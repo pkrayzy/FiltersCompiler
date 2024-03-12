@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: bH9xHnxslqdeDoJ37w6FAg
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1710124560-3600.patch
+! Checksum: FVNh4D/W3gwf/PstYbb3NQ
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1710210959-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.7.49
@@ -131,6 +131,8 @@ jiwasoku.com###pcpc-rss
 jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
 h-ken.net###footer-rssLinkListHtml
+kijomatomelog.com##div[style="margin:0px;padding:2px;"]
+kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"]
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"] ~ a[href][target="_blank"]
 baiku-sokuho.info##.links2
 ||baiku-sokuho.info/pickup-rss*.html
@@ -292,6 +294,8 @@ kokopyon.net##.plg_area:last-child
 ||aaieba.livedoor.biz^$subdocument,~third-party
 aaieba.livedoor.biz##.aaieba-b
 kijomatomelog.com##.related-wrapper
+kijomatomelog.com##div[style="line-height: 35px; border-top:dotted 1px gray; border-bottom:dotted 1px gray; margin-top:20px; margin-bottom:20px; padding: 10px 10px 10px 15px;"] + .t_h
+kijomatomelog.com##div[style="margin-bottom:30px;"] > b > span[style="font-size: medium; color: rgb(102, 102, 102);"]
 ||baiku-sokuho.info/top-rss.html
 carp-matome.blog.jp##.bw_outbox
 anihatsu.com##.rss-blogroll-kobetu
@@ -378,6 +382,8 @@ oumaga-times.com##.popular-list-header
 burusoku-vip.com##.headline-body
 burusoku-vip.com##.headline-title
 kijomatomelog.com##div[style^="line-height: 35px; border-top:dotted 1px gray;"]
+kijomatomelog.com##div[style="line-height: 20px"]
+kijomatomelog.com#?#.article span[style="font-size: 125%;"]:has(> span >span[style^="font-weight: bold;"])
 ||waranote.livedoor.biz^$subdocument,~third-party
 waranote.livedoor.biz###container > table
 waranote.livedoor.biz##.article-body > iframe[width="660"][height="780"]
@@ -519,8 +525,10 @@ anige-sokuhouvip.com##div[id^="top_center"]
 jumpmatome2ch.biz##.d-contents
 matacoco.com,tsurimatome.com,kokopyon.net,girlsvip-matome.com,valorantchannel.net,saikyo-jump.com,absurd.blogo.jp,daretoku-eromanga.info,hattatu-matome.ldblog.jp##div[class^="rss"]
 celery-marine.net,otoko-honne.com,ske48matoeme.com,kijolifehack.com##div[id^="rss"]
+kijomatomelog.com#?#.sub_right > .sidewrapper:has(> .sidetitlebody > .sidetitle:contains(人気記事))
 manpukunews.blog.jp##div[align="center"] > table[width="700"]
 manpukunews.blog.jp##table[rules="None"]
+kijomatomelog.com##.rss-single
 kijomatomelog.com##.section-rss1
 ||kurumachannel.com/*-Rss.html
 kurumachannel.com##iframe[src*="-Rss.html"]
@@ -932,6 +940,7 @@ ing.com.tr###chat
 diskgenius.cn##.class_qidian_wpa
 ||guest-agent.mobilus.me/web/mobi-agent-client-frame-loader.min.js$domain=city.arakawa.tokyo.jp
 wenmi.com##.alc
+sparkasse-oberlausitz-niederschlesien.de##.chatbot_linda_link
 ||live-cwc.elron.titancs.mindtitan.com/chat-web-sdk-$domain=elron.ee
 ||studlancer.net/images/chat/studlancer_chat.js
 ankerjapan.com###ch-plugin
