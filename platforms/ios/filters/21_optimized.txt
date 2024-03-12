@@ -1,9 +1,9 @@
-! Checksum: LsnYLYB8ZGn1VkP944d4UA
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1710243511-3600.patch
+! Checksum: yB2g2jRwC7/27QYOagrVGA
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1710247006-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.20.59
-! TimeUpdated: 2024-03-12T11:33:33+00:00
+! Version: 2.0.20.60
+! TimeUpdated: 2024-03-12T12:32:17+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -836,6 +836,7 @@ disk.yandex.by,disk.yandex.com,disk.yandex.com.tr,disk.yandex.fr,disk.yandex.kz,
 disk.yandex.by,disk.yandex.com,disk.yandex.com.tr,disk.yandex.fr,disk.yandex.kz,disk.yandex.ru,yadi.sk#$#body[style="padding-right: 0px; overflow: hidden;"] > div[class*="Fullscreen_root_"] { display: none !important; }
 disk.yandex.ru#$#.InfoSpace__Footer > button.InfoSpace__Button { display: none !important; }
 disk.yandex.ru#%#//scriptlet('remove-attr', 'href', '.InfoSpace[href^="https://360.yandex."][href*="/premium-plans?"]')
+[$path=/pogoda]yandex.*##a[class^="BannerHobbies_promo"]
 [$path=/maps]yandex.*##.card-special-offers-view
 [$path=/maps]yandex.*##.business-card-view__main-wrapper div.card-offer-view
 [$path=/maps]yandex.*##.business-card-title-view__advert
@@ -2561,7 +2562,7 @@ finsurances.co#%#//scriptlet('remove-attr', 'disabled', '#getlink')
 finsurances.co#%#//scriptlet('adjust-setInterval', 'counter')
 pling.com#%#//scriptlet('adjust-setTimeout', 'Download', '*', '0.001')
 app.trangchu.news#%#//scriptlet("set-constant", "count", "0")
-maqal360.com,diudemy.com#%#//scriptlet('adjust-setTimeout', 'div_form')
+diudemy.com#%#//scriptlet('adjust-setTimeout', 'div_form')
 fansonlinehub.com,teralink.me,teraearn.com,terashare.me,hotmediahub.com,terabox.fun#%#//scriptlet('adjust-setTimeout', 'value', '*', '0.001')
 fansonlinehub.com,teralink.me,teraearn.com,terashare.me,hotmediahub.com,terabox.fun#%#//scriptlet('adjust-setInterval', 'clearInterval', '*', '0.001')
 hotmediahub.com#%#(async()=>{if(location.href.includes("?slid="))try{const t=new URLSearchParams(location.search).get("slid");if(!t||!t.length)return;const a=await fetch(`https://hotmediahub.com/shorturl/getoriginurl?&surl_key=${t}`),i=await a.json();i?.data?.origin_url&&i.data.origin_url.startsWith("http")&&location.assign(i.data.origin_url)}catch(t){console.debug(t)}})();
