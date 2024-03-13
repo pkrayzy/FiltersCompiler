@@ -1,9 +1,9 @@
-! Checksum: xGl/o8FsxaDni6ZgcfZ+qQ
-! Diff-Path: ../patches/14/14-s-1710326178-3600.patch
+! Checksum: qHLqZlyX99UfFGoxBpGt+w
+! Diff-Path: ../patches/14/14-s-1710329799-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.90.48
-! TimeUpdated: 2024-03-13T10:31:51+00:00
+! Version: 2.1.90.49
+! TimeUpdated: 2024-03-13T11:32:02+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2388,6 +2388,12 @@ pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|show--conse
 !
 ! NOTE: Regular rules
 !
+healthy.kaiserpermanente.org#$##analyticsmodal { display: none !important; }
+healthy.kaiserpermanente.org#$#.kp-modal-disable-scroll { overflow: auto !important; }
+gruppo.bancobpm.it##.absolute-wrapper > div[class^="css-"]:has(> div.focus-trap-container div#cookieBannerContent)
+unicredit.it#$#.pws_cookie_bar { display: none !important; }
+unicredit.it#$#body { overflow: auto !important; }
+drweb.com##div[aria-live="polite"] > div[x-show="toast_show"]:has(> div[x-data*="cookiesMsg"])
 1800contacts.com###__consentBanner
 anc.ua##.cookies--container
 culture.gov.ru###form-accept-cookie
@@ -22601,6 +22607,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+mapio.net###backpicx > div[id^="__estate_"][style]
 2ch.hk###js-plashque-mob
 1800contacts.com#%#//scriptlet('set-cookie', 'hasSeenEmailCaptureModal', 'true')
 p2pb2b.com##svg[id^="registerBtn_"]
@@ -28683,7 +28690,7 @@ auto.ru#?#body > div:has(> div.Modal > div.Modal__container > div[class*="Admins
 ! END: Yandex
 !
 ! Tegna Inc.
-cbs8.com,kvue.com,wbir.com,wltx.com,wgrz.com,newscentermaine.com,whas11.com,ktvb.com,13wmaz.com,firstcoastnews.com,wnep.com,wtsp.com,wfaa.com,kgw.com,king5.com,wcnc.com,kens5.com,ksdk.com,khou.com,wusa9.com,abc10.com,wwltv.com,11alive.com,wfmynews2.com,thv11.com,9news.com,wkyc.com,wzzm13.com,kare11.com,13newsnow.com,12news.com#$?#div[data-module="grid"] > dialog[data-name="exitInterstitial"] { remove: true; }
+12newsnow.com,cbs8.com,kvue.com,wbir.com,wltx.com,wgrz.com,newscentermaine.com,whas11.com,ktvb.com,13wmaz.com,firstcoastnews.com,wnep.com,wtsp.com,wfaa.com,kgw.com,king5.com,wcnc.com,kens5.com,ksdk.com,khou.com,wusa9.com,abc10.com,wwltv.com,11alive.com,wfmynews2.com,thv11.com,9news.com,wkyc.com,wzzm13.com,kare11.com,13newsnow.com,12news.com#$?#div[data-module="grid"] > dialog[data-name="exitInterstitial"] { remove: true; }
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/169531#issuecomment-1877526044
 ||smetrics.telegraph.co.uk^
@@ -29691,6 +29698,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+business-gazeta.ru###popupAcceptNotify
 ||rosario3.com/*/scripts/PushFirebase.js
 ||print24.com.pl/ajax/js/webpush_subscription.js
 hokiesports.com##div[class$="container"]:has(button[type="button"] + div[class] div.tip-contents)
@@ -30265,7 +30273,7 @@ ndtv.com/js/notify.js
 ||zakon.kz/static_zakon/push-notifications/main.js
 !
 ! Tegna Inc.
-/notifications*.js$domain=cbs8.com|kvue.com|wbir.com|wltx.com|wgrz.com|newscentermaine.com|whas11.com|ktvb.com|13wmaz.com|firstcoastnews.com|wnep.com|wtsp.com|wfaa.com|kgw.com|king5.com|wcnc.com|kens5.com|ksdk.com|khou.com|wusa9.com|abc10.com|wwltv.com|11alive.com|wfmynews2.com|thv11.com|9news.com|wkyc.com|wzzm13.com|kare11.com|13newsnow.com|12news.com
+/notifications*.js$domain=12newsnow.com|cbs8.com|kvue.com|wbir.com|wltx.com|wgrz.com|newscentermaine.com|whas11.com|ktvb.com|13wmaz.com|firstcoastnews.com|wnep.com|wtsp.com|wfaa.com|kgw.com|king5.com|wcnc.com|kens5.com|ksdk.com|khou.com|wusa9.com|abc10.com|wwltv.com|11alive.com|wfmynews2.com|thv11.com|9news.com|wkyc.com|wzzm13.com|kare11.com|13newsnow.com|12news.com
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150086
 quizangel.com#%#//scriptlet('set-constant', 'arrJsConfig.enablePushNotification', '0')
