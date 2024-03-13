@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Hl8pYcFb6NbWnIiayae2Fw
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1710329821-3600.patch
+! Checksum: jFhuVm3IHv7pO1XDNj65IQ
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1710333576-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.19
-! TimeUpdated: 2024-03-13T11:32:26+00:00
+! Version: 2.0.89.20
+! TimeUpdated: 2024-03-13T12:34:48+00:00
 ! Expires: 5 days (update frequency)
 /load-xml/?id=*&roll=$xmlhttprequest
 .com/services/?id=$script,third-party
@@ -2022,6 +2022,7 @@ modsforwot.ru,helpsetup.ru,vargr.ru,trialkeys.ru##+js(abort-on-property-read, ad
 volley.ru##+js(no-fetch-if, exchange.buzzoola.com)
 @@||ads.vk.com^$~image,domain=ads.vk.com
 @@||yandex.ru/ads/system/context.js$domain=tvzvezda.ru
+tragtorr.in#@#div[id^="yandex_rtb"]
 @@||textovod.com/images/728x90.png
 torlook.in##+js(set-constant, adBlockFunction, noopFunc)
 positiverecords.ru##+js(abort-current-script, $, .height())
@@ -2029,7 +2030,7 @@ positiverecords.ru#@#.ad-google
 pikabu.ru##+js(abort-on-stack-trace, XMLHttpRequest, createAd)
 pikabu.ru##+js(no-setTimeout-if, _sendAnalytics)
 pikabu.ru##+js(json-prune, data, errors)
-pikabu.ru##+js(remove-node-text, script, /new \(?(this|document\.defaultView|window|top|XMLHttpRequest|true|false|[a-zA-Z]{9\,10})(\[[\"\s\'\+a-zA-Z]+\])?[\s\S]+Ad/)
+pikabu.ru##+js(remove-node-text, script, /document\.addEventListener\(.*[\s\S]+new \(nagi_bator/)
 sports.ru##+js(json-prune, direct rtbAuctionInfo)
 sports.ru##+js(set-constant, Ya.adfoxCode.create, noopFunc)
 sports.ru##+js(remove-node-text, script, AdBlocker present)
