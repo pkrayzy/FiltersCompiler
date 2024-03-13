@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: eeOn0eMTa39foYECtA92Vg
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1710291991-14400.patch
+! Checksum: 4AGimkAygYiQnOBjvQQ6Fg
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1710306398-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.20.85
-! TimeUpdated: 2024-03-13T01:02:10+00:00
+! Version: 2.1.20.86
+! TimeUpdated: 2024-03-13T05:02:05+00:00
 ! Expires: 5 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -89,6 +89,7 @@
 /needsharebutton.min.css
 /pandalocker.$script
 /pin_it_button.png
+/pinit-button.png
 /pinterest-footer-icon.svg
 /pinterest-for-woocommerce-save-button.min.js
 /pinterest-for-woocommerce-tracking.min.js
@@ -261,6 +262,7 @@ _socialfancysliders/
 ###block-menu-menu-social-networks
 ###block-ridiculouslyresponsivesocialsharebuttons
 ###block-social
+###block-socialfooter
 ###block-sociallinks
 ###block-socialmedia
 ###block-socialmedialinks
@@ -302,6 +304,7 @@ _socialfancysliders/
 ###facebook-like
 ###facebook-likebox
 ###facebook-link
+###facebook-popup
 ###facebook-share
 ###facebook-social-wrapper
 ###facebook-widget
@@ -310,6 +313,7 @@ _socialfancysliders/
 ###facebookIcon
 ###facebookLike
 ###facebookLikeButton
+###facebookLikeContainer
 ###facebookShareButton
 ###facebookTab
 ###facebookWidget
@@ -714,6 +718,7 @@ _socialfancysliders/
 ###social-youtube
 ###social-yt
 ###social2
+###socialBanner
 ###socialBar
 ###socialButton
 ###socialButtonOnPage
@@ -821,6 +826,7 @@ _socialfancysliders/
 ###surveyshare-buttons
 ###svgFacebook
 ###svgTwitter
+###svgYoutube
 ###tab-share
 ###table_shareus
 ###top-bar-social
@@ -849,6 +855,7 @@ _socialfancysliders/
 ###twitter-widget
 ###twitter2
 ###twitterBtn
+###twitterContainer
 ###twitterShareButton
 ###twitter_btn
 ###twitter_button
@@ -1138,6 +1145,7 @@ _socialfancysliders/
 ##.asocial-area
 ##.aspexifblikebox
 ##.aspexifbsidebox
+##.asset-inline-share-tools
 ##.at-icon-facebook
 ##.at-icon-pinterest_share
 ##.at-share-btn
@@ -1265,6 +1273,7 @@ _socialfancysliders/
 ##.bt_share
 ##.bt_twitter
 ##.btn--share
+##.btn--sns
 ##.btn-fbook-share
 ##.btn-group-social
 ##.btn-shares
@@ -1349,6 +1358,7 @@ _socialfancysliders/
 ##.cd-fb-like-widget
 ##.cff-share-container
 ##.cff-share-tooltip
+##.cl-social
 ##.cmSocialMediaList
 ##.cmSocialMediaListContainer
 ##.cmg-share-bar
@@ -1416,6 +1426,7 @@ _socialfancysliders/
 ##.custom-social-icon
 ##.custom-social-media
 ##.custom-social-share
+##.custom-tweet-button
 ##.custom_share
 ##.custom_social
 ##.customsocial
@@ -1733,6 +1744,7 @@ _socialfancysliders/
 ##.followSocial
 ##.followTwitter
 ##.followUsBox
+##.followUsContainer
 ##.followUsLinks
 ##.followUsSocialMedia
 ##.follow__item
@@ -1924,6 +1936,7 @@ _socialfancysliders/
 ##.glyphicon-instagram
 ##.glyphicon-telegram
 ##.glyphicons-share-alt
+##.gn-col-share
 ##.gnt_ss_a
 ##.goodshare
 ##.google-share
@@ -1995,6 +2008,7 @@ _socialfancysliders/
 ##.header-social-media-block
 ##.header-social-share
 ##.header-social-shares
+##.header-social-twitter
 ##.header-socials
 ##.header-top-social
 ##.header-top-social-link
@@ -2144,6 +2158,7 @@ _socialfancysliders/
 ##.icon-social-twitter
 ##.icon-social-twitter-circle
 ##.icon-social-youtube
+##.icon-social__link
 ##.icon-soundcloud
 ##.icon-tw-footer
 ##.icona-social
@@ -2151,6 +2166,7 @@ _socialfancysliders/
 ##.iconeFacebook
 ##.iconeTwitter
 ##.iconfacebook
+##.iconic-social-twitter
 ##.iconinstagram
 ##.iconochive-share
 ##.icons_social
@@ -2205,6 +2221,9 @@ _socialfancysliders/
 ##.ipsfocus_social
 ##.is-social
 ##.ishare
+##.ism_box_facebook
+##.ism_box_google
+##.ism_box_twitter
 ##.isocial
 ##.it-share
 ##.item--social
@@ -2288,6 +2307,7 @@ _socialfancysliders/
 ##.jw-sharing-dock-btn
 ##.keystone-social-author
 ##.kindleWidget
+##.kl-social-link
 ##.l-footer-social
 ##.l-footer__social
 ##.l-social
@@ -2472,6 +2492,7 @@ _socialfancysliders/
 ##.mini-share-post
 ##.mk-header-social
 ##.mkd-share-link
+##.mkdf-blog-share
 ##.mkdf-social-icon-widget
 ##.mks_social_widget
 ##.ml-share
@@ -2593,6 +2614,7 @@ _socialfancysliders/
 ##.ocArticleFooterShareContainer
 ##.ocArticleFooterShareLinksWrapper
 ##.oceanwp-about-me-social
+##.oe_social_share
 ##.official-social2
 ##.oi-share
 ##.omc-social-small
@@ -2749,6 +2771,7 @@ _socialfancysliders/
 ##.product__share
 ##.pswp__button--share
 ##.public-share
+##.public-social-icons
 ##.pw-button-email
 ##.pw-button-facebook
 ##.pw-button-twitter
@@ -2761,6 +2784,7 @@ _socialfancysliders/
 ##.qt-socialicon
 ##.qticon-share
 ##.quick-links__social
+##.quickshare
 ##.qw_social
 ##.r-footer--social
 ##.rambler-share
@@ -3337,6 +3361,8 @@ _socialfancysliders/
 ##.sharing-zone
 ##.sharingButton
 ##.sharingLinks
+##.sharingList
+##.sharingPanel
 ##.sharing__list
 ##.sharing_block
 ##.sharing_box
@@ -3349,6 +3375,7 @@ _socialfancysliders/
 ##.sharings_box
 ##.sharrre
 ##.sharrre-container
+##.show-all-sharetool
 ##.show-share
 ##.showShareMore
 ##.showsocial
@@ -3568,6 +3595,7 @@ _socialfancysliders/
 ##.social-icons-list
 ##.social-icons-new
 ##.social-icons-special
+##.social-icons-sticky
 ##.social-icons-title
 ##.social-icons-top
 ##.social-icons-widget
@@ -3620,6 +3648,7 @@ _socialfancysliders/
 ##.social-media-sharing
 ##.social-media-twitter
 ##.social-media-widget
+##.social-media-widget-container
 ##.social-media-wrapper
 ##.social-menu-desktop
 ##.social-menu-item
@@ -3962,6 +3991,7 @@ _socialfancysliders/
 ##.socials_widget
 ##.socialscroll
 ##.socialshare
+##.socialshare-wrapper
 ##.socialshares
 ##.socialsharing
 ##.socialside
@@ -4078,6 +4108,7 @@ _socialfancysliders/
 ##.swp_social_panel
 ##.synved-social-button
 ##.t-content__shares
+##.ta_followWidget
 ##.tags-share
 ##.tags-share-box
 ##.tasti-social-top
@@ -4120,6 +4151,7 @@ _socialfancysliders/
 ##.thread-share
 ##.thread-share-bar-buttons
 ##.thrv_tw_qs
+##.titleSocial
 ##.tk-footer-social-icons
 ##.tm-follow-link-site
 ##.tm-footer-social
@@ -4245,6 +4277,7 @@ _socialfancysliders/
 ##.twitterbtn
 ##.twitterbutton
 ##.twitterfeed
+##.twitterfollow
 ##.twitterlink
 ##.twittershare
 ##.twshare
@@ -4285,6 +4318,7 @@ _socialfancysliders/
 ##.user-share
 ##.ut2-social-link-block
 ##.util-bar-module-firefly-visible
+##.util-bar-module-share
 ##.utility-share
 ##.utility-social
 ##.uvpjs__btn-share
@@ -4753,6 +4787,7 @@ consumerreports.org##.btn__social
 unz.com##.button-holder
 healthline.com##.button-wrapper
 livescience.com##.buttons-social
+newshub.co.nz##.c-ArticleHeading-actions
 noovomoi.ca##.c-actionsTools
 nature.com##.c-article-extras-additional-links
 lawandcrime.com##.c-article-foot__site
@@ -4818,7 +4853,6 @@ wikihow.com##.follow_sidebox
 rbth.com##.follows-channel
 telegraphindia.com##.followusbox
 thejc.com##.foot__socials
-moviemaker.com##.footer-bg
 lineageos.org,morbidology.com,topuniversities.com,westpac.com.au##.footer-icons
 trustedreviews.com##.footer-menu--icons
 meteoblue.com##.footer-options
@@ -4937,6 +4971,7 @@ beincrypto.com##.share-block
 calcioefinanza.it,news-medical.net,scientificamerican.com##.share-box
 ibtimes.co.in##.share-btn-wrp
 cheknews.ca,fandomwire.com,stadiumtalk.com,tvline.com##.share-container
+news.cgtn.com,newsus.cgtn.com##.share-icon
 alwatanvoice.com,binnews.com,blog.phylum.io,gulf-times.com,iheart.com,jessekellyshow.com,news12.com,steveharveyfm.com,thewildest.com##.share-icons
 mymodernmet.com##.share-it-side
 nymag.com,thisismoney.co.uk##.share-link
@@ -5028,6 +5063,7 @@ stuff.co.nz##.tik4-sharing
 ncaa.com##.tile-follow
 30seconds.com##.tip-share
 techlila.com##.tl-social
+xbiz.com##.tool-list
 daily.jstor.org##.top-bar-right
 thehackernews.com##.top-follow
 destructoid.com##.top-sidebar-wrapper
@@ -5192,7 +5228,6 @@ phonandroid.com##.social-networks
 pix-geeks.com##.social_icons
 20minutes.fr##.socialbar
 tv5monde.com##.tv5monde-footer-menu--social
-almesryoon.com##.FollowUsOn
 midad.com##.social-actions
 khamsat.com##.social-media
 ||almasryalyoum.com/scripts/sharing.js
@@ -5252,6 +5287,7 @@ finanzaonline.com,mediaset.it,teleborsa.it,tempostretto.it##.soc
 wallstreetitalia.com##.social-btn
 sportwebsicilia.it##.social-button
 trend-online.com##.social-icon
+ansa.it##.social-menu
 iphoneitalia.com##.social-sharing
 davinotti.com##.social__variant
 sportitalia.com##.social_table
