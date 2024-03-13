@@ -1,9 +1,9 @@
-! Checksum: SjT20OGBCSNpDamH//JqSw
-! Diff-Path: ../patches/14/14-s-1710322670-3600.patch
+! Checksum: zjrK0en8xdYOZKw/+1LD6Q
+! Diff-Path: ../patches/14/14-s-1710326223-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.90.47
-! TimeUpdated: 2024-03-13T09:32:20+00:00
+! Version: 2.1.90.48
+! TimeUpdated: 2024-03-13T10:31:51+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -28874,7 +28874,8 @@ agrolink.com.br#$#.modal-backdrop { display: none !important; }
 !
 dailynews.com#$#.modal-scrollable { display: none!important; }
 dailynews.com#$#.connext-modal-backdrop { display: none!important; }
-dailynews.com#$#body { overflow: visible!important; }
+dailynews.com#$#html.modal-open { overflow: auto !important; }
+dailynews.com#$#body.modal-open { overflow: auto !important; }
 !
 anires.ru###shadow_logo
 anires.ru###hello_iframe
@@ -30479,6 +30480,11 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+dictionary.com##div:has(> form[data-type="signup-form"])
+dictionary.com##.wotd-email-form
+dictionary.com##.otd-widget__form
+dailynews.com##a.subscribe-button[type="subscribe"]
+dailynews.com###footerSubscribe
 att.com##.lazyload-wrapper:has(> div[class] > div.container > div.undefined > div.row button[data-testid="email-capture-button"])
 ||richlandsource.com/wp-content/plugins/pico/includes/js/read-more.js
 tomshw.it##.sticky > div:has(> div.flex > a[href="https://www.tomshw.it/iscrizione-newsletter"])
