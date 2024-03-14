@@ -1,9 +1,9 @@
-! Checksum: dbII8JTUuhdncSLsOHmfPA
-! Diff-Path: ../patches/1/1-s-1710412879-3600.patch
+! Checksum: 9/Nm0fSaGKGWKzF/mKWGlg
+! Diff-Path: ../patches/1/1-s-1710416372-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.22
-! TimeUpdated: 2024-03-14T10:35:29+00:00
+! Version: 2.0.89.23
+! TimeUpdated: 2024-03-14T11:32:33+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4434,8 +4434,8 @@ metasirus.su#%#//scriptlet('prevent-setTimeout', 'hasAdBlocker')
 ! reshuolymp.ru
 reshuolymp.ru#%#//scriptlet('adjust-setTimeout', 'function(){return', '20000', '0.00')
 ! sdamgia.ru
-||sdamgia.naydex.net/*/*/*_$script,replace=/adblock//
-sdamgia.ru#%#//scriptlet('prevent-setTimeout', '===getComputedStyle(')
+||sdamgia.ru^$cookie=bda
+sdamgia.ru#%#//scriptlet('adjust-setTimeout', 'f(!1)', '20000', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150448
 litehd.tv#@#.ad-container
 litehd.tv#%#//scriptlet('set-constant', 'ya.videoAd.loadModule', 'noopPromiseResolve')
@@ -17679,8 +17679,9 @@ ozon.ru##div[data-widget="advVideoBanner"]
 ozon.ru##img[elementtiming*="Banner"]
 ! 2gis
 ||2gis.*/ads/advise/
-~id.2gis.com,2gis.*##._3hmsj
 2gis.*##span[class]:contains(/[Рр]еклама/)
+! Unblcoked in Filter unblocking search ads and self-promotion
+~id.2gis.com,2gis.*##._3hmsj
 ! pikabu.ru
 pikabu.ru#?#.stories-feed__container > article.story:has(> div.story__main a[href^="/information/specials"])
 pikabu.ru#?#.stories-feed__container > article:has(> div.story__placeholder)
@@ -18640,6 +18641,7 @@ forum.ixbt.com##.mainpage_table > tbody > tr > td[align="center"]
 !
 ! sdamgia.ru
 sdamgia.ru##a[target="_blank"] > img[src^="data:image"]
+sdamgia.ru#$?#main > div:has(> div > div > script:contains(window.yaContextCb)) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru#$?#div > aside > div:has(script:contains(window.yaContextCb)) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru#$?#div > aside > div:has(script:contains(window.rotator)) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru#$?#.menu > div[style]:has(> a > img[src^="data:;base64"]) { position: absolute !important; top: -9999px !important; }

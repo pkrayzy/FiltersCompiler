@@ -1,9 +1,9 @@
-! Checksum: K2pCeTYjJtg6cO4qJvDgeQ
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1710412836-3600.patch
+! Checksum: oTIH3r3A+thwELajw/7bMA
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1710416275-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.22
-! TimeUpdated: 2024-03-14T10:35:29+00:00
+! Version: 2.0.89.23
+! TimeUpdated: 2024-03-14T11:32:33+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2074,8 +2074,8 @@ zazloo.ru#%#//scriptlet('set-constant', 'fpm_adbDetect', 'noopFunc')
 metasirus.su#%#//scriptlet('prevent-setTimeout', 'hasAdBlocker')
 ||yandex.ru/ads/system/adsdk.js$script,redirect=noopjs,domain=player.mediavitrina.ru
 reshuolymp.ru#%#//scriptlet('adjust-setTimeout', 'function(){return', '20000', '0.00')
-||sdamgia.naydex.net/*/*/*_$script,replace=/adblock//
-sdamgia.ru#%#//scriptlet('prevent-setTimeout', '===getComputedStyle(')
+||sdamgia.ru^$cookie=bda
+sdamgia.ru#%#//scriptlet('adjust-setTimeout', 'f(!1)', '20000', '0.001')
 litehd.tv#@#.ad-container
 litehd.tv#%#//scriptlet('set-constant', 'ya.videoAd.loadModule', 'noopPromiseResolve')
 litehd.tv#%#//scriptlet('set-constant', 'ya', 'noopFunc')
@@ -6359,8 +6359,8 @@ ozon.ru##div[data-widget="advBanner"]
 ozon.ru##div[data-widget="advVideoBanner"]
 ozon.ru##img[elementtiming*="Banner"]
 ||2gis.*/ads/advise/
-~id.2gis.com,2gis.*##._3hmsj
 2gis.*##span[class]:contains(/[Рр]еклама/)
+~id.2gis.com,2gis.*##._3hmsj
 pikabu.ru#?#.stories-feed__container > article.story:has(> div.story__main a[href^="/information/specials"])
 pikabu.ru#?#.stories-feed__container > article:has(> div.story__placeholder)
 pikabu.ru##.comments__adv
@@ -6798,6 +6798,7 @@ forum.ixbt.com##.mainpage_table > tbody > tr > td[align="center"]
 ||ixbt.online/banners/$image
 ||ixbt.com/cgi-bin/banqs.cgi
 sdamgia.ru##a[target="_blank"] > img[src^="data:image"]
+sdamgia.ru#$?#main > div:has(> div > div > script:contains(window.yaContextCb)) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru#$?#div > aside > div:has(script:contains(window.yaContextCb)) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru#$?#.menu > div[style]:has(> a > img[src^="data:;base64"]) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru##.con_warper > div[class$="t_block"]

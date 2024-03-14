@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 6BtzZbPwscDjSO4SSn6wgA
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1710412864-3600.patch
+! Checksum: ajInfVhSpk0MVRRuBW0ETw
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1710416329-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.22
-! TimeUpdated: 2024-03-14T10:35:29+00:00
+! Version: 2.0.89.23
+! TimeUpdated: 2024-03-14T11:32:33+00:00
 ! Expires: 5 days (update frequency)
 /load-xml/?id=*&roll=$xmlhttprequest
 .com/services/?id=$script,third-party
@@ -2057,7 +2057,7 @@ zazloo.ru##+js(set-constant, fpm_adbDetect, noopFunc)
 metasirus.su##+js(no-setTimeout-if, hasAdBlocker)
 ||yandex.ru/ads/system/adsdk.js$script,redirect=noop.js,domain=player.mediavitrina.ru
 reshuolymp.ru##+js(adjust-setTimeout, function(){return, 20000, 0.00)
-sdamgia.ru##+js(no-setTimeout-if, ===getComputedStyle()
+sdamgia.ru##+js(adjust-setTimeout, f(!1), 20000, 0.001)
 litehd.tv#@#.ad-container
 litehd.tv##+js(set-constant, ya.videoAd.loadModule, noopPromiseResolve)
 ritsatv.ru##.ab.message
@@ -6189,8 +6189,8 @@ ozon.ru##div[data-widget="advBanner"]
 ozon.ru##div[data-widget="advVideoBanner"]
 ozon.ru##img[elementtiming*="Banner"]
 ||2gis.*/ads/advise/
-~id.2gis.com,2gis.*##._3hmsj
 2gis.*##span[class]:contains(/[Рр]еклама/)
+~id.2gis.com,2gis.*##._3hmsj
 pikabu.ru#?#.stories-feed__container > article.story:has(> div.story__main a[href^="/information/specials"])
 pikabu.ru#?#.stories-feed__container > article:has(> div.story__placeholder)
 pikabu.ru##.comments__adv
@@ -6609,6 +6609,7 @@ forum.ixbt.com##.mainpage_table > tbody > tr > td[align="center"]
 ||ixbt.online/banners/$image
 ||ixbt.com/cgi-bin/banqs.cgi
 sdamgia.ru##a[target="_blank"] > img[src^="data:image"]
+sdamgia.ru#$?#main > div:has(> div > div > script:contains(window.yaContextCb)) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru#$?#div > aside > div:has(script:contains(window.yaContextCb)) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru#$?#.menu > div[style]:has(> a > img[src^="data:;base64"]) { position: absolute !important; top: -9999px !important; }
 sdamgia.ru##.con_warper > div[class$="t_block"]
