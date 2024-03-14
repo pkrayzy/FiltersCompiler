@@ -1,9 +1,9 @@
-! Checksum: h7iD9ZwPsPAp6hk45HUvHA
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1710434280-3600.patch
+! Checksum: SMpbPVbSqJEUXv+O67JlHw
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1710437830-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.26.74
-! TimeUpdated: 2024-03-14T16:34:18+00:00
+! Version: 2.3.26.75
+! TimeUpdated: 2024-03-14T17:33:09+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1108,6 +1108,7 @@ pornhub.com,pornhub.org,pornhub.net#%#//scriptlet('prevent-setTimeout', '\x41\x6
 @@||static.adsafeprotected.com/skeleton.gif?*adslot=
 @@||static.adsafeprotected.com/skeleton.gif?*adunitid=
 @@||static.adsafeprotected.com/skeleton.gif?*bannnerid=
+qload.info##.adb
 poplinks.sbs,shorttrick.in##.popSc
 poplinks.sbs,shorttrick.in#%#//scriptlet('abort-on-property-write', 'checkAdsStatus')
 poplinks.sbs,sampledrive.in#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'adsSrc')
@@ -1215,6 +1216,7 @@ freemcserver.net#%#//scriptlet('abort-on-property-read', 'pbjs')
 @@||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup_fy2021.html$domain=ytlarge.com
 @@||googleads.g.doubleclick.net/pagead/ads?client=ca-pub-*&adk=$~xmlhttprequest,~script,~image,domain=ytlarge.com
 ytlarge.com#@##adcontent
+ytlarge.com#%#AG_onLoad((()=>{const e=[13*Math.floor(1e6+9e6*Math.random()),13*Math.floor(1e6+9e6*Math.random())],t=()=>{o()},o=()=>{document.querySelectorAll("input#mxtime, input#mxtime1").forEach(((t,o)=>{e[o]&&(t.value=e[o])}))};o();const n=document.querySelector("button#checker");n&&n.addEventListener("click",t)}));
 ultimate-guitar.com#%#//scriptlet('set-constant', 'UGAPP.bidding.prebidLoadError', 'false')
 ultimate-guitar.com#%#//scriptlet('set-constant', 'Object.prototype.setNeedShowAdblockWarning', 'noopFunc')
 efootballdb.com#%#//scriptlet('prevent-fetch', 'www3.doubleclick.net')
@@ -2872,6 +2874,7 @@ megaup.net#%#//scriptlet("abort-current-inline-script", "I833")
 megaup.net#%#//scriptlet('set-constant', 'zJSYdQ ', 'true')
 megaup.net#%#//scriptlet('set-constant', 'ASksiwk', 'true')
 megaup.net#%#//scriptlet('trusted-replace-node-text', 'script', 'setInterval', '/if\(window.*?==undefined.*?img.*?return;}/', 'if(!1){}')
+||download.megaup.net/*ad*.png
 @@||download.megaup.net/*.js$~third-party
 purposegames.com#%#//scriptlet("set-constant", "sngsaa", "false")
 @@||megaup.net^$generichide
@@ -9850,6 +9853,9 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 ||olalivehdplay.ru/blast.js
 ||lovesomecommunity.com/blast.js
 ||b4ucast.com/blast.js
+twibbonize.com##.anchor-ads-bottom
+twibbonize.com##.top-ads--open
+twibbonize.com###modals-container:has(div.modal-promotion-any)
 hollywoodreporter.com##.get-the-magazine
 jcinfo.net###content aside:has(.adsbygoogle)
 playmods.net##.recommend-container
@@ -13832,6 +13838,7 @@ mail.yahoo.com##[data-test-id^="pencil-ad"]
 ||gemini.yahoo.com^$domain=d3ward.github.io
 !+ NOT_PLATFORM(ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard
+@@||facebook.com^$generichide,badfilter
 @@||devfaq.ru/*/search?*&method=HEAD$xmlhttprequest,document
 ||consent.cookiefirst.com^$badfilter
 javcrave.com#@#.widget_custom_html
