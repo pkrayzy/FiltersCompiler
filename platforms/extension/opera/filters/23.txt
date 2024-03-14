@@ -1,9 +1,9 @@
-! Checksum: /EdLP0VKSwz/cJ3t3ddFCw
-! Diff-Path: ../patches/23/23-s-1710275857-3600.patch
+! Checksum: lI3VyQidAOtewqIAEDqSsA
+! Diff-Path: ../patches/23/23-s-1710423653-3600.patch
 ! Title: AdGuard Ukrainian filter
 ! Description: Filter that enables ad blocking on websites in Ukrainian language.
-! Version: 2.0.4.3
-! TimeUpdated: 2024-03-12T20:32:25+00:00
+! Version: 2.0.4.4
+! TimeUpdated: 2024-03-14T13:35:04+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -6147,6 +6147,11 @@ gorodkiev.com.ua##.story-full > script + table[width] ~ noindex
 24tv.ua##div[class^="b_reklama"]
 24tv.ua##.inner-wrap > section[class="nav-additional"]
 konkurent.in.ua,niknews.mk.ua,novosti.dn.ua###banner
+!
+! ictv.ua, stb.ua, novy.tv
+player.starlight.digital#%#//scriptlet('trusted-replace-fetch-response', '"mediaHls"', '"mediaHlsNoAdv"', 'starlight.digital/player-api/')
+||starlight.digital/get-playlist-ad/hls-vod/files/*.mp4/*_AdBlock$xmlhttprequest,removeparam=site_id
+||starlight.digital/get-playlist-ad/hls-vod/files/*.mp4/*_AdBlock$xmlhttprequest,removeparam=placement_id
 !
 ! Special rules for AdGuard websites' test pages. The only purpose of these
 ! rules is to make test pages work so that users could verify that AdGuard

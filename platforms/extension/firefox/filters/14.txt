@@ -1,9 +1,9 @@
-! Checksum: 7IEHLDsQYhc7onjAzUlRMw
-! Diff-Path: ../patches/14/14-s-1710419893-3600.patch
+! Checksum: SbK1zNR9ETbJmK9uzq7xrw
+! Diff-Path: ../patches/14/14-s-1710423642-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.90.60
-! TimeUpdated: 2024-03-14T12:32:03+00:00
+! Version: 2.1.90.61
+! TimeUpdated: 2024-03-14T13:34:15+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -22621,6 +22621,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+||cem.nexon.com/contentstemplate|$document
 gos-oplata.ru##.before-leave
 mapio.net###backpicx > div[id^="__estate_"][style]
 2ch.hk###js-plashque-mob
@@ -22936,7 +22937,6 @@ healthtap.com#%#//scriptlet('set-local-storage-item', 'qset_vc', '$remove$')
 feedly.com##.SignupFooter
 kinopoisk.ru#?#body > div.ReactModalPortal:has(> div.ReactModal__Overlay > div.ReactModal__Content > div[class^="styles_root"] > div[class^="styles_container"] > p:contains(Подписка Плюс с Амедиатекой))
 lk21official.wiki,nontondrama.click##.warning-modal
-||cem.nexon.com/globalnps|$document
 youtube.com##.yt-mealbar-promo-renderer
 ||player.twitch.tv^$domain=nwdb.info
 indiatoday.in###tapBoxId
@@ -44394,18 +44394,15 @@ agrinews.co.jp###ad
 outlook.live.com#?#main > div[class] > div[style] > div[class][style*="position"]:matches-property("/__reactProps/.children.props.adIndex")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118543
 ! https://github.com/AdguardTeam/AdguardFilters/pull/128667
-outlook.live.com#?#div[data-focuszone-id] + div > button > div > img[class][src$="/leftNavUpsellIcons/premium-diamond-01.svg"]:upward(2)
-outlook.live.com#?#.customScrollBar > div > div[class^="_"] > div > div.full:not([aria-label]):not([data-convid]):not([role="option"]):upward(2)
-outlook.live.com#?##app .customScrollBar + div[class] > div:not([id]):not([class]) > div[class] > div[class]:has(> div[class] > div[class] > img[src*="adbar"])
 outlook.live.com#?#div[data-app-section="MessageList"] .full:first-child:has(.fbAdCallToAction)
 outlook.live.com##div[id^="docking_InitVisiblePart_"] div[id^="virtualEditScroller"] + div[class] button[aria-label]
 outlook.live.com#?#.customScrollBar[data-is-scrollable] > div[class] > div[class]:first-child:has(> div > div[class] > div[class] > div[class] > div[class] > div[class] > div[class] > i[data-icon-name][title])
 outlook.live.com#?#div[data-app-section="MessageList"] > div:first-child:has(> div > div > div > div div > div[class] img[src*="/ads-"])
 outlook.live.com#?#.customScrollBar[tabindex] .customScrollBar > div[style] > div:first-child:has(> div[data-animatable] div[class] > div[class] > div[class] > span:contains(Microsoft Outlook))
+! Promo in the left bottom corner
+outlook.live.com##div[data-focuszone-id] + div:has(> button > div > img[alt="Premium Features"])
 ! Ad above inbox (via settings -> general advertising settings -> banner ads
 outlook.live.com#?#div[data-app-section="MessageList"] > div:first-child:has(> div > div > div > div div > span:contains(Microsoft Outlook))
-! Other tab
-outlook.live.com#?#div[data-app-section="MessageList"] .customScrollBar > div[class] > div[class]:has(> div[class]:first-child > div[id][class] div[class] > span:contains(Microsoft Outlook))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/102342
 bunshun.jp#?#.block-header:contains(SPECIAL)
 bunshun.jp##a[href$="?ref=special"]
@@ -45468,10 +45465,6 @@ electrek.co,9to5mac.com##.author-bio-container > .author-gear
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22207
 perspective-daily.de###trialsignuppopup
 perspective-daily.de##md-backdrop
-! https://github.com/AdguardTeam/AdguardFilters/issues/2686
-outlook.live.com##div[aria-label][data-max-width] > div[class^="_"] >div[class] > div.ms-FocusZone.disableTextSelection + div[class]:not([data-focuszone-id]):not([role]) > button
-outlook.live.com##div[class][style] > div[data-focuszone-id*="FocusZone"] + div[class] > div[class] > button[class]
-outlook.live.com##div[autoid].hiddenOverflow > div[autoid] a.o365button[href*="_Upgrade"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21886
 pcgameshardware.de,pcgames.de##.cms-teaser
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21847
@@ -45655,6 +45648,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+nishi2.jp###block-3 > div > a[href^="https://nishi2.jp/ad/"]
 billboard.com##.lrv-a-wrapper:has(> div.bb-pro-promotional-banner)
 support.qq.com##.promotionbit
 ||gamewith.jp/ad/
@@ -46727,7 +46721,6 @@ elementor.com##.sticky-banner
 neowin.net##div.trending-item-title[class*="w_stackcn"] > span[class*="rec"]
 geeksforgeeks.org##.text > h3[style="text-align:center"] + blockquote
 geeksforgeeks.org##.text > h3[style="text-align:center"]
-outlook.live.com##div[data-focuszone-id="FocusZone12"] + div > button
 codegym.cc##img[id^="click_banner"]
 opinie-perfumy.pl##.lepopup-popup-overlay
 opinie-perfumy.pl##.lepopup-popup-container
@@ -48098,6 +48091,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/174343
+file-mods.ru#%#//scriptlet('adjust-setInterval', 'timer', '1000', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174126
 bfmtv.com#%#//scriptlet('remove-attr', 'autoplay', '.video_block')
 bfmtv.com#%#//scriptlet('set-attr', '.video_block', 'autoplay', 'false')
@@ -50202,6 +50197,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+erogazo-ngo.com###content_top_ad
 ||ryusoku.com/assets/html/headline.html
 aaieba.livedoor.biz##.left-container
 blog.tinect.jp##p + .g.g-46 > .g-single
