@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Wed, 13 Mar 2024, 13:31 UTC+01:00
-! OriginalVersion: 2024.3.13.0
+! Last modified: Thu, 14 Mar 2024, 21:31 UTC+01:00
+! OriginalVersion: 2024.3.14.0
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: śro, 13 mar 2024, 13:31 UTC+01:00
+! Aktualizacja: czw, 14 mar 2024, 21:31 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -12357,8 +12357,8 @@ web.archive.org#$#dl > .date { width: auto !important; height: auto !important; 
 web.archive.org#$?#dl:has(> .date) { width: auto !important; height: auto !important; clip: unset !important; display: inline-block !important }
 webowe.gadu-gadu.pl#$#body#webowe > #footer { position: static !important; padding: 20px 0; margin: auto !important }
 www.auchan.pl#$#img[height="40px"][src*="birdy"] { height: 40px !important }
-www.instalki.pl#$#:matches-media((max-width: 500px)) .blog .type-post .entry-header .entry-details, .archive .type-post .entry-header .entry-details { display: inline !important }
 www.instalki.pl#$#:matches-media((max-width: 500px)) .post-categories, .post-categories li { background: none !important; padding: 0; margin: 3px -5px; display: inline-flex }
+www.instalki.pl#$#:matches-media((max-width: 500px)) :is(.blog, .archive) .type-post .entry-header .entry-details  { display: inline !important }
 www.youtube.com#$#:matches-media((min-width: 1500px) and (max-width: 2000px)) [page-subtype="home"] ytd-rich-grid-renderer { --ytd-rich-grid-items-per-row: 4 !important }
 www.youtube.com#$#ytd-browse[page-subtype="home"] ytd-rich-grid-row, ytd-browse[page-subtype="home"] #contents.ytd-rich-grid-row { display:contents !important }
 zalando.pl##.js_z-mask-smartbanner.z-mask-smartbanner
@@ -12401,9 +12401,6 @@ youtube.com#$#html:not([dark]) #guide-inner-content { scrollbar-color: #000 #000
 youtube.com#$#html[dark] #guide-inner-content { scrollbar-color: #999 #9990 !important }
 !#endif
 !#if !ext_ublock
-!allegro.pl#$?#@media (min-width: 1200px) { #search-results div[data-analytics-view-label="BETTER_SORT_APPLIED"]:has(> button) { position: absolute !important; z-index: 2147483647 !important; top: 240px !important; background: white !important; } }
-!allegro.pl#$?#@media (min-width: 1200px) { #search-results:has(div[data-analytics-view-label="BETTER_SORT_APPLIED"]) { margin-top: 90px !important } }
-!allegro.pl#$?#@media all and (min-width: 1200px) { #search-results div[data-analytics-view-label="BETTER_SORT_APPLIED"]:has(> div > button) { position: absolute !important; z-index: 2147483647 !important; top: 240px !important; background: white !important; } }
 #$#.buttonHomepage { remove: true; }
 #$#.containerHomepage { remove: true; }
 #@#div[style]:not([id], [class]):has(> h2 ~ span[title*="-extension://"][title*="/web_accessible_resources/epicker-ui.html"])
@@ -12411,8 +12408,9 @@ youtube.com#$#html[dark] #guide-inner-content { scrollbar-color: #999 #9990 !imp
 karachan.org$$script[wildcard="style*xD"][min-length="100"]
 komputerswiat.pl$$[id="ks_breaking_news"]
 wbgroup.pl#@$#:matches-media((max-width: 999px)) header > .Header-content { display: flex !important }
-www.instalki.pl#$#@media (max-width: 500px) { .blog .type-post .entry-header .entry-details, .archive .type-post .entry-header .entry-details { display: inline !important } }
 www.instalki.pl#$#@media (max-width: 500px) { .post-categories, .post-categories li { background: none !important; padding: 0; margin: 3px -5px; display: inline-flex } }
+www.instalki.pl#$#@media (max-width: 500px) { :is(.blog, .archive) .type-post .entry-header .entry-details .sponsored-label { display: none !important } }
+www.instalki.pl#$#@media (max-width: 500px) { :is(.blog, .archive) .type-post .entry-header .entry-details { display: inline !important } }
 www.youtube.com#@$?##contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]) > #contents:first-child { max-width: unset !important; }
 www.youtube.com#@$?##contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]) ytd-rich-grid-media { max-width: unset !important; }
 www.youtube.com#@$?##contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]) { --ytd-rich-grid-items-per-row: 1 !important; }
