@@ -1,9 +1,9 @@
-! Checksum: 2HLJaa6wAtzA9EMR6n43cw
-! Diff-Path: ../patches/14/14-s-1710488174-3600.patch
+! Checksum: MujPoUAJ+AE2mjZzR3meBw
+! Diff-Path: ../patches/14/14-s-1710495551-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.90.71
-! TimeUpdated: 2024-03-15T07:31:58+00:00
+! Version: 2.1.90.72
+! TimeUpdated: 2024-03-15T09:33:23+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2388,6 +2388,7 @@ pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|show--conse
 !
 ! NOTE: Regular rules
 !
+photo-ac.com##.show-notice-cookie
 news.abs-cbn.com#%#//scriptlet('set-local-storage-item', 'uninavIsAgreeCookie', 'true')
 remarkable.com##div[data-cy="cookie-consent-banner-info-only"]
 remarkable.com#$#body { overflow: auto !important; }
@@ -20008,13 +20009,11 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ! !SECTION: Anti-adblock - Admiral
 !
 ! SECTION: Anti-adblock - Freestar Recovered
-! TODO: consider to remove ":empty" from the rule below,
-! there a is random text added to this element on phoronix.com, so it doesn't work
-#$#body > div.ad.banner-ad[data-freestar-ad][style]:empty { display: block !important; }
-phoronix.com#$#body > div.ad.banner-ad[data-freestar-ad][style] { display: block !important; }
+#$#body > div.ad.banner-ad.ad-siderail.stickyads[data-freestar-ad][style] { display: block !important; }
 ||a.pub.network/core/prebid-universal-creative.js$script,redirect=noopjs
 ! In the case if DNS filtering is enabled
 phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('abort-current-inline-script', 'Uint8Array', 'getAndSetOverlay')
 ! If the script in a separate file
 ||getemoji.com/scripts/apester.js
 ! NOTE: Freestar Recovered end ⬆️
