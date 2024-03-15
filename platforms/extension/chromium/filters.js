@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.26.80",
-			"timeUpdated": "2024-03-14T22:33:03+0000",
+			"version": "2.3.26.81",
+			"timeUpdated": "2024-03-15T00:33:16+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.0.98.53",
-			"timeUpdated": "2024-03-14T19:33:18+0000",
+			"version": "2.0.98.54",
+			"timeUpdated": "2024-03-15T00:33:31+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.90.68",
-			"timeUpdated": "2024-03-14T20:39:32+0000",
+			"version": "2.1.90.69",
+			"timeUpdated": "2024-03-15T00:32:13+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.62.99",
-			"timeUpdated": "2024-03-14T18:32:06+0000",
+			"version": "2.0.63.0",
+			"timeUpdated": "2024-03-15T00:32:15+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -703,8 +703,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.33.36",
-			"timeUpdated": "2024-03-14T19:32:16+0000",
+			"version": "2.0.33.37",
+			"timeUpdated": "2024-03-15T00:32:27+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1506,8 +1506,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.12.52",
-			"timeUpdated": "2024-03-14T23:32:31+0000",
+			"version": "2.1.12.53",
+			"timeUpdated": "2024-03-15T00:32:48+0000",
 			"languages": [
 				"zh"
 			],
