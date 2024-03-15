@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.7",
-			"timeUpdated": "2024-03-14T19:31:42+0000",
+			"version": "2.0.50.8",
+			"timeUpdated": "2024-03-15T08:31:36+0000",
 			"languages": [],
 			"tags": [
 				1,
