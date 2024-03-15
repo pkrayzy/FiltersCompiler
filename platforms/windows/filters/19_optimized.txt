@@ -1,9 +1,9 @@
-! Checksum: yIlLX6CYZOOho+NkhAn7rA
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1710470215-3600.patch
+! Checksum: UFeUSEtSPQMWWaJDeKw/iQ
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1710488253-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.33.37
-! TimeUpdated: 2024-03-15T00:32:27+00:00
+! Version: 2.0.33.38
+! TimeUpdated: 2024-03-15T07:32:14+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -320,8 +320,9 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ||strivesidewalk.com^$third-party
 ||ticklesign.com^$third-party
 #$#body > div.ad.banner-ad[data-freestar-ad][style]:empty { display: block !important; }
+phoronix.com#$#body > div.ad.banner-ad[data-freestar-ad][style] { display: block !important; }
 ||a.pub.network/core/prebid-universal-creative.js$script,redirect=noopjs
-virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
 ||getemoji.com/scripts/apester.js
 scitechdaily.com,thewindowsclub.com#%#//scriptlet("set-constant", "ezAardvarkDetected", "false")
 !#safari_cb_affinity(general)
@@ -342,6 +343,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ||wp-r.github.io/*/assets/js/jquery.adsplacer.ab-testing.js
 ||wp-r.github.io/adsplacer_pro/$third-party
 !#safari_cb_affinity
+bravedown.com#%#//scriptlet('set-constant', 'antiADB', 'noopFunc')
 organic-chemistry.org##div#top:empty
 organic-chemistry.org#%#//scriptlet('set-constant', 'square', '5')
 uakino.club#%#//scriptlet('remove-node-text', '#text', 'Відключи AdBlock на сайті')
@@ -371,7 +373,6 @@ photopea.com##.app > div + div[style]:has(a[href*="blocking-ads"])
 vrcmods.com###showfreemethod
 vrcmods.com#%#//scriptlet('prevent-element-src-loading', 'script', 'cdn.ad.plus')
 tekniknot.com#%#//scriptlet("set-constant", "alert", "undefined")
-bravedown.com#%#//scriptlet('prevent-fetch', 'adskeeper')
 triblive.com#%#//scriptlet('set-constant', 'aa_abd_modal_create', 'noopFunc')
 /pubs/trib/triblive_mnbvcx.js$domain=triblive.com
 radarbox.com###ad-blocking
@@ -1571,6 +1572,7 @@ api.flocktory.com
 ||unpkg.com/@textback/notification-widget
 ||widget.pico.tools^$third-party
 ||widget.privy.com^$third-party
+stereogum.com#%#//scriptlet('hide-in-shadow-dom', '.spcv_visible')
 ||cem.nexon.com/contentstemplate|$document
 gos-oplata.ru##.before-leave
 mapio.net###backpicx > div[id^="__estate_"][style]

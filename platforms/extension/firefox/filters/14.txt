@@ -1,9 +1,9 @@
-! Checksum: l9sqdjKYTC+NTLrlinh8vg
-! Diff-Path: ../patches/14/14-s-1710484595-3600.patch
+! Checksum: KOk2pzTOJbzRNy+/BaQhQA
+! Diff-Path: ../patches/14/14-s-1710488201-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.90.70
-! TimeUpdated: 2024-03-15T06:32:08+00:00
+! Version: 2.1.90.71
+! TimeUpdated: 2024-03-15T07:31:58+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -11290,7 +11290,7 @@ rus.tvnet.lv,bangkokbiznews.com,thansettakij.com,komchadluek.net,springnews.co.t
 maximum.com.tr##.sticky_cookie_warning
 bizhint.net##.subscribe-popup
 unimelb.edu.au##.tealium_privacy_prompt
-fromatob.de##.the-cookie-banner
+dekra.pl,fromatob.de##.the-cookie-banner
 ikea.com##.toast-container
 indeed.com##.tos-Banner-dismissable
 zoom.us##.truste-banner
@@ -20001,10 +20001,13 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ! !SECTION: Anti-adblock - Admiral
 !
 ! SECTION: Anti-adblock - Freestar Recovered
+! TODO: consider to remove ":empty" from the rule below,
+! there a is random text added to this element on phoronix.com, so it doesn't work
 #$#body > div.ad.banner-ad[data-freestar-ad][style]:empty { display: block !important; }
+phoronix.com#$#body > div.ad.banner-ad[data-freestar-ad][style] { display: block !important; }
 ||a.pub.network/core/prebid-universal-creative.js$script,redirect=noopjs
 ! In the case if DNS filtering is enabled
-virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
 ! If the script in a separate file
 ||getemoji.com/scripts/apester.js
 ! NOTE: Freestar Recovered end ⬆️
@@ -20043,6 +20046,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+bravedown.com#%#//scriptlet('set-constant', 'antiADB', 'noopFunc')
 organic-chemistry.org##div#top:empty
 organic-chemistry.org#%#//scriptlet('set-constant', 'square', '5')
 uakino.club#%#//scriptlet('remove-node-text', '#text', 'Відключи AdBlock на сайті')
@@ -20075,7 +20079,6 @@ photopea.com##.app > div + div[style]:has(a[href*="blocking-ads"])
 vrcmods.com###showfreemethod
 vrcmods.com#%#//scriptlet('prevent-element-src-loading', 'script', 'cdn.ad.plus')
 tekniknot.com#%#//scriptlet("set-constant", "alert", "undefined")
-bravedown.com#%#//scriptlet('prevent-fetch', 'adskeeper')
 triblive.com#%#//scriptlet('set-constant', 'aa_abd_modal_create', 'noopFunc')
 /pubs/trib/triblive_mnbvcx.js$domain=triblive.com
 radarbox.com###ad-blocking
@@ -22619,6 +22622,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+stereogum.com#%#//scriptlet('hide-in-shadow-dom', '.spcv_visible')
 ||cem.nexon.com/contentstemplate|$document
 gos-oplata.ru##.before-leave
 mapio.net###backpicx > div[id^="__estate_"][style]
@@ -40738,6 +40742,8 @@ instagram.com##._aagw:empty
 !
 ! End: Instagram.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/174644
+stereogum.com##.subscribe-article
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174646
 theringer.com##.c-newsletter_signup_box
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174856
@@ -48106,7 +48112,7 @@ bfmtv.com#%#//scriptlet('set-attr', '.video_block', 'autoplay', 'false')
 kuncomic.com#%#//scriptlet('adjust-setInterval', 'countdownTime', '1500', '0.001')
 ! gplinks - gplinks.co/fi3p
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170980
-ndlifestylego.com,gentletrail.in,mghindinews.in,netflixvip.in,pmyojanasarkari.in,mediniweb.in,picassoappk.com,geniuseducares.com,recruitmentrasta.in,dhamakamusic.ink,ryzenmusic.in,learnwithsaif.in,sugargliderfaqs.com,smartsetkari.in,foreverhealth.in,eternalcbse.in,awolio.com,anumin.com,gptproguide.com,odiamusicsong.com,news36tech.com,minijankari.com,nhmgujarat.in,jobwaala.in,w3hindi.in,kaisekareblog.com,iplquotes.com,newzwala.co.in,jobkijankari.in,newsloti.com,theringtonesworld.in,indisarkrijob.com,hindikahanistory.in,jkssbnotes.com,megashayari.com,sbkeditsofficials.in,mktechword.com,picassoappk.com,bmremix.in,odiasongmuzic.com,bharatsarkarijobalert.com,mpscstudyhub.com,djppclub.com,indiasarkari.com,ojasnew.in,myfirstname.in,mystudyhelp.in,aditechz.com,blog24.me,onpointgame.net,doge25.in,kejriwalyojana.com,onlinegratuitycalculator.com,gplinks.co,rontymobile.in#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
+raidersixgameapk.com,potter-world.com,sarkariexam365.com,ndlifestylego.com,gentletrail.in,mghindinews.in,netflixvip.in,pmyojanasarkari.in,mediniweb.in,picassoappk.com,geniuseducares.com,recruitmentrasta.in,dhamakamusic.ink,ryzenmusic.in,learnwithsaif.in,sugargliderfaqs.com,smartsetkari.in,foreverhealth.in,eternalcbse.in,awolio.com,anumin.com,gptproguide.com,odiamusicsong.com,news36tech.com,minijankari.com,nhmgujarat.in,jobwaala.in,w3hindi.in,kaisekareblog.com,iplquotes.com,newzwala.co.in,jobkijankari.in,newsloti.com,theringtonesworld.in,indisarkrijob.com,hindikahanistory.in,jkssbnotes.com,megashayari.com,sbkeditsofficials.in,mktechword.com,picassoappk.com,bmremix.in,odiasongmuzic.com,bharatsarkarijobalert.com,mpscstudyhub.com,djppclub.com,indiasarkari.com,ojasnew.in,myfirstname.in,mystudyhelp.in,aditechz.com,blog24.me,onpointgame.net,doge25.in,kejriwalyojana.com,onlinegratuitycalculator.com,gplinks.co,rontymobile.in#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172260
 imgdrive.net#%#//scriptlet('trusted-click-element', '#redirect-close > a[onclick="closeOverlay()"]', '', '500')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171810

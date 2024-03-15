@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: T0sBS953PRufmrHHDAAlGA
-! Diff-Path: ../patches/19/19-s-1710463057-3600.patch
+! Checksum: TagAUy0GpZS6YIiZRztB0w
+! Diff-Path: ../patches/19/19-s-1710488223-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.33.37
-! TimeUpdated: 2024-03-15T00:32:27+00:00
+! Version: 2.0.33.38
+! TimeUpdated: 2024-03-15T07:32:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1489,7 +1489,10 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ! !SECTION: Anti-adblock - Admiral
 !
 ! SECTION: Anti-adblock - Freestar Recovered
+! TODO: consider to remove ":empty" from the rule below,
+! there a is random text added to this element on phoronix.com, so it doesn't work
 #$#body > div.ad.banner-ad[data-freestar-ad][style]:empty { display: block !important; }
+phoronix.com#$#body > div.ad.banner-ad[data-freestar-ad][style] { display: block !important; }
 ||a.pub.network/core/prebid-universal-creative.js$script,redirect=noop.js
 ! In the case if DNS filtering is enabled
 ! If the script in a separate file
@@ -1530,6 +1533,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+bravedown.com##+js(set-constant, antiADB, noopFunc)
 organic-chemistry.org##div#top:empty
 organic-chemistry.org##+js(set-constant, square, 5)
 uakino.club##+js(remove-node-text, #text, Відключи AdBlock на сайті)
@@ -1558,7 +1562,6 @@ photopea.com#?#.window:has(> div.body > div > div:contains(ad blocker))
 photopea.com##.app > div + div[style]:has(a[href*="blocking-ads"])
 vrcmods.com###showfreemethod
 tekniknot.com##+js(set-constant, alert, undefined)
-bravedown.com##+js(no-fetch-if, adskeeper)
 triblive.com##+js(set-constant, aa_abd_modal_create, noopFunc)
 /pubs/trib/triblive_mnbvcx.js$domain=triblive.com
 radarbox.com###ad-blocking

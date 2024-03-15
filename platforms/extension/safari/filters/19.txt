@@ -1,9 +1,9 @@
-! Checksum: +OlO3q5dqLXdGZXstbrRWg
-! Diff-Path: ../patches/19/19-s-1710463049-3600.patch
+! Checksum: /FGX/htcie2CYIcuo8InVQ
+! Diff-Path: ../patches/19/19-s-1710488217-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.33.37
-! TimeUpdated: 2024-03-15T00:32:27+00:00
+! Version: 2.0.33.38
+! TimeUpdated: 2024-03-15T07:32:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1600,14 +1600,17 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ! !SECTION: Anti-adblock - Admiral
 !
 ! SECTION: Anti-adblock - Freestar Recovered
+! TODO: consider to remove ":empty" from the rule below,
+! there a is random text added to this element on phoronix.com, so it doesn't work
 #$#body > div.ad.banner-ad[data-freestar-ad][style]:empty { display: block !important; }
+phoronix.com#$#body > div.ad.banner-ad[data-freestar-ad][style] { display: block !important; }
 ! In the case if DNS filtering is enabled
-virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
 !#safari_cb_affinity(general,privacy)
-virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@#.banner-ad-container
-virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@#.banner-ad
-virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@#.ad-siderail
-@@||a.pub.network/core/prebid-universal-creative.js$script,domain=hostednovel.com|getemoji.com|concertarchives.org|mouse-sensitivity.com|thisisanfield.com|titantv.com|baeldung.com|creaders.net|virtualpiano.net
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@#.banner-ad-container
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@#.banner-ad
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@#.ad-siderail
+@@||a.pub.network/core/prebid-universal-creative.js$script,domain=hostednovel.com|getemoji.com|concertarchives.org|mouse-sensitivity.com|thisisanfield.com|titantv.com|baeldung.com|creaders.net|virtualpiano.net|phoronix.com
 !#safari_cb_affinity
 ! If the script in a separate file
 ||getemoji.com/scripts/apester.js
@@ -1646,6 +1649,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+bravedown.com#%#//scriptlet('set-constant', 'antiADB', 'noopFunc')
 organic-chemistry.org##div#top:empty
 organic-chemistry.org#%#//scriptlet('set-constant', 'square', '5')
 uakino.club#%#//scriptlet('remove-node-text', '#text', 'Відключи AdBlock на сайті')
@@ -1678,7 +1682,6 @@ photopea.com##.app > div + div[style]:has(a[href*="blocking-ads"])
 vrcmods.com###showfreemethod
 vrcmods.com#%#//scriptlet('prevent-element-src-loading', 'script', 'cdn.ad.plus')
 tekniknot.com#%#//scriptlet("set-constant", "alert", "undefined")
-bravedown.com#%#//scriptlet('prevent-fetch', 'adskeeper')
 triblive.com#%#//scriptlet('set-constant', 'aa_abd_modal_create', 'noopFunc')
 /pubs/trib/triblive_mnbvcx.js$domain=triblive.com
 radarbox.com###ad-blocking
@@ -4321,6 +4324,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+stereogum.com#%#//scriptlet('hide-in-shadow-dom', '.spcv_visible')
 ||cem.nexon.com/contentstemplate|$document
 gos-oplata.ru##.before-leave
 mapio.net###backpicx > div[id^="__estate_"][style]

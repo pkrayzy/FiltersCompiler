@@ -1,9 +1,9 @@
-! Checksum: vOh/6zPy4mn9cWRkcORe3A
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1710484630-3600.patch
+! Checksum: PFb3XzSmq1hYyJmimFQLZg
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1710488251-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.90.70
-! TimeUpdated: 2024-03-15T06:32:08+00:00
+! Version: 2.1.90.71
+! TimeUpdated: 2024-03-15T07:31:58+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -5808,6 +5808,7 @@ politic.gr,coffeetea.ru,startbloggingonline.com,biod.ro,stephaniebohm.com,istl.n
 rus.tvnet.lv,bangkokbiznews.com,thansettakij.com,komchadluek.net,springnews.co.th,nationtv.tv,tnews.co.th,elu24.ee##.sticky-cookie
 bizhint.net##.subscribe-popup
 unimelb.edu.au##.tealium_privacy_prompt
+dekra.pl,fromatob.de##.the-cookie-banner
 zoom.us##.truste-banner
 jigsawplanet.com##.ts-msg.ts-type0
 westjet.com##.wj-header-usercookies
@@ -9352,8 +9353,9 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ||strivesidewalk.com^$third-party
 ||ticklesign.com^$third-party
 #$#body > div.ad.banner-ad[data-freestar-ad][style]:empty { display: block !important; }
+phoronix.com#$#body > div.ad.banner-ad[data-freestar-ad][style] { display: block !important; }
 ||a.pub.network/core/prebid-universal-creative.js$script,redirect=noopjs
-virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
+phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#%#//scriptlet('prevent-element-src-loading', 'script', 'a.pub.network')
 ||getemoji.com/scripts/apester.js
 scitechdaily.com,thewindowsclub.com#%#//scriptlet("set-constant", "ezAardvarkDetected", "false")
 !#safari_cb_affinity(general)
@@ -9374,6 +9376,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ||wp-r.github.io/*/assets/js/jquery.adsplacer.ab-testing.js
 ||wp-r.github.io/adsplacer_pro/$third-party
 !#safari_cb_affinity
+bravedown.com#%#//scriptlet('set-constant', 'antiADB', 'noopFunc')
 organic-chemistry.org##div#top:empty
 organic-chemistry.org#%#//scriptlet('set-constant', 'square', '5')
 uakino.club#%#//scriptlet('remove-node-text', '#text', 'Відключи AdBlock на сайті')
@@ -9403,7 +9406,6 @@ photopea.com##.app > div + div[style]:has(a[href*="blocking-ads"])
 vrcmods.com###showfreemethod
 vrcmods.com#%#//scriptlet('prevent-element-src-loading', 'script', 'cdn.ad.plus')
 tekniknot.com#%#//scriptlet("set-constant", "alert", "undefined")
-bravedown.com#%#//scriptlet('prevent-fetch', 'adskeeper')
 triblive.com#%#//scriptlet('set-constant', 'aa_abd_modal_create', 'noopFunc')
 /pubs/trib/triblive_mnbvcx.js$domain=triblive.com
 radarbox.com###ad-blocking
@@ -10600,6 +10602,7 @@ api.flocktory.com
 ||unpkg.com/@textback/notification-widget
 ||widget.pico.tools^$third-party
 ||widget.privy.com^$third-party
+stereogum.com#%#//scriptlet('hide-in-shadow-dom', '.spcv_visible')
 ||cem.nexon.com/contentstemplate|$document
 gos-oplata.ru##.before-leave
 mapio.net###backpicx > div[id^="__estate_"][style]
@@ -19170,6 +19173,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_mobileappba
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com##._aagw:empty
+stereogum.com##.subscribe-article
 theringer.com##.c-newsletter_signup_box
 cbssports.com##.LiveBlogHeroVideo
 newsmaker.md##.evo-search-holder
@@ -21741,7 +21745,7 @@ file-mods.ru#%#//scriptlet('adjust-setInterval', 'timer', '1000', '0.001')
 bfmtv.com#%#//scriptlet('remove-attr', 'autoplay', '.video_block')
 bfmtv.com#%#//scriptlet('set-attr', '.video_block', 'autoplay', 'false')
 kuncomic.com#%#//scriptlet('adjust-setInterval', 'countdownTime', '1500', '0.001')
-ndlifestylego.com,gentletrail.in,mghindinews.in,netflixvip.in,pmyojanasarkari.in,mediniweb.in,picassoappk.com,geniuseducares.com,recruitmentrasta.in,dhamakamusic.ink,ryzenmusic.in,learnwithsaif.in,sugargliderfaqs.com,smartsetkari.in,foreverhealth.in,eternalcbse.in,awolio.com,anumin.com,gptproguide.com,odiamusicsong.com,news36tech.com,minijankari.com,nhmgujarat.in,jobwaala.in,w3hindi.in,kaisekareblog.com,iplquotes.com,newzwala.co.in,jobkijankari.in,newsloti.com,theringtonesworld.in,indisarkrijob.com,hindikahanistory.in,jkssbnotes.com,megashayari.com,sbkeditsofficials.in,mktechword.com,picassoappk.com,bmremix.in,odiasongmuzic.com,bharatsarkarijobalert.com,mpscstudyhub.com,djppclub.com,indiasarkari.com,ojasnew.in,myfirstname.in,mystudyhelp.in,aditechz.com,blog24.me,onpointgame.net,doge25.in,kejriwalyojana.com,onlinegratuitycalculator.com,gplinks.co,rontymobile.in#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
+raidersixgameapk.com,potter-world.com,sarkariexam365.com,ndlifestylego.com,gentletrail.in,mghindinews.in,netflixvip.in,pmyojanasarkari.in,mediniweb.in,picassoappk.com,geniuseducares.com,recruitmentrasta.in,dhamakamusic.ink,ryzenmusic.in,learnwithsaif.in,sugargliderfaqs.com,smartsetkari.in,foreverhealth.in,eternalcbse.in,awolio.com,anumin.com,gptproguide.com,odiamusicsong.com,news36tech.com,minijankari.com,nhmgujarat.in,jobwaala.in,w3hindi.in,kaisekareblog.com,iplquotes.com,newzwala.co.in,jobkijankari.in,newsloti.com,theringtonesworld.in,indisarkrijob.com,hindikahanistory.in,jkssbnotes.com,megashayari.com,sbkeditsofficials.in,mktechword.com,picassoappk.com,bmremix.in,odiasongmuzic.com,bharatsarkarijobalert.com,mpscstudyhub.com,djppclub.com,indiasarkari.com,ojasnew.in,myfirstname.in,mystudyhelp.in,aditechz.com,blog24.me,onpointgame.net,doge25.in,kejriwalyojana.com,onlinegratuitycalculator.com,gplinks.co,rontymobile.in#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
 imgdrive.net#%#//scriptlet('trusted-click-element', '#redirect-close > a[onclick="closeOverlay()"]', '', '500')
 ipalibrary.me#%#//scriptlet('adjust-setInterval', 'countdown', '*', '0.001')
 sanemoku.com#%#//scriptlet('adjust-setInterval', 'countdown', '*', '0.001')
