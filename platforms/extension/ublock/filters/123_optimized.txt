@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: zjmVgglIgm0G/wMCRzsxGA
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1710551291-14400.patch
+! Checksum: sRPIWIvER0RdYDSWZueolg
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1710565640-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.2
-! TimeUpdated: 2024-03-16T01:02:43+00:00
+! Version: 2.1.21.3
+! TimeUpdated: 2024-03-16T05:02:22+00:00
 ! Expires: 5 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -236,6 +236,7 @@ _socialfancysliders/
 ###ShareButton
 ###ShareItemBtn
 ###SharePanel
+###Social-Sidebar
 ###SocialContainer
 ###SocialMedia
 ###SocialShare
@@ -376,6 +377,8 @@ _socialfancysliders/
 ###followUs
 ###follow_box
 ###follow_buttons
+###follow_facebook
+###follow_twitter
 ###follow_us
 ###follow_us_block
 ###followus
@@ -1287,6 +1290,7 @@ _socialfancysliders/
 ##.bt_twitter
 ##.btn--share
 ##.btn--sns
+##.btn-custom-social-full
 ##.btn-fbook-share
 ##.btn-group-social
 ##.btn-shares
@@ -1295,6 +1299,7 @@ _socialfancysliders/
 ##.btn_social
 ##.btn_twit
 ##.bts_social
+##.bttn-share
 ##.buttShare
 ##.button-pinterest
 ##.button-share
@@ -1315,6 +1320,7 @@ _socialfancysliders/
 ##.bx-footer__social-links
 ##.c-Footer__links__social
 ##.c-NavSocial-item
+##.c-article-share
 ##.c-aside--subscribe
 ##.c-blog-social
 ##.c-footer-social
@@ -1386,6 +1392,7 @@ _socialfancysliders/
 ##.comment__share
 ##.comment_share
 ##.comment_share_toggle
+##.comments-share
 ##.comments-social
 ##.comments__likes
 ##.common-social
@@ -1824,6 +1831,7 @@ _socialfancysliders/
 ##.footer-share-bar
 ##.footer-share-buttons
 ##.footer-share-list
+##.footer-share-section
 ##.footer-sharing
 ##.footer-sns
 ##.footer-social
@@ -2813,6 +2821,7 @@ _socialfancysliders/
 ##.qticon-share
 ##.quick-links__social
 ##.quickshare
+##.quickshare-container
 ##.qw_social
 ##.r-footer--social
 ##.rambler-share
@@ -4123,6 +4132,7 @@ _socialfancysliders/
 ##.stm-socials
 ##.stm-socials__icon
 ##.story-share
+##.story-share-btns
 ##.story-share-buttons
 ##.story-social
 ##.story-tool-share
@@ -4399,6 +4409,7 @@ _socialfancysliders/
 ##.vs-social
 ##.vs-social-link
 ##.vsac-social
+##.vshare
 ##.vuukle-powerbar
 ##.vuukle-powerbar-vertical
 ##.w-share
@@ -4637,6 +4648,7 @@ _socialfancysliders/
 ||facebook.com/plugins/like.php?$third-party
 ||facebook.com/plugins/like_box.php$third-party
 ||facebook.com/plugins/page.php?$third-party
+||facebook.com/widgets/like.php?$third-party
 ||facebook.com^*/plugins/like.php?$third-party
 ||facebook.com^*/plugins/page.php?$third-party
 ||facebook.com^*/plugins/share_button.php?$third-party
@@ -4816,6 +4828,7 @@ beebom.com##.beebom-social-share
 military.com##.block--addtoanyadv
 crash.net,ttnews.com##.block-better-social-sharing-buttons
 tastesbetterfromscratch.com##.block-follow-me
+therecipecritic.com##.block-pinterest-cta
 9to5linux.com##.bm-social-top
 breitbart.com##.bnn-social-share
 ofbez.com##.box-fixed-subscription
@@ -5230,16 +5243,13 @@ teltarif.de##.sbm
 orf.at##.share-dialog
 gameswelt.de##.share__bottom
 gameswelt.de##.share__top
-bdkj.info##.shariff
 mindfactory.de##.sliderbar
 formel1.de##.social-buttons_container
 deutsche-wirtschafts-nachrichten.de##.social-line
 golem.de##.social-tools
-bdkj.info##.socials-section
 sportnews.bz##.socialshare
 presseportal.de##.story-sharing
 t3n.de##.tg-social-bottom
-dioezesanmuseum-rottenburg.de##.uncode-vc-social
 watson.ch##.watson-sharebuttons
 handelsblatt.com##app-icon-link
 berliner-kurier.de##section[class^="article-top-panel_socials_"]
@@ -5474,6 +5484,7 @@ cope.es##.toolbar
 telesurtv.net##.wpRedesFoot
 businessinsider.es,hobbyconsolas.com##div[class^="share-bar_"]
 hobbyconsolas.com##div[class^="social-list_"]
+ahaber.com.tr,aspor.com.tr##.pageTools
 bigpara.hurriyet.com.tr##.share-list
 bigpara.hurriyet.com.tr##.socialIcons
 gifyagusi.pl#@##fan-exit
