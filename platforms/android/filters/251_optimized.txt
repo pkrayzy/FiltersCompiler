@@ -1,9 +1,9 @@
-! Checksum: j7eMSd5WUbWK39CdfbFaOw
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1710508124-14400.patch
+! Checksum: YgR4pecq/jfOGdZ1fZAjig
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1710594401-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links.
-! Version: 2.0.7.57
-! TimeUpdated: 2024-03-15T13:04:19+00:00
+! Version: 2.0.7.58
+! TimeUpdated: 2024-03-16T13:03:23+00:00
 ! Expires: 5 days (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -371,8 +371,8 @@ $removeparam=REFERRAL_ID
 $removeparam=impradid
 $removeparam=impradname
 $removeparam=cm_type
-$document,removeparam=/^ref=cj$/i
-$document,removeparam=/^ref=awin$/
+Ref=CJ$document,removeparam=ref
+ref=awin$document,removeparam=ref
 $document,removeparam=/^source=pepperjam$/
 $document,removeparam=/^source=cj$/
 $removeparam=HACMP
@@ -488,8 +488,8 @@ $removeparam=adj_adgroup
 $removeparam=adj_creative
 $removeparam=_vsrefdom
 $removeparam=ceneo_spo
-$document,removeparam=/^from=ceneo$/
-$document,removeparam=/^ref=ceneo$/
+from=ceneo$document,removeparam=from
+ref=ceneo$document,removeparam=ref
 $removeparam=__s,document
 $removeparam=_kx
 $document,removeparam=/^affsrc=/i
@@ -540,7 +540,7 @@ $document,removeparam=/^refsource=webgains$/
 $document,removeparam=/^source=webgains$/
 $document,removeparam=/^source=tradedoubler$/
 $document,removeparam=/^network=webgains$/i
-$document,removeparam=/^ref=kelkoo/
+ref=kelkoo$document,removeparam=ref
 $document,removeparam=/^kk=\w{6,}-\w{10,}-\w{5,}$/
 $document,removeparam=/^from=kelkoo/
 $removeparam=sClickID
@@ -696,15 +696,15 @@ $removeparam=ads_targetid
 $removeparam=elqTrack
 $document,removeparam=/^from=rss$/
 $document,removeparam=/^source=rss$/
-$document,removeparam=/^ref=rss$/
-$document,removeparam=/^via=rss$/
+ref=rss$document,removeparam=ref
+via=rss$document,removeparam=via
 $removeparam=mindbox-click-id
 $document,removeparam=dtpid
 $removeparam=tj,domain=baidu.com|sina.com.cn
 $removeparam=tagtag_uid
 $removeparam=affiliateCode
 $removeparam=affcode
-$document,removeparam=/^ref=admitad$/
+ref=admitad$document,removeparam=ref
 $document,removeparam=/^source=admitad$/
 $document,removeparam=/^target=admitad$/
 $document,removeparam=/^referer=prisjakt/i
@@ -731,8 +731,8 @@ $removeparam=gaa_sig
 $removeparam=amp_gsa
 $removeparam=vgo_ee
 $removeparam=rpcid
-$document,removeparam=/^ref=prisjakt/i
-$document,removeparam=/^ref=pricespy/i
+ref=prisjakt$document,removeparam=ref
+ref=pricespy$document,removeparam=ref
 $document,removeparam=/^amp;utm_/
 $removeparam=sap-outbound-id
 $removeparam=analyticsCorrelationId
@@ -778,8 +778,8 @@ $document,removeparam=/^adppopup=[a-eg-zA-EG-Z0-9]/
 $removeparam=relatedposts_hit
 $removeparam=relatedposts_origin
 $removeparam=relatedposts_position
-$document,removeparam=/^ref=itsfoss.com$/
-$document,removeparam=/^ref=news.itsfoss.com$/
+ref=itsfoss.com$document,removeparam=ref
+ref=news.itsfoss.com$document,removeparam=ref
 $removeparam=b_source
 $removeparam=b_medium
 $removeparam=b_campaign
@@ -2325,7 +2325,7 @@ $removeparam=ad_sub,domain=homo.xxx
 $document,removeparam=waporef
 ||carsales.com.au^$removeparam=Cr,document
 $removeparam=sdsrc,document
-$removeparam=/^ref=troyhunt\.com/
+ref=troyhunt.com$document,removeparam=ref
 ||shrunken.com^$document,removeparam=shortUrlDomain
 ||disneyplus.com^$removeparam=distributionPartner
 ||homedepot.com^$removeparam=fromReminder
@@ -2359,7 +2359,7 @@ $document,removeparam=wp_source,domain=ac24.cz|ambcrypto.com|glispa.com|whitepag
 ||cnbc.com^$document,removeparam=par
 ||businessinsider.com^$document,removeparam=r
 ||businessinsider.com^$removeparam=op,document
-$removeparam=/^ref=spreadprivacy.com$/
+ref=spreadprivacy.com$removeparam=ref
 $removeparam=caniuse_source,document
 ||theathletic.com^$removeparam=checkout_entry_point,document
 ||theathletic.com^$removeparam=ref_page,document
@@ -2396,8 +2396,8 @@ $removeparam=dyn,domain=clink2.com|dlink2.com,document
 ||instagram.com^$removeparam=ig_rid
 ||cdninstagram.com^$removeparam=_nc_sid
 ||adguard.info^$removeparam=nc
-ref=404media.co$document,removeparam=/^ref=404media.co$/
-ref=easywithai$document,removeparam=/^ref=easywithai$/
+ref=404media.co$document,removeparam=ref
+ref=easywithai$document,removeparam=ref
 ||slack.com/downloads/$document,removeparam=t
 $document,removeparam=jp_cmp,domain=chase.com
 $document,removeparam=orig_ref,domain=peacocktv.com
@@ -2441,10 +2441,10 @@ $removeparam=BT_VanityDomain,domain=citi.com
 $document,removeparam=deliveryName,domain=abp.nl
 $document,removeparam=wt_mc
 $document,removeparam=wt_zmc
-ref=exploit.media$document,removeparam=/^ref=exploit.media$/
+ref=exploit.media$document,removeparam=ref
 $document,removeparam=bpli,domain=blogger.com
 $document,removeparam=st,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
-ref=beep.blog$document,removeparam=/^ref=beep.blog$/
+ref=beep.blog$document,removeparam=ref
 ||tempo.co^$document,removeparam=tracking_page_direct
 ||gitlab.$removeparam=ref_type
 ||trendyol.com^$document,removeparam=link_userID
@@ -2461,9 +2461,9 @@ ref=beep.blog$document,removeparam=/^ref=beep.blog$/
 ||cimri.com^$document,removeparam=offerCount
 ||cimri.com^$document,removeparam=offerFiltered
 ||cimri.com^$document,removeparam=hasFavorite
-ref=blog.roboflow.com$document,removeparam=/^ref=blog.roboflow.com$/
+ref=blog.roboflow.com$document,removeparam=ref
 ||gitlab.com^$document,removeparam=nav_source
-ref=buffer.com$document,removeparam=/^ref=buffer.com$/
+ref=buffer.com$document,removeparam=ref
 ||bybit.com^$document,removeparam=/^sa_utm_/i
 $document,removeparam=gci
 $document,removeparam=af_reengagement_window
@@ -2477,7 +2477,7 @@ $document,removeparam=af_reengagement_window
 ||affiliate.insider.com^$document,removeparam=platform
 ||affiliate.insider.com^$document,removeparam=postID
 ||affiliate.insider.com^$document,removeparam=postSlug
-||wordpress.com^$removeparam=/^ref=[a-z-]{5,}$/
+||wordpress.com^$document,removeparam=/^ref=[a-z-]{5,}$/
 $removeparam=context,domain=avito.ru|avito.ma
 $document,removeparam=_x_ns_sku_id,domain=temu.com
 $document,removeparam=_x_ads_channel,domain=temu.com
@@ -2536,8 +2536,8 @@ $removeparam=cgkit_search_word
 ||shop.samsung.com^$document,removeparam=hmz_campaign
 ||shop.samsung.com^$document,removeparam=hmz_inf
 ||shop.samsung.com^$document,removeparam=hmz_lid
-ref=labs.watchtowr.com$document,removeparam=/^ref=labs.watchtowr.com$/
-ref=upstract.com$document,removeparam=/^ref=upstract.com$/
+ref=labs.watchtowr.com$document,removeparam=ref
+ref=upstract.com$document,removeparam=ref
 ||koreaherald.com^$document,removeparam=ACE_SEARCH
 ||abcnyheter.no^$removeparam=nr
 ||windscribe.com^$document,removeparam=pcpid
@@ -2558,7 +2558,7 @@ $document,removeparam=vsm_pid
 ||carousell.$removeparam=t-source
 ||carousell.$removeparam=t-tap_index
 $document,removeparam=pk_cid
-ref=zetter-zeroday.com$document,removeparam=/^ref=zetter-zeroday.com$/
+ref=zetter-zeroday.com$document,removeparam=ref
 ||qzone.qq.com^$document,removeparam=loginfrom
 ||qzone.qq.com^$document,removeparam=jumptoqzone
 ||qzone.qq.com^$document,removeparam=subtype
@@ -2581,8 +2581,8 @@ ref=zetter-zeroday.com$document,removeparam=/^ref=zetter-zeroday.com$/
 ||urlshare.cn^$document,removeparam=src_scene
 ||urlshare.cn^$document,removeparam=cli_scene
 $document,removeparam=Tcsack
-ref=awesometechstack.com$document,removeparam=/^ref=awesometechstack.com$/
-ref=gtg.benabraham.net$document,removeparam=/^ref=gtg.benabraham.net$/
+ref=awesometechstack.com$document,removeparam=ref
+ref=gtg.benabraham.net$document,removeparam=ref
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
 $removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
 $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
