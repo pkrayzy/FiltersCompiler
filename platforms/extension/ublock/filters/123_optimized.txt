@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: pLgYeVcBYVwYwW5R5zNQtQ
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1710724104-14400.patch
+! Checksum: jC6//qs35cpelJRiizJB+w
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1710738453-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.11
-! TimeUpdated: 2024-03-18T01:02:42+00:00
+! Version: 2.1.21.12
+! TimeUpdated: 2024-03-18T05:02:27+00:00
 ! Expires: 5 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -670,6 +670,7 @@ _socialfancysliders/
 ###social-bottom
 ###social-box
 ###social-buttons-nav
+###social-buttons-transporter
 ###social-channels
 ###social-col
 ###social-column
@@ -751,6 +752,7 @@ _socialfancysliders/
 ###socialInstagram
 ###socialLinks
 ###socialLinksContainer
+###socialLogos
 ###socialMedia
 ###socialMediaMenu
 ###socialMediaSection
@@ -2048,6 +2050,7 @@ _socialfancysliders/
 ##.header-social-shares
 ##.header-social-twitter
 ##.header-socials
+##.header-tools-social-links
 ##.header-top-social
 ##.header-top-social-link
 ##.header-top__social
@@ -2549,6 +2552,7 @@ _socialfancysliders/
 ##.mobile-social-wrapper
 ##.mobile-socialshare-bottom
 ##.mobileShare
+##.mobilesocial
 ##.mod-facebook
 ##.mod-follow
 ##.mod-social
@@ -2844,6 +2848,7 @@ _socialfancysliders/
 ##.react-share__ShareButton
 ##.react_share_icons
 ##.reddit-icon
+##.reddit-share-btn
 ##.reddit-share-button
 ##.reddit_button
 ##.redes-sociais
@@ -2944,6 +2949,7 @@ _socialfancysliders/
 ##.share-addthis
 ##.share-alt
 ##.share-anchor
+##.share-and-comments
 ##.share-area
 ##.share-art
 ##.share-article
@@ -3422,6 +3428,7 @@ _socialfancysliders/
 ##.sharing__list
 ##.sharing_block
 ##.sharing_box
+##.sharing_button
 ##.sharing_buttons
 ##.sharing_container
 ##.sharing_menu
@@ -3689,6 +3696,7 @@ _socialfancysliders/
 ##.social-list:not(html):not(body)
 ##.social-listing:not(html):not(body)
 ##.social-main-footer
+##.social-media--container
 ##.social-media-banner
 ##.social-media-bar
 ##.social-media-column
@@ -3808,6 +3816,7 @@ _socialfancysliders/
 ##.social-siderail-l
 ##.social-single
 ##.social-site
+##.social-site-links
 ##.social-sites
 ##.social-sliver
 ##.social-static
@@ -3909,6 +3918,7 @@ _socialfancysliders/
 ##.socialShareLinks
 ##.socialSharing
 ##.socialSideBar
+##.socialSidebar
 ##.socialSquare
 ##.socialTab
 ##.socialToggle
@@ -4155,6 +4165,7 @@ _socialfancysliders/
 ##.story_share
 ##.storyshare
 ##.stripe-social
+##.stwitter
 ##.sub_sns
 ##.sub_twitter
 ##.subfooter-social
@@ -4162,6 +4173,7 @@ _socialfancysliders/
 ##.subscribe__follow
 ##.subscribe_block
 ##.subscribe_icons
+##.subscribe_tw
 ##.svp-share
 ##.switchShare
 ##.swp-hover-pin-button
@@ -4503,6 +4515,7 @@ _socialfancysliders/
 ##.widget_twitter_timeline
 ##.widget_twitter_widget
 ##.widget_vw_widget_social_counter
+##.widget_vw_widget_social_subscription
 ##.widget_wpcom_social_media_icons_widget
 ##.widget_wpgrade_social_links
 ##.wp-block-social-links
@@ -4785,6 +4798,7 @@ pinetools.com###social-icons
 coindesk.com###social-icons-box
 theepochtimes.com###social_share_widget
 salon.com###social_total
+news.crunchbase.com###ss-sticky-bar
 osxdaily.com###subscribe_box
 thenewstack.io###tns-footer-bar
 reuters.com###toolbar-item-parent-share-12
@@ -4822,6 +4836,7 @@ freebeacon.com##.article-share-icons
 babylonbee.com,notthebee.com##.article-shareables
 cosmosmagazine.com,forbes.com,phillyvoice.com##.article-sharing
 newrepublic.com##.article-social
+heraldscotland.com##.article-sticky-social
 dailystar.com.lb,eurekalert.org##.article-tools
 nationalreview.com##.article-utility-nav
 techcrunch.com##.article__floating-wrap
@@ -4867,6 +4882,7 @@ lawandcrime.com##.c-header-social-item
 kyivindependent.com##.c-share__wrapper
 theglobeandmail.com##.c-site-header__buttons
 vox.com##.c-social-buttons
+marketplace.org##.c-story-meta__share
 cgdirector.com##.cgd-social-wrapper
 thecinemaholic.com##.cinemaholic-share
 edugeek.net##.cms_widget_content.widget_content > [align="center"]
@@ -5070,6 +5086,7 @@ getpocket.com##.social-actions
 vaticannews.va##.social-btn
 businessinsider.in##.social-common-blck
 fujitsu.com##.social-content
+livecoinwatch.com##.social-feed-container
 gfinityesports.com,stealthoptional.com##.social-follow-unit
 india.com,news18.com,wionews.com##.social-icon
 cntraveler.com##.social-icons--share
@@ -5107,6 +5124,7 @@ lithub.com##.social_links
 outlookindia.com##.social_sharing_article
 businesstoday.in##.social_tracking
 traveltriangle.com##.socialshare_box
+news.crunchbase.com##.ss-inline-share-content
 cryptonews.com##.ssk
 bbc.co.uk##.ssrcss-11faxz6-TagShareWrapper
 sundayworld.co.za##.sticky-buttons
