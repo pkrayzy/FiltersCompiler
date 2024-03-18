@@ -1,9 +1,9 @@
-! Checksum: 1+93baKnyLPhbl+OKetQuw
-! Diff-Path: ../patches/1/1-s-1710751091-3600.patch
+! Checksum: a8SuSdUqZl9l0CHUrtRPLQ
+! Diff-Path: ../patches/1/1-s-1710770433-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.32
-! TimeUpdated: 2024-03-18T08:33:07+00:00
+! Version: 2.0.89.33
+! TimeUpdated: 2024-03-18T13:35:27+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4386,7 +4386,7 @@ positiverecords.ru#@#.ad-google
 pikabu.ru#%#//scriptlet('abort-on-stack-trace', 'XMLHttpRequest', 'createAd')
 pikabu.ru#%#//scriptlet('prevent-setTimeout', '_sendAnalytics')
 pikabu.ru#%#//scriptlet('json-prune', 'data', 'errors')
-pikabu.ru#%#//scriptlet('remove-node-text', 'script', 'addTracker')
+pikabu.ru#%#//scriptlet("remove-node-text", "script", "/let [a-zA-Z0-9]{5,10} = 'https:\/\/pikabu\.ru\/[a-zA-Z0-9]{5,10}\/[a-zA-Z0-9]{5,10}\//")
 ! sports.ru
 sports.ru#%#//scriptlet('json-prune', 'direct rtbAuctionInfo')
 sports.ru#%#//scriptlet('set-constant', 'Ya.adfoxCode.create', 'noopFunc')
@@ -7629,6 +7629,7 @@ ivanovonews.ru,gorodn.ru,bits.media,devyatka.ru,gazeta-n1.ru,gorod48.ru,hi-fi.ru
 !
 !
 !
+vk-smi.ru##.p-news
 enthub.it##article > section > a[target="_blank"] > img
 sravni.ru##a[href^="https://sravni.go2cloud.org/"]
 sravni.ru#$#div[class*="_wrapper"][style^="--branding-"] {  --branding-container-height: 20px !important; visibility: hidden !important; }
