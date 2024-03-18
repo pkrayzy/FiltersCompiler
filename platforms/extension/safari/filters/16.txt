@@ -1,9 +1,9 @@
-! Checksum: XPZb6r8TVTo1knGcLbKnPA
-! Diff-Path: ../patches/16/16-s-1710747537-3600.patch
+! Checksum: jFfDWE0dsgK4nG7koWJVNA
+! Diff-Path: ../patches/16/16-s-1710758432-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.44.7
-! TimeUpdated: 2024-03-18T07:32:57+00:00
+! Version: 2.0.44.8
+! TimeUpdated: 2024-03-18T10:33:19+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -127,6 +127,10 @@ capital.fr#@#.plainAd
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/22958
+rustica.fr#%#//scriptlet('set-constant', 'checkAdsBlocked', 'noopFunc')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=rustica.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172868
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=oqee.tv
@@ -801,6 +805,8 @@ tf1info.fr#%#//scriptlet('set-constant', '__NEXT_DATA__.runtimeConfig.playerTF1.
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! https://github.com/uBlockOrigin/uAssets/issues/22958
+rustica.fr#$#@media (min-width: 992px) { html > body.hasHabillage { padding-top: 0 !important; } }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172925
 deco.fr,fourchette-et-bikini.fr#$#.site_content { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171681
