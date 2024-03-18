@@ -1,14 +1,14 @@
-! Checksum: uVeZv6e+CY37MfqKaVnvbw
-! Diff-Path: ../patches/227/227-s-1710508168-14400.patch
+! Checksum: afvOsg+k5tEqzJR4Lwxf2Q
+! Diff-Path: ../patches/227/227-s-1710767530-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.17.92
-! TimeUpdated: 2024-03-15T13:03:29+00:00
+! Version: 2.0.17.93
+! TimeUpdated: 2024-03-18T13:06:52+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2024.0315.0
+! OriginalVersion: 2024.0318.7
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://community.list-kr.com/docs/
@@ -244,6 +244,7 @@
 ||awd.spochak.com^
 !
 ! DOMAIN-REFRESHER: END
+||kiesta.net^$third-party
 ||nsmartad.com^
 ||authanalysis.com^$third-party
 ||adfork.co.kr^
@@ -511,6 +512,10 @@
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
 !
+||100news.kr/data/100news_kr/banner/
+||ad-img.gmarket.com/ADS/Contents_/$domain=signin.gmarket.co.kr
+||search.danawa.com/mobile/ajax/adProduct/$xmlhttprequest
+||search.danawa.com/ajax/adProduct/$xmlhttprequest
 ||bjapi.afreecatv.com/api/ad/
 ||google.com/adsense/ad
 ||google.com/adsense/domains
@@ -1455,7 +1460,7 @@ mimint.co.kr,economist.co.kr,dailian.co.kr,bigkinds.or.kr,hungryapp.co.kr,rhythm
 ! ##div[class$="banner"]
 sports.chosun.com,dcinside.com##div[class$="banner"]
 ! ##div[class$="-banner"]
-eanews.kr,economist.co.kr,philgo.com,ondisk.co.kr,blockchainhub.kr,cineaste.co.kr,jpaxnet.co.kr,bigkinds.or.kr,toomics.com,ilbe.com##div[class$="-banner"]
+signin.gmarket.co.kr,eanews.kr,economist.co.kr,philgo.com,ondisk.co.kr,blockchainhub.kr,cineaste.co.kr,jpaxnet.co.kr,bigkinds.or.kr,toomics.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
 bgchang.co.kr,edit.incruit.com,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
@@ -1493,6 +1498,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+talk-cargo.com##.basic-body-main > .margin-bottom-5:has(a[target="_blank"][tabindex])
 issuelink.co.kr##table.table-stripped tr:is(:has(.ad), :has(.adsbygoogle))
 www.instiz.net##body > div[style]:has(> div[class^="powerlink_"])
 www.instiz.net##body > .foot:has(> div[style*="margin:"][id^="d"])
@@ -2562,6 +2568,7 @@ www.erdcloud.com##.erd-ads-area
 !
 ! DOMAIN-REFRESHER: START
 !
+coktv.*##.custom_banner_wrap
 avguri2.com,avguri3.com,avguri4.com,avguri5.com,avguri6.com,avguri7.com,avguri8.com,avguri9.com,avguri10.com,avguri11.com,avguri12.com,avguri13.com###hd_pop
 bbongtv.*##img[src^="/img/"][src*=".gif"]
 ygy48.com,ygy49.com,ygy50.com,ygy51.com,ygy52.com,ygy53.com,ygy54.com,ygy55.com,ygy56.com,ygy57.com,ygy58.com,ygy59.com,ygy60.com,ygy61.com##.popup_wrap
@@ -2628,7 +2635,7 @@ booktoki323.com,booktoki324.com,booktoki325.com,booktoki326.com,booktoki327.com,
 hellven.net##a[href^="http"][target="_blank"].thumbnail
 dajunbi.com##div[class^="banner_"]
 spotv112.com,spotv113.com,spotv114.com,spotv115.com,spotv116.com,spotv117.com,spotv118.com,spotv119.com,spotv120.com,spotv121.com,spotv122.com,spotv123.com,spotv124.com,spotv125.com,spotv126.com,spotv127.com,spotv128.com,spotv129.com,spotv130.com##div[id$="-banner"]
-anilife.*##div[class$="-banner"]
+anilife.*##div[class^="banner-"]
 qooqootv.fun##div[class^="banner_"]
 lover924.net,lover925.net,lover926.net,lover927.net,lover928.net,lover929.net,lover930.net,lover931.net,lover932.net,lover933.net##.xe_content span ~ div[style]
 agit627.xyz,agit628.xyz,agit629.xyz,agit630.xyz,agit631.xyz,agit632.xyz,agit633.xyz,agit634.xyz,agit635.xyz,agit636.xyz,agit637.xyz,agit638.xyz,agit639.xyz,agit640.xyz,agit641.xyz,agit642.xyz,agit643.xyz,agit644.xyz,agit645.xyz,agit646.xyz,agit647.xyz,agit648.xyz,agit649.xyz,agit650.xyz,agit661.xyz##.banner
@@ -3290,8 +3297,12 @@ aagag.com#@#ins.adsbygoogle
 aagag.com#$#.la { height: 75px !important; width: 75px !important; visibility: hidden !important; }
 ! t.hi098123.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=t.hi098123.com
-t.hi098123.com#$#.tabad { visibility: hidden !important; }
-t.hi098123.com#$#article.inner2 { top: 0px !important; }
+@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2021.js$domain=t.hi098123.com
+t.hi098123.com#@#ins.adsbygoogle
+!#safari_cb_affinity(privacy)
+@@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
+!#safari_cb_affinity
+t.hi098123.com#$#.tabad { top: -100px !important; }
 !
 svrforum.com##body > div[class][style*="box-shadow:"]
 luckyquiz3.blogspot.com#%#//scriptlet('abort-on-stack-trace', 'Node.prototype.insertBefore', '.html')
