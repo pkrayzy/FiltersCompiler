@@ -1,9 +1,9 @@
-! Checksum: CjOsMKU+JtW8sjk6iOgHEw
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1710773672-3600.patch
+! Checksum: +8Un+Bi+vPawS1afCev+nw
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1710776431-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.13.1
-! TimeUpdated: 2024-03-18T13:35:28+00:00
+! Version: 2.0.13.2
+! TimeUpdated: 2024-03-18T15:33:28+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -409,7 +409,7 @@ point.md#?#.bottom-bar > div:has(> a.bottombar-download)
 klook.com#$#.default-header { top: 0px !important; }
 m.v.qq.com##.at-app-banner
 peru21.pe###appstick
-fontanka.ru#?#div[data-io-article-url] > div[class]:has(> a[href^="https://redirect.appmetrica.yandex.com/serve/"])
+fontanka.ru##div[data-io-article-url] > div[class]:has(svg ~ a[href^="https://redirect.appmetrica.yandex.com/"] > span)
 m.11st.co.kr##.c-footer__app-download
 finance.sina.com.cn##.m-p1-lb2_5
 haokan.baidu.com##.player-pause-code
@@ -1226,6 +1226,7 @@ zhihu.com##.OpenInAppButton
 theguardian.com##.site-message--banner
 bing.com#$#body > div[id^="bnp.nid"] { display: none !important; }
 bing.com#$#html[style="overflow: hidden;"] { overflow: visible !important; }
+bing.com#$#html[style^="background:"][style$="overflow: hidden;"] { overflow: visible !important; }
 avito.ru##.common-banner
 sina.cn##.fl_qr
 ||static.fastpic.ru/android.png

@@ -1,9 +1,9 @@
-! Checksum: O2xjBv2W4Q8d1GtmcwcXdg
-! Diff-Path: ../patches/20/20-s-1710772946-3600.patch
+! Checksum: hNt8TKmPHQpqdFBjC+f+eQ
+! Diff-Path: ../patches/20/20-s-1710776408-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.13.1
-! TimeUpdated: 2024-03-18T13:35:28+00:00
+! Version: 2.0.13.2
+! TimeUpdated: 2024-03-18T15:33:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -656,7 +656,7 @@ klook.com#$#.default-header { top: 0px !important; }
 m.v.qq.com##.at-app-banner
 peru21.pe###appstick
 guides.gamepressure.com##.guide19-app-cc
-fontanka.ru#?#div[data-io-article-url] > div[class]:has(> a[href^="https://redirect.appmetrica.yandex.com/serve/"])
+fontanka.ru##div[data-io-article-url] > div[class]:has(svg ~ a[href^="https://redirect.appmetrica.yandex.com/"] > span)
 m.11st.co.kr##.c-footer__app-download
 finance.sina.com.cn##.m-p1-lb2_5
 qanda.ai###__next > footer + div[type="bottom"]
@@ -2527,6 +2527,7 @@ theguardian.com##.site-message--banner
 ||hibiny.com/images/new_site/iphone/google-play.png
 bing.com#$#body > div[id^="bnp.nid"] { display: none !important; }
 bing.com#$#html[style="overflow: hidden;"] { overflow: visible !important; }
+bing.com#$#html[style^="background:"][style$="overflow: hidden;"] { overflow: visible !important; }
 vnexpress.net##.box_vne_app_pin
 ivoox.com##.banner-box
 msn.com###NewsApps
