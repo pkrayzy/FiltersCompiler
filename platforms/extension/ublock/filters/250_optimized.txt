@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: 5FY/TBm9jtmlFwmaXhtpog
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1710810539-14400.patch
+! Checksum: illjgveWF2P7wXKhj5IuRg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1710825057-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.13.72
@@ -241,6 +241,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||auslogics.com^$document
 ||23.111.31.137^$document
 ||23.111.88.207^$document
+||onesafesoftware.com^$document
 ||45.90.58.90^$document
 ||agkn.com^$document
 /(^|\.|//)tkqlhce\.com/click-.*([?&][a-tv-z]{1,}(=[a-zA-Z0-9]{1,})?){1,}$/$document
@@ -1407,6 +1408,7 @@ portal.moi.gov.qa##li:has(> a[href*="/prayertimings/"])
 thenews.com.pk##a[href$="/prayer-time"]
 yeniakit.com.tr##.info-bar > li:not([class], [title])
 star.com.tr##.pray
+ahaber.com.tr##.menu-timer
 trgthaber.com.tr,haberturk.com##a[href$="namaz-vakitleri"]
 todaytime.ir##.navbar-nav [href="/اوقات-شرعی-اذان"]
 ##a[href$=PrayerTimes]
@@ -1500,7 +1502,6 @@ $removeparam=ysclid
 &uclick=*&uclickhash=$document,removeparam
 /?r=dir&zoneid=$document,removeparam
 /?rb=*&zoneid=$document,removeparam
-/?uclick=*;uclickhash=$document,removeparam
 $document,removeparam=/^\??utm_/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl
 $document,removeparam=/^itm_/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_/,domain=~redir.tradedoubler.com
@@ -1803,6 +1804,7 @@ $removeparam=vero_conv
 $removeparam=vero_id
 $removeparam=a_aid
 $removeparam=otracker
+$removeparam=otracker1
 $removeparam=ft_source
 $removeparam=ft_medium
 $removeparam=ref_source
@@ -1875,28 +1877,20 @@ $removeparam=cm_pla
 $removeparam=cm_ite
 $removeparam=cm_lm
 $removeparam=cm_ainfo
-$document,removeparam=/^Offers\.com/
 $removeparam=CSID
-$document,removeparam=/^source=connexity$/
 $removeparam=cnxclid
-$document,removeparam=/^refsource=webgains$/
 $document,removeparam=/^source=webgains$/
-$document,removeparam=/^source=tradedoubler$/
-$document,removeparam=/^network=webgains$/i
 ref=kelkoo^$document,removeparam=ref
 $document,removeparam=/^kk=\w{6,}-\w{10,}-\w{5,}$/
 $document,removeparam=/^from=kelkoo/
-$document,removeparam=/^source=partnerads$/
 $removeparam=paid
 $removeparam=pacid
 $removeparam=pa-partnerid
-||prispresseren.dk^$document,removeparam=/^amp;/
 $removeparam=adtype
 $removeparam=tmad
 $removeparam=tmcampid
 $removeparam=s_afcid
 $removeparam=n_cid
-$document,removeparam=/^src=aff$/
 $removeparam=af_ad
 $removeparam=af_ad_id
 $removeparam=af_ad_type
@@ -1936,12 +1930,10 @@ $removeparam=trk_ref
 $removeparam=ircid
 $removeparam=dfw_tracker
 $document,removeparam=/^src=rss$/
-$document,removeparam=/^otm_/
 $removeparam=amp_device_id
 $removeparam=awinaffid
 $removeparam=iclid
 $removeparam=rndad
-$document,removeparam=/^tracker=affiliatefuture$/i
 $removeparam=affc
 $removeparam=a_fid
 $removeparam=afCampaignId
@@ -1958,8 +1950,6 @@ $removeparam=s_kwcid
 $removeparam=dm_i
 $removeparam=epik
 $document,removeparam=/^mtm_/
-$document,removeparam=/^matomo_/
-$document,removeparam=/^piwik_/
 $removeparam=pk_campaign
 $removeparam=pk_medium
 $removeparam=pk_source
@@ -1986,9 +1976,6 @@ $removeparam=tagtag_uid
 $removeparam=affiliateCode
 $removeparam=affcode
 ref=admitad^$document,removeparam=ref
-$document,removeparam=/^source=admitad$/
-$document,removeparam=/^target=admitad$/
-$document,removeparam=/^referer=prisjakt/i
 $removeparam=cx_testId
 $removeparam=cx_testVariant
 $removeparam=cx_artPos
@@ -2031,12 +2018,10 @@ $removeparam=as_campaign
 $removeparam=as_camptype
 $removeparam=as_channel
 $removeparam=as_source
-$document,removeparam=/^source=igodigital$/
 $removeparam=qq-pf-to
 $removeparam=mibextid
 $removeparam=li_source
 $removeparam=li_medium
-$document,removeparam=/^adpopup=[a-eg-zA-EG-Z0-9]/
 $document,removeparam=/^adppopup=[a-eg-zA-EG-Z0-9]/
 $removeparam=relatedposts_hit
 $removeparam=relatedposts_origin
@@ -2099,6 +2084,7 @@ $removeparam=tp_uid
 $removeparam=td_client_id
 $removeparam=ft_section
 $removeparam=correlator
+$removeparam=ap_id
 $removeparam=ucf_user_id
 $removeparam=yandexuid
 $removeparam=google_nid
@@ -2626,6 +2612,7 @@ $removeparam=adcampaigngroup
 ||malwarebytes.com^$removeparam=x-source
 ||malwarebytes.com^$removeparam=ADDITIONAL_x-source
 ||ozon.ru^$removeparam=advert
+$document,removeparam=sh,domain=forbes.com|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 $removeparam=soc_src
 $removeparam=soc_trk
 $removeparam=ia-pkpmtrack
@@ -3074,8 +3061,6 @@ $document,removeparam=af_xp
 ref=labs.watchtowr.com$document,removeparam=ref
 ref=upstract.com$document,removeparam=ref
 ||windscribe.com^$document,removeparam=pcpid
-||ubereats.com^$document,removeparam=marketing-visitor-id
-||ubereats.com^$document,removeparam=sub-campaign
 $document,removeparam=vsm_type
 $document,removeparam=vsm_cid
 $document,removeparam=vsm_pid
