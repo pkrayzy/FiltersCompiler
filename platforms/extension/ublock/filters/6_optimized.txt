@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: B0rHfsrR7hUlOd0zLCoXzw
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1710729416-3600.patch
+! Checksum: 6eYT0r4fPFGna2rujRARvw
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1710815841-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.40.99
@@ -687,6 +687,7 @@ computerwoche.de#$#.idgGoogleAdTag { position: absolute !important; left: -9999p
 bluray-disc.de#$#html { cursor: auto !important; }
 3c.web.de#$#html.can-have-sky .section-content { margin-right: 0px !important; }
 3c-bap.web.de,3c-bap.gmx.net#$#.page-body > .section-content { margin-right: 0px !important; }
+giga.de#$#nav[data-role="alice-sub-navbar"][data-position="smart-sticky"] { margin-top: auto !important; }
 golem.de#$#.wraptusplit { min-height: auto!important; }
 3c.gmx.net#$#.page-body > .section-1 > .section-container { bottom: 0px !important; }
 3c.gmx.net#$#.page-body > .section-1 { margin-right: 0px !important; }
@@ -1219,6 +1220,7 @@ businessinsider.de##.superbanner-container
 gutekueche.at##div[id^="ad_cont_"]
 onvista.de##atf-ad-slot
 laenderdaten.info##.adtg
+laenderdaten.info##div[style^="min-height:90px;"][style*="padding:15px;"]
 fernsehserien.de##ins[id^="werbemittel"]
 geekguide.de##.entry-content > #inArticle
 vpntester.org##.pupop-wrapper
@@ -1724,6 +1726,7 @@ krone.at##.kmm-article-box + .row > .c_label
 ||pfaffenhofen-today.de/images/banners/
 eurosport.de##div[class^="adtech_"]
 augsburger-allgemeine.de##.p-ad
+ef-magazin.de###articlefootad
 sueddeutsche.de##.ad:not([class="ad"]):not(.ad_iqadtileOOP)
 finanzen.net##.small-font.light-grey
 finanzen.net##:not(td) > a[href^="http://g.finanzen.net/"]
@@ -2273,9 +2276,11 @@ rtl.de#@#.rtlde-medium-rectangle
 /werbung90.
 /werbung_*?
 /werbung__
+/werbung_vertical.
 /werbungsbilder/*
 /Widgets/Werbung/*
 _Banner_Werbung_
+_Bannerwerbung.
 _werbebanner.
 _werbebanner/
 _werbung.php
@@ -2416,6 +2421,7 @@ _werbung.php
 ##a[href^="https://ads.sunmaker.com/tracking.php?"]
 ##a[href^="https://bd742.com/"]
 ##a[href^="https://clicks.imaxcash.com/?aff_"]
+##a[href^="https://dpm.affaire18.com/click.php?dp="]
 ##a[href^="https://dpm.jungekontakte.com/click.php?dp="]
 ##a[href^="https://feed.solads.media/"]
 ##a[href^="https://marketing.net.brillen.de/"]
@@ -2522,6 +2528,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||blogads.de^$third-party
 ||cashdorado.de^$third-party
 ||chatntr.com^$third-party
+||ci-marketing.de^$third-party
 ||cmadserver.de^$third-party
 ||conative.de^$third-party
 ||connects.ch^$third-party
@@ -2537,6 +2544,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||finative.cloud^$third-party
 ||fotoscaseras.top^$third-party
 ||gbucket.ch^$third-party
+||gigapromo.de^$third-party
 ||green-ads.net^$third-party
 ||h5v.eu^$third-party
 ||ibanner.de^$third-party
@@ -2863,6 +2871,8 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||msecnd.net/endpoint/shipment/$domain=merkurist.de
 ||msh-online.de/_daten/banner/
 ||mtb-news.de/news/wp-content/plugins/mtbn-ads/
+||multilingual.de^*/sprachreisen_0.gif
+||multilingual.de^*/sprachschule-malta.gif
 ||musiker-board.de^*/siropu/aml/
 ||musiksampler.de/cgi-bin/arlight/view.php
 ||mygully.com/at1.php
@@ -3264,6 +3274,7 @@ ladies.de###page-closing-sol
 ladies.de###page-top-sol
 inside-digital.de###parallax
 moz.de,swp.de###parent-adbox-superbanner
+efahrer.chip.de###partner-nav
 fundresearch.de###partnerCentersLogoBar
 pedelecforum.de###pedelecforum\.de_mpu_bot
 photovoltaikforum.com###pf_incontent_2
@@ -3310,6 +3321,7 @@ bafoeg-rechner.de,studis-online.de###ston-footer-ad
 chilloutzone.net###superreplacement
 ddl-warez.cc###tab-1 p:nth-of-type(1),#tab-1 p:nth-of-type(2),#tab-1 p:nth-of-type(3),#tab-1 p:nth-of-type(4)
 4kfilme.de###tdi_39
+lokalo.de###tdi_67
 giga.de,kino.de,watson.de###teaserheld-header
 tennisnet.com###tennisnetWidget
 computerschach.de,nachrichten.es,nh24.de,randombrick.de,tollabea.de###text-2
@@ -3444,6 +3456,7 @@ onlinehaendler-news.de##.article-rectangle
 computerbase.de##.article-view__rectangle
 itmagazine.ch##.article_rectangle
 rhein-zeitung.de##.articlebody__rectangle
+dererker.it##.articles-pr-box
 prad.de##.asa2_ajax_container
 fitforfun.de##.aside-rectangle
 hockeyweb.de,scienceblogs.de,tourenfahrer.de,unicum.de,wissen.de,wissenschaft.de##.asm_async_creative
@@ -3512,6 +3525,7 @@ tvspielfilm.de##.button.affiliate
 lounge.fm##.buy
 eventelevator.de##.bwdfb-widget
 lecker.de,praxisvita.de##.bx-ada
+dererker.it##.bxslider
 t3n.de##.c-ad-container
 rockantenne.bayern,rockantenne.de##.c-image--left
 finanznachrichten.de##.c-sban1
@@ -3625,6 +3639,7 @@ my-homo.net##.gxt_banner
 my-homo.net##.gxt_feed
 qiez.de##.h5v
 helpster.de##.h5v-ad
+hallobuer.ruhr##.hallo-inhalt_2
 pornohut.info##.happy-player-beside
 ak-kurier.de##.hd-banner
 fkk24.de##.head-top-bannerplace
@@ -3739,6 +3754,8 @@ gmx.net,web.de##.partner-links
 herthabsc.com##.partner-main-footer
 eintracht.com##.partner-wrapper
 esports.ch,hannover96.de,p-stadtkultur.de,sihf.ch##.partners
+dererker.it##.partvert
+dererker.it##.partvert-right
 otto.de##.pdp_reco-sponsored
 heise.de##.perf-cls-reduc-leaderboard
 heise.de##.perf-cls-reduc-rectangle
@@ -3968,6 +3985,7 @@ berliner-stadtplan.com,dein-plan.de,hamburger-stadtplan.com,hannover-stadtplan.c
 chip.de##a[href^="https://www.chip.de/downloads/"][href$=".html"] > figure > img
 pi-news.net##a[href^="https://www.fincabayano.net/"]
 schwedenstube.de##a[href^="https://www.lead-alliance.net/tc.php"]
+sexabc.ch##a[href^="https://www.mydirtyhobby.de/"][href*="?ats="]
 areadvd.de##a[href^="https://www.teufel.de/sales?partner_id="]
 pornoente.tv,pornohirsch.net,pornolisa.com,pornotanja.com##a[href^="https://www.tik-tok-dates.com/"]
 pcwelt.de##a[href^="https://www.tkqlhce.com/click-"]
@@ -4125,6 +4143,7 @@ lokalo.de##img[height="250"]
 warez-ddl.net##img[height="90"]
 ak-kurier.de,nr-kurier.de,ww-kurier.de##img[name="banner"]
 darts1.de##img[width="120"]
+wirsiegen.de##img[width="140"][height="180"]
 prewarcar.de##img[width="160"][height="92"]
 mikanews.de##img[width="180"][height="120"]
 kultur-port.de,utvmagazin.de##img[width="200"][height="600"]
@@ -4137,6 +4156,7 @@ nh24.de##img[width="533"]
 report24.news##img[width="587"][height="562"]
 report24.news##img[width="600"][height="550"]
 championstream.de,fruchthandel.de,ibooks.to,online-gebuehrenrechner.de,vfl.de##img[width="728"][height="90"]
+lokalo.de##img[width="770"]
 petra.de##kas
 vital.de##kas[type="placement"]
 nau.ch##nau-external-content-lazy
