@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ZpUQovtSOMaKV1ztaAPX4A
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1710837425-3600.patch
+! Checksum: lRuwq4Wa7IdfPQ6lov8VeA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1710841040-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.27.33
-! TimeUpdated: 2024-03-19T08:33:03+00:00
+! Version: 2.3.27.34
+! TimeUpdated: 2024-03-19T09:33:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7088,7 +7088,6 @@ tiktokcounter.net##+js(set-constant, isAdClickDone, true)
 tiktokcounter.net##+js(remove-class, is-hidden, #checkclick)
 @@/adpartner.min.js$domain=tiktokcounter.net
 @@/ad.js$domain=tiktokcounter.net
-@@/pagead.js$domain=tiktokcounter.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173846
 dash.hyzen-cloud.com##+js(abort-on-property-write, adScript)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173839
@@ -16834,9 +16833,6 @@ mobilmania.cz,zive.cz##+js(abort-on-stack-trace, String.prototype.indexOf, /Obje
 mobilmania.cz,zive.cz##+js(addEventListener-defuser, load, /function\(\){[a-zA-Z0-9]{1\,}_[a-zA-Z0-9]{1\,}.*\(\)}/)
 !+ NOT_PLATFORM(windows, mac, android)
 mobilmania.cz,zive.cz#$#div[class*=" cnc-ads--"] { height: 10px !important; min-height: 10px !important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/164081
-@@||ewrc.cz/js/pagead.js
-ewrc.cz##+js(set-constant, canGetAds, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164067
 sector.sk##.conte
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163232
@@ -32066,6 +32062,12 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 !
 ! NOTE: Specific rules
 !
+cmsdetect.com##+js(set-cookie, bioep_shown, true)
+cmsdetect.com#$#.headmsg { display: none !important; }
+cmsdetect.com#$##topNav { margin-top: 0 !important; }
+cmsdetect.com##+js(set-cookie, shopify, 1)
+cmsdetect.com##+js(set-cookie, second, 1)
+cmsdetect.com##+js(set-cookie, third, 1)
 chromeactions.com##body div[wheel]:has(ins.adsbygoogle)
 chromeactions.com##.filters
 dafont.com##.dfsmall ~ div[style^="width"]:has(ins.adsbygoogle)
@@ -32289,9 +32291,6 @@ medibang.com#$#.mpcViewerAds { display: none !important; }
 medibang.com#$#body.mpc-modal-open { overflow: auto !important; }
 talk.tv##div[class^="css-"]:has(> p:first-child + .ad-outline:last-child)
 ||ads.talk.tv/ads.talktv.min.js
-websleuths.com##a[data-dnasolvesslug]
-websleuths.com##.block-body > div[style*="text-align: center; padding: 10px;"]:has(> a[data-dnasolvesslug])
-websleuths.com##.p-body-sidebar > .block:not([data-widget-id]):has(> .block-container > .block-body > a[data-dnasolvesslug])
 khaleejtimes.com##body .ad-unit
 khaleejtimes.com##body .fix-mpu-nf
 khaleejtimes.com##body .fix-billboard-nf
@@ -49328,6 +49327,12 @@ adultlingeriepics.com,adultlingeriepics.com,adultspankingtgp.com,allfeetporn.com
 /(?:com|net)\/[0-9a-f]{12}\.js$/$script,~third-party,domain=imgadult.com|imgdrive.net|imgtaxi.com|imgwallet.com
 !
 !
+!+ NOT_OPTIMIZED
+websleuths.com##a[data-dnasolvesslug]
+!+ NOT_OPTIMIZED
+websleuths.com##.block-body > div[style*="text-align: center; padding: 10px;"]:has(> a[data-dnasolvesslug])
+!+ NOT_OPTIMIZED
+websleuths.com##.p-body-sidebar > .block:not([data-widget-id]):has(> .block-container > .block-body > a[data-dnasolvesslug])
 !+ NOT_OPTIMIZED
 ||dnasolves.com/static/js/embed.js$domain=websleuths.com
 !+ NOT_OPTIMIZED
