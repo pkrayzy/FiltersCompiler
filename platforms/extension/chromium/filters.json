@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.49.52",
-			"timeUpdated": "2024-03-18T16:35:01+0000",
+			"version": "2.0.49.53",
+			"timeUpdated": "2024-03-19T04:33:38+0000",
 			"languages": [
 				"ja"
 			],
