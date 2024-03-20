@@ -1,9 +1,9 @@
-! Checksum: eTychMMeA2tarAv0amB2EA
-! Diff-Path: ../patches/5/5-s-1710254222-3600.patch
+! Checksum: GpC9Ci4rJftRmMbyQhvC1g
+! Diff-Path: ../patches/5/5-s-1710956479-3600.patch
 ! Title: AdGuard Experimental filter
 ! Description: Filter designed to test certain hazardous filtering rules before they are added to the basic filters.
-! Version: 2.0.1.34
-! TimeUpdated: 2024-03-12T14:33:17+00:00
+! Version: 2.0.1.35
+! TimeUpdated: 2024-03-20T17:35:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -143,7 +143,8 @@
 !
 ! remove anti-adb
 www.youtube.com#%#(()=>{const wrapper=(target,thisArg,args)=>{let content=Reflect.apply(target,thisArg,args);if(content.includes('bkaEnforcementMessage')){const modifiedContent=content.replace('\n|\nGauxiliaryUi.messageRenderers.bkaEnforcementMessageViewModel.displayType\x121ENFORCEMENT_MESSAGE_VIEW_MODEL_DISPLAY_TYPE_POPUP\nM\nEauxiliaryUi.messageRenderers.bkaEnforcementMessageViewModel.isVisible\x12\x04true','');return modifiedContent;}return content;};const handler={apply:wrapper};window.atob=new Proxy(window.atob,handler);})();
-www.youtube.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.auxiliaryUi.messageRenderers.bkaEnforcementMessageViewModel', 'undefined')
+! Breaks player, when a video is opened in a new tab (Ctrl+Click)
+!www.youtube.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.auxiliaryUi.messageRenderers.bkaEnforcementMessageViewModel', 'undefined')
 ! main youtube page - changing view for the first row of elements
 www.youtube.com#$##contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]) > #contents:first-child { max-width: unset !important; }
 www.youtube.com#$##contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]) ytd-rich-grid-media { max-width: unset !important; }
