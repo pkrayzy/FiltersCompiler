@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: CCYhXA/ghfDqd8BX1WSAPg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1710931641-3600.patch
+! Checksum: eyUbEZvtiUaLBGV+X9bmbA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1710941829-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.27.51
-! TimeUpdated: 2024-03-20T10:42:26+00:00
+! Version: 2.3.27.52
+! TimeUpdated: 2024-03-20T13:33:06+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -8252,13 +8252,14 @@ cordtpoint.co.in,mealcold.com###adb
 ! ||shrinkearn.com/modern_theme/img/dwndbnr1.png$image,redirect=1x1-transparent.gif,domain=tii.la
 ! oko.sh,tii.la#$#.banner-inner > * { visibility: hidden !important; }
 oko.sh##+js(no-xhr-if, /^(?!.*oko\.sh).*/ method:GET)
-oko.sh,tii.la#$#.banner-inner { display: block; width: 0 !important; }
+aii.sh,oko.sh,tii.la#$#.banner-inner { display: block; width: 0 !important; }
 oko.sh,tii.la#$#.myads > a { visibility: hidden !important; }
 oko.sh,tii.la##+js(abort-current-script, XMLHttpRequest, .innerHTML)
 oko.sh,tii.la##+js(abort-current-script, document.addEventListener, innerHTML)
 oko.sh,tii.la##+js(abort-current-script, document.createElement, /\.innerHTML|break;case \$\./)
 oko.sh,tii.la##+js(no-fetch-if, /pagead2\.googlesyndication\.com|inklinkor\.com/)
 oko.sh##+js(set-constant, app_vars.force_disable_adblock, undefined)
+aii.sh##+js(no-xhr-if, /pagead2\.googlesyndication\.com|inklinkor\.com/)
 $xmlhttprequest,redirect-rule=noop.txt,domain=oko.sh|tii.la
 $script,redirect-rule=noop.js,domain=oko.sh|tii.la
 ! https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-6011881
@@ -50217,8 +50218,8 @@ mail.yahoo.com##[data-test-id^="pencil-ad"]
 ||advice-ads.s3.amazonaws.com^$domain=d3ward.github.io
 ! Amazon Advertising API for advertisers
 ||advertising-api-eu.amazon.com^$domain=d3ward.github.io
-! TikTok Ads API for advertisers
-||ads-api.tiktok.com^$domain=d3ward.github.io
+! Admin panels of ads systems
+||ads$domain=d3ward.github.io
 ! Yandex Ads site
 ||advertising.yandex.ru^$domain=d3ward.github.io
 ||adfox.yandex.ru^$domain=d3ward.github.io
@@ -50235,8 +50236,9 @@ mail.yahoo.com##[data-test-id^="pencil-ad"]
 ||extmaps-api.yandex.net^$domain=d3ward.github.io
 ! Twitter Ads API
 ||ads-api.twitter.com^$domain=d3ward.github.io
-! random bait
+! Common baits which used to detects ad blockers
 partner.ads.js$domain=d3ward.github.io
+/pagead.js$domain=d3ward.github.io
 !
 !
 ! Special rules for AdGuard websites' test pages. The only purpose of these

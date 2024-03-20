@@ -1,9 +1,9 @@
-! Checksum: 8Y3sWKklQ/hBVwAdlvbVDg
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1710931620-3600.patch
+! Checksum: i2v9olaE3gQYtaEaOJ70CA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1710941815-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.27.51
-! TimeUpdated: 2024-03-20T10:42:26+00:00
+! Version: 2.3.27.52
+! TimeUpdated: 2024-03-20T13:33:06+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1746,13 +1746,14 @@ tempumail.com#%#//scriptlet('prevent-setTimeout', 'Ad Blocker')
 fotor.com#%#//scriptlet('prevent-setTimeout', 't.hasAdBlock')
 uprot.net#$##butok { display: block !important; }
 oko.sh#%#//scriptlet('prevent-xhr', '/^(?!.*oko\.sh).*/ method:GET')
-oko.sh,tii.la#$#.banner-inner { display: block; width: 0 !important; }
+aii.sh,oko.sh,tii.la#$#.banner-inner { display: block; width: 0 !important; }
 oko.sh,tii.la#$#.myads > a { visibility: hidden !important; }
 oko.sh,tii.la#%#//scriptlet('abort-current-inline-script', 'XMLHttpRequest', '.innerHTML')
 oko.sh,tii.la#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', 'innerHTML')
 oko.sh,tii.la#%#//scriptlet('abort-current-inline-script', 'document.createElement', '/\.innerHTML|break;case \$\./')
 oko.sh,tii.la#%#//scriptlet('prevent-fetch', '/pagead2\.googlesyndication\.com|inklinkor\.com/')
 oko.sh#%#//scriptlet('set-constant', 'app_vars.force_disable_adblock', 'undefined')
+aii.sh#%#//scriptlet('prevent-xhr', '/pagead2\.googlesyndication\.com|inklinkor\.com/')
 $xmlhttprequest,redirect-rule=nooptext,domain=oko.sh|tii.la
 $script,redirect-rule=noopjs,domain=oko.sh|tii.la
 webmatrices.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
@@ -13996,11 +13997,12 @@ dailymail.co.uk##.ad-wrapper
 mail.yahoo.com##[data-test-id^="pencil-ad"]
 ||advice-ads.s3.amazonaws.com^$domain=d3ward.github.io
 ||advertising-api-eu.amazon.com^$domain=d3ward.github.io
-||ads-api.tiktok.com^$domain=d3ward.github.io
+||ads$domain=d3ward.github.io
 ||advertising.yandex.ru^$domain=d3ward.github.io
 ||partnerads.ysm.yahoo.com^$domain=d3ward.github.io
 ||advertising.apple.com^$domain=d3ward.github.io
 ||gemini.yahoo.com^$domain=d3ward.github.io
+/pagead.js$domain=d3ward.github.io
 !+ NOT_PLATFORM(ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard
 @@||facebook.com^$generichide,badfilter
