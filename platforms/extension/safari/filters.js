@@ -636,8 +636,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/16_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.12",
-			"timeUpdated": "2024-03-19T14:32:16+0000",
+			"version": "2.0.44.13",
+			"timeUpdated": "2024-03-20T04:32:33+0000",
 			"languages": [
 				"fr"
 			],
