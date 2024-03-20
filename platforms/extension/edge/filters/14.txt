@@ -1,9 +1,9 @@
-! Checksum: BIN9TYSN+TvtuVK/2jXimA
-! Diff-Path: ../patches/14/14-s-1710949276-3600.patch
+! Checksum: lqpvmT+QT1VWc/CoMjvNzw
+! Diff-Path: ../patches/14/14-s-1710953029-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.12
-! TimeUpdated: 2024-03-20T15:33:29+00:00
+! Version: 2.1.91.13
+! TimeUpdated: 2024-03-20T16:33:21+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2389,6 +2389,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+academy.com#%#//scriptlet('set-cookie', 'c_consent', 'true')
 ibuypower.com##div[class^="acceptcookie_"]
 unas.hu#%#//scriptlet('prevent-setTimeout', 'cookie_consent')
 claude.ai#%#//scriptlet('trusted-set-cookie', 'anthropic-consent-preferences', '%7B%22analytics%22%3Afalse%2C%22marketing%22%3Afalse%7D')
@@ -6541,7 +6542,7 @@ barenecessities.com###cbt-consent-banner-wrapper
 ||asus.com.cn/js/*/alert-info_cn.js
 asus.com.cn,zentalk.asus.com#$#body { overflow: auto !important; }
 asus.com.cn,zentalk.asus.com#$#div[id^="cookie-policy-info"] { display: none !important; }
-overstock.com###gdpr-container
+bedbathandbeyond.com,overstock.com###gdpr-container
 ||ocnk.net/js/confirmation-bar.js
 exakta.se,exaktacreative.se,exaktasoftware.se#$#.cookiePopup { display: none !important; }
 exakta.se,exaktacreative.se,exaktasoftware.se#$#.cookiePopupVisible [canvas]:not(.cookiePopup) { filter: none !important; }
@@ -12843,7 +12844,7 @@ sanyglobal.com,naray.one,mcdonalds.co.id,euronabycerny.com,mangahack.com,wiadomo
 bequiet.com,my5.tv,hearthhead.com,kabeleins.de,prosieben.de,prosiebenmaxx.de,ran.de,sat1.de,sixx.de,the-voice-of-germany.de##.cookie-banner
 crowdfox.com##.cookie-banner-info
 visitmons.be##.cookie-compliance-message
-cv.ee,cv.lv,cvonline.lt,thomasmeyerhoefer.com,kaffeebraun.com,bessey.de,europe.nflshop.com,neuronation.com,conjuga-me.net,proz.com,htc.com,index.hr,vice.com##.cookie-consent-container
+cv.ee,cv.lv,cvonline.lt,thomasmeyerhoefer.com,kaffeebraun.com,bessey.de,europe.nflshop.com,neuronation.com,conjuga-me.net,proz.com,htc.com,vice.com##.cookie-consent-container
 theinquirer.net##.cookie-consent-content
 deloitte.com##.cookie-container
 theatlantic.com##.cookie-disclaimer
@@ -14089,8 +14090,8 @@ androidacy.com#%#//scriptlet('trusted-click-element', '.qc-cmp2-container .qc-cm
 motopedia.otomoto.pl#%#//scriptlet('set-cookie', 'cc-cookie-accept', 'false')
 eurogrow.es#%#//scriptlet('set-constant', 'hiCookieLaw', 'emptyObj')
 adnkronos.com,bandaancha.eu,tviplayer.iol.pt,selfie.iol.pt,thefunpost.com,the-express.com,tvi.iol.pt,cnnportugal.iol.pt,mirror.co.uk#%#//scriptlet('trusted-click-element', '.qc-cmp2-summary-buttons > button[mode="primary"]')
-filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '.didomi-consent-popup-actions > button.didomi-components-button:not(.highlight-button)')
-filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '#didomi-notice-learn-more-button')
+index.hr,filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '.didomi-consent-popup-actions > button.didomi-components-button:not(.highlight-button)')
+index.hr,filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '#didomi-notice-learn-more-button')
 idmobile.co.uk#%#//scriptlet('trusted-click-element', '.banner-actions-container > button#onetrust-accept-btn-handler')
 lovethesales.com#%#//scriptlet("set-cookie", "lts-cookie-consent", "1")
 mapcarta.com#%#//scriptlet('set-constant', 'runads', 'false')
@@ -16379,7 +16380,6 @@ feedbax.de#@##cookie-popup
 captaincoupon.de#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124210
 @@||sdk.privacy-center.org^$domain=index.hr
-||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=index.hr,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124160
 transgourmet.de#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124090
@@ -22612,6 +22612,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+bathandbodyworks.com##body > .ui-dialog:has(> #dialog-container > div.email-dialog-content > a[href="/loyalty-rewards"])
+bathandbodyworks.com##.ui-widget-overlay
+bedbathandbeyond.com#%#//scriptlet('trusted-click-element', 'div[class*="CountrySelectStyles"] .cl-dialog-close')
 media.vkplay.ru###top-informer
 app.daily.dev##.from-theme-overlay-active-cabbage.to-theme-overlay-active-onion
 pogoda.by#%#//scriptlet('trusted-set-cookie', 'pogoda_banner_first_open', '1')
@@ -30506,6 +30509,8 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+wayfair.com##body > div[data-hb-id="Portal"]:has(> div > div[data-cypress-id="CoreGatewayModal"])
+bedbathandbeyond.com###omailContainer
 lowes.com###sfmc-sms-modal-btn
 drugs.com##.ddc-sidebox-subscribe
 drugs.com#?##content > h2:contains(Subscribe to our newsletter)
@@ -49791,6 +49796,8 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+eromovie-s.com##.recommend-site
+||eromovie-s.com/feed/
 etude000.com##div[class^="extendedwopts-"]
 erogazo-ngo.com###content_top_ad
 ||ryusoku.com/assets/html/headline.html

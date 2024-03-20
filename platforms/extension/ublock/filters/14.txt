@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: gdfAITFwk+v1n96yDZs90w
-! Diff-Path: ../patches/14/14-s-1710949337-3600.patch
+! Checksum: aOdvEd5unmJ86C8A2SSgMQ
+! Diff-Path: ../patches/14/14-s-1710953079-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.12
-! TimeUpdated: 2024-03-20T15:33:29+00:00
+! Version: 2.1.91.13
+! TimeUpdated: 2024-03-20T16:33:21+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2360,6 +2360,7 @@ damota.me,pracazarohom.*,seduo.*##+js(remove-class, force--consent|show--consent
 !
 ! NOTE: Regular rules
 !
+academy.com##+js(set-cookie, c_consent, true)
 ibuypower.com##div[class^="acceptcookie_"]
 unas.hu##+js(no-setTimeout-if, cookie_consent)
 bnllux.overdrive.com##.cookieSettingsModal
@@ -6355,7 +6356,7 @@ barenecessities.com###cbt-consent-banner-wrapper
 ||asus.com.cn/js/*/alert-info_cn.js
 asus.com.cn,zentalk.asus.com#$#body { overflow: auto !important; }
 asus.com.cn,zentalk.asus.com#$#div[id^="cookie-policy-info"] { display: none !important; }
-overstock.com###gdpr-container
+bedbathandbeyond.com,overstock.com###gdpr-container
 ||ocnk.net/js/confirmation-bar.js
 exakta.se,exaktacreative.se,exaktasoftware.se#$#.cookiePopup { display: none !important; }
 exakta.se,exaktacreative.se,exaktasoftware.se#$#.cookiePopupVisible [canvas]:not(.cookiePopup) { filter: none !important; }
@@ -12657,7 +12658,7 @@ sanyglobal.com,naray.one,mcdonalds.co.id,euronabycerny.com,mangahack.com,wiadomo
 bequiet.com,my5.tv,hearthhead.com,kabeleins.de,prosieben.de,prosiebenmaxx.de,ran.de,sat1.de,sixx.de,the-voice-of-germany.de##.cookie-banner
 crowdfox.com##.cookie-banner-info
 visitmons.be##.cookie-compliance-message
-cv.ee,cv.lv,cvonline.lt,thomasmeyerhoefer.com,kaffeebraun.com,bessey.de,europe.nflshop.com,neuronation.com,conjuga-me.net,proz.com,htc.com,index.hr,vice.com##.cookie-consent-container
+cv.ee,cv.lv,cvonline.lt,thomasmeyerhoefer.com,kaffeebraun.com,bessey.de,europe.nflshop.com,neuronation.com,conjuga-me.net,proz.com,htc.com,vice.com##.cookie-consent-container
 theinquirer.net##.cookie-consent-content
 deloitte.com##.cookie-container
 theatlantic.com##.cookie-disclaimer
@@ -21893,6 +21894,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+bathandbodyworks.com##body > .ui-dialog:has(> #dialog-container > div.email-dialog-content > a[href="/loyalty-rewards"])
+bathandbodyworks.com##.ui-widget-overlay
 media.vkplay.ru###top-informer
 app.daily.dev##.from-theme-overlay-active-cabbage.to-theme-overlay-active-onion
 ||techbook.de/content/themes/ms-wpt-books/dist/js/notification.min.js
@@ -29793,6 +29796,8 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+wayfair.com##body > div[data-hb-id="Portal"]:has(> div > div[data-cypress-id="CoreGatewayModal"])
+bedbathandbeyond.com###omailContainer
 lowes.com###sfmc-sms-modal-btn
 drugs.com##.ddc-sidebox-subscribe
 drugs.com#?##content > h2:contains(Subscribe to our newsletter)
@@ -49248,6 +49253,8 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+eromovie-s.com##.recommend-site
+||eromovie-s.com/feed/
 etude000.com##div[class^="extendedwopts-"]
 erogazo-ngo.com###content_top_ad
 ||ryusoku.com/assets/html/headline.html
