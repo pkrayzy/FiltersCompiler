@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: nUD4xyOj16/nK5IJypWppg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1710924076-3600.patch
+! Checksum: CCYhXA/ghfDqd8BX1WSAPg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1710931641-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.27.50
-! TimeUpdated: 2024-03-20T08:36:37+00:00
+! Version: 2.3.27.51
+! TimeUpdated: 2024-03-20T10:42:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -19510,6 +19510,8 @@ mako.co.il##+js(set-constant, isBs, false)
 !
 forum.fibra.click##.FibraClickAds-fake-poststream-item
 open.online##a[rel="sponsored"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/175282
+hwupgrade.it##.page div.vbmenu_popup ~ table td[style]:has(> div.banner-content)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175274
 rendimentibtp.it##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175139
@@ -21000,6 +21002,9 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175316
+moja-ostroleka.pl##+js(adjust-setTimeout, adBanner, *, 0.001)
+moja-ostroleka.pl##+js(abort-current-script, EventTarget.prototype.addEventListener, adBanner)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175262
 olsztyn.com.pl###boxB
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174802
@@ -25644,6 +25649,9 @@ asilmedia.org###banner
 !------------------------------ Vietnamese ---------------------------
 !---------------------------------------------------------------------
 ! NOTE: Vietnamese
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/174960
+savetik.co##.ads-slot-top
 !
 mod18.com##img[width="728px"][height="90px"]
 mod18.com##.epcl-banner
@@ -32086,6 +32094,8 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 !
 ! NOTE: Specific rules
 !
+camwhores.tv##a[target="_blank"][href*="utm_campaign"]
+camwhores.tv##.fap-circle
 cnpics.org##.popup-box-ads
 cnpics.org##.fileviewer-body center:has(.vr-adv-unit)
 yts-official.org##.container > a[rel="nofollow"] > img[style]
