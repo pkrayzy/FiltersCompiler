@@ -1,9 +1,9 @@
-! Checksum: HhRpR7EeCE2isJP8z+dx0A
-! Diff-Path: ../patches/14/14-s-1711039034-3600.patch
+! Checksum: sI2DbCctKz645L8poYOYvw
+! Diff-Path: ../patches/14/14-s-1711042609-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.25
-! TimeUpdated: 2024-03-21T16:32:11+00:00
+! Version: 2.1.91.26
+! TimeUpdated: 2024-03-21T17:31:57+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.cookies-eu-banner
 ##.cookie-tip
 ##.shop_index > div.consents
 ##.m-popup__cookies
@@ -2391,6 +2392,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+ups.com.tr##.cookie-pol
 app.spendee.com#%#//scriptlet('set-cookie', 'cbpolicy', 'true')
 schroeder-bauzentrum.de#$##usercentrics-root { display: none !important; }
 schroeder-bauzentrum.de#%#//scriptlet('remove-class', 'overflowHidden', 'body')
@@ -2936,7 +2938,6 @@ ekokoza.*#$#body { overflow: auto !important; }
 gamestar.de#%#//scriptlet('trusted-click-element', '.cmp-accept', '', '300')
 bike24.*#%#//scriptlet('trusted-click-element', '.cookie-consent-modal-simple-footer__buttons-wrapper > button.cookie-consent-modal-simple-footer__button:last-child')
 newsflare.com##.nf-cookie-consent
-geratrium.ch,itvbd.com##.cookies-eu-banner
 topsporter.net##.penci-wrap-gprd-law
 baltimoresun.com##.osano-cm-dialog-custom
 blue.vanmarcke.com#$##cookieModal { display: none !important; }
@@ -25881,7 +25882,6 @@ mindtools.com#$##propositionModal { display: none !important; }
 mindtools.com#$?#html { overflow: auto !important; }
 collegedunia.com#?#.modal:has(> div[class] div.media-body > h3:contains(/^Register Now/))
 collegedunia.com#$#.modal-backdrop { display: none !important; }
-dtf.ru,vc.ru##.dstr-fl
 goimports.com.br###btnwhatsapp
 boohooman.com,boohoo.com##.js-floating-promo
 brax.com###oc-newsletter
@@ -29352,6 +29352,7 @@ epaper.thehindu.com,h5.g123.jp,accounts.binance.com,zlavomat.sk,id.rambler.ru,pi
 .name/?pus=$script,third-party
 .site/?pus=$script,third-party
 !
+||pushmoose.com^$third-party
 ||pushouse.com^$third-party
 ||dpns-notifications.com^
 ||cdn-server.live^$third-party
@@ -30528,6 +30529,8 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+democracynow.org###daily_digest_modal
+usafricaonline.com##.elementor-widget-foxiz-newsletter-3
 lesite24.com###button-contact-vr
 m.foodingredientsfirst.com##.subscribe
 m.foodingredientsfirst.com#$#.subscribepop { display: none !important; }
