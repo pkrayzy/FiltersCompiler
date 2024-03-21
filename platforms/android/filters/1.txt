@@ -1,9 +1,9 @@
-! Checksum: d+z1naGqYB5/trlWyBRWYw
-! Diff-Path: ../patches/1/1-s-1711018926-3600.patch
+! Checksum: kKVnVgrzFngmwekILKWihg
+! Diff-Path: ../patches/1/1-s-1711024602-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.45
-! TimeUpdated: 2024-03-21T10:56:54+00:00
+! Version: 2.0.89.46
+! TimeUpdated: 2024-03-21T12:32:41+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5795,6 +5795,8 @@ fishki.net,hronika.info,meta.ua$$script[tag-content="window.AD_DOMAIN_URL_SYS"][
 !------- JS ------------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175398
+swing-zone.com#%#//scriptlet("set-constant", "membermenu.load_sub_menu_content", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175426
 ru.spbtv.com#%#//scriptlet("json-prune", "data.ads")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172460
@@ -7729,6 +7731,9 @@ ivanovonews.ru,gorodn.ru,bits.media,devyatka.ru,gazeta-n1.ru,gorod48.ru,hi-fi.ru
 !
 !
 !
+||swing-zone.com/media/images/banners/$image
+swing-zone.com##.page_column > .page_block_container:has(> .disignBoxFirst .hide_ads)
+swing-zone.com##.topMenu td:has(a[href^="https://www.swing-zone.com/click.php?406"])
 ru.spbtv.com##div[class^="gridcomponent__GridColumn"]:has(> div[class^="channel-player-asideui__AdsHolder"])
 [$path=/news/]cyber.sports.ru##.box > .layout-columns > .rightPart:has(> .banner)
 youxxx.cc##.media_spot
@@ -18709,6 +18714,7 @@ adme.media##div[data-test-id="article-content"] > div[class*=" "]:not([tabindex]
 adme.media#?#div[data-test-id="article-bottom-recommended"] > div > div > div[style="position:relative"] > div > div:has(div:empty + div:empty + div:empty)
 !
 ! Start: vc.ru, dtf.ru, spark.ru
+dtf.ru##.supbar--top
 dtf.ru,vc.ru##.propaganda
 dtf.ru#?#.content-list > div[class]:has(> div > div:contains(реклама))
 dtf.ru##.rotator

@@ -1,9 +1,9 @@
-! Checksum: Zcg8H4/FuBuV/vWdeoWsKQ
-! Diff-Path: ../patches/3/3-s-1710968154-3600.patch
+! Checksum: e0od2K154MU+w8G0SXrrzA
+! Diff-Path: ../patches/3/3-s-1711024639-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.67.98
-! TimeUpdated: 2024-03-20T20:36:31+00:00
+! Version: 2.0.67.99
+! TimeUpdated: 2024-03-21T12:33:27+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -97000,8 +97000,10 @@ nethunt.com/api/v1/track/email/$image
 @@||godaddy.com^$cookie=_ga
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170920
 @@||endesaclientes.com^$cookie=dtCookie
+! https://github.com/AdguardTeam/AdguardFilters/issues/175430
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164914
-@@||epuap.gov.pl^$cookie=dtCookie
+! TODO: Uncomment the exception rule once the issue is fixed - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2552
+! @@||epuap.gov.pl^$cookie=dtCookie
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164711
 !+ PLATFORM(ext_ff)
 @@||vattenfall.nl^$cookie=dtCookie
@@ -97283,7 +97285,11 @@ $cookie=rxVisitor
 ! Required to identify proper endpoints for beacon transmission
 $cookie=dtPC
 ! Tracks a visit across multiple requests
-$cookie=dtCookie
+! https://github.com/AdguardTeam/AdguardFilters/issues/175430
+! https://github.com/AdguardTeam/AdguardFilters/issues/164914
+! TODO: use exception rule (it's already added, but should be uncommented)
+! once the issue is fixed - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2552
+$cookie=dtCookie,domain=~gov.pl
 !
 ! spot.im
 $cookie=spotim_visitId
