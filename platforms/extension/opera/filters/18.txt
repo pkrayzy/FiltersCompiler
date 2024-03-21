@@ -1,9 +1,9 @@
-! Checksum: maCh90EKiRBOQBhiLHAOWQ
-! Diff-Path: ../patches/18/18-s-1711018964-3600.patch
+! Checksum: DoUf87w7uAjqOt8hXp8daw
+! Diff-Path: ../patches/18/18-s-1711021058-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.36.13
-! TimeUpdated: 2024-03-21T10:56:38+00:00
+! Version: 2.0.36.14
+! TimeUpdated: 2024-03-21T11:32:36+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2391,6 +2391,8 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+mvideo.ru#$#mvid-global-container > mvid-modals-container:has(mvid-modal div.modal-layout span.mobile-notification__text-cookie) { display: none !important; }
+mvideo.ru#$#body.disable-body-scrolling { position: static !important; overflow: auto !important; }
 pekao.com.pl###cookies-popup-container
 m.foodingredientsfirst.com##div[id^="CookiePolicy"]
 academy.com#%#//scriptlet('set-cookie', 'c_consent', 'true')
@@ -14998,6 +15000,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/22999
+@@||usercentrics.eu^$domain=rts.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174918
 ! Causes high CPU usage if it's blocked
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=rtl.nl

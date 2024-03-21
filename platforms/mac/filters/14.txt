@@ -1,9 +1,9 @@
-! Checksum: NWEKqilsYjibjq/yJYOXnQ
-! Diff-Path: ../patches/14/14-s-1711018992-3600.patch
+! Checksum: PLx6Dq66GMddln9SPTzugw
+! Diff-Path: ../patches/14/14-s-1711021073-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.19
-! TimeUpdated: 2024-03-21T10:56:24+00:00
+! Version: 2.1.91.20
+! TimeUpdated: 2024-03-21T11:32:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2391,6 +2391,8 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+mvideo.ru#$#mvid-global-container > mvid-modals-container:has(mvid-modal div.modal-layout span.mobile-notification__text-cookie) { display: none !important; }
+mvideo.ru#$#body.disable-body-scrolling { position: static !important; overflow: auto !important; }
 pekao.com.pl###cookies-popup-container
 m.foodingredientsfirst.com##div[id^="CookiePolicy"]
 academy.com#%#//scriptlet('set-cookie', 'c_consent', 'true')
@@ -15045,6 +15047,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/22999
+@@||usercentrics.eu^$domain=rts.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174918
 ! Causes high CPU usage if it's blocked
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=rtl.nl
@@ -37250,6 +37254,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+paypayfleamarket.yahoo.co.jp###__next > div > aside:has(> div > div > div > div > a[href^="https://play.google.com/"])
 tractorsupply.com##.tsc-get-app-banner
 kikkoman.co.jp##.info-app-tsushin
 smbc-card.com,k-jz.com,convini.shotworks.jp##div[id^="smart_app_banner"]
