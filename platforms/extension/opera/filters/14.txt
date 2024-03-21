@@ -1,9 +1,9 @@
-! Checksum: huVMuS/DsI0AtkZTWtDE/Q
-! Diff-Path: ../patches/14/14-s-1711006640-3600.patch
+! Checksum: mgY2Nv+TeG+9/7xpxidMRQ
+! Diff-Path: ../patches/14/14-s-1711010238-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.16
-! TimeUpdated: 2024-03-21T07:32:16+00:00
+! Version: 2.1.91.17
+! TimeUpdated: 2024-03-21T08:32:13+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1320,7 +1320,6 @@
 ##.cookie-warn
 ##.cookie-warn-msg
 ##.cookie-warning
-##.cookie-wrapper
 ##.cookieAccept
 ##.cookieAccepterSlider
 ##.cookieAdvice
@@ -1660,6 +1659,8 @@
 ##.wrapperCookies
 ##.wsa-cookielaw
 ##body > #ckch
+!+ NOT_OPTIMIZED
+##.cookie-wrapper
 !+ NOT_OPTIMIZED
 ##.contao-cookiebar
 !+ NOT_OPTIMIZED
@@ -2390,6 +2391,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+m.foodingredientsfirst.com##div[id^="CookiePolicy"]
 academy.com#%#//scriptlet('set-cookie', 'c_consent', 'true')
 ibuypower.com##div[class^="acceptcookie_"]
 unas.hu#%#//scriptlet('prevent-setTimeout', 'cookie_consent')
@@ -14157,7 +14159,6 @@ erli.pl#%#//scriptlet('set-local-storage-item', 'COOKIES_CONSENTS', 'emptyObj')
 gamingonlinux.com#%#//scriptlet('set-cookie', 'gol_external_media_consent', '0')
 citilink.ru#%#//scriptlet('set-cookie', 'infoCookieUses', 'true')
 jove.com#%#//scriptlet('set-local-storage-item', 'displayCookiesBanner', 'false')
-getir.com#%#//scriptlet('trusted-click-element', 'button[data-testid="button"][aria-label^="Reject"]')
 medal.tv#%#//scriptlet('set-cookie', 'medal-accept-cookie', 'false')
 iodonna.it,oggi.it,video.gazzetta.it,corriere.it#%#//scriptlet('trusted-click-element', '.privacy-cp-wall #privacy-cp-wall-accept')
 nightcafe.studio#%#//scriptlet('trusted-set-local-storage-item', 'acceptsNonCriticalCookies', 'denied')
@@ -30523,6 +30524,10 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+m.foodingredientsfirst.com##.subscribe
+m.foodingredientsfirst.com#$#.subscribepop { display: none !important; }
+m.foodingredientsfirst.com#$#.ui-widget-overlay { display: none !important; }
+m.foodingredientsfirst.com#$#body[style] { position: static !important; }
 mailchimp.com##.p23StackingHighlightModule
 mailchimp.com##.eloquaSubscription
 igrotime.ru##.modal-fortune
