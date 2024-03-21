@@ -1,9 +1,9 @@
-! Checksum: CiW82bGlTqes46m8C06BnQ
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1711017194-14400.patch
+! Checksum: L1HJd5haXOZPKEk7TkvEyg
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1711040839-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links.
-! Version: 2.0.7.63
-! TimeUpdated: 2024-03-21T10:28:55+00:00
+! Version: 2.0.7.64
+! TimeUpdated: 2024-03-21T17:03:29+00:00
 ! Expires: 10 days (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -1095,6 +1095,9 @@ $removeparam=returnFromLogin,domain=amazon.*
 $removeparam=/^asc_/,document,domain=amazon.*|aboutamazon.com|amzn.to
 ||amazon.*/primeday/$removeparam=tag
 ||amazon.*/primeday/$removeparam=mfadid
+||www.amazon.$removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
+||www.amazon.$removeparam=sp_csd
+||www.amazon.$removeparam=dib_tag
 ||bing.com/?$removeparam=/^form=/i
 ||bing.$removeparam=sp
 $removeparam=sc,document,domain=bing.com|qvc.com|startpage.com
@@ -1270,6 +1273,7 @@ $removeparam=si,document,domain=open.spotify.com|soundcloud.com|zappos.com
 $removeparam=gtm
 $removeparam=referral,domain=tv2.no|spotify.com|yubo.live
 ||spotify.com^$removeparam=nd
+||open.spotify.com^$removeparam=uid
 ||aliexpress.*/item/$removeparam=pvid
 ||aliexpress.$removeparam=_t
 ||aliexpress.$removeparam=gps-id
