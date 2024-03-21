@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: hYwqFmhpdDSqTzcRusamtw
-! Diff-Path: ../patches/235/235-s-1710565641-14400.patch
+! Checksum: xByYfG1jInfFfhqAJYKwuA
+! Diff-Path: ../patches/235/235-s-1711017249-14400.patch
 ! Title: Persian Blocker
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.19
-! TimeUpdated: 2024-03-16T05:02:53+00:00
+! Version: 2.0.4.20
+! TimeUpdated: 2024-03-21T10:28:36+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: PersianBlocker
@@ -1536,6 +1536,7 @@ lahzeakhar.com##+js(set-constant, customnotify, noopFunc)
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+mimplus.ir#$#div#icontent { display: block !important; }
 musiceman.net##+js(remove-node-text, script, /popTimes_|document\.onkeydown|"contextmenu"/)
 musiceman.net##+js(remove-attr, onmousedown|onselectstart, body)
 magiran.com##div.blur-text
@@ -1916,6 +1917,8 @@ forum.p30world.com#@##ad_global_above_footer
 8pic.ir##.up_submit > span
 ! 8pic.ir##*[class*="main"]:has-text(تبلیغ)
 ! >> Q <<
+||qnama.ir/ipop.js^$script,~third-party
+qnama.ir##div#ads1
 ||sentry.quera.org^
 ! >> R <<
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172968
@@ -2325,9 +2328,14 @@ techna.news##[class="widget_text sidebar-box"]:has-text(وبگردی)
 ||technolife.ir/image/deema0.js^$script,~third-party
 ||technolife.ir/image/deemaScript.js^$script,~third-party
 ||technolife.ir/image/yektanetScript.js^$script,~third-party
-||tabanmusic.com/p-pop/
-texahang.org##.myside.right-sidebar
-! TODO: Check again for new sidebar
+||rentinal.info^$script,third-party
+! https://rentinal.info/pop2/popmain.js
+||tabanmusic.com/p-pop^$script
+tabanmusic.com,texahang.org,iran-music.com##+js(addEventListener-defuser, load, contextmenu)
+tabanmusic.com,texahang.org,iran-music.com##+js(remove-attr, onmousedown|onselectstart, body)
+iran-music.com##+js(remove-node-text, script, popTimes_)
+texahang.org##div.ads-site
+texahang.org##div.right-sidebar > aside:has(> div.tit-side:has-text(پیوندهای داغ))
 trainbit.com##section#downloadbox > div#indicatorr
 trainbit.com#$#section#downloadbox > input#btnDownload { display: block !important; }
 ||tafrihi.com/wp-content/plugins/simple-ads
