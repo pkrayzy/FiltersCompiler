@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 77pJEEbcj249gm/ZRrPOvA
-! Diff-Path: ../patches/21/21-s-1711024661-3600.patch
+! Checksum: qVGQpSVKG3cSAXf4oACUoA
+! Diff-Path: ../patches/21/21-s-1711031828-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.20.98
-! TimeUpdated: 2024-03-21T12:32:43+00:00
+! Version: 2.0.20.99
+! TimeUpdated: 2024-03-21T14:32:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3200,8 +3200,12 @@ ya.ru##.market-feed
 ya.ru##.message-promo
 ya.ru##.search3__inner > div.link-bro
 ! Yandex Browser promo
+! "a"
 ya.ru,yandex.*##.simple-popup_direction_center:has(> div > div > div.dist-overlay__description)
 ya.ru,yandex.*##.simple-popup__overlay_shown_true
+! "b" https://github.com/AdguardTeam/AdguardFilters/issues/175068#issuecomment-2009355449
+ya.ru,yandex.*#$#.DistributionSplashScreenModal[outercrosstitle="Нет, спасибо"] { display: none !important; }
+ya.ru,yandex.*#$#body { overflow: auto !important; }
 !
 ! Yandex.Search
 ya.ru,yandex.*##:matches-path(/search).AdvOffers
@@ -4986,6 +4990,9 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+islamicfinder.org###main-column > div[class]:has(> div.rbanner > div.rbox)
+islamicfinder.org###sidebar div[class]:has(> div.row > div.banner-box)
+islamicfinder.org##.banner
 sofmap.com###remote_cs
 sofmap.com##.side_bnr
 swisscows.com##.bnnr-widget

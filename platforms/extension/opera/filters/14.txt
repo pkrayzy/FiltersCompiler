@@ -1,9 +1,9 @@
-! Checksum: 08D2a82uW4lRlKRMoHBbgw
-! Diff-Path: ../patches/14/14-s-1711028243-3600.patch
+! Checksum: RXCSaSB+XnHf1WLfH4y97w
+! Diff-Path: ../patches/14/14-s-1711031814-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.22
-! TimeUpdated: 2024-03-21T13:32:24+00:00
+! Version: 2.1.91.23
+! TimeUpdated: 2024-03-21T14:31:58+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2391,6 +2391,9 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+app.spendee.com#%#//scriptlet('set-cookie', 'cbpolicy', 'true')
+schroeder-bauzentrum.de#$##usercentrics-root { display: none !important; }
+schroeder-bauzentrum.de#%#//scriptlet('remove-class', 'overflowHidden', 'body')
 mvideo.ru#$#mvid-global-container > mvid-modals-container:has(mvid-modal div.modal-layout span.mobile-notification__text-cookie) { display: none !important; }
 mvideo.ru#$#body.disable-body-scrolling { position: static !important; overflow: auto !important; }
 pekao.com.pl###cookies-popup-container
@@ -14525,7 +14528,7 @@ godbolt.org#%#//scriptlet('trusted-click-element', '#alert button.close', '', '3
 hotscope.tv#%#//scriptlet('set-cookie', 'cookieConsent', '1')
 greens-efa.eu#%#//scriptlet("set-cookie", "ZEDWCC", "5")
 kasuwa.de#%#//scriptlet('set-cookie-reload', 'cc_main', '1')
-chartoo.in,chartoo.de,chartoo.com#%#document.cookie = "ypo=39; path=/;";
+chartoo.in,chartoo.de,chartoo.com#%#//scriptlet('trusted-set-cookie', 'ypo', '39')
 stories.com#%#document.cookie="newsletter-signup=viewed; path=/;";
 wempe.com#%#//scriptlet('prevent-setTimeout', 'typeof __cmp')
 tvfindr.com#%#//scriptlet('trusted-click-element', '#c-p-bn', '', '300')
@@ -14558,7 +14561,6 @@ allocine.fr,jeuxvideo.com,purepeople.com#%#//scriptlet('trusted-click-element', 
 kzvb.de#%#//scriptlet('trusted-click-element', '#save-cookies')
 ph-karlsruhe.de#%#//scriptlet('set-cookie', 'phkCookiePolicyState', '0')
 polyas.de#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("POLYAS-essentials", "true"); localStorage.setItem("POLYAS-adscomfort", "null"); localStorage.setItem("POLYAS-statistics", "null");} } catch (ex) {} })();
-shop.raiwa.net,schroeder-bauzentrum.de#%#document.cookie = "cookieSettings= ";
 asklepios.com#%#//scriptlet('set-cookie', 'askk.cookie-overlay-shown', 'true')
 vorteilshop.com,hagengrote.de#%#//scriptlet('abort-current-inline-script', '$', '#modal-consent')
 hildegardis-krankenhaus.de,st-agatha-krankenhaus.de#%#//scriptlet("abort-current-inline-script", "document.createElement", "consent.cookiebot.com")
@@ -14790,7 +14792,6 @@ radeberger-gruppe.de#%#document.cookie = "dataPrivacy-acceptCookies=confirmed";
 cinemaxx.de#%#document.cookie = "showCookiesConsent=true; path=/;";
 warsteiner-gruppe.de#%#AG_onLoad(function() { var el = document.querySelector(".gdpr-preface"); if(el) { Cookies.set('gdpr_preface', '1', { expires: Infinity });; location.reload(); }; });
 twitter.com#%#document.cookie="eu_cn=1; path=/;";
-app.spendee.com#%#document.cookie = "cbpolicy=true; path=/";
 empik.com#%#//scriptlet('set-cookie', 'cp', '1')
 empik.com#%#//scriptlet('set-cookie', 'cc', '2')
 empik.com#%#//scriptlet('set-cookie', 'cva', '1')
@@ -43467,8 +43468,12 @@ ya.ru##.market-feed
 ya.ru##.message-promo
 ya.ru##.search3__inner > div.link-bro
 ! Yandex Browser promo
+! "a"
 ya.ru,yandex.*##.simple-popup_direction_center:has(> div > div > div.dist-overlay__description)
 ya.ru,yandex.*##.simple-popup__overlay_shown_true
+! "b" https://github.com/AdguardTeam/AdguardFilters/issues/175068#issuecomment-2009355449
+ya.ru,yandex.*#$#.DistributionSplashScreenModal[outercrosstitle="Нет, спасибо"] { display: none !important; }
+ya.ru,yandex.*#$#body { overflow: auto !important; }
 !
 ! Yandex.Search
 [$path=/search]ya.ru,yandex.*##.AdvOffers
@@ -45256,6 +45261,9 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+islamicfinder.org###main-column > div[class]:has(> div.rbanner > div.rbox)
+islamicfinder.org###sidebar div[class]:has(> div.row > div.banner-box)
+islamicfinder.org##.banner
 sofmap.com###remote_cs
 sofmap.com##.side_bnr
 swisscows.com##.bnnr-widget

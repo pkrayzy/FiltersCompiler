@@ -1,9 +1,9 @@
-! Checksum: 84uTdAxRvR8Pf0TrgwFbjg
-! Diff-Path: ../patches/14/14-s-1711028216-3600.patch
+! Checksum: WLeWsEpYk1caHyUaMHJ2gA
+! Diff-Path: ../patches/14/14-s-1711031793-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.22
-! TimeUpdated: 2024-03-21T13:32:24+00:00
+! Version: 2.1.91.23
+! TimeUpdated: 2024-03-21T14:31:58+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2352,6 +2352,7 @@ spaziogames.it,tuttotech.net,tuttoandroid.net,multiplayer.it,tomshw.it,moto.it#$
 !
 ! NOTE: Regular rules
 !
+schroeder-bauzentrum.de#$##usercentrics-root { display: none !important; }
 mvideo.ru#$#body.disable-body-scrolling { position: static !important; overflow: auto !important; }
 pekao.com.pl###cookies-popup-container
 m.foodingredientsfirst.com##div[id^="CookiePolicy"]
@@ -39900,7 +39901,11 @@ ya.ru##.market-feed
 ya.ru##.message-promo
 ya.ru##.search3__inner > div.link-bro
 ! Yandex Browser promo
+! "a"
 ya.ru,yandex.*##.simple-popup__overlay_shown_true
+! "b" https://github.com/AdguardTeam/AdguardFilters/issues/175068#issuecomment-2009355449
+ya.ru,yandex.*#$#.DistributionSplashScreenModal[outercrosstitle="Нет, спасибо"] { display: none !important; }
+ya.ru,yandex.*#$#body { overflow: auto !important; }
 !
 ! Yandex.Search
 [$path=/search]ya.ru,yandex.*##.AdvOffers
@@ -41521,6 +41526,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+islamicfinder.org##.banner
 sofmap.com###remote_cs
 sofmap.com##.side_bnr
 swisscows.com##.bnnr-widget
