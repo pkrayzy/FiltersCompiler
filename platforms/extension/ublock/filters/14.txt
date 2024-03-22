@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 6sfDn29ulFk6RpSUypXssQ
-! Diff-Path: ../patches/14/14-s-1711111041-3600.patch
+! Checksum: nFW63RroW6SHsDLGfBbUfA
+! Diff-Path: ../patches/14/14-s-1711114633-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.37
-! TimeUpdated: 2024-03-22T12:32:04+00:00
+! Version: 2.1.91.38
+! TimeUpdated: 2024-03-22T13:32:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2363,6 +2363,7 @@ damota.me,pracazarohom.*,seduo.*##+js(remove-class, force--consent|show--consent
 !
 ! NOTE: Regular rules
 !
+openpli.org##+js(set-cookie, gdpr-accepted, Yes)
 wincofoods.com##mct-templater-cookie-consent
 /wp-content/plugins/wpmagus-consent-manager/assets/*$domain=altenberg.pl|alt.pl
 hesburger.*##.cookie-consent
@@ -21911,6 +21912,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+beeline.ru##+js(set-session-storage-item, backCallPopupIsShown, 1)
+beeline.ru#?#main + div:has(> div > div > button > span:contains(Быстро подключить))
 bathandbodyworks.com##body > .ui-dialog:has(> #dialog-container > div.email-dialog-content > a[href="/loyalty-rewards"])
 bathandbodyworks.com##.ui-widget-overlay
 media.vkplay.ru###top-informer
@@ -44952,6 +44955,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+bing.com##.b_algo_feedback ~ li.b_ans.b_mop.b_mopb
 glarity.app##div[class] > div[class]:has(> div[class] > a[href^="https://chromewebstore.google.com/"])
 glarity.app#?#div[class^="__"] > h1 ~ div:has(> div[class] div:contains(It’s free!))
 nativecamp.net##.hey-nc-top-banner
