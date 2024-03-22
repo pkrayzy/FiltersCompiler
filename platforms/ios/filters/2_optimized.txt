@@ -1,9 +1,9 @@
-! Checksum: Azz60zDjiBdjVnrEeTUgbw
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1711093043-3600.patch
+! Checksum: dzPCIozkBAOvS4TZbb/6IA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1711096654-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.27.80
-! TimeUpdated: 2024-03-22T07:33:02+00:00
+! Version: 2.3.27.81
+! TimeUpdated: 2024-03-22T08:33:09+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -286,6 +286,7 @@
 !+ NOT_PLATFORM(windows, mac, android)
 ||amgload.net^$third-party,badfilter
 ||d71e6dd31a026d45.com$popup
+||d2psma0az3acui.cloudfront.net^
 ||ads.betweendigital.com^
 ||rec.deezer.com^
 ||ads.greengeeks.com^
@@ -1160,6 +1161,8 @@ myabandonware.com#%#//scriptlet('abort-on-stack-trace', 'XMLHttpRequest', 'putPb
 streamingcommunity.*#%#//scriptlet('prevent-xhr', '/\.\w+\/$/')
 @@||streamingcommunity.*/*.js
 babia.to#%#//scriptlet('remove-node-text', 'script', '!document.getElementById(btoa(')
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+babia.to##body > div[class*=" "][style^="background: rgba("]
 freewebcart.com#@#.ad-wrap
 freewebcart.com#%#//scriptlet('prevent-setTimeout', 'placebo.height')
 igeeksblog.com#%#//scriptlet('prevent-setTimeout', 'placebo.height')
@@ -9659,6 +9662,7 @@ igg-games.com#%#//scriptlet('abort-on-stack-trace', 'Date', '_0x')
 get-to.link,zoro.se,bluemediadownload.lat,musichq.pe,bluemediaurls.lol,coolrea.link,bluemedialink.online,limetorrents.lol,updown.ninja,urlcut.ninja,moviesjoyhd.to,f2movies.to,kissasian.*,arponag.xyz,streamvid.net,1l1l.to,fireload.com,kissanimefree.cc,kimcartoon.li,cineb.rs,anichin.top,tinyzonetv.se,solarmovie.pe,himovies.sx,cineb.net,pahe.li,klmanga.net,tuktukcinema.*,truyengihotnhat.com,123-movies.zone,mangago.me,dlpanda.com,w123moviesfree.net,oxtorrent.sk,bluemediafile.*,exee.app,exep.app,exe.app,bluemediafiles.*,igg-games.co,javhd.today,ziperto.com,allmoviesforyou.net,1337xx.to,dropgalaxy.com,just-upload.com,pelisplushd.net,coinsurl.com,luckydice.net,coinsearns.com,torrentmac.net,cuevana3.*,igg-games.com,soap2day.*#%#//scriptlet("abort-current-inline-script", "globalThis", "break;case")
 eio.io#%#//scriptlet("abort-current-inline-script", "String.prototype.replace", "break;case")
 sitenable.*,filesdownloader.com,siteget.net,freeproxy.io,glodls.to#%#//scriptlet('abort-current-inline-script', 'fetch', 'IS_POP_COIN')
+1337x.to#%#//scriptlet('abort-on-property-write', 'LAST_CORRECT_EVENT_TIME')
 sitenable.*,filesdownloader.com,siteget.net,freeproxy.io,glodls.to#%#//scriptlet('abort-on-stack-trace', 'navigator', 'Object.isFlashEnabled')
 wishanimes.com,hd-streams.org,skidrowreloaded.com#%#//scriptlet("abort-current-inline-script", "Promise", "FingerprintJS")
 yoykp.com,arcjav.com,mc-hacks.net,mycivillinks.com,woiden.com,wonderapk.com,megaup.net,exeo.app,vidsrc.*,cricstream.me,vipleague.*,socceronline.me,igg-games.co,crackstreams.*,torrentmac.net,vipboxtv.*,vipbox.*,userscloud.com,game3rb.com,soap2day.*,soccerworldcup.me,igg-games.com,miraculous.to,coloredmanga.com,hentaispark.com,send.cm#%#//scriptlet("abort-current-inline-script", "navigator", "FingerprintJS")
@@ -11839,6 +11843,7 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 ||olalivehdplay.ru/blast.js
 ||lovesomecommunity.com/blast.js
 ||b4ucast.com/blast.js
+||1337x.to/mm.js
 thestoryshack.com##.variable-flash
 thestoryshack.com##.billboard-flash
 syok.my##.global-ads
