@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: VI5wmRHM1cOHmpeEftwyJQ
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1711069653-14400.patch
+! Checksum: Fu9xPZ0yVFYwUBfKnUO7CA
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1711084040-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.24
-! TimeUpdated: 2024-03-22T01:02:23+00:00
+! Version: 2.1.21.25
+! TimeUpdated: 2024-03-22T05:02:21+00:00
 ! Expires: 5 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -38,6 +38,7 @@
 /addtoany.
 /amp-social-
 /article-social/*
+/banner/social/*
 /bookmarksite_google.
 /bottom-facebook.
 /bottom-twitter.
@@ -454,6 +455,7 @@ _socialfancysliders/
 ###mainShare
 ###menu-footer-social-icons
 ###menu-footer-social-links
+###menu-footer_social
 ###menu-gridlove-social
 ###menu-header-social
 ###menu-herald-social
@@ -886,6 +888,7 @@ _socialfancysliders/
 ###twitter_content
 ###twitter_follow
 ###twitter_link
+###twitter_panel
 ###twitter_share
 ###twitter_social
 ###twitter_timeline-2
@@ -1023,6 +1026,7 @@ _socialfancysliders/
 ##.adSocial
 ##.adblSocialContainer
 ##.add-this
+##.addthis-button
 ##.addthis-container
 ##.addthis-smartlayers
 ##.addthis-wrapper
@@ -1201,6 +1205,7 @@ _socialfancysliders/
 ##.b-advert-social-wrapper
 ##.b-article__social
 ##.b-event_links__share__block
+##.b-follow-us
 ##.b-footer-social-icons
 ##.b-footer__social
 ##.b-footer_social
@@ -1952,6 +1957,7 @@ _socialfancysliders/
 ##.g1-social-icons
 ##.g1-socials-item
 ##.g1-socials-section
+##.g_share
 ##.ga-socials
 ##.gab_share_widget
 ##.galepro-core-social-share
@@ -2194,6 +2200,7 @@ _socialfancysliders/
 ##.icon-pinterest-share
 ##.icon-pinterest-sign
 ##.icon-pinterest-white
+##.icon-pinterest3
 ##.icon-pintrest
 ##.icon-pocket
 ##.icon-s-facebook
@@ -2431,6 +2438,7 @@ _socialfancysliders/
 ##.list-inline.social
 ##.list-item-facebook
 ##.list-item-twitter
+##.list-reseaux-sociaux
 ##.list-share
 ##.list-social
 ##.list-socials
@@ -2723,6 +2731,7 @@ _socialfancysliders/
 ##.parler-icon
 ##.partage-twitter
 ##.partial-share
+##.partialSocialButtons
 ##.pathSocialIcons
 ##.pbtsharethisbutt
 ##.pen_social_networks
@@ -2815,6 +2824,7 @@ _socialfancysliders/
 ##.postSocial
 ##.postTwitterIcon
 ##.post__fb-page-plugin
+##.post__pin-link
 ##.post__share
 ##.post__share-container
 ##.post__social-container
@@ -3188,6 +3198,7 @@ _socialfancysliders/
 ##.shareArticle
 ##.shareBar
 ##.shareBlock
+##.shareBottom
 ##.shareBox
 ##.shareBtm
 ##.shareBtn
@@ -3887,6 +3898,7 @@ _socialfancysliders/
 ##.socialButtons
 ##.socialButtonv1
 ##.socialChannels
+##.socialCnt
 ##.socialColumn
 ##.socialConnect
 ##.socialCont
@@ -3913,6 +3925,7 @@ _socialfancysliders/
 ##.socialIconsWrapper
 ##.socialIcons_link
 ##.socialInfo
+##.socialInner
 ##.socialItem
 ##.socialItems
 ##.socialLikes
@@ -4186,6 +4199,7 @@ _socialfancysliders/
 ##.sticky-share
 ##.sticky-share-bar
 ##.sticky-social
+##.sticky-social-group
 ##.sticky-social-share
 ##.stickyVerticalSocialContainer
 ##.sticky_social
@@ -4371,6 +4385,7 @@ _socialfancysliders/
 ##.twitter-w
 ##.twitter-wrap
 ##.twitter-wrapper
+##.twitterBlock
 ##.twitterBox
 ##.twitterFeed
 ##.twitterFeeds
@@ -4853,6 +4868,7 @@ oneindia.com###youtube_promo
 always-on.com.au###zeen_retina_image-3
 ynetnews.com##.AccordionShareWrapper
 10news.com##.ActionBar
+popsci.com##.Article-socialShare
 newscientist.com##.ArticleHeader__SocialWrapper
 nationalgeographic.com##.Article__Header__Share
 startrek.com##.Article_shareToggle__D2fGG
@@ -4948,7 +4964,6 @@ onedayonly.co.za##.css-p1ns9f
 thedrive.com##.css-vr83lp
 coincodecap.com##.ct-block-wrapper
 therighthairstyles.com##.custom-pinterest-wrap
-thewildest.com##.dJ_xt
 cracked.com##.desktop-controls
 ubisoft.com##.desktop-only
 capital.com##.detail__soc
@@ -5188,6 +5203,7 @@ healthshots.com##.stickySocial
 amazonadviser.com,apptrigger.com,arrowheadaddict.com,bamsmackpow.com,fansided.com,gamesided.com,gojoebruin.com,hiddenremote.com,lastnighton.com,mlsmultiplex.com,netflixlife.com,playingfor90.com,stormininnorman.com,winteriscoming.net##.sticky_1ds30c3
 aetv.com,wccftech.com##.story-share
 wccftech.com##.story-share-bottom
+stuff.co.nz##.stuff-article-sharebar
 patch.com##.styles_SocialShare__lQpUq
 todayonline.com##.subcription-two
 scrippsnews.com##.subheader
@@ -5414,6 +5430,8 @@ vg.hu##app-share-buttons
 centrometeoitaliano.it,leggo.it###box-social
 salute.gov.it###boxCondivisioneVoto
 ilmeteo.it###condividi_news
+ilfattoalimentare.it###custom_html-8
+ilfattoalimentare.it###custom_html-9
 bastabugie.it,tuttocampo.it###facebook
 wikihow.it###sf
 focusjunior.it##.SATover
