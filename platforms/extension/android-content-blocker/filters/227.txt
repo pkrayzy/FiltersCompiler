@@ -1,14 +1,14 @@
-! Checksum: kyQgPZeD0Pnewds4cRR8gA
-! Diff-Path: ../patches/227/227-s-1711040832-14400.patch
+! Checksum: 5Eh5HHrVQ6pQ/efn+mPkdA
+! Diff-Path: ../patches/227/227-s-1711109938-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.17.95
-! TimeUpdated: 2024-03-21T17:02:55+00:00
+! Version: 2.0.17.96
+! TimeUpdated: 2024-03-22T12:14:47+00:00
 ! Expires: 1 day (update frequency)
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2024.0321.1
+! OriginalVersion: 2024.0322.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://community.list-kr.com/docs/
@@ -457,7 +457,6 @@
 ##ins.adsbyadop
 ##iframe[src^="https://realdsp.realclick.co.kr"]
 ##iframe[src^="https://googleads.g.doubleclick.net/"]
-##div[id^="google_ads_iframe_"]
 ##ins.adsbygoogle
 ##iframe[src^="https://ads-partners.coupang.com/"]
 ##ins.kakao_ad_area
@@ -632,7 +631,6 @@
 ||coupang.com/vp/products/*/items/*/carousel-widget
 ||images.mimint.co.kr/banner/
 ||melon-pan.com/plugin/adcover/
-||s-lol-web.op.gg/assets/images/banners/
 /wp-content/plugins/brave-popup-builder/assets/frontend/brave.js$domain=smartinpress.com|hotissuepoint.com|keela.co.kr
 ||etoland.co.kr/img/renewal/games/squidland/
 ||youtube.com/iframe_api|$domain=etoland.co.kr
@@ -1270,6 +1268,7 @@
 !
 ! DOMAIN-REFRESHER: START
 !
+||images.request-support.com/br/$domain=tvwiki.*
 /__/nuevo.min.js$domain=avguri2.com|avguri3.com|avguri4.com|avguri5.com|avguri6.com|avguri7.com|avguri8.com|avguri9.com|avguri10.com|avguri11.com|avguri12.com|avguri13.com
 ||ohli365.*/data/apms/$domain=ohli365.*
 ||bbongtv.*/img/*.gif$domain=bbongtv.*
@@ -1499,6 +1498,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+tftps.gg###summoner-history-header ~ div[class*=" "][class^="sc-"]:not([id]):not([style])
 etoland.co.kr###coupang_cover_box
 etoland.co.kr##body[marginheight] #coupang_cover_box ~ section[style^="margin-top:"].box
 zum.com##div[class$="-banners"]
@@ -1645,7 +1645,6 @@ shopping.interpark.com##.productSortingList > .choice
 shopping.interpark.com##.productListWrap > #serviceKeywordId
 hash.kr##table[border="0"] > tbody > tr > td:not(td > div:not(div.noresize) + b > a:not([target="_blank"]))
 mlbpark.donga.com##.left_cont > div[style^="width:"]
-esports.op.gg##div[class^="lg:bg-darkpurple-800"]
 ruliweb.com##.adrr
 forwarder.kr###aside > div[style^="background-color:"]
 fun-iyagi.co.kr,timecoffee.co.kr###custom_html-8
@@ -1694,11 +1693,6 @@ munhwa.com,kpanews.co.kr##section[class*="_ad"]
 etoland.co.kr##section.main_left > div[style*="width:"][style*="text-align:"] ~ div[style^="margin-bottom:"]
 mimint.co.kr###MiMintBottomViewLayer
 jellinggame.com##.popup
-op.gg##div[id^="banner-"]
-op.gg##.vm-placement
-op.gg###content-header .FormItem + #opgg-video
-op.gg##.e17e77tq6
-op.gg###content-container > main > div[class^="css-"][class*=" "] ~ div[class^="css-"][class*=" "][style^="margin-bottom:"]
 etoland.co.kr##div[class^="power_link"]
 etoland.co.kr##ul.board_list > li.subject.ad_subject
 etoland.co.kr###mw_mobile > div[style^="margin-bottom:"]
@@ -2240,7 +2234,7 @@ edufindkorea.com###body_wrap > #body_main > div[style]:nth-child(2)
 junggi.co.kr##img[src^="/data/__banner/"]
 junggi.co.kr##img[src^="/image/banner/"]
 danawa.com##.main__grid.main__grid--line .main__grid__right
-duo.op.gg,tgd.kr,dpg.danawa.com##div[id*="-ad-"]
+tgd.kr,dpg.danawa.com##div[id*="-ad-"]
 maxmovie.com,dcnewsj.joins.com,news.heraldcorp.com,biz.chosun.com,m.place.naver.com,styleup.gameangel.com,wowtv.co.kr,news.naver.com##div[id*="_ad_"]
 thelec.kr##div[onclick^="wcs.event("]
 m.starnewskorea.com###content > div[style^="background:"][class]
@@ -2751,8 +2745,6 @@ svrforum.com##body > div[class][style*="box-shadow:"]
 @@||mtag.mman.kr/get_ad.mezzo/$xmlhttprequest,domain=maxmovie.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aagag.com,xmlhttprequest
 meeco.kr#@#.googleAd
-op.gg#@#.AdSense
-op.gg#@##top-banner-ad
 @@||cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js$script,domain=typing.works
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$xmlhttprequest,domain=spotvnow.co.kr
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.search.naver.com
