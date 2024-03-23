@@ -1,9 +1,9 @@
-! Checksum: ILlGVdy5yiolHU1gLLcpew
-! Diff-Path: ../patches/241_optimized/241_optimized-s-1711156034-14400.patch
+! Checksum: M6ynC4cpNpyfpjrAbceezA
+! Diff-Path: ../patches/241_optimized/241_optimized-s-1711170434-14400.patch
 ! Title: EasyList Cookie List (Optimized)
 ! Description: Removes cookie and privacy warnings. Already included in Fanboy's Annoyances list.
-! Version: 2.1.31.15
-! TimeUpdated: 2024-03-23T01:03:15+00:00
+! Version: 2.1.31.16
+! TimeUpdated: 2024-03-23T05:03:14+00:00
 ! Expires: 10 days (update frequency)
 -consent-banner-
 -consent-banner.
@@ -571,6 +571,7 @@
 ###allow_cookies
 ###allowusecookies
 ###am-cookie
+###amg-privacy-banner
 ###amgdpr-cookie-block
 ###analytics-consent
 ###analytics_cookie
@@ -781,12 +782,14 @@
 ###container_cookie
 ###containercookies
 ###contenedorCookies
+###conteneurCookies
 ###content > #cookie
 ###content-alert-cookie
 ###content-cookie
 ###content-cookies
 ###content_cookie
 ###coockieagree
+###cookEN
 ###cookemessagehandler
 ###cooki
 ###cookie-1
@@ -1019,6 +1022,7 @@
 ###cookie.align-center
 ###cookie.cookie
 ###cookie.cookies
+###cookie.fixed-bottom
 ###cookie.ng-scope
 ###cookie.p-4
 ###cookie.view
@@ -1269,6 +1273,7 @@
 ###cookie_dialog
 ###cookie_directive_container
 ###cookie_disclaimer
+###cookie_disclaimer_wrapper
 ###cookie_div
 ###cookie_eu_bar
 ###cookie_footer
@@ -1910,6 +1915,7 @@
 ###gdpr_cookies
 ###gdpr_link
 ###gdpr_message
+###gdpr_modal
 ###gdpr_notice
 ###gdpr_overlay
 ###gdpr_popup
@@ -2135,6 +2141,7 @@
 ###nx_gdpr_modal_main2
 ###o99_cookie-information
 ###oPrivallyApp
+###oc_cb_wrapper
 ###ocn-cookie-inner
 ###ocn-cookie-wrap
 ###oct-policy.fixed-bottom
@@ -2228,6 +2235,7 @@
 ###popup_cookies
 ###popupcookies
 ###portal-cookie-info
+###ppms_cm_bar_overlay
 ###ppms_cm_popup_overlay
 ###pricacy_popup
 ###pricepirates-cookie-accept
@@ -2469,6 +2477,7 @@
 ###wpca-popup-modal
 ###wpcui_cookie_bar_main_body
 ###wrap-cookies-gdpr
+###wrapper > #cookie-container
 ###wrapper-cookies
 ###ws-cookie-banner
 ###wsjconsent
@@ -2496,6 +2505,7 @@
 ##.CookieAcknowldegementContainer
 ##.CookieBannerOfPc
 ##.CookieComplianceContainer
+##.CookieComplianceContainer-veil
 ##.CookieConsent-Wrapper-BackgroundBox
 ##.CookieConsentBanner
 ##.CookieConsentContainer
@@ -2622,6 +2632,7 @@
 ##.aviso-cookies
 ##.aviso-de-cookies
 ##.aviso-gestion-cookies
+##.aviso-lgpd
 ##.aviso-politica-cookies
 ##.aviso_cookies
 ##.awe_cookie_settings
@@ -3108,6 +3119,7 @@
 ##.cookie-policy-accept
 ##.cookie-policy-aggressive-popup
 ##.cookie-policy-bar
+##.cookie-policy-bar-bottom
 ##.cookie-policy-box
 ##.cookie-policy-container
 ##.cookie-policy-content
@@ -3380,6 +3392,7 @@
 ##.cookie_privacy_info_bar
 ##.cookie_rules
 ##.cookie_sav
+##.cookie_section
 ##.cookie_setting
 ##.cookie_settings_toggle
 ##.cookie_statement
@@ -3457,6 +3470,7 @@
 ##.cookies-accept--block
 ##.cookies-accept-block
 ##.cookies-acceptance
+##.cookies-acceptance-panel
 ##.cookies-accepted:not(body):not(.page)
 ##.cookies-adv
 ##.cookies-agree
@@ -3593,6 +3607,7 @@
 ##.cookiesContent
 ##.cookiesCorreios
 ##.cookiesDisclaimer
+##.cookiesHeader
 ##.cookiesInfo
 ##.cookiesMessage
 ##.cookiesNote
@@ -3658,6 +3673,7 @@
 ##.cookiesbox-bubble
 ##.cookieseal-banner-body
 ##.cookiesettings
+##.cookiesheader
 ##.cookiesinfo
 ##.cookieslaw
 ##.cookiesmessage
@@ -3818,6 +3834,7 @@
 ##.footer-cookie-popup
 ##.footer-cookie-wrapper
 ##.footer-cookies
+##.footer-cookies-alert
 ##.footer-cookies-policy
 ##.footer-gdpr
 ##.footer-privacy-popup
@@ -3880,6 +3897,7 @@
 ##.gdpr-message
 ##.gdpr-modal-dialog
 ##.gdpr-modal-overlay
+##.gdpr-modal-wrapper
 ##.gdpr-msg
 ##.gdpr-notice
 ##.gdpr-notice-container
@@ -4073,6 +4091,7 @@
 ##.kia-cookie
 ##.kick-kcm-settings
 ##.klaroPlaceholder
+##.kokku-cookie-banner
 ##.kv-ee-gdpr-banner
 ##.kvk-footer-warning
 ##.kvkkpop
@@ -4115,6 +4134,7 @@
 ##.m_cookie
 ##.m_privacy_statement
 ##.mac-header-cookie-banner-section
+##.main-cookie-title
 ##.main-cookies
 ##.mainPrivacyBar
 ##.mainPrivacyModal
@@ -4527,6 +4547,7 @@
 ##.vtl-cb-main-widget
 ##.w-100.cookie
 ##.waconcookiemanagement
+##.warning-cookie
 ##.warning_EU_cookiemsg
 ##.wb_cookie_policy
 ##.wc-gdpr-template-large
@@ -4584,6 +4605,7 @@
 ##[aria-describedby^="cookie-wall-"]
 ##[aria-labelledby="cookie-wall-heading"]
 ##[data-alert-cookie]
+##[data-at-selector="cookie-banner"]
 ##[data-ccpa]
 ##[data-cookie-name="cookiesDirective"]
 ##[data-cookie-number]
@@ -5174,7 +5196,6 @@ enermax.com###cookice-text
 yousign.com###cookie-consent-app
 github.com###cookie-consent-banner
 amnesty.org###cookie-consent__modal
-autism-unlimited.org###cookie-cover
 energylivenews.com###cookie-notification-mask
 rauch-ft.com###cookie-policy
 asus.com###cookie-policy-info-bg
@@ -5209,7 +5230,6 @@ alternative.me,motorsport.com,pdf24.org###footer
 auth.sparxmaths.uk###footer-cookie-banner
 flynas.com###footer-message
 freakonomics.com###fre_cookie_modal
-shbarcelona.com###full_screen_div_cookies_layer
 musicmap.info###fullscreen-overlay
 wallarm.com###gdpr_banner_container
 myedit.online###gdpr_notes
@@ -5231,6 +5251,7 @@ amcharts.com###notices
 checkpoint.com,csl-computer.com,pomvom.com,proscia.com,yesgolive.com###notification
 pacesuite.com###notification-cont
 tresorit.com###notification-wrapper
+adverts.ie,boards.ie,dailyedge.ie,did.ie,the42.ie,thejournal.ie###notify-container
 steamgriddb.com###noty_layout__bottomRight
 spreaker.com###nt_container
 nvu.io###nvu-consent
@@ -5356,6 +5377,7 @@ linkedin.com##.bg-color-background-container-tint.top-2
 mastersintime.com##.bg-green-200
 rowertour.com##.bg-trans-full-cookie
 french-weekendbreaks.co.uk##.block-fs-cookie
+cvent.com##.block-notifications-block
 matrixgames.com,slitherine.com##.blockingOverlay
 gobrightline.com##.blte-alertbanner__wrapper
 copilot.microsoft.com##.bnp_cookie_banner
@@ -5431,6 +5453,7 @@ bandcamp.com##.corp-banners
 itv.com##.cp_dialog
 odds.am##.cs
 onedayonly.co.za##.css-1gx7o2j
+bbb.org##.css-1kzsvch.e5ukq110
 streamelements.com##.css-1tg1tld
 tiktok.com##.css-bu8whx-DivBannerContainer
 princetonreview.com##.customer-cookie-container
@@ -5735,7 +5758,7 @@ mbgtc.de,privateproperty.co.za###consentManager
 stat.fi,unesdoc.unesco.org,vkf-renzel.nl###cookie-modal
 1med.tv,mediasphera.ru,waldorf-expertenservice.de###cknt
 cv.ee,cv.lv,cvonline.lt##.cookie-consent-container
-brothers-graphics.com,dryrobe.com,dxracer-germany.de,lockcard.de##.cc-window-wrapper
+brothers-graphics.com,cerascreen.de,dryrobe.com,dxracer-germany.de,lockcard.de##.cc-window-wrapper
 flexispot.co.uk,flexispot.de,flexispot.es,flexispot.it,flexispot.nl,flexispot.pl###gdprMask
 timp.pro,vivantis-shop.at,vivantis.cz,vivantis.hu,vivantis.it,vivantis.ro##.modal-wrapper
 landal.at,landal.be,landal.ch,landal.co.uk,landal.com,landal.de,landal.dk,landal.no##consent-slide-in-component
@@ -5772,7 +5795,6 @@ flanco.ro,ip-adress.com###cc-wrapper
 it-notes.dragas.net,lehmanns.de,solas.ie##.cc_dialog
 lansol.de,simply-yummy.de,volcanoteide.com##.cc-grower
 adammendrek.cz,airsoft.ch,airsoftzone.at,armamat.at,poistenievyhodne.sk,racius.com##.cb
-efkoart.cz,ellexgk.cz,eltasat.cz,fizishop.cz,kawio.cz,majkl3d.cz,majkl3d.sk,marusik.cz,niwa.cz,softcotton.pl,top-dent.cz,woolife.cz##.CA
 eufy.com,kurasu.kyoto,popcandyco.com,seenebula.com,soundcore.com##.jsFixedMessage
 proprospan.ru,worksmile.com##.cookies-component
 bienpreter.com,jackbox.tv,kirchberg.ch,ndsas.sk,sardynkibiznesu.pl,trakt.tv###cc-main
@@ -7567,6 +7589,7 @@ kymppikatsastus.fi#%#//scriptlet('ubo-set-cookie.js', 'cookielawinfo-checkbox-ne
 kymppikatsastus.fi#%#//scriptlet('ubo-set-cookie.js', 'cookielawinfo-checkbox-toiminnalliset-evasteet', 'yes')
 kymppikatsastus.fi#%#//scriptlet('ubo-set-cookie.js', 'cookielawinfo-checkbox-analytics', 'no')
 kymppikatsastus.fi#%#//scriptlet('ubo-set-cookie.js', 'viewed_cookie_policy', 'yes')
+hoklartherm.de###Cookie_content
 vdk.de###DSE
 audi-technology-portal.de###PrivacyManager
 die-mitte.ch###ampsandConsentElement
@@ -7695,6 +7718,7 @@ cd.cz###c22overlay
 czc.cz###ccp-popup
 levnapc.cz###cookies-lp-banner
 zdopravy.cz###open_preferences_center
+eberry.cz##.c-cookie-consent-bar
 menicka.cz##.cookies_panel_wrp
 lekarna.cz##.inconsent-cc
 kudyznudy.cz##.j-cinfo
@@ -7720,7 +7744,9 @@ mobiel.nl##[class^="CookiesModal_"]
 npo.nl##ccm-notification
 teztour.ee##.dialog-window
 bolt.works##.bolt-cookie-banner
+vertaa.fi##.cg-97
 verkkokauppa.com##.gDFWtL
+vertaa.fi##div > .cg-57
 imt.fi##imt-consent-overlay
 bittimittari.fi,hackthenetworks.fi,havaro.fi,kyberturvallisuuskeskus.fi,tietoturvamerkki.fi,traficom.fi,turvalistit.fi##section[class^="PrivacyConsentBanner_"]
 whatsup.gr###ck_cookies
