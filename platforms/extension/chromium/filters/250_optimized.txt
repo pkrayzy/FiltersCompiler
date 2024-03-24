@@ -1,5 +1,5 @@
-! Checksum: SnTZyhOIyi9VHGfo057rRw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1711170428-14400.patch
+! Checksum: ATEGi67XWJGy+SrVgKVlug
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1711256815-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.13.72
@@ -379,6 +379,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||pochta-ru.com^$all
 ||howtofix.guide^$document
 ||contactspotsscattered.com^$all
+||crumblerefunddiana.com^$all
 ||departgross.com^$all
 ||feelsjet.com^$all
 ||files.im^$all
@@ -582,6 +583,7 @@ www.microsoft.com##a[data-pfns][data-pfns^="2"][data-pfns*="game."]
 ##a[class^=share_btn]:not([class*=body i],[id*=body i])
 ##a[data-ss-ss-type]
 ##a[href*=".cmd=addShare"]
+##a[href*="/social_plugins/share"]
 ##a[href*="://plus.google.com/share?url="]
 ##a[href*="addtoany.com/add_to/"]
 ##a[href*="api.addthis.com"]:not([href*="/email/"])
@@ -1378,12 +1380,14 @@ $removeparam=at_gd
 $document,removeparam=/^amp=$/,domain=~eurasiantimes.com|~cybersecuritynews.com
 $document,removeparam=/^amp=true$/
 $removeparam=_gl
+$removeparam=_source_page
 $removeparam=vfadid
 $document,removeparam=/^outputType=amp$/
 $removeparam=orig_referrer
 $removeparam=AgentCode
 $removeparam=ncid
 $document,removeparam=/^ecid=/i,domain=~account.microsoft.com
+$removeparam=adcid
 $removeparam=mkt_tok
 @@^mkt_unsubscribe=$removeparam=mkt_tok
 $removeparam=affname
@@ -2393,6 +2397,7 @@ $removeparam=ds_e_adid,domain=clickserve.dartsearch.net
 $removeparam=ds_e_target_id
 $removeparam=ds_e_network,domain=clickserve.dartsearch.net
 $removeparam=ds_url_v,domain=clickserve.dartsearch.net
+||jasonsavard.com^$removeparam=cUrl
 ||xg4ken.com^$removeparam=prof
 ||xg4ken.com^$removeparam=kct
 ||xg4ken.com^$removeparam=kchid
@@ -2445,6 +2450,7 @@ $removeparam=visit_id,document,domain=bilibili.com|google.*
 ||coupang.com^$removeparam=wTime
 ||coupang.com^$removeparam=wPcid
 $removeparam=correlation_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
+||pulseway.com^$removeparam=rfid
 ||dw.com^$removeparam=maca
 ||fiverr.com^$removeparam=bta
 ||fiverr.com^$removeparam=afp
@@ -2553,7 +2559,9 @@ $removeparam=spr,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=tc,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=textadID,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=affwin
+$removeparam=instance_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=nl,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
+$removeparam=te,document,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 ^fs=e&s=cl$document,removeparam=fs
 ^fs=e&s=cl$document,removeparam=s
 ||redirect.appmetrica.yandex.com^$removeparam=c
@@ -2684,6 +2692,7 @@ $document,domain=bilibili.com|querie.me,removeparam=timestamp
 ||adguard.info^$removeparam=nc
 ref=404media.co$document,removeparam=ref
 ref=easywithai$document,removeparam=ref
+$document,removeparam=jp_cmp,domain=chase.com
 ||researchgate.net^$document,removeparam=_tp
 $document,removeparam=share_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 ||xvideos.$document,removeparam=sxcaf
