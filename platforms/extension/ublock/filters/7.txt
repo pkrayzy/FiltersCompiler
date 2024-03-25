@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: d7x7g4FSwOOqJlylcfP7oA
-! Diff-Path: ../patches/7/7-s-1711370257-3600.patch
+! Checksum: repHAST261Q2AYo843LIsg
+! Diff-Path: ../patches/7/7-s-1711373875-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.49.81
-! TimeUpdated: 2024-03-25T12:33:35+00:00
+! Version: 2.0.49.82
+! TimeUpdated: 2024-03-25T13:33:55+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1673,6 +1673,10 @@ gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 !
 !
 !
+funny-ai.com##.main-header-ads
+funny-ai.com##.main-frp-ads
+||korewaeroi.com/i2i.html
+korewaeroi.com##.l-sidebar > aside.widget_custom_html
 moeasia.net###pickup > a ~ .bam-card:has(a[href*=".amazon.co.jp/dp/"])
 nekochan.jp##.detail_header_ad
 wanchan.jp##.detail_header__ad
@@ -10239,6 +10243,11 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_japanese
 !
 !
 !
+! Unbreak ranking
+@@||serving.stat-rock.com/v1/placements/$xmlhttprequest,domain=funny-ai.com
+||stream.playerserve.com/stream/server/$media,redirect=noop-1s.mp4,domain=funny-ai.com
+funny-ai.com#@#.button_ads
+funny-ai.com#$#.orp-player-rewarded { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142569
 @@||cm-widget.nakanohito.jp/cm/$script,stylesheet
 @@||cm-beacon.nakanohito.jp/cm/comment_$xmlhttprequest
