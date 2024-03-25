@@ -1,9 +1,9 @@
-! Checksum: i0YtTYXeCL6HGy/SJSgHcA
-! Diff-Path: ../patches/3/3-s-1711381015-3600.patch
+! Checksum: URuXR7H4bEyz8SyrnfhtIw
+! Diff-Path: ../patches/3/3-s-1711384634-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.68.11
-! TimeUpdated: 2024-03-25T15:33:12+00:00
+! Version: 2.0.68.12
+! TimeUpdated: 2024-03-25T16:33:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -41909,6 +41909,14 @@ nethunt.com/api/v1/track/email/$image
 ||app.getsentry.com^$domain=d3ward.github.io
 ! NOTE: d3ward.github.io end ⬆️
 ! !SECTION: d3ward.github.io
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_protection
+!
 !-------------------------------------------------------------------------------!
 !-------------- Fixing filtration errors (false-positive) Cookies --------------!
 !-------------------------------------------------------------------------------!
@@ -43401,6 +43409,7 @@ inapps.appsflyersdk.com^
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175365
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175476
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||widget.fitanalytics.com/widget.js$domain=pullandbear.com
