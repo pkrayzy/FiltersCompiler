@@ -1,9 +1,9 @@
-! Checksum: jxZl4vDRGK8yZKUmsYd1sg
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1711328836-14400.patch
+! Checksum: 46FNs8y2o1v95M0H+iQSpQ
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1711343211-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.39
-! TimeUpdated: 2024-03-25T01:02:30+00:00
+! Version: 2.1.21.40
+! TimeUpdated: 2024-03-25T05:02:26+00:00
 ! Expires: 5 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -337,6 +337,7 @@ _socialfancysliders/
 ###fb-box
 ###fb-like
 ###fb-like-box
+###fb-like-button
 ###fb-side-like
 ###fbLike
 ###fbLikeButton
@@ -362,6 +363,7 @@ _socialfancysliders/
 ###fbtw
 ###fcbk
 ###float_fb_plugin
+###floating-share
 ###floatingSocialShare
 ###follow-buttons
 ###follow-facebook
@@ -407,6 +409,7 @@ _socialfancysliders/
 ###footerSocialIcons
 ###footerSocialLinks
 ###footer_block_social
+###footer_follow
 ###footer_social
 ###footer_social_facebook
 ###footer_social_icons
@@ -545,6 +548,7 @@ _socialfancysliders/
 ###share-this
 ###share-toggle
 ###share-tools
+###share-trigger
 ###share-tweet
 ###share-twitter
 ###share-twitter-menu
@@ -958,6 +962,7 @@ _socialfancysliders/
 ##.SOCIAL
 ##.Share-buttons
 ##.Share-item
+##.Share-reveal
 ##.ShareBar
 ##.ShareBlock-isReact
 ##.ShareBox
@@ -1402,6 +1407,7 @@ _socialfancysliders/
 ##.card-share
 ##.card__share
 ##.card__shareBtn
+##.card__social
 ##.category-share
 ##.cb-social-sharing
 ##.ccm-block-social-links
@@ -1409,6 +1415,7 @@ _socialfancysliders/
 ##.cd-fb-like-widget
 ##.cff-share-container
 ##.cff-share-tooltip
+##.checkout-share
 ##.cl-social
 ##.cmSocialMediaList
 ##.cmSocialMediaListContainer
@@ -1526,6 +1533,7 @@ _socialfancysliders/
 ##.dslc-social-icon
 ##.dt_social_single
 ##.dtm-footer-social-link
+##.dw-social-icons
 ##.dwg-footer-plank__social
 ##.e-footer--social
 ##.e-header--sociallist
@@ -1650,6 +1658,7 @@ _socialfancysliders/
 ##.facebook-messenger-avatar
 ##.facebook-modal
 ##.facebook-page-plugin
+##.facebook-page-widget
 ##.facebook-plain-control
 ##.facebook-popup
 ##.facebook-recommend
@@ -2103,6 +2112,7 @@ _socialfancysliders/
 ##.header__nav-social
 ##.header__social
 ##.header__social-button
+##.header__social-buttons
 ##.header__social-icons
 ##.header__social-list
 ##.header__social-media
@@ -2112,6 +2122,7 @@ _socialfancysliders/
 ##.header_sharing
 ##.header_sns
 ##.header_social
+##.header_social-media
 ##.header_social_icon
 ##.header_top_bar_socs
 ##.headersocial:not(body):not(html)
@@ -2131,6 +2142,7 @@ _socialfancysliders/
 ##.hideshare-wrap
 ##.hola_share_player_btn
 ##.hola_share_player_btn_wrapper
+##.homepage-social
 ##.horizontal-share
 ##.horizontal-social-links
 ##.horizontal.social
@@ -2579,6 +2591,7 @@ _socialfancysliders/
 ##.messageShareButtons
 ##.meta-share
 ##.meta-share-expand
+##.meta-share-post-social-header
 ##.meta-share-wrapper
 ##.meta-shares
 ##.meta__share
@@ -2649,10 +2662,12 @@ _socialfancysliders/
 ##.mvp-soc-mob-pin
 ##.mvp_facebook_widget
 ##.n-facebook
+##.naked-social-share
 ##.native-share
 ##.native-share-buttons
 ##.nav--social
 ##.nav-bar__social-links__link
+##.nav-follow-us
 ##.nav-footer-social
 ##.nav-instagram
 ##.nav-share
@@ -2813,6 +2828,7 @@ _socialfancysliders/
 ##.post-content__sticky-social
 ##.post-email-share
 ##.post-footer-share
+##.post-footer__share
 ##.post-like-share
 ##.post-meta-share
 ##.post-meta-social
@@ -3674,6 +3690,7 @@ _socialfancysliders/
 ##.social-buttons--uk
 ##.social-buttons-compact
 ##.social-buttons-container
+##.social-buttons-footer
 ##.social-buttons-module
 ##.social-buttons-v2
 ##.social-buttons-wrapper
@@ -4337,6 +4354,7 @@ _socialfancysliders/
 ##.toolbar-share
 ##.toolbar-twitter
 ##.toolbox-share
+##.toolkit-social-share
 ##.tools-share
 ##.toolsShare
 ##.tooltip_google
@@ -4461,6 +4479,8 @@ _socialfancysliders/
 ##.u-btni-share
 ##.u-socialWrapper
 ##.uhf-social-links
+##.ui-fixed-panel-share
+##.ui-fixed-panel-shares
 ##.ui-icon-facebook
 ##.ui-icon-linkedin
 ##.ui-icon-twitter
@@ -4614,6 +4634,7 @@ _socialfancysliders/
 ##.widget_vw_widget_social_subscription
 ##.widget_wpcom_social_media_icons_widget
 ##.widget_wpgrade_social_links
+##.widgetsocial
 ##.wp-block-social-links
 ##.wp-embed-share
 ##.wp-flybox_tab
@@ -5006,7 +5027,6 @@ coincodecap.com##.ct-block-wrapper
 therighthairstyles.com##.custom-pinterest-wrap
 cracked.com##.desktop-controls
 ubisoft.com##.desktop-only
-capital.com##.detail__soc
 dailymail.co.uk##.dms-puff
 thefitcareerist.com,thewalrus.ca##.dpsp-network-list-item
 theverge.com##.duet--article--share-buttons
@@ -5025,6 +5045,7 @@ bearingarms.com,hotair.com,redstate.com##.fb-social
 phoenixnewtimes.com##.fdn-site-header-social-icons
 eadaily.com##.feed
 teaonews.co.nz##.ffsAxx
+indiatoday.in##.fixedshared
 kick.com##.flex.flex-col.space-y-3
 techradar.com##.flipboard-icon
 thehackernews.com##.float-share
