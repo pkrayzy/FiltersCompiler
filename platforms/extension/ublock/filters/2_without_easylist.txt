@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: t2Nk15O3kbMDcjtpYNh0rA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1711456857-3600.patch
+! Checksum: Rktl9xB+A6KOFgGW15MZQw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1711466318-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.28.41
-! TimeUpdated: 2024-03-26T12:35:39+00:00
+! Version: 2.3.28.42
+! TimeUpdated: 2024-03-26T15:09:32+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -17727,6 +17727,8 @@ junat.net###junatnet-campaign-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157387
 telsu.fi##+js(no-fetch-if, googlesyndication.com)
 ! https://github.com/uBlockOrigin/uAssets/issues/14204
+||es.ylilauta.org^
+ylilauta.org##.card.a
 ! ruutu.fi - video ads
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/*.mp4$media,redirect=noop-1s.mp4,domain=ruutu.fi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78743
@@ -30165,6 +30167,8 @@ spectrum.ieee.org##+js(set-constant, splashpage, undefined)
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175743
+thesprucepets.com#$?#.mm-ads-leaderboard-spacer { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175615
 formu1a.uno#$#.et_pb_row_1_tb_body { min-height: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174650
@@ -32133,6 +32137,9 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 !
 ! NOTE: Specific rules
 !
+||modsfire.com/img/ookfmx.png
+songbpm.com##div > div:has(> section > ins.adsbygoogle)
+bing.com##.b_ans:has([class^="xm_"][class*="_ansCont"])
 lnk.to##div[data-advertiser="amazon-music"]
 economist.com##div[class^="adComponent_advert"]
 exuce.com##button > a[target="_blank"]
@@ -32141,7 +32148,6 @@ uxwing.com##.flaxmain > div.tagmainblock:has(> div[id^="bsa-zone_"])
 ||vipbox.lc/partytown/
 fontesk.com##.postlist > .postlist-col:has(> aside > .textwidget > .feed-ads)
 tanoshiijapanese.com###cnbody #cnfooter:has(> #affiliate)
-bing.com##.b_algo_feedback ~ li.b_ans.b_mop.b_mopb
 yummly.com##.external-promo-root
 boardgameoracle.com#?#div[class^="jss"]:has(> span.MuiTypography-displayBlock:contains(Advertisement))
 open.spotify.com##div[aria-label="Advertisement"]
@@ -34685,7 +34691,7 @@ meracalculator.com##.mt-md-3  >.col-12
 meracalculator.com##.col-sm-12 > div[style^="min-height:"]
 ||timesnownews.com/dfpamzn.js
 timesnownews.com##._1ML8q
-video.hizliresim.com##.vr-adv-unit
+fastupload.io,video.hizliresim.com##.vr-adv-unit
 ||kisscartoon.*/api/pop*.php
 businessgreen.com##.notice-slot-full-below-header
 alternativeto.net##div[style^="min-height:114px;background-color:"]
@@ -54468,6 +54474,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175596#issuecomment-2016696488
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175376
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175300
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175302

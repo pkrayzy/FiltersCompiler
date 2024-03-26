@@ -1,9 +1,9 @@
-! Checksum: P8XoJEzJTkMmMJYpQtvdrQ
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1711456872-3600.patch
+! Checksum: ne5Gc7l8ldRTUqLfNtRTUA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1711466334-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.28.41
-! TimeUpdated: 2024-03-26T12:35:39+00:00
+! Version: 2.3.28.42
+! TimeUpdated: 2024-03-26T15:09:32+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -4409,10 +4409,6 @@ telsu.fi#%#!function(){const e={apply:(e,t,n)=>{if("prg"!==t?.id)return Reflect.
 ||telsu.fi/js/t.js$replace=/bbd\(0x\d\)/(()=>{})()/
 ||es.ylilauta.org^
 ylilauta.org##.card.a
-ylilauta.org#%#//scriptlet('prevent-fetch', 'es.ylilauta')
-||ylilauta.org^$replace=/srcdoc="<script>/srcdoc="<script>;/,document
-||ylilauta.org^$replace=/frames\[0\]\.frameElement\.srcdoc/;frames[0].frameElement.srcdoc/,document
-ylilauta.org#%#!function(){const e=()=>{},t={Reflect:window.Reflect,includes:String.prototype.includes,match:String.prototype.match,append:Element.prototype.append,Error:window.Error,querySelector:Document.prototype.querySelector},c=new Set(["Error","confirm","setTimeout","String.prototype.match","String.prototype.includes","Element.prototype.append","Object.defineProperty","Document.prototype.querySelector","frames"]),r=(e,t)=>{e.forEach((e=>{const c=e.split(".");c.reduce(((e,t,r)=>(r===c.length-1&&(e[t]=u(e[t])),e[t])),t)}))},n=/(( ){4})?(at Reflect\.get \(<anonymous>\)\n|at Object\.(get|apply)[\s\S]*?\n|at Object\.(wrapper)?[Cc]onstruct[\s\S]*?<anonymous>[\s\S]*?\n)/g,a="Proxy.<anonymous>",o="Proxy.value",l="Function.value",s=/Proxy\.((?!.*(value|<anonymous>)).*?) /,i="checkTampering";let p;const u=d=>{const f={apply:(s,p,d)=>{const f=(new t.Error).stack,m=d[0],y=p;switch(s.name){case"confirm":if(m&&t.includes.call(m.toString(),"Error loading advertisements"))return;break;case"setTimeout":m&&(t.includes.call(m.toString(),"this.#test")||t.includes.call(m.toString(),"this.#showFail"))&&(d[0]=e);break;case"match":case"includes":if(y)return"string"==typeof y&&(p=p?.replaceAll?.(n,"")),t.Reflect.apply(s,p,d);break;case"append":{const e=t.Reflect.apply(s,p,d);if(t.includes.call(f,i)&&m&&m.matches("iframe"))try{const n=document.createElement("iframe");return t.append.call(document.body,n),r(c,n.contentWindow),w=c,b=d[0].contentWindow,g=n.contentWindow,w.forEach((e=>{let t=g;const c=e.split(".");c.reduce(((e,r,n)=>(t=t[r],n===c.length-1&&(e[r]=t),e[r])),b)})),n.remove(),e}catch(e){}break}case"defineProperty":if(t.includes.call(f,i)&&d[2]?.value&&d[2].value instanceof Object&&(d[2].value=u(d[2].value)),d[1]&&"fail"===d[1])return;break;case"querySelector":if(t.includes.call(f,"Lauta.js")&&t.includes.call(d[0],"body > iframe")){const e=t.Reflect.apply(s,p,d);return e.srcdoc=e.srcdoc.replace("script>;","script>"),e}}var w,b,g;try{return t.Reflect.apply(s,p,d)}catch(e){if(e instanceof Error&&(e.stack=e.stack.replaceAll(n,""),e.stack=e.stack.replace(a,"Function.caller"),e.stack=e.stack.replace(o,l)),t.includes.call(e.stack,"about:srcdoc:"))return;throw e}},get:(e,c,r)=>{if("toString"===c)return e.toString.bind(e);"0"===c&&e[c]&&e[c].frameElement?.srcdoc&&t.includes.call(e[c].frameElement.srcdoc,"top.Object,'defineProperty'")&&(e[c].frameElement.srcdoc=e[c].frameElement.srcdoc.replace("<script>;frameElement.srcdoc=`<scr`+`ipt>","<script>"),e[c].frameElement.srcdoc=e[c].frameElement.srcdoc.replace("</scr`+`ipt>`<\/script>","<\/script>"));try{return t.Reflect.get(e,c,r)}catch(e){if((e instanceof Error||e instanceof ReferenceError)&&(!p||p===e?.stack||t.includes.call(e?.stack,"Super constructor may only be called once"))){let c,r;t.match.call(e.stack,s)&&(r=t.match.call(e.stack,s)[0],c=`Function.${t.match.call(e.stack,s)[1]}`);const i=c||"Function.<anonymous>",p=r||a;e.stack=e.stack.replaceAll(n,""),e.stack=e.stack.replace(p,i),e.stack=e.stack.replace(o,l)}throw e}},construct:(e,c,r)=>{const n=(new t.Error).stack;if("Error"===e.name)if(t.includes.call(n,i)){const n=t.Reflect.construct(e,c,r);return p=n?.stack,n}return t.Reflect.construct(e,c,r)}};return new Proxy(d,f)};r(c,window),Object.defineProperty(window,"Object",{value:Object,writable:!1,configurable:!1}),Object.defineProperty(Object,"defineProperty",{value:Object.defineProperty,writable:!1,configurable:!1}),document.addEventListener("load",(function(e){"IFRAME"!==e.target.nodeName||"about:blank"!==e.target.src&&""!==e.target.src||r(c,e.target.contentWindow)}),!0);let d=!1;Object.defineProperty(window.Element.prototype,"replaceChild",{value:Element.prototype.replaceChild,configurable:!1,writable:!1}),new MutationObserver(((e,n)=>{const a=t.querySelector.call(document,"body > iframe");if(a){if(r(c,a.contentWindow),!d){d=!0;const e=a.srcdoc,c=t.match.call(e,/top,'([a-zA-Z0-9]+)',{value:'([a-zA-Z0-9]+)'/);try{window[c[1]]=c[2]}catch(e){}try{const e=(new XMLSerializer).serializeToString(a);let c;if(t.includes.call(e,"newLauta")||t.includes.call(e,"newApp"))c=e;else{const e=t.querySelector.call(document,'head > script[type="module"]');c=e?e.textContent:""}if(c){const e=7,r=t.match.call(c,/top,'([a-zA-Z0-9]+)',{value:'([a-zA-Z0-9]+)'/);window[r[1]]=r[2];const n=c.replace(/ /g,""),a=n.replace(/&#10;/g,"").replace(/\n/g,"").replace(/\\'/g,"'"),o=t.match.call(a,/import(.*?)from'(.*?)'[\s\S]*?new(?:.*?)\([\s\S]*?'(.*?)',[\s\S]*?'(.*?)',(\d+),(.*?)\)/);if(o&&o.length===e){o[1];const e=o[2],t=o[3],c=o[4],r=(Number(o[5]),JSON.parse(o[6].substr(0,o[6].lastIndexOf("]")+1)));(async()=>{try{new((await import(`${e}`)).default)(t,c,c,r)}catch(e){}})()}}}catch(e){}}a.addEventListener("load",(function(e){r(c,e.target.contentWindow)}),!0)}})).observe(document,{attributes:!0,childList:!0,subtree:!0})}();
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/*.mp4$media,redirect=noopmp4-1s,domain=ruutu.fi
 ||v.fwmrm.net/ad/g/1?$replace=/(tv\.freewheel\.SDK\._instanceQueue\['Context_[\s\S]*?'\][\s\S]*?\.requestComplete\(\{)[\s\S]*\}\);/\$1\}\);/,domain=ruutu.fi
 kuvake.net#@#.ad728x90
@@ -8717,6 +8713,7 @@ imagebam.com#%#window.open = function() {};
 calameo.com#%#AG_onLoad(function() { document.getElementsByTagName('body')[0].className = ''; });
 zippymoviez.com#%#window.open = function() {};
 mobilapk.com#%#AG_onLoad(function() { setTimeout(function() {document.getElementsByClassName('post-inner')[0].innerHTML = document.getElementsByClassName('post-inner')[0].innerHTML.replace('Sponsored Ads',''); document.getElementsByClassName('post-inner')[0].innerHTML = document.getElementsByClassName('post-inner')[0].innerHTML.replace('Sponsored Ads',''); }, 300); });
+thesprucepets.com#$?#.mm-ads-leaderboard-spacer { remove: true; }
 formu1a.uno#$#.et_pb_row_1_tb_body { min-height: auto !important; }
 loudwire.com#$?#.non-menu-content { remove: true; }
 loudwire.com#$#.fixed-full-width #site-menu-wrapper .logo { height: auto !important; top: 0px !important;}
@@ -9165,6 +9162,9 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 ||olalivehdplay.ru/blast.js
 ||lovesomecommunity.com/blast.js
 ||b4ucast.com/blast.js
+||modsfire.com/img/ookfmx.png
+songbpm.com##div > div:has(> section > ins.adsbygoogle)
+bing.com##.b_ans:has([class^="xm_"][class*="_ansCont"])
 lnk.to##div[data-advertiser="amazon-music"]
 economist.com##div[class^="adComponent_advert"]
 exuce.com##button > a[target="_blank"]
@@ -9173,7 +9173,6 @@ uxwing.com##.flaxmain > div.tagmainblock:has(> div[id^="bsa-zone_"])
 ||vipbox.lc/partytown/
 fontesk.com##.postlist > .postlist-col:has(> aside > .textwidget > .feed-ads)
 tanoshiijapanese.com###cnbody #cnfooter:has(> #affiliate)
-bing.com##.b_algo_feedback ~ li.b_ans.b_mop.b_mopb
 yummly.com##.external-promo-root
 boardgameoracle.com#?#div[class^="jss"]:has(> span.MuiTypography-displayBlock:contains(Advertisement))
 open.spotify.com##div[aria-label="Advertisement"]
@@ -10221,6 +10220,7 @@ data-load.in##.p-body-pageContent > center > a[target="_blank"]
 science.org##body .adplaceholder
 ||faster-trk.com/video?$xmlhttprequest,redirect=nooptext
 ||timesnownews.com/dfpamzn.js
+fastupload.io,video.hizliresim.com##.vr-adv-unit
 12tomatoes.com##.sheknows-infuse-ad-callout
 economictimes.indiatimes.com###budgetAd
 jeepgladiatorforum.com##.fa-share-alt
@@ -14641,6 +14641,7 @@ implbits.com#@#.banner_container
 @@||googleadservices.com^$domain=google.ae|google.at|google.be|google.by|google.ca|google.ch|google.cl|google.cn|google.co.id|google.co.in|google.co.jp|google.co.th|google.co.uk|google.co.ve|google.co.za|google.com|google.com.ar|google.com.au|google.com.bd|google.com.br|google.com.co|google.com.eg|google.com.hk|google.com.mx|google.com.my|google.com.ng|google.com.pe|google.com.ph|google.com.pk|google.com.sa|google.com.sg|google.com.tr|google.com.tw|google.com.ua|google.com.vn|google.de|google.dk|google.ee|google.es|google.fr|google.gr|google.hu|google.ie|google.it|google.nl|google.no|google.pl|google.pt|google.ro|google.rs|google.ru|google.se|google.sk|google.tn
 !############### TEMPORARY ###############
 !#########################################
+@@||bilibili.com/*/newplayer.html$stealth=referrer
 @@||mxcontent.net/*.mp4$media,stealth=referrer
 @@||animesonline.nz/noance/$subdocument,stealth=referrer
 @@||vod-*=video/mp4$media,stealth=referrer,domain=animesonline.nz
@@ -22715,6 +22716,7 @@ browsershots.org#@#.advert_area
 ||brokerspunacquired.com^
 ||bromidsluluai.com^
 ||bromusic.site^
+||broncogainer.top^
 ||broochtrade.com^
 ||broodtoffeehaphazard.com^
 ||brookredheadpowerfully.com^
@@ -23072,6 +23074,7 @@ browsershots.org#@#.advert_area
 ||chemtoaxeehy.com^
 ||chengaib.net^
 ||chequeholding.com^
+||cheqzone.com^
 ||chestishugli.com^
 ||chethgentman.live^
 ||chevetoelike.com^
@@ -23419,6 +23422,7 @@ browsershots.org#@#.advert_area
 ||continentalaileendepict.com^
 ||continentcoaximprovement.com^
 ||continuallyninetysole.com^
+||continue-installing.com^
 ||continuedhostilityequipped.com^
 ||contradictshaftfixedly.com^
 ||conventionalrestaurant.com^
@@ -24074,6 +24078,7 @@ browsershots.org#@#.advert_area
 ||donatecanuck.com^
 ||doninjaskr.com^
 ||donkstar1.online^
+||donkstar2.online^
 ||donttbeevils.de^
 ||doodoaru.net^
 ||dooloust.net^
@@ -24210,6 +24215,7 @@ browsershots.org#@#.advert_area
 ||dutythursday.com^
 ||duwvinarma.com^
 ||dvdpzpjoipwkmm.com^
+||dvigutying.top^
 ||dvypar.com^
 ||dvzkkug.com^
 ||dwetwdstom1020.com^
@@ -25292,6 +25298,7 @@ browsershots.org#@#.advert_area
 ||gjzbcvatvn.com^
 ||gk79a2oup.com^
 ||gkcltxp.com^
+||gkdafpdmiwwd.xyz^
 ||gkpvuyrgbbzu.com^
 ||gkrtmc.com^
 ||glaijauk.xyz^
@@ -26846,6 +26853,7 @@ browsershots.org#@#.advert_area
 ||laundrydesert.com^
 ||lavatorydownybasket.com^
 ||lavenderhierarchy.com^
+||lavufa.uno^
 ||lawishkukri.com^
 ||lawsbuffet.com^
 ||laxoaksi.net^
@@ -26889,6 +26897,7 @@ browsershots.org#@#.advert_area
 ||leesecobourg.com^
 ||leetaipt.net^
 ||leezeept.com^
+||left-world.com^
 ||leftshoemakerexpecting.com^
 ||legal-weight.pro^
 ||legendaryremarkwiser.com^
@@ -29257,6 +29266,7 @@ browsershots.org#@#.advert_area
 ||pupur.pro^
 ||purgescholars.com^
 ||purgoaho.xyz^
+||purifybaptism.guru^
 ||purinscauter.top^
 ||purpleads.io^
 ||purplepatch.online^
@@ -29671,6 +29681,7 @@ browsershots.org#@#.advert_area
 ||rereddit.com^
 ||resailsgyse.com^
 ||resalag.com^
+||resaypyche.top^
 ||resentfulelsewherethoroughfare.com^
 ||resharekobolds.top^
 ||residetransactionsuperiority.com^
@@ -29968,6 +29979,7 @@ browsershots.org#@#.advert_area
 ||rysjkulq.xyz^
 ||s-adzone.com^
 ||s0cool.net^
+||s0q260-rtbix.top^
 ||s1cta.com^
 ||s2blosh.com^
 ||s2d6.com^
@@ -30338,6 +30350,7 @@ browsershots.org#@#.advert_area
 ||sittingtransformation.com^
 ||situatedconventionalveto.com^
 ||sixingmudland.top^
+||siyaukq.com^
 ||sizeilksohs.com^
 ||sjczzdfvd.com^
 ||sjmbwxnqz.com^
@@ -31875,6 +31888,7 @@ browsershots.org#@#.advert_area
 ||vezizey.xyz^
 ||vfghc.com^
 ||vfghd.com^
+||vfgte.com^
 ||vfgtg.com^
 ||vfthr.com^
 ||vg4u8rvq65t6.com^
@@ -32905,6 +32919,7 @@ browsershots.org#@#.advert_area
 ||internodeid.com^$document
 ||jlodgings.com^$document
 ||ku42hjr2e.com^$document
+||locooler-ageneral.com^$document
 ||mbreviews.info^$document
 ||mcpuwpush.com^$document
 ||me4track.com^$document
@@ -32914,6 +32929,7 @@ browsershots.org#@#.advert_area
 ||mnaspm.com^$document
 ||mobiletracking.ru^$document
 ||moralitylameinviting.com^$document
+||novibet.partners^$document
 ||onclickperformance.com^$document
 ||ophoacit.com^$document
 ||optimalscreen1.online^$document
@@ -32942,6 +32958,7 @@ browsershots.org#@#.advert_area
 ||rtbbpowaq.com^$document
 ||rtbix.xyz^$document
 ||runicforgecrafter.com^$document
+||s0q260-rtbix.top^$document
 ||savinist.com^$document
 ||score-feed.com^$document
 ||shauladubhe.top^$document
@@ -32962,6 +32979,7 @@ browsershots.org#@#.advert_area
 ||unitsympathetic.com^$document
 ||utm-campaign.com^$document
 ||vezizey.xyz^$document
+||vfgte.com^$document
 ||viistroy.com^$document
 ||vriddhipardee.top^$document
 ||wbidder.online^$document
@@ -32970,6 +32988,7 @@ browsershots.org#@#.advert_area
 ||xlivrdr.com^$document
 ||xml-clickurl.com^$document
 ||yellow-resultsbidder.com^$document
+||youradexchange.com^$document
 ||2mdn.net^$~media,third-party
 ||33across.com^$third-party
 ||4dsply.com^$third-party
@@ -33617,6 +33636,7 @@ browsershots.org#@#.advert_area
 ||rtbix.xyz^$popup
 ||rtmladcenter.com^$popup
 ||s0cool.net^$popup
+||s0q260-rtbix.top^$popup
 ||sandmakingsilver.info^$popup
 ||savinist.com^$popup
 ||seashorelikelihoodreasonably.com^$popup
@@ -37307,7 +37327,7 @@ pornmd.com##.suggestions-box
 txxx.com##.sugggestion
 boundhub.com##.t2op
 boundhub.com##.tab7le
-18porn.sex,18teensex.tv,429men.com,4kporn.xxx,4wank.com,alotporn.com,amateurporn.co,amateurporn.me,bigtitslust.com,camwhores.tv,danude.com,daporn.com,fapnow.xxx,fpo.xxx,freeporn8.com,fuqer.com,gayck.com,hentai-moon.com,heroero.com,hoes.tube,intporn.com,japaneseporn.xxx,jav.gl,javwind.com,jizzberry.com,mrdeepfakes.com,multi.xxx,onlyhentaistuff.com,pornchimp.com,porndr.com,pornmix.org,rare-videos.net,sortporn.com,tabootube.xxx,watchmygf.xxx,xcavy.com,xgroovy.com,xxxshake.com##.table
+18porn.sex,18teensex.tv,429men.com,4kporn.xxx,4wank.com,alotporn.com,amateurporn.co,amateurporn.me,bigtitslust.com,camwhores.tv,danude.com,daporn.com,fapnow.xxx,fpo.xxx,freeporn8.com,fuqer.com,gayck.com,hentai-moon.com,heroero.com,hoes.tube,intporn.com,japaneseporn.xxx,jav.gl,javwind.com,jizzberry.com,mrdeepfakes.com,multi.xxx,onlyhentaistuff.com,pornchimp.com,porndr.com,pornmix.org,rare-videos.net,sortporn.com,tabootube.xxx,watchmygf.xxx,xcavy.com,xgroovy.com,xmateur.com,xxxshake.com##.table
 sxyprn.com##.tbd
 amateurvoyeurforum.com##.tborder[width="99%"][cellpadding="6"]
 camwhores.tv##.tdn
@@ -37315,7 +37335,7 @@ porn87.com##.three_ads
 xnxx.com,xvideos.com##.thumb-ad
 pornpictureshq.com##.thumb__iframe
 drtuber.com##.title-sponsored
-4wank.com,daporn.com,fpo.xxx,hentai-moon.com,pornmix.org,scatxxxporn.com##.top
+4wank.com,daporn.com,fpo.xxx,hentai-moon.com,pornmix.org,scatxxxporn.com,xmateur.com##.top
 motherless.com##.top-referers
 porngem.com,uiporn.com##.top-sponsor
 ok.xxx,perfectgirls.xxx##.top_spot
