@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: fBX0VDXEjwKyZ5s7UNuBaA
-! Diff-Path: ../patches/250/250-s-1710810539-14400.patch
+! Checksum: f/4J5cDfwJDlcXC6GiV/YQ
+! Diff-Path: ../patches/250/250-s-1711462101-14400.patch
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.13.72
-! TimeUpdated: 2024-03-19T01:03:55+00:00
+! Version: 2.0.13.73
+! TimeUpdated: 2024-03-26T14:01:05+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
@@ -486,7 +486,7 @@ quora.com##.modal_bg
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 18March2024v2
+! OriginalVersion: 24March2024v2
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -499,9 +499,9 @@ linkedin.com#$?#body { overflow: auto !important; }
 ! Mali (Put on break due to too many and too frequent whitelistings being needed)
 !!!||ml^$doc,domain=~google.ml|~melody.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~nothingprivate.ml|~lingva.ml|~lemmy.ml|~beatbump.ml|~prompt.ml|~biblioreads.ml
 ! Equatorial Guinea
-||gq^$document,domain=~inege.gq|~tvgelive.gq|~siteproxy.gq|~blockly.gq
+!!!||gq^$doc,domain=~inege.gq|~tvgelive.gq|~siteproxy.gq|~blockly.gq
 ! Central African Republic
-||cf^$document,domain=~google.cf|~rths.cf|~acap.cf|~shorter.cf
+!!!||cf^$doc,domain=~google.cf|~rths.cf|~acap.cf|~shorter.cf
 ! Palau (Put on break due to too many whitelistings being needed)
 !!!||pw^$doc,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~buttercup.pw|~rezka.pw|~darkcrystal.pw|~xor.pw|~fullhdfilmizlesene.pw|~gopass.pw|~vost.pw|~core.pw|~bittor.pw|~plutonium.pw|~nitter.pw|~kge.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
@@ -509,19 +509,19 @@ linkedin.com#$?#body { overflow: auto !important; }
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 !!!||agency^$doc,domain=~battlefield.agency|~baam.agency|~robotzebra.agency|~uphotel.agency|~ws.agency (Can't remember the last time I saw it used in a redirection train.)
-||gdn^$document,domain=~cst.gdn|~pss.gdn
+!!!||gdn^$doc,domain=~cst.gdn|~pss.gdn
 ||bid^$document
-||ooo^$document,domain=~toast.ooo
+!!!||ooo^$doc,domain=~toast.ooo
 ! (https://github.com/DandelionSprout/adfilt/issues/999)
-@@://oo*.ooo/$document
+!!!@@://oo*.ooo/$doc
 ! https://bgp.he.net/AS202492#_prefixes (17/07/2022)
 !!!||monster^$doc,domain=~egybest.monster|~yts.monster|~cloudcdn.monster|~fedi.monster|~rollenspiel.monster|~tts.monster|~geometry.monster
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131156
-||sbs^$document,domain=~ecopulse.sbs
+!!!||sbs^$doc,domain=~ecopulse.sbs
 ! https://github.com/DandelionSprout/adfilt/issues/659
-||discount^$document,domain=~real.discount
+!!!||discount^$doc,domain=~real.discount
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137635
-||cfd^$document,domain=~frcoal.cfd|~freedium.cfd
+!!!||cfd^$doc,domain=~frcoal.cfd|~freedium.cfd
 ! Experimental attempt to cover a few hardcore spam ASNs
 .buzz/*/?*=*&*=*&*=*&*=*&*=$document
 .life/*/?*=*&*=*&*=*&*=*&*=$document
@@ -529,15 +529,6 @@ linkedin.com#$?#body { overflow: auto !important; }
 .xyz/*/?*=*&*=*&*=*&*=*&*=$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139667
 /\.(live|buzz)/.*&[a-z]{1,3}=[a-zA-Z0-9%]{250,}/$document
-! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
-www.google.*##.g:has(a[href*=".gq/"]:not([href*="inege.gq"], [href*="tvgelive.gq"], [href*="siteproxy.gq"], [href*="blockly.gq"]))
-www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="acap.cf"], [href*="shorter.cf"]))
-!!!www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="gopass.pw"], [href*="vost.pw"], [href*="core.pw"], [href*="bittor.pw"], [href*="plutonium.pw"], [href*="nitter.pw"], [href*="kge.pw"]))
-www.google.*##.g:has(a[href*=".loan/"])
-www.google.*##.g:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="baam.agency"], [href*="uphotel.agency"], [href*="robotzebra.agency"], [href*="ws.agency"]))
-www.google.*##.g:has(a[href*=".gdn/"]):not([href*="cst.gdn"], [href*="pss.gdn"])
-www.google.*##.g:has(a[href*=".bid/"])
-www.google.*##.g:has(a[href*=".top/"]:not([href*="caitlin.top"], [href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"], [href*="strims.top"], [href*="thedesk.top"], [href*="pegelinux.top"], [href*="awavenue.top"]))
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -567,24 +558,6 @@ www.google.*##.g:has(a[href*="&orig_url=/" i]):has(a[href*=".tk/"], a[href*=".ml
 www.google.*##.g:has(a[href*="=//"]):has(a[href*=".tk/"], a[href*=".ml/"])
 www.google.*##.g:has(a[href*=redirect][href*=".%D1%80%D1%84"])
 www.google.*##.g:has(a[href*="/go/"][href*=".%D1%80%D1%84"])
-! ——— For DuckDuckGo ———
-duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".gq/"]:not([href*="inege.gq"], [href*="tvgelive.gq"], [href*="siteproxy.gq"], [href*="blockly.gq"]))
-duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="acap.cf"], [href*="shorter.cf"]))
-!!!duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="gopass.pw"], [href*="vost.pw"], [href*="core.pw"], [href*="bittor.pw"], [href*="plutonium.pw"], [href*="nitter.pw"], [href*="kge.pw"]))
-duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".loan/"])
-duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="baam.agency"], [href*="uphotel.agency"], [href*="robotzebra.agency"], [href*="ws.agency"]))
-duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".gdn/"]):not([href*="cst.gdn"], [href*="pss.gdn"])
-duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".bid/"])
-duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-nrn="result"]:has(a[href*=".top/"]:not([href*="caitlin.top"], [href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"], [href*="strims.top"], [href*="thedesk.top"], [href*="pegelinux.top"], [href*="awavenue.top"]))
-! ——— For Bing ———
-bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="inege.gq"], [href*="tvgelive.gq"], [href*="siteproxy.gq"], [href*="blockly.gq"]))
-bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="acap.cf"], [href*="shorter.cf"]))
-!!!bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="gopass.pw"], [href*="vost.pw"], [href*="core.pw"], [href*="bittor.pw"], [href*="plutonium.pw"], [href*="nitter.pw"], [href*="kge.pw"]))
-bing.com##.b_algo:has(a[href*=".loan/"])
-bing.com##.b_algo:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="baam.agency"], [href*="uphotel.agency"], [href*="robotzebra.agency"], [href*="ws.agency"]))
-bing.com##.b_algo:has(a[href*=".gdn/"]):not([href*="cst.gdn"], [href*="pss.gdn"])
-bing.com##.b_algo:has(a[href*=".bid/"])
-bing.com##.b_algo:has(a[href*=".top/"]:not([href*="caitlin.top"], [href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"], [href*="strims.top"], [href*="thedesk.top"], [href*="pegelinux.top"], [href*="awavenue.top"]))
 ! ——— Old dead tech-related domains ———
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
@@ -817,7 +790,7 @@ exefiles.com##.row:has(a[href*="/recommended/"])
 /^https?:\/\/((?!www)[a-z]{3,5}\.)?[-0-9a-z]{6,}\.(?:com|fun|guru|life|online|pw|site|space|top)\/\/?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$document,match-case,domain=com|fun|guru|life|online|pw|site|space|top
 /^https?:\/\/((?!www)[a-z]{3,5}\.)?[-0-9a-z]{6,}\.(?:com|fun|guru|life|online|pw|site|space|top)\/\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,match-case,domain=com|fun|guru|life|online|pw|site|space|top
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58737
-/^https?:\/\/(?:www\.)?[-0-9a-z]{14,}\.(?:biz|fun|live)\/[a-zA-Z]{10,}\.php/$document,domain=biz|fun|live
+/^https?:\/\/(?:www\.)?[-0-9a-z]{14,}\.(?:biz|fun|live)\/[a-zA-Z]{10,}\.php$/$document,domain=biz|fun|live
 ! ——— Banner for "MSN New Tab" ———
 msn.com##.irisbanner
 ! ——— Download sites that felt shoddy to me (Most of which, if not all of which, had real non-ad download links that contained malware .exe files) ———
@@ -4393,7 +4366,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 /christmas-snow.js
 ##foxfield-xmas
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 07February2024v1-Beta
+! OriginalVersion: 20March2024v1-Beta
 ! Expires: 10 days
 ! Description: Originally created as an unbreak list because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! Description 🇹🇼: 一些中國大陸的廣告過濾名單製作者顯然決定封鎖法輪功網站，儘管這與廣告、追蹤或惡意程式完全無關，而且這些網站在他們的國家已經被大規模封鎖。所以，如果你在國外居住並使用下面提到的任何名單，這個名單就是為你而設的。
@@ -4460,7 +4433,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@||mewe.com^
 @@||wikileaks.org^
 @@||t.me^
-! Caused by «ABP Japanese Filters» (https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt)
+! 🇫🇷 Caused by «ABP Japanese Filters» (https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt)
 @@||lemondeinformatique.fr^
 ! Caused by «Anti-paywall filters» (Makes Google shows up as an account option when on the account creation page)
 @@||accounts.google.com/gsi^$domain=www.deviantart.com
@@ -4489,7 +4462,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@://www.fortiguard.com^
 @@||dbl.oisd.nl^$elemhide
 @@||vulners.com^
-! https://wiki.manjaro.org/index.php/Pacman-mirrors#Use
+! 🇺🇸 https://wiki.manjaro.org/index.php/Pacman-mirrors#Use
 @@://wikipedia.org^
 @@|github.com^|
 @@://github.com^|
@@ -4498,20 +4471,20 @@ daz3d.ru##+js(set-constant, snow, undefined)
 #@#html
 #@#body
 ! Connection pages for hotel/train/boat Wi-Fi networks (Entries for additional networks are always desired)
-! Norrtåg
+! 🇸🇪 Norrtåg
 @@||internet--access.net^
-! Narvesen
+! 🇳🇴 Narvesen
 @@||network-auth.com^
-! Thon Hotels
+! 🇳🇴 Thon Hotels
 @@||netnordic.net^
 @@||thonhotels.no^
-! Britannia Hotell
+! 🇳🇴 Britannia Hotell
 @@||hospitality.thecloud.eu^
 ! Burger King
 @@||service.thecloud.eu^
 ! Rema 1000
 @@||rema1000-kunde.rema.no^
-! Krambua
+! 🇳🇴 Krambua
 @@||airid.cloud^
 ! Radisson Blu
 @@||login.mikenopa.com^
@@ -4520,13 +4493,13 @@ daz3d.ru##+js(set-constant, snow, undefined)
 ! Clas Ohlson
 @@||connectivitycheck.gstatic.com^
 @@||guestportal.clasohlson.eu^
-! 'If' Insurance
+! 🇳🇴 'If' Insurance
 @@||visitor.if.eu^
-! Jordbærpikene
+! 🇳🇴 Jordbærpikene
 @@||portal.skyid.no^
-! Nille
+! 🇳🇴 Nille
 @@||central-eu.cloudguest.central.arubanetworks.com^
-! University of Trondheim - NTNU
+! 🇳🇴 University of Trondheim - NTNU
 @@||wireless.ntnu.no^
 ! HTTPS certificate verifiers
 @@||lencr.org^
@@ -4752,7 +4725,7 @@ todaytime.ir##.navbar-nav [href="/اوقات-شرعی-اذان"]
 ~google.*##a[href$="/prayer-times"]
 ~albayan.ae##.prayertime:not(html, body)
 ! Title: 🧗 Anti-'Functionality removal' List
-! OriginalVersion: 15February2024v1-Beta
+! OriginalVersion: 20March2024v1-Beta
 ! Expires: 9 days
 ! Description: This list aims to combat some sites' attempts to make it impossible to copy text, right-click on pages, open the F12 menu, create fake loading times, or who otherwise obstruct people from features that they should be perfectly in their rights to have access to.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -4785,16 +4758,16 @@ respublika.lt#$?##news_comment_container { filter: none !important }
 autoplius.lt##+js(remove-attr, target, [target="_blank"], stay)
 ! Fake loading screens
 hackintoshshop.com##body > div:first-of-type[style^=background-color][id]
-! (From "Nordic Filters")
+! 🇳🇴 (From "Nordic Filters")
 nettavisen.no###topover-loader
 nettavisen.no###topover
-! adressa.no (02/12/2020)
+! 🇳🇴 adressa.no (02/12/2020)
 ||collector.schibsted.io^$third-party
 ! https://sandberg.world/en-no/product/Wireless-Mouse-Pro (25/12/2022); mppdainik.com (Unknown date)
 ###preloader
-! sun.sr
+! 🇸🇷 sun.sr
 ##app-loading-screen
-! Elding.fo checkout
+! 🇫🇴 Elding.fo checkout
 ##.loading-mask:not(html,body)
 !!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
 !+ NOT_OPTIMIZED
@@ -5040,7 +5013,7 @@ hdfilmcehennemi.film##.poster-imdb
 vumoo.to#?#div.col-lg-12:has-text(IMDb)
 watchseries.*##.imdb
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 18March2024v1
+! OriginalVersion: 24March2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -6465,7 +6438,7 @@ $removeparam=id,domain=go.redirectingat.com|go.skimlinks.com|go.skimresources.co
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1726383
 $removeparam=offer_id,domain=catch.com.au|surfshark.com
 ! https://tenshoku.nikkei.co.jp/lp/15002/?n_cid=TPRN0002&waad=Ujim9yQ8&adid=NK_L2_T_shortlink_Sun_diagnosis&utm_source=NKdenshiban&utm_medium=content-text&utm_content=text&utm_campaign=shortlink_Sun_diagnosis (Can't be made generic due to: finn.no, willhaben.at, kijiji.ca, https://github.com/DandelionSprout/adfilt/issues/601)
-$removeparam=adid,domain=nikkei.co.jp|mcafee.com|indeed.com
+$document,removeparam=adid,domain=indeed.com|mcafee.com|nikkei.co.jp|tmz.com
 !! ——— Rules for heavily covered sites ———
 !!! ——— Amazon ———
 ! filters known to be problematic
@@ -6601,6 +6574,10 @@ $removeparam=/^asc_/,document,domain=amazon.*|aboutamazon.com|amzn.to
 ! (from Firefox new tab ad) https://www.amazon.com/primeday/?tag=admarketus-20&ref=pd_sl_74dc22234008947b70137123d65e594c06220c7b2b8126f0c62e16c3&mfadid=adm
 ||amazon.*/primeday/$removeparam=tag
 ||amazon.*/primeday/$removeparam=mfadid
+! https://www.amazon.com/60-Large-Eye-Sharp-Needles/dp/B0CMHZT968?dib=eyJ2IjoiMSJ9.XCuQOwI2pP0h3gyIwYtHbu6XoKvFdVSHdG-a_sSIzqdfrDrBiM7WLXkgbvQDRkna865o8-YQPgV3tTQuOeYVEwL_iq6HG9JXe3lJA-BNjQEZSPKaQLEvy-ruDP6f5Lna8ZFUMjoilPEyUgN2lzEhQ4a79HhUat1X898e423PbPKF7srfYl_-x62LDWvAZJoSsbXKNxjjp8aGhxguKUwu4-NkC_evPnvLu0hItMP_Qbr_MhDAxg8Cwth6tMyamxzNIMQG9j7rcY1HTgGudHH1HEP9-R6_IJ8lWApc0CKTPqw.gwh-OxTtsi2sQjaKpj_pZs7BtiXp7rBzKtURGJvstVI&dib_tag=se&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8860491
+||www.amazon.$removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
+||www.amazon.$removeparam=sp_csd
+||www.amazon.$removeparam=dib_tag
 !!! ——— Bing ———
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
 ! https://cn.bing.com/?FORM=Z9FD1 (16/11/2023)
@@ -6841,6 +6818,8 @@ $removeparam=_x_tr_pto
 ||google.$document,removeparam=sca_esv
 ! https://www.google.com/search?q=winget+vsdc&newwindow=1&udm= (15/03/2024)
 ||www.google.$removeparam=/^udm=$/
+! https://www-nrk-no.translate.goog/norge/regjeringen-vil-endre-russetiden-_-her-er-planen-1.16812907?_x_tr_sl=no&_x_tr_tl=en&_x_tr_hl=no&_x_tr_pto=wapp (20/03/2024)
+||translate.goog^$removeparam=_x_tr_pto
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
 ||tiktok.com^$removeparam=_r
@@ -6885,6 +6864,9 @@ $removeparam=gtm
 $removeparam=referral,domain=tv2.no|spotify.com|yubo.live
 ! https://open.spotify.com/album/7D2NdGvBHIavgLhmcwhluK?nd=1
 ||spotify.com^$removeparam=nd
+! https://open.spotify.com/album/6Mf15O3wMv52ySP3aSTre1?uid=1dadcf09fbbee47a&uri=spotify%3Atrack%3A3HoSi38l1e6E1K1lHWUCeV — https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8867924
+||open.spotify.com^$removeparam=uid
+!!! Don't remove "uri", as it seems to involve source songs to some extent.
 !! ——— Rules for heavily covered international sites ———
 !!! ——— PR-China ———
 !!! Special thanks to https://github.com/DeepChirp for helping with this section.
@@ -8879,6 +8861,8 @@ ref=blog.isosceles.com$document,removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/commit/bcb304aff7f2026d08e5fd6e2e6e82ebddf16904 (full credit to Yuki2718)
 ! used on many other websites: https://www.google.com/search?q=inurl%3AjmtyClId
 $document,removeparam=jmtyClId
+! https://www•asos•com/men/ctas/hp-edit-1/cat/?cid=50606&ctaref=hp|mw|prime|hero|1|edit|thegentlemen (Note that cid can not be removed, as it'd make pages never load)
+||asos.com^$removeparam=ctaref
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
