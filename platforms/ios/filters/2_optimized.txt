@@ -1,9 +1,9 @@
-! Checksum: 5MQK6dyMuaNTniufdBmW3Q
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1711431425-3600.patch
+! Checksum: rfJS0vV47FgmsNXznHMCmg
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1711438648-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.28.36
-! TimeUpdated: 2024-03-26T05:33:06+00:00
+! Version: 2.3.28.37
+! TimeUpdated: 2024-03-26T07:33:06+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -3011,8 +3011,9 @@ hotdebrid.com#%#//scriptlet('prevent-element-src-loading', 'script', 'ads.rubico
 !+ PLATFORM(ios, ext_android_cb)
 @@||ads.rubiconproject.com/ad/*.js$domain=hotdebrid.com
 @@||work.ink^$generichide
-work.ink#%#//scriptlet('prevent-fetch', '/quantserve\.com|adligature\.com/')
+work.ink#%#//scriptlet('prevent-fetch', '/quantserve\.com|adligature\.com|srvtrck\.com/')
 @@||adligature.com^|$xmlhttprequest,domain=work.ink
+@@||srvtrck.com/assets/css/LineIcons.css$domain=work.ink
 @@||cdn.adligature.com^$script,xmlhttprequest,domain=work.ink
 blog.textpage.xyz#%#//scriptlet('abort-on-property-read', 'eazy_ad_unblocker')
 blog.textpage.xyz#@#.adsBanner
@@ -5884,6 +5885,7 @@ leechpremium.net#%#//scriptlet('prevent-setInterval', 'iframe')
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl_*.js$domain=leechpremium.net
 leechpremium.net#$#.adsbygoogle { position: absolute!important; left: -3000px!important; }
 myuploadedpremium.de#%#AG_onLoad(function(){var b=new MutationObserver(function(){var a=document.querySelectorAll(".adsbygoogle iframe");for(i=0;i<a.length;i++)a[i].setAttribute("height",280+i),b.disconnect()});b.observe(document,{childList:!0,subtree:!0})});
+myuploadedpremium.de#%#//scriptlet('remove-attr', 'height', 'body > iframe[height][width][style]')
 myuploadedpremium.de#%#//scriptlet('abort-current-inline-script', '$', '/setInterval[\s\S]*?_0x[\s\S]*?</')
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=myuploadedpremium.de
 @@||pagead2.googlesyndication.com/pagead/js/r*/show_ads_impl_*.js$domain=myuploadedpremium.de
@@ -11898,6 +11900,8 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 ||olalivehdplay.ru/blast.js
 ||lovesomecommunity.com/blast.js
 ||b4ucast.com/blast.js
+uxwing.com##.adspc01
+uxwing.com##.flaxmain > div.tagmainblock:has(> div[id^="bsa-zone_"])
 ||vipbox.lc/partytown/
 fontesk.com##.postlist > .postlist-col:has(> aside > .textwidget > .feed-ads)
 tanoshiijapanese.com###cnbody #cnfooter:has(> #affiliate)
@@ -13557,7 +13561,7 @@ pornicom.com##.thumb_aside
 libertycity.net,libertycity.ru##.file_info_ad
 ||multporn.net/fern*_pen.js
 issuu.com##section[aria-label="Advert"]
-fontesk.com,iplocation.net,pureinfotech.com,insurance-space.xyz##div[id^="bsa-zone_"]
+uxwing.com,fontesk.com,iplocation.net,pureinfotech.com,insurance-space.xyz##div[id^="bsa-zone_"]
 calculator.net##div[style^="padding-top:10px"][style*="min-height:280px"]
 aviability.com##.a180
 mashable.com##div[data-pogo]
