@@ -1,9 +1,9 @@
-! Checksum: X2FniPPBQREh6P4+13f76g
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1711415285-14400.patch
+! Checksum: pyeyZtL+jYLpDTvWa60nNw
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1711429670-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.45
-! TimeUpdated: 2024-03-26T01:02:25+00:00
+! Version: 2.1.21.46
+! TimeUpdated: 2024-03-26T05:02:25+00:00
 ! Expires: 12 hours (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -141,6 +141,7 @@
 /Sharetw.
 /shariff-sharing/*
 /shariff.min.js
+/SharingBar/*
 /sidebar/social/*
 /simple-share-$~stylesheet
 /simplified-social-
@@ -153,6 +154,7 @@
 /sme-facebook-$image
 /snaShare.
 /sns_naverband.
+/socbutton/*
 /social-bar-
 /social-bar.
 /social-bookmarks/*
@@ -590,6 +592,7 @@ _socialfancysliders/
 ###shareTags
 ###shareThis
 ###shareTool
+###shareTop
 ###shareTxt
 ###shareUrl
 ###shareVertHolder
@@ -706,10 +709,12 @@ _socialfancysliders/
 ###social-media-footer
 ###social-media-header
 ###social-media-icons
+###social-media-icons-container
 ###social-media-links
 ###social-media-menu
 ###social-media-navigation
 ###social-media-share
+###social-media-wrapper
 ###social-nav
 ###social-nav-holder
 ###social-navbar
@@ -1278,6 +1283,7 @@ _socialfancysliders/
 ##.block-twitter
 ##.blockShare
 ##.blockSocial
+##.block_post_social
 ##.block_share
 ##.block_social
 ##.blog-post-share
@@ -1740,6 +1746,7 @@ _socialfancysliders/
 ##.fb_report_icon
 ##.fb_share
 ##.fb_share_link
+##.fb_social
 ##.fb_widget
 ##.fb_wrap
 ##.fbbsb-button
@@ -2541,6 +2548,7 @@ _socialfancysliders/
 ##.mashsb-container
 ##.masterSocialbutton
 ##.masthead-social
+##.material-icons-share
 ##.materna-shariff
 ##.mb-social
 ##.mc-share-toggle
@@ -2770,7 +2778,6 @@ _socialfancysliders/
 ##.parent-shareBox
 ##.parler-icon
 ##.partage-twitter
-##.partial-share
 ##.partialSocialButtons
 ##.pathSocialIcons
 ##.pbtsharethisbutt
@@ -3569,6 +3576,7 @@ _socialfancysliders/
 ##.single-article-social
 ##.single-content-share
 ##.single-item-share
+##.single-post-meta-data__social-sharing
 ##.single-post-share
 ##.single-post-social
 ##.single-post__share
@@ -3676,7 +3684,9 @@ _socialfancysliders/
 ##.social-blocks
 ##.social-bookmark
 ##.social-bookmarks
+##.social-box-facebook
 ##.social-box-footer
+##.social-box-twitter
 ##.social-btn-area
 ##.social-btn-container
 ##.social-btn-facebook
@@ -3815,6 +3825,7 @@ _socialfancysliders/
 ##.social-meta-item
 ##.social-methods
 ##.social-network-wrapper
+##.social-network.widget
 ##.social-networking
 ##.social-networks-bayside
 ##.social-networks-container
@@ -4632,6 +4643,8 @@ _socialfancysliders/
 ##.widget_twitter_widget
 ##.widget_vw_widget_social_counter
 ##.widget_vw_widget_social_subscription
+##.widget_woo_twitter
+##.widget_woodojo_tweets
 ##.widget_wpcom_social_media_icons_widget
 ##.widget_wpgrade_social_links
 ##.widgetsocial
@@ -5044,7 +5057,6 @@ knowyourmeme.com##.fb-page-like-box
 bearingarms.com,hotair.com,redstate.com##.fb-social
 phoenixnewtimes.com##.fdn-site-header-social-icons
 eadaily.com##.feed
-teaonews.co.nz##.ffsAxx
 indiatoday.in##.fixedshared
 kick.com##.flex.flex-col.space-y-3
 techradar.com##.flipboard-icon
@@ -5060,6 +5072,7 @@ alarabiya.net,ausgamers.com,cloudwards.net,notateslaapp.com,republicworld.com,ti
 financialexpress.com##.follow-us-on
 vt.edu##.follow-virginia-tech-icons
 wikihow.com##.follow_sidebox
+moviemistakes.com##.followbuttons
 rbth.com##.follows-channel
 telegraphindia.com##.followusbox
 thejc.com##.foot__socials
@@ -5105,6 +5118,8 @@ manutd.com##.icon-share-card-lite
 photofunia.com##.icons
 financialexpress.com##.ie-google-news
 indianexpress.com##.ie-ie-share
+informationisbeautiful.net##.iib-share-buttons
+informationisbeautiful.net##.iib-viz-section--share
 designcurial.com##.image-tools
 inews.co.uk##.inews__footer__menus__icons
 inews.co.uk##.inews__post-share
@@ -5203,6 +5218,7 @@ commondreams.org,spectrum.ieee.org,theblaze.com##.share-panel
 aajtak.in,gnttv.com,indiatoday.in,indiatodayne.in##.share-social-icons
 alarabiya.net,timeextension.com##.share-this
 apkpure.net##.share-toolbox
+thespinoff.co.nz##.shareButton
 tech.hindustantimes.com##.shareLinks
 vimeo.com##.share_body
 searchenginejournal.com##.sharebtn
@@ -5233,6 +5249,7 @@ cyberdaily.au,gamingbolt.com##.social-media-container
 defenseone.com##.social-media-icons-container
 knowablemagazine.org,ucl.ac.uk##.social-media-links
 247sports.com##.social-media-list
+mg.co.za##.social-meks
 insideclimatenews.org,joblo.com##.social-menu
 birdsandblooms.com,familyhandyman.com,rd.com,tasteofhome.com,thehealthy.com##.social-menu-desktop
 apkpure.net##.social-network
@@ -5280,6 +5297,7 @@ dcrainmaker.com##.swp_floating_horizontal_wrapper
 elements.visualcapitalist.com,marktechpost.com##.swp_social_panel
 echonewshub.com,jugomobile.com##.t-shared-sec
 gamingbolt.com##.tag-social-media
+notthebee.com##.take-shareables
 thediplomat.com##.td-follow
 carnewschina.com##.tds-button
 tecmint.com##.tecmint-float-social-wrapper
@@ -5508,7 +5526,6 @@ donnamoderna.com##.dm20-footer-social-link
 donnamoderna.com##.dm20-lory-share-panel
 mediaset.it##.dsoc
 alfredopedulla.com##.fb-banner
-sportwebsicilia.it##.follow-title
 24plus.ilsole24ore.com##.icon-send
 alfredopedulla.com##.ig-banner
 wallstreetitalia.com##.inner__more
@@ -5527,7 +5544,6 @@ mediaset.it##.shr
 greenstyle.it##.single-post__social
 finanzaonline.com,mediaset.it,teleborsa.it,tempostretto.it##.soc
 wallstreetitalia.com##.social-btn
-sportwebsicilia.it##.social-button
 trend-online.com##.social-icon
 ansa.it##.social-menu
 brindisimagazine.it,fiorentinanews.com,fiorentinauno.com,monza-news.it,pianetalecce.it,salernogranata.it##.social-sharers
@@ -5655,6 +5671,7 @@ defensacentral.com##.group-xs
 abc.es##.herramientas
 neomotor.epe.es##.icons_rrss
 mdzol.com##.interacciones
+movistar.es##.link-redes
 defensacentral.com##.list-inline-xs
 planetarealmadrid.com##.m-social-profile
 canalnet.tv##.main-video-single__socials
@@ -5800,6 +5817,7 @@ petsmart.com#@#a[href^="https://www.facebook.com/sharer/sharer.php"]
 @@||inscience.news/svc/getscript.aspx$script,~third-party
 @@||instagram.com/p/$subdocument,third-party
 @@||jsdelivr.net/npm/sharer.js
+@@||moneyweb.co.za^*/social-shares.min.js?
 @@||nhk.or.jp/common/sns/nol_share.js$script,~third-party
 @@||player.fm^*/social-icons/$image
 @@||qds.it/wp-content/plugins/digistream/digiplayer/js/videojs-share.min.js?$script,~third-party
