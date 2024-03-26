@@ -1,14 +1,14 @@
-! Checksum: zJ4G1v292GU5l/Rc6dRUjg
-! Diff-Path: ../patches/227/227-s-1711184865-14400.patch
+! Checksum: ZBpGNqevM0I/fWWNjhu6Dw
+! Diff-Path: ../patches/227/227-s-1711458596-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.17.98
-! TimeUpdated: 2024-03-23T09:03:12+00:00
+! Version: 2.0.17.99
+! TimeUpdated: 2024-03-26T13:04:05+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2024.0323.1
+! OriginalVersion: 2024.0326.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://community.list-kr.com/docs/
@@ -1101,7 +1101,7 @@
 /^https:\/\/(comm\.|m\.)?news\.nate\.com\/(etc|Etc)\/[A-z]*(ad|Ad|AD)[A-z]*/$domain=nate.com
 ||shop-redapi.daum.net/red-apigate/shopad/
 ||t1.daumcdn.net/kas/static/ka-middle-ad-event-handler.js
-||t1.kakaocdn.net/gamepub/daumgame/gamebar/
+||t1.kakaocdn.net/gamepub/daumgame/gamebar/$domain=~www.daum.net
 ||ssl.pstatic.net/adimg3.search/*/nx_powerlink.css
 /^https:\/\/t1\.daumcdn\.net\/b2\/creative\/[0-9]{6}\/[a-z0-9]{32}\./
 /^https:\/\/www\.filecity\.co\.kr\/img\/btn\/top_banner_[a-z]{4}\./$domain=filecity.co.kr
@@ -1499,6 +1499,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+muko.kr##.col-md-3 .eq .xe-widget-wrapper:has(.plusad_point)
 tftps.gg###content-container > div[class*=" "]:has(> .vm-placement)
 tftps.gg###top-area + div[class*=" "] > div[class*=" "]:not([id]):has(> .vm-placement)
 tftps.gg###top-area div[class*=" "]:has(> .vm-placement)
@@ -3113,6 +3114,7 @@ mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !importan
 zzzz.lol#$?#.ent_wrapper.slide-vertical-effect .ent_news:not(:has(.ent_prefix:contains(ZZAPFLIX))) { remove: true; }
 !
 ! DOMAIN-REFRESHER: END
+muko.kr#?#.bd_lst .notice:has(.no > .list:contains(AD))
 search.tmon.co.kr#?#.deallist_wrap li[data-d].item:has(span[role="presentation"] > button:contains(AD))
 namu.wiki#?#aside > div[class*=" "]:has(> img[class] ~ div[class]:contains(광고))
 m.pay.naver.com#?##content > .recommend_section:has(> div[style^="padding:"] > #m_pay_deliverytracking):contains(/^[ \\n]+$/)
