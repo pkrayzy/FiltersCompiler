@@ -1,9 +1,9 @@
-! Checksum: vb5tKQJhrLAZaandY7NRLQ
-! Diff-Path: ../patches/14/14-s-1711539391-3600.patch
+! Checksum: ZtBoTLIYypMnJjeCmpDqvQ
+! Diff-Path: ../patches/14/14-s-1711542994-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.69
-! TimeUpdated: 2024-03-27T11:32:00+00:00
+! Version: 2.1.91.70
+! TimeUpdated: 2024-03-27T12:32:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.consent_container:not(body,html,:empty)
 ##.cookies-eu-banner
 ##.cookie-tip
 ##.shop_index > div.consents
@@ -1685,6 +1686,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+/css/modules/consent.css^$~third-party
 /dist/resources/js/consent.js^
 /dist/resources/html/consentA.html^
 ||consent.dadoslegais.com.br^
@@ -2396,6 +2398,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+iobit.com##.agree-pop
 resources.github.com###wcpConsentBannerCtrl
 blog.bizvibe.com#$##cookie-law-info-bar { display: none!important; }
 blog.bizvibe.com#$#.cli-popupbar-overlay { display: none!important; }
@@ -22709,6 +22712,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+bloomberg.com###fortress-container-root
 seozoom.it###cta
 userstyles.org##div[class*="rate-us_rateUsWrapper__"]
 ||forvo.com/campaign-promo-mfp/$xmlhttprequest
@@ -22864,8 +22868,8 @@ gilt.com#$#.remodal-is-locked body { overflow: auto !important; }
 brilliant.org###loggedout-wiki-footer
 brilliant.org#$#body.wiki-page.logged-out.modal-open.cropped > .modal-bg.in { display: none !important; }
 brilliant.org#$#body.wiki-page.logged-out.modal-open.cropped { overflow: auto !important; }
-iobit.com##div[class*="float-"]
-iobit.com##div[class*="-pop"]
+iobit.com##.comm-bottom
+iobit.com##.dia_leave
 waipian1.com,waipian2.com,waipian3.com,waipian4.com,waipian5.com,waipian6.com,waipian7.com,waipian8.com,waipian9.com,waipian10.com,waipian11.com,waipian12.com,waipian13.com,waipian14.com,waipian15.com,waipian16.com,waipian17.com,waipian18.com,waipian19.com,waipian20.com,waipian21.com,waipian22.com,waipian23.com,waipian24.com,waipian25.com,waipian26.com,waipian27.com,waipian28.com,waipian29.com,waipian30.com,waipian31.com,waipian32.com,waipian33.com,waipian34.com,waipian35.com,waipian36.com,waipian37.com,waipian38.com,waipian39.com,waipian40.com#%#//scriptlet('trusted-set-cookie', 'cookie-name', 'the_value')
 investorshub.advfn.com###interstitial-wrapper
 dhgate.com#?#div[spm-c="bottomb"].j-foot-login:contains(first-hand offers)
@@ -40429,6 +40433,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+rmcbfmplay.com##bfmrmc-banner-mobile
 online.citysuper.com.hk###shopify-section-download-app-banner
 izumi.jp#$#html[data-smartbanner-original-margin-top="0"][style="margin-top: 84px;"] { margin-top: 0 !important; }
 izumi.jp#$##s_header[style="top: 84px;"] { top: 0 !important; }
@@ -44208,6 +44213,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 ! END: Yandex
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175549
+filmora.wondershare.com##aside[data-recommend="section-product-logo"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175627
 ka-style.jp##.l-footerBanner
 ka-style.jp##nav.p-columnCategory ~ .p-footerEditable
@@ -50541,6 +50548,8 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+chooinkya.com###sidebar div[id^="block-"]:has(.rssimport a[href*="//2ch-2.net/"])
+chooinkya.com##.wp-block-rss
 ameblo.jp##header ~ div div[style^="min-height:"]:has(div[id^="blogInfeed"])
 etude000.com###mainEntity > .clearfix > span[style$="padding:0 10px;font-weight:bold; font-size:large;"]:has(+ div[style="text-align: center;"])
 etude000.com###mainEntity > .clearfix > span[style$="padding:0 10px;font-weight:bold; font-size:large;"] + div[style="text-align: center;"]

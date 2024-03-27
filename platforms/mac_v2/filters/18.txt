@@ -1,9 +1,9 @@
-! Checksum: 1gcB6N1PNx8wVxFGZZDbQw
-! Diff-Path: ../patches/18/18-s-1711539458-3600.patch
+! Checksum: dkcLsAUk8e/hdDAnxodhkQ
+! Diff-Path: ../patches/18/18-s-1711543065-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.36.45
-! TimeUpdated: 2024-03-27T11:32:11+00:00
+! Version: 2.0.36.46
+! TimeUpdated: 2024-03-27T12:32:11+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.consent_container:not(body,html,:empty)
 ##.cookies-eu-banner
 ##.cookie-tip
 ##.shop_index > div.consents
@@ -1685,6 +1686,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+/css/modules/consent.css^$~third-party
 /dist/resources/js/consent.js^
 /dist/resources/html/consentA.html^
 ||consent.dadoslegais.com.br^
@@ -2396,6 +2398,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+iobit.com##.agree-pop
 resources.github.com###wcpConsentBannerCtrl
 blog.bizvibe.com#$##cookie-law-info-bar { display: none!important; }
 blog.bizvibe.com#$#.cli-popupbar-overlay { display: none!important; }
