@@ -1,9 +1,9 @@
-! Checksum: Li70zFIVIRKL7/PHsWI1cg
-! Diff-Path: ../patches/18/18-s-1711547874-3600.patch
+! Checksum: vyIwsDF0WBgy4oYOjuXydg
+! Diff-Path: ../patches/18/18-s-1711550244-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.36.47
-! TimeUpdated: 2024-03-27T13:52:25+00:00
+! Version: 2.0.36.48
+! TimeUpdated: 2024-03-27T14:32:25+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -93,6 +93,8 @@
 ##.consent_container:not(body,html,:empty)
 ##.cookies-eu-banner
 ##.cookie-tip
+##.shop_index > div#cookie
+###shoper-foot ~ div.consents
 ##.shop_index > div.consents
 ##.m-popup__cookies
 ##.container-cookie
@@ -2401,6 +2403,9 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+q21.pl###change_terms_message
+q21.pl#%#//scriptlet('abort-current-inline-script', 'jQuery', 'cookies_message_modal')
+kakto.pl#%#//scriptlet('abort-current-inline-script', '$', 'RodoCookiesInfo')
 iobit.com##.agree-pop
 resources.github.com###wcpConsentBannerCtrl
 blog.bizvibe.com#$##cookie-law-info-bar { display: none!important; }
@@ -7743,7 +7748,7 @@ onleihe.de##.reveal-overlay
 extract.pics##footer + div.fixed.items-center
 beinsports.com.tr##div[class*="cookie_cookie__"]
 blisshq.com###cookie-opt-out
-laptok.com,kombitsklep.pl,icentrumsklep.pl,huzaro.pl,kozak.pl,militarymarket.pl,dlabrodacza.pl,retio.pl,fitness-home.pl,audiotop.pl,czerwonatwierdza.pl,duda-cars.pl,pancernik.eu,profitechnik.pl,prorowery.pl,sklepkawa.pl,bakeshop.pl,fly-desk.com,trigar.pl,niewiem.pl,wkdzik.pl,estetic-dent-sklep.pl,modnakiecka.pl,skarbyroztocza.com,miodykrupiec.pl,planszostrefa.pl,questsport.shop##.consents
+deluxury.pl,r-kom.pl,hanzo.com.pl,laptok.com,kombitsklep.pl,icentrumsklep.pl,huzaro.pl,kozak.pl,militarymarket.pl,dlabrodacza.pl,retio.pl,fitness-home.pl,audiotop.pl,czerwonatwierdza.pl,duda-cars.pl,pancernik.eu,profitechnik.pl,prorowery.pl,sklepkawa.pl,bakeshop.pl,fly-desk.com,trigar.pl,niewiem.pl,wkdzik.pl,estetic-dent-sklep.pl,modnakiecka.pl,skarbyroztocza.com,miodykrupiec.pl,planszostrefa.pl,questsport.shop##.consents
 kremer-pigmente.com###cclayer
 wuerzburg.de###klaro > div.klaro > div.cookie-notice
 rauch.cc##div[class*="js-cookie-note"]
@@ -15049,6 +15054,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175804
+kakto.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175673
 blog.bizvibe.com#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174913
