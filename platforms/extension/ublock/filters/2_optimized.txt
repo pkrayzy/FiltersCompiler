@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 1Aypkw9eFafX93561wF6og
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1711557478-3600.patch
+! Checksum: cv2UKWtQNp2MMxKryoyiCA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1711561031-3600.patch
 ! Title: AdGuard Base filter + EasyList (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.28.59
-! TimeUpdated: 2024-03-27T16:33:27+00:00
+! Version: 2.3.28.60
+! TimeUpdated: 2024-03-27T17:33:10+00:00
 ! Expires: 5 days (update frequency)
 ||zovidree.com^
 ||rbqlbolklrvmk.top^
@@ -4906,6 +4906,9 @@ hindi.business-standard.com##+js(abort-current-script, document.addEventListener
 @@||hindi.business-standard.com^$generichide
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 hindi.business-standard.com##div[id^="div-gpt-ad"]
+player.rtl.hu##+js(set-constant, gemiusStream, {})
+player.rtl.hu##+js(set-constant, gemiusStream.event, noopFunc)
+player.rtl.hu##+js(set-constant, gemiusStream.init, noopFunc)
 liner.hu###liner_nyito_fekvo_1
 liner.hu##div[class*="siderbar_ads"]
 online-filmek.ac##span[class^="adslot_"]
@@ -5452,6 +5455,10 @@ vijesti.me##.ads
 ekantipur.com##.static-sponsor
 onlinekhabar.com##.advName
 onlinekhabar.com##.okam-each-ad
+gamer.no##+js(set-constant, ads, {})
+gamer.no##.container > div[class]:has(> [data-size-mapping="toppbanner"])
+gamer.no##header ~ * > [class]:has(> [data-name="gamer_toppbanner"])
+gamer.no##.fullscreen-ad
 kundeavisogtilbud.no##div[class^="ad_"]
 vgtv.no##+js(json-prune, enabled, testhide)
 nytid.no#@#.td-a-rec
@@ -14944,7 +14951,7 @@ cars.bg#$#body { background: #fafafa!important; }
 /adserv.
 /adserve/*
 /adserver-
-/adserver.$~xmlhttprequest
+/adserver.$~stylesheet,~xmlhttprequest
 /adserver1-
 /adserver1.
 /adserver2.
