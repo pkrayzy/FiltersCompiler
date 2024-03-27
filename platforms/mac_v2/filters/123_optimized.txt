@@ -1,9 +1,9 @@
-! Checksum: BBYS86usLDLxx36IB+T2kg
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1711501701-14400.patch
+! Checksum: hxBl75fNxYHDspKijnMjGQ
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1711516086-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.51
-! TimeUpdated: 2024-03-27T01:02:33+00:00
+! Version: 2.1.21.52
+! TimeUpdated: 2024-03-27T05:02:33+00:00
 ! Expires: 12 hours (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -60,6 +60,7 @@
 /fbfooter.
 /fbshare.
 /floating-wpp.min.
+/flw-twitter.
 /follow-facebook.
 /follow-icon-
 /follow-linkedin.
@@ -289,6 +290,7 @@ _socialfancysliders/
 ###content-social
 ###crestashareicon
 ###crestashareiconincontent
+###ctSocialShare
 ###custom-tweet-button
 ###details-share-icon-link
 ###divShareButtons
@@ -511,13 +513,16 @@ _socialfancysliders/
 ###pageshare
 ###pinterest-link
 ###pinterest-share
+###pinterestLink
 ###playerShare
 ###plug-facebook
 ###plug-twitter
 ###popup-social
 ###popup_social
+###post-footer-share
 ###post-social
 ###post-social-wrap
+###postshare
 ###reseaux-sociaux
 ###reseaux_sociaux
 ###rsociaux
@@ -664,12 +669,14 @@ _socialfancysliders/
 ###sidebar-right-social
 ###sidebar-share
 ###sidebar-social
+###sidebar-social-widget
 ###sidebar-socials
 ###sidebar-twitter
 ###sidebar-youtube
 ###sidebar_share
 ###sidebar_social
 ###sidebar_social_icons
+###siga-twitter
 ###single-share
 ###site-share
 ###site-share-footer
@@ -820,6 +827,7 @@ _socialfancysliders/
 ###social_panel
 ###social_pinterest
 ###social_popup
+###social_section
 ###social_share
 ###social_share_bar
 ###social_share_wrapper
@@ -932,6 +940,7 @@ _socialfancysliders/
 ##.Article__socialShareContent
 ##.BtnShareGroup
 ##.ButtonSharing
+##.ButtonsSharing
 ##.DiggThisButton
 ##.FBLikeBox
 ##.FacebookLike
@@ -1437,6 +1446,7 @@ _socialfancysliders/
 ##.comment__share
 ##.comment_share
 ##.comment_share_toggle
+##.comments-and-share
 ##.comments-share
 ##.comments-social
 ##.comments__likes
@@ -2544,6 +2554,7 @@ _socialfancysliders/
 ##.mashicon-google
 ##.mashicon-reddit
 ##.mashicon-share
+##.mashicon-twitter
 ##.mashsb-box
 ##.mashsb-container
 ##.masterSocialbutton
@@ -2687,6 +2698,7 @@ _socialfancysliders/
 ##.nav-youtube
 ##.navSocial
 ##.nav__item--social
+##.nav__share
 ##.nav__social
 ##.nav_facebook
 ##.nav_menu_social
@@ -2825,6 +2837,7 @@ _socialfancysliders/
 ##.player__share
 ##.plugin-socialshare
 ##.pn-social-icons
+##.po-hr-fl__sharing
 ##.pocket-btn-icon
 ##.polaris__social--icon
 ##.poll-share
@@ -2846,6 +2859,7 @@ _socialfancysliders/
 ##.post-share-bot
 ##.post-share-box
 ##.post-share-buttons
+##.post-share-data
 ##.post-share-facebook
 ##.post-share-float
 ##.post-share-icons
@@ -2863,6 +2877,7 @@ _socialfancysliders/
 ##.post-soc-share
 ##.post-soc-twit
 ##.post-social
+##.post-social-buttons
 ##.post-social-goog
 ##.post-social-pin
 ##.post-social-wrapper
@@ -2915,6 +2930,7 @@ _socialfancysliders/
 ##.qlwapp-button
 ##.qode-blog-share
 ##.qode-share-title
+##.qodef-social-share
 ##.qt-sharepage
 ##.qt-socialicon
 ##.qticon-share
@@ -3074,6 +3090,7 @@ _socialfancysliders/
 ##.share-buttons-bottom
 ##.share-buttons-box
 ##.share-buttons-container
+##.share-buttons-line
 ##.share-buttons-list
 ##.share-buttons-top
 ##.share-buttons-wrapper
@@ -3412,6 +3429,7 @@ _socialfancysliders/
 ##.share_with_friends
 ##.share_wrap
 ##.share_wrapper
+##.sharea
 ##.shareaholic-canvas
 ##.shareaholic-ui
 ##.shareall
@@ -3522,6 +3540,7 @@ _socialfancysliders/
 ##.sharingButton
 ##.sharingLinks
 ##.sharingList
+##.sharingOptions
 ##.sharingPanel
 ##.sharing__list
 ##.sharing_block
@@ -4471,6 +4490,7 @@ _socialfancysliders/
 ##.twitter_link
 ##.twitter_share_button
 ##.twitter_sm
+##.twitter_social
 ##.twitter_widget
 ##.twitterbird
 ##.twitterbox
@@ -4484,6 +4504,7 @@ _socialfancysliders/
 ##.twshare
 ##.twt-icon
 ##.twtr
+##.twtr-widget
 ##.ty-social-link
 ##.ty-social-link-block
 ##.typcn-social-twitter
@@ -4516,6 +4537,7 @@ _socialfancysliders/
 ##.ulSocialmedia
 ##.uptl_container-share
 ##.us_facebook
+##.us_linkedin
 ##.us_pinterest
 ##.us_share
 ##.us_share_buttons
@@ -5204,6 +5226,7 @@ buzzfeed.com##.share-bar_buzzfeed___uZ4R
 beincrypto.com##.share-block
 calcioefinanza.it,crealitycloud.com,news-medical.net,scientificamerican.com##.share-box
 ibtimes.co.in##.share-btn-wrp
+tastecooking.com##.share-button
 bylancer.com##.share-buttons-icons
 cheknews.ca,fandomwire.com,stadiumtalk.com,tvline.com##.share-container
 citynews.ca,news.cgtn.com,newsus.cgtn.com##.share-icon
@@ -5536,6 +5559,7 @@ wallstreetitalia.com##.inner__more
 libero.it##.iol-social
 ilsole24ore.com##.list-inline--tools
 ansa.it##.media-share
+quotidianopiemontese.it##.mvp-post-soc-wrap
 everyeye.it##.p-gnewsBanner
 everyeye.it##.p-telBut
 greenstyle.it##.partial-button-telegram
@@ -5564,6 +5588,7 @@ thewom.it##.wo-opening-share-panel
 ilsole24ore.com##[data-type="fb"]
 ilsole24ore.com##[data-type="in"]
 ilsole24ore.com##[data-type="tw"]
+agendadigitale.eu,corrierecomunicazioni.it,economyup.it,insuranceup.it##a[href="#condivisioni"]
 ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net##div[class^="SocialShare_"]
 ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net##div[class^="WhatsApp_"]
 ||imyfone.com/assets/js/media_share/
