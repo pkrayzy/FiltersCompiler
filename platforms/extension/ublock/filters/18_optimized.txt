@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: hrd/H1GDQeCZ5unBNUH2ng
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1711579026-3600.patch
+! Checksum: VT4JQURSAy9Z43GQHaZJ2Q
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1711593436-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
 ! Version: 2.0.36.50
@@ -416,6 +416,7 @@
 ###cookie_notification_bar
 ###cookie_panel
 ###cookie_policy
+###cookie_policy_banner
 ###cookie_policy_popup
 ###cookie_popup
 ###cookie_popup_container
@@ -840,6 +841,7 @@
 ##.sb-ncookies-alert
 ##.site-cookies
 ##.uk-cookie
+##.wrapper--cookies
 ##.wsa-cookielaw
 !+ NOT_OPTIMIZED
 ##.cookie-wrapper
@@ -931,6 +933,7 @@
 ||cdn.privacytools.com.br^$third-party
 ||cdn.ampproject.org/v0/amp-consent-*.*.mjs
 ||cdn.ampproject.org/v0/amp-consent-*.*.js
+/mrf4u/cmp/*/*.js?autoinit=
 ||mrf.io/cmp/
 ||goadopt.io^$third-party
 ||cookihq.com^$third-party
@@ -1041,6 +1044,7 @@
 /cookie_legal_$script
 /cookie_msg.js
 /cookie_notice.
+/cookie_notifier/*
 /cookie_policy.
 /cookie_policy_
 /cookieacceptance.
@@ -1259,7 +1263,6 @@ wordfence.com##.wf-cookie-consent-container
 q21.pl###change_terms_message
 q21.pl##+js(abort-current-script, jQuery, cookies_message_modal)
 kakto.pl##+js(abort-current-script, $, RodoCookiesInfo)
-iobit.com##.agree-pop
 resources.github.com###wcpConsentBannerCtrl
 blog.bizvibe.com#$##cookie-law-info-bar { display: none!important; }
 blog.bizvibe.com#$#.cli-popupbar-overlay { display: none!important; }
@@ -1395,8 +1398,6 @@ zaiks.org.pl###pageCookieConsent
 zaiks.org.pl##div[class^="cookiesInformation_wrapper_"]
 toolsai.net##div[class^="ancr-"]
 imgw.pl###imgw-pop-box-cookie
-ekonomiczny.ing.pl#$#body { overflow-y: auto !important; }
-ekonomiczny.ing.pl#$#body #cookiePolicy { display: none !important; }
 outletmoto.com###aviso_cookie
 auburntigers.com,patreon.com,gofundme.com,kickstarter.com,mountathletics.com,goxavier.com###transcend-consent-manager
 gate.shop#$?##snippet--cookies { remove: true; }
@@ -2337,6 +2338,7 @@ auto.de#$#html, body { overflow: auto !important; }
 wefashion.nl,wefashion.de,wefashion.be,wefashion.ch,wefashion.at,wefashion.fr,wefashion.lu##.consent-tracking-custom
 wefashion.nl,wefashion.de,wefashion.be,wefashion.ch,wefashion.at,wefashion.fr,wefashion.lu##.modal-open > div.veil
 dobro.ru##div[class^="CookiesModal_cookies__"]
+hemea.com###rgpdModal
 viabcp.com#$#.bcp_politica_uso_cookieAdobe { display: none !important; }
 viabcp.com#$#body { overflow: auto !important; }
 gyakorikerdesek.hu###stialert
@@ -3216,6 +3218,7 @@ zte.com.cn,htm.sf-express.com##.cookieCon
 cenyvaptekah.ru,lareviewofbooks.org##.Toastify
 investimenti.bnpparibas.it#$#body { overflow: auto !important; padding-right: 0 !important; }
 investimenti.bnpparibas.it#$#.siteDisclaimer { display: none !important; }
+misspompadour.de###mp-app-cookie-banner
 premierinn.com#$#.pi-cookie-policy-modal { display: none !important; }
 premierinn.com#$#body { overflow: auto !important; }
 nvu.io###nvu-consent
@@ -3667,6 +3670,7 @@ abc.net.au##div[data-component="CookieBanner"]
 restate.ru##.cow
 culture.ru##.Rv1DR
 ||teltarif.de/scripts/qm/config-de.js
+itaxi.pl###itaxi-cookie
 dnb.no#$##consent-modal { display: none !important }
 dnb.no#$#body { overflow: auto !important; }
 migros.ch##.mui-js-cookie-banner
@@ -3734,6 +3738,7 @@ up-load.io###gdpr-cookie-notice
 itproger.com###cookies-hide
 howlongtobeat.com##.showConsentTool
 azurair.ru##.cookie-warningbar
+mydress.com#?#.container-component > div[class^="sc-"] > div[class^="sc-"] > p > a[href^="//www.mydress.com/MyAccount/Privacy?"]:upward(3)
 trud.com##.disc-cookies
 bamka.info###st_custom_html_widget-9
 sescsp.org.br##.container-policy
@@ -4064,6 +4069,7 @@ catracalivre.com.br###lgpd-box
 red-by-sfr.fr,sfr.fr###CkC
 wetv.vip##.cookie_uneu_banner
 wildberries.ru##.modal--cookie
+2-remove-virus.com##.cookie-inform
 columbia.edu###cu-privacy-notice
 indeed.com##.gnav-CookiePrivacyNotice
 polarstern-energie.de#$#body { overflow: visible !important; }
@@ -5393,6 +5399,7 @@ giant-bicycles.com#$#body { overflow: visible !important; }
 netology.ru##div[class*="-CookiesAgreement-"]
 vietnamairlines.com#$#.cookie-accept-box { display: none !important; }
 vietnamairlines.com#$#body { overflow: visible !important; }
+desimartini.com#$#body { overflow: visible !important; }
 forum.cristalix.gg,freewebsitetemplates.com,forums.mydigitallife.net##body .PanelScroller.Notices
 ecdc.europa.eu###cckBanner
 1.fm##.gdprcookiescont
