@@ -1,9 +1,9 @@
-! Checksum: ZzsAZTQfTOx4ON4X1ttRPw
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1711545559-14400.patch
+! Checksum: FB1e0h6cI8Lg3PceYSkW1Q
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1711631278-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.1
-! TimeUpdated: 2024-03-27T13:12:56+00:00
+! Version: 2.0.18.2
+! TimeUpdated: 2024-03-28T13:03:08+00:00
 ! Expires: 1 day (update frequency)
 ||d23poh9wsma6va.cloudfront.net^
 ||cdn-ads.tmap.co.kr^
@@ -441,7 +441,7 @@
 ##ins.adsbyadop
 ##iframe[src^="https://realdsp.realclick.co.kr"]
 ##iframe[src^="https://googleads.g.doubleclick.net/"]
-##ins.adsbygoogle
+##ins.adsbygoogle[data-ad-slot]
 ##iframe[src^="https://ads-partners.coupang.com/"]
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
@@ -2622,7 +2622,7 @@ x86.co.kr#@#.download_ad
 @@/^https:\/\/www\.ehanex\.com\/images\/main\/[a-z]{2}_ad\.gif$/
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com|dongbanmall.com
 @@||adxv.zum.com/view/targets?slots=$domain=zum.com
-quiz.avatye.com#@#ins.adsbygoogle
+quiz.avatye.com#@#ins.adsbygoogle[data-ad-slot]
 @@||ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js$domain=danawa.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com
 ||fundingchoicesmessages.google.com^$domain=maplescouter.com|vivatv.cc|singingdalong.blogspot.com|goodgag.net|bera.world|sellas.ink|hunigo.com|windowsforum.kr|iteastory.com|snskeyboard.com|rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.live|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net
@@ -2649,7 +2649,7 @@ te31.com#@#.text_ad
 te31.com#@#.text_ads
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2021.js$domain=t.hi098123.com
-t.hi098123.com#@#ins.adsbygoogle
+t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||adxv.zum.com/view/targets?slots=$domain=zum.com
 svrforum.com##body > div[class][style*="box-shadow:"]
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=t.hi098123.com
@@ -2679,7 +2679,7 @@ avdbs.com#@#.ad-btn
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
 bera.world,sellas.ink,1412.live#@#.ads
-remiz.co.kr#@#ins.adsbygoogle
+remiz.co.kr#@#ins.adsbygoogle[data-ad-slot]
 remiz.co.kr#@#.googleAd
 remiz.co.kr#@##googleAd
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=tsuvod.com
@@ -2713,7 +2713,7 @@ ilsangt.tistory.com#@#.adsense-area
 @@||tab2.clickmon.co.kr/pop/wp_ad_$script,domain=ilsangt.tistory.com
 @@||clickmon.co.kr/ADVER_server/ad_view/pop_ad.php$subdocument,domain=ilsangt.tistory.com
 clickmon.co.kr##html *
-uda1004.tistory.com#@#ins.adsbygoogle
+uda1004.tistory.com#@#ins.adsbygoogle[data-ad-slot]
 @@||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,domain=m.sports.naver.com
 @@||fafan.kr^$genericblock
 @@||poketory.com^$genericblock
@@ -2730,7 +2730,7 @@ meeco.kr#@#.adsbygoogle
 @@||meeco.kr^$generichide
 @@||iphonedev.co.kr^$generichide
 @@||iphonedev.co.kr/files/attach/images/*/*#ad&adv_keywords=-page-peel
-stockinfo7.com#@#ins.adsbygoogle
+stockinfo7.com#@#ins.adsbygoogle[data-ad-slot]
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stockinfo7.com
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
 @@||www3.doubleclick.net/|$xmlhttprequest,domain=blackkiwi.net
@@ -2738,7 +2738,7 @@ stockinfo7.com#@#ins.adsbygoogle
 @@||tistory.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=noonnu.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
-ff14angler.com#@#ins.adsbygoogle
+ff14angler.com#@#ins.adsbygoogle[data-ad-slot]
 @@||avjamak.net^$generichide
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|entertain.daum.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cpsp.kr

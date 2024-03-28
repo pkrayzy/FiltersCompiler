@@ -1,9 +1,9 @@
-! Checksum: Rx14N0FtxaQbFl1Rz5Nqog
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1711545640-14400.patch
+! Checksum: CLAdh0WYWDT3fvjO8AMVBA
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1711631325-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.1
-! TimeUpdated: 2024-03-27T13:12:56+00:00
+! Version: 2.0.18.2
+! TimeUpdated: 2024-03-28T13:03:08+00:00
 ! Expires: 1 day (update frequency)
 ||d23poh9wsma6va.cloudfront.net^
 ||cdn-ads.tmap.co.kr^
@@ -441,7 +441,7 @@
 ##ins.adsbyadop
 ##iframe[src^="https://realdsp.realclick.co.kr"]
 ##iframe[src^="https://googleads.g.doubleclick.net/"]
-##ins.adsbygoogle
+##ins.adsbygoogle[data-ad-slot]
 ##iframe[src^="https://ads-partners.coupang.com/"]
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
@@ -3232,11 +3232,11 @@ spotvnow.co.kr#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com/pag
 @@||mtag.mman.kr/get_ad.mezzo/$xmlhttprequest,domain=maxmovie.com
 @@||advimg.ad-mapps.com/sdk/M_PLUS/Image/$domain=maxmovie.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aagag.com,xmlhttprequest
-aagag.com#@#ins.adsbygoogle
+aagag.com#@#ins.adsbygoogle[data-ad-slot]
 aagag.com#$#.la { height: 75px !important; width: 75px !important; visibility: hidden !important; }
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=t.hi098123.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2021.js$domain=t.hi098123.com
-t.hi098123.com#@#ins.adsbygoogle
+t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 !#safari_cb_affinity(privacy)
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 !#safari_cb_affinity
@@ -3275,7 +3275,7 @@ errornight.com#%#//scriptlet('abort-on-stack-trace', 'alert', 'chk_adBlock')
 @@||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,domain=m.sports.naver.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=bera.world|1412.live|sellas.ink
 bera.world,sellas.ink,1412.live#@#.ads
-remiz.co.kr#@#ins.adsbygoogle
+remiz.co.kr#@#ins.adsbygoogle[data-ad-slot]
 remiz.co.kr#@#.googleAd
 remiz.co.kr#@##googleAd
 bera.world,sellas.ink,1412.live#@##google_ads
@@ -3290,7 +3290,7 @@ ssulwar.com#%#//scriptlet('abort-current-inline-script', 'document.getElementByI
 @@||smrmembers-smr.smartmediarep.com/smc/smrmembers/$domain=mbn.co.kr
 detegice.github.io#%#//scriptlet('abort-on-property-read', '$.prototype.fadeIn')
 ilsangt.tistory.com#%#//scriptlet('abort-current-inline-script', '$', '.adsense-area')
-uda1004.tistory.com#@#ins.adsbygoogle
+uda1004.tistory.com#@#ins.adsbygoogle[data-ad-slot]
 sogirl.so#%#//scriptlet('set-constant', 'DHAntiAdBlocker', 'true')
 @@||sogirl.so/wp-content/plugins/dh-anti-adblocker/public/js/ads-prebid.js
 @@||clien.net^$generichide
@@ -3309,10 +3309,10 @@ blackkiwi.net#%#//scriptlet('prevent-fetch', 'www3.doubleclick.net')
 @@||www3.doubleclick.net/|$xmlhttprequest,domain=blackkiwi.net
 persnacons.tistory.com#@#.topAD
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
-uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle
+uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle[data-ad-slot]
 singingdalong.blogspot.com,sajuplus.net##.adsense-alt
 tistory.com,sajuplus.net#%#//scriptlet('set-constant', 'checkAds', 'noopFunc')
-play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle
+play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle[data-ad-slot]
 lover924.net,lover925.net,lover926.net,lover927.net,lover928.net,lover929.net,lover930.net,lover931.net,lover932.net,lover933.net#%#//scriptlet('prevent-setTimeout', 'document[_0x')
 tv.nate.com#%#AG_onLoad(() => { var BuildObs, PlayerObs; let PlayerCall = (mutationList, observer) => { mutationList.forEach((e) => { if (Array.from(e.target.classList).some((e) => { return e === "ntv-ad-playing" })) { player.trigger("adended"); PlayerObs.disconnect() }})}; let BuildCall = (mutationList, observer) => { mutationList.forEach((e) => { Array.from(e.addedNodes).filter((o) => { return o.id === "natePlayer" }).forEach((k) => { PlayerObs = new MutationObserver(PlayerCall); PlayerObs.observe(k, { attributes: true }); BuildObs.disconnect() })})}; BuildObs = new MutationObserver(BuildCall); BuildObs.observe(document.querySelector(".player-wrapper"), { childList: true }) })
 dealbada.com#%#AG_onLoad(() => { Array.from(document.querySelectorAll("a[href*='dealbada.com/bbs/link']")).forEach((e) => { e.href = e.innerText })})
