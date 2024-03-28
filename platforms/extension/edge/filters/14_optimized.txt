@@ -1,9 +1,9 @@
-! Checksum: a5XKxH53yvEYP4wIm05Xxg
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1711636663-3600.patch
+! Checksum: bijyT5RHoS6ASTZvwSJR0g
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1711640204-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.82
-! TimeUpdated: 2024-03-28T14:32:25+00:00
+! Version: 2.1.91.83
+! TimeUpdated: 2024-03-28T15:31:58+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -19,6 +19,7 @@
 !#######################################################
 !######### General element hiding rules ################
 !#######################################################
+##.privacy-warning
 ###footer-cookie-banner
 ##.consent_container:not(body,html,:empty)
 ##.cookies-eu-banner
@@ -6080,7 +6081,6 @@ guideautoweb.com##.notification[data-nots-uid="gdpr-guideauto"]
 viarail.ca##.opened-cookie-alert
 mnb.hu##.popupDialog
 webatic.com##.ppa-notice
-bankofbaroda.in,parks.vic.gov.au,sanofi.com.tr,sanofi.com,famousfootwear.com##.privacy-warning
 inquirer.net##.qni-cookmsg
 realme.com#$#.r-cookie { display: none !important; }
 realme.com#$#body { overflow: visible !important; }
@@ -14276,6 +14276,7 @@ epaper.thehindu.com,h5.g123.jp,accounts.binance.com,zlavomat.sk,id.rambler.ru,pi
 shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
 wallstreet-online.de,dni.ru#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
+sr.de###safariPushCon
 ||varanoros.com/push/create
 republicworld.com,republicbharat.com##.noti-wrapper
 ladbible.com##div[class^="soft-notification-modal_modal"]
@@ -21178,6 +21179,7 @@ alexfitness.ru#$#div.modal-backdrop { display: none!important; }
 alexfitness.ru#$#.modal-open { overflow: visible!important; }
 banggood.com##.top_mt.datacube_banner
 ||contributions.guardianapis.com^
+okmusi.com##.footer-banner
 mrdeepfakes.com##.top-line > a.text-gold
 forvo.com##.banner-academy
 tarotingie.com##.tarot-before-content_27

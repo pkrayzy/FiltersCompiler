@@ -1,9 +1,9 @@
-! Checksum: ZNw0F/c59vSCAu/fY2tAcA
-! Diff-Path: ../patches/1/1-s-1711636654-3600.patch
+! Checksum: GK7cwKXhH0KH9LBvhEE+IQ
+! Diff-Path: ../patches/1/1-s-1711640196-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.67
-! TimeUpdated: 2024-03-28T14:32:51+00:00
+! Version: 2.0.89.68
+! TimeUpdated: 2024-03-28T15:32:22+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5504,9 +5504,6 @@ echo.msk.ru,kakprosto.ru#%#//scriptlet('abort-on-property-read', 'Object.prototy
 ya.ru,yandex.com##.banner
 !
 ! Yandex.Search
-[$path=/search]ya.ru,yandex.*##.content__right div[class][data-cid]:has(> div[data-vnl*='"renderTo"'])
-[$path=/search]ya.ru,yandex.*##.content__right div.serp-item:has(> div[data-state-id] span.LabelDirect)
-[$path=/search]ya.ru,yandex.*##.content__right div.serp-item:has(> div[data-vnl*='"nonceId"'])
 ya.ru##.Skeleton_type_ad_search
 [$path=/search]ya.ru,yandex.*##.AdvMedia
 ya.ru,yandex.*##li[class*="mini-suggest__item"] > a[href^="http://yabs."][href*="/count/"]
@@ -5514,6 +5511,10 @@ ya.ru,yandex.*##li[class*="mini-suggest__item"] > a[href^="https://yabs."][href*
 ya.ru,yandex.*##li[class*="mini-suggest__item"] > a[href^="http://yandex"][href*="/clck/"]
 yandex.*##body:not([data-bem*="pogoda"]) .mini-suggest__popup-content > li[data-type="nav"]
 [$path=/search]ya.ru,yandex.*##.serp-item:has(> div[data-bem*="organic"] > div a[href][data-event-required])
+! the ad is on the right side, which is mostly non-reproducible
+[$path=/search]ya.ru,yandex.*##.content__right div[class][data-cid]:has(> div[data-vnl*='"renderTo"'])
+[$path=/search]ya.ru,yandex.*##.content__right div.serp-item:has(> div[data-state-id] span.LabelDirect)
+[$path=/search]ya.ru,yandex.*##.content__right div.serp-item:has(> div[data-vnl*='"nonceId"'])
 ! In the search suggestions when typing
 ya.ru##.mini-suggest__popup-content > div.mini-suggest__group_layout_separated:has(> div > a[target="_blank"])
 ! Right side, where usually shown useful content
