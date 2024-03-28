@@ -1,9 +1,9 @@
-! Checksum: ABzdX08R4ZcH3ux7wo6mqQ
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1711588090-14400.patch
+! Checksum: 48BEka6GLBSWUc4n50tlBg
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1711602464-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.57
-! TimeUpdated: 2024-03-28T01:02:46+00:00
+! Version: 2.1.21.58
+! TimeUpdated: 2024-03-28T05:02:43+00:00
 ! Expires: 10 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -53,6 +53,7 @@
 /facebook_like_button.
 /facebook_social.
 /Facebook_Social_
+/facebookbadge.
 /facebookHeader.
 /facebooksquare.
 /fb-pixel.js
@@ -325,6 +326,7 @@ _socialfancysliders/
 ###facebookTab
 ###facebookWidget
 ###facebookWrapper
+###facebook_box
 ###facebook_like
 ###facebook_likebox
 ###facebook_link
@@ -460,6 +462,7 @@ _socialfancysliders/
 ###linkShare
 ###main-social
 ###mainShare
+###mashfbar-header
 ###menu-footer-social-icons
 ###menu-footer-social-links
 ###menu-footer_social
@@ -552,6 +555,7 @@ _socialfancysliders/
 ###share-post
 ###share-project-button
 ###share-reddit
+###share-strip
 ###share-this
 ###share-toggle
 ###share-tools
@@ -1136,6 +1140,7 @@ _socialfancysliders/
 ##.article-full__share
 ##.article-header-social
 ##.article-header__share
+##.article-icon-share
 ##.article-open_shere
 ##.article-pic-soc
 ##.article-share-social
@@ -1241,6 +1246,7 @@ _socialfancysliders/
 ##.b-socials
 ##.b-topic__socials
 ##.b-widget-sharing
+##.b2jsocial
 ##.b_like
 ##.b_share
 ##.b_social
@@ -1676,6 +1682,7 @@ _socialfancysliders/
 ##.facebook-plain-control
 ##.facebook-popup
 ##.facebook-recommend
+##.facebook-section
 ##.facebook-share-btn
 ##.facebook-share-button
 ##.facebook-share-link
@@ -1765,6 +1772,7 @@ _socialfancysliders/
 ##.fblikebox
 ##.fblink
 ##.fbpopup
+##.fbpromo
 ##.fbshare
 ##.fc-social-media-header
 ##.fe-share
@@ -1876,6 +1884,7 @@ _socialfancysliders/
 ##.footer-facebook
 ##.footer-facebook-icon
 ##.footer-fb
+##.footer-fb-btn
 ##.footer-fb-icon
 ##.footer-follow
 ##.footer-follow-text
@@ -2318,6 +2327,7 @@ _socialfancysliders/
 ##.instagram.icon
 ##.instagramIcon
 ##.instagram_icon
+##.instagram_share
 ##.instagramicon
 ##.instalink
 ##.iol-social-share
@@ -2869,6 +2879,7 @@ _socialfancysliders/
 ##.post-share-whatsapp
 ##.post-share-widget
 ##.post-share__sticky-wrapper
+##.post-sharebuttons
 ##.post-sharing
 ##.post-sharrre
 ##.post-soc-pin
@@ -2917,6 +2928,7 @@ _socialfancysliders/
 ##.productSocial
 ##.product__share
 ##.pswp__button--share
+##.pt-share
 ##.public-share
 ##.public-social-icons
 ##.pw-button-email
@@ -3411,6 +3423,7 @@ _socialfancysliders/
 ##.share_story
 ##.share_this
 ##.share_this_content
+##.share_three
 ##.share_tool
 ##.share_toolbox
 ##.share_tools
@@ -3714,6 +3727,7 @@ _socialfancysliders/
 ##.social-button-small
 ##.social-button-wrapper
 ##.social-buttons--content-before
+##.social-buttons--follow
 ##.social-buttons--uk
 ##.social-buttons-compact
 ##.social-buttons-container
@@ -3905,6 +3919,7 @@ _socialfancysliders/
 ##.social-share-footer
 ##.social-share-google
 ##.social-share-icons
+##.social-share-label-wrap
 ##.social-share-link
 ##.social-share-links
 ##.social-share-list
@@ -3960,6 +3975,7 @@ _socialfancysliders/
 ##.social-tools-primary
 ##.social-tools-wrapper
 ##.social-tooltip
+##.social-utility
 ##.social-vertical
 ##.social-widget
 ##.social-widgets
@@ -4089,6 +4105,7 @@ _socialfancysliders/
 ##.social_row
 ##.social_section
 ##.social_share_bar
+##.social_share_blk
 ##.social_share_box
 ##.social_share_btn
 ##.social_share_button_wrapper
@@ -5171,6 +5188,7 @@ washingtonian.com##.min-height-800
 boxofficemojo.com##.mojo-fb-logo
 boxofficemojo.com##.mojo-tw-logo
 manofmany.com##.mom-entry-meta-buttons
+pbs.org##.more-from-pbs__social
 yardbarker.com##.msnfc
 denofgeek.com##.nav-social__items
 outlookindia.com##.nav-socials
@@ -5244,7 +5262,6 @@ thespinoff.co.nz##.shareButton
 tech.hindustantimes.com##.shareLinks
 vimeo.com##.share_body
 searchenginejournal.com##.sharebtn
-whowhatwhy.org##.shared-counts-wrap
 jta.org##.sharedaddy
 muscleandfitness.com##.sharedaddy__wrapper
 cointelegraph.com##.shares-list__list
@@ -5316,6 +5333,7 @@ scrippsnews.com##.subheader
 npr.org,symmetrymagazine.org,thefinance.sg,topbet.eu##.subscribe
 hindustantimes.com##.subscribe-social
 locals.com##.support-now
+elsate.com##.swBar
 dcrainmaker.com##.swp_floating_horizontal_wrapper
 elements.visualcapitalist.com,marktechpost.com##.swp_social_panel
 echonewshub.com,jugomobile.com##.t-shared-sec
