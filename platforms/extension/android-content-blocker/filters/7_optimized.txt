@@ -1,9 +1,9 @@
-! Checksum: 9Er9XHlSIID582yT8qfyNw
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1711629433-3600.patch
+! Checksum: zHmrBm6ZqF2MqpuVxXu6MA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1711633017-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.49.91
-! TimeUpdated: 2024-03-28T12:34:04+00:00
+! Version: 2.0.49.92
+! TimeUpdated: 2024-03-28T13:33:42+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||lmadps.jp^$third-party
@@ -355,11 +355,13 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
+nieru.net#@#.ad-space
+nieru.net#@#.adWidget
 jprime.jp#$#.image-area { opacity: 1 !important; pointer-events: auto !imortant; filter: none !important; }
 jprime.jp#$#.js-article-wrap .article-body { opacity: 1 !important; pointer-events: auto !imortant; filter: none !important; }
 blog.2nt.com#@#.AdSense
 ||nazology.net/*/adb/adb.js
-pvpoke-re.com#@#ins.adsbygoogle
+pvpoke-re.com#@#ins.adsbygoogle[data-ad-slot]
 !+ PLATFORM(ios, ext_android_cb)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=pvpoke-re.com
 bm.best-hit.tv,h178.com,jukenbbs.com#@#.amp_ad
@@ -372,14 +374,14 @@ shindanmaker.com#$#div[id^="div-gpt-"] { min-height: 1px !important; }
 !+ PLATFORM(ios, ext_android_cb)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=qa.crefan.jp
 tters.jp#$#.ad-section { height: 10px !important; position: absolute !important; left: -3000px !important; }
-tters.jp#@#ins.adsbygoogle
+tters.jp#@#ins.adsbygoogle[data-ad-slot]
 tters.jp#@#.ad-section
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pointi.jp/js_new/fuckadblock.min.js
 ||minorasu.basf.co.jp/shared/scripts/vendor/piano/tag_prod.js
 egotter.com#$#.adsense-container { height: 1px !important; }
 egotter.com#@#.adsense-container
-egotter.com#@#ins.adsbygoogle
+egotter.com#@#ins.adsbygoogle[data-ad-slot]
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=egotter.com
 puzzle-ch.com#@##adframe:not(frameset)
@@ -417,11 +419,11 @@ ssbsblg.blogspot.com#$#.btmads { position: absolute !important; left: -3000px !i
 audio-sound-premium.com##div[id][class^="popup"][class$="wrap"]
 logworker.net#$##unblk { display: none !important; }
 logworker.net#$#.entry-content { display: block !important; }
-logworker.net#$#ins.adsbygoogle { display: none !important; }
-logworker.net#@#ins.adsbygoogle
+logworker.net#$#ins.adsbygoogle[data-ad-slot] { display: none !important; }
+logworker.net#@#ins.adsbygoogle[data-ad-slot]
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=logworker.net
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2021.js$domain=logworker.net
-musmus.main.jp#@#ins.adsbygoogle
+musmus.main.jp#@#ins.adsbygoogle[data-ad-slot]
 musmus.main.jp#$#div[class*="ad_"] {  height: 1px !important; width: 1px !important; min-height: 1px !important; padding: 0 !important; margin: 0 !important; overflow: hidden !important; }
 musmus.main.jp#$#div[id^="sub_ad"] {  height: 1px !important; width: 1px !important; min-height: 1px !important; padding: 0 !important; margin: 0 !important; overflow: hidden !important; }
 snrec.jp#$#.tp-backdrop { display: none!important; }
@@ -503,7 +505,7 @@ intaa.net##div[id^="adunit-"]:not(#adunit-10):not(#adunit-11)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=intaa.net
 @@||yoshidakenkou.net^$generichide
 yoshidakenkou.net##.adsbygoogle
-battlecats-db.com#@#ins.adsbygoogle
+battlecats-db.com#@#ins.adsbygoogle[data-ad-slot]
 battlecats-db.com#$#body[style="display: none;"] { display: block !important; }
 @@||pagead2.googlesyndication.com/pagead/*/show_ads_impl_$domain=battlecats-db.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=battlecats-db.com
@@ -523,7 +525,7 @@ ouminews.net#@#.text_ad
 ouminews.net#@#.pub_300x250
 knshow.com#$#.ads { display: block!important;height: 1px!important; }
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=knshow.com
-knshow.com#@#ins.adsbygoogle
+knshow.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googlesyndication.com/pagead/show_ads.js$domain=crefan.jp
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=crefan.jp
 @@||googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=nihongo-pro.com
@@ -538,7 +540,7 @@ knshow.com#@#ins.adsbygoogle
 /modal-dist/index.js$script,domain=ananweb.jp|newsweekjapan.jp
 @@||ad.jp.ap.valuecommerce.com/servlet/jsbanner$domain=coron.tech
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=coron.tech
-coron.tech#@#ins.adsbygoogle
+coron.tech#@#ins.adsbygoogle[data-ad-slot]
 !+ NOT_PLATFORM(ext_safari)
 ad-contents.jp#$#.ui-wrapper { display: block !important; }
 !+ NOT_PLATFORM(ext_safari)
@@ -1061,8 +1063,8 @@ n.lat/login|$document
 /regist_execute.html$document
 /^https?:\/\/(?!www)[a-z]{3,5}\.[0-9a-z]{4,10}\.[a-z]{2,6}\/[a-z]{3,15}\/(?=[a-z]{0,9}[0-9A-Z])[0-9A-z]{10}\.html$/$document,match-case,domain=art|cc|cfd|cloud|club|fun|homes|info|life|me|one|online|shop|site|store|top|world|xyz
 .com/ae/login.php?openid.pape.max_auth_age=0&openid.return_to=%$document
-/?AC=*&IC=$document,domain=fun|online|site
-.asp?AC=*&IC=$document,domain=fun|online|site
+/?AC=*&IC=$document,domain=com|fun|online|site
+.asp?AC=*&IC=$document,domain=com|fun|online|site
 /step1.php?msg=*&cnv=*&cnt=$document
 /index.php?cpno=$document
 /ec2_index.html?cpno=$document
@@ -1100,6 +1102,8 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+uwakich.com##div[class^="article-body"] > div > p[style="text-align: center;"]
+uwakich.com##div[class^="article-body"] > div > b > span[style="color: rgb(255, 0, 0);"]
 ||eromovie-s.com/ad/
 melty-novel.com##.sp[style^="width:336px; height:280px"]
 ipentec.com##.AdsContainerDocumentTop
