@@ -2542,6 +2542,10 @@
             "script": "(()=>{const wrapper=(target,thisArg,args)=>{let content=Reflect.apply(target,thisArg,args);if(content.includes('bkaEnforcementMessage')){const modifiedContent=content.replace(/\\n.\\n[A-Z]auxiliaryUi\\.messageRenderers\\.bkaEnforcementMessageViewModel\\.displayType.\\dENFORCEMENT_MESSAGE_VIEW_MODEL_DISPLAY_TYPE_[A-Z]+\\n[A-Z]\\n[A-Z]auxiliaryUi\\.messageRenderers\\.bkaEnforcementMessageViewModel\\.isVisible.{2}(?:tru|fals)e/,'');return modifiedContent;}return content;};const handler={apply:wrapper};window.atob=new Proxy(window.atob,handler);})();"
         },
         {
+            "domains": "www.youtube.com",
+            "script": "(()=>{window.JSON.parse=new Proxy(JSON.parse,{apply(r,e,t){const n=Reflect.apply(r,e,t);if(!location.pathname.startsWith(\"/shorts/\"))return n;const a=n?.entries;return a&&Array.isArray(a)&&(n.entries=n.entries.filter((r=>{if(!r?.command?.reelWatchEndpoint?.adClientParams?.isAd)return r}))),n}});})();"
+        },
+        {
             "domains": "",
             "script": "var AG_onLoad=function(func){if(document.readyState===\"complete\"||document.readyState===\"interactive\")func();else if(document.addEventListener)document.addEventListener(\"DOMContentLoaded\",func);else if(document.attachEvent)document.attachEvent(\"DOMContentLoaded\",func)};"
         },
