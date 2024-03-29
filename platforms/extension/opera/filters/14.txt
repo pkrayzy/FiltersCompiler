@@ -1,9 +1,9 @@
-! Checksum: XowJAx7/AvKikVZ8i5nhSA
-! Diff-Path: ../patches/14/14-s-1711712233-3600.patch
+! Checksum: BOYOSz4ucuFckLT63g0g/A
+! Diff-Path: ../patches/14/14-s-1711715847-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.91.90
-! TimeUpdated: 2024-03-29T11:32:04+00:00
+! Version: 2.1.91.91
+! TimeUpdated: 2024-03-29T12:32:07+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2402,6 +2402,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+bangbros.com#%#//scriptlet('set-cookie', 'cookieConsent', '0')
 accounts.pixiv.net###js-privacy-policy-banner
 sigame.vladimirkhil.com##.cookies__warning
 ||app.easy.tools/cookies/scripts/$domain=upolujebooka.pl
@@ -22680,6 +22681,10 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+tinyurl.com#$##modals-container { display: none !important; }
+tinyurl.com#$#body.vm--block-scroll { overflow: auto !important; }
+tinyurl.com##div[data-test-id="freetrial_promotional_banner"]
+bangbros.com##div[data-cy="catfish"]
 fandom.com##body > div.notifications-placeholder:has(#localNotice a[href="/wiki/Special:Signup"])
 youdao.com##div#ServiceBox1
 youdao.com##.newUserCouponIndex
