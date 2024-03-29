@@ -1,9 +1,9 @@
-! Checksum: xJ8h4e57iZlMrAaRp51CgQ
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1711674463-14400.patch
+! Checksum: ua1DuMuXUKNc1NGNwGdtXA
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1711688834-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.63
-! TimeUpdated: 2024-03-29T01:02:27+00:00
+! Version: 2.1.21.64
+! TimeUpdated: 2024-03-29T05:02:23+00:00
 ! Expires: 10 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -100,6 +100,7 @@
 /plugins/easy-twitter-feeds/public/js/widget.js
 /plugins/facebook-button-plugin/js/script.js
 /plugins/facebook-page-promoter-$~stylesheet
+/plugins/like-box-pro/includes/javascript/front_end_js.js
 /plugins/mashsharer/assets/js/mashsb.min.js
 /plugins/pinterest-pin-it-button-on-image-hover-and-post/js/pinit.js
 /plugins/sociable-re/images/*
@@ -525,6 +526,7 @@ _socialfancysliders/
 ###post-footer-share
 ###post-social
 ###post-social-wrap
+###post_info_share
 ###postshare
 ###reseaux-sociaux
 ###reseaux_sociaux
@@ -784,6 +786,7 @@ _socialfancysliders/
 ###socialMedia
 ###socialMediaMenu
 ###socialMediaSection
+###socialMediaShare
 ###socialModal
 ###socialNav
 ###socialNetworks
@@ -1334,6 +1337,7 @@ _socialfancysliders/
 ##.boxsocial
 ##.brand-social
 ##.breakingNews__socialMedia
+##.brid-share-button-holder
 ##.brid-share-control
 ##.bt-share
 ##.btFacebook
@@ -2000,6 +2004,7 @@ _socialfancysliders/
 ##.fusion-sharing-box
 ##.fusion-social-network-icon
 ##.fv-social
+##.fvfacebook_share
 ##.g1-drop-the-socials
 ##.g1-social-icons
 ##.g1-socials-item
@@ -2350,6 +2355,7 @@ _socialfancysliders/
 ##.it-share
 ##.item--social
 ##.item-facebook
+##.item-google-plus
 ##.item-share
 ##.item-share-social
 ##.item-shares
@@ -2521,6 +2527,7 @@ _socialfancysliders/
 ##.lzd-follow-us-icon
 ##.m-SocialLinksFresh
 ##.m-article-share
+##.m-brand-engagement--social-link
 ##.m-entry__social
 ##.m-footer-social
 ##.m-header--social-nav
@@ -2696,6 +2703,9 @@ _socialfancysliders/
 ##.nav-bar__social-links__link
 ##.nav-follow-us
 ##.nav-footer-social
+##.nav-icon-facebook
+##.nav-icon-instagram
+##.nav-icon-twitter
 ##.nav-instagram
 ##.nav-share
 ##.nav-share-btn
@@ -2802,6 +2812,7 @@ _socialfancysliders/
 ##.pathSocialIcons
 ##.pbtsharethisbutt
 ##.pen_social_networks
+##.penci-social-counter
 ##.penci-social-share-footer
 ##.penci-social__content
 ##.penci-social__item
@@ -3338,6 +3349,7 @@ _socialfancysliders/
 ##.shareThisWrapper
 ##.shareTitle
 ##.shareTool
+##.shareToolbar
 ##.shareTools
 ##.shareTop
 ##.shareTrig
@@ -4313,6 +4325,7 @@ _socialfancysliders/
 ##.story__share
 ##.story__social
 ##.story_share
+##.story_social_share
 ##.storyshare
 ##.stripe-social
 ##.stwitter
@@ -4324,6 +4337,7 @@ _socialfancysliders/
 ##.subscribe-follow
 ##.subscribe__follow
 ##.subscribe_block
+##.subscribe_facebook
 ##.subscribe_icons
 ##.subscribe_tw
 ##.svp-share
@@ -4372,6 +4386,7 @@ _socialfancysliders/
 ##.the_champ_sharing_ul
 ##.theme-icon-facebook
 ##.theme-icon-twitter
+##.thim-author-social
 ##.thirdShareBox
 ##.thread-share
 ##.thread-share-bar-buttons
@@ -4843,6 +4858,7 @@ _socialfancysliders/
 ||button.like.co^$third-party
 ||buttons.github.io/buttons.js$third-party
 ||connect.ok.ru^$third-party
+||facebook.com/plugins/follow.php$third-party
 ||facebook.com/plugins/like.php?$third-party
 ||facebook.com/plugins/like_box.php$third-party
 ||facebook.com/plugins/page.php?$third-party
@@ -5059,6 +5075,7 @@ vox.com##.c-social-buttons
 marketplace.org##.c-story-meta__share
 cgdirector.com##.cgd-social-wrapper
 thecinemaholic.com##.cinemaholic-share
+businesstoday.in##.cmp_shr_btn
 edugeek.net##.cms_widget_content.widget_content > [align="center"]
 neatorama.com##.col-4
 stuff.co.nz##.comment-and-share
@@ -5254,6 +5271,7 @@ fintech.tv,war.ukraine.ua##.share-news
 thehackernews.com##.share-open-modal
 ig.com.br,rebelnews.com##.share-page
 commondreams.org,spectrum.ieee.org,theblaze.com##.share-panel
+thenationalpulse.com##.share-post-button
 aajtak.in,gnttv.com,indiatoday.in,indiatodayne.in##.share-social-icons
 alarabiya.net,timeextension.com##.share-this
 apkpure.net##.share-toolbox
@@ -5473,13 +5491,11 @@ finanzfrage.net,gutefrage.net##.Bigfoot-socialLinks
 veganblatt.com##.Shares
 krone.at##.al__socials
 butenunbinnen.de##.article-addons
-nebelspalter.ch##.ccm-element-social-share
 nn.de,nordbayern.de##.icon__social
 kicker.de##.kick__article__social
 ndr.de##.meta
 laut.de##.module-share
 emtb-news.de,mtb-news.de,rennrad-news.de##.mtbnews-post-share__container
-suedostschweiz.ch##.node_share_news
 streamkiste.tv##.sb
 teltarif.de##.sbm
 orf.at##.share-dialog
