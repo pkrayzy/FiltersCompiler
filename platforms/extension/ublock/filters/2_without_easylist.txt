@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: CepmtAo9ZBOMcDzARFNTaw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1711701435-3600.patch
+! Checksum: SVbekCkWNSLkwhe+7lf0+g
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1711705021-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.28.85
-! TimeUpdated: 2024-03-29T08:33:05+00:00
+! Version: 2.3.28.86
+! TimeUpdated: 2024-03-29T09:32:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7059,6 +7059,8 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/174556
+dankmemer.lol##+js(no-setTimeout-if, nads)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175901
 soft3arbi.com#$#body { overflow: auto !important; }
 soft3arbi.com#$##detect-modal { display: none !important; }
@@ -8061,9 +8063,11 @@ southparkstudios.com##+js(no-fetch-if, imasdk.googleapis.com)
 !+ NOT_PLATFORM(windows, mac, android, ext_chromium, ext_opera)
 @@||mssl.fwmrm.net/libs/adm/*/AdManager.js$domain=southparkstudios.com
 ! #abDetectorModal
-ftuapps.dev,onehack.us###abDetectorModal
 ftuapps.dev,onehack.us#$#.adsbox.doubleclick.ad-placement { display: block !important; }
 ftuapps.dev,onehack.us##+js(no-xhr-if, pagead2.googlesyndication.com)
+ftuapps.dev,onehack.us##+js(no-fetch-if, pagead2.googlesyndication.com)
+!+ NOT_OPTIMIZED
+ftuapps.dev,onehack.us###abDetectorModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157086
 fordownloader.com###freezePopup
 fordownloader.com##+js(no-xhr-if, pagead2.googlesyndication.com)
