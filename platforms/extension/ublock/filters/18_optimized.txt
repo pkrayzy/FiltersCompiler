@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: ygF8ZGJT+yOnGVIxqYIGHQ
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1711731040-3600.patch
+! Checksum: ltAWXci9TjjAusYzsXTYDQ
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1711766222-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
 ! Version: 2.0.36.64
@@ -267,6 +267,7 @@
 ###cookie-banner
 ###cookie-banner-container
 ###cookie-bar
+###cookie-bar-bottom
 ###cookie-bar-main
 ###cookie-block
 ###cookie-compliance
@@ -891,6 +892,7 @@
 ||clickiocmp.com^$third-party
 /simple-cookies_for_hu.js
 ||fastcmp.com^$third-party
+/ferra-cookie-consent-widget.min.js
 /ACC_js.php?$script
 ||cookiemanager.dk^
 /Amasty_GdprFrontendUi/*
@@ -1392,7 +1394,6 @@ eplus.by#$#body[class] { overflow: auto !important; }
 usg.edu###gdpr-cookie-notification
 screen.studio##body > div[class]:has(> div[style] a[href="/privacy"])
 banki24.by##.cookies_consent
-/stereotypedsugar\.com\/[a-z]?\/[a-z0-9]+\/[a-z]{4}[a-z0-9]{15,25}\.index\.js$/$script,match-case,domain=agweek.com
 primevideo.com##.DVWebNode-conditional-site-wide-wrapper > .fbl-banner:has(form[action*="/privacyprefs/sp/consent/"])
 bullionvault.com##.navigation__cookies
 ||cdn.shopify.com/shopifycloud/privacy-banner/storefront-banner.js
@@ -2742,6 +2743,7 @@ grooves.land###ack_usage_de
 grooves.land###background
 dailymotion.com##+js(set-cookie-reload, cookie_policy_closed, 1)
 tedate.jp##.m-snackbar-notice
+ben.nl#$##defaultModal { display: none !important; }
 ben.nl#$#.cookie-wall { display: none !important; }
 ben.nl#$#body { overflow: auto !important; }
 seb.se##.pw-cookie-consent-v2
@@ -3444,6 +3446,7 @@ suslusozluk.com#$?##container > div#modal:has(div[data-op="accept-cookies"]) { d
 suslusozluk.com#$##lightsout { display: none!important; }
 odrabiamy.pl,interacty.me##div[class^="CookiesBanner_"]
 bayern.de##.modCookieBar
+cleanipedia.com##div[id="_cqConsentPanel"]
 aia.co.th##.alertFooterContent
 jobs.concentrix.com,careers.microsoft.com,footlocker.com##.ph-cookie-popup-v2-default-default
 tass.ru#?#div[class^="Cookies_container__"]
@@ -4051,6 +4054,7 @@ hik-connect.com##.ant-message-notice-content
 hik-connect.com##div[class^="src-pages-cookie-___cookieTip__app-cookie-container"]
 pinterest.jp,pinterest.at,pinterest.ch,pinterest.co.uk,pinterest.com,pinterest.com.au,pinterest.com.mx,pinterest.de,pinterest.es,pinterest.fr,pinterest.it,pinterest.pt##div[data-test-id="cookie-consent-banner"]
 mirkrasok.ru##.module_messages_cookies
+celeramotion.com##.privacy_wrapper
 yvid.ru###cbb
 martha-maria.de##mama-cookie-banner
 sbis.ru##.sbis_ru-CookieAgreement
@@ -4547,6 +4551,7 @@ ritmoteka.ru,imagefu.com###cook
 infomir.eu,elektromall.de###cb
 1aradio.com,baustoffshop.de,katholischglauben.info#$#.ccm-root { display: none !important; }
 1aradio.com,baustoffshop.de,katholischglauben.info#$#.ccm-blocked:not(#style_important) { overflow: visible !important; }
+mobileshop.eu##.fixed-warning
 dayspedia.com,puzzlegarage.com,onlineradiobox.com##div[class^="modal--cookies"]
 mql5.com,finteza.com,searchengines.guru##.float-vertical-panel
 houzz.ru,houzz.com,houzz.de##.hz-visitor-consents
@@ -5521,6 +5526,7 @@ naughtyamerica.com##.privacy-disclaimer
 vrn.de###vrn-cookie
 waze.com##.wz-cc-container
 kik.com##.cookie_policy_outer
+icq.com##.ca_wrap
 jagranjosh.com,jagran.com,herzindagi.com,newsnation.in###gdprbx
 uhrzeit.org###cookieContraption
 mdv.de###BorlabsCookieBoxWrap
@@ -5623,6 +5629,7 @@ thehouseofportable.com,gls-group.eu###cookiePopup
 csaladinet.hu###CookieAcceptLayer
 rosewe.com###accept_agree
 videovegas.ru###agreement_cookie
+lastampa.it,open.online###amp-user-notification-privacy
 homebanking-hilfe.de###annoyingeucookiemsg
 linkedin.com###artdeco-global-alert-container
 reparatur-initiativen.de,redlineagrinio.gr,visaplace.com,novakid.com.tr,wulfenerhals.de,netsiparis.com,d16.pl,akilliphone.com,wochenanzeiger-muenchen.de###band-cookies
@@ -5939,6 +5946,7 @@ ing.pl##.js-cookie-policy-box
 agatameble.pl##.js-infoBarCookies
 praca.gov.pl##.komunikat-panel-cookies
 archdaily.*,plataformaarquitectura.cl##.kth-toast--bottom
+winsa.com.tr,egepen.com.tr,honda.com.tr##.kvvk-cookie
 ivi.tv,ivi.ru##.lowest-teaser
 xn--90aqok.xn--p1ai,linux-gaming.ru,walletsrates.com,zatuschok.com,cpd.by,ustaliy.ru,aurora.ua,androidsfaq.com,prizyvanet.ru,rucore.net,vesti.uz,nalivay-ka.ru,perstni.com##.lwpcngNotice
 motor1.uol.com.br,insideevs.*,motor1.com##.m1-footer-messages
@@ -6009,6 +6017,8 @@ gibteseinestorung.de#$#.modal-backdrop  { display:none!important; }
 gibteseinestorung.de#$#.modal-open { overflow:visible!important; }
 imobiliare.ro#$#.modal-backdrop { display:none!important; }
 imobiliare.ro#$#.modal-open { overflow:visible!important; }
+mediamarkt.nl#$#.modal-backdrop { display:none!important; }
+mediamarkt.nl#$#.modal-open { overflow:visible!important; }
 mkidn.gov.pl#$#body { overflow: visible!important; }
 imobiliare.ro#$##modalCookies { display:none!important; }
 overdrive.com#$#.featherlight { display:none!important; }
@@ -6195,6 +6205,7 @@ allday.com.tr,happylook.ru,e-consystems.com,uaz.ru,nakubani.ru,eksmo.ru,papajohn
 sanyglobal.com,naray.one,mcdonalds.co.id,euronabycerny.com,mangahack.com,wiadomoscihandlowe.pl,bcs-express.ru,psc-inc.co.jp,apteka24.ua,u-mama.ru,gumtree.co.za,btclod.com,a12.com,ontiva.com,dr-telemed.ru,myfasol.ru,ponyexpress.ru,litres.ru,amediateka.ru,hansa.rs,schnaeppchenfuchs.com,xsport.ua##.cookie-agreement
 visitmons.be##.cookie-compliance-message
 cv.ee,cv.lv,cvonline.lt,thomasmeyerhoefer.com,kaffeebraun.com,bessey.de,europe.nflshop.com,neuronation.com,conjuga-me.net,proz.com,htc.com,vice.com##.cookie-consent-container
+deloitte.com##.cookie-container
 velomarket.pl,avantree.com,singlife.com.ph,ok.co.uk##.cookie-div
 bidolubaski.com,hurriyetemlak.com,hotnewhiphop.com,vonovia.de,whitehatsec.com,yurticikargo.com##.cookie-policy-wrapper
 sarsilmaz.com,karakartal.com,sporx.com,superfb.com,webaslan.com##.cookie-text
@@ -7273,6 +7284,7 @@ riga.lv#@##cookieConsent
 riga.lv#@#.cookie-wrapper
 @@||app.usercentrics.eu/browser-ui/$domain=wohnglueck.de
 @@||api.usercentrics.eu/settings/$domain=wohnglueck.de
+@@||cdn.cookielaw.org^$domain=mesta.net
 mesta.net#@##onetrust-consent-sdk
 @@||sdk.privacy-center.org^$domain=serially.it
 rittal.com#@#.cookie-overlay:not(html):not(body)
