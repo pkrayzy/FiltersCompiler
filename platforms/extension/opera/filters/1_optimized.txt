@@ -1,5 +1,5 @@
-! Checksum: mPnsRP2s+F5pMiFAt2FTBw
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1711766215-3600.patch
+! Checksum: AP/5v9pEQfN0aaFK9maBVQ
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1711852632-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
 ! Version: 2.0.89.73
@@ -333,6 +333,7 @@ sb.php?s=$script
 /pix/ad/*
 /Pop-under.js
 /promo/banner2.jpg
+/pseudocounter.js
 /reclama_*.jpg
 /redtram.
 /rek1.js|
@@ -1169,6 +1170,7 @@ ucoz.ru/informer/
 ||adfinity.pro^$third-party
 ||ackhoo.com^$third-party
 ||jmpmedia.club^$third-party
+||click.zmctrack.net^$all
 ||admitad-connect.com^$third-party
 ||banners.adfox.ru^$third-party
 ||hdbcode.com^$third-party
@@ -1634,6 +1636,7 @@ ucoz.ru/informer/
 ||mediaportal.ru^$third-party
 ||mediatoday.ru^$third-party
 ||mediawayss.com^$third-party
+||medtiz.com^$third-party
 ||meelba.com^$third-party
 ||meendocash.com^$third-party
 ||megatizer.ru^$third-party
@@ -1762,6 +1765,7 @@ ucoz.ru/informer/
 ||regpole.com^$third-party
 ||rekl1.com^$third-party
 ||reklamaizer.ru^$third-party
+||release-me.ru^$third-party
 ||renewnewss.net^$third-party
 ||republer.com^$third-party
 ||retagapp.com^
@@ -2529,7 +2533,6 @@ echo.msk.ru,kakprosto.ru#%#//scriptlet('abort-on-property-read', 'Object.prototy
 ya.ru,yandex.com##.banner
 ya.ru##.Skeleton_type_ad_search
 [$path=/search]ya.ru,yandex.*##.AdvMedia
-ya.ru,yandex.*##li[class*="mini-suggest__item"] > a[href^="http://yabs."][href*="/count/"]
 ya.ru,yandex.*##li[class*="mini-suggest__item"] > a[href^="https://yabs."][href*="/count/"]
 ya.ru,yandex.*##li[class*="mini-suggest__item"] > a[href^="http://yandex"][href*="/clck/"]
 yandex.*##body:not([data-bem*="pogoda"]) .mini-suggest__popup-content > li[data-type="nav"]
@@ -3295,7 +3298,6 @@ asiaplustj.info##.newsbox-outer-banner
 yablyk.com##.yandex-ad
 forbes.ru##div[data-title-deleted="Реклама на Forbes"]
 forbes.ru##div[data-article] > div[class] > div[class] > div[class] > div[class] > div[style^="min-height:"]:has(div[class^="infox_"])
-forbes.ru##div[data-article] > div[class] > div[class] > div:has(> div > div > div > header > svg[width="67"])
 forbes.ru##main div[class] > div[class]:has(> div[class] > aside > div[id^="adfox_"]):not(:has(h1)):not(:has(figure))
 afisha.ru##div[data-test="PAGE-BLOCK"] > div > section[role="section"]:has(> div[data-test="SECTION-CONTENT"] > div > a[href^="https://okko.tv/"])
 ||forum.cxem.net/adv/
@@ -3888,6 +3890,7 @@ otzyvy.by#?#center > div[align="center"][style]:has(> div.direct)
 otzyvy.by#?##review_frm > table.form > tbody > tr:has(> td[align="center"] > center > table.blue)
 vk.com#?#.wall_posts > div.post:has(span.PostHeaderSubtitle__item:contains(Реклама в сообществе))
 zasvetfoto.com#?##menu-verhnee-menyu > li:has(> a[href="http://xlib.info/"])
+bombardir.ru#?#.content > p:has(> a[href^="http://bmbrdr.ru/"])
 bombardir.ru#?#.soc-news > li:has(> span.soc-text > a[href^="https://bmbrdr.ru/"])
 cnews.ru#?#.article-wrap > section.section_mainnews > div.container:has(> div.line_pattern > a[href^="https://market.cnews.ru/"])
 amic.ru#?#.col-md-12 > h3:contains(Новости партнеров)
@@ -7320,6 +7323,7 @@ skodarapidclub.ru#@#.headerad
 fizvosp.ru#@##banners
 fizvosp.ru#@#iframe[width="240"][height="400"]
 @@||gismeteo.*/informers/constructor/$document
+@@||gismeteo.*/informers/get-code/$document
 wf.mail.ru#@##banners
 wf.mail.ru#@#.bannerblock
 @@||mariinsky.ru/images/
