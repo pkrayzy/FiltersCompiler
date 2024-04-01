@@ -1,9 +1,9 @@
-! Checksum: eCTqNks6N/z1efMVVEyjhQ
-! Diff-Path: ../patches/1/1-s-1711975017-3600.patch
+! Checksum: tuTE5zRVvy/UOVm2X5vYSw
+! Diff-Path: ../patches/1/1-s-1711982241-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.77
-! TimeUpdated: 2024-04-01T12:32:40+00:00
+! Version: 2.0.89.78
+! TimeUpdated: 2024-04-01T14:32:41+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1464,6 +1464,7 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||luxcdn.com^$third-party
 ||vqhrqt.com^
 ||marketer.lv^$third-party
 ||programmatica.com^$third-party
@@ -5807,6 +5808,8 @@ penzainform.ru#$#body { cursor: auto!important; }
 !------- CSS -----------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176035
+autosport.com.ru#$#body { padding-top: 0 !important; background-color: white !important;}
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172614
 the-wire-fox.net#$##wrapper { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171941
@@ -7276,6 +7279,10 @@ ivanovonews.ru,gorodn.ru,bits.media,devyatka.ru,gazeta-n1.ru,gorod48.ru,hi-fi.ru
 !
 !
 !
+||autosport.com.ru/files/partners/
+autosport.com.ru##.partner-content
+autosport.com.ru##a[href^="https://betonmobile.ru/"]
+salonsecret.ru##a[href^="https://lorealprofessionnel.ru/"] > *
 uznayvse.ru##.iku_loaded
 happycoin.club##div[class*="clickout-banner"]
 happycoin.club##a[href][target="_blank"][rel="noopener"] > img[width][height]
@@ -7787,7 +7794,6 @@ new-science.ru###text-html-widget-17
 new-science.ru###text-html-widget-6
 ||investfuture.ru/source/partner
 thegirl.ru##div[data-creative-container="hb-top"]
-||s.luxcdn.com/t/*/360_light.js
 multitran.com##.getty
 multitran.com##.pic
 ||embed-cdn.gettyimages.com^$domain=multitran.com
