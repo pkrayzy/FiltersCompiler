@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.29.19",
-			"timeUpdated": "2024-04-01T10:33:04+0000",
+			"version": "2.3.29.20",
+			"timeUpdated": "2024-04-01T11:33:07+0000",
 			"languages": []
 		},
 		{
@@ -87,8 +87,8 @@
 			"displayNumber": 1,
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/4.txt",
-			"version": "2.0.99.13",
-			"timeUpdated": "2024-04-01T09:59:31+0000",
+			"version": "2.0.99.14",
+			"timeUpdated": "2024-04-01T11:33:22+0000",
 			"languages": []
 		},
 		{
@@ -213,8 +213,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/13.txt",
-			"version": "2.0.50.88",
-			"timeUpdated": "2024-04-01T09:31:45+0000",
+			"version": "2.0.50.89",
+			"timeUpdated": "2024-04-01T11:31:46+0000",
 			"languages": [
 				"tr"
 			]
@@ -228,8 +228,8 @@
 			"displayNumber": 1,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/14.txt",
-			"version": "2.1.92.2",
-			"timeUpdated": "2024-04-01T10:32:00+0000",
+			"version": "2.1.92.3",
+			"timeUpdated": "2024-04-01T11:32:02+0000",
 			"languages": []
 		},
 		{
@@ -287,8 +287,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/18.txt",
-			"version": "2.0.36.67",
-			"timeUpdated": "2024-04-01T09:58:15+0000",
+			"version": "2.0.36.68",
+			"timeUpdated": "2024-04-01T11:32:14+0000",
 			"languages": []
 		},
 		{
@@ -300,8 +300,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/19.txt",
-			"version": "2.0.34.12",
-			"timeUpdated": "2024-04-01T10:32:14+0000",
+			"version": "2.0.34.13",
+			"timeUpdated": "2024-04-01T11:32:17+0000",
 			"languages": []
 		},
 		{
@@ -1018,8 +1018,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/224.txt",
-			"version": "2.1.13.49",
-			"timeUpdated": "2024-04-01T09:32:36+0000",
+			"version": "2.1.13.50",
+			"timeUpdated": "2024-04-01T11:32:38+0000",
 			"languages": [
 				"zh"
 			]
@@ -1257,7 +1257,7 @@
 		},
 		{
 			"filterId": 242,
-			"name": "NoCoin Filter List",
+			"name": "(Obsolete) NoCoin Filter List",
 			"description": "This filter disables browser-based miners such as coin-hive.",
 			"homepage": "https://github.com/hoshsadiq/adblock-nocoin-list/",
 			"expires": 432000,
