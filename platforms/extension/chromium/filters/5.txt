@@ -1,9 +1,9 @@
-! Checksum: xg9UstxgZf5FUoJAQ4mUtQ
-! Diff-Path: ../patches/5/5-s-1711964225-3600.patch
+! Checksum: C9z2lxK2/hnGqm/EUJDGXA
+! Diff-Path: ../patches/5/5-s-1712010987-3600.patch
 ! Title: AdGuard Experimental filter
 ! Description: Filter designed to test certain hazardous filtering rules before they are added to the basic filters.
-! Version: 2.0.1.40
-! TimeUpdated: 2024-04-01T09:33:27+00:00
+! Version: 2.0.1.41
+! TimeUpdated: 2024-04-01T22:33:20+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -143,7 +143,7 @@
 ! This section contain any type of rule grouped by domain.
 !
 ! remove anti-adb
-www.youtube.com#%#(()=>{const wrapper=(target,thisArg,args)=>{let content=Reflect.apply(target,thisArg,args);if(content.includes('bkaEnforcementMessage')){const modifiedContent=content.replace(/\n.\n[A-Z]auxiliaryUi\.messageRenderers\.bkaEnforcementMessageViewModel\.displayType.\dENFORCEMENT_MESSAGE_VIEW_MODEL_DISPLAY_TYPE_[A-Z]+\n[A-Z]\n[A-Z]auxiliaryUi\.messageRenderers\.bkaEnforcementMessageViewModel\.isVisible.{2}(?:tru|fals)e/,'');return modifiedContent;}return content;};const handler={apply:wrapper};window.atob=new Proxy(window.atob,handler);})();
+www.youtube.com#%#(()=>{const wrapper=(target,thisArg,args)=>{let content=Reflect.apply(target,thisArg,args);if(content.includes('bkaEnforcementMessage')){const modifiedContent=content.replace(/\n.\n.auxiliaryUi\.messageRenderers\.bkaEnforcementMessageViewModel\.displayType.\dENFORCEMENT_MESSAGE_VIEW_MODEL_DISPLAY_TYPE_[A-Z]+\n.\n.auxiliaryUi\.messageRenderers\.bkaEnforcementMessageViewModel\.isVisible.{2}(?:tru|fals)e/,'');return modifiedContent;}return content;};const handler={apply:wrapper};window.atob=new Proxy(window.atob,handler);})();
 www.youtube.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.auxiliaryUi.messageRenderers.bkaEnforcementMessageViewModel', 'undefined')
 ! Fix ads on https://www.youtube.com/shorts/
 ! TODO: If it does not cause any problems, move it to the Base filter
