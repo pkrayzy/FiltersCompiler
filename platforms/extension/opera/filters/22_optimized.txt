@@ -1,9 +1,9 @@
-! Checksum: RKC+Vw0ZtZ+PcKBTMjipAQ
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1711939031-3600.patch
+! Checksum: Z4UBFx/vJjuIerqEWA9kyQ
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1711964250-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.7.77
-! TimeUpdated: 2024-03-31T16:32:35+00:00
+! Version: 2.0.7.78
+! TimeUpdated: 2024-04-01T09:32:37+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -137,6 +137,7 @@ blog.livedoor.jp##.naka_rss
 blog.livedoor.jp##div[class^="footrss"]
 blog.livedoor.jp##div[class^="shitarss_"]
 blog.livedoor.jp##div[id^="shitarss_title_"]
+tyoieronews.blog.jp###more > blockquote:has(> span > a[href^="http://"][href*="doorblog.jp/"])
 maspiai.com###sidebar > div.sticky
 maspiai.com##.recommended-summary
 porn-selection.net##.main_col >  div[style]:has(> div[align="left"] > div[style] > div[id^="blz_reverse"])
@@ -1203,3 +1204,7 @@ hromadske.ua#$#.DonateModal-overlay { display: none !important; }
 hromadske.ua#$#body { overflow: visible !important; }
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_widgets
+!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_ext
+!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext

@@ -1,9 +1,9 @@
-! Checksum: gDLowYqzhHv8KdQQg0GdEw
-! Diff-Path: ../patches/21/21-s-1711953397-3600.patch
+! Checksum: Dm+eIkT2sio1kfBFnOCO5g
+! Diff-Path: ../patches/21/21-s-1711964221-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.21.27
-! TimeUpdated: 2024-04-01T06:32:22+00:00
+! Version: 2.0.21.28
+! TimeUpdated: 2024-04-01T09:32:29+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -107,6 +107,9 @@ instagram.com##._aagw:empty
 !
 ! End: Instagram.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175876
+sueddeutsche.de##div[data-newsletter-id]
+sueddeutsche.de##div[class]:has(> div[data-teaserlist-element]:only-child > .basebox:only-child > div[data-newsletter-id])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175098
 24sata.hr#%#//scriptlet('remove-class', 'sticky-top', '.vjs-wrapper')
 24sata.hr#%#//scriptlet('remove-class', 'sticky-bottom', '.video-js')
@@ -3187,6 +3190,11 @@ instiz.net#$?#.backlogo { background-image: none !important; }
 !
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_other
+!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_ext
+! Detect of using AdGuard products
+!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 ! This is section contains the list of rules that block websites' own banners at our discretion.
