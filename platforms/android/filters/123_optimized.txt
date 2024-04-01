@@ -1,9 +1,9 @@
-! Checksum: Wj/c5821FFQMXDVS9qAZLg
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1711933640-14400.patch
+! Checksum: GS0exl8GgvQHzqh3vhphyw
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1711948019-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.21.75
-! TimeUpdated: 2024-04-01T01:02:27+00:00
+! Version: 2.1.21.76
+! TimeUpdated: 2024-04-01T05:02:26+00:00
 ! Expires: 5 days (update frequency)
 -buttons-facebook.
 -facebook-share.
@@ -31,6 +31,7 @@
 -webicon-twitter-
 .sharecount.
 .sharing.js
+.sociallocker.
 /accesspress-social-
 /addthis_widget.
 /addtoany-
@@ -285,6 +286,7 @@ _socialfancysliders/
 ###box_social
 ###bsocial
 ###btnShareFacebook
+###btnShareFb
 ###btnShareMessenger
 ###btnShareTwitter
 ###cm-social-overlay
@@ -1163,6 +1165,7 @@ _socialfancysliders/
 ##.article-social
 ##.article-social-bar
 ##.article-social-bottom
+##.article-social-box
 ##.article-social-btn
 ##.article-social-button
 ##.article-social-buttons
@@ -1436,6 +1439,7 @@ _socialfancysliders/
 ##.card__share
 ##.card__shareBtn
 ##.card__social
+##.carshare
 ##.category-share
 ##.cb-social-sharing
 ##.ccm-block-social-links
@@ -2754,6 +2758,7 @@ _socialfancysliders/
 ##.news-detail-share
 ##.news-share
 ##.news-share-button
+##.news-sharing
 ##.news__share
 ##.news_share
 ##.news_sns
@@ -3227,6 +3232,7 @@ _socialfancysliders/
 ##.share-popup
 ##.share-post
 ##.share-post-box
+##.share-rail
 ##.share-reddit
 ##.share-row
 ##.share-rrss
@@ -4468,6 +4474,7 @@ _socialfancysliders/
 ##.triggerShare
 ##.ts-share-bar
 ##.ts-socials
+##.tsocial
 ##.tt-share
 ##.tve_social_items
 ##.tw-leaf-info-share-fb
@@ -5003,6 +5010,7 @@ lethbridgenewsnow.com,panow.com###social-share-icons
 theepochtimes.com###social_share_widget
 salon.com###social_total
 news.crunchbase.com###ss-sticky-bar
+democracynow.org###story_social
 osxdaily.com###subscribe_box
 thenewstack.io###tns-footer-bar
 reuters.com###toolbar-item-parent-share-12
@@ -5172,6 +5180,7 @@ cars.com##.global-footer-social-buttons
 oneindia.com##.goog-one-news
 cnbctv18.com##.google-btn-div
 ringsidenews.com##.google-news
+crypto.news##.google-news-banner
 alarabiya.net##.google-news-callout
 sammobile.com##.google-news-cta
 9to5google.com,9to5mac.com,9to5toys.com,dronedj.com,electrek.co,searchengineland.com,spaceexplored.com##.google-news-link
@@ -5509,7 +5518,6 @@ de.rt.com###google_news_banner
 rtde.tech##.ArticleView-googleNewsBanner
 rtde.tech##.ArticleView-rotatorBanners
 finanzfrage.net,gutefrage.net##.Bigfoot-socialLinks
-veganblatt.com##.Shares
 krone.at##.al__socials
 butenunbinnen.de##.article-addons
 nn.de,nordbayern.de##.icon__social
@@ -5740,7 +5748,6 @@ cadenaser.com,caracol.com.co,wradio.com.co##.cnt-interaccion
 adslzone.net##.comments-social-share
 ecologiaverde.com,el9nou.cat,elsaltodiario.com,lanacion.com.ar,laverdad.com,psicologia-online.com,qmusica.tv,revistafamilia.ec##.compartir
 eitb.eus##.compartir_sociales
-laprensalara.com.ve##.container-bar
 caustica.co,futbolred.com,portafolio.co##.container__btngoogle
 elcolombiano.com##.contenedor-google-noticias
 neomotor.epe.es##.detail_rrss
@@ -5767,7 +5774,6 @@ canalnet.tv##.main-video-single__socials
 vidaextra.com##.masthead-nav-social
 genbeta.com,vidaextra.com##.menu-follow
 depor.com##.nav__story-social-network
-noticierovenevision.net##.noticia-ampliada-compartir
 ecologiaverde.com##.open-compartir
 vidaextra.com##.post-comments-shortcut
 biobiochile.cl##.post-social-container
