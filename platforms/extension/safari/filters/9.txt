@@ -1,9 +1,9 @@
-! Checksum: T0SL6ynGQEWG0o6hBVwS9g
-! Diff-Path: ../patches/9/9-s-1711964261-3600.patch
+! Checksum: Z6Ho2f/6dplTfLl9ACSzGQ
+! Diff-Path: ../patches/9/9-s-1712050635-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.23.92
-! TimeUpdated: 2024-04-01T09:33:46+00:00
+! Version: 2.0.23.93
+! TimeUpdated: 2024-04-02T09:33:55+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -373,9 +373,11 @@ peliculas8k.com#%#//scriptlet('prevent-fetch', '/googlesyndication\.com|iubenda\
 alarmadefraude.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=alarmadefraude.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/176131
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162478
+modescanlator.com#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.googlesyndication.com')
 modescanlator.com#%#//scriptlet('prevent-fetch', 'ads_block.txt')
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=modescanlator.com
 @@||modescanlator.com/ads_block.txt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162260
 ||cdn.jsdelivr.net/gh/MuriloWalker/javascript@main/AntiAdblock.js
