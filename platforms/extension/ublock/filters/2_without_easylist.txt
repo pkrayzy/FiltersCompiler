@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: TXz9rsS7T2I//OPFQOK2SA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712039848-3600.patch
+! Checksum: iiNWBw8Gj56Jm8b7Gas6Vg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712043439-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.29.29
-! TimeUpdated: 2024-04-02T06:33:12+00:00
+! Version: 2.3.29.30
+! TimeUpdated: 2024-04-02T07:33:05+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,7 @@
 !
 !
 !
+||rokymedia.com^
 ||pregainpotgut.top^
 ||dedukicationan.info^
 ||munpracticalwh.info^
@@ -7125,6 +7126,9 @@ streamingcommunity.*##+js(no-xhr-if, /\.\w+\/$/)
 @@||streamingcommunity.*/*.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175083
 babia.to##+js(remove-node-text, script, !document.getElementById(btoa()
+! https://github.com/AdguardTeam/AdguardFilters/issues/176022
+arcfly.net#@#.ad-wrap
+arcfly.net##+js(no-setTimeout-if, placebo.height)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175218
 freewebcart.com#@#.ad-wrap
 freewebcart.com##+js(no-setTimeout-if, placebo.height)
@@ -21065,6 +21069,11 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176158
+stockwatch.pl##div[class*="-"] > span[data-adsourl]:first-child + img:last-child
+stockwatch.pl##div[class*="-"]:has(> span[data-adsourl]:first-child + img:last-child)
+! https://github.com/AdguardTeam/AdguardFilters/issues/176153
+inzynieria.com##.karta-art-qs
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175916
 handelextra.pl##.Ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175918
@@ -32191,6 +32200,9 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 !
 ! NOTE: Specific rules
 !
+luxuretv.com##iframe[data-src^="https://rokymedia.com/"]
+luxuretv.com###vz_im_ad
+arcfly.net##.elementor-widget-foxiz-ad-image
 commands.gg##.playwire_container
 emulatorjs.com##+js(nano-setInterval-booster, ;}\,setTimeout(function(){, 1000)
 hitomi.la##.container > div.top-content > div[class]:not([class="list-title"])
@@ -49270,8 +49282,8 @@ flashscore.*,horseracing24.com,darts24.com,handball24.com,volleyball24.com,motor
 ://aj2*.online^$xmlhttprequest,other
 !
 ! Brightcove SSAI
-||brightcovecdn.com/playback/*/*?ad_config_id=$removeparam=ad_config_id,xmlhttprequest,domain=tvnz.co.nz|roosterteeth.com|nhl.com
-||brightcove.com/playback/*/*?ad_config_id$removeparam=ad_config_id,xmlhttprequest,domain=tvnz.co.nz|roosterteeth.com|nhl.com
+||brightcovecdn.com/playback/*/*?ad_config_id=$removeparam=ad_config_id,xmlhttprequest,domain=tvnz.co.nz|roosterteeth.com|nhl.com|9now.com.au
+||brightcove.com/playback/*/*?ad_config_id$removeparam=ad_config_id,xmlhttprequest,domain=tvnz.co.nz|roosterteeth.com|nhl.com|9now.com.au
 ! Streamplay
 /..nt.nt\.st.+p.ay\..+/$domain=stemplay.*|steamplay.*|steanplay.*|streamp1ay.*|streanplay.*|streampiay.*|stre4mplay.*
 jquery-1.8.3.min.js$domain=stemplay.*|steamplay.*|steanplay.*|streamp1ay.*|streanplay.*
