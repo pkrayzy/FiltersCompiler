@@ -1,9 +1,9 @@
-! Checksum: rWVKwNv9BbZBjpoYGAOwPg
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1712065059-3600.patch
+! Checksum: M7cCJR6OYgDzdabXAKX+RA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1712068649-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.50.7
-! TimeUpdated: 2024-04-02T13:33:53+00:00
+! Version: 2.0.50.8
+! TimeUpdated: 2024-04-02T14:33:40+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -618,6 +618,8 @@ crefan.jp#%#//scriptlet('prevent-setTimeout', 'objDef.resolve')
 ||freemen.jp/wp-content/uploads/yIOefayFENNZ/$script
 ||freemen.jp/wp-content/uploads/gftpkzd.js
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=freemen.jp
+@@||h-ken.net^$generichide
+h-ken.net#%#//scriptlet('set-constant', 'adBlockDetected', 'noopFunc')
 @@||js.ad-stir.com/js/adstir.js$domain=h-ken.net
 @@||ad.ad-stir.com/ad$domain=h-ken.net
 @@||js.ad-stir.com/js/adstir_magnify.js$domain=h-ken.net
@@ -788,6 +790,7 @@ nasubiblog.com,kyukyoku-matome.com##.widget_pc_ad
 ##.widget_tsnc_ads_custom_html
 ##.wipe-ad-div-class
 ##.ys-ad-content
+##a[href*="ams.exad.jp/"] > img
 ##a[href^="http://abroadabc.com/index.php"]
 ##a[href^="https://nxcount.com/AdClick/"][target="_blank"]
 ##a[href^="https://preaf.jp/pa.do"] > img
@@ -816,6 +819,7 @@ nasubiblog.com,kyukyoku-matome.com##.widget_pc_ad
 ##.t_b ~ a[href^="https://www.amazon.co.jp"]
 ##.t_b ~ div > a[href^="https://al.dmm.co"]
 ##.t_b ~ div > a[href^="https://www.amazon.co.jp"]
+##.widget_custom_html > .custom-html-widget > a[href^="https://www.e-nls.com/access.php"]
 twidouga.net#%#//scriptlet('prevent-addEventListener', '', 'setTrigger')
 pictab.art,onagazou.info#%#//scriptlet('set-constant', 'pum_vars', 'undefined')
 shindanmaker.com#%#//scriptlet('adjust-setInterval', 'reward_countdown')
@@ -1273,7 +1277,7 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
-kimamamatome.doorblog.jp##a[href^="http://ams.exad.jp/"] > img
+||kimamamatome.doorblog.jp/ad*.js
 kimamamatome.doorblog.jp###sidebar-inner > div:has(> div.right-container-ads)
 kimamamatome.doorblog.jp##.kotei
 kimamamatome.doorblog.jp###sidebar-inner > div.plugin3_title:contains(スポンサードリンク)
@@ -2495,6 +2499,7 @@ city.isehara.kanagawa.jp##div[id^="bnAdvertisement"]
 city.fukaya.saitama.jp##.bannerRMod
 asahi.com##.p-ad-area
 pandachirari.com##.entry_adv
+etude000.com##.container7
 etude000.com##.bc
 etude000.com###side-fixed > div.thk_ps_widget
 etude000.com###thk_ps_widget-71
@@ -6350,8 +6355,6 @@ craftbeer-tokyo.info###execphp-40
 pixiv.kurocore.com,wws-channel.com,craftbeer-tokyo.info###top-banner
 waifu2x.net##.all-page > div[style="min-height: 270px; margin: 1em"]
 waifu2x.net##.dmm-games
-h-ken.net##.mainColumn > div > .sidebarList
-h-ken.net##.mainColumn > div > p.midashiPink
 rakko.tools##.pr_link
 ||360asp.click/data.php?$third-party
 wtpage.info##.cm-banner
