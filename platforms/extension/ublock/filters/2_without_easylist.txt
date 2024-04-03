@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: z5FO7tPE4Wld+piq4AigCA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712126238-3600.patch
+! Checksum: 3r4Y+pWRY4XkY6mFqDdIow
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712129836-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.29.44
-! TimeUpdated: 2024-04-03T06:33:05+00:00
+! Version: 2.3.29.45
+! TimeUpdated: 2024-04-03T07:33:04+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23116,7 +23116,9 @@ eurogamer.pl##.mpu
 eurogamer.pl##.desktop-mpu
 ! tracktrace.dpd.com.pl - ads
 tracktrace.dpd.com.pl#$#.banner-side-bar { visibility: hidden !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/176228
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68365
+beskidzka24.pl###sidebar-primary > .widget_custom_html .banner-line + * img
 beskidzka24.pl##.banner-line
 ! https://github.com/AdguardTeam/AdguardFilters/issues/68130
 @@||media.polsatnews.pl^$generichide
@@ -27173,6 +27175,8 @@ kat.*,kickass.*,kickass2.*,kickasstorrents.*,kat2.*,kattracker.*,thekat.*,thekic
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176233
+! TODO: use href-sanitizer scriptlet when it will be available
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175978
 nuuuppp.*##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175863
@@ -27241,7 +27245,7 @@ moviekhhd.biz##+js(no-setTimeout-if, ads/Ads)
 tnaflix.com##+js(set-constant, ads, {})
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172661
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172504
-movies4u.cafe##+js(abort-on-property-write, app_advert)
+movies4u.*##+js(abort-on-property-write, app_advert)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172069
 javcock.com##+js(abort-current-script, String.prototype.split, Popunder)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171867
@@ -32216,6 +32220,7 @@ $xmlhttprequest,third-party,denyallow=linkvertise.com|fastly.net|statically.io|s
 !
 ! NOTE: Specific rules
 !
+howtoinstall.co##div[id^="ads-wrapper-"]
 olx.in##div[class]:has(> div[id^="baxter-ads"])
 okmilfporn.com##div.text-center[style*="height: 250px;"]
 imgur.com##div[id*="/InContent/"][style*="min-height: 250px;"]
@@ -39473,7 +39478,7 @@ flickr.com##.moola-search-div
 ||bbc.com/ngas/latest/dotcom-ads.js
 readcomiconline.li,kimcartoon.pro,kimcartoon.li,dvdtrailertube.com,weekendnotes.com##div[style*="width: 300px; height: 250px;"]
 newsday.com##.fullBanner
-freeupscmaterials.org,eroasmr.com,movies4u.cafe,footybite.to,krx18.com,flacdl.com,gitlink.pro,blogmado.com,pornstash.in,1shorten.com,aylink.co,privatemoviez.*,gdrivez.xyz,tlin.me,antiscan.me,illink.net,downturk.net,app.stream2watch.sx,uploadflix.org,uploadraja.com,modsfire.com,cryptofuns.ru,kvador.com,tweetycoin.com,speed4up.com,spaste.com##center > a[target="_blank"] > img
+freeupscmaterials.org,eroasmr.com,movies4u.*,footybite.to,krx18.com,flacdl.com,gitlink.pro,blogmado.com,pornstash.in,1shorten.com,aylink.co,privatemoviez.*,gdrivez.xyz,tlin.me,antiscan.me,illink.net,downturk.net,app.stream2watch.sx,uploadflix.org,uploadraja.com,modsfire.com,cryptofuns.ru,kvador.com,tweetycoin.com,speed4up.com,spaste.com##center > a[target="_blank"] > img
 kitguru.net###bg_url_kg
 ||yoursports.stream/watch/now.php
 yoursports.stream,yrsprts.stream##iframe[src^="http://yoursports.stream/watch/now.php"]
