@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.54",
-			"timeUpdated": "2024-04-02T07:31:41+0000",
+			"version": "2.0.50.55",
+			"timeUpdated": "2024-04-03T08:38:43+0000",
 			"languages": [],
 			"tags": [
 				1,
