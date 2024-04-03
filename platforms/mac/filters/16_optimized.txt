@@ -1,5 +1,5 @@
-! Checksum: +zwiPHxN374dvxNcT7zRPQ
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1712101012-3600.patch
+! Checksum: QszoUKmfnBDZKXFOIHMF8g
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1712111868-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
 ! Version: 2.0.44.40
@@ -650,6 +650,7 @@ replay.fr##.dfa
 /neads.$domain=~neads.io|~neads.co
 ||fmovies.*/sw.js
 lesfrontaliers.lu###full-container > div#header-wrapper + div[class]
+lesfrontaliers.lu##.ad-listing
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_french
 !+ PLATFORM(windows, mac, android, ios) NOT_OPTIMIZED
@@ -1101,6 +1102,7 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 -ads-cdn.
 -ads-footer.
 -ads-header.
+-ads-live.
 -ads-sidebar.
 -ads.js&$script
 -ads/ads.
@@ -2248,6 +2250,7 @@ _werbebanner_
 &ad_scheme=$popup
 &adcid=$popup
 &adserver=$popup
+&bann=$popup
 &cbiframe=$popup
 &exotracker=$popup
 &id_publisher=*&id_$popup
@@ -2697,6 +2700,7 @@ _lx.ads/$popup
 ||tdsapi.com^$third-party
 ||tdscd.com^$third-party
 ||templatehelp.com^$third-party
+||thereforem.com^$third-party
 ||threedrive.su^$third-party
 ||tipser.com^$third-party
 ||tools-affil2.com^$third-party
@@ -3934,6 +3938,7 @@ _lx.ads/$popup
 ||disturbedquiet.com^
 ||diswontchose.com^
 ||ditcherstorify.guru^
+||divatraffic.bid^
 ||djmaowwewck.com^
 ||dkgmjvktmowcbtj.xyz^
 ||doaphaha.net^
@@ -4384,6 +4389,7 @@ _lx.ads/$popup
 ||kempygateway.com^
 ||kesodgqt.xyz^
 ||kfgqfjledfy.xyz^
+||kfiopkln.com^
 ||kfunryiqykypho.com^
 ||kgnohpvawhef.com^
 ||khuoevxu.xyz^
@@ -4563,6 +4569,7 @@ _lx.ads/$popup
 ||nhqqv.space^
 ||nicsorts-accarade.com^
 ||nigrebud.net^
+||nimiq.com^
 ||niubixxx.com^
 ||nnbwljpcdrgo.xyz^
 ||nnnkmsgqnkpkng.com^
@@ -5477,6 +5484,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||laredoute.com/marketing/$third-party,domain=~laredoute.be|~laredoute.ch|~laredoute.co.uk|~laredoute.com|~laredoute.es|~laredoute.fr|~laredoute.gr|~laredoute.hr|~laredoute.it|~laredoute.kr|~laredoute.lu|~laredoute.ma|~laredoute.nl|~laredoute.pl|~laredoute.pt|~laredoute.ru|~laredouteliban.com
 ||le1er.net/promo/
 ||ledeclycx.com/images/ban_
+||legagnant.com/pv$image
 ||les-meilleurs-plans.com^$script,subdocument,third-party
 ||lesplansduweb.com^$script,subdocument,third-party
 ||lewebfacilement.com^$script,subdocument,third-party
@@ -7017,6 +7025,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.sponsoredPrisma
 ##.sponsorfooter
 ##.squareadboxext
+##.srcPub
 ##.srcPubZone
 ##.stackcommerce-widget
 ##.stage-advertising
@@ -7044,6 +7053,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.txt-top-publicity
 ##.underplayer_banner
 ##.ustreklam
+##.vda-block
 ##.vertical-ads-group
 ##.video-list-ads
 ##.video_reklama
@@ -7305,6 +7315,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##div[data-iab-tag]
 ##div[data-pub-appnexus]
 ##div[data-pub-siteid]
+##div[data-refadmob]
 ##div[data-sticky-ads]
 ##div[id*="300x250_advertisement_"]
 ##div[id^="M"][id*="Composite"]
@@ -7500,6 +7511,7 @@ batiactu.com##.banner-background
 judgehype.com##.bannerATF_container
 bfmtv.com##.banner_top
 turf-fr.com##.banners-con
+laposte.fr##.basic-pub
 multiup.io##.bg-info
 journaldemontreal.com##.bigbox-container
 autonews.fr##.bl-partner
@@ -7599,6 +7611,7 @@ zdnet.fr##.mpu-middle
 ouedkniss.com##.mt-4.mt-md-6.home-front-store
 allo-streaming.one##.mvic-btn
 jetanimes.com##.mysticky-welcomebar-fixed
+tchatche.com##.native-banner
 porndoe.com##.news-ticker-wrap
 manjaro.fr##.nuxit
 lenouveleconomiste.fr##.nveco-widget
@@ -7774,6 +7787,7 @@ maliweb.net##a[target="_blank"] > img[width="300"][height="200"]
 forexmt4indicators.com##a[target="_blank"] > img[width="300"][height="250"]
 gamergen.com,generation-nt.com##article .product
 scan-manga.com##article[itemtype="https://schema.org/Product"]
+tchatche.com##banner
 gamopat-forum.com##div#wrapper > div#right img[src*="/11/03/61/79/"]
 newpharma.fr##div[class*="adh-banner"]
 gauleporno.xxx,pornburst.xxx##div[class*="banner"]
