@@ -1,0 +1,36 @@
+d1 2
+a2 2
+! Checksum: zJxYMl+Ls15vqksEEQtKAg
+! Diff-Path: ../patches/224/224-s-1712137108-3600.patch
+d5 2
+a6 2
+! Version: 2.1.13.61
+! TimeUpdated: 2024-04-03T09:33:03+00:00
+d789 13
+d1129 1
+d1493 2
+d1501 2
+d2644 1
+a2644 2
+nivod8.tv,nivod7.tv##.nav-ads
+||api.nivodz.com/commercial/incr/
+a2645 1
+nivod5.tv,nivod4.tv##.img-list > .img-item:has(> a[href*=".ad_click"])
+a2646 1
+nivod5.tv,nivod4.tv##a.focus_title_inner[href*=".ad_click"]
+a2648 15
+m.nivod8.tv,m.nivod7.tv,m.nivod4.tv,m.nivod5.tv###hellBoy > li:not([track-by]) > img
+m.nivod8.tv,m.nivod7.tv,m.nivod4.tv,m.nivod5.tv###video-container + ul[style^="width:"] > li > img
+! https://github.com/AdguardTeam/AdguardFilters/issues/149414
+nivod5.tv,nivod4.tv#%#//scriptlet('set-constant', 'pageData.__banners.0.commercial.mediaUrl', '')
+nivod5.tv,nivod4.tv#%#//scriptlet('set-constant', 'pageData.__banners.0.commercial.jumpUrl', '')
+nivod5.tv,nivod4.tv#%#//scriptlet('set-constant', 'pageData.__banners.0.commercial.title', '')
+nivod5.tv,nivod4.tv#%#//scriptlet('set-constant', 'pageData.__banners.1.commercial.mediaUrl', '')
+nivod5.tv,nivod4.tv#%#//scriptlet('set-constant', 'pageData.__banners.1.commercial.jumpUrl', '')
+nivod5.tv,nivod4.tv#%#//scriptlet('set-constant', 'pageData.__banners.1.commercial.title', '')
+! Temorary solution, remove when https://github.com/AdguardTeam/Scriptlets/issues/330 will be resolved
+nivod5.tv,nivod4.tv#%#(function(){window.eval=new Proxy(eval,{apply:(e,c,n)=>{const o=Reflect.apply(e,c,n);if("object"==typeof o&&o.banners)try{o.banners.forEach(((e,c)=>{e.commercial&&(e.commercial={})}))}catch(e){console.debug(e)}return o}})})();
+! https://github.com/AdguardTeam/AdguardFilters/issues/147985
+! https://github.com/AdguardTeam/AdguardFilters/issues/146359
+nivod8.tv,nivod7.tv,nivod5.tv,nivod4.tv#%#//scriptlet('set-constant', 'detailParams.is_ad_play', 'false')
+m.nivod8.tv,m.nivod7.tv,m.nivod5.tv,m1.nivod.tv,m.nivod4.tv#%#//scriptlet('evaldata-prune', 'entity.commercial')

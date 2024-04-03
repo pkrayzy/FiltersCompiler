@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Y04C97DQaEJa+mprw6pF9g
-! Diff-Path: ../patches/224_optimized/224_optimized-s-1712126237-3600.patch
+! Checksum: SAC2nvLy9h5hut5ie0dXDA
+! Diff-Path: ../patches/224_optimized/224_optimized-s-1712137084-3600.patch
 ! Title: AdGuard Chinese filter (Optimized)
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.13.60
-! TimeUpdated: 2024-04-03T06:32:36+00:00
+! Version: 2.1.13.61
+! TimeUpdated: 2024-04-03T09:33:03+00:00
 ! Expires: 5 days (update frequency)
 ||1x5jlh.xyz^$popup
 ||98765.pw^
@@ -515,14 +515,6 @@ yfsp.tv,aiyifan.tv,iyf.tv##+js(abort-on-property-read, Object.prototype.ShouldLo
 9xav.cc##+js(remove-class, q-body--prevent-scroll, body)
 m.91zww.com##+js(abort-on-property-write, delCookie)
 pornbest.org##+js(abort-current-script, jQuery, injectPops)
-nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.0.commercial.mediaUrl, '')
-nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.0.commercial.jumpUrl, '')
-nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.0.commercial.title, '')
-nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.1.commercial.mediaUrl, '')
-nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.1.commercial.jumpUrl, '')
-nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.1.commercial.title, '')
-nivod8.tv,nivod7.tv,nivod5.tv,nivod4.tv##+js(set-constant, detailParams.is_ad_play, false)
-m.nivod8.tv,m.nivod7.tv,m.nivod5.tv,m1.nivod.tv,m.nivod4.tv##+js(evaldata-prune, entity.commercial)
 axutongxue.net##+js(no-setTimeout-if, getCookie(")
 hamivideo.hinet.net##+js(set-constant, myPlayer.adDisplay, undefined)
 jianshu.com##+js(set-constant, NEWS_FEED, noopFunc)
@@ -687,7 +679,6 @@ yibian.hopto.org##.yb-apng
 ||d2.yingyongge.com/*?*&$subdocument
 storytrain.info##.responsive_ad
 5000yan.com###cebianlan > div[style^="background-color:"][style*="border-radius:"]
-nivod8.tv,nivod7.tv##.nav-ads
 boylove1.mobi##.div_sticky2
 boylove1.mobi##.fuafxnfq
 boylove1.mobi##.main-banner
@@ -1049,16 +1040,12 @@ right.com.cn###hd > div.wp > div.hdc > h2
 ||right.com.cn/forum/static/image/common/logo
 helloyishi.com.tw##.article-desktop-ad-wrapper
 dy.xdf.cn,haoweichi.com##.ad2
-||api.nivodz.com/commercial/incr/
-nivod5.tv,nivod4.tv##a.focus_title_inner[href*=".ad_click"]
 newmobilelife.com###ATS_sticky
 tieba.baidu.com##.top_toutu_admarks
 123pan.com##div[style="width:100%;position:absolute;bottom:0;height:96px"]
 wnflb2023.com##.GzList
 bdys03.com##.artplayer-plugin-ads
 ||u10*.com/*.gif$domain=bhuai.top
-m.nivod8.tv,m.nivod7.tv,m.nivod4.tv,m.nivod5.tv###hellBoy > li:not([track-by]) > img
-m.nivod8.tv,m.nivod7.tv,m.nivod4.tv,m.nivod5.tv###video-container + ul[style^="width:"] > li > img
 ||ll.ibiqiuge.com/m.js
 axutongxue.net###uuuui
 sstv.pw##.container > a > img[style="width: 100%;"]
@@ -2192,11 +2179,24 @@ bilibili.com##.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-
 bilibili.com#$#.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-card__skeleton { visibility: visible !important; }
 bilibili.com#$#.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__skeleton { visibility: visible !important; }
 bilibili.com##.carousel-container > .carousel-transform > .carousel-slide:has(> a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bilibili.com/"])) > .extension-tips
-nivod5.tv,nivod4.tv#?#.img-list > .img-item:has(> a[href*=".ad_click"])
+nivod8.tv,nivod7.tv##.nav-ads
+||api.nivodz.com/commercial/incr/
 nivod5.tv,nivod4.tv#$?#.img-list > .img-item:has(> a[href*=".ad_click"]) { remove: true; }
+nivod5.tv,nivod4.tv##.img-list > .img-item:has(> a[href*=".ad_click"])
 nivod5.tv,nivod4.tv#$?#a.focus_title_inner[href*=".ad_click"] { remove: true; }
+nivod5.tv,nivod4.tv##a.focus_title_inner[href*=".ad_click"]
 m.nivod8.tv,m.nivod7.tv,m.nivod5.tv,m.nivod4.tv#?##hellBoy > li[track-by="$index"] > div[style] > .show-div:has(> .show-card > .update-play:contains(/^AD$/))
 m.nivod8.tv,m.nivod7.tv,m.nivod5.tv,m.nivod4.tv#?#.slider-group > .nut-swiper > .nut-swiper-inner > .nut-swiper-item:has(> .swiper-page > span:contains(/^AD/))
+m.nivod8.tv,m.nivod7.tv,m.nivod4.tv,m.nivod5.tv###hellBoy > li:not([track-by]) > img
+m.nivod8.tv,m.nivod7.tv,m.nivod4.tv,m.nivod5.tv###video-container + ul[style^="width:"] > li > img
+nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.0.commercial.mediaUrl, '')
+nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.0.commercial.jumpUrl, '')
+nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.0.commercial.title, '')
+nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.1.commercial.mediaUrl, '')
+nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.1.commercial.jumpUrl, '')
+nivod5.tv,nivod4.tv##+js(set-constant, pageData.__banners.1.commercial.title, '')
+nivod8.tv,nivod7.tv,nivod5.tv,nivod4.tv##+js(set-constant, detailParams.is_ad_play, false)
+m.nivod8.tv,m.nivod7.tv,m.nivod5.tv,m1.nivod.tv,m.nivod4.tv##+js(evaldata-prune, entity.commercial)
 yeyemo4.com,yeyemo5.com,yeyemo6.com,yeyemo7.com,yeyemo8.com,yeyemo9.com,yeyemo10.com##center > a[target="_blank"] > img
 liaoningmovie.net##.ad_panelAR
 liaoningmovie.net##.list-subCont > li[style$="height: 98px;"]
