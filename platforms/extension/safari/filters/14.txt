@@ -1,9 +1,9 @@
-! Checksum: z58g8doyzpJSWfhwikMtRQ
-! Diff-Path: ../patches/14/14-s-1712230679-3600.patch
+! Checksum: NgJJXC9laJf5qM0ZIl9LQg
+! Diff-Path: ../patches/14/14-s-1712234274-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.92.43
-! TimeUpdated: 2024-04-04T11:32:16+00:00
+! Version: 2.1.92.44
+! TimeUpdated: 2024-04-04T12:32:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2408,6 +2408,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+etelecinema.hu##div[role="alert"]
 iotransfer.itopvpn.com##.fl-accept
 3dmodelshare.org##.flatsome-cookies
 chessly.com##span > div[class^="NotificationPanel_"]:has(> div[class^="CookieConsentForm_"])
@@ -29109,8 +29110,8 @@ auto.ru#?#body > div:has(> div.Modal > div.Modal__container > div[class*="Admins
 myfoxzone.com,wtol.com,5newsonline.com,fox61.com,wthr.com,wqad.com,fox43.com,10tv.com,localmemphis.com,newswest9.com,weareiowa.com,krem.com,kcentv.com,cbs19.tv,kiiitv.com,12newsnow.com,cbs8.com,kvue.com,wbir.com,wltx.com,wgrz.com,newscentermaine.com,whas11.com,ktvb.com,13wmaz.com,firstcoastnews.com,wnep.com,wtsp.com,wfaa.com,kgw.com,king5.com,wcnc.com,kens5.com,ksdk.com,khou.com,wusa9.com,abc10.com,wwltv.com,11alive.com,wfmynews2.com,thv11.com,9news.com,wkyc.com,wzzm13.com,kare11.com,13newsnow.com,12news.com#$?#div[data-module="grid"] > dialog[data-name="exitInterstitial"] { remove: true; }
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175941
-tradingview.com#$#div[id="overlap-manager-root"] > div[data-id] > div[data-dialog-name="gopro"] { display: none !important; }
-tradingview.com#$#html > body.i-no-scroll { overflow: auto !important; padding-right: 0 !important; }
+tradingview.com#$#div[id="overlap-manager-root"] > div[data-id] > div[data-dialog-name^="gopro"] { display: none !important; }
+tradingview.com#$?#body[class] { overflow: auto !important; padding-right: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/169531#issuecomment-1877526044
 ||smetrics.telegraph.co.uk^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166762#issuecomment-1820750011
@@ -30924,6 +30925,7 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+kathimerini.gr###k-footer-paywall
 jamanetwork.com##.widget-EmailListSignUp
 deadline.com##.subscribe-to
 wielerrevue.nl##.piano-no-full-page
@@ -50200,6 +50202,7 @@ kimamamatome.doorblog.jp,fgochaldeas.com,kimuta1105.livedoor.blog,central-dragon
 ! 2chblog.jp,blog.jp,blog.livedoor.jp,bloggeek.jp,blogism.jp,blogo.jp,blogstation.jp,blogto.jp,cafeblog.jp,corpblog.jp,diary.to,doorblog.jp,dreamlog.jp,gger.jp,golog.jp,ldblog.jp,liblo.jp,livedoor.biz,livedoor.blog,myjournal.jp,mynikki.jp,officeblog.jp,officialblog.jp,publog.jp,storeblog.jp,teamblog.jp,techblog.jp,weblog.to,xxxblog.jp,youblog.jp,seesaa.net,blog.fc2.com,blog.2nt.com
 ! specify subdomain or use unique and safe selector; for blog.livedoor.jp make your rule as specific as possible or use $path
 !
+2chav.com##.entry_box > div[style]:has(> iframe[src^="https://blog-imgs-97.fc2.com/"])
 ||blog.livedoor.jp/nanjstu/bt_rss3.htm
 blog.livedoor.jp##.headlinerss
 [$path=/sekaiminzoku]blog.livedoor.jp##.main-column-inner > div[style^="width:720px;height:"][style*="border-bottom-style:groove"]
