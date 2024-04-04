@@ -50,8 +50,8 @@ const copyPlatformsPath = path.join(__dirname, '../..', FOLDER_WITH_OLD_FILTERS)
 const reportPath = rawReportPath === ''
     // report-adguard.txt OR report-third-party.txt
     ? path.join(__dirname, `../../${rawReportPath}`)
-    // report_DD-MM-YYYY_HH-MM-SS.txt
-    : path.join(__dirname, `../../report_${formatDate(new Date())}.txt`);
+    // report_partial_DD-MM-YYYY_HH-MM-SS.txt
+    : path.join(__dirname, `../../report_partial_${formatDate(new Date())}.txt`);
 
 /**
  * Compiler entry point.
