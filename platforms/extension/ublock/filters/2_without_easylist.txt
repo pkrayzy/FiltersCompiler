@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: r9S3id3TelOz5QVKEOPXcA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712230693-3600.patch
+! Checksum: baUX9qplb0tysKg5o8H9cQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712241490-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.29.63
-! TimeUpdated: 2024-04-04T11:33:19+00:00
+! Version: 2.3.29.65
+! TimeUpdated: 2024-04-04T14:33:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7106,6 +7106,8 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176315
+ewrc-results.com##+js(abort-on-property-write, ADS_URL)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176233
 shortix.co,learnmany.in#$#button#link { opacity: 1 !important; }
 shortix.co,learnmany.in##+js(remove-attr, disabled, button#link)
@@ -9555,8 +9557,6 @@ yt2save.com#@#.showads
 yt2save.com##+js(no-setTimeout-if, document.body.innerHTML)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125829
 $script,redirect-rule=noop.js,domain=freebnb.top
-! https://github.com/AdguardTeam/AdguardFilters/issues/126026
-ewrc-results.com##+js(set-constant, canGetAds, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125474
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dogeen.xyz
 dogeen.xyz##+js(no-fetch-if, pagead2.googlesyndication.com)
@@ -17892,6 +17892,7 @@ autopapa.ge##.top-rek
 !---------------------------------------------------------------------
 ! NOTE: Greek
 !
+kathimerini.gr##.nx-billboard-ad-row
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172878
 ygeiamou.gr##.banners-section
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172511
@@ -31680,6 +31681,10 @@ neowin.net#$#div[class^="banner-"] { height: 0!important; min-height: 0!importan
 !
 ! https://github.com/AdguardTeam/AdguardFilters/pull/175819
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}[-.]min\.js$/$script,third-party,match-case,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/*.css|$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com*/images/*.min.js|$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/css/$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/js/css/$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
 ! https://github.com/uBlockOrigin/uAssets/issues/9139#issuecomment-1945860142
 .com/api/users?token=*&uuid=&pii=&in=false^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158316
@@ -54631,6 +54636,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/175574
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176190
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176109
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176059

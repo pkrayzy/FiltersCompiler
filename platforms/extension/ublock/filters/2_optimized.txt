@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: lsS3evoAEu/FM0HyQF8tPQ
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1712230692-3600.patch
+! Checksum: V1WFpRnDT+I/HuMXYpTxpg
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1712241489-3600.patch
 ! Title: AdGuard Base filter + EasyList (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.29.63
-! TimeUpdated: 2024-04-04T11:33:19+00:00
+! Version: 2.3.29.65
+! TimeUpdated: 2024-04-04T14:33:20+00:00
 ! Expires: 5 days (update frequency)
 ||rsldfvt.com^
 ||longestsundays.com^
@@ -1112,6 +1112,7 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 @@||static.adsafeprotected.com/skeleton.gif?*adslot=
 @@||static.adsafeprotected.com/skeleton.gif?*adunitid=
 @@||static.adsafeprotected.com/skeleton.gif?*bannnerid=
+ewrc-results.com##+js(abort-on-property-write, ADS_URL)
 shortix.co,learnmany.in#$#button#link { opacity: 1 !important; }
 shortix.co,learnmany.in##+js(remove-attr, disabled, button#link)
 shortix.co##.popSc
@@ -2189,7 +2190,6 @@ shorterall.com##+js(set-cookie, _popfired, 1)
 mangas-raw.com##+js(abort-on-property-write, showInfoAdBlock)
 yt2save.com#@#.showads
 yt2save.com##+js(no-setTimeout-if, document.body.innerHTML)
-ewrc-results.com##+js(set-constant, canGetAds, true)
 dogeen.xyz##+js(no-fetch-if, pagead2.googlesyndication.com)
 darksoftware.net##+js(abort-current-script, $, /initDetection|!document\.getElementById\(btoa/)
 vods.tv##+js(no-fetch-if, www3.doubleclick.net)
@@ -4933,6 +4933,7 @@ myhome.ge##body .h-banners
 ||sab.fast.ge/www/*/*.$domain=forum.ge
 ||forum.ge/trash/ads_down.gif
 autopapa.ge##.top-rek
+kathimerini.gr##.nx-billboard-ad-row
 bookpress.gr##.banneritem
 insomnia.gr###main div.ad.insMainAd
 zougla.gr##.diaf
@@ -9021,6 +9022,10 @@ cdkeys.com#$#body .wrapper { background: none!important; }
 hltv.org#$#body { background-image: none !important; }
 cdkeyit.it,allkeyshop.com#$#body { background-image: none!important; }
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}[-.]min\.js$/$script,third-party,match-case,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/*.css|$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com*/images/*.min.js|$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/css/$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
+://www.*.com/js/css/$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
 .com/api/users?token=*&uuid=&pii=&in=false^$document
 ?aff_pg=PPU&aff_id=$all
 /?clck=*&sid=$document
