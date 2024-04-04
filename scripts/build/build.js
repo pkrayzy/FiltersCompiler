@@ -47,7 +47,7 @@ const logPath = path.join(__dirname, '../../log.txt');
 const platformsPath = path.join(__dirname, '../..', FOLDER_WITH_NEW_FILTERS);
 const copyPlatformsPath = path.join(__dirname, '../..', FOLDER_WITH_OLD_FILTERS);
 
-const reportPath = rawReportPath.length > 0
+const reportPath = rawReportPath === ''
     // report-adguard.txt OR report-third-party.txt
     ? path.join(__dirname, `../../${rawReportPath}`)
     // report_DD-MM-YYYY_HH-MM-SS.txt
