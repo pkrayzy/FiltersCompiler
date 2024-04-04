@@ -74,8 +74,8 @@
 			"displayNumber": 1,
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/3.txt",
-			"version": "2.0.68.39",
-			"timeUpdated": "2024-04-04T09:33:23+0000",
+			"version": "2.0.68.40",
+			"timeUpdated": "2024-04-04T10:33:27+0000",
 			"languages": []
 		},
 		{
@@ -87,8 +87,8 @@
 			"displayNumber": 1,
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/4.txt",
-			"version": "2.0.99.29",
-			"timeUpdated": "2024-04-04T09:33:29+0000",
+			"version": "2.0.99.30",
+			"timeUpdated": "2024-04-04T10:33:33+0000",
 			"languages": []
 		},
 		{
@@ -213,8 +213,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/13.txt",
-			"version": "2.0.50.95",
-			"timeUpdated": "2024-04-03T23:31:45+0000",
+			"version": "2.0.50.96",
+			"timeUpdated": "2024-04-04T10:31:58+0000",
 			"languages": [
 				"tr"
 			]
@@ -228,8 +228,8 @@
 			"displayNumber": 1,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/14.txt",
-			"version": "2.1.92.41",
-			"timeUpdated": "2024-04-04T09:32:10+0000",
+			"version": "2.1.92.42",
+			"timeUpdated": "2024-04-04T10:32:14+0000",
 			"languages": []
 		},
 		{
@@ -274,8 +274,8 @@
 				"ext_safari",
 				"ext_android_cb"
 			],
-			"version": "2.0.8.25",
-			"timeUpdated": "2024-04-01T09:32:10+0000",
+			"version": "2.0.8.26",
+			"timeUpdated": "2024-04-04T10:32:23+0000",
 			"languages": []
 		},
 		{
@@ -287,8 +287,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/18.txt",
-			"version": "2.0.36.96",
-			"timeUpdated": "2024-04-04T09:32:21+0000",
+			"version": "2.0.36.97",
+			"timeUpdated": "2024-04-04T10:32:25+0000",
 			"languages": []
 		},
 		{
@@ -326,8 +326,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/21.txt",
-			"version": "2.0.21.41",
-			"timeUpdated": "2024-04-04T09:32:38+0000",
+			"version": "2.0.21.42",
+			"timeUpdated": "2024-04-04T10:32:42+0000",
 			"languages": []
 		},
 		{
