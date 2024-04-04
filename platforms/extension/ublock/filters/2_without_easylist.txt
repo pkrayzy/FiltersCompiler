@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: HkKKcVT42O0vnRDzwqCnGw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712234287-3600.patch
+! Checksum: baUX9qplb0tysKg5o8H9cQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712241490-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.29.64
-! TimeUpdated: 2024-04-04T12:33:33+00:00
+! Version: 2.3.29.65
+! TimeUpdated: 2024-04-04T14:33:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7106,6 +7106,8 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176315
+ewrc-results.com##+js(abort-on-property-write, ADS_URL)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176233
 shortix.co,learnmany.in#$#button#link { opacity: 1 !important; }
 shortix.co,learnmany.in##+js(remove-attr, disabled, button#link)
@@ -9555,8 +9557,6 @@ yt2save.com#@#.showads
 yt2save.com##+js(no-setTimeout-if, document.body.innerHTML)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125829
 $script,redirect-rule=noop.js,domain=freebnb.top
-! https://github.com/AdguardTeam/AdguardFilters/issues/126026
-ewrc-results.com##+js(set-constant, canGetAds, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125474
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dogeen.xyz
 dogeen.xyz##+js(no-fetch-if, pagead2.googlesyndication.com)
