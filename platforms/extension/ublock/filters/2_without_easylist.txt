@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: baUX9qplb0tysKg5o8H9cQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712241490-3600.patch
+! Checksum: Ne+h1HhQvmAkdCIyGDBMlw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1712248642-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.29.65
-! TimeUpdated: 2024-04-04T14:33:20+00:00
+! Version: 2.3.29.66
+! TimeUpdated: 2024-04-04T16:33:11+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -10468,11 +10468,11 @@ mmacore.tv#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ad
 streamta.*#@#.google-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129136
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116826
-wcostream.org,watchanimesub.net,wco.tv,wcostream.net,wcostream.com##+js(abort-current-script, onload, /isAdBlockActive|google_jobrunner|window\.location\.replace/)
-wcostream.org,watchanimesub.net,wco.tv,wcostream.net,wcostream.com##+js(no-setTimeout-if, AdBlock)
-wcostream.org,watchanimesub.net,wco.tv,wcostream.net,wcostream.com##+js(set-constant, isAdBlockActive, false)
-@@/inc/embed/*ads.js$domain=wcostream.org|watchanimesub.net|wco.tv|wcostream.net|wcostream.com
-@@/inc/embed/suv4.js$domain=wcostream.org|watchanimesub.net|wco.tv|wcostream.net|wcostream.com
+wcoforever.tv,wcostream.org,watchanimesub.net,wco.tv,wcostream.net,wcostream.com##+js(abort-current-script, onload, /isAdBlockActive|google_jobrunner|window\.location\.replace/)
+wcoforever.tv,wcostream.org,watchanimesub.net,wco.tv,wcostream.net,wcostream.com##+js(no-setTimeout-if, AdBlock)
+wcoforever.tv,wcostream.org,watchanimesub.net,wco.tv,wcostream.net,wcostream.com##+js(set-constant, isAdBlockActive, false)
+@@/inc/embed/*ads.js$domain=wcostream.org|watchanimesub.net|wco.tv|wcostream.net|wcostream.com|wcoforever.tv
+@@/inc/embed/suv4.js$domain=wcostream.org|watchanimesub.net|wco.tv|wcostream.net|wcostream.com|wcoforever.tv
 @@||embed.watchanimesub.net/inc/embed/kampyle.js
 @@||embed.watchanimesub.net/inc/embed/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97271
@@ -32144,8 +32144,12 @@ youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPla
 youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, playerResponse.adPlacements, undefined)
 !
 ! Remove anti-adb
+! Disabled for https://github.com/AdguardTeam/AdguardFilters/issues/176113#issuecomment-2033847966
+!!#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_firefox)
+!!#endif
 ! Modify YT xhr responses
 ! $replace rules for Firefox
+! Disabled for https://github.com/AdguardTeam/AdguardFilters/issues/176113#issuecomment-2033847966
 ! https://github.com/AdguardTeam/AdguardFilters/pull/170936
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167440
 ! The rule trusted-replace-xhr-response with '\"adPlacements.*?([A-Z]"\}|"\}{2})\}\]\,' causes breakage on tv.youtube.com
