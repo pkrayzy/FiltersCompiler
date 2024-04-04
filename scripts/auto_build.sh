@@ -54,13 +54,4 @@ fi
 yarn validate
 
 # Update built platforms and filters in the repository
-yarn push:filters
-
-# Compile the report.txt file during "full" filters build run
-if [[ "$MODE" == "all" ]]; then
-    # report.txt is updated for all filters during a build run with no '--skip' or '--include' flags
-    yarn build
-fi
-
-# Update the report.txt in the repository
-yarn push:report
+yarn push
