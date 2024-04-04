@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script performs a fully automated build of filters with patches
-# and pushes the updated platforms, filters, and report.txt
+# and pushes the updated platforms, filters, and report file
 # to the current repository.
 
 # Enable tracing and exit on error
@@ -41,12 +41,12 @@ echo "Selected mode: $MODE"
 if [[ "$MODE" == "all" ]]; then
     # Build all filters except ours to keep 1 hour update cycle of patches
     # for our filters.
-    yarn build --skip=$ADGUARD_FILTERS
+    yarn build --skip=$ADGUARD_FILTERS --report='report-third-party.txt'
     # Set the time live of patches to '4 hours' in seconds
     yarn build:patches --time=14400 --resolution=s --skip=$ADGUARD_FILTERS
 elif [[ "$MODE" == "adguard" ]]; then
     # Build specific AdGuard filters based on the filter IDs
-    yarn build --include=$ADGUARD_FILTERS
+    yarn build --include=$ADGUARD_FILTERS --report='report-adguard.txt'
     # Set the time live of patches to '60 minutes' in seconds
     yarn build:patches --time=3600 --resolution=s --include=$ADGUARD_FILTERS
 fi

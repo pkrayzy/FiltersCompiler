@@ -14,6 +14,7 @@ const {
  */
 let includedFilterIDs = [];
 let excludedFilterIDs = [];
+let rawReportPath = '';
 
 const args = process.argv.slice(2);
 args.forEach((val) => {
@@ -32,6 +33,10 @@ args.forEach((val) => {
             .split(',')
             .map((x) => Number.parseInt(x, 10));
     }
+
+    if (val.startsWith('--report=')) {
+        rawReportPath = val.slice(val.indexOf('=') + 1).trim();
+    }
 });
 
 /**
@@ -42,11 +47,11 @@ const logPath = path.join(__dirname, '../../log.txt');
 const platformsPath = path.join(__dirname, '../..', FOLDER_WITH_NEW_FILTERS);
 const copyPlatformsPath = path.join(__dirname, '../..', FOLDER_WITH_OLD_FILTERS);
 
-let reportPath = path.join(__dirname, '../../report.txt');
-if (includedFilterIDs.length > 0 || excludedFilterIDs.length > 0) {
+const reportPath = rawReportPath.length > 0
+    // report-adguard.txt OR report-third-party.txt
+    ? path.join(__dirname, `../../${rawReportPath}`)
     // report_DD-MM-YYYY_HH-MM-SS.txt
-    reportPath = path.join(__dirname, `../../report_${formatDate(new Date())}.txt`);
-}
+    : path.join(__dirname, `../../report_${formatDate(new Date())}.txt`);
 
 /**
  * Compiler entry point.
