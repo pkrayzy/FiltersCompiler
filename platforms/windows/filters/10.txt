@@ -1,9 +1,9 @@
-! Checksum: YuX+eXNhcrYdguQRei5fnA
-! Diff-Path: ../patches/10/10-s-1712223491-3600.patch
+! Checksum: L86gxCBj0y6XQh1cKbsRfg
+! Diff-Path: ../patches/10/10-s-1712324848-3600.patch
 ! Title: Filter unblocking search ads and self-promotion
 ! Description: Filter that unblocks search ads in Google, DuckDuckGo, Bing, or Yahoo and self-promotion on websites.
-! Version: 2.0.3.26
-! TimeUpdated: 2024-04-04T09:31:44+00:00
+! Version: 2.0.3.27
+! TimeUpdated: 2024-04-05T13:40:03+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -289,8 +289,8 @@ ebay.com,ebay.co.uk,ebay.com.au#@?#div[itemtype="https://schema.org/Product"] di
 ebay.com,ebay.co.uk,ebay.com.au#@?#div[itemtype="https://schema.org/Product"] div[id^="merch_html_"]:has(> div[id] h2.mfe-card-group-title:contains(sponsored))
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176306
-startpage.com#@?##main > div[class^="css-"]:has(> div[class^="css-"] > p[class^="css-"]:contains(Ads))
-startpage.com#@?#.main-results-container > div.shopping-header > div[class^="css-"] > div[class^="css-"] > div.information-container + div[class^="css-"]:has(> span:contains(Sponsored))
+startpage.com#@?##main > div[class^="css-"]:has(> div[class^="css-"] > p[class^="css-"]:contains(/Annoncer|Anzeigen|Ads|Anuncios|Publicités|Advertenties|Annonser|Reklamy|Anúncios/))
+startpage.com#@?#.main-results-container > div.shopping-header > div[class^="css-"] > div[class^="css-"] > div.information-container + div[class^="css-"]:has(> span:contains(/Sponsoreret|Gesponsert|Sponsored|Patrocinad|Sponsorisé|Gesponsord|Sponset|Sponsorowane|Sponsrad/))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151448
 metager.org#@$?##results > div.result:has(> div.result-header > div.result-subheadline > a.result-link > span.advertisement-mark) { remove: true; }
 metager.org#@$?##results > div.result:has(> div.result-header > div.result-subheadline > a[href="https://metager.org/partnershops"]) { remove: true; }
