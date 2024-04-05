@@ -9,10 +9,11 @@ on:
       # it is needed to avoid pull request merge blocking
       # as compiler does not use the updated config during the build.
       - 'optimization_config.json'
+  schedule:
+    - cron: "0 3 * * *"
 
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -39,3 +40,12 @@ jobs:
 
       - name: Validate platforms and locales
         run: yarn validate
+
+      - name: Push to repository
+        run: |
+          git config --global user.name "pkrayzy"
+          git config --global user.email "pkrayzy@users.noreply.github.com"
+          now=$(date)
+          git add -A
+          git commit -m "Update Filters on $now"
+          git push
