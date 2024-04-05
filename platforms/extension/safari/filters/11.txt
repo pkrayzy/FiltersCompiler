@@ -1,9 +1,8 @@
-! Checksum: HFq0Qy9hB+bxXm/JMB22fg
-! Diff-Path: ../patches/11/11-s-1712330510-600.patch
+! Checksum: lBVxGggKaqFzxs+zldPYkA
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.50.66
-! TimeUpdated: 2024-04-05T15:17:30+00:00
+! Version: 2.0.50.67
+! TimeUpdated: 2024-04-05T17:25:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7241,16 +7240,4 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !---------------------------------------------------------------------------!
 !------------------ Content replacement rules ------------------------------!
 !---------------------------------------------------------------------------!
-!
-! This section contains the list of the content replacement rules that block ads on mobile devices. Rules must be domain-specific.
-!
-! Bad:  ||example.org/video-links (should be in specific.txt)
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/101976
-! https://github.com/AdguardTeam/AdguardFilters/issues/21078
-||mangaapi.manhuaren.com/*/public/getRecommendedGame^
-! https://github.com/AdguardTeam/AdguardFilters/issues/10315
-||ads.adfox.ru/*/getCode?p1=$domain=auth.wi-fi.ru,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
-! https://forum.adguard.com/index.php?threads/23599/
-! https://github.com/AdguardTeam/AdguardFilters/issues/5676
-!
+! @include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/replace.txt"
