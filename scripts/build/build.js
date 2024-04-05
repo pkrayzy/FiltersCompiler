@@ -47,11 +47,11 @@ const logPath = path.join(__dirname, '../../log.txt');
 const platformsPath = path.join(__dirname, '../..', FOLDER_WITH_NEW_FILTERS);
 const copyPlatformsPath = path.join(__dirname, '../..', FOLDER_WITH_OLD_FILTERS);
 
-const reportPath = rawReportPath === ''
+const reportPath = rawReportPath !== ''
     // report-adguard.txt OR report-third-party.txt
-    ? path.join(__dirname, `../../${rawReportPath}`)
+    ? path.join(__dirname, '../..', rawReportPath)
     // report_partial_DD-MM-YYYY_HH-MM-SS.txt
-    : path.join(__dirname, `../../report_partial_${formatDate(new Date())}.txt`);
+    : path.join(__dirname, '../..', `report_partial_${formatDate(new Date())}.txt`);
 
 /**
  * Compiler entry point.
