@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: P5qUyG/oowqpjqjIXQ5sgg
-! Diff-Path: ../patches/18/18-s-1712302636-3600.patch
+! Checksum: A4ZgfAYfCdLLBN4yNW4MxQ
+! Diff-Path: ../patches/18/18-s-1712310226-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.37.1
-! TimeUpdated: 2024-04-05T07:32:09+00:00
+! Version: 2.0.37.2
+! TimeUpdated: 2024-04-05T09:37:57+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2377,6 +2377,12 @@ damota.me,pracazarohom.*,seduo.*##+js(remove-class, force--consent|show--consent
 !
 ! NOTE: Regular rules
 !
+baeder-duesseldorf.de#$#.modal-backdrop { display: none !important; }
+baeder-duesseldorf.de#$#body #cookieNotice { display: none !important; }
+baeder-duesseldorf.de#$#body { overflow-y: auto !important; padding-right: 0 !important; }
+talentdays.pl#$##headlessui-portal-root { display: none !important; }
+talentdays.pl#$#html { overflow: auto !important; padding-right: 0 !important; }
+talentdays.pl#$#body { overflow: auto !important; padding-right: 0 !important; }
 emu-land.net##.policy-validation
 etelecinema.hu##div[role="alert"]
 iotransfer.itopvpn.com##.fl-accept
@@ -2401,7 +2407,7 @@ q21.pl###change_terms_message
 q21.pl##+js(abort-current-script, jQuery, cookies_message_modal)
 kakto.pl##+js(abort-current-script, $, RodoCookiesInfo)
 iobit.com##.agree-pop
-resources.github.com###wcpConsentBannerCtrl
+github.blog,resources.github.com###wcpConsentBannerCtrl
 blog.bizvibe.com#$##cookie-law-info-bar { display: none!important; }
 blog.bizvibe.com#$#.cli-popupbar-overlay { display: none!important; }
 blog.bizvibe.com#$#body.cli-barmodal-open { overflow: auto!important; position: static !important; }
@@ -14427,6 +14433,9 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176348
+baeder-duesseldorf.de#@##cookieNotice
+baeder-duesseldorf.de#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176304
 polirtech.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176118
