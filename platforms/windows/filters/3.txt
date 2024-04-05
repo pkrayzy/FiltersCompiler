@@ -1,9 +1,9 @@
-! Checksum: gZn31wHPXxOYSknpEhBEbA
-! Diff-Path: ../patches/3/3-s-1712237902-3600.patch
+! Checksum: u6tXKhcqK2XTsCOfVQh7JQ
+! Diff-Path: ../patches/3/3-s-1712317096-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.68.43
-! TimeUpdated: 2024-04-04T13:33:40+00:00
+! Version: 2.0.68.49
+! TimeUpdated: 2024-04-05T11:33:22+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -569,6 +569,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||palibzh.tech^
+||mediaownerscloud.com^
 ||jubbie.de^
 ||collector.lunalabs.io^
 ||greenbids.ai^$third-party
@@ -4819,7 +4821,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||sgtm.fashionunited.
 ||mercury.coupang.com^
 ||client-telemetry.roblox.com^
-||ecsv2.roblox.com^
 ||tracing.roblox.com^
 ||treatment.grammarly.com^
 ||rac.ruutu.fi^
@@ -5664,7 +5665,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||gscounters.gigya.com^
 ||gtm.beiersdorf.com^
 ||gtm.udemy.com^
-||gtm.vanmoof.com^
 ||gtmdev.jabra.
 ||guq9.vente-unique.it^
 ||harvester.hbpl.co.uk^
@@ -6490,7 +6490,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||track.tproger.ru^
 ||track.ugamezone.com^
 ||track.ultimate-guitar.com^
-||track.wattpad.com^
 ||track.websiteceo.com^
 ||track.wildblue.com^
 ||track.zalando.
@@ -58564,6 +58563,9 @@ charlestownwyllie.oaklawnnonantum.com^
 !-------------- CNAME trackers exceptions --------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+! TODO: Should be handled in https://github.com/AdguardTeam/cname-trackers/issues/96
+!       and this file must be removed from FiltersRegistry and AdGuard filters
+!
 ! This section contains the list of rules that excluding CNAME domains,
 ! that cause breakage or are not used for tracking or advertising purposes.
 !
@@ -58574,8 +58576,6 @@ charlestownwyllie.oaklawnnonantum.com^
 !       - @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/175954
-@@||app.focusmate.com^$stealth=webrtc
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175337
 ||mbox.wegmans.com^$badfilter
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/1631
@@ -94946,6 +94946,7 @@ _tracking.php?b=
 /analytics.js$domain=tokyometro.jp|resumes.breakdownexpress.com|techcult.com|inbox.lv|kopeda.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de|newsdig.tbs.co.jp|imore.com|city.kushiro.lg.jp|emeraldbridal.com.au|emarat-news.ae|imobie.jp|tikla.com.tr|rusvideos.porn|jrkyushu.co.jp|amiunique.org|edit.ing|konami.com
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com|deutschepost.de|thebay.com|s.shufoo.net|tsn.ca|tabelog.com|euronews.com|newshub.co.nz|fredmeyer.com|viabcp.com|carsales.com.au|falabella.com|aarp.org|thehill.com|realtor.com|nzherald.co.nz|aia.com.ph|baynews9.com|thesaurus.com|dhc.co.jp|0101.co.jp|staples.com
 !
+||prod-app.because-intelligence.com/track/
 ||similarweb.com/scripts/lite-app/client/dist/tracking.min.js
 erostopics.net###custom_html-81
 erostopics.net###custom_html-137
@@ -100558,7 +100559,6 @@ inapps.appsflyersdk.com^
 ||event-collector.moviesanywhere.com^
 ||us-east-1.paa-reporting-advertising.amazon^
 ||analytics.nianticlabs.com^
-||sg.log.ulivetv.net^
 ||tracker.ulivetv.net^
 ||trackernew.ulivetv.net^
 ||gamestats.easybrain.com^
@@ -101308,6 +101308,7 @@ inapps.appsflyersdk.com^
 ! For platforms which do not support $redirect rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176193
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175365
 @@||per*.segmentify.com^$app=com.carrefoursa.ecommerce
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175476

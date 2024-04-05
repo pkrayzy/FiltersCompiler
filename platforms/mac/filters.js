@@ -46,8 +46,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/1.txt",
-			"version": "2.0.89.91",
-			"timeUpdated": "2024-04-04T13:32:49+0000",
+			"version": "2.0.89.93",
+			"timeUpdated": "2024-04-05T09:38:13+0000",
 			"languages": [
 				"ru"
 			]
@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.29.66",
-			"timeUpdated": "2024-04-04T16:33:11+0000",
+			"version": "2.3.29.77",
+			"timeUpdated": "2024-04-05T11:33:13+0000",
 			"languages": []
 		},
 		{
@@ -74,8 +74,8 @@
 			"displayNumber": 1,
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/3.txt",
-			"version": "2.0.68.43",
-			"timeUpdated": "2024-04-04T13:33:40+0000",
+			"version": "2.0.68.49",
+			"timeUpdated": "2024-04-05T11:33:22+0000",
 			"languages": []
 		},
 		{
@@ -87,8 +87,8 @@
 			"displayNumber": 1,
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/4.txt",
-			"version": "2.0.99.33",
-			"timeUpdated": "2024-04-04T14:33:35+0000",
+			"version": "2.0.99.34",
+			"timeUpdated": "2024-04-05T10:33:49+0000",
 			"languages": []
 		},
 		{
@@ -113,8 +113,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/6.txt",
-			"version": "2.0.41.25",
-			"timeUpdated": "2024-04-04T14:33:48+0000",
+			"version": "2.0.41.26",
+			"timeUpdated": "2024-04-04T17:33:47+0000",
 			"languages": [
 				"de"
 			]
@@ -158,8 +158,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/9.txt",
-			"version": "2.0.23.95",
-			"timeUpdated": "2024-04-03T17:40:04+0000",
+			"version": "2.0.23.96",
+			"timeUpdated": "2024-04-05T06:33:43+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -187,8 +187,8 @@
 			"displayNumber": 2,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/11.txt",
-			"version": "2.0.50.61",
-			"timeUpdated": "2024-04-04T11:31:56+0000",
+			"version": "2.0.50.63",
+			"timeUpdated": "2024-04-05T11:31:51+0000",
 			"languages": []
 		},
 		{
@@ -213,8 +213,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/13.txt",
-			"version": "2.0.50.97",
-			"timeUpdated": "2024-04-04T11:32:00+0000",
+			"version": "2.0.50.99",
+			"timeUpdated": "2024-04-05T10:32:13+0000",
 			"languages": [
 				"tr"
 			]
@@ -228,8 +228,8 @@
 			"displayNumber": 1,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/14.txt",
-			"version": "2.1.92.47",
-			"timeUpdated": "2024-04-04T16:32:06+0000",
+			"version": "2.1.92.52",
+			"timeUpdated": "2024-04-05T11:32:10+0000",
 			"languages": []
 		},
 		{
@@ -241,8 +241,8 @@
 			"displayNumber": 3,
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/15.txt",
-			"version": "2.0.63.84",
-			"timeUpdated": "2024-04-04T12:32:30+0000",
+			"version": "2.0.63.88",
+			"timeUpdated": "2024-04-05T10:32:30+0000",
 			"languages": []
 		},
 		{
@@ -287,8 +287,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/18.txt",
-			"version": "2.0.37.0",
-			"timeUpdated": "2024-04-04T16:32:17+0000",
+			"version": "2.0.37.3",
+			"timeUpdated": "2024-04-05T11:32:21+0000",
 			"languages": []
 		},
 		{
@@ -300,8 +300,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/19.txt",
-			"version": "2.0.34.36",
-			"timeUpdated": "2024-04-04T16:32:21+0000",
+			"version": "2.0.34.40",
+			"timeUpdated": "2024-04-05T10:32:43+0000",
 			"languages": []
 		},
 		{
@@ -313,8 +313,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/20.txt",
-			"version": "2.0.13.32",
-			"timeUpdated": "2024-04-04T16:32:33+0000",
+			"version": "2.0.13.34",
+			"timeUpdated": "2024-04-05T09:38:14+0000",
 			"languages": []
 		},
 		{
@@ -326,8 +326,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/21.txt",
-			"version": "2.0.21.42",
-			"timeUpdated": "2024-04-04T10:32:42+0000",
+			"version": "2.0.21.45",
+			"timeUpdated": "2024-04-05T09:38:16+0000",
 			"languages": []
 		},
 		{
@@ -1018,8 +1018,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/224.txt",
-			"version": "2.1.13.70",
-			"timeUpdated": "2024-04-04T16:32:42+0000",
+			"version": "2.1.13.75",
+			"timeUpdated": "2024-04-05T10:33:04+0000",
 			"languages": [
 				"zh"
 			]
@@ -1429,6 +1429,45 @@
 			"languages": [
 				"mk"
 			]
+		},
+		{
+			"filterId": 255,
+			"name": "Phishing URL Blocklist",
+			"description": "Phishing URL blocklist for uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort and Suricata.",
+			"homepage": "https://gitlab.com/malware-filter/phishing-filter",
+			"expires": 432000,
+			"displayNumber": 1,
+			"groupId": 5,
+			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
+			"version": "2.0.0.0",
+			"timeUpdated": "2024-04-03T14:10:40+0000",
+			"languages": []
+		},
+		{
+			"filterId": 256,
+			"name": "Scam Blocklist by DurableNapkin",
+			"description": "List for blocking untrustworthy websites.",
+			"homepage": "https://github.com/durablenapkin/scamblocklist",
+			"expires": 432000,
+			"displayNumber": 1,
+			"groupId": 5,
+			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
+			"version": "2.0.0.0",
+			"timeUpdated": "2024-04-03T14:10:40+0000",
+			"languages": []
+		},
+		{
+			"filterId": 257,
+			"name": "uBlock Origin – Badware risks",
+			"description": "Filter for risky sites, warning users of potential threats.",
+			"homepage": "https://github.com/uBlockOrigin/uAssets/",
+			"expires": 432000,
+			"displayNumber": 1,
+			"groupId": 5,
+			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
+			"version": "2.0.0.0",
+			"timeUpdated": "2024-04-03T14:10:40+0000",
+			"languages": []
 		}
 	]
 }
