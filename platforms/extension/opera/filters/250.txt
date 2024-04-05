@@ -1,13 +1,13 @@
-! Checksum: D8e3aX16R5OSHTVDcJNebg
-! Diff-Path: ../patches/250/250-s-1712164252-14400.patch
+! Checksum: FOuhbprDbuVQUAbQOllCxA
+! Diff-Path: ../patches/250/250-s-1712330255-14400.patch
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.13.83
-! TimeUpdated: 2024-04-03T17:04:24+00:00
+! Version: 2.0.13.84
+! TimeUpdated: 2024-04-05T15:12:47+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 29February2024v1-Compilation
+! OriginalVersion: 05April2024v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, prayer time clocks on newssites, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds, opt-out autoplay on video sites
@@ -485,7 +485,7 @@ quora.com##.modal_bg
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 03April2024v1
+! OriginalVersion: 04April2024v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -18241,6 +18241,18 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||speednetworkchain.com^$all
 ||systemnetworkroute.com^$all
 ||trafficredirectchain.com^$all
+! https://github.com/AdguardTeam/FiltersRegistry/issues/925
+! https://github.com/AdguardTeam/FiltersRegistry/pull/927
+||avito.avito.avito.$all
+.booking.com-id*$all
+.com-id*.info^$all
+||yandex.avito.sber*$all
+||yandex.avito.www.$all
+||yandex.pay.avito.$all
+.avito.www.booking.$all
+||booklng.com-*$all
+||avito.avito.www.avito.$all
+||booking.com-id*$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -24863,7 +24875,6 @@ the-dots.com##[class^=ContentPaywall]
 ! The Guardian (03/12/2021)
 ||assets.guim.co.uk/assets/SignInGateMain.
 ! Avisen Danmark (06/02/2022)
-||zephr.avisendanmark.dk^
 ! Twitch
 !! https://github.com/DandelionSprout/adfilt/issues/588
 twitch.tv###twilight-sticky-footer-root
@@ -25030,48 +25041,6 @@ investing.com###PromoteSignUpPopUp
 ! Reverso Context (Fixed in "AdGuard Annoyances filter")
 ! Removes a small login prompt in the bottom left
 context.reverso.net###register-popup-bottom
-! Title: 🌫 Media Player Gradient Remover
-! OriginalVersion: 10March2024v1-Alpha
-! Expires: 6 days
-! Description: So you're trying to enjoy a new episode of Butterbean's Café, but you keep bumping into the mouse, which causes the control bar to warp the colours on a third of a screen which ruins the scenic view, and you wait impatiently for the colours to return to normal, which ruins your fun and immersion? If so, this is the perfect list for you.
-! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-viaplay.*##.backdrop-bottom
-telenor.no##section.banner-hero > .gradient
-hbomax.com#$?#.vjs-control-bar { background: none !important }
-hbomax.com#$?#.video-js ~ div { background-image: none !important }
-disneyplus.com##.controls__header::before
-disneyplus.com##.controls__footer::before
-disneyplus.com##.fadeIn::before
-rakuten.tv#$?#div[data-testid^=video_controls_] { background: none !important }
-! netflix.com
-##.title-episode-gradient:not(html, body)
-netflix.com#$#div[class^=watch-video--][class*="-container "] { background-image: none !important }
-! tv.nrk.no
-##.ludo-layout__gradient:not(html, body)
-! svtplay.se
-##div[class*=VideoPlayerNew__ui-container--visible]::after
-! viafree.no
-##.player-bottom-gradient:not(html, body)
-! arenan.yle.fi
-*#$?#.playkit-bottom-bar { background: none !important }
-*#$?#.playkit-top-bar { background: none !important }
-! https://www.bbc.com/reel/video/p084pp2h/the-airport-for-celebrities-you-never-knew-existed
-##.p_gradientLayer:not(html, body)
-! https://www.mewatch.sg/watch/Nella-the-Princess-Knight-S2-E18-Piece-of-Cake-Tale-of-Two-Nellas-276115
-##.player-block__fader:not(html, body)
-! https://positivr.fr/plant-moms-les-conseils-pour-verdir-nos-interieurs-fleurissent-sur-tiktok/
-##.c-controls__background:not(html, body)
-! YouTube on PC
-www.youtube.com##div[class*="-gradient-bottom "]
-www.youtube.com##div[class$=-gradient-bottom]
-##div[class^=ytp-gradient-]
-! T-We
-twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
-! ——— Help wanted for: ———
-! Hulu
-! BBC iPlayer
-! Prime Video
-! And just about any other streaming or rental service out there in the world as well, especially USA- or nation-specific ones.
 ! Title: 💐 Anti-'Awful comments' list
 ! OriginalVersion: 08February2024v1-Beta
 ! Expires: 7 days
@@ -25804,7 +25773,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 @@||discord.gift^$popup
 ! Domains that cause Error -105 on my LG 43UH603V TV if they're blocked (Not in any known filterlists)
 @@||connected-devices.viaplay.tv^
-@@||tv.deezer.com^
 @@||lgrecommends.lgappstv.com^
 ! Disney+
 @@||cd-dmgz.bamgrid.com^
@@ -25887,7 +25855,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 @@||stanev.org/abp^
 @@||pgl.yoyo.org/adservers/serverlist.
 @@||someonewhocares.org/hosts/
-@@||ublockorigin.github.io^
 @@||ublockorigin.pages.dev^
 @@||fanboy.co.nz/*.txt^
 ! Title: ⏰ Anti-'Prayer times' List
@@ -26097,52 +26064,50 @@ nettavisen.no###topover
 ##app-loading-screen
 ! 🇫🇴 Elding.fo checkout
 ##.loading-mask:not(html,body)
-!!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
-!+ NOT_OPTIMIZED
 ! Title: 🕳 Empty Padding Remover
-! OriginalVersion: 29December2023v1-Alpha
+! OriginalVersion: 05April2024v2-Alpha
 ! Expires: 4 days
-! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? If so, this list will help you a little extra bit with that.
+! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? Or perhaps you're tired ot very large shadows on video sites when moving the mouse? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! ——— Generic ———
 ##.skille:not(html, body)
-! change.org, indiegogo.com, thejc.com, icelandreview.com, bir.no, medier24.no, knr.gl, nutiminn.is
-! (https://github.com/DandelionSprout/adfilt/issues/923)
+! change•org, indiegogo•com, thejc•com, icelandreview•com, bir•no, medier24•no, knr•gl, nutiminn•is
+! (https://github•com/DandelionSprout/adfilt/issues/923)
 *,~barter.vg##p:has-text(/^\xA0$/):not(:has-text(/\S/)):not(:has(img))
-! https://zh.cn.nikkei.com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57.html
-! (Exception: https://www.pixiv.net/bookmark.php)
+! https://zh•cn•nikkei•com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57•html
+! (Exception: https://www•pixiv•net/bookmark•php)
 *##p:has-text(/^\xA0\xA0$/):not(:has-text(/\S/)):not(:has(span))
-! As per https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace
-! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/119108)
+! As per https://developer•mozilla•org/en-US/docs/Web/CSS/:-moz-only-whitespace
+! (Exception: https://github•com/AdguardTeam/AdguardFilters/issues/119108)
 ##p:empty:not([class])
-! lyricsmania.com,songtextemania.com
+! lyricsmania•com,songtextemania•com
 ##.spacer-20:not(html, body)
-! alrai.com
+! alrai•com
 ##.space20:not(html, body)
-! talkmore.no
-! (Exceptions: Various US local newspaper sites, https://github.com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
+! talkmore•no
+! (Exceptions: Various US local newspaper sites, https://github•com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
 !!!*##.spacer:not(html, body):not(:has-text(/\S/))
 !!!trakt.tv#@#.spacer
 !!!mousechief.com#@#.spacer
-! icelandreview.com
+! icelandreview•com
 ##.mk-padding-divider:not(html, body)
-! https://www.sat24.com/foreloop.aspx?type=0&continent=europa
+! https://www•sat24•com/foreloop•aspx?type=0&continent=europa
 ###horizontalspace
-! https://newrepublic.com/article/156829/happened-jordan-peterson
+! https://newrepublic•com/article/156829/happened-jordan-peterson
 ##.section-break:not(html, body)
-! https://mobilabonnement.dk/mobiltesten
+! https://mobilabonnement•dk/mobiltesten
 ~simplenote.com##.wp-block-spacer:not(html, body)
-! https://www.thetravelinspector.no/news/dobler-prisen-for-nye-pass-bestill-naa
+! https://www•thetravelinspector•no/news/dobler-prisen-for-nye-pass-bestill-naa
 ##.spacer-block:not(html, body)
-! doktor.frettabladid.is
+! doktor•frettabladid•is
 ~gog.com##.footer-spacer:not(html, body)
-! https://thedroidguy.com/htc-u11-troubleshooting (25/10/2020)
+! https://thedroidguy•com/htc-u11-troubleshooting (25/10/2020)
 ##.elementor-spacer:not(html, body)
-! allers.no
+! allers•no
 ~schengenvisainfo.com##.vc_empty_space:not(html, body)
-! https://byggebolig.no/luft-luft-varmepumpe/erfaringer-med-mitsubishi-kirigamine-6-6/msg445542 (12/11/2020)
+! https://byggebolig•no/luft-luft-varmepumpe/erfaringer-med-mitsubishi-kirigamine-6-6/msg445542 (12/11/2020)
 ##.body-spacer:not(html, body)
-! https://academickids.com/encyclopedia/index.php/Cream_the_Rabbit (Though the source page is unsalvageable, the general spirit of the entry remains applicable.)
+! https://academickids•com/encyclopedia/index•php/Cream_the_Rabbit (Though the source page is unsalvageable, the general spirit of the entry remains applicable•)
 ##.spacer150px:not(html,body)
 ! ——— Site-specific ———
 indiegogo.com#?#h3:has-text(/^\xA0$/):not(:has-text(/\S/))
@@ -26163,9 +26128,44 @@ transfermarkt.com##.clearer
 sat24.com###headermenu
 ! For listings with 2 or more related/size notices
 rule34.xxx###status-notices > br:empty
-pixiv.net#?#div[class*=" "]:empty:has(+ aside + aside)
+pixiv.net##div[class*=" "]:empty:has(+ aside + aside)
 ! Disqualified entries due to breakage of regular content (Example given)
 !!! *##p:has(br):not(:has-text(/\S/)):not(:has(span)):not(:has(img)) (Caused newlines to fail to work in Slack)
+! Merged from «Media Player Gradient Remover»
+viaplay.*##.backdrop-bottom
+telenor.no##section.banner-hero > .gradient
+hbomax.com#$?#.vjs-control-bar { background: none !important }
+hbomax.com#$?#.video-js ~ div { background-image: none !important }
+disneyplus.com##.controls__header::before
+disneyplus.com##.controls__footer::before
+disneyplus.com##.fadeIn::before
+rakuten.tv#$?#div[data-testid^=video_controls_] { background: none !important }
+! netflix•com
+##.title-episode-gradient:not(html, body)
+netflix.com#$#div[class^=watch-video--][class*="-container "] { background-image: none !important }
+! tv•nrk•no
+##.ludo-layout__gradient:not(html, body)
+! svtplay•se
+##div[class*=VideoPlayerNew__ui-container--visible]::after
+! viafree•no
+##.player-bottom-gradient:not(html, body)
+! arenan•yle•fi
+*#$?#.playkit-bottom-bar { background: none !important }
+*#$?#.playkit-top-bar { background: none !important }
+! https://www•bbc•com/reel/video/p084pp2h/the-airport-for-celebrities-you-never-knew-existed
+##.p_gradientLayer:not(html, body)
+! https://www•mewatch•sg/watch/Nella-the-Princess-Knight-S2-E18-Piece-of-Cake-Tale-of-Two-Nellas-276115
+##.player-block__fader:not(html, body)
+! https://positivr•fr/plant-moms-les-conseils-pour-verdir-nos-interieurs-fleurissent-sur-tiktok/
+##.c-controls__background:not(html, body)
+! YouTube on PC
+www.youtube.com##div[class*="-gradient-bottom "]
+www.youtube.com##div[class$=-gradient-bottom]
+##div[class^=ytp-gradient-]
+! T-We
+twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
+! %•%•% Help would be appreciated for Hulu, BBC iPlayer, Prime Video, and just about any other streaming or rental service out there in the world as well, especially USA- or nation-specific ones. %•%•%
+!!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
 !+ NOT_OPTIMIZED
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
 ! OriginalVersion: 09February2024v1-Beta
@@ -26338,7 +26338,7 @@ hdfilmcehennemi.film##.poster-imdb
 vumoo.to#?#div.col-lg-12:has-text(IMDb)
 watchseries.*##.imdb
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 31March2024v1
+! OriginalVersion: 05April2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -26608,7 +26608,6 @@ $removeparam=msclkid
 $removeparam=litb_from
 $document,removeparam=/^adword_/,domain=~justdial.com
 $removeparam=adw_src_id
-! https://www.ericgown.no/A-Formet-Prinsesse-V-Hals-Gulvlengde-Chiffong-Selskapskjoler-Med-Frynse-Splittet-Front-017216976-g216976/?ggsub=pl&ggntk=g&ggcid=426150376762&ggkey&ggpos&ggdev=m&ggdevm&ggplm&ggtgt&currency=EUR (22/05/2021)
 $removeparam=ggsub
 $removeparam=ggntk
 $removeparam=ggcid
@@ -28678,8 +28677,6 @@ $removeparam=medium,domain=1sol.io|bybit.com|coinpanel.com|deepdiscount.com|disc
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750307
 $removeparam=rid,domain=giphy.com
 ||rightmove.co.uk^$removeparam=csg
-! https://www.ericgown.no/A-Formet-Prinsesse-V-Hals-Gulvlengde-Chiffong-Selskapskjoler-Med-Frynse-Splittet-Front-017216976-g216976/?ggsub=pl&ggntk=g&ggcid=426150376762&ggkey&ggpos&ggdev=m&ggdevm&ggplm&ggtgt&currency=EUR (22/05/2021)
-||ericgown.no^$removeparam=ggkey
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-770867
 $removeparam=ServiceType,domain=cnet.*|gamespot.com
 $removeparam=UniqueID,domain=cnet.*|gamespot.com
@@ -30191,6 +30188,10 @@ $document,removeparam=jmtyClId
 ||asos.com^$removeparam=ctaref
 ! https://www•intersport•no/sportx--tannbeskytter-dobbel-trening-gjennomsiktig/ino•sportx•x27248•001•html?dwvar_ino•sportx.x27248.001_color=001&cgid= (30/03/2024)
 ||intersport.$removeparam=cgid
+! https://bybaobab•gumroad•com/l/sTjIA?recommended_by=discover
+||gumroad.com^$removeparam=recommended_by
+! https://www.lakera.ai/blog/guide-to-prompt-injection?ref=gandalf
+ref=gandalf$document,removeparam=/^ref=gandalf$/
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
