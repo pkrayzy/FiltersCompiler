@@ -39,7 +39,8 @@ echo "Selected mode: $MODE"
 
 # Depending on the mode, execute different commands
 if [[ "$MODE" == "all" ]]; then
-    # Build all filters except ours to keep 1 hour update cycle of patches for our filters.
+    # Build all filters except ours to keep 1 hour update cycle of patches
+    # for our filters.
     yarn build --skip=$ADGUARD_FILTERS --report='report-third-party.txt'
     # Set the time live of patches to '4 hours' in seconds
     yarn build:patches --time=14400 --resolution=s --skip=$ADGUARD_FILTERS
