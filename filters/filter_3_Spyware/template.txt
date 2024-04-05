@@ -16,18 +16,18 @@
 !-------------------------------------------------------------------------------!
 !-------------- Tracking servers list  -----------------------------------------!
 !-------------------------------------------------------------------------------!
-@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers.txt"
-@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers_firstparty.txt"
+@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.txt"
+@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers_firstparty.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.txt"
 !-------------------------------------------------------------------------------!
 !-------------- CNAME trackers  ------------------------------------------------!
 !-------------------------------------------------------------------------------!
-@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/cname_trackers.txt" /exclude="../exclusions.txt"
+@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/cname_trackers.txt" /exclude="../exclusions.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.txt"
 !-------------------------------------------------------------------------------!
 !-------------- CNAME mail trackers --------------------------------------------!
 !-------------------------------------------------------------------------------!
-!#if (!adguard_ext_safari && !adguard_app_ios && !adguard_ext_android_cb)
-@include "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_mail_trackers_justdomains.txt" /addModifiers="image"
-!#endif
+!! !#if (!adguard_ext_safari && !adguard_app_ios && !adguard_ext_android_cb)
+!! @include "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_mail_trackers_justdomains.txt" /addModifiers="image"
+!! !#endif
 !-------------------------------------------------------------------------------!
 !-------------- General (unsorted) url blocking --------------------------------!
 !-------------------------------------------------------------------------------!
@@ -35,7 +35,7 @@
 !-------------------------------------------------------------------------------!
 !-------------- Specific web sites ---------------------------------------------!
 !-------------------------------------------------------------------------------!
-@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/specific.txt"
+@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/specific.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.txt"
 !-------------------------------------------------------------------------------!
 !-------------- Fixing filtration errors (false-positive) Cookies --------------!
 !-------------------------------------------------------------------------------!
@@ -49,7 +49,7 @@
 !-------------------------------------------------------------------------------!
 !-------------- Mobile analytics  ----------------------------------------------!
 !-------------------------------------------------------------------------------!
-@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt"
+@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.txt"
 !-------------------------------------------------------------------------------!
 !-------------- Mobile analytics exceptions  -----------------------------------!
 !-------------------------------------------------------------------------------!
