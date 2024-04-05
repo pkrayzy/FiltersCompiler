@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.29.75",
-			"timeUpdated": "2024-04-05T09:38:55+0000",
+			"version": "2.3.29.76",
+			"timeUpdated": "2024-04-05T10:33:34+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.33",
-			"timeUpdated": "2024-04-04T14:33:35+0000",
+			"version": "2.0.99.34",
+			"timeUpdated": "2024-04-05T10:33:49+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -565,8 +565,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.98",
-			"timeUpdated": "2024-04-05T09:37:27+0000",
+			"version": "2.0.50.99",
+			"timeUpdated": "2024-04-05T10:32:13+0000",
 			"languages": [
 				"tr"
 			],
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.92.50",
-			"timeUpdated": "2024-04-05T09:37:45+0000",
+			"version": "2.1.92.51",
+			"timeUpdated": "2024-04-05T10:32:28+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.63.87",
-			"timeUpdated": "2024-04-05T06:32:01+0000",
+			"version": "2.0.63.88",
+			"timeUpdated": "2024-04-05T10:32:30+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -703,8 +703,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.34.39",
-			"timeUpdated": "2024-04-05T09:38:01+0000",
+			"version": "2.0.34.40",
+			"timeUpdated": "2024-04-05T10:32:43+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1506,8 +1506,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.13.74",
-			"timeUpdated": "2024-04-05T09:38:23+0000",
+			"version": "2.1.13.75",
+			"timeUpdated": "2024-04-05T10:33:04+0000",
 			"languages": [
 				"zh"
 			],
@@ -2005,6 +2005,60 @@
 				1,
 				10,
 				71
+			]
+		},
+		{
+			"filterId": 255,
+			"name": "Phishing URL Blocklist",
+			"description": "Phishing URL blocklist for uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort and Suricata.",
+			"timeAdded": "2024-04-03T14:10:40+0000",
+			"homepage": "https://gitlab.com/malware-filter/phishing-filter",
+			"expires": 43200,
+			"displayNumber": 1,
+			"groupId": 5,
+			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
+			"trustLevel": "low",
+			"version": "2.0.0.0",
+			"timeUpdated": "2024-04-03T14:10:40+0000",
+			"languages": [],
+			"tags": [
+				4
+			]
+		},
+		{
+			"filterId": 256,
+			"name": "Scam Blocklist by DurableNapkin",
+			"description": "List for blocking untrustworthy websites.",
+			"timeAdded": "2024-04-03T14:10:40+0000",
+			"homepage": "https://github.com/durablenapkin/scamblocklist",
+			"expires": 43200,
+			"displayNumber": 1,
+			"groupId": 5,
+			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
+			"trustLevel": "low",
+			"version": "2.0.0.0",
+			"timeUpdated": "2024-04-03T14:10:40+0000",
+			"languages": [],
+			"tags": [
+				4
+			]
+		},
+		{
+			"filterId": 257,
+			"name": "uBlock Origin – Badware risks",
+			"description": "Filter for risky sites, warning users of potential threats.",
+			"timeAdded": "2024-04-03T14:10:40+0000",
+			"homepage": "https://github.com/uBlockOrigin/uAssets/",
+			"expires": 43200,
+			"displayNumber": 1,
+			"groupId": 5,
+			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
+			"trustLevel": "low",
+			"version": "2.0.0.0",
+			"timeUpdated": "2024-04-03T14:10:40+0000",
+			"languages": [],
+			"tags": [
+				4
 			]
 		}
 	]
