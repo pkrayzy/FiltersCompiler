@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.63.92",
-			"timeUpdated": "2024-04-06T06:33:11+0000",
+			"version": "2.0.63.93",
+			"timeUpdated": "2024-04-06T12:33:15+0000",
 			"languages": [],
 			"tags": [
 				45,
