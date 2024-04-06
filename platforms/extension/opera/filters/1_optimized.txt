@@ -1,5 +1,5 @@
-! Checksum: GTwb3LgXCzL9PjOZgnqq1Q
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1712310211-3600.patch
+! Checksum: LDKjquICIZloabPHm26Mcg
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1712371026-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
 ! Version: 2.0.89.93
@@ -177,6 +177,7 @@ sb.php?s=$script
 .ua/pop.js
 .ua/rtr/5
 .ua/rtr/9
+.unicast.*.js
 .wrating.*.js
 .xyz/get.php?
 /.adserv/*
@@ -588,6 +589,7 @@ ucoz.ru/informer/
 ##.bottom_banner
 ~filmz.ru##.bottombanner
 ~theology.edu##.contentAd
+##.contextBanner
 ##.flat_ads_block
 ##.h_banner
 ##.hbanner
@@ -1345,6 +1347,7 @@ ucoz.ru/informer/
 ||adlmerge.com^$third-party
 ||admachina.com^$third-party
 ||admaster.net^$third-party
+||admilk.ru^$third-party
 ||admixer.net^$third-party
 ||admulti.$third-party
 ||adone.ru^$third-party
@@ -1732,6 +1735,7 @@ ucoz.ru/informer/
 ||partners.vsemayki.ru^
 ||pay-hit.com^$third-party
 ||pbcde.com^$third-party
+||pbnet.ru^$third-party
 ||pcads.ru^$third-party
 ||pelicanprogram.com^$third-party
 ||penza-online.ru/cgi-bin/userstats.pl?
@@ -1966,6 +1970,7 @@ ucoz.ru/informer/
 ||widget.socialmart.ru^$third-party
 ||widgets.planeta.ru^$third-party
 ||wieistmeineip.de/ip-address/
+||wifly.net^$third-party
 ||wlbann.com^$third-party
 ||wmcasher.ru^$third-party
 ||wmlink.ru^$third-party
@@ -4001,6 +4006,8 @@ korsars.pro#?#td[id^="sidebar"] > div:has(img[src="styles/images/stat.png"])
 ria.ru#?#.the-in-carousel__pack > div.the-in-carousel__item:has(> div[data-has-banner="true"])
 you-anime.ru,sefon.pro,gtorrent.org,gtorrent.pro,gtorrent.tv#$?#body { padding-top: 0 !important; }
 x-true.info#?#.block_header:contains(Также по теме)
+app-s.ru#?##sidebar > div.sidebar_block:has(> div[id^="yandex_rtb"])
+app-s.ru#?##sidebar > div.sidebar_block:has(> ins.adsbygoogle)
 iz.ru#?#.block-container > div.clearfix + div[class] > div[class^="margin"] div[id^="adfox"]:upward(2)
 rustxt.ru#?#body > div.container > div.row > div[class]:has(> ins.adsbygoogle)
 tvtvtv.ru#?#table:has(> tbody > tr > td:contains(/Объявления|Реклама/))
@@ -5790,6 +5797,7 @@ bfm.ru##.block_smi_mm
 rybolov.ee##.blockbody > a:not([href^="http://rybolov.ee/"]):not([href^="/forum/index.php"]) > img
 magcity74.ru##.bm3 > a[href^="/go/?bid="]
 poltava.to,mediametrics.ru,progorod59.ru,s13.ru##.bn
+pickpoint.ru##.bn-index-ad1
 onliner.by##.bnr-top-wide
 uralpolit.ru##.bnr-wrap
 orki.ru##.bnz_horizontal
@@ -5826,7 +5834,9 @@ x-true.info,absoluttv.ru,auto.gorod-vrn.ru##.content_adv
 9tv.co.il,kriminal.tv,aktualno.ru,socportal.info##.content_banner
 noob-club.ru##.content_cactus
 vph-holod.ru,kleo.ru,etopochki.ru##.content_rb
+openssource.biz##.content_section_after_spoiler > div[class^="block_"]
 finam.ru,ikinohd.com,post-tracker.ru##.counters
+openssource.biz##.crymoreb > a
 fishki.net##.cycle-carousel-wrap > a[id^="id_ap_"]
 ykt.ru##.d-advs
 euroki.org##.desktop_banners
@@ -6013,6 +6023,7 @@ wot-lom.com,stolica-s.su##.textwidget > a[target="_blank"] > img
 parents.ru,bsn.ru##.tgb
 vgtimes.ru##.thisad
 sob.ru##.title-spec
+filosofia.ru,sudba.info##.tizery-hr
 back-in-ussr.com##.tizzers
 donday.ru##.tobbanner
 donday.ru##.tobbanner4
@@ -6133,6 +6144,7 @@ babestar.ru##center noindex + a[rel="nofollow"]
 codhacks.ru/banner$domain=codhacks.ru
 bestfree.ru##div#yandex_advert
 evrikak.ru##div.ad.clearfix
+openssource.biz##div.textwidget a[target="_blank"]:not([href^="/"]):not([href^="https://openssource"])
 newsru.com##div[align="center"] > div[style*="width: 328px;"]
 dlltop.ru##div[align="center"] a[target="_blank"] > img
 ntsk.ru##div[bs_id="30"]
