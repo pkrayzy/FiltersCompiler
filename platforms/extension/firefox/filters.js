@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.22",
-			"timeUpdated": "2024-04-05T16:33:01+0000",
+			"version": "2.0.50.23",
+			"timeUpdated": "2024-04-06T11:32:44+0000",
 			"languages": [
 				"ja"
 			],
