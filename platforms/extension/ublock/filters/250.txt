@@ -1,14 +1,14 @@
 ![Adblock Plus 2.0]
-! Checksum: M4P4pG9EEPACT1BBytbNpA
-! Diff-Path: ../patches/250/250-s-1712509664-14400.patch
+! Checksum: OXL+ZAgJtEteywr4O+17Ew
+! Diff-Path: ../patches/250/250-s-1712524068-14400.patch
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.13.86
-! TimeUpdated: 2024-04-07T17:03:22+00:00
+! Version: 2.0.13.87
+! TimeUpdated: 2024-04-07T21:03:32+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 05April2024v1-Compilation
+! OriginalVersion: 07April2024v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, prayer time clocks on newssites, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds, opt-out autoplay on video sites
@@ -486,7 +486,7 @@ quora.com##.modal_bg
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 05April2024v1
+! OriginalVersion: 07April2024v6
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -528,7 +528,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 .live/*/?*=*&*=*&*=*&*=*&*=$document
 .xyz/*/?*=*&*=*&*=*&*=*&*=$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139667
-/\.(live|buzz)/.*&[a-z]{1,3}=[a-zA-Z0-9%]{250,}/$document
+/^.*\.(live|buzz)/.*&[a-z]{1,3}=[a-zA-Z0-9%]{250,}$/$document
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -1142,7 +1142,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||cpmstatsart.com^$document
 ! https://github.com/DandelionSprout/adfilt/issues/287
 ! (https://github.com/DandelionSprout/adfilt/issues/904)
-/(^|\.|//)tkqlhce\.com/click-.*([?&][a-tv-z]{1,}(=[a-zA-Z0-9]{1,})?){1,}$/$document
+/^(.*\.|.*//)?tkqlhce\.com/click-.*([?&][a-tv-z]{1,}(=[a-zA-Z0-9]{1,})?){1,}$/$document
 ! https://github.com/DandelionSprout/adfilt/issues/288
 ||forwrdnow.com^$document
 ||7lyonline.com^$document
@@ -2134,7 +2134,7 @@ google.*##.isv-r:has-text(/, [1-9][1-46-9]% OFF/)
 $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|ufl.edu|oecd.org|bu.edu|wikidot.com|alternativenation.net
 ! ——— Anti-'Malware comments' (Currently Disqus-specific) ———
 ! https://myip.ms/info/limitexcess
-*#?#.post-list > .post-content:has-text(/Best\sgirls\swebcam/i)
+*#?#.post-list > .post-content:has-text(/^.*Best\sgirls\swebcam.*$/i)
 ! https://myip.ms/info/memberarea/My_Account.html
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(Viagra)
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(We offer unlimited)
@@ -3777,7 +3777,7 @@ vimeo.com##+js(set-constant, vimeo.clip_page_config.continuous_play_enabled, fal
 ted.com##+js(no-setInterval-if, d.period, 1000)
 ted.com##.css-1dg07lz:has-text(Up next)
 ! Title: 🎫 Ad Removal List for Unusual Ads
-! OriginalVersion: 22January2024v1-Alpha
+! OriginalVersion: 07April2024v1-Alpha
 ! Expires: 4 days
 ! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -3824,11 +3824,11 @@ techdirt.com#?#.storyblock:has-text(Daily Deal: )
 bulbapedia.bulbagarden.net###upper-article
 ! ——— Slot machine design ads(?) on Artstation ———
 ! Most easily visible when searching for fantasy creatures like "mermaid" and "fairy".
-artstation.com#?#projects-list-item:has-text(/slot\s\mach\ine/i)
-artstation.com#?#projects-list-item:has-text(/v\ideo\sslot/i)
-artstation.com#?#projects-list-item:has-text(/slot\ss\y\mbol/i)
-artstation.com#?#projects-list-item:has-text(/Keno[ .]/)
-artstation.com#?#projects-list-item:has-text(/slot\sga\me/i)
+artstation.com#?#projects-list-item:has-text(/^.*slot\s\mach\ine.*$/i)
+artstation.com#?#projects-list-item:has-text(/^.*v\ideo\sslot.*$/i)
+artstation.com#?#projects-list-item:has-text(/^.*slot\ss\y\mbol.*$/i)
+artstation.com#?#projects-list-item:has-text(/^.*Keno(\s|\.).*$/)
+artstation.com#?#projects-list-item:has-text(/^.*slot\sga\me.*$/i)
 artstation.com#?#projects-list-item:has-text(Artforgame Gamedesign)
 ! ——— Project "sponsors" that are actually just the project leaders selling out to online casinos
 ||images.opencollective.com^$domain=socket.io
@@ -4092,7 +4092,7 @@ seiponemadireng.co.za##.white:has(> script)
 seiponemadireng.co.za##.white:has(img[src*="-ad."])
 ! TBD: Tigrinya, etc.
 ! Title: 🍿 Know Your Meme: Pure Browsing Experience
-! OriginalVersion: 28February2021v1
+! OriginalVersion: 07April2024v1
 ! Expires: 10 days
 ! Description: So let's say that you're doing research on Half-Life: Full Life Consequences, which is the best meme ever made, but you've grown very tired of seeing unrelated images, social media nags, and things that are categorically not memes? In that case, this list will save your sanity.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -9029,13 +9029,13 @@ nerdelandslaget.no#$#html { cursor: auto !important }
 .cursor|$domain=~pixiv.net|~deviantart.com
 ! ————— 'Helpful list for maintainers of and contributors to Adfilt' (Will get its own subfile once I've got spare energy to extend the anti-'Wrong upload place' section further) —————
 ! Marks completed subthreads in https://github.com/DandelionSprout/adfilt/discussions/163 as complated, by marking them as green
-github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/I have fixed it in |This has been fixed in /) .timeline-comment { background-color: #cee4c5 !important }
-github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/I have fixed it in |This has been fixed in /) .timeline-comment > div { background-color: #cee4c5 !important }
-github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/I have fixed it in |This has been fixed in /) .timeline-comment > div > div { background-color: #cee4c5 !important }
+github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/^.*(I have fixed it in |This has been fixed in).*$/i) .timeline-comment { background-color: #cee4c5 !important }
+github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/^.*(I have fixed it in |This has been fixed in).*$/i) .timeline-comment > div { background-color: #cee4c5 !important }
+github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/^.*(I have fixed it in |This has been fixed in).*$/i) .timeline-comment > div > div { background-color: #cee4c5 !important }
 ! Aims to prevent the uploading of files generated by https://github.com/DandelionSprout/adfilt/tree/master/NorwegianExperimentalList%20alternate%20versions#how-to-run-the-list-generation-script to the wrong folder and requiring tedious deletion of up to 25 files afterwards, by showing a large red warning colour
-github.com#$?#.repository-content:has(.repo-upload-breadcrumb:has-text(NorwegianExperimentalList alternate versions)):has(.js-manifest-file-list:has-text(/AntiMalware|CompilationList/)) { background-color: red !important }
-github.com#$?#.repository-content:has(.repo-upload-breadcrumb:has-text(Alternate versions Anti-Malware List)):has(.js-manifest-file-list:has-text(/NordicFilters|CompilationList/)) { background-color: red !important }
-github.com#$?#.repository-content:has(a[data-pjax=true][href="/DandelionSprout/adfilt/upload/master"]):has(.separator:last-child):has(.js-manifest-file-list:has-text(/AntiMalware|NordicFilters|CompilationList/)) { background-color: red !important }
+github.com#$?#.repository-content:has(.repo-upload-breadcrumb:has-text(NorwegianExperimentalList alternate versions)):has(.js-manifest-file-list:has-text(/^.*(AntiMalware|CompilationList).*$/)) { background-color: red !important }
+github.com#$?#.repository-content:has(.repo-upload-breadcrumb:has-text(Alternate versions Anti-Malware List)):has(.js-manifest-file-list:has-text(/^.*(NordicFilters|CompilationList).*$/)) { background-color: red !important }
+github.com#$?#.repository-content:has(a[data-pjax=true][href="/DandelionSprout/adfilt/upload/master"]):has(.separator:last-child):has(.js-manifest-file-list:has-text(/^.*(AntiMalware|NordicFilters|CompilationList).*$/)) { background-color: red !important }
 ! ————— Entries that are currently specific to this compilation —————
 ! Removes listings in certain lists, that are simply unwanted and unwarranted space wasters
 !+ NOT_OPTIMIZED
@@ -9043,7 +9043,7 @@ freelancer.com##.PageProjectViewLogout-freelancerInfo:has(.small-flag.bangladesh
 !+ NOT_OPTIMIZED
 whynohttps.com##tbody > tr:has([src="/flags/4x3/cn.svg"])
 2fa.directory##.table-danger
-manage.ntppool.org#?#span[id^=server_]:has(.deletion):has-text(/-[3-9]\d|-100/)
+manage.ntppool.org#?#span[id^=server_]:has(.deletion):has-text(/^.*(-[3-9]\d|-100).*$/)
 ! https://github.com/DandelionSprout/adfilt/issues/609
 quora.com###mainContent > div > .q-box:has(.q-inline.qu-mr--small)
 quora.com###mainContent > div > .qu-borderRadius--small:has(> [class=q-box])

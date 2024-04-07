@@ -1,9 +1,9 @@
-! Checksum: snPNEr3o3RradSqq0lwbMw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1712509691-14400.patch
+! Checksum: LX3I38RC9w5hyyXxg8naJA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1712524091-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.13.86
-! TimeUpdated: 2024-04-07T17:03:22+00:00
+! Version: 2.0.13.87
+! TimeUpdated: 2024-04-07T21:03:32+00:00
 ! Expires: 12 hours (update frequency)
 ###app-modal
 ###smart-banner
@@ -1706,7 +1706,11 @@ cda.pl##.video-baner
 cda.pl##.row-video-clip-wrapper
 cda.pl###tVC
 mewe.com##.emoji-picker-promotion
-artstation.com#?#projects-list-item:has-text(/slot\sga\me/i)
+artstation.com#?#projects-list-item:has-text(/^.*slot\s\mach\ine.*$/i)
+artstation.com#?#projects-list-item:has-text(/^.*v\ideo\sslot.*$/i)
+artstation.com#?#projects-list-item:has-text(/^.*slot\ss\y\mbol.*$/i)
+artstation.com#?#projects-list-item:has-text(/^.*Keno(\s|\.).*$/)
+artstation.com#?#projects-list-item:has-text(/^.*slot\sga\me.*$/i)
 ||images.opencollective.com^$domain=socket.io
 ||socket.io/images/sponsors^$image
 fandom.com##.ad-slot-placeholder
@@ -3742,10 +3746,17 @@ tumblr.com#$#body { cursor: unset !important }
 /wp-content/uploads/*/cursor.png|
 nerdelandslaget.no#$#html { cursor: auto !important }
 .ani|$domain=~pixiv.net|~deviantart.com
+github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/^.*(I have fixed it in |This has been fixed in).*$/i) .timeline-comment { background-color: #cee4c5 !important }
+github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/^.*(I have fixed it in |This has been fixed in).*$/i) .timeline-comment > div { background-color: #cee4c5 !important }
+github.com#$?#html:has(meta[content$="/DandelionSprout/adfilt/discussions/163"]) .js-timeline-item > .TimelineItem > div[id^=discussioncomment-]:has-text(/^.*(I have fixed it in |This has been fixed in).*$/i) .timeline-comment > div > div { background-color: #cee4c5 !important }
+github.com#$?#.repository-content:has(.repo-upload-breadcrumb:has-text(NorwegianExperimentalList alternate versions)):has(.js-manifest-file-list:has-text(/^.*(AntiMalware|CompilationList).*$/)) { background-color: red !important }
+github.com#$?#.repository-content:has(.repo-upload-breadcrumb:has-text(Alternate versions Anti-Malware List)):has(.js-manifest-file-list:has-text(/^.*(NordicFilters|CompilationList).*$/)) { background-color: red !important }
+github.com#$?#.repository-content:has(a[data-pjax=true][href="/DandelionSprout/adfilt/upload/master"]):has(.separator:last-child):has(.js-manifest-file-list:has-text(/^.*(AntiMalware|NordicFilters|CompilationList).*$/)) { background-color: red !important }
 !+ NOT_OPTIMIZED
 freelancer.com##.PageProjectViewLogout-freelancerInfo:has(.small-flag.bangladesh)
 !+ NOT_OPTIMIZED
 whynohttps.com##tbody > tr:has([src="/flags/4x3/cn.svg"])
+manage.ntppool.org#?#span[id^=server_]:has(.deletion):has-text(/^.*(-[3-9]\d|-100).*$/)
 quora.com###mainContent > div > .qu-borderRadius--small:has(> [class=q-box])
 docs.google.com###docs-presence
 ://go.microsoft.com/fwlink/?LinkID=219472^$all
