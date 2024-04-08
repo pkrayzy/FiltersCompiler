@@ -92,7 +92,7 @@
 				"name": "Блокировка рекламы"
 			},
 			"sk": {
-				"name": "Blokovanie reklamy"
+				"name": "Blokovanie reklám"
 			},
 			"sl": {
 				"name": "Zaviranje oglasov"
@@ -1116,7 +1116,7 @@
 			},
 			"sk": {
 				"name": "AdGuard základný filter",
-				"description": "EasyList + AdGuard základný filter. Tento filter je potrebný pre kvalitné blokovanie reklamy."
+				"description": "EasyList + AdGuard základný filter. Tento filter je potrebný pre kvalitné blokovanie reklám."
 			},
 			"sl": {
 				"name": "AdGuard Osnovni filter",
@@ -1222,7 +1222,7 @@
 			},
 			"id": {
 				"name": "Penyaring Spyware AdGuard",
-				"description": "Daftar paling komprehensif dari berbagai penghitung online dan alat analisis web. Gunakan penyaring ini, jika Anda tidak ingin tindakan Anda di internet dilacak."
+				"description": "Daftar paling komprehensif dari berbagai penghitung daring dan alat analisis web. Gunakan penyaring ini, jika Anda tidak ingin tindakan Anda di internet terlacak."
 			},
 			"it": {
 				"name": "Filtro Protezione dal Tracciamento AdGuard",
@@ -1764,7 +1764,7 @@
 			},
 			"tr": {
 				"name": "AdGuard Almanca filtresi",
-				"description": "EasyList Germany + AdGuard Almanca filtresi. Özellikle Almanca dilindeki sitelerde reklamları engelleyen filtre listesi."
+				"description": "EasyList Germany + AdGuard Almanca filtresi. Özellikle Almanca dilindeki sitelerde reklamları kaldıran filtre listesi."
 			},
 			"uk": {
 				"name": "Німецький фільтр AdGuard",
@@ -2080,7 +2080,7 @@
 			},
 			"tr": {
 				"name": "AdGuard Flemenkçe filtresi",
-				"description": "EasyList Dutch + AdGuard Flemenkçe filtresi. Özellikle Flemenkçe dilindeki sitelerde reklamları engelleyen filtre listesi."
+				"description": "EasyList Dutch + AdGuard Flemenkçe filtresi. Özellikle Flemenkçe dilindeki sitelerde reklamları kaldıran filtre listesi."
 			},
 			"uk": {
 				"name": "Голландський фільтр AdGuard",
@@ -2802,7 +2802,7 @@
 			},
 			"id": {
 				"name": "Penyaring AdGuard Turki",
-				"description": "Didesain khusus untuk menyaring iklan di halaman web dalam bahasa Turki"
+				"description": "Daftar filter yang secara khusus menghapus iklan di situs web berbahasa Turki."
 			},
 			"it": {
 				"name": "Filtro AdGuard turco",
@@ -3344,7 +3344,7 @@
 			},
 			"tr": {
 				"name": "AdGuard Fransızca filtresi",
-				"description": "Liste FR + AdGuard Fransızca filtresi. Özellikle Fransızca dilindeki sitelerde reklamları engelleyen filtre listesi."
+				"description": "Liste FR + AdGuard Fransızca filtresi. Özellikle Fransızca dilindeki sitelerde reklamları kaldıran filtre listesi."
 			},
 			"uk": {
 				"name": "Французький фільтр AdGuard",
@@ -3730,7 +3730,7 @@
 			},
 			"fi": {
 				"name": "AdGuardin ponnahdussuodatin",
-				"description": "Estää kaikenlaisia ponnahduksia, jotka eivät ole välttämättömiä verkkosivustojen toiminnalle suodatuskäytäntömme mukaisesti."
+				"description": "Estää kaikenlaisia ponnahduksia, jotka eivät ole välttämättömiä verkkosivustojen toiminnalle suodatinkäytäntömme mukaisesti."
 			},
 			"fr": {
 				"name": "Filtre AdGuard Popups",
@@ -4801,6 +4801,10 @@
 			"hu": {
 				"name": "Bulgarian list",
 				"description": "További szűrőlista bolgár nyelvű weboldalakhoz."
+			},
+			"id": {
+				"name": "Bulgarian list",
+				"description": "Daftar filter tambahan untuk situs web dalam bahasa Bulgaria."
 			},
 			"it": {
 				"name": "Elenco bulgaro",
@@ -7380,6 +7384,14 @@
 			}
 		},
 		"124": {
+			"ar": {
+				"name": "EasyList البرتغالية",
+				"description": "قائمة تصفية إضافية للمواقع باللغتين الإسبانية والبرتغالية."
+			},
+			"be": {
+				"name": "EasyList Portuguese",
+				"description": "Дадатковы спіс фільтраў для сайтаў на іспанскай і партугальскай мовах."
+			},
 			"cs": {
 				"name": "EasyList Portuguese",
 				"description": "Doplňkový seznam filtrů pro webové stránky ve španělštině a portugalštině."
@@ -7412,9 +7424,21 @@
 				"name": "EasyList portugais",
 				"description": "Liste de filtres additionnelle pour les sites web en espagnol et en portugais."
 			},
+			"he": {
+				"name": "EasyList Portuguese",
+				"description": "רשימת מסננים נוספת עבור אתרים בספרדית ובפורטוגזית."
+			},
 			"hr": {
 				"name": "EasyList Portuguese",
 				"description": "Dodatan popis filtera za web-mjesta na španjolskom i portugalskom."
+			},
+			"hu": {
+				"name": "EasyList Portuguese",
+				"description": "További szűrőlista spanyol és portugál nyelvű webhelyekhez."
+			},
+			"id": {
+				"name": "EasyList Portuguese",
+				"description": "Daftar filter tambahan untuk situs web dalam bahasa Spanyol dan Portugis."
 			},
 			"it": {
 				"name": "EasyList Portuguese",
@@ -7452,6 +7476,10 @@
 				"name": "EasyList Portuguese",
 				"description": "Lista de filtros adicionais para sites em Espanhol e Português."
 			},
+			"ro": {
+				"name": "EasyList Portuguese",
+				"description": "Listă suplimentară de filtre pentru site-uri web în limba spaniolă și portugheză."
+			},
 			"ru": {
 				"name": "EasyList Portuguese",
 				"description": "Дополнительный фильтр для сайтов на испанском и португальском языках."
@@ -7475,6 +7503,10 @@
 			"uk": {
 				"name": "EasyList Portuguese",
 				"description": "Додатковий фільтр для вебсайтів іспанською та португальською мовами."
+			},
+			"vi": {
+				"name": "EasyList Portuguese",
+				"description": "Danh sách lọc bổ sung cho các trang web bằng tiếng Tây Ban Nha và tiếng Bồ Đào Nha."
 			},
 			"zh": {
 				"name": "EasyList Portuguese",
@@ -7742,7 +7774,7 @@
 			},
 			"tr": {
 				"name": "Hungarian filter",
-				"description": "Hufilter. Özellikle Macarca dilindeki sitelerde reklamları engelleyen filtre listesi."
+				"description": "Hufilter. Özellikle Macarca dilindeki sitelerde reklamları kaldıran filtre listesi."
 			},
 			"uk": {
 				"name": "Hungarian filter",
@@ -8362,6 +8394,10 @@
 				"name": "Liste ADgk Mobile China",
 				"description": "Filtre pour les sites mobiles chinois."
 			},
+			"he": {
+				"name": "ADgk Mobile China list",
+				"description": "סינון עבור אתרי סלולר סיניים."
+			},
 			"hr": {
 				"name": "Popis ADgk Mobile China",
 				"description": "Filtar za kineske mobilne stranice."
@@ -8369,6 +8405,10 @@
 			"hu": {
 				"name": "ADgk Mobile Kína listája",
 				"description": "Szűrő kínai mobil webhelyekhez."
+			},
+			"id": {
+				"name": "ADgk Mobile China list",
+				"description": "Penyaring untuk situs seluler Cina."
 			},
 			"it": {
 				"name": "ADgk Mobile China list",
@@ -9059,6 +9099,10 @@
 			"hu": {
 				"name": "Hivatalos lengyel szűrők az AdBlock, uBlock Origin &AdGuard számára",
 				"description": "További szűrőlista lengyel nyelvű weboldalakhoz."
+			},
+			"id": {
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
+				"description": "Daftar filter tambahan untuk situs web dalam bahasa Polandia."
 			},
 			"it": {
 				"name": "Filtri polacchi ufficiali per AdBlock, uBlock Origin e AdGuard",
@@ -10242,7 +10286,7 @@
 			},
 			"tr": {
 				"name": "AdGuard Çince filtresi",
-				"description": "EasyList China + AdGuard Çince filtresi. Özellikle Çince dilindeki sitelerde reklamları engelleyen filtre listesi."
+				"description": "EasyList China + AdGuard Çince filtresi. Özellikle Çince dilindeki sitelerde reklamları kaldıran filtre listesi."
 			},
 			"uk": {
 				"name": "Китайський фільтр AdGuard",
@@ -10384,7 +10428,7 @@
 			},
 			"uk": {
 				"name": "Fanboy's Anti-Facebook List",
-				"description": "Увага, цей список пошкоджує коментарі на базі Facebook на деяких вебсайтах, а також може порушувати роботу деяких додатків та ігор Facebook."
+				"description": "Увага, цей фільтр пошкоджує коментарі на базі Facebook на деяких вебсайтах, а також може порушувати роботу деяких додатків та ігор Facebook."
 			},
 			"vi": {
 				"name": "Fanboy's Anti-Facebook List",
@@ -10734,7 +10778,7 @@
 			},
 			"id": {
 				"name": "xinggsf",
-				"description": "Blok iklan pada platform video Cina (MangoTV, DouYu dan lainnya)."
+				"description": "Memblokir iklan di platform video Cina (MangoTV, DouYu, dan lainnya)."
 			},
 			"it": {
 				"name": "xinggsf",
@@ -11630,7 +11674,7 @@
 			},
 			"uk": {
 				"name": "ROLIST2",
-				"description": "Це додатковий список для ROList проти дратівливих елементів, які не обов'язково є банерами. Цей список дуже агресивний і не рекомендований для користувачів-початківців."
+				"description": "Це додатковий фільтр для ROList проти дратівливих елементів, які не обов'язково є банерами. Цей фільтр дуже агресивний і не рекомендований для користувачів-початківців."
 			},
 			"vi": {
 				"name": "ROLIST2",
@@ -11980,7 +12024,7 @@
 			},
 			"id": {
 				"name": "Polish Annoyances Filters",
-				"description": "Daftar filter yang menyembunyikan dan memblokir pop-up, widget, buletin, pemberitahuan push, panah, tautan internal yang diberi tag di luar topik, dan elemen menjengkelkan lainnya. Filter GDPR-Cookies Polandia sudah ada di dalamnya."
+				"description": "Daftar filter yang menyembunyikan dan memblokir pop-up, widget, buletin, pemberitahuan push, panah, tautan internal yang ditandai di luar topik, dan elemen menjengkelkan lainnya. Filter GDPR-Cookie Polandia sudah ada di dalamnya."
 			},
 			"it": {
 				"name": "Filtri Anti-Fastidio polacco",
@@ -12044,7 +12088,7 @@
 			},
 			"uk": {
 				"name": "Polish Annoyances Filters",
-				"description": "Список фільтрів, який приховує та блокує банери, віджети, розсилки новин, push-сповіщення, стрілки, позначені внутрішні посилання, які не стосуються теми, а також інші дратівливі елементи. До складу цього фільтра вже входить Polish GDPR-Cookies Filters."
+				"description": "Фільтр, який приховує та блокує банери, віджети, розсилки новин, push-сповіщення, стрілки, позначені внутрішні посилання, які не стосуються теми, а також інші дратівливі елементи. До складу цього фільтра вже входить Polish GDPR-Cookies Filters."
 			},
 			"vi": {
 				"name": "Polish Annoyances Filters",
@@ -12806,6 +12850,10 @@
 				"name": "Frellwit's Swedish Filter",
 				"description": "Szűrő, amely eltávolítja a regionális svéd hirdetéseket, a nyomkövetőket, a közösségi médiát, a kellemetlenségeket, a szponzorált cikkeket stb."
 			},
+			"id": {
+				"name": "Frellwit's Swedish Filter",
+				"description": "Filter yang bertujuan untuk menghapus iklan regional Swedia, pelacakan, media sosial, gangguan, artikel bersponsor, dll."
+			},
 			"it": {
 				"name": "Filtro Frellwit Swedish",
 				"description": "Un filtro per che mira a rimuovere annunci regionali svedesi, tracciatori, social media, elementi irritanti, articoli sponsorizzati, ecc."
@@ -13058,6 +13106,10 @@
 				"name": "AlleBlock",
 				"description": "Filtro que elimina elementos molestos de los sitios de comercio electrónico polacos."
 			},
+			"fa": {
+				"name": "AlleBlock",
+				"description": "پالایشی که اجزاء آزاردهنده را از تارنماهای تجارت الکترونیک لهستان حذف می‌کند."
+			},
 			"fi": {
 				"name": "AlleBlock",
 				"description": "Suodatin, joka poistaa ärsyttäviä elementtejä puolalaisilta verkkokauppasivustoilta."
@@ -13216,6 +13268,10 @@
 				"name": "EasyList Polish",
 				"description": "További szűrőlista lengyel nyelvű weboldalakhoz."
 			},
+			"id": {
+				"name": "EasyList Polish",
+				"description": "Daftar filter tambahan untuk situs web dalam bahasa Polandia."
+			},
 			"it": {
 				"name": "EasyList polacco",
 				"description": "Elenco addizionale dei filtri per i siti web in polacco."
@@ -13352,7 +13408,7 @@
 			},
 			"id": {
 				"name": "Polish Anti-Annoying Special Supplement",
-				"description": "Filter yang memblokir dan menyembunyikan elemen RSS dan sisa-sisa buletin tersembunyi yang digabungkan dengan elemen sosial di situs web Polandia."
+				"description": "Filter yang memblokir dan menyembunyikan elemen RSS dan sisa buletin tersembunyi yang digabungkan dengan elemen sosial di situs web Polandia."
 			},
 			"it": {
 				"name": "Polish Anti-Annoying Special Supplement",
@@ -13468,6 +13524,10 @@
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "Esta lista abarca los sitios web de Noruega, Dinamarca, Islandia, los territorios daneses y la población indígena Sami."
 			},
+			"fa": {
+				"name": "Dandelion Sprout's Nordic Filters",
+				"description": "این فهرست تارنماهای نروژ، دانمارک، ایسلند، سرزمین‌های دانمارک و جمعیت بومی سامی را پوشش می‌دهد."
+			},
 			"fi": {
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "Tämä lista kattaa norjan-, tanskan-, islanninkieliset alueet, sekä saamenkielisen alkuperäisväestön."
@@ -13558,7 +13618,7 @@
 			},
 			"uk": {
 				"name": "Dandelion Sprout's Nordic Filters",
-				"description": "Цей список працює на вебсайтах для Норвегії, Данії, Ісландії та для корінного населення саамі."
+				"description": "Цей фільтр працює на вебсайтах для Норвегії, Данії, Ісландії та для корінного населення саамі."
 			},
 			"vi": {
 				"name": "Dandelion Sprout's Nordic Filters",
@@ -13890,6 +13950,10 @@
 				"name": "Dandelion Sprout's Serbo-Croatian List",
 				"description": "Lista de filtros para sitios web en serbio, montenegrino, croata y bosnio."
 			},
+			"fa": {
+				"name": "Dandelion Sprout's Serbo-Croatian List",
+				"description": "فهرست پالایشی برای تارنماهای صربی، مونته‌نگرویی، کرواتی و بوسنیایی."
+			},
 			"fi": {
 				"name": "Dandelion Sprout's Serbo-Croatian List",
 				"description": "Suodatin, joka estää mainoksia serbian-, montenegron-, kroatian- ja bosniankielisillä verkkosivuilla."
@@ -13909,6 +13973,10 @@
 			"hu": {
 				"name": "Dandelion Sprout szerb-horvát listája",
 				"description": "Szűrőlista szerb, montenegrói, horvát és bosnyák nyelvű webhelyekhez."
+			},
+			"id": {
+				"name": "Dandelion Sprout's Serbo-Croatian List",
+				"description": "Daftar penyaring untuk halaman web dalam bahasa Serbia, bahasa Montenegro, bahasa Kroasia, bahasa Bosnia."
 			},
 			"it": {
 				"name": "La Lista serbocroata di Dandelion Sprout",
@@ -14044,6 +14112,10 @@
 				"name": "IndianList",
 				"description": "További szűrőlista hindi, tamil és más dravid és indián nyelveken készült weboldalakhoz."
 			},
+			"id": {
+				"name": "IndianList",
+				"description": "Daftar filter tambahan untuk situs web dalam bahasa Hindi, Tamil, dan bahasa Dravida dan India lainnya."
+			},
 			"it": {
 				"name": "IndianList",
 				"description": "Elenco addizionale dei filtri per i siti web in hindi, tamil e lingue dravidiche e indoarie."
@@ -14057,7 +14129,7 @@
 				"description": "힌디어, 타밀어 등과 같은 인도어 및 드라비다어 웹사이트를 위한 추가 필터 목록입니다."
 			},
 			"mk": {
-				"name": "IndianList",
+				"name": "Индиска листа",
 				"description": "Дополнителен список со филтри за веб-локации на хинди, тамилски и други дравидски и индиски јазици."
 			},
 			"nl": {
@@ -14122,6 +14194,10 @@
 			}
 		},
 		"254": {
+			"ar": {
+				"name": "مرشحات adBlock المقدونية",
+				"description": "يحظر الإعلانات وأدوات التتبع على مختلف المواقع الإلكترونية المقدونية."
+			},
 			"cs": {
 				"name": "Makedonské filtry adBlokc",
 				"description": "Blokují reklamy a slídiče na různých makedonských webových stránkách."
@@ -14150,6 +14226,10 @@
 				"name": "Filtros de bloqueo de anuncios en macedonio",
 				"description": "Bloquea anuncios y rastreadores en varios sitios web macedonios."
 			},
+			"fa": {
+				"name": "Macedonian adBlock Filters",
+				"description": "تبلیغات و ردیاب‌ها را در تارنماهای مختلف مقدونیایی مسدود می‌کند."
+			},
 			"fi": {
 				"name": "Macedonian adBlock Filters",
 				"description": "Estää mainoksia ja seurantoja useilla makedoniankielisillä verkkosivustoilla."
@@ -14158,9 +14238,21 @@
 				"name": "Filtres adBlock macédoniens",
 				"description": "Bloque les publicités et les traqueurs sur des sites web macédoniens."
 			},
+			"he": {
+				"name": "Macedonian adBlock Filters",
+				"description": "חוסם פרסומות ועוקבנים באתרים מקדוניים שונים."
+			},
 			"hr": {
 				"name": "Makedonski AdBlock Filteri",
 				"description": "Blokira reklame i trackere na raznim makedonskim web stranicama."
+			},
+			"hu": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Blokkolja a hirdetéseket és a nyomkövetőket a különböző macedón webhelyeken."
+			},
+			"id": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Memblokir iklan dan pelacak di berbagai situs web Makedonia."
 			},
 			"it": {
 				"name": "Filtri adBlock macedoni",
@@ -14198,6 +14290,10 @@
 				"name": "Filtros macedónios de bloqueio de anúncios",
 				"description": "Bloqueia anúncios e rastreadores em vários sites da Macedônia."
 			},
+			"ro": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Blochează reclamele și instrumentele de urmărire pe diverse site-uri web macedonene."
+			},
 			"ru": {
 				"name": "Macedonian adBlock Filters",
 				"description": "Блокируют рекламу и трекеры на различных македонских сайтах."
@@ -14222,6 +14318,10 @@
 				"name": "Macedonian adBlock Filters",
 				"description": "Блокує рекламу та трекери на різних македонських вебсайтах."
 			},
+			"vi": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Chặn quảng cáo và trình theo dõi trên các trang web các tang web tiếng Macedonia."
+			},
 			"zh": {
 				"name": "Macedonian adBlock Filters",
 				"description": "拦截各种马其顿语网站上的广告和跟踪器。"
@@ -14229,6 +14329,404 @@
 			"zh_TW": {
 				"name": "Macedonian adBlock Filters",
 				"description": "封鎖各種馬其頓語網站上的廣告和追蹤器。"
+			}
+		},
+		"255": {
+			"ar": {
+				"name": "قائمة حظر عناوين URL التصيد الاحتيالي",
+				"description": "قائمة حظر عناوين URL للتصيد الاحتيالي لـ uBlock Origin (uBO)، وAdGuard، وVivaldi، وPi-hole، وHosts file، وDnsmasq، وBIND، وUnbound، وSnort، وSuricata."
+			},
+			"be": {
+				"name": "Phishing URL Blocklist",
+				"description": "Чорны спіс URL фішынгу для uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort і Suricata."
+			},
+			"cs": {
+				"name": "Phishing URL Blocklist",
+				"description": "Seznam blokovaných phishingových URL pro uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort a Suricata."
+			},
+			"da": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL-blokeringsliste til uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort og Suricata."
+			},
+			"de": {
+				"name": "Phishing URL Blocklist",
+				"description": "Sperrliste für Phishing-URLs für uBlock Origin (uBO), AdGuard, Vivaldi, Pi-Loch, Hosts-Datei, Dnsmasq, BIND, Unbound, Snort und Suricata."
+			},
+			"en": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL blocklist for uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort and Suricata."
+			},
+			"es": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL blocklist para uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort e Suricata."
+			},
+			"es_ES": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL blocklist para uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort e Suricata."
+			},
+			"fi": {
+				"name": "Phishing URL Blocklist",
+				"description": "Tietojenkalastelun URL-osoitteiden estolista uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts-tiedosto, Dnsmasq, BIND, Unbound, Snort ja Suricata."
+			},
+			"fr": {
+				"name": "Phishing URL Blocklist",
+				"description": "Liste de blocage des URL de phishing pour uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort et Suricata."
+			},
+			"he": {
+				"name": "Phishing URL Blocklist",
+				"description": "רשימת חסימה של כתובות דיוג עבור uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, קובץ מארחים, Dnsmasq, BIND, Unbound, Snort ו-Suricata."
+			},
+			"hr": {
+				"name": "Phishing URL Blocklist",
+				"description": "Popis neželjenih URL-ova za uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts datoteku, Dnsmasq, BIND, Unbound, Snort i Suricata."
+			},
+			"hu": {
+				"name": "Phishing URL Blocklist",
+				"description": "Adathalász URL blokklista az uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort és Suricata számára."
+			},
+			"id": {
+				"name": "Phishing URL Blocklist",
+				"description": "Daftar blokir URL phishing untuk uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, file Hosts, Dnsmasq, BIND, Unbound, Snort dan Suricata."
+			},
+			"it": {
+				"name": "Phishing URL Blocklist",
+				"description": "Elenco di URL truffaldini per uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort e Suricata."
+			},
+			"ja": {
+				"name": "Phishing URL Blocklist（フィッシングURLブロックリスト）",
+				"description": "uBlock Origin (uBO)、AdGuard、Vivaldi、Pi-hole、Hosts file、Dnsmasq、BIND、Unbound、Snort、Suricata用のフィッシングURLブロックリストです。"
+			},
+			"ko": {
+				"name": "피싱 URL 차단 목록",
+				"description": "uBlock Origin(uBO), AdGuard, Vivaldi, Pi-hole, 호스트 파일, Dnsmasq, BIND, Unbound, Snort 및 Suricata에 대한 피싱 URL 차단 목록입니다."
+			},
+			"nl": {
+				"name": "Phishing-URL blokkeerlijst",
+				"description": "Phishing-URL blokkeerlijst voor uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort en Suricata."
+			},
+			"pl": {
+				"name": "Phishing URL Blocklist",
+				"description": "Lista blokowanych adresów URL phishingu dla uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort i Suricata."
+			},
+			"pt": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL blocklist para uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort e Suricata."
+			},
+			"pt_BR": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL blocklist para uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort e Suricata."
+			},
+			"pt_PT": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL blocklist para uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort e Suricata."
+			},
+			"ro": {
+				"name": "Phishing URL Blocklist",
+				"description": "Lista de blocare a URL-urilor de phishing pentru uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, fișierul hosts, Dnsmasq, BIND, Unbound, Snort și Suricata."
+			},
+			"ru": {
+				"name": "Phishing URL Blocklist",
+				"description": "Чёрный список фишинговых URL-адресов для uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, файла Hosts, Dnsmasq, BIND, Unbound, Snort и Suricata."
+			},
+			"sk": {
+				"name": "Zoznam blokovaných phishing URL adries",
+				"description": "Zoznam blokovaných phishing URL adries pre uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort a Suricata."
+			},
+			"sl": {
+				"name": "Phishing URL Blocklist",
+				"description": "Seznam blokiranih URL-jev lažnega predstavljanja za uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, datoteko Hosts, Dnsmasq, BIND, Unbound, Snort in Suricata."
+			},
+			"sr": {
+				"name": "Phishing URL Blocklist",
+				"description": "Lista blokiranih phishing URL-ova za uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts fajl, Dnsmasq, BIND, Unbound, Snort i Suricata."
+			},
+			"tr": {
+				"name": "Phishing URL Blocklist",
+				"description": "uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort ve Suricata için Phishing URL engel listesi."
+			},
+			"uk": {
+				"name": "Phishing URL Blocklist",
+				"description": "Фільтр блокування фішингових URL-адрес для uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort і Suricata."
+			},
+			"vi": {
+				"name": "Phishing URL Blocklist",
+				"description": "Danh sách chặn URL lừa đảo cho uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort và Suricata."
+			},
+			"zh": {
+				"name": "网络钓鱼 URL 黑名单",
+				"description": "uBlock Origin (uBO)、AdGuard、Vivaldi、Pi-hole、Hosts file、Dnsmasq、BIND、Unbound、Snort 和 Suricata 的网络钓鱼 URL 黑名单。"
+			},
+			"zh_TW": {
+				"name": "網路釣魚 URL 封鎖清單",
+				"description": "uBlock Origin (uBO)、AdGuard、Vivaldi、Pi-hole、Hosts file、Dnsmasq、BIND、Unbound、Snort 和 Suricata 的網路釣魚 URL 封鎖清單。"
+			}
+		},
+		"256": {
+			"ar": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "قائمة لحظر المواقع غير الموثوقة."
+			},
+			"be": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Спіс для блакіроўкі ненадзейных сайтаў."
+			},
+			"cs": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Seznam pro blokování nedůvěryhodných stránek."
+			},
+			"da": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Liste til blokering af utroværdige websteder."
+			},
+			"de": {
+				"name": "DurableNapkins Sperrliste für Betrugsversuche",
+				"description": "Liste zum Sperren nicht vertrauenswürdiger Websites."
+			},
+			"en": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "List for blocking untrustworthy websites."
+			},
+			"es": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Lista para bloquear sitios web no confiables."
+			},
+			"es_ES": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Lista para bloquear sitios web no confiables."
+			},
+			"fi": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Lista epäluotettavien sivustojen estoon."
+			},
+			"fr": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Liste pour bloquer les sites web non fiables."
+			},
+			"he": {
+				"name": "רשימת חסימה של הונאה מאת DurableNapkin",
+				"description": "רשימת חסימה כדי להגן על משתמשים מפני אתרים בלתי מהימנים."
+			},
+			"hr": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Popis blokova za zaštitu korisnika od nepouzdanih web-mjesta."
+			},
+			"hu": {
+				"name": "DurableNapkin átverések elleni listája",
+				"description": "A megbízhatatlan webhelyek blokkolásának listája."
+			},
+			"id": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Daftar untuk memblokir situs web yang tidak dapat dipercaya."
+			},
+			"it": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Elenco per bloccare i siti web non affidabili."
+			},
+			"ja": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "怪しい・信頼できないウェブサイトをブロックするためのリストです。"
+			},
+			"ko": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "신뢰할 수 없는 웹사이트를 차단하는 목록입니다."
+			},
+			"mk": {
+				"name": "Список за блокирање измами од DurableNapkin",
+				"description": "Список за блокирање недоверливи веб-страници."
+			},
+			"nl": {
+				"name": "Scam blokkeerlijst van DurableNapkin",
+				"description": "Lijst voor het blokkeren van onbetrouwbare websites."
+			},
+			"pl": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Lista blokad chroniąca użytkowników przed niezaufanymi witrynami."
+			},
+			"pt": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Lista para bloquear os utilizadores contra sítios não confiáveis."
+			},
+			"pt_BR": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Lista para bloquear sites não confiáveis."
+			},
+			"pt_PT": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Lista para bloquear os utilizadores contra sítios não confiáveis."
+			},
+			"ro": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Listă pentru blocarea site-urilor web nesigure."
+			},
+			"ru": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Список для блокировки ненадёжных сайтов."
+			},
+			"sk": {
+				"name": "Blokovací zoznam podvodov od DurableNapkin-a",
+				"description": "Zoznam na blokovanie nedôveryhodných webových lokalít."
+			},
+			"sl": {
+				"name": "Seznam onemogočenih prevar DurableNapkina",
+				"description": "Seznam za zaviranje nezanesljivih spletnih strani."
+			},
+			"sr": {
+				"name": "Blokiranje prevara od DurableNapkin",
+				"description": "Lista za blokiranje nepouzdanih Web lokacija."
+			},
+			"tr": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Güvenilmez siteleri engellemek için liste."
+			},
+			"uk": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Фільтр для блокування ненадійних сайтів."
+			},
+			"vi": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Một danh sách chặn để bảo vệ người dùng khỏi các trang không đáng tin cậy."
+			},
+			"zh": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "拦截不可信网站的列表。"
+			},
+			"zh_TW": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "封鎖不可信網站的清單。"
+			}
+		},
+		"257": {
+			"ar": {
+				"name": "uBlock Origin - مخاطر البرامج الضارة",
+				"description": "تصفية المواقع الخطرة، وتحذير المستخدمين من التهديدات المحتملة."
+			},
+			"be": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Фільтр для небяспечных сайтаў, які папярэджае карыстальнікаў аб магчымых загадах."
+			},
+			"cs": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtrování pro riskantní stránky, varující uživatele před potenciálními hrozbami."
+			},
+			"da": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filter til risikable websteder, advarer bruger om potentielle trusler."
+			},
+			"de": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filter für gefährliche Websites, der den Nutzer vor potenziellen Bedrohungen warnt."
+			},
+			"en": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filter for risky sites, warning users of potential threats."
+			},
+			"es": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtra sitios riesgosos y advierte a los usuarios sobre posibles amenazas."
+			},
+			"es_ES": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtra sitios riesgosos y advierte a los usuarios sobre posibles amenazas."
+			},
+			"fi": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Suodattaa riskialttiita sivustoja ja varoittaa käyttäjiä mahdollisista uhkista."
+			},
+			"fr": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtre pour les sites à risque, avertissant les utilisateurs des menaces potentielles."
+			},
+			"he": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "סנן אתרים מסוכנים, והזהיר משתמשים מפני איומים פוטנציאליים."
+			},
+			"hr": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtar za rizična web-mjesta, upozoravajući korisnike na potencijalne prijetnje."
+			},
+			"hu": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Rizikós webhelyek szűrése, figyelmeztetés a felhasználók számára a lehetséges veszélyekről."
+			},
+			"id": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filter untuk situs berisiko, peringatkan pengguna tentang potensi ancaman."
+			},
+			"it": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtro per siti rischiosi, avvisando gli utenti di potenziali minacce."
+			},
+			"ja": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "危険なサイトのためのフィルタ。潜在的な脅威についてユーザーに警告します。"
+			},
+			"ko": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "위험한 사이트를 필터링하며, 사용자에게 잠재적인 위협을 경고합니다."
+			},
+			"mk": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Филтер за ризични страници, предупредувајќи ги корисниците за потенцијалните претпазливости."
+			},
+			"nl": {
+				"name": "uBlock Origin – Badwarerisico's",
+				"description": "Filter op risicovolle sites en waarschuw gebruikers voor mogelijke bedreigingen."
+			},
+			"pl": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtruj ryzykowne witryny, ostrzegając użytkowników o potencjalnych zagrożeniach."
+			},
+			"pt": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtro para sítios de risco, avisando os utilizadores de potenciais ameaças."
+			},
+			"pt_BR": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtro para sites arriscados, alertando os usuários sobre possíveis ameaças."
+			},
+			"pt_PT": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtro para sítios de risco, avisando os utilizadores de potenciais ameaças."
+			},
+			"ro": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filtrarea pentru site-urile periculoase, avertizând utilizatorii cu privire la posibilele amenințări."
+			},
+			"ru": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Фильтр опасных сайтов, который предупреждает пользователей о потенциальных угрозах."
+			},
+			"sk": {
+				"name": "uBlock Origin - riziká spojené so škodlivým softvérom",
+				"description": "Filtrovanie rizikových lokalít a upozorňovanie používateľov na potenciálne hrozby."
+			},
+			"sl": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filter za tvegana spletna mesta, uporabnike opozarja na morebitne grožnje."
+			},
+			"sr": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Filter za rizične sajtove, upozoravajući korisnike na potencijalne pretnje."
+			},
+			"tr": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Riskli siteleri filtreleyerek kullanıcıları potansiyel tehditlere karşı uyarır."
+			},
+			"uk": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Фільтр для ризикованих сайтів, що попереджає користувачів про потенційні загрози."
+			},
+			"vi": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Lọc các trang web nguy hiểm, cảnh báo người dùng về các mối đe dọa tiềm ẩn."
+			},
+			"zh": {
+				"name": "uBlock Origin —— 恶意软件风险",
+				"description": "过滤风险网站，警告用户潜在的威胁。"
+			},
+			"zh_TW": {
+				"name": "uBlock Origin —— 惡意軟體風險",
+				"description": "過濾風險網站，警告使用者潛在的威脅。"
 			}
 		}
 	}
