@@ -1,8 +1,8 @@
-! Checksum: rXpt04XvjFrsFgX6NYLedw
+! Checksum: Q/Y4tH2TV2mUTkd/JWJiWw
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.50.22
-! TimeUpdated: 2024-04-07T03:09:45+00:00
+! Version: 2.0.50.23
+! TimeUpdated: 2024-04-08T23:23:06+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -392,6 +392,8 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
+service.webgoto.net#%#//scriptlet('prevent-xhr', 'amazon')
+@@||m.media-amazon.com/images/I/$xmlhttprequest,domain=service.webgoto.net
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=intaa.net
 success-corp.co.jp#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=success-corp.co.jp
@@ -1150,7 +1152,7 @@ n.lat/login|$document
 ?ph0ne=050-$document
 .co.jp.*.cn/ai/$document
 /\.com\/(?:[a-z]{2,}-)+p-\d{4,6}\.html\?(?:page_source|prevRef|re[fl])=/$document,match-case
-/^https:\/\/(?!www)[a-z]{3,}\.[a-z]{8,}\.com\/index\.php\?main_page=product_info(&stl=\d)?&(?:cPath|products_id)=/$document
+/^https:\/\/(?!www)[a-z]{3,}\.[a-z]{5,}\.(?:com|net)\/index\.php\?main_page=product_info(&stl=\d)?&(?:cPath|products_id)=/$document
 ://www2.etc-$document,domain=com|net|icu
 /bin/loginCamp.php?$document
 .com/reg_new?$document
@@ -1228,6 +1230,8 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+maikuranikki.jp##.more-ad-title
+maikuranikki.jp##.kanren-under-ad-title
 nan-net.com##iframe[src*="/inc/footadv_s_in/"]
 nan-net.com##.bottom_aff
 nan-net.com###b_frame > #bottom_neta_list + a > div[style]
@@ -1295,16 +1299,21 @@ city.tsuyama.lg.jp###sponsor_banner
 peacedoorball.blog##.sidebar__right a[target="_blank"] > img
 buywrite.jp##.c-infoBar
 buywrite.jp##div[id^="fourm_video_"]
-service.webgoto.net##[data-is="riot-fee2"]
+service.webgoto.net##[data-is^="riot-fee"]
+service.webgoto.net##a[href^="https://www.amazon.co.jp"][target="_blank"]
 sirogohan.com##.ad-halfwrap
 yamakei-online.com###movie_ad
 city.takasaki.gunma.jp##.content5:has(#top_banner_7_list)
 shakinghip.com##.underad
 eromon.net##aside > div.swiper
 eromon.net##a[href^="https://www.sokmil.com/"]
-newmatosoku.com##.awa3
-newmatosoku.com##.sideh2b:has(+ .awa3)
-newmatosoku.com##li[class$=" waku-zentai"]
+||amazon.co.jp^$popup,domain=newmatosoku.com
+||amzn.to^$popup,domain=newmatosoku.com
+newmatosoku.com##a[href*="amazon.co.jp"]
+newmatosoku.com##a[href*="amzn.to"]
+newmatosoku.com##.sideh2b
+newmatosoku.com##.sideh2b + .font08
+newmatosoku.com##li[class*="waku-zentai"]:not([class="waku-zentai "])
 newmatosoku.com#?#.topmain ~ div[class] > .sideh2:contains(広告)
 newmatosoku.com##.topmain ~ div[class] > .kouko3:has(div[id^="div-gpt-ad-"])
 nishi2.jp##.nishi-target:not(#block-3 > .nishi-target)
@@ -4037,7 +4046,7 @@ mensnonno.jp##.post-foot-ad
 city.akiruno.tokyo.jp###zone04_bg
 joqr.co.jp##.article-inner > .article-box._center._inner_break_horiz-sp
 roboanime.com##div[class^="article-body"] > div[style="border-style: solid; border-width: 1px; padding: 10px 5px 10px 20px;border-color: #ffffcc; background-color: #ffffcc"]
-neo-blood.co.jp##.wp-block-st-blocks-my-box[style="background-color:#fff;border-color:#f78da7"]
+neo-blood.co.jp##.wp-block-st-blocks-my-box[style^="background-color:#fff;border-color:#"]
 ||virusbuster.jp/aff/$third-party
 collepic.net##div[id^="ad_game"]
 collepic.net##div[style="width: 760px; min-height: 500px;"]
@@ -5685,7 +5694,7 @@ suzukikenichi.com###side > div > .widget-wrap > .textwidget > .al-c > a[target="
 luchs.fxproject-blog.com###sidebar-scroll > aside#text-2
 warorince.com###sidemenu_widget-2 ~ .widget_st_custom_html_widget.ad
 doktornakanoblog.com##.mainbox > .adbox + .widget_text
-newmatosoku.com,sugi9532.com##a[href^="https://amzn.to"]
+sugi9532.com##a[href^="https://amzn.to"]
 sugi9532.com##.p-blogParts > div.swell-block-fullWide.pc-py-60.sp-py-40
 sugi9532.com##.post_content > .wp-block-image
 sugi9532.com##.swell-block-fullWide__inner > .wp-block-image:first-child
@@ -8285,7 +8294,7 @@ tvbok.com###left_fix_out #left_box3
 tvbok.com###right_2nd > .right_box2
 bookbang.jp###footer_ban
 hatena.ne.jp##div[class^="entry-ad-"]
-newmatosoku.com,xn--w8jtkjf8c570x.com,cg-method.com##a[href^="https://www.amazon.co.jp"]
+xn--w8jtkjf8c570x.com,cg-method.com##a[href^="https://www.amazon.co.jp"]
 blog.munieru.jp,anou4649.hatenablog.com,nomolk.hatenablog.com,moognyk.jp,noaboutsnote.hatenablog.com##.hatena-asin-detail
 ogeji.hatenablog.com##.entry-content > .code ~ table[style*="width:300px"]
 wiki.seesaa.jp##.ad-boomapp
