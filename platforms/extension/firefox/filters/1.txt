@@ -1,9 +1,9 @@
-! Checksum: zgcKyjShESP1sogi/0PRaw
-! Diff-Path: ../patches/1/1-s-1712572679-3600.patch
+! Checksum: udnHfprwZ/IZMccgmRZ+dQ
+! Diff-Path: ../patches/1/1-s-1712580001-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.89.96
-! TimeUpdated: 2024-04-08T10:31:52+00:00
+! Version: 2.0.89.97
+! TimeUpdated: 2024-04-08T12:33:30+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1486,6 +1486,7 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||cdn.alfasense.net^
 ||luxcdn.com^$third-party
 ||vqhrqt.com^
 ||marketer.lv^$third-party
@@ -5582,6 +5583,9 @@ yandex.*#?#.business-card-title-view__actions > div.business-card-title-view__ad
 ||yandex.*/video/*/*/*/*_$script,replace=/Ya.*RtbBidReqID.*//
 ! Video ad
 ||strm.yandex.ru/get/$xmlhttprequest,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
+! ads near the player
+[$path=/video]ya.ru,yandex.*##.DirectStripe
+[$path=/video]ya.ru,yandex.*##div[class*="_placement_before-player"]
 !
 ! Yandex.Afisha
 ||yandex-afisha.naydex.net/*/*/*_$script,replace=/eval\(decodeURIComponent\(.*//
@@ -10505,8 +10509,6 @@ citydog.io,citydog.by##.brandingBottom
 mhealth.ru##.preview-section__ad
 mhealth.ru##.detail-billboard-topline
 avito.ru##div[class^="items-ads-"]
-||alfasense.net/js/ad_
-||alfasense.net/lib/alfadart.lib.min.js
 kraj.by##.mainpage_banner
 gamebomb.ru##a[href^="//gamebomb.ru/tp/"]
 ||basaru.net/down/bn/
