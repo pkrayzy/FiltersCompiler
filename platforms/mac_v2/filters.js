@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.34",
-			"timeUpdated": "2024-04-09T11:46:10+0000",
+			"version": "2.3.30.35",
+			"timeUpdated": "2024-04-09T12:32:17+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.68.60",
-			"timeUpdated": "2024-04-09T00:32:24+0000",
+			"version": "2.0.68.61",
+			"timeUpdated": "2024-04-09T12:32:29+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.47",
-			"timeUpdated": "2024-04-09T11:46:30+0000",
+			"version": "2.0.99.48",
+			"timeUpdated": "2024-04-09T12:32:36+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.28",
-			"timeUpdated": "2024-04-09T07:32:39+0000",
+			"version": "2.0.50.29",
+			"timeUpdated": "2024-04-09T12:32:54+0000",
 			"languages": [
 				"ja"
 			],
@@ -479,8 +479,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.6.52",
-			"timeUpdated": "2024-04-03T13:33:53+0000",
+			"version": "2.0.6.53",
+			"timeUpdated": "2024-04-09T12:32:58+0000",
 			"languages": [
 				"nl"
 			],
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.92.85",
-			"timeUpdated": "2024-04-09T11:47:25+0000",
+			"version": "2.1.92.86",
+			"timeUpdated": "2024-04-09T12:33:28+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.64.5",
-			"timeUpdated": "2024-04-09T06:33:17+0000",
+			"version": "2.0.64.6",
+			"timeUpdated": "2024-04-09T12:33:30+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -683,8 +683,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.37.24",
-			"timeUpdated": "2024-04-09T11:47:44+0000",
+			"version": "2.0.37.25",
+			"timeUpdated": "2024-04-09T12:33:40+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -703,8 +703,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.34.51",
-			"timeUpdated": "2024-04-09T10:33:43+0000",
+			"version": "2.0.34.52",
+			"timeUpdated": "2024-04-09T12:33:43+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -723,8 +723,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/20.txt",
 			"trustLevel": "full",
-			"version": "2.0.13.39",
-			"timeUpdated": "2024-04-09T11:47:49+0000",
+			"version": "2.0.13.40",
+			"timeUpdated": "2024-04-09T12:33:44+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1745,25 +1745,6 @@
 				10,
 				50,
 				41
-			]
-		},
-		{
-			"filterId": 239,
-			"name": "Fanboy's Anti-thirdparty Fonts",
-			"description": "A filter that blocks third-party fonts. It may break the look and design of some websites.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://www.fanboy.co.nz/",
-			"expires": 43200,
-			"displayNumber": 5,
-			"groupId": 2,
-			"subscriptionUrl": "https://fanboy.co.nz/fanboy-antifonts.txt",
-			"trustLevel": "low",
-			"version": "2.0.4.96",
-			"timeUpdated": "2024-02-25T21:03:06+0000",
-			"languages": [],
-			"tags": [
-				2,
-				45
 			]
 		},
 		{
