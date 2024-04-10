@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-08 07:29:03 CEST
+! Last modified: 2024-04-09 09:55:36 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -567,6 +567,7 @@ framtid.se###siteflash, #customer-link-container
 fraser.nu##div[aria-label="Annonser"]
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo, .sidebar-front .boxen
 freeride.se##.mark:has-text(/spons/i):upward(.post)
+freeride.se##.sidebar-front .widget_text.dark ~ p
 freeride.se##.visible-xs:has(a[href*="casino"])
 freeride.se,gamereactor.se,happyride.se##.sponsor
 fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper
@@ -594,7 +595,8 @@ gamereactor.se###grtvbelt_Sponsored:upward(1)
 gamereactor.se#%#//scriptlet('ubo-set.js', 'adblockEnabled', 'falseFunc')
 gamereactor.se##.ad_interscroller:upward(.wrapper)
 gamereactor.se#$?#.colHomePlayer:has([data-slotads="videoad"]) { remove: true; }
-garaget.org##.gorgad, .gorg-side-content > div.small:nth-last-child(2)
+garaget.org#%#//scriptlet('ubo-rmnt.js', '#text', 'casino')
+garaget.org##.gorgad, .gorg-side-content > div.small:nth-last-child(2), .gorg-side-content .bottom-buffer ~ *
 gasetten.se##.footer-widgets .widget_block li
 gasetten.se,fotbollsthlm.se##article:has-text(/är en annons/i)
 gasetten.se,fotbollsthlm.se##.footer-links, .fotbo-target
@@ -2358,7 +2360,6 @@ zeromagazine.nu##div[id^="ads"]
 @@||feed.meltwater.com^$subdocument
 @@||fwmrm.net/ad/g/$xmlhttprequest,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
-@@||happyride.se/img/admarket/$~third-party
 @@||img.upsales.com^
 @@||js.createsend1.com/js/jquery
 @@||js.driftt.com^$domain=sanity.io
@@ -3084,6 +3085,10 @@ zeromagazine.nu##div[id^="ads"]
 ||fast.fonts.com/t/1.css
 ||fast.fonts.net/t/1.css
 ||fast.fonts.net/lt/1.css
+!#endif
+!#if env_mobile
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se#%#//scriptlet('ubo-m3u-prune.js', '.mp4', 'yospace.com')
 !#endif
 !#if !env_chromium
 ||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se|sverigeslarare.se|sdr.se|ljuskultur.se|electronic.se

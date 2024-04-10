@@ -1,8 +1,8 @@
-! Checksum: pybcj89ZfLN4KGa/i2kPag
+! Checksum: hMIyU6LbWXIKAsqixL6l3A
 ! Title: Frellwit's Swedish Filter (Optimized)
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.18.15
-! TimeUpdated: 2024-04-08T23:22:18+00:00
+! Version: 2.0.18.16
+! TimeUpdated: 2024-04-10T03:03:25+00:00
 ! Expires: 12 hours (update frequency)
 .ads-gdprlock
 .ax/ad/
@@ -560,6 +560,7 @@ framtid.se###siteflash, #customer-link-container
 fraser.nu##div[aria-label="Annonser"]
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo, .sidebar-front .boxen
 freeride.se##.mark:has-text(/spons/i):upward(.post)
+freeride.se##.sidebar-front .widget_text.dark ~ p
 freeride.se##.visible-xs:has(a[href*="casino"])
 freeride.se,gamereactor.se,happyride.se##.sponsor
 fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper
@@ -587,7 +588,8 @@ gamereactor.se###grtvbelt_Sponsored:upward(1)
 gamereactor.se#%#//scriptlet('ubo-set.js', 'adblockEnabled', 'falseFunc')
 gamereactor.se##.ad_interscroller:upward(.wrapper)
 gamereactor.se#$?#.colHomePlayer:has([data-slotads="videoad"]) { remove: true; }
-garaget.org##.gorgad, .gorg-side-content > div.small:nth-last-child(2)
+garaget.org#%#//scriptlet('ubo-rmnt.js', '#text', 'casino')
+garaget.org##.gorgad, .gorg-side-content > div.small:nth-last-child(2), .gorg-side-content .bottom-buffer ~ *
 gasetten.se##.footer-widgets .widget_block li
 gasetten.se,fotbollsthlm.se##article:has-text(/är en annons/i)
 gasetten.se,fotbollsthlm.se##.footer-links, .fotbo-target
@@ -2351,7 +2353,6 @@ zeromagazine.nu##div[id^="ads"]
 @@||feed.meltwater.com^$subdocument
 @@||fwmrm.net/ad/g/$xmlhttprequest,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
-@@||happyride.se/img/admarket/$~third-party
 @@||img.upsales.com^
 @@||js.createsend1.com/js/jquery
 @@||js.driftt.com^$domain=sanity.io
