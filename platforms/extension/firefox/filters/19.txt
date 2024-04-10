@@ -1,9 +1,9 @@
-! Checksum: taqLfXj2zeIgqzjyo/zYPQ
-! Diff-Path: ../patches/19/19-s-1712763438-3600.patch
+! Checksum: fk1MrV/pJ08w3tnOIydkGQ
+! Diff-Path: ../patches/19/19-s-1712772700-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.34.63
-! TimeUpdated: 2024-04-10T15:33:43+00:00
+! Version: 2.0.34.64
+! TimeUpdated: 2024-04-10T18:07:56+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -10205,6 +10205,11 @@ cloud.tencent.com##body > .cdc-portal-wrapper:has(.cdc-modal__mask + .mod-m-new-
 ! TODO: check the element after 2024 Jan 10 - https://github.com/AdguardTeam/AdguardFilters/issues/169645
 ||piano.io/xbuilder/experience/execute?aid=$domain=athleterecipe.com
 !
+! "Sign in with your Google account" popup:
+! Google Chrome may render the popup as a floating element which is not a part of the page
+! that is why cosmetic rule `###credential_picker_container` does not work
+! https://github.com/AdguardTeam/AdguardFilters/issues/176407
+||accounts.google.com/gsi/client$domain=stackoverflow.com
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156472#issue-1805785001
 m.youtube.com#$#body > c3-overlay.bottom-sheet-overlay-scrim { display: none !important; }
@@ -11302,6 +11307,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||push.idowa.de^
 ||kanald.com.tr/netmera_worker.html
 kodami.it##.fbx
 sr.de###safariPushCon
