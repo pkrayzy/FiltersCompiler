@@ -1,9 +1,9 @@
-! Checksum: 8/uBNLXtwYp/jegzoOjL3Q
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1712803166-3600.patch
+! Checksum: PpYWhb1Wci7ms7yzrOpItA
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1712821688-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.41.36
-! TimeUpdated: 2024-04-10T18:07:02+00:00
+! Version: 2.0.41.37
+! TimeUpdated: 2024-04-11T07:42:45+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -697,6 +697,8 @@ welt.de##.c-inline-element--has-commercials
 welt.de##.c-page-container--has-commercials
 !+ NOT_OPTIMIZED
 bild.de##.outstreamAd
+!+ NOT_PLATFORM(android, ios, ext_android_cb)
+giga.de#$#div[class*="ad--top"] { display: block !important; min-height: 40px !important; }
 jungewelt.de,elektrikforum.de,bauexpertenforum.de,1erforum.de,avensis-forum.de,ford-forum.de,skodacommunity.de,toyota-forum.de,windows-7-forum.net##.Anzeige
 drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan.de,wallstreet-online.de,tierchenwelt.de,bielefeld.de##.anzeige
 ratgeber.bunte.de,horizont.net,vergleich.focus.de,chip.de,gutefrage.net,reisefrage.net,motorradfrage.net,autofrage.net,sportlerfrage.net,computerfrage.net,gesundheitsfrage.net,gutefrage.net,finanzfrage.net##.Ad
@@ -704,6 +706,13 @@ jetzt.de,derwesten.de,eurosport.de,ingenieur.de,heise.de,ww-kurier.de,1prospekte
 krone.at,cleverdialer.de,sueddeutsche.de,geo.de,northdata.de,losungencodycross.com,spieletipps.de,heise.de,netdoktor.de,aachener-zeitung.de,wissen.de##.ad-container
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
 formel1.de,krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
+schreiben.net##.codeee-block:has(> div[data-ai-tracking] > a[href*="/link/"])
+chip.de##.Ad-Slot
+chip.de##p:has(> .aff-link)
+benzinpreis.de##.start-teaser-banner
+benzinpreis.de##.multi-content:has(> .right-content-content:only-child > .start-teaser-banner:only-child)
+benzinpreis.de##.HYPE_document
+benzinpreis.de##li:has(> .html-content:only-child > .left_navi_block:only-child > .HYPE_document:only-child)
 fussballfieber.de##div[data-ads-slot]
 noz.de##.grid > div.grid-cell--m-12:has(> div.grid--column > div.ad_label)
 ||noz.de/static/adframework/
@@ -745,7 +754,6 @@ suchen.mobile.de##span[data-testid^="result-listing"]:has( span[data-testid="spo
 winfuture.de###wfv4_bb2_lazyload
 sueddeutsche.de##main > div[class^="css-"]:has(> ins.asm_async_creative)
 chip.de##section.TopList--Count
-giga.de#$#div[class*="ad--top"] { min-height: 40px !important; }
 giga.de##.alice-root-container > div.row:has(> div[class^="col-"] > section > div.section-header > h2 > a[href="/sparen/deals/"])
 giga.de##.alice-teaser-list-item:has(> div[id="giga.de_tech_startseite_teaser1"])
 giga.de#%#//scriptlet('remove-class', 'show-teaserheld-header', 'body')

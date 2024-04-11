@@ -1,9 +1,9 @@
-! Checksum: /wpyF8WAiBDnlq3C5BW2yg
-! Diff-Path: ../patches/14/14-s-1712810223-3600.patch
+! Checksum: Sa2N77kBqKpg0506NNw5qA
+! Diff-Path: ../patches/14/14-s-1712821625-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.93.6
-! TimeUpdated: 2024-04-11T04:33:27+00:00
+! Version: 2.1.93.7
+! TimeUpdated: 2024-04-11T07:43:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2367,6 +2367,8 @@ movieplayer.it#$#html { overflow: visible !important; }
 !
 ! NOTE: Regular rules
 !
+cam4.com##div[data-name="CookieConsent"]
+benzinpreis.de##div[id^="cmp"]
 alohabrowser.com##section[class^="modal-cookies"]
 024.by##.lwpcngNotice
 icegames.store##.acceptanceAgreement
@@ -9965,7 +9967,7 @@ allgaeuer-brauhaus.de,ur-krostitzer.de##.cbanner > form > p.welcome + p.headline
 allgaeuer-brauhaus.de,ur-krostitzer.de##.cbanner > form > div.ccontent
 allgaeuer-brauhaus.de,ur-krostitzer.de##.cbanner > form > div.csection
 decathlon.com.br##.cookie-policies
-leanylabs.com,nordvpn.com,cam4.com##div[class^="CookieConsent"]
+leanylabs.com,nordvpn.com##div[class^="CookieConsent"]
 radeberger.com##.cookieabfrage
 montiemare.de#$##cookieNotice { display: none !important; }
 montiemare.de#$#.modal-open { overflow: visible !important; }
@@ -13301,6 +13303,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176791
+@@||delivery.consentmanager.net/delivery/$domain=benzinpreis.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176431
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=blog.unity.com
 @@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=blog.unity.com
@@ -17381,6 +17385,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.InA
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.SidebarAd
 !#safari_cb_affinity
 !
+||pulsatingmeadow.com^$third-party
 ||keenquill.com^$third-party
 ||chipperisle.com^$third-party
 ||cleanhaircut.com^$third-party
@@ -18544,6 +18549,10 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/176829
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hausbau-forum.de
 !
 rutube.ru##.notification-container-module__infoNotifications
 watson.de#$##adBlockerTest { display: block !important; }
