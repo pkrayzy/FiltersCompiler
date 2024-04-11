@@ -1,9 +1,9 @@
-! Checksum: m5D6yUke6CQksqzaAwbc1A
-! Diff-Path: ../patches/19/19-s-1712821691-3600.patch
+! Checksum: K0KpDiB/F5RkDVHNRnXnvA
+! Diff-Path: ../patches/19/19-s-1712835478-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.34.66
-! TimeUpdated: 2024-04-11T07:43:39+00:00
+! Version: 2.0.34.67
+! TimeUpdated: 2024-04-11T11:33:38+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1588,6 +1588,10 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176829
 hausbau-forum.de#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !
+jsfiddle.net##body > #modal-body.unblockRequest
+jsfiddle.net#%#//scriptlet('set-constant', '_bsa', 'emptyObj')
+newmatosoku.com#?#.topmain + div > p:contains(/AdGuard|広告ブロッカー/)
+newmatosoku.com#?#.topmain + div > div:has(+ p:contains(/AdGuard|広告ブロッカー/))
 rutube.ru##.notification-container-module__infoNotifications
 watson.de#$##adBlockerTest { display: block !important; }
 raenonx.cc#%#(()=>{const e={apply:async(e,t,a)=>{if(a[0]&&a[0]?.match(/adsbygoogle|doubleclick/)){const e=(e="{}",t="",a="opaque")=>{const n=new Response(e,{statusText:"OK"}),o=String((s=50800,r=50900,Math.floor(Math.random()*(r-s+1)+s)));var s,r;return n.headers.set("Content-Length",o),Object.defineProperties(n,{type:{value:a},status:{value:0},statusText:{value:""},url:{value:""}}),Promise.resolve(n)};return e("{}",a[0])}return Reflect.apply(e,t,a)}};window.fetch=new Proxy(window.fetch,e)})();
@@ -12092,6 +12096,8 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+elle.com###recommended-modal
+snidel.com##.block-mail
 venturebeat.com##.post-boilerplate:has(.Boilerplate__newsletter-container)
 forbes.com#$#.zephr-editorial-newsletter-modal {display: none !important; }
 forbes.com#$#.zephr-editorial-newsletter-backdrop { display: none !important; }
