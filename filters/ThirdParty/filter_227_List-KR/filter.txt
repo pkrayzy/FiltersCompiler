@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2024.0411.0
+! OriginalVersion: 2024.0411.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://community.list-kr.com/docs/
@@ -3458,6 +3458,12 @@ t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 !#safari_cb_affinity
 t.hi098123.com#$#.tabad { top: -100px !important; }
+! chzzk.naver.com
+! The tusted scriptlet rule should be rechecked after https://github.com/AdguardTeam/Scriptlets/issues/419 is resolved.
+! Check that PIP of a live streaming and chatting management of a channel work.
+naver.com#%#//scriptlet('set-cookie', 'ba.uuid', '0')
+@@||ssl.pstatic.net/tveta/libs/glad/prod/$script,domain=chzzk.naver.com
+@@||nam.veta.naver.com/vas$xmlhttprequest,domain=chzzk.naver.com
 !
 svrforum.com##body > div[class][style*="box-shadow:"]
 !#if (adguard_app_ios || adguard_ext_safari)
@@ -3795,7 +3801,7 @@ ff14angler.com#@#ins.adsbygoogle[data-ad-slot]
 !#endif
 
 ! This file contains the trusted rules
-chzzk.naver.com#%#//scriptlet('trusted-replace-xhr-response', ',"adFree":false', ',"adFree":true', 'my-info')
+! chzzk.naver.com#%#//scriptlet('trusted-replace-xhr-response', ',"adFree":false', ',"adFree":true', 'my-info')
 !#if adguard_ext_safari
 compuzone.co.kr#%#AG_onLoad(() => { if (document.querySelector("input[name=SearchProductKey]").value === "") { document.querySelector("input#HeadSearchKeyword").value = ""; document.querySelector("input#fixedSearchKeyword").value = ""; } })();
 !#endif

@@ -1,9 +1,9 @@
-! Checksum: GN0Z994PdCEKSaJ+YRvELw
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1712855247-14400.patch
+! Checksum: 78hkcokLlzeXF0ujfq9Yyg
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1712869665-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.10
-! TimeUpdated: 2024-04-11T17:02:50+00:00
+! Version: 2.0.18.11
+! TimeUpdated: 2024-04-11T21:03:04+00:00
 ! Expires: 10 days (update frequency)
 ||cdn.nhnace.com^
 ||tae.middlepoint.co.kr^
@@ -3207,6 +3207,9 @@ t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 !#safari_cb_affinity
 t.hi098123.com#$#.tabad { top: -100px !important; }
+naver.com#%#//scriptlet('set-cookie', 'ba.uuid', '0')
+@@||ssl.pstatic.net/tveta/libs/glad/prod/$script,domain=chzzk.naver.com
+@@||nam.veta.naver.com/vas$xmlhttprequest,domain=chzzk.naver.com
 svrforum.com##body > div[class][style*="box-shadow:"]
 luckyquiz3.blogspot.com#%#//scriptlet('abort-on-stack-trace', 'Node.prototype.insertBefore', '.html')
 luckyquiz3.blogspot.com#%#//scriptlet('set-cookie', 'notToday2', 'Y')
@@ -3276,7 +3279,6 @@ lover924.net,lover925.net,lover926.net,lover927.net,lover928.net,lover929.net,lo
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=~investing.com
 ||newspic.kr^$removeparam=cp
-chzzk.naver.com#%#//scriptlet('trusted-replace-xhr-response', ',"adFree":false', ',"adFree":true', 'my-info')
 tv.nate.com#%#AG_onLoad(() => { var BuildObs, PlayerObs; let PlayerCall = (mutationList, observer) => { mutationList.forEach((e) => { if (Array.from(e.target.classList).some((e) => { return e === "ntv-ad-playing" })) { player.trigger("adended"); PlayerObs.disconnect() }})}; let BuildCall = (mutationList, observer) => { mutationList.forEach((e) => { Array.from(e.addedNodes).filter((o) => { return o.id === "natePlayer" }).forEach((k) => { PlayerObs = new MutationObserver(PlayerCall); PlayerObs.observe(k, { attributes: true }); BuildObs.disconnect() })})}; BuildObs = new MutationObserver(BuildCall); BuildObs.observe(document.querySelector(".player-wrapper"), { childList: true }) })
 dealbada.com#%#AG_onLoad(() => { Array.from(document.querySelectorAll("a[href*='dealbada.com/bbs/link']")).forEach((e) => { e.href = e.innerText })})
 m.compuzone.co.kr#%#AG_onLoad(() => { if (document.querySelector("input#SearchTermAdTxt").value === "") { document.querySelector("input#SearchProductKey").value = ""; document.querySelector("input.m_gnb_search_input").value = ""; } })();
