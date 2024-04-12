@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.77",
-			"timeUpdated": "2024-04-12T03:32:17+0000",
+			"version": "2.3.30.78",
+			"timeUpdated": "2024-04-12T06:32:20+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.93.19",
-			"timeUpdated": "2024-04-12T05:33:23+0000",
+			"version": "2.1.93.20",
+			"timeUpdated": "2024-04-12T06:33:29+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.64.16",
-			"timeUpdated": "2024-04-12T00:33:26+0000",
+			"version": "2.0.64.17",
+			"timeUpdated": "2024-04-12T06:33:31+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -703,8 +703,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.34.70",
-			"timeUpdated": "2024-04-11T20:33:43+0000",
+			"version": "2.0.34.71",
+			"timeUpdated": "2024-04-12T06:33:44+0000",
 			"languages": [],
 			"tags": [
 				5,
