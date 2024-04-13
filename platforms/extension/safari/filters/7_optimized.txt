@@ -1,8 +1,8 @@
-! Checksum: yZMmYaBohhz00NwiZR6k4g
+! Checksum: DRU0asj0UKcwa0mJIhk3zw
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.50.27
-! TimeUpdated: 2024-04-12T03:05:00+00:00
+! Version: 2.0.50.28
+! TimeUpdated: 2024-04-13T13:13:55+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -389,6 +389,9 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
+mx2b.nan-net.jp###adblock_guide_mask
+mx2b.nan-net.jp##.adblock_guide_box
+b.best-hit.tv#$#.ad.ads.adsbygoogle.ad1.ad-space.adbox.imggif.ad-banner.amp_ad.file-display-area { display: block !important; }
 service.webgoto.net#%#//scriptlet('prevent-xhr', 'amazon')
 @@||m.media-amazon.com/images/I/$xmlhttprequest,domain=service.webgoto.net
 success-corp.co.jp#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
@@ -458,16 +461,14 @@ tokyo-sports.co.jp#@#.adSense
 tokyo-sports.co.jp#@#.ads-banner
 tokyo-sports.co.jp#@#.textad
 tokyo-sports.co.jp#@#.view_ad
-tojav.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
-tojav.net##div[id][class^="popup"][class$="wrap"]
+audio-sound-premium.com,tojav.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+audio-sound-premium.com,tojav.net##div[id][class^="popup"][class$="wrap"]
 asobeans.jp#@#.ad_block
 ssbsblg.blogspot.com#%#//scriptlet('remove-attr', 'hidden', 'html[hidden]')
 ssbsblg.blogspot.com#%#//scriptlet('abort-current-inline-script', 'atob', '/documentEl[\s\S]*?_0x/')
 ssbsblg.blogspot.com#$#.btmads { position: absolute !important; left: -3000px !important; }
 @@||ssbsblg.blogspot.com^$generichide
 @@||ssbsblg.glitch.me/*.js$domain=ssbsblg.blogspot.com
-audio-sound-premium.com##div[id][class^="popup"][class$="wrap"]
-audio-sound-premium.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 logworker.net#$##unblk { display: none !important; }
 logworker.net#$#.entry-content { display: block !important; }
 o-dan.net#%#//scriptlet('remove-class', 'visited', '#oRslt li a.visited', 'stay')
@@ -784,6 +785,7 @@ nasubiblog.com,kyukyoku-matome.com##.widget_pc_ad
 ##.t_b ~ div > a[href^="https://al.dmm.co"]
 ##.t_b ~ div > a[href^="https://www.amazon.co.jp"]
 ##.widget_custom_html > .custom-html-widget > a[href^="https://www.e-nls.com/access.php"]
+twivideo.net#%#//scriptlet('prevent-addEventListener', 'load', 'interstitialAd')
 ac-illust.com,photo-ac.com#%#//scriptlet('abort-current-inline-script', '$', 'google_ads_iframe_')
 twidouga.net#%#//scriptlet('prevent-addEventListener', '', 'setTrigger')
 pictab.art,onagazou.info#%#//scriptlet('set-constant', 'pum_vars', 'undefined')
@@ -1243,6 +1245,18 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+j-baseball.club##.ad-space-top-footer
+j-baseball.club##.ad-space-top-header
+blog.janjan.net##.entry-content > p.has-text-align-center
+nan-net.com##iframe[id^="bottomad"]
+nan-net.com###middleadv-nex
+nan-net.com##a[href^="https://nosports-nofoul.tokyo/"]
+nan-net.com##.ngo1t2_simple
+nan-net.com##div[style="margin:-5px 15px 10px 25px;height:70px;"]
+nan-net.com##div[style^="margin-top:"]:has(> div > iframe[src*="/bbs/inc/hedadv"])
+||eroya.net/img/bbs*/anasi/$image,domain=best-hit.tv
+b.best-hit.tv##.ad > center > div[id^="div_fam_async"]
+syakouba.com##div[style="text-align:center;height:100px;margin:10px 0"]
 daily-tohoku.news##.atid__wrapper
 muromin.jp##.bnr li:has([alt*="[PR]"])
 hokkaido-np.co.jp##.main_1col:has(> div > div[id^="taboola-below-article-thumbnails-"])
@@ -1328,17 +1342,10 @@ city.takasaki.gunma.jp##.content5:has(#top_banner_7_list)
 shakinghip.com##.underad
 eromon.net##aside > div.swiper
 eromon.net##a[href^="https://www.sokmil.com/"]
-||amazon.co.jp^$popup,domain=newmatosoku.com
-||amzn.to^$popup,domain=newmatosoku.com
-newmatosoku.com#?#.topmain + div > p:contains(/AdGuard|広告ブロッカー/)
-newmatosoku.com#?#.topmain + div > div:has(+ p:contains(/AdGuard|広告ブロッカー/))
 newmatosoku.com##.topmain + div > div:has(a[href*="amazon.co.jp"])
-newmatosoku.com##li:has(a[href*="amzn.to"])
-newmatosoku.com##[onclick]
-newmatosoku.com##a[href*="amazon.co.jp"]
-newmatosoku.com##a[href*="amzn.to"]
-newmatosoku.com#?#.topmain ~ div[class] > .sideh2:contains(広告)
-newmatosoku.com##.topmain ~ div[class] > .kouko3:has(div[id^="div-gpt-ad-"])
+newmatosoku.com##.waku-zentai:has(a[href*="amzn.to"])
+newmatosoku.com##.sideh2:has(+ .kouko3)
+newmatosoku.com##.kouko3
 nishi2.jp##.nishi-target:not(#block-3 > .nishi-target)
 magazine.cainz.com###recommendedPost div.recommended:has(> div.related_content ins[data-ad-client])
 pref.ehime.jp##.top_banner_7
@@ -3989,7 +3996,7 @@ teach-me.biz##.ad2x
 ||tuma.jp/happy600.gif
 ||tuma.jp/link/duga180.jpg
 konyoku.net##.ta-c > hr[width="760"] ~ br:not(hr + br):not(font + br):not(font + br + br)
-hime.me,konyoku.net,toukou.tv,tuma.jp##a[href^="https://click.duga.jp"]
+best-hit.tv,hime.me,konyoku.net,toukou.tv,tuma.jp##a[href^="https://click.duga.jp"]
 tumadouga.jp,hime.me,konyoku.net,toukou.tv,tuma.jp##a[href^="https://mttag.com"]
 tumadouga.jp,hime.me,konyoku.net,toukou.tv,tuma.jp,doucolle.net,m4ex.com,i-bbs.sijex.net##a[href^="https://www.e-nls.com/access.php"]
 konyoku.net,toukou.tv,tuma.jp##table[width="780"][cellpadding="5"] tr:nth-child(2)

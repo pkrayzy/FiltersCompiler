@@ -1,8 +1,8 @@
-! Checksum: KVqHYsEP71oddmluGPlxQA
+! Checksum: 4WX5pZ0WxXYnbMN1SfMDLw
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.50.27
-! TimeUpdated: 2024-04-12T03:05:00+00:00
+! Version: 2.0.50.28
+! TimeUpdated: 2024-04-13T13:13:55+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -455,6 +455,13 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176920
+mx2b.nan-net.jp###adblock_guide_mask
+mx2b.nan-net.jp##.adblock_guide_box
+! https://github.com/AdguardTeam/AdguardFilters/issues/176922
+b.best-hit.tv#$#.ad.ads.adsbygoogle.ad1.ad-space.adbox.imggif.ad-banner.amp_ad.file-display-area { display: block !important; }
+!+ PLATFORM(ios, ext_android_cb)
+@@||b.best-hit.tv^$generichide
 ! https://github.com/uBlockOrigin/uAssets/issues/23212
 @@||m.media-amazon.com/images/I/$xmlhttprequest,domain=service.webgoto.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176276
@@ -542,16 +549,15 @@ tokyo-sports.co.jp#@#.adSense
 tokyo-sports.co.jp#@#.ads-banner
 tokyo-sports.co.jp#@#.textad
 tokyo-sports.co.jp#@#.view_ad
+! https://github.com/AdguardTeam/AdguardFilters/issues/140795
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143053
-tojav.net##div[id][class^="popup"][class$="wrap"]
+audio-sound-premium.com,tojav.net##div[id][class^="popup"][class$="wrap"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142796
 asobeans.jp#@#.ad_block
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142790
 ssbsblg.blogspot.com#$#.btmads { position: absolute !important; left: -3000px !important; }
 @@||ssbsblg.blogspot.com^$generichide
 @@||ssbsblg.glitch.me/*.js$domain=ssbsblg.blogspot.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/140795
-audio-sound-premium.com##div[id][class^="popup"][class$="wrap"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140596
 logworker.net#$##unblk { display: none !important; }
 logworker.net#$#.entry-content { display: block !important; }
@@ -950,6 +956,10 @@ nasubiblog.com,kyukyoku-matome.com##.widget_pc_ad
 !-------JS----------
 !-------------------
 !
+! https://github.com/uBlockOrigin/uAssets/issues/23285
+twivideo.net#@##interstitialAd
+@@||ratel-ad.com/file/box/$domain=twivideo.net
+@@||serving.stat-rock.com/v1/placements/$domain=twivideo.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176598
 ! ad-leftover on click
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166651
@@ -1564,6 +1574,17 @@ gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 !
 !
 !
+j-baseball.club##.ad-space-top-footer
+j-baseball.club##.ad-space-top-header
+blog.janjan.net##.entry-content > p.has-text-align-center
+nan-net.com##iframe[id^="bottomad"]
+nan-net.com###middleadv-nex
+nan-net.com##a[href^="https://nosports-nofoul.tokyo/"]
+nan-net.com##.ngo1t2_simple
+nan-net.com##div[style="margin:-5px 15px 10px 25px;height:70px;"]
+||eroya.net/img/bbs*/anasi/$image,domain=best-hit.tv
+b.best-hit.tv##.ad > center > div[id^="div_fam_async"]
+syakouba.com##div[style="text-align:center;height:100px;margin:10px 0"]
 daily-tohoku.news##.atid__wrapper
 ||shiroino.com/ad*.php
 city.nagaoka.niigata.jp##.koukokuWrap
@@ -1627,14 +1648,7 @@ yamakei-online.com###movie_ad
 shakinghip.com##.underad
 eromon.net##aside > div.swiper
 eromon.net##a[href^="https://www.sokmil.com/"]
-! https://github.com/AdguardTeam/AdguardFilters/issues/172907
-! TODO: remove after fixing https://github.com/AdguardTeam/AGLint/issues/206
-! aglint-disable-next-line invalid-modifiers
-||amazon.co.jp^$popup,domain=newmatosoku.com
-||amzn.to^$popup,domain=newmatosoku.com
-newmatosoku.com##[onclick]
-newmatosoku.com##a[href*="amazon.co.jp"]
-newmatosoku.com##a[href*="amzn.to"]
+newmatosoku.com##.kouko3
 nishi2.jp##.nishi-target:not(#block-3 > .nishi-target)
 pref.ehime.jp##.top_banner_7
 search.yahoo.co.jp##.AdBannerCarousel
@@ -4095,7 +4109,7 @@ teach-me.biz##.ad2x
 ||tuma.jp/happy600.gif
 ||tuma.jp/link/duga180.jpg
 konyoku.net##.ta-c > hr[width="760"] ~ br:not(hr + br):not(font + br):not(font + br + br)
-hime.me,konyoku.net,toukou.tv,tuma.jp##a[href^="https://click.duga.jp"]
+best-hit.tv,hime.me,konyoku.net,toukou.tv,tuma.jp##a[href^="https://click.duga.jp"]
 tumadouga.jp,hime.me,konyoku.net,toukou.tv,tuma.jp##a[href^="https://mttag.com"]
 tumadouga.jp,hime.me,konyoku.net,toukou.tv,tuma.jp,doucolle.net,m4ex.com,i-bbs.sijex.net##a[href^="https://www.e-nls.com/access.php"]
 konyoku.net,toukou.tv,tuma.jp##table[width="780"][cellpadding="5"] tr:nth-child(2)
