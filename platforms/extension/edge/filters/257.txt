@@ -1,9 +1,9 @@
-! Checksum: F8bA6GGjMY6xh0i1pzXpcw
-! Diff-Path: ../patches/257/257-s-1712927339-14400.patch
+! Checksum: gPCQn9fOpbd3HA6nEzZBkA
+! Diff-Path: ../patches/257/257-s-1713007541-14400.patch
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.0.18
-! TimeUpdated: 2024-04-12T13:04:53+00:00
+! Version: 2.0.0.19
+! TimeUpdated: 2024-04-13T11:23:44+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -6573,11 +6573,11 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 /^https:\/\/[a-z]{3}\.[a-z]{3}\.mybluehost\.me\/[a-z]{2,}\/[0-9A-z]{3,}\/contract\//$document,subdocument,match-case
 !+ NOT_OPTIMIZED
-/^https?:\/\/usps\.post[a-z]{2,}\.com\//$document,domain=~usps.com
+/^https:\/\/usps\.[-a-z]{6,}\.(?:com|top)\/(?:address\.html|information|verify)\b/$document,domain=com|top|~usps.com
 !+ NOT_OPTIMIZED
-/^https?:\/\/usp[a-z]\.[a-z]{5,}\.top\//$document,domain=~usps.com
+/^https:\/\/ur[ce][a-z]{2}\.com\/(?:address\.html|information|verify)\b/$document,domain=com|~usps.com
 !+ NOT_OPTIMIZED
-.top/pg?do=index$document
+.top/pg?do=$document,domain=top
 !+ NOT_OPTIMIZED
 ||usps.posttrackre.com^$all
 !+ NOT_OPTIMIZED
@@ -6636,6 +6636,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||mybluehost.me/Cope346/$all
 !+ NOT_OPTIMIZED
 ||secure-documents.glitch.me^$all
+!+ NOT_OPTIMIZED
+||fz9q.info/NZ-195/$all
 !+ NOT_OPTIMIZED
 ||glitch.me/pdf.html?email=^$document
 ! http://s5[.]qb6agda[.]cursorltd.com/
@@ -6740,3 +6742,6 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://www.facebook.com/LYNVietnam/photos/a.367113197050114/1391216614639762/
 !+ NOT_OPTIMIZED
 ||lynstore.net^$all,to=~lynvn.com
+! https://dichvucong[.]vsgov[.]com/ - gov phishing site
+!+ NOT_OPTIMIZED
+||dichvucong.$document,domain=~gov.vn

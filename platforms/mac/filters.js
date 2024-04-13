@@ -367,8 +367,8 @@
 			"displayNumber": 3,
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
-			"version": "2.1.24.0",
-			"timeUpdated": "2024-04-12T17:01:44+0000",
+			"version": "2.1.24.1",
+			"timeUpdated": "2024-04-13T11:22:55+0000",
 			"languages": []
 		},
 		{
@@ -408,8 +408,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/easylist/easylistchina/master/easylistchina.txt",
-			"version": "2.1.37.22",
-			"timeUpdated": "2024-04-12T13:03:05+0000",
+			"version": "2.1.37.23",
+			"timeUpdated": "2024-04-13T11:22:58+0000",
 			"languages": []
 		},
 		{
@@ -437,8 +437,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
-			"version": "2.1.46.97",
-			"timeUpdated": "2024-04-12T17:01:53+0000",
+			"version": "2.1.46.98",
+			"timeUpdated": "2024-04-13T11:22:59+0000",
 			"languages": []
 		},
 		{
@@ -478,8 +478,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
-			"version": "2.1.46.99",
-			"timeUpdated": "2024-04-12T17:01:57+0000",
+			"version": "2.1.47.0",
+			"timeUpdated": "2024-04-13T11:23:00+0000",
 			"languages": [
 				"it"
 			]
@@ -523,8 +523,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
-			"version": "2.1.46.98",
-			"timeUpdated": "2024-04-12T17:01:59+0000",
+			"version": "2.1.46.99",
+			"timeUpdated": "2024-04-13T11:23:01+0000",
 			"languages": [
 				"ar"
 			]
@@ -538,8 +538,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
-			"version": "2.1.46.97",
-			"timeUpdated": "2024-04-12T17:02:02+0000",
+			"version": "2.1.46.98",
+			"timeUpdated": "2024-04-13T11:23:03+0000",
 			"languages": []
 		},
 		{
@@ -603,8 +603,8 @@
 			"displayNumber": 2,
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
-			"version": "2.1.24.88",
-			"timeUpdated": "2024-04-12T17:02:07+0000",
+			"version": "2.1.24.89",
+			"timeUpdated": "2024-04-13T11:23:06+0000",
 			"languages": []
 		},
 		{
@@ -657,8 +657,8 @@
 			"displayNumber": 100,
 			"groupId": 4,
 			"subscriptionUrl": "https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt",
-			"version": "2.1.24.27",
-			"timeUpdated": "2024-04-12T17:02:23+0000",
+			"version": "2.1.24.28",
+			"timeUpdated": "2024-04-13T11:23:12+0000",
 			"languages": []
 		},
 		{
@@ -670,8 +670,8 @@
 			"displayNumber": 2,
 			"groupId": 3,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/fanboy-social.txt",
-			"version": "2.1.22.23",
-			"timeUpdated": "2024-04-12T17:02:26+0000",
+			"version": "2.1.22.24",
+			"timeUpdated": "2024-04-13T11:23:13+0000",
 			"languages": []
 		},
 		{
@@ -683,8 +683,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
-			"version": "2.0.18.72",
-			"timeUpdated": "2024-04-12T17:02:26+0000",
+			"version": "2.0.18.73",
+			"timeUpdated": "2024-04-13T11:23:13+0000",
 			"languages": []
 		},
 		{
@@ -791,8 +791,8 @@
 			"displayNumber": 3,
 			"groupId": 4,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
-			"version": "2.1.46.98",
-			"timeUpdated": "2024-04-12T17:02:31+0000",
+			"version": "2.1.46.99",
+			"timeUpdated": "2024-04-13T11:23:16+0000",
 			"languages": []
 		},
 		{
@@ -804,8 +804,8 @@
 			"displayNumber": 1,
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
-			"version": "2.0.95.36",
-			"timeUpdated": "2024-04-12T13:03:47+0000",
+			"version": "2.0.95.37",
+			"timeUpdated": "2024-04-13T11:23:16+0000",
 			"languages": []
 		},
 		{
@@ -856,8 +856,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/cntblock.txt",
-			"version": "2.1.46.23",
-			"timeUpdated": "2024-04-12T17:02:32+0000",
+			"version": "2.1.46.24",
+			"timeUpdated": "2024-04-13T11:23:16+0000",
 			"languages": []
 		},
 		{
@@ -1033,8 +1033,8 @@
 			"displayNumber": 4,
 			"groupId": 2,
 			"subscriptionUrl": "https://www.fanboy.co.nz/fanboy-antifacebook.txt",
-			"version": "2.0.6.49",
-			"timeUpdated": "2024-04-12T13:04:02+0000",
+			"version": "2.0.6.50",
+			"timeUpdated": "2024-04-13T11:23:22+0000",
 			"languages": []
 		},
 		{
@@ -1113,8 +1113,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
-			"version": "2.1.46.99",
-			"timeUpdated": "2024-04-12T17:02:50+0000",
+			"version": "2.1.47.0",
+			"timeUpdated": "2024-04-13T11:23:24+0000",
 			"languages": []
 		},
 		{
@@ -1126,8 +1126,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/FiltersHeroes/KAD/master/KAD.txt",
-			"version": "2.0.54.90",
-			"timeUpdated": "2024-04-12T17:02:55+0000",
+			"version": "2.0.54.91",
+			"timeUpdated": "2024-04-13T11:23:26+0000",
 			"languages": []
 		},
 		{
@@ -1167,8 +1167,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
-			"version": "2.0.4.24",
-			"timeUpdated": "2024-04-06T13:02:52+0000",
+			"version": "2.0.4.25",
+			"timeUpdated": "2024-04-13T11:23:28+0000",
 			"languages": [
 				"fa",
 				"tg",
@@ -1184,8 +1184,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/tcptomato/ROad-Block/master/road-block-filters-light.txt",
-			"version": "2.0.2.49",
-			"timeUpdated": "2024-03-21T10:28:37+0000",
+			"version": "2.0.2.50",
+			"timeUpdated": "2024-04-13T11:23:28+0000",
 			"languages": []
 		},
 		{
@@ -1251,8 +1251,8 @@
 			"displayNumber": 100,
 			"groupId": 4,
 			"subscriptionUrl": "https://www.fanboy.co.nz/fanboy-cookiemonster.txt",
-			"version": "2.1.32.13",
-			"timeUpdated": "2024-04-12T17:03:09+0000",
+			"version": "2.1.32.14",
+			"timeUpdated": "2024-04-13T11:23:32+0000",
 			"languages": []
 		},
 		{
@@ -1277,8 +1277,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
-			"version": "2.0.18.18",
-			"timeUpdated": "2024-04-12T13:04:27+0000",
+			"version": "2.0.18.19",
+			"timeUpdated": "2024-04-13T11:23:33+0000",
 			"languages": [
 				"sv"
 			]
@@ -1292,8 +1292,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/yous/YousList/master/youslist.txt",
-			"version": "2.0.10.57",
-			"timeUpdated": "2024-04-12T13:04:29+0000",
+			"version": "2.0.10.58",
+			"timeUpdated": "2024-04-13T11:23:34+0000",
 			"languages": []
 		},
 		{
@@ -1318,8 +1318,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
-			"version": "2.1.43.5",
-			"timeUpdated": "2024-04-12T17:03:14+0000",
+			"version": "2.1.43.6",
+			"timeUpdated": "2024-04-13T11:23:34+0000",
 			"languages": []
 		},
 		{
@@ -1409,8 +1409,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
-			"version": "2.0.40.30",
-			"timeUpdated": "2024-04-12T17:03:32+0000",
+			"version": "2.0.40.31",
+			"timeUpdated": "2024-04-13T11:23:42+0000",
 			"languages": [
 				"hi"
 			]
@@ -1424,8 +1424,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/RandomAdversary/Macedonian-adBlock-Filters/master/Filters",
-			"version": "2.0.0.8",
-			"timeUpdated": "2024-03-25T17:06:33+0000",
+			"version": "2.0.0.9",
+			"timeUpdated": "2024-04-13T11:23:42+0000",
 			"languages": [
 				"mk"
 			]
@@ -1439,8 +1439,8 @@
 			"displayNumber": 1,
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
-			"version": "2.0.0.14",
-			"timeUpdated": "2024-04-12T13:04:52+0000",
+			"version": "2.0.0.15",
+			"timeUpdated": "2024-04-13T11:23:43+0000",
 			"languages": []
 		},
 		{
@@ -1452,8 +1452,8 @@
 			"displayNumber": 1,
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
-			"version": "2.0.0.8",
-			"timeUpdated": "2024-04-12T05:03:42+0000",
+			"version": "2.0.0.9",
+			"timeUpdated": "2024-04-13T11:23:44+0000",
 			"languages": []
 		},
 		{
@@ -1465,8 +1465,8 @@
 			"displayNumber": 1,
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
-			"version": "2.0.0.18",
-			"timeUpdated": "2024-04-12T13:04:53+0000",
+			"version": "2.0.0.19",
+			"timeUpdated": "2024-04-13T11:23:44+0000",
 			"languages": []
 		}
 	]
