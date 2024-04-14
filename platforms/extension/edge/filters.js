@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.64.24",
-			"timeUpdated": "2024-04-14T14:31:48+0000",
+			"version": "2.0.64.25",
+			"timeUpdated": "2024-04-14T21:31:42+0000",
 			"languages": [],
 			"tags": [
 				45,
