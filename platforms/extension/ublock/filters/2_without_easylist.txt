@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: HiYPF5lU1khknCTfUi6B0g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713260023-3600.patch
+! Checksum: slLL+H11DfpU+grVBq6uBw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713263647-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.31.33
-! TimeUpdated: 2024-04-16T09:31:09+00:00
+! Version: 2.3.31.34
+! TimeUpdated: 2024-04-16T10:31:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -11393,7 +11393,7 @@ strtape.*#@#.google-ad
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication.com/adsbygoogle.js,important,domain=hulblog.com|omgmusik.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74176
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75599
-||copyrightcontent.org/unblocker/ub/$domain=finchtechs.com|imginn.com
+||copyrightcontent.org/unblocker/ub/$domain=finchtechs.com|imginn.com|manithan.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74297
 elil.cc##+js(set-constant, ads_blocked, 0)
 @@||elil.cc/advertisement/$script,~third-party
@@ -21241,6 +21241,10 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177191
+transinfo.pl#$#html { overflow: auto !important; }
+transinfo.pl#$#.adblock { display: none !important; }
+transinfo.pl##+js(no-setTimeout-if, /adblockFunc|hasChildNodes\(\)/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177111
 download.net.pl##.sidebar-container a[href^="https://amzn.to/"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176904
@@ -25293,6 +25297,8 @@ ekstrabladet.dk#@##ad_container
 !---------------------------------------------------------------------
 ! NOTE: Sinhalese and Tamil
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177158
+manithan.com##.blurb
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149966
 ada.lk##.advert
 ||deals4me.lk/assets/widget1/img/soorya.gif
@@ -29514,9 +29520,10 @@ pkr.pw##+js(window.open-defuser)
 moneycontrol.com##+js(set-constant, redirect_interstitial, false)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62485
 youtube-video.download##+js(window.open-defuser)
+! https://github.com/AdguardTeam/AdguardFilters/issues/177153
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62399
-shrinkme.org,shrinkme.info##+js(window.open-defuser)
-shrinkme.org,shrinkme.info,shrinke.me##+js(abort-on-property-read, addDictionary)
+shrinkme.*##+js(window.open-defuser)
+shrinkme.*,shrinke.me##+js(abort-on-property-read, addDictionary)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62396
 yespornpleasexxx.com##+js(abort-on-property-write, i7oo)
 yespornpleasexxx.com##+js(addEventListener-defuser, , return R0())
@@ -32421,6 +32428,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+||hitad.lk/Widget/widget_$third-party
 ivfauthority.com##div[class^="ivfau-inarticle"]
 jiocinema.com##div[class*="-AdRoot"]
 thesun.co.uk##div[data-aspc="BILL"]
@@ -42117,7 +42125,7 @@ fritchy.com,imagebam.com##div[id^="ad-header"]
 owlcation.com,history.com##.m-adaptive-ad-component
 history.com##.m-in-content-ad-row
 ||get-to.link/delicate-water-5f5b/
-shrinkme.io###imgAddDirectLink
+shrinkme.*###imgAddDirectLink
 tech.dutchycorp.space##div[id^="floating_ads_"]
 cumilf.com##.visibility
 ||cumilf.com/regarding.asp$script

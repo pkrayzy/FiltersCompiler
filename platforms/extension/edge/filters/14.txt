@@ -1,9 +1,9 @@
-! Checksum: /ZG3KElDI3VSdwABHEIdcw
-! Diff-Path: ../patches/14/14-s-1713260004-3600.patch
+! Checksum: 7ViWQmL/2sRGXTR4wNDWAA
+! Diff-Path: ../patches/14/14-s-1713263630-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.93.49
-! TimeUpdated: 2024-04-16T09:31:44+00:00
+! Version: 2.1.93.50
+! TimeUpdated: 2024-04-16T10:32:03+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5904,7 +5904,7 @@ eam.de,eam-netz.de#$#body.om_cookie_active .mm-page.mm-slideout { filter: none!i
 energieag.at##.app-cookie-consent
 codesandbox.io#?#div[class^="elements__ToastContainer"] > a[href="/legal/privacy"]:upward(1)
 avia.de###avia-cookie-consent
-loewenbraeukeller.com,limango.pl,blau.de,wohnglueck.de###usercentrics-root
+pflanzen-koelle.de,loewenbraeukeller.com,limango.pl,blau.de,wohnglueck.de###usercentrics-root
 ksiegaimion.com##.eucl
 intersport.com.cy#$?#body > .fancybox-container:has(#cookies-modal-id) { display: none !important; }
 intersport.com.cy#$#body { overflow: visible !important; }
@@ -14093,7 +14093,7 @@ highsnobiety.com#%#//scriptlet('trusted-click-element', '.tm-cs-layer--visible b
 converse.pl#%#//scriptlet('trusted-set-cookie', 'amcookie_policy_restriction', 'allowed')
 converse.pl#%#//scriptlet('trusted-set-cookie', 'amcookie_disallowed', '_ga%2C_gid%2C_gat%2C_gcl_au%2Cgtm_extended')
 digisport.ro#%#//scriptlet('set-cookie-reload', 'cmp_level', '5')
-moneycontrol.com#%#//scriptlet('trusted-click-element', '.cookie-concern-wrapper > .cc-checklist-input-wrapper > input[name="concern3"], .cookie-concern-wrapper > button.cc-checklist-button')
+moneycontrol.com#%#//scriptlet('trusted-click-element', '.cookie-concern-wrapper > .cc-checklist-input-wrapper > input[name="concern3"], .cookie-concern-wrapper > button.cc-checklist-button', '!cookie:_w18g_consent')
 calciomercato.com,highlights.legaseriea.it#%#//scriptlet('trusted-click-element', '#cl-consent button[data-role="b_decline"]')
 [$path=/Consent]fplstatistics.com#%#//scriptlet('trusted-click-element', 'div[style^="position: relative;"] button[onclick="IMOK()"]')
 abema.tv#%#//scriptlet('trusted-click-element', '#com-onboarding-OnboardingWelcomeModal__title + div .com-a-Button--dark')
@@ -15099,6 +15099,9 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177017
+@@||app.usercentrics.eu^$domain=pflanzen-koelle.de
+@@||api.usercentrics.eu/settings/$domain=pflanzen-koelle.de
 ! s-court.me - unable to login
 s-court.me#@#.cookie_accept
 ! mz.de - broken player
@@ -22736,6 +22739,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+dailymirror.lk##.floatw
 nanboya.com##.p-toggle-banner
 10mtv.jp##.popup-area
 blog.moneysmart.sg#%#//scriptlet('prevent-addEventListener', 'scroll', 'function')
@@ -30694,6 +30698,7 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+moneycontrol.com##.join_follow
 ixbt.com##.topic-footer-panel-soc
 tmohentai.com#?#.row div.panel-primary input[value="Subscribe"]:upward(.panel-primary)
 ||nikkei.com/edit/topic/briefing_newsletter_
@@ -34441,7 +34446,7 @@ werbemittel24.com###container3
 analyticsindiamag.com##div[data-id="1216dac"]
 analyticsindiamag.com##section[data-id="2438492"]
 novosti-n.org##div[class*="_indent-clear"][style^="background-color"]
-olymp.com##.banner-newsletter
+kyeongin.com,olymp.com##.banner-newsletter
 planet-sports.de###newsletterPullUp
 dickieslife.com##.vf-newsletter-popup
 gap.eu#$#.email-popup-dialog { display: none!important; }
@@ -35692,7 +35697,7 @@ programiz.com##.cover__form
 muyhistoria.es,marie-claire.es,miarevista.es,muynegociosyeconomia.es,serpadres.es,muyinteresante.es##.newsletter--subscription--box
 blog.doist.com##.home-form-banner
 blog.doist.com##.article-subscribe-form
-mambiznes.pl##.newsletter-area
+kyeongin.com,mambiznes.pl##.newsletter-area
 cointelegraph.com##.article-subscription-widget
 team29.org##.mc-subscribe
 howtogeek.com##div[class^="walter-march2021-"]
