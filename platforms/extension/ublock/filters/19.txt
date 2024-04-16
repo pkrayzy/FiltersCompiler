@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: BPNSSzLA5Pb0vyeKN87Rpg
-! Diff-Path: ../patches/19/19-s-1713263646-3600.patch
+! Checksum: TKb10/rtzU1FGXnHyLKwuw
+! Diff-Path: ../patches/19/19-s-1713267240-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.34.86
-! TimeUpdated: 2024-04-16T10:32:10+00:00
+! Version: 2.0.34.87
+! TimeUpdated: 2024-04-16T11:32:02+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -201,6 +201,8 @@ auto.ru##+js(json-prune, ads)
 ! drive2.ru
 drive2.ru##+js(abort-on-property-read, Object.prototype.AdChosen)
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
+! pikabu
+pikabu.ru##+js(set-constant, Object.prototype.blockId, undefined)
 !   NOTE: Yandex direct end ⬆️
 !   !SECTION: Anti-adblock - Yandex direct
 !
@@ -4032,6 +4034,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+twistedvoxel.com##.tt-shortcode-1
+order.linemo.jp###not-supported-browser-modal
 dailymirror.lk##.floatw
 nanboya.com##.p-toggle-banner
 10mtv.jp##.popup-area
@@ -11996,6 +12000,10 @@ newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,theloca
 !
 ! SECTION: Subscriptions - Regular rules
 !
+smbiz.asahi.com##.compo-conversion
+eurogamer.pt,eurogamer.pl,rockpapershotgun.com,eurogamer.it,eurogamer.net,eurogamer.pt##div[data-mode="signup"]
+thursdayboots.com#$#body { overflow: auto !important; padding-right: 0 !important; }
+thursdayboots.com#$##shopify-section-email-modal { display: none !important; }
 moneycontrol.com##.join_follow
 ixbt.com##.topic-footer-panel-soc
 tmohentai.com#?#.row div.panel-primary input[value="Subscribe"]:upward(.panel-primary)
