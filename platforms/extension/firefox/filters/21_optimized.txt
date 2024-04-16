@@ -1,5 +1,5 @@
-! Checksum: rXLTt6Mln3WuAsZz67djYg
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1713224012-3600.patch
+! Checksum: RrrdMCGLLf+Nm8lkFZUyDQ
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1713234807-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
 ! Version: 2.0.21.70
@@ -53,6 +53,7 @@ foxnews.com#%#//scriptlet('set-constant', 'Taplytics.featureFlagEnabled', 'trueF
 foxnews.com#%#//scriptlet('adjust-setTimeout', 'Taplytics', '*', '0.001')
 foxnews.com#%#//scriptlet('remove-class', 'gated-overlay', '.article-gating')
 foxnews.com#%#//scriptlet('remove-class', 'has-gated-overlay|gated-article-body', '.gated-article-body')
+inc.com##.mobile_video_insert
 ||geo.dailymotion.com/player/xdgu3.html$domain=idntimes.com
 cnyes.com#%#//scriptlet('remove-class', 'ppn-overflows', '.ppn-overflows.ppn-floating_enable')
 ||player.svc.litv.tv/v3/ppnio.js$replace=/if\(r\.enableFloating&&/if(!1&&/,domain=cnyes.com
@@ -217,7 +218,6 @@ chosun.com#$#body { position: static !important; }
 e-ogrodek.pl,gra.pl,stronakuchni.pl,stronapodrozy.pl,strefaedukacji.pl,i.pl,stronazdrowia.pl,naszahistoria.pl,regiodom.pl,dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikzachodni.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gs24.pl,katowice.naszemiasto.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl##.atomsNavigationStickyReturnHome
 e-ogrodek.pl,gra.pl,stronakuchni.pl,stronapodrozy.pl,strefaedukacji.pl,i.pl,stronazdrowia.pl,naszahistoria.pl,regiodom.pl,dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikzachodni.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gs24.pl,katowice.naszemiasto.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl##.atomsArticleStickyVideo
 e-ogrodek.pl,gra.pl,stronakuchni.pl,stronapodrozy.pl,strefaedukacji.pl,i.pl,stronazdrowia.pl,naszahistoria.pl,regiodom.pl,dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikzachodni.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gs24.pl,katowice.naszemiasto.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl##.dailymotion-player.js-sticky
-laleggepertutti.it###sh_local
 deepl.com##aside[aria-labelledby="customer-quotes-heading"]
 cinemablend.com,livescience.com,gamesradar.com,tomshardware.com,pcgamer.com,windowscentral.com,laptopmag.com,techradar.com##.related-articles-block
 sia.ru###right_fixed_block
@@ -252,6 +252,7 @@ stopcor.org##.videoOfDay
 so.toutiao.com##.s-side-list > div.result-content > div[id^="s-dom-"]
 ||widget.golfscape.com^$domain=sport360.com
 tribuna.com##.dugout-video
+football-tribe.com##.dugout_video_cont
 ||embed.dugout.com^$script,third-party,domain=~sportowefakty.wp.pl|~ultra-soccer.jp
 wired.com#$?#.grid-layout__aside > .sticky-box > .sticky-box__primary > div[data-in-view] > figure[data-testid="cne-interlude-container-right-rail"]:has(> .cne-video-embed) { remove: true; }
 gala.fr###dailymotion-pip-large-viewport
@@ -682,7 +683,6 @@ my.mail.ru##.b-column-right__block-apps
 mail.ru##.m-pwa-custom-infobar
 mail.ru#?#body > div.tooltip:has(div.m-push-notifications__buttons)
 ||pogoda.mail.ru/*/ct-push-notifications/ct-push-notifications.xml.js
-mail.ru##.ph-balloon
 sport24.ru##div:has(> p + a[href^="https://sport24.ru/"])
 mail.ru,~e.mail.ru,~octavius.mail.ru##.js-promo-popup
 sportmail.ru##div[id^="notification"]
@@ -703,8 +703,6 @@ cgtips.org#$#div[class][data-locker-id] { display: block !important; }
 cgtips.org#$#.mts-cl[id^="content-locker-"] { display: none !important; }
 3dmodelshare.org,3dzip.org#$#.mts-cl[id^="content-locker-"] { display: none !important; }
 3dmodelshare.org,3dzip.org#$#div[class][data-locker-id] { display: block !important; }
-labkom.co.id#$#.fca-lockercat-wrapper { display: none!important; }
-labkom.co.id#$#.fca-lockercat-content { display: block!important; }
 yasir252.com#%#AG_onLoad(function(){setTimeout(function(){var a=document.querySelector(".onp-sl-content");if("function"===typeof jQuery&&"object"===typeof bizpanda.lockerOptions&&a)try{a=0;for(var c=Object.keys(bizpanda.lockerOptions);a<c.length;a++){var d=c[a];if(d.includes("onpLock")){var b=bizpanda.lockerOptions[d];b&&jQuery.ajax({url:b.ajaxUrl,method:"post",data:{lockerId:b.lockerId,action:"opanda_loader",hash:b.contentHash},success:function(a){var b=jQuery(".onp-sl-content"),c=jQuery(".onp-sl-social-locker"); b.append(a);b.css("display","block");c.css("display","none")}})}}}catch(e){}},1E3)});
 ||trimay.ru/?
 gazeta.ru###_id_telegram_subscriber
@@ -1034,6 +1032,7 @@ member.livedoor.com###loginAdwall
 andapp.jp##.topJackBanner
 ||gamewith.jp/ad/
 gamewith.jp##.walkthrough-hikari
+lvz.de#$#.tp-modal:has(> div.tp-iframe-wrapper > iframe[src^="https://buy-eu.piano.io/"]) { display: none !important; }
 lvz.de#$#.tp-backdrop.tp-active { display: none !important; }
 lvz.de#$#body.tp-modal-open { overflow: auto !important; position: static !important; touch-action: unset !important; background: unset !important; }
 thelocal.*#?#.tp-modal:has(> div.tp-iframe-wrapper > iframe[src^="https://buy.tinypass.com/checkout/offer/show?displayMode="])
@@ -1116,6 +1115,7 @@ magazineluiza.com.br##a[data-testid="banner-link"]
 biglobe.ne.jp#?#.prom > a.prom-all:upward(1)
 news.biglobe.ne.jp##.bnr
 tech-camp.in##.header-banner-link
+natalie.mu##.NA_article_tagad
 ferret-plus.com##.scrolling-sidebar
 radiko.jp##.header__banner
 pixiv.net##.premium-denki-t-footer
@@ -1539,6 +1539,7 @@ thurrott.com##.widget_thurrott_premium_upsell
 nerdwallet.com##.sticky-banner-container
 jump.5ch.net###navbarResponsive
 petri.com##div[id^="petri-advertising-sponsor-"]
+kanobu.ru##div[class^="KnbSideStickyWrapper"]
 youtube.com#?#.ytd-metadata-row-container-renderer:has(> div.style-scope > ytd-rich-metadata-renderer > a[href="https://www.youtubekids.com/"])
 conoha.jp##.sidebarBlock_banner
 lepoint.fr##body div#paywall-sticky
@@ -2024,6 +2025,7 @@ coub.com##.timeline-right-block__login-banner
 bestdroidplayer.com##.ulp-overlay
 bestdroidplayer.com##.ulp-window-container
 docs.cntd.ru#?#.sheet div[class]:has(> div.demo-modal)
+pan.bilnn.com##div[class^="jss"] > a[href="https://feige.bilnn.com/"]
 tripmydream.com##.wind-banner-place
 biz.moneyforward.com###secondary > aside:not(.widget_search):not(.widget_categories)
 map.yahoo.co.jp###yjSub > div.banner
@@ -2266,7 +2268,6 @@ interfax.ru##.popupNowReading
 madnessporn.com#?#.video div.header:has(> h2:contains(Madness Webcam))
 lostpix.com##a[href="http://myfresh.tv/radio/BestR.html"]
 ||cmtscience.ru/photos/shares/banners/5eba53abef3e6.gif
-mirsmart.com.ua##div[class^="blockbaner"]
 opennet.ru##a[href^="/banners"]
 inc42.com##.plus-bottom-bar
 autoua.net##a[href="https://insurance.autoua.net/ru/osago/"]
