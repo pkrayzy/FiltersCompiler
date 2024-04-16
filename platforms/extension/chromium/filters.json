@@ -565,8 +565,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.26",
-			"timeUpdated": "2024-04-16T20:31:44+0000",
+			"version": "2.0.51.27",
+			"timeUpdated": "2024-04-16T21:31:34+0000",
 			"languages": [
 				"tr"
 			],
