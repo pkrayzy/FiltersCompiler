@@ -1,8 +1,8 @@
-! Checksum: SyrtWJM46G5ksu5HTQSjhg
+! Checksum: svU7mqQimwPErz7XHjzFFw
 ! Title: AdGuard Chinese filter
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.13.87
-! TimeUpdated: 2024-04-14T03:49:43+00:00
+! Version: 2.1.13.90
+! TimeUpdated: 2024-04-15T17:54:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -324,6 +324,10 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177065
+bilinovel.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'pagead2.googlesyndication.com')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=bilinovel.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176112
 ||174.127.195.66/bbs/include/javascript/adblock.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170879
@@ -2704,12 +2708,12 @@ netfly.*,netfly.tv##div[class*="tt-"] > a[target="_blank"] + span.tt-icon-close
 ! https://user-images.githubusercontent.com/3976203/273172163-25ff30a0-c988-4ec3-9e51-cf4722a90976.jpg
 ! bilibili.com#?#.bili-video-card.is-rcmd > div > a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bili"]) + .bili-video-card__info:upward(2)
 bilibili.com#$?#.container > div.floor-single-card:has(> div.skeleton) { remove: true; }
-bilibili.com##.bili-video-card:has(.bili-video-card__info--ad) > .extension-tips
+bilibili.com##.bili-video-card:has(.bili-video-card__info--ad) > div[class^="extension-tips"]
 bilibili.com##.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-card__wrap
 bilibili.com##.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__wrap
 bilibili.com#$#.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-card__skeleton { visibility: visible !important; }
 bilibili.com#$#.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__skeleton { visibility: visible !important; }
-bilibili.com##.carousel-container > .carousel-transform > .carousel-slide:has(> a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bilibili.com/"])) > .extension-tips
+bilibili.com##.carousel-container > .carousel-transform > div[class^="carousel-slide"]:has(> a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bilibili.com/"])) > div[class^="extension-tips"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149414
 nivod8.tv,nivod7.tv##.nav-ads
 ||api.nivodz.com/commercial/incr/
@@ -4732,8 +4736,10 @@ newduba.cn###jq_youxi
 ||6slb0.cyou^
 ||6zfem.icu^
 ||777bbb222bbb.com^
+||777bbb777www.com^
 ||7vviw.cyou^
 ||888bb555ww.com^
+||888bbb555www.com^
 ||88lm05.com^
 ||88lm06.com^
 ||88lm07.com^
@@ -4770,6 +4776,7 @@ newduba.cn###jq_youxi
 ||beyers.cn^
 ||bijiangqing.com^
 ||bjswhpy.cn^
+||bjxfnn.xyz^
 ||bkzmtp.xyz^
 ||blrupz.xyz^
 ||blzbjpg.xyz^
@@ -4816,6 +4823,7 @@ newduba.cn###jq_youxi
 ||costarg.com^
 ||cowm199.com^
 ||cqisam.xyz^
+||crbbhp.xyz^
 ||crjeymh.cn^
 ||ctlrarz.xyz^
 ||ctmrso.xyz^
@@ -4827,6 +4835,7 @@ newduba.cn###jq_youxi
 ||cwssfg632.shop^
 ||cxlvlbx.xyz^
 ||cyuwkbf.top^
+||czxvgod.xyz^
 ||d3g4a.cyou^
 ||damiul.icu^
 ||dataryon.com^
@@ -4899,6 +4908,7 @@ newduba.cn###jq_youxi
 ||fpjjjh.xyz^
 ||fpvdrzx.xyz^
 ||fqbjzj.xyz^
+||fqghykp.cn^
 ||frtnqps358.shop^
 ||frtnqpw837.shop^
 ||fvpboxu.xyz^
@@ -4906,6 +4916,7 @@ newduba.cn###jq_youxi
 ||fxjnfn.xyz^
 ||fztyrv.xyz^
 ||gblxtlo.xyz^
+||gccnntq.cn^
 ||gcumgu.xyz^
 ||gfjn5.xyz^
 ||gfylyw.xyz^
@@ -4917,9 +4928,11 @@ newduba.cn###jq_youxi
 ||gridline.cn^
 ||grtarpcf963.top^
 ||gsuxyg.xyz^
+||gtxkze.cn^
 ||gueikw.xyz^
 ||guwohvw.icu^
 ||gvbta.icu^
+||gxihcq.xyz^
 ||ha723.icu^
 ||halct.cn^
 ||hbjolp.xyz^
@@ -4950,6 +4963,7 @@ newduba.cn###jq_youxi
 ||hubgets.cn^
 ||hvxrvef.xyz^
 ||hyusnisu.top^
+||hyuwkbu.top^
 ||idffhq.cn^
 ||ievvo.xyz^
 ||ijvla.cn^
@@ -4965,6 +4979,7 @@ newduba.cn###jq_youxi
 ||ivbgpax.cn^
 ||ivnrrkx.cn^
 ||iykig.cn^
+||iyuwkbo.top^
 ||izalflh.cn^
 ||izmiua.xyz^
 ||jbmfldt.cn^
@@ -4973,6 +4988,7 @@ newduba.cn###jq_youxi
 ||jgblvt.xyz^
 ||jgmywh.icu^
 ||jioed.cyou^
+||jmesxbe.icu^
 ||jnalzla.top^
 ||jnifdlaa.top^
 ||jozbun.icu^
@@ -4980,6 +4996,7 @@ newduba.cn###jq_youxi
 ||jqpejp.xyz^
 ||js131.cn^
 ||jtyusia.top^
+||jtzdld.xyz^
 ||jubnpx.xyz^
 ||justapp.top^
 ||jvkqkzu.cn^
@@ -5130,6 +5147,7 @@ newduba.cn###jq_youxi
 ||qhemphox.com^
 ||qhocciks.com^
 ||qhodog.xyz^
+||qhtdmlf.xyz^
 ||qkscga.xyz^
 ||qlbbowx.xyz^
 ||qnalzly.top^
@@ -5138,6 +5156,7 @@ newduba.cn###jq_youxi
 ||qrkhwe.xyz^
 ||qrovwu.xyz^
 ||qrttfmo.cn^
+||qtoidch.icu^
 ||qtyusiy.top^
 ||qvnbjjd.xyz^
 ||qw9cu.cyou^
@@ -5210,6 +5229,7 @@ newduba.cn###jq_youxi
 ||szpwf.cn^
 ||szpwg.cn^
 ||szpwh.cn^
+||szpzk.cn^
 ||szpzm.cn^
 ||tahznx.xyz^
 ||taxoxz.xyz^
@@ -5233,6 +5253,7 @@ newduba.cn###jq_youxi
 ||tqvnzj.xyz^
 ||tsrvrr.xyz^
 ||tu2024020388.com^
+||tuky889900.com^
 ||tyodot.icu^
 ||tyzfoej.cn^
 ||u7u9.com^$third-party
@@ -5242,6 +5263,7 @@ newduba.cn###jq_youxi
 ||uiqcf.cn^
 ||ujovcb.cn^
 ||uljoifw.cn^
+||ulktyi.xyz^
 ||ulwfys.xyz^
 ||unalzlt.top^
 ||unifdlat.top^
@@ -5347,12 +5369,6 @@ newduba.cn###jq_youxi
 ||zfzys.top^
 ||zhaweifeng.com^
 ||zhihucloud.xyz^
-||bjxfnn.xyz^
-||qhtdmlf.xyz^
-||gccnntq.cn^
-||hyuwkbu.top^
-||ulktyi.xyz^
-||qtoidch.icu^
 ||zhnnaxe.xyz^
 ||zjrtxt.xyz^
 ||znhlxvb.xyz^
@@ -11244,6 +11260,7 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||ctfile.com/iz.php?
 ||ctrip.com/amd/*960x90.
 ||ctrip.com/Domestic/tool/AjaxGetCPTList.ashx?advpositioncode=
+||cupid.iqiyi.com/mixer?
 ||cww.net.cn/include/show.asp?boardID=
 ||cww.net.cn/js/urdev.js
 ||cycyw.com/mf/
@@ -21722,6 +21739,7 @@ $image,third-party,domain=258zw.com
 ##.nr_all > .m_f_a.sw_sp
 ##.readerListADbox
 .xyz/*.sdk?$script,third-party
+.xyz:8009/11?x=
 /1.js?ssfrid=$script,third-party
 /121sdw/*$script,third-party
 /1skwwd.
