@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: OKfYQqRtTRygpq1qQIxkrg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713335615-3600.patch
+! Checksum: q5O7XAxTP6kNy14HaihB5A
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713342845-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.31.44
-! TimeUpdated: 2024-04-17T06:31:11+00:00
+! Version: 2.3.31.45
+! TimeUpdated: 2024-04-17T08:31:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -22958,6 +22958,8 @@ niebezpiecznik.pl###main > .container > .posts-section > .section-content > a[hr
 niebezpiecznik.pl##footer > a[href^="https://niebezpiecznik.pl/"][href*=".php"][target="_blank"] > img
 niebezpiecznik.pl###main > .post + a[href^="https://niebezpiecznik.pl/"][href*=".php"][target="_blank"] > img
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139579
+meczyki.pl##.content > .grid-news-slider > .large:has(> a[rel] .ads-info)
+meczyki.pl##.background-custom[style*="width:"][style*="height:"][style*="background-image:"]
 meczyki.pl#?#div[class^="col-md-"] > .row > div[class^="col"] > .widget-wrapper:has(> .widget-wrapper__header > h3[title="Bukmacherzy"])
 !+ NOT_OPTIMIZED
 meczyki.pl#?#.collapse-container > .row > .col-lg-4:has(> a[target="_blank"] > .news-item > .news-image > .ads-info)
@@ -27372,6 +27374,8 @@ kat.*,kickass.*,kickass2.*,kickasstorrents.*,kat2.*,kattracker.*,thekat.*,thekic
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177229
+standard.co.uk##+js(adjust-setTimeout, /Autoplay|Piano|Request timeout|player|hlsjs\.start|r\|\|\(e\(\)/, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176868
 sportsonline.so##+js(abort-on-property-read, Adcash)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176869
@@ -32440,6 +32444,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+standard.co.uk###frameInner > div[class*=" "]:has(> div[class*=" "]:only-child > div[data-ad-unit-path]:only-child)
 digitaltrends.com##.m-shop
 ||zeriun.cc/assets/js/mtg.js
 zeriun.cc##+js(abort-on-property-write, ckllk)
@@ -52021,8 +52026,10 @@ bing.com##.ins_exp.vsp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/77758
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76646
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.gazzetta.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/177229
 ! https://github.com/AdguardTeam/AdguardFilters/issues/77064
-@@||standard.co.uk/js/third-party/prebid.js
+@@||standard.co.uk/js/third-party/prebid*.js$domain=standard.co.uk
+||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon_apstag.js,domain=standard.co.uk
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices_gpt.js,domain=standard.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75981
 @@||player.avplayer.com/script/*/libs/hls.min.js$domain=readlightnovel.org
