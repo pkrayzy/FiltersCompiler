@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.90.4",
-			"timeUpdated": "2024-04-17T03:04:27+0000",
+			"version": "2.0.90.5",
+			"timeUpdated": "2024-04-18T03:05:13+0000",
 			"languages": [
 				"ru"
 			],
@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.29.98",
-			"timeUpdated": "2024-04-17T03:04:40+0000",
+			"version": "2.3.29.99",
+			"timeUpdated": "2024-04-18T03:05:26+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.68.65",
-			"timeUpdated": "2024-04-17T03:04:44+0000",
+			"version": "2.0.68.66",
+			"timeUpdated": "2024-04-18T03:05:29+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.50",
-			"timeUpdated": "2024-04-17T03:04:46+0000",
+			"version": "2.0.99.51",
+			"timeUpdated": "2024-04-18T03:05:31+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -434,8 +434,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/6.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.37",
-			"timeUpdated": "2024-04-17T03:04:52+0000",
+			"version": "2.0.41.38",
+			"timeUpdated": "2024-04-18T03:05:36+0000",
 			"languages": [
 				"de"
 			],
@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.33",
-			"timeUpdated": "2024-04-16T15:02:36+0000",
+			"version": "2.0.50.34",
+			"timeUpdated": "2024-04-18T03:05:37+0000",
 			"languages": [
 				"ja"
 			],
@@ -479,8 +479,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.6.56",
-			"timeUpdated": "2024-04-17T03:04:56+0000",
+			"version": "2.0.6.57",
+			"timeUpdated": "2024-04-18T03:05:39+0000",
 			"languages": [
 				"nl"
 			],
@@ -503,8 +503,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.5",
-			"timeUpdated": "2024-04-16T15:02:38+0000",
+			"version": "2.0.24.6",
+			"timeUpdated": "2024-04-18T03:05:40+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.76",
-			"timeUpdated": "2024-04-17T03:04:08+0000",
+			"version": "2.0.50.77",
+			"timeUpdated": "2024-04-18T03:04:57+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -565,8 +565,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.9",
-			"timeUpdated": "2024-04-17T03:04:09+0000",
+			"version": "2.0.51.10",
+			"timeUpdated": "2024-04-18T03:04:59+0000",
 			"languages": [
 				"tr"
 			],
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.92.68",
-			"timeUpdated": "2024-04-17T03:04:16+0000",
+			"version": "2.1.92.69",
+			"timeUpdated": "2024-04-18T03:05:05+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.64.5",
-			"timeUpdated": "2024-04-17T03:04:17+0000",
+			"version": "2.0.64.6",
+			"timeUpdated": "2024-04-18T03:05:05+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -636,8 +636,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.51",
-			"timeUpdated": "2024-04-16T15:02:10+0000",
+			"version": "2.0.44.52",
+			"timeUpdated": "2024-04-18T03:05:08+0000",
 			"languages": [
 				"fr"
 			],
@@ -660,8 +660,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.37.17",
-			"timeUpdated": "2024-04-17T03:04:20+0000",
+			"version": "2.0.37.18",
+			"timeUpdated": "2024-04-18T03:05:09+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -680,8 +680,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.34.52",
-			"timeUpdated": "2024-04-17T03:04:22+0000",
+			"version": "2.0.34.53",
+			"timeUpdated": "2024-04-18T03:05:09+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -700,8 +700,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/20.txt",
 			"trustLevel": "full",
-			"version": "2.0.13.44",
-			"timeUpdated": "2024-04-16T15:02:16+0000",
+			"version": "2.0.13.45",
+			"timeUpdated": "2024-04-18T03:05:14+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -720,8 +720,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.21.56",
-			"timeUpdated": "2024-04-17T03:04:28+0000",
+			"version": "2.0.21.57",
+			"timeUpdated": "2024-04-18T03:05:14+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -740,8 +740,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.7.91",
-			"timeUpdated": "2024-04-16T15:02:18+0000",
+			"version": "2.0.7.92",
+			"timeUpdated": "2024-04-18T03:05:18+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -783,8 +783,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.23.81",
-			"timeUpdated": "2024-04-17T03:03:00+0000",
+			"version": "2.1.23.82",
+			"timeUpdated": "2024-04-18T03:03:51+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -801,8 +801,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
 			"trustLevel": "high",
-			"version": "2.0.6.70",
-			"timeUpdated": "2024-04-17T03:03:01+0000",
+			"version": "2.0.6.71",
+			"timeUpdated": "2024-04-18T03:03:52+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -844,8 +844,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/easylist/easylistchina/master/easylistchina.txt",
 			"trustLevel": "high",
-			"version": "2.1.37.14",
-			"timeUpdated": "2024-04-17T03:03:04+0000",
+			"version": "2.1.37.15",
+			"timeUpdated": "2024-04-18T03:03:54+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -889,8 +889,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
 			"trustLevel": "low",
-			"version": "2.1.46.78",
-			"timeUpdated": "2024-04-17T03:03:06+0000",
+			"version": "2.1.46.79",
+			"timeUpdated": "2024-04-18T03:03:55+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -909,8 +909,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist.to/easylistgermany/easylistgermany.txt",
 			"trustLevel": "low",
-			"version": "2.0.13.4",
-			"timeUpdated": "2024-04-17T03:03:06+0000",
+			"version": "2.0.13.5",
+			"timeUpdated": "2024-04-18T03:03:56+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -952,8 +952,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.46.80",
-			"timeUpdated": "2024-04-17T03:03:09+0000",
+			"version": "2.1.46.81",
+			"timeUpdated": "2024-04-18T03:03:58+0000",
 			"languages": [
 				"it"
 			],
@@ -1021,8 +1021,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.46.79",
-			"timeUpdated": "2024-04-17T03:03:11+0000",
+			"version": "2.1.46.80",
+			"timeUpdated": "2024-04-18T03:04:00+0000",
 			"languages": [
 				"ar"
 			],
@@ -1044,8 +1044,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
 			"trustLevel": "low",
-			"version": "2.1.46.78",
-			"timeUpdated": "2024-04-17T03:03:14+0000",
+			"version": "2.1.46.79",
+			"timeUpdated": "2024-04-18T03:04:02+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1084,8 +1084,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.73",
-			"timeUpdated": "2024-04-17T03:03:17+0000",
+			"version": "2.1.24.74",
+			"timeUpdated": "2024-04-18T03:04:05+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -1122,8 +1122,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
-			"version": "2.0.19.97",
-			"timeUpdated": "2024-04-17T03:03:18+0000",
+			"version": "2.0.19.98",
+			"timeUpdated": "2024-04-18T03:04:06+0000",
 			"languages": [
 				"id"
 			],
@@ -1164,8 +1164,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt",
 			"trustLevel": "high",
-			"version": "2.1.24.8",
-			"timeUpdated": "2024-04-17T03:03:23+0000",
+			"version": "2.1.24.9",
+			"timeUpdated": "2024-04-18T03:04:12+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1183,8 +1183,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/fanboy-social.txt",
 			"trustLevel": "low",
-			"version": "2.1.22.8",
-			"timeUpdated": "2024-04-17T03:03:24+0000",
+			"version": "2.1.22.9",
+			"timeUpdated": "2024-04-18T03:04:13+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -1202,8 +1202,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
 			"trustLevel": "low",
-			"version": "2.0.18.53",
-			"timeUpdated": "2024-04-17T03:03:25+0000",
+			"version": "2.0.18.54",
+			"timeUpdated": "2024-04-18T03:04:14+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1268,8 +1268,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&mimetype=plaintext",
 			"trustLevel": "low",
-			"version": "2.0.15.31",
-			"timeUpdated": "2024-04-17T03:03:28+0000",
+			"version": "2.0.15.32",
+			"timeUpdated": "2024-04-18T03:04:20+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -1305,8 +1305,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
 			"trustLevel": "low",
-			"version": "2.1.46.79",
-			"timeUpdated": "2024-04-17T03:03:30+0000",
+			"version": "2.1.46.80",
+			"timeUpdated": "2024-04-18T03:04:22+0000",
 			"languages": [],
 			"tags": [
 				50
@@ -1323,8 +1323,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.95.38",
-			"timeUpdated": "2024-04-17T03:03:30+0000",
+			"version": "2.0.95.39",
+			"timeUpdated": "2024-04-18T03:04:22+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1341,8 +1341,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/cntblock.txt",
 			"trustLevel": "low",
-			"version": "2.1.46.4",
-			"timeUpdated": "2024-04-17T03:03:32+0000",
+			"version": "2.1.46.5",
+			"timeUpdated": "2024-04-18T03:04:24+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -1360,8 +1360,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.28.42",
-			"timeUpdated": "2024-04-17T03:03:32+0000",
+			"version": "2.0.28.43",
+			"timeUpdated": "2024-04-18T03:04:24+0000",
 			"languages": [
 				"vi"
 			],
@@ -1483,8 +1483,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.13.93",
-			"timeUpdated": "2024-04-17T03:04:31+0000",
+			"version": "2.1.13.94",
+			"timeUpdated": "2024-04-18T03:05:18+0000",
 			"languages": [
 				"zh"
 			],
@@ -1525,8 +1525,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter-AdGuard.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.12",
-			"timeUpdated": "2024-04-16T15:01:41+0000",
+			"version": "2.0.18.13",
+			"timeUpdated": "2024-04-18T03:04:30+0000",
 			"languages": [
 				"ko"
 			],
@@ -1567,8 +1567,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
 			"trustLevel": "low",
-			"version": "2.1.46.80",
-			"timeUpdated": "2024-04-17T03:03:41+0000",
+			"version": "2.1.46.81",
+			"timeUpdated": "2024-04-18T03:04:32+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1587,8 +1587,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/FiltersHeroes/KAD/master/KAD.txt",
 			"trustLevel": "low",
-			"version": "2.0.54.79",
-			"timeUpdated": "2024-04-17T03:03:43+0000",
+			"version": "2.0.54.80",
+			"timeUpdated": "2024-04-18T03:04:34+0000",
 			"languages": [],
 			"tags": [
 				4,
@@ -1675,8 +1675,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/tcptomato/ROad-Block/master/road-block-filters-light.txt",
 			"trustLevel": "high",
-			"version": "2.0.2.54",
-			"timeUpdated": "2024-04-17T03:03:46+0000",
+			"version": "2.0.2.55",
+			"timeUpdated": "2024-04-18T03:04:36+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1754,8 +1754,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://www.fanboy.co.nz/fanboy-cookiemonster.txt",
 			"trustLevel": "high",
-			"version": "2.1.31.94",
-			"timeUpdated": "2024-04-17T03:03:52+0000",
+			"version": "2.1.31.95",
+			"timeUpdated": "2024-04-18T03:04:41+0000",
 			"languages": [],
 			"tags": [
 				6
@@ -1772,8 +1772,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.20",
-			"timeUpdated": "2024-04-15T17:54:02+0000",
+			"version": "2.0.18.21",
+			"timeUpdated": "2024-04-18T03:04:42+0000",
 			"languages": [
 				"sv"
 			],
@@ -1816,8 +1816,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
 			"trustLevel": "low",
-			"version": "2.1.42.86",
-			"timeUpdated": "2024-04-17T03:03:55+0000",
+			"version": "2.1.42.87",
+			"timeUpdated": "2024-04-18T03:04:44+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1928,8 +1928,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.40.11",
-			"timeUpdated": "2024-04-17T03:04:03+0000",
+			"version": "2.0.40.12",
+			"timeUpdated": "2024-04-18T03:04:53+0000",
 			"languages": [
 				"hi"
 			],
@@ -1972,8 +1972,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.0.17",
-			"timeUpdated": "2024-04-17T03:04:05+0000",
+			"version": "2.0.0.18",
+			"timeUpdated": "2024-04-18T03:04:54+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1990,8 +1990,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.0.11",
-			"timeUpdated": "2024-04-16T15:01:59+0000",
+			"version": "2.0.0.12",
+			"timeUpdated": "2024-04-18T03:04:55+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -2008,8 +2008,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.0.13",
-			"timeUpdated": "2024-04-16T15:01:59+0000",
+			"version": "2.0.0.14",
+			"timeUpdated": "2024-04-18T03:04:55+0000",
 			"languages": [],
 			"tags": [
 				4
