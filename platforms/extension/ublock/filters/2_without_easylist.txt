@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 2efE86JbOWXURudHYeBMyQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713450852-3600.patch
+! Checksum: ELtrtduFA9H9jpZ0SA5MDQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713458042-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.31.71
-! TimeUpdated: 2024-04-18T14:31:27+00:00
+! Version: 2.3.31.72
+! TimeUpdated: 2024-04-18T16:31:17+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,12 @@
 !
 !
 !
+||haoelo.com^$all
+||get.stoplocker.com^$all
+||antoiew.com^
+||acedirect.net^$all
+||r-q-e.com^
+||adx1js.s3.amazonaws.com^
 ||lkhfkjp.com^
 ||aickeebsi.com^
 ||hstbbmtyptovqmw.com^
@@ -32093,6 +32099,9 @@ _ad_content.
 !+ NOT_PLATFORM(ext_safari, ios)
 /tghr.js$script
 !
+/zone/*?frame=0&ancestorOrigins=$all
+/direct-link?pubid=$all
+.com/redirect-zone/$all
 .com/afu.php?zoneid=$all
 ://creative.*/widgets/Spot/lib.js$third-party
 ://creative.*/widgets/v4/Universal?$subdocument,third-party
@@ -32482,6 +32491,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+heypoorplayer.com###widgets > div[id^="block-"]
 multmetric.com##div[style^="min-height: 300px;"]
 redbook.com.au##.is-section-doubleclickad
 ||resource.csnstatic.com/retail/cmp-retail-details/adverts-assets-*.js$domain=redbook.com.au
