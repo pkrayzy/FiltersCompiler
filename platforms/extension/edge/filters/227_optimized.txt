@@ -1,9 +1,9 @@
-! Checksum: uAtAndNVrRcTI2ndbBFHvQ
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1713445458-14400.patch
+! Checksum: plU8igOVlYQ0mgqSsL3eOQ
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1713531832-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.16
-! TimeUpdated: 2024-04-18T13:01:33+00:00
+! Version: 2.0.18.17
+! TimeUpdated: 2024-04-19T13:01:31+00:00
 ! Expires: 10 days (update frequency)
 ||ad.tpmn.io^
 ||cdn.nhnace.com^
@@ -230,6 +230,8 @@
 ||partner.googleadservices.com^
 ||i.keezip.com^
 ||awd.spochak.com^
+||splash-ad.classting.com^
+||ad-files.classting.com^
 ||middlepoint.co.kr^$third-party
 ||kiesta.net^$third-party
 ||nsmartad.com^
@@ -1246,6 +1248,7 @@
 ||loader2.fmkorea.com/_myphp/adpost/content_new.php
 ||loader.fmkorea.com/_loader/
 ||ssl.pstatic.net/tveta/libs/
+||anilife.*/assets/images/banner/$domain=anilife.*
 ||tvzone.*/data/banner/$domain=tvzone.*
 ||xvideos-kr.com/img/banner/
 ||images.request-support.com/br/$domain=tvwiki.*
@@ -1495,11 +1498,11 @@ g-enews.*##div[id^="tdn_"][style*="height:"]
 3277532532.reviewtoday.net##*[class*="-coupas-"]
 3277532532.reviewtoday.net##div[class^="Post_post__"] > .text-center:has(ins.adsbygoogle)
 search.naver.com##div[id^="power_link_together_"]
-namu.wiki,~board.namu.wiki##article div:not([class*=" "]) ~ div div + div[class*=" "]:has(iframe[id^="google_ads_"])
-namu.wiki,~board.namu.wiki##article div:not([class*=" "]) ~ div div + div[class*=" "]:has(iframe[src*="arca.live/external/callad"])
-namu.wiki,~board.namu.wiki##article div:not([class*=" "]) ~ div div + div[class*=" "]:has(> div[id][class])
+namu.wiki,~board.namu.wiki##div:not([class*=" "]) ~ div div + div[class*=" "]:has(iframe[id^="google_ads_"])
+namu.wiki,~board.namu.wiki##div:not([class*=" "]) ~ div div + div[class*=" "]:has(iframe[src*="arca.live/external/callad"])
+namu.wiki,~board.namu.wiki##div:not([class*=" "]) ~ div div + div[class*=" "]:has(> div[id][class])
 namu.wiki,~board.namu.wiki##div[class]:not([class*=" "]) ~ div[class*=" "] > *[class*=" "] > *:has(iframe[id^="google_ads_iframe_"])
-namu.wiki,~board.namu.wiki##article > div[class]:not([class*=" "]) ~ *:not([class]) > *[class]:has(iframe[id^="google_ads_iframe_"])
+namu.wiki,~board.namu.wiki##div[class*=" "] div[class]:not([class*=" "]) ~ *:not([class]) > *[class]:has(iframe[id^="google_ads_iframe_"])
 maple.gg##.container-content div[class*=" "]:has(> div[id^="div-gpt-ad-"]):not(:has(*[class]:not([id])))
 m.10000recipe.com##.sp_pdt_wrap
 new-m.pay.naver.com##div[class*="_banner_"][style]
@@ -2525,6 +2528,7 @@ orbi.kr##div.panel.class-event-wrap
 orbi.kr##a[href^="https://ads.orbi.kr/"]
 osen.mt.co.kr##div#close_mask
 www.erdcloud.com##.erd-ads-area
+anilife.*##.MainBnnWrap
 anilife.*##div[data-page] > div[class]:has(a[target="_blank"])
 tvzone.*##.main_banner
 xvideos-kr.com##.thumb-ad
