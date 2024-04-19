@@ -1,8 +1,8 @@
-! Checksum: eE1jJwnpndOsAtyzzEgaug
+! Checksum: NaoIr5sPZourd+OqX0mRtQ
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.21.58
-! TimeUpdated: 2024-04-19T03:05:17+00:00
+! Version: 2.0.21.59
+! TimeUpdated: 2024-04-19T17:36:48+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -17,6 +17,7 @@
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com##._aagw:empty
+realtime-chart.info##.osn_base
 [$path=/search]www.nicovideo.jp##.nicoadVideoItem
 fotospor.com##a[href="https://twitter.com/EfsaneFotospor"] > img
 fotospor.com##a[href="https://t.me/efsanefotospor"] > img
@@ -1373,6 +1374,9 @@ tennistemple.com##div[id="300x250_premium"]
 tennistemple.com##.right > div.box_nd > div[id="300x250"]
 banggood.com##.top_mt.datacube_banner
 ||contributions.guardianapis.com^
+famitsu.com##.l-contents-block:has(> div.row > div > div.card > div.ad-native-campaign-leftout)
+famitsu.com##div[class^="ArticleDetail_column_"]:has(> ul[class^="PrimaryCardList_wrapper_"] p[class^="PrimaryCardInner_adText"])
+dengekionline.com##li[class^="ArticleList_listBanner__"]
 terabox.com##.coupon-Popup-box
 ||wk-partners.co.jp/homepage/wp-content/themes/webkikaku/assets/images/blog-banner-ad.png
 ||best-hit.tv/random_pr.js
@@ -1383,7 +1387,6 @@ iotransfer.itopvpn.com#$#.language { margin-top: 0 !important; padding-top: 0 !i
 zerohedge.com##div[class^="PromoBanner_"]
 weedleteam.com##.kickstarter-visible
 renosy.com##.floatBanner
-flickr.com##.view:has(> div > p.upgrade-to-pro-cta)
 inzynieria.com##.partners-top
 twitter.com##div[data-testid="primaryColumn"] nav[aria-live][role="navigation"] + div[class]:has(> div > div[role="status"] > div > div > a[href="/i/premium_sign_up"][style^="text-overflow:"])
 wcostream.tv##td[width="160"][height="900"][align="left"]
