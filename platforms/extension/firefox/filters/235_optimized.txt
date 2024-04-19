@@ -1,9 +1,9 @@
-! Checksum: o1auhk1y55xDD810NImKEg
-! Diff-Path: ../patches/235_optimized/235_optimized-s-1713459829-14400.patch
+! Checksum: zKnZ3GJEM6k+e5DWEzx1sg
+! Diff-Path: ../patches/235_optimized/235_optimized-s-1713517446-14400.patch
 ! Title: Persian Blocker (Optimized)
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.27
-! TimeUpdated: 2024-04-18T17:01:33+00:00
+! Version: 2.0.4.28
+! TimeUpdated: 2024-04-19T09:01:37+00:00
 ! Expires: 10 days (update frequency)
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.site/"]
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
@@ -445,6 +445,8 @@ apktops.ir##.spcontent:upward(.post)
 apktops.ir##.post-article > .content > .row .entry-content:has-text(اسپاتیفای پرمیوم از APKTOPS):upward(.post-article)
 apktops.ir##[id^="linkcat"] > ul > li:not(:has(a[href*="apktops.ir"]))
 apktops.ir##.asiatech
+barcanews.org#%#//scriptlet('ubo-set.js', 'adsShow', 'true')
+barcanews.org##div.sidebar_ads
 ||binaopt.com/wp-content/uploads/*.webm^$media,~third-party
 binaopt.com#$#* { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
 bizma.ir#%#//scriptlet('ubo-aeld.js', '/contextmenu|copy|cut/', 'return"undefined"')
@@ -959,11 +961,11 @@ gooyait.com#@#.page-ads
 gooyait.com#@#.banner-ads
 gsm.ir##[href^="/ads/"]
 gsm.ir##.sidebar_tabliq
-gamefa.com###top-banners
-gamefa.com###image-advertise
-gamefa.com##.content-ads
-gamefa.com###fix-advertise
-[$path=/^((?!author/post).)*$/]gamefa.com###posts-body > .posts > .box > .d-block > .border-bottom .row .image > span.text-white:has-text(رپرتاژ آگهی):upward(.d-block)
+gamefa.com##header.header-part div.banner:has(> div.d-table-cell > a.d-block > img)
+gamefa.com##section#top-banners
+gamefa.com##section#image-advertise
+gamefa.com##div.content-ads
+gamefa.com##div#fix-advertise
 ||ghatreh.com/ads^
 ||ghatreh.com/skins/default/js/najva.js^
 ||ghatreh.com/skins/default/najva.css^
@@ -2729,6 +2731,7 @@ www.google.com#$#.g a[href*="miniroid.com"]> h3::after { content: ' [حذفیا�
 www.google.com#$#.g a[href*="tinroid.ir"]> h3::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 www.google.com#$#.g a[href*="par30games.net"]> h3::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 www.google.com#$#.g a[href*="p30day.ir"]> h3::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
+www.google.com#$#.g a[href*="downloadha.com"]> h3::after { content: ' [لینک دانلود در کانال تلگرام] ' !important; color: #E6000D !important; }
 duckduckgo.com#$#a[data-testid="result-title-a"][href*="download.ir"]::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 duckduckgo.com#$#a[data-testid="result-title-a"][href*="magbazi.com"]::after { content: ' [لینک دانلود در کانال تلگرام] ' !important; color: #E6000D !important; }
 duckduckgo.com#$#a[data-testid="result-title-a"][href*="par30dl.net"]::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
@@ -2738,6 +2741,7 @@ duckduckgo.com#$#a[data-testid="result-title-a"][href*="darkroid.ir"]::after { c
 duckduckgo.com#$#a[data-testid="result-title-a"][href*="miniroid.com"]::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 duckduckgo.com#$#a[data-testid="result-title-a"][href*="tinroid.ir"]::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 duckduckgo.com#$#a[data-testid="result-title-a"][href*="par30games.net"]::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
+duckduckgo.com#$#a[data-testid="result-title-a"][href*="downloadha.com"]::after { content: ' [لینک دانلود در کانال تلگرام] ' !important; color: #E6000D !important; }
 search.brave.com#$#div#results > div.snippet > a.result-header[href*="download.ir"] > span.snippet-title::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 search.brave.com#$#div#results > div.snippet > a.result-header[href*="magbazi.com"] > span.snippet-title::after { content: ' [لینک دانلود در کانال تلگرام] ' !important; color: #E6000D !important; }
 search.brave.com#$#div#results > div.snippet > a.result-header[href*="par30dl.net"] > span.snippet-title::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
@@ -2747,6 +2751,7 @@ search.brave.com#$#div#results > div.snippet > a.result-header[href*="darkroid.i
 search.brave.com#$#div#results > div.snippet > a.result-header[href*="miniroid.com"] > span.snippet-title::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 search.brave.com#$#div#results > div.snippet > a.result-header[href*="tinroid.ir"] > span.snippet-title::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
 search.brave.com#$#div#results > div.snippet > a.result-header[href*="par30games.net"] > span.snippet-title::after { content: ' [حذفیات لینک دانلود] ' !important; color: #E6000D !important; }
+search.brave.com#$#div#results > div.snippet > a.result-header[href*="downloadha.com"] > span.snippet-title::after { content: ' [لینک دانلود در کانال تلگرام] ' !important; color: #E6000D !important; }
 oila.tj#%#//scriptlet('ubo-aopr.js', 'window.LOCO_DATA.copyrightTranslation')
 ||oila.tj/storage/banners^$image
 ||oila.tj/storage/iframe^$subdocument
