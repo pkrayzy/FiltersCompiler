@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 5OFjz9Hgj5dIWaQp5KNmMQ
-! Diff-Path: ../patches/19/19-s-1713461650-3600.patch
+! Checksum: rDTuavUMJhtCdmgJDl4Qsg
+! Diff-Path: ../patches/19/19-s-1713513430-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.35.3
-! TimeUpdated: 2024-04-18T17:32:11+00:00
+! Version: 2.0.35.4
+! TimeUpdated: 2024-04-19T07:54:33+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3936,10 +3936,6 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 ###credential_picker_container
 ! mobile
 ###credential_picker_iframe
-! Google Chrome may render the popup as a floating element which is not a part of the page
-! that is why cosmetic rule `###credential_picker_container` does not work
-! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
-!||accounts.google.com/gsi/client^$third-party,script,domain=
 !
 api.flocktory.com
 /wp-content/plugins/ays-facebook-popup-likebox/*
@@ -4033,6 +4029,13 @@ api.flocktory.com
 !
 ! Good: any type of the rules will be good
 ! Bad:  @@||example.org^ (should be in popups_allowlist.txt)
+!
+!
+!
+! Google Chrome may render the popup as a floating element which is not a part of the page
+! that is why cosmetic rule `###credential_picker_container` does not work
+! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru
 !
 ! SECTION: Popups - Regular rules
 !
