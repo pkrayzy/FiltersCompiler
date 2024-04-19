@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 0dQgFv0gi3GSjIZGRoKOLg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713526459-3600.patch
+! Checksum: OdG60IE0PHt9AYrt44Eidw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1713530048-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.31.79
-! TimeUpdated: 2024-04-19T11:31:22+00:00
+! Version: 2.3.31.80
+! TimeUpdated: 2024-04-19T12:31:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -27621,7 +27621,7 @@ xxx18.uno##+js(set-cookie-reload, hasShownPromo, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167001
 uploadsea.com##+js(set-constant, openLink, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131500
-discoveryplus.*,go.discovery.com,investigationdiscovery.com##+js(json-prune, data.attributes.ssaiInfo.forecastTimeline data.attributes.ssaiInfo.vendorAttributes.nonLinearAds data.attributes.ssaiInfo.vendorAttributes.videoView data.attributes.ssaiInfo.vendorAttributes.breaks.*.ads.*.adMetadata data.attributes.ssaiInfo.vendorAttributes.breaks.*.ads.*.adParameters data.attributes.ssaiInfo.vendorAttributes.breaks.*.timeOffset)
+discoveryplus.*,go.discovery.com,investigationdiscovery.com,go.tlc.com,sciencechannel.com##+js(json-prune, data.attributes.ssaiInfo.forecastTimeline data.attributes.ssaiInfo.vendorAttributes.nonLinearAds data.attributes.ssaiInfo.vendorAttributes.videoView data.attributes.ssaiInfo.vendorAttributes.breaks.*.ads.*.adMetadata data.attributes.ssaiInfo.vendorAttributes.breaks.*.ads.*.adParameters data.attributes.ssaiInfo.vendorAttributes.breaks.*.timeOffset)
 discoveryplus.*,go.discovery.com,investigationdiscovery.com,go.tlc.com,sciencechannel.com#@#+js(xml-prune, xpath(//*[name()="MPD"][.//*[name()="BaseURL" and contains(text()\,"dash_clear_fmp4") and contains(text()\,"/a/")]]/@mediaPresentationDuration | //*[name()="Period"][./*[name()="BaseURL" and contains(text()\,"dash_clear_fmp4") and contains(text()\,"/a/")]]), , .mpd)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/165997
 play.max.com##+js(json-prune, ssaiInfo fallback.ssaiInfo)
@@ -32517,6 +32517,8 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+boobyday.com,gonewildday.com,poppornday.com##body > center:has(> div.bannerbottom)
+boobyday.com,gonewildday.com,poppornday.com###page > .menu-left:has(> div.btnhome)
 emojipedia.org##.text-\[\#adadad\]
 emojipedia.org###__next > .flex > main > .h-\[312px\]
 emojipedia.org##div[class^="MainSection_main-section"] .items-start > div.h-\[300px\]:has(> div[class^="AdContainer"])
