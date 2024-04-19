@@ -1,8 +1,8 @@
-! Checksum: AkgFBLsMAKPEbzazDLgSbA
+! Checksum: NGW/AKNeAyCN3fFzCCcypg
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.34.53
-! TimeUpdated: 2024-04-18T03:05:09+00:00
+! Version: 2.0.34.54
+! TimeUpdated: 2024-04-19T03:05:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -424,6 +424,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.InA
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.SidebarAd
 !#safari_cb_affinity
 !
+||dandyglow.com^$third-party
 ||signaturepod.com^$third-party
 ||nebulajubilee.com^$third-party
 ||pulsatingmeadow.com^$third-party
@@ -4030,10 +4031,6 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 ###credential_picker_container
 ! mobile
 ###credential_picker_iframe
-! Google Chrome may render the popup as a floating element which is not a part of the page
-! that is why cosmetic rule `###credential_picker_container` does not work
-! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
-||accounts.google.com/gsi/client^$third-party,script
 !
 api.flocktory.com
 /wp-content/plugins/ays-facebook-popup-likebox/*
@@ -4128,8 +4125,18 @@ api.flocktory.com
 ! Good: any type of the rules will be good
 ! Bad:  @@||example.org^ (should be in popups_allowlist.txt)
 !
+!
+!
+! Google Chrome may render the popup as a floating element which is not a part of the page
+! that is why cosmetic rule `###credential_picker_container` does not work
+! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru
+!
 ! SECTION: Popups - Regular rules
 !
+order.ymobile.jp#$#body { overflow: auto !important; position: static !important; }
+order.ymobile.jp#$##not-supported-browser-modal { display: none !important; }
+r10.net##div[data-cname^="topbar10barrk"]
 classy-online.jp###fw-player
 oko.press#%#//scriptlet('set-cookie', 'remember-pit-2', 'true')
 oko.press#%#//scriptlet('set-cookie', 'animatedDonation', 'true')
@@ -10885,7 +10892,6 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 @@||sdk.*.braze.com^$domain=forum.paradoxplaza.com
 ! Unblock "Sign in with your Google account" popup, where it is used as the only way to log in using Google account
 g123.jp,accounts.binance.com#@##credential_picker_container
-@@||accounts.google.com/gsi/client|$third-party,script,domain=g123.jp|accounts.binance.com|tango.me|iloveimg.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164746
 @@||technode.com/wp-content/plugins/newspack-popups/dist/view.css
 ! https://github.com/uBlockOrigin/uAssets/issues/16321
@@ -11577,7 +11583,7 @@ eisamay.com,samayam.com,indiatimes.com##.notification_popup
 timesnownews.com##div[class^="ArticleShow-ze__subscribe-container-"]
 ndtv.com##.live__updts
 chinatimes.com###avivid_waterfall_subscribe
-mediazona.by,mediazona.ca##.mz-push-banner
+mediazona.ca##.mz-push-banner
 ||thehindubusinessline.com/serviceworker.js
 fellowsfilm.com##.u-bottomFixer
 graty.me###push-modal
@@ -12159,6 +12165,9 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+vadimkravcenko.com##.custom-backdrop-show
+ubuntu.com###main-content div[class^="row-"] > .col:has(>  form[onsubmit*="newsletter signup"])
+ubuntu.com##.blog-p-card--muted:has(> .blog-p-card__content > form[onsubmit*="newsletter signup"])
 estadao.com.br##div[title="Estadão Pílula"]
 matchtv.ru##.video-js > a[href^="https://t.me/"]
 joesandbox.com###joeSandboxBasicModal
