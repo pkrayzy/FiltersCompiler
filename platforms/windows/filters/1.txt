@@ -1,9 +1,9 @@
-! Checksum: eKJbCvdU+esLoqBTxST8Hw
-! Diff-Path: ../patches/1/1-s-1713533675-3600.patch
+! Checksum: 5vWH6elZheIxxW+KAgsaLQ
+! Diff-Path: ../patches/1/1-s-1713616461-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.90.26
-! TimeUpdated: 2024-04-19T13:31:08+00:00
+! Version: 2.0.90.27
+! TimeUpdated: 2024-04-20T12:31:00+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1541,7 +1541,7 @@ ucoz.ru/informer/
 ||dpjrba.com^
 ||appcodedark.com^
 ||appcodepnik^
-||flyroll.ru^
+||flyroll.ru^$third-party
 ||adstreamer.ru^$third-party
 ||videohead.tech^
 ||openssp.ru^
@@ -5763,6 +5763,8 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 !-------JS----------
 !-------------------
 !
+! prevent ad requests
+aniqit.com#%#//scriptlet('json-prune', 'vast')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154442
 ain.ua#%#//scriptlet('abort-current-inline-script', 'jQuery', 'link_br')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96330
