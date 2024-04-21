@@ -1,5 +1,5 @@
-! Checksum: e5QkTHAxIgMmofSzptbskA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1713589438-14400.patch
+! Checksum: NJnC3jBcLylgQC+6GXL4RQ
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1713675839-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.13.96
@@ -9,6 +9,7 @@
 ##.app-banner:not(html,body,:empty)
 ##.app-btn:not(html,body,:empty)
 ##.app-download:not(html,body,section,.content)
+##.app-teaser:not(html,body,:empty)
 ##.AppBanner:not(html,body,:empty)
 ##.download-app-banner:not(html,body,:empty)
 ##.download-app:not(html,body,:empty)
@@ -196,7 +197,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||connatedresspint.com^$all
 ||eltontry.com^$all
 ||franklycommission.com^$all
-||injuredripplegentleman.com^$all
 ||novemberassimilate.com^$all
 ||outbursttones.com^$all
 ||recordingperky.com^$all
@@ -449,12 +449,11 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 165.227.168.212$network
 162.241.115.*$network
 23.81.64.183$network
+||nessainy.net^$all
 ||ofgogoatan.com^$all
-||lephaush.net^$all
 ||betzapdoson.com^$all
 ||whampamp.com^$all
 ||agamantykeon.com^$all
-||beludicolor.com^$all
 ||besmeargleor.com^$all
 ||outoctillerytor.com^$all
 139.45.197.236$network
@@ -488,7 +487,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 104.160.10.*$network
 165.231.154.*$network
 ||hokaoneone*$all
-*outletuk.com^$all
 165.231.10.*$network
 165.231.152.*$network
 196.196.52.*$network
@@ -508,7 +506,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||agacelebir.com^$all
 ||beklefkiom.com^$all
 ||cagothie.net^$all
-||cdrvrs.com^$all
 ||grunoaph.net^$all
 ||hetapugs.com^$all
 ||nossairt.net^$all
@@ -617,7 +614,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||artistictastesnly.info^$all
 ||aysesuretobea.com^$all
 ||choobinoobi.com^$all
-||edstevermotorie.com^$all
+||consukultingeca.com^$all
 ||ionakasulbackgrou.com^$all
 ||ksehinkitw.hair^$all
 ||liondolularhene.info^$all
@@ -1124,6 +1121,7 @@ google.*##.isv-r:has-text(/, [1-9][1-46-9]% OFF/)
 ://ww17.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
 ://ww18.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
 ://ww19.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
+://ww21.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
 ://ww24.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
 ://ww25.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
 ://ww31.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
@@ -1665,6 +1663,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /let-it-snow.
 /snow-fall.js
 /snow-falling.js
+/snow-storm^$script
 /snowfall-master.min.js
 /snowfall.jquery.
 /snowstorm-min.js
@@ -1944,6 +1943,7 @@ $removeparam=spLa
 $removeparam=affTrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
+$removeparam=SSAID
 $document,removeparam=/^cm_mmc.*$/
 $removeparam=hsCtaTracking
 $removeparam=tblci
@@ -2063,7 +2063,6 @@ $removeparam=subacctid
 $removeparam=subacctname
 $document,removeparam=/^.*affcid.*$/i
 $removeparam=afflid
-$removeparam=fcref
 $~xmlhttprequest,removeparam=mcid,domain=~miguvideo.*
 $~xmlhttprequest,removeparam=msid,domain=~rsc.org
 $removeparam=exactag_uk
@@ -2171,6 +2170,7 @@ $document,removeparam=/^source=webgains$/
 $document,removeparam=/^from=kelkoo.*$/
 $removeparam=paid
 $removeparam=pacid
+$removeparam=thg_ppc_campaign
 $removeparam=adtype
 $removeparam=tmad
 $removeparam=tmcampid
@@ -2178,6 +2178,7 @@ $removeparam=s_afcid
 $removeparam=n_cid
 $removeparam=af_ad
 $removeparam=af_ad_id
+$removeparam=af_ad_type
 $removeparam=af_adset
 $removeparam=af_adset_id
 $removeparam=af_c_id
@@ -2444,8 +2445,6 @@ $removeparam=hvexid
 $removeparam=cstrackid
 ||amazon.$removeparam=SubscriptionId
 ||amazon.$removeparam=hydadcr
-$removeparam=%2AVersion%2A,domain=amazon.*
-$removeparam=%2Aentries%2A,domain=amazon.*
 $removeparam=returnFromLogin,domain=amazon.*
 ||amazon.*/dp/$removeparam=tag,document
 ||amazon.*/stores/$removeparam=tag,document
@@ -3010,7 +3009,6 @@ $removeparam=iid,domain=cnn.com
 ||weibo.com/ajax/log$removeparam=act_code
 ||weibo.com/ajax/log$removeparam=fid
 $removeparam=/^cmpid%3D=.*$/i,domain=bloomberg.com
-||onbuy.com^$removeparam=stat
 ||despegar.$removeparam=/^clt_.*$/
 ||officemonster.co.uk^$removeparam=/^fo_.*$/
 ||hao123.com^$removeparam=tn
@@ -3109,7 +3107,6 @@ $document,removeparam=refresh,domain=cnn.com|startribune.com
 ||emag.ro^$removeparam=scenario_ID
 $removeparam=mt_click_id,domain=mail.ru|vkplay.ru
 $removeparam=/(\$)ja.*$/,domain=argos.co.uk
-$removeparam=nvid,domain=nvidia.com
 $removeparam=/^cid=DSS-Affiliate.*$/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
 $removeparam=/^cid=DSS-Search-.*$/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
 $removeparam=/^cid=DTCI_STAR-Synergy.*$/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
@@ -3152,8 +3149,12 @@ $removeparam=mt,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=spr,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=tc,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=textadID,domain=media-cdn.costco.ca|media-cdn.costco.com
+$removeparam=instance_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=nl,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
+$removeparam=regi_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
+$removeparam=segment_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=te,document,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
+$removeparam=user_id,document,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 ^fs=e&s=cl$document,removeparam=fs
 ^fs=e&s=cl$document,removeparam=s
 ||redirect.appmetrica.yandex.com^$removeparam=c
@@ -3162,6 +3163,7 @@ $document,removeparam=refId,domain=aebn.com|linkedin.com
 ||eporner.$removeparam=trx
 $removeparam=sub,domain=allboner.com|twinkvideos.com
 ||fandom.com^$removeparam=so
+||tumblr.com^$removeparam=is_related_post
 ||xbox.com^$removeparam=rtc
 ||tokopedia.com^$removeparam=extParam
 ||tokopedia.com^$removeparam=refined
@@ -3261,8 +3263,6 @@ $removeparam=embeds_referring_euri
 ||bugs.co.kr^$removeparam=wl_ref
 ||etsy.com^$removeparam=gpla
 ||etsy.com^$removeparam=gao
-||whitepages.com^$document,removeparam=wp_medium
-||whitepages.com^$document,removeparam=wp_content
 ||whitepages.com^$document,removeparam=wp_term
 ||sciencedirect.com/*?via%3D$removeparam=/^via%3D.*$/,document
 ||deepl.com^$document,removeparam=cta
@@ -3271,6 +3271,7 @@ $removeparam=embeds_referring_euri
 ||open.substack.com^$removeparam=r,document
 ||businessinsider.com^$document,removeparam=r
 ||businessinsider.com^$removeparam=op,document
+ref=spreadprivacy.com$removeparam=ref
 $removeparam=caniuse_source,document
 ||github.com^$removeparam=reference_location
 $removeparam=afSmartRedirect
@@ -3322,9 +3323,11 @@ $document,removeparam=_x_ns_sku_id,domain=temu.com
 $document,removeparam=_x_ads_channel,domain=temu.com
 $document,removeparam=_x_gmc_account,domain=temu.com
 $document,removeparam=_x_ads_creative_id,domain=temu.com
+$document,removeparam=_x_ns_device,domain=temu.com
 $document,removeparam=_x_ads_account,domain=temu.com
 $document,removeparam=refer_page_sn,domain=temu.com
 $document,removeparam=_x_ns_match_type,domain=temu.com
+$document,removeparam=_x_ns_msclkid,domain=temu.com
 $document,removeparam=_x_ads_set,domain=temu.com
 $document,removeparam=_x_ns_source,domain=temu.com
 $document,removeparam=_x_ads_id,domain=temu.com

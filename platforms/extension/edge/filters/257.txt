@@ -1,9 +1,9 @@
-! Checksum: crDgzq9N2mqur1SmRrj3+g
-! Diff-Path: ../patches/257/257-s-1713618231-14400.patch
+! Checksum: VfGqimklWNKGxXZjMzwhng
+! Diff-Path: ../patches/257/257-s-1713675818-14400.patch
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.0.38
-! TimeUpdated: 2024-04-20T13:01:55+00:00
+! Version: 2.0.0.39
+! TimeUpdated: 2024-04-21T05:01:46+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -6611,15 +6611,17 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! garena
 ! https://infosec.exchange/@urldna/112226284936503649
 !+ NOT_OPTIMIZED
-/^https:\/\/(ff\.)?member[.-]gare[a-z]+a\.vn\//$document,domain=~garena.vn
+/^https:\/\/(?:ff[-.])?member[-.]gare[a-z]+a(?:\.pro)?\.vn\//$document,domain=vn|~garena.vn
 !+ NOT_OPTIMIZED
-||garerna.vn^$all
+||garerna.vn^$all,to=~garena.vn
 !+ NOT_OPTIMIZED
-||gareza.vn^$all
+||gareza.vn^$all,to=~garena.vn
 !+ NOT_OPTIMIZED
-||member-garena.vn^$all
+||garena.pro.vn^$all,to=~garena.vn
 !+ NOT_OPTIMIZED
-||nhanqua.garenaff.io.vn^$all
+||member-garena.vn^$all,to=~garena.vn
+!+ NOT_OPTIMIZED
+||nhanqua.garenaff.io.vn^$all,to=~garena.vn
 ! microsoft
 !+ NOT_OPTIMIZED
 ||office365.account-terminations.com^$all
@@ -6645,6 +6647,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||usps.mytrackingie.top^$all
 !+ NOT_OPTIMIZED
 ||uaxaqr.com^$all
+!+ NOT_OPTIMIZED
+||wrc-gh.org/redelivery$document
 ! weebly/square phishing
 !+ NOT_OPTIMIZED
 /^https:\/\/(?:[a-z0-9]{2,}-)+10\d{4}\.weeblysite\.com\//$document
