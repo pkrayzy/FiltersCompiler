@@ -1,9 +1,9 @@
-! Checksum: vyF9pc6P8PM3A89Zg7A7pw
-! Diff-Path: ../patches/19/19-s-1713789284-3600.patch
+! Checksum: aEaotr89lwAxIm0Z7opvWQ
+! Diff-Path: ../patches/19/19-s-1713792856-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.35.17
-! TimeUpdated: 2024-04-22T12:31:59+00:00
+! Version: 2.0.35.18
+! TimeUpdated: 2024-04-22T13:32:03+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -215,8 +215,6 @@ auto.ru#%#//scriptlet('json-prune', 'ads')
 ! drive2.ru
 drive2.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.AdChosen')
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
-! pikabu
-pikabu.ru#%#//scriptlet('set-constant', 'Object.prototype.blockId', 'undefined')
 !   NOTE: Yandex direct end ⬆️
 !   !SECTION: Anti-adblock - Yandex direct
 !
@@ -4127,10 +4125,13 @@ api.flocktory.com
 ! Google Chrome may render the popup as a floating element which is not a part of the page
 ! that is why cosmetic rule `###credential_picker_container` does not work
 ! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
-||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru
+! Warning: check, if auth using Google is not broken
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru
 !
 ! SECTION: Popups - Regular rules
 !
+4gamers.com.tw#$#body { overflow: auto !important; padding-right: 0 !important; }
+4gamers.com.tw#$##aroma-idle-modal___BV_modal_outer_ { display: none !important; }
 leawo.org###banner-top-prom
 comnico.jp###hs-web-interactives-bottom-anchor
 fanblogs.jp##.aff-notice
