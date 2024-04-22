@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: HHGIpJOztgTL+JtfkLXeWQ
-! Diff-Path: ../patches/228_optimized/228_optimized-s-1713560642-14400.patch
+! Checksum: Af17a18aKrFXq+Def+I9Mg
+! Diff-Path: ../patches/228_optimized/228_optimized-s-1713776646-14400.patch
 ! Title: xinggsf (Optimized)
 ! Description: Blocks ads on the Chinese video platforms (MangoTV, DouYu and others).
-! Version: 2.0.2.71
-! TimeUpdated: 2024-04-19T21:01:29+00:00
+! Version: 2.0.2.72
+! TimeUpdated: 2024-04-22T09:01:30+00:00
 ! Expires: 5 days (update frequency)
 @@||bdstatic.com/static/common/widget/ui/admanager/$script,domain=image.baidu.com
 ||cpro.$domain=~baidu.com
@@ -1186,10 +1186,10 @@ iqiyi.com##.cupid-panel + div, div[data-adzone],#block-V
 iqiyi.com##+js(set-constant, Object.prototype.blackscreenDuration, 1)
 iqiyi.com##+js(set-constant, QiyiPlayerProphetData.a.data, {})
 t7z.cupid.iqiyi.com
-||mesh.if.iqiyi.com/player/pcw/update/commonAppDownloadData^$xmlhttprequest
 ||static.iqiyi.com/js/common/mars_v.js^$script
 ||video.iqiyi.com/ws$websocket
 ||www.iqiyi.com/service-worker.js
+||mesh.if.iqiyi.com/player/pcw/update/commonAppDownloadData^$xmlhttprequest
 ||127.0.0.1^$script,domain=iqiyi.com
 ||iqiyipic.com/image/20*_100000$image
 apisgame.iqiyi.com
@@ -1216,6 +1216,7 @@ xtgreat.com
 bilibili.com##.ad-report, .ad-floor
 bilibili.com##.gg-floor-module,#slide_ad,a[href^="//cm.bilibili.com"]
 ||api.bilibili.com/x/web-show/res/loc?pf=$~script
+||hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js^$script,redirect=noop.js
 ||hdslb.com/bfs/sycp/creative_img/$image
 cm.bilibili.com
 acfun.cn##.pause-display-container,#ad-comment,#ad-player-view
@@ -1231,6 +1232,7 @@ de.as.pptv.com
 pub.funshion.com
 ||relive.vodfile.m1905.com/video/qiantie202$media
 1905.com#$?#.pauseInfoWrap { remove: true; }
+sobot.com
 @@||tb.mgtv.com/sdk/*/ad-sdk.
 ad-survey.com
 ||video.da.mgtv.com/$media
@@ -1270,9 +1272,15 @@ zhiziyun.com
 le.com##.min_pause_img
 le.com##.hv_wm_logo
 cctv.com,www.douyu.com##+js(addEventListener-defuser, /visibilitychange|pagehide/)
-douyu.com##+js(set-constant, RTCPeerConnection.prototype.addTrack, noopFunc)
 ||douyucdn.cn/adxdsp/$image
+||www.douyu.com/webSocket.worker_$script
+||shark2.douyucdn.cn/front-publish/live-master/js/player_first/qvbp2p_douyu$script
 wan.douyu.com
+||shark2.douyucdn.cn/front-publish/live-master/js/room/topBanner_$script
+||shark2.douyucdn.cn/front-publish/live-master/js/room/ScreenBannerAd_$script
+||shark2.douyucdn.cn/front-publish/live-master/js/room/CloseVideoAd_$script
+||shark2.douyucdn.cn/front-publish/live-master/js/room/FreeTimeAd_$script
+||shark2.douyucdn.cn/front-publish/live-master/js/room/SuspendedBallAd_$script
 douyu.com##.Title-ad, .DropMenuList-ad, .DropPane-ad
 douyu.com##a[href^="https://g.wan."]
 huya.com##a[href^="https://wan."]
@@ -1311,7 +1319,7 @@ jads.co
 age.tv,agedm.org##+js(noeval-if, devtoolsDetector)
 ||toutiaoimg.com/origin/$image,domain=agedm.org|acgndmku.com|subaibaiys.com
 dandanzan.com,dandanzan10.top,nunuyy5.org##+js(set-constant, webkitRTCPeerConnection, null)
-dandanzan.com,dandanzan10.top,nunuyy5.org#$#.gm-fp-body video { max-height:100%!important }
+dandanzan.com,nnyy.in#$#.gm-fp-body video { max-height:100%!important }
 aqours.today
 2qpqwkx.cn
 z4a.net
