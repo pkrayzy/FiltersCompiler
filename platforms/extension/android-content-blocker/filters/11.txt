@@ -1,9 +1,9 @@
-! Checksum: SlzyTGYX+/EkUq8M/SCjHw
-! Diff-Path: ../patches/11/11-s-1713598412-3600.patch
+! Checksum: +F/eoZYc7cz2NZCj1MOjjw
+! Diff-Path: ../patches/11/11-s-1713778406-3600.patch
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.51.1
-! TimeUpdated: 2024-04-20T07:31:44+00:00
+! Version: 2.0.51.2
+! TimeUpdated: 2024-04-22T09:31:39+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1894,6 +1894,10 @@ deviantart.com#$#div[class*="dp-ad-"] {height: 0!important; width: 0!important; 
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177593
+@@||click.speee-ad.jp/v1/recwid?$script,domain=hochi.news
+@@||speee-ad.akamaized.net/tag/$script,domain=hochi.news
+@@||speee-ad.akamaized.net^$image,domain=hochi.news
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175651
 bestech.sk#@#img[width="320"][height="50"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166753
@@ -2268,6 +2272,8 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+hochi.news##.ad_response
+hochi.news#$#div[style="min-height: 1000px;"] { min-height: auto !important; }
 nan-net.com###bottomad2
 famitsu.com##.banner-header-video-container
 famitsu.com##.banner-window-jack-wrapper
