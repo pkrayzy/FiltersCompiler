@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.4",
-			"timeUpdated": "2024-04-21T23:32:06+0000",
+			"version": "2.3.30.5",
+			"timeUpdated": "2024-04-22T03:08:06+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.23.87",
-			"timeUpdated": "2024-04-21T23:31:51+0000",
+			"version": "2.1.23.88",
+			"timeUpdated": "2024-04-22T03:07:50+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.79",
-			"timeUpdated": "2024-04-21T23:31:53+0000",
+			"version": "2.1.24.80",
+			"timeUpdated": "2024-04-22T03:07:52+0000",
 			"languages": [],
 			"tags": [
 				2
