@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.6",
-			"timeUpdated": "2024-04-23T03:04:08+0000",
+			"version": "2.3.30.7",
+			"timeUpdated": "2024-04-23T14:12:04+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.68.71",
-			"timeUpdated": "2024-04-23T03:04:12+0000",
+			"version": "2.0.68.72",
+			"timeUpdated": "2024-04-23T14:12:08+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.55",
-			"timeUpdated": "2024-04-23T03:04:15+0000",
+			"version": "2.0.99.56",
+			"timeUpdated": "2024-04-23T14:12:11+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.81",
-			"timeUpdated": "2024-04-23T03:03:53+0000",
+			"version": "2.0.50.82",
+			"timeUpdated": "2024-04-23T14:11:46+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.92.74",
-			"timeUpdated": "2024-04-23T03:04:00+0000",
+			"version": "2.1.92.75",
+			"timeUpdated": "2024-04-23T14:11:53+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.23.89",
-			"timeUpdated": "2024-04-23T03:03:48+0000",
+			"version": "2.1.23.90",
+			"timeUpdated": "2024-04-23T14:11:41+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.81",
-			"timeUpdated": "2024-04-23T03:03:51+0000",
+			"version": "2.1.24.82",
+			"timeUpdated": "2024-04-23T14:11:44+0000",
 			"languages": [],
 			"tags": [
 				2
