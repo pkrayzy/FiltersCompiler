@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 73Yl6gdhXb1ZItA6xaV+ew
-! Diff-Path: ../patches/14/14-s-1713868441-3600.patch
+! Checksum: oqpR9td5cdC+yYAa1i/mKQ
+! Diff-Path: ../patches/14/14-s-1713872050-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.7
-! TimeUpdated: 2024-04-23T10:31:54+00:00
+! Version: 2.1.94.8
+! TimeUpdated: 2024-04-23T11:31:54+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2779,9 +2779,9 @@ grupapracuj.pl###gp_cookie_agreements
 erecruiter.pl###cookieLawInfo
 swedbank.se#$#body { overflow: auto !important; }
 swedbank.se#$#.cookie-banner { display: none !important; }
-krungsricard.com#$##cookieModal { display: none !important; }
-krungsricard.com#$#body { overflow: auto !important; padding-right: 0 !important; }
-krungsricard.com#$#.modal-backdrop { display: none !important; }
+lgseeds.com.ua,krungsricard.com#$##cookieModal { display: none !important; }
+lgseeds.com.ua,krungsricard.com#$#body { overflow: auto !important; padding-right: 0 !important; }
+lgseeds.com.ua,krungsricard.com#$#.modal-backdrop { display: none !important; }
 taishinbank.com.tw###cookie-accept-block
 viagogo.*#?##app > div[class*=" "] > div[class*=" "] > div[class*=" "]:has(> span a[href="/help/cookies"])
 player.amperwave.net##.v7-us-privacy-explicit-notice
@@ -13794,6 +13794,7 @@ akku-maeser.at##+js(set-cookie-reload, cookies_confirmed_1, 1)
 ! TODO: replace by the scriptlet when https://github.com/AdguardTeam/Scriptlets/issues/423
 !       will be done and products with new Scriptlets lib will be released
 !
+seventeen-web.jp##.cookie-consent-footer
 stolichki.ru##.pop-coockie
 my.sch.gr##.mycc-banner
 pl.canalplus.com##+js(set-cookie, cp_cc_required, 1)
@@ -14666,7 +14667,7 @@ jetzt.thw.de#@#.cookiebanner:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171776
 louwman.nl#@#body #cookie-policy
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171975
-gibson.com#@##cookieModal
+lgseeds.com.ua,gibson.com#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171958
 @@||cdn.jsdelivr.net/npm/cookieconsent$domain=travel.budgetdirect.com.au
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171935
@@ -22039,7 +22040,7 @@ api.flocktory.com
 ! that is why cosmetic rule `###credential_picker_container` does not work
 ! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
 ! Warning: check, if auth using Google is not broken
-||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com
 !
 ! SECTION: Popups - Regular rules
 !
@@ -51604,6 +51605,8 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !
 !   NOTE: Donation widgets (which are really annoying only)
 !
+thejournal.ie##+js(set-local-storage-item, total_page_views, 2)
+thejournal.ie##.contribution-prompt-wrapper-redesign
 digitallydownloaded.net##.entry-content > p > a[href="https://www.patreon.com/MattSainsb"]
 nookgaming.com##.ko_fi_widget
 nookgaming.com#?#.entry-content .awac-wrapper:has(div.ko-fi-button)
