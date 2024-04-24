@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: Cd8obFWPlc5corP4LFFYVg
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1713879230-3600.patch
+! Checksum: gtZ2KmIiaifcSxK6KQlOXA
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1713926035-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
 ! Version: 2.0.21.88
@@ -44,6 +44,7 @@ foxnews.com##+js(set-constant, Taplytics.featureFlagEnabled, trueFunc)
 foxnews.com##+js(adjust-setTimeout, Taplytics, *, 0.001)
 foxnews.com##+js(remove-class, gated-overlay, .article-gating)
 foxnews.com##+js(remove-class, has-gated-overlay|gated-article-body, .gated-article-body)
+zelvia.co.jp##.p-sticky
 inc.com##.mobile_video_insert
 ||geo.dailymotion.com/player/xdgu3.html$domain=idntimes.com
 cnyes.com##+js(remove-class, ppn-overflows, .ppn-overflows.ppn-floating_enable)
@@ -667,6 +668,7 @@ tecnoblog.net###tb-banner-whatsapp
 ivanovonews.ru##.news-detail__panel > div.news-detail__panel-col:has(> div.news-detail__panel-bottom > a[href^="https://dzen.ru/ivanovonews.ru?"])
 thenewstack.io###tns-promo-voxpop
 thenewstack.io###tns-footer-bar
+zelvia.co.jp##.p-sticky > div.container > div.p-side_sticky
 sport5.by###news > div[style="margin-bottom: 50px; margin-top: -40px;"]
 istories.media##div[class^="SocialMediaBanner"]
 abc-mart.net###___ratingbadge_0
@@ -690,7 +692,6 @@ cyclingnews.com###disqus_thread
 itsmycity.ru##div[class^="donate-text"]
 euronews.com##.c-sublock-most-viewed
 stirileprotv.ro###fakegrooveskin
-latestly.com###decor3
 healthshots.com##.stickySocial
 digitaltrends.com##div[class^="dtvideos"]
 cbssports.com#$#.VideoHero--sticky { position: static !important; }
@@ -736,7 +737,6 @@ eteknix.com###main > div[align="center"] > a[href^="http://bit.ly/"] > img
 turbopages.org##.fixed_widget-feedback
 climate.nasa.gov##.chertools_floater[data-react-props*="share"]
 4sysops.com###footer-sidebar-3
-server-setting.info###sc_bookmark
 4players.de###social_leftbar
 androidinsider.ru###telegram-banner
 metro.co.uk###we-need-monies
@@ -744,6 +744,7 @@ dailymail.co.uk##.dms-puff
 euroki.org##.filter_share
 m.star.com.tr,m.gunes.com##.fixed-interaction-bar
 vpnmentor.com##.follow-experts
+habibs.com.br##.messenger-bot
 fotomac.com.tr##.share
 astar.bz,anistar.org,online-star.org,online-stars.org##.share-soc
 appleinsider.ru,hi-news.ru##.sidebar-banner-telegram
@@ -789,7 +790,6 @@ ya.ru,yandex.*##:matches-path(/search).Distribution-Popup
 ya.ru,yandex.*##:matches-path(/search).DistributionSplashScreenModal-CloseButtonOuter
 ya.ru,yandex.*#$#:matches-path(/search).Distribution-Splashscreen { display: none !important; }
 ya.ru,yandex.*#$#:matches-path(/search).DistributionSplashScreenModal { display: none !important; }
-ya.ru,yandex.*##:matches-path(/search)div.Root[id]:has(> button.SplashscreenDefault-DeclineButtonOuter)
 ya.ru,yandex.*##:matches-path(/search)div.Root[id]:has(> button.DistributionSplashScreenModal-CloseButtonOuter)
 ya.ru,yandex.*#$#:matches-path(/search)body[style] { padding-right: 0 !important; overflow: auto !important; }
 ya.ru,yandex.*##:matches-path(/search).HeaderDesktopActions-Distribution
@@ -1120,6 +1120,7 @@ findamasters.com##.inSearchAdRow
 findamasters.com##+js(set-constant, AdGlare, {})
 javhoho.com##center > a[href="https://javhoho.com/subscription-plan/"]
 bloomberg.com###fortress-preblocked-container-root
+icy-veins.com##div[class^="premium_banners"]
 ||gomovies-online.cam/addons/*.gif
 gomovies-online.cam##body > div[class^="_"] > div[id^="_"]:only-child > style + div[id^="_"]
 winfuture.de#?#.topnews > div:has(a:contains(/(Anzeige)|Schnäppchen|sale|(?<!-)Angebot(?!s)|für nur [0-9]{1,} Euro/))
@@ -1245,7 +1246,6 @@ hwsw.hu##.news-feed-other > div > article.ab-news
 hwsw.hu##.article-content-inner > .ab-block
 phoronix.com##+js(set-constant, aax_getad_mpb, false)
 kachelmannwetter.com##.dkpw-deleteads
-escortbook.com##.escortbook_banner
 1fichier.com##.ui-widget-overlay
 1fichier.com##.ui-widget-content[aria-describedby="modal-msg"]
 theaustralian.com.au#$#body { overflow:visible!important; }
@@ -1408,7 +1408,6 @@ rocketleague.tracker.network##.app-promo-section
 microsoftedge.microsoft.com###banner
 dns-shop.ru##.products-list__banner
 tumblr.com##.HOjIH
-e-chords.com##.v_banner > div:has(> div[style="margin-top: 30px;"])
 e-chords.com##.v_banner > div[style="text-align:center; margin-top:20px;"]
 deepl.com##div[data-testid="app-ad-callout-callout"]
 trampos.co##.breadwin-box
@@ -1599,6 +1598,7 @@ nhanhoa.com##.shake_image_promotion
 woozooo.com###f_right > div[style="margin-top: 20px;"] > a[rel="noreferrer"] > img
 kafan.cn##.wrap.advert
 bakusai.com##.menuTopAds
+jikayosha.jp##.l-sidebar > div.widget_block
 translate.com##h1.heroTitle + small.heroSubtitle
 translate.com##.translateFiles
 translate.com##.mtGetPro
@@ -1979,8 +1979,6 @@ hindustantimes.com##.freemium-card
 backpacker.com,betamtb.com,cleaneatingmag.com,climbing.com,outsideonline.com,oxygenmag.com,pelotonmagazine.com,skimag.com,trailrunnermag.com,triathlete.com,vegetariantimes.com,velonews.com,womensrunning.com,yogajournal.com##.o-content-cta
 backpacker.com,betamtb.com,cleaneatingmag.com,climbing.com,outsideonline.com,oxygenmag.com,pelotonmagazine.com,skimag.com,trailrunnermag.com,triathlete.com,vegetariantimes.com,velonews.com,womensrunning.com,yogajournal.com##.c-thinbanner
 max.book118.com##.webpreview-recommend
-seo-akademiya.com#$##topbar { display: none !important; }
-seo-akademiya.com#$##seo-app > header { padding-top: 0 !important; }
 101.ru##.bnr-wide
 radarbox.com##.student-offer
 wired.com##.paywall-bar__consumer-marketing-unit
