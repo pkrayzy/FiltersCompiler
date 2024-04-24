@@ -1,9 +1,9 @@
-! Checksum: KpiOitST2uZxYj0iQZV2YQ
-! Diff-Path: ../patches/14/14-s-1713922442-3600.patch
+! Checksum: Scyil6zqytwhjTImSUU7jg
+! Diff-Path: ../patches/14/14-s-1713947639-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.16
-! TimeUpdated: 2024-04-24T01:31:54+00:00
+! Version: 2.1.94.17
+! TimeUpdated: 2024-04-24T08:31:49+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2408,6 +2408,9 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'f
 !
 ! NOTE: Regular rules
 !
+ynjn.jp##article.fixed > .items-center.text-white:has(> div > a[href*="/privacy/privacy_detail.html"])
+jackjones.com#$#body { overflow: auto !important; }
+jackjones.com#$#.flyout--cookienotification { display: none !important; }
 tjapan.jp##.fixed_banner
 nonno.hpplus.jp##.popup_banner
 m-tac.pl##.cookie-notice-ui
@@ -48178,6 +48181,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177320 timer
+wdho.ru#%#//scriptlet('set-constant', 'window.c', '1')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177548
 dwgshare.com#%#//scriptlet('adjust-setInterval', 'secounds', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176233
