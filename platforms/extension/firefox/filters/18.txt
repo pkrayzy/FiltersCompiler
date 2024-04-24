@@ -1,9 +1,9 @@
-! Checksum: Xo9MPoJyjfbDrvA+uQ+jbw
-! Diff-Path: ../patches/18/18-s-1713987232-3600.patch
+! Checksum: gKWS8l6xCPlGck6vWPl35g
+! Diff-Path: ../patches/18/18-s-1713990807-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.38.10
-! TimeUpdated: 2024-04-24T19:31:58+00:00
+! Version: 2.0.38.11
+! TimeUpdated: 2024-04-24T20:31:53+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -10817,7 +10817,7 @@ xing.com##.consent_wrapper
 xing.com##div[class^="cookie-consent-CookieConsent-container-"]
 wibc.com###ed-tos-bubble
 jagranjosh.com,jagran.com,herzindagi.com,newsnation.in###gdprbx
-uhrzeit.org###cookieContraption
+uhrzeit.org#%#//scriptlet('set-constant', 'getCookieConsent', 'false')
 shopdisney.de#$##disney-explicit-consent-prompt { position: absolute!important; left: -2000px!important; }
 mdv.de###BorlabsCookieBoxWrap
 dl03.magix.net,vegascreativesoftware.com,magix.com###cookieConsentMessage
@@ -14828,7 +14828,7 @@ sakurajav.com#%#//scriptlet('set-cookie', 'ce-cookie', 'Y')
 mathem.se#%#//scriptlet('set-cookie', 'CookieConsentPolicy', '1')
 kaiser-elektro.de#%#//scriptlet('set-cookie', 'mnd-cookie-accepted-wwwkaiserelektrode1', '1')
 medimops.de#%#(function(){var a={timestamp:(new Date).getTime(),choice:2,version:"1.0"};document.cookie="mxp="+JSON.stringify(a)+"; path=/"})();
-psg.fr#%#//scriptlet('set-cookie', 'cookie_acceptance', '1')
+eduportal.bielsko.pl,psg.fr#%#//scriptlet('set-cookie', 'cookie_acceptance', '1')
 ! archiveofourown.org#%#//scriptlet("abort-current-inline-script", "$j", "showTOSPrompt")
 kokaihop.se#%#//scriptlet('set-cookie', 'cookieUserPolicy', 'true')
 kmweg.de#%#//scriptlet('set-cookie', 'cookie_consent', '1')
@@ -15113,6 +15113,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177395
+uhrzeit.org#@#.acceptCookies
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177378
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=sportiva.shueisha.co.jp
 sportiva.shueisha.co.jp#@##onetrust-consent-sdk
