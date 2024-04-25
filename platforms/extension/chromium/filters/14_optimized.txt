@@ -1,9 +1,9 @@
-! Checksum: oluiMRwaSJ+78cq2Lggrig
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1714059232-3600.patch
+! Checksum: 7MOcX4Y8i9O+ffBDWq0flA
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1714062830-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.40
-! TimeUpdated: 2024-04-25T15:31:54+00:00
+! Version: 2.1.94.41
+! TimeUpdated: 2024-04-25T16:31:54+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1271,6 +1271,8 @@ _europecookielaw.
 ||usercentrics.eu^$third-party
 ||consensu.org^$domain=~consensu.org
 ||cmp.uniconsent.com^$third-party,domain=~xda-developers.com
+/admiral_worker_caller.js
+||cdn.sentinelp.com^$third-party
 ||cmpworker.operationsports.com^
 ||nebulousgarden.com^$third-party
 ||nebulacrescent.com^$third-party
@@ -10390,6 +10392,7 @@ api.flocktory.com
 ||widget.pico.tools^$third-party
 ||widget.privy.com^$third-party
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br
+m.lenta.ru##.spring2024-banner
 dnoticias.pt##.podcasts-home
 deech.co.jp###js-spHomeBar
 mwed.jp###sodan-banner
@@ -13600,6 +13603,7 @@ g123.jp,accounts.binance.com#@##credential_picker_container
 shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
 wallstreet-online.de,dni.ru#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
+||indianexpress.com/wp-content/themes/indianexpress/js/ie-moengage-*.js
 foxnews.com##.push-alert-notify
 gamingbible.com##div[class^="soft-notification-modal_"]
 ||uchubiz.com/wp-content/themes/uchubiz/assets/js/push.js
