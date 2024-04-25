@@ -1,9 +1,9 @@
-! Checksum: Jj3W07BaYsmvj0FHRWLNHA
-! Diff-Path: ../patches/228/228-s-1713935028-14400.patch
+! Checksum: /6/B1rJFAImLM0FcxIB8xw
+! Diff-Path: ../patches/228/228-s-1714007028-14400.patch
 ! Title: xinggsf
 ! Description: Blocks ads on the Chinese video platforms (MangoTV, DouYu and others).
-! Version: 2.0.2.75
-! TimeUpdated: 2024-04-24T05:01:29+00:00
+! Version: 2.0.2.76
+! TimeUpdated: 2024-04-25T01:01:28+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: 乘风 广告过滤规则
@@ -1202,7 +1202,7 @@ xshellcn.com
 yihuifu.cn
 www.zhzzx.com
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202404242
+! OriginalVersion: 202404251
 ! Expires: 1 day
 ! Homepage: https://github.com/xinggsf/Adblock-Plus-Rule/issues
 ! 屏蔽P2P
@@ -1237,16 +1237,17 @@ apisgame.iqiyi.com
 static.g.iqiyi.com
 ||ssports.iqiyi.com/json/shop/shopInfo
 show.ssports.com
+v.qq.com##.video-card-module > .card-wrap
 v.qq.com##.quick_games.quick_item, div.game-switch-ad
-!qq.com##.mod_ad, .txp_ad, .txp_ad_link, .adWrap
 qq.com#%#//scriptlet('ubo-json-prune.js', 'ads ad material.video')
-!qq.com##+js(no-xhr-if,/trace\.|\/collect/)
-qq.com#%#//scriptlet('ubo-no-fetch-if.js', 'beacon.')
+v.qq.com#%#//scriptlet('ubo-no-fetch-if.js', '/(beacon|trace)\.qq\.com/')
 !qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
 !qq.com##+js(aopr, Beacon.prototype.fail)
 @@||union.video.qq.com/fcgi-bin/$script,domain=qq.com
+iwan-s.video.qq.com
 gdt.qq.com
 cm.l.qq.com
+||mall.video.qq.com/m/activity/h5/$subdocument
 !||l.qq.com/lview?
 ||qq.com/livemsg?
 !||mark.l.qq.com/fcgi-bin/get_video_mark_all?
@@ -1256,11 +1257,6 @@ cm.l.qq.com
 !||ssp.qq.com/static/web/websites/pcnewsplugin/sspad_$script
 new.qq.com#%#//scriptlet('ubo-set.js', 'SSPAd.prototype.loadAd', 'noopFunc')
 ||news.ssp.qq.com/app
-miaozhen.com
-reachmax.cn
-scorecardresearch.com
-tencentmind.com
-xtgreat.com
 bilibili.com##.ad-report, .ad-floor
 bilibili.com##.gg-floor-module,#slide_ad,a[href^="//cm.bilibili.com"]
 ||api.bilibili.com/x/web-show/res/loc?pf=$~script
@@ -1337,7 +1333,7 @@ douyu.com##.Title-ad, .DropMenuList-ad, .DropPane-ad
 douyu.com,huya.com##a[href^="https://g.wan."]
 huya.com##a[href^="https://wan."]
 huya.com###hy-ad,#hy-ab,#huya-ab
-www.huya.com##.sidebar-banner
+www.huya.com##.sidebar-banner, a.J_g_resource
 www.huya.com##.duya-header-right,#public-screen-ab
 ||business.msstatic.com/advertiser/$image
 ||midext2.cdn.huya.com/ext-web-mid/ext-web-sub-frame/$subdocument
