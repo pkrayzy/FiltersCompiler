@@ -1,9 +1,9 @@
-! Checksum: Wpv1EVD9qk69SKYN6/cUDQ
-! Diff-Path: ../patches/18/18-s-1714052029-3600.patch
+! Checksum: VFWr9xF5WUTN+IWpdf4tZQ
+! Diff-Path: ../patches/18/18-s-1714059226-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.38.18
-! TimeUpdated: 2024-04-25T13:32:04+00:00
+! Version: 2.0.38.19
+! TimeUpdated: 2024-04-25T15:32:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2408,6 +2408,7 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'f
 !
 ! NOTE: Regular rules
 !
+laposte.net###privacy-overlay
 bleepingcomputer.com#%#//scriptlet('set-cookie', 'sc_cookie_consent', '0')
 smartcellular.co.uk###m-cookienotice
 melee.gg#%#//scriptlet('set-cookie-reload', 'CookieConsent', 'true')
@@ -15138,6 +15139,12 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177672
+! Rule $referrerpolicy is required for apps, becasue source of unblocked scripts is not detected
+! and due to this it doesn't work with $domain modifier
+||laposte.net^$referrerpolicy=origin
+@@||cdn.trustcommander.net/privacy/*/privacy_v*.js$domain=laposte.net
+@@||cdn.tagcommander.com/*/tc_LaPostenetPrivacy_*.js$domain=laposte.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177511
 @@||maps.vdl.lu/neo/v1/js/cookiebanner.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177351
@@ -15156,6 +15163,8 @@ biomedcentral.com#@#.cc-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177325
 @@||consent.cookiebot.com/uc.js$domain=tme.eu
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177260
+! Rule $referrerpolicy is required for apps, becasue source of unblocked scripts is not detected
+! and due to this it doesn't work with $domain modifier
 ||olympiapark.de^$referrerpolicy=origin
 @@||consent.cookiebot.com/uc.js$domain=olympiapark.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177017

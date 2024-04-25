@@ -1,9 +1,9 @@
-! Checksum: vm+Nwvi7bpkWTnZdOfG8hA
-! Diff-Path: ../patches/14/14-s-1714055639-3600.patch
+! Checksum: 9l1m/nQNgxIcn0lp3iyCpQ
+! Diff-Path: ../patches/14/14-s-1714059239-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.39
-! TimeUpdated: 2024-04-25T14:31:59+00:00
+! Version: 2.1.94.40
+! TimeUpdated: 2024-04-25T15:31:54+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2408,6 +2408,7 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'f
 !
 ! NOTE: Regular rules
 !
+laposte.net###privacy-overlay
 bleepingcomputer.com#%#//scriptlet('set-cookie', 'sc_cookie_consent', '0')
 smartcellular.co.uk###m-cookienotice
 melee.gg#%#//scriptlet('set-cookie-reload', 'CookieConsent', 'true')
@@ -15109,6 +15110,11 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177672
+! Rule $referrerpolicy is required for apps, becasue source of unblocked scripts is not detected
+! and due to this it doesn't work with $domain modifier
+@@||cdn.trustcommander.net/privacy/*/privacy_v*.js$domain=laposte.net
+@@||cdn.tagcommander.com/*/tc_LaPostenetPrivacy_*.js$domain=laposte.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177511
 @@||maps.vdl.lu/neo/v1/js/cookiebanner.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177351
@@ -15127,6 +15133,8 @@ biomedcentral.com#@#.cc-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177325
 @@||consent.cookiebot.com/uc.js$domain=tme.eu
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177260
+! Rule $referrerpolicy is required for apps, becasue source of unblocked scripts is not detected
+! and due to this it doesn't work with $domain modifier
 @@||consent.cookiebot.com/uc.js$domain=olympiapark.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177017
 @@||app.usercentrics.eu^$domain=pflanzen-koelle.de
@@ -22806,6 +22814,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+dnoticias.pt##.podcasts-home
 deech.co.jp###js-spHomeBar
 mwed.jp###sodan-banner
 newslaundry.com#%#//scriptlet('prevent-addEventListener', 'scroll', 'pageYOffset')
@@ -40641,7 +40650,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
-gata21.jp,livedoor.biz,alfalfalfa.com,livedoor.blog,blog.livedoor.jp###app-follow-banner
+ldblog.jp,gata21.jp,livedoor.*###app-follow-banner
 relax-job.com##.js-smartapp-banner
 relax-job.com##.p-top-app-appeal
 baby-calendar.jp##.l-anime-bana.js-bcweb-only
