@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: tV9gXEVAmcBl14x4kHFZng
-! Diff-Path: ../patches/14/14-s-1714044866-3600.patch
+! Checksum: ilqQjMhzsDe5UGGMnaf10g
+! Diff-Path: ../patches/14/14-s-1714048453-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.36
-! TimeUpdated: 2024-04-25T11:32:04+00:00
+! Version: 2.1.94.37
+! TimeUpdated: 2024-04-25T12:32:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2378,6 +2378,8 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*##+js(remove-class, force--consen
 !
 ! NOTE: Regular rules
 !
+smartcellular.co.uk###m-cookienotice
+melee.gg##+js(set-cookie-reload, CookieConsent, true)
 zaginieni.pl###cookie_politics_overlay
 mypalmshop.de##+js(set-constant, eCookiePopupDialog, {})
 pca.st##.custom-cookie-banner
@@ -22060,10 +22062,11 @@ api.flocktory.com
 ! that is why cosmetic rule `###credential_picker_container` does not work
 ! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
 ! Warning: check, if auth using Google is not broken
-||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br
 !
 ! SECTION: Popups - Regular rules
 !
+deech.co.jp###js-spHomeBar
 mwed.jp###sodan-banner
 newslaundry.com##+js(addEventListener-defuser, scroll, pageYOffset)
 blog.livedoor.com##body > a[href="https://www.youtube.com/@YoMuRy-mangadouga"]
@@ -22943,7 +22946,7 @@ bookhodai.jp##.fixbanner
 gaishishukatsu.com###noLoginFixedBanner
 ||smart-bdash.com^$domain=iface.com
 healthline.com##+js(remove-class, jw-flag-floating|jw-flag-small-player)
-||delivery.satr.jp^$domain=digima-news.com|cloudgate.jp
+||delivery.satr.jp^$domain=digima-news.com|cloudgate.jp|deech.co.jp
 map.baidu.com##+js(set-cookie, showLoginPopup, 1)
 map.baidu.com##+js(set-local-storage-item, firstEnter, false)
 haberturk.com##+js(remove-class, show, .widget-mini-player)
@@ -29252,6 +29255,7 @@ macwelt.de,pcwelt.de##+js(set-constant, firebase.messaging, noopFunc)
 !
 ! SECTION: Push notifications - Regular rules
 !
+foxnews.com##.push-alert-notify
 gamingbible.com##div[class^="soft-notification-modal_"]
 ||uchubiz.com/wp-content/themes/uchubiz/assets/js/push.js
 ||push.idowa.de^
@@ -51655,6 +51659,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !
 !   NOTE: Donation widgets (which are really annoying only)
 !
+newslaundry.com##.full-width:has(> div > img[alt="subscription-appeal-image"])
 thejournal.ie##+js(set-local-storage-item, total_page_views, 2)
 thejournal.ie##.contribution-prompt-wrapper-redesign
 digitallydownloaded.net##.entry-content > p > a[href="https://www.patreon.com/MattSainsb"]
