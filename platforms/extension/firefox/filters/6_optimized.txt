@@ -1,5 +1,5 @@
-! Checksum: cIewzB7GHN9bJBW/pYB1fA
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1714066423-3600.patch
+! Checksum: u19E7SCkY1Xym6jgxKWlEw
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1714098825-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.41.65
@@ -32,6 +32,7 @@
 ||afl-static-cdn.newbiz-prod.stroeerws.de^$third-party
 ||embed.contentverticals.de^$third-party
 ||ablyft.com^$third-party
+||tikibihu.com^$third-party
 ||partners2.das-onlinespiel.de^$third-party
 ||intextlinks.idg.zone^$third-party
 ||megadeliveryn.com^$third-party
@@ -1341,8 +1342,6 @@ delamar.de#%#//scriptlet('prevent-setTimeout', '#modal_livestream')
 krone.at#$#body .ad-container[data-nodeid] { display: block !important; }
 datenbanken-verstehen.de##div[class^="ad-block-"]:not(.ad-block-text)
 datenbanken-verstehen.de###ai_widget-46
-datenbanken-verstehen.de###ai_widget-38
-datenbanken-verstehen.de###ai_widget-91
 datenbanken-verstehen.de##.one-half:empty
 macwelt.de,pcwelt.de##.jwPlayer--floatingContainer
 auf1.tv##.w-full:has(> div.text-sm:contains(Bezahlte Anzeige))
@@ -1535,7 +1534,6 @@ focus.de###sidebar > div[id^="fwid"]
 mobile.de,focus.de##div[data-label="Anzeige"]
 ruhr24.de##div[id^="gptslot"]
 rp-online.de##div[id^="ir_rpd"]
-||jenaer-nachrichten.de/images/banners/
 nw.de##.box-ad-middle
 trendingtopics.eu##.post__aside-ad
 astroportal.com##div[data-apad]
@@ -1961,7 +1959,6 @@ golem.de###screen div[id^="iqadtile"]
 heise.de##.pvg-widget
 deskmodder.de###secondary > #codewidget-7
 deine-tierwelt.de###nativendo-mmg-frontpage-
-rtl.de##.adwrapper
 iphone-ticker.de##div[id^="verbraucherhinweis"]
 dhv.de##body > .dhv_topcolor > table
 ||dhv.de/dbfiles/wbg/images/*.gif
@@ -2320,6 +2317,7 @@ chip.de##section[data-vr-zone="hp-neongelb"] > ul.List > li:last-child
 tichyseinblick.de##.adwidget_sidebar
 telefonspion.de##.adlb
 www-zeit-de.cdn.ampproject.org,kirche-und-leben.de,otz.de,thueringer-allgemeine.de,tlz.de##.advertising
+focus.de##.adp-admarker
 frauenzimmer.de,rtl.de,vox.de,vip.de##.rtli-master-ad
 dejure.org##.reihe.googlediv
 dejure.org###werbungrechtsfloat
@@ -2577,6 +2575,7 @@ forum.golem.de#?#.list-comments > li:has(> div[style])
 photovoltaikforum.com#?#ul.wbbThreadPostList  > li:not([class]):has(> .wcfAdLocation)
 freundin.de#?#div[class]:has(> div[class]:last-child > div[class] > div[class] > a[href*="e-commerce"])
 freundin.de#?#.native-marketing:has(> .native-marketing__item-caption > .native-marketing__item-overhead:contains(BEZAHLTE PARTNERSCHAFT))
+freundin.de#?#.section__native-marketing:has(> .native-marketing__title:first-child + a[style="display: none !important;"]:last-child)
 duden.de#$?#div[class^="js-view-dom-id"] > div.segment  > section.vignette { margin: 0px!important; border-top: 0px !important; }
 duden.de#?#div  > aside:has( > header:contains(Anzeige))
 fondsweb.com#?#.f-padding_bottom > .col-12:has(> div[style] > [class^="fw--advertisement"])
@@ -2833,7 +2832,6 @@ rtl.de#@#.rtlde-medium-rectangle
 /nativendo/*
 /o2-layer.
 /pic/werbung/*
-/sponsoren/banner_
 /styles/*/werbung/*
 /upload/werbung/*
 /usemax/*
@@ -2910,9 +2908,9 @@ _werbung.pl
 ###reklame-rechts-mitte
 ###startwerbung
 ###topwerbung
-###werbeanzeige
 ###werbebanner
 ###werbebox
+###werbeflaeche
 ###werbeslot-artikel
 ###werbeslot-sidebar
 ###werbung
@@ -3079,6 +3077,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||ad4m.at^$third-party
 ||ad4mat.de^$third-party
 ||adalizer.com^$third-party
+||adc.tripple.at^$third-party
 ||adcocktail.com^$third-party
 ||addefend.com^$third-party
 ||adindex.de^$third-party
@@ -3432,7 +3431,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||pear.focus.de^
 ||pi-news.net/wp-content/uploads/*/Banner_
 ||pi-news.net/wp-content/uploads/*/pax_aktiv.jpg
-||pi-news.net/wp-content/uploads/*_banner.
 ||pi-news.net/wp-content/uploads/ad-
 ||pilotenboard.de/ad/
 ||plus.tourispo.com^
@@ -3460,6 +3458,8 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||sex-infos.ch^*/clubBanner/
 ||sexnews.ch/uploads/tx_sfbanners/
 ||sexvideos-hd.com/img/linklist/
+||sgf1903.de^*/Partner/
+||sgf1903.de^*/Sponsoring/
 ||skipper-bootshandel.de/wp-content/uploads/*/BANNER-
 ||somquery.sqrt-5041.de/tv/ad-wrapper
 ||speedtorrent.com/usenet/
@@ -3515,6 +3515,8 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||windowspro.de^$subdocument,domain=windowspro.de
 ||wir-leben-outdoor.de/wp-content/uploads/*/banner-
 ||wirin.de/images/banners/
+||wirsiegen.de/wp-content/uploads/*/Anwalt-Baranowski.jpg
+||wirsiegen.de/wp-content/uploads/*/steinmetz300.jpg
 ||wochenanzeiger.de/graphic/w/
 ||wochenblatt.cc^*/Werbung-
 ||wohnmobilforum.de/anhaengerkupplung.jpg
@@ -3714,6 +3716,7 @@ kleinanzeigen.de###home-billboard
 ladies.de###home-teaser
 winfuture.de###homepage_rectangle
 familienkost.de###incontent_1
+familienkost.de###incontent_2
 bz-berlin.de###inpage
 ariva.de,handelsblatt.com###iqd_mainAd
 rp-online.de###ir_rpd_lb
@@ -3814,6 +3817,7 @@ obermain.de,rhoenundsaalepost.de###slot-rectangle
 obermain.de,rhoenundsaalepost.de###slot-sky
 kochrezepte.at###slot_middle
 kochrezepte.at###slot_middle_2
+smsgott.de###smsboxIframe
 chemnitzerfc.de,deutsche-mittelstands-nachrichten.de,games.ch###sponsor
 itmagazine.ch###sponsorbutton_div
 queer.de###startrechts
@@ -3926,7 +3930,6 @@ smartdroid.de##.advorp1
 erf.de,greenbyte.ch,rtl.de##.adwrapper
 rtl.de##.adwrapper--mobile
 fitbook.de,myhomebook.de,stylebook.de,techbook.de,travelbook.de##.affiliate-amex
-pcgames.de##.affiliateBelowArticle
 nachbelichtet.com##.ai-track
 nextpit.de##.al-amazon
 ligaportal.at##.alert
@@ -4033,7 +4036,6 @@ finanznachrichten.de##.c-sban2
 scfreiburg.com,sgf1903.de##.c-sponsors-list
 focus.de##.cad
 focus.de##.cad_native
-1000ps.at##.cadbox
 heizsparer.de##.cadheight[style="min-height:600px;"]
 all-electronics.de,automobil-produktion.de,automotiveit.eu,chemietechnik.de,fertigung.de,fluid.de,instandhaltung.de,ke-next.de,kgk-rubberpoint.de,ki-portal.de,neue-verpackung.de,pharma-food.de,plastverarbeiter.de,produktion.de,technik-einkauf.de,werkzeug-formenbau.de##.ce_banneradbox
 utopia.de##.channel-logo-desc
@@ -4417,7 +4419,6 @@ kostenloses-fernsehen.de,melodieundrhythmus.com##.widget-3
 gameswirtschaft.de,haus-garten-magazin.de##.widget_aawp_widget_bestseller
 diekuechebrennt.de,gameswirtschaft.de##.widget_aawp_widget_box
 gearnews.de##.widget_adtag_rectangle
-diesachsen.de##.widget_commerce
 autogazette.de,cyclingmagazine.de,schmunzelseite.de,signal-online.de,solaranlage-ratgeber.de##.widget_custom_html
 delamar.de##.wk
 regensburg-digital.de##.wk-slideshow
@@ -4684,7 +4685,6 @@ businessinsider.de,bz-berlin.de,fitbook.de,giga.de,jetzt.de,myhomebook.de,noizz.
 finanzen.net##a[href^="https://ad.doubleclick.net/"]
 autobild.de,computerbild.de,finanzen.net,focus.de,gamestar.de,n-tv.de,ran.de##a[href^="https://paid.outbrain.com/network/redir?"]
 focus.de##a[href^="https://www.communicationads.net/tc.php"]
-focus.de##a[href^="https://www.financeads.net/tc.php"]
 ratehase.de##a[onclick^="setAdClick"]
 autobild.de,chip.de,computerbild.de,finanzen.net,focus.de,gamestar.de,metal-hammer.de,n-tv.de,pcwelt.de,ran.de,sport.de,tvspielfilm.de##a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"]
 wort.lu##div[class^="ad-element_"]
@@ -4806,6 +4806,7 @@ winfuture-forum.de#?#div.ExtraPostBlock:-abp-has(div.post_block:-abp-contains(An
 @@||googletagservices.com/tag/js/gpt.js$domain=windowspro.de
 @@||ib.adnxs.com/ut/v3$xmlhttprequest,domain=musikexpress.de|rollingstone.de|stylebook.de
 @@||ib.adnxs.com^$xmlhttprequest,domain=finanzen.ch
+@@||ikiosk.de/pdf/company/2/advertisement/$image,domain=ikiosk.de
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=atv.at|autobild.de|chip.de|computerbild.de|gentside.de|oe24.at|ohmymag.de|phonostar.de|schwaebische.de|spielaffe.de|sport.sky.de|wetter.at|wetteronline.de
 @@||img.classistatic.de/api/v1/mo-prod/images/ad/$image,domain=mobile.de
 @@||img.welt.de/img/Advertorials/$image,domain=welt.de
