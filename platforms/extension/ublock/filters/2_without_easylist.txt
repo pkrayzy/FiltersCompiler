@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: McEiy0Odp7raDObOToptyw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714124030-3600.patch
+! Checksum: Z6n734Djc/sAqVNr5e4LKw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714131260-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.32.79
-! TimeUpdated: 2024-04-26T09:31:16+00:00
+! Version: 2.3.32.80
+! TimeUpdated: 2024-04-26T11:31:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,8 @@
 !
 !
 !
+||idyllicjazz.com^
+||orclrul.com^
 ||vmkdfdjsnujy.xyz^
 ||sirdushi.xyz^
 ||ofleafeona.com^
@@ -27473,7 +27475,9 @@ soccer100.shop##+js(abort-on-property-write, u_cfg)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177229
 standard.co.uk##+js(adjust-setTimeout, /Autoplay|Piano|Request timeout|player|hlsjs\.start|r\|\|\(e\(\)/, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176868
-forgepattern.net,sportsonline.*##+js(abort-on-property-read, Adcash)
+! https://github.com/AdguardTeam/AdguardFilters/issues/177970
+official.nbabite.com,forgepattern.net,sportsonline.*##+js(abort-on-property-read, Adcash)
+official.nbabite.com##+js(abort-current-script, window, adserverDomain)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176869
 onloop.pro##+js(abort-on-property-read, PopUnder)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176835
@@ -32549,6 +32553,9 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+||bgr.com/*/pmc-adm-v2/build/setup-ads.js
+bgr.com##.bgr-ad-leaderboard
+bgr.com##aside > section:has(> div.bgr-ad-right-rail-top)
 lazyadmin.nl##a[href="https://lazyadmin.etsy.com/"] > img
 firstpost.com##.TABOOLA
 timesofindia.indiatimes.com##.imageBanner
