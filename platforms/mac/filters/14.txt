@@ -1,9 +1,9 @@
-! Checksum: hahTR8N/8Y5dRCqIy3ting
-! Diff-Path: ../patches/14/14-s-1714138481-3600.patch
+! Checksum: cEB0x7bXRT5IxWUiZwKJqA
+! Diff-Path: ../patches/14/14-s-1714142058-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.48
-! TimeUpdated: 2024-04-26T13:32:11+00:00
+! Version: 2.1.94.49
+! TimeUpdated: 2024-04-26T14:31:52+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2410,6 +2410,11 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'f
 !
 ! NOTE: Regular rules
 !
+4kfilme.de#$#div[consent-skip-blocker] { display: none !important; }
+4kfilme.de#$#html { overflow: auto !important; }
+4kfilme.de#$#body { overflow: auto !important; }
+bbb.org#%#//scriptlet('trusted-set-cookie-reload', 'iabbb_cookies_policy', '{%22necessary%22:true%2C%22functional%22:true%2C%22performance%22:false%2C%22marketing%22:false}')
+bbb.org#%#//scriptlet('trusted-set-cookie', 'iabbb_cookies_preferences_set', 'true')
 manufactum.com##div[data-cookie-banner-area="true"]
 mediamarkt.nl##div:has(> [data-test="mms-search-consent-section"])
 worthaus-ac.de##[class^="pixelmate-"]
@@ -15140,6 +15145,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/23454
+@@||usercentrics.eu^$domain=dr-beckmann.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177672
 ! Rule $referrerpolicy is required for apps, becasue source of unblocked scripts is not detected
 ! and due to this it doesn't work with $domain modifier

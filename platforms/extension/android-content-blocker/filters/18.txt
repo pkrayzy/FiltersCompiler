@@ -1,9 +1,9 @@
-! Checksum: fl0Pke2JrlBXtebNFl4eEQ
-! Diff-Path: ../patches/18/18-s-1714134831-3600.patch
+! Checksum: 0QNu8arRsHhjmC9dopwcSQ
+! Diff-Path: ../patches/18/18-s-1714142028-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.38.23
-! TimeUpdated: 2024-04-26T12:31:56+00:00
+! Version: 2.0.38.24
+! TimeUpdated: 2024-04-26T14:31:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2370,6 +2370,9 @@ movieplayer.it#$#html { overflow: visible !important; }
 !
 ! NOTE: Regular rules
 !
+4kfilme.de#$#div[consent-skip-blocker] { display: none !important; }
+4kfilme.de#$#html { overflow: auto !important; }
+4kfilme.de#$#body { overflow: auto !important; }
 manufactum.com##div[data-cookie-banner-area="true"]
 worthaus-ac.de##[class^="pixelmate-"]
 dietly.pl#$##cc-main { display: none !important; }
@@ -13323,6 +13326,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/23454
+@@||usercentrics.eu^$domain=dr-beckmann.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177672
 ! Rule $referrerpolicy is required for apps, becasue source of unblocked scripts is not detected
 ! and due to this it doesn't work with $domain modifier
