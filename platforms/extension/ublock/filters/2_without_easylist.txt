@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: jmazFMhKwT9I7WAn+p/8fw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714221241-3600.patch
+! Checksum: 0o5ZNzUivodUY9kCTIqKFw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714224841-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.32.99
-! TimeUpdated: 2024-04-27T12:31:16+00:00
+! Version: 2.3.33.0
+! TimeUpdated: 2024-04-27T13:31:23+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7285,6 +7285,8 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177996
+shortearn.net##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178020
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,redirect=googlesyndication.com/adsbygoogle.js,domain=texteditor.nsspot.net,important
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=texteditor.nsspot.net
@@ -32920,8 +32922,6 @@ fappeningbook.com##a[href="https://w1.fappeningbook.com/"]
 fappeningbook.com#?#.left-dv > div.left-inn-wrap-dv:not(:has(p:contains(Welcome to)))
 fappeningbook.com##.left-dv > h2
 worldhistory.org##+js(remove-node-text, script, adShieldScript)
-cdnstream.top,gaytry.com##div[style="position:relative;"] ~ div[style*="position:fixed;inset:0px;"][style*="background:black;opacity"]
-||cdnstream.top/assets/jquery/app*.js?type=adult&v=
 moviekhhd.biz###Ads + .tooltip
 moviekhhd.biz##a[target="_blank"] > img[src^="ads/"]
 ||moviekhhd.biz/ads/
@@ -50019,6 +50019,10 @@ adultlingeriepics.com,adultlingeriepics.com,adultspankingtgp.com,allfeetporn.com
 /(?:com|net)\/[0-9a-f]{12}\.js$/$script,~third-party,domain=imgadult.com|imgdrive.net|imgtaxi.com|imgwallet.com
 !
 !
+!+ NOT_OPTIMIZED
+cdnstream.top,gaytry.com##div[style="position:relative;"] ~ div[style*="position:fixed;inset:0px;"][style*="background:black;opacity"]
+!+ NOT_OPTIMIZED
+||cdnstream.top/assets/jquery/app*.js?type=adult&v=
 !+ NOT_OPTIMIZED
 autocarpro.in##body div[class^="ad-section-"]
 !+ NOT_OPTIMIZED
