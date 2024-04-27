@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 0o5ZNzUivodUY9kCTIqKFw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714224841-3600.patch
+! Checksum: 1oV57OBTGK+z4xbfJGXnBA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714232047-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.33.0
-! TimeUpdated: 2024-04-27T13:31:23+00:00
+! Version: 2.3.33.1
+! TimeUpdated: 2024-04-27T15:31:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -32467,7 +32467,8 @@ youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, playerRespon
 !
 ! Multiple trusted-replace-xhr-response causes breakage on music.youtube.com when logged in
 youtube.com##+js(json-prune, playerResponse.playerConfig.ssapConfig playerResponse.streamingData.serverAbrStreamingUrl playerConfig.ssapConfig streamingData.serverAbrStreamingUrl)
-! TODO: replace with json-prune-fetch-response when it will be available in extensions
+youtube.com##+js(json-prune-xhr-response, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots, , /playlist\?list=|player\?|watch\?v=/)
+youtube.com##+js(json-prune-fetch-response, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots, , /playlist\?list=|player\?|watch\?v=/)
 m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1925290685
 ||googlevideo.com/initplayback?source=youtube&*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com

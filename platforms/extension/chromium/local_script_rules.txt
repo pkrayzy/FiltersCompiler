@@ -4446,11 +4446,9 @@ youtubekids.com,youtube-nocookie.com,youtube.com#%#//scriptlet('set-constant', '
 youtubekids.com,youtube-nocookie.com,youtube.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.adSlots', 'undefined')
 youtubekids.com,youtube-nocookie.com,youtube.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.playerAds', 'undefined')
 youtubekids.com,youtube-nocookie.com,youtube.com#%#//scriptlet('set-constant', 'playerResponse.adPlacements', 'undefined')
-youtube.com#%#//scriptlet('trusted-replace-xhr-response', '/\"adPlacements.*?([A-Z]"\}|"\}{2,4})\}\]\,/', '', '/^(?!.*(\/\/tv\.youtube\.com)).*(playlist\?list=|player\?|watch\?v=)/')
-tv.youtube.com#%#//scriptlet('trusted-replace-xhr-response', '"adPlacements"', '"no_ads"', '/playlist\?list=|player\?|watch\?v=/')
 youtube.com#%#//scriptlet('json-prune', 'playerResponse.playerConfig.ssapConfig playerResponse.streamingData.serverAbrStreamingUrl playerConfig.ssapConfig streamingData.serverAbrStreamingUrl')
-youtube.com#%#//scriptlet('trusted-replace-fetch-response', '/"adPlacements.*?([A-Z]"\}|"\}{2,4})\}\]\,/', '', 'player?')
-youtube.com#%#//scriptlet('trusted-replace-fetch-response', '"adSlots"', '"no_ads"', '/playlist\?list=|player\?|watch\?v=/')
+youtube.com#%#//scriptlet('json-prune-xhr-response', 'playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots', '', '/playlist\?list=|player\?|watch\?v=/')
+youtube.com#%#//scriptlet('json-prune-fetch-response', 'playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots', '', '/playlist\?list=|player\?|watch\?v=/')
 m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com#%#//scriptlet('json-prune', 'playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots')
 [$path=/tv]youtube.com#%#//scriptlet('json-prune', 'playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots', '', '/https:\/\/www\.youtube\.com\/s\/player\/.*\/tv-player-ias\.vflset\/tv-player-ias\.js:/')
 www.youtube.com#%#(()=>{window.JSON.parse=new Proxy(JSON.parse,{apply(r,e,t){const n=Reflect.apply(r,e,t);if(!location.pathname.startsWith("/shorts/"))return n;const a=n?.entries;return a&&Array.isArray(a)&&(n.entries=n.entries.filter((r=>{if(!r?.command?.reelWatchEndpoint?.adClientParams?.isAd)return r}))),n}});})();
