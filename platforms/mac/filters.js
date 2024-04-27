@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.30.10",
-			"timeUpdated": "2024-04-26T03:07:41+0000",
+			"version": "2.3.30.11",
+			"timeUpdated": "2024-04-27T03:08:49+0000",
 			"languages": []
 		},
 		{
@@ -74,8 +74,8 @@
 			"displayNumber": 1,
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/3.txt",
-			"version": "2.0.68.75",
-			"timeUpdated": "2024-04-26T03:07:45+0000",
+			"version": "2.0.68.76",
+			"timeUpdated": "2024-04-27T03:08:54+0000",
 			"languages": []
 		},
 		{
@@ -87,8 +87,8 @@
 			"displayNumber": 1,
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/4.txt",
-			"version": "2.0.99.59",
-			"timeUpdated": "2024-04-26T03:07:47+0000",
+			"version": "2.0.99.60",
+			"timeUpdated": "2024-04-27T03:08:56+0000",
 			"languages": []
 		},
 		{
@@ -187,8 +187,8 @@
 			"displayNumber": 2,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/11.txt",
-			"version": "2.0.50.85",
-			"timeUpdated": "2024-04-26T03:07:28+0000",
+			"version": "2.0.50.86",
+			"timeUpdated": "2024-04-27T03:08:32+0000",
 			"languages": []
 		},
 		{
@@ -228,8 +228,8 @@
 			"displayNumber": 1,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/14.txt",
-			"version": "2.1.92.78",
-			"timeUpdated": "2024-04-26T03:07:34+0000",
+			"version": "2.1.92.79",
+			"timeUpdated": "2024-04-27T03:08:39+0000",
 			"languages": []
 		},
 		{
@@ -367,8 +367,8 @@
 			"displayNumber": 3,
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
-			"version": "2.1.23.93",
-			"timeUpdated": "2024-04-26T03:07:24+0000",
+			"version": "2.1.23.94",
+			"timeUpdated": "2024-04-27T03:08:27+0000",
 			"languages": []
 		},
 		{
@@ -603,8 +603,8 @@
 			"displayNumber": 2,
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
-			"version": "2.1.24.85",
-			"timeUpdated": "2024-04-26T03:07:27+0000",
+			"version": "2.1.24.86",
+			"timeUpdated": "2024-04-27T03:08:29+0000",
 			"languages": []
 		},
 		{

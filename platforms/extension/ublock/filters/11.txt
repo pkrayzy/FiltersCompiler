@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: XbiU1pGv0gkh2RwOU75vNw
+! Checksum: Fn3zl8cZ+Hv0rlwxDmfIrw
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.50.85
-! TimeUpdated: 2024-04-26T03:07:28+00:00
+! Version: 2.0.50.86
+! TimeUpdated: 2024-04-27T03:08:32+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1110,6 +1110,7 @@ westseattleblog.com#@#.header-ad
 ya.ru##services-feed div.banner
 !
 ! Yandex.Search
+! Update unblocking rule for the search ads in usefulads.txt
 yandex.*##div[class^="Direct"]
 yandex.*#?#:matches-path(/search/touch)div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div.Organic-Columns > div.Organic-Column > a[href][data-event-required])
 yandex.*#?#:matches-path(/search/touch)div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div[class^="VanillaReact"] > a[href][data-event-required])
@@ -1264,8 +1265,6 @@ pornhub.com,pornhub.org,pornhub.net##+js(set-constant, abp1, 0)
 m.viptube.com##+js(set-constant, player.postitialTimeout, 0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126103
 thestudentroom.co.uk##+js(remove-class, fixed_ad, #header.fixed_ad)
-! popunder on clicking thumbnails
-share-videos.se##+js(abort-current-script, $, clickurl)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120699
 ! popup on back/erobanach.com overlay
 openloadpro.com,erobanach.com##+js(addEventListener-defuser, , returnAd)
@@ -2306,6 +2305,10 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+cloud.mail.ru##div[class^="Page-touch__root"] > div[id][class][style="visibility: visible;"]:empty
+b.best-hit.tv##center > a[target="_blank"] > img
+b.best-hit.tv##div[style="margin-top:15px; margin-bottom:15px; text-align:center;"]
+b.best-hit.tv##.substitute-show-area-on
 firstpost.com##.stkadbtm
 firstpost.com##.mblad
 adacomi.com##body > a[href] ~ .bbs_box
