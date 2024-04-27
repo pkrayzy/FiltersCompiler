@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: HzxeCXgbv3x0LrqEWb1tsg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714217642-3600.patch
+! Checksum: jmazFMhKwT9I7WAn+p/8fw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714221241-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.32.98
-! TimeUpdated: 2024-04-27T11:31:19+00:00
+! Version: 2.3.32.99
+! TimeUpdated: 2024-04-27T12:31:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,7 @@
 !
 !
 !
+||go.syndcloud.com^
 ||lwhyihajamafu.com^
 ||utygdjcs.xyz^
 ||ewpubiimput.com^
@@ -7284,6 +7285,9 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178020
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,redirect=googlesyndication.com/adsbygoogle.js,domain=texteditor.nsspot.net,important
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=texteditor.nsspot.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177441
 @@||celebfapper.com/js/adManager.js
 celebfapper.com##+js(no-setTimeout-if, adblocktag)
@@ -19847,6 +19851,8 @@ mako.co.il##+js(set-constant, isBs, false)
 treccani.it##.gmp
 forum.fibra.click##.FibraClickAds-fake-poststream-item
 open.online##a[rel="sponsored"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/178012
+spaziogames.it##.mx-auto > div.text-center:has(> div.flex > div.not-prose > a[href^="https://www.amazon.it/"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176117
 kodami.it##.adv
 kodami.it#$#body { padding-top: 0 !important; }
@@ -32559,6 +32565,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+glitched.online#?#.widgettitle:contains(SPONSORED):upward([id^="text-"])
 top3.financefirefly.com##div[id^="penci_"]:has(center > div[id^="div-gpt-ad"])
 ||bgr.com/*/pmc-adm-v2/build/setup-ads.js
 bgr.com##.bgr-ad-leaderboard
