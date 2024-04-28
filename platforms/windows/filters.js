@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.11",
-			"timeUpdated": "2024-04-27T03:08:49+0000",
+			"version": "2.3.30.12",
+			"timeUpdated": "2024-04-28T03:03:02+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.68.76",
-			"timeUpdated": "2024-04-27T03:08:54+0000",
+			"version": "2.0.68.77",
+			"timeUpdated": "2024-04-28T03:03:05+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.60",
-			"timeUpdated": "2024-04-27T03:08:56+0000",
+			"version": "2.0.99.61",
+			"timeUpdated": "2024-04-28T03:03:07+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.92.79",
-			"timeUpdated": "2024-04-27T03:08:39+0000",
+			"version": "2.1.92.80",
+			"timeUpdated": "2024-04-28T03:02:55+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.23.94",
-			"timeUpdated": "2024-04-27T03:08:27+0000",
+			"version": "2.1.23.95",
+			"timeUpdated": "2024-04-28T03:02:47+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.86",
-			"timeUpdated": "2024-04-27T03:08:29+0000",
+			"version": "2.1.24.87",
+			"timeUpdated": "2024-04-28T03:02:49+0000",
 			"languages": [],
 			"tags": [
 				2
