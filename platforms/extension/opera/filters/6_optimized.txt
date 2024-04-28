@@ -1,5 +1,5 @@
-! Checksum: A2/s132tywB7rnKWea6hoQ
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1714214030-3600.patch
+! Checksum: KyEDcRWCVooGujZ1TqniKQ
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1714271625-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.41.71
@@ -562,8 +562,6 @@ duden.de#$#body { overflow: auto !important; }
 stadt-bremerhaven.de#$#body { overflow: auto !important; }
 recuton.xyz#%#//scriptlet('prevent-fetch', 'imasdk.googleapis.com')
 sport1.de#$#body { overflow: auto !important; }
-sport1.de#$##__next > div[elevation]:not(.w-full) { display: none !important; }
-sport1.de#$##__next > div[pointer-events="box-none"] { display: none !important; }
 file-upload.net#%#//scriptlet("set-constant", "start", "noopFunc")
 ||static.wlct-one.de^
 ||s.d.adup-tech.com/ads/display.js$script,redirect=noopjs,domain=quermania.de,important
@@ -934,8 +932,6 @@ brutto-netto-rechner.info##div[class^="adarea"]
 winfuture.de###news_content > #vergleich
 winfuture.de###news_content > #vergleich + iframe
 fraenkische-rezepte.de##.banner-desktop
-fraenkische-rezepte.de##.code-block:has(> div[id^="div-gpt-ad"]:only-child)
-fraenkische-rezepte.de##.code-block:has(> .OUTBRAIN)
 giga.de##.alice-teaser-list-item:has(> article[style="display: none !important;"]:only-child)
 ip-phone-forum.de##.xcx-ad
 ||ip-phone-forum.de/styles/ads/
@@ -994,6 +990,7 @@ studysmarter.de##.ss-dynamic-banner
 zockify.de#?#article > aside:has(> div > div.vm-dynamic-container)
 ratgeber.bunte.de##main ~ aside[id^="R1C"][role="complementary"]
 xn--solitr-online-ffb.eu##div[id*="pane"][class*="pane"][style]
+mahjong-spiel.eu##.bn[id][style]
 computerbase.de##.skin-ad
 bild.de##.mtl
 all-in.de###banner-container
@@ -1913,11 +1910,13 @@ freizeitpartnerweb.de,outdoorpartner.net,urlaubspartner.net##.ad.text-uppercase
 briefwahl-beantragen.de##.stadt-panel-right > .stadt-panel.stadt-formular-panel
 ||widgets.outbrain.com^$domain=spiegel.de|manager-magazin.de
 borkenerzeitung.de,bbv-net.de###WallpaperBanner
+pfalz-express.de##div[id^="banner_unter_menu"]
 unwetterzentrale.de###content > div[style*="width:336px;height:16px;"]
 kalender-365.de##.az
 anpfiff.info##.content-col-r > div > div[style="min-height:250px;"]
 anpfiff.info##.content-col-r > div > div[style="min-height:250px;"] ~ hr.linie-seperator
 anpfiff.info##div[id^="divAdv"]
+||brueckenkopf-online.com/wp-content/adds
 taz.de###adzone_wall
 tagesspiegel.de##div[id^="urban-"]
 chip.de##section[data-vr-zone="hp-neongelb"] > ul.List > li:last-child
@@ -2074,7 +2073,6 @@ xnxx-sexfilme.com#?#.grid_box:has(a[target="_blank"])
 autobild.de#?#.mainText > div:has(> .paragraph:only-child > div:first-child > link:first-child + section:last-child)
 autobild.de#?#.mainText > div:has(> .paragraph:only-child > br:only-child:empty)
 isteshaltbar.de#?##secondary > .inner:has(div[class*="-hpa-atf"])
-cooknsoul.de#?#div[data-insertion-position]:has(> div > div[id^="traffective-ad"])
 t-online.de#?#main > div[class]:has(> div[class]:only-child > div[class][data-commercial-format])
 t-online.de#?#div[data-testid="Stages.Container"] > div:has(> span > div[data-testid="nativendo-container"])
 t-online.de#?#div[data-testid="StageLayout.StreamItem"]:has(> div[data-testid] > .afl-widget-root)
@@ -2318,7 +2316,6 @@ rtl.de#@#.rtlde-medium-rectangle
 .org/werbung/
 /_werbung/*
 /bannerwerbung-
-/bilder/ads/*
 /bilder/werbung_
 /cms/werbung/*
 /grafik/ads/*
@@ -2420,7 +2417,6 @@ _werbung.pl
 ###werbung-banner
 ###werbung-rectangle1
 ###werbung-rectangle2
-###werbung-skyscraper
 ###werbung1
 ###werbung2
 ###werbung3
@@ -2468,6 +2464,8 @@ _werbung.pl
 ##.werbenbox
 ##.werbung
 ##.werbung-1
+##.werbung-2
+##.werbung-3
 ##.werbung-container
 ##.werbung-label
 ##.werbung-leiste
@@ -2930,6 +2928,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||outdoortest.info/wp-content/kooperation/
 ||parfumo.de/affi/
 ||partner.schalke04.de^
+||partyamt.de/images/b/
 ||paules-pc-forum.de/images/buch/
 ||pcgames.de/tsimg/topbanner/
 ||pcgamesdatabase.de/images/amazon_small.jpg
@@ -3079,6 +3078,7 @@ connextra.com##iframe[src^="https://ssl.connextra.com"]
 ||serving-sys.com/Serving/$domain=imasdk.googleapis.com
 ||smartadserver.com^$domain=autobild.de
 ||smartstream.tv^$domain=imasdk.googleapis.com
+||static.criteo.net/js/ld/publishertag.prebid.js$domain=autobild.de
 ||yieldlab.net^$domain=autobild.de
 ||flashtalking.com^$~media,domain=toggo.de
 ||flashtalking.com^*.mp4$redirect=noopmp4-1s,domain=toggo.de
@@ -3183,7 +3183,6 @@ dasoertliche.de###content-billboard
 ladies.de###content-solads
 tarnkappe.info###custom_html-126
 einkochen.info,ipadblog.de,leserbriefe.info,nh24.de,stimmt.at,wiener-online.at###custom_html-2
-ipadblog.de,presse-nachrichten.de,urheberrecht.de###custom_html-4
 nachrichten.es,primavera24.de,radsportjournaltourman.com###custom_html-5
 finanznachrichten.de,wallstreet-online.de###dban1
 finanznachrichten.de,wallstreet-online.de###dban2
@@ -3508,8 +3507,11 @@ cherry.ch,lust24.ch##.bannerListPremium
 cherry.ch##.bannerListPremiumTop
 goyellow.de##.bannerResult
 erotikforum.at##.bannerWrapper
+stock-world.de##.banner_bigsize_unten
 bluray-disc.de,der-farang.com##.banner_container
 apotheke-adhoc.de##.banner_container__mobile_billboard
+stock-world.de##.banner_content
+stock-world.de##.banner_sky
 112-magazin.de,bassprofessor.info,griechenland.net,hifistatement.net,highway-magazin.de,hitradio.com.na,kajak-magazin.com,kl-aktuell.de,loz-news.de,mef-line.de,motorradundreisen.de,naturundtherapie.at,osttirol-online.at,pc-experience.de,radio-oberland.de,sonic-seducer.de,speyer-report.de,spielbox.de,teneriffa-heute.net,tennistraveller.net,tvbb.de,vorsprung-online.de,wahrschauer.net##.bannergroup
 lokalkompass.de##.bannerslot-centered
 msh-online.de,nnz-online.de##.bannerwrapper
@@ -3991,6 +3993,7 @@ metager.de##a[href^="https://r.search.yahoo.com/"]
 report24.news##a[href^="https://tentorium.tv/"]
 bildschirmarbeiter.com,bitreporter.de,chip.de,emok.tv,naruto-tube.org,nickles.de,onepiece-tube.com,pcgamesdatabase.de,pcwelt.de,pi-news.net,ruhrbarone.de,schule-studium.de,wiiunews.at##a[href^="https://www.amazon."][href*="tag="]
 apfeltalk.de##a[href^="https://www.apfeltalk.de/magazin/affiliate/"]
+aus-liebe.net,pcwelt.de,radsport-seite.de##a[href^="https://www.awin1.com/cread.php?"]
 berliner-stadtplan.com,dein-plan.de,hamburger-stadtplan.com,hannover-stadtplan.com,leipziger-stadtplan.com,muenchener-stadtplan.com,potsdamer-stadtplan.com,spreewaldkarte.de##a[href^="https://www.booking.com/searchresults.de.html?aid="]
 chip.de##a[href^="https://www.chip.de/downloads/"][href$=".html"] > figure > img
 pi-news.net##a[href^="https://www.fincabayano.net/"]
@@ -4312,7 +4315,6 @@ winfuture-forum.de#?#div.ExtraPostBlock:-abp-has(div.post_block:-abp-contains(An
 @@||amazon-adsystem.com/aax2/apstag.js$script,domain=gamestar.de|moviepilot.de
 @@||asadcdn.com/adlib/$domain=autobild.de|rollingstone.de
 @@||asadcdn.com/adlib/$script,domain=sportbild.bild.de
-@@||asadcdn.com/adlib/libmodules/$script,domain=musikexpress.de
 @@||asadcdn.com/adlib/pages/bz-berlin.js$script,domain=bz-berlin.de
 @@||asadcdn.com/adlib/pages/musikexpress.js$domain=musikexpress.de
 @@||asadcdn.com/adlib/pages/stylebook.js^$script,domain=stylebook.de
