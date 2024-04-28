@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 3h7iMGDcO2QohKEfl2EBVA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714282438-3600.patch
+! Checksum: 8BbYsqneaZgCavf/c8zHDw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714289627-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.33.9
-! TimeUpdated: 2024-04-28T05:31:17+00:00
+! Version: 2.3.33.10
+! TimeUpdated: 2024-04-28T07:31:15+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -32467,17 +32467,6 @@ youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, playerRespon
 !!#endif
 ! Modify YT xhr responses
 ! $replace rules for Firefox
-! Disabled for https://github.com/AdguardTeam/AdguardFilters/issues/176113#issuecomment-2033847966
-! https://github.com/AdguardTeam/AdguardFilters/pull/170936
-! https://github.com/AdguardTeam/AdguardFilters/issues/167440
-! The rule trusted-replace-xhr-response with '\"adPlacements.*?([A-Z]"\}|"\}{2})\}\]\,' causes breakage on tv.youtube.com
-! The problem is that rules with '~' do not work correctly in Safari, the same might be for exceptions,
-! so requests from tv.youtube.com are excluded from this rule (the url part - '^(?!.*(\/\/tv\.youtube\.com)).*(player\?key=|watch\?v=)') and instead simple workaround is used
-!
-! Multiple trusted-replace-xhr-response causes breakage on music.youtube.com when logged in
-youtube.com##+js(json-prune, playerResponse.playerConfig.ssapConfig playerResponse.streamingData.serverAbrStreamingUrl playerConfig.ssapConfig streamingData.serverAbrStreamingUrl)
-youtube.com##+js(json-prune-xhr-response, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots, , /playlist\?list=|player\?|watch\?v=/)
-youtube.com##+js(json-prune-fetch-response, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots, , /playlist\?list=|player\?|watch\?v=/)
 m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1925290685
 ||googlevideo.com/initplayback?source=youtube&*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com
