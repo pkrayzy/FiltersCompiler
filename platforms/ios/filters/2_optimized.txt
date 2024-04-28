@@ -1,9 +1,9 @@
-! Checksum: 21ivVEgdcJkoKxbnDnMslQ
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1714307658-3600.patch
+! Checksum: V3f+dgmTzi6Umn731mz8xQ
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1714311232-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.33.14
-! TimeUpdated: 2024-04-28T12:31:20+00:00
+! Version: 2.3.33.15
+! TimeUpdated: 2024-04-28T13:31:15+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1303,7 +1303,9 @@ pornhub.com,pornhub.org,pornhub.net#%#//scriptlet('prevent-setTimeout', '\x41\x6
 shortearn.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=shortearn.net
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=texteditor.nsspot.net
+texteditor.nsspot.net#%#//scriptlet('set-constant', 'gadb', 'false')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/show_ads.js$domain=texteditor.nsspot.net
 @@||celebfapper.com/js/adManager.js
 celebfapper.com#%#//scriptlet('prevent-setTimeout', 'adblocktag')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -26544,6 +26546,7 @@ _800x80_
 ##.home-ads
 ##.homeAd
 ##.homepageAd
+##.homepage__native-ad
 ##.horizontal-ad
 ##.horizontal-ads
 ##.horizontal-advert-container
