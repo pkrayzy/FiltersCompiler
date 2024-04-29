@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.12",
-			"timeUpdated": "2024-04-28T03:03:02+0000",
+			"version": "2.3.30.13",
+			"timeUpdated": "2024-04-29T03:02:35+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.68.77",
-			"timeUpdated": "2024-04-28T03:03:05+0000",
+			"version": "2.0.68.78",
+			"timeUpdated": "2024-04-29T03:02:38+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.50.86",
-			"timeUpdated": "2024-04-27T03:08:32+0000",
+			"version": "2.0.50.87",
+			"timeUpdated": "2024-04-29T03:02:19+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.92.80",
-			"timeUpdated": "2024-04-28T03:02:55+0000",
+			"version": "2.1.92.81",
+			"timeUpdated": "2024-04-29T03:02:26+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.23.95",
-			"timeUpdated": "2024-04-28T03:02:47+0000",
+			"version": "2.1.23.96",
+			"timeUpdated": "2024-04-29T03:02:15+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.87",
-			"timeUpdated": "2024-04-28T03:02:49+0000",
+			"version": "2.1.24.88",
+			"timeUpdated": "2024-04-29T03:02:17+0000",
 			"languages": [],
 			"tags": [
 				2
