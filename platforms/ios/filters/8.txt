@@ -1,9 +1,9 @@
-! Checksum: SUiPVO7iZGqJwBzHxbsngw
-! Diff-Path: ../patches/8/8-s-1714152826-3600.patch
+! Checksum: htzNGsVo11K4Sw8PnPJxmA
+! Diff-Path: ../patches/8/8-s-1714383225-3600.patch
 ! Title: AdGuard Dutch filter
 ! Description: EasyList Dutch + AdGuard Dutch filter. Filter list that specifically removes ads on websites in Dutch language.
-! Version: 2.0.6.65
-! TimeUpdated: 2024-04-26T17:31:39+00:00
+! Version: 2.0.6.66
+! TimeUpdated: 2024-04-29T09:31:34+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1404,6 +1404,8 @@ vakantieplaats.nl#@#.topAds
 @@||content.hwigroup.net/images^$domain=hardware.info
 hardware.info,tweakers.net#@#.AdBar
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178088
+topkleurplaat.nl#%#//scriptlet('prevent-setTimeout', '.height() === 0')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177923
 filmvandaag.nl#%#//scriptlet('prevent-fetch', 'securepubads.g.doubleclick.net')
 !+ PLATFORM(ios, ext_android_cb)
@@ -1584,6 +1586,7 @@ omroepwest.nl#$#.adcontainer-Rectangle { position: absolute!important; left: -40
 ! Good: example.org###rek; ||example.com/ads/
 ! Bad: example.org#@##banner_ad (for instance, should be in allowlist.txt or in antiadblock.txt)
 !
+topkleurplaat.nl##a[href^="https://partner.bol.com/click/click"] > img
 ||cdn.aa.onstuimig.nl/mega-publishers/nieuwspaal.nl.js
 nieuwspaal.nl###abovecontent-widget-area
 wielerrevue.nl###WB_VIDEO_PLAYER_TARGET
