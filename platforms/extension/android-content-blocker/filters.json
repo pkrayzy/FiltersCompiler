@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.33.21",
-			"timeUpdated": "2024-04-29T05:31:15+0000",
+			"version": "2.3.33.22",
+			"timeUpdated": "2024-04-29T06:31:14+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -503,8 +503,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.39",
-			"timeUpdated": "2024-04-27T11:31:43+0000",
+			"version": "2.0.24.40",
+			"timeUpdated": "2024-04-29T06:31:37+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.94.68",
-			"timeUpdated": "2024-04-28T18:31:54+0000",
+			"version": "2.1.94.69",
+			"timeUpdated": "2024-04-29T06:31:48+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.64.80",
-			"timeUpdated": "2024-04-29T00:31:54+0000",
+			"version": "2.0.64.81",
+			"timeUpdated": "2024-04-29T06:31:49+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -660,8 +660,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.38.31",
-			"timeUpdated": "2024-04-28T17:32:03+0000",
+			"version": "2.0.38.32",
+			"timeUpdated": "2024-04-29T06:31:54+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -680,8 +680,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.35.60",
-			"timeUpdated": "2024-04-28T12:32:05+0000",
+			"version": "2.0.35.61",
+			"timeUpdated": "2024-04-29T06:31:55+0000",
 			"languages": [],
 			"tags": [
 				5,
