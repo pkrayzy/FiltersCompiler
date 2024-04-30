@@ -1,9 +1,9 @@
-! Checksum: q6UAnzEVarOcOC095GvTJg
-! Diff-Path: ../patches/19/19-s-1714487651-3600.patch
+! Checksum: dcXqPAdSiAcA46frcekO4A
+! Diff-Path: ../patches/19/19-s-1714491245-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.35.71
-! TimeUpdated: 2024-04-30T14:32:04+00:00
+! Version: 2.0.35.72
+! TimeUpdated: 2024-04-30T15:31:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1674,6 +1674,7 @@ hausbau-forum.de#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hausbau-forum.de
 !
+whatismybrowser.com#%#//scriptlet('set-constant', 'WIMB.detect.addons.adblock.enabled', 'falseFunc')
 phys.org,techxplore.com,medicalxpress.com##header > div.alert.bg-danger
 economictimes.indiatimes.com#%#//scriptlet('set-constant', '_tp_data.isPrime', 'true')
 mediamarkt.nl##div:has(> [data-test="mms-search-consent-section"])
@@ -3012,6 +3013,10 @@ uwaterloo.ca##div[aria-label="Ad Blocker Detected"]
 ! SECTION[id=general]: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
+whatismybrowser.com#@##ads-advert-banner
+whatismybrowser.com#@#.ads--square
+whatismybrowser.com#@#.ads--top
+whatismybrowser.com#@#.adFrame
 ||jsdelivr.net/npm/ad-compass@latest/dist/ad-compass.umd.js
 derwesten.de#@#.AdSense
 @@||xhamster*.*/*/api/ads$xmlhttprequest,~third-party
@@ -4319,6 +4324,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+linux.do#%#//scriptlet('remove-class', 'topic-in-gated-category', 'body')
+linux.do#$#div.topic-in-gated-category { display: none !important; }
 zhcw.com##.jltb
 japan.hackers.com##.closing-banner-area
 japan.hackers.com##.q_bn_left
@@ -11518,6 +11525,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||api.useinsider.com/static/native-push-sdk.js
 ||indianexpress.com/wp-content/themes/indianexpress/js/ie-moengage-*.js
 foxnews.com##.push-alert-notify
 gamingbible.com##div[class^="soft-notification-modal_"]
