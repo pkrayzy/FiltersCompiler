@@ -2299,7 +2299,7 @@
         },
         {
             "domains": "youtubekids.com,youtube-nocookie.com,youtube.com",
-            "script": "(()=>{const wrapper=(target,thisArg,args)=>{let content=Reflect.apply(target,thisArg,args);if(content.includes('ssapPrerollEnabled')){const modifiedContent=content.replace(/\\n.\\n.playerConfig\\.ssapConfig\\.ssapPrerollEnabled.{2}(?:tru|fals)e/,'');return modifiedContent;}return content;};const handler={apply:wrapper};window.atob=new Proxy(window.atob,handler);})();"
+            "script": "(()=>{const wrapper=(target,argumentsList,newTarget)=>{const result=Reflect.construct(target,argumentsList,newTarget);try{const decoded=new TextDecoder().decode(result);console.debug('Decoded:',decoded);if(decoded.includes('ssapPrerollEnabled')){const modifiedContent=decoded.replace(/\\n.\\n.playerConfig\\.ssapConfig\\.ssapPrerollEnabled.{2}(?:tru|fals)e/,'');const modifiedUint8Array=new TextEncoder().encode(modifiedContent);return modifiedUint8Array}}catch(e){} return result};const handler={construct:wrapper,};window.Uint8Array=new Proxy(Uint8Array,handler)})()"
         },
         {
             "domains": "www.youtube.com",
