@@ -1,9 +1,9 @@
-! Checksum: 1ftvXs9kXSVoAUMPDOORXg
-! Diff-Path: ../patches/18/18-s-1714469666-3600.patch
+! Checksum: khg/zZPStoXq+laohetTvg
+! Diff-Path: ../patches/18/18-s-1714476858-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.38.46
-! TimeUpdated: 2024-04-30T09:32:07+00:00
+! Version: 2.0.38.47
+! TimeUpdated: 2024-04-30T11:31:58+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2411,6 +2411,8 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'f
 !
 ! NOTE: Regular rules
 !
+backmarket.*#%#//scriptlet('trusted-click-element', 'div[data-qa="cookies-modal"] button:has(> span.body-2-bold)', '!cookie:BM_Analytics', '500')
+kuna.io##div[class*="cookies-footer"]
 mit-dem-rad-zur-arbeit.de#$##cookiebannerModal { display: none !important; }
 mit-dem-rad-zur-arbeit.de#$#.modal-backdrop { display: none !important; }
 mit-dem-rad-zur-arbeit.de#$#.modal-open { overflow: auto !important; }
@@ -14444,9 +14446,6 @@ newbalance.ru#%#//scriptlet('set-local-storage-item', 'cookieDate', 'emptyObj')
 ekstrabladet.dk#%#//scriptlet('set-cookie', 'CookieConsent', '1')
 ieatfoodtours.co.uk,londraculturale.it,onceinrome.com,weliketuscany.it#%#//scriptlet('set-cookie', 'fh_should_track', 'false')
 pdf24.org#%#//scriptlet('trusted-click-element', 'div[id*="EntryPage"] > .buttons > .declineAll')
-backmarket.*#%#//scriptlet('set-cookie', 'BM_Analytics', 'false')
-backmarket.*#%#//scriptlet('set-cookie', 'BM_Advertising', 'false')
-backmarket.*#%#//scriptlet('set-cookie-reload', 'BM_User_Experience', 'true')
 vr.fi#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem('cookieConsent','{"consented":true,"levels":{"level1":true,"level2":false,"level3":false,"level4":false}}'))}catch(a){}})();
 openingceremony.com#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem("SHOW_COOKIE_BANNER","no"))}catch(a){}})();
 sex.com#%#//scriptlet('set-cookie', 'sx_cookie_ok', '1')

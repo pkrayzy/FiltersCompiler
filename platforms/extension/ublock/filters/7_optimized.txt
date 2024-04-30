@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ETco+lMySjxLEMmuWV2fSg
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1714473254-3600.patch
+! Checksum: PVYLhizsTNyM952pM13m0A
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1714476853-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.51.18
-! TimeUpdated: 2024-04-30T10:31:35+00:00
+! Version: 2.0.51.19
+! TimeUpdated: 2024-04-30T11:31:37+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||ad.unique1static.jp^
@@ -596,11 +596,7 @@ h-ken.net##+js(set-constant, adBlockDetected, noopFunc)
 /modal-dist/index.js$script,domain=ananweb.jp|newsweekjapan.jp
 coron.tech##+js(remove-attr, class, [id][role] > [id] > [class] > section)
 connect.coron.tech##+js(abort-current-script, jQuery, decodeURIComponent)
-ad-contents.jp##+js(addEventListener-defuser, load, ad blocker)
-!+ NOT_PLATFORM(ext_safari)
-ad-contents.jp#$#.ui-wrapper { display: block !important; }
-!+ NOT_PLATFORM(ext_safari)
-ad-contents.jp#$#.mid-rectangle { display: none !important; }
+@@||ad-contents.jp^$generichide
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication.com/adsbygoogle.js,domain=ap-siken.com|db-siken.com|fe-siken.com|itpassportsiken.com|nw-siken.com|pm-siken.com|sc-siken.com|sg-siken.com|fp1-siken.com|fp2-siken.com|fp3-siken.com
 fp1-siken.com,fp2-siken.com,fp3-siken.com,ap-siken.com,db-siken.com,fe-siken.com,itpassportsiken.com,nw-siken.com,pm-siken.com,sc-siken.com,sg-siken.com##+js(no-setTimeout-if, _0x)
 applion.jp#@#.ads-ad
@@ -8090,7 +8086,7 @@ weblio.jp##.rectangle-ads-frame-www
 weblio.jp##.adBannerHdWrp
 weblio.jp##.adSmpBnrFtBtSp
 weblio.jp##.adBkOverlayClr
-ad-contents.jp##.large-banner
+ad-contents.jp##.ui-main-body > div.large-banner
 ad-contents.jp##.regular-banner
 ad-contents.jp##.overlay-item
 ad-contents.jp##.overlay-mask
