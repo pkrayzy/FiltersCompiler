@@ -1,9 +1,9 @@
-! Checksum: yDNJMA0eOwMJCf+lS41wpA
-! Diff-Path: ../patches/14/14-s-1714466029-3600.patch
+! Checksum: aEiVRogSfAvW9jw7hfpYPA
+! Diff-Path: ../patches/14/14-s-1714469635-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.85
-! TimeUpdated: 2024-04-30T08:31:58+00:00
+! Version: 2.1.94.86
+! TimeUpdated: 2024-04-30T09:32:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2371,6 +2371,9 @@ movieplayer.it#$#html { overflow: visible !important; }
 !
 ! NOTE: Regular rules
 !
+mit-dem-rad-zur-arbeit.de#$##cookiebannerModal { display: none !important; }
+mit-dem-rad-zur-arbeit.de#$#.modal-backdrop { display: none !important; }
+mit-dem-rad-zur-arbeit.de#$#.modal-open { overflow: auto !important; }
 probit.com##app-cookie-popup
 blindenschule.ch###ig-consent-container
 gutscheine.n-tv.de##.cookie
@@ -13320,6 +13323,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178222
+mit-dem-rad-zur-arbeit.de#@##cookiebanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178161
 @@||delivery.consentmanager.net/delivery/customcmp/*.js$domain=propertydesign.pl
 @@||delivery.consentmanager.net/delivery/cmp.php$domain=propertydesign.pl
@@ -27626,7 +27631,7 @@ thedailystar.net###bellIcon
 ||alerts.thedailystar.net/js/alerts.js
 banglatech24.com,minsknews.by###perfecty-push-dialog-container
 minsknews.by##.perfecty-push-settings-container
-sacbee.com##.ab-in-app-message
+theolympian.com,sacbee.com##.ab-in-app-message
 youla.ru##article[role="alert"]
 toy-people.com###notification_alert_container
 kion546.com##.viafoura > div[data-test="tray-trigger-root-element"]
@@ -34192,6 +34197,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! TODO: Delete the following rule when https://github.com/AdguardTeam/ExtendedCss/issues/172 is resolved.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 !
+indiatimes.com##a[href^="https://timesofindia.onelink.me"]
 wear.jp##button > img[width="686"][height="264"]
 typhoon.yahoo.co.jp###calendar_detail2_module
 mydealz.de##.browserExtension-promotionBanner
@@ -34362,7 +34368,7 @@ vkplay.ru##div[class^="NativeAppBannerBase_root"]
 max.book118.com##.side-app
 max.book118.com##.preview-app
 community.oneplus.com##.oneplus-app
-amazon.com.mx,amazon.co.jp###native-app-upsell
+amazon.ca,amazon.com.mx,amazon.co.jp###native-app-upsell
 emergency-weather.yahoo.co.jp##.spFooterBanner
 tw.news.yahoo.com##main > div#postArticle > div#module-mktIframe
 calm.com##div[class^="QRCodeHandoff__HandoffWrapperWrapper-"]
