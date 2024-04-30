@@ -1,9 +1,9 @@
-! Checksum: oSagRfc/ASOPu1a3ARMkIw
-! Diff-Path: ../patches/14/14-s-1714480419-3600.patch
+! Checksum: Gf0oDZPBQaCAhXS7IXcfkQ
+! Diff-Path: ../patches/14/14-s-1714484015-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.94.89
-! TimeUpdated: 2024-04-30T12:31:45+00:00
+! Version: 2.1.94.90
+! TimeUpdated: 2024-04-30T13:31:55+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -13324,6 +13324,9 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177668
+!+ PLATFORM(ios, ext_android_cb)
+@@||cdn.privacy-mgmt.com^$domain=filext.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177835
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=costco.ca
 costco.ca#@##onetrust-consent-sdk
@@ -20953,6 +20956,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+japan.hackers.com##.closing-banner-area
+japan.hackers.com##.q_bn_left
+japan.hackers.com##.dungdung
 familydollar.com##.modal-backdrop
 familydollar.com##.modal-dialog.alert
 life.oricon.co.jp##.overlay-box
@@ -21650,7 +21656,8 @@ video.sibnet.ru##.pobeda2023_push
 video.sibnet.ru###pobeda2023-sticky
 boxnovel.baidu.com##.popup_mask
 ossan-deai.net,smart-iphone.com##.bfb_textBtnTextBtn
-adlock.com##.adl__spec__disc__content
+adlock.com#$#.adl__spec__disc__content { display: none !important; }
+adlock.com#$#body[style^="filter: blur"] { filter: unset !important; }
 open-minds.it##.fixed-banner
 you.com##div[data-eventname="user_click_in_non_app"]
 wired.com##div[class^="PaywallBarWrapper"]
@@ -45848,7 +45855,7 @@ youtube5ch.com##.article-more-rss
 youtube5ch.com##.article-footer-rss
 /rss_$subdocument,domain=eegg.fun
 ||eegg.fun/rssline.html
-blog.fc2.com,blog.jp###blogroll
+karapaia.com,blog.fc2.com,blog.jp###blogroll
 ssimas72.blog.jp##div[style^="width:990px;height:300px;"]
 tokimeki-s.com,rabitsokuhou.2chblog.jp###rss
 xn--gmq92kd2rm1kx34a.com###rssrole
