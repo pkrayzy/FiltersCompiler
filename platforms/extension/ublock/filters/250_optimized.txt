@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: QUjjeBENF70f4rm4JbCnmQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1714439050-14400.patch
+! Checksum: W0S3eVjbFF9EbxTa0c2mpw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1714453440-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.4
@@ -132,6 +132,7 @@ exefiles.com##.row:has(a[href*="/recommended/"])
 /^https?:\/\/((?!www)[a-z]{3,5}\.)?[-0-9a-z]{6,}\.(?:com|fun|guru|life|online|pw|site|space|top)\/\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,match-case,domain=com|fun|guru|life|online|pw|site|space|top
 /^https?:\/\/(?:www\.)?[-0-9a-z]{14,}\.(?:biz|fun|live)\/[a-zA-Z]{10,}\.php$/$document,domain=biz|fun|live
 ||freeroms.com^$document
+||romsmania.com^$document
 ||roms-download.com^$document
 ||gamesgx.net^$document
 coolrom.com.au,coolrom.com##.download_link
@@ -258,7 +259,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||naborutmyrq.top^$all
 ||nedtolethimbevx.com^$all
 ||oefanyorbesttn.info^$all
-||pohsoneche.info^$all
 ||pringed.space^$all
 ||puldhukelpmet.com^$all
 ||ricewaterhou.xyz^$all
@@ -525,6 +525,7 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 ##a[onclick*="plus.google.com/share?"]
 ##a[onclick^="window.open('http"][onclick*="facebook.com/sharer"]
 ##a[onclick^=ShowShareDialog]
+##a[onmouseover^="return addthis_open"]
 ##a[title="Share on Reddit" i]
 ##a[title="Share on Telegram" i]
 ##a[title="Share on WhatsApp" i]
@@ -563,7 +564,6 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 /btn_share_fb.
 /btn_share_tw.
 /modules/responsive_share_buttons^
-/share-icons_$image
 /share/*-icon.png$image
 /sharing/facebook.$image
 /sharing/reddit.$image
@@ -659,6 +659,7 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 ###share-twitter
 ##.btn-twitter:not(html,body,:empty)
 ##.icon--twitter:not(html,body,:empty)
+##.js-share-twitter:not(html,body,:empty)
 ##.share-twitter:not(html,body,:empty)
 ##.twitter-share:not(html,body,:empty)
 ##.twitter[href*="/share?"]:not(html,body,:empty)
@@ -709,7 +710,6 @@ addons.opera.com###overlay
 duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##div.header--aside__item:has(+ a)
 archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion,btdig.com##+js(abort-current-script, document.cookie, document.location.href)
 rapid-cloud.co##+js(abort-on-property-write, navigator.brave)
-/getAdobeReader.$image
 gigabyte.com#?#div.target-container.desc:has-text(PDF files with Acrobat )
 /get_adobe_reader.$image
 @@||supermicro.com$elemhide,badfilter
@@ -754,6 +754,7 @@ www.instagram.com#$?#[id^=mount]:has(a[class][href*="/accounts/login/?"]) ~ div[
 pinterest.*#$#div[style^="filter:"] { filter: none !important }
 quora.com#$#.signup_wall_prevent_scroll .PageWrapper { filter: none !important }
 quora.com#$#.signup_wall_prevent_scroll { position: unset !important }
+cooking.nytimes.com##div[class*=modal_show_]:not(:has(button[aria-label=close], div[class*=grocerylist_listContainer]))
 quizlet.com#$#.SetPageTerm { display: block !important }
 seekingalpha.com##.in.fade.modal
 seekingalpha.com##.modal-dialog
@@ -1523,6 +1524,7 @@ $document,removeparam=/^src=rss$/
 $document,removeparam=/^otm_.*$/
 $removeparam=amp_device_id
 $removeparam=awinaffid
+$removeparam=cje
 $removeparam=iclid
 $removeparam=rndad
 $removeparam=a_fid
@@ -1653,6 +1655,7 @@ $removeparam=dsp_uid
 $removeparam=cs_xi
 $removeparam=pn_id
 $removeparam=mt_uuid
+$removeparam=sifi_uid
 $removeparam=_rlid
 $removeparam=ga_fc
 $removeparam=ga_client_id
@@ -1909,6 +1912,7 @@ $removeparam=u_code
 $removeparam=is_copy_url
 $removeparam=is_from_webapp
 $removeparam=sender_device
+$removeparam=sender_web_id
 ||tiktok.com^$removeparam=_d
 ||tiktok.com^$removeparam=tt_from
 ||tiktok.com^$removeparam=preview_pb
@@ -2210,7 +2214,6 @@ $removeparam=soc_trk
 ||blue-tomato.com^$removeparam=varid
 $removeparam=ia-pkpmtrack
 ||blue-tomato.com^$removeparam=/^.*_(\$)ja.*$/
-||spartoo.$removeparam=track_id
 ||microcenter.com^$removeparam=rf
 ||as.com^$removeparam=omnil
 $removeparam=kw,domain=udemy.com|hotels.com
@@ -2277,6 +2280,7 @@ $document,removeparam=ct,domain=apple.com|bumble.com|newsroom.co.nz
 ||apple.com^$removeparam=/^ign-.*$/
 $removeparam=xcust
 $removeparam=xs,domain=skimresources.com|skimlinks.com|redirectingat.com
+$removeparam=algo,document
 $removeparam=imp_id,document
 ||steampowered.com^$removeparam=ser
 $removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
@@ -2528,6 +2532,7 @@ $removeparam=mar,domain=nextdoor.com
 ||verizon.com^$removeparam=campaignGroup
 ||verizon.com^$removeparam=campaignName
 ||verizon.com^$removeparam=campaignSource
+||youtube.com^$removeparam=embeds_euri
 ||youtube.com^$removeparam=source_ve_path
 ^ref=hackernoon.com^$removeparam=ref
 ^ref=futurepedia^$removeparam=ref
