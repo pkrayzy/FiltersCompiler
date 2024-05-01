@@ -1,9 +1,9 @@
-! Checksum: jQYkzd7e6VLCgYO/dXSEJQ
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1714559648-3600.patch
+! Checksum: 6eQB1LCkY51qWEaRl7sMBQ
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1714566840-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.90.57
-! TimeUpdated: 2024-05-01T10:31:06+00:00
+! Version: 2.0.90.58
+! TimeUpdated: 2024-05-01T12:31:02+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -478,7 +478,6 @@ ucoz.ru/informer/
 ##.ad_left
 ~didaktik-der-mathematik.de##.ad_right
 ~chinapost.com.tw##.ad_space
-~leboncoin.fr##.ad_text
 ##.adbg
 ~superbikeplanet.com##.addiv
 ~linux.com##.adframe
@@ -2571,7 +2570,7 @@ synthira.ru#%#//scriptlet("abort-current-inline-script", "document.write", "adst
 gamer-info.com#%#//scriptlet('abort-current-inline-script', '$', '/\$\(\'\.roarticlecol\'\)\.height\(\) >/')
 gamer-info.com#%#(function() { var isSet = false; Object.defineProperty(window, 'vPRinfiniteLoopOfChanges', { get: function() { return isSet ? false : undefined; }, set: function() { isSet = false; } }); })();
 sberometer.ru#%#//scriptlet("abort-current-inline-script", "document.addEventListener", "place_rvn")
-spcs.reviews,gdespaces.com,spcs.me,spaces.im,spaces-blogs.com,strip2.me#%#//scriptlet("set-constant", "mobiads_loader", "noopFunc")
+spaces.im,spaces-blogs.com,strip2.me#%#//scriptlet("set-constant", "mobiads_loader", "noopFunc")
 tehnot.com#%#AG_onLoad(function() { jQuery(function() { jQuery('body').unbind('click'); }); });
 zerno-ua.com#%#AG_onLoad(function() { $('div.branding_wrapper').removeAttr("onclick"); });
 economistua.com#%#//scriptlet('set-constant', 'onlyBodyClick', 'noopFunc')
@@ -6565,8 +6564,14 @@ kp.ru,kp.by,kp.kg,kp.kz##div[data-name]
 kp.ru,kp.by,kp.kg,kp.kz###adwrap
 kp.ru,kp.by,kp.kg,kp.kz#?#div[data-gtm-el="content-body"] ~ div > div:has(> div.smi24__informer)
 2gis.ru##._y2b48h
-/resources/js/sticker.js$domain=spcs.reviews|spcs.pro|spcs.news|spac1.info|spcs.social|spac1.org|gdespaces.com|spcs.me|spaces.im|strip2.in
-spcs.reviews,spcs.pro,spcs.news,spac1.info,spcs.social,spac1.org,gdespaces.com,spcs.me,spaces.im,strip2.in#?#div > div:has(> a[title="Отключить рекламу"])
+spaces.im,spcs.*,strip2.in##div > div:has(> a[title="Отключить рекламу"])
+/resources/js/sticker.js$domain=spaces.im|spcs.*|strip2.in
+spaces.im,spcs.*,strip2.in###siteContent > div.relative ~ div[class]:has(> table[style] > tbody > tr > td[class] > div[class] > a[title="Отключить рекламу"])
+spaces.im,spcs.*,strip2.in##.wrapper > div:has(> div > a[title="Отключить рекламу"])
+spaces.im,spcs.*,strip2.in###main_content_block > div.content_wrap > div[id="page_rightbar"] > div.widgets-group ~ div[class]:has(> div.widgets-group > a[target="_blank"][rel="noopener"])
+spaces.im,spcs.*,strip2.in###main_content > div.widgets-group:has(> a.ico_close_btn)
+spaces.im,spcs.*,strip2.in##.wrapper > div[class]:has(> div > b.darkblue)
+spaces.im,spcs.*,strip2.in##div:has(> a[title="Отключить рекламу"])
 adme.media###root > div > div.g-recaptcha ~ div:not([id]):not([class])
 adme.media##div[data-test-id="article-content"] > div[class*=" "]:not([tabindex]):empty
 vc.ru##.entry-rotator
