@@ -1,9 +1,9 @@
-! Checksum: TTLKZozjSkUO1BYwqXPWbw
-! Diff-Path: ../patches/19/19-s-1714649659-3600.patch
+! Checksum: 3CvN7pjDqJb8fSwzH2ZnVA
+! Diff-Path: ../patches/19/19-s-1714653248-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.35.83
-! TimeUpdated: 2024-05-02T11:32:13+00:00
+! Version: 2.0.35.84
+! TimeUpdated: 2024-05-02T12:31:57+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4324,6 +4324,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+sakshi.com#$?#.floating_video { remove: true; }
 toptoon.jp###floatingBnr
 linux.do#%#//scriptlet('remove-class', 'topic-in-gated-category', 'body')
 linux.do#$#div.topic-in-gated-category { display: none !important; }
@@ -10505,6 +10506,10 @@ arenda.yandex.ru#$#body[style] { overflow: auto !important; }
 ! auto.ru
 auto.ru#?#body > div:has(> div.Modal > div.Modal__container > div[class*="AdminsMarketingPopup__wrapper"])
 !
+! kinopoisk.ru
+www.kinopoisk.ru#$#.ReactModalPortal > div.ReactModal__Overlay:has(> div.ReactModal__Content > div[data-tid="fb14777c"]) { display: none !important; }
+www.kinopoisk.ru#$#body[class*="styles_body"] { overflow: auto !important; }
+!
 ! END: Yandex
 !
 ! Tegna Inc.
@@ -11517,7 +11522,7 @@ g123.jp,accounts.binance.com#@##credential_picker_container
 ! Disabling of push-notifications
 !
 ! #%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
-shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
+sakshi.com,shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
 !
 wallstreet-online.de,dni.ru#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
@@ -12334,6 +12339,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+fishkeepingworld.com##.formkit-slide-in
 razaoautomovel.com##a[title="Subscreva a nossa newsletter"]
 ultimate-guitar.com###ug-article-email-subscribe
 wheresyoured.at#$#.outpost-cta { display: none !important; }
@@ -16905,7 +16911,7 @@ programme-television.org###subcribeNewsletter
 ahrefs.com##.subscr-fright
 thehill.com###block-thehill-blocks-footer-signup
 vesti.ua##.subscribeLine
-natro.com,touristica.com.tr,gramwzielone.pl,prad.de,rollingstone.com,stetson.com,fdpbt.de,webmd.com,thepostmillennial.com,designmodo.com##.newsletter-wrapper
+sakshi.com,natro.com,touristica.com.tr,gramwzielone.pl,prad.de,rollingstone.com,stetson.com,fdpbt.de,webmd.com,thepostmillennial.com,designmodo.com##.newsletter-wrapper
 alisale.by,heizsparer.de,freemodapks.com,krebsonsecurity.com,mikrotiklab.ru,newsmaker.md,edtimes.in,appwrk.com,theinternetpatrol.com,pocketwanderings.com,thedronegirl.com###custom_html-2
 torrentmac.net,defenceturk.net,makezine.com,deepsense.ai,lawenforcementtoday.com,anime7.download,telekritika.ua###custom_html-3
 boundingintocomics.com,faqpda.ru,cancanlah.com,tokion.jp,thescholarshipsystem.com,blogs.perficient.com,copyblogger.com,gotoadm.ru###custom_html-4
