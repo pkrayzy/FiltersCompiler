@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: C7UtV1efmGeLFClkVDd62g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714631654-3600.patch
+! Checksum: ngclyHktsh/DCyszZqtHVw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714635247-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.33.68
-! TimeUpdated: 2024-05-02T06:31:18+00:00
+! Version: 2.3.33.69
+! TimeUpdated: 2024-05-02T07:31:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -9793,9 +9793,11 @@ smallseotools.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,redirect=noop.js,domain=smallseotools.com,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128230
 bestreamsports.org##+js(abort-current-script, document.createElement, adsbygoogle.js)
+! https://github.com/AdguardTeam/AdguardFilters/issues/178343
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128388
 opentunnel.net#@#.textad
 opentunnel.net#$#body .textad { display: block !important; }
+opentunnel.net##+js(no-xhr-if, ad.plus)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170231
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128306
 howdy.id##+js(no-fetch-if, /www3\.doubleclick\.net|pagead2\.googlesyndication\.com/)
@@ -32697,6 +32699,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+opentunnel.net#?#span.text-muted:contains(/^Advertisement$/)
 link.paid4link.com##.card
 link.paid4link.com##form .banner + div.box
 upstreamonline.com##.top-ad-placeholder
@@ -51951,7 +51954,7 @@ listcrawler.eu#@#.listad
 ! moneycontrol.com - incorrect blocking
 ! Fixes blocked graph - https://www.moneycontrol.com/news/business/markets/share-market-live-updates-stock-market-today-march-17-latest-news-bse-nse-sensex-nifty-covid-coronavirus-beml-gufic-biosciences-satin-creditcare-network-yasho-industries-indiabulls-housing-finance-8241801.html
 moneycontrol.com#@#iframe[width="100%"][height="120"]
-/^https?:\/\/.*\.(jpg|gif|png|php|svg|ico|js|txt|css)/$popup,domain=mixdrop.*,badfilter
+/^https?:\/\/.*\.(jpg|gif|png|php|svg|ico|js|txt|css)/$popup,domain=mixdrop.*|mixdrop.ag|mixdrop.nu,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112207
 @@||stc.cdncache.xyz/*/*.css$domain=streamz.ws
 @@||stc.cdncache.xyz/*/*.js$domain=streamz.ws
@@ -52066,7 +52069,7 @@ nfl.com#@#.nfl-c-strip
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105529
 @@||gumtree.com.au/p-post-ad*.html
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105185
-$popup,third-party,domain=mixdrop.*,badfilter
+$popup,third-party,domain=mixdrop.*|mixdrop.ag|mixdrop.nu,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103576
 @@||any-video-converter.com/promotion/*-christmas-sale/img/bottom-banner-ad.png
 ! videovard.sx - incorrect blocking
