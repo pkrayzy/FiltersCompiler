@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: HyXVMg2ckqB8kalN4+ma2g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714642474-3600.patch
+! Checksum: 9aFHLM/OoryI6wkRbILxzA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1714646065-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.33.71
-! TimeUpdated: 2024-05-02T09:31:28+00:00
+! Version: 2.3.33.72
+! TimeUpdated: 2024-05-02T10:31:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,11 @@
 !
 !
 !
+||wrqtcoxjw.com^
+||atlxpstsf.com^
+||lxnkuie.com^
+||tnnpozuqdhes.com^
+||mvwkysam.com^
 ||sljvpjtavn.com^
 ||ad.yieldmanager.com^
 ||bollyocean.com^
@@ -7384,6 +7389,11 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178349
+sounddrain.net#@#iframe[src^="//ad.a-ads.com/"]
+sounddrain.net#$#iframe[src^="//ad.a-ads.com/"] { position: absolute !important; left: -3000px !important; }
+sounddrain.net#$#.content > div.overflow-hidden:has(> iframe[src^="//ad.a-ads.com/"]) { position: absolute !important; left: -3000px !important; }
+sounddrain.net##+js(no-setTimeout-if, .clientHeight<=0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178284
 relampagomovies.com##+js(no-setTimeout-if, nextFunction)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178187
@@ -55685,7 +55695,6 @@ implbits.com#@#.banner_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121396 [Stealth Mode - Block third-party Authorization header]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120298 [Stealth Mode - Block third-party Authorization header]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121055 [Stealth Mode - Block third-party Authorization header]
-!+ NOT_OPTIMIZED
 @@||sto-caas-api.e-spirit.cloud/*/content/$domain=sto.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118495 [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120220
@@ -56126,7 +56135,6 @@ implbits.com#@#.banner_container
 ! frankenpost.de - "Vorlesen" broken [Stealth Mode - Referrer]
 ! jccsmart.com is broken [Stealth Mode]
 ! https://forum.adguard.com/index.php?threads/2034/
-!+ NOT_OPTIMIZED
 @@||googleadservices.com/pagead/conversion.js$domain=dubizzle.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12579 [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35419 [Stealth Mode - Referrer]
@@ -56230,7 +56238,6 @@ implbits.com#@#.banner_container
 ! turbo.az - website is broken [Stealth Mode - Referrer]
 ! https://forum.adguard.com/index.php?threads/http-tap-az-abnormal-traffic.24553/ [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2243
-!+ NOT_OPTIMIZED
 @@||cdn.taboola.com/libtrc/*/loader.js$domain=cnet.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6564 [Stealth Mode - hide IP]
 ! interia.pl - video is broken [Stealth Mode - Referrer]
@@ -56294,66 +56301,47 @@ implbits.com#@#.banner_container
 ! bild.de - fixing authorization [Stealth Mode - third-party cookies]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1898 [Stealth Mode - Referrer]
 ! prom.ua - fixing remote cart on third-party sites
-!+ NOT_OPTIMIZED
 @@||my.prom.ua/remote/
 ! webaudioapi.com - audio samples are broken [Stealth Mode - WebRTC]
-!+ NOT_OPTIMIZED
 @@||webaudioapi.com/samples/
 ! Broken sync in Yandex Browser [Stealth Mode - User-agent]
 ! warthunder.ru - fixing authorization
-!+ NOT_OPTIMIZED
 @@||login.gaijin.net^
-!+ NOT_OPTIMIZED
 @@||forum.warthunder.ru/?&identity_
-!+ NOT_OPTIMIZED
 @@||forum.warthunder.ru/index.php?*&section=
 ! Fixing synchronization [Stealth Mode - hide user-agent]
 ! http://forum.adguard.com/showthread.php?9453 [Stealth Mode - Referrer]
-!+ NOT_OPTIMIZED
 @@||xmissymedia.com/galleries/$domain=xmissy.nl,image
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1667 [Stealth Mode - third-party cookies]
-!+ NOT_OPTIMIZED
 @@||forgeofempires.com/game/json
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1646 [Stealth Mode - Referrer]
-!+ NOT_OPTIMIZED
 @@||winvistaclub.com/wp-content/uploads/$domain=thewindowsclub.com
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1632 [Stealth Mode - Referrer, third-party cookies]
 ! aliexpress.com - broken checkout
-!+ NOT_OPTIMIZED
 @@||icashier.alipay.com^$domain=aliexpress.com
-!+ NOT_OPTIMIZED
 @@||iopen.alipay.com/gateway.do$domain=aliexpress.com
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1499 [Stealth Mode - WebRTC]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1592 [Stealth Mode - third-party cookies]
 ! Fixing authorization via github.com
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1549 [Stealth Mode - third-party cookies]
-!+ NOT_OPTIMIZED
 @@||loginza.ru/api/
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1543 [Stealth Mode - hide IP]
-!+ NOT_OPTIMIZED
 @@||veehd.com/dl/
 ! solvemedia.com - captcha is broken [Stealth Mode - User-agent]
 ! nwolb.com - login failed [Stealth Mode - third-party cookies]
-!+ NOT_OPTIMIZED
 @@||nwolb.com^
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1534 [Stealth Mode - hide IP]
-!+ NOT_OPTIMIZED
 @@||tinypic.com/upload.php
 ! Fixing Yandex authorization [Stealth Mode - third-party cookies]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1505 [Stealth Mode - third-party cookies]
 ! broken autentification with ulogin.ru
-!+ NOT_OPTIMIZED
 @@||ulogin.ru/auth.php
-!+ NOT_OPTIMIZED
 @@||ulogin.ru/fill.php
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1367 [Stealth Mode - third-party cookies]
-!+ NOT_OPTIMIZED
 @@||adobelogin.com^
-!+ NOT_OPTIMIZED
 @@||adobeid-*.services.adobe.com^
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1379 [Stealth Mode - third-party cookies]
 ! usps.com - access denied to tracking page [Stealth Mode - IP hiding]
-!+ NOT_OPTIMIZED
 @@||tools.usps.com/go/TrackConfirmAction
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1202 [Stealth Mode - User-agent]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1109 [Stealth Mode - IP hiding]
@@ -56363,45 +56351,32 @@ implbits.com#@#.banner_container
 !! 2. Jump to Google Store from other site
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1666 [Stealth Mode - third-party cookies]
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/252 [Stealth Mode - third-party cookies]
-!+ NOT_OPTIMIZED
 @@||answers.microsoft.com/*/completesignin
-!+ NOT_OPTIMIZED
 @@||answers.microsoft.com/*/site/startsignin
 ! http://forum.adguard.com/showthread.php?7406 (#119)
 ! Go to https://products.office.com/en-us/office-insider then click "install the office insider build now"
-!+ NOT_OPTIMIZED
 @@||stores.office.com/authredir
-!+ NOT_OPTIMIZED
 @@||stores.office.com/myaccount/advancedinstalls.aspx
 ! http://forum.adguard.com/showthread.php?7463 [Stealth Mode - Referrer]
 ! http://forum.adguard.com/showthread.php?7539 [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/883 [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/812 [Stealth Mode - Referrer, third-party cookies]
-!+ NOT_OPTIMIZED
 @@||datacloudmail.ru^$domain=cloud.mail.ru
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/259
-!+ NOT_OPTIMIZED
 @@||cbox.ws/box/?boxid=$domain=exystence.net
 ! http://forum.adguard.com/showthread.php?6047 (#376) [Stealth Mode - third-party cookies]
 ! Login to habrahabr projects; login to hypercomments on sites
-!+ NOT_OPTIMIZED
 @@||id.tmtm.ru/login/
-!+ NOT_OPTIMIZED
 @@||hypercomments.com/auth/
-!+ NOT_OPTIMIZED
 @@||hypercomments.com/api/login?
 ! privat24 [Stealth Mode - Referrer, third-party cookies]
-!+ NOT_OPTIMIZED
 @@||privat24.privatbank.ua^
 ! http://forum.adguard.com/showthread.php?6772 [Stealth Mode - Referrer]
-!+ NOT_OPTIMIZED
 @@||cdn*.downloadapkgames.com/?session=
 ! http://forum.adguard.com/showthread.php?6047 (#273) [Stealth Mode - third-party cookies]
 ! http://forum.adguard.com/showthread.php?6681 [Stealth Mode - third-party cookies]
-!+ NOT_OPTIMIZED
 @@||login.uid.me^$domain=ucoz.ru
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/692 [Stealth Mode - third-party cookies]
-!+ NOT_OPTIMIZED
 @@||vodakpsdhdsdrm-vh.akamaihd.net/z/clips/
 !
 ! SECTION: Protect from DPI problems
