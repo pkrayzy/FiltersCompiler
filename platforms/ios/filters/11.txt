@@ -1,8 +1,8 @@
-! Checksum: AADL07wCZjl4TdT56XpYyw
+! Checksum: YG4GwpXj/aFPKc1YnTiwrw
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.50.89
-! TimeUpdated: 2024-05-01T03:07:37+00:00
+! Version: 2.0.50.90
+! TimeUpdated: 2024-05-02T03:04:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -217,6 +217,7 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||appsrv.display.io^
 ||ad.line-scdn.net^
 ||splash-ad.classting.com^
 ||ad-files.classting.com^
@@ -1149,9 +1150,9 @@ ya.ru##services-feed div.banner
 !
 ! Yandex.Search
 ! Update unblocking rule for the search ads in usefulads.txt
-yandex.*##div[class^="Direct"]
-[$path=/search/touch]yandex.*#?#div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div.Organic-Columns > div.Organic-Column > a[href][data-event-required])
-[$path=/search/touch]yandex.*#?#div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div[class^="VanillaReact"] > a[href][data-event-required])
+yandex.*##div[class^="Direct "]
+ya.ru,yandex.*##div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div.Organic-Columns > div.Organic-Column > a[href][data-event-required])
+ya.ru,yandex.*##div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div[class^="VanillaReact"] > a[href][data-event-required])
 !
 ! Yandex.Images
 yandex.*##.justifier__col > div.incut
@@ -1863,6 +1864,8 @@ deviantart.com#$#div[class*="dp-ad-"] {height: 0!important; width: 0!important; 
 ! Repeated requests, two or more in one second if blocked - https://old.reddit.com/r/Adguard/comments/ztbv96/how_do_i_stop_this_my_phone_is_overheating_and/
 ! https://old.reddit.com/r/Adguard/comments/18s9snu/api2branch_causing_cpu_overheat/
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178331
+! https://github.com/AdguardTeam/AdguardFilters/issues/178333
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175802
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174633
 ! Missing a few seconds of video between scenes
@@ -2420,6 +2423,7 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+redcafe.net##.adwrap
 tengrinews.kz,tengriauto.kz###tnStickyContainer
 life.oricon.co.jp,juken.oricon.co.jp##aside[style="min-height:100px"]
 juken.oricon.co.jp#$#div[style="min-height:100px;"] { min-height: 0 !important; }
@@ -2598,7 +2602,7 @@ m.winfuture.de###articleBody > #vergleich
 m.winfuture.de###articleBody > #vergleich + iframe
 m.winfuture.de###articleBody > .summary_box ~ div:not(#ab_comments_button) > iframe
 m.winfuture.de#?##articleBody > .summary_box ~ b:contains(Vergleich)
-macg.co##.optidigital-wrapper-div
+forocoches.com,macg.co##.optidigital-wrapper-div
 comnews.ru###bn-popup
 passeportsante.net##.ads-core-wrapper
 passeportsante.net#$#@media (max-width: 1280px) { body:not(.pmsSkin).default.mobile, body:not(.pmsSkin).medicaments.mobile { margin-top: 64px !important; } }
@@ -6467,7 +6471,6 @@ pornhd.com##ul.thumbs.inside-row > li:not([data-thumbindexes])
 ||m.telegraaf.nl/static/lib/bva-widget.html
 ||m.wxrw123.com/style/js/feimobile.js
 ||m.wxrw123.com/style/js/tongji.js
-||mo.spaces.ru./static/$script,domain=nasimke.ru|sasisa.ru
 ||ok-tv.org/images/banner_ipone.jpg
 ||ok-tv.org/ruuc.js
 ||onlain-multiki.ru/config.json
