@@ -1,5 +1,5 @@
-! Checksum: kfrGwdCfqvfmzpfkC5Iqag
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1714746861-3600.patch
+! Checksum: a14gHQ95uwRt0z7cNfrQJg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1714790049-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.10
@@ -100,6 +100,7 @@ blog.livedoor.jp##.rsstop
 blog.livedoor.jp##.tabmoji
 blog.livedoor.jp##.tabmoji2
 blog.livedoor.jp###rss3
+blog.livedoor.jp###container > div[style$="scrollbar-track-color:#ffffff;"]
 blog.livedoor.jp##.rss-sub
 blog.livedoor.jp###RSSbox
 blog.livedoor.jp###touter > div#rt-outer
@@ -280,9 +281,7 @@ kininaru-geinou-m.blog.jp##.rss-blogroll + div.sub-title-box
 kininaru-geinou-m.blog.jp##.rss-blogroll1box
 kininaru-geinou-m.blog.jp##.sub-title-box:first-child
 pokemon-goh.doorblog.jp##.article-body-inner > div.t_b + div[style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;"]
-re-file.com#?#.frame:has(> script[src$="/blogroll.js"]) + br
 re-file.com#?#.frame > script[src$="/blogroll.js"]:upward(1)
-re-file.com#?#.page-title:contains(/話題の|ピックアップ/)
 you1news.com##div[class^="article-bottom-rss"]
 ||matomeantena.com/scripts/parts/category/vip.js
 inutomo11.com##.main-column-inner > br
@@ -492,7 +491,6 @@ uwakich.com##.links-navy1
 gfoodd.com##.box_group ~ div.singleh4
 gfoodd.com##.box_group ~ br
 gfoodd.com#?#.code-block > div.sponserdrink:contains(RSS)
-marasoku.info##.rss_ninja_title
 2-carat.net##div[class^="toprss"]
 2-carat.net##div[class^="yos"]
 toychan.blog.jp,shouginews.blog.jp,hinomoto99.com,fireflyframer.blog.jp##.message-board-outer
@@ -597,7 +595,6 @@ kidan-m.com,otakumix.doorblog.jp###rss1
 otakumix.doorblog.jp##iframe[src="http://otakumix.doorblog.jp/testrss.html"]
 pokemon-matome.net###header_rssbox
 pokemon-matome.net##div[class^="rss_inner"]
-h-library.com,4545comics.com##.card-white__blue.padding8
 ||onecall2ch.com^$subdocument,~third-party
 bipblog.com##iframe[src^="http://bipblog.com/"]
 ||bipblog.com^$subdocument,~third-party
@@ -795,7 +792,6 @@ hdfcbank.com###chatTogglerDiv
 justanswer.com##.th-chat-window
 liquidweb.com##footer + div[class^="FixedButton_"]
 network.mobile.rakuten.co.jp###rexSurveyEmbedded
-networkguru.ru##.tbForm_CallMe
 ozon.ru##div[data-widget="webFeedbackForm"]
 pravoved.ru##.ver_2.city
 rakuten.co.jp###rexSurveyRoot
@@ -894,7 +890,6 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 ||support-widget.userlocal.jp^
 ||widget.solvemate.com^
 ||webchat.birdeye.com^$third-party
-||tracker.tolvnow.com^$third-party
 ||synalio.com^$third-party
 ||chatbot.com^$third-party
 ||cdn.carrotquest.app^$third-party
@@ -993,7 +988,6 @@ laptopmag.com##.hawk-nest
 haberler.com#%#//scriptlet("abort-current-inline-script", "document.write", "widget.yenimedya.com.tr/Partner/")
 ||widget.getyourguide.com^$third-party
 ||v.xchanger.io/widget/exchange/default/exchange.php$domain=parkiet.com
-||my.openwrite.cn/js/readmore.js
 ||actionbutton.co^$third-party
 ||holyclock.com^$third-party
 ||discordapp.com/widget?id=$domain=hentaiz.org|animeru.tv
@@ -1097,7 +1091,6 @@ unian.ua,unian.net##.support-post
 ||paywall.fewcents.co/static/js/paywall.js
 proagro.com.ua#$#.td-outer-container { background-image: none !important; cursor: default !important; }
 proagro.com.ua#%#//scriptlet("abort-on-property-read", "wpsite_clickable_data")
-delo.ua##.c-support
 texty.org.ua###the-only-donate-banner
 mediazona.online,fourth-sphere-302420.appspot.com,zona.media##.tools__support_container
 ||static.theprint.in/wp-content/uploads/*/subscribe_*.png
