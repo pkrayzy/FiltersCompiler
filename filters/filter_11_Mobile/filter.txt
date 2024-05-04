@@ -2650,6 +2650,7 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+gsmservice.pl###tdi_14
 zentrum-der-gesundheit.de##.container > div.fixed:has(> button:contains(Interessante Produkte für Sie))
 faz.net##.iqdcontainer
 mx1b.nan-net.jp##div[style="padding:0px 0px 20px 0px;"]
@@ -7411,6 +7412,12 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_mobile
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
+! Detect HTTPS filtering
+!+ PLATFORM(windows, mac, android) NOT_OPTIMIZED
+||https-filtering-check.adtidy.org^
+! Detect Advanced Protection of AdGuard for iOS
+!+ PLATFORM(ios) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_ios { display: none !important; }
 !
 
 !---------------------------------------------------------------------------!
