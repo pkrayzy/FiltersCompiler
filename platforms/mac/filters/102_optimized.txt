@@ -1,9 +1,9 @@
-! Checksum: fACCvRmnFv7v31nafOSGFg
-! Diff-Path: ../patches/102_optimized/102_optimized-s-1714093450-14400.patch
+! Checksum: 1noQVfgS/Y9714nhna5oKA
+! Diff-Path: ../patches/102_optimized/102_optimized-s-1714784646-14400.patch
 ! Title: ABPindo (Optimized)
 ! Description: Additional filter list for websites in Indonesian.
-! Version: 2.0.6.75
-! TimeUpdated: 2024-04-26T01:01:02+00:00
+! Version: 2.0.6.76
+! TimeUpdated: 2024-05-04T01:01:05+00:00
 ! Expires: 5 days (update frequency)
 ||188affiliates.com^$third-party
 ||accesstrade.co.id^$third-party
@@ -559,7 +559,7 @@ iklan300x250.gif|
 ||yourjavascript.com/1411253239/itu-domino-popup-script.js
 ||yourjavascript.com/9422241923/iklan-popweb-goalcoid.js
 *$popup,domain=bacakomik.co|info.mapsaddress.com|info.vebma.com|kiryuu.id|komikcastid.com|komikstation.co|mangakita.id|mangakita.net|wrt.my.id
-.gif$image,domain=149.56.24.226|15.235.11.45|anime-indo.id|bgibola.com|bioskopkerenin.org|dunia21.club|dutafilm.cfd|ld2tv.net|lk21.london|lk21official.biz|lk21official.live|lk21official.org|lk21tv.com|mangakita.id|movieajip.online|nontondrama.*|oploverz.*|oploverz.best|oploverz.co.in|oploverz.love|oploverz.tv|otakudesu.ltd|samehadaku.*|samehadaku.show
+.gif$image,domain=149.56.24.226|15.235.11.45|anime-indo.id|bgibola.com|bioskopkerenin.org|dunia21.club|dutafilm.cfd|ld2tv.net|lk21.london|lk21official.biz|lk21official.live|lk21official.org|lk21tv.com|mangakita.id|movieajip.online|nontondrama.*|oploverz.*|oploverz.best|oploverz.co.in|oploverz.love|oploverz.tv|otakudesu.ltd|rbtv77.com|samehadaku.*|samehadaku.show
 doroni.me#%#//scriptlet('ubo-acs.js', 'getComputedStyle', '', 'cpm')
 info.mapsaddress.com,info.vebma.com#%#//scriptlet('ubo-aeld.js', 'click', 'linkOpened')
 juraganfilm.ink#%#//scriptlet('ubo-aopr.js', '$.magnificPopup.open')
@@ -1681,6 +1681,7 @@ suara.com##div.placeholder_pariwara
 medcom.id##div.showcase.banner
 medcom.id##div.skycrapper.banner
 cerpen.co.id##div.ui_adblock
+tokopedia.com##div[data-testid="CPMWrapper"]
 tokopedia.com##div[data-testid="featuredShopCntr"]
 tokopedia.com##div[data-testid="topadsCPMWrapper"]
 rasa.my##div[data-ub-carousel]
@@ -1757,14 +1758,18 @@ cnbcindonesia.com,cnnindonesia.com,detik.com#?#.mr2:-abp-has([id^="div-gpt-ad"])
 cnnindonesia.com#?#.mr3:-abp-has([id^="div-gpt-ad"])
 blibli.com#?#.product__card:-abp-has(.product__tag__ads)
 detik.com#?#.staticdetail_container:-abp-has(.staticdetail_ads)
+tokopedia.com#?#a[data-testid="lnkProductContainer"]:-abp-has(img[alt^="topads"])
 cari.com.my#?#center:-abp-contains(ADVERTISEMENT)
 kompas.com#?#div:-abp-has( > #gpt-passback)
 katadata.co.id#?#div:-abp-has( > [id^="div-gpt-ad"][class^="paralax"])
-tokopedia.com#?#div[data-testid="CPMWrapper"]:-abp-has(span:-abp-contains(/^Ad$/))
+tokopedia.com#?#div[data-ssr="findProductSSR"]:-abp-has(span[data-testid="lblTopads"])
+tokopedia.com#?#div[data-ssr="findProductSSR"]:-abp-has(span[data-testid="linkProductTopads"])
+tokopedia.com#?#div[data-testid="divCarouselProduct"]:-abp-has(span:-abp-contains(/^Ad$/))
 tokopedia.com#?#div[data-testid="divProduct"]:-abp-has(span[data-testid="icnHomeTopadsRecom"])
 tokopedia.com#?#div[data-testid="divProductWrapper"]:-abp-has(span[data-testid="divSRPTopadsIcon"])
 tokopedia.com#?#div[data-testid="lazy-frame"]:-abp-has(span[data-testid="lblProdTopads"])
 tokopedia.com#?#div[data-testid="master-product-card"]:-abp-has(span[data-testid^="linkProductTopads"])
+tokopedia.com#?#div[data-testid^="divProductRecommendation"]:-abp-has(span:-abp-contains(/^Ad$/))
 tokopedia.com#?#div[data-testid^="divProductRecommendation"]:-abp-has(span[data-testid="icnHomeTopadsRecom"])
 cloud.majalahhewan.com,info.gambar.pro,info.mapsaddress.com,info.vebma.com#?#p:-abp-has( > a[href="#downloadnow"])
 tokopedia.com#?#section[data-unify="Card"]:-abp-has([href^="https://ta.tokopedia.com"]:first-child)
@@ -1780,6 +1785,7 @@ cloud.majalahhewan.com,info.vebma.com#?#span:-abp-contains(Advertisement)
 -bandarbet303.$image
 -bandarbetqq-$image
 -bandarkiu.$image
+-Banner-Mahjong-$image
 -banner-togel-$image
 -banner-winstar138.gif|$image
 -bisabet.$image
@@ -1969,6 +1975,7 @@ cloud.majalahhewan.com,info.vebma.com#?#span:-abp-contains(Advertisement)
 /apibet.$image,third-party
 /apibet.gif|$image
 /areabola.$image,third-party
+/areaslots.gif$image
 /arenajackpot.$image
 /arenaqq.$image
 /armaniqq.$image,third-party
@@ -2702,6 +2709,7 @@ cloud.majalahhewan.com,info.vebma.com#?#span:-abp-contains(Advertisement)
 /sahabatarena.$image,third-party
 /sahamdomino.$image,third-party
 /sahamqq.$image
+/SaktiSpin-$image
 /santapoker.gif$image
 /saranapoker.$image,third-party
 /saranghoki2.$image,third-party
@@ -5357,6 +5365,7 @@ leon.bet#@#[href$="/slots"]
 ##[href^="https://h5.rp777car.com/"]
 ##[href^="https://jamet138c.me/"]
 ##[href^="https://jayaabadi.pro/"]
+##[href^="https://mainhoki.link/"]
 ##[href^="https://menang123-eksis.com"]
 ##[href^="https://pinoyslots.ph/"]
 ##[href^="https://playbook-88.site/"]
@@ -5366,6 +5375,7 @@ leon.bet#@#[href$="/slots"]
 ##[href^="https://vpnnawala.site"]
 ##[href^="https://winslots84.com/"]
 ##[href^="https://www.mainrajasatu.com/"]
+##[title="AREASLOTS" i]
 ##[title="Slot Gacor" i]
 ##[title^=" agen bola terpercaya" i]
 ##[title^=" judi bola online" i]
@@ -7966,8 +7976,10 @@ leon.bet#@#[href$="/slots"]
 ##img[alt="REMIPOKER" i]
 ##img[alt="Rajasatu" i]
 ##img[alt="Royalslot" i]
+##img[alt="SaktiSpin" i]
 ##img[alt="WIN4D" i]
 ##img[alt="isport365" i]
+##img[alt="mainhoki" i]
 ##img[alt="slotguru" i]
 ##img[alt="winslotsf" i]
 ##img[alt^=" agen bola terpercaya" i]
