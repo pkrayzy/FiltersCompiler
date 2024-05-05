@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.18",
-			"timeUpdated": "2024-05-04T03:03:20+0000",
+			"version": "2.3.30.19",
+			"timeUpdated": "2024-05-05T03:04:03+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/14_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.92.86",
-			"timeUpdated": "2024-05-04T03:03:13+0000",
+			"version": "2.1.92.87",
+			"timeUpdated": "2024-05-05T03:03:55+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -783,8 +783,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.1",
-			"timeUpdated": "2024-05-04T03:03:02+0000",
+			"version": "2.1.24.2",
+			"timeUpdated": "2024-05-05T03:03:45+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1084,8 +1084,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.93",
-			"timeUpdated": "2024-05-04T03:03:05+0000",
+			"version": "2.1.24.94",
+			"timeUpdated": "2024-05-05T03:03:47+0000",
 			"languages": [],
 			"tags": [
 				2
