@@ -1,9 +1,9 @@
-! Checksum: xqMLX+nrAr2MnxEDsz3o3w
-! Diff-Path: ../patches/1/1-s-1715074434-3600.patch
+! Checksum: TgrJunS8SEGfyxUoMaeEyg
+! Diff-Path: ../patches/1/1-s-1715085262-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.90.69
-! TimeUpdated: 2024-05-07T09:31:04+00:00
+! Version: 2.0.90.70
+! TimeUpdated: 2024-05-07T12:31:04+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1492,6 +1492,7 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||tzbirdcod.com^
 ||audiotouch.info^
 ||videotouch88.info^
 ||ippunet.site^
@@ -7767,6 +7768,10 @@ ivanovonews.ru,gorodn.ru,bits.media,devyatka.ru,gazeta-n1.ru,gorod48.ru,hi-fi.ru
 !
 !
 !
+||parnuha21.com/images/r7.jpg
+||parnuha21.com/images/1win.jpg
+parnuha21.com##center > a[href][target="_blank"]
+sez.vporno.video##.hdsd
 citywalls.ru##.cssAdvertBlock1
 cian.ru##div[data-name="AdfoxLayout"]
 lumpics.ru#?#article div[class^="block"]:has(> div[class^="flat_"])
@@ -18965,8 +18970,10 @@ player.ex.co#@##ad-container
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178768
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175081
-@@||xporn.in^$domain=tre.zorox.sex
+@@||xporn.in^$domain=tre.zorox.sex|sez.vporno.video
+||sez.vporno.video^$referrerpolicy=origin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171626
 re.animemoonx.org#@#.reclama
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170548
