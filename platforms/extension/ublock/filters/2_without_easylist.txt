@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: MX5/GDQwsR7c3dLfha0JZw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1715063664-3600.patch
+! Checksum: IA+p/dS/0NPJjmIT+FE/tQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1715067239-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.34.52
-! TimeUpdated: 2024-05-07T06:31:29+00:00
+! Version: 2.3.34.53
+! TimeUpdated: 2024-05-07T07:31:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,7 @@
 !
 !
 !
+||nderpurganismpr.info^
 ||hborq.com^
 ||oszlnxwqlc.com^
 ||fkodq.com^
@@ -7422,6 +7423,9 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178731
+@@||nzbstars.com/ads.bundle.min.js
+nzbstars.com##+js(abort-current-script, document.getElementById, window.location.replace)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178717
 shareus.io##+js(abort-on-property-write, antiAdBlockerHandler)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178580
@@ -16254,7 +16258,8 @@ gameland.click,gamestation.cam,gamezone.cam,gamesera.online,free-games.cam,top-g
 gameland.click,gamestation.cam,gamezone.cam,gamesera.online,free-games.cam,top-games.live,tech-review.me,gulftech.live,reviewhub.vip,reviewtech.me,pcreview.me,reviewstation.me###fixedban2
 gameland.click,gamestation.cam,gamezone.cam,gamesera.online,free-games.cam,top-games.live,tech-review.me,gulftech.live,reviewhub.vip,reviewtech.me,pcreview.me,reviewstation.me##body > #sticky
 gameland.click,gamestation.cam,gamezone.cam,gamesera.online,free-games.cam,top-games.live,tech-review.me,gulftech.live,reviewhub.vip,reviewtech.me,pcreview.me,reviewstation.me##div[class^="adbn"][class*="wrap"]
-gameland.click,gamestation.cam,gamezone.cam,gamesera.online,free-games.cam,top-games.live,tech-review.me,gulftech.live,reviewhub.vip,reviewtech.me,pcreview.me,reviewstation.me##+js(no-fetch-if, /pagead2\.googlesyndication\.com|greeter\.me/)
+gameland.click,gamestation.cam,gamezone.cam,gamesera.online,free-games.cam,top-games.live,tech-review.me,gulftech.live,reviewhub.vip,reviewtech.me,pcreview.me,reviewstation.me##.rts0-urts0
+gameland.click,gamestation.cam,gamezone.cam,gamesera.online,free-games.cam,top-games.live,tech-review.me,gulftech.live,reviewhub.vip,reviewtech.me,pcreview.me,reviewstation.me##+js(no-fetch-if, /doubleclick\.net|pagead2\.googlesyndication\.com|greeter\.me/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139730
 arabic-toons.com###ads-blocked
 arabic-toons.com##+js(abort-on-property-read, adsBlocked)
@@ -27708,6 +27713,8 @@ kat.*,kickass.*,kickass2.*,kickasstorrents.*,kat2.*,kattracker.*,thekat.*,thekic
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178731
+nzbstars.com##+js(abort-on-property-write, Pub2)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178728
 smashy.stream##+js(abort-current-script, String.prototype.concat, popup)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178514
@@ -32788,6 +32795,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+||nzbstars.com/deatowllpik.php
 smashy.stream##.react-responsive-modal-root
 climate-data.org##.pub_ATF
 climate-data.org##.rectangle_ad_video
@@ -33946,9 +33954,10 @@ tomsguide.com##div[class^="bordeaux-"]
 ||animalporn.dog/js/video_plb_link.js
 animalporn.dog##a[href^="/out.php"]
 animalporn.dog###content > .related
+thehackernews.com##body > [class]:has(> a[href][target="_blank"])
 thehackernews.com##body > [class^="p"]:has(> center > script)
 thehackernews.com##body > [class]:has(> center a[href][target="_blank"])
-thehackernews.com##aside a[target="_blank"] > img
+thehackernews.com##:is(aside, #r-box)  a[target="_blank"] > img
 thehackernews.com###right-box a[target="_blank"] > img
 thehackernews.com###right-box > #expand-list
 thehackernews.com###right-box > section[class*="bb-side-box-"]
