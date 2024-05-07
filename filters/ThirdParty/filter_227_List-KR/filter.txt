@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2024.0503.2
+! OriginalVersion: 2024.0507.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://community.list-kr.com/docs/
@@ -462,6 +462,10 @@
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
+!#if (adguard_app_ios || adguard_ext_safari)
+newtoki.help##.ba_test
+newtoki.help##.banner2
+!#endif
 !#if (adguard_ext_safari || adguard_app_ios)
 board.namu.wiki#@#div:not([class*=" "]) ~ div div + div[class*=" "]:has(iframe[id^="google_ads_"])
 board.namu.wiki#@#div:not([class*=" "]) ~ div div + div[class*=" "]:has(iframe[src*="arca.live/external/callad"])
@@ -557,6 +561,7 @@ funbe332.com,funbe333.com,funbe334.com,funbe335.com,funbe336.com,funbe337.com,fu
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
 !
+||damoang.net/data/file/banners/
 ||ggeal.com/banner/
 ||sejonghub.com/theme/BS4-Basic/storage/image/title-
 ||stoo.com/banner/
@@ -1320,6 +1325,7 @@ funbe332.com,funbe333.com,funbe334.com,funbe335.com,funbe336.com,funbe337.com,fu
 !
 ! DOMAIN-REFRESHER: START
 !
+||xn--h10b90b998c.site/img/
 /^https:\/\/v[0-9]+\.dasibogo\.net\/wp-content\/uploads\/sites\/[0-9]+\/[0-9]+\/[0-9]+\/[a-z0-9]+\./$domain=dasibogo.net
 /^https:\/\/v[0-9]+\.jogemovie\.net\/wp-content\/uploads\/sites\/[0-9]+\/[0-9]+\/[0-9]+\/[a-z0-9-]+\./$domain=dasibogo.net
 ||xn--vv4b11c.com/main/data/file/_sh_banner_/
@@ -1558,7 +1564,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
-damoang.net##.py-3 > .mb-4:has(a[href$="/free/445969"])
+damoang.net##a[data-dd-action-name*="Ads"]
 ggeal.com###body_read > div[style^="margin:"] > div[class=""][style*="width:"]
 sejonghub.com##div[id^="carousel_"].carousel.carousel-fade
 ssodam.com##div[class^="col-lg-offset-"] > div[style*="height:"].hidden-xs
@@ -2840,6 +2846,9 @@ auto.danawa.com#%#//scriptlet('set-constant', 'NAVER_ADPOST_V2', 'noopFunc')
 ! TODO: remove the following filter if https://github.com/AdguardTeam/CoreLibs/issues/1831 is resolved.
 !#if (adguard_app_android || adguard_app_mac || adguard_app_windows)
 /^https:\/\/m[0-9]+\.kotbc\.com\/img\/[a-z0-9_/]+\.gif$/
+!#endif
+!#if (adguard_app_ios || adguard_ext_safari)
+||newtoki.*/banner*/$domain=newtoki.help
 !#endif
 !#if (adguard_app_ios || adguard_ext_safari)
 ||api-gw.sports.naver.com/cms/contents/adContents/$domain=m.sports.naver.com
