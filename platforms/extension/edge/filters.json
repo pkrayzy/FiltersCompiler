@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.34.58",
-			"timeUpdated": "2024-05-07T13:31:20+0000",
+			"version": "2.3.34.59",
+			"timeUpdated": "2024-05-07T14:31:33+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.0.55",
-			"timeUpdated": "2024-05-07T13:31:29+0000",
+			"version": "2.1.0.56",
+			"timeUpdated": "2024-05-07T14:31:43+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -434,8 +434,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/6.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.89",
-			"timeUpdated": "2024-05-07T09:31:32+0000",
+			"version": "2.0.41.90",
+			"timeUpdated": "2024-05-07T14:31:53+0000",
 			"languages": [
 				"de"
 			],
@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.39",
-			"timeUpdated": "2024-05-07T11:31:35+0000",
+			"version": "2.0.51.40",
+			"timeUpdated": "2024-05-07T14:31:56+0000",
 			"languages": [
 				"ja"
 			],
@@ -503,8 +503,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.64",
-			"timeUpdated": "2024-05-07T11:31:39+0000",
+			"version": "2.0.24.65",
+			"timeUpdated": "2024-05-07T14:32:01+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.95.55",
-			"timeUpdated": "2024-05-07T13:31:57+0000",
+			"version": "2.1.95.56",
+			"timeUpdated": "2024-05-07T14:32:18+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -665,8 +665,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.8.38",
-			"timeUpdated": "2024-05-07T10:31:59+0000",
+			"version": "2.0.8.39",
+			"timeUpdated": "2024-05-07T14:32:23+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -683,8 +683,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.38.94",
-			"timeUpdated": "2024-05-07T13:32:02+0000",
+			"version": "2.0.38.95",
+			"timeUpdated": "2024-05-07T14:32:24+0000",
 			"languages": [],
 			"tags": [
 				5,
