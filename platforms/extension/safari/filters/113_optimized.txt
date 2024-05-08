@@ -1,9 +1,9 @@
-! Checksum: HNnLiIva+U3h3T8Nxc8KTg
-! Diff-Path: ../patches/113_optimized/113_optimized-s-1715130243-14400.patch
+! Checksum: NvsUh6bEPtDfz+dyyfe2bA
+! Diff-Path: ../patches/113_optimized/113_optimized-s-1715144632-14400.patch
 ! Title: Liste FR (Optimized)
 ! Description: Additional filter list for websites in French. Already included in AdGuard French filter.
-! Version: 2.1.48.41
-! TimeUpdated: 2024-05-08T01:01:12+00:00
+! Version: 2.1.48.42
+! TimeUpdated: 2024-05-08T05:01:08+00:00
 ! Expires: 5 days (update frequency)
 &ad_count=
 &ad_unit_
@@ -150,6 +150,7 @@
 .gif?partner=
 .html?placement_id=
 .id/ads.
+.ir/ad/
 .ir/ads.
 .ir/ads/
 .jmpopups-
@@ -189,6 +190,7 @@
 /.s/src/crit_image.js
 /1000x90_
 /1080x90_$image
+/120-x-600-
 /120-x-600.
 /16-60.gif
 /160-x-600-
@@ -392,6 +394,7 @@
 /ads_data/*
 /ads_data_
 /ads_left.
+/ads_link_
 /ads_right.
 /ads_script.
 /ads_script_
@@ -429,6 +432,7 @@
 /adv/*_728
 /adv/ad_
 /adv/ads.
+/adv/banners/*
 /adv/www/*
 /adv_300_
 /adv_banner.
@@ -558,7 +562,6 @@
 /bnr/300/*
 /bnr/468/*
 /bnr/ad/*
-/bnrs/yn_bnr.
 /brand-ads-
 /brinpopup.
 /c.amazon-adsystem.com/*
@@ -646,7 +649,6 @@
 /ico-ad.
 /iframe.*?idzone=
 /iframe_pub.
-/iframes/ads/*
 /image/ad.
 /images/*_ads/
 /images/affiliates/*
@@ -699,6 +701,7 @@
 /main/ads_
 /marketing/*/pub/*
 /media-ads/*
+/mediamondads.
 /medias/ads/*
 /miniads/*
 /mobile-ad/*
@@ -721,6 +724,7 @@
 /npop.js|
 /ntfc.php?p=
 /otherads/*
+/p_under_
 /pab-ssl.js
 /pagead/*?$subdocument
 /pagepub.
@@ -744,9 +748,7 @@
 /pop.php|$script
 /pop/index/*$script
 /pop/script.
-/pop_*&ref=
 /popchaturbaterevshare.
-/popunder3.
 /popup.*&ads=
 /popup1.js
 /popup4.js
@@ -777,6 +779,7 @@
 /pub/dfp.
 /pub/ga_pub_$script
 /pub/habillage-
+/pub/partners/*
 /pub/pub-
 /pub/pub_
 /pub300.
@@ -1016,6 +1019,7 @@ _46860_
 _468x200.
 _468x60&
 _468x60@
+_468X60v2.
 _480x250.
 _60x468_
 _648x60_
@@ -1067,7 +1071,6 @@ _board_ad.
 _code/*/goclick?
 _display_ad_
 _domain=ads.
-_epmads.
 _event_pub.
 _fr/ads/
 _iframe728x90.
@@ -1184,7 +1187,6 @@ _werbebanner_
 /countClick.$popup
 /delivery/ck.$popup
 /delivery/directlink.$popup
-/direct/?cid=$popup
 /directclick/?$popup
 /display/clicks/*$popup
 /enter.php?*&id=*cmp=$popup
@@ -1220,8 +1222,8 @@ _werbebanner_
 /redirect.php?*==$popup
 /redirect/cpa/*$popup
 /renderBanner.do?$popup
-/router.*/click/*?sub_id=$popup
 /s2iurl.php?$popup
+/script/redirect.php?$popup
 /serve.*/ads?
 /splash.*?idzone=$popup
 /syndication.*&idzone=$popup
@@ -1342,6 +1344,7 @@ _lx.ads/$popup
 ||bigbolz.com^$third-party
 ||bionestraff.pro^$third-party
 ||blockadz.com^$third-party
+||blogbang.com^$third-party
 ||broadcast.pm^$third-party
 ||camsoda.com^$third-party
 ||captchme.net^$third-party
@@ -1617,7 +1620,6 @@ _lx.ads/$popup
 ||accidentdemocracy.com^
 ||accountantpacketassail.com^
 ||acerlipeptone.space^
-||acglottku.com^
 ||acjlrotnjjjrobx.com^
 ||acnkdrklbuwhr.com^
 ||acobnnvet.com^
@@ -1633,7 +1635,6 @@ _lx.ads/$popup
 ||ads-blue.com^
 ||adslop.com^
 ||adtoqbuejunef.com^
-||adtracker2.com^
 ||advymjwwsuhs.com^
 ||aeoqmogkswsd.com^
 ||aesopicmalchus.com^
@@ -1862,7 +1863,6 @@ _lx.ads/$popup
 ||deeprootedstranded.com^
 ||deficiencypiecelark.com^
 ||deitynosebleed.com^
-||delusionalrevolt.com^
 ||democratplayful.com^
 ||demtaudeeg.com^
 ||desirebucket.com^
@@ -2033,7 +2033,6 @@ _lx.ads/$popup
 ||imbasedsquidge.com^
 ||imglov.com^
 ||immureuvanite.com^
-||imzahrwl.xyz^
 ||insideoftech.com^
 ||instructscornfulshoes.com^
 ||iodinsbezette.com^
@@ -2219,6 +2218,7 @@ _lx.ads/$popup
 ||oohirdoadi.com^
 ||oordoughy.com^
 ||opealleven.com^
+||opsktp.com^$~subdocument
 ||oremantolsey.com^
 ||orjzy.com^
 ||oslcypxrrpod.com^
@@ -2267,7 +2267,6 @@ _lx.ads/$popup
 ||popcorntime.com.br^
 ||porncrash.com^
 ||poseunprofessionalspecific.com^
-||possessedcrackinghart.com^
 ||postinabioses.com^
 ||pourbaiser.com^
 ||prefershapely.com^
@@ -2304,7 +2303,6 @@ _lx.ads/$popup
 ||ratalslibra.com^
 ||raufajoo.net^
 ||ravishoctopi.com^
-||rcraveoisanikc.com^
 ||realsstoned.com^
 ||reasulty.com^
 ||reauthenticator.com^
@@ -2437,7 +2435,6 @@ _lx.ads/$popup
 ||tetrdracausa.com^
 ||tewtawnaze.space^
 ||texterra.me^
-||textsdulse.com^
 ||thatvalhall.digital^
 ||thecalokas.com^
 ||theirsneedful.com^
@@ -2571,6 +2568,7 @@ _lx.ads/$popup
 ||binance.org^$third-party
 ||browsealoud.com/plus/scripts/$script
 ||clgserv.pro^$third-party
+||cloud-miner.eu^$third-party
 ||cnhv.co^$third-party
 ||coin-have.com^$third-party
 ||coincheck.com^$third-party
@@ -2617,7 +2615,6 @@ _lx.ads/$popup
 ||boonsex.com^$popup,third-party
 ||brightonclick.com^$popup,third-party
 ||buysellads.com^$popup,third-party
-||bwinpartypartners.com^$popup,third-party
 ||camsoda.com^$popup,third-party
 ||cduporno.fr^$popup,third-party
 ||cityadspix.com^$popup,third-party
@@ -2626,7 +2623,6 @@ _lx.ads/$popup
 ||clickzzs.nl^$popup,third-party
 ||cloudgallery.net^$popup
 ||cmvrclicks000.com^$popup
-||cobalten.com^$popup,third-party
 ||combofile4u.click^$popup
 ||cpabuild.com^$popup,third-party
 ||daftsex.com^$popup
@@ -2638,7 +2634,6 @@ _lx.ads/$popup
 ||flashtalking.com^$popup,third-party
 ||flixtab.com^$popup
 ||frjelsoieapoas.shop^$popup
-||geniusdexchange.com^$popup,third-party
 ||getresponse.com^$popup
 ||go2cliks.net^$popup
 ||grottogamer.com^$popup
@@ -2926,6 +2921,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||cpmlink.net^$script,third-party
 ||link.tl^$script,third-party
 ||safelinku.com^$script,third-party
+||shink.me^$script,third-party
 ||shorte.st^$script,third-party
 ||shortem.com^$script,subdocument,third-party
 ||tmearn.net^$script,third-party
@@ -3382,6 +3378,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ###appnexus-placement-teaser1
 ###appnexus-placement-teaser2
 ###appnexus-placement-welcomeAd
+###atlads_place_index_main
 ###atlads_place_left
 ###atlads_place_top
 ###ban728
@@ -3559,7 +3556,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.ad.banner
 ##.ad.banniere-haute
 ##.ad.billboard
-##.ad.isSticky
 ##.ad.onlyMobile
 ##.ad.placeholder
 ##.ad250heightreel
@@ -3618,7 +3614,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.adsMega
 ##.adsMobile
 ##.adsPave
-##.adsPost
 ##.adsTitle
 ##.ads_ban
 ##.ads_frame
@@ -3754,7 +3749,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.newads
 ##.nf-aside-ads
 ##.nf-aside-ads__legal
-##.oa_bannerPub
 ##.oan_ad
 ##.oboxads
 ##.oboxads-ad-widget
@@ -3999,7 +3993,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##a[href^="http://sexgamedevil.com/?"]
 ##a[href^="http://spklmis.com/"]
 ##a[href^="http://t2lgo.com/"]
-##a[href^="http://www.allopass.com/"] > img
 ##a[href^="http://www.espace-plus.net/"]
 ##a[href^="http://www.hayleyssecrets.com/"]
 ##a[href^="http://www.poweredbyliquidfire.mobi/"]
@@ -4537,7 +4530,6 @@ bol.com##section.js_slot-sponsored-products
 solutions-numeriques.com##td[onclick^="window.open('https://www.solutions-numeriques.com/r/?"]
 1fr1.net,3oloum.com,7olm.org,ahladalil.com,ahlamontada.com,alamontada.com,arabepro.com,banouta.net,darkbb.com,easyforumpro.com,fcmulhousefans.com,forum2jeux.com,forumactif.com,forumactif.fr,forumactif.org,forumalgerie.net,forumpro.fr,forums-actifs.com,galoppourlavie.org,gid3an.com,jordanforum.net,lebonforum.com,orizzontescuolaforum.net,own0.com,passionmilitaria.com,sorcieremonique.com,superforum.fr,syriaforums.net,walkingdead-rpg.com,yoo7.com,ze-43eme.com##.croco_wrapper, [onclick^="_"], [onclick^="var"], [style*="position:relative; height: 90px;"]
 auchan.fr##.hp-banner:has(.hp-banner__message-sponsored)
-zebulon.fr##.penci-feed:has(a[href*="/sponso-"])
 1fr1.net,3oloum.com,7olm.org,ahladalil.com,ahlamontada.com,alamontada.com,arabepro.com,banouta.net,easyforumpro.com,fcmulhousefans.com,forum2jeux.com,forumactif.com,forumactif.fr,forumactif.org,forumalgerie.net,forumpro.fr,forums-actifs.com,galoppourlavie.org,gid3an.com,jordanforum.net,lebonforum.com,orizzontescuolaforum.net,own0.com,passionmilitaria.com,sorcieremonique.com,superforum.fr,syriaforums.net,walkingdead-rpg.com,yoo7.com,ze-43eme.com#?#.post:-abp-has(.postprofile:-abp-contains(Contenu sponsorisé))
 2ememain.be#?#.hz-Listing--list-item:-abp-has(.hz-Listing-priority:-abp-contains(Pub au top))
 algerie-eco.com#?#.td_block_wrap:-abp-has(.block-title:-abp-contains(sponsorisés))
