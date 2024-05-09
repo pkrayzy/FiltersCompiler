@@ -1,5 +1,5 @@
-! Checksum: 0UPTWTgPo74dbwKGiueO4g
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1715135651-3600.patch
+! Checksum: rmqxhwdqT/PNQM9mQZunHw
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1715222032-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.12
@@ -284,7 +284,9 @@ kininaru-geinou-m.blog.jp##.rss-blogroll + div.sub-title-box
 kininaru-geinou-m.blog.jp##.rss-blogroll1box
 kininaru-geinou-m.blog.jp##.sub-title-box:first-child
 pokemon-goh.doorblog.jp##.article-body-inner > div.t_b + div[style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;"]
+re-file.com#?#.frame:has(> script[src$="/blogroll.js"]) + br
 re-file.com#?#.frame > script[src$="/blogroll.js"]:upward(1)
+re-file.com#?#.page-title:contains(/話題の|ピックアップ/)
 you1news.com##div[class^="article-bottom-rss"]
 ||matomeantena.com/scripts/parts/category/vip.js
 inutomo11.com##.main-column-inner > br
@@ -314,7 +316,6 @@ akb48matomemory.com##.section-title-style-2ch
 akb48matomemory.com##.ad-article
 ||js.blozoo.info/js/locktool/blogparts.js$domain=kininatta2chmatome.doorblog.jp
 alfalfalfa.com##.rss_headline
-pachinkolist.com##div[style^="height:130px;overflow:auto;"]
 oppainorakuen.com###more > a[target="_blank"]
 digital-thread.com##.article-headline
 ||blog.livedoor.jp/kokopyon1/rss/$subdocument
@@ -427,7 +428,6 @@ figsoku.net##.rssarea
 russianbeauties.jp#%#//scriptlet('abort-on-property-read', 'document.write')
 tozanchannel.blog.jp##.waku
 tozanchannel.blog.jp##.waku-1
-tozanchannel.blog.jp##.waku-2
 tozanchannel.blog.jp##.article-body-inner span[style="font-size: large;"] > b > span[style^="padding-left: 10px; color:"]
 tozanchannel.blog.jp##.article-body-inner div[style="font-size: 120%; padding-left:10px; padding-right:10px; width:auto;"]
 gundamlog.com###kijisita_rss2
@@ -508,6 +508,7 @@ tokimeki-s.com,rabitsokuhou.2chblog.jp###rss
 kijyomatome.com###top-rss
 kijomatomelog.com,kijyomatome.com##.ga-rss
 meshinews.blog.jp##div[class^="mainrss"]
+gsch.tfmwish.com##.rssti
 gsch.tfmwish.com##div[class^="blogroll-wrapper"]
 gundamlog.com###urss
 gundamlog.com###top_rss
@@ -585,7 +586,6 @@ nofootynolife.net##.blogroll_content2
 ||tb.53kf.com/code/$script
 ||hayamimi-hobby.com/gen-rss/
 akankore.doorblog.jp,beelzeboulxxx.com,gossip1.net,kisslog2.com##.rss_wrapper
-newsoku.blog##.headrsssppc
 warotanien.net,newsoku.blog##.rss_scroll_sp
 ddd-smart.net#?#aside > h4.card-panel:contains(色々な同人誌)
 ||feed.mikle.com^$domain=gensen5ch.blog.jp|blog.livedoor.jp|crx7601.com|gadgetlife2ch.blomaga.jp|hayamimi-gunpla.com|hdouga.com|ibarakinews.jp|obutu.com|totalwar.doorblog.jp|xn--bckadddb2a0d4dnc8dwhngdtb58aya0l4a2om843g5npczp7dwh5g.com
@@ -648,7 +648,6 @@ bipblog.com##.main_center_block:first-child
 repsoku.net,hdouga.com,gekiyaku.com##.headline
 fx2ch.net##[class^="rss-blogroll"]
 momoniji.com###content-top-in > .widget-content-top:first-child
-||hosyusokuhou.jp/rss/
 hosyusokuhou.jp###top
 blog.domesoccer.jp##.article-header-rss
 minigob-matome.blog.jp,honsoku.com,samuraisoccer.doorblog.jp##.bt-rss
@@ -726,7 +725,6 @@ beasoku.com##.l-rss-header
 ||cdn.reamaze.com^$third-party
 ||chaser.ru^$third-party
 ||chat24.io^$third-party
-||chatbot.lifecell.ua^
 ||chatra.io^$third-party
 ||ckct.ru^$third-party
 ||cleversite.ru^$third-party
@@ -874,6 +872,7 @@ mbs.jp##.common-wrap--recommend
 getnews.jp,front-row.jp##._popIn_recommend
 lmaga.jp##.feed
 dramanavi.net###block-97
+medical.jiji.com###_popIn_recommend_2
 kahoku.news##div[style="min-height:492px;"]
 news.ntv.co.jp##.recommend-list-wrapper
 ctinews.com#?#.border-b > div#_popIn_recommend:upward(1)
@@ -978,7 +977,6 @@ smartpress.by##.vidjet-template
 ||widget-am.misteraladin.com^$domain=inews.id
 eiga.com##.area-unext
 ||cdn.vuukle.com/platform.js$domain=joblo.com
-web.ultra-soccer.jp###kindle-side-banner
 hltv.org##.leftCol > aside > div.a-reset
 hltv.org##.mid-container > div[class]:has(> div.featured-matches-top-next-slider)
 ||thetruestory.news/widget-top.iife.js$domain=echofm.online|zona.media|thebell.io
@@ -1091,6 +1089,9 @@ m4ex.com##div[class^="rssframe"]
 diletant.media##.donations-coin
 ||ko-fi.com^$domain=luciferdonghua.in|magicemperor.online
 nashaniva.com##.article-content > div[style^="text-align:center;background:url(/images/dback.svg);"]
+inmediahk.net##section[role="main"] a[href="https://www.inmediahk.net/supportus"]
+inmediahk.net##.banner-wrapper
+inmediahk.net##.donate-form
 hejto.pl##header > div.fixed.bottom-0
 novayagazeta.eu#?#main > header ~ div[class]:not([id]):has(> svg + div[class] a[href^="/donate?"])
 ||helpukrainewinwidget.org/cdn/widget.js
