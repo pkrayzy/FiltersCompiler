@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: fQR1diBib3h31/oBq2aGyw
-! Diff-Path: ../patches/14/14-s-1715243643-3600.patch
+! Checksum: 3ILckh+LjOQu8+2ipt+FAw
+! Diff-Path: ../patches/14/14-s-1715247234-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.95.75
-! TimeUpdated: 2024-05-09T08:31:47+00:00
+! Version: 2.1.95.76
+! TimeUpdated: 2024-05-09T09:31:51+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2384,6 +2384,9 @@ docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 !
 ! NOTE: Regular rules
 !
+watchpedia.com##+js(set-cookie-reload, concent, False)
+carry.pl#$#body { overflow: auto !important; }
+carry.pl#$#.cooksieslaw-block { display: none !important; }
 cosphera.net##.cookie-box-back
 innostage-group.ru##.use_cookies-wrap
 99freelas.com.br##.box-cookie
@@ -14442,6 +14445,7 @@ gadgethacks.com##+js(set-constant, WHT.ShowConsentForm, trueFunc)
 ! TODO: use trusted-click-element scriptlet when issues below are fixed
 ! Support for clicking in shadow DOM - https://github.com/AdguardTeam/Scriptlets/issues/323
 ! Support for longer delay - https://github.com/AdguardTeam/Scriptlets/issues/400
+! https://github.com/AdguardTeam/AdguardFilters/issues/178878
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178161
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156057
 ! TODO: rewrite and move to top when https://github.com/AdguardTeam/Scriptlets/issues/284 is resolved
@@ -14523,6 +14527,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178880
+carry.pl#@#.lgcookieslaw_banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178558
 parkbutor.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178817
@@ -30209,6 +30215,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+liebscher-bracht.com##lead-popup[cookie="lead_popup_dismissed_popup_standard"]
 gallea.ca#?##show-artwork div[class^="lg"]:has(> div.flex > p:contains(Partager))
 blog.eva.ua##.acticle-block > p > a[href^="https://invite.viber.com/"]
 blog.eva.ua##.acticle-block > p > a[href="https://www.instagram.com/blog.eva.ua/"]
