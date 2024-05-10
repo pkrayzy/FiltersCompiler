@@ -367,8 +367,8 @@
 			"displayNumber": 3,
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
-			"version": "2.1.24.8",
-			"timeUpdated": "2024-05-10T00:15:09+0000",
+			"version": "2.1.24.9",
+			"timeUpdated": "2024-05-10T03:06:28+0000",
 			"languages": []
 		},
 		{
@@ -603,8 +603,8 @@
 			"displayNumber": 2,
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
-			"version": "2.1.25.0",
-			"timeUpdated": "2024-05-10T00:15:11+0000",
+			"version": "2.1.25.1",
+			"timeUpdated": "2024-05-10T03:06:30+0000",
 			"languages": []
 		},
 		{
