@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.34.96",
-			"timeUpdated": "2024-05-10T05:31:13+0000",
+			"version": "2.3.34.97",
+			"timeUpdated": "2024-05-10T06:31:11+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.0.63",
-			"timeUpdated": "2024-05-09T05:31:23+0000",
+			"version": "2.1.0.64",
+			"timeUpdated": "2024-05-10T06:31:20+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -503,8 +503,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.71",
-			"timeUpdated": "2024-05-09T12:31:39+0000",
+			"version": "2.0.24.72",
+			"timeUpdated": "2024-05-10T06:31:34+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.95.79",
-			"timeUpdated": "2024-05-09T15:31:51+0000",
+			"version": "2.1.95.80",
+			"timeUpdated": "2024-05-10T06:31:46+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.65.24",
-			"timeUpdated": "2024-05-10T00:31:59+0000",
+			"version": "2.0.65.25",
+			"timeUpdated": "2024-05-10T06:31:46+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -683,8 +683,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.39.11",
-			"timeUpdated": "2024-05-09T12:31:55+0000",
+			"version": "2.0.39.12",
+			"timeUpdated": "2024-05-10T06:31:51+0000",
 			"languages": [],
 			"tags": [
 				5,
