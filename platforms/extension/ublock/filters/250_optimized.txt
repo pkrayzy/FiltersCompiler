@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: kTb+Rh8I7NUKfEkvrIjuJQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1715303041-14400.patch
+! Checksum: LVgkfFkkjvfWlb/ajlwm1A
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1715317447-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.11
@@ -741,8 +741,6 @@ quora.com#$#.signup_wall_prevent_scroll .PageWrapper { filter: none !important }
 quora.com#$#.signup_wall_prevent_scroll { position: unset !important }
 cooking.nytimes.com##div[class*=modal_show_]:not(:has(button[aria-label=close], div[class*=grocerylist_listContainer]))
 quizlet.com#$#.SetPageTerm { display: block !important }
-seekingalpha.com##.in.fade.modal
-seekingalpha.com##.modal-dialog
 seekingalpha.com#$#.p { display: block !important }
 seekingalpha.com#$#.blured { opacity: 1.0 !important }
 seekingalpha.com#$#html[lang] > body { overflow: auto !important; }
@@ -792,6 +790,7 @@ indiatimes.com##div[class$="cmtwrapper "]
 ghacks.net###comments
 en.greatfire.org###comments
 color-hex.com##.txtgray
+color-hex.com##.well-sm.well.commentcontainer
 color-hex.com##a[href="#comments"]
 rule34.paheal.net###comment-list-recent
 rule34.xxx###comment-list
@@ -966,6 +965,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 #@#html
 #@#body
 @@||network-auth.com^
+@@||lencr.org^
 @@||disneyplus.bn5x.net^$~third-party
 @@|https://raw.githubusercontent.com/DandelionSprout/adfilt/*
 @@||raw.githubusercontent.com/*/master/*$~third-party
@@ -1013,6 +1013,7 @@ bloombergquint.com##+js(abort-current-script, document.oncopy)
 bloombergquint.com##+js(abort-on-property-read, getSelection)
 delfi.lt##+js(addEventListener-defuser, copy)
 ||www.15min.lt/naujiena^$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:
+/wp-content/plugins/disable-right-click-and-content-copy-protection^
 /plugins/wp-copy-protect-with-color-design^
 dropgalaxy.*##+js(abort-current-script, document.onkeydown)
 ||jsdelivr.net/npm/disable-devtool$script
@@ -1086,7 +1087,6 @@ $removeparam=nx_source
 $removeparam=oprtrack
 $removeparam=ysclid
 &uclick=*&uclickhash=$document,removeparam
-/?r=dir&zoneid=$document,removeparam
 $document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp
 $document,removeparam=/^itm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_.*$/,domain=~redir.tradedoubler.com
@@ -1368,6 +1368,7 @@ $removeparam=subacctid
 $removeparam=subacctname
 $document,removeparam=/^.*affcid.*$/i
 $removeparam=afflid
+$removeparam=fcref
 $document,removeparam=maid
 $document,removeparam=mcid,domain=~miguvideo.*
 $document,removeparam=msid,domain=~rsc.org
@@ -1414,6 +1415,7 @@ $removeparam=_branch_match_id
 $removeparam=_branch_referrer
 $removeparam=vc_lpp
 $removeparam=aff_track
+$removeparam=cj_affiliate
 $removeparam=cj_aid
 $removeparam=cj_pid
 $removeparam=adj_campaign
@@ -1548,7 +1550,6 @@ $removeparam=ads_network
 $removeparam=ads_targetid
 $document,removeparam=/^from=rss$/
 $document,removeparam=/^source=rss$/
-ref=rss^$document,removeparam=ref
 $removeparam=mindbox-click-id
 $document,removeparam=dtpid
 $removeparam=tj,domain=baidu.com|sina.com.cn
@@ -1576,6 +1577,7 @@ $removeparam=gaa_ts
 $removeparam=gaa_sig
 $removeparam=amp_gsa
 $removeparam=vgo_ee
+ref=prisjakt^$document,removeparam=ref
 $document,removeparam=/^amp;utm_.*$/
 $removeparam=sap-outbound-id
 $removeparam=analyticsCorrelationId
@@ -1667,6 +1669,7 @@ $removeparam=lotamePanoramaId
 $removeparam=yandexuid
 $removeparam=google_nid
 $removeparam=cbuster
+$removeparam=ns_ts
 $removeparam=__hs
 $removeparam=ex-src
 $removeparam=pmUserId
@@ -1988,6 +1991,7 @@ $removeparam=aff_click_id
 ||baidu.com/search/index?$removeparam=ct
 ||baidu.com^$removeparam=asctag
 ||baidu.com^$removeparam=rq
+||baidu.com^$removeparam=vslid
 ||baidu.com^$removeparam=idctag
 ||baidu.com^$removeparam=logid
 ||baidu.com^$removeparam=pageFrom
@@ -2191,6 +2195,7 @@ $removeparam=adcampaigngroup
 $removeparam=soc_src
 $removeparam=soc_trk
 $removeparam=ia-pkpmtrack
+||spartoo.$removeparam=track_id
 ||microcenter.com^$removeparam=rf
 ||as.com^$removeparam=omnil
 $removeparam=kw,domain=udemy.com|hotels.com
@@ -2209,7 +2214,6 @@ $document,removeparam=/^siteid=.*$/i,domain=agentprovocateur.com|amerimark.com|a
 ||kohls.com^$removeparam=pfm
 ||kohls.com^$removeparam=bdrecsId
 ||kohls.com^$removeparam=prdPV
-$removeparam=site_id,domain=taskrabbit.com|kochava.com
 ||kochava.com^$removeparam=network_id
 ||kochava.com^$removeparam=device_id
 ||skyscanner.$removeparam=redirectedFrom
@@ -2281,15 +2285,11 @@ $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
 ||apple.com^$removeparam=mttnsubplmnt
 $removeparam=wfr,domain=weidian.com|baidu.com
 $removeparam=organic_search_click
-$removeparam=pop,domain=etsy.com
 $removeparam=pro,domain=etsy.com
 $removeparam=frs,domain=etsy.com
 $removeparam=click_key,domain=etsy.com
 $removeparam=click_sum,domain=etsy.com
 $removeparam=iid,domain=cnn.com
-||weibo.com/ajax/log$removeparam=uicode
-||weibo.com/ajax/log$removeparam=act_code
-||weibo.com/ajax/log$removeparam=fid
 ||onbuy.com^$removeparam=stat
 ||despegar.$removeparam=mktdata
 ||hao123.com^$removeparam=tn
@@ -2327,7 +2327,6 @@ $removeparam=correlation_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo
 ||walmart.$removeparam=/^ath.*$/
 $removeparam=deep_and_deferred
 ||gamivo.com^$removeparam=glv
-||gearbest.$removeparam=lkid
 ||banggood.com^$removeparam=custlinkid
 ||market.yandex.ru^$removeparam=cpc
 ||everesttech.net^$removeparam=/^ev_.*$/
@@ -2354,9 +2353,12 @@ $removeparam=ret,domain=shein.com
 $removeparam=ici,domain=shein.com
 $removeparam=adp,domain=shein.com
 $removeparam=_t,domain=shein.com
+$removeparam=sr_id,domain=reddit.app.link
+$removeparam=sr_name,domain=reddit.app.link
 $removeparam=domain,domain=reddit.app.link
 $removeparam=user_agent,domain=reddit.app.link
 $removeparam=language,domain=reddit.app.link
+$removeparam=session_id,domain=reddit.app.link
 $document,removeparam=feature,domain=reddit.app.link
 $removeparam=mweb_loid,domain=reddit.app.link
 $removeparam=mweb_loid_created,domain=reddit.app.link
@@ -2429,7 +2431,6 @@ $document,removeparam=refId,domain=aebn.com|linkedin.com
 ||tumblr.com^$removeparam=is_related_post
 ||xbox.com^$removeparam=rtc
 ||tokopedia.com^$removeparam=extParam
-||tokopedia.com^$removeparam=refined
 ||sony.$removeparam=cpint
 ||target.$removeparam=preselect
 $removeparam=ueid,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
@@ -2546,6 +2547,7 @@ $document,domain=bilibili.com|querie.me,removeparam=timestamp
 ||adguard.info^$removeparam=nc
 ref=404media.co$document,removeparam=ref
 ref=easywithai$document,removeparam=ref
+$document,removeparam=jp_cmp,domain=chase.com
 ||researchgate.net^$document,removeparam=_tp
 $document,removeparam=share_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 ||xvideos.$document,removeparam=sxcaf
@@ -2574,6 +2576,7 @@ ref=blog.roboflow.com$document,removeparam=ref
 $document,removeparam=af_reengagement_window
 ||privatbank.ua^$removeparam=visit_id
 ||yandex.com/portal/set/any$removeparam=sk
+||fifa.com^$document,removeparam=entryPoint
 ||affiliate.insider.com^$document,removeparam=amazonTrackingID
 ||affiliate.insider.com^$document,removeparam=h
 ||affiliate.insider.com^$document,removeparam=platform
@@ -2611,6 +2614,7 @@ $document,removeparam=sal,domain=indeed.com
 $document,removeparam=vjk,domain=indeed.com
 $document,removeparam=fvj,domain=indeed.com
 ||bp.blogspot.com^$removeparam=/^r[hn].*$/
+||monsterhunternow.com^$document,removeparam=source_caller
 $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid
@@ -2677,6 +2681,7 @@ tumblr.com#$#body { cursor: unset !important }
 .cur|$image,domain=~pixiv.net|~deviantart.com
 @@://maps.gstatic.com/*.cur|$image
 /puntatore_$image
+/assets/js/Cursor_1__1.min.js
 /wp-content/uploads/*/cursor.png|
 nerdelandslaget.no#$#html { cursor: auto !important }
 .ani|$domain=~pixiv.net|~deviantart.com
