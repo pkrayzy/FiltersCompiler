@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.30.25",
-			"timeUpdated": "2024-05-11T03:04:05+0000",
+			"version": "2.3.30.26",
+			"timeUpdated": "2024-05-12T03:06:22+0000",
 			"languages": []
 		},
 		{
@@ -87,8 +87,8 @@
 			"displayNumber": 1,
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/4.txt",
-			"version": "2.0.99.71",
-			"timeUpdated": "2024-05-11T03:04:10+0000",
+			"version": "2.0.99.72",
+			"timeUpdated": "2024-05-12T03:06:27+0000",
 			"languages": []
 		},
 		{
@@ -367,8 +367,8 @@
 			"displayNumber": 3,
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
-			"version": "2.1.24.10",
-			"timeUpdated": "2024-05-11T03:03:46+0000",
+			"version": "2.1.24.11",
+			"timeUpdated": "2024-05-12T03:06:04+0000",
 			"languages": []
 		},
 		{
@@ -603,8 +603,8 @@
 			"displayNumber": 2,
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
-			"version": "2.1.25.2",
-			"timeUpdated": "2024-05-11T03:03:49+0000",
+			"version": "2.1.25.3",
+			"timeUpdated": "2024-05-12T03:06:06+0000",
 			"languages": []
 		},
 		{
