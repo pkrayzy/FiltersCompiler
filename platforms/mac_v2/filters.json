@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.35.21",
-			"timeUpdated": "2024-05-12T08:31:13+0000",
+			"version": "2.3.35.22",
+			"timeUpdated": "2024-05-12T12:31:16+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.0.67",
-			"timeUpdated": "2024-05-11T13:31:24+0000",
+			"version": "2.1.0.68",
+			"timeUpdated": "2024-05-12T12:31:26+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.61",
-			"timeUpdated": "2024-05-12T11:31:34+0000",
+			"version": "2.0.51.62",
+			"timeUpdated": "2024-05-12T12:31:37+0000",
 			"languages": [
 				"ja"
 			],
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.95.86",
-			"timeUpdated": "2024-05-12T11:31:51+0000",
+			"version": "2.1.95.87",
+			"timeUpdated": "2024-05-12T12:31:57+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.65.33",
-			"timeUpdated": "2024-05-12T06:31:46+0000",
+			"version": "2.0.65.34",
+			"timeUpdated": "2024-05-12T12:31:58+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -665,8 +665,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.8.41",
-			"timeUpdated": "2024-05-09T11:31:58+0000",
+			"version": "2.0.8.42",
+			"timeUpdated": "2024-05-12T12:32:02+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -763,8 +763,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.13",
-			"timeUpdated": "2024-05-12T11:31:59+0000",
+			"version": "2.0.8.14",
+			"timeUpdated": "2024-05-12T12:32:06+0000",
 			"languages": [],
 			"tags": [
 				5,
