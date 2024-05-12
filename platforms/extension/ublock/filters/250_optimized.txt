@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: mEy0gstaLKHKxrXB6Ir3aA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1715403845-14400.patch
+! Checksum: 90FB9ciM1HTJJ/KZl9wMsg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1715490234-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.11
@@ -10,6 +10,7 @@
 ##.app-banner:not(html,body,:empty)
 ##.app-btn:not(html,body,:empty)
 ##.app-download:not(html,body,section,.content)
+##.app-teaser:not(html,body,:empty)
 ##.AppBanner:not(html,body,:empty)
 ##.download-app-banner:not(html,body,:empty)
 ##.download-app:not(html,body,:empty)
@@ -49,7 +50,6 @@ rts.rs##.footer-download
 rts.rs##.boxRight:has(img[src*=ndroid-aplikacija])
 skype.com###appBanner
 soundcloud.com##article.mobileApps
-sporx.com,superfb.com,webaslan.com##a[href$=".com/mobil/"]
 tokopedia.com##div[id*=header] div[class^=css-]> a[href="/mobile-apps/"]
 tokopedia.com##div[id*=header] i:has(+ a[href="/mobile-apps/"])
 video.az##.sidebar-right > .text-center > a[href*="/app"] > img
@@ -206,6 +206,7 @@ coolrom.com.au,coolrom.com##.download_link
 !+ NOT_OPTIMIZED
 ||132.148.220.142^$document
 ||upload-4ever.com^$document
+/(^|\.|://)[a-z0-9-]{2,}trk\.xyz(/|$)/$document,popup,domain=~malware-redirection-trains.*
 !+ NOT_OPTIMIZED
 /^https?://(www\.)?[a-z0-9-]{1,}\.[a-z]{2,17}/[a-z0-9]/\?[a-z0-9.-]{8,}$/$document
 ||195.201.253.130^$document
@@ -1065,6 +1066,7 @@ rakuten.tv##a[href*=".imdb.com/title/"]
 playpilot.com##.ratings
 www.google.*#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
 www.google.*##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
+tv.nu##a[href*="imdb.com"]
 tv.nu#?#a[title] span:has-text(IMDb)
 tv.nu##a[title] span:has(path[d^="M9.465 "])
 cinerama.uz##div[class^=MovieDescription_rating__]:nth-of-type(1)
@@ -1172,6 +1174,7 @@ $removeparam=irpid
 $removeparam=iradtype
 $removeparam=irmptype
 $removeparam=mp_value1
+$removeparam=__twitter_impression
 $removeparam=email_work_card
 $removeparam=tracking_source
 $~image,removeparam=itok
@@ -1180,7 +1183,6 @@ $removeparam=tpcc
 $removeparam=onetime_FromEmail
 $~xmlhttprequest,removeparam=mbid
 $removeparam=itid
-$removeparam=full_trSrc
 $document,removeparam=/^ICID=.*$/i,domain=~api.mapbox.com|~microsoft.com
 $document,removeparam=/^utm-.*$/
 $~subdocument,removeparam=aff,domain=~discoverbank.com|~discover.com
@@ -1353,6 +1355,7 @@ $removeparam=cm_type
 Ref=CJ^$document,removeparam=ref
 ref=awin^$document,removeparam=ref
 $document,removeparam=/^source=pepperjam$/
+$document,removeparam=/^source=cj$/
 $removeparam=affil
 $removeparam=cjid
 $removeparam=irsharedid
@@ -1388,8 +1391,6 @@ $removeparam=ldtag_cl
 $removeparam=vero_conv
 $removeparam=vero_id
 $removeparam=a_aid
-$removeparam=otracker
-$removeparam=otracker1
 $removeparam=ft_source
 $removeparam=ft_medium
 $removeparam=ref_source
@@ -2243,8 +2244,6 @@ $removeparam=fm,domain=flipkart.com|shopbop.com
 ||epicgames.com^$removeparam=epic_affiliate
 ||epicgames.com^$removeparam=epic_gameId
 $document,removeparam=cId,domain=apple.com|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|youtube.com
-$document,removeparam=lId,domain=apple.com|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|youtube.com
-$document,removeparam=/^src=Linkfire$/,domain=apple.com|youtube.com
 ||music.apple.com^$removeparam=itsct
 ||music.apple.com^$removeparam=itscg
 ||apple.com^$removeparam=/^ign-.*$/
@@ -2254,7 +2253,6 @@ $removeparam=algo,document
 $removeparam=imp_id,document
 ||steampowered.com^$removeparam=ser
 $removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
-$removeparam=ds_s_kwgid,domain=clickserve.dartsearch.net
 $removeparam=ds_a_cid,domain=clickserve.dartsearch.net
 $removeparam=ds_a_caid,domain=clickserve.dartsearch.net
 $removeparam=ds_a_agid,domain=clickserve.dartsearch.net
@@ -2285,6 +2283,7 @@ $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
 ||apple.com^$removeparam=mttnsubplmnt
 $removeparam=wfr,domain=weidian.com|baidu.com
 $removeparam=organic_search_click
+$removeparam=pop,domain=etsy.com
 $removeparam=pro,domain=etsy.com
 $removeparam=frs,domain=etsy.com
 $removeparam=click_key,domain=etsy.com
@@ -2326,6 +2325,7 @@ $removeparam=correlation_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo
 ||walmart.$removeparam=/^ath.*$/
 $removeparam=deep_and_deferred
 ||gamivo.com^$removeparam=glv
+||gearbest.$removeparam=lkid
 ||banggood.com^$removeparam=custlinkid
 ||market.yandex.ru^$removeparam=cpc
 ||everesttech.net^$removeparam=/^ev_.*$/
@@ -2427,6 +2427,7 @@ $removeparam=ueid,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|d
 $removeparam=qo,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com|search.ask.com
 $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
 $document,removeparam=l,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
+||qvc.com^$removeparam=qq
 ||jcpenney.com^$removeparam=deptId
 ||jcpenney.com^$removeparam=catId
 ||jcpenney.com^$removeparam=urlState
@@ -2486,7 +2487,6 @@ $removeparam=cvid,domain=chinadaily.com.cn|eastday.com|msn.cn|msn.com|tianqi.com
 ||quizlet.com^$removeparam=funnelUUID
 ||quizlet.com^$removeparam=signupOrigin
 $removeparam=qid,domain=bookdepository.com|eastday.com
-$removeparam=pk_vid,document
 ||xiaohongshu.com^$removeparam=app_platform,document
 ||xiaohongshu.com^$removeparam=app_version,document
 ||xiaohongshu.com^$removeparam=share_from_user_hidden,document
@@ -2560,7 +2560,6 @@ $document,removeparam=bpli,domain=blogger.com
 ||cimri.com^$document,removeparam=offerCount
 ||cimri.com^$document,removeparam=offerFiltered
 ||cimri.com^$document,removeparam=hasFavorite
-ref=blog.roboflow.com$document,removeparam=ref
 ||gitlab.com^$document,removeparam=nav_source
 ||bybit.com^$document,removeparam=/^sa_utm_.*$/i
 $document,removeparam=af_reengagement_window
@@ -2687,7 +2686,6 @@ foodora.*#$#.page-wrapper.order-component { margin-top: 128px !important }
 foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 @@/favicon.ico|
 @@/favicon1.ico|
-@@/doubleclick.ico|
 www.youtube.com##.ytd-watch-flexy #dismissible:has(.badge-style-type-simple)
 www.youtube.com##ytd-shelf-renderer[thumbnail-style]
 www.finn.no##+js(remove-class, ads__unit--premium, .ads__unit, stay)
