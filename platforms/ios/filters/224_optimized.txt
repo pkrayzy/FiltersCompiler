@@ -1,9 +1,9 @@
-! Checksum: PDR2AnuVWa3U33W749qWJw
-! Diff-Path: ../patches/224_optimized/224_optimized-s-1715578446-3600.patch
+! Checksum: eJ3GCBqRt7sduUIX97EM6Q
+! Diff-Path: ../patches/224_optimized/224_optimized-s-1715582057-3600.patch
 ! Title: AdGuard Chinese filter (Optimized)
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.15.71
-! TimeUpdated: 2024-05-13T05:32:09+00:00
+! Version: 2.1.15.72
+! TimeUpdated: 2024-05-13T06:32:01+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -602,6 +602,9 @@ nfmovies.com#$#img[src^="/pic/tu/"] { visibility: hidden!important; }
 nfmovies.com#$#a[onclick*="openurl"][target="_blank"] img[src^="/static/"] { position: absolute!important; top: -9999px!important; left: -9999px!important; bottom: unset!important; }
 ##.Zi_ad_a_H
 ##a[href^="https://adm.beimg.com/"]
+now.com#%#//scriptlet('set-constant', 'preBid', 'emptyObj')
+now.com#%#//scriptlet('set-constant', 'preBid.displayAd', 'noopFunc')
+now.com#%#//scriptlet('set-constant', 'preBid.getPrerollVASTUrl', 'noopFunc')
 3dmgame.com#%#//scriptlet('abort-on-property-write', 'adStart')
 m.lwxs.com#%#//scriptlet('abort-current-inline-script', 'eval', '_0x')
 m.lwxs.com#%#//scriptlet('abort-current-inline-script', 'document.write', '_0x')
@@ -2381,6 +2384,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_chinese
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !+ PLATFORM(ios) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_ios { display: none !important; }
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||now.com/*/js/dfpAsset_prebid.js
 @@||api.val.qq.com/go/agame/resource/banner?bannerid=aclos_website_banner$domain=val.qq.com
 ||cdn77.org^*.mp4$badfilter
 mfa.gov.cn,fmprc.gov.cn#@#.adbox2

@@ -1,9 +1,9 @@
-! Checksum: rc+Ff4Ui8k7WrB7qXzonQA
-! Diff-Path: ../patches/224/224-s-1715578415-3600.patch
+! Checksum: cBA4qQdcA5QDUvpoM2bOGw
+! Diff-Path: ../patches/224/224-s-1715582022-3600.patch
 ! Title: AdGuard Chinese filter
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.15.71
-! TimeUpdated: 2024-05-13T05:32:09+00:00
+! Version: 2.1.15.72
+! TimeUpdated: 2024-05-13T06:32:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -767,6 +767,10 @@ nfmovies.com#$#a[onclick*="openurl"][target="_blank"] img[src^="/static/"] { pos
 !--------------------------------------!
 ! SECTION: Chinese - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178988
+now.com#%#//scriptlet('set-constant', 'preBid', 'emptyObj')
+now.com#%#//scriptlet('set-constant', 'preBid.displayAd', 'noopFunc')
+now.com#%#//scriptlet('set-constant', 'preBid.getPrerollVASTUrl', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/169652
 3dmgame.com#%#//scriptlet('abort-on-property-write', 'adStart')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/168192
@@ -2786,6 +2790,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/178988
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=now.com,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174552
 @@||api.val.qq.com/go/agame/resource/banner?bannerid=aclos_website_banner$domain=val.qq.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170147
