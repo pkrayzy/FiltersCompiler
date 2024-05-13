@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 4Rl9xmg7LNTTunEpj7ZlwQ
-! Diff-Path: ../patches/14/14-s-1715585649-3600.patch
+! Checksum: JEsjfGcllrVuAekbcJCgUw
+! Diff-Path: ../patches/14/14-s-1715589254-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.95.94
-! TimeUpdated: 2024-05-13T07:31:49+00:00
+! Version: 2.1.95.95
+! TimeUpdated: 2024-05-13T08:31:49+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -13877,6 +13877,7 @@ apply.lufthansagroup.careers##+js(set-cookie, cookieCenterConsent, true)
 fusionbrain.ai##+js(set-local-storage-item, fb-cookies-accept, 1)
 digi24.ro##+js(set-cookie-reload, cmp_level, 5)
 !
+doppelherz.de##+js(set-cookie, cookieConsent, false)
 odido.nl##+js(abort-current-script, jQuery, #cookiePopup)
 i-kolobrzeg.pl##+js(set-cookie-reload, cookieConsent, accepted)
 app.erevie.pl##+js(set-cookie, cookies-accept, 1)
@@ -22192,6 +22193,11 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+embibe.com##button:has(> img[src^="https://sss.embibe.com/content-utilities/"])
+embibe.com##.ReactModalPortal:has(div[class]:first-child:empty + div[class] > input[placeholder="Mobile Number"])
+embibe.com##+js(set-session-storage-item, isAvailableSmartBanner, false)
+embibe.com##+js(set-session-storage-item, isOpenedLiveClassBanner, false)
+embibe.com##+js(set-session-storage-item, embibeApp.smartBanner.landingHome, true)
 ensinarhistoria.com.br##.telegram-fixa
 cpt.com.br##.whatsapp-footer
 thestudentroom.co.uk#$#body > div.MuiDialog-root:has(> div.MuiDialog-container div[data-testid="registration-modal-threadregprompt"]) { display: none !important; }
@@ -30226,6 +30232,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+lance.com.br###more-news ~ .w-full:has(img[alt="backgroundNewsletter"])
 tastecooking.com##div[id^="taste-lead-capture"]
 liebscher-bracht.com##lead-popup[cookie="lead_popup_dismissed_popup_standard"]
 gallea.ca#?##show-artwork div[class^="lg"]:has(> div.flex > p:contains(Partager))

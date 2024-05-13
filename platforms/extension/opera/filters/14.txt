@@ -1,9 +1,9 @@
-! Checksum: mgbT7/1eM5dKc6IcxYDVTw
-! Diff-Path: ../patches/14/14-s-1715585641-3600.patch
+! Checksum: nZ9pG48v3WPLSIF6wsKIsA
+! Diff-Path: ../patches/14/14-s-1715589247-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.95.94
-! TimeUpdated: 2024-05-13T07:31:49+00:00
+! Version: 2.1.95.95
+! TimeUpdated: 2024-05-13T08:31:49+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14136,6 +14136,7 @@ chase.co.uk#%#//scriptlet('trusted-click-element', '#consent-manager-modal butto
 spoint.spox.com,cmpv2.berliner-zeitung.de#%#//scriptlet('trusted-click-element', 'button[title="Zustimmen"]')
 cmp.computerbild.de,cmp-sp.siegener-zeitung.de,cmp-sp.sportbuzzer.de#%#//scriptlet('trusted-click-element', 'button[title^="Alle akzeptieren"]')
 !
+doppelherz.de#%#//scriptlet('set-cookie', 'cookieConsent', 'false')
 odido.nl#%#//scriptlet('abort-current-inline-script', 'jQuery', '#cookiePopup')
 i-kolobrzeg.pl#%#//scriptlet('set-cookie-reload', 'cookieConsent', 'accepted')
 pilgrim.es#%#//scriptlet('trusted-set-cookie', 'cookies_options', '%7B%22name%22%3A%22cookies_options%22%2C%22required%22%3Atrue%2C%22analytics%22%3Afalse%2C%22advertising%22%3Afalse%7D')
@@ -22900,6 +22901,11 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+embibe.com##button:has(> img[src^="https://sss.embibe.com/content-utilities/"])
+embibe.com##.ReactModalPortal:has(div[class]:first-child:empty + div[class] > input[placeholder="Mobile Number"])
+embibe.com#%#//scriptlet('set-session-storage-item', 'isAvailableSmartBanner', 'false')
+embibe.com#%#//scriptlet('set-session-storage-item', 'isOpenedLiveClassBanner', 'false')
+embibe.com#%#//scriptlet('set-session-storage-item', 'embibeApp.smartBanner.landingHome', 'true')
 ensinarhistoria.com.br##.telegram-fixa
 imagecolorpicker.com#%#//scriptlet('trusted-set-local-storage-item', 'w3ride_leave_dialog', 'true')
 cpt.com.br##.whatsapp-footer
@@ -30928,6 +30934,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+lance.com.br###more-news ~ .w-full:has(img[alt="backgroundNewsletter"])
 tastecooking.com##div[id^="taste-lead-capture"]
 liebscher-bracht.com##lead-popup[cookie="lead_popup_dismissed_popup_standard"]
 gallea.ca#?##show-artwork div[class^="lg"]:has(> div.flex > p:contains(Partager))

@@ -1,9 +1,9 @@
-! Checksum: OzWXCWWZyrXGDExq5/rSHQ
-! Diff-Path: ../patches/19/19-s-1715585629-3600.patch
+! Checksum: 3HvBdP7OkhwiuBrjhT694A
+! Diff-Path: ../patches/19/19-s-1715589238-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.36.29
-! TimeUpdated: 2024-05-13T07:31:56+00:00
+! Version: 2.0.36.30
+! TimeUpdated: 2024-05-13T08:31:55+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4151,6 +4151,11 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+embibe.com##button:has(> img[src^="https://sss.embibe.com/content-utilities/"])
+embibe.com##.ReactModalPortal:has(div[class]:first-child:empty + div[class] > input[placeholder="Mobile Number"])
+embibe.com#%#//scriptlet('set-session-storage-item', 'isAvailableSmartBanner', 'false')
+embibe.com#%#//scriptlet('set-session-storage-item', 'isOpenedLiveClassBanner', 'false')
+embibe.com#%#//scriptlet('set-session-storage-item', 'embibeApp.smartBanner.landingHome', 'true')
 ensinarhistoria.com.br##.telegram-fixa
 imagecolorpicker.com#%#//scriptlet('trusted-set-local-storage-item', 'w3ride_leave_dialog', 'true')
 cpt.com.br##.whatsapp-footer
@@ -12177,6 +12182,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+lance.com.br###more-news ~ .w-full:has(img[alt="backgroundNewsletter"])
 tastecooking.com##div[id^="taste-lead-capture"]
 liebscher-bracht.com##lead-popup[cookie="lead_popup_dismissed_popup_standard"]
 gallea.ca#?##show-artwork div[class^="lg"]:has(> div.flex > p:contains(Partager))
