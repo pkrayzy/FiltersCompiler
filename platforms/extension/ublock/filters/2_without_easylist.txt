@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 1+uB1BU70/o0Ij8RA3xCbQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1715600057-3600.patch
+! Checksum: x3Odz6iuKbIK88XMgW2eRQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1715603678-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.35.37
-! TimeUpdated: 2024-05-13T11:31:16+00:00
+! Version: 2.3.35.38
+! TimeUpdated: 2024-05-13T12:31:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7484,6 +7484,9 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179034
+||tempmail.run/nab.js
+tempmail.run##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179074
 everydaytechvams.com##.popSc
 everydaytechvams.com##+js(abort-on-property-write, checkAdsStatus)
@@ -32317,6 +32320,8 @@ neowin.net#$#div[class^="banner-"] { height: 0!important; min-height: 0!importan
 ! /asset/angular.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 ! /asset/jquery/slim-3.2.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 !
+! ex. https://fiveyardlab.com/z-7131650
+/^https:\/\/[0-9a-z]{5,}\.[a-z]{2,3}\/z-[5-7]\d{6}$/$script,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/pull/175819
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$script,third-party,match-case,header=link:/adsco\.re\/>;rel=preconnect/
 ://www.*.com/*.css|$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
@@ -32897,6 +32902,10 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+tempmail.run##.mt-2 > .row > .col-md-4 > .card:empty
+tempmail.run##.col-md-8 > .card:has(> div[id*="ScriptRoot"]:only-child)
+youtubetranscript.com###video_col a[target="_blank"] > img
+cloud.getpczone.com##a[href^="https://wingiestedifyupboiled.com/"]
 investing.com###comments_new > div:not([class], [id]) > .border-t:has(> .border-b:only-child > div[data-test="ad-slot-visible"])
 islegitsite.com##div[style="max-width: 728px; min-height: 150px;"]
 guru3d.com##article.ct-publish:has(> header > .ct-publish-meta > .badge > .bi-badge-ad-fill)
