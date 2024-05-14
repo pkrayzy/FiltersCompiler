@@ -1,5 +1,5 @@
-! Checksum: 7bTKdfV+QmYq1WD0XmrAXg
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1715618073-3600.patch
+! Checksum: PiHQuPvbDvaz504XrPI7CQ
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1715654063-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.41.97
@@ -427,7 +427,6 @@ hausbau-forum.de###consent_info
 gamezoom.net#%#//scriptlet('prevent-fetch', 'ads.gamezoom.net')
 gamezoom.net#%#//scriptlet('set-constant', 'loadAntiWerber', 'noopFunc')
 deutschekanale.com,riuria.beauty#%#//scriptlet('prevent-fetch', '/doubleclick\.net|imasdk\.googleapis\.com/')
-||imasdk.googleapis.com^$xmlhttprequest,redirect=nooptext,domain=deutschekanale.com|riuria.beauty
 gartenfreunde.de#%#//scriptlet('set-constant', 'ezDetectAardvark', 'noopFunc')
 southpark.de#%#(()=>{const e=new Map,t=function(){},o=t;o.prototype.dispose=t,o.prototype.setNetwork=t,o.prototype.resize=t,o.prototype.setServer=t,o.prototype.setLogLevel=t,o.prototype.newContext=function(){return this},o.prototype.setParameter=t,o.prototype.addEventListener=function(t,o){t&&(console.debug(`Type: ${t}, callback: ${o}`),e.set(t,o))},o.prototype.removeEventListener=t,o.prototype.setProfile=t,o.prototype.setCapability=t,o.prototype.setVideoAsset=t,o.prototype.setSiteSection=t,o.prototype.addKeyValue=t,o.prototype.addTemporalSlot=t,o.prototype.registerCustomPlayer=t,o.prototype.setVideoDisplaySize=t,o.prototype.setContentVideoElement=t,o.prototype.registerVideoDisplayBase=t,o.prototype.submitRequest=function(){const t={type:tv.freewheel.SDK.EVENT_SLOT_ENDED},o=e.get("EVENT_SLOT_ENDED");o&&setTimeout((()=>{try{o(t)}catch(e){console.error(e)}}),1)},window.tv={freewheel:{SDK:{Ad:t,AdManager:o,AdListener:t,_instanceQueue:{},setLogLevel:t,EVENT_SLOT_ENDED:"EVENT_SLOT_ENDED"}}}})();
 southpark.de#%#//scriptlet('prevent-fetch', 'imasdk.googleapis.com')
@@ -487,6 +486,7 @@ cryptstream.de,2ix2com.de,2ix2-alternative.de,2ix2tv.de,tv24livestream2.de,tv24l
 cryptstream.de,2ix2com.de,2ix2-alternative.de,2ix2tv.de,tv24livestream2.de,tv24livestream1.de,tv24livestream.de,mysqlcryptnow.de,mysql2dumpcrypt.de,nydus.org#?##xabzy
 cryptstream.de,2ix2com.de,2ix2-alternative.de,2ix2tv.de,tv24livestream2.de,tv24livestream1.de,tv24livestream.de,mysqlcryptnow.de,mysql2dumpcrypt.de,nydus.org##div[id^="abmm"]
 cryptstream.de,2ix2com.de,2ix2-alternative.de,2ix2tv.de,tv24livestream2.de,tv24livestream1.de,tv24livestream.de,mysqlcryptnow.de,mysql2dumpcrypt.de,nydus.org#?#div[id^="abmm"]
+nydus.org#$##wrapfabtest { height: 1px !important; }
 cryptstream.de,2ix2com.de,2ix2-alternative.de,2ix2tv.de,tv24livestream2.de,tv24livestream1.de,tv24livestream.de,mysqlcryptnow.de,mysql2dumpcrypt.de,nydus.org#%#//scriptlet('set-constant', 'gss', '0')
 cryptstream.de,2ix2com.de,2ix2-alternative.de,2ix2tv.de,tv24livestream2.de,tv24livestream1.de,tv24livestream.de,mysqlcryptnow.de,mysql2dumpcrypt.de,nydus.org#%#//scriptlet('set-constant', 'stpd', 'emptyObj')
 cryptstream.de,2ix2com.de,2ix2-alternative.de,2ix2tv.de,tv24livestream2.de,tv24livestream1.de,tv24livestream.de,mysqlcryptnow.de,mysql2dumpcrypt.de,nydus.org#%#//scriptlet('prevent-setTimeout', '/ab==|window\.getComputedStyle\(el\)|\.style\.display="none"|=="undefined"/')
@@ -1089,6 +1089,7 @@ tagblatt.ch##.pageelement--advertisement
 tagblatt.ch##div[componenttype^="advertisement-native"]
 buffed.de##.ratgeberWrapper
 buffed.de##.innerArticleModule a[data-google-interstitial]
+studium-ratgeber.de##.elementor-top-column > div.elementor-widget-wrap > div.elementor-widget-image a[target="_blank"]
 tarnkappe.info##.content > section[data-nosnippet][class*="-only"]
 spieleforum.de##div[data-widget-definition="fh_ad_position"]
 spieleforum.de##.block-body > article:not([data-author])
@@ -1410,7 +1411,6 @@ spin.de###adcontsupersize
 spin.de###content > .box-info + div[style="margin: 60px auto 20px auto;width:640px;text-align:center"]
 spin.de##.mbox > div[style="float:left;margin:60px 0 0 70px"]
 spin.de##.kl:not(.minorinfo) + div[id^="adcont"]
-pff.de##.porscheMarketAdContainer
 cad.de##a[href^="https://ww4.cad.de/Ads/adclick.php"]
 ||cad.de/images/Anzeige60.jpg
 bild.de##article > .article-mtl
@@ -1809,6 +1809,7 @@ zdnet.de###featureWhitepaper
 golem.de###gts-clip
 winfuture.de###homepage_rectangle
 sueddeutsche.de###iqd_mainAd
+szbz.de,hardwareluxx.de,geliebte-katze.de###leaderboard
 physio-deutschland.de###partners-right
 seatforum.de###posts > ins[id^="AABI-"]
 golem.de###pricehits
@@ -2257,7 +2258,6 @@ rtl.de#@#.rtlde-medium-rectangle
 /images/werbung/*
 /img/werbung/*
 /iqadcontroller.$script
-/media/werbung/*
 /medien/werbung/*
 /nativendo.js
 /nativendo/*
@@ -2312,7 +2312,6 @@ _werbung.pl
 ###google_adsense_werbung
 ###gwerbung
 ###headerWerbung
-###inlinewerbung
 ###nativendo-artikel
 ###nativendo-home
 ###nativendo-home-2
@@ -2528,6 +2527,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||amunx.de^$third-party
 ||arminius.io^$third-party
 ||atf-tagmanager.de^$third-party
+||auxmoney-partnerprogramm.de^$third-party
 ||ay.delivery^$third-party
 ||ba-content.de^$third-party
 ||cashdorado.de^$third-party
@@ -2612,6 +2612,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||b.big7.com^$third-party
 ||baygel.de/banner/
 ||belmediaverlag.com/gott-ch/$third-party
+||bergfreunde-partner.de/banner/
 ||cdn.plus500.com/media/banners/
 ||ced.sascdn.com^
 ||communicationads.net/tb.php
@@ -2639,7 +2640,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||middleware.marktjagd.de^$third-party
 ||modules.wikifolio.com/v2/de/autocontent/stock/*?partner=
 ||mothor.de/webbanner/
-||partners2.das-onlinespiel.de/client.js?pid=pg_bildnew_kwr&zone=crosswords$domain=spiele.bild.de
 ||phonepublisher.com/banner.do?
 ||profiseller.de/banner/$third-party
 ||publisher.outtra.com^$third-party
@@ -2714,6 +2714,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||buffed.de/tsimg/topbanner/
 ||chartsurfer.de/getthead.php?
 ||cherry.ch/images/banner/
+||climbing.de/fileadmin/banner/
 ||code.alpin.de^
 ||code.bergsteigen.com^
 ||coincierge.de/wp-content/plugins/floating-banner/
@@ -2736,6 +2737,8 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||einrichtungsbeispiele.de/revive/
 ||eintracht.com/fileadmin/Sponsoren/
 ||eisbaeren.de/assets/img/sponsorenbox_
+||eishockey-online.com/images/banners/
+||entwickler.de/wp-content/uploads/*_Webbanner_
 ||erogeschichten.com/b/
 ||erogeschichten.com/mdhpic/
 ||erotikforum.at/data/siropu/
@@ -2772,9 +2775,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||funkbasis.de/_static/ban-
 ||fupa.net/static/js/fupa_ads-
 ||fussball.de^*/partner/
-||fussballn.de/images/design/anpfifffussballn.png
-||fussballn.de/images/design/fussballn/hudson2.png
-||fussballn.de/Images/Design/sportplatzmedia2.png
 ||gamezone.de/tsimg/topbanner/
 ||gawina.de/wp-content/uploads/*-Banner_
 ||germancorrector.com/cnc/
@@ -2924,6 +2924,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||viamichelin.de/static/*/adblocker/advertising.js
 ||vienna-capitals.at/tl_files/capitals/partner/
 ||viralize.tv^$domain=n-tv.de
+||volksblatt.at/wp-content/banners/
 ||vorsprung-online.de^*/Werbung/
 ||wbbanner.mrn-news.de^
 ||websingles.at/pages/site/de/images/logos/
@@ -2956,7 +2957,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||ww4.cad.de^*.php?what=*:*&n=
 ||ww4.cad.de^*/axjs.php
 ||xhamsterde.com/ad/
-||zum.de/eduversum/
 /^https?:\/\/.*\/.*(sw[0-9a-z._-]|\.notify\.).*/$script,domain=hammerporno.xxx
 /^https?:\/\/[0-9a-z]{8,}\.com\/.*/$~media,~subdocument,third-party,domain=190.115.18.20|aniworld.to|bs.to|burningseries.ac|burningseries.nz|burningseries.se|burningseries.sx|burningseries.vc|kinokiste.live|kinox.top|megakino.co|s.to|serien.cam|serienstream.to|streamcloud.movie|topstreamfilm.live
 /^https?:\/\/[0-9a-z]{8,}\.xyz\/.*/$~media,third-party,domain=kinoger.com|kinokiste.live|megakino.co|streamcloud.movie|topstreamfilm.live
@@ -3403,7 +3403,6 @@ wochenblatt.cc##.banner-header-left
 wochenblatt.cc##.banner-header-right
 mein-wahres-ich.de##.banner-inline
 asialadies.de,avladies.de,badeladies.de,behaarteladies.de,bizarrladies.de,busenladies.de,deutscheladies.de,devoteladies.de,dominanteladies.de,erfahreneladies.de,escorts24.de,exklusivladies.de,grosseladies.de,hobbyladies.de,jungeladies.de,kussladies.de,latinaladies.de,massierendeladies.de,mollyladies.de,nsladies.de,nymphomaneladies.de,orientladies.de,osteuropaladies.de,piercingladies.de,rasierteladies.de,schokoladies.de,spielkarussell.de,tattooladies.de,tsladies.de,zaertlicheladies.de,zierlicheladies.de##.banner-leaderboard
-donnerwetter.at,donnerwetter.ch,donnerwetter.de##.banner-place
 fotohits.de##.banner-row
 donnerwetter.at,donnerwetter.ch,donnerwetter.de##.banner-top
 immobilienscout24.de##.banner-top-placeholder
@@ -3457,6 +3456,7 @@ lounge.fm##.buy
 eventelevator.de##.bwdfb-widget
 lecker.de,praxisvita.de##.bx-ada
 t3n.de##.c-ad-container
+rockantenne.at##.c-image--center
 rockantenne.bayern,rockantenne.de##.c-image--left
 finanznachrichten.de##.c-sban1
 finanznachrichten.de##.c-sban2
@@ -3729,7 +3729,6 @@ sportdeutschland.tv##.sdtv-gothaer
 wallstreet-online.de##.shareInFocus
 wallstreet-online.de##.shareTodayBox
 merkurist.de##.shipment
-merkurist.de##.shipmentPremium
 buffed.de,gamesaktuell.de,gamezone.de,pcgames.de##.shopLinkFrameWrapper
 xnxx2.de##.show-banner
 xnxx2.de##.show-block
@@ -3965,6 +3964,7 @@ suchen.mobile.de##div[data-testid^="SRP_TABLECELL_"]
 gesundheit.de,onmeda.de##div[id$="SparkWrapper"]
 aerzteblatt.de##div[id^="Ads_BA_"]
 teltarif.de##div[id^="LxIdealo"]
+hardware-mag.de##div[id^="ad-"]
 argoviatoday.ch,fm1today.ch,nzz.ch,pilatustoday.ch,swissmom.ch##div[id^="adnz_"]
 haus.de##div[id^="adtech_"]
 arbeits-abc.de##div[id^="arbei-"]
@@ -4069,6 +4069,7 @@ nau.ch##nau-external-content-lazy
 chip.de##span.Button--Clickout[data-submit]
 ariva.de##span[onpointerdown^="countClickOnGAorEs("]
 ariva.de##span[onpointerup*="prgAnalyticsEvent("]
+erogeschichten.com##table[align-center][cellpadding="13"][border="0"][bgcolor="lightgrey"]
 ubuntu-forum.de##table[style="background-color: none; border-top: 1px dashed; border-color: #a89058; border-left: 1px dashed; border-color: #a89058; border-right: 1px dashed; border-color: #a89058; border-bottom: 1px dashed; border-color: #a89058;"]
 erogeschichten.com##table[style="border: 1px solid black; padding: 5px 0px 5px 0px; background-color: lightgrey; text-align: center"]
 grower.ch##table[width="195"]
