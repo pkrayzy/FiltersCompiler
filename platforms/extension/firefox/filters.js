@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.35.68",
-			"timeUpdated": "2024-05-15T05:31:15+0000",
+			"version": "2.3.35.69",
+			"timeUpdated": "2024-05-15T06:31:23+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -565,8 +565,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.69",
-			"timeUpdated": "2024-05-14T14:31:47+0000",
+			"version": "2.0.51.70",
+			"timeUpdated": "2024-05-15T06:31:55+0000",
 			"languages": [
 				"tr"
 			],
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.96.17",
-			"timeUpdated": "2024-05-15T05:31:52+0000",
+			"version": "2.1.96.18",
+			"timeUpdated": "2024-05-15T06:32:02+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.65.44",
-			"timeUpdated": "2024-05-15T00:31:55+0000",
+			"version": "2.0.65.45",
+			"timeUpdated": "2024-05-15T06:32:02+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -683,8 +683,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.39.38",
-			"timeUpdated": "2024-05-15T05:31:58+0000",
+			"version": "2.0.39.39",
+			"timeUpdated": "2024-05-15T06:32:07+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -703,8 +703,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.36.40",
-			"timeUpdated": "2024-05-14T13:32:11+0000",
+			"version": "2.0.36.41",
+			"timeUpdated": "2024-05-15T06:32:09+0000",
 			"languages": [],
 			"tags": [
 				5,
