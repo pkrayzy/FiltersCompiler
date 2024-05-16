@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.90.77",
-			"timeUpdated": "2024-05-16T07:31:26+0000",
+			"version": "2.0.90.78",
+			"timeUpdated": "2024-05-16T13:31:07+0000",
 			"languages": [
 				"ru"
 			],
@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.83",
-			"timeUpdated": "2024-05-16T12:31:43+0000",
+			"version": "2.0.51.84",
+			"timeUpdated": "2024-05-16T13:31:38+0000",
 			"languages": [
 				"ja"
 			],
@@ -503,8 +503,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.83",
-			"timeUpdated": "2024-05-15T16:31:48+0000",
+			"version": "2.0.24.84",
+			"timeUpdated": "2024-05-16T13:31:43+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.60",
-			"timeUpdated": "2024-05-14T22:31:39+0000",
+			"version": "2.0.51.61",
+			"timeUpdated": "2024-05-16T13:31:46+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.96.33",
-			"timeUpdated": "2024-05-16T12:32:01+0000",
+			"version": "2.1.96.34",
+			"timeUpdated": "2024-05-16T13:31:56+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -740,8 +740,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.20",
-			"timeUpdated": "2024-05-15T15:32:05+0000",
+			"version": "2.0.8.21",
+			"timeUpdated": "2024-05-16T13:32:04+0000",
 			"languages": [],
 			"tags": [
 				5,
