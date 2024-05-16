@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.31",
-			"timeUpdated": "2024-05-16T01:21:20+0000",
+			"version": "2.3.30.32",
+			"timeUpdated": "2024-05-16T01:42:40+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -527,8 +527,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/10_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.3.30",
-			"timeUpdated": "2024-04-16T15:01:59+0000",
+			"version": "2.0.3.31",
+			"timeUpdated": "2024-05-16T01:42:27+0000",
 			"languages": [],
 			"tags": []
 		},
@@ -783,8 +783,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.16",
-			"timeUpdated": "2024-05-16T01:21:05+0000",
+			"version": "2.1.24.17",
+			"timeUpdated": "2024-05-16T01:42:25+0000",
 			"languages": [],
 			"tags": [
 				1
