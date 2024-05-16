@@ -1,9 +1,9 @@
-! Checksum: JEJwIwmvfOb7H8IyEcBWrg
-! Diff-Path: ../patches/6/6-s-1715844914-3600.patch
+! Checksum: GjhHr2U4rnEuUbI6w61Iww
+! Diff-Path: ../patches/6/6-s-1715848493-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.42.3
-! TimeUpdated: 2024-05-16T07:31:55+00:00
+! Version: 2.0.42.4
+! TimeUpdated: 2024-05-16T08:31:35+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1140,6 +1140,10 @@ plus.rtl.de#%#//scriptlet('trusted-replace-xhr-response', 'true', 'false', 'homa
 brigitte.de#%#//scriptlet('trusted-replace-xhr-response', 'true', 'false', 'global_config.json')
 plus.rtl.de#%#//scriptlet('abort-on-stack-trace', 'Object.prototype.adReinsertion', 'createSdk')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179303
+tvspielfilm.de#%#//scriptlet('set-constant', 'DL8_GLOBALS.enableAdSupport', 'false')
+tvspielfilm.de#%#//scriptlet('set-constant', 'DL8_GLOBALS.useHomad', 'false')
+tvspielfilm.de#%#//scriptlet('set-constant', 'DL8_GLOBALS.enableHomadDesktop', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178312
 stern.de#%#(()=>{Object.defineProperty=new Proxy(Object.defineProperty,{apply:(a,b,c)=>{const[d,e,f]=c;return"createAdPlayer"===e&&"function"==typeof c[2]?.get&&(c[2].get=()=>{}),Reflect.apply(a,b,c)}})})();
 ! https://github.com/uBlockOrigin/uAssets/issues/22883
