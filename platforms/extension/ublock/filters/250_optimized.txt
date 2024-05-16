@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: e7c0hor+uHBWz8YtuA1Dlw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1715749448-14400.patch
+! Checksum: ydqEMwG2pO4LYE2O8EMg6w
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1715850285-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.13
@@ -10,7 +10,6 @@
 ##.app-banner:not(html,body,:empty)
 ##.app-btn:not(html,body,:empty)
 ##.app-download:not(html,body,section,.content)
-##.app-teaser:not(html,body,:empty)
 ##.AppBanner:not(html,body,:empty)
 ##.download-app-banner:not(html,body,:empty)
 ##.download-app:not(html,body,:empty)
@@ -326,9 +325,10 @@ google.*##.isv-r:has-text(/, [1-9][1-46-9]% OF{2}/)
 ://ww44.$document,domain=~practically-always-leads-to-a-domain-parking-service-known-for-malware.*
 $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|ufl.edu|oecd.org|bu.edu|wikidot.com|alternativenation.net
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(Viagra)
+www.microsoft.com##a[data-pfns][href*=jail-break]
 www.microsoft.com##.card[data-bi-cn*="bus sim" i]
 www.microsoft.com##.card[data-bi-cn*="driver simulat" i]
-www.microsoft.com##a[data-pfns][data-pfns^="2"][data-pfns*="games."]
+www.microsoft.com##a[data-pfns][data-pfns^="3"][data-pfns*="games."]
 ||212.27.60.108^$all
 ||oxtop.ru^
 ||fotoredactor.com^
@@ -895,6 +895,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 fandom.com#$?#.page__right-rail:has(.sticky-modules-wrapper:last-of-type) { width: 210px !important }
 fandom.com#$#.right-rail-wrapper { padding: 0 1px !important }
 fandom.com#$##WikiaAdInContentPlaceHolder { padding: 7px !important }
+fandom.com##.reviews
 fandom.com##.recirculation-prefooter__recommendations
 fandom.com##.global-navigation__fanhub-wrapper
 fandom.com##.notifications-box
@@ -946,6 +947,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@||t.me^
 @@||lemondeinformatique.fr^
 @@||accounts.google.com/gsi^$domain=www.deviantart.com
+@@||discord.gift^$popup
 @@||siteadvisor.com^
 @@||www.joesandbox.com^
 @@||virustotal.com^
@@ -1669,7 +1671,6 @@ $removeparam=cbuster
 $removeparam=ns_ts
 $removeparam=__hs
 $removeparam=ex-src
-$removeparam=pmUserId
 $removeparam=p_gpid
 $removeparam=jsession
 $document,removeparam=uid_bam
@@ -1990,7 +1991,6 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=vslid
 ||baidu.com^$removeparam=idctag
 ||baidu.com^$removeparam=logid
-||baidu.com^$removeparam=pageFrom
 ||baidu.com^$removeparam=srcp
 ||baidu.com^$removeparam=sfrom
 ||haokan.baidu.com/v?$removeparam=pd
@@ -2134,6 +2134,7 @@ $removeparam=sref,domain=bloomberg.com|go.skimresources.com|go.skimlinks.com|go.
 $removeparam=ctc,domain=avantlink.com
 $removeparam=pid,document,domain=123inkjets.com|appsflyer.com|bergfreunde.*|bybit.com|dobrytextil.cz|farfetch.com|fifa.com|glami.cz|hepsiburada.com|neeva.com|onelink.me|play.google.com|samsclub.com|shopee.*|th.bing.com|tiktok.com
 $removeparam=subid,domain=admitad.com|mintmobile.com|secretlab.*|webmasterplan.com
+$removeparam=tracking,domain=affiliatefuture.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|gtomega.*|malwarebytes.com|messenger.com
 $removeparam=u1,domain=linksynergy.com|shop-links.co
 $removeparam=article_name,domain=shop-links.co
 $removeparam=article_url,domain=shop-links.co
@@ -2334,7 +2335,6 @@ $removeparam=deep_and_deferred
 ||lenovo.com^$removeparam=orgRef
 $removeparam=ppref,domain=digidip.net
 ||dhgate.com^$removeparam=f
-||cyberghostvpn.com^$removeparam=media_source
 ||zhihu.com^$removeparam=hybrid_search_source
 ||zhihu.com^$removeparam=hybrid_search_extra
 ||theregister.com^$removeparam=td
@@ -2486,6 +2486,7 @@ $removeparam=cvid,domain=chinadaily.com.cn|eastday.com|msn.cn|msn.com|tianqi.com
 ||quizlet.com^$removeparam=funnelUUID
 ||quizlet.com^$removeparam=signupOrigin
 $removeparam=qid,domain=bookdepository.com|eastday.com
+$removeparam=pk_vid,document
 ||xiaohongshu.com^$removeparam=app_platform,document
 ||xiaohongshu.com^$removeparam=app_version,document
 ||xiaohongshu.com^$removeparam=share_from_user_hidden,document
@@ -2500,7 +2501,6 @@ $removeparam=ymid
 $removeparam=via,domain=sincode.ai|skillshare.com|thedailybeast.com
 ||bloomberg.com^$removeparam=re_source
 ||carsales.com.au^$removeparam=Cr,document
-$removeparam=sdsrc,document
 ref=troyhunt.com$document,removeparam=ref
 ||disneyplus.com^$removeparam=distributionPartner
 ||homedepot.com^$removeparam=fromReminder
@@ -2587,7 +2587,6 @@ $document,removeparam=_x_ads_id,domain=temu.com
 $document,removeparam=_p_rfs,domain=temu.com
 $document,removeparam=_x_ads_sub_channel,domain=temu.com
 $document,removeparam=_x_vst_scene,domain=temu.com
-$document,removeparam=mkt_rec,domain=temu.com
 $document,removeparam=refer_page_el_sn,domain=temu.com
 $document,removeparam=tk,domain=indeed.com
 $removeparam=from,domain=indeed.com
@@ -2626,7 +2625,6 @@ $document,removeparam=af_xp
 ||asos.com^$removeparam=ctaref
 ||gumroad.com^$removeparam=recommended_by
 ref=gandalf$document,removeparam=ref
-src=foodpanda.com$document,domain=foodpanda.*,removeparam=src
 ref=blog.unpac.me$document,removeparam=ref
 $document,removeparam=s_campaign
 ref=privacy.thenexus.today$document,removeparam=ref
@@ -2696,4 +2694,5 @@ $third-party,denyallow=microsoft.com,domain=store.rg-adguard.net
 fandom.com##.notifications-box
 flipkart.com##div[style^=flex-grow] div:first-of-type + div.col
 flipkart.com##footer section + div:last-of-type
+###custom-css .vjs-loading-spinner
 mariowiki.com,fandom.com#$#table.wikitable ruby > rt { font-size: 67% !important }
