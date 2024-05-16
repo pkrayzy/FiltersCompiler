@@ -783,8 +783,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.17",
-			"timeUpdated": "2024-05-16T01:42:25+0000",
+			"version": "2.1.24.18",
+			"timeUpdated": "2024-05-16T03:07:46+0000",
 			"languages": [],
 			"tags": [
 				1
