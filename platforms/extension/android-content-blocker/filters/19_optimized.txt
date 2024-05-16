@@ -1,9 +1,9 @@
-! Checksum: jwI69KP+VAFQgcCEYXXkOg
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1715855657-3600.patch
+! Checksum: do9kMMtGPItdxKR1kqCDYg
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1715862842-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.36.51
-! TimeUpdated: 2024-05-16T10:32:05+00:00
+! Version: 2.0.36.52
+! TimeUpdated: 2024-05-16T12:32:08+00:00
 ! Expires: 5 days (update frequency)
 ://yandex.*/images/_$xmlhttprequest,method=post
 music.yandex.*##.notify > div.deco-tooltip_notify.notify_shown
@@ -99,9 +99,13 @@ livescience.com##.ad-unit
 !#safari_cb_affinity(general)
 !#safari_cb_affinity
 /htdocs/js/admiral/init.js
+!#safari_cb_affinity(general)
+||succeedscene.com^$badfilter
+@@||succeedscene.com/*/ads.load.js
+@@||succeedscene.com/ads/*/*.js
+!#safari_cb_affinity
 /^https:\/\/[0-9a-z]{7,25}\.com\/v2(?:\/0\/)?(?=[0-9a-z_-]{0,84}[A-Z])(?=[a-zA-Z_-]{0,84}[0-9])[0-9a-zA-Z_-]{54,85}(#\?v=[0-9a-f]{32})?$/$ping,script,xmlhttprequest,third-party,match-case
 ##body div.bOvWNQ
-@@||succeedscene.com/*/ads.load.js
 !+ NOT_OPTIMIZED
 mlive.com,cbr.com##body > div:not([style],[id]) > style + div[class]
 !+ NOT_OPTIMIZED
@@ -303,6 +307,23 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ||screechingfurniture.com^$third-party
 ||sincerebuffalo.com^$third-party
 ||strivesidewalk.com^$third-party
+!#safari_cb_affinity(general)
+#@#.stickyads
+#@#.ads_banner
+##.stickyads:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"]):not(:empty)
+##.ads_banner:not([style^="width: 32px"], [style^="width: 33px"])
+@@||adserver.adtech.advertising.com/pubapi/*/ADTECH;*;cmd=bid;cors=yes|$xmlhttprequest
+@@||static.adsafeprotected.com/skeleton.js?adslot=
+@@||static.adsafeprotected.com/skeleton.js?adspot_id=
+@@||static.adsafeprotected.com/skeleton.js?adunitid=
+@@||static.adsafeprotected.com/skeleton.js?bannnerid=
+@@||static.adsafeprotected.com/skeleton.js?*adid=
+@@||static.adsafeprotected.com/skeleton.gif?*adid=
+@@||static.adsafeprotected.com/skeleton.gif?*adslot=
+@@||static.adsafeprotected.com/skeleton.gif?*adunitid=
+@@||static.adsafeprotected.com/skeleton.gif?*bannnerid=
+@@||static.adsafeprotected.com/skeleton.gif?*zoneid=
+!#safari_cb_affinity
 #$#body > div.ad.banner-ad.ad-siderail.stickyads[data-freestar-ad][style] { display: block !important; }
 !#safari_cb_affinity(general,privacy)
 thenation.com,lse.co.uk,knowt.com,gamerescape.com,myabandonware.com,androidheadlines.com,phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@#.banner-ad-container
@@ -1371,6 +1392,7 @@ api.flocktory.com
 ||widget.pico.tools^$third-party
 ||widget.privy.com^$third-party
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br
+nisanyansozluk.com##.toast
 ptengine.jp##pt-experience
 bizjournals.com##div[data-dev="AppFade"]
 aiful.co.jp##div[id^="AIFULID202"][onclick^="ga\("]
@@ -3876,6 +3898,7 @@ medonet.pl##body.withFPU::before
 kurashiru.com#$##dly-LandingPopupBanner { display: none !important; }
 !+ NOT_OPTIMIZED
 kurashiru.com#$#html.dly-modal-active { overflow: auto !important; }
+fdoc.jp##.un_floatUnit
 news.denfaminicogamer.jp###dfng-popup
 ufret.jp#$##full-screen-ad { display: none !important; }
 ufret.jp#$#.no-scroll { overflow: auto !important; }
