@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.36.7",
-			"timeUpdated": "2024-05-17T17:31:34+0000",
+			"version": "2.3.36.8",
+			"timeUpdated": "2024-05-17T19:31:18+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -665,8 +665,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.8.44",
-			"timeUpdated": "2024-05-13T22:31:54+0000",
+			"version": "2.0.8.45",
+			"timeUpdated": "2024-05-17T19:32:00+0000",
 			"languages": [],
 			"tags": [
 				2
