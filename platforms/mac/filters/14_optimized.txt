@@ -1,9 +1,9 @@
-! Checksum: M5vc7rKfczZ8I9e3Z1Ff7Q
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1715934851-3600.patch
+! Checksum: GzmO65QRAPguSUlcJNVeXg
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1715938478-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.96.44
-! TimeUpdated: 2024-05-17T08:31:50+00:00
+! Version: 2.1.96.45
+! TimeUpdated: 2024-05-17T09:32:18+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1379,6 +1379,7 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+weekend.ee#%#//scriptlet('trusted-click-element', '.GDPR-Button_Settings, .GDPRSettingsModal-DoneButton', '!localStorage:gdpr', '2000')
 denimdream.com#%#//scriptlet('trusted-set-local-storage-item', 'ddCookieConsent', '1:1,2:0,3:0,4:0,5:0')
 elisa.ee#%#//scriptlet('trusted-set-cookie', 'cookie-categories',  'WyJmdW5jdGlvbmFsX2Nvb2tpZXMiXQ==')
 elisa.ee#%#//scriptlet('trusted-set-cookie', 'cookie-accepted-version',  '1.0.2')
@@ -6076,7 +6077,7 @@ lung.org##.banner--cookie
 ckeditor.com,awwwards.com,iconosquare.com,movistarplus.es##.banner-cookies
 tp-link.com,huawei.com##.browsehappy.ReadPolicy
 hotshops.pl,aldoshoes.com##.c-cookie-notice
-telegraf.com.ua,expo2020dubai.com,zoll-karriere.de,airbus.com,ncoi.nl,richardmille.com,scheidegger.nl##.c-cookies
+shuba.life,telegraf.com.ua,expo2020dubai.com,zoll-karriere.de,airbus.com,ncoi.nl,richardmille.com,scheidegger.nl##.c-cookies
 elcorreo.com,revespcardiol.org##.capa-cookies
 argusmonitor.com,audeze.com,hedd.audio,spigen.com,jasminwagner.de,aqua-fun.com,dji.com,ockles.com,mkvtoolnix.download,mlbstream.me##.cc-window
 freebitco.in,sozialversicherung-kompetent.de,mobile-tracker-free.com,store.bistudio.com,hifi-forum.de,m.apotheken-umschau.de,futhead.com,gofobo.com,mobiflip.de,news.de##.cc_banner-wrapper
@@ -6174,6 +6175,8 @@ patronite.pl#%#(()=>{window.patroniteGdprData={google_recaptcha:"allow"}})();
 !+ PLATFORM(windows, mac, android, ext_chromium)
 ||cdn.patronite.pl/rodo/rodo.js
 check24.de#$#body { position: static !important; }
+!+ PLATFORM(windows, mac, android)
+darkreading.com#?##onetrust-consent-sdk
 harmonie-im-garten.de,jimdosite.com##main + div:last-child
 xe.com#$#div[class*="ConsentBannerstyles_"] { position: absolute !important; left: -3000px !important; }
 ||consent.gameforge.com/cookiebanner.js$important
