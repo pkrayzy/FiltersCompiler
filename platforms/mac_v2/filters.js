@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.34",
-			"timeUpdated": "2024-05-18T03:03:16+0000",
+			"version": "2.3.30.35",
+			"timeUpdated": "2024-05-19T03:04:40+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.93.1",
-			"timeUpdated": "2024-05-18T03:03:10+0000",
+			"version": "2.1.93.2",
+			"timeUpdated": "2024-05-19T03:04:33+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.20",
-			"timeUpdated": "2024-05-18T03:03:01+0000",
+			"version": "2.1.24.21",
+			"timeUpdated": "2024-05-19T03:04:24+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.25.10",
-			"timeUpdated": "2024-05-18T03:03:03+0000",
+			"version": "2.1.25.11",
+			"timeUpdated": "2024-05-19T03:04:26+0000",
 			"languages": [],
 			"tags": [
 				2
