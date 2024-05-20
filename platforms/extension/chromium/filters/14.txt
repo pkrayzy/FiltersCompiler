@@ -1,9 +1,9 @@
-! Checksum: y4i2ElcCJqkDXPI7aPNvwA
-! Diff-Path: ../patches/14/14-s-1716197657-3600.patch
+! Checksum: HE79V5wyqu6nYMSf+E1zfg
+! Diff-Path: ../patches/14/14-s-1716201222-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.96.70
-! TimeUpdated: 2024-05-20T09:31:52+00:00
+! Version: 2.1.96.71
+! TimeUpdated: 2024-05-20T10:31:48+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14851,7 +14851,6 @@ ravenol-shop.de#%#//scriptlet('set-cookie', 'mnd-cookie-accepted-wwwravenolshopd
 emuia1.gugik.gov.pl#%#//scriptlet("set-cookie", "cookieMessageHide", "true")
 gisgminny.pl#%#//scriptlet('set-cookie', 'cookiesDirective', '1')
 atlasbiomed.com,atlas.ru#%#//scriptlet('set-local-storage-item', 'privacyBannerShow', 'false')
-linternaute.com,lachainemeteo.com#%#//scriptlet('trusted-click-element', 'button.button__acceptAll')
 totalcasino.pl#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("gdpr_popup", "true") } } catch (ex) {} })();
 login.e-dowod.gov.pl#%#document.cookie="acceptRodoSie=hide; path=/;";
 patienten.kvno.de#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("cookies-confirmed", "true") } } catch (ex) {} })();
@@ -15092,7 +15091,7 @@ metro.hu#%#document.cookie = "allowedCookieCategories=necessary; domain=.metro.h
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173053
 ! TODO: remove the hints, JS rule when the issue is fixed - https://github.com/AdguardTeam/Scriptlets/issues/407
 !+ NOT_PLATFORM(windows, mac, android)
-journaldesfemmes.fr,lefigaro.fr#%#//scriptlet('trusted-click-element', 'button.button__acceptAll')
+linternaute.com,lachainemeteo.com,journaldesfemmes.fr,lefigaro.fr#%#//scriptlet('trusted-click-element', 'button.button__acceptAll')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170168
 ! TODO: use trusted-click-element scriptlet when issues below are fixed
 ! Support for clicking in shadow DOM - https://github.com/AdguardTeam/Scriptlets/issues/323
@@ -19238,6 +19237,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.InA
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.SidebarAd
 !#safari_cb_affinity
 !
+||verdantsculpture.com^$third-party
 ||reactjspdf.com^$third-party
 ||evasivejar.com^$third-party
 ||niftygraphs.com^$third-party
@@ -20398,11 +20398,10 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ! Blocked in Annoyances Popups filter according to the policy:
 ! https://adguard.com/kb/general/ad-filtering/filter-policy/
 ! Popups that encourage users to disable ad blocker and violate user’s privacy
+! Element hiding baits are in the Base filter
+! LINK: BaseFilter\sections\antiadblock.txt#common_baits
+!
 !#safari_cb_affinity(general)
-#@#.stickyads
-#@#.ads_banner
-##.stickyads:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"]):not(:empty)
-##.ads_banner:not([style^="width: 32px"], [style^="width: 33px"])
 @@||adserver.adtech.advertising.com/pubapi/*/ADTECH;*;cmd=bid;cors=yes|$xmlhttprequest
 @@||static.adsafeprotected.com/skeleton.js?adslot=
 @@||static.adsafeprotected.com/skeleton.js?adspot_id=
@@ -31053,6 +31052,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+fontanka.ru##section[itemprop="articleBody"] + noindex:has(a[href="https://t.me/fontankaspb"])
+figma.com##.css-eouiu8
 remix.run##.container:has(> div[id="newsletter-text"])
 bocanewsnow.com###tnp-modal
 dp.ru##app-article-signup-newsletters
@@ -37913,6 +37914,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+testbook.com##.app-footer-view
 testbook.com###appContinue
 ||testbook.com/js/truecaller-client-sdk-amp.js
 testbook.com##amp-script[src*="truecaller-client-sdk-amp"]
@@ -40364,7 +40366,7 @@ wrestling-online.com###mvp-wallpaper > a[href="http://w-o.it/woiosfree"]
 bleacherreport.com##.notification.mobile_interstitial
 givemesport.com##.gms-notification-app
 m.baby.ru##.happy_mama-banner
-20minutes.fr,picwish.com,halktv.com.tr,whosampled.com,lefigaro.fr,type.jp,yenihaberden.com,victorysportsnews.com###app-banner
+yenicaggazetesi.com.tr,20minutes.fr,picwish.com,halktv.com.tr,whosampled.com,lefigaro.fr,type.jp,yenihaberden.com,victorysportsnews.com###app-banner
 filejoker.net,sport.de##a[href^="https://itunes.apple.com"][href*="app"]
 filejoker.net,sport.de##a[href^="https://play.google.com"]
 kicker.de###ovAppBar
@@ -41100,6 +41102,9 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179083
+fontanka.ru##.gridContainer  > section[class]:has(> div > a[href="/pressrelease"])
+fontanka.ru##.gridContainer  > section[class]:has(> div > a[href="/format/fproject/"])
 ! Add to Friend, self-promotion, etc.
 joshi-spa.jp,nikkan-spa.jp##.affiliate_banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179280

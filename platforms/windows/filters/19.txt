@@ -1,9 +1,9 @@
-! Checksum: yPLUC5lJ3LeAmjV0Q5A3jQ
-! Diff-Path: ../patches/19/19-s-1716197692-3600.patch
+! Checksum: kCqfv8KAGKNlBNnN3nZ0HQ
+! Diff-Path: ../patches/19/19-s-1716201254-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.36.68
-! TimeUpdated: 2024-05-20T09:31:59+00:00
+! Version: 2.0.36.69
+! TimeUpdated: 2024-05-20T10:31:56+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -432,6 +432,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.InA
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.SidebarAd
 !#safari_cb_affinity
 !
+||verdantsculpture.com^$third-party
 ||reactjspdf.com^$third-party
 ||evasivejar.com^$third-party
 ||niftygraphs.com^$third-party
@@ -1592,11 +1593,10 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 ! Blocked in Annoyances Popups filter according to the policy:
 ! https://adguard.com/kb/general/ad-filtering/filter-policy/
 ! Popups that encourage users to disable ad blocker and violate user’s privacy
+! Element hiding baits are in the Base filter
+! LINK: BaseFilter\sections\antiadblock.txt#common_baits
+!
 !#safari_cb_affinity(general)
-#@#.stickyads
-#@#.ads_banner
-##.stickyads:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"]):not(:empty)
-##.ads_banner:not([style^="width: 32px"], [style^="width: 33px"])
 @@||adserver.adtech.advertising.com/pubapi/*/ADTECH;*;cmd=bid;cors=yes|$xmlhttprequest
 @@||static.adsafeprotected.com/skeleton.js?adslot=
 @@||static.adsafeprotected.com/skeleton.js?adspot_id=
@@ -12263,6 +12263,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+fontanka.ru##section[itemprop="articleBody"] + noindex:has(a[href="https://t.me/fontankaspb"])
+figma.com##.css-eouiu8
 remix.run##.container:has(> div[id="newsletter-text"])
 bocanewsnow.com###tnp-modal
 dp.ru##app-article-signup-newsletters

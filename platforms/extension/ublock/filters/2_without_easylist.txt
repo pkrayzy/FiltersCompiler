@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: +pakF7xUyZh9dxlORmbsZA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716197679-3600.patch
+! Checksum: BTcQybK/bUSI/KL6mCaTNQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716201242-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.36.38
-! TimeUpdated: 2024-05-20T09:31:15+00:00
+! Version: 2.3.36.39
+! TimeUpdated: 2024-05-20T10:31:09+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7489,13 +7489,21 @@ pornhub.com,pornhub.org,pornhub.net##+js(set-constant, page_params.holiday_promo
 pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\x63\x6b\x20\x66\x6f\x72\x20\x70\x6f\x72\x6e\x68\x75\x62)
 ! END: Ads replacement
 !
+! Prevent detection by various scripts which use common bait classes, including fingerprinting (for example "Freestar Recovered")
+! NOTE[id=common_baits]
+#@#.stickyads
+#@#.ads_banner
+##.stickyads:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"]):not(:empty)
+##.ads_banner:not([style^="width: 32px"], [style^="width: 33px"])
+!
 ! NOTE: Regular rules
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179538
 rainmail.xyz##+js(no-setTimeout-if, enable_ad_block_detector)
 @@||rainmail.xyz/storage/js/suv4.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/179423
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179587
-oei.la##+js(no-xhr-if, /inklinkor\.com|\/tag\.min\.js/)
+lnbz.la,oei.la##+js(no-xhr-if, /inklinkor\.com|\/tag\.min\.js/)
 ! young-machine.com
 ||fewcents.co/scripts/paywall-$third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179257
@@ -32920,7 +32928,7 @@ issitedownrightnow.com,terabox.*,fedscoop.com,statescoop.com,edscoop.com,defense
 ! ##.ads
 mybestgames.dk,eshop-prices.com,quena.id,sexu.*,gameme.eu,pornwatch.ws,mollygram.com,onlinewebfonts.com,androjungle.com,filerice.com,10001.games,hoes.tube,i24news.tv,rpp.pe,4pig.com,love4porn.com,gametop.com,bluedollar.net,outlookindia.com,blabbermouth.net,ghettotube.com,mangoporn.net,javplay.me,jagranjosh.com,4kporn.xxx,bangkokpost.com,up-load.io,liveindex.org,freeshib.biz,apkmb.com,upload.ac,westkentuckystar.com,namekun.com,piliapp.com,photofunny.net,grazia.co.in,flightpedia.org,thelingerieaddict.com,banglanews24.com,swisscows.com,jagran.com,autocarindia.com,userupload.net,javbraze.com,laptrinhx.com,youtube-video.download,pinkvilla.com,youramateurporn.com,dausel.co,yesnetwork.com,indiatoday.in,vidcloud.icu,appvn.com,h2mp3.com,tapas.io,freefrontend.com,ally.sh,myplaycity.com,mercadojobs.com,thepiratebay.org,sgxnifty.org,cyberscoop.com,filmcomment.com,youngpornvideos.com,eventcinemas.com.au,findyourlucky.com,linuxmint.com,mobafire.com,themepack.me##.ads
 ! ##.banner-inner
-oei.la,adpaylink.com,shortyget.com,clk.wiki,tinys.click,adpayl.ink,baicho.xyz,clk.asia,namaidani.com,short2fly.xyz,bestcash2020.com,du-link.in,shrink.*,4cash.me,shorthero.site,cookdov.com,myshrinker.com,linkjust.com,adlinkweb.com,vklinks.com,seulink.online,gtlink.co,coinadfly.com,popimed.com,hoastie.com,forex-trnd.com,earnwithshortlink.com,adfloz.co,tui.click,link.ltc24.com,linkebr.com,pnd.*,clik.pw,cutlink.link,zagl.info,lite-link.xyz,pureshort.link,lite-link.com,techupme.com,fir3.net,softairbay.com,todaynewspk.win,fx4vip.com,tii.ai,srt.leechpremium.link,link1s.*,arabplus2.co,stfly.me,profitlink.info,jwearn.com,shorthitz.com,adsy.pw,intothelink.com,linkviet.xyz,adslinkfly.online,lkop.me,shlinko.com,oncehelp.com,shorterall.com,s-url.xyz,encurta.eu,stfly.io,shrtfly.net,vivads.net,fc.lc,icutlink.com,urlcloud.us,suqdz.com,cutlinks.pro,shortzon.com,kutz.io,coinb.ink,bit-url.com,tmearn.com,linkkawy.com##.banner-inner
+lnbz.la,oei.la,adpaylink.com,shortyget.com,clk.wiki,tinys.click,adpayl.ink,baicho.xyz,clk.asia,namaidani.com,short2fly.xyz,bestcash2020.com,du-link.in,shrink.*,4cash.me,shorthero.site,cookdov.com,myshrinker.com,linkjust.com,adlinkweb.com,vklinks.com,seulink.online,gtlink.co,coinadfly.com,popimed.com,hoastie.com,forex-trnd.com,earnwithshortlink.com,adfloz.co,tui.click,link.ltc24.com,linkebr.com,pnd.*,clik.pw,cutlink.link,zagl.info,lite-link.xyz,pureshort.link,lite-link.com,techupme.com,fir3.net,softairbay.com,todaynewspk.win,fx4vip.com,tii.ai,srt.leechpremium.link,link1s.*,arabplus2.co,stfly.me,profitlink.info,jwearn.com,shorthitz.com,adsy.pw,intothelink.com,linkviet.xyz,adslinkfly.online,lkop.me,shlinko.com,oncehelp.com,shorterall.com,s-url.xyz,encurta.eu,stfly.io,shrtfly.net,vivads.net,fc.lc,icutlink.com,urlcloud.us,suqdz.com,cutlinks.pro,shortzon.com,kutz.io,coinb.ink,bit-url.com,tmearn.com,linkkawy.com##.banner-inner
 ! ###ad
 cimanowtv.com,weakstreams.online,online-stopwatch.com,formula1streams.club,hockeynews.club,livesportstream.club,footballroma.com,web.yokugames.com,cimavids.live,cimanow.*,2shrt.com,cnvids.com,iogames.army,classic-retro-games.com,ytmp3.cc,fxsolves.com,kodi-addons.club,lastpass.com,jsoneditoronline.org,animeseed.com,robinwidget.com,ascoltareradio.com,bg-radio.org,ceskaradiaonline.cz,ecouterradioenligne.com,emisora.cl,emisora.org.es,emisoras.com.gt,emisoras.com.mx,emisoras.com.py,nederlandseradio.nl,nettiradiot.org,nettradionorge.com,onlineradio.pl,radio.cd,radio.co.ci,radio.co.cm,radio.co.dk,radio.co.ma,radio.co.si,radio.ht,radio.mg,radio.org.ro,radio.org.se,radio.pp.ru,radio.sn,radioalgerie.eu,radioarg.com,radiohallgatas.hu,radioonline.com.pt,radios.co.at,radios.co.cr,radios.co.ni,radios.co.ve,radios.com.bo,radios.com.co,radios.com.do,radios.com.ec,radios.com.pa,radios.com.pe,radios.com.sv,radios.com.uy,radios.hn,radios.hr,radios.org.il,radiosaovivo.net,radiosdecuba.com,radiosdepuertorico.com,radiosonline.be,radiosonline.ch,radiotunisienne.org,radioua.net,radyodinle.fm,surinaamseradio.com###ad
 ! ##.advert
@@ -34218,6 +34226,8 @@ thehackernews.com##body > [class]:has(> a[href][target="_blank"])
 thehackernews.com##body > [class^="p"]:has(> center > script)
 thehackernews.com##body > [class]:has(> center a[href][target="_blank"])
 thehackernews.com##:is(aside, section, [id*="-"], [class*="right"], [class*="side"]) a[target="_blank"] > img
+thehackernews.com##:is(aside, section, [id*="-"], [class*="right"], [class*="side"]) a > img[target="_blank"]
+thehackernews.com#?#:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class][id]:has(> a > img[target="_blank"]) + script)
 thehackernews.com#?#:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class][id]:has(> a[target="_blank"]) + script)
 thehackernews.com##center > a:is([rel^="nofollow"], [target^="_blank"]) > img
 thehackernews.com###articlebody > div[class]:has(> center > a:is([rel^="nofollow"], [target^="_blank"]) > img)
@@ -55656,7 +55666,6 @@ implbits.com#@#.banner_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176190
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176109
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176059
-!https://github.com/AdguardTeam/AdguardFilters/issues/175954
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175931
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175689
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175596#issuecomment-2016696488
