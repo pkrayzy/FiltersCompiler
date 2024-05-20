@@ -1,9 +1,9 @@
-! Checksum: A+aUqv+XuwnndmQZvbErYw
-! Diff-Path: ../patches/14/14-s-1716215640-3600.patch
+! Checksum: 45nCYFpEGLp0mDkA6HBX+w
+! Diff-Path: ../patches/14/14-s-1716219261-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.96.75
-! TimeUpdated: 2024-05-20T14:32:10+00:00
+! Version: 2.1.96.76
+! TimeUpdated: 2024-05-20T15:32:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -37835,6 +37835,9 @@ avclub.com,clickhole.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotak
 ! START: Yandex
 !
 ! Yandex.Market
+[$path=/maps]yandex.*##.business-card-view__extend > form.maillist-form-view
+!
+! Yandex.Market
 market.yandex.*##div[data-apiary-widget-id="/footer/subscription"]
 market.yandex.*##div[data-apiary-widget-id="/content/subscription"]
 !
@@ -43991,8 +43994,6 @@ hackstore.net,activationkeys.co,bicfic.com,boxcracked.com,androidride.com,chseri
 latestcracked.com#$#.onp-sl-signin-locker { display: none!important; }
 warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!important; }
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/152180
-fontanka.ru#?#.record > div[class]:has(> div[class] > div[class] > a[href="https://t.me/fontankaspb"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127818
 cgtips.org#$#div[class][data-locker-id] { display: block !important; }
 cgtips.org#$#.mts-cl[id^="content-locker-"] { display: none !important; }
@@ -44420,7 +44421,7 @@ disk.yandex.ru#%#//scriptlet('remove-attr', 'href', '.InfoSpace[href^="https://3
 yandex.*##.meteum-promo
 !
 ! Yandex.Maps
-[$path=/maps]yandex.*##.business-ownership-view
+[$path=/maps]yandex.*##.business-card-view__section:has(> .business-ownership-view)
 [$path=/maps]yandex.*##.card-special-offers-view
 [$path=/maps]yandex.*#?#.toponym-service-orgs > div[data-chunk="search-snippet"]:has(> a.search-lavka-view)
 [$path=/maps]yandex.*#?#.business-card-view__orgpage-actions div.carousel__item > div._type_action_button > a[role] > span:contains(Скачать приложение)
