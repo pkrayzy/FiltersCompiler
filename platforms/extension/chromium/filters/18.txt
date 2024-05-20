@@ -1,9 +1,9 @@
-! Checksum: HPJklglp7AUdzl3r0TaqyQ
-! Diff-Path: ../patches/18/18-s-1716194047-3600.patch
+! Checksum: 8oyfA/I9nNWkcvgyRJ+Q1Q
+! Diff-Path: ../patches/18/18-s-1716197658-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.39.75
-! TimeUpdated: 2024-05-20T08:32:18+00:00
+! Version: 2.0.39.76
+! TimeUpdated: 2024-05-20T09:31:58+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2426,6 +2426,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+swissmilk.ch#%#//scriptlet('set-cookie', 'closedCookieBanner', 'true')
 maxgaming.*###cookie_consent_manager_wrapper
 krsystem.pl###cook_cover
 bydeurope.com##.cookies-bottom-container
@@ -2792,7 +2793,7 @@ imgw.pl###imgw-pop-box-cookie
 ekonomiczny.ing.pl#$#body { overflow-y: auto !important; }
 ekonomiczny.ing.pl#$#body #cookiePolicy { display: none !important; }
 outletmoto.com###aviso_cookie
-auburntigers.com,patreon.com,gofundme.com,kickstarter.com,mountathletics.com,goxavier.com###transcend-consent-manager
+eventbrite.com,auburntigers.com,patreon.com,gofundme.com,kickstarter.com,mountathletics.com,goxavier.com###transcend-consent-manager
 gate.shop#$?##snippet--cookies { remove: true; }
 jatu.eu###prestapros-cookie-law-container
 dea.digar.ee###deacookienotificationbarcontainer
@@ -4589,7 +4590,8 @@ outdoor-concepts.de###blackout_cookie
 lcd-compare.com#$##myModal { display: none !important; }
 lcd-compare.com#$#.modal-backdrop { display: none !important; }
 lcd-compare.com#$#.modal-open { overflow: auto !important; }
-tempcover.com###CookieConsentFullscreenWrapper
+tempcover.com#$#body { overflow: auto !important; }
+tempcover.com#$##CookieConsentFullscreenWrapper { display: none !important; }
 511mt.net###cookieBannerHolder
 aicom.pl##.alert-warning
 jolly-sacky.cz###cookies_confirm_wrapper
@@ -15200,6 +15202,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/23721#issuecomment-2118604458
+swissmilk.ch#@#.CookieBanner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179589
 @@||consentmanager.net^$domain=gutefrage.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179360
