@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: E1u3V17pCwqmwFbpCZuXOg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716190466-3600.patch
+! Checksum: wFRjyJ40zNC3OvPcxCnM+Q
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716194069-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.36.36
-! TimeUpdated: 2024-05-20T07:31:29+00:00
+! Version: 2.3.36.37
+! TimeUpdated: 2024-05-20T08:31:33+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -27863,6 +27863,8 @@ kat.*,kickass.*,kickass2.*,kickasstorrents.*,kat2.*,kattracker.*,thekat.*,thekic
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179507
+yeptube.com##+js(abort-on-property-read, initBetter)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179587
 lnbz.la,oei.la##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178994
@@ -28043,6 +28045,8 @@ tapeantiads.com##+js(window.open-defuser)
 camgirls.casa##+js(abort-on-property-write, p$00a)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174785
 ! https://github.com/AdguardTeam/AdguardFilters/issues/168256
+finfang.cc,designparty.sx##+js(window.open-defuser)
+finfang.cc,designparty.sx##+js(abort-on-property-read, Barracuda)
 finfang.cc,designparty.sx##+js(json-prune, *, skipClicks)
 finfang.cc,designparty.sx##+js(noeval-if, popunder)
 finfang.cc,designparty.sx##+js(abort-on-stack-trace, navigator.userAgent, _getBrowserCapabilities)
@@ -30538,7 +30542,6 @@ filecrypt.co##+js(set-constant, _popsThisDay, 999)
 filecrypt.co##+js(set-constant, YPOP, noopFunc)
 filecrypt.co##+js(set-constant, YPOP2, noopFunc)
 filecrypt.cc##+js(set-constant, FBPOP, noopFunc)
-filecrypt.cc##+js(set-constant, CNLPOP, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43713
 javfull.net##+js(abort-on-property-read, Z4EE)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43700
@@ -32392,6 +32395,8 @@ neowin.net#$#div[class^="banner-"] { height: 0!important; min-height: 0!importan
 ! /asset/angular.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 ! /asset/jquery/slim-3.2.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 !
+! ex. https://gutazngipaf.com/en/olrod?id=2013574
+/^https:\/\/[a-z]{10,12}\.com\/[a-z\/]{2,}\?id=[12]\d{6}$/$script,third-party,match-case
 ! ex. https://fiveyardlab.com/z-7131650
 /^https:\/\/[0-9a-z]{5,}\.[a-z]{2,3}\/z-[5-7]\d{6}$/$script,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/pull/175819
@@ -32970,6 +32975,8 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+||hupuza.com^$domain=yeptube.com
+||yeptube.com/templates/base_master/js/ppdr/pu.init.js
 unboxholics.com##div[id^="inside-banner-"]
 sms24.me##div[class^="ado-"]
 mediafire.com##.sidebar > div.apps
@@ -51520,6 +51527,9 @@ $popup,third-party,domain=dood.ws,badfilter
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179457
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vix.com
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=vix.com
 ! https://github.com/AdguardTeam/CoreLibs/issues/1881
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179358
 $popup,third-party,domain=aniwave.to,badfilter
