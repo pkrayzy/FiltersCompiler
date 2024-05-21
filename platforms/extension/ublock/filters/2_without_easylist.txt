@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: RlVZMmXDDOQ5HNFD9XXw1g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716284043-3600.patch
+! Checksum: MKQ0PqZXUbK2G8tahYCbmA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716287650-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.36.56
-! TimeUpdated: 2024-05-21T09:31:16+00:00
+! Version: 2.3.36.57
+! TimeUpdated: 2024-05-21T10:31:17+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,7 @@
 !
 !
 !
+||synchroscript.deliveryengine.adswizz.com^
 ||pubtrky.com^
 ||mpqgoircwb.com^
 ||moawgsfidoqm.com^
@@ -21682,6 +21683,10 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179707
+gazetaolsztynska.pl##+js(set-constant, playerConfig.abWarning, 0)
+gazetaolsztynska.pl##+js(set-constant, playerState.ads.adsBlocked, 0)
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=gazetaolsztynska.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179469
 @@||mediateka.pl/media/desktop/zpr_footer/js/adblock_detector.js
 mediateka.pl##+js(set-constant, adblockBait, '')
@@ -33008,6 +33013,9 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+grland.info##.elementor-widget-wrap > .elementor-element:has(> .elementor-widget-container > img[src*="banner"])
+grland.info##.elementor-container:has(.elementor-widget-wrap > .elementor-element > .elementor-widget-container > a > img[src*="banner"])
+grland.info#?#span:contains(Advertisement):upward(.elementor-element)
 ||fotosketcher.com/wp-content/uploads/*/Tastefulcups-banner-
 javdatabase.com##.row:has(> div.col-md-3 > div.card > div.card-body > div.movie-cover-thumb > a[href^="https://www.spermmania.com/"])
 techspot.com##article > div[style="min-height: 280px"]
