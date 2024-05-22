@@ -1,9 +1,9 @@
-! Checksum: Xt69u+N/7TB92RWsv6I6BQ
-! Diff-Path: ../patches/14/14-s-1716359667-3600.patch
+! Checksum: PauhSM2ozhIR+pKU39G9Ug
+! Diff-Path: ../patches/14/14-s-1716363248-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.96.96
-! TimeUpdated: 2024-05-22T06:32:09+00:00
+! Version: 2.1.96.97
+! TimeUpdated: 2024-05-22T07:31:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2429,6 +2429,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+ladies.de#$#html { overflow: auto !important; }
+ladies.de#$#div[id^="cookie-overlay"] { display: none !important; }
 ||tvpworld.com/files/*/polityka-prywatnosci/cmp/*/tvp-tcfapi.js
 ginekologija-8.ru###toast_cookie
 what3words.com##w3w-cookies-notice
@@ -15238,6 +15240,10 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179731
+ladies.de#@#.cookie-check
+ladies.de#@##cookie-overlay
+ladies.de#@#.cookie-info:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179616
 @@||jawnylublin.pl/wp-content/plugins/cookie-notice/js/front.min.js$~third-party
 ! https://github.com/uBlockOrigin/uAssets/issues/23721#issuecomment-2118604458
@@ -23472,6 +23478,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+my.telkomsel.com##div[class^="DialogInstall"]
 kotobank.jp###myPaymentModal
 myrtlebeach.com#%#//scriptlet('set-cookie', 'Bring-on-Spring', 'true')
 futura-sciences.com##.viously > div.viously-sticked
@@ -31604,6 +31611,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tampabay.com##.house-promo
+tampabay.com##.fXDgxBh
 rewe.de##.rdf-footer-newsletter
 colgate.de##.reference-pop-up-banner
 longreads.com##.entry-content > div.in-story:has(> p > a[href^="https://longreads.com/newsletter/"])
@@ -38485,6 +38494,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+my.telkomsel.com##div[class^="BannerDownload"]
 kariyerbankasi.net##.mobile-app-popup
 receive-sms.cc##.pt-3 .bg-banner
 quillbot.com##.MuiGrid-root > div.MuiGrid-item:has(> div.MuiCollapse-root div[style*="/chrome-ext-"])

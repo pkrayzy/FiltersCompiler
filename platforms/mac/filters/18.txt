@@ -1,9 +1,9 @@
-! Checksum: hwIVbaxB0F9NrxqUJgnlxw
-! Diff-Path: ../patches/18/18-s-1716356072-3600.patch
+! Checksum: bGPNIC84zrj8E/iHAkmwVA
+! Diff-Path: ../patches/18/18-s-1716363253-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.39.89
-! TimeUpdated: 2024-05-22T05:32:18+00:00
+! Version: 2.0.39.90
+! TimeUpdated: 2024-05-22T07:32:05+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2427,6 +2427,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+ladies.de#$#html { overflow: auto !important; }
+ladies.de#$#div[id^="cookie-overlay"] { display: none !important; }
 ||tvpworld.com/files/*/polityka-prywatnosci/cmp/*/tvp-tcfapi.js
 ginekologija-8.ru###toast_cookie
 what3words.com##w3w-cookies-notice
@@ -15257,6 +15259,10 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179731
+ladies.de#@#.cookie-check
+ladies.de#@##cookie-overlay
+ladies.de#@#.cookie-info:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179616
 @@||jawnylublin.pl/wp-content/plugins/cookie-notice/js/front.min.js$~third-party
 ! https://github.com/uBlockOrigin/uAssets/issues/23721#issuecomment-2118604458

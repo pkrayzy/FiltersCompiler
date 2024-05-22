@@ -1,9 +1,9 @@
-! Checksum: UafXJOrSPVzey96hD9vBiw
-! Diff-Path: ../patches/14/14-s-1716359640-3600.patch
+! Checksum: J2WHhQp0GWBxbiUoLJTy9A
+! Diff-Path: ../patches/14/14-s-1716363220-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.96.96
-! TimeUpdated: 2024-05-22T06:32:09+00:00
+! Version: 2.1.96.97
+! TimeUpdated: 2024-05-22T07:31:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2383,6 +2383,8 @@ docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 !
 ! NOTE: Regular rules
 !
+ladies.de#$#html { overflow: auto !important; }
+ladies.de#$#div[id^="cookie-overlay"] { display: none !important; }
 ||tvpworld.com/files/*/polityka-prywatnosci/cmp/*/tvp-tcfapi.js
 ginekologija-8.ru###toast_cookie
 what3words.com##w3w-cookies-notice
@@ -13397,6 +13399,10 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179731
+ladies.de#@#.cookie-check
+ladies.de#@##cookie-overlay
+ladies.de#@#.cookie-info:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179616
 @@||jawnylublin.pl/wp-content/plugins/cookie-notice/js/front.min.js$~third-party
 ! https://github.com/uBlockOrigin/uAssets/issues/23721#issuecomment-2118604458
@@ -21137,6 +21143,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+my.telkomsel.com##div[class^="DialogInstall"]
 kotobank.jp###myPaymentModal
 futura-sciences.com##.viously > div.viously-sticked
 photopoint.ee#$#.fancybox-overlay { display: none !important; }
@@ -28615,6 +28622,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tampabay.com##.house-promo
+tampabay.com##.fXDgxBh
 rewe.de##.rdf-footer-newsletter
 colgate.de##.reference-pop-up-banner
 longreads.com##.support-longreads
@@ -34487,6 +34496,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! TODO: Delete the following rule when https://github.com/AdguardTeam/ExtendedCss/issues/172 is resolved.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 !
+my.telkomsel.com##div[class^="BannerDownload"]
 kariyerbankasi.net##.mobile-app-popup
 receive-sms.cc##.pt-3 .bg-banner
 testbook.com##.app-footer-view
