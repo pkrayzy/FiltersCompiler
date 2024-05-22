@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 1NwdPH5tXjfTaFcKesKJQw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716356066-3600.patch
+! Checksum: GZ0jxc0YzDF98c2zwLBG9w
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716359666-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.36.69
-! TimeUpdated: 2024-05-22T05:31:36+00:00
+! Version: 2.3.36.70
+! TimeUpdated: 2024-05-22T06:31:32+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7515,6 +7515,8 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179759
+textreverse.com##+js(no-fetch-if, cdn.snigelweb.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179538
 rainmail.xyz##+js(no-setTimeout-if, enable_ad_block_detector)
 @@||rainmail.xyz/storage/js/suv4.js
@@ -33016,6 +33018,10 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+textreverse.com###ac-wrapper
+textreverse.com##.grammar-in
+textreverse.com##.moretooladd
+textreverse.com##.clearfix:has(> .border > div[id^="adngin-"])
 xboxachievements.com###lb-top
 xboxachievements.com###mp-main
 xboxachievements.com###mp-btf
@@ -33923,7 +33929,6 @@ colonist.io##div[id^="in_game_ab_"]
 ||dailymusicroll.com/wp-content/plugins/epic-ad/
 dailymusicroll.com##.epic_ad_elements
 ||vgmlinks.net/codes.js
-ajc.com##div[class*="arc_ad "]
 perchance.org##div[style*="height: 90px; overflow: hidden; text-align: center;"]
 wbur.org##.section--bp
 wbur.org#?#div[class^="CardWrapper"] > article:has(> .uw > .bp--rec)
