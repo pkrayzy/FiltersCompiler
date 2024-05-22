@@ -1,9 +1,9 @@
-! Checksum: 0MhkEHojzo+eT3XnJl7Qyg
-! Diff-Path: ../patches/250/250-s-1716339895-14400.patch
+! Checksum: B44dQvTnt5yNfeveoPDCZw
+! Diff-Path: ../patches/250/250-s-1716398274-14400.patch
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.14.18
-! TimeUpdated: 2024-05-22T01:02:16+00:00
+! Version: 2.0.14.19
+! TimeUpdated: 2024-05-22T17:15:36+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
@@ -486,7 +486,7 @@ quora.com##.modal_bg
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 15May2024v2
+! OriginalVersion: 21May2024v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -25312,9 +25312,10 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 |atlassian.com|$dnstype=TXT
 |apple.com|$dnstype=TXT
 |google.com|$dnstype=TXT
+! For when one really doesn't want to have a harder time with uBO's log error checker.
+/^172\.255\.6\.(\d{1,2}|2.*|1[0-689].*|17[0-689])\$/$network
 ! Very experimental entry; see https://github.com/DandelionSprout/adfilt/issues/950 and https://www.techspot.com/news/77949-ccleaner-could-install-avast-anti-virus-without-permission.html
 ||avast.$app=CCleaner.exe|CCleaner64.exe|CCleanerCloudAgent.exe|ccsetup617.exe|ccsetup618.exe|ccsetup619.exe|ccsetup620.exe|ccsetup621.exe|ccsetup622.exe|ccsetup623.exe|ccsetup624.exe|ccsetup625.exe|ccsetup70.exe
-! Placeholder line for alternate list versions
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
 ! OriginalVersion: 24April2024v1-Alpha
 ! Expires: 3 days
@@ -26383,7 +26384,7 @@ investing.com###PromoteSignUpPopUp
 ! Removes a small login prompt in the bottom left
 context.reverso.net###register-popup-bottom
 ! Title: 💐 Anti-'Awful comments' list
-! OriginalVersion: 25April2024v1-Beta
+! OriginalVersion: 22May2024v2-Beta
 ! Expires: 7 days
 ! Description: This is a somewhat alternate approach to the usual anti-comment-section lists, as this list only removes those comment sections that are filled with exceptionally bad comments.
 ! Note: Out of sheer massive spite against how some newssites deliberately run userpolls on the most contentious articles and only those articles, this list also targets such userpolls now.
@@ -26403,6 +26404,8 @@ nottinghampost.com###comments-wrapper
 thejournal.ie,city-countyobserver.com###comments
 indiatimes.com##div[class$="cmtwrapper "]
 ghacks.net###comments
+! www•adressa•no/midtnorskdebatt/i/GyG4v9/naa-vet-vi-at-trollene-finnes-i-sverige-ogsaa
+||cmmnts.i.bt.no^$domain=adressa.no
 ! ——— Anti-'Other kinds of spam comments' ———
 soundcloud.com#?#.commentItem:has-text(You will be kissed on)
 en.greatfire.org###comments
@@ -26434,7 +26437,7 @@ klix.ba##.komentariCont
 ###hot-network-questions
 pastebin.com###content_right
 ! ——— Anti-'Astonishing mass stupidity comment threads' ———
-justin-time.fandom.com##div[class^=CommentList_c]:not([class*=" "])
+justin-time.fandom.com,lalaloopsyland.fandom.com##div[class^=CommentList_c]:not([class*=" "])
 ! ——— Pro-'Steam dictatorship of all PC gaming forever and ever' comments ———
 arstechnica.com###social-footer
 ||arstechnica.$removeparam=comments
