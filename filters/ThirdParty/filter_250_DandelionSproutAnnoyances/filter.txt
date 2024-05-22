@@ -480,7 +480,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 15May2024v2
+! OriginalVersion: 21May2024v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -2734,10 +2734,10 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 |google.com|$domain=for-txt-dnstype-conversions.mint
 !#endif
 !#if !ext_ublock
-! Very experimental entry; see https://github.com/DandelionSprout/adfilt/issues/950 and https://www.techspot.com/news/77949-ccleaner-could-install-avast-anti-virus-without-permission.html
-||avast.$app=CCleaner.exe|CCleaner64.exe|CCleanerCloudAgent.exe|ccsetup617.exe|ccsetup618.exe|ccsetup619.exe|ccsetup620.exe|ccsetup621.exe|ccsetup622.exe|ccsetup623.exe|ccsetup624.exe|ccsetup625.exe|ccsetup70.exe
 ! For when one really doesn't want to have a harder time with uBO's log error checker.
 /^172\.255\.6\.(\d{1,2}|2.*|1[0-689].*|17[0-689])\$/$network
+! Very experimental entry; see https://github.com/DandelionSprout/adfilt/issues/950 and https://www.techspot.com/news/77949-ccleaner-could-install-avast-anti-virus-without-permission.html
+||avast.$app=CCleaner.exe|CCleaner64.exe|CCleanerCloudAgent.exe|ccsetup617.exe|ccsetup618.exe|ccsetup619.exe|ccsetup620.exe|ccsetup621.exe|ccsetup622.exe|ccsetup623.exe|ccsetup624.exe|ccsetup625.exe|ccsetup70.exe
 !#endif
 ! Placeholder line for alternate list versions
 !#endif
@@ -29933,7 +29933,7 @@ twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 !!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
 !+ NOT_OPTIMIZED
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 09February2024v1-Beta
+! OriginalVersion: 22May2024v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -30012,6 +30012,8 @@ twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 ~imdb.com##.swimlane-standard-item__imdb-pill
 ! https://twe.no/assetCard/epg%3ATnNo1032%3A1032-20701 (01/01/2024)
 ~imdb.com##div[data-test-id=decorator__imdb i]
+! https://reelgood.com/show/lalaloopsy-2013 (22/05/2024)
+~imdb.com##div[title="IMDb Rating" i]
 ! International (All adblockers)
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
 newonnetflix.info##p:has(a[target=_imdb])
@@ -30104,6 +30106,7 @@ fullhdfilmizlesene.pw#?#span:has-text(/^IMDB: /)
 hdfilmcehennemi.film##.poster-imdb
 vumoo.to#?#div.col-lg-12:has-text(IMDb)
 watchseries.*##.imdb
+justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
 !#if !env_legacy
 !#if !env_safari
 !#if !adguard_app_ios

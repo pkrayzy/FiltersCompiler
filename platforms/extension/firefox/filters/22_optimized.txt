@@ -1,9 +1,9 @@
-! Checksum: tMz755o9zX/rBdbxb91A2Q
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1716172422-3600.patch
+! Checksum: 4je3e4J4baXlq485ESQEGg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1716392041-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.8.25
-! TimeUpdated: 2024-05-18T12:32:15+00:00
+! Version: 2.0.8.28
+! TimeUpdated: 2024-05-22T15:32:05+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -70,6 +70,7 @@ blog.livedoor.jp##center > div[style$="ine-height:1.3;width:826px;background-col
 ||blog.livedoor.jp/i6469/RSS/
 blog.livedoor.jp##.rss_top
 blog.livedoor.jp##.rss_top6
+||blog.livedoor.jp/love120331/$subdocument,~third-party
 blog.livedoor.jp##.RSS05
 blog.livedoor.jp#?#.plugin-memo > div.side > div > script[src$="/blogroll.js"]:upward(3)
 blog.livedoor.jp###rssheader
@@ -179,6 +180,7 @@ jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
 h-ken.net###footer-rssLinkListHtml
 kijomatomelog.com##div[style="margin:0px;padding:2px;"]
+kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"]
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"] ~ a[href][target="_blank"]
 baiku-sokuho.info##.links2
 ||baiku-sokuho.info/pickup-rss*.html
@@ -225,7 +227,6 @@ negisoku.com##.article-body-more > p[style="color:gray;text-align:right;"]
 shouginews.blog.jp###main > div[style^="border:"][style*="padding:"]
 sexytvcap.com###bottomrss
 cavolump.com##div[class^="pickup"]
-parlourfullslotl.com##.RSSBlogroll
 nofootynolife.net##.blogroll_content1
 nofootynolife.net##.entry_body > div[style$="#AAA;width: 400px;"]
 urapic.com###main-box > h3.midashi
@@ -255,6 +256,7 @@ aatyu.livedoor.blog##.custom5
 aatyu.livedoor.blog##.article-body > div.logbox4
 ||matomeantena.com^$domain=japohan.net|aaieba.livedoor.biz
 ||nullpoantenna.com^$domain=japohan.net|aaieba.livedoor.biz
+kijomatomelog.com##.rss-single
 kijomatomelog.com,sukattojapan.com##.section-rss1
 ||vtubernews.jp/*link.js
 hiragana46matome.com,toriizaka46.jp##.sec-rss
@@ -354,7 +356,6 @@ zch-vip.com##.column-inner > div[class*="eadline"]
 ||h-pon.doorblog.jp/149502rss.html
 h-pon.doorblog.jp##.article-sub-popular > div.article-sub-popular
 ||harusuki3.sakura.ne.jp/rss_reader.html
-carro-groce.com###text-21
 ||fesoku.net^$subdocument,~third-party
 fesoku.net##.titlehl
 chaos2ch.com#?#.article-title-outer-h:contains(ヘッドライン)
@@ -409,6 +410,7 @@ oumaga-times.com##.popular-list-header
 burusoku-vip.com##.headline-body
 burusoku-vip.com##.headline-title
 kijomatomelog.com##div[style^="line-height: 35px; border-top:dotted 1px gray;"]
+kijomatomelog.com##div[style="line-height: 20px"]
 ||all-nationz.com/feed-all-nationz.html
 ||amnewgame.blog.jp/TOPRSS3.html
 anihatsu.com##.rss-blogroll-header
@@ -537,6 +539,7 @@ anige-sokuhouvip.com##div[id^="top_center"]
 jumpmatome2ch.biz##.d-contents
 g-mens.net,matacoco.com,tsurimatome.com,kokopyon.net,girlsvip-matome.com,valorantchannel.net,saikyo-jump.com,absurd.blogo.jp,daretoku-eromanga.info,hattatu-matome.ldblog.jp##div[class^="rss"]
 celery-marine.net,otoko-honne.com,ske48matoeme.com,kijolifehack.com##div[id^="rss"]
+kijomatomelog.com#?#.sub_right > .sidewrapper:has(> .sidetitlebody > .sidetitle:contains(人気記事))
 manpukunews.blog.jp##div[align="center"] > table[width="700"]
 manpukunews.blog.jp##table[rules="None"]
 ||kurumachannel.com/*-Rss.html
@@ -639,7 +642,7 @@ ironsaga-msoku.xyz#$##rss_wrap { display: none!important; }
 coolpan.net##.pickupList
 erogazou-pinkline.com###adnex-text-widget
 rastaneko-blog.com##center > div[style$="border:1px dotted #000000;"]
-newsmana.com,gameleaks.org##.rss-table
+newsmana.com##div[class^="rss-table"]
 newsmana.com,gameleaks.org##.rss-widget
 moeimg.net###sp-pickup-link-frame
 moeimg.net##.post-single > div.entryblock.sp_only
@@ -733,6 +736,7 @@ beasoku.com##.l-rss-header
 ||cleversite.ru^$third-party
 ||client.crisp.chat^$third-party
 ||clients.streamwood.ru^$third-party
+||clloudia.com^$third-party
 ||comagic.ru^$third-party
 ||envybox.io^$third-party
 ||extraaedge.com^$third-party
@@ -798,6 +802,7 @@ infranken.de###singlewidget_standalone
 blamper.ru##div[data-module^="widgets/common/FakeChat/"]
 centr-hirurgii.ru,smclinic.ru###call-btn
 eldorado.ru###custom-livetex-fab
+esputnik.com##.intercom-lightweight-app
 f.ua##.callback_buttons
 hdfcbank.com###chatTogglerDiv
 justanswer.com##.th-chat-window
@@ -911,6 +916,7 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 ||widget.solvemate.com^
 ||cdn.legistco.ru^$third-party
 ||webchat.birdeye.com^$third-party
+||limetalk.com^$third-party
 ||synalio.com^$third-party
 ||chatbot.com^$third-party
 ||cdn.carrotquest.app^$third-party
@@ -922,7 +928,6 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 ||mylivechat.com^$third-party
 ||secure.livechatinc.com^$third-party
 ||widget.info-static.ru^$third-party
-||widget.installchatbot.com^$third-party
 ||widget.moin.ai^$third-party
 ||widget.replain.cc^$third-party
 ||showtalk.jp^$third-party
@@ -1062,6 +1067,10 @@ ukr.net###sinoptik_container
 ##.gsInformer
 /gs_informerClient.min.$third-party
 ||gismeteo.*/getInformer/$third-party
+hejto.pl##img[alt="Zostań patronem Hejto"]
+hejto.pl##img[alt="Zostań patronem Hejto"] + div.rounded-lg
+hrw.org##.donation-block__content
+hrw.org###block-donationfooterblock
 newslaundry.com##.full-width:has(> div > img[alt="subscription-appeal-image"])
 thejournal.ie#%#//scriptlet('set-local-storage-item', 'total_page_views', '2')
 thejournal.ie##.contribution-prompt-wrapper-redesign
