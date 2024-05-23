@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: MajxYI0jEQKc2NkKhQtIQw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716449714-3600.patch
+! Checksum: 3L501g+gsOuwyL3Pqi/OXQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1716453344-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.36.88
-! TimeUpdated: 2024-05-23T07:31:26+00:00
+! Version: 2.3.36.89
+! TimeUpdated: 2024-05-23T08:31:32+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -8249,15 +8249,14 @@ staige.tv##+js(no-xhr-if, /adblock/advert)
 viu.tv#@#.ad-placement
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145284
 /wp-content/plugins/best-ads-block-detector/*
+! https://github.com/AdguardTeam/AdguardFilters/issues/179829
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157512
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144268
+@@||sportnews.to^$generichide
 @@||topsporter.net^$generichide
-topsporter.net##+js(abort-current-script, $, keepChecking)
-topsporter.net##+js(no-xhr-if, static.doubleclick.net/instream/ad_status.js)
+sportnews.to,topsporter.net##+js(abort-current-script, $, keepChecking)
+sportnews.to,topsporter.net##+js(no-xhr-if, static.doubleclick.net/instream/ad_status.js)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145039
-! TODO: remove prevent-addEventListener rule when new version with fix for prevent-element-src-loading will be released
-! https://github.com/AdguardTeam/Scriptlets/issues/270
-pentafaucet.com,simplebits.io,getitall.top,satoshilabs.net,hitbits.io##+js(addEventListener-defuser, bugfix, fix)
 pentafaucet.com,simplebits.io,getitall.top,satoshilabs.net,hitbits.io##+js(no-fetch-if, pagead2.googlesyndication.com)
 $script,redirect-rule=noop.js,domain=pentafaucet.com|simplebits.io|getitall.top|satoshilabs.net|hitbits.io
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152736
