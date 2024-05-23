@@ -1,9 +1,9 @@
-! Checksum: zDQkkDLMqqpdaUxGbfuWhA
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1716181420-14400.patch
+! Checksum: bw5yhlFdPyJI3imllMeQHg
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1716469443-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links.
-! Version: 2.0.7.83
-! TimeUpdated: 2024-05-20T05:01:47+00:00
+! Version: 2.0.7.84
+! TimeUpdated: 2024-05-23T13:01:58+00:00
 ! Expires: 10 days (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -226,7 +226,7 @@ $document,removeparam=/^dv_adwords_.*$/
 $removeparam=wdorigin
 $document,removeparam=/^aff_id\d?=.*$/i,domain=~affiliate.salestring.com
 $removeparam=twitchReferral
-$removeparam=elqTrackId
+$document,removeparam=elqTrackId,domain=~comcast.com
 $removeparam=tctx
 $removeparam=ad_medium
 $document,removeparam=/^adgroup=.*$/i
@@ -237,7 +237,7 @@ $removeparam=partition_id
 $removeparam=adgroup_id
 $removeparam=rlsatarget
 $document,removeparam=targetid,domain=~myanonamouse.net
-$removeparam=elqCampaignId
+$document,removeparam=elqCampaignId,domain=~comcast.com
 $removeparam=dc_campid
 $removeparam=dc_adgroupid
 $removeparam=adgroupid
@@ -298,12 +298,12 @@ $removeparam=action_type_map
 $document,removeparam=/^bsft_.*$/
 $document,removeparam=/^dpg_.*$/
 $document,removeparam=/^adjust.*$/,domain=~adj.st
-$removeparam=elq
-$removeparam=elqaid
-$removeparam=elqat
-$removeparam=elqah
-$removeparam=elqcst
-$removeparam=elqcsid
+$document,removeparam=elq,domain=~comcast.com
+$document,removeparam=elqaid,domain=~comcast.com
+$document,removeparam=elqat
+$document,removeparam=elqah
+$document,removeparam=elqcst
+$document,removeparam=elqcsid
 $document,removeparam=/^ga_.*$/
 $removeparam=_hsenc
 $removeparam=_hsmi
