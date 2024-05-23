@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.36.95",
-			"timeUpdated": "2024-05-23T15:31:24+0000",
+			"version": "2.3.36.96",
+			"timeUpdated": "2024-05-23T16:31:39+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.16",
-			"timeUpdated": "2024-05-23T15:32:29+0000",
+			"version": "2.0.52.17",
+			"timeUpdated": "2024-05-23T16:32:53+0000",
 			"languages": [
 				"ja"
 			],
@@ -665,8 +665,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.8.47",
-			"timeUpdated": "2024-05-21T08:31:54+0000",
+			"version": "2.0.8.48",
+			"timeUpdated": "2024-05-23T16:33:18+0000",
 			"languages": [],
 			"tags": [
 				2
