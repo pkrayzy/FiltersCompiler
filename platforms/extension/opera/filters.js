@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.42",
-			"timeUpdated": "2024-05-23T14:21:52+0000",
+			"version": "2.3.30.43",
+			"timeUpdated": "2024-05-23T14:36:45+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -527,8 +527,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/10.txt",
 			"trustLevel": "full",
-			"version": "2.0.3.32",
-			"timeUpdated": "2024-05-18T03:03:03+0000",
+			"version": "2.0.3.33",
+			"timeUpdated": "2024-05-23T14:36:35+0000",
 			"languages": [],
 			"tags": []
 		},
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.9",
-			"timeUpdated": "2024-05-23T14:21:41+0000",
+			"version": "2.0.51.10",
+			"timeUpdated": "2024-05-23T14:36:35+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.93.9",
-			"timeUpdated": "2024-05-23T14:21:46+0000",
+			"version": "2.1.93.10",
+			"timeUpdated": "2024-05-23T14:36:39+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.28",
-			"timeUpdated": "2024-05-23T14:21:37+0000",
+			"version": "2.1.24.29",
+			"timeUpdated": "2024-05-23T14:36:32+0000",
 			"languages": [],
 			"tags": [
 				1

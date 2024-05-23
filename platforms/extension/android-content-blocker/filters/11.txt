@@ -1,9 +1,15 @@
-! Checksum: gueBZ7qFh8D6bG6Apl/qGA
+! Checksum: GN9LXlDnib12FB9fduJVoQ
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.51.9
-! TimeUpdated: 2024-05-23T14:21:41+00:00
+! Version: 2.0.51.10
+! TimeUpdated: 2024-05-23T14:36:35+00:00
 ! Expires: 5 days (update frequency)
+! Homepage: https://github.com/AdguardTeam/AdGuardFilters
+! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
+!
+!---------------------------------------------------------------------------!
+!-------------- General JS API ---------------------------------------------!
+!---------------------------------------------------------------------------!
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
 !
@@ -6693,4 +6699,17 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !---------------------------------------------------------------------------!
 !------------------ Content replacement rules ------------------------------!
 !---------------------------------------------------------------------------!
-! @include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/replace.txt"
+!
+! This section contains the list of the content replacement rules that block ads on mobile devices. Rules must be domain-specific.
+!
+! Bad:  ||example.org/video-links (should be in specific.txt)
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/101976
+! https://github.com/AdguardTeam/AdguardFilters/issues/21078
+||mangaapi.manhuaren.com/*/public/getRecommendedGame^
+! https://github.com/AdguardTeam/AdguardFilters/issues/10315
+||ads.adfox.ru/*/getCode?p1=$domain=auth.wi-fi.ru,replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
+! https://forum.adguard.com/index.php?threads/23599/
+! https://github.com/AdguardTeam/AdguardFilters/issues/5676
+!
+!---------------------------------------------------------------------------!
