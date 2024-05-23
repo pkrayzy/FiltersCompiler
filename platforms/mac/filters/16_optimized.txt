@@ -1,9 +1,9 @@
-! Checksum: EsNVaoxyOUk845PCxzJWDw
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1716438949-3600.patch
+! Checksum: u1AdwXME+Ehwlb9EntVuXQ
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1716446101-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.44.93
-! TimeUpdated: 2024-05-23T04:33:44+00:00
+! Version: 2.0.44.94
+! TimeUpdated: 2024-05-23T06:32:46+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -70,9 +70,10 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 japscan.lol#@#.ad_slot
 japscan.lol#@##ad-img-slot
+japscan.lol#@##banner-top-right
 japscan.lol##.blur-background
 japscan.lol##.notice-message
-japscan.lol#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/getComputedStyle[\s\S]*?_0x/')
+japscan.lol#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/((ad-img|banner)-|interstitial|getComputedStyle)[\s\S]*?_0x/')
 !+ PLATFORM(windows, mac, android)
 geo.fr,capital.fr#%#(()=>{const a=function(){};window.apstag={fetchBids(c,a){"function"==typeof a&&a([])},init:a,setDisplayBids:a,targetingKeys:a}})();
 signal-arnaques.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
@@ -339,6 +340,9 @@ cookomix.com##.AdMB
 cosmopolitan.fr##.External
 /japs/*_1200x2000_banner_fr.jpg$xmlhttprequest,domain=japscan.lol
 ||japscan.lol/ujs/$script
+japscan.lol###blur-inter
+japscan.lol###interstitial
+japscan.lol##a[target="_blank"].donate
 japscan.lol###stickyBanner
 japscan.lol##.card.copines
 japscan.lol##a[href^="https://candy.ai/"][target="_blank"]

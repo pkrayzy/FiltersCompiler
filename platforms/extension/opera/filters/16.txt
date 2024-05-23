@@ -1,9 +1,9 @@
-! Checksum: 1wdxyp4OqhM2dqPVrc4rBA
-! Diff-Path: ../patches/16/16-s-1716438939-3600.patch
+! Checksum: mRtFRAe9VnXOiz58ycBe4g
+! Diff-Path: ../patches/16/16-s-1716446086-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.44.93
-! TimeUpdated: 2024-05-23T04:33:44+00:00
+! Version: 2.0.44.94
+! TimeUpdated: 2024-05-23T06:32:46+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -201,12 +201,14 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150698
 @@||monumentum.fr/template/front/js/bigbangads.js
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
+! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147842
 japscan.lol#@#.ad_slot
 japscan.lol#@##ad-img-slot
+japscan.lol#@##banner-top-right
 japscan.lol##.blur-background
 japscan.lol##.notice-message
-japscan.lol#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/getComputedStyle[\s\S]*?_0x/')
+japscan.lol#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/((ad-img|banner)-|interstitial|getComputedStyle)[\s\S]*?_0x/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147701
 trustmyscience.com##.adb-border
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146165
@@ -908,6 +910,9 @@ h2-mobile.fr###main-container .blog__content:has(> .col-md-4 > div[id^="optidigi
 cosmopolitan.fr##.External
 /japs/*_1200x2000_banner_fr.jpg$xmlhttprequest,domain=japscan.lol
 ||japscan.lol/ujs/$script
+japscan.lol###blur-inter
+japscan.lol###interstitial
+japscan.lol##a[target="_blank"].donate
 japscan.lol###stickyBanner
 japscan.lol##.card.copines
 japscan.lol##a[href^="https://candy.ai/"][target="_blank"]
