@@ -1,9 +1,9 @@
-! Checksum: MSdBwNQQ5GMYKdCivKiUWA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1716547004-3600.patch
+! Checksum: wjPvha+ntH3ckCjw1Zx25Q
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1716550517-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.97.27
-! TimeUpdated: 2024-05-24T10:33:39+00:00
+! Version: 2.1.97.28
+! TimeUpdated: 2024-05-24T11:32:48+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -18,6 +18,7 @@
 !#######################################################
 !######### General element hiding rules ################
 !#######################################################
+##.js-cookie-banner
 ##.box-lgpd
 ###cookieConsentContainer
 ###cmp-app-container
@@ -1379,9 +1380,10 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+||mazovia.pl/js/cookiePlugin/
+character.ai#%#//scriptlet('trusted-set-cookie', 'cookie_consent_v1', 'reject_all')
+forbes.com#%#//scriptlet('trusted-click-element', '#ketch-banner button[aria-label="Accept All"]')
 leroymerlin.ru##div[data-qa="cookie-notification"]
-forbes.com###ketch-consent-overlay
-forbes.com##.ketch-fixed
 grupoahora.net.br###termos-cookie
 livelo.com.br##.notifi
 ||gsm24.pl/modules/x13eucookies/
@@ -3450,7 +3452,7 @@ cnyes.com###__next > div[class^="_"][style="z-index: 100;"]
 mile.cloud##.jss4
 myhome.ge##body > div.cookie_wrap
 mymarket.ge##.cookie-frame
-redtube.com,youporn.com,aklarsanalmarket.com,autochladek.cz##div[id^="cookie_"]
+miekinia.pl,redtube.com,youporn.com,aklarsanalmarket.com,autochladek.cz##div[id^="cookie_"]
 ||lexar.com/wp-content/plugins/lexar-cookie-accept/cookie.accept.js
 bpi.com.ph##.wid-cookie-bar
 mein-eigenheim.de##.overlay_cookiebanner
@@ -3978,7 +3980,7 @@ kolobrzeg.info.pl,nowpatient.com,forms.clickup.com,aftermath.site,streetsblog.or
 realme.com##.r-cookie-footer ~ div.mask-untouch
 boxy-svg.com,checkpoint.com###notification
 shaw.ca##notification-block[data-notice*="cookies"]
-zosolesnica.pl,olesnica.pl###polityka-cookie
+wkatowicach.eu,zosolesnica.pl,olesnica.pl###polityka-cookie
 olesnica.pl,tvtrend.pl##.cookie__info
 new.hnair.com###declareGDPR
 ||cmp.lavie.fr/js/mp.min.js
@@ -10947,6 +10949,7 @@ api.flocktory.com
 ||widget.pico.tools^$third-party
 ||widget.privy.com^$third-party
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br
+character.ai#%#//scriptlet('trusted-click-element', 'div[role="dialog"] > div[class]:has(a[href$="-Login-Process"]) ~ button')
 gbnews.com##.breaking-banner__wrapper
 fark.com##div[class^="custombox-"]
 grupoahora.net.br#%#//scriptlet('set-session-storage-item', 'popup', '1')
@@ -16941,7 +16944,7 @@ paidcoursesforfree.com#?#.sidebar > div.widget:has(> div[class] > span:contains(
 r-bloggers.com#?#.sb-right > div.sb-widget:has(> div.textwidget input[value="Subscribe"])
 weraveyou.com,r-bloggers.com##.snp-fb
 freekaamaal.com##.telepulse_link
-displaydb.com,freekaamaal.com##.subscription-container
+naftemporiki.gr,displaydb.com,freekaamaal.com##.subscription-container
 javarevisited.blogspot.com###HTML15
 sexualalpha.com,nextpit.de,twominutebooks.com,nextpit.com,javarevisited.blogspot.com##.seva-form
 anti-malware.ru##.telegram_sub
@@ -20864,6 +20867,8 @@ mail.yandex.*##div[class^="DisableAdsButton"]
 rasp.yandex.*##.TravelHotelsBanner
 tv.yandex.*##.recommended-ott
 www.kinopoisk.ru##div[class^="trailer-promo"]
+beyondvape.jp##.common_header_banner
+beyondvape.jp##.shadow .toggle.open-sp:has(.img_block)
 menshealth.de##div[class*="inlinePaidShopify"]
 menshealth.de##article strong > a[matomo-tracking-link="true"]
 tactiq.io##div:has( > img[src*="-promo"])

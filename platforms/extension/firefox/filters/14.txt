@@ -1,9 +1,9 @@
-! Checksum: WejsILJ4iDdR0TiQKRLgNA
-! Diff-Path: ../patches/14/14-s-1716546952-3600.patch
+! Checksum: 7IYIbHt+YBI2ETVJ8hEWRA
+! Diff-Path: ../patches/14/14-s-1716550500-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.97.27
-! TimeUpdated: 2024-05-24T10:33:39+00:00
+! Version: 2.1.97.28
+! TimeUpdated: 2024-05-24T11:32:48+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.js-cookie-banner
 ##.box-lgpd
 ###cookieConsentContainer
 ###cmp-app-container
@@ -2428,9 +2429,10 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+||mazovia.pl/js/cookiePlugin/
+character.ai#%#//scriptlet('trusted-set-cookie', 'cookie_consent_v1', 'reject_all')
+forbes.com#%#//scriptlet('trusted-click-element', '#ketch-banner button[aria-label="Accept All"]')
 leroymerlin.ru##div[data-qa="cookie-notification"]
-forbes.com###ketch-consent-overlay
-forbes.com##.ketch-fixed
 grupoahora.net.br###termos-cookie
 livelo.com.br##.notifi
 ||gsm24.pl/modules/x13eucookies/
@@ -5794,7 +5796,7 @@ samsoe.com#$#body { overflow: visible!important; }
 didriksons.com##div[class^="tracking-consent-"]
 myhome.ge##body > div.cookie_wrap
 mymarket.ge##.cookie-frame
-redtube.com,youporn.com,aklarsanalmarket.com,autochladek.cz##div[id^="cookie_"]
+miekinia.pl,redtube.com,youporn.com,aklarsanalmarket.com,autochladek.cz##div[id^="cookie_"]
 ||d13kjxnqnhcmn2.cloudfront.net/AfcDesignCentre/js/DC_CookiePolicy.js
 kufar.by###__next > div > footer ~ div[class^="styles_wrapper__"]
 eshop-upepanka.cz##.jpcookiepopup-container
@@ -6966,7 +6968,7 @@ kolobrzeg.info.pl,nowpatient.com,forms.clickup.com,aftermath.site,streetsblog.or
 realme.com##.r-cookie-footer ~ div.mask-untouch
 boxy-svg.com,checkpoint.com###notification
 shaw.ca##notification-block[data-notice*="cookies"]
-zosolesnica.pl,olesnica.pl###polityka-cookie
+wkatowicach.eu,zosolesnica.pl,olesnica.pl###polityka-cookie
 olesnica.pl,tvtrend.pl##.cookie__info
 new.hnair.com###declareGDPR
 karaca.com.de##body .cookiealert
@@ -23103,6 +23105,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+character.ai#%#//scriptlet('trusted-click-element', 'div[role="dialog"] > div[class]:has(a[href$="-Login-Process"]) ~ button')
 gbnews.com##.breaking-banner__wrapper
 fark.com##div[class^="custombox-"]
 grupoahora.net.br#%#//scriptlet('set-session-storage-item', 'popup', '1')
@@ -35121,7 +35124,7 @@ telecom.economictimes.indiatimes.com##.model-container.sticky-rgt-btm
 r-bloggers.com#?#.sb-right > div.sb-widget:has(> div.textwidget input[value="Subscribe"])
 weraveyou.com,r-bloggers.com##.snp-fb
 freekaamaal.com##.telepulse_link
-displaydb.com,freekaamaal.com##.subscription-container
+naftemporiki.gr,displaydb.com,freekaamaal.com##.subscription-container
 javarevisited.blogspot.com###HTML15
 sexualalpha.com,nextpit.de,twominutebooks.com,nextpit.com,javarevisited.blogspot.com##.seva-form
 anti-malware.ru##.telegram_sub
@@ -45055,6 +45058,9 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 ! END: Yandex
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179944
+beyondvape.jp##.common_header_banner
+beyondvape.jp##.shadow .toggle.open-sp:has(.img_block)
 ! menshealth.de - buying their training manuals
 menshealth.de##div[class*="inlinePaidShopify"]
 menshealth.de##article strong > a[matomo-tracking-link="true"]

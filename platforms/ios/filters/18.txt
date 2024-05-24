@@ -1,9 +1,9 @@
-! Checksum: OH8HphffHqFT8FXirqJB8Q
-! Diff-Path: ../patches/18/18-s-1716547005-3600.patch
+! Checksum: IbjAOnecLb2KCb7ibF9G+g
+! Diff-Path: ../patches/18/18-s-1716550518-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.40.6
-! TimeUpdated: 2024-05-24T10:33:46+00:00
+! Version: 2.0.40.7
+! TimeUpdated: 2024-05-24T11:32:55+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -89,6 +89,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.js-cookie-banner
 ##.box-lgpd
 ###cookieConsentContainer
 ###cmp-app-container
@@ -2430,9 +2431,10 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+||mazovia.pl/js/cookiePlugin/
+character.ai#%#//scriptlet('trusted-set-cookie', 'cookie_consent_v1', 'reject_all')
+forbes.com#%#//scriptlet('trusted-click-element', '#ketch-banner button[aria-label="Accept All"]')
 leroymerlin.ru##div[data-qa="cookie-notification"]
-forbes.com###ketch-consent-overlay
-forbes.com##.ketch-fixed
 grupoahora.net.br###termos-cookie
 livelo.com.br##.notifi
 ||gsm24.pl/modules/x13eucookies/
@@ -5794,7 +5796,7 @@ samsoe.com#$#body { overflow: visible!important; }
 didriksons.com##div[class^="tracking-consent-"]
 myhome.ge##body > div.cookie_wrap
 mymarket.ge##.cookie-frame
-redtube.com,youporn.com,aklarsanalmarket.com,autochladek.cz##div[id^="cookie_"]
+miekinia.pl,redtube.com,youporn.com,aklarsanalmarket.com,autochladek.cz##div[id^="cookie_"]
 ||d13kjxnqnhcmn2.cloudfront.net/AfcDesignCentre/js/DC_CookiePolicy.js
 kufar.by###__next > div > footer ~ div[class^="styles_wrapper__"]
 eshop-upepanka.cz##.jpcookiepopup-container
@@ -6965,7 +6967,7 @@ kolobrzeg.info.pl,nowpatient.com,forms.clickup.com,aftermath.site,streetsblog.or
 realme.com##.r-cookie-footer ~ div.mask-untouch
 boxy-svg.com,checkpoint.com###notification
 shaw.ca##notification-block[data-notice*="cookies"]
-zosolesnica.pl,olesnica.pl###polityka-cookie
+wkatowicach.eu,zosolesnica.pl,olesnica.pl###polityka-cookie
 olesnica.pl,tvtrend.pl##.cookie__info
 new.hnair.com###declareGDPR
 karaca.com.de##body .cookiealert
