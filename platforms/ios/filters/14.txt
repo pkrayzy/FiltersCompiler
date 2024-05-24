@@ -1,8 +1,8 @@
-! Checksum: xtAkDeyjKbwfivrSXLBvzg
+! Checksum: 2IUpXeH/VsSbV0tYg+vRKQ
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.93.10
-! TimeUpdated: 2024-05-23T14:36:39+00:00
+! Version: 2.1.93.11
+! TimeUpdated: 2024-05-24T03:08:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2435,6 +2435,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+grupoahora.net.br###termos-cookie
+livelo.com.br##.notifi
 ||gsm24.pl/modules/x13eucookies/
 hurt.com.pl##.cover
 wetter.com#%#//scriptlet('trusted-click-element', 'body.cmp-prevent-scroll button#cmp-btn-accept')
@@ -15250,6 +15252,13 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179919
+@@||blogs.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.js
+@@||blogs.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.css
+! https://github.com/AdguardTeam/AdguardFilters/issues/179915
+@@||cdn.privacy-mgmt.com/mms/$domain=bbc.com
+@@||cdn.privacy-mgmt.com/unified/$domain=bbc.com
+@@||cdn.privacy-mgmt.com/privacy-manager/index.html$domain=bbc.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179731
 ladies.de#@#.cookie-check
 ladies.de#@##cookie-overlay
@@ -23490,9 +23499,10 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+grupoahora.net.br#%#//scriptlet('set-session-storage-item', 'popup', '1')
+dramacool.*##div[style^="z-index:99999;position: fixed;bottom: 0;"]
 lesbelleslettres.com###popin-wrapper
 my.telkomsel.com##div[class^="DialogInstall"]
-kotobank.jp###myPaymentModal
 myrtlebeach.com#%#//scriptlet('set-cookie', 'Bring-on-Spring', 'true')
 futura-sciences.com##.viously > div.viously-sticked
 photopoint.ee#$#.fancybox-overlay { display: none !important; }
@@ -30802,7 +30812,7 @@ g123.jp,accounts.binance.com#@##credential_picker_container
 ! Disabling of push-notifications
 !
 ! #%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
-sakshi.com,shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
+haber.biz,sakshi.com,shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
 !
 wallstreet-online.de,dni.ru#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
@@ -30962,7 +30972,7 @@ engadget.com##body .notification-upsell-push:not(#style_important)
 ||eleconomista.com.mx/system/modules/com.tfsla.diario.eleconomista/resources/scripts/PushFirebase.js
 timesofindia.indiatimes.com###izootoCustomPopup
 e1.ru##section:has(> p:contains(/уведомления в браузере|Ежедневная подписка/))
-krymr.com,canalrural.com.br,baominh.tech,e1.ru###onesignal-slidedown-container
+grupoahora.net.br,krymr.com,canalrural.com.br,baominh.tech,e1.ru###onesignal-slidedown-container
 ||app.avada.io/scripttag/push/avada-push.min.js
 kurzy.cz###notifpopup
 ||kurzy.cz/push/push.js
@@ -31432,6 +31442,8 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 ! SECTION: Push notifications - Allowlist
 !
+! fix lamoda breakage
+@@||a.lmcdn.ru/static/*/assets/pushwoosh-*.js$domain=lamoda.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170522
 @@||esputnik.com/scripts/$domain=dnipro-m.ua
 @@||esputnik.com/forms/$domain=dnipro-m.ua
