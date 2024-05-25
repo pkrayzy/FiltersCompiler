@@ -1,9 +1,9 @@
-! Checksum: d5UX7PF8vmoihjVlZi4fQQ
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1716618911-3600.patch
+! Checksum: z1DeTFUYhvE7YqbaST6sMw
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1716633306-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.52.23
-! TimeUpdated: 2024-05-25T06:33:09+00:00
+! Version: 2.0.52.24
+! TimeUpdated: 2024-05-25T10:32:59+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -17,6 +17,7 @@
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_setConstant=function(e,a){if("undefined"===a)a=void 0;else if("false"===a)a=!1;else if("true"===a)a=!0;else if("noopFunc"===a)a=function(){};else if("trueFunc"===a)a=function(){return!0};else if("falseFunc"===a)a=function(){return!1};else if(/^\d+$/.test(a)){if(a=parseFloat(a),isNaN(a)||32767<Math.abs(a))return}else return;var b=!1;AG_defineProperty(e,{get:function(){return a},set:function(c){if(b)var d=!0;else void 0!==c&&void 0!==a&&typeof c!==typeof a&&(b=!0),d=b;d&&(a=c)}})};
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
+||adleap.jp^
 ||ad.unique1static.jp^
 ||bance.jp^
 ||appdraft.link^$third-party
@@ -1259,6 +1260,9 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+comic-walker.com##div[class^="AdSection_"]
+taishurx.jp##.catchup
+taishurx.jp##div.bnr
 twi-fans.com##.fixed.lg\:h-\[320px\]
 ||s.yimg.jp/images/finance/nisa/image/banner/sbi/$domain=finance.yahoo.co.jp
 finance.yahoo.co.jp###contents > div[class^="_"] > div[class^="_1"] > div[class^="_2"] > div[class*=" _"]:has(> #subAdTop)
@@ -1964,6 +1968,7 @@ hoge5ch.info##.amazon_item
 hoge5ch.info##.right-container > div.plugin-memo:last-child
 ||coneti.net/post_image/mt_20220623211055_jF696njUWbNW.jpg$third-party
 ||poginfo.ddo.jp/pogs/images/pr/
+times.abema.tv##.u-lg-overflow-hidden[style="height: 200px;"]
 times.abema.tv#?#.c-article-footer-title:contains(/^関連(記事|動画)/)
 times.abema.tv##.article-tvbtn-under-ad
 yuki0918kw.com#?##block-106 ~ div.widget_block.fix_sidebar:has(> center > a)
@@ -7090,7 +7095,7 @@ nurse-senka.jp###side > div.inline-block
 web.ultra-soccer.jp##.stripe-free
 ushigyu.net,dobon.net###im_panel_pc
 eigo.plus##div[id^="omc_ad_widget"]
-lee.hpplus.jp##.media-ad
+hpplus.jp##.media-ad
 yoheim.net##.topAdsenseArea
 dl-x.com##.vip-size-728x90
 ||akibablog.net/lilbox/$subdocument
@@ -10099,7 +10104,7 @@ teny.co.jp#@#.s-ad
 kana-ot.jp#@#.boxAds
 minpo.jp#@#.ads970
 osusume.mynavi.jp#@#.ad-widget
-@@||img-baila.hpplus.jp/common/large/image/ad/$image,~third-party
+@@||img-baila.hpplus.jp/*/image/ad/$image,~third-party
 @@||ascii.jp/img/ad/radeon/logo.png
 @@||cache.vector.co.jp/img_cache/*/300x250.
 !+ NOT_OPTIMIZED
