@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: e9k1kfDBxRP3HaihiZeDjg
-! Diff-Path: ../patches/237_optimized/237_optimized-s-1716642253-14400.patch
+! Checksum: TAXBwVKrkondHijdfo8t0w
+! Diff-Path: ../patches/237_optimized/237_optimized-s-1716671062-14400.patch
 ! Title: Polish Annoyances Filters (Optimized)
 ! Description: Filter list that hides and blocks pop-ups, widgets, newsletters, push notifications, arrows, tagged internal links that are off-topic, and other irritating elements. Polish GDPR-Cookies Filters is already in it.
-! Version: 1.0.31.32
-! TimeUpdated: 2024-05-25T13:01:32+00:00
+! Version: 1.0.31.33
+! TimeUpdated: 2024-05-25T21:01:47+00:00
 ! Expires: 5 days (update frequency)
 ||4prm.pl/*/4p_newsletter.jpg
 ||a-ajurweda.pl/images/layout/ajurweda/newsletter_ajurweda.png
@@ -2384,6 +2384,8 @@ csk.szczecin.pl##.in.bootbox-confirm.modal.bootbox
 cyberdefence24.pl,defence24.pl,energetyka24.com,infosecurity24.pl,space24.pl###popupModal, .modal-backdrop
 cyberfolks.pl,drzwi-cal.pl###ue_widget
 czasnawnetrze.pl,mlodytechnik.pl,zielonyogrodek.pl##.mod_avt_alert
+czysklepyczynne.pl##a[data-target="#modalSubscribeForm"]:not(.btn)
+czysklepyczynne.pl#?##footer.page-footer > .text-center:-abp-has(a.btn[data-target="#modalSubscribeForm"])
 dabrowa-gornicza.pl##.pop-up-visit
 dabrowka.com.pl##.popup-hld--startpage
 dachyb2b.pl,instalacjeb2b.pl,oknaidrzwib2b.pl,przegrodyb2b.pl,wykanczanieb2b.pl###newsletter-subscription
@@ -5450,10 +5452,10 @@ pl##.quickcontact-box
 ||widgets.okazje.info.pl^$third-party
 ||xiegarnia.pl/wp-content/themes/xiegarnia.pl-theme/assets/images/authors-label.png
 ||youtube.com/embed/*origin=*zapytaj.onet.pl$subdocument,domain=zapytaj.onet.pl
+~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.back-arrow[href*="//wp.pl/"], .back-arrow[href*="//ww.wp.pl/"]
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.back_bar
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.backToWp, #goToSG
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.backToWp, .btn__back-to-wp, .footer-back-link, .wp-pl-redirect
-~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.sgwp.back-arrow
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##a[data-st-area*="backTo" i], a[data-st-area*="goToSG" i]
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##article#main-content ~ div > style ~ div div > a[href^="/"]
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##div[class][style^="background-color:"]:not([id]) > a[data-st-area][href="https://www.wp.pl/"]
@@ -11694,7 +11696,7 @@ play.pl##.mobile-map-list .contact-us-modal, .mobile-map-list > .page-wrapper::b
 play.pl#$#.modal-open[class] > .mobile-map-list { overflow: auto !important }
 player.pl###nscorepop-wrapper, #nscorepop-content
 player.pl##+js(remove-attr, style, body[style*="overflow"], stay)
-player.pl#$#body[style*="overflow"] { overflow: auto !important }
+player.pl,sportowefakty.wp.pl#$#body[style*="overflow"] { overflow: auto !important }
 playstation.com##+js(abort-current-script, $, PopupManager)
 pmsocho.com#$#.cp-custom-viewport, .cp-oveflow-hidden, .cp-window-viewport { overflow: auto !important }
 pmsocho.com##.cp-webinar-container.cp-modal-popup-container.cp-module
@@ -11778,6 +11780,7 @@ sofine.pl##+js(no-setInterval-if, popcount, 1000)
 solven.pl###dontGoModal, .modal-backdrop
 spidersweb.pl##.mfp-ready:has(.popoup-content)
 spidersweb.pl#$#html { overflow: auto !important; margin-right: 0 !important }
+sportowefakty.wp.pl##.modal:has-text(Już uciekasz?)
 sprawnymarketing.pl###pop_facebook
 sprawnymarketing.pl#$#.blur { filter: none !important }
 sprawyzdrowia.pl##+js(no-setTimeout-if, i(), 3000)
