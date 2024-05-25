@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: nVPbm5igxSjTYEiDxBy+5A
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1716554149-3600.patch
+! Checksum: YXhJHTH1GccxvcBYtb7hFA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1716611717-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.52.21
-! TimeUpdated: 2024-05-24T12:33:01+00:00
+! Version: 2.0.52.22
+! TimeUpdated: 2024-05-25T04:33:01+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||ad.unique1static.jp^
@@ -769,6 +769,7 @@ nasubiblog.com,kyukyoku-matome.com##.widget_pc_ad
 *##.ise-ad
 *##div[id^="active_overlay"]
 *##div[id^="JP_"][style]
+twi-fans.com##+js(addEventListener-defuser, /touchmove|wheel/, preventDefault())
 kasegeru.blog.jp##+js(remove-node-text, #text, /スポンサードリンク：?|楽天広告：/)
 blog.livedoor.jp##+js(abort-current-script, Math.floor, amazon)
 erommd-street.com##+js(abort-current-script, document.createElement, overview)
@@ -840,6 +841,8 @@ dotti2.jp,pochitto2.jp##+js(set-constant, sec, 0)
 gotouchi.jp##+js(set-constant, sec, 0)
 cmnw.jp##+js(set-constant, sec, 0)
 avgle.com##+js(abort-current-script, __htapop)
+twi-fans.com#$#.fixed[data-state="open"] { display: none !important; }
+twi-fans.com#$#body[style="pointer-events: none;"] { pointer-events: auto !important; }
 2game.info#$#.sponsored-loop300x250 { position: absolute !important; left: -4000px !important; }
 service.webgoto.net#$#.image_box[style*="amazon.co"] { background: none !important; }
 telling.asahi.com#$#.p-header-billboard { min-height: 0 !important; }
