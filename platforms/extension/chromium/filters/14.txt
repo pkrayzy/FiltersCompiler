@@ -1,9 +1,9 @@
-! Checksum: DQth+bbU/IyVz/F6SDfBzw
-! Diff-Path: ../patches/14/14-s-1716809738-3600.patch
+! Checksum: XPtP+ybk5n3wdfJQAUNfGg
+! Diff-Path: ../patches/14/14-s-1716813326-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.97.50
-! TimeUpdated: 2024-05-27T11:33:19+00:00
+! Version: 2.1.97.51
+! TimeUpdated: 2024-05-27T12:33:20+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2429,6 +2429,11 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+nieruchomosci-online.pl#$#html { overflow: auto !important; }
+nieruchomosci-online.pl#$##ci-wrapper { display: none !important; }
+gdzietankowac.pl#%#//scriptlet('set-cookie-reload', 'acv', '1')
+north.pl##.offcanvas-backdrop::before
+north.pl###cookie-offcanvas
 sbtnews.sbt.com.br##div[class^="coookies-banner"]
 wko.at#$#div[id^="cookie-"] { display: none !important; }
 wko.at#$#body { overflow: auto !important; }
@@ -46273,6 +46278,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+kotsovolos.gr###top-pre-header
 myfanstv.net##.right-col > noindex > div[style]:has(> center > a[href^="/index.php?"])
 thebell.io##.post_content > figure.inner-image:has(> picture > img[src="https://thebell.io/storage_v2/images/9d1/4a0/9d14a067-284a-49a1-8601-c759bc7e2f1f.webp"])
 smopia.com###custom_html-25
@@ -48852,7 +48858,7 @@ bfmtv.com#%#//scriptlet('set-attr', '.video_block', 'autoplay', 'false')
 kuncomic.com#%#//scriptlet('adjust-setInterval', 'countdownTime', '1500', '0.001')
 ! gplinks - gplinks.co/fi3p
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170980
-decidewhy.com#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
+djrkremix.com,decidewhy.com#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172260
 imgdrive.net#%#//scriptlet('trusted-click-element', '#redirect-close > a[onclick="closeOverlay()"]', '', '500')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171810
