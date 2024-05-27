@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: kw5ly5z63f4UcII6UOW9Rg
-! Diff-Path: ../patches/14/14-s-1716824123-3600.patch
+! Checksum: qHKR5ZX3+xccexWHrEOehA
+! Diff-Path: ../patches/14/14-s-1716827723-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.97.54
-! TimeUpdated: 2024-05-27T15:33:09+00:00
+! Version: 2.1.97.55
+! TimeUpdated: 2024-05-27T16:33:06+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -163,6 +163,7 @@
 ###kanews-cookie-box
 ##.e-consents-alert
 ##.wp-gdpr-cookie-notice-wrap
+##.wp-block-jetpack-cookie-consent
 ##body:not(.cookie-modal-open) > div#dm-cookie-popup-container
 ##.inpage_cookieOptOutForm
 ##.optanon-show-settings
@@ -2395,6 +2396,8 @@ docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 !
 ! NOTE: Regular rules
 !
+abw.by#$#.cookie-modal { display: none !important; }
+abw.by##+js(remove-class, stop-scroll, body)
 musio.net.br##div[data-v-98c620b8]
 wesendit.com##+js(set-local-storage-item, legalsAccepted, true)
 nieruchomosci-online.pl#$#html { overflow: auto !important; }
@@ -14608,6 +14611,10 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180087
+abw.by#@#.cookie-modal
+abw.by#@#.cookie-banner:not(body):not(html)
+@@||b.abw.by/api/v2/page/cookie-policy/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180171
 wko.at#@##cookie-banner
 ! https://github.com/uBlockOrigin/uAssets/issues/23827
@@ -19855,6 +19862,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+scimagojr.com##body #wrap-blocker
 myshows.me##+js(set-cookie, adBlockModal, true)
 klsescreener.com###aLegMYzGHfnR
 klsescreener.com##+js(abort-current-script, document.getElementById, /adsbygoogle|adblock/)
