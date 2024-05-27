@@ -1,9 +1,9 @@
-! Checksum: 3L3XFDkagqd9TY0AyDSIkg
-! Diff-Path: ../patches/21/21-s-1716802499-3600.patch
+! Checksum: +1UcenGQmOYgNlvUsIxPLg
+! Diff-Path: ../patches/21/21-s-1716806099-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.22.79
-! TimeUpdated: 2024-05-27T09:33:10+00:00
+! Version: 2.0.22.80
+! TimeUpdated: 2024-05-27T10:32:56+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7695,6 +7695,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180144
+ndtv.com#%#//scriptlet('trusted-click-element', '.story__content > div > a.expand-btn__link')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180127
 appdoze.com#%#//scriptlet('adjust-setInterval', 'show_download_links', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179600#issuecomment-2121022000
@@ -9480,7 +9482,7 @@ ufchgu.ru,mi-faq.ru#%#//scriptlet("abort-current-inline-script", "disable_keystr
 ufchgu.ru,mi-faq.ru#%#//scriptlet("prevent-addEventListener", "copy", "pagelink")
 top10mais.org#%#//scriptlet("prevent-addEventListener", "copy", "nocopas")
 onna.kr,tistory.com#%#//scriptlet("abort-current-inline-script", "document.addEventListener", "copyWithSource")
-recantodasletras.com.br#%#//scriptlet("prevent-addEventListener", "/^(?:contextmenu|copy|cut)$/", "nrWrapper")
+recantodasletras.com.br#%#//scriptlet('prevent-addEventListener', '/^(?:contextmenu|copy|cut)$/', '/nrWrapper|Handler/')
 priemnaya.duma.gov.ru#%#AG_onLoad(function() {setTimeout(() => $('#treat_body_text').unbind(), 300);});
 yodu.org,linovelib.com#%#//scriptlet('remove-attr', 'onselectstart', 'body')
 readcomiconline.li,nusantararom.org#%#//scriptlet("prevent-addEventListener", "/keydown|contextmenu/")
