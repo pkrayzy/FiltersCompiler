@@ -1,9 +1,9 @@
-! Checksum: H+02SR4XVaKOoSMeAOi2OA
-! Diff-Path: ../patches/236/236-s-1715087062-14400.patch
+! Checksum: 5rSFNByw8Fk8q1v6HbFF6A
+! Diff-Path: ../patches/236/236-s-1716815079-14400.patch
 ! Title: road-block light
 ! Description: Romanian ad blocking filter subscription.
-! Version: 2.0.2.60
-! TimeUpdated: 2024-05-07T13:01:46+00:00
+! Version: 2.0.2.61
+! TimeUpdated: 2024-05-27T13:01:40+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ROU: Romanian Ad (ROad) Block List Light
@@ -759,6 +759,9 @@ turdanews.net##.ai-track
 ziarulevenimentul.ro##[href*="/adclick.php"]
 ziarulevenimentul.ro##[href^="https://www.bursa.ro"]
 g4media.ro##.custom-html-widget
+g4media.ro##[data-ai-debug]:has([src*=pnl])
+g4media.ro##.code-block:has(.ad-header)
+g4media.ro##.post-review:has(.author-publicitate)
 ||investigatoria.ro/*banner$image
 investigatoria.ro##.code-block
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kfetele.ro
@@ -1161,7 +1164,6 @@ locals.md#?#.t-records:-abp-contains(arderea )
 kudika.ro#?#.article-view:-abp-contains(arderea tutunului)
 digi24.ro#?#.article:-abp-contains(arderea tutunului)
 dcmedical.ro#?#.ContentArticle:-abp-contains( tutunului)
-dcnews.ro#?#.page:-abp-contains(Philip Morris)
 stirilebzi.ro#?#.vc_column_inner > .vc_column-inner > .wpb_wrapper:-abp-has(.adsbygoogle)
 ||cronicazilei.ro/*banner-$image
 cronicazilei.ro##[href="https://www.amosnews.ro/"]
@@ -1421,3 +1423,6 @@ clujust.ro#%#//scriptlet('ubo-rmnt.js', 'script', 'ai_adb')
 lovendal.ro#%#//scriptlet('ubo-noeval-if.js', 'ads')
 ! ff netu player popups
 kimdesene.org#%#//scriptlet('ubo-nowoif.js')
+! https://github.com/uBlockOrigin/uAssets/issues/23860
+||sapi.emag.*/recommendations/*zones=adss$xmlhttprequest,~third-party
+emag.*##.container:has([data-tracking-alias^="sponsored_products"])
