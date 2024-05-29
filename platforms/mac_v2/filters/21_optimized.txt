@@ -1,5 +1,5 @@
-! Checksum: 8C3h2oH+fZW6yxVH7LjdAw
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1716910538-3600.patch
+! Checksum: LF3M2TMeQkgqI0QYdmLMIQ
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1716950144-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
 ! Version: 2.0.22.85
@@ -256,7 +256,6 @@ stopcor.org##.videoOfDay
 so.toutiao.com##.s-side-list > div.result-content > div[id^="s-dom-"]
 ||widget.golfscape.com^$domain=sport360.com
 tribuna.com##.dugout-video
-football-tribe.com##.dugout_video_cont
 ||embed.dugout.com^$script,third-party,domain=~sportowefakty.wp.pl|~ultra-soccer.jp
 vogue.*,wired.com#$?#.grid-layout__aside > .sticky-box > .sticky-box__primary > div[data-in-view] > figure[data-testid="cne-interlude-container-right-rail"]:has(> .cne-video-embed) { remove: true; }
 gala.fr###dailymotion-pip-large-viewport
@@ -334,6 +333,7 @@ zoon.ru#?#.ss-contents > div.box-padding:has(> a.box-banner)
 avgle.com##.alert-success
 reuters.com#%#//scriptlet("prevent-addEventListener", "scroll", "#sticky-video")
 reuters.com#%#//scriptlet("set-constant", "Object.prototype.enable_floating", "false")
+goo.ne.jp#$#.chrome-extension-banner { display: none!important; }
 wolframalpha.com##main > div[class] div[class] > a[href="https://www.wolframalpha.com/tour/"][target="_blank"] > img
 wolframalpha.com##main > div[class] div[class] > a[href*="://www.wolfram.com/"][href*="/?adref="][target="_blank"]
 wolframalpha.com##main > div[class] div[class] > a[href*="://www.wolframalpha.com/"][href*="/?adref="][target="_blank"]
@@ -1210,7 +1210,6 @@ nishinippon.co.jp#?#.p-grid__item h2.c-heading-h2__text > a[href="/content/edito
 ||rakuten-static.com/1/grp/banner/js/create.js
 avito.ru##div[class^="create-promocode-banner"]
 finance.sina.com.cn###sina-pages-u
-||mora.jp/pc/img/jack/
 ||rakuten.co.jp/sitemap/img/banner/
 pinnacle.com##a[data-gtm-id^="promo_banner_"]
 ||jugem.jp/user_blog/ad/
@@ -1399,8 +1398,6 @@ klerk.ru###__layout > div.h-full > footer ~ div > div.w-full.fixed
 xhamster.*##div[data-testid="right-banner-section"]
 navitime.co.jp##.kyujin-control-banner-container
 navitime.co.jp###kyujin-banner-offer-container
-h178.com###banner div.panel:has(> div.panel-body > div.text-center > a[href="https://j-baseball.club/"])
-dandy-house.co.jp##.post_content > a[href*="?utm_source"] > img
 artstation.com##support-artstation
 iwate-np.co.jp#?#.side .article-list > li:has(.published > .date:contains(広告))
 ||tabs.ultimate-guitar.com/static/public/video/fp/fp-video.noaudio.
@@ -1696,8 +1693,6 @@ forums.malwarebytes.com##.ipsMmalware.ipsSpacer_both
 comics888.com#?##divMain > div.post:has(> a[href="http://rawdl.net/rapidgator.html"])
 iplocation.net#?##ip-placeholder span:has(> a[href^="/go/hide-ip-with-vpn/"])
 iplocation.net##.iptable a[href^="/go/hide-ip-with-vpn/"]
-best-legal.jp###consultation-sp
-best-legal.jp##.consultation-more
 shopping.yahoo.co.jp##div[class^="style_SideMenuBanner_"]
 travel.co.jp##.ad-msq
 storm.mg###premium_block_inner_wrap_outer
@@ -1746,6 +1741,7 @@ new-retail.ru##.buy_advertising
 watchsomuch.to#%#//scriptlet('set-cookie', 'Upgrade', '0')
 w3schools.com#?#.sidesection:has(> a[href="/colors/colors_picker.asp"])
 w3schools.com###upperfeatureshowcaselink
+w3schools.com###lowerfeatureshowcaselink
 best-legal.jp###common-cta
 insurance.rakuten.co.jp###grpheader > div.spOff
 bookwalker.jp###banner-area
@@ -1798,7 +1794,6 @@ rakuten-card.co.jp##.logoutArea > h2.box__ttl
 hostlove.com##.ad0
 new-123movies.live#?#script + div[class] div[id]:has(> a[href="/user/profile/premium-membership"])
 new-123movies.live,fmovies.style#?##info + div[class]:has(> div > a[href="/user/profile/premium-membership"])
-fmovies.style#?#body > main + script + div[class]:has(> div[id] > div[id] > a[href="/user/profile/premium-membership"])
 new-123movies.live,fmovies.style##.jw-overlays + div.jw-logo[style^="background-image:"]
 love-spo.com##a[href="https://love-spo.com/magazine_bridge/shibayama_golf.html"]
 driverguide.com#?#div[class^="col-"] > div[class]:has(> form[action^="https://scan.driverguide.com/"][target="_top"])
@@ -2193,7 +2188,6 @@ zerkalo.io##script[src*=".zerkalo.io/api?rev=r0~r0~r0~r0"] + div[class^="news-se
 intellipaat.com##.tutorial-cta-wrapper
 zerkalo.io##.b-prmplace
 careeraddict.com,matchtv.ru##.banner-container
-careeraddict.com##.article-card-banner
 support.microsoft.com###rail-banner
 economist.com##._newsletter-promo-container
 laleggepertutti.it##div[style*="background-color: #efbb1b;"][style*="padding: 10px;"][style*="color: #000;"]
@@ -2279,6 +2273,7 @@ interfax.ru##.popupNowReading
 madnessporn.com#?#.video div.header:has(> h2:contains(Madness Webcam))
 lostpix.com##a[href="http://myfresh.tv/radio/BestR.html"]
 ||cmtscience.ru/photos/shares/banners/5eba53abef3e6.gif
+mirsmart.com.ua##div[class^="blockbaner"]
 opennet.ru##a[href^="/banners"]
 inc42.com##.plus-bottom-bar
 autoua.net##a[href="https://insurance.autoua.net/ru/osago/"]
@@ -3381,7 +3376,6 @@ habuteru.com,play.hbomax.com,mathbang.net,ab-in-den-urlaub.de,ladyblog.me,planta
 earphones-review.ru,codedosa.com#$#html { user-select: auto!important;-webkit-touch-callout: default!important;-webkit-user-select: auto!important;-moz-user-select: auto!important;-ms-user-select: auto!important; }
 open.spotify.com#$#span[dir="auto"][draggable="true"] { user-select: auto!important;-webkit-touch-callout: default!important;-webkit-user-select: auto!important;-moz-user-select: auto!important;-ms-user-select: auto!important; }
 lezhinus.com,lezhin.com#$#body.is-comic * { pointer-events: auto!important; }
-my-expert.ru#$#html { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 piyonote.com,hiraethtranslation.com,brokensilenze.net,pabrikarang.com,allaboutshaving.kr,animeindia.in,codedosa.com,my-expert.ru#$#.unselectable { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 fmkorea.com#$##bd_capture { background: none!important; }
 cafe.daum.net#$#body * { -webkit-touch-callout: default!important; -moz-user-select: auto!important; -webkit-user-select: auto!important; -ms-user-select: auto!important; -o-user-select: auto!important; user-select: auto!important; -khtml-user-select: auto!important; }
@@ -3395,6 +3389,7 @@ ltnovel.com,lightnovelpub.com,lightnovelworld.com#$#.chapter-content { -webkit-t
 mediafire.com#$#.nonDLContentWrap { min-height: 1300px !important; }
 lanacion.com.ar#$#.sidebar__aside { background: none!important; }
 mangaflame.org,exlyrics.com,plantaomaringa.com,omgkpop.top#$#html > body *:not(input):not(textarea)::selection { background-color: #3297FD!important; }
+plantaomaringa.com,omgkpop.top#$#html > body *:not(input):not(textarea):not(button) { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 visortmo.com,lectortmo.com#$#.element { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 mangaflame.org,nhk.or.jp,jucagototranslations.fukou-da.net,quotev.com,nontongratis88.live,freecourser.com#$#body * { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 m.blog.naver.com,filmzone.com,habuteru.com,allaboutshaving.kr,pcprogramasymas.net,javsubtitle.co,panda-novel.com,legionscans.com,toonvideos.net.in#$#html { -webkit-touch-callout: default !important; -moz-user-select: text !important; -webkit-user-select: text !important; -ms-user-select: text !important; -o-user-select: text !important; user-select: text !important; -khtml-user-select: text !important; }
