@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.66.3",
-			"timeUpdated": "2024-05-28T18:33:44+0000",
+			"version": "2.0.66.4",
+			"timeUpdated": "2024-05-29T00:33:40+0000",
 			"languages": [],
 			"tags": [
 				45,
