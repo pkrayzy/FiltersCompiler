@@ -1,9 +1,9 @@
-! Checksum: fUpOJ1UQE5NI9doLI5hcjA
-! Diff-Path: ../patches/118_optimized/118_optimized-s-1717031042-14400.patch
+! Checksum: TtSEecp+YhP5xRt+CwdApA
+! Diff-Path: ../patches/118_optimized/118_optimized-s-1717045432-14400.patch
 ! Title: EasyPrivacy (Optimized)
 ! Description: Privacy protection supplement for EasyList.
-! Version: 2.1.27.34
-! TimeUpdated: 2024-05-30T01:01:17+00:00
+! Version: 2.1.27.35
+! TimeUpdated: 2024-05-30T05:01:11+00:00
 ! Expires: 10 days (update frequency)
 &action=js_stats&
 &ev=PageView&
@@ -55,7 +55,6 @@
 /500b-bench.jpg?
 /?dm=*&blogid=$script
 /?essb_counter_
-/?log=experiment&
 /?log=performance-
 /?sentry_key=
 /?sentry_version=
@@ -167,6 +166,7 @@
 /analytics_v2.js
 /analytics_wbc.min.js
 /analytics_www.js
+/analyticsFooter.js
 /analyticsjs.js
 /analyticstracking.js
 /anclytic-ajax.html
@@ -354,6 +354,7 @@
 /counter-js.php
 /Counter.ashx?
 /counter.asp?
+/counter.aspx?
 /counter.cgi?
 /counter.js.php
 /counter.pl?
@@ -419,7 +420,6 @@
 /email/track/*$image
 /email_opened_tracking_pixel?
 /emos2.js
-/emstrack.js
 /emtj_tracker.js
 /emtj_tracker.min.js
 /endpoint/stats.php?
@@ -514,6 +514,7 @@
 /ga-events.js
 /ga-lite.min.js
 /ga-script.js
+/ga-track.js
 /ga-tracking.js
 /ga.js?grid
 /ga.php?$image
@@ -566,6 +567,7 @@
 /googleAnalytics4.js
 /GoogleAnalyticsEvents.js
 /googletag.js
+/googletagmanageranalytics.js
 /googletrack.js
 /googleTracking.js
 /grumi-ip.js
@@ -654,6 +656,7 @@
 /kameleoon-iframe.html
 /kameleoon.js
 /kameleoon/script.js
+/keen-tracking.min.js
 /keen.min.js
 /KenticoActivityLogger/Logger.js
 /keypress.js$script
@@ -776,7 +779,6 @@
 /mormont.js
 /mpel/mpel.js
 /mpulse.js
-/ms.analytics-web-3.min.js
 /mtc.js
 /mtiFontTrackingCode.js
 /naLogImpressions^
@@ -803,8 +805,6 @@
 /oa-tracking?
 /obPixelFrame/*
 /ocount.php
-/ocounter.php
-/omniunih.js
 /one-plugin-analytics-comscore/*
 /onetag/*
 /oo/*/l.js
@@ -903,7 +903,6 @@
 /ppms.js
 /pr.php?
 /printpixel.js
-/prnx_track.js
 /probance_tracker-min.js
 /prod/ncg/ncg.js
 /propagate_cookie.php
@@ -962,6 +961,7 @@
 /resxclsx.js
 /rgea.min.js
 /riveted.min.js
+/rm.gif?
 /roi_tracker.js
 /rollbar.js
 /rollbar.min.js
@@ -1093,7 +1093,6 @@
 /StatSNA.js
 /StatsPixel?
 /storeAdvImpression.jsp
-/storefront.google-analytics-4.min.js
 /sTrackStats.js
 /streamsense.min.js
 /strpixel.png?
@@ -1107,6 +1106,7 @@
 /tagcommander/prd/*
 /tagmanager/pptm.js
 /tags.js?org_id=
+/tatari-shopify/tracker-snippet-latest.min.js
 /tc_imp.gif?
 /tccl.min.js
 /tck/gif/*
@@ -1299,7 +1299,6 @@
 /web-vitals.
 /web-vitals/*
 /web/push?
-/web_analytics/*
 /Web_JS_Stats.js
 /WebAnalytics.$domain=~webanalytics.italia.it
 /webAnalytics/*
@@ -1335,7 +1334,6 @@
 /wrapper/metrics/v1/custom-metrics?
 /writelog.js
 /wt_capi.js
-/wtbase.js
 /wtid.js
 /wtinit.js
 /wwwcount.cgi?
@@ -1466,6 +1464,7 @@ _webanalytics.
 .google-analytics.com/
 .intercom-mail.com/via/$image
 .inxmail-commerce.com/tracking/$image
+.inxserver.com/transparent.gif
 .keap-link004.com/$image
 .keap-link009.com/$image
 .keap-link010.com/$image
@@ -1518,7 +1517,6 @@ _webanalytics.
 /i?aid=*&se_ac=open&$image
 /impression?mkevt=
 /link-tracker?*&l=open&
-/link.news.*/mo/*$image
 /links1.strava.com/*$image
 /lzdmailer.letter.open?
 /mail-stat.airdroid.com/*$image
@@ -1634,6 +1632,7 @@ omni.soundestlink.com$image
 ||enthusiastgaming.net^
 ||envato.market^
 ||epsilondelta.co^
+||eqy.link^
 ||etop.ro^
 ||everesttech.net^
 ||experianmatch.info^
@@ -1717,7 +1716,6 @@ omni.soundestlink.com$image
 ||mxpnl.com^
 ||mysingleromance.com^
 ||native-track.com^
-||niblewren.co^
 ||nimblebird.co^
 ||nmgassets.com^
 ||notifpush.com^
@@ -1939,7 +1937,6 @@ omni.soundestlink.com$image
 ||anytrack.io^$third-party
 ||api64.com^$third-party
 ||apicit.net^$third-party
-||apollofind.com^$third-party
 ||apolloprogram.io^$third-party
 ||appboycdn.com^$third-party
 ||appcast.io^$third-party
@@ -1975,7 +1972,6 @@ omni.soundestlink.com$image
 ||axf8.net^$third-party
 ||b0e8.com^$third-party
 ||b1img.com^$third-party
-||b1js.com^$third-party
 ||b2c.com^$third-party
 ||baikalize.com^$third-party
 ||bam-x.com^$third-party
@@ -2109,6 +2105,7 @@ omni.soundestlink.com$image
 ||commander1.com^$third-party
 ||company-target.com^$third-party
 ||compteur.cc^$third-party
+||compteur.fr^$third-party
 ||conductrics.com^$third-party
 ||conductrics.net^$third-party
 ||connectif.cloud^$third-party
@@ -2438,7 +2435,6 @@ omni.soundestlink.com$image
 ||imhd.io^$third-party
 ||impression.link^$third-party
 ||imtwjwoasak.com^$third-party
-||inboxtag.com^$third-party
 ||incentivesnetwork.net^$third-party
 ||index.ru^$third-party
 ||indexstats.com^$third-party
@@ -2613,7 +2609,6 @@ omni.soundestlink.com$image
 ||metarouter.io^$third-party
 ||metricode.com^$third-party
 ||metricool.com^$third-party
-||metrics0.com^$third-party
 ||metricswave.com^$third-party
 ||micpn.com^$script,third-party
 ||microanalytics.io^$third-party
@@ -2621,6 +2616,7 @@ omni.soundestlink.com$image
 ||mieru-ca.com^$third-party
 ||minkatu.com^$third-party
 ||mirabelsmarketingmanager.com^$third-party
+||mixi.mn^$third-party
 ||mixpanel.com^$third-party
 ||mkt51.net^$third-party
 ||mkt941.com^$third-party
@@ -2655,7 +2651,6 @@ omni.soundestlink.com$image
 ||mysocialpixel.com^$third-party
 ||mytictac.com^$third-party
 ||myvisitorcounter.com^$third-party
-||mywebstats.com.au^$third-party
 ||mywebstats.org^$third-party
 ||n-analytics.io^$third-party
 ||naj.sk^$third-party
@@ -3033,6 +3028,7 @@ omni.soundestlink.com$image
 ||stellaservice.com^$third-party
 ||stormiq.com^$third-party
 ||storygize.net^$third-party
+||streetmetrics.io^$third-party
 ||stroeerdigitalmedia.de^$third-party
 ||strs.jp^$third-party
 ||studiostack.com^$third-party
@@ -3049,6 +3045,7 @@ omni.soundestlink.com$image
 ||swetrix.org^$third-party
 ||synergy-e.com^$third-party
 ||synerise.com^$third-party
+||tadpull.com^$third-party
 ||tag4arm.com^$third-party
 ||tagcommander.com^$third-party
 ||tagsrvcs.com^$third-party
@@ -3127,6 +3124,7 @@ omni.soundestlink.com$image
 ||truoptik.com^$third-party
 ||trysera.com^$third-party
 ||tubemogul.com^$third-party
+||tunnl.com^$third-party
 ||turn.com^$third-party
 ||tvsquared.com^$third-party
 ||twcount.com^$third-party
@@ -3292,6 +3290,7 @@ omni.soundestlink.com$image
 ||coin-have.com^$third-party
 ||coinpot.co^$third-party
 ||coinzillatag.com^$third-party
+||cookiescript.info^$third-party
 ||duckdns.org^$third-party,websocket
 ||easyhash.de^$third-party
 ||ethereum-pocket.com^$third-party
@@ -3309,6 +3308,7 @@ omni.soundestlink.com$image
 ||omine.org^$third-party
 ||pampopholf.com^
 ||reauthenticator.com^
+||serie-vostfr.com^$third-party
 ||statdynamic.com^
 ||static-sb.com^$third-party
 ||tercabilis.info^
@@ -3474,6 +3474,7 @@ omni.soundestlink.com$image
 ||skillfuldrop.com^
 ||smallbeginner.com^
 ||smashquartz.com^
+||soothingglade.com^
 ||sparkgoal.com^
 ||spectacularstamp.com^
 ||spellsalsa.com^
@@ -3493,7 +3494,6 @@ omni.soundestlink.com$image
 ||tempertrick.com^
 ||tiresomethunder.com^
 ||toecircle.com^
-||toolcapital.com^
 ||tranquilveranda.com^
 ||troubledtail.com^
 ||ubiquitousyard.com^
@@ -3586,7 +3586,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||breaktime.com.tw^$third-party
 ||brightedge.com^$third-party
 ||citrusad.net^$third-party
-||clickguardian.app^$third-party
 ||fpjscdn.net^
 ||guoshipartners.com^$third-party
 ||klangoo.com^$third-party
@@ -3804,7 +3803,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||tenmax.io^$third-party
 ||threatbook.cn^$third-party
 ||top-bloggers.com^$third-party
-||twcouponcenter.com^$third-party
 ||vamaker.com^$third-party
 ||vdoing.com^$third-party
 ||vm5apis.com^$third-party
@@ -3823,7 +3821,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||agillic.eu^$third-party
 ||chart.dk^$third-party
 ||digitaladvisor.dk^$third-party
-||euroads.dk^$third-party
 ||livecounter.dk^$third-party
 ||netminers.dk^$third-party
 ||telemetric.dk^$third-party
@@ -3853,7 +3850,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||shinystat.it^$third-party
 ||sibautomation.com^$third-party
 ||statistiche.it^$third-party
-||statistichegratis.net^$third-party
 ||vivistats.com^$third-party
 ||webads.eu^$third-party
 ||accaii.com^$third-party
@@ -3946,6 +3942,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||adtive.com^$third-party
 ||aicontents.net^$third-party
 ||contentsfeed.com^$third-party
+||dawin.tv^$third-party
 ||logger.co.kr^$third-party
 ||rainbownine.net^$third-party
 ||smlog.co.kr^$third-party
@@ -4194,6 +4191,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||analytic.rollout.io^
 ||analyticcdn.globalmailer.com^
 ||analytics-1.cavai.com^
+||analytics-api.klickly.com^
 ||analytics-cms.whitebeard.me^
 ||analytics-consent-manager-v2-prod.azureedge.net^
 ||analytics-prd.aws.wehaa.net^
@@ -4350,6 +4348,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||argos.citruserve.com^
 ||ariane.abtasty.com^
 ||arkoselabs.com/metrics/
+||asayer.io/tracker.js
 ||assets.moneymade.io/js/fp.min.js
 ||assets.yumpu.com/release/*/tracking.js
 ||assistant.watson.appdomain.cloud/analytics/
@@ -4440,7 +4439,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||burstcloud.co/jwe?
 ||bytedance.com/pixel/
 ||byteoversea.com/captcha/report
-||byteoversea.com/monitor_browser/
 ||c.amazinglybrilliant.com.au^
 ||c.bazo.io^
 ||c.imedia.cz^
@@ -4595,6 +4593,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||counter.yadro.ru^
 ||counters.freewebs.com^
 ||coveo.com/coveo.analytics.js/
+||covery.ai/fp/$third-party
 ||cp.official-coupons.com^
 ||cp.official-deals.co.uk^
 ||cqloud.com/measurements/
@@ -5184,7 +5183,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||pla.fwdcdn.com^
 ||platform.iteratehq.com^
 ||platform.twitter.com/impressions.js
-||plausible.io/js/plausible.
 ||play.adtonos.com^
 ||play.ht/views/
 ||player-metrics.instaread.co^
@@ -5714,7 +5712,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||v.shopify.com^
 ||va.tawk.to/log
 ||validate.onecount.net^$image
-||vast.com/vimpressions.js$third-party
 ||vcita.com/tr_
 ||vdrn.redplum.com^
 ||ventunotech.com/beacon/
@@ -6410,6 +6407,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||popin.cc/test/popin_img_m.js
 ||popin.cc/test/popin_send_cookie_set_fail.js
 ||rakuten-static.com/com/rat/
+||rasin.tech/heatmap-
 ||rasin.tech/scroll-logs/
 ||rcm.shinobi.jp^
 ||rd.rakuten.co.jp^$script
@@ -6822,7 +6820,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||browsealoud.com/plus/scripts/$script
 ||builder.io/api/v1/track
 ||buzzfeed.com/destination-sync.html
-||byteoversea.com/monitor_web/
 ||c.arstechnica.com^
 ||c.newyorker.com^
 ||c.paypal.com^$image,script
@@ -7843,7 +7840,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 @@/^https:\/\/kemono\.su\/api\/v1\/favorites\/creator\/(?:afdian|boosty|discord|dlsite|fan(?:box|tia)|gumroad|onlyfans|patreon|subscribestar)\/[.0-9A-Z_a-z]+$/$xmlhttprequest,~third-party,match-case,method=post
 @@||coomer.su/.well-known/ddos-guard/mark/|
 @@||kemono.su/.well-known/ddos-guard/mark/|
-||afi.ssl.gmobb.jp^
 ||assets.garron.me^
 ||hurricane.tinybird.co^
 ||momotaro.craigmod.com^
@@ -7873,7 +7869,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||a1.api.bbc.com^
 ||abncx.amv.fr^
 ||ama.wdr.de^
-||ama.wdrmaus.de^
 ||ana.tv5unis.ca^
 ||arrietty.nrj.fr^
 ||at-cddc.actu-juridique.fr^
@@ -7905,7 +7900,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||images.kika.de^
 ||insights.sport1.de^
 ||johannes.voith.com^
-||mkt.usz.ch^
 ||montpalatin.handicap.fr^
 ||ponyo.cheriefm.fr^
 ||res.elle.fr^
@@ -8059,6 +8053,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.picknrg.com^
 ||analytics.pipelife.com^
 ||analytics.pipelife.de^
+||analytics.pipelife.ee^
 ||analytics.pnc.com^
 ||analytics.qualcomm.com^
 ||analytics.reliant.com^
@@ -8298,6 +8293,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||data.connect.riolasvegas.com^
 ||data.crm-edm.thsrc.com.tw^
 ||data.cs.officedepot.com^
+||data.descubre.interbank.pe^
 ||data.dow.com^
 ||data.e.lotteryoffice.com.au^
 ||data.e.worldvision.ca^
@@ -8331,6 +8327,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||data.marketingbmg.bancobmg.com.br^
 ||data.member.aware.com.au^
 ||data.member.unitedhealthcare.com^
+||data.msg.wegmans.com^
 ||data.myhealth.riteaid.com^
 ||data.news.eurobet.it^
 ||data.newsletter.avianca.com^
@@ -8349,6 +8346,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||data.socio.realmadrid.net^
 ||data.stepstone.de^
 ||data.trx.costco.ca^
+||data.umfrage.blau.de^
 ||data0.bell.ca^
 ||data1.bell.ca^
 ||data1.sparkasse.at^
@@ -8365,6 +8363,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||dcs.esprit.co.uk^
 ||dcs.esprit.cz^
 ||dcs.esprit.de^
+||dcs.esprit.es^
 ||dcs.esprit.eu^
 ||dcs.esprit.fr^
 ||dcs.esprit.se^
@@ -8401,7 +8400,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||dii2.zooplus.gr^
 ||dii2.zooplus.hr^
 ||dii2.zooplus.hu^
-||dii2.zooplus.ie^
 ||dii2.zooplus.it^
 ||dii2.zooplus.nl^
 ||dii2.zooplus.no^
@@ -8437,7 +8435,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||dii3.zooplus.gr^
 ||dii3.zooplus.hr^
 ||dii3.zooplus.hu^
-||dii3.zooplus.ie^
 ||dii3.zooplus.it^
 ||dii3.zooplus.nl^
 ||dii3.zooplus.no^
@@ -8568,6 +8565,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||metrics.farmshopanddelishow.co.uk^
 ||metrics.fcacert.com^
 ||metrics.fedex.com^
+||metrics.feednavigator.com^
 ||metrics.foodmanufacture.co.uk^
 ||metrics.foodnavigator-asia.com^
 ||metrics.foodnavigator-latam.com^
@@ -8613,6 +8611,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||metrics.lacaixa.es^
 ||metrics.langhamhotels.com^
 ||metrics.lastminute.ch^
+||metrics.lww.com^
 ||metrics.makemytrip.com^
 ||metrics.marriott.com^
 ||metrics.mathworks.com^
@@ -8623,7 +8622,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||metrics.morningadvertiser.co.uk^
 ||metrics.myprime.com^
 ||metrics.mytributes.com.au^
-||metrics.nationalconvenienceshow.co.uk^
 ||metrics.news.com.au^
 ||metrics.newscorporatesubscriptions.com.au^
 ||metrics.nfm.com^
@@ -8829,7 +8827,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||s.blinds.ca^
 ||s.blinds.com^
 ||s.bramptonguardian.com^
-||s.cadent.bloomberglaw.com^
 ||s.caledonenterprise.com^
 ||s.cambridgetimes.ca^
 ||s.durhamregion.com^
@@ -8843,6 +8840,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||s.lexusfinancial.com^
 ||s.metroland.com^
 ||s.mississauga.com^
+||s.musicradio.com^
 ||s.muskokaregion.com^
 ||s.newhamburgindependent.ca^
 ||s.niagarafallsreview.ca^
@@ -8964,6 +8962,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sadobemarketing.boden.co.uk^
 ||sadobemarketing.boden.eu^
 ||sadobemarketing.boden.fr^
+||sadobemarketing.bodenclothing.com.au^
 ||sadobemarketing.bodendirect.at^
 ||sadobemarketing.bodendirect.de^
 ||sadobemarketing.bodenusa.com^
@@ -8981,6 +8980,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sanalytics.boing.es^
 ||sanalytics.boomerangtv.co.uk^
 ||sanalytics.boomerangtv.com.au^
+||sanalytics.boomerangtv.it^
 ||sanalytics.box.com^
 ||sanalytics.cartoonito.co.uk^
 ||sanalytics.cartoonito.ro^
@@ -9102,6 +9102,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sdc.allianz-vor-ort.de^
 ||sdc.allianz.de^
 ||sdc.aware.com.au^
+||sdc.azt-automotive.com^
 ||sdc2.credit-suisse.com^
 ||sdcs.felissimo.co.jp^
 ||secmetrics.leggmason.com^
@@ -9165,7 +9166,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||securetags.esriuk.com^
 ||securetags.geotecnologias.com^
 ||securetags.gisbaltic.eu^
-||securetags.img.com.br^
 ||securetags.maps.com^
 ||securetags.sigsa.info^
 ||securetenilstats.turner.com^
@@ -9450,7 +9450,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||smetrics.cartersoshkosh.ca^
 ||smetrics.cartoonnetwork.ca^
 ||smetrics.caser.es^
-||smetrics.caserexpatinsurance.com^
 ||smetrics.cashnetusa.com^
 ||smetrics.casio.co.jp^
 ||smetrics.casio.com.tw^
@@ -9486,7 +9485,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||smetrics.circusny.com^
 ||smetrics.cisco.com^
 ||smetrics.cit.com^
-||smetrics.citeline.com^
 ||smetrics.citibank.ae^
 ||smetrics.citibank.co.th^
 ||smetrics.citibank.com.au^
@@ -9854,7 +9852,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||smetrics.lakeshorelearning.com^
 ||smetrics.lambweston.com^
 ||smetrics.landa.com^
-||smetrics.landolakes.com^
 ||smetrics.landolakesinc.com^
 ||smetrics.landrover.com^
 ||smetrics.lanebryant.com^
@@ -10076,6 +10073,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||smetrics.optimum.net^
 ||smetrics.optum.com^
 ||smetrics.oreilly.com^
+||smetrics.orencia.com^
 ||smetrics.otsuka-us.com^
 ||smetrics.oxfam.org.uk^
 ||smetrics.packersproshop.com^
@@ -10291,7 +10289,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||smetrics.sharecare.com^
 ||smetrics.sharekhan.com^
 ||smetrics.shihang.org^
-||smetrics.shihangjituan.org^
 ||smetrics.shinseibank.com^
 ||smetrics.shionogi.co.jp^
 ||smetrics.shionogi.tv^
@@ -10415,6 +10412,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||smetrics.thrivent.com^
 ||smetrics.thriventfinancial.com^
 ||smetrics.tiaa.org^
+||smetrics.ticket.dk^
 ||smetrics.ticket.no^
 ||smetrics.ticket.se^
 ||smetrics.ticketsatwork.com^
@@ -10664,7 +10662,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||somnit.blinkfitness.com^
 ||somnit.equinox.com^
 ||somniture.compactappliance.com^
-||somniture.edgestar.com^
 ||somniture.faucetdirect.com^
 ||somniture.handlesets.com^
 ||somniture.icemakerdirect.com^
@@ -10731,7 +10728,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||ssc.insidevoa.com^
 ||ssc.irfaasawtak.com^
 ||ssc.kavkazr.com^
-||ssc.kcamexico.com^
 ||ssc.krymr.com^
 ||ssc.logotv.com^
 ||ssc.maghrebvoices.com^
@@ -10753,6 +10749,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||ssc.nickanimation.com^
 ||ssc.nickatnite.com^
 ||ssc.nickelodeon.la^
+||ssc.nickelodeonarabia.com^
 ||ssc.nickjr.com^
 ||ssc.ozodi.org^
 ||ssc.ozodlik.org^
@@ -10875,6 +10872,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sstats.fishersci.nl^
 ||sstats.fishersci.no^
 ||sstats.fishersci.se^
+||sstats.gaba.co.jp^
 ||sstats.harlequin.com^
 ||sstats.harrods.com^
 ||sstats.healthcare-sumitomo-pharma.jp^
@@ -10922,6 +10920,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||sstats.vizergy.com^
 ||sstats.www.o2.cz^
 ||sstatstest.adobe.com^
+||st-nlyss1.plala.or.jp^
 ||st.bahn.de^
 ||st.der-kleine-ice.de^
 ||st.iceportal.de^
@@ -11380,6 +11379,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||connect.kristechwire.com^
 ||connect.mikrocentrum.nl^
 ||connect.shopezrentals.com^
+||connect.shoprentone.com^
 ||connect.uniti.com^
 ||contact.aquaterraenergy.com^
 ||contact.marathon-sports-ec.com^
@@ -11452,6 +11452,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||info.healthcareittoday.com^
 ||info.healthcarescene.com^
 ||info.ironcad.com^
+||info.itw-air.com^
 ||info.itwcce.com^
 ||info.jccc.edu^
 ||info.jwpepper.com^
@@ -11492,6 +11493,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||info.visitorlando.com^
 ||info.walkingclassroom.org^
 ||info.weloveournewwindows.com^
+||infospot.roanokegroup.com^
 ||innovation.rlgbuilds.com^
 ||insights.jabian.com^
 ||insights.openfieldx.com^
@@ -11513,8 +11515,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||marketing.alfalak.com^
 ||marketing.almusnet.com^
 ||marketing.alsearsmd.com^
-||marketing.americanbathgroup.com^
 ||marketing.analysysmason.com^
+||marketing.andaluciarealty.com^
 ||marketing.aragonresearch.com^
 ||marketing.arlington.org^
 ||marketing.arysta-na.com^
@@ -11532,12 +11534,12 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||marketing.bondcapital.ca^
 ||marketing.bostwick-braun.com^
 ||marketing.bouldercoloradousa.com^
-||marketing.brandywinevalley.com^
 ||marketing.cadillacmichigan.com^
 ||marketing.cargas.com^
 ||marketing.celona.io^
 ||marketing.centra.org^
 ||marketing.cfa.ca^
+||marketing.chemometec.com^
 ||marketing.choosechicago.com^
 ||marketing.cisco-eagle.com^
 ||marketing.cla.aero^
@@ -11552,6 +11554,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||marketing.destinationvancouver.com^
 ||marketing.discoverpuertorico.com^
 ||marketing.dnacenter.com^
+||marketing.driveline.co.nz^
 ||marketing.dryvit.com^
 ||marketing.duckbrand.com^
 ||marketing.e-emphasys.com^
@@ -11621,6 +11624,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||marketing.redlion.net^
 ||marketing.riverfrontig.com^
 ||marketing.rocklakeig.com^
+||marketing.schneiderdowns.com^
 ||marketing.sedgwick.com^
 ||marketing.seeclearfield.com^
 ||marketing.seemonterey.com^
@@ -11632,7 +11636,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||marketing.superiorrecreationalproducts.com^
 ||marketing.systancia.com^
 ||marketing.technologyadvice.com^
-||marketing.tenoapp.com^
 ||marketing.thepalmbeaches.com^
 ||marketing.theplasticsurgeryclinic.ca^
 ||marketing.theresortatsummerlin.com^
@@ -11715,10 +11718,10 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||newsletter.davey.com^
 ||nra.locktonaffinity.net^
 ||nu.esri.nl^
-||offers.hddistributors.com^
 ||onesourcebackground.actonservice.com^
 ||outreach.crossref.org^
 ||outreach.successforall.org^
+||pages.cobweb.com^
 ||pages.srsmith.com^
 ||people.mbtionline.com^
 ||promo.skf.com^
@@ -11738,8 +11741,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||simple.siegelgale.com^
 ||soccajoeys.actonservice.com^
 ||solutions.bwtek.com^
+||steel.newmill.com^
 ||success.vertigis.com^
-||success.vertigisstudio.com^
 ||support.flex.com^
 ||support2.flex.com^
 ||svarcom.actonservice.com^
@@ -11758,6 +11761,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||universalbackground.actonservice.com^
 ||value.kfcu.org^
 ||vip.gophersport.com^
+||vt.mak.com^
 ||web.eisenhowerhealthnews.org^
 ||woodtone.actonservice.com^
 ||ww2.businessgrouphealth.org^
@@ -11815,7 +11819,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tr.communication.b2b-actualites.com^
 ||tr.communication.enkiapp.io^
 ||tr.communication.offresb2b.fr^
-||tr.comunicacao.younited-credit.com^
 ||tr.contact.canalplus.fr^
 ||tr.courrier.charentelibre.fr^
 ||tr.courrier.sudouest.fr^
@@ -11845,6 +11848,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tr.info.harmonie-mutuelle.fr^
 ||tr.informations.harmonie-mutuelle.fr^
 ||tr.infos.gazdebordeaux.fr^
+||tr.invest.younited-credit.com^
 ||tr.kpyn.espmp-cufr.net^
 ||tr.lesmarquesenviedebienmanger.fr^
 ||tr.mail.enviedebienmanger.fr^
@@ -11855,6 +11859,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tr.membres.boursorama.info^
 ||tr.mp.aconclue-business.fr^
 ||tr.mp.aconclue-pro.com^
+||tr.mp.ld-man.fr^
 ||tr.news.alinea.com^
 ||tr.news.allopneus.com^
 ||tr.news.capfun.com^
@@ -11916,6 +11921,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||analytics.uwindsor.ca^
 ||announcement.lyreco.com^
 ||answers.teradata.com^
+||apcinfo.motorolasolutions.com^
 ||app.12thman.com^
 ||app.auburntigers.com^
 ||app.bluehens.com^
@@ -11941,6 +11947,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||app.poconoraceway.com^
 ||app.portland5.com^
 ||app.ramblinwreck.com^
+||app.texastech.com^
 ||app.tulanegreenwave.com^
 ||app.updates.digicert.com^
 ||app.virginiasports.com^
@@ -11973,7 +11980,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||contact.regus.com^
 ||contacto.gtc.com.gt^
 ||content.eaton.com^
-||content.wire.telstra.com^
 ||contents.pwc.com^
 ||cookies.engage.russellinvestments.com^
 ||cookies.siemens-healthineers.com^
@@ -12017,9 +12023,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||elqtrk.intel.fr^
 ||elqtrk.intel.in^
 ||elqtrk.intel.la^
-||elqtrk.intel.pl^
 ||elqtrk.intel.sg^
-||elqtrk.morningstar.com.au^
 ||elqtrk.morningstar.com^
 ||elqtrk.thailand.intel.com^
 ||em.thermofisher.com^
@@ -12033,7 +12037,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||engage.unisa.edu.au^
 ||engage2demand.cisco.com^
 ||engagemetrics.cisco.com^
-||engageru.3mrussia.ru^
 ||etrack.ext.arubanetworks.com^
 ||eumeainfo.motorolasolutions.com^
 ||event.thermoscientific.com^
@@ -12122,6 +12125,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||lantern.fortinet.com^
 ||learn.anthology.com^
 ||learn.uwindsor.ca^
+||learnmore.protiviti.com^
+||lets.go.haymarketmedicalnetwork.com^
 ||lets.go.prweekus.com^
 ||link.halifax.co.uk^
 ||link.infineon.com^
@@ -12142,7 +12147,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||marketing.uwmedicine.org^
 ||me.sigsauer.com^
 ||memelq.acs.org^
-||message.sonicwall.com^
 ||my.internationalsos.com^
 ||myfeed.thalesgroup.com^
 ||na-pages.husqvarna.com^
@@ -12186,13 +12190,12 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||solicitud.pacifico.com.pe^
 ||solutions.desertfinancial.com^
 ||solutions.lseg.com^
+||solutions.oppd.com^
 ||solutions.refinitiv.com^
-||solutions.staubli.com^
 ||solutions.westrock.com^
 ||stat.bdc.ca^
 ||stat.dbschenker.com^
 ||stat.juridicas.com^
-||study.vu.edu.au^
 ||submit.vaisala.com^
 ||subscribe.adpinfo.com^
 ||sw.broadcom.com^
@@ -12217,6 +12220,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||track.postkodlotteriet.se^
 ||tracker.providence.org^
 ||tracker.swedish.org^
+||tracking.adp.ca^
 ||tracking.adp.com^
 ||tracking.adpinfo.com^
 ||tracking.att.com^
@@ -12230,6 +12234,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tracking.direxion.com^
 ||tracking.eloq.soa.org^
 ||tracking.eloqua.modernize.com^
+||tracking.endnote.com^
 ||tracking.europe.business.samsung.com^
 ||tracking.evergy.com^
 ||tracking.getapp.com^
@@ -12248,7 +12253,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tracking.ptc.com^
 ||tracking.regus.com^
 ||tracking.reply.broadwayinhollywood.com^
-||tracking.reply.dpacnc.com^
 ||tracking.shop.verymobile.it^
 ||tracking.solutions.parker.com^
 ||tracking.stemcell.com^
@@ -12257,7 +12261,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tracking.ti.com^
 ||tracking.utas.edu.au^
 ||tracking.vertiv.com^
-||tracking.vodafone.com^
 ||trackingcareers.accenture.com^
 ||trackingmms.accenture.com^
 ||tracks3.ferrari.com^
@@ -12266,6 +12269,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||trk.channelpartnersconference.com^
 ||trk.encoreglobal.com^
 ||trk.go.ingrammicrocloud.com^
+||trk.itprotoday.com^
 ||trk.mktg.nec.com^
 ||trk.ndtco.com^
 ||trk.neogen.com^
@@ -12405,6 +12409,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||secure.intelligent-business-wisdom.com^
 ||secure.lote1otto.com^
 ||secure.navy9gear.com^
+||secure.node7seat.com^
 ||secure.office-insightdetails.com^
 ||secure.rear9axis.com^
 ||secure.rime8lope.com^
@@ -12526,7 +12531,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||webmet.creditreform.de^
 ||website-usage.knorr-bremse.com^
 ||webt.eu.teac-audio.com^
-||wt.dialog-versicherung.de^
 ||wt.envivas.de^
 ||wt.generali.de^
 ||wt.vhb.de^
@@ -12849,6 +12853,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||stat.y.qq.com^
 ||stat.zol.com.cn^
 ||static.funshion.com/*/common/log/
+||static.qiyi.com/js/pingback/
 ||steamchina.com/events/
 ||sugar.zhihu.com^
 ||tbskip.taobao.com^$script
@@ -12928,6 +12933,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||io-tech.fi/io/www/delvr/lokiz.php
 ||rac.ruutu.fi^
 ||stats.fonecta.fi^
+||ts.fi/Statistics/Log$image
 ||cellstats.mako.co.il^
 ||stats.mako.co.il^
 ||adat.borsonline.hu^
