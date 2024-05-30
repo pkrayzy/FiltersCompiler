@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/1_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.91.17",
-			"timeUpdated": "2024-05-30T12:31:37+0000",
+			"version": "2.0.91.18",
+			"timeUpdated": "2024-05-30T16:31:25+0000",
 			"languages": [
 				"ru"
 			],
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.1.54",
-			"timeUpdated": "2024-05-30T14:34:19+0000",
+			"version": "2.1.1.55",
+			"timeUpdated": "2024-05-30T16:32:31+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/11_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.86",
-			"timeUpdated": "2024-05-30T13:33:21+0000",
+			"version": "2.0.51.87",
+			"timeUpdated": "2024-05-30T16:32:48+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/14_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.97.92",
-			"timeUpdated": "2024-05-30T15:33:21+0000",
+			"version": "2.1.97.93",
+			"timeUpdated": "2024-05-30T16:32:59+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -660,8 +660,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.40.49",
-			"timeUpdated": "2024-05-30T10:33:30+0000",
+			"version": "2.0.40.50",
+			"timeUpdated": "2024-05-30T16:33:06+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1483,8 +1483,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.16.70",
-			"timeUpdated": "2024-05-30T14:35:05+0000",
+			"version": "2.1.16.71",
+			"timeUpdated": "2024-05-30T16:33:13+0000",
 			"languages": [
 				"zh"
 			],
