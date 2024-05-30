@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: rrbyLu5HvyYKIVCdIFzfsw
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1716757453-14400.patch
+! Checksum: aatt2kaH8rjUoyexcBzIAg
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1717088700-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links.
-! Version: 2.0.7.86
-! TimeUpdated: 2024-05-26T21:01:49+00:00
+! Version: 2.0.7.87
+! TimeUpdated: 2024-05-30T17:02:10+00:00
 ! Expires: 5 days (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -1096,10 +1096,13 @@ $removeparam=returnFromLogin,domain=amazon.*
 $removeparam=/^asc_.*$/,document,domain=amazon.*|aboutamazon.com|amzn.to
 ||amazon.*/primeday/$removeparam=tag
 ||amazon.*/primeday/$removeparam=mfadid
-||www.amazon.$removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
+||www.amazon.$document,removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
 ||www.amazon.$removeparam=sp_csd
 ||www.amazon.$removeparam=dib_tag
 @@||amazon.*/profilewidget^$removeparam,~document
+||amazon.$document,removeparam=social_share
+||amazon.$document,removeparam=starsLeft
+||amazon.$document,removeparam=skipTwisterOG
 ||bing.com/?$removeparam=/^form=.*$/i
 ||bing.$removeparam=sp
 $removeparam=sc,document,domain=bing.com|qvc.com|startpage.com
@@ -1896,7 +1899,7 @@ $removeparam=referer,document,domain=bodykind.com|clink2.com|dlink2.com|nitter.n
 ||target.com^$removeparam=lnk
 $removeparam=marketing_id
 $removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com
-$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
+$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
 $removeparam=visit_id,document,domain=bilibili.com|google.*

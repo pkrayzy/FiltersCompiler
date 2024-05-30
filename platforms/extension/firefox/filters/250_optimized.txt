@@ -1,9 +1,9 @@
-! Checksum: iGn/pnDXqJUfOyI3PGFtpw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1717045434-14400.patch
+! Checksum: KRn2b+lsGy5XqVesHdDoxA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1717088687-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.14.26
-! TimeUpdated: 2024-05-29T17:02:06+00:00
+! Version: 2.0.14.27
+! TimeUpdated: 2024-05-30T17:02:10+00:00
 ! Expires: 10 days (update frequency)
 ###smart-banner
 ##.app-banner:not(html,body,:empty)
@@ -4239,10 +4239,13 @@ $removeparam=returnFromLogin,domain=amazon.*
 ||gaming.amazon.com^$removeparam=redirectRoute
 ||amazon.$removeparam=sbo
 $removeparam=/^asc_.*$/,document,domain=amazon.*|aboutamazon.com|amzn.to
-||www.amazon.$removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
+||www.amazon.$document,removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
 ||www.amazon.$removeparam=sp_csd
 ||www.amazon.$removeparam=dib_tag
 @@||amazon.*/profilewidget^$removeparam,~document
+||amazon.$document,removeparam=social_share
+||amazon.$document,removeparam=starsLeft
+||amazon.$document,removeparam=skipTwisterOG
 ||bing.com/?$removeparam=/^form=.*$/i
 ||bing.$removeparam=sp
 $removeparam=sc,document,domain=bing.com|qvc.com|startpage.com
@@ -4772,7 +4775,7 @@ $removeparam=click_sum,domain=etsy.com
 ||target.com^$removeparam=lnk
 $removeparam=marketing_id
 $removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com
-$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
+$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
 $removeparam=visit_id,document,domain=bilibili.com|google.*
