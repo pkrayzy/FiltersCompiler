@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: GUmEagFInppHs4RZ1NJaXQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1717140964-3600.patch
+! Checksum: KRxktDcEO/dqjIfi72u0dw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1717144499-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.37.99
-! TimeUpdated: 2024-05-31T07:31:59+00:00
+! Version: 2.3.38.0
+! TimeUpdated: 2024-05-31T08:31:17+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,7 @@
 !
 !
 !
+||cdn.mcnn.pl^$third-party
 ||batch.com^$third-party
 ||flx2.pnl.agency^$third-party
 ||opeanresultancete.info^$all
@@ -20916,6 +20917,14 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180519
+! .big-placeholder cannot just be hidden because the website will freeze, so it's necessary to remove it
+gratka.pl###empty-placeholder
+gratka.pl##.mobile-placeholder
+gratka.pl##.desktop-main-page-placeholder
+gratka.pl##div[id^="placeholder-slot-"]
+gratka.pl##.td-post-content > div[style*="height:"][style*="width:"][style*="margin-bottom:"]:has(> div[id^="slot-left"])
+gratka.pl#$?#.big-placeholder { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180271
 tygodnikpowszechny.pl#@#.block-simpleads
 tygodnikpowszechny.pl#$#.block-simpleads { display: block !important; position: absolute !important; left: -3000px !important; }
@@ -32290,7 +32299,6 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 ytmp3.mobi##+js(window.open-defuser, ad.ymcdn)
 ||4khd.com/interstitial.js
 gocomics.com##.gc-top-advertising
-base64decode.org##.ad_corner
 educationtimes.com##div[class]:has(> div[class] > div[id^="div-gpt-ad"])
 kickassanime.*#$?#body ~ div[style^="position:"] { remove: true; }
 vidco.pro#$?#iframe[style^="position:"] { remove: true; }
@@ -55599,6 +55607,7 @@ implbits.com#@#.banner_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95265
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95696 [Stealth Mode - User-agent]
 ! kinopoisk.ru - sign in was broken [Stealth Mode - third-party cookies]
+! https://github.com/AdguardTeam/AdguardFilters/issues/180504
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105801
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95882 [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96021 [Stealth Mode - Referrer]
