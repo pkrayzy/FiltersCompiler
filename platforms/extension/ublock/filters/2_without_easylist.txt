@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: EllnrAozi9/Es3ZmwjNB+Q
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1717133697-3600.patch
+! Checksum: MS4I//ND46iqK345oLo8gQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1717137360-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.37.97
-! TimeUpdated: 2024-05-31T05:31:36+00:00
+! Version: 2.3.37.98
+! TimeUpdated: 2024-05-31T06:31:39+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -6715,6 +6715,9 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180503
+4khd.com##.popup
+4khd.com##+js(no-xhr-if, magsrv.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180124
 howtoconcepts.com###adb
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180061
@@ -27440,6 +27443,7 @@ newslive.com##+js(abort-current-script, onload, atob(link))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/169300
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162161
 jeniusplay.com##+js(window.open-defuser)
+! https://github.com/AdguardTeam/AdguardFilters/issues/180487
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161263
 ! Fixes video player, required in case of DNS filtering
 uniladtech.com,gamingbible.com,ladbible.com,sportbible.com,unilad.com,tyla.com##+js(set-constant, pbjs.rp, noopFunc)
@@ -32285,6 +32289,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+||4khd.com/interstitial.js
 gocomics.com##.gc-top-advertising
 base64decode.org##.ad_corner
 educationtimes.com##div[class]:has(> div[class] > div[id^="div-gpt-ad"])
@@ -50907,6 +50912,9 @@ $popup,third-party,domain=dood.ws,badfilter
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180487
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=worldsurfleague.com,important
+||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon_apstag.js,domain=worldsurfleague.com,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180133
 ||jwplayer.com^$domain=gamesradar.com,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179844
