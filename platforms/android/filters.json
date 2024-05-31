@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.51",
-			"timeUpdated": "2024-05-30T03:07:39+0000",
+			"version": "2.3.30.52",
+			"timeUpdated": "2024-05-31T03:08:10+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/3_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.69.7",
-			"timeUpdated": "2024-05-30T03:07:40+0000",
+			"version": "2.0.69.8",
+			"timeUpdated": "2024-05-31T03:08:12+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.93",
-			"timeUpdated": "2024-05-30T03:07:41+0000",
+			"version": "2.0.99.94",
+			"timeUpdated": "2024-05-31T03:08:13+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -527,8 +527,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/10_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.3.34",
-			"timeUpdated": "2024-05-30T03:07:30+0000",
+			"version": "2.0.3.35",
+			"timeUpdated": "2024-05-31T03:08:02+0000",
 			"languages": [],
 			"tags": []
 		},
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/11_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.15",
-			"timeUpdated": "2024-05-30T03:07:31+0000",
+			"version": "2.0.51.16",
+			"timeUpdated": "2024-05-31T03:08:03+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/14_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.93.17",
-			"timeUpdated": "2024-05-30T03:07:34+0000",
+			"version": "2.1.93.18",
+			"timeUpdated": "2024-05-31T03:08:06+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.37",
-			"timeUpdated": "2024-05-30T03:07:28+0000",
+			"version": "2.1.24.38",
+			"timeUpdated": "2024-05-31T03:08:00+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.25.26",
-			"timeUpdated": "2024-05-30T03:07:30+0000",
+			"version": "2.1.25.27",
+			"timeUpdated": "2024-05-31T03:08:02+0000",
 			"languages": [],
 			"tags": [
 				2
