@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.52",
-			"timeUpdated": "2024-05-31T03:08:10+0000",
+			"version": "2.3.30.53",
+			"timeUpdated": "2024-05-31T13:25:20+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/3_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.69.8",
-			"timeUpdated": "2024-05-31T03:08:12+0000",
+			"version": "2.0.69.9",
+			"timeUpdated": "2024-05-31T13:25:21+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.94",
-			"timeUpdated": "2024-05-31T03:08:13+0000",
+			"version": "2.0.99.95",
+			"timeUpdated": "2024-05-31T13:25:22+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/14_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.93.18",
-			"timeUpdated": "2024-05-31T03:08:06+0000",
+			"version": "2.1.93.19",
+			"timeUpdated": "2024-05-31T13:25:15+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -783,8 +783,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.38",
-			"timeUpdated": "2024-05-31T03:08:00+0000",
+			"version": "2.1.24.39",
+			"timeUpdated": "2024-05-31T13:25:09+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1084,8 +1084,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.25.27",
-			"timeUpdated": "2024-05-31T03:08:02+0000",
+			"version": "2.1.25.28",
+			"timeUpdated": "2024-05-31T13:25:11+0000",
 			"languages": [],
 			"tags": [
 				2

@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: H+Zs7i5f3DkEkMmYEyW7Fg
+! Checksum: 8sZYCBCCj0XnpRqb548vPw
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.30.52
-! TimeUpdated: 2024-05-31T03:08:10+00:00
+! Version: 2.3.30.53
+! TimeUpdated: 2024-05-31T13:25:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -83,6 +83,7 @@
 !
 !
 !
+||cdn.mcnn.pl^$third-party
 ||batch.com^$third-party
 ||flx2.pnl.agency^$third-party
 ||opeanresultancete.info^$all
@@ -6720,6 +6721,9 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180503
+4khd.com##.popup
+4khd.com##+js(no-xhr-if, magsrv.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180124
 howtoconcepts.com###adb
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180061
@@ -16838,6 +16842,8 @@ svetzeny.cz##+js(set-constant, __burdaAds, {})
 svetzeny.cz##+js(set-constant, __burdaAds.getDevice, noopFunc)
 svetzeny.cz##+js(set-constant, __burdaAds.isSeznam, noopFunc)
 svetzeny.cz##+js(set-constant, __burdaAds.refreshAllSlots, noopFunc)
+! https://github.com/AdguardTeam/AdguardFilters/issues/180078
+/cwl.js$domain=seznam.cz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144019
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140501
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135692
@@ -20918,6 +20924,19 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180520
+kb.pl##.sticky2
+kb.pl##body .kba
+kb.pl##.kboferwidget
+||oferteo.pl/widget/$domain=kb.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/180519
+! .big-placeholder cannot just be hidden because the website will freeze, so it's necessary to remove it
+gratka.pl###empty-placeholder
+gratka.pl##.mobile-placeholder
+gratka.pl##.desktop-main-page-placeholder
+gratka.pl##div[id^="placeholder-slot-"]
+gratka.pl##.td-post-content > div[style*="height:"][style*="width:"][style*="margin-bottom:"]:has(> div[id^="slot-left"])
+gratka.pl#$?#.big-placeholder { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180271
 tygodnikpowszechny.pl#@#.block-simpleads
 tygodnikpowszechny.pl#$#.block-simpleads { display: block !important; position: absolute !important; left: -3000px !important; }
@@ -27445,6 +27464,7 @@ newslive.com##+js(abort-current-script, onload, atob(link))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/169300
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162161
 jeniusplay.com##+js(window.open-defuser)
+! https://github.com/AdguardTeam/AdguardFilters/issues/180487
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161263
 ! Fixes video player, required in case of DNS filtering
 uniladtech.com,gamingbible.com,ladbible.com,sportbible.com,unilad.com,tyla.com##+js(set-constant, pbjs.rp, noopFunc)
@@ -29138,8 +29158,6 @@ y2mate.guru##+js(window.open-defuser)
 files.im##+js(json-prune, *, ppuClicks)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72001
 janusnotes.com##+js(window.open-defuser)
-! https://github.com/AdguardTeam/AdguardFilters/issues/71773
-ytmp3.mobi##+js(window.open-defuser, ad.ytmp3.mobi)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71406
 strikeout.nu##+js(json-prune, *.*, *.clk)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71280
@@ -32078,6 +32096,8 @@ triblive.com###storyContent > div[data-type="float"][data-stn-player]
 ! !SECTION: Temporary
 !##################
 !
+! Ad-Shield ad reinsertion
+!
 ! ExoClick
 /abl.php$domain=sunporno.com
 /backend_loader.php$domain=beeg.com|croea.com|hipornvideo.com|imagetwist.com|imgskull.com|kporno.com|picfox.org|picshick.com|picturelol.com|porntube.com|yourporn.sexy
@@ -32290,8 +32310,15 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+kewnscans.org###sticky-ad-head
+neoseeker.com##.prms_inc
+neoseeker.com##div[style^="text-align:center;background:"][style*="min-height:"]:has(> .text-secondary > small)
+torrentgalaxy.unblockninja.com###blockalert
+torrentgalaxy.unblockninja.com###stopad
+ytmp3.mobi###pa_download
+ytmp3.mobi##+js(window.open-defuser, ad.ymcdn)
+||4khd.com/interstitial.js
 gocomics.com##.gc-top-advertising
-base64decode.org##.ad_corner
 educationtimes.com##div[class]:has(> div[class] > div[id^="div-gpt-ad"])
 kickassanime.*#$?#body ~ div[style^="position:"] { remove: true; }
 vidco.pro#$?#iframe[style^="position:"] { remove: true; }
@@ -50912,6 +50939,9 @@ $popup,third-party,domain=dood.ws,badfilter
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180487
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=worldsurfleague.com,important
+||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon_apstag.js,domain=worldsurfleague.com,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180133
 ||jwplayer.com^$domain=gamesradar.com,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179844
@@ -55597,6 +55627,7 @@ implbits.com#@#.banner_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95265
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95696 [Stealth Mode - User-agent]
 ! kinopoisk.ru - sign in was broken [Stealth Mode - third-party cookies]
+! https://github.com/AdguardTeam/AdguardFilters/issues/180504
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105801
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95882 [Stealth Mode - Referrer]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96021 [Stealth Mode - Referrer]
