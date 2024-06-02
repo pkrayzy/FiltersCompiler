@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: x+SeRiMtGwajdDme4HdqNg
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1717275874-14400.patch
+! Checksum: EiPup6SToBz2nZGjh066Yg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1717304648-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.28
@@ -16,6 +16,7 @@
 ##.download_app:not(html,body,:empty)
 ##.downloadapp:not(html,body,:empty)
 ##.mobile-app-links:not(html,body,:empty)
+##.mobile_apps:not(html,body,:empty)
 ##.open-in-app:not(html,body,:empty)
 ##.OpenInAppButton:not(html,body,:empty)
 ##.smartbanner:not(html,body,:empty)
@@ -210,7 +211,6 @@ coolrom.com.au,coolrom.com##.download_link
 ||96.47.230.68^$document
 ||96.47.230.69^$document
 ||96.47.230.70^$document
-||com/landers/iphone*_spin$document
 ||31.220.27.134^$document
 ||158.247.212.220^$document
 ||165.227.168.212^$document
@@ -836,7 +836,6 @@ ctrip.com##.service-notice-right
 dianping.com##.qrcode-aside
 dianping.com##.shop-owner.mod
 ditu.amap.com###mobileenterance_no_bg
-flights.ch.com##.m-side
 jd.com###J_mobile
 jdpay.com##.ui-modal-mask
 jdpay.com###promotionModal
@@ -885,6 +884,7 @@ wikia.org,fandom.com#$?##wds-company-logo-fandom-white { pointer-events: none !i
 wikia.org,fandom.com#$?#.wds-global-footer__header { pointer-events: none !important; cursor: default !important }
 fandom.com##.unified-search__layout__right-rail
 ||vignette.wikia.nocookie.net/*/images/0/0e^$important
+||vignette.wikia.nocookie.net/*/images/c/cd^$important
 ||wikia.nocookie.net/*/images/*/Wiki-background^$domain=fandom.com
 ||wikia.nocookie.net/*/images/*/Site-background-$domain=fandom.com
 fandom.com#$?#:root { --theme-body-background-image: none !important }
@@ -936,7 +936,6 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@||ntdtv.com^
 @@||shenyun.com^
 @@||soundofhope.org^
-@@||wujieliulan.com^
 @@||buzzfeed.com^
 @@||mewe.com^
 @@||wikileaks.org^
@@ -1123,6 +1122,7 @@ $removeparam=AID,document,denyallow=firestore.googleapis.com,domain=~google.*|~d
 $removeparam=/^CJEVENT=.*$/i,document
 $document,removeparam=refd
 $document,removeparam=/^hmb_.*$/
+$document,removeparam=FMID
 $document,removeparam=LID
 $document,removeparam=_ga,domain=~login.aliexpress.*
 $document,removeparam=guccounter
@@ -1187,7 +1187,6 @@ $removeparam=campaign_id,domain=~kochava.com|~unisportstore.*
 $removeparam=wmlspartner
 $removeparam=sscid
 $removeparam=rmmds
-$removeparam=act_poa
 $removeparam=utmid
 $removeparam=msclkid
 $removeparam=litb_from
@@ -1207,6 +1206,7 @@ $removeparam=wgu
 $removeparam=wgexpiry
 $removeparam=fsrc
 $removeparam=Referrer
+$removeparam=ad_pvid
 $removeparam=algo_pvid
 $removeparam=algo_expid
 $removeparam=btsid
@@ -1323,7 +1323,6 @@ $removeparam=irmpname
 $removeparam=REFERRAL_ID
 $removeparam=impradid
 $removeparam=impradname
-$removeparam=cm_type
 Ref=CJ^$document,removeparam=ref
 ref=awin^$document,removeparam=ref
 $document,removeparam=/^source=pepperjam$/
@@ -1611,6 +1610,7 @@ $removeparam=mt_uuid
 $removeparam=_rlid
 $removeparam=ga_fc
 $removeparam=s_id
+$removeparam=_puid
 $removeparam=b_id
 $removeparam=dspUserId
 $removeparam=tpmn_buid
@@ -1665,7 +1665,6 @@ $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws|xkcd.com|linkedin.com|
 ||amazon.$removeparam=crid
 ||amazon.$removeparam=/^cv_ct_.*$/
 ||amazon.$removeparam=sprefix
-||amazon.$removeparam=ac_md
 $removeparam=coliid
 $removeparam=geniuslink
 ||amazon.$removeparam=aaxitk
@@ -1775,11 +1774,7 @@ $removeparam=googleloc
 $removeparam=_sacat,domain=~ebay.*
 ||ebay.$removeparam=campid
 ||ebay.$removeparam=toolid
-$removeparam=crlp,domain=ebay.*
-$removeparam=MT_ID,domain=ebay.*
-$removeparam=geo_id,domain=ebay.*
 $removeparam=device,domain=ebay.*
-$removeparam=cmpgn,domain=ebay.*
 ||ebay.*/itm/$removeparam=LH_BIN
 ||ebay.$removeparam=mkpid
 ||ebay.$removeparam=emsid
@@ -1962,8 +1957,6 @@ $removeparam=aff_click_id
 ||map.baidu.com^$removeparam=pcevaname
 ||map.baidu.com^$removeparam=ugc_type
 ||map.baidu.com^$removeparam=ugc_ver
-||wenku.baidu.com^$removeparam=rec_flag
-||wenku.baidu.com^$removeparam=sxts
 ||baidu.com^$removeparam=hl_tag
 ||zhidao.baidu.com^$removeparam=qbl
 ||wenku.baidu.com/search?$removeparam=cc
@@ -2495,7 +2488,6 @@ $document,domain=bilibili.com|querie.me,removeparam=timestamp
 ||adguard.info^$removeparam=nc
 ref=404media.co$document,removeparam=ref
 ||researchgate.net^$document,removeparam=_tp
-$document,removeparam=share_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 ||xvideos.$document,removeparam=sxcaf
 $document,removeparam=iId,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 $removeparam=partner,domain=accuweather.com|fastcompany.com|humblebundle.com
@@ -2561,6 +2553,7 @@ $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid
 ||login.yahoo.com^$document,removeparam=activity
+$removeparam=cgkit_search_word
 ref=upstract.com$document,removeparam=ref
 ||windscribe.com^$document,removeparam=pcpid
 ||carousell.$removeparam=t-id
