@@ -1,9 +1,9 @@
-! Checksum: JUquEANGpx/NWYVAtZcK1Q
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1717333443-14400.patch
+! Checksum: c1dCbElrA5zQB79XNJfAbA
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1717405431-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.52
-! TimeUpdated: 2024-06-02T13:01:48+00:00
+! Version: 2.0.18.53
+! TimeUpdated: 2024-06-03T09:01:33+00:00
 ! Expires: 1 day (update frequency)
 ||centaurs-rest.coupang.com^
 ||ad.cashdoc.io^
@@ -1457,6 +1457,10 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+ajunews.com###articleBody ~ div[class$="_banner"]
+ajunews.com###articleBody > div[style*="height:"]
+new-m.pay.naver.com###root > div[class*="PaymentLayout_article_"] div[class*="AdBanner_article_"]
+new-m.pay.naver.com##div[class^="AdReward_list_"] > div[class^="ADRewardGladBanner_article_"]
 bbs.ruliweb.com##div[style*=" "] > div[id][style].relative
 bbs.ruliweb.com##div[class^="adrr_"]
 bbs.ruliweb.com##div[style].ti_wrapper
@@ -1494,7 +1498,6 @@ g-enews.*##div[id^="tdn_"][style*="height:"]
 3277532532.reviewtoday.net##*[class*="-coupas-"]
 search.naver.com##div[id^="power_link_together_"]
 m.10000recipe.com##.sp_pdt_wrap
-new-m.pay.naver.com##div[class*="_banner_"][style]
 ygosu.com##div[id^="clickmon_"]
 e-himart.co.kr##div[id*="Banner"]:not(:is(#mainNewBanner, .hm-main__slide-new))
 mksports.co.kr##.read_txt> div[id^="slot"]
@@ -2245,7 +2248,7 @@ sign.dcinside.com##.ban_box
 playwares.com##a[href*="../api/redirectAd.php?"]
 kormedi.com##div[id^="better-ads-"]
 kormedi.com##iframe[src*="/wp-content/uploads/ads/"]
-khan.co.kr,zdnet.co.kr,msearch.shopping.naver.com,pann.nate.com,theqoo.net,asiatoday.co.kr,osmanias.com,drapt.com,realty.chosun.com,newstong.co.kr,it.chosun.com,cm.asiae.co.kr,modoodoc.com,salgoonews.com,xportsnews.com##div[class*="_ad_"]
+ajunews.com,khan.co.kr,zdnet.co.kr,msearch.shopping.naver.com,pann.nate.com,theqoo.net,asiatoday.co.kr,osmanias.com,drapt.com,realty.chosun.com,newstong.co.kr,it.chosun.com,cm.asiae.co.kr,modoodoc.com,salgoonews.com,xportsnews.com##div[class*="_ad_"]
 shoppinghow.kakao.com##div[data-gg="{s1:shopping}"] h2 + div[class^="#banner"]
 m.naver.com##div[data-panel-code="SHOP_VOGUE"] ._MM_TREND_PICK
 compuzone.co.kr###gamezone .bnrList_area > ul.rollbnr_list
