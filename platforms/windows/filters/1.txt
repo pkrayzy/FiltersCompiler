@@ -1,9 +1,9 @@
-! Checksum: RgOkPLyTwA8UhTBSknX0Sg
-! Diff-Path: ../patches/1/1-s-1717176931-3600.patch
+! Checksum: EPIzcIjlpfewpkohdnBPiA
+! Diff-Path: ../patches/1/1-s-1717414822-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.21
-! TimeUpdated: 2024-05-31T17:31:04+00:00
+! Version: 2.0.91.22
+! TimeUpdated: 2024-06-03T11:31:06+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5582,7 +5582,10 @@ yandex.*#?#.content__left > ul#search-result > li:has(> div[data-bem*="organic"]
 ! In the search suggestions when typing
 ya.ru##.mini-suggest__popup-content > div.mini-suggest__group_layout_separated:has(> div > a[target="_blank"])
 ! Right side, where usually shown useful content
+! The rule must be checked also another with search requests to not break the page
+! For example, pills, specific electrinics, searcf for definition of a word
 ya.ru,yandex.*###search-result-aside > div[class*="_right_yes"] > div[data-cid] div[data-vnl*="R-I-"]
+ya.ru,yandex.*###search-result-aside > div[class*="_right_yes"]:not([aria-label]) > div[data-cid] > div.Root_lazy > div[class$="-Slot"]
 ! Breaks useful content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/168382
 ! ya.ru,yandex.*##.content__right .serp-item > *
