@@ -1,9 +1,9 @@
-! Checksum: v6h6gDSkJgLyM9tzDh5vSQ
-! Diff-Path: ../patches/14/14-s-1717497317-3600.patch
+! Checksum: VOMBIYzA8VMhyL9wwhWsDg
+! Diff-Path: ../patches/14/14-s-1717500977-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.34
-! TimeUpdated: 2024-06-04T10:33:20+00:00
+! Version: 2.1.98.35
+! TimeUpdated: 2024-06-04T11:34:23+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2432,6 +2432,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+domovita.by#$##modalCookies { display: none !important; }
+domovita.by#$#.modal-backdrop { display: none !important; }
+domovita.by#$#body { overflow: auto !important; padding-right: 0 !important; }
 telekom.de#%#//scriptlet('trusted-set-cookie', 'CONSENTMGR', 'c1%3A0%7Cc3%3A0%7Cc7%3A1%7Cts%3A1717487342176%7Cconsent%3Atrue', '', '/', 'telekom.de')
 cupt.gov.pl#$#html { overflow: auto !important; }
 cupt.gov.pl#$#div[id^="wiCookieBar"] { display: none !important; }
@@ -31334,6 +31337,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+domovita.by##.subscription-messengers
+domovita.by##.mail-wrapper
 techcrunch.com##.wp-block-tc23-newsletter-signup-compact
 poferries.com#%#//scriptlet('set-cookie', 'SeenOptInPopup', '1')
 securitylab.ru##.telegram-block
