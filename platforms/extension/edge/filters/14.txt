@@ -1,9 +1,9 @@
-! Checksum: s/xIxRrDCeWsOslnbwqRhw
-! Diff-Path: ../patches/14/14-s-1717482928-3600.patch
+! Checksum: HjtQ7ENhjpIcZDCXFsv7Ew
+! Diff-Path: ../patches/14/14-s-1717486530-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.30
-! TimeUpdated: 2024-06-04T06:33:25+00:00
+! Version: 2.1.98.31
+! TimeUpdated: 2024-06-04T07:33:38+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2432,6 +2432,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+cupt.gov.pl#$#html { overflow: auto !important; }
+cupt.gov.pl#$#div[id^="wiCookieBar"] { display: none !important; }
+dolubatarya.com#%#//scriptlet('trusted-click-element', '#cc--main button.c-bn.c_link', '!cookie:cc_cookie')
 germanos.gr,payzy.gr##div[id^="ck_cookies"]
 ||cookies.webixa.pl^$domain=ppnt.poznan.pl
 fuam.pl#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="0"][id]')
@@ -9423,7 +9426,7 @@ real.de#$#html { overflow: visible !important; }
 constantin-film.de#$#.cookielayer { display: none !important; }
 mclaren.com##div[class*="-cookie-alert"]
 bitci.com##.bw-cnotify
-pilgway.com,3dcoat.com,tantis.pl,voltus.de###cookiesModal
+dpdgroup.com,pilgway.com,3dcoat.com,tantis.pl,voltus.de###cookiesModal
 interlak-expo.ru,expocentr.ru,prostudio.ru,sviaz-expo.ru##.cookie-attention
 /sm-policy-banner.js$domain=storage-mart.com
 ucretsizhivtesti.com##div[id^="tpapopup-"]
@@ -23129,6 +23132,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+expedia.co.jp#%#//scriptlet('trusted-set-cookie-reload', 'NavActions', 'acctWasOpened')
 ||quiz.tryinteract.com^$domain=birdwatchinghq.com
 birdwatchinghq.com###interact-promotion-popup
 studysmarter.de#%#//scriptlet('trusted-set-cookie', 'intent', 'opened')
