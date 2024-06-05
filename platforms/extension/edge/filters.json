@@ -636,8 +636,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.45.8",
-			"timeUpdated": "2024-06-03T11:33:35+0000",
+			"version": "2.0.45.9",
+			"timeUpdated": "2024-06-05T23:33:42+0000",
 			"languages": [
 				"fr"
 			],
@@ -1506,8 +1506,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.16.98",
-			"timeUpdated": "2024-06-05T15:33:23+0000",
+			"version": "2.1.16.99",
+			"timeUpdated": "2024-06-05T23:33:51+0000",
 			"languages": [
 				"zh"
 			],
