@@ -783,8 +783,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.44",
-			"timeUpdated": "2024-06-04T23:27:17+0000",
+			"version": "2.1.24.45",
+			"timeUpdated": "2024-06-05T03:10:07+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1084,8 +1084,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.25.33",
-			"timeUpdated": "2024-06-04T23:27:19+0000",
+			"version": "2.1.25.34",
+			"timeUpdated": "2024-06-05T03:10:09+0000",
 			"languages": [],
 			"tags": [
 				2
