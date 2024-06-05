@@ -1,9 +1,9 @@
-! Checksum: 7t0eQQbLQjRoD96+ixfJNw
-! Diff-Path: ../patches/14/14-s-1717590935-3600.patch
+! Checksum: GjFch1gYoRKiEFpypcXBLg
+! Diff-Path: ../patches/14/14-s-1717594512-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.43
-! TimeUpdated: 2024-06-05T12:33:37+00:00
+! Version: 2.1.98.44
+! TimeUpdated: 2024-06-05T13:33:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2389,6 +2389,7 @@ docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 !
 ! NOTE: Regular rules
 !
+ostechnix.com##div[data-name="mediavine-gdpr-cmp"]
 nowfoods.com##.block-sd-cookie-consent-block
 phot.ai##div[class*="styles_consentCard_"]
 powiatkarkonoski.eu##.cookiesBackground
@@ -13428,6 +13429,10 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_ext
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Detect HTTPS filtering
 ! Detect Advanced Protection of AdGuard for iOS
+!
+poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo.pl,r360.eu,centrumwyobrazni.pl#$#.cookie { display: none !important; }
+poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo.pl,r360.eu,centrumwyobrazni.pl#$#main { filter: none !important; pointer-events: auto!important; }
+poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo.pl,r360.eu,centrumwyobrazni.pl#$#header { filter: none !important; pointer-events: auto!important; }
 !
 !
 ! This section contains the list of rules that fix incorrect blocking of cookie notifications by generic rules. Rules should be domain-specific.
@@ -28735,6 +28740,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+ostechnix.com#$##grow-me-root { display: none !important; }
+ostechnix.com#$#body { overflow: auto !important; }
 topcor.ru##.channels
 it-world.ru##.subscribe-detail
 lancasterarchery.com###shopify-section-footer .border-charcoal
@@ -32532,7 +32539,7 @@ inspiringtips.com##.enews
 belmarket.by##.anons-big__bottom ~ p + div[style^="background:#eeeeee;"]
 infoworld.com##.brand-social
 grmag.com##.vc_widget_sidebar > div.tagdiv-type.tdi_30_aa0
-acouplecooks.com,readbrightly.com##.inline-subscribe
+acouplecooks.com,readbrightly.com,ostechnix.com##.inline-subscribe
 adme.media,brightside.me##div[data-test-id="subscription-block"]
 fateka.com##.newsletter-subscription-section
 akc.org##div[data-js-props*="newsletter"]
@@ -37967,6 +37974,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180046
+pcmag.com###trust-badge
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180459
 sou.com##.browse-guide-bg
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180332
