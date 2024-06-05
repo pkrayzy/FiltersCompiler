@@ -1,9 +1,9 @@
-! Checksum: FnIEZKCPk+BUZQn2MWjFHw
-! Diff-Path: ../patches/18/18-s-1717605345-3600.patch
+! Checksum: zclHU1+fvzM8n4NkyCJnng
+! Diff-Path: ../patches/18/18-s-1717608946-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.40.88
-! TimeUpdated: 2024-06-05T16:33:18+00:00
+! Version: 2.0.40.89
+! TimeUpdated: 2024-06-05T17:33:39+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2433,6 +2433,10 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+kleinezeitung.at###footerCookieConfigurationDidomi
+futurezone.at#%#//scriptlet('trusted-click-element', '#didomi-notice-agree-button')
+futurezone.at#%#//scriptlet('trusted-click-element', 'div[data-iframe="YouTube"] .noConsent-content > button')
+futurezone.at#%#//scriptlet('trusted-click-element', 'div[data-twitter] .noConsent-content > button')
 flightconnections.com##div[class*=z-index-top]
 flip.gr#%#//scriptlet('trusted-set-cookie', 'consts', '{}')
 ostechnix.com##div[data-name="mediavine-gdpr-cmp"]
@@ -15331,6 +15335,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+!https://github.com/AdguardTeam/AdguardFilters/issues/180694
+@@||sdk.privacy-center.org^$domain=futurezone.at
 !https://github.com/AdguardTeam/AdguardFilters/issues/180700
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179831
 app.nlziet.nl#@##onetrust-consent-sdk
