@@ -1,9 +1,9 @@
-! Checksum: eQYWrn4BSRT5Z0cACXsY4Q
-! Diff-Path: ../patches/14/14-s-1717673828-3600.patch
+! Checksum: Qi10KO7FPwsiU7WHjdd88Q
+! Diff-Path: ../patches/14/14-s-1717677424-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.55
-! TimeUpdated: 2024-06-06T11:34:53+00:00
+! Version: 2.1.98.56
+! TimeUpdated: 2024-06-06T12:34:45+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2433,6 +2433,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+hurtowniakarm.pl#$#body { overflow: auto !important; }
+hurtowniakarm.pl#$#.modal-backdrop { display: none !important; }
+hurtowniakarm.pl#$##RodoCookiesInfo { display: none !important; }
 ||steelseries.com/static/css/eu-osano.
 steelseries.com#$#body { overflow: auto !important; }
 inbag.pl#%#//scriptlet('set-cookie-reload', 'AtomStore[COOKIES_ACCEPTED]', '1')
@@ -15289,6 +15292,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180761
+hurtowniakarm.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180914
 inbag.pl#@#.cookie-message:not(html):not(body)
 inbag.pl#@#.cookie-modal
@@ -30474,7 +30479,7 @@ business-gazeta.ru###popupAcceptNotify
 hokiesports.com##div[class$="container"]:has(button[type="button"] + div[class] div.tip-contents)
 nowtv.com.tr##.gospock-webpush-permission-modal-contanier
 ||heraldsun.com/*/messaging/webpush_
-themirror.com##.pwa-modal-prompt
+mirror.co.uk,themirror.com##.pwa-modal-prompt
 ||shiftdelete.net/wp-content/plugins/push-notification-*/js/pnfpb_pushscript_pwa.js
 jn.pt##.sk-notification-dialog
 jn.pt###sk-notifications-container
@@ -31262,13 +31267,14 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+sud.ua##.b-bblock:has(> a[href="http://sud.ua/click/2"])
 rosbalt.ru##.matter-after > div:has(> div[class^="Subscribe_"])
 studio.fm.br###block-2
 studio.fm.br##.stream-item-size > div.table-is-responsive:has(> table p[align="center"] > a[href="https://t.me/studionoticias"])
 journal.sovcombank.ru#?#form button:contains(Получать подборку):upward(4)
 journal.sovcombank.ru#?#form button:contains(Подписаться):upward(4)
 journal.sovcombank.ru#?#img[src^="https://journal.sovcombank.ru/api/upload/blog-btm-bnr/"]:upward(2)
-timescale.com#?#.ts-site__sidebar .newsletter-form:upward(3)
+timescale.com##.ts-site__sidebar > div > div.block:has(> form.newsletter-form)
 insider-gaming.com##.sidebar-wrap > div[style]:has(> a[href^="https://www.youtube.com/@insider_gaming?"])
 joshwcomeau.com#%#//scriptlet('trusted-set-local-storage-item', 'toasty-subscribe-history', '{"status":"subscribed"}')
 temporarymail.com##.extension-offer
@@ -52320,6 +52326,7 @@ beasoku.com##.l-rss-header
 !
 !   SECTION: Widgets - Marketing (specific)
 !
+support.apple.com##.accsoffer-wrapper
 ||zchnk.ru/*/zao-order-chat.js
 surabaya.tribunnews.com###jualbeli2022
 surabaya.tribunnews.com##.widgettshop
