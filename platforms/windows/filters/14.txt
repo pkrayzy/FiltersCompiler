@@ -1,9 +1,9 @@
-! Checksum: zKp9eKswS6KlGQokYHuJ3w
-! Diff-Path: ../patches/14/14-s-1717670249-3600.patch
+! Checksum: K5Mom8M/rWGnsrzlSbYKfw
+! Diff-Path: ../patches/14/14-s-1717673854-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.54
-! TimeUpdated: 2024-06-06T10:34:37+00:00
+! Version: 2.1.98.55
+! TimeUpdated: 2024-06-06T11:34:53+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2433,6 +2433,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+||steelseries.com/static/css/eu-osano.
+steelseries.com#$#body { overflow: auto !important; }
 inbag.pl#%#//scriptlet('set-cookie-reload', 'AtomStore[COOKIES_ACCEPTED]', '1')
 zdnet.com##.c-siteTermsBanner
 pixelgun3d.com##.my_cookie_alert
@@ -19108,9 +19110,9 @@ foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 music.yandex.*##.notify > div.deco-tooltip_notify.notify_shown
 !
 ! Yandex.Pogoda
-[$path=/\/(?:weather\/|pogoda\/|hava\/)/]yandex.*#%#//scriptlet('prevent-eval-if', 'Id":"R-I')
-[$path=/\/(?:weather\/|pogoda\/|hava\/)/]yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
-[$path=/\/(?:weather\/|pogoda\/|hava\/)/]yandex.*#%#//scriptlet('json-prune', 'rtb')
+yandex.*#%#//scriptlet('prevent-eval-if', 'Id":"R-I')
+yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
+yandex.*#%#//scriptlet('json-prune', 'rtb')
 !
 ! Yandex.Video
 [$path=/video]yandex.*#%#//scriptlet('json-prune', 'seatbid')
@@ -31301,6 +31303,9 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+rosbalt.ru##.matter-after > div:has(> div[class^="Subscribe_"])
+studio.fm.br###block-2
+studio.fm.br##.stream-item-size > div.table-is-responsive:has(> table p[align="center"] > a[href="https://t.me/studionoticias"])
 journal.sovcombank.ru#?#form button:contains(Получать подборку):upward(4)
 journal.sovcombank.ru#?#form button:contains(Подписаться):upward(4)
 journal.sovcombank.ru#?#img[src^="https://journal.sovcombank.ru/api/upload/blog-btm-bnr/"]:upward(2)
@@ -38252,6 +38257,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+jianshu.com##body > #__next ~ div:not([class]):has(img[src="//upload.jianshu.io/images/js-qrc.png"])
 cara.app###js_smartbanner
 cars.av.by##.promo-app
 flowgpt.com#%#//scriptlet('set-local-storage-item', 'appDownloadModalDismissed', 'true')
@@ -41484,6 +41490,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180762
+delfi.lt##body #__layout div.C-live-stream-announcement
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180049
 slantmagazine.com##.donate
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180046
@@ -46545,6 +46553,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+delfi.lt##.G-col > .C-article-headlines:has(div[class*="swiper-recommended-"])
 lenta.com##section[class^="Banner_container_"]
 ||boncharge.com^$removeparam=aff-view
 futurezone.at#$#.adFreeOffer { display: none !important; }
@@ -50978,7 +50987,7 @@ globaledu.jp#%#//scriptlet('remove-attr', 'oncontextmenu|onselectstart', 'body')
 battle-one.com#%#//scriptlet("abort-on-property-read", "document.oncontextmenu")
 korona.co.jp#%#//scriptlet('remove-attr', 'oncopy|oncontextmenu', 'body')
 nordkorea-info.de#%#//scriptlet("set-constant", "document.oncontextmenu", "emptyObj")
-easyayurveda.com,iembra2or.com,wizardsubs.com,procrackerz.org#%#//scriptlet("abort-on-property-read", "nocontext")
+studio.fm.br,easyayurveda.com,iembra2or.com,wizardsubs.com,procrackerz.org#%#//scriptlet("abort-on-property-read", "nocontext")
 animeactua.com,procrackerz.org#%#//scriptlet("abort-current-inline-script", "disableEnterKey", "Content is protected")
 ukrainianwall.com#%#//scriptlet('prevent-addEventListener', '/copy|selectstart|contextmenu/', 'preventDefault')
 hataphim.com,japan-fans.com#%#//scriptlet('abort-current-inline-script', 'document.onmousedown')
