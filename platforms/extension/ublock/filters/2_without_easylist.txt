@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: pk74sPdfOnSPjFPD8V9sNg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1717691749-3600.patch
+! Checksum: LkpJEgK4Syzf6m15rVTcPw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1717695294-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.38.88
-! TimeUpdated: 2024-06-06T16:31:19+00:00
+! Version: 2.3.38.89
+! TimeUpdated: 2024-06-06T17:31:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -27104,6 +27104,8 @@ kat.*,kickass.*,kickass2.*,kickasstorrents.*,kat2.*,kattracker.*,thekat.*,thekic
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180944
+clk.kim##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180648
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180652
 freespoke.com##+js(json-prune, messaging, context)
@@ -32240,6 +32242,10 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+bscscan.com###ContentPlaceHolder1_lblTextAd
+pcmag.com#?#.mx-auto > div[class^="my-"]:has(> div.hide-three > a[href][rel="sponsored"]) + div.leading-tight
+pcmag.com#?#.mx-auto > div[class^="my-"]:has(> div.hide-three > a[href][rel="sponsored"])
+pcmag.com##div#similar-products
 bestforpuzzles.com##div[data-element-description$=" ad"]
 bestforpuzzles.com##div[class^="GameTemplate__adSidebar___"]
 flightradar24.com###primisAdContainer
@@ -32513,7 +32519,6 @@ vjav.*##div[class] > div[class] > section[style="padding: 10px;"]
 flac24bitmusic.com##a[target="_blank"][rel] > img[src*=".gif"]
 ||flac24bitmusic.com/uploads/pryamo.gif
 ||flac24bitmusic.com/uploads/headerbaner.gif
-hackread.com#?#.cs-sidebar__inner a.click:upward(.widget)
 chordu.com##div[class*="ads_ad_background"]
 boobyday.com,gonewildday.com,poppornday.com##body > center:has(> div.bannerbottom)
 boobyday.com,gonewildday.com,poppornday.com###page > .menu-left:has(> div.btnhome)
@@ -49920,6 +49925,8 @@ adultlingeriepics.com,adultlingeriepics.com,adultspankingtgp.com,allfeetporn.com
 !
 !
 !
+!+ NOT_OPTIMIZED
+hackread.com#?#.cs-sidebar__inner a.click:upward(.widget)
 !+ NOT_OPTIMIZED
 fileditch.com##a[href^="https://hostslick.com/"]
 !+ NOT_OPTIMIZED
