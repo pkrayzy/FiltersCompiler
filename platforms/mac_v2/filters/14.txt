@@ -1,9 +1,9 @@
-! Checksum: EK0kIIKtR+9/QmyK7WgcZg
-! Diff-Path: ../patches/14/14-s-1717745759-3600.patch
+! Checksum: fGgYA8t4tfkOiKhrS2ANDg
+! Diff-Path: ../patches/14/14-s-1717749300-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.59
-! TimeUpdated: 2024-06-07T07:33:26+00:00
+! Version: 2.1.98.60
+! TimeUpdated: 2024-06-07T08:32:50+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -19114,9 +19114,9 @@ foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 music.yandex.*##.notify > div.deco-tooltip_notify.notify_shown
 !
 ! Yandex.Pogoda
-yandex.*#%#//scriptlet('prevent-eval-if', 'Id":"R-I')
-yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
-yandex.*#%#//scriptlet('json-prune', 'rtb')
+[$path=/pogoda]yandex.*#%#//scriptlet('prevent-eval-if', 'Id":"R-I')
+[$path=/pogoda]yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
+[$path=/pogoda]yandex.*#%#//scriptlet('json-prune', 'rtb')
 !
 ! Yandex.Video
 [$path=/video]yandex.*#%#//scriptlet('json-prune', 'seatbid')
@@ -31310,6 +31310,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+straitstimes.com##div[data-sdkids-campaignname*="newsletter"]
+straitstimes.com#%#//scriptlet('set-cookie', 'exit_intervention', 'true')
 pcmag.com##div[aria-label="Manage Newsletters"]
 sud.ua##.b-bblock:has(> a[href="http://sud.ua/click/2"])
 rosbalt.ru##.matter-after > div:has(> div[class^="Subscribe_"])

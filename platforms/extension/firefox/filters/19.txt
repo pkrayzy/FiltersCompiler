@@ -1,9 +1,9 @@
-! Checksum: SBYQ7fg9JDXNa0OpMleCmA
-! Diff-Path: ../patches/19/19-s-1717695281-3600.patch
+! Checksum: akUuzz3RK3gRQGzvEZoLrg
+! Diff-Path: ../patches/19/19-s-1717749287-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.37.77
-! TimeUpdated: 2024-06-06T17:32:55+00:00
+! Version: 2.0.37.78
+! TimeUpdated: 2024-06-07T08:32:58+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -105,9 +105,9 @@
 music.yandex.*##.notify > div.deco-tooltip_notify.notify_shown
 !
 ! Yandex.Pogoda
-yandex.*#%#//scriptlet('prevent-eval-if', 'Id":"R-I')
-yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
-yandex.*#%#//scriptlet('json-prune', 'rtb')
+[$path=/pogoda]yandex.*#%#//scriptlet('prevent-eval-if', 'Id":"R-I')
+[$path=/pogoda]yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
+[$path=/pogoda]yandex.*#%#//scriptlet('json-prune', 'rtb')
 !
 ! Yandex.Video
 [$path=/video]yandex.*#%#//scriptlet('json-prune', 'seatbid')
@@ -12314,6 +12314,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+straitstimes.com##div[data-sdkids-campaignname*="newsletter"]
+straitstimes.com#%#//scriptlet('set-cookie', 'exit_intervention', 'true')
 pcmag.com##div[aria-label="Manage Newsletters"]
 sud.ua##.b-bblock:has(> a[href="http://sud.ua/click/2"])
 rosbalt.ru##.matter-after > div:has(> div[class^="Subscribe_"])
