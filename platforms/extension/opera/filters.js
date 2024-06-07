@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.38.90",
-			"timeUpdated": "2024-06-06T21:31:35+0000",
+			"version": "2.3.38.91",
+			"timeUpdated": "2024-06-07T00:31:37+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.66.43",
-			"timeUpdated": "2024-06-06T18:32:55+0000",
+			"version": "2.0.66.44",
+			"timeUpdated": "2024-06-07T00:33:54+0000",
 			"languages": [],
 			"tags": [
 				45,
