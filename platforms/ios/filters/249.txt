@@ -1,14 +1,14 @@
-! Checksum: GRfvIW0S44ixSq3YOwfsCA
-! Diff-Path: ../patches/249/249-s-1716570259-14400.patch
+! Checksum: 1WTe66iwxhp1Cv0SpiR7Dg
+! Diff-Path: ../patches/249/249-s-1717967050-14400.patch
 ! Title: Dandelion Sprout's Nordic Filters
 ! Description: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population.
-! Version: 2.0.7.50
-! TimeUpdated: 2024-05-24T17:01:57+00:00
+! Version: 2.0.7.51
+! TimeUpdated: 2024-06-09T21:01:42+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! OriginalVersion: 24May2024v3
+! OriginalVersion: 09June2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -222,6 +222,7 @@ finn.no##.ads__unit--banner
 bt.no##div[class^=article-wrapper-] > div[class^=_]
 nettavisen.no##amedia-include[param-editionid=reklame]:upward(1)
 sundhedslex.dk##.boxl
+costume.no##.teaser--link:has(.teaser__cat--sponsorlabel)
 mytastenor.com,mytastednk.com##.affiliate
 itavisen.no##.td-adspot-title
 byggfakta.no##.sponsor-row
@@ -944,6 +945,7 @@ madbanditten.dk##.madbanditten-widget
 gunnarandreassen.com##a[href*=dreamz]
 midtsiden.no##main > div > div:not([class])
 journalisten.dk#$#.article { padding-bottom: 10px !important }
+datamaskin.biz##.ad2
 latterkula.no##a[title*=spill]
 kundeavisogtilbud.no,tilbudsaviseronline.dk##.anchor-wrapper
 fcbarcelona.dk##.bluebox.custom
@@ -1635,6 +1637,7 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ||ytresogn.no/wp-content/uploads/2020/02/Ytre_718_360_2.jpg^
 ||gamereactor.*/ads^
 ||gamereactor.*/exclusive.json^
+||datamaskin.biz/ad/
 ! — — — — — — —
 ! 🇳🇴: Filtjener- eller nettstedsspesifikke oppføringer med kilder
 ! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
@@ -1895,7 +1898,7 @@ vafo.dk##.adform-flexblock
 ! bt.no, byas.no, aftenbladet.no (30/10/2020)
 ##.vertical-x1-ad > .column--big:not(body,:empty)
 ! costume.no, costume.dk (09/11/2020)
-##.grid > div[class=flow-banner]:not(body,:empty)
+##.grid > div[class=flow-banner]:not(body)
 ! boligpluss.no (09/11/2020), women.dk
 ##.wg-banner:not(html,body,:empty)
 ! ytresogn.no (16/12/2020)
@@ -1969,6 +1972,8 @@ innherred.no##.master.x10
 rbkweb.no##font > table:first-of-type
 !+ NOT_OPTIMIZED
 baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
+! Should not have ":not" + ":empty" added to it due to costume.no
+##.bonnier-ad:not(html,body)
 ! — — — — — — — — —
 ! 🇳🇴: Hovedsaklig for AdGuard
 ! 🇳🇴🏞: Huvudsakleg for AdGuard
