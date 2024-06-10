@@ -1,9 +1,9 @@
-! Checksum: fwu74q6fVcUNO/dWetAw4A
-! Diff-Path: ../patches/21/21-s-1718008622-3600.patch
+! Checksum: qYGHEJTTk5SzIKizB1Lgyg
+! Diff-Path: ../patches/21/21-s-1718012212-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.23.23
-! TimeUpdated: 2024-06-10T08:34:15+00:00
+! Version: 2.0.23.24
+! TimeUpdated: 2024-06-10T09:34:19+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3337,9 +3337,6 @@ ya.ru##.promo-gallery
 ! "a"
 ya.ru,yandex.*##.simple-popup_direction_center:has(> div > div > div.dist-overlay__description)
 ya.ru,yandex.*##.simple-popup__overlay_shown_true
-! "b" https://github.com/AdguardTeam/AdguardFilters/issues/175068#issuecomment-2009355449
-[$path=/search]ya.ru,yandex.*#$#.DistributionSplashScreenModal[outercrosstitle="Нет, спасибо"] { display: none !important; }
-[$path=/search]ya.ru,yandex.*#$#body { overflow: auto !important; }
 !
 ! Yandex.Search
 [$path=/search]ya.ru,yandex.*##.AdvOffers
@@ -3347,12 +3344,8 @@ ya.ru,yandex.*##.simple-popup__overlay_shown_true
 [$path=/search]ya.ru,yandex.*##.serp-item[data-fast-subtype="product_tiles_adv"]
 [$path=/search]ya.ru,yandex.*##.serp-item:has(> div[data-state-id] > article > div[class*="-"] span[id*="-PriceDisclaimer"])
 ! popup
-[$path=/search]ya.ru,yandex.*##.Distribution-Popup
-[$path=/search]ya.ru,yandex.*##.DistributionSplashScreenModal-CloseButtonOuter
-[$path=/search]ya.ru,yandex.*#$#.Distribution-Splashscreen { display: none !important; }
-[$path=/search]ya.ru,yandex.*#$#.DistributionSplashScreenModal { display: none !important; }
-[$path=/search]ya.ru,yandex.*##div.Root[id]:has(> button.SplashscreenDefault-DeclineButtonOuter)
-[$path=/search]ya.ru,yandex.*##div.Root[id]:has(> button.DistributionSplashScreenModal-CloseButtonOuter)
+[$path=/search]ya.ru,yandex.*#$#div[class*="Distribution-SplashScreenModal"][outercrosstitle="Нет, спасибо"] { display: none !important; }
+[$path=/search]ya.ru,yandex.*##div.Root[id]:has(> button.Distribution-SplashScreenModalCloseButtonOuter)
 [$path=/search]ya.ru,yandex.*#$#body[style] { padding-right: 0 !important; overflow: auto !important; }
 !
 [$path=/search]ya.ru,yandex.*##.HeaderDesktopActions-Distribution
