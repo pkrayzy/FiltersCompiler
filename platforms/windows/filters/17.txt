@@ -1,9 +1,9 @@
-! Checksum: fAkl2UvUkSktYt4IllUA0w
-! Diff-Path: ../patches/17/17-s-1717662974-3600.patch
+! Checksum: 3BqxceU/e2Ar915VYgJSrw
+! Diff-Path: ../patches/17/17-s-1718015728-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.8.55
-! TimeUpdated: 2024-06-06T08:33:44+00:00
+! Version: 2.0.8.56
+! TimeUpdated: 2024-06-10T10:32:59+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -356,6 +356,11 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180304
+||nytimes.com^$removeparam=smid
+||nytimes.com^$removeparam=referringSource
+||nytimes.com^$removeparam=sgrp
+||nytimes.com^$removeparam=impression_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180890
 ||shimotsuke.co.jp^$removeparam=rankinghour
 ||shimotsuke.co.jp^$removeparam=top
@@ -2079,7 +2084,6 @@ $removeparam=epi,domain=microsoft.com|xbox.com
 ||visit.digidip.net^$removeparam=/^(ppref|ref|pid)=/
 ||ad.admitad.com^$removeparam=/^subid/
 ||mvideo.ru^$removeparam=/^(_requestid|reff)=/
-||nytimes.com^$removeparam=impression_id
 !
 ||websearch.rakuten.co.jp/Web?$removeparam=ref
 ||rakuten.co.jp^*&trflg=$removeparam=trflg
