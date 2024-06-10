@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ZUPwGm8Hv3N1LHtdfpkTkQ
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1717997721-3600.patch
+! Checksum: PJlfFxwqWYQ5D46z8hvMxQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1718001328-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.71
-! TimeUpdated: 2024-06-10T05:33:24+00:00
+! Version: 2.1.98.72
+! TimeUpdated: 2024-06-10T06:33:26+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1367,6 +1367,8 @@ focus.it##+js(remove-class, cp-banner-visible, body)
 codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.*##+js(remove-class, force--consent|show--consent, html)
 ||cdn.jsdelivr.net/npm/@lmc-eu/cookie-consent-manager$domain=teamio.com
 docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
+||cmp.springer.com/*/consent-bundle-
+springer.com#$?#.cc-banner { remove: true; }
 5ka.ru##aside[class*="-CookieMessage-"]
 ||24sata.hr/static/scripts/js.cookie.min.js
 firebase.google.com##devsite-cookie-notification-bar
@@ -8667,6 +8669,8 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ||wp-r.github.io/*/assets/js/jquery.adsplacer.ab-testing.js
 ||wp-r.github.io/adsplacer_pro/$third-party
 !#safari_cb_affinity
+playzone.cz##.aab-alert-wrap
+playzone.cz##+js(set-constant, clench3, true)
 bilibili.com##.recommended-swipe-body div.carousel-slide:has(> a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bilibili.com/"]))
 neoseeker.com##+js(no-setTimeout-if, .offsetHeight === 0)
 scimagojr.com##body #wrap-blocker

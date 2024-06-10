@@ -1,9 +1,9 @@
-! Checksum: INbgcz5ciEfeYemdQ3mLjw
-! Diff-Path: ../patches/14/14-s-1717997724-3600.patch
+! Checksum: oDC3adLUWoxF7vPaBY654A
+! Diff-Path: ../patches/14/14-s-1718001331-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.71
-! TimeUpdated: 2024-06-10T05:33:24+00:00
+! Version: 2.1.98.72
+! TimeUpdated: 2024-06-10T06:33:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2435,6 +2435,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+||cmp.springer.com/*/consent-bundle-
+springer.com#$?#.cc-banner { remove: true; }
 5ka.ru##aside[class*="-CookieMessage-"]
 ||24sata.hr/static/scripts/js.cookie.min.js
 firebase.google.com##devsite-cookie-notification-bar
@@ -20958,6 +20960,8 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+playzone.cz##.aab-alert-wrap
+playzone.cz#%#//scriptlet('set-constant', 'clench3', 'true')
 bilibili.com##.recommended-swipe-body div.carousel-slide:has(> a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bilibili.com/"]))
 neoseeker.com#%#//scriptlet('prevent-setTimeout', '.offsetHeight === 0')
 scimagojr.com##body #wrap-blocker
