@@ -1,9 +1,9 @@
-! Checksum: MrbyvjT0ynxo8z24JemTWA
-! Diff-Path: ../patches/18/18-s-1718033723-3600.patch
+! Checksum: C7nFCEFT1FM+1sSl/tVc7g
+! Diff-Path: ../patches/18/18-s-1718037295-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.41.11
-! TimeUpdated: 2024-06-10T15:33:34+00:00
+! Version: 2.0.41.12
+! TimeUpdated: 2024-06-10T16:33:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2433,6 +2433,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+iledefrance-mobilites.fr#$#html[class^="stopScroll"] { overflow: auto !important; }
+iledefrance-mobilites.fr#$#.cookies-banner { display: none !important; }
+bnews.com.br##.amdb-user-notification-container
 bellroy.com#$#bellroy-cookie-dialog { display: none !important; }
 bellroy.com#$#body { overflow: auto !important; }
 ||images.tcdn.com.br/files/*/modal-lgpd$script
@@ -2904,7 +2907,7 @@ eplus.by#$##cookiesAgreementNotice { display: none !important; }
 eplus.by#$#body[class] { overflow: auto !important; }
 usg.edu###gdpr-cookie-notification
 screen.studio##body > div[class]:has(> div[style] a[href="/privacy"])
-||fundingchoicesmessages.google.com^$app=com.accordion.pro.camera
+||fundingchoicesmessages.google.com^$app=com.accordion.pro.camera|ru.photostrana.mobile
 banki24.by##.cookies_consent
 /stereotypedsugar\.com\/[a-z]?\/[a-z0-9]+\/[a-z]{4}[a-z0-9]{15,25}\.index\.js$/$script,match-case,domain=agweek.com
 primevideo.com##.DVWebNode-conditional-site-wide-wrapper > .fbl-banner:has(form[action*="/privacyprefs/sp/consent/"])
@@ -15361,6 +15364,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181210
+iledefrance-mobilites.fr#@#.cookies-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181209
 bellroy.com#@##cookie-dialog
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181191
