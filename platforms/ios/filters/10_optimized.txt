@@ -1,9 +1,9 @@
-! Checksum: 3nBuLjOh9gaxk54fUF9BTQ
-! Diff-Path: ../patches/10_optimized/10_optimized-s-1717090518-3600.patch
+! Checksum: XXmPtRPSSjy48j5jG0AYmg
+! Diff-Path: ../patches/10_optimized/10_optimized-s-1718026528-3600.patch
 ! Title: Filter unblocking search ads and self-promotion (Optimized)
 ! Description: Filter that unblocks search ads in Google, DuckDuckGo, Bing, or Yahoo and self-promotion on websites.
-! Version: 2.0.3.36
-! TimeUpdated: 2024-05-30T17:33:06+00:00
+! Version: 2.0.3.37
+! TimeUpdated: 2024-06-10T13:33:09+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -27,9 +27,9 @@ bing.com#@#.sb_adTA
 bing.com#@#.b_adPATitleBlock
 bing.com#@#.b_adPATitleBlock + div
 bing.com#@##b_content > main > #b_results > li:not(.b_algo):not(.b_ans):not(.b_mop):not(.b_pag)
-bing.com#@?##b_results > li.b_algo:has(> .b_caption > p:matches-css-before(content: /^(Ad|Ann\.|Annonce|Anúncio|Anzeige|Reklama|Реклама|Reclamă|Publicidade)$/))
+bing.com#@?##b_results > li.b_algo:has(> .b_caption > p:matches-css(before, content: /^(Ad|Ann\.|Annonce|Anúncio|Anzeige|Reklama|Реклама|Reclamă|Publicidade)$/))
 bing.com#@?##b_results > li:has(> h2 + .b_caption > div.b_attribution:not([u]) + p[class])
-bing.com#@?##b_results > .b_algo:has(> .b_caption > .b_attribution:matches-css-before(content: /url\(data:image/))
+bing.com#@?##b_results > .b_algo:has(> .b_caption > .b_attribution:matches-css(before, content: /url\(data:image/))
 bing.com#@#.b_spa_adblock
 @@||r.bat.bing.com/?ld=
 carview.yahoo.co.jp#@##ad_SS
