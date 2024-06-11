@@ -1,9 +1,9 @@
-! Checksum: tUm0xhTqtNcf7WP4FHrRsg
-! Diff-Path: ../patches/14/14-s-1718123769-3600.patch
+! Checksum: gZ24Cb2zt5JWJM7BKVuBhQ
+! Diff-Path: ../patches/14/14-s-1718127338-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.98.96
-! TimeUpdated: 2024-06-11T16:33:55+00:00
+! Version: 2.1.98.97
+! TimeUpdated: 2024-06-11T17:33:35+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2434,6 +2434,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+talksport.com,wiwo.de#$?#div[id^="sp_message_container_"] { display: none !important; }
+talksport.com,wiwo.de#%#//scriptlet('remove-class', 'sp-message-open', 'html')
 infineon.com##.mi-consent-layer
 powerapp.com.tr##div[id^="cookie-terms-container"]
 geekretro.pl##main > div[style$="z-index:999"]
@@ -5645,7 +5647,6 @@ mediathek.lfv-bayern.de#$#body { overflow: auto !important; }
 blog.jp,saikyo-jump.com,ske48matoeme.com###gdpr-banner
 tweetdeleter.com##div[class="w-full fixed bottom-16 px-16"][style]
 virgintvgo.virginmedia.com##.notifications-manager
-||cdn259.talksport.com^$domain=talksport.com
 soft.mydiv.net##.page-banner__wrapper
 skroutz.gr##.js-global-skrp-messages
 mook.com.tw##.modal-privacy
@@ -5716,8 +5717,6 @@ edit.chromium.org,shinden.pl,magbak.com##cookie-bar
 letsenhance.io##div[class^="CookieBanner-module--Wrapper"]
 bunny.net##.bn-cookies-wr
 upscalepics.com##.q-dialog--seamless[style="cursor: pointer;"] > div.fixed-bottom[style="--q-transition-duration: 300ms;"]
-wiwo.de#$?#div[id^="sp_message_container_"] { display: none !important; }
-wiwo.de#$?#body { overflow: auto !important; position: inherit !important; }
 netio-products.com###warning-modal
 iol.co.za###id-9
 local.standard.co.uk##.alert-pad
@@ -23222,6 +23221,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+goworkship.com##.c-fixed-banner
+goworkship.com##.jsc-adsFixed
 openbook.gr##.sgpb-basic-bottom-right
 letras.mus.br##.header:has(a[data-ga-label="entrar"]) ~ div section.selectionOptions
 thenightly.com.au##.js-content-area > footer ~ div[class*="StickyBreachContainer"]

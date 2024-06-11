@@ -1,9 +1,9 @@
-! Checksum: UXclbIPwtR2Opj5innin+Q
-! Diff-Path: ../patches/18/18-s-1718113019-3600.patch
+! Checksum: 1kBX7D3b5yiDeS1pCjeiPQ
+! Diff-Path: ../patches/18/18-s-1718127330-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.41.21
-! TimeUpdated: 2024-06-11T13:35:01+00:00
+! Version: 2.0.41.22
+! TimeUpdated: 2024-06-11T17:33:41+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2434,6 +2434,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+talksport.com,wiwo.de#$?#div[id^="sp_message_container_"] { display: none !important; }
+talksport.com,wiwo.de#%#//scriptlet('remove-class', 'sp-message-open', 'html')
 infineon.com##.mi-consent-layer
 powerapp.com.tr##div[id^="cookie-terms-container"]
 geekretro.pl##main > div[style$="z-index:999"]
@@ -5645,7 +5647,6 @@ mediathek.lfv-bayern.de#$#body { overflow: auto !important; }
 blog.jp,saikyo-jump.com,ske48matoeme.com###gdpr-banner
 tweetdeleter.com##div[class="w-full fixed bottom-16 px-16"][style]
 virgintvgo.virginmedia.com##.notifications-manager
-||cdn259.talksport.com^$domain=talksport.com
 soft.mydiv.net##.page-banner__wrapper
 skroutz.gr##.js-global-skrp-messages
 mook.com.tw##.modal-privacy
@@ -5716,8 +5717,6 @@ edit.chromium.org,shinden.pl,magbak.com##cookie-bar
 letsenhance.io##div[class^="CookieBanner-module--Wrapper"]
 bunny.net##.bn-cookies-wr
 upscalepics.com##.q-dialog--seamless[style="cursor: pointer;"] > div.fixed-bottom[style="--q-transition-duration: 300ms;"]
-wiwo.de#$?#div[id^="sp_message_container_"] { display: none !important; }
-wiwo.de#$?#body { overflow: auto !important; position: inherit !important; }
 netio-products.com###warning-modal
 iol.co.za###id-9
 local.standard.co.uk##.alert-pad
