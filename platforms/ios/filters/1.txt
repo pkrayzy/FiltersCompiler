@@ -1,9 +1,9 @@
-! Checksum: neK8vleSFclpJzHzYeXgOQ
-! Diff-Path: ../patches/1/1-s-1718058925-3600.patch
+! Checksum: olq+6RgvX66V0jMLtOVhBw
+! Diff-Path: ../patches/1/1-s-1718094947-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.42
-! TimeUpdated: 2024-06-10T22:31:02+00:00
+! Version: 2.0.91.43
+! TimeUpdated: 2024-06-11T08:31:04+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5284,7 +5284,9 @@ kino.mail.ru##button[class*="adv-marker"] + div.text
 ! minigames.mail.ru - ads replacement script
 !
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '())),v.Z.themes.on("themes:')
-! probably obsolete:
+! Fix for the mobile version, when used #%#//scriptlet('prevent-setTimeout', '())),v.Z.themes.on("themes:')
+!+ PLATFORM(android, ios)
+octavius.mail.ru#$?#html.mobile .letter-list__react div.ReactVirtualized__Grid__innerScrollContainer { margin-top: var(--vkui--octavius_size_portal-menu_height--regular); }
 !
 ! ok.ru
 ! брендинг страницы авторизации
