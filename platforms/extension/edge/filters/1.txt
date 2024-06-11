@@ -1,9 +1,9 @@
-! Checksum: F972/m67ctYpfLjoG7DSNQ
-! Diff-Path: ../patches/1/1-s-1718105688-3600.patch
+! Checksum: JQSV712ReELZbiXV8L4RZg
+! Diff-Path: ../patches/1/1-s-1718116519-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.45
-! TimeUpdated: 2024-06-11T11:31:06+00:00
+! Version: 2.0.91.46
+! TimeUpdated: 2024-06-11T14:31:18+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4391,6 +4391,8 @@ modsforwot.ru,helpsetup.ru,vargr.ru,trialkeys.ru#%#//scriptlet("abort-on-propert
 modsforwot.ru,helpsetup.ru,vargr.ru,trialkeys.ru#%#//scriptlet("abort-on-property-read", "ad_nodes")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181132
+||v*.plrjs.org/*.xml$xmlhttprequest,redirect=nooptext,domain=volley.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177587
 howdyho.net#$##anti-adblock { display: none !important; }
 howdyho.net#%#//scriptlet('remove-attr', 'style', '#download div.dwrapper')
@@ -9898,8 +9900,6 @@ trashexpert.ru##.penci-custom-html-inside-content
 trashexpert.ru###after-slider-ad
 unsch.edu.pe##.pm-ads-inplayer
 citydog.io,citydog.by##.banner_post_footer_top
-||newsapi.fontanka.ru/v1/public/auto/offers/
-fontanka.ru##div[style="width:728px;"]
 matchtv.ru,news.sportbox.ru##.ligastavok-coef-link
 ||adebiportal.kz/media/image/podkast_kk.jpg
 inform.kz###redtram
@@ -10555,7 +10555,6 @@ grodno24.com##.similar
 ||tv.kyiv.media/wp-content/uploads/sites/*/w1-min-baner.gif
 kyiv.media##.hg-adv-item
 jrnlst.ru##.yandex-advertisement
-fontanka.ru##div[id^="div-dfp-top"]
 ||fanday.net/img/sadfd/
 fanday.net##.sadfd
 calorizator.ru###site-branding-header
@@ -18107,6 +18106,7 @@ meduza.global.ssl.fastly.net,meduza.io##.DFPBanner-root
 meduza.global.ssl.fastly.net,meduza.io##div.App-banner
 !
 ! fontanka.ru
+fontanka.ru##aside > div:has(div.flickity-enabled a[href*="/?erid="])
 fontanka.ru###app div[class] > aside[class] + div[class] > section[class] > div > div:not([class]) + div[class] > div:first-child
 fontanka.ru##.jt-auto-block
 ! mirtesen.ru and blogs
