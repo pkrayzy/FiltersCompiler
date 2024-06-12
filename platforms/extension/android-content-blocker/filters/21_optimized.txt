@@ -1,5 +1,5 @@
-! Checksum: vIJO2T37FnJPtyhzlgyaCQ
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1718102119-3600.patch
+! Checksum: JaE6keNISaI8qmFXoAgz+Q
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1718159706-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
 ! Version: 2.0.23.31
@@ -8,6 +8,7 @@
 !######### Annoying elements (not ads)
 instagram.com##._aagw:empty
 hikkoshizamurai.jp##.promotionBox
+republic.ru##.ino_agent
 delfi.lt##body #__layout div.C-live-stream-announcement
 slantmagazine.com##.donate
 pcmag.com###trust-badge
@@ -229,6 +230,7 @@ blog.tinect.jp###meerkat-wrap
 ||meczyki.pl/js/news-widget.js$domain=devilpage.pl
 egzamin-ee08.blogspot.com,egzamin-ee09.blogspot.com,egzamin-e12.blogspot.com,egzamin-e13.blogspot.com,egzamin-e14.blogspot.com###divpop
 skillcrush.com##div[class^="mt-"] > p + div.sc-post-cta
+meteo.ua##.add-favourites
 ||azby.fmworld.net/usage/images/banner_enquete.jpg
 pricearchive.org##.footerstorelink
 seeedstudio.com###content aside.widget-area > div.sfsi
@@ -507,7 +509,6 @@ youtube-nocookie.com,youtube.com##.ytp-cards-teaser
 m.youtube.com##ytm-paid-content-overlay-renderer
 youtube-nocookie.com,youtube.com##.ytp-paid-content-overlay
 yandex.ru##.Warning_type_roskomnadzor
-[$path=/video/search]yandex.ru##.prevention_instance_rknWarning
 [$path=/search]yandex.ru#$#body[style="padding-right: 17px; overflow: hidden;"] { overflow: auto !important; padding-right: 0 !important; }
 travel.yandex.*##noindex[id^="gzab"][class*=" "]
 my.mail.ru##.b-column-right__block-sale
@@ -610,6 +611,7 @@ dailymail.co.uk##.dms-puff
 euroki.org##.filter_share
 m.star.com.tr,m.gunes.com##.fixed-interaction-bar
 vpnmentor.com##.follow-experts
+povarenok.ru##.header-socials
 habibs.com.br##.messenger-bot
 fotomac.com.tr##.share
 astar.bz,anistar.org,online-star.org,online-stars.org##.share-soc
@@ -738,6 +740,7 @@ clearvpn.com##.articleSideBanner
 xtech.nikkei.com##a[href^="https://info.nikkei.com/nxt/subscription/"]
 115.com##.feature-float
 115.com##.sharing-banner
+anonymouse.org###mouselayer
 dailyshincho.jp##.l-contents__sub > div.c-box-ad
 live.nicovideo.jp##a[class*="___premium-merit-appeal-banner__"]
 tokfm.pl#$#.breakingNewsTop { display: none !important; }
@@ -1170,6 +1173,7 @@ patents.justia.com##.rotating-leads
 itc.ua##.partner-posts
 mailchimp.com##aside[data-module-id="inlineArticleCta"]
 wolframalpha.com##a[href^="/pro/"]
+worldsextrip.com##.add
 ||jorudan.co.jp/com/img/bnr/w685_
 infourok.ru##.how-to-earn
 infourok.ru###rating-worksheets-react-app
@@ -1185,7 +1189,6 @@ support.qq.com##.promotionbit
 ||gamewith.jp/ad/
 gamewith.jp##.walkthrough-gamewith-announces.gtm-ga4-walkthrough-imp-event
 efe.com###media_image-2
-pokebattler.com##a[href="https://www.patreon.com/join/pokebattler?"]
 dotnet.microsoft.com##.swim-purple
 flightradar24.com##.size-full > div.relative > div.size-full ~ div.justify-between.absolute > div.justify-center.flex + div.items-end
 hepper.com##body div.opportunity-container.active
@@ -1232,7 +1235,6 @@ lepoint.fr,lpnt.fr##.slotkam
 scribd.com##.between_page_portal_root
 langenscheidt.com###lgs-ad
 sportskeeda.com###fortnite-promotional-banner
-wix.com###comp-k0zay9k9
 animexin.vip##.announ
 duckduckgo.com##.header__search-wrap + div.header--aside > div.header--aside__item
 dzen.ru##div[id$="-link_bro"]
@@ -1283,6 +1285,7 @@ detector.media##.md_banner_zone
 upscale.media##header[class^="Header__StyledHeader-"] + div[style^="width:"]
 thurrott.com##.widget_thurrott_premium_upsell
 nerdwallet.com##.sticky-banner-container
+freecouchtuner.com##.jwplayer > div.jw-logo[style*="//freecouchtuner.com/addons/banner/"]
 jump.5ch.net###navbarResponsive
 petri.com##div[id^="petri-advertising-sponsor-"]
 conoha.jp##.sidebarBlock_banner
@@ -1392,6 +1395,8 @@ techno-edge.net##.sidebox-membership
 techno-edge.net##.main-membership
 max.book118.com##.sidebar-vip
 proton.me##.animate-enter-top
+crazyegg.com##.cta--large
+crazyegg.com##.post-cta
 developer.aliyun.com##div[class$="_banner"]
 developer.aliyun.com##.free-product
 ||singtao.ca/*/singclub_feature_articles/
@@ -1537,7 +1542,6 @@ nhk.or.jp###stickyBanner
 tuoitre.vn##.box-raovat
 123pan.com##.VipBanner
 travel.rakuten.co.jp###block-mailmagazine-link
-vgorode.ua##.donate_news_btn_in
 ||ecbeing.net/cms/images/headline/kokuchi.jpg
 /minnanovideo_bn300.png$domain=minnano-anime.com|minnano-camera.com
 businessinsider.de##.piano__footer
@@ -1780,7 +1784,6 @@ ec.toranoana.jp##.toto-obi
 coolztricks.com###wpfront-notification-bar-spacer
 app.raindrop.io##.svSidebar > a[class^="upgrade-"]
 support.mozilla.org###doc-contributors + section.sumo-page-section
-bignox.com##.egg-section
 tabletki.ua##.category-card__card-row > div.col:not([id])
 bmc.com##.vce-sticky
 avast.ru##.message-bar
@@ -1917,7 +1920,6 @@ irccloud.com###limits > a
 livelaw.in###news_on_exit
 wired.com##.consumer-marketing-unit--cm-footer
 m.blog.naver.com##.btm_banner
-gas.goodlife.tw###main_content > div#widgets
 fux.com##.transparent-button.ugc
 forum.onliner.by##.banner-centered
 hackers.co.kr##.closing_banner_container
@@ -1947,7 +1949,6 @@ protanki.tv#$#body { overflow: visible!important; }
 splice.com##a[data-qa="plugins-banner"]
 scdkey.com##body > div.main > ul.bg
 telecinco.es##.alertTop
-rosewe.com##.head-all > div[style*="margin"][style*="text-align"][style*="position"]
 ||doeda.com/wp-content/*/porno.gif
 wowhead.com##.premium-promo-row
 cxem.net##.cont_left
