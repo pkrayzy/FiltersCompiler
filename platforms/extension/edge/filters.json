@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.65",
-			"timeUpdated": "2024-06-11T03:08:25+0000",
+			"version": "2.3.30.66",
+			"timeUpdated": "2024-06-12T00:58:43+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.69.20",
-			"timeUpdated": "2024-06-11T03:08:26+0000",
+			"version": "2.0.69.21",
+			"timeUpdated": "2024-06-12T00:58:44+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.0.3",
-			"timeUpdated": "2024-06-11T03:08:28+0000",
+			"version": "2.1.0.4",
+			"timeUpdated": "2024-06-12T00:58:45+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -527,8 +527,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/10.txt",
 			"trustLevel": "full",
-			"version": "2.0.3.36",
-			"timeUpdated": "2024-06-11T03:08:16+0000",
+			"version": "2.0.3.37",
+			"timeUpdated": "2024-06-12T00:58:34+0000",
 			"languages": [],
 			"tags": []
 		},
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.24",
-			"timeUpdated": "2024-06-11T03:08:17+0000",
+			"version": "2.0.51.25",
+			"timeUpdated": "2024-06-12T00:58:34+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.93.30",
-			"timeUpdated": "2024-06-11T03:08:20+0000",
+			"version": "2.1.93.31",
+			"timeUpdated": "2024-06-12T00:58:38+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.52",
-			"timeUpdated": "2024-06-11T03:08:14+0000",
+			"version": "2.1.24.53",
+			"timeUpdated": "2024-06-12T00:58:31+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.25.41",
-			"timeUpdated": "2024-06-11T03:08:16+0000",
+			"version": "2.1.25.42",
+			"timeUpdated": "2024-06-12T00:58:33+0000",
 			"languages": [],
 			"tags": [
 				2
