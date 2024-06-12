@@ -1,9 +1,9 @@
-! Checksum: 3/mcp6sn/ynXWpj9UnoDfQ
-! Diff-Path: ../patches/14/14-s-1718184883-3600.patch
+! Checksum: 0DsiQYN3CO2bWZ9/kiG0MA
+! Diff-Path: ../patches/14/14-s-1718192095-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.3
-! TimeUpdated: 2024-06-12T09:32:59+00:00
+! Version: 2.1.99.4
+! TimeUpdated: 2024-06-12T11:32:55+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -15205,6 +15205,8 @@ metro.hu#%#document.cookie = "allowedCookieCategories=necessary; domain=.metro.h
 ! TODO: remove the hints, JS rule when the issue is fixed - https://github.com/AdguardTeam/Scriptlets/issues/407
 !+ NOT_PLATFORM(windows, mac, android)
 linternaute.com,lachainemeteo.com,journaldesfemmes.fr,lefigaro.fr#%#//scriptlet('trusted-click-element', 'button.button__acceptAll')
+! https://github.com/uBlockOrigin/uAssets/issues/24060
+lephoceen.fr#%#AG_onLoad(function(){if("undefined"!=typeof localStorage)try{if(!localStorage.getItem("fastCMP-customConsent")){var b=new MutationObserver(function(){var a=document.querySelector("iframe#fast-cmp-iframe");a&&a.contentDocument&&(a=a.contentDocument.querySelector(".fast-cmp-home-accept > .fast-cmp-button-primary"))&&(b.disconnect(),a.click())});b.observe(document,{childList:!0,subtree:!0,attributes:!0});setTimeout(function(){b.disconnect()},1E4)}}catch(a){}});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170168
 ! TODO: use trusted-click-element scriptlet when issues below are fixed
 ! Support for clicking in shadow DOM - https://github.com/AdguardTeam/Scriptlets/issues/323
@@ -15316,6 +15318,12 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/24060
+! Video player doesn't work if cookie notice is not accepted
+@@||static.fastcmp.com/fast-cmp-stub.js$domain=lephoceen.fr
+@@||static.fastcmp.com/fast-cmp-stub.modern.*.js$domain=lephoceen.fr
+@@||static.fastcmp.com/fast-cmp-en-tcfeuv2.*.js$domain=lephoceen.fr
+@@||static.fastcmp.com/tcfeuv2/consents.json$domain=lephoceen.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181251
 excellent.com.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181174
@@ -20658,6 +20666,9 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+lephoceen.fr#$#body { overflow: auto !important; }
+lephoceen.fr#$#div[class^="paywall_modal_"][aria-labelledby^="Adblock"] { display: none !important; }
+lephoceen.fr#%#//scriptlet('prevent-fetch', 'pips.taboola.com')
 playzone.cz##.aab-alert-wrap
 playzone.cz#%#//scriptlet('set-constant', 'clench3', 'true')
 bilibili.com##.recommended-swipe-body div.carousel-slide:has(> a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bilibili.com/"]))
