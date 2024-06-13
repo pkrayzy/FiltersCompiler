@@ -1,9 +1,9 @@
-! Checksum: wDdJ0Tsf7ep5QLjqoIAe1w
-! Diff-Path: ../patches/14/14-s-1718278540-3600.patch
+! Checksum: zEOGp82DEWJz9IetF8/QjA
+! Diff-Path: ../patches/14/14-s-1718282164-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.15
-! TimeUpdated: 2024-06-13T11:33:35+00:00
+! Version: 2.1.99.16
+! TimeUpdated: 2024-06-13T12:33:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2772,7 +2772,6 @@ chessly.com##span > div[class^="NotificationPanel_"]:has(> div[class^="CookieCon
 wildberries.ru##.fixed-block__cookies
 casaevideo.com.br#%#//scriptlet('set-cookie', 'acceptPolicy', 'true')
 memo.h3z.jp##div[aria-describedby^="cookieconsent"]
-manisteenews.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":["jwp","twitter","facebook"]}')
 ||consent.wko.at^
 denthelp.pl##.phpro-cookie-notice
 lactosan.pl##.monit
@@ -3080,7 +3079,7 @@ motor.es#%#//scriptlet('trusted-click-element', '[id="purposesNavLegInt"]')
 houstonchronicle.com#%#//scriptlet('trusted-click-element', '#modals button + button.bg-primaryAccessible')
 doppelmayr.com###dop-cookiebanner-overlay
 doppelmayr.com###dop-cookiebanner
-myjournalcourier.com,sfchronicle.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":["jwp","twitter","facebook"]}')
+beaumontenterprise.com,manisteenews.com,myjournalcourier.com,sfchronicle.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":["jwp","twitter","facebook"]}')
 mysanantonio.com,expressnews.com,sfgate.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":[]}')
 auf1.tv#%#//scriptlet('trusted-set-local-storage-item', 'consent', '{"analytics":false,"location":false,"video":false}')
 rutube.ru##noindex.eu-cookie-popup-module__eu_cookie_popup
@@ -19179,7 +19178,8 @@ music.yandex.*##.notify > div.deco-tooltip_notify.notify_shown
 [$path=/pogoda]yandex.*#%#//scriptlet('json-prune', 'rtb')
 !
 ! Yandex.Video
-[$path=/video]yandex.*#%#//scriptlet('json-prune', 'seatbid')
+[$path=/video]ya.ru,yandex.*#%#//scriptlet('json-prune', 'rtb seatbid')
+[$path=/video]ya.ru,yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
 !
 ! Yandex.Afisha
 afisha.yandex.*#%#//scriptlet('prevent-eval-if', 'bidReqIdStr')
@@ -20772,8 +20772,8 @@ bravedown.com#%#//scriptlet('set-constant', 'antiADB', 'noopFunc')
 organic-chemistry.org##div#top:empty
 organic-chemistry.org#%#//scriptlet('set-constant', 'square', '5')
 uakino.club#%#//scriptlet('remove-node-text', '#text', 'Відключи AdBlock на сайті')
-houstonchronicle.com,myjournalcourier.com,expressnews.com,sfchronicle.com#%#//scriptlet('set-constant', 'HDN.dataLayer.ads.adBlockerDetected', 'false')
-houstonchronicle.com,myjournalcourier.com,expressnews.com,sfchronicle.com#%#//scriptlet('prevent-element-src-loading', 'script', '/script.js')
+beaumontenterprise.com,houstonchronicle.com,myjournalcourier.com,expressnews.com,sfchronicle.com#%#//scriptlet('set-constant', 'HDN.dataLayer.ads.adBlockerDetected', 'false')
+beaumontenterprise.com,houstonchronicle.com,myjournalcourier.com,expressnews.com,sfchronicle.com#%#//scriptlet('prevent-element-src-loading', 'script', '/script.js')
 realmz.io###realmz-io_728x90
 /assets/adblock_$domain=mageclash.io|monstermaster.io|grix.io
 starblast.io#%#//scriptlet('prevent-element-src-loading', 'script', 'pafvertizing.crazygames.com')
@@ -22164,7 +22164,7 @@ whatismybrowser.com#@#.adFrame
 ||jsdelivr.net/npm/ad-compass@latest/dist/ad-compass.umd.js
 derwesten.de#@#.AdSense
 @@||xhamster*.*/*/ads$xmlhttprequest,~third-party
-@@/sites/jquery.adx.js$domain=expressnews.com|myjournalcourier.com|sfchronicle.com|houstonchronicle.com
+@@/sites/jquery.adx.js$domain=expressnews.com|myjournalcourier.com|sfchronicle.com|houstonchronicle.com|beaumontenterprise.com
 @@||pafvertizing.crazygames.com/rafvertizing-v7.js$domain=starblast.io
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js|$domain=textstudio.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tomshw.it
@@ -23293,7 +23293,7 @@ api.flocktory.com
 ! that is why cosmetic rule `###credential_picker_container` does not work
 ! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
 ! Warning: check, if auth using Google is not broken
-||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com
 !
 ! SECTION: Popups - Regular rules
 !
@@ -31459,6 +31459,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+mercurynews.com##.footer-meta-content > div.button-center-wrapper
 media.mts.ru##.mts-official-telegram-popup
 aftermath.site##div[class^="ContentGate_wrapper_"]:has(> button[class^="ContentGate_regClose"])
 frankmedia.ru##.post__telegram
@@ -38430,6 +38431,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+subito.it##div[class^="AppWidget_download-box-wrapper"]
 analyticsindiamag.com##main[data-elementor-type="single-post"] > section.elementor-section:has(> div.elementor-container > div.elementor-column > div.elementor-widget-wrap > section > div.elementor-container > div.elementor-column > div.elementor-widget-wrap > div.elementor-element > div.elementor-widget-container > a[href="https://apps.apple.com/in/app/analytics-india-magazine/id1502685162"])
 routinehub.co##.actions a[href^="/download/"]
 routinehub.co##.actions div.qr-code

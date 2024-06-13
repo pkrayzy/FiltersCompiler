@@ -1,9 +1,9 @@
-! Checksum: g8iFunVMIUAfKmpCOsplpA
-! Diff-Path: ../patches/1/1-s-1718275190-3600.patch
+! Checksum: JhuKtkOvSYATMt5ZmXiT4Q
+! Diff-Path: ../patches/1/1-s-1718282203-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.50
-! TimeUpdated: 2024-06-13T10:31:07+00:00
+! Version: 2.0.91.51
+! TimeUpdated: 2024-06-13T12:31:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5675,10 +5675,12 @@ yandex.*#?#.business-card-title-view__actions > div.business-card-title-view__ad
 ! Yandex.Market
 !
 ! Yandex.Video
+[$path=/video]ya.ru,yandex.*##.Viewer-Content div[class$="Block_bottomRounded"]
 ! Video ad
 ! ads near the player
+[$path=/video]ya.ru,yandex.*##.Viewer > div[style^="height:"]
+[$path=/video]ya.ru,yandex.*##.Viewer-ScrollContainer > div[class$="Block"] > div[class*="_placement_"]
 [$path=/video]ya.ru,yandex.*##.DirectStripe
-[$path=/video]ya.ru,yandex.*##div[class*="_placement_before-player"]
 !
 ! Yandex.Afisha
 afisha.yandex.*##div[style="width:100%;height:250px;display:block"]
@@ -5714,7 +5716,7 @@ rasp.yandex.*##.Direct
 rasp.yandex.ru##.ThreadLayout__topDirect
 !
 ! Yandex.TV
-! the rule also relates to Afisha and Realty
+! the rule also relates to Afisha, Realty, Video
 !
 ! Yandex.Realty
 realty.ya.*##div[class*="PostBlocks__ad"]

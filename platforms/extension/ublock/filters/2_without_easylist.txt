@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: j8svCOf/5xgNtnhWyLWEDA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1718278567-3600.patch
+! Checksum: EWtMRWLprngkHppO/24ikg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1718282201-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.39.71
-! TimeUpdated: 2024-06-13T11:31:23+00:00
+! Version: 2.3.39.72
+! TimeUpdated: 2024-06-13T12:31:41+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -19458,6 +19458,12 @@ smellyfisher.com##.providers
 treccani.it##.gmp
 forum.fibra.click##.FibraClickAds-fake-poststream-item
 open.online##a[rel="sponsored"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/181367
+subito.it##div[class^="AdvTopBanner"]
+subito.it##div[class^="banner-module_sticky"]
+subito.it##div[class*="AdsGAMPlacement"]
+subito.it##div[class^="ItemListContainer"] div[id^="ad_wrapper"]:has(> div[data-google-interstitial] > div[style*="min-height"])
+||subito.it/static/script/subito-adv.*.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181230
 automap.it#@#.ads1
 automap.it#@#.ads2
@@ -32414,6 +32420,7 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+.com^|$xmlhttprequest,third-party,domain=kaido.to
 thetimes.com###article-main > div:has(> div > div#ad-header)
 ziperto.com##a[href*="https://givawey.click/"]
 wolfstream.tv##div[id^="ann_"]
