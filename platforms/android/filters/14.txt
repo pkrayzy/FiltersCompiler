@@ -1,9 +1,9 @@
-! Checksum: nHQa2REvD4ghCWsjpPufOQ
-! Diff-Path: ../patches/14/14-s-1718267738-3600.patch
+! Checksum: XeSFQacnM4kvZDovDRRzQg
+! Diff-Path: ../patches/14/14-s-1718271331-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.12
-! TimeUpdated: 2024-06-13T08:33:57+00:00
+! Version: 2.1.99.13
+! TimeUpdated: 2024-06-13T09:33:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2435,6 +2435,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+abinbevefes.ru###CybotCookiebotDialog
 health.tvbs.com.tw#%#//scriptlet('set-cookie', 'cookie_accept', 'accept')
 scaleway.com#%#//scriptlet('trusted-click-element', '.sc-dGCmGc.fJEvkp', '!localStorage:gbFeaturesCache')
 przewodnik-katolicki.pl##.ciastka
@@ -15374,6 +15375,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181026
+@@||consent.cookiebot.com/uc.js$domain=abinbevefes.ru
+||abinbevefes.ru^$referrerpolicy=origin
 ! https://github.com/uBlockOrigin/uAssets/issues/24060
 ! Video player doesn't work if cookie notice is not accepted
 @@||static.fastcmp.com/fast-cmp-stub.js$domain=lephoceen.fr
@@ -31450,6 +31454,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+media.mts.ru##.mts-official-telegram-popup
 aftermath.site##div[class^="ContentGate_wrapper_"]:has(> button[class^="ContentGate_regClose"])
 frankmedia.ru##.post__telegram
 frankmedia.ru##div[data-svelte-component="telegram/corner-block"]
@@ -47265,6 +47270,11 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+saas.360.cn#$#.home-activity { display: none !important; }
+saas.360.cn#$#header[style^="padding-top:"] { padding-top: 0 !important; }
+saas.360.cn#$#div[style^="padding-top:"] { padding-top: 0 !important; }
+saas.360.cn#$#.productIntroduce { top: 60px !important; }
+saas.360.cn#$#.sale-entries-panel { top: 60px !important; }
 analyticsindiamag.com##section[data-element_type="section"] > div.elementor-container > div.elementor-column + div.elementor-column > div.elementor-widget-wrap > div[data-widget_type="image.default"]:has(> div.elementor-widget-container > a[href^="https://rb.gy/"]) ~ div[data-widget_type="image.default"] ~ section.elementor-section:has(> div.elementor-container a[href^="https://machinecon.analyticsindiamag.com/"])
 splashlearn.com###custom_html-7
 delfi.lt##.G-col > .C-article-headlines:has(div[class*="swiper-recommended-"])
@@ -49876,7 +49886,7 @@ bfmtv.com#%#//scriptlet('set-attr', '.video_block', 'autoplay', 'false')
 kuncomic.com#%#//scriptlet('adjust-setInterval', 'countdownTime', '1500', '0.001')
 ! gplinks - gplinks.co/fi3p
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170980
-funkeykida.com#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
+lcliq.com,funkeykida.com#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172260
 imgdrive.net#%#//scriptlet('trusted-click-element', '#redirect-close > a[onclick="closeOverlay()"]', '', '500')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171810
