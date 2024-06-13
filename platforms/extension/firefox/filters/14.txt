@@ -1,9 +1,9 @@
-! Checksum: lULKbQEMwscOURd+b0TAjQ
-! Diff-Path: ../patches/14/14-s-1718256878-3600.patch
+! Checksum: BBQ1/VEmP+XyKSNxSNy41Q
+! Diff-Path: ../patches/14/14-s-1718260570-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.9
-! TimeUpdated: 2024-06-13T05:32:48+00:00
+! Version: 2.1.99.10
+! TimeUpdated: 2024-06-13T06:33:51+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+###dv-cookie-notice
 ###politykaprywatnosci
 ##.cws-cookies-notification
 ###agree_cookies
@@ -2423,7 +2424,7 @@ cmp.wetteronline.de,tvspielfilm.de,cmpv2.netdoktor.de,cmp-sp.haz.de,rockpapersho
 codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.*#%#//scriptlet('remove-class', 'force--consent|show--consent', 'html')
 ||cdn.jsdelivr.net/npm/@lmc-eu/cookie-consent-manager$domain=teamio.com
 ! GitBook instances
-docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
+docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 !
 ! trustarc cookies
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
@@ -2434,6 +2435,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+scaleway.com#%#//scriptlet('trusted-click-element', '.sc-dGCmGc.fJEvkp', '!localStorage:gbFeaturesCache')
+przewodnik-katolicki.pl##.ciastka
 revolut.com##div[aria-label="Choose your cookies"]
 openbank.*#%#//scriptlet('trusted-click-element', 'button[onclick="onClickRefuseCookies(event)"]', '!cookie:CONSENTMGR')
 monzo.com#%#//scriptlet('set-cookie', 'cookies_accepted', 'false')
@@ -2511,7 +2514,6 @@ ufi.org###cookies-prompt
 mtp.pl#%#//scriptlet('trusted-set-cookie-reload', 'cookieOptions', '{"analitics":false,"marketing":false}')
 mtp.pl#%#//scriptlet('set-cookie', 'cookieVers', '1')
 eshe.club##div[class^="CookieNotification__"]
-scaleway.com#%#//scriptlet('trusted-set-cookie', '_scw_rgpd_hash', '1777213350')
 petslike.ua##.cookie
 ati.su##div[class^="CookieBanner"]
 android.com.pl##.Button--cmp
@@ -5481,7 +5483,6 @@ boomplay.com##.cookieTipWrap
 skynet.ru##footer + div.fixed.bg-white
 magentatv.pl##div[class^="styles__StyledMagentaBar-"]
 timepartner.com###cookiesettings
-scaleway.com##.sc-djvmMF.cjOQjk
 sensorsdata.cn##div[class^="index-module--CookieAuth"]
 batteryempire.cz#$##js-modern-cookie-modal-wrapper { display: none !important; }
 ||parismatch.com/assets/js/didomi/ui-gdpr-
@@ -7580,7 +7581,6 @@ c.mi.com##.cookie-setting-bottom-bar
 martha-maria.de##mama-cookie-banner
 toptal.com,capcut.net##div[class*="cookie-banner-"]
 ocea-ssm.com##.iccookies_container
-scaleway.com##footer ~ div.didiff-hide
 sbis.ru##.sbis_ru-CookieAgreement
 apteka.ru##.CookieNotify
 liveagent.com#$#body div[class^="Kolaciky"]:not(#style_important) { display: none !important; }
@@ -12289,7 +12289,7 @@ net-s.pl##.regulations
 zoomalia.de,mister-auto.*,iliad.it##.rgpd-banner
 handnews.fr##.rgpd-bar
 imgw.pl##.rodo__container
-imgw.pl,kanokajaki.pl,archiconnect.pl,mas-sport.pl,polskieradio.pl,minecraft.org.pl##.rodo
+zamek-lancut.pl,imgw.pl,kanokajaki.pl,archiconnect.pl,mas-sport.pl,polskieradio.pl,minecraft.org.pl##body .rodo
 neo24.pl##.rodo-info__content
 neo24.pl##.rodo-info__overlay
 rx.edu.pl,aptekaszpitalna.pl,mgr.farm,polskieradio24.pl,dziennikwschodni.pl,polskieradio.pl##.rodo-modal
@@ -14536,7 +14536,6 @@ snap.com#%#//scriptlet('set-cookie', 'sc-cookies-accepted', 'true')
 meteoprog.pl#%#//scriptlet('prevent-setTimeout', 'gdpr')
 infosecurity24.pl,defence24.pl,cyberdefence24.pl,energetyka24.com,space24.pl,defence24.com#%#(function() { try { if ('undefined' != typeof localStorage) { localStorage.setItem('privacy2022', '{"required":true,"performance":false,"functional":true,"marketing":false,"analytics":false}') } } catch (ex) {} })();
 filen.io#%#//scriptlet('set-cookie', 'cookieConsent', 'yes')
-scaleway.com#%#//scriptlet('set-cookie', 'consent-analytics', 'false')
 hellotv.nl#%#//scriptlet('set-cookie', 'cookieConsentClosed', 'true')
 qatarairways.com#%#//scriptlet("set-cookie", "cookie_visited", "true")
 burgerstein.ch#%#//scriptlet('set-cookie-reload', 'privacy', 'false')
@@ -49752,7 +49751,7 @@ bfmtv.com#%#//scriptlet('set-attr', '.video_block', 'autoplay', 'false')
 kuncomic.com#%#//scriptlet('adjust-setInterval', 'countdownTime', '1500', '0.001')
 ! gplinks - gplinks.co/fi3p
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170980
-creatorsmaster.com,indianinventions.com,addomainbroker.com#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
+funkeykida.com#%#//scriptlet('adjust-setInterval', 'myTimer', '*', '0.02')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172260
 imgdrive.net#%#//scriptlet('trusted-click-element', '#redirect-close > a[onclick="closeOverlay()"]', '', '500')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171810
