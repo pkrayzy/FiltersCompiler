@@ -1,9 +1,9 @@
-! Checksum: GQ4RTQkHgHOty/vKjYKqwQ
-! Diff-Path: ../patches/14/14-s-1718242517-3600.patch
+! Checksum: j3PZINOQzPuM1s7Cbq165Q
+! Diff-Path: ../patches/14/14-s-1718253330-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.7
-! TimeUpdated: 2024-06-13T01:33:17+00:00
+! Version: 2.1.99.8
+! TimeUpdated: 2024-06-13T04:33:16+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2434,6 +2434,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+openbank.*#%#//scriptlet('trusted-click-element', 'button[onclick="onClickRefuseCookies(event)"]', '!cookie:CONSENTMGR')
+monzo.com#%#//scriptlet('set-cookie', 'cookies_accepted', 'false')
+monzo.com#%#//scriptlet('set-cookie', '_cookies_banner_dismissed', 'true')
 talksport.com,wiwo.de#$?#div[id^="sp_message_container_"] { display: none !important; }
 talksport.com,wiwo.de#%#//scriptlet('remove-class', 'sp-message-open', 'html')
 infineon.com##.mi-consent-layer

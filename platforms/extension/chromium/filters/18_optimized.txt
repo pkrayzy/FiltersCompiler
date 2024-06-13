@@ -1,9 +1,9 @@
-! Checksum: pLBVFqEQcFr1Tzg5mpVphg
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1718246062-3600.patch
+! Checksum: tjGbb12aHjEt9owCpI+n9w
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1718253308-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.41.28
-! TimeUpdated: 2024-06-13T01:33:23+00:00
+! Version: 2.0.41.29
+! TimeUpdated: 2024-06-13T04:33:22+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1223,6 +1223,9 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+openbank.*#%#//scriptlet('trusted-click-element', 'button[onclick="onClickRefuseCookies(event)"]', '!cookie:CONSENTMGR')
+monzo.com#%#//scriptlet('set-cookie', 'cookies_accepted', 'false')
+monzo.com#%#//scriptlet('set-cookie', '_cookies_banner_dismissed', 'true')
 talksport.com,wiwo.de#$?#div[id^="sp_message_container_"] { display: none !important; }
 talksport.com,wiwo.de#%#//scriptlet('remove-class', 'sp-message-open', 'html')
 infineon.com##.mi-consent-layer

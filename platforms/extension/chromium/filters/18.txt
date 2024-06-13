@@ -1,9 +1,9 @@
-! Checksum: Ce80hn1RJ3ql52B4+oW03w
-! Diff-Path: ../patches/18/18-s-1718242499-3600.patch
+! Checksum: ivFvx9NoMb3P9fn4HT2ZuQ
+! Diff-Path: ../patches/18/18-s-1718253308-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.41.28
-! TimeUpdated: 2024-06-13T01:33:23+00:00
+! Version: 2.0.41.29
+! TimeUpdated: 2024-06-13T04:33:22+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2434,6 +2434,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+openbank.*#%#//scriptlet('trusted-click-element', 'button[onclick="onClickRefuseCookies(event)"]', '!cookie:CONSENTMGR')
+monzo.com#%#//scriptlet('set-cookie', 'cookies_accepted', 'false')
+monzo.com#%#//scriptlet('set-cookie', '_cookies_banner_dismissed', 'true')
 talksport.com,wiwo.de#$?#div[id^="sp_message_container_"] { display: none !important; }
 talksport.com,wiwo.de#%#//scriptlet('remove-class', 'sp-message-open', 'html')
 infineon.com##.mi-consent-layer
