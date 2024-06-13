@@ -1,9 +1,9 @@
-! Checksum: A6V4ODu2rg3P9DscIufrmQ
-! Diff-Path: ../patches/14/14-s-1718275192-3600.patch
+! Checksum: WSEAm/W0/GY8G6o+UA4SJg
+! Diff-Path: ../patches/14/14-s-1718278568-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.14
-! TimeUpdated: 2024-06-13T10:36:04+00:00
+! Version: 2.1.99.15
+! TimeUpdated: 2024-06-13T11:33:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2437,6 +2437,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+mlyn.by###acceptСookie
 remitly.com#%#//scriptlet('trusted-set-cookie', 'cookie_consent', '000')
 remitly.com#%#//scriptlet('trusted-set-local-storage-item', 'cookie_consent_date', '$now$')
 americanexpress.com#$##user-consent-management-granular-banner-overlay { display: none !important; }
@@ -40279,7 +40280,6 @@ job.nifty.com##.bnr-area
 erecipe.woman.excite.co.jp##.appdl_container
 access.line.me##.MdMN01Banner
 hidemy.io,hidemy.name##.main-download-popup
-tunein.com#%#//scriptlet('set-cookie', 'navBasedDialogManager', 'true')
 kinarino.jp#%#//scriptlet('set-cookie-reload', 'hide_app_banner', '1')
 bushikaku.net##.ad__foot-lower
 r.gnavi.co.jp##div[class^="style_appAdvertise__"]
@@ -40970,8 +40970,6 @@ issuu.com##.js-smart-banner
 ebrosur.com##.downloadAppBar
 demorgen.be###APP_DOWNLOAD
 ||iwatchme2u.com/Public/banner.jpg
-tunein.com#$#body { overflow: visible !important; }
-tunein.com#?#body > div:has(> div[style] div[class^="dark-theme-dialog__"])
 raysigorta.com.tr#$#.modal[aria-labelledby="myModalLabel"] { display: none !important; }
 raysigorta.com.tr#$#.modal-backdrop { display: none !important; }
 raysigorta.com.tr#$#body { overflow: visible !important; }
@@ -41980,6 +41978,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+tunein.com#%#//scriptlet('set-cookie-reload', 'hideMobileOverlay', 'true')
 sp.nicovideo.jp###jsSmartAppBanner
 yeniduzen.com###app-banner
 bushikaku.net##.footer_banner
