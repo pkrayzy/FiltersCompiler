@@ -1,9 +1,9 @@
-! Checksum: 4nSYPbZhDrVzKsNY5H4DUg
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1718332517-3600.patch
+! Checksum: SjlhYHuWB53I8/kK9j9gRA
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1718361496-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.52
-! TimeUpdated: 2024-06-14T00:31:06+00:00
+! Version: 2.0.91.53
+! TimeUpdated: 2024-06-14T10:31:13+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2248,7 +2248,16 @@ mail.ru##.mailru-visibility-check
 mail.ru##div[class*="rb-slot_plug"]
 mail.ru,sportmail.ru##div[class*="m-fixed-panel__box"]
 mail.ru,sportmail.ru,~e.mail.ru,~my.mail.ru,~touch.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.mimic', 'null')
+mail.ru#?#div[slot="main-column"] > div:matches-css(height : /^90px/)
 [$path=/^\/$|mail\.ru\/\?/]mail.ru##div[slot="main-column"] > div.tgb-wrapper
+[$path]mail.ru#%#//scriptlet('json-prune', '[].slot')
+my.mail.ru##.l-music__banner-728x90
+my.mail.ru##.sp-video__billboard
+my.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.isAdblockEnable', 'noopFunc')
+love.mail.ru#?##app-wrapper > div:has(> div[class] > div[class] > div[class] > a[href*="/tips/?tip=DisableAdblock"])
+love.mail.ru###adblock-in-browser
+e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', 'SMOKESCREEN')
+e.mail.ru,octavius.mail.ru#%#//scriptlet('json-prune', '[].slot')
 kino.mail.ru##.block_ad-text
 kino.mail.ru##button[class*="adv-marker"]
 kino.mail.ru##button[class*="adv-marker"] + div.text
@@ -2256,8 +2265,17 @@ kino.mail.ru##button[class*="adv-marker"] + div.text
 @@||kino.mail.ru^$generichide
 ||auto.mail.ru/-/*/js/cmpld/auto/*/*.js$replace=/mimic_\d+_\d+\s*\&\&\s*mimic_\d+_\d+\(.*\)//
 ||auto.mail.ru/sw-mobile.js
+minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "advBlock")
+minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "showAd")
+otvet.mail.ru#%#//scriptlet('json-prune', 'baits css direct *.slot')
 ||ad.mail.ru/adp/?_SITEZONE=$replace=/"html"/"html_"/,domain=e.mail.ru|octavius.mail.ru
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '())),v.Z.themes.on("themes:')
+@@||e.mail.ru^$generichide
+@@||octavius.mail.ru^$generichide
+ok.ru#%#//scriptlet('json-prune', 'result.body.direct')
+||ok.ru/res/js/app/FriendsOnline4thColumn_*.js$replace=/fourthColumnWrapper//
+||ok.ru/res/js/app/RightColumn_*.js
+ok.ru##.dialogWrapperBanner
 ok.ru##.anonym_login_w+div.prl_txt
 ok.ru#%#//scriptlet('set-constant', 'Object.prototype.obfuscateParams', 'undefined')
 ok.ru#?#.feed-list > div.feed-w:has(> div.feed div.feed-info-label:contains(Реклама))

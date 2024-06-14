@@ -1,9 +1,9 @@
-! Checksum: sVJJvNaRaq8nW0RtmVSpRA
-! Diff-Path: ../patches/1/1-s-1718325280-3600.patch
+! Checksum: 8ia6lBxRNYYHmFDJNN24BQ
+! Diff-Path: ../patches/1/1-s-1718361504-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.52
-! TimeUpdated: 2024-06-14T00:31:06+00:00
+! Version: 2.0.91.53
+! TimeUpdated: 2024-06-14T10:31:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5217,8 +5217,22 @@ mail.ru##.mailru-visibility-check
 mail.ru##div[class*="rb-slot_plug"]
 mail.ru,sportmail.ru##div[class*="m-fixed-panel__box"]
 mail.ru,sportmail.ru,~e.mail.ru,~my.mail.ru,~touch.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.mimic', 'null')
+! mail.ru main page - under the search
+mail.ru#?#div[slot="main-column"] > div:matches-css(height : /^90px/)
 ! ad on main page
 [$path=/^\/$|mail\.ru\/\?/]mail.ru##div[slot="main-column"] > div.tgb-wrapper
+!
+[$path]mail.ru#%#//scriptlet('json-prune', '[].slot')
+!
+my.mail.ru##.l-music__banner-728x90
+my.mail.ru##.sp-video__billboard
+my.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.isAdblockEnable', 'noopFunc')
+!
+love.mail.ru#?##app-wrapper > div:has(> div[class] > div[class] > div[class] > a[href*="/tips/?tip=DisableAdblock"])
+love.mail.ru###adblock-in-browser
+!
+e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', 'SMOKESCREEN')
+e.mail.ru,octavius.mail.ru#%#//scriptlet('json-prune', '[].slot')
 ! kino.mail.ru
 kino.mail.ru##.block_ad-text
 kino.mail.ru##button[class*="adv-marker"]
@@ -5229,11 +5243,20 @@ kino.mail.ru##button[class*="adv-marker"] + div.text
 ! horo.mail.ru
 ||auto.mail.ru/sw-mobile.js
 ! minigames.mail.ru - ads replacement script
+minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "advBlock")
+minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "showAd")
+!
+otvet.mail.ru#%#//scriptlet('json-prune', 'baits css direct *.slot')
 !
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '())),v.Z.themes.on("themes:')
+@@||e.mail.ru^$generichide
+@@||octavius.mail.ru^$generichide
 ! Fix for the mobile version, when used #%#//scriptlet('prevent-setTimeout', '())),v.Z.themes.on("themes:')
 !
 ! ok.ru
+ok.ru#%#//scriptlet('json-prune', 'result.body.direct')
+||ok.ru/res/js/app/RightColumn_*.js
+ok.ru##.dialogWrapperBanner
 ! брендинг страницы авторизации
 ok.ru##.anonym_login_w+div.prl_txt
 ||st.mycdn.me/res/css/prod/login/login_megafon.*.css
@@ -20301,6 +20324,7 @@ citrus.ua,xsport.ua,zi.dn.ua,zi.ua##img[src^="/upload/rk/"]
 !
 !
 !
+goloskarpat.info##.gkad
 kurs.com.ua##div[data-display-before="РЕКЛАМА"]
 unn.ua###ads-sidebar
 censor.net##.container > div#w1001.d-print-none

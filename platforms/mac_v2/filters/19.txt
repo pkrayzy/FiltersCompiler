@@ -1,9 +1,9 @@
-! Checksum: 9adbH5LRACsCUhzojEdG2A
-! Diff-Path: ../patches/19/19-s-1718350555-3600.patch
+! Checksum: TnJ/hCw4DfprnRw1FthlBA
+! Diff-Path: ../patches/19/19-s-1718361526-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.38.9
-! TimeUpdated: 2024-06-14T07:33:23+00:00
+! Version: 2.0.38.10
+! TimeUpdated: 2024-06-14T10:35:38+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -232,33 +232,7 @@ dzen.ru#$?#.feed__item > article._with_big_card_height._dzen-feed._carousel:cont
 dzen.ru##body .card-wrapersome
 ! Interview popup
 dzen.ru##div[class^="float-interview__float-"]
-! mail.ru main page - under the search
-mail.ru#?#div[slot="main-column"] > div:matches-css(height : /^90px/)
 !
-[$path]mail.ru#%#//scriptlet('json-prune', '[].slot')
-!
-minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "advBlock")
-mmminigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "showAd")
-!
-otvet.mail.ru#%#//scriptlet('json-prune', 'baits css direct *.slot')
-!
-my.mail.ru##.l-music__banner-728x90
-my.mail.ru##.sp-video__billboard
-my.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.isAdblockEnable', 'noopFunc')
-!
-love.mail.ru#?##app-wrapper > div:has(> div[class] > div[class] > div[class] > a[href*="/tips/?tip=DisableAdblock"])
-love.mail.ru###adblock-in-browser
-!
-e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', 'SMOKESCREEN')
-e.mail.ru,octavius.mail.ru#%#//scriptlet('json-prune', '[].slot')
-!
-@@||e.mail.ru^$generichide
-@@||octavius.mail.ru^$generichide
-!
-ok.ru#%#//scriptlet('json-prune', 'result.body.direct')
-||ok.ru/res/js/app/FriendsOnline4thColumn_*.js$replace=/fourthColumnWrapper//
-||ok.ru/res/js/app/RightColumn_*.js
-ok.ru##.dialogWrapperBanner
 ! END: VK group
 !   NOTE: VK group end ⬆️
 !   !SECTION: Anti-adblock - VK group
@@ -11113,6 +11087,7 @@ g123.jp,accounts.binance.com#@##credential_picker_container
 .name/?pus=$script,third-party
 .site/?pus=$script,third-party
 !
+||ziwelatum.com^
 ||adpush.com.tr^$third-party
 ||pushly.net^
 ||pushmoose.com^$third-party
@@ -12318,6 +12293,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+bbc.com##ul[role="list"] > li:has(> div[class] >  a[href^="https://www.bbc.com/russian/send/"])
 mercurynews.com##.footer-meta-content > div.button-center-wrapper
 media.mts.ru##.mts-official-telegram-popup
 aftermath.site##div[class^="ContentGate_wrapper_"]:has(> button[class^="ContentGate_regClose"])

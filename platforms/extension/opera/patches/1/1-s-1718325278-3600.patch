@@ -1,0 +1,37 @@
+d1 2
+a2 2
+! Checksum: P9SiQY4WaM6gKGDGRRvCag
+! Diff-Path: ../patches/1/1-s-1718361499-3600.patch
+d5 2
+a6 2
+! Version: 2.0.91.53
+! TimeUpdated: 2024-06-14T10:31:13+00:00
+a5230 2
+! mail.ru main page - under the search
+mail.ru#?#div[slot="main-column"] > div:matches-css(height : /^90px/)
+a5232 12
+!
+[$path]mail.ru#%#//scriptlet('json-prune', '[].slot')
+!
+my.mail.ru##.l-music__banner-728x90
+my.mail.ru##.sp-video__billboard
+my.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.isAdblockEnable', 'noopFunc')
+!
+love.mail.ru#?##app-wrapper > div:has(> div[class] > div[class] > div[class] > a[href*="/tips/?tip=DisableAdblock"])
+love.mail.ru###adblock-in-browser
+!
+e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', 'SMOKESCREEN')
+e.mail.ru,octavius.mail.ru#%#//scriptlet('json-prune', '[].slot')
+a5242 2
+minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "advBlock")
+minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "showAd")
+a5243 2
+otvet.mail.ru#%#//scriptlet('json-prune', 'baits css direct *.slot')
+!
+a5244 2
+@@||e.mail.ru^$generichide
+@@||octavius.mail.ru^$generichide
+a5247 3
+ok.ru#%#//scriptlet('json-prune', 'result.body.direct')
+||ok.ru/res/js/app/RightColumn_*.js
+ok.ru##.dialogWrapperBanner

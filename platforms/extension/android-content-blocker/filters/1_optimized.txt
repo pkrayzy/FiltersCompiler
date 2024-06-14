@@ -1,9 +1,9 @@
-! Checksum: 0EajjRojASw2GU4RSROyOw
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1718332511-3600.patch
+! Checksum: tC3yzc3u0MscBgd8vUQYyA
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1718361481-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.52
-! TimeUpdated: 2024-06-14T00:31:06+00:00
+! Version: 2.0.91.53
+! TimeUpdated: 2024-06-14T10:31:13+00:00
 ! Expires: 5 days (update frequency)
 /.feed/v5/ad?stream_uuid=
 /content/stream/1xbet/*
@@ -2204,12 +2204,19 @@ mail.ru##.mailru-visibility-check
 mail.ru##div[class*="rb-slot_plug"]
 mail.ru,sportmail.ru##div[class*="m-fixed-panel__box"]
 [$path=/^\/$|mail\.ru\/\?/]mail.ru##div[slot="main-column"] > div.tgb-wrapper
+my.mail.ru##.l-music__banner-728x90
+my.mail.ru##.sp-video__billboard
+love.mail.ru###adblock-in-browser
 kino.mail.ru##.block_ad-text
 kino.mail.ru##button[class*="adv-marker"]
 kino.mail.ru##button[class*="adv-marker"] + div.text
 @@||ad.mail.ru/i*.gif$domain=kino.mail.ru
 @@||kino.mail.ru^$generichide
 ||auto.mail.ru/sw-mobile.js
+@@||e.mail.ru^$generichide
+@@||octavius.mail.ru^$generichide
+||ok.ru/res/js/app/RightColumn_*.js
+ok.ru##.dialogWrapperBanner
 ok.ru##.anonym_login_w+div.prl_txt
 ok.ru##.browser-banner
 @@||ad.mail.ru/adq/?callback=mailruEnabled$domain=ok.ru
@@ -6292,6 +6299,7 @@ proagro.com.ua#$##all > main { margin: 0 15px 0 165px !important; }
 unian.net#$#.social-shares { visibility: hidden!important; }
 /upload/rk/*$domain=citrus.ua|xsport.ua|zi.dn.ua|zi.ua
 citrus.ua,xsport.ua,zi.dn.ua,zi.ua##img[src^="/upload/rk/"]
+goloskarpat.info##.gkad
 kurs.com.ua##div[data-display-before="РЕКЛАМА"]
 unn.ua###ads-sidebar
 censor.net##.container > div#w1001.d-print-none
