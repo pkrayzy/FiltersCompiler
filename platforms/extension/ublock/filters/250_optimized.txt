@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: aWyqeAWmSkz+moC0CdUNAg
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1718298258-14400.patch
+! Checksum: f9+ShtdZNO0VCjPQLsBa+g
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1718341450-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.35
@@ -624,7 +624,6 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 ~linkedin.com,~terabox.com##div[class*=share-box]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-share-box])
 ~mail.ru##a[href^="https://connect.mail.ru/share?url="]
 ~mewe.com##div[class*=share-link]
-~ne.jp##a[href*="b.hatena.ne.jp/add?url="]
 ~ne.jp##iframe[class^=hatena-bookmark]
 ~ok.ru##a[href*="/connect.ok.ru/dk?"]
 ~ok.ru##a[href^="https://connect.ok.ru/offer?url="]
@@ -633,6 +632,7 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 ~pinterest.*##.pinterest[href*="/pin/create/"]
 ~pinterest.*##.share-pinterest:not(html,body,:empty)
 ~pinterest.*##a[class$=pinterest-share]
+~pinterest.*##a[data-pin-do=buttonPin]
 ~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
 ~pinterest.*##a[onclick*="pinterest.com/pin/create/"]
 ~pinterest.*##a[title="Share on Pinterest" i]
@@ -783,7 +783,6 @@ cdn.memberspace.com/*
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.generic_dialog_modal.pop_dialog
 pinterest.*##div[data-test-id=giftWrap]
 addons.opera.com###overlay
-deezer.com###modal_login:upward(2)
 stackexchange.com,askubuntu.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com#?#.js-dismissable-hero:has-text(Sign up)
 quizlet.com##.LoginBottomBar
 quizlet.com#$#.SetPageTerm-largeSide { filter: none !important }
@@ -930,6 +929,7 @@ spleis.no##+js(set-constant, __INITIAL_STATE__.features.should-show-snow, false)
 alpresor.se##+js(abort-current-script, snowMax)
 /snow.js|$script
 /wp-content/plugins/christmasify^
+/wp-content/plugins/snow-3d^
 daz3d.ru##+js(set-constant, snow, undefined)
 /jquery.snow.js
 /let-it-snow.
@@ -941,12 +941,12 @@ daz3d.ru##+js(set-constant, snow, undefined)
 /snowstorm-min.js
 /snowstorm.js
 /wp-snow-effect^
+-christmasification-
 /christmas-snow.js
 @@||bannedbook.org^
 @@||dongtaiwang.com^
 @@||epochtimes.com.tw^
 @@||epochtimes.com^
-@@||ntdtv.com.tw^
 @@||ntdtv.com^
 @@||secretchina.com^
 @@||soundofhope.org^
@@ -1057,7 +1057,6 @@ twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 ~imdb.com##a[href="/top-imdb"]
 ~imdb.com###repimdb
 ~imdb.com##.owl-item .poster > .rating
-~imdb.com##a[href*=".imdb."] > .rating
 ~imdb.com##a[href$="/top-imdb/"]
 ~imdb.com##span[data-automation-id=imdb-rating-badge]
 ~imdb.com##.imdb_r:not(html,body,:empty)
@@ -1086,6 +1085,7 @@ $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=action_object_map
 $removeparam=action_ref_map
+$removeparam=_zucks_suid
 $removeparam=adfrom
 $removeparam=aiad_clid
 $removeparam=maf
@@ -1201,9 +1201,6 @@ $removeparam=sscid
 $removeparam=rmmds
 $removeparam=utmid
 $removeparam=msclkid
-$removeparam=litb_from
-$document,removeparam=/^adword_.*$/,domain=~justdial.com
-$removeparam=adw_src_id
 $removeparam=ggntk
 $removeparam=ggcid
 $removeparam=ggplm
@@ -1315,6 +1312,7 @@ $removeparam=o_sch
 $removeparam=o_xid
 $removeparam=wtExtndSource
 $removeparam=rfsn
+$removeparam=bclid
 $document,removeparam=trackid,domain=~nzpost.co.nz
 $removeparam=afsrc
 $removeparam=lctid
@@ -1362,7 +1360,6 @@ $removeparam=sp_source
 $removeparam=sp_campaign
 $removeparam=ad_id,domain=~olx.ua
 $document,removeparam=/^affSource.*$/i
-$document,removeparam=/^cid_.*$/
 $removeparam=p_sid
 $removeparam=depth_1-utm_source
 $removeparam=cmp_id
@@ -1668,13 +1665,13 @@ $removeparam=dchild
 ||amazon.$removeparam=sr
 ||amazon.$removeparam=creative
 $removeparam=creativeASIN
-||amazon.$removeparam=/^sc_i.*$/
 $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws|xkcd.com|linkedin.com|lnkd.in
 ||amazon.$removeparam=/^__mk_*_.*$/
 ||amazon.$removeparam=ascsubtag
 ||amazon.$removeparam=crid
 ||amazon.$removeparam=/^cv_ct_.*$/
 ||amazon.$removeparam=sprefix
+||amazon.$removeparam=ac_md
 $removeparam=coliid
 $removeparam=geniuslink
 ||amazon.$removeparam=aaxitk
@@ -2137,7 +2134,6 @@ $removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
 ||roblox.com^$removeparam=refPageId
 ||newegg.com^$removeparam=nm_mc
 $removeparam=bsencid
-||target.com^$removeparam=clkid
 $removeparam=adcampaigngroup
 ||dell.com^$removeparam=dgc
 ||dell.com^$removeparam=VEN1
@@ -2150,6 +2146,7 @@ $removeparam=adcampaigngroup
 $removeparam=soc_src
 $removeparam=soc_trk
 $removeparam=ia-pkpmtrack
+||spartoo.$removeparam=sx
 ||spartoo.$removeparam=track_id
 ||as.com^$removeparam=omnil
 ||surfshark.com^$removeparam=transaction_id
@@ -2161,10 +2158,10 @@ $removeparam=aid,domain=adguard-dns.com|adguard-vpn.com|adguard.com|brownells.*|
 $removeparam=camp,domain=amazon.*|calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com|bestbuy.com
 $removeparam=cp,domain=converse.com|nike.com|nextdoor.com|duckduckgo.com
+$removeparam=/^pubname=.*$/i,domain=anntaylor.com|ashford.com|backcountry.com|bloomingdales.com|dermstore.com|express.com|famousfootwear.com|farmandfleet.com|gucci.com|hottopic.com|loft.com|naturalizer.com|samsclub.com
 $document,removeparam=/^refID=.*$/i,domain=allmodern.com|calphalon.com|priceline.com|questrade.com|wayfair.*|yankeecandle.com
 $document,removeparam=/^siteid=.*$/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|barenecessities.com|barrons.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|ebay.*|famousfootwear.com|finishline.com|freetaxusa.com|gap.com|gapcanada.ca|gucci.com|hanes.com|hotwire.com|hulu.com|hunterboots.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|laroche-posay.us|loft.com|magazines.com|marketwatch.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|online4baby.com|radissonhotelsamericas.com|ralphlauren.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|skinceuticals.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com
 ||kohls.com^$removeparam=kls_sbp
-||kohls.com^$removeparam=pfm
 ||kohls.com^$removeparam=prdPV
 $removeparam=site_id,domain=taskrabbit.com|kochava.com
 ||kochava.com^$removeparam=network_id
@@ -2241,6 +2238,7 @@ $removeparam=pro,domain=etsy.com
 $removeparam=frs,domain=etsy.com
 $removeparam=click_key,domain=etsy.com
 $removeparam=click_sum,domain=etsy.com
+$removeparam=iid,domain=cnn.com
 ||despegar.$removeparam=mktdata
 ||hao123.com^$removeparam=tn
 ||lazada.$removeparam=dsource
@@ -2334,6 +2332,7 @@ $document,removeparam=refresh,domain=cnn.com|startribune.com
 $removeparam=mt_click_id,domain=mail.ru|vkplay.ru
 ||blog.getadblock.com^$removeparam=gi
 $removeparam=nvid,domain=nvidia.com
+$removeparam=ico,domain=dailymail.co.uk|inews.co.uk|metro.co.uk|thisismoney.co.uk
 ||espn.com^$removeparam=ex_cid
 ||mercadolibre.com.ar^$removeparam=pdp_filters
 $removeparam=cxt,domain=twitter.com|x.com
@@ -2355,19 +2354,12 @@ $removeparam=o,domain=nortonsafe.search.ask.com|linkvertise.com|demo.thisischip.
 ||nortonsafe.search.ask.com^$removeparam=olpchannel
 ||nortonsafe.search.ask.com^$removeparam=chn
 ||nortonsafe.search.ask.com^$removeparam=tpr
+||nortonsafe.search.ask.com^$removeparam=p2
 ||nortonsafe.search.ask.com^$removeparam=cmpgn
 ||nortonsafe.search.ask.com^$removeparam=doi
 ||ekstrabladet.dk^$removeparam=ilc
 $removeparam=ct,domain=nextdoor.com
 $removeparam=ec,domain=nextdoor.com
-$removeparam=adSize,domain=media-cdn.costco.ca|media-cdn.costco.com
-$removeparam=channelID,domain=media-cdn.costco.ca|media-cdn.costco.com
-$removeparam=hc,domain=media-cdn.costco.ca|media-cdn.costco.com
-$removeparam=location,domain=media-cdn.costco.ca|media-cdn.costco.com
-$removeparam=mt,domain=media-cdn.costco.ca|media-cdn.costco.com
-$removeparam=spr,domain=media-cdn.costco.ca|media-cdn.costco.com
-$removeparam=tc,domain=media-cdn.costco.ca|media-cdn.costco.com
-$removeparam=textadID,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=instance_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=nl,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=regi_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
@@ -2486,7 +2478,6 @@ $removeparam=embeds_referring_euri
 ref=spreadprivacy.com$removeparam=ref
 ||github.com^$removeparam=reference_location
 $removeparam=afSmartRedirect
-||app.snyk.io^$removeparam=page,document
 ||wsj.com^$removeparam=st
 $removeparam=adt_ei
 ||linkedin.com/feed/update$removeparam=origin
