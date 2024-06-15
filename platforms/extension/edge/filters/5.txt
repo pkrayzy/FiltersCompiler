@@ -1,9 +1,9 @@
-! Checksum: MC54w3Mb0p2SfUKeXBUVxQ
-! Diff-Path: ../patches/5/5-s-1718188545-3600.patch
+! Checksum: V28SDtERfeXWQesGr7yt/A
+! Diff-Path: ../patches/5/5-s-1718465676-3600.patch
 ! Title: AdGuard Experimental filter
 ! Description: Filter designed to test certain hazardous filtering rules before they are added to the basic filters.
-! Version: 2.0.1.53
-! TimeUpdated: 2024-06-12T10:33:14+00:00
+! Version: 2.0.1.54
+! TimeUpdated: 2024-06-15T15:32:17+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -144,9 +144,8 @@
 !
 ! Fix for new ads
 ! TODO: move to the Base filter if it doesn't break anything
-youtube.com#%#//scriptlet('set-constant', 'ytcfg.data_.INNERTUBE_CONTEXT.client.visitorData', 'undefined')
-youtube.com#%#(()=>{const e={apply:(e,t,o)=>{if(!(window.yt?.config_?.EXPERIMENT_FLAGS?.html5_enable_ssap_entity_id&&o[0]&&"X-Goog-Visitor-Id"===o[0]&&o[1]))return Reflect.apply(e,t,o)}};window.XMLHttpRequest.prototype.setRequestHeader=new Proxy(window.XMLHttpRequest.prototype.setRequestHeader,e)})();
-youtube.com#%#(()=>{const t={construct:(t,e,o)=>{if(window.yt?.config_?.EXPERIMENT_FLAGS?.html5_enable_ssap_entity_id){const t=e[0],o=e[1];if("https://www.youtube.com/"!==location.href&&t&&t.includes?.("/youtubei/"))try{delete o.headers["X-Goog-Visitor-Id"]}catch(t){console.trace(t)}if(o&&o.body?.includes("visitorData"))try{e[1].body=e[1].body.replace(/"visitorData":".*?",/,"")}catch(t){console.trace(t)}if(t&&t.includes?.("&sabr=1"))try{e[0]=e[0].replace("&sabr=1","")}catch(t){console.trace(t)}}return Reflect.construct(t,e,o)}};window.Request=new Proxy(window.Request,t)})();
+youtube.com#%#//scriptlet('adjust-setTimeout', '[native code]', '17000', '0.001')
+youtube.com#%#(()=>{let t=document.location.href,e=[],n=[],o=!1;const r=Array.prototype.push,i={apply:(t,i,a)=>(window.yt?.config_?.EXPERIMENT_FLAGS?.html5_enable_ssap_entity_id&&a[0]&&a[0]!==window&&"number"==typeof a[0].start&&a[0].end&&"ssap"===a[0].namespace&&a[0].id&&(o||0!==a[0]?.start||n.includes(a[0].id)||(e.length=0,n.length=0,o=!0,r.call(e,a[0]),r.call(n,a[0].id)),o&&0!==a[0]?.start&&!n.includes(a[0].id)&&(r.call(e,a[0]),r.call(n,a[0].id))),Reflect.apply(t,i,a))};window.Array.prototype.push=new Proxy(window.Array.prototype.push,i),AG_onLoad((function(){if(!window.yt?.config_?.EXPERIMENT_FLAGS?.html5_enable_ssap_entity_id)return;const r=()=>{const t=document.querySelector("video");if(t&&e.length){const r=Math.round(t.duration),i=Math.round(e.at(-1).end/1e3);if(0===t.currentTime&&r&&r===i){const r=Math.ceil(e.at(-1).start/1e3);t.currentTime<r&&(t.currentTime=r,o=!1,e.length=0,n.length=0)}}};r();new MutationObserver((()=>{t!==document.location.href?(t=document.location.href,e.length=0,n.length=0,o=!1,r()):r()})).observe(document,{childList:!0,subtree:!0})}))})();
 ! remove anti-adb
 www.youtube.com#%#(()=>{const wrapper=(target,thisArg,args)=>{let result=Reflect.apply(target,thisArg,args);try{const decoded=atob(result);if(decoded.includes('bkaEnforcementMessage')){const modifiedContent=decoded.replace(/\n.\n.auxiliaryUi\.messageRenderers\.bkaEnforcementMessageViewModel\.displayType.\dENFORCEMENT_MESSAGE_VIEW_MODEL_DISPLAY_TYPE_[A-Z]+\n.\n.auxiliaryUi\.messageRenderers\.bkaEnforcementMessageViewModel\.isVisible.{2}(?:tru|fals)e/,'');const encodeToBase64=btoa(modifiedContent);return encodeToBase64}}catch(e){} return result};const handler={apply:wrapper};window.Array.prototype.join=new Proxy(window.Array.prototype.join,handler)})();
 www.youtube.com#%#//scriptlet('trusted-replace-fetch-response', '/"auxiliaryUi":\{"messageRenderers":\{"bkaEnforcementMessageViewModel.*?e\}\}\}\,/', '', 'player?')
