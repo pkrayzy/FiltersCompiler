@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: LMprvcgEnM2yvkdJc7r/Ww
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1718413472-14400.patch
+! Checksum: iWC8yU/q5eWqYKID8RWCRw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1718427863-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.36
@@ -634,6 +634,7 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 ~pinterest.*##a[class$=pinterest-share]
 ~pinterest.*##a[data-pin-do=buttonPin]
 ~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
+~pinterest.*##a[href="/#pinterest"]
 ~pinterest.*##a[onclick*="pinterest.com/pin/create/"]
 ~pinterest.*##a[title="Share on Pinterest" i]
 ~pinterest.*##button[data-href*="pinterest.com/pin/create/button/"]
@@ -658,7 +659,6 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 ##.twitter-share:not(html,body,:empty)
 ##.twitter[href*="/share?"]:not(html,body,:empty)
 ##a[class$=share-twitter]
-##a[class=twitter i][title=Tweet]
 ##a[data-sharer=twitter]
 ##a[href*="twitter.com/home?status="]
 ##a[href*="twitter.com/intent/tweet?"]
@@ -950,6 +950,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@||ntdtv.com^
 @@||secretchina.com^
 @@||soundofhope.org^
+@@||wujieliulan.com^
 @@||buzzfeed.com^
 @@||mewe.com^
 @@||wikileaks.org^
@@ -990,6 +991,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@||fanboy.co.nz/*.txt^
 ||timesprayer.com/widgets.php^$third-party
 yenisafak.com,yeniakit.com.tr,haber7.com##.prayer
+almanar.com.lb##.box-wrapper:has(.prayer-times)
 thenews.com.pk##a[href$="/prayer-time"]
 yeniakit.com.tr##.info-bar > li:not([class], [title])
 star.com.tr##.pray
@@ -1115,7 +1117,6 @@ $document,removeparam=awc
 $document,removeparam=ranMID
 $document,removeparam=ranEAID
 $document,removeparam=ranSiteID
-$document,removeparam=ranLinkID
 $document,removeparam=LGWCODE
 $document,removeparam=xtor
 $document,removeparam=SRC
@@ -1321,7 +1322,6 @@ $removeparam=usource
 $document,removeparam=/^mpid=.*$/i,domain=~miguvideo.*
 $removeparam=c3ch
 $removeparam=c3nid
-$removeparam=om_mmc
 $removeparam=trackingCode
 $removeparam=k_clickid
 $removeparam=affiliateCustomId
@@ -1356,11 +1356,13 @@ $removeparam=LSID
 $removeparam=affuid
 $removeparam=icid2
 $removeparam=refclickid
-$removeparam=sp_source
 $removeparam=sp_campaign
 $removeparam=ad_id,domain=~olx.ua
 $document,removeparam=/^affSource.*$/i
+$removeparam=p_aid
 $removeparam=p_sid
+$removeparam=p_link
+$removeparam=p_tok
 $removeparam=depth_1-utm_source
 $removeparam=cmp_id
 $removeparam=adg_id
@@ -1451,6 +1453,7 @@ $document,removeparam=/^kk=\w{6,}-\w{10,}-\w{5,}$/
 $document,removeparam=/^from=kelkoo.*$/
 $removeparam=paid
 $removeparam=pacid
+$removeparam=pa-partnerid
 $removeparam=adtype
 $removeparam=tmcampid
 $removeparam=n_cid
@@ -1713,7 +1716,6 @@ $removeparam=returnFromLogin,domain=amazon.*
 ||amazon.*/dp/$removeparam=tag,document
 ||amazon.*/stores/$removeparam=tag,document
 ||amazon.*/product/$removeparam=tag,document
-||amazon.$removeparam=qu
 ||amazon.*/dp/$removeparam=rps,document
 ||amazon.$removeparam=content-id
 ||amazon.$removeparam=colid
@@ -2098,7 +2100,6 @@ $removeparam=origin,denyallow=platform.twitter.com,domain=archive.org|buzzfeed.c
 $removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com|adtraction.com|tradedoubler.com
 $removeparam=sm12
 $removeparam=ts,domain=al.to|baidu.com|combat.pl|x-kom.pl
-||son-video.com^$removeparam=ae
 ||fnac.$removeparam=Origin
 ||paypal.com^$removeparam=calc
 ||youtube.com^$removeparam=ab_channel
@@ -2168,6 +2169,9 @@ $removeparam=site_id,domain=taskrabbit.com|kochava.com
 ||kochava.com^$removeparam=device_id
 ||skyscanner.$removeparam=redirectedFrom
 ||skyscanner.$removeparam=previousCultureSource
+||saksfifthavenue.com^$removeparam=LSoid
+||saksfifthavenue.com^$removeparam=LSlinkid
+||saksfifthavenue.com^$removeparam=LScreativeid
 ||fubo.tv^$removeparam=irad
 ||fubo.tv^$removeparam=irmp
 ||imobiliare.ro^$removeparam=exprec
@@ -2238,7 +2242,6 @@ $removeparam=pro,domain=etsy.com
 $removeparam=frs,domain=etsy.com
 $removeparam=click_key,domain=etsy.com
 $removeparam=click_sum,domain=etsy.com
-$removeparam=iid,domain=cnn.com
 ||despegar.$removeparam=mktdata
 ||hao123.com^$removeparam=tn
 ||lazada.$removeparam=dsource
@@ -2669,5 +2672,4 @@ $third-party,denyallow=microsoft.com,domain=store.rg-adguard.net
 fandom.com##.notifications-box
 flipkart.com##div[style^=flex-grow] div:first-of-type + div.col
 flipkart.com##footer section + div:last-of-type
-###custom-css .vjs-loading-spinner
 mariowiki.com,fandom.com#$#table.wikitable ruby > rt { font-size: 67% !important }
