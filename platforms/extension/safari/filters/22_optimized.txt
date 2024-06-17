@@ -1,5 +1,5 @@
-! Checksum: pQObYz0is73QqodKIpbJ7w
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1718505756-3600.patch
+! Checksum: /XAcW1W8gg9O1Ub7jWpulA
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1718591674-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.54
@@ -176,8 +176,6 @@ jiwasoku.com###pcpc-rss
 jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
 h-ken.net###footer-rssLinkListHtml
-kijomatomelog.com##div[style="margin:0px;padding:2px;"]
-kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"]
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"] ~ a[href][target="_blank"]
 baiku-sokuho.info##.links2
 ||baiku-sokuho.info/pickup-rss*.html
@@ -250,7 +248,6 @@ aatyu.livedoor.blog##.custom5
 aatyu.livedoor.blog##.article-body > div.logbox4
 ||matomeantena.com^$domain=japohan.net|aaieba.livedoor.biz|incident-wo.com
 ||nullpoantenna.com^$domain=japohan.net|aaieba.livedoor.biz|incident-wo.com
-kijomatomelog.com##.rss-single
 kijomatomelog.com,sukattojapan.com##.section-rss1
 hiragana46matome.com,toriizaka46.jp##.sec-rss
 hiragana46matome.com,toriizaka46.jp##.sec-rss-article
@@ -320,7 +317,6 @@ kokopyon.net##.plg_area:last-child
 ||aaieba.livedoor.biz^$subdocument,~third-party
 aaieba.livedoor.biz##.aaieba-b
 kijomatomelog.com##.related-wrapper
-kijomatomelog.com##div[style="margin-bottom:30px;"] > b > span[style="font-size: medium; color: rgb(102, 102, 102);"]
 ||baiku-sokuho.info/top-rss.html
 carp-matome.blog.jp##.bw_outbox
 anihatsu.com##.rss-blogroll-kobetu
@@ -400,8 +396,6 @@ oumaga-times.com##.popular-list-header
 burusoku-vip.com##.headline-body
 burusoku-vip.com##.headline-title
 kijomatomelog.com##div[style^="line-height: 35px; border-top:dotted 1px gray;"]
-kijomatomelog.com##div[style="line-height: 20px"]
-kijomatomelog.com#?#.article span[style="font-size: 125%;"]:has(> span >span[style^="font-weight: bold;"])
 ||all-nationz.com/feed-all-nationz.html
 ||amnewgame.blog.jp/TOPRSS3.html
 anihatsu.com##.rss-blogroll-header
@@ -449,6 +443,8 @@ nanjde.blog.jp##div[id^="rsslink"]
 gadget2ch.com##.article-text-rss-box
 ||news4vip.livedoor.biz/rss-test3.html
 ||jin115.com/rss*$subdocument,~third-party
+2chblog.jp##.kiji-sita-rss
+2chblog.jp##.kiji-ue-rss
 2chmatome.net,elephant.2chblog.jp,vippers.jp###topRss
 kitizawa.com###headerRSS
 sonicch.com,kijomatomelog.com,okkisokuho.com,no-one-no.net,ertk.net,uwakitaiken.com,blog.esuteru.com,kidan-m.com,onihimechan.com,kijonotakuhaibin.com,okusama-kijyo.com,otakomu.jp,exawarosu.net,mindhack2ch.com,duellinks.doorblog.jp,dragonquestwalk.blog.jp,netamesi.com,sk2ch.net,kijyomita.com,tanu-soku.com,akb48matomemory.com##.rss
@@ -525,7 +521,6 @@ jumpmatome2ch.net###rss-top
 jumpmatome2ch.biz##.d-contents
 g-mens.net,matacoco.com,tsurimatome.com,kokopyon.net,girlsvip-matome.com,valorantchannel.net,saikyo-jump.com,absurd.blogo.jp,daretoku-eromanga.info,hattatu-matome.ldblog.jp##div[class^="rss"]
 celery-marine.net,otoko-honne.com,ske48matoeme.com,kijolifehack.com##div[id^="rss"]
-kijomatomelog.com#?#.sub_right > .sidewrapper:has(> .sidetitlebody > .sidetitle:contains(人気記事))
 manpukunews.blog.jp##div[align="center"] > table[width="700"]
 manpukunews.blog.jp##table[rules="None"]
 ||kurumachannel.com/*-Rss.html
@@ -618,6 +613,7 @@ ironsaga-msoku.xyz#$##content { margin-top: 180px!important; }
 ironsaga-msoku.xyz#$##rss_wrap { display: none!important; }
 ||toushichannel.net^$subdocument,~third-party
 coolpan.net##.pickupList
+erogazou-pinkline.com###adnex-text-widget
 rastaneko-blog.com##center > div[style$="border:1px dotted #000000;"]
 newsmana.com##div[class^="rss-table"]
 gameleaks.org##.rss-table
@@ -828,6 +824,8 @@ vinmec.com##.global-thread-create-cta
 ||yastatic.net/*/chat/widget.js$domain=next24.ru|goodprice4you.ru
 @@||secure.livechatinc.com/customer/action/open_chat?$domain=kinguin.net
 ||static.elfsight.com^$third-party,domain=cafemarta.ch|trestlebrewing.com|taube-rankweil.at|savearizonafund.com|avproedge.com
+@@||widgets.trustedshops.com/reviews/tsSticker/tsSticker.js$domain=interpack.eu
+@@||widgets.trustedshops.com/reviews/tsSticker/css/light.theme.css$domain=interpack.eu
 @@||code.jivo.ru/widget/$domain=coffee-tea-bravos.ru
 @@||components.justanswer.com^$domain=justanswer.co.uk|justanswer.es|justanswer.de|justanswer.jp
 webznam.ru###topalfaweb
@@ -1052,7 +1050,6 @@ hrw.org##.donation-block__content
 hrw.org###block-donationfooterblock
 thejournal.ie#%#//scriptlet('set-local-storage-item', 'total_page_views', '2')
 nookgaming.com##.ko_fi_widget
-nookgaming.com#?#.entry-content .awac-wrapper:has(div.ko-fi-button)
 echofm.online##main > article.wp-embed-responsive ~ div[class^="sc-"]:has(> div[style="visibility: visible;"] > div[class] > div[class] > label > input[name="paymentMethod"])
 gigazine.net###donation_wrapper
 getcomics.org##.wpfront-notification-bar-spacer
