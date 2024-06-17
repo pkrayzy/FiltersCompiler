@@ -1,9 +1,9 @@
-! Checksum: TtHeZolv8S1MaCAPs+72KA
-! Diff-Path: ../patches/7/7-s-1718620552-3600.patch
+! Checksum: bIXnxly1casjFZJQDNjJdg
+! Diff-Path: ../patches/7/7-s-1718627780-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.52.80
-! TimeUpdated: 2024-06-17T10:33:04+00:00
+! Version: 2.0.52.81
+! TimeUpdated: 2024-06-17T12:33:54+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -500,6 +500,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181591
+iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179614
 kotobank.jp#%#//scriptlet('prevent-setTimeout', 'return', '7400')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178919
@@ -522,10 +524,6 @@ success-corp.co.jp#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=success-corp.co.jp
 nieru.net#@#.ad-space
 nieru.net#@#.adWidget
-! https://github.com/AdguardTeam/AdguardFilters/issues/179875
-! https://github.com/AdguardTeam/AdguardFilters/issues/159931
-iwb.jp#%#//scriptlet('abort-on-property-read', 'alert')
-iwb.jp#%#//scriptlet('abort-on-property-read', 'onload')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171258
 jprime.jp#$?#.js-reward-modal  { remove: true; }
 jprime.jp#$?#.js-reward-gallery-modal  { remove: true; }
@@ -1733,6 +1731,8 @@ gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 !
 !
 !
+oricon.co.jp###content-main .block-link-list-b > article:has(.pr)
+mainichi.jp##div[id^="ad-"]
 ||altema.jp/*/ad_random.js
 ||altema.jp/*/ads_interstitial.js
 ||altema.jp/*/ffbeadsjs.js
