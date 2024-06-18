@@ -1,9 +1,9 @@
-! Checksum: 3qb0OoP/2Hl2KZr6nOg/Ng
-! Diff-Path: ../patches/1/1-s-1718714184-3600.patch
+! Checksum: tW84xQjaX1F9BfS7G+RP5Q
+! Diff-Path: ../patches/1/1-s-1718717684-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.62
-! TimeUpdated: 2024-06-18T12:32:43+00:00
+! Version: 2.0.91.63
+! TimeUpdated: 2024-06-18T13:31:18+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5196,6 +5196,7 @@ mail.ru,sportmail.ru,~e.mail.ru,~my.mail.ru,~touch.mail.ru#%#//scriptlet('set-co
 ! mail.ru main page - under the search
 mail.ru#?#div[slot="main-column"] > div:matches-css(height : /^(90|89\.5).*px/)
 ! ad on main page
+mail.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.ssr_ads')
 [$path=/^\/$|mail\.ru\/\?/]mail.ru##div[slot="main-column"] > div.tgb-wrapper
 !
 [$path]mail.ru#%#//scriptlet('json-prune', '[].slot')
