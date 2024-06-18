@@ -1,9 +1,9 @@
-! Checksum: ULfz8ildpauuwGWfoMEuVA
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1718706992-3600.patch
+! Checksum: Q8fKorHhAKfvSttt9LPLtQ
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1718714186-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.61
-! TimeUpdated: 2024-06-18T10:31:02+00:00
+! Version: 2.0.91.62
+! TimeUpdated: 2024-06-18T12:32:43+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2221,7 +2221,7 @@ mail.ru##.mailru-visibility-check
 mail.ru##div[class*="rb-slot_plug"]
 mail.ru,sportmail.ru##div[class*="m-fixed-panel__box"]
 mail.ru,sportmail.ru,~e.mail.ru,~my.mail.ru,~touch.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.mimic', 'null')
-mail.ru#?#div[slot="main-column"] > div:matches-css(height : /^90px/)
+mail.ru#?#div[slot="main-column"] > div:matches-css(height : /^(90|89\.5).*px/)
 [$path=/^\/$|mail\.ru\/\?/]mail.ru##div[slot="main-column"] > div.tgb-wrapper
 [$path]mail.ru#%#//scriptlet('json-prune', '[].slot')
 my.mail.ru##.l-music__banner-728x90
@@ -3045,9 +3045,7 @@ lenta.ru##.custom-banner
 ||liveball.uno/public/img/onewin_branding/
 liveball.uno#$?##custom_brand { remove: true; }
 kinoart.ru#?#.react-reveal  > div[class^="_"]:has(> div[rel="noopener noreferrer"]:empty)
-fontanka.ru##article ~ div:has(div.flickity-slider)
 asn24.ru##.paid-area
-fontanka.ru##div[class]:has(> a[href^="https://people.sovcombank.ru/"])
 sport-express.net###_ad_container_
 sport-express.net##.se-banner
 sport-express.net##div[data-component="se-game-app"]
@@ -3380,7 +3378,6 @@ pogoda.onliner.by##div[class$="_fixed-height"]
 tvmag.ru##a[href*=".tricolor.tv"] > img
 ||vb17123filippaaniketos.pw/overroll/
 atorus.ru###block-headerads
-fontanka.ru##div[style*="--creative-height:"]
 soccer365.ru,xcadr.online,soccer365.com.ua,kniga-online.com##.adv
 notepadonline.ru##.adbox
 cian.ru##div[data-name="AdFoxBannerTracker"]
@@ -6245,6 +6242,10 @@ meduza.global.ssl.fastly.net,meduza.io##.App-bannerBottom
 meduza.global.ssl.fastly.net,meduza.io##.DFPBanner-root
 !+ NOT_OPTIMIZED
 meduza.global.ssl.fastly.net,meduza.io##div.App-banner
+fontanka.ru##a[href^="https://www.fontanka.ru/"][href*="#lenta-btn"]
+fontanka.ru##article ~ div:has(div.flickity-slider)
+fontanka.ru##div[class]:has(> a[href^="https://people.sovcombank.ru/"])
+fontanka.ru##div[style*="--creative-height:"]
 fontanka.ru##aside > div:has(div.flickity-enabled a[href*="/?erid="])
 fontanka.ru###app div[class] > aside[class] + div[class] > section[class] > div > div:not([class]) + div[class] > div:first-child
 mirtesen.ru##.partner-block-wrapper
