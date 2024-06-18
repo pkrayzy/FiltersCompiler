@@ -1,9 +1,9 @@
-! Checksum: KXH6ppd1Ufd4OzVyCXTcBQ
-! Diff-Path: ../patches/14/14-s-1718696123-3600.patch
+! Checksum: +Rl6MaFGnh3AidFUVn+u/w
+! Diff-Path: ../patches/14/14-s-1718699725-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.49
-! TimeUpdated: 2024-06-18T07:33:29+00:00
+! Version: 2.1.99.50
+! TimeUpdated: 2024-06-18T08:33:19+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2437,6 +2437,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+growdiaries.com##.popup_secure:has(a[href="/policy"])
 serif.com##div[aria-labelledby="cookie-heading"]
 magnit.ru##.popup-unit-cookie-policy
 torggler.com##.wf-cookie-consent
@@ -15359,6 +15360,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181643
+@@||123elec.com/*/Amasty_GdprFrontendUi/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181053
 channel4.com#@##cookie-consent-banner
 channel4.com#@#.cookie-banner:not(body):not(html)
@@ -31385,6 +31388,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+growdiaries.com#$#body { overflow: auto !important; }
+growdiaries.com#$#.modal:has(img[src^="/images/signup_"]) { display: none !important; }
 newsbomb.gr##.publisher-teasers
 bundesliga.com##dfl-newsletter-banner
 thepostmillennial.com##.card.bg-warning
