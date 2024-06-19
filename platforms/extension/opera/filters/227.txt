@@ -1,14 +1,14 @@
-! Checksum: UiF8EsX+Vm4asYsTKr0MZQ
-! Diff-Path: ../patches/227/227-s-1718701482-14400.patch
+! Checksum: C2FmCOP86SbC43ZHymgKyg
+! Diff-Path: ../patches/227/227-s-1718773438-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.62
-! TimeUpdated: 2024-06-18T09:01:59+00:00
+! Version: 2.0.18.63
+! TimeUpdated: 2024-06-19T05:01:28+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2024.0618.0
+! OriginalVersion: 2024.0619.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://community.list-kr.com/docs/
@@ -1528,7 +1528,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
-www.naver.com##.shortcut_item > a[class="link_service"]:has(> i.ico_ad)
+gmarket.co.kr###login-banner-box
+www.naver.com###shortcutArea .shortcut_item:has( > a[href*="veta.naver.com"] > i.ico_ad)
 cvsnet.co.kr##.reserEvent
 news.mtn.co.kr##div:not([class]) > a[href][target]
 news.mtn.co.kr##aside > div[class]:has(> div:not([class]) > div[id^="taboola-"])
@@ -2798,6 +2799,7 @@ x86.co.kr#@#.download_ad
 auto.danawa.com#%#//scriptlet('set-constant', 'NAVER_ADPOST_V2', 'noopFunc')
 ||shopsquare.naver.com^$badfilter
 ! TODO: remove the following filter if https://github.com/AdguardTeam/CoreLibs/issues/1831 is resolved.
+www.naver.com#$##shortcutArea { padding-left: 64px !important; }
 ggulzam.zal.kr#$#.partners-inside { display: none !important; }
 ggulzam.zal.kr#$#.inside-content-background-gradient { display: none !important; }
 ggulzam.zal.kr#$##inner-content-body.hided { max-height: fit-content !important; }
