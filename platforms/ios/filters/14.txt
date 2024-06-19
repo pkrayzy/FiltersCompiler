@@ -1,9 +1,9 @@
-! Checksum: dw/9bw2Je75Yi/j4rvMl1w
-! Diff-Path: ../patches/14/14-s-1718804171-3600.patch
+! Checksum: 5zdRZWrhg56QDjfnUWWlgg
+! Diff-Path: ../patches/14/14-s-1718815064-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.65
-! TimeUpdated: 2024-06-19T13:34:05+00:00
+! Version: 2.1.99.66
+! TimeUpdated: 2024-06-19T16:34:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -11880,6 +11880,7 @@ celebheights.com###ckeu
 foreca.it,foreca.ru###ckieconsent
 psychic.de,laleggepertutti.it,chimerarevo.com,navigaweb.net,politize.com.br###cl_modal
 almamarket.pl###claw
+securitm.ru##div[x-data*=cookie_confirm]
 esteban.fr,shopping.rakuten.com###cnilBanner
 codemasters.com,dirt4game.com###codemasters_cookies
 borusanoto.com,nokiantyres.com.tr,kondis.no###coiConsentBanner
@@ -24315,8 +24316,10 @@ prepp.in#%#//scriptlet('trusted-set-cookie', 'ldCookie', 'closed')
 gocomics.com##.amu-container-alert
 uol.com.br,elperiodicoextremadura.com,laopiniondemalaga.es#$?#body > div.tp-modal:has(> div.tp-iframe-wrapper > iframe[id^="offer_"]) { display: none !important; }
 uol.com.br,elperiodicoextremadura.com,laopiniondemalaga.es#$#.tp-backdrop { display: none !important; }
-uol.com.br,elperiodicoextremadura.com,laopiniondemalaga.es#$#html > body[class] { overflow: auto !important; touch-action: auto !important; height: auto !important; }
 uol.com.br,elperiodicoextremadura.com,laopiniondemalaga.es#$#html { overflow: auto !important; touch-action: auto !important; }
+uol.com.br#$#html > body[class]:not([class^="amp-"]) { overflow: auto !important; touch-action: auto !important; height: auto !important; }
+uol.com.br#$#html > body[class^="amp-"] { overflow: auto !important; touch-action: auto !important; }
+elperiodicoextremadura.com,laopiniondemalaga.es#$#html > body[class] { overflow: auto !important; touch-action: auto !important; height: auto !important; }
 laopiniondemalaga.es###fmegaPiano
 ytv.co.jp##.delivery_bnr
 browserling.com##.welcome-back
