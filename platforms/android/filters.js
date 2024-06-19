@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.40.42",
-			"timeUpdated": "2024-06-19T16:32:15+0000",
+			"version": "2.3.40.43",
+			"timeUpdated": "2024-06-19T17:31:13+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -457,8 +457,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.91",
-			"timeUpdated": "2024-06-19T14:33:36+0000",
+			"version": "2.0.52.92",
+			"timeUpdated": "2024-06-19T17:32:52+0000",
 			"languages": [
 				"ja"
 			],
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/11_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.19",
-			"timeUpdated": "2024-06-18T16:33:19+0000",
+			"version": "2.0.52.20",
+			"timeUpdated": "2024-06-19T17:32:59+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/14_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.99.66",
-			"timeUpdated": "2024-06-19T16:34:35+0000",
+			"version": "2.1.99.67",
+			"timeUpdated": "2024-06-19T17:33:09+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -723,8 +723,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/20_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.14.66",
-			"timeUpdated": "2024-06-18T17:33:12+0000",
+			"version": "2.0.14.67",
+			"timeUpdated": "2024-06-19T17:33:16+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -743,8 +743,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/21_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.23.49",
-			"timeUpdated": "2024-06-19T06:33:17+0000",
+			"version": "2.0.23.50",
+			"timeUpdated": "2024-06-19T17:33:16+0000",
 			"languages": [],
 			"tags": [
 				5,
