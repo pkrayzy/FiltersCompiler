@@ -1,9 +1,9 @@
-! Checksum: srQv/AFLW5ArMqiP4ifwgQ
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1718802274-14400.patch
+! Checksum: OiQr0esyo6XJ7jzg5k3A7w
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1718888648-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.65
-! TimeUpdated: 2024-06-19T13:01:55+00:00
+! Version: 2.0.18.66
+! TimeUpdated: 2024-06-20T13:01:50+00:00
 ! Expires: 1 day (update frequency)
 ||centaurs-rest.coupang.com^
 ||ad.cashdoc.io^
@@ -1468,6 +1468,7 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+muko.kr##.xe-widget-wrapper > div[style]:has(a[href^="/ad"])
 m.gmarket.co.kr##.js-impressionable
 gmarket.co.kr###login-banner-box
 www.naver.com###shortcutArea .shortcut_item:has( > a[href*="veta.naver.com"] > i.ico_ad)
@@ -1512,7 +1513,6 @@ app.dcinside.com,m.dcinside.com##.brick-wid > .grid:has(> *[id*="_title"] ~ *[st
 www.naver.com###newsstand ~ #feed.id_cargame .feed_box:has(span[class^="HighlightedColumnView-module__tag_ad_"])
 www.naver.com###root div[class^="Layout-module__content_"]:has(iframe[src^="https://shopsquare.naver.com/"])
 www.naver.com##div[class^="Layout-module__content_area_"]:has(> div[class*="_banner_"])
-muko.kr##.col-md-3 .eq .xe-widget-wrapper:has(.plusad_point)
 tftps.gg###content-container > div[class*=" "]:has(> .vm-placement)
 tftps.gg###top-area + div[class*=" "] > div[class*=" "]:not([id]):has(> .vm-placement)
 tftps.gg###top-area div[class*=" "]:has(> .vm-placement)
@@ -2582,6 +2582,7 @@ orbi.kr##div.panel.class-event-wrap
 orbi.kr##a[href^="https://ads.orbi.kr/"]
 osen.mt.co.kr##div#close_mask
 www.erdcloud.com##.erd-ads-area
+tv25.co##.code-block
 tv40.wiki,tv41.wiki,tv42.wiki,tv43.wiki,tv44.wiki,tv45.wiki,tv46.wiki,tv47.wiki,tv48.wiki,tv49.wiki,tv50.wiki,tv51.wiki,tv52.wiki,tv53.wiki##img[src*="images.request-support.com/br/"]
 xn--vv4b11c.com##.mp4-banner-view
 xn--vv4b11c.com###xcontent-goodsite
@@ -3103,7 +3104,6 @@ algumon.com#$?#.nav-mobile:matches-css(display: none) ~ .base > .main { width: c
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
 zzzz.lol#$?#.ent_wrapper.slide-vertical-effect .ent_news:not(:has(.ent_prefix:contains(ZZAPFLIX))) { remove: true; }
-muko.kr#?#.bd_lst .notice:has(.no > .list:contains(AD))
 search.tmon.co.kr#?#.deallist_wrap li[data-d].item:has(span[role="presentation"] > button:contains(AD))
 namu.wiki#?#aside > div[class*=" "]:has(> img[class] ~ div[class]:contains(광고))
 m.pay.naver.com#?##content > .recommend_section:has(> div[style^="padding:"] > #m_pay_deliverytracking):contains(/^[ \\n]+$/)
@@ -3340,6 +3340,7 @@ uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle[data-ad-slot]
 singingdalong.blogspot.com,sajuplus.net##.adsense-alt
 tistory.com,sajuplus.net#%#//scriptlet('set-constant', 'checkAds', 'noopFunc')
 play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle[data-ad-slot]
+||fundingchoicesmessages.google.com^$domain=tv25.co
 lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lover938.net,lover939.net,lover940.net,lover941.net#%#//scriptlet('prevent-setTimeout', 'document[_0x')
 ||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com,redirect=noopjs
 ||video.veilduck.app^$redirect=noopmp4-1s
