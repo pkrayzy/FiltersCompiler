@@ -491,7 +491,7 @@ const EXTENDED_CSS_RULES_PATTERNS = [
 ];
 
 /**
- * Used for `EXTENSION_CHROMIUM`, `EXTENSION_EDGE`, and `EXTENSION_OPERA` platforms.
+ * Used for `EXTENSION_CHROMIUM`, `EXTENSION_CHROMIUM_MV3`, `EXTENSION_EDGE`, and `EXTENSION_OPERA` platforms.
  */
 const CHROMIUM_BASED_EXTENSION_PATTERNS = [
     ...HTML_FILTERING_MODIFIER_PATTERNS,
@@ -588,6 +588,20 @@ module.exports = {
     'EXTENSION_CHROMIUM': {
         'platform': 'ext_chromium',
         'path': 'extension/chromium',
+        'expires': '10 days',
+        'configuration': {
+            'removeRulePatterns': CHROMIUM_BASED_EXTENSION_PATTERNS,
+            'replacements': null,
+            'ignoreRuleHints': false,
+        },
+        'defines': {
+            'adguard': true,
+            'adguard_ext_chromium': true,
+        },
+    },
+    'EXTENSION_CHROMIUM_MV3': {
+        'platform': 'ext_chromium_mv3',
+        'path': 'extension/chromium-mv3',
         'expires': '10 days',
         'configuration': {
             'removeRulePatterns': CHROMIUM_BASED_EXTENSION_PATTERNS,
