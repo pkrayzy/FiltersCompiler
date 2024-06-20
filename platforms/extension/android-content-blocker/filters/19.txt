@@ -1,9 +1,9 @@
-! Checksum: ZKD7SpcmNqIupp7X54UYxg
-! Diff-Path: ../patches/19/19-s-1718901296-3600.patch
+! Checksum: OiIHGVoOQzlRCgBUsZsqLg
+! Diff-Path: ../patches/19/19-s-1718912121-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.38.41
-! TimeUpdated: 2024-06-20T16:33:12+00:00
+! Version: 2.0.38.42
+! TimeUpdated: 2024-06-20T19:33:32+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -325,9 +325,12 @@ livescience.com##.ad-unit
 ! Exceptions are also required because these requests can be blocked by other rules
 !#safari_cb_affinity(general)
 ||succeedscene.com^$badfilter
+@@||succeedscene.com/_adslot/
+@@||succeedscene.com/pagead/ads?ad=
 @@||succeedscene.com/*/ads.load.js
 @@||succeedscene.com/ads/*/*.js
 @@||succeedscene.com/admr/site-adbanner.js
+@@||succeedscene.com/customads/custom_ads.js
 !#safari_cb_affinity
 ! https://github.com/AdguardTeam/AdguardFilters/pull/142877
 /^https:\/\/[0-9a-z]{7,25}\.com\/v2(?:\/0\/)?(?=[0-9a-z_-]{0,84}[A-Z])(?=[a-zA-Z_-]{0,84}[0-9])[0-9a-zA-Z_-]{54,85}(#\?v=[0-9a-f]{32})?$/$ping,script,xmlhttprequest,third-party,match-case
