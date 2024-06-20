@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.40.59",
-			"timeUpdated": "2024-06-20T15:31:37+0000",
+			"version": "2.3.40.60",
+			"timeUpdated": "2024-06-20T16:31:13+0000",
 			"languages": []
 		},
 		{
@@ -228,8 +228,8 @@
 			"displayNumber": 1,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/14.txt",
-			"version": "2.1.99.78",
-			"timeUpdated": "2024-06-20T15:33:33+0000",
+			"version": "2.1.99.79",
+			"timeUpdated": "2024-06-20T16:33:05+0000",
 			"languages": []
 		},
 		{
@@ -274,8 +274,8 @@
 				"ext_safari",
 				"ext_android_cb"
 			],
-			"version": "2.0.8.61",
-			"timeUpdated": "2024-06-19T06:33:14+0000",
+			"version": "2.0.8.62",
+			"timeUpdated": "2024-06-20T16:33:10+0000",
 			"languages": []
 		},
 		{
@@ -287,8 +287,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/18.txt",
-			"version": "2.0.41.70",
-			"timeUpdated": "2024-06-20T12:34:35+0000",
+			"version": "2.0.41.71",
+			"timeUpdated": "2024-06-20T16:33:10+0000",
 			"languages": []
 		},
 		{
@@ -300,8 +300,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/19.txt",
-			"version": "2.0.38.40",
-			"timeUpdated": "2024-06-20T15:33:41+0000",
+			"version": "2.0.38.41",
+			"timeUpdated": "2024-06-20T16:33:12+0000",
 			"languages": []
 		},
 		{
@@ -736,7 +736,7 @@
 			"expires": 432000,
 			"displayNumber": 2,
 			"groupId": 7,
-			"subscriptionUrl": "https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-adguard.txt",
+			"subscriptionUrl": "https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt",
 			"version": "2.0.2.98",
 			"timeUpdated": "2024-06-19T13:01:45+0000",
 			"languages": [
