@@ -1,14 +1,14 @@
-! Checksum: /gvLiy+g0z55b+k7aWBcOQ
-! Diff-Path: ../patches/249/249-s-1717967025-14400.patch
+! Checksum: dPeQhS/GH65m1KFPmCfevA
+! Diff-Path: ../patches/249/249-s-1718874285-14400.patch
 ! Title: Dandelion Sprout's Nordic Filters
 ! Description: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population.
-! Version: 2.0.7.51
-! TimeUpdated: 2024-06-09T21:01:42+00:00
+! Version: 2.0.7.52
+! TimeUpdated: 2024-06-20T09:02:16+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! OriginalVersion: 09June2024v1
+! OriginalVersion: 20June2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -219,6 +219,7 @@ realmadrid.dk##div[style^="float:right;width:300px"]
 canariajournalen.no##.ad-separator-top
 1819.is,finna.is##.augl
 eyjar.net##.hausad
+baeredygtigtfiskeri.dk##div[data-element_type=widget][data-widget_type="search-form.default"] ~ div[data-element_type=widget][data-widget_type="image.default"]
 musikknyheter.no##.centered:not(#toTop)
 itavisen.no,tvguide.dk##div[id^=ad-]
 tu.no##.undefined.hidden
@@ -1409,29 +1410,31 @@ contentMarketing$xmlhttprequest,domain=sol.no
 ! 🇳🇴🏞: Filtenar- eller nettstadsspesifikke oppføringar med kildar
 ! 🇩🇰: Filserver- eller webstedsspecifikke indførsler med kilder
 ! 🇬🇧: Fileserver or site-specific blocking rules with sources
-! bilasolur.is (03/05/2020)
+! bilasolur•is (03/05/2020)
 /lykill_banner$image
-! bt.no
+! bt•no
 ||finn.no/distribution-carousel?$object,third-party
 ! https://newsbreak.dk/a01-problemer-hos-tdc-maaske-kan-du-ikke-ringe-01072020/
 ||images.sprinklecontent.com/*.amazonaws.com%2Fimages%$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67358#issuecomment-724888304
 ||gfx.no^*/refererPromo$script,stylesheet
-! buildingsupply.no, maskinregisteret.no, metalsupply.no, plastforum.no
+! buildingsupply•no, maskinregisteret•no, metalsupply•no, plastforum•no
 ||f.nordiskemedier.dk/*.gif^
-! building-supply.dk
+! building-supply•dk
 ||f.nordiskemedier.dk/banner^
-! metalsupply.no, licitationen.dk
+! metalsupply•no, licitationen•dk
 /://f\.nordiskemedier\.dk/2[a-z0-9]{12,}\.(jpg|png|jpeg)/$third-party
-! viivilla.no (10/11/2020)
+! viivilla•no (10/11/2020)
 ||bcm.interactives.dk/script^$third-party
-! adressa.no (10/11/2020)
+! adressa•no (10/11/2020)
 ||static.polarismedia.no/*/cxense.js
 ! https://github.com/uBlockOrigin/uAssets/issues/13661 (11/06/2022)
 ! https://github.com/DandelionSprout/adfilt/issues/968
 ||finn.no/distribution-front/external/carousel^$subdocument,third-party
 ! https://github.com/DandelionSprout/adfilt/issues/983
 .no/api/unit-image?config=$image
+! arto•dk
+||artodata.net/site/ads/$subdocument
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
@@ -1921,6 +1924,7 @@ startsiden.no##div[class^=nyttig__tippingHeader__]
 ||cloudfront.net/v*/Liveoddsen.aspx^$domain=vglive.no
 abcnyheter.no##div + section[class*=" o-section__between-layout"]
 startsiden.no##a[id^=desked-section][data-orig-url]
+.cloudfront.net/oddsen^$subdocument,third-party,domain=~norsk-tipping.no|~tipster.no
 ! nidaros.no (02/12/2021)
 ##.sportspill-container[href*=lotto]:not(html,body,:empty)
 ! h-avis.no (11/12/2023)
@@ -2413,7 +2417,7 @@ fla.de##.index-banner
 /zone?pub
 ! Various Android apps
 ! Other entries that are «AdGuard syntax»-specific
-! Last updated: 18April2024v1-Extension
+! Last updated: 20June2024v2-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -2440,7 +2444,7 @@ vg.no##p[data-test-tag=lead-text] ~ p[class] ~ div[class]:not(.undefined):not([c
 borsen.dk#$#.paywall { top: 0px !important }
 borsen.dk##.indent-wrapper > .overlay
 dknyt.dk,kommunen.dk##.fade-out
-vartoslo.no##.teaserContent::before
+vartoslo.no,minerva.no##.teaserContent::before
 h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no##.faded-content::before
 h-a.no,lokal-avisa.no,ringsakern.no,stangeavisa.no#$#.faded-content { max-height: none !important }
 markedsforing.dk##.gradient-y-trans-to-white-95
