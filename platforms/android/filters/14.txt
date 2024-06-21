@@ -1,9 +1,9 @@
-! Checksum: Njjpzws5QY3EpWliu8aYdg
-! Diff-Path: ../patches/14/14-s-1718955263-3600.patch
+! Checksum: v69obvJXiKIM+hH8lN3rdQ
+! Diff-Path: ../patches/14/14-s-1718958889-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.82
-! TimeUpdated: 2024-06-21T07:32:43+00:00
+! Version: 2.1.99.83
+! TimeUpdated: 2024-06-21T08:32:55+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2437,6 +2437,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+sex.com#%#//scriptlet('trusted-set-cookie-reload', 'privacy-preferences', '%7B%22essential%22%3Atrue%2C%22analytics%22%3Afalse%7D')
 copaamerica.com#%#//scriptlet('set-cookie', 'localConsent', 'true')
 spk-bergkamen-boenen.de#%#//scriptlet('trusted-click-element', 'a[data-form=".eprivacy_optin_decline"]')
 backmarket.de#%#//scriptlet('set-cookie-reload', 'BM_Advertising', 'false')
@@ -8107,8 +8108,6 @@ studierenplus.de##.chimpify-popup
 merxu.com##.mxu-cookie-consent
 cm.com##.s-cookie-popup
 tierarzt-onlineverzeichnis.de,vergleichen-und-sparen.de###vs-cookiehinweis
-sex.com#$#body { overflow: auto !important; }
-sex.com#$#body > .bg-overlay:has(> #cookie-modal) { display: none !important; }
 flazio.com##.flazio-cookie
 hij.airport.jp,cede.de,minimed.at,justiz.nrw###cookieAgree
 krautreporter.de##.js-flash-messages-container
@@ -14701,7 +14700,6 @@ ieatfoodtours.co.uk,londraculturale.it,onceinrome.com,weliketuscany.it#%#//scrip
 pdf24.org#%#//scriptlet('trusted-click-element', 'div[id*="EntryPage"] > .buttons > .declineAll')
 vr.fi#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem('cookieConsent','{"consented":true,"levels":{"level1":true,"level2":false,"level3":false,"level4":false}}'))}catch(a){}})();
 openingceremony.com#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem("SHOW_COOKIE_BANNER","no"))}catch(a){}})();
-sex.com#%#//scriptlet('set-cookie', 'sx_cookie_ok', '1')
 play.hbomax.com#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem("dataservices.PreferencesManager.targetingCookies","off"),localStorage.setItem("dataservices.PreferencesManager.performanceCookies","off"),localStorage.setItem("dataservices.PreferencesManager.functionalCookies","on"))}catch(a){}})();
 voka.tv#%#//scriptlet('set-local-storage-item', 'ALLOW_COOKIES', 'false')
 gns3.com#%#//scriptlet('set-local-storage-item', 'user-has-accepted-cookies', 'true')
@@ -47343,6 +47341,8 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+faselhds.*##.alert-danger
+faselhds.*##body > div[id]:has(> div > a[href^="https://www.faselplus.com/onboarding?"])
 hesgoal.watch###block-9
 email1.io##.browser-card
 thetimes.com#$#html { overflow: auto !important; }
