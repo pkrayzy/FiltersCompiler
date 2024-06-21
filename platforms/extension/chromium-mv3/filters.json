@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.40.71",
-			"timeUpdated": "2024-06-21T12:31:28+0000",
+			"version": "2.3.40.72",
+			"timeUpdated": "2024-06-21T13:31:19+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.71.25",
-			"timeUpdated": "2024-06-21T12:32:42+0000",
+			"version": "2.0.71.26",
+			"timeUpdated": "2024-06-21T13:32:37+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.26",
-			"timeUpdated": "2024-06-21T12:33:04+0000",
+			"version": "2.0.52.27",
+			"timeUpdated": "2024-06-21T13:32:59+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -565,8 +565,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.12",
-			"timeUpdated": "2024-06-21T12:33:06+0000",
+			"version": "2.0.52.13",
+			"timeUpdated": "2024-06-21T13:33:02+0000",
 			"languages": [
 				"tr"
 			],
@@ -635,8 +635,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.76",
-			"timeUpdated": "2024-06-21T12:33:21+0000",
+			"version": "2.0.41.77",
+			"timeUpdated": "2024-06-21T13:33:17+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -655,8 +655,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.38.45",
-			"timeUpdated": "2024-06-21T12:33:23+0000",
+			"version": "2.0.38.46",
+			"timeUpdated": "2024-06-21T13:33:18+0000",
 			"languages": [],
 			"tags": [
 				5,
