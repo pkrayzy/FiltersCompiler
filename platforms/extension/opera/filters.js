@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.75",
-			"timeUpdated": "2024-06-20T03:07:59+0000",
+			"version": "2.3.30.76",
+			"timeUpdated": "2024-06-21T03:07:46+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.69.28",
-			"timeUpdated": "2024-06-20T03:08:01+0000",
+			"version": "2.0.69.29",
+			"timeUpdated": "2024-06-21T03:07:47+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -397,8 +397,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.0.12",
-			"timeUpdated": "2024-06-20T03:08:02+0000",
+			"version": "2.1.0.13",
+			"timeUpdated": "2024-06-21T03:07:49+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -543,8 +543,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.31",
-			"timeUpdated": "2024-06-20T03:07:52+0000",
+			"version": "2.0.51.32",
+			"timeUpdated": "2024-06-21T03:07:37+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -588,8 +588,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/14.txt",
 			"trustLevel": "full",
-			"version": "2.1.93.39",
-			"timeUpdated": "2024-06-20T03:07:55+0000",
+			"version": "2.1.93.40",
+			"timeUpdated": "2024-06-21T03:07:41+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.62",
-			"timeUpdated": "2024-06-20T03:07:48+0000",
+			"version": "2.1.24.63",
+			"timeUpdated": "2024-06-21T03:07:34+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1107,8 +1107,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.25.51",
-			"timeUpdated": "2024-06-20T03:07:51+0000",
+			"version": "2.1.25.52",
+			"timeUpdated": "2024-06-21T03:07:36+0000",
 			"languages": [],
 			"tags": [
 				2
