@@ -57,6 +57,12 @@ const main = async () => {
             const fileInFiltersFolder = file.includes('filters/') || file.includes('filters\\');
             const fileHasTxtExtension = file.endsWith('.txt');
 
+            const isChromiumMv3 = file.includes('/chromium-mv3/') || file.includes('\\chromium-mv3\\');
+            if (isChromiumMv3) {
+                console.log('Skipped generating patch for chromium-mv3');
+                return false;
+            }
+
             const filename = path.basename(file);
 
             if (!/\d+(_optimized|_without_easylist)?\.txt/.test(filename)) {
