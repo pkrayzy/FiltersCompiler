@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.40.64",
-			"timeUpdated": "2024-06-21T05:31:17+0000",
+			"version": "2.3.40.65",
+			"timeUpdated": "2024-06-21T06:31:19+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -378,8 +378,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.71.21",
-			"timeUpdated": "2024-06-21T05:32:30+0000",
+			"version": "2.0.71.22",
+			"timeUpdated": "2024-06-21T06:32:08+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -479,8 +479,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.7.5",
-			"timeUpdated": "2024-06-14T15:34:35+0000",
+			"version": "2.0.7.6",
+			"timeUpdated": "2024-06-21T06:32:23+0000",
 			"languages": [
 				"nl"
 			],
@@ -607,8 +607,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/15.txt",
 			"trustLevel": "full",
-			"version": "2.0.67.3",
-			"timeUpdated": "2024-06-21T00:33:27+0000",
+			"version": "2.0.67.4",
+			"timeUpdated": "2024-06-21T06:32:39+0000",
 			"languages": [],
 			"tags": [
 				45,
