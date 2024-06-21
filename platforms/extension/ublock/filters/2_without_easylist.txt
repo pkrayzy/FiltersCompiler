@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: AmQYniqrOVD+e8uqENjEhw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1718980506-3600.patch
+! Checksum: uF9h77lkewJAsi1Z3khR2Q
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1718984108-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.40.73
-! TimeUpdated: 2024-06-21T14:31:17+00:00
+! Version: 2.3.40.74
+! TimeUpdated: 2024-06-21T15:31:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -6888,6 +6888,8 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 ! NOTE: Regular rules
 !
 !
+!
+sportshub.to#?#body > div.modal:has(> div.modal-content > div.box > h1:contains(AdBlock))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181761
 stream2watch.in##.popSc
 stream2watch.in##+js(abort-on-property-write, checkAdsStatus)
@@ -32622,6 +32624,13 @@ $xmlhttprequest,third-party,denyallow=rsc.cdn77.org|linkvertise.com|fastly.net|s
 !
 ! NOTE: Specific rules
 !
+gpblog.com##div[class^="ArticlePromoItem_ArticlePromoItem"]
+gpblog.com##li[data-tracker-name="advertorialNewsList"]
+gpblog.com##li[class^="NewsList_injection"]:has(> div:only-child > .ad:only-child)
+sportnews.to###primary > div.card:has(div.banner-ads)
+sportnews.to##.widget-body > div.card:has(> div.card-body div.adsbyvli)
+pubjav.com##.mvic-ads
+pubjav.com###main + div.container > div.row:has(> div[class^="ads-player"])
 sportnews.to##.widget-body > div.card:has(> div[style="min-height: 280px;"])
 nativesurge.info##.adsbyadful
 nativesurge.info##.adsbyadful + button#dismiss-btn
@@ -35685,7 +35694,7 @@ serial021.com###block-11
 hotdeals.com##.ads-list-one
 hotdeals.com##.adsRightCenter
 streameast.to##.google-auto-placed
-streameast.to##.adsbyvli
+sportnews.to,streameast.to##.adsbyvli
 solarmovie.cr##div[id="content-embed"][style*="/images/play_center.png) center"]
 go.bicolink.net##iframe[src*="/ads-bicolink"]
 go.bicolink.net##img[src*="/ads-bnr.jpg"]
