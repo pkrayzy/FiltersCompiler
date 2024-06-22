@@ -1,9 +1,9 @@
-! Checksum: HnI35AHXHr1f5lkjkc4LpA
-! Diff-Path: ../patches/19/19-s-1718994941-3600.patch
+! Checksum: ed/ETT9c/+vq7K1bEsH8Lg
+! Diff-Path: ../patches/19/19-s-1719038077-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.38.48
-! TimeUpdated: 2024-06-21T18:33:13+00:00
+! Version: 2.0.38.49
+! TimeUpdated: 2024-06-22T06:32:37+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -340,12 +340,13 @@ fosspost.org,portalvirtualreality.ru,pingvin.pro,bonobono.com,curbsideclassic.co
 ! Exceptions are also required because these requests can be blocked by other rules
 !#safari_cb_affinity(general)
 ||succeedscene.com^$badfilter
-@@||succeedscene.com/_adslot/
-@@||succeedscene.com/pagead/ads?ad=
-@@||succeedscene.com/*/ads.load.js
-@@||succeedscene.com/ads/*/*.js
-@@||succeedscene.com/admr/site-adbanner.js
-@@||succeedscene.com/customads/custom_ads.js
+@@||succeedscene.com*.js^$script,third-party
+!@@||succeedscene.com/_adslot/
+!@@||succeedscene.com/pagead/ads?ad=
+!@@||succeedscene.com/*/ads.load.js
+!@@||succeedscene.com/ads/*/*.js
+!@@||succeedscene.com/admr/site-adbanner.js
+!@@||succeedscene.com/customads/custom_ads.js
 !#safari_cb_affinity
 ! https://github.com/AdguardTeam/AdguardFilters/pull/142877
 /^https:\/\/[0-9a-z]{7,25}\.com\/v2(?:\/0\/)?(?=[0-9a-z_-]{0,84}[A-Z])(?=[a-zA-Z_-]{0,84}[0-9])[0-9a-zA-Z_-]{54,85}(#\?v=[0-9a-f]{32})?$/$ping,script,xmlhttprequest,third-party,match-case

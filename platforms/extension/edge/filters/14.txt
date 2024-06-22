@@ -1,9 +1,9 @@
-! Checksum: 027QXtilVSOJ7lk8jwfl/g
-! Diff-Path: ../patches/14/14-s-1719034494-3600.patch
+! Checksum: NCsx0lLExJXwhF9KYwiVeQ
+! Diff-Path: ../patches/14/14-s-1719038057-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.1.99.93
-! TimeUpdated: 2024-06-22T05:33:06+00:00
+! Version: 2.1.99.94
+! TimeUpdated: 2024-06-22T06:32:30+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3551,7 +3551,7 @@ wlkp24.info#$#body { overflow: auto !important; padding-right: 0 !important; }
 northernpowergrid.com#$##block-cookiesui { display: none !important; }
 northernpowergrid.com#$#body { overflow: auto !important; }
 northernpowergrid.com#$#.blurred { filter: none !important; pointer-events: unset !important; }
-dr-brinkmann.com,bezpiecznedane.gov.pl##.modal-backdrop
+neubaukompass.de,dr-brinkmann.com,bezpiecznedane.gov.pl##.modal-backdrop
 bezpiecznedane.gov.pl##body .cookie-popup-modal
 andhrafriends.com##div[data-role="cookieConsentBar"]
 happymod.com##.use_cookie
@@ -19390,12 +19390,13 @@ fosspost.org,portalvirtualreality.ru,pingvin.pro,bonobono.com,curbsideclassic.co
 ! Exceptions are also required because these requests can be blocked by other rules
 !#safari_cb_affinity(general)
 ||succeedscene.com^$badfilter
-@@||succeedscene.com/_adslot/
-@@||succeedscene.com/pagead/ads?ad=
-@@||succeedscene.com/*/ads.load.js
-@@||succeedscene.com/ads/*/*.js
-@@||succeedscene.com/admr/site-adbanner.js
-@@||succeedscene.com/customads/custom_ads.js
+@@||succeedscene.com*.js^$script,third-party
+!@@||succeedscene.com/_adslot/
+!@@||succeedscene.com/pagead/ads?ad=
+!@@||succeedscene.com/*/ads.load.js
+!@@||succeedscene.com/ads/*/*.js
+!@@||succeedscene.com/admr/site-adbanner.js
+!@@||succeedscene.com/customads/custom_ads.js
 !#safari_cb_affinity
 ! https://github.com/AdguardTeam/AdguardFilters/pull/142877
 /^https:\/\/[0-9a-z]{7,25}\.com\/v2(?:\/0\/)?(?=[0-9a-z_-]{0,84}[A-Z])(?=[a-zA-Z_-]{0,84}[0-9])[0-9a-zA-Z_-]{54,85}(#\?v=[0-9a-f]{32})?$/$ping,script,xmlhttprequest,third-party,match-case
