@@ -829,8 +829,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.11",
-			"timeUpdated": "2024-06-22T13:01:03+0000",
+			"version": "2.1.51.12",
+			"timeUpdated": "2024-06-22T17:01:07+0000",
 			"languages": [
 				"it"
 			],
@@ -898,8 +898,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.10",
-			"timeUpdated": "2024-06-22T13:01:04+0000",
+			"version": "2.1.51.11",
+			"timeUpdated": "2024-06-22T17:01:08+0000",
 			"languages": [
 				"ar"
 			],
@@ -921,8 +921,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
-			"version": "2.0.20.76",
-			"timeUpdated": "2024-06-21T10:52:58+0000",
+			"version": "2.0.20.77",
+			"timeUpdated": "2024-06-22T17:01:13+0000",
 			"languages": [
 				"id"
 			],
@@ -1006,8 +1006,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.29.93",
-			"timeUpdated": "2024-06-22T01:01:30+0000",
+			"version": "2.0.29.94",
+			"timeUpdated": "2024-06-22T17:01:23+0000",
 			"languages": [
 				"vi"
 			],
@@ -1188,8 +1188,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.78",
-			"timeUpdated": "2024-06-21T05:01:42+0000",
+			"version": "2.0.18.79",
+			"timeUpdated": "2024-06-22T17:01:41+0000",
 			"languages": [
 				"sv"
 			],
@@ -1266,8 +1266,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.44.42",
-			"timeUpdated": "2024-06-22T13:01:47+0000",
+			"version": "2.0.44.43",
+			"timeUpdated": "2024-06-22T17:01:51+0000",
 			"languages": [
 				"hi"
 			],
