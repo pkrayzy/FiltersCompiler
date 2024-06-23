@@ -1,9 +1,9 @@
-! Checksum: d89+Lkh0LbjyY4aWGlWWoA
-! Diff-Path: ../patches/257/257-s-1719090272-14400.patch
+! Checksum: pgu+Pd08dW6vOLDZRI+ZGQ
+! Diff-Path: ../patches/257/257-s-1719119058-14400.patch
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.1.52
-! TimeUpdated: 2024-06-22T21:02:00+00:00
+! Version: 2.0.1.53
+! TimeUpdated: 2024-06-23T05:01:50+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -6525,6 +6525,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 ||taikhoanvps.com.vn^$document,domain=~vps.com.vn
 !+ NOT_OPTIMIZED
+||ozen-hyzmat.com^$all,to=~whatsapp.com
+!+ NOT_OPTIMIZED
 ||final-ua.eu/vasilisa/votings$all
 ! https://infosec.exchange/@urldna/112186648791862292
 !+ NOT_OPTIMIZED
@@ -6553,6 +6555,9 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://infosec.exchange/@urldna/112551867657605910
 !+ NOT_OPTIMIZED
 ||mybluehost.me/*/dir/ca/pay/$document,domain=~canadapost-postescanada.ca
+! https://infosec.exchange/@urldna/112657446079878043
+!+ NOT_OPTIMIZED
+||mybluehost.me/*/netflix/net/login.php$document
 ! allegro
 !+ NOT_OPTIMIZED
 ||allegrostu.com^$all
@@ -6569,6 +6574,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||dana-indone*.id^$document,domain=my.id|web.id|~dana.id
 !+ NOT_OPTIMIZED
 ||xcxcx.my.id^$document,domain=~dana.id
+!+ NOT_OPTIMIZED
+||clsamin-dnnax-asy.payfr.my.id^$all,to=~dana.id
 ! orange.fr
 !+ NOT_OPTIMIZED
 ||07xxxfixe.hubside.fr^$all,to=~orange.fr
@@ -6589,6 +6596,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||amazonl3.com^$all
 !+ NOT_OPTIMIZED
 ||amazon-onboarding.com^$all
+!+ NOT_OPTIMIZED
+||etisalat-amazonprime.com^$all,to=~etisalat.ae
 !+ NOT_OPTIMIZED
 ||miaoniter.com^$all
 !+ NOT_OPTIMIZED
@@ -6733,9 +6742,11 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||vww-facebook.com.vn^$all
 ! shopee / tiki / lazada / sendo
 !+ NOT_OPTIMIZED
-||sp15569p.com^$all,to=~shopee.vn
+/^https:\/\/sp\d{2,3}88(?:vn)?\.com\//$document,domain=com|~shopee.vn
 !+ NOT_OPTIMIZED
-||soppe68.*^$all,to=~shopee.vn
+/api/user/do_login|$xmlhttprequest,~third-party,to=com|info,method=post,header=access-control-allow-headers:/authorization\,content-type\,if-match\,if-modified-since\,if-none-match\,if-unmodified-since\,x-requested-with/i
+!+ NOT_OPTIMIZED
+/api/user/do_login|$xmlhttprequest,~third-party,to=com|info,method=post,header=Access-Control-Allow-Headers:/authorization\,content-type\,if-match\,if-modified-since\,if-none-match\,if-unmodified-since\,x-requested-with/i
 !+ NOT_OPTIMIZED
 *$document,domain=tikimall.*|~tiki.vn
 !+ NOT_OPTIMIZED
@@ -6745,22 +6756,11 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 ||lazada.bbc6666.com^$all
 !+ NOT_OPTIMIZED
-||da6555.com^$all
-!+ NOT_OPTIMIZED
 ||vnsendo.*^$all,to=info|shop|vip|~sendo.vn
 !+ NOT_OPTIMIZED
 ||mayxanhsupport.com^$all,to=~dienmayxanh.com
 !+ NOT_OPTIMIZED
 ||trungtam-dienmayxanh.com^$all,to=~dienmayxanh.com
-!+ NOT_OPTIMIZED
-/^https:\/\/sp\d{2,3}88(?:vn)?\.com\//$document,domain=com|~shopee.vn
-!+ NOT_OPTIMIZED
-/^https:\/\/tdk[dt]0[0-9]\.com\//$document,domain=com|~tiki.vn
-!+ NOT_OPTIMIZED
-/api/user/do_login|$xmlhttprequest,~third-party,to=com|info,method=post,header=access-control-allow-headers:/authorization\,content-type\,if-match\,if-modified-since\,if-none-match\,if-unmodified-since\,x-requested-with/i
-!+ NOT_OPTIMIZED
-/api/user/do_login|$xmlhttprequest,~third-party,to=com|info,method=post,header=Access-Control-Allow-Headers:/authorization\,content-type\,if-match\,if-modified-since\,if-none-match\,if-unmodified-since\,x-requested-with/i
-!+ NOT_OPTIMIZED
 ! https://www.reddit.com/r/Scams/comments/1cr5dye/dating_app_scams_in_2024/
 !+ NOT_OPTIMIZED
 ||angesky.com^$all
@@ -6777,6 +6777,9 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||11steam.com^$all
 !+ NOT_OPTIMIZED
 ||sp.26skins.com^$all
+! https://infosec.exchange/@urldna/112663344254245028
+!+ NOT_OPTIMIZED
+||steamommunity.com^$all
 ! garena
 ! https://infosec.exchange/@urldna/112226284936503649
 ! https://infosec.exchange/@urldna/112354748681058897
@@ -6796,6 +6799,11 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||member.sso-garena.vn^$all,to=~garena.vn
 !+ NOT_OPTIMIZED
 ||sukien-lienquanmobile.com^$all
+! pubg
+!+ NOT_OPTIMIZED
+||pubg-arena.top^$all
+!+ NOT_OPTIMIZED
+||pubgm.kraftonevent.com^$all
 ! google
 !+ NOT_OPTIMIZED
 ||bxzxenzidrmrksu.jiongcao.cn^$all
@@ -6959,8 +6967,6 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 ||air.bnb-id*.com^$all,to=~airbnb.com
 !+ NOT_OPTIMIZED
-||pubg-arena.top^$all
-!+ NOT_OPTIMIZED
 ||k8cxh.shop^$all,to=~gazprom.ru
 !+ NOT_OPTIMIZED
 ||pakket-bpost-be.web.app^$all,to=~bpost.be
@@ -6977,9 +6983,20 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||cursorltd.com^$document
 !+ NOT_OPTIMIZED
 ||cprapid.com^$document
+! https://khonggianmang.vn/uploads/2024_CBT_22_26eef5509b.pdf
+!+ NOT_OPTIMIZED
+/^https:\/\/da\d{4}\.com\//$document,domain=com|~lazada.vn
+!+ NOT_OPTIMIZED
+/^https:\/\/tdk[dt]0[0-9]\.com\//$document,domain=com|~tiki.vn
+!+ NOT_OPTIMIZED
+||da6555.com^$all
+!+ NOT_OPTIMIZED
+||soppe68.*^$all,to=~shopee.vn
 ! https://khonggianmang.vn/uploads/2024_CBT_23_cdbc1a35e4.pdf
 !+ NOT_OPTIMIZED
 /^https:\/\/sp\d{5}p\.com\//$document,domain=com|~shopee.vn
+!+ NOT_OPTIMIZED
+||sp15569p.com^$all,to=~shopee.vn
 ! https://www.malwarebytes.com/blog/threat-intelligence/2024/03/new-go-loader-pushes-rhadamanthys
 ! https://safeweb.norton.com/report/show?url=https:%2F%2Farnaudpairoto.com%2F
 ! https://otx.alienvault.com/indicator/domain/arnaudpairoto.com
