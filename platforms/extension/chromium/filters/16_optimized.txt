@@ -1,9 +1,9 @@
-! Checksum: giT7OjWWYZA7n6liVGwS7Q
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1719196510-3600.patch
+! Checksum: Xhq9dwc405oj/f53Ei41Ew
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1719214513-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.45.30
-! TimeUpdated: 2024-06-22T10:33:13+00:00
+! Version: 2.0.45.31
+! TimeUpdated: 2024-06-24T07:33:22+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -210,6 +210,7 @@ $script,redirect-rule=noopjs,domain=tf1info.fr
 !+ NOT_OPTIMIZED
 @@||ads.stickyadstv.com^|$xmlhttprequest,domain=tf1.fr|tf1info.fr
 !#safari_cb_affinity
+sudouest.fr#%#//scriptlet('adjust-setTimeout', 'return t()', '*', '0.001')
 japscan.lol#%#//scriptlet('prevent-setTimeout', 'sessionStorage')
 seriescultes.store#%#//scriptlet('remove-attr', 'href', 'a[href]#clickfakeplayer')
 1jour1film.homes#%#//scriptlet('remove-attr', 'href', 'a[href]#clickfakeplayer')
@@ -647,6 +648,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_french
 !+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 app.molotov.tv#%#//scriptlet('prevent-xhr', '/ping?token=')
+@@||ultimedia.com/js/common/smart.js$domain=sudouest.fr
 @@||4hu.tv/static/adScript.js$domain=4hu.tv
 ||candy.ai^$popup,third-party,badfilter
 ||web2.$subdocument,domain=0calc.com|0calc.es|0calc.fr|0calc.in|0calc.ru|0rechner.de,badfilter
