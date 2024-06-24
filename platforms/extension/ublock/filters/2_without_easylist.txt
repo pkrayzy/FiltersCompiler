@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: qTGJMMGWRpzrdhxPU7jFdg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719207316-3600.patch
+! Checksum: ugGPrqA3bY+CoLhEFbSzNQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719210920-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.40.99
-! TimeUpdated: 2024-06-24T05:31:20+00:00
+! Version: 2.3.41.0
+! TimeUpdated: 2024-06-24T06:31:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7093,9 +7093,11 @@ exuce.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 true-tech.net,dailyboulder.com,aclsports.com,route-one.net,prajwaldesai.com,stvincenttimes.com##+js(no-setTimeout-if, placebo)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175504
 gearingcommander.com##+js(no-setTimeout-if, fnMaskAdBlock)
+! https://github.com/AdguardTeam/AdguardFilters/issues/182040
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179916
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175439
 veev.to##+js(set-constant, fapit.check, noopFunc)
+veev.to##+js(set-constant, $veevplayer.context.$adblock.isEnabled, false)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175266
 @@||rddywd.com/advertising.js$domain=herokuapp.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175371
@@ -14000,12 +14002,19 @@ goodtoknow.co.uk##+js(abort-current-script, IPCCoreQueue, bidWon)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18569
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 @@||streamlord.com^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/181976
+readcomiconline.li###adbWarnContainer
+readcomiconline.li##+js(set-constant, isAdb, false)
+readcomiconline.li##+js(abort-on-property-write, checkAdsBlocked)
+readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndication\.com/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181590
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130163
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128239
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35064
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20387
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18523
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#@##ad-promo
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-on-property-write, checkAdsBlocked)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, alb, false)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, isAdb, false)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(no-xhr-if, /mgid\.com|pagead2\.googlesyndication\.com/)
@@ -18996,6 +19005,9 @@ indiatimes.com##.last8brdiv > div.sponsor_block
 ! NOTE: Indonesian
 !
 duniaku.idntimes.com##amp-script[script="parallax-script"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/182103
+idlixplus.*##+js(abort-on-stack-trace, DOMTokenList.prototype.contains, manageBodyClasses)
+@@||static.doubleclick.net/instream/ad_status.js$domain=idlixplus.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176908
 rejabar.republika.co.id##img[width="320px"][height="100px"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173572
@@ -27432,7 +27444,7 @@ hentaila.com##+js(json-prune, *, *.adcashLib)
 1stream.eu,sanet.st,lewblivehdplay.ru,streameast.*##+js(abort-on-property-read, aclib.runPop)
 !
 ! e6QQ/IS_POP_COIN
-vdbtm.shop,urlbluemedia.*,get-to.link,zoro.se,bluemediadownload.*,musichq.pe,bluemediaurls.lol,coolrea.link,bluemedialink.online,limetorrents.lol,updown.ninja,urlcut.ninja,moviesjoyhd.to,f2movies.to,kissasian.*,arponag.xyz,streamvid.net,1l1l.to,fireload.com,kissanimefree.cc,kimcartoon.li,cineb.rs,anichin.top,tinyzonetv.se,solarmovie.pe,himovies.sx,cineb.net,pahe.li,klmanga.net,tuktukcinema.*,truyengihotnhat.com,123-movies.zone,mangago.me,dlpanda.com,w123moviesfree.net,oxtorrent.sk,bluemediafile.*,exee.app,exep.app,exe.app,bluemediafiles.*,igg-games.co,javhd.today,ziperto.com,allmoviesforyou.net,1337xx.to,dropgalaxy.com,just-upload.com,pelisplushd.net,coinsurl.com,luckydice.net,coinsearns.com,torrentmac.net,cuevana3.*,igg-games.com,soap2day.*##+js(abort-current-script, globalThis, break;case)
+readcomiconline.li,vdbtm.shop,urlbluemedia.*,get-to.link,zoro.se,bluemediadownload.*,musichq.pe,bluemediaurls.lol,coolrea.link,bluemedialink.online,limetorrents.lol,updown.ninja,urlcut.ninja,moviesjoyhd.to,f2movies.to,kissasian.*,arponag.xyz,streamvid.net,1l1l.to,fireload.com,kissanimefree.cc,kimcartoon.li,cineb.rs,anichin.top,tinyzonetv.se,solarmovie.pe,himovies.sx,cineb.net,pahe.li,klmanga.net,tuktukcinema.*,truyengihotnhat.com,123-movies.zone,mangago.me,dlpanda.com,w123moviesfree.net,oxtorrent.sk,bluemediafile.*,exee.app,exep.app,exe.app,bluemediafiles.*,igg-games.co,javhd.today,ziperto.com,allmoviesforyou.net,1337xx.to,dropgalaxy.com,just-upload.com,pelisplushd.net,coinsurl.com,luckydice.net,coinsearns.com,torrentmac.net,cuevana3.*,igg-games.com,soap2day.*##+js(abort-current-script, globalThis, break;case)
 eio.io##+js(abort-current-script, String.prototype.replace, break;case)
 sitenable.*,filesdownloader.com,siteget.net,freeproxy.io,glodls.to##+js(abort-current-script, fetch, IS_POP_COIN)
 !
@@ -32536,6 +32548,8 @@ m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-p
 ! TODO: remove trusted-replace-xhr-response/trusted-replace-fetch-response rules below when json-prune-fetch-response/json-prune-xhr-response will be supported by Safari extension
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1925290685
 ||googlevideo.com/initplayback?source=youtube&*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com
+! Fix SSAP ads
+www.youtube.com##+js(adjust-setTimeout, [native code], 17000, 0.001)
 ! Fix ads on https://www.youtube.com/shorts/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1991263854
 ! TODO: use scriptlet when this issue will be fixed - https://github.com/AdguardTeam/Scriptlets/issues/183
@@ -54645,7 +54659,6 @@ domodedovo.ru#@##adLink1
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11609
 @@||mssl.fwmrm.net/crossdomain.xml$domain=msn.com
 @@||mssl.fwmrm.net/p/msn_live/AdManager.swf$domain=msn.com
-! https://github.com/AdguardTeam/AdguardBrowserExtension/issues/497
 ! sendgrid.com - fixing account
 @@||sendgrid.com/marketing_campaigns$document
 @@||app.sendgrid.com$document
@@ -54672,8 +54685,6 @@ domodedovo.ru#@##adLink1
 @@||scontent.xx.fbcdn.net/hads-ak-prn2/*.png$domain=facebook.com|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion
 ! https://forum.adguard.com/index.php?threads/13738/
 @@||themes.googleusercontent.com/static/fonts/$domain=tweaktown.com
-! forum.adguard.com - prevent blocking ajax requests by generic rules
-@@||forum.adguard.com/index.php$xmlhttprequest
 ! https://forum.adguard.com/index.php?threads/16226/
 @@_468x60_$domain=top100arena.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3460
