@@ -357,8 +357,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.30.80",
-			"timeUpdated": "2024-06-23T03:07:53+0000",
+			"version": "2.3.30.81",
+			"timeUpdated": "2024-06-24T03:08:23+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -783,8 +783,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "low",
-			"version": "2.1.24.67",
-			"timeUpdated": "2024-06-23T03:07:42+0000",
+			"version": "2.1.24.68",
+			"timeUpdated": "2024-06-24T03:08:11+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -1084,8 +1084,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
 			"trustLevel": "low",
-			"version": "2.1.25.56",
-			"timeUpdated": "2024-06-23T03:07:44+0000",
+			"version": "2.1.25.57",
+			"timeUpdated": "2024-06-24T03:08:13+0000",
 			"languages": [],
 			"tags": [
 				2
