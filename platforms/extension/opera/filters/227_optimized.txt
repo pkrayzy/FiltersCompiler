@@ -1,9 +1,9 @@
-! Checksum: HpafVYdXVNPO44sHXPyfbw
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1718888671-14400.patch
+! Checksum: ZC4xwQS/z/YmtyQxLEZFuA
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1719205438-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.66
-! TimeUpdated: 2024-06-20T13:01:50+00:00
+! Version: 2.0.18.67
+! TimeUpdated: 2024-06-24T05:01:26+00:00
 ! Expires: 10 days (update frequency)
 ||centaurs-rest.coupang.com^
 ||ad.cashdoc.io^
@@ -496,6 +496,8 @@
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
+||d2c8akc1t97nhh.cloudfront.net/static/images/academies/*_ad_banner_$domain=academy.prompie.com
+||d2c8akc1t97nhh.cloudfront.net/media/creators/$domain=academy.prompie.com
 ||cvsnet.co.kr/image/2024/4/202404230404320390.png
 ||mitem.gmarket.co.kr/Item/PowerClickAd
 ||trendjournal.co.kr/theme/*/include/adsense.php
@@ -2728,6 +2730,9 @@ x86.co.kr#@#.download_ad
 @@||dasibogo.net/wp-content/uploads/sites/23/2024/04/dasibogologo$domain=dasibogo.net
 auto.danawa.com#%#//scriptlet('set-constant', 'NAVER_ADPOST_V2', 'noopFunc')
 ||shopsquare.naver.com^$badfilter
+academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) { display: none !important; }
+academy.prompie.com#$#body.modal-open:has(> #academyMainModal a[href^="https://academy.prompie.com/banners/"]) { overflow: auto !important; }
+academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) ~ .modal-backdrop { display: none !important; }
 www.naver.com#$##shortcutArea { padding-left: 64px !important; }
 ggulzam.zal.kr#$#.partners-inside { display: none !important; }
 ggulzam.zal.kr#$#.inside-content-background-gradient { display: none !important; }
