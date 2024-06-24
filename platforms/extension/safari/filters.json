@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.41.5",
-			"timeUpdated": "2024-06-24T11:31:24+0000",
+			"version": "2.3.41.6",
+			"timeUpdated": "2024-06-24T12:31:25+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.8",
-			"timeUpdated": "2024-06-24T06:32:49+0000",
+			"version": "2.0.53.9",
+			"timeUpdated": "2024-06-24T12:32:34+0000",
 			"languages": [
 				"ja"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.0.9",
-			"timeUpdated": "2024-06-24T11:34:43+0000",
+			"version": "2.2.0.10",
+			"timeUpdated": "2024-06-24T12:32:52+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.67.15",
-			"timeUpdated": "2024-06-24T06:33:07+0000",
+			"version": "2.0.67.16",
+			"timeUpdated": "2024-06-24T12:32:53+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -681,8 +681,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.90",
-			"timeUpdated": "2024-06-24T11:34:50+0000",
+			"version": "2.0.41.91",
+			"timeUpdated": "2024-06-24T12:32:58+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -702,8 +702,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/19_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.38.55",
-			"timeUpdated": "2024-06-24T08:33:39+0000",
+			"version": "2.0.38.56",
+			"timeUpdated": "2024-06-24T12:32:59+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -744,8 +744,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/21_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.23.63",
-			"timeUpdated": "2024-06-24T10:35:27+0000",
+			"version": "2.0.23.64",
+			"timeUpdated": "2024-06-24T12:33:00+0000",
 			"languages": [],
 			"tags": [
 				5,
