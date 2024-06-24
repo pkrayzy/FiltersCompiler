@@ -1,9 +1,9 @@
-! Checksum: GxFsxHtvM+itD/D4fVTltA
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1719218130-3600.patch
+! Checksum: 8nBrMs6EMPsEh8wIg+dEHw
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1719221686-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.41.87
-! TimeUpdated: 2024-06-24T08:33:38+00:00
+! Version: 2.0.41.88
+! TimeUpdated: 2024-06-24T09:32:58+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1221,6 +1221,7 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+metro.hu#%#//scriptlet('set-cookie', 'allowedCookieCategories', 'necessary', '/', 'metro.hu')
 igmetall.de#%#//scriptlet('remove-class', 'cookie-overlay', 'body.cookie-overlay')
 virustotal.com##privacy-policy-changes-banner
 arhcity.ru###cookieAnnounce
@@ -7166,7 +7167,6 @@ intersport.nl,intersport.hu,intersport.nl,intersport.es,intersport.at#%#//script
 itsnicethat.com#%#document.cookie = "cookie-preferences-advertising=no; path=/"; document.cookie = "cookie-preferences-analytics=no; path=/"; document.cookie = "cookie-preferences-marketing=no; path=/";
 shop.warsteiner.de#%#AG_onLoad(function() { setTimeout(function() {var cookieBlock = document.querySelector(".modal-body__content-block--cookie"); var ageBlock = document.querySelector(".modal-body__content-block--agegate"); if(cookieBlock) { Cookies.set('gdpr_preface','1',{ expires:Infinity } ); cookieBlock.setAttribute("style","display: none;"); ageBlock.setAttribute("style","display: list-item;");}} ,300)});
 mein-etikett.warsteiner.de#%#AG_onLoad(function() {var ageRequest = document.getElementById("agerequest"); if(ageRequest){ confirmAge = confirmSocial; }});
-galaxus.de#%#document.cookie = "cookieMessageAccepted=1";
 radeberger-gruppe.de#%#document.cookie = "dataPrivacy-acceptCookies=confirmed";
 cinemaxx.de#%#document.cookie = "showCookiesConsent=true; path=/;";
 warsteiner-gruppe.de#%#AG_onLoad(function() { var el = document.querySelector(".gdpr-preface"); if(el) { Cookies.set('gdpr_preface', '1', { expires: Infinity });; location.reload(); }; });
@@ -7188,7 +7188,6 @@ linkedin.com#%#AG_onLoad(function() { setTimeout(function() {var el = document.q
 linkedin.com#%#AG_onLoad(function() { setTimeout(function() { var el = document.getElementsByClassName("application-outlet no-scroll")[0]; if(el) { el.classList.remove("no-scroll") }}, 1000); });
 moniteurautomobile.be#%#AG_onLoad(function() { if (document.cookie.indexOf('gdpr-compliance-content') == -1) { document.cookie = "gdpr-compliance-content=1"; location.reload(); } });
 chordify.net#%#document.cookie = 'CONSENT={"essential":true,"youtube":true,"ads_personalized":false,"share":false,"emails_personalized":false,"facebook":null}; path=/;';
-decathlon.hu#%#document.cookie="COOKIE_BANNER=Y; path=/;";
 bndestem.nl#%#AG_onLoad(function() { if (document.cookie.indexOf('nl_cookiewall_version') == -1) { document.cookie = "nl_cookiewall_version=4"; location.reload(); } });
 trouw.nl#%#AG_onLoad(function() { if (document.cookie.indexOf('nl_cookiewall_version') == -1) { document.cookie = "nl_cookiewall_version=1"; location.reload(); } });
 fis-ski.com#%#document.cookie = "cookieDisclaimer=approved; path=/;";
@@ -7229,7 +7228,6 @@ joyn.de#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("userConsentCommun
 totaaltv.nl,dpgmedia.nl,dpgmediagroup.com,dpgmediagroup.net#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector("#pg-shadow-host").shadowRoot.querySelector("#pg-accept-btn"); if(el) { el.click(); } }, 1000); });
 geberit.de,rsi.ch,villeroy-boch.fr,gematik.de,aldi.nl,aldi.pt,aldi.lu,aldi-nord.de,aldi.dk,aldi.be,aldi.fr,handwerk-magazin.de,hornbach.de#%#!function(){const t=setInterval((function(){var e=document.getElementById("usercentrics-root");if(e&&e.shadowRoot){var o=e.shadowRoot.querySelector('button[data-testid="uc-accept-all-button"]');if(!o)return;clearInterval(t),o.click()}}),100);setTimeout((function(){clearInterval(t)}),1e4)}();
 virginaustralia.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("virginCookiesAccepted")){var a=new MutationObserver(function(){var b=document.querySelector('#cookieAcceptanceBtn');b&&b.click()});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
-metro.hu#%#document.cookie = "allowedCookieCategories=necessary; domain=.metro.hu; path=/;";
 !+ PLATFORM(windows, mac, android)
 linternaute.com,lachainemeteo.com,journaldesfemmes.fr,lefigaro.fr#%#AG_onLoad(function(){if("undefined"!=typeof localStorage)try{if(!localStorage.getItem("_pubcid")){var b=new MutationObserver(function(){var a=document.querySelector("#appconsent > iframe");a&&a.contentDocument&&(a=a.contentDocument.querySelector(".button__acceptAll"))&&(b.disconnect(),a.click())});b.observe(document,{childList:!0,subtree:!0,attributes:!0});setTimeout(function(){b.disconnect()},1E4)}}catch(a){}});
 lephoceen.fr#%#AG_onLoad(function(){if("undefined"!=typeof localStorage)try{if(!localStorage.getItem("fastCMP-customConsent")){var b=new MutationObserver(function(){var a=document.querySelector("iframe#fast-cmp-iframe");a&&a.contentDocument&&(a=a.contentDocument.querySelector(".fast-cmp-home-accept > .fast-cmp-button-primary"))&&(b.disconnect(),a.click())});b.observe(document,{childList:!0,subtree:!0,attributes:!0});setTimeout(function(){b.disconnect()},1E4)}}catch(a){}});

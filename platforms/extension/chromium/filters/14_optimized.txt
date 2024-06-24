@@ -1,9 +1,9 @@
-! Checksum: NgtbleNIATWIqROG4CQ5Hw
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1719218137-3600.patch
+! Checksum: qzSvbXSj7edbmfo2vQNElw
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1719221693-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.6
-! TimeUpdated: 2024-06-24T08:33:31+00:00
+! Version: 2.2.0.7
+! TimeUpdated: 2024-06-24T09:32:51+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1388,6 +1388,7 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+metro.hu#%#//scriptlet('set-cookie', 'allowedCookieCategories', 'necessary', '/', 'metro.hu')
 igmetall.de#%#//scriptlet('remove-class', 'cookie-overlay', 'body.cookie-overlay')
 virustotal.com##privacy-policy-changes-banner
 arhcity.ru###cookieAnnounce
@@ -7361,7 +7362,6 @@ intersport.nl,intersport.hu,intersport.nl,intersport.es,intersport.at#%#//script
 itsnicethat.com#%#document.cookie = "cookie-preferences-advertising=no; path=/"; document.cookie = "cookie-preferences-analytics=no; path=/"; document.cookie = "cookie-preferences-marketing=no; path=/";
 shop.warsteiner.de#%#AG_onLoad(function() { setTimeout(function() {var cookieBlock = document.querySelector(".modal-body__content-block--cookie"); var ageBlock = document.querySelector(".modal-body__content-block--agegate"); if(cookieBlock) { Cookies.set('gdpr_preface','1',{ expires:Infinity } ); cookieBlock.setAttribute("style","display: none;"); ageBlock.setAttribute("style","display: list-item;");}} ,300)});
 mein-etikett.warsteiner.de#%#AG_onLoad(function() {var ageRequest = document.getElementById("agerequest"); if(ageRequest){ confirmAge = confirmSocial; }});
-galaxus.de#%#document.cookie = "cookieMessageAccepted=1";
 radeberger-gruppe.de#%#document.cookie = "dataPrivacy-acceptCookies=confirmed";
 cinemaxx.de#%#document.cookie = "showCookiesConsent=true; path=/;";
 warsteiner-gruppe.de#%#AG_onLoad(function() { var el = document.querySelector(".gdpr-preface"); if(el) { Cookies.set('gdpr_preface', '1', { expires: Infinity });; location.reload(); }; });
@@ -7383,7 +7383,6 @@ linkedin.com#%#AG_onLoad(function() { setTimeout(function() {var el = document.q
 linkedin.com#%#AG_onLoad(function() { setTimeout(function() { var el = document.getElementsByClassName("application-outlet no-scroll")[0]; if(el) { el.classList.remove("no-scroll") }}, 1000); });
 moniteurautomobile.be#%#AG_onLoad(function() { if (document.cookie.indexOf('gdpr-compliance-content') == -1) { document.cookie = "gdpr-compliance-content=1"; location.reload(); } });
 chordify.net#%#document.cookie = 'CONSENT={"essential":true,"youtube":true,"ads_personalized":false,"share":false,"emails_personalized":false,"facebook":null}; path=/;';
-decathlon.hu#%#document.cookie="COOKIE_BANNER=Y; path=/;";
 bndestem.nl#%#AG_onLoad(function() { if (document.cookie.indexOf('nl_cookiewall_version') == -1) { document.cookie = "nl_cookiewall_version=4"; location.reload(); } });
 trouw.nl#%#AG_onLoad(function() { if (document.cookie.indexOf('nl_cookiewall_version') == -1) { document.cookie = "nl_cookiewall_version=1"; location.reload(); } });
 fis-ski.com#%#document.cookie = "cookieDisclaimer=approved; path=/;";
@@ -7427,7 +7426,6 @@ easygo.pl,audioteka.com,jastrzabpost.pl,deliciousmagazine.pl,finansowysupermarke
 forum.echirurgia.pl,nerwica.com,superauto.pl,totalmoney.pl,extradom.pl,wakacje.pl,vibez.pl,kafeteria.pl,parenting.pl,abczdrowie.pl,fotoblogia.pl,gadzetomania.pl,open.fm,domodi.pl,homebook.pl,allani.pl,autocentrum.pl,polygamia.pl,komorkomania.pl,autokult.pl,money.pl,dobreprogramy.pl#%#AG_onLoad(function(){if(!(-1<document.cookie.indexOf("OAX")||"undefined"!=typeof localStorage&&null!==localStorage.getItem("crdab"))){var a=new MutationObserver(function(){var b=document.evaluate("//button[contains(text(), 'PRZECHODZ')]",document,null,XPathResult.ANY_TYPE,null).iterateNext();b&&(a.disconnect(),setTimeout(function(){b.click()},1E3))});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 benchmark.pl,videostar.pl,so-magazyn.pl,o2.pl,pudelek.pl,wp.pl#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("OAX")){var a=new MutationObserver(function(){var b=document.evaluate("//button[contains(text(), 'PRZECHODZ')]",document,null,XPathResult.ANY_TYPE,null).iterateNext();b&&(a.disconnect(),setTimeout(function(){b.click()},1E3))});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 virginaustralia.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("virginCookiesAccepted")){var a=new MutationObserver(function(){var b=document.querySelector('#cookieAcceptanceBtn');b&&b.click()});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
-metro.hu#%#document.cookie = "allowedCookieCategories=necessary; domain=.metro.hu; path=/;";
 !+ NOT_PLATFORM(windows, mac, android)
 linternaute.com,lachainemeteo.com,journaldesfemmes.fr,lefigaro.fr#%#//scriptlet('trusted-click-element', 'button.button__acceptAll')
 lephoceen.fr#%#AG_onLoad(function(){if("undefined"!=typeof localStorage)try{if(!localStorage.getItem("fastCMP-customConsent")){var b=new MutationObserver(function(){var a=document.querySelector("iframe#fast-cmp-iframe");a&&a.contentDocument&&(a=a.contentDocument.querySelector(".fast-cmp-home-accept > .fast-cmp-button-primary"))&&(b.disconnect(),a.click())});b.observe(document,{childList:!0,subtree:!0,attributes:!0});setTimeout(function(){b.disconnect()},1E4)}}catch(a){}});

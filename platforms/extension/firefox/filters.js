@@ -344,7 +344,8 @@
 				8,
 				10,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/1.txt"
 		},
 		{
 			"filterId": 2,
@@ -357,15 +358,16 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.41.2",
-			"timeUpdated": "2024-06-24T08:31:24+0000",
+			"version": "2.3.41.3",
+			"timeUpdated": "2024-06-24T09:31:29+0000",
 			"languages": [],
 			"tags": [
 				10,
 				1,
 				9,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/2.txt"
 		},
 		{
 			"filterId": 3,
@@ -378,13 +380,14 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.71.31",
-			"timeUpdated": "2024-06-24T08:32:59+0000",
+			"version": "2.0.71.32",
+			"timeUpdated": "2024-06-24T09:32:19+0000",
 			"languages": [],
 			"tags": [
 				2,
 				10
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/3.txt"
 		},
 		{
 			"filterId": 4,
@@ -403,7 +406,8 @@
 			"tags": [
 				3,
 				10
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/4.txt"
 		},
 		{
 			"filterId": 5,
@@ -421,7 +425,8 @@
 			"languages": [],
 			"tags": [
 				45
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/5.txt"
 		},
 		{
 			"filterId": 6,
@@ -444,7 +449,8 @@
 				10,
 				12,
 				13
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/6.txt"
 		},
 		{
 			"filterId": 7,
@@ -466,7 +472,8 @@
 				1,
 				10,
 				14
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/7.txt"
 		},
 		{
 			"filterId": 8,
@@ -490,7 +497,8 @@
 				11,
 				15,
 				16
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/8.txt"
 		},
 		{
 			"filterId": 9,
@@ -514,7 +522,8 @@
 				10,
 				17,
 				18
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/9.txt"
 		},
 		{
 			"filterId": 10,
@@ -530,7 +539,8 @@
 			"version": "2.0.3.40",
 			"timeUpdated": "2024-06-21T08:32:40+0000",
 			"languages": [],
-			"tags": []
+			"tags": [],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/10.txt"
 		},
 		{
 			"filterId": 11,
@@ -552,7 +562,8 @@
 				10,
 				11,
 				19
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/11.txt"
 		},
 		{
 			"filterId": 13,
@@ -575,7 +586,8 @@
 				10,
 				11,
 				24
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/13.txt"
 		},
 		{
 			"filterId": 14,
@@ -591,13 +603,14 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.0.6",
-			"timeUpdated": "2024-06-24T08:33:31+0000",
+			"version": "2.2.0.7",
+			"timeUpdated": "2024-06-24T09:32:51+0000",
 			"languages": [],
 			"tags": [
 				5,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/14.txt"
 		},
 		{
 			"filterId": 15,
@@ -629,7 +642,8 @@
 				59,
 				60,
 				61
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/15.txt"
 		},
 		{
 			"filterId": 16,
@@ -653,7 +667,8 @@
 				11,
 				27,
 				28
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/16.txt"
 		},
 		{
 			"filterId": 17,
@@ -676,7 +691,8 @@
 			"languages": [],
 			"tags": [
 				2
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/17.txt"
 		},
 		{
 			"filterId": 18,
@@ -689,14 +705,15 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.87",
-			"timeUpdated": "2024-06-24T08:33:38+0000",
+			"version": "2.0.41.88",
+			"timeUpdated": "2024-06-24T09:32:58+0000",
 			"languages": [],
 			"tags": [
 				5,
 				10,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/18.txt"
 		},
 		{
 			"filterId": 19,
@@ -716,7 +733,8 @@
 				5,
 				10,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/19.txt"
 		},
 		{
 			"filterId": 20,
@@ -736,7 +754,8 @@
 				5,
 				10,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/20.txt"
 		},
 		{
 			"filterId": 21,
@@ -756,7 +775,8 @@
 				5,
 				10,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/21.txt"
 		},
 		{
 			"filterId": 22,
@@ -776,7 +796,8 @@
 				5,
 				10,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/22.txt"
 		},
 		{
 			"filterId": 23,
@@ -799,7 +820,8 @@
 				68,
 				10,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/23.txt"
 		},
 		{
 			"filterId": 101,
@@ -820,7 +842,8 @@
 			"languages": [],
 			"tags": [
 				1
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/101.txt"
 		},
 		{
 			"filterId": 102,
@@ -843,7 +866,8 @@
 				1,
 				9,
 				29
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/102.txt"
 		},
 		{
 			"filterId": 103,
@@ -866,7 +890,8 @@
 				9,
 				10,
 				30
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/103.txt"
 		},
 		{
 			"filterId": 104,
@@ -889,7 +914,8 @@
 				1,
 				9,
 				31
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/104.txt"
 		},
 		{
 			"filterId": 105,
@@ -914,7 +940,8 @@
 				10,
 				32,
 				33
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/105.txt"
 		},
 		{
 			"filterId": 106,
@@ -937,7 +964,8 @@
 				1,
 				9,
 				15
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/106.txt"
 		},
 		{
 			"filterId": 107,
@@ -960,7 +988,8 @@
 				1,
 				9,
 				12
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/107.txt"
 		},
 		{
 			"filterId": 108,
@@ -983,7 +1012,8 @@
 				9,
 				10,
 				34
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/108.txt"
 		},
 		{
 			"filterId": 109,
@@ -1006,7 +1036,8 @@
 				9,
 				10,
 				35
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/109.txt"
 		},
 		{
 			"filterId": 110,
@@ -1029,7 +1060,8 @@
 				9,
 				10,
 				37
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/110.txt"
 		},
 		{
 			"filterId": 111,
@@ -1052,7 +1084,8 @@
 				9,
 				10,
 				36
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/111.txt"
 		},
 		{
 			"filterId": 112,
@@ -1075,7 +1108,8 @@
 				9,
 				10,
 				38
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/112.txt"
 		},
 		{
 			"filterId": 113,
@@ -1098,7 +1132,8 @@
 				1,
 				9,
 				27
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/113.txt"
 		},
 		{
 			"filterId": 114,
@@ -1121,7 +1156,8 @@
 				1,
 				9,
 				39
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/114.txt"
 		},
 		{
 			"filterId": 118,
@@ -1142,7 +1178,8 @@
 			"languages": [],
 			"tags": [
 				2
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/118.txt"
 		},
 		{
 			"filterId": 119,
@@ -1165,7 +1202,8 @@
 				1,
 				9,
 				42
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/119.txt"
 		},
 		{
 			"filterId": 120,
@@ -1187,7 +1225,8 @@
 				1,
 				10,
 				29
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/120.txt"
 		},
 		{
 			"filterId": 121,
@@ -1210,7 +1249,8 @@
 				1,
 				9,
 				44
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/121.txt"
 		},
 		{
 			"filterId": 122,
@@ -1232,7 +1272,8 @@
 			"tags": [
 				5,
 				9
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/122.txt"
 		},
 		{
 			"filterId": 123,
@@ -1254,7 +1295,8 @@
 			"tags": [
 				3,
 				9
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/123.txt"
 		},
 		{
 			"filterId": 124,
@@ -1278,7 +1320,8 @@
 				9,
 				17,
 				18
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/124.txt"
 		},
 		{
 			"filterId": 202,
@@ -1300,7 +1343,8 @@
 				1,
 				10,
 				64
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/202.txt"
 		},
 		{
 			"filterId": 203,
@@ -1323,7 +1367,8 @@
 				2,
 				48,
 				10
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/203.txt"
 		},
 		{
 			"filterId": 204,
@@ -1344,7 +1389,8 @@
 			"languages": [],
 			"tags": [
 				2
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/204.txt"
 		},
 		{
 			"filterId": 206,
@@ -1366,7 +1412,8 @@
 			"tags": [
 				1,
 				35
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/206.txt"
 		},
 		{
 			"filterId": 207,
@@ -1387,7 +1434,8 @@
 			"languages": [],
 			"tags": [
 				50
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/207.txt"
 		},
 		{
 			"filterId": 208,
@@ -1405,7 +1453,8 @@
 			"languages": [],
 			"tags": [
 				4
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/208.txt"
 		},
 		{
 			"filterId": 212,
@@ -1427,7 +1476,8 @@
 			"tags": [
 				2,
 				8
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/212.txt"
 		},
 		{
 			"filterId": 214,
@@ -1449,7 +1499,8 @@
 				1,
 				52,
 				10
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/214.txt"
 		},
 		{
 			"filterId": 216,
@@ -1471,7 +1522,8 @@
 				1,
 				10,
 				41
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/216.txt"
 		},
 		{
 			"filterId": 217,
@@ -1493,7 +1545,8 @@
 			"tags": [
 				6,
 				41
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/217.txt"
 		},
 		{
 			"filterId": 218,
@@ -1515,7 +1568,8 @@
 				10,
 				1,
 				53
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/218.txt"
 		},
 		{
 			"filterId": 220,
@@ -1537,7 +1591,8 @@
 			"tags": [
 				5,
 				31
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/220.txt"
 		},
 		{
 			"filterId": 221,
@@ -1559,7 +1614,8 @@
 			"tags": [
 				3,
 				41
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/221.txt"
 		},
 		{
 			"filterId": 224,
@@ -1582,7 +1638,8 @@
 				10,
 				11,
 				31
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/224.txt"
 		},
 		{
 			"filterId": 225,
@@ -1604,7 +1661,8 @@
 			"tags": [
 				2,
 				45
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/225.txt"
 		},
 		{
 			"filterId": 227,
@@ -1627,7 +1685,8 @@
 				11,
 				56,
 				10
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/227.txt"
 		},
 		{
 			"filterId": 228,
@@ -1649,7 +1708,8 @@
 			"tags": [
 				1,
 				31
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/228.txt"
 		},
 		{
 			"filterId": 231,
@@ -1672,7 +1732,8 @@
 				1,
 				9,
 				17
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/231.txt"
 		},
 		{
 			"filterId": 232,
@@ -1694,7 +1755,8 @@
 			"tags": [
 				4,
 				41
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/232.txt"
 		},
 		{
 			"filterId": 233,
@@ -1716,7 +1778,8 @@
 				1,
 				10,
 				40
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/233.txt"
 		},
 		{
 			"filterId": 234,
@@ -1740,7 +1803,8 @@
 				5,
 				39,
 				57
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/234.txt"
 		},
 		{
 			"filterId": 235,
@@ -1766,7 +1830,8 @@
 				54,
 				69,
 				70
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/235.txt"
 		},
 		{
 			"filterId": 236,
@@ -1788,7 +1853,8 @@
 			"tags": [
 				1,
 				39
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/236.txt"
 		},
 		{
 			"filterId": 237,
@@ -1810,7 +1876,8 @@
 			"tags": [
 				41,
 				5
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/237.txt"
 		},
 		{
 			"filterId": 238,
@@ -1832,7 +1899,8 @@
 				10,
 				50,
 				41
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/238.txt"
 		},
 		{
 			"filterId": 239,
@@ -1854,7 +1922,8 @@
 			"tags": [
 				2,
 				45
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/239.txt"
 		},
 		{
 			"filterId": 241,
@@ -1875,7 +1944,8 @@
 			"languages": [],
 			"tags": [
 				6
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/241.txt"
 		},
 		{
 			"filterId": 243,
@@ -1900,7 +1970,8 @@
 				2,
 				3,
 				55
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/243.txt"
 		},
 		{
 			"filterId": 244,
@@ -1922,7 +1993,8 @@
 			"tags": [
 				1,
 				56
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/244.txt"
 		},
 		{
 			"filterId": 246,
@@ -1945,7 +2017,8 @@
 				1,
 				9,
 				41
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/246.txt"
 		},
 		{
 			"filterId": 247,
@@ -1968,7 +2041,8 @@
 				41,
 				5,
 				62
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/247.txt"
 		},
 		{
 			"filterId": 249,
@@ -1997,7 +2071,8 @@
 				49,
 				42,
 				63
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/249.txt"
 		},
 		{
 			"filterId": 250,
@@ -2019,7 +2094,8 @@
 			"tags": [
 				5,
 				11
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/250.txt"
 		},
 		{
 			"filterId": 251,
@@ -2043,7 +2119,8 @@
 			"languages": [],
 			"tags": [
 				2
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/251.txt"
 		},
 		{
 			"filterId": 252,
@@ -2067,7 +2144,8 @@
 				65,
 				66,
 				10
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/252.txt"
 		},
 		{
 			"filterId": 253,
@@ -2089,7 +2167,8 @@
 				1,
 				67,
 				10
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/253.txt"
 		},
 		{
 			"filterId": 254,
@@ -2111,7 +2190,8 @@
 				1,
 				10,
 				71
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/254.txt"
 		},
 		{
 			"filterId": 255,
@@ -2129,7 +2209,8 @@
 			"languages": [],
 			"tags": [
 				4
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/255.txt"
 		},
 		{
 			"filterId": 256,
@@ -2147,7 +2228,8 @@
 			"languages": [],
 			"tags": [
 				4
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/256.txt"
 		},
 		{
 			"filterId": 257,
@@ -2165,7 +2247,8 @@
 			"languages": [],
 			"tags": [
 				4
-			]
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/firefox/filters/257.txt"
 		}
 	]
 }
