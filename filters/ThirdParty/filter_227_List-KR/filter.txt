@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2024.0620.1
+! OriginalVersion: 2024.0624.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://community.list-kr.com/docs/
@@ -465,6 +465,9 @@
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
+!#if (adguard_app_ios)
+m.humoruniv.com###list_body ~ *[id][style^="border-bottom-width:"]
+!#endif
 !#if (adguard_app_ios || adguard_ext_safari)
 newtoki.help##.ba_test
 newtoki.help##.banner2
@@ -552,6 +555,8 @@ m.fmkorea.com##iframe[src*="//loader.fmkorea.com/"][src*="_loader/"]
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
 !
+||d2c8akc1t97nhh.cloudfront.net/static/images/academies/*_ad_banner_$domain=academy.prompie.com
+||d2c8akc1t97nhh.cloudfront.net/media/creators/$domain=academy.prompie.com
 ||cvsnet.co.kr/image/2024/4/202404230404320390.png
 ||mitem.gmarket.co.kr/Item/PowerClickAd
 ||trendjournal.co.kr/theme/*/include/adsense.php
@@ -1561,6 +1566,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+mininote.co.kr##rs-fullwidth-wrap[style^="margin-top:"]
+mininote.co.kr##rs-module-wrap[id^="rev_slider_"]
 muko.kr##.xe-widget-wrapper > div[style]:has(a[href^="/ad"])
 m.gmarket.co.kr##.js-impressionable
 gmarket.co.kr###login-banner-box
@@ -2878,6 +2885,9 @@ auto.danawa.com#%#//scriptlet('set-constant', 'NAVER_ADPOST_V2', 'noopFunc')
 !#endif
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) { display: none !important; }
+academy.prompie.com#$#body.modal-open:has(> #academyMainModal a[href^="https://academy.prompie.com/banners/"]) { overflow: auto !important; }
+academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) ~ .modal-backdrop { display: none !important; }
 www.naver.com#$##shortcutArea { padding-left: 64px !important; }
 ggulzam.zal.kr#$#.partners-inside { display: none !important; }
 ggulzam.zal.kr#$#.inside-content-background-gradient { display: none !important; }
