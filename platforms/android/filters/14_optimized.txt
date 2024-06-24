@@ -1,9 +1,9 @@
-! Checksum: 3RYEr5DlCJ3LvAgm7rPn7w
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1719221685-3600.patch
+! Checksum: 02zYEXEtzDj8vx2SbRqa1g
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1719225453-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.7
-! TimeUpdated: 2024-06-24T09:32:51+00:00
+! Version: 2.2.0.8
+! TimeUpdated: 2024-06-24T10:35:16+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1388,6 +1388,10 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+bitbucket.org##div[aria-labelledby="cookiesTrackingNoticeLink"]
+planningpokeronline.com##div[class^="CookiesBanner-module--banner"]
+garagezell.ch#$#body { overflow: auto !important; }
+garagezell.ch#$#.gw-cookie-consent { display: none !important; }
 metro.hu#%#//scriptlet('set-cookie', 'allowedCookieCategories', 'necessary', '/', 'metro.hu')
 igmetall.de#%#//scriptlet('remove-class', 'cookie-overlay', 'body.cookie-overlay')
 virustotal.com##privacy-policy-changes-banner
@@ -7372,8 +7376,6 @@ intersport.nl,intersport.hu,intersport.nl,intersport.es,intersport.at#%#//script
 itsnicethat.com#%#document.cookie = "cookie-preferences-advertising=no; path=/"; document.cookie = "cookie-preferences-analytics=no; path=/"; document.cookie = "cookie-preferences-marketing=no; path=/";
 shop.warsteiner.de#%#AG_onLoad(function() { setTimeout(function() {var cookieBlock = document.querySelector(".modal-body__content-block--cookie"); var ageBlock = document.querySelector(".modal-body__content-block--agegate"); if(cookieBlock) { Cookies.set('gdpr_preface','1',{ expires:Infinity } ); cookieBlock.setAttribute("style","display: none;"); ageBlock.setAttribute("style","display: list-item;");}} ,300)});
 mein-etikett.warsteiner.de#%#AG_onLoad(function() {var ageRequest = document.getElementById("agerequest"); if(ageRequest){ confirmAge = confirmSocial; }});
-radeberger-gruppe.de#%#document.cookie = "dataPrivacy-acceptCookies=confirmed";
-cinemaxx.de#%#document.cookie = "showCookiesConsent=true; path=/;";
 warsteiner-gruppe.de#%#AG_onLoad(function() { var el = document.querySelector(".gdpr-preface"); if(el) { Cookies.set('gdpr_preface', '1', { expires: Infinity });; location.reload(); }; });
 x.com,twitter.com#%#document.cookie="eu_cn=1; path=/;";
 empik.com#%#//scriptlet('set-cookie', 'cp', '1')
@@ -22018,7 +22020,7 @@ softpedia.com#$#iframe.swipebox-rightxd[id="relcontent"] { top: 60px!important; 
 !##############################
 !######### JS tweaks ##########
 !##############################
-avclub.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kinja.com,kotaku.com,lifehacker.com,qz.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#%#//scriptlet('trusted-click-element', '.js_expandable-container button.js_expandable-container-button')
+avclub.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kinja.com,kotaku.com,lifehacker.com,qz.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#%#//scriptlet('trusted-click-element', '.js_expandable-container button.js_expandable-container-button', '', '1000')
 dl.apkmoddone.com#%#//scriptlet('adjust-setTimeout', 'tick()', '*', '0.001')
 dl.apkmoddone.com#%#//scriptlet('adjust-setInterval', 'clearInterval', '*', '0.001')
 webhostsec.com,livenewsflix.com,apekite.com#%#//scriptlet("set-constant", "timeSec", "0")

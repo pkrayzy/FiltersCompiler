@@ -1,9 +1,9 @@
-! Checksum: dSSOcVeK985pm2U5PydgXw
-! Diff-Path: ../patches/14/14-s-1719221693-3600.patch
+! Checksum: MDNMcDm4c3YQ8UM/PP0KTw
+! Diff-Path: ../patches/14/14-s-1719225462-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.7
-! TimeUpdated: 2024-06-24T09:32:51+00:00
+! Version: 2.2.0.8
+! TimeUpdated: 2024-06-24T10:35:16+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2438,6 +2438,10 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+bitbucket.org##div[aria-labelledby="cookiesTrackingNoticeLink"]
+planningpokeronline.com##div[class^="CookiesBanner-module--banner"]
+garagezell.ch#$#body { overflow: auto !important; }
+garagezell.ch#$#.gw-cookie-consent { display: none !important; }
 metro.hu#%#//scriptlet('set-cookie', 'allowedCookieCategories', 'necessary', '/', 'metro.hu')
 igmetall.de#%#//scriptlet('remove-class', 'cookie-overlay', 'body.cookie-overlay')
 virustotal.com##privacy-policy-changes-banner
@@ -15162,8 +15166,6 @@ intersport.nl,intersport.hu,intersport.nl,intersport.es,intersport.at#%#//script
 itsnicethat.com#%#document.cookie = "cookie-preferences-advertising=no; path=/"; document.cookie = "cookie-preferences-analytics=no; path=/"; document.cookie = "cookie-preferences-marketing=no; path=/";
 shop.warsteiner.de#%#AG_onLoad(function() { setTimeout(function() {var cookieBlock = document.querySelector(".modal-body__content-block--cookie"); var ageBlock = document.querySelector(".modal-body__content-block--agegate"); if(cookieBlock) { Cookies.set('gdpr_preface','1',{ expires:Infinity } ); cookieBlock.setAttribute("style","display: none;"); ageBlock.setAttribute("style","display: list-item;");}} ,300)});
 mein-etikett.warsteiner.de#%#AG_onLoad(function() {var ageRequest = document.getElementById("agerequest"); if(ageRequest){ confirmAge = confirmSocial; }});
-radeberger-gruppe.de#%#document.cookie = "dataPrivacy-acceptCookies=confirmed";
-cinemaxx.de#%#document.cookie = "showCookiesConsent=true; path=/;";
 warsteiner-gruppe.de#%#AG_onLoad(function() { var el = document.querySelector(".gdpr-preface"); if(el) { Cookies.set('gdpr_preface', '1', { expires: Infinity });; location.reload(); }; });
 x.com,twitter.com#%#document.cookie="eu_cn=1; path=/;";
 empik.com#%#//scriptlet('set-cookie', 'cp', '1')
@@ -49242,7 +49244,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 ! SECTION: Tweaks - JS
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181134
-avclub.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kinja.com,kotaku.com,lifehacker.com,qz.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#%#//scriptlet('trusted-click-element', '.js_expandable-container button.js_expandable-container-button')
+! https://github.com/AdguardTeam/AdguardFilters/issues/180915
+avclub.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kinja.com,kotaku.com,lifehacker.com,qz.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#%#//scriptlet('trusted-click-element', '.js_expandable-container button.js_expandable-container-button', '', '1000')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181328
 dl.apkmoddone.com#%#//scriptlet('adjust-setTimeout', 'tick()', '*', '0.001')
 dl.apkmoddone.com#%#//scriptlet('adjust-setInterval', 'clearInterval', '*', '0.001')
