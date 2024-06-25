@@ -1,9 +1,9 @@
-! Checksum: dY/QNFiX1B8JlEKDk8peAA
-! Diff-Path: ../patches/14/14-s-1719315342-3600.patch
+! Checksum: HeaDd5Dot9tD2uxMpO3hiw
+! Diff-Path: ../patches/14/14-s-1719318970-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.23
-! TimeUpdated: 2024-06-25T11:33:34+00:00
+! Version: 2.2.0.24
+! TimeUpdated: 2024-06-25T12:34:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -17720,7 +17720,11 @@ livescience.com##.ad-unit
 ! Exceptions are also required because these requests can be blocked by other rules
 !#safari_cb_affinity(general)
 ||succeedscene.com^$badfilter
+! File paths can change daily and generic url blocking rules can block them
 @@||succeedscene.com^$script,third-party
+! If site must be blocked:
+! ||succeedscene.com^$important,domain=
+!
 !@@||succeedscene.com/_adslot/
 !@@||succeedscene.com/pagead/ads?ad=
 !@@||succeedscene.com/*/ads.load.js
@@ -34811,8 +34815,6 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! notifications - part of the functionality
 ! discord.com##div[class^="container"] > nav[class^="wrapper"] + div[class^="base"] > div[class^="notice-"]
 !
-! Replace by class rule when https://github.com/AdguardTeam/FiltersCompiler/issues/221 is resolved.
-sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 ! TODO: Delete the following rule when https://github.com/AdguardTeam/ExtendedCss/issues/172 is resolved.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 !

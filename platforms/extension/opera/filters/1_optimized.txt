@@ -1,9 +1,9 @@
-! Checksum: q9E7BiWQnas/ceA1c1X5tw
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1719315358-3600.patch
+! Checksum: CogOwY4pj+zION531Wd32Q
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1719318987-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.77
-! TimeUpdated: 2024-06-25T11:31:06+00:00
+! Version: 2.0.91.78
+! TimeUpdated: 2024-06-25T12:31:01+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1920,11 +1920,12 @@ torlook.in#%#//scriptlet("set-constant", "adBlockFunction", "noopFunc")
 positiverecords.ru#%#//scriptlet('abort-current-inline-script', '$', '.height()')
 positiverecords.ru#@#.ad-google
 ||tests24.su^$cookie=/^ai/
+pikabu.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.getYaContext')
 pikabu.ru#%#//scriptlet('abort-on-property-write', 'Ya')
-||pikabu.ru^$cookie=__vA11
+||pikabu.ru^$cookie=btId
 pikabu.ru#%#//scriptlet('prevent-setTimeout', '_sendAnalytics')
 pikabu.ru#%#//scriptlet('json-prune', 'data', 'errors')
-pikabu.ru#%#//scriptlet("remove-node-text", "script", "/let\s{1,10}?[a-zA-Z0-9_]{6,15}\s{1,2}?= 'https:\/\/pikabu\.ru\/[a-zA-Z0-9]{5,10}\/[a-zA-Z0-9]{5,10}\//")
+pikabu.ru#%#//scriptlet("remove-node-text", "script", "/.innerHTML.*cancelAnimationFrame/")
 sports.ru#%#//scriptlet('json-prune', 'direct rtbAuctionInfo')
 sports.ru#%#//scriptlet('set-constant', 'Ya.adfoxCode.create', 'noopFunc')
 sports.ru#%#//scriptlet('remove-node-text', 'script', 'AdBlocker present')
