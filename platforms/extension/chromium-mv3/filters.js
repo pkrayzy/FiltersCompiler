@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.26",
-			"timeUpdated": "2024-06-25T01:01:10+0000",
+			"version": "2.1.51.27",
+			"timeUpdated": "2024-06-25T05:01:04+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.25",
-			"timeUpdated": "2024-06-25T01:01:11+0000",
+			"version": "2.1.51.26",
+			"timeUpdated": "2024-06-25T05:01:04+0000",
 			"languages": [
 				"ar"
 			],
@@ -1037,8 +1037,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.29.99",
-			"timeUpdated": "2024-06-24T13:01:27+0000",
+			"version": "2.0.30.0",
+			"timeUpdated": "2024-06-25T05:01:19+0000",
 			"languages": [
 				"vi"
 			],
@@ -1308,8 +1308,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.44.57",
-			"timeUpdated": "2024-06-25T01:01:52+0000",
+			"version": "2.0.44.58",
+			"timeUpdated": "2024-06-25T05:01:45+0000",
 			"languages": [
 				"hi"
 			],
@@ -1373,8 +1373,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.0.83",
-			"timeUpdated": "2024-06-24T05:01:46+0000",
+			"version": "2.0.0.84",
+			"timeUpdated": "2024-06-25T05:01:46+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1392,8 +1392,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.54",
-			"timeUpdated": "2024-06-24T09:01:53+0000",
+			"version": "2.0.1.55",
+			"timeUpdated": "2024-06-25T05:01:47+0000",
 			"languages": [],
 			"tags": [
 				4
