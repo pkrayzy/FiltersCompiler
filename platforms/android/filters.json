@@ -1628,8 +1628,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.17.93",
-			"timeUpdated": "2024-06-25T11:33:47+0000",
+			"version": "2.1.17.94",
+			"timeUpdated": "2024-06-25T23:33:14+0000",
 			"languages": [
 				"zh"
 			],
