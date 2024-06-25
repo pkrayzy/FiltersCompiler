@@ -1,9 +1,9 @@
-! Checksum: 7Q4z4d4GOf0yRoVfPQ06fQ
-! Diff-Path: ../patches/19/19-s-1719326236-3600.patch
+! Checksum: sh1XSSWyoZY1PYJJvJJubQ
+! Diff-Path: ../patches/19/19-s-1719333364-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.38.64
-! TimeUpdated: 2024-06-25T14:33:58+00:00
+! Version: 2.0.38.65
+! TimeUpdated: 2024-06-25T16:33:38+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -377,7 +377,7 @@ slashfilm.com#%#//scriptlet('abort-current-inline-script', 'String.fromCharCode'
 ! #%#//scriptlet('set-constant', 'loadAdmiral', 'noopFunc')
 cbssports.com#%#//scriptlet('set-constant', 'loadAdmiral', 'noopFunc')
 ! #%#//scriptlet('set-constant', 'admrlLoaded', 'true')
-mlive.com#%#//scriptlet('set-constant', 'admrlLoaded', 'true')
+pennlive.com,mlive.com#%#//scriptlet('set-constant', 'admrlLoaded', 'true')
 ! bait - Admiral overlay
 howtogeek.com#%#//scriptlet('prevent-element-src-loading', 'script', 'nebulousgarden.com')
 ##body div.bOvWNQ
@@ -4231,6 +4231,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+ew.com#%#//scriptlet('trusted-click-element', '.jwplayer > .jw-wrapper > .jw-float-bar > div[class*="jw-button-color"][aria-label="Close"]')
 holod.media##.banner1
 carseven.co.jp##.fix_box
 communities.win###app > main ~ div:has(> div > button[aria-label="Close"])
@@ -12342,6 +12343,8 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+goal.com##body > div[class^="modal_modal___"]:has(> div[class^="newsletter-popup-"])
+ew.com##.structured-content > p:has(> strong > a[href="https://forms.dotdashmeredith.com/ew-tv-inline-offer"])
 reuters.com##p[data-testid="promo-box"]
 digitaltrends.com##div[data-shortcode-name="respec-newsletter-signup"]
 jmty.jp##.u-margin-s-lr.u-margin-l-tb > .callout
