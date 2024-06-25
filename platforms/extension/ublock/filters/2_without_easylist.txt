@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: eutmgITpTorMUhr1VnSq6g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719300955-3600.patch
+! Checksum: 2D8G1pCFhVjsU14wOFMyXQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719304546-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.41.18
-! TimeUpdated: 2024-06-25T07:31:30+00:00
+! Version: 2.3.41.19
+! TimeUpdated: 2024-06-25T08:31:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -28709,7 +28709,8 @@ w2g.tv##+js(set-constant, W2gDFP.loadAcceptableAds, noopFunc)
 timesnownews.com##+js(set-constant, player.adm.destroy, noopFunc)
 timesnownews.com##+js(set-constant, SlikePlayer.prototype.playAd, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114376
-vidplay.*,vidstream.*,fmovies.to,vizcloud.*,mcloud.*,vizcloud2.*,vidstreamz.online##+js(remove-attr, data-ad-img|data-ad-target|data-id|data-p|data-cg, #player-wrapper)
+! fmovies, vidsrc, vidstream, mycloud
+vid2faf.*,vidplay.*,vidstream.*,fmovies.to,vizcloud.*,mcloud.*,vizcloud2.*,vidstreamz.online##+js(remove-attr, data-ad-img|data-ad-target|data-id|data-p|data-cg, #player-wrapper)
 ! popup
 jav.re##+js(abort-on-stack-trace, onload, /app.js)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113891
@@ -30692,6 +30693,8 @@ spectrum.ieee.org##+js(set-constant, splashpage, undefined)
 !-------------------
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181965
+euronews.com#$?##o-site-hr__leaderboard-wallpaper.u-show-for-xlarge { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181590
 kimcartoon.li#$?##disqus_recommendations > iframe[src*="://disqus.com/recommendations/"] { width: 100% !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181961
@@ -55606,6 +55609,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181992#issuecomment-2188273314
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182121
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181648
 ! m10.asd.quest - unable to get to download page
