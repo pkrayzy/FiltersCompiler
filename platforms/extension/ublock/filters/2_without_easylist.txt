@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: IMIq87SV6+SMp0wCsLU74A
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719383720-3600.patch
+! Checksum: q52VHcgs8g89HuItJpDJig
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719387294-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.41.34
-! TimeUpdated: 2024-06-26T06:31:18+00:00
+! Version: 2.3.41.35
+! TimeUpdated: 2024-06-26T07:31:23+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -6960,6 +6960,9 @@ pornhub.com,pornhub.org,pornhub.net##+js(no-setTimeout-if, \x41\x64\x62\x6c\x6f\
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182239
+bong.ink##+js(no-fetch-if, adsbygoogle.js)
+bong.ink##body > div[style^="position: fixed; top:"][style*="z-index:"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182028
 ||10minutemail.com/ub/ub.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182157
@@ -51003,6 +51006,9 @@ thepostmillennial.com###leader-mot
 thepostmillennial.com##.surfsharkcontent
 !+ NOT_OPTIMIZED
 masalaseen.com##a[target="_blank"] > img
+! https://github.com/AdguardTeam/AdguardFilters/issues/182264
+terashare.co##+js(window.open-defuser, !/sharing/link)
+terashare.co##+js(addEventListener-defuser, click, attached)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176410
 ! generichide rule are not applied in Firefox — https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2757
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166545
