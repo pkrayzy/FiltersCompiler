@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.14",
-			"timeUpdated": "2024-06-25T11:33:16+0000",
+			"version": "2.0.53.15",
+			"timeUpdated": "2024-06-26T05:33:06+0000",
 			"languages": [
 				"ja"
 			],
