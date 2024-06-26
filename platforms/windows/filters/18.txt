@@ -1,9 +1,9 @@
-! Checksum: vCqCRlRAhue2yuVCgLFT6A
-! Diff-Path: ../patches/18/18-s-1719398178-3600.patch
+! Checksum: uA97VUByy7Xdd8wIFhJFsQ
+! Diff-Path: ../patches/18/18-s-1719401776-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.42.4
-! TimeUpdated: 2024-06-26T10:33:21+00:00
+! Version: 2.0.42.5
+! TimeUpdated: 2024-06-26T11:33:08+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2439,6 +2439,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+hagebau.de#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-accept-all-button"]')
 pixiv.net##.terms-of-use-header
 ||filoz.net/*/*/glowCookies$script,stylesheet,~third-party
 satu.xl.co.id##.cookie-consent-prompt
@@ -15398,6 +15399,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182275
+@@||privacy-proxy.usercentrics.eu^$domain=hagebau.de
+@@||app.usercentrics.eu/browser-ui/$domain=hagebau.de
+@@||api.usercentrics.eu/settings/$domain=hagebau.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182059
 likumi.lv#@##cookiescript_injected
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182046

@@ -1,9 +1,9 @@
-! Checksum: jmG+rr9a8cwnWA60XfBmmQ
-! Diff-Path: ../patches/14/14-s-1719398172-3600.patch
+! Checksum: HPCdeyqRc3fCVfYmw89tHQ
+! Diff-Path: ../patches/14/14-s-1719401769-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.35
-! TimeUpdated: 2024-06-26T10:33:14+00:00
+! Version: 2.2.0.36
+! TimeUpdated: 2024-06-26T11:33:01+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2439,6 +2439,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+hagebau.de#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-accept-all-button"]')
 pixiv.net##.terms-of-use-header
 ||filoz.net/*/*/glowCookies$script,stylesheet,~third-party
 satu.xl.co.id##.cookie-consent-prompt
@@ -15396,6 +15397,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182275
+@@||privacy-proxy.usercentrics.eu^$domain=hagebau.de
+@@||app.usercentrics.eu/browser-ui/$domain=hagebau.de
+@@||api.usercentrics.eu/settings/$domain=hagebau.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182059
 likumi.lv#@##cookiescript_injected
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182046
@@ -31450,6 +31455,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+hagebau.de##.newsletter-footer
 ||ukrinform.substack.com/embed$domain=ukrinform.ua
 promobil.de##.va-footer-newsletter
 72.ru###articleBody > div[class^="uiArticleBlockText"]:has(> p > a[href^="https://invite.viber.com/"])
@@ -38438,6 +38444,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+trip.com##.scroller-inner > div[class^="banner-container_"]:has(> div > div[class^="app-download-banner_"])
 promobil.de##div[class*="bannerImage_background__"] > a[href="https://promobil.de/stellplatz/instastores"]
 baseball.yahoo.co.jp,soccer.yahoo.co.jp,sports.yahoo.co.jp##.sn-modAppText
 kasioda.com###custom_html-9
