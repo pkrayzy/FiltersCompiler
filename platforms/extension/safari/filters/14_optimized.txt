@@ -1,9 +1,9 @@
-! Checksum: RFlnPUua3qFUeohmCF8XZQ
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1719394532-3600.patch
+! Checksum: eNRQhP3CevI2jgL40QxNKw
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1719398154-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.34
-! TimeUpdated: 2024-06-26T09:33:25+00:00
+! Version: 2.2.0.35
+! TimeUpdated: 2024-06-26T10:33:14+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1387,6 +1387,8 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+pixiv.net##.terms-of-use-header
+||filoz.net/*/*/glowCookies$script,stylesheet,~third-party
 satu.xl.co.id##.cookie-consent-prompt
 life.ru##div[class^="CommonLayout_root"] > div:has(> div > div > span > a[href="/legacy#persondata"])
 likumi.lv#%#//scriptlet('trusted-click-element', '#cookiescript_accept')
@@ -13538,6 +13540,8 @@ yandex.*##.serp-header__nav > span.distr-nav
 yandex.*##.main__distr-popup
 yandex.*#?#div[class*=" "] > div[id][class]:has(> div[class*=" "] > div[class] > div[class] > div:contains(Сделать поиск Яндекса основным))
 ya.ru,yandex.*###distr-pcode-container
+mail.yandex.ru#$#div[data-test-id="promopopup"] { display: none !important; }
+mail.yandex.ru#$#body[style*="overflow:"] { overflow: auto !important; }
 market.yandex.*##div[data-apiary-widget-name="@MarketNode/ReviewPollPopup"]
 market.yandex.*##div[data-zone-name="BannerPopup"]
 realty.ya.ru#%#//scriptlet('set-cookie-reload', 'housearch_popup_shown', 'yes')

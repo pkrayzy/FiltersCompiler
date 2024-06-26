@@ -1,9 +1,9 @@
-! Checksum: +EpcZW/xJY+x0cQu/9nb+g
-! Diff-Path: ../patches/14/14-s-1719394544-3600.patch
+! Checksum: ZH5I9SaCR2uMk/1HftLxqQ
+! Diff-Path: ../patches/14/14-s-1719398168-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.34
-! TimeUpdated: 2024-06-26T09:33:25+00:00
+! Version: 2.2.0.35
+! TimeUpdated: 2024-06-26T10:33:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2439,6 +2439,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+pixiv.net##.terms-of-use-header
+||filoz.net/*/*/glowCookies$script,stylesheet,~third-party
 satu.xl.co.id##.cookie-consent-prompt
 life.ru##div[class^="CommonLayout_root"] > div:has(> div > div > span > a[href="/legacy#persondata"])
 likumi.lv#%#//scriptlet('trusted-click-element', '#cookiescript_accept')
@@ -29579,6 +29581,10 @@ yandex.*#?#div[class*=" "] > div[id][class]:has(> div[class*=" "] > div[class] >
 !
 ! Yandex.Images
 ya.ru,yandex.*###distr-pcode-container
+!
+! Yandex.Mail
+mail.yandex.ru#$#div[data-test-id="promopopup"] { display: none !important; }
+mail.yandex.ru#$#body[style*="overflow:"] { overflow: auto !important; }
 !
 ! Yandex.Market
 market.yandex.*##div[data-apiary-widget-name="@MarketNode/ReviewPollPopup"]

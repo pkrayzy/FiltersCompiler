@@ -1,9 +1,9 @@
-! Checksum: hKmfTz+porNF3kXYXFW9cA
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1719394529-3600.patch
+! Checksum: FEhhA+dIe+Jj393kctZ8aQ
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1719398151-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.91.81
-! TimeUpdated: 2024-06-26T09:31:06+00:00
+! Version: 2.0.91.82
+! TimeUpdated: 2024-06-26T10:31:08+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1927,9 +1927,9 @@ torlook.in#%#//scriptlet("set-constant", "adBlockFunction", "noopFunc")
 positiverecords.ru#%#//scriptlet('abort-current-inline-script', '$', '.height()')
 positiverecords.ru#@#.ad-google
 ||tests24.su^$cookie=/^ai/
-pikabu.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.getYaContext')
+pikabu.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.shouldShowStickyAd')
 pikabu.ru#%#//scriptlet('abort-on-property-write', 'Ya')
-||pikabu.ru^$cookie=btId
+||pikabu.ru^$cookie=_MCID
 pikabu.ru#%#//scriptlet('prevent-setTimeout', '_sendAnalytics')
 pikabu.ru#%#//scriptlet('json-prune', 'data', 'errors')
 pikabu.ru#%#//scriptlet("remove-node-text", "script", "/.innerHTML.*cancelAnimationFrame/")
