@@ -1,9 +1,9 @@
-! Checksum: A9EEWyfM+UNJc4ZmFcjsjg
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1719369276-3600.patch
+! Checksum: YGlizr8ibz4dYUC1cW6ssQ
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1719383695-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.38.67
-! TimeUpdated: 2024-06-25T19:33:27+00:00
+! Version: 2.0.38.68
+! TimeUpdated: 2024-06-26T06:33:20+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1456,6 +1456,11 @@ postimees.ee#%#//scriptlet('remove-class', 'cookie-paywall-visible', 'article')
 !#safari_cb_affinity(privacy)
 !#safari_cb_affinity
 duolingo.com#?#div[class^="_"]:has(> div[class^="_"] > a[href*="How-can-I-disable-my-ad-blocker-to-support-Duolingo"])
+duolingo.com#%#//scriptlet('prevent-setTimeout', '/handleWhetherBlocked[\s\S]*?\.clientHeight/')
+!#safari_cb_affinity(general)
+duolingo.com#@#ins.adsbygoogle[data-ad-slot]
+duolingo.com#@#ins.adsbygoogle[data-ad-client]
+!#safari_cb_affinity
 vladan.fr$$script[tag-content="svg .adback-shape"][min-length="94000"][max-length="102000"]
 notebookcheck-hu.com,notebookcheck-tr.com,notebookcheck-ru.com,notebookcheck.*#%#//scriptlet("abort-current-inline-script", "document.getElementById", "/!document\.getElementById[\s\S]*?innerHTML[\s\S]*?insertBefore/")
 notebookcheck-hu.com,notebookcheck-tr.com,notebookcheck-ru.com,notebookcheck.*$$script[wildcard="*!document.getElementById*innerHTML*insertBefore*"][min-length="1000"][max-length="1500"]

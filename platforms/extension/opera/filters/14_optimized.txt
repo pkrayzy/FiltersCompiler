@@ -1,9 +1,9 @@
-! Checksum: vn2RNXm1G97Pt3jdpEsmyg
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1719369288-3600.patch
+! Checksum: 0id2uSeT71UdHxCYGJIAYg
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1719383710-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.30
-! TimeUpdated: 2024-06-25T19:33:19+00:00
+! Version: 2.2.0.31
+! TimeUpdated: 2024-06-26T06:33:13+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -10359,6 +10359,11 @@ postimees.ee#%#//scriptlet('remove-class', 'cookie-paywall-visible', 'article')
 !#safari_cb_affinity(privacy)
 !#safari_cb_affinity
 duolingo.com#?#div[class^="_"]:has(> div[class^="_"] > a[href*="How-can-I-disable-my-ad-blocker-to-support-Duolingo"])
+duolingo.com#%#//scriptlet('prevent-setTimeout', '/handleWhetherBlocked[\s\S]*?\.clientHeight/')
+!#safari_cb_affinity(general)
+duolingo.com#@#ins.adsbygoogle[data-ad-slot]
+duolingo.com#@#ins.adsbygoogle[data-ad-client]
+!#safari_cb_affinity
 notebookcheck-hu.com,notebookcheck-tr.com,notebookcheck-ru.com,notebookcheck.*#%#//scriptlet("abort-current-inline-script", "document.getElementById", "/!document\.getElementById[\s\S]*?innerHTML[\s\S]*?insertBefore/")
 dailywire.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads { display:block!important;}
 j.wfcdn.de#@#.ADBox
