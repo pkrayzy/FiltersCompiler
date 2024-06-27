@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.39",
-			"timeUpdated": "2024-06-27T05:01:05+0000",
+			"version": "2.1.51.40",
+			"timeUpdated": "2024-06-27T09:02:38+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.38",
-			"timeUpdated": "2024-06-27T05:01:05+0000",
+			"version": "2.1.51.39",
+			"timeUpdated": "2024-06-27T09:02:39+0000",
 			"languages": [
 				"ar"
 			],
@@ -948,8 +948,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
-			"version": "2.0.20.80",
-			"timeUpdated": "2024-06-25T21:01:16+0000",
+			"version": "2.0.20.81",
+			"timeUpdated": "2024-06-27T09:02:45+0000",
 			"languages": [
 				"id"
 			],
@@ -1037,8 +1037,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.4",
-			"timeUpdated": "2024-06-27T05:01:20+0000",
+			"version": "2.0.30.5",
+			"timeUpdated": "2024-06-27T09:02:57+0000",
 			"languages": [
 				"vi"
 			],
@@ -1177,8 +1177,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
 			"trustLevel": "high",
-			"version": "2.0.4.49",
-			"timeUpdated": "2024-06-23T21:01:44+0000",
+			"version": "2.0.4.50",
+			"timeUpdated": "2024-06-27T09:03:11+0000",
 			"languages": [
 				"fa",
 				"tg",
@@ -1308,8 +1308,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.44.70",
-			"timeUpdated": "2024-06-27T05:01:46+0000",
+			"version": "2.0.44.71",
+			"timeUpdated": "2024-06-27T09:03:27+0000",
 			"languages": [
 				"hi"
 			],
