@@ -1,5 +1,5 @@
-! Checksum: lULTwG0fqKL65hF8sULHrQ
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1719423300-3600.patch
+! Checksum: pYH7DOT5AEzodR5N69NBPA
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1719455707-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.42.61
@@ -1088,6 +1088,7 @@ infranken.de##.teaser-section_special
 infranken.de##section[data-module="Shopping-Deal"]
 insuedthueringen.de,inrlp.de###billboard-wrapper
 chip.de,webfail.com##div[style="min-height:250px;"]
+rollingstone.de##.ph-ad-fallback-top-billboard
 mopo.de##a[href*="campaign"][target="_blank"]
 frankenpost.de,insuedthueringen.de,np-coburg.de###hcsb-topteaser-upper
 spiegel.de##div[data-area="heise-widget"]
@@ -1253,6 +1254,7 @@ areadvd.de##div[align="center"]
 areadvd.de##div[align="center"] + br
 areadvd.de###content > .reduced ~ p[style="text-align:left"]
 areadvd.de##.entry > p[style="text-align:left"]
+bayreuther-tagblatt.de##.bayre-adlabel
 transfermarkt.de##.werbung-skyscraper-container
 transfermarkt.de##div > img[referrerpolicy="unsafe-url"][src*="transfermarkt.de/image/"]
 esut.de##div[class="g g-9"]
@@ -1334,8 +1336,6 @@ efahrer.chip.de##.outbrain-reserved-space
 web.de,gmx.*##.co-content-container
 gamestar.de##.jad-placeholder
 express.de##.dm-slot:not(#style_important)
-langeoognews.de###pp_ad
-langeoognews.de##div[class*="wbg_zone_"]
 focus.de##.promo.BgcGreyRed
 netdoktor.de##.ndpm-ihre-apotheken
 uhrforum.de###fh-div-inner > #fh-outside-top
@@ -1771,6 +1771,8 @@ magdeburg.de###md_sidebar
 wiesbaden.de###SP-commercials
 tvtoday.de##.banner-container
 autobild.de,computerbild.de##.adsensebox
+autobild.de##a[onclick^="_gaq.push"]
+autobild.de##.inlineslot
 radiobielefeld.de###billboardad
 radiobielefeld.de##div[class*="jsbt"]
 schulferien.org###right_box
@@ -2012,7 +2014,6 @@ formel1.de#?##right_column > div.teaser_container:has(span.ads-anzeige)
 formel1.de#?##right_column > div.teaser_container:has(div.OUTBRAIN)
 rtde.site#?#.Section-root:has(> div.Section-container > div.Section-block > div[id^="adfox_"])
 deutschlandkurier.de#?#.vc_column > div.wpb_wrapper > div.td_block_wrap:has(> div.td-fix-index:contains(Anzeige))
-wetter.de#?#.article-teaser-list__articles > div > div.v-spacing-md:has(> div.showheroes-ad-slot)
 ww-kurier.de#?#.uk-width-1-4 > div.uk-panel:has(> div.uk-text-center > a.ads-link)
 win-10-forum.de#?#.fh-sidebar > div.block-container:has(> div.fh-sidebar-top)
 wallstreet-online.de#?#.module:has(> div.shareTextInfo)
@@ -2286,9 +2287,8 @@ _werbung.pl
 ###ad-qm-sidebar-oben
 ###adcontentoben
 ###adliste
+###bannerwerbung
 ###gwerbung
-###nativendo-articlemiddle
-###nativendo-articletop
 ###nativendo-artikel
 ###nativendo-home
 ###nativendo-home-2
@@ -2298,7 +2298,9 @@ _werbung.pl
 ###nativendo-infeed-1
 ###nativendo-infeed-2
 ###nativendo-infeed-3
+###nativendo-infeed-4
 ###nativendo-infeed-5
+###nativendo-infeed-6
 ###nativendo-infeed1
 ###nativendo-infeed2
 ###nativendo-marginal
@@ -2685,7 +2687,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||blog-der-republik.de/wp-content/uploads/*/square.png
 ||bluray-disc.de/images/banner/
 ||boerse-social.com/media/Content/Partner/
-||boersennews.de/images/smartbroker/
 ||bolzano-bozen.it/images/banner/
 ||borncity.com/blog/wp-content/uploads/*/Amazon03b.jpg
 ||borncity.com/blog/wp-content/uploads/*/Book04.jpg
@@ -2904,7 +2905,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||vfl-bochum.de^*/Partner/
 ||vfl.de^*_sponsoren_
 ||viralize.tv^$domain=n-tv.de
-||volksblatt.at/wp-content/banners/
 ||vorsprung-online.de^*/Werbung/
 ||wbbanner.mrn-news.de^
 ||websingles.at/pages/site/de/images/logos/
@@ -3052,6 +3052,7 @@ rtl.de###billboard_1
 bz-berlin.de,finanzen.net###billboard_btf
 finanzen.net###billboard_btf_2
 computerbild.de###billboard_btf_2Wrapper
+realtotal.de###block-3
 jungle.world###block-anzeige
 macgadget.de###block-anzeige2
 fachzeitungen.de###block-block-32
@@ -3227,6 +3228,7 @@ computerschach.de,nachrichten.es,nh24.de,randombrick.de,tollabea.de###text-2
 lokalo.de###text-60
 apfelpage.de###text-65
 focus.de###tfm_footer_yield
+fernseher.org,kopfhoerer.com,kuehlschrank.com,laufband.org,schlafsack.net,staubsauger.net###tip_top
 bluray-disc.de###top-angebote-box
 focus.de,fool.de,it-production.com###top-banner
 otr.datenkeller.net###topBanner
@@ -3266,7 +3268,6 @@ chip.de##.FC.mt-md-so[role="complementary"]
 netmoms.de,praxistipps.focus.de##.FC__Ad
 kostenlose-urteile.de##.RTaktAds
 de.rt.com##.TopBanner-root
-suchen.mobile.de##.ViD7S
 gartenjournal.net##._gartenjournal_billboard
 mallorcazeitung.es##._mo_recs
 4kfilme.de,abenteuerfreundschaft.de,appgefahren.de,automatentest.de,autorevue.at,gameswirtschaft.de,gartenjournal.net,gebrauchtwagenberater.de,googlewatchblog.de,justnetwork.eu,kabel-blog.de,medienkuh.de,nachbelichtet.com,nat-games.de,pocketpc.ch,stadt-bremerhaven.de,technikshavo.de##.aawp
@@ -3425,7 +3426,6 @@ finanznachrichten.de##.c-sban1
 finanznachrichten.de##.c-sban2
 scfreiburg.com,sgf1903.de##.c-sponsors-list
 focus.de##.cad
-focus.de##.cad_native
 1000ps.at##.cadbox
 heizsparer.de##.cadheight[style="min-height:600px;"]
 faktastisch.de##.cca
@@ -3815,7 +3815,6 @@ aerotelegraph.com##.widget--marktplatz
 gameswirtschaft.de,haus-garten-magazin.de##.widget_aawp_widget_bestseller
 diekuechebrennt.de,gameswirtschaft.de##.widget_aawp_widget_box
 gearnews.de##.widget_adtag_rectangle
-diesachsen.de##.widget_commerce
 autogazette.de,cyclingmagazine.de,radio-aktiv.de,schmunzelseite.de,signal-online.de,solaranlage-ratgeber.de,xxx-amateur.eu##.widget_custom_html
 delamar.de##.wk
 regensburg-digital.de##.wk-slideshow
@@ -3865,7 +3864,6 @@ chip.de##a[href^="https://prf.hn/click/"] > img
 schnittberichte.com##a[href^="https://pvn.mediamarkt.de/trck/eclick/"] > img[src^="https://www.schnittberichte.com/resources/images/mediamarkt_"]
 schnittberichte.com##a[href^="https://pvn.saturn.de/trck/eclick/"] > img[src^="https://www.schnittberichte.com/resources/images/saturn_"]
 metager.de##a[href^="https://r.search.yahoo.com/"]
-emuenzen.de##a[href^="https://rover.ebay.com/"]
 report24.news##a[href^="https://tentorium.tv/"]
 pcwelt.de##a[href^="https://tracking.s24.com/"]
 bildschirmarbeiter.com,bitreporter.de,chip.de,emok.tv,naruto-tube.org,nickles.de,onepiece-tube.com,pcgamesdatabase.de,pcwelt.de,pi-news.net,ruhrbarone.de,schule-studium.de,wiiunews.at##a[href^="https://www.amazon."][href*="tag="]
@@ -4205,7 +4203,6 @@ winfuture-forum.de#?#div.ExtraPostBlock:-abp-has(div.post_block:-abp-contains(An
 @@||g.doubleclick.net/gampad/ads?*&iu_parts=27763518%3A21917048853%2Cteltarif-de_Onlineverlag_GmbH%2Cteltarif.de%2CParallax%2Chalfpagelu%2Chalfpageru%2Cnavisky&$script,xmlhttprequest,domain=teltarif.de
 @@||g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$script,domain=auto-motor-und-sport.de|gamepro.de|gamestar.de|motorradonline.de|teltarif.de
 @@||g.doubleclick.net/pagead/ppub_config?ippd=$xmlhttprequest,domain=gamepro.de|gamestar.de|moviepilot.de
-@@||g.doubleclick.net/pcs/$popup,domain=motorradonline.de
 @@||g.doubleclick.net/tag/js/gpt.js$script,xmlhttprequest,domain=11freunde.de|auto-motor-und-sport.de|gala.de|gamepro.de|gamestar.de|gentside.de|manager-magazin.de|motorradonline.de|moviepilot.de|n-tv.de|ohmymag.de|stern.de|teltarif.de
 @@||getjad.io/library/$script,domain=moviepilot.de
 @@||getjad.io/prebid/$script,domain=moviepilot.de
@@ -4262,5 +4259,6 @@ winfuture-forum.de#?#div.ExtraPostBlock:-abp-has(div.post_block:-abp-contains(An
 @@||g.doubleclick.net/gampad/adx?*/wetter_direct_toolbar$document,subdocument,domain=wetter.com
 @@||g.doubleclick.net/gpt/pubads_impl_$script,domain=brigitte.de|eltern.de|geo.de
 @@||g.doubleclick.net/tag/js/gpt.js$domain=brigitte.de|eltern.de|geo.de
+@@||eatsmarter.de/sites/default/files/*_300x250_$image,domain=eatsmarter.de
 @@||board.canna.tf^$popup,domain=canna-power.to|canna.to
 @@||canna-power.to/links.php?action=$popup,domain=canna-power.to
