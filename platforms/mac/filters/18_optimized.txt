@@ -1,9 +1,9 @@
-! Checksum: Ane707NsEULBWT2foKhGUQ
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1719542143-3600.patch
+! Checksum: x92SEDvvBGTSjLLNCN64dw
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1719549348-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.42.21
-! TimeUpdated: 2024-06-28T01:32:52+00:00
+! Version: 2.0.42.22
+! TimeUpdated: 2024-06-28T04:33:38+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1223,6 +1223,7 @@ codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', '.gdpr a.submit')
 consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="cookieMainHeader"] a#gwt-debug-close_id')
+revolut.com#%#//scriptlet('trusted-set-cookie', 'rev_cookie_consent', '{%22preferences%22:false%2C%22analytics%22:false%2C%22advertising%22:false}')
 bing.com##div[id^="bnp"]:has(> #bnp_cookie_banner)
 bing.com#$#html[style="overflow: hidden;"] { overflow: auto !important; }
 ||kaup24.ee/*/home/cookiebox
@@ -1290,7 +1291,6 @@ abinbevefes.ru###CybotCookiebotDialog
 health.tvbs.com.tw#%#//scriptlet('set-cookie', 'cookie_accept', 'accept')
 scaleway.com#%#//scriptlet('trusted-click-element', '.sc-dGCmGc.fJEvkp', '!localStorage:gbFeaturesCache')
 przewodnik-katolicki.pl##.ciastka
-revolut.com##div[aria-label="Choose your cookies"]
 openbank.*#%#//scriptlet('trusted-click-element', 'button[onclick="onClickRefuseCookies(event)"]', '!cookie:CONSENTMGR')
 monzo.com#%#//scriptlet('set-cookie', 'cookies_accepted', 'false')
 monzo.com#%#//scriptlet('set-cookie', '_cookies_banner_dismissed', 'true')
@@ -3527,7 +3527,6 @@ invisalign.*##div[class^="ConciergePopup"]
 zawodtyper.pl###cookie-allow-box
 bookings.sevenair.com,tvbanywhere.com###gdprcookie
 yibian.hopto.org###we-use-cookie
-app.revolut.com#?##root > div[role="dialog"] > div[class*="styled__CookieConsentModalBase-"]:upward(1)
 curiositystream.com#?#main ~ div[class]:has(> div.flex > div.inline-block > button:contains(Cookies))
 lesecologistes.fr,htw-berlin.de##div[id^="gdpr-"]
 investintech.com###geoPolicy
