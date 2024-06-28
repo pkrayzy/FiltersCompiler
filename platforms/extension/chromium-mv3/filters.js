@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.45",
-			"timeUpdated": "2024-06-28T05:01:08+0000",
+			"version": "2.1.51.46",
+			"timeUpdated": "2024-06-28T09:01:19+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.44",
-			"timeUpdated": "2024-06-28T05:01:09+0000",
+			"version": "2.1.51.45",
+			"timeUpdated": "2024-06-28T09:01:19+0000",
 			"languages": [
 				"ar"
 			],
@@ -1037,8 +1037,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.6",
-			"timeUpdated": "2024-06-28T05:01:24+0000",
+			"version": "2.0.30.7",
+			"timeUpdated": "2024-06-28T09:01:35+0000",
 			"languages": [
 				"vi"
 			],
@@ -1130,8 +1130,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter-AdGuard.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.69",
-			"timeUpdated": "2024-06-26T05:01:29+0000",
+			"version": "2.0.18.70",
+			"timeUpdated": "2024-06-28T09:01:42+0000",
 			"languages": [
 				"ko"
 			],
@@ -1308,8 +1308,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.44.76",
-			"timeUpdated": "2024-06-28T05:01:50+0000",
+			"version": "2.0.44.77",
+			"timeUpdated": "2024-06-28T09:02:05+0000",
 			"languages": [
 				"hi"
 			],
@@ -1392,8 +1392,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.64",
-			"timeUpdated": "2024-06-28T05:01:51+0000",
+			"version": "2.0.1.65",
+			"timeUpdated": "2024-06-28T09:02:06+0000",
 			"languages": [],
 			"tags": [
 				4
