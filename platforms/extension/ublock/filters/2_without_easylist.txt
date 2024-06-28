@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: zmzjGfPcFkr/fBQwtpXp7w
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719592530-3600.patch
+! Checksum: w7Rk/3UXWi9PiV5MIEE5Sw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719596101-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.41.76
-! TimeUpdated: 2024-06-28T16:31:24+00:00
+! Version: 2.3.41.77
+! TimeUpdated: 2024-06-28T17:31:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -27983,6 +27983,8 @@ trakt.tv##+js(set-constant, artemisInit, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160187
 foxweather.com,foxsports.com##+js(json-prune, ads)
 foxweather.com,foxsports.com##+js(m3u-prune, /#UPLYNK-SEGMENT:.*\,ad/, .m3u8)
+foxsports.com##+js(m3u-prune, /vod/creatives)
+foxsports.com##.permanentPubInfo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159530
 dvdgayonline.com##+js(remove-attr, href, a[href]#clickfakeplayer)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159589
@@ -32828,8 +32830,6 @@ nativesurge.info##td:has(> div.adsbyadful)
 ||hdtoday.tv/ajax/banner
 ||scripts.dkmedia.vercel.app/popunders/
 gogoanimes.fi##.ads_watch_top
-racketboy.com###rb-content p > a[href^="https://www.ebay.com/sch/i.html"]
-racketboy.com###rb-content a[href*="amazon.com/exec/"] > img[class][srcset]
 standard.co.uk##.teads
 fullmatch.info##div[class^="penci-google-adsense-"]
 fullmatch.info##a[href^="https://linkfreshlink.com"] > img
@@ -42260,7 +42260,7 @@ realestate.co.nz##.topbar-ad-parent
 tmonews.com##.featured-google
 tmonews.com##.sponsor-dfp
 fc.lc###link-view > iframe[src*="/fc.lc/"]
-news.sky.com##.sdc-site-au[data-ad-format] > div[data-role="ad-container"]
+news.sky.com#$?#.sdc-site-au { remove: true; }
 news.sky.com##.sdc-site-layout-sticky-region__ghost[data-format="leaderboard"]
 ||dcs.creativecow.net^$domain=wwwm.creativecow.net
 a2zapk.com###galax
@@ -55728,6 +55728,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182423
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182057
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182365
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182298
