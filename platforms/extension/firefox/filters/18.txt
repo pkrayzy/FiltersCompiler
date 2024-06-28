@@ -1,9 +1,9 @@
-! Checksum: D1S2JjjYcfV2o7gRRHsvtw
-! Diff-Path: ../patches/18/18-s-1719578111-3600.patch
+! Checksum: Asl+OTlJ6CwIcIFxWZfjzg
+! Diff-Path: ../patches/18/18-s-1719599687-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.42.28
-! TimeUpdated: 2024-06-28T12:33:06+00:00
+! Version: 2.0.42.29
+! TimeUpdated: 2024-06-28T18:32:53+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1706,6 +1706,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+||collector.appconsent.io^
 ||cdn.cookiesuit.com^$third-party
 /wp-content/plugins/consent-magic-pro/*
 ||transcend-cdn.com^$third-party
@@ -2440,6 +2441,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+servustv.com#%#//scriptlet('trusted-click-element', 'button[onclick="OneTrust.AllowAll()"]')
 lustery.com##div[class^="CookieConsentBanner_"]
 /cookieconsentmanager/modernCookieModal.js$domain=swiatbaterii.pl|batteryempire.de|batteryempire.fr|batteryempire.it|batteryempire.co.uk|batteryempire.es|batteryempire.sk|batteryempire.nl|batteryempire.lt|batteryempire.hu|batteryempire.ro|batteryempire.pt|batteryempire.dk|batteryempire.be|batteryempire.se|batteryempire.fi|batteryempire.gr
 kamami.pl###megacookieeu
@@ -15388,6 +15390,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! servustv.com - unable to play video
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=servustv.com
+servustv.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182328
 nowymarketing.pl#@##cmplz-cookiebanner-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182275
