@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.71.47",
-			"timeUpdated": "2024-06-28T03:32:24+0000",
+			"version": "2.0.71.48",
+			"timeUpdated": "2024-06-28T08:32:20+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.29",
-			"timeUpdated": "2024-06-28T04:33:14+0000",
+			"version": "2.0.53.30",
+			"timeUpdated": "2024-06-28T08:32:33+0000",
 			"languages": [
 				"ja"
 			],
@@ -670,8 +670,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.38.85",
-			"timeUpdated": "2024-06-27T15:33:00+0000",
+			"version": "2.0.38.86",
+			"timeUpdated": "2024-06-28T08:32:59+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -712,8 +712,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.23.75",
-			"timeUpdated": "2024-06-27T08:33:09+0000",
+			"version": "2.0.23.76",
+			"timeUpdated": "2024-06-28T08:33:00+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -733,8 +733,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.64",
-			"timeUpdated": "2024-06-27T12:33:51+0000",
+			"version": "2.0.8.65",
+			"timeUpdated": "2024-06-28T08:33:00+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1106,8 +1106,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.18.16",
-			"timeUpdated": "2024-06-28T05:33:31+0000",
+			"version": "2.1.18.17",
+			"timeUpdated": "2024-06-28T08:33:06+0000",
 			"languages": [
 				"zh"
 			],
