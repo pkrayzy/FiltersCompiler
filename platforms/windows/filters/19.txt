@@ -1,9 +1,9 @@
-! Checksum: aDYgHGP0OAV5upN5FUBJag
-! Diff-Path: ../patches/19/19-s-1719570963-3600.patch
+! Checksum: qzguyruzN/UaQZ9M9NrkKw
+! Diff-Path: ../patches/19/19-s-1719574567-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.38.87
-! TimeUpdated: 2024-06-28T10:33:30+00:00
+! Version: 2.0.38.88
+! TimeUpdated: 2024-06-28T11:33:28+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3086,6 +3086,8 @@ uwaterloo.ca##div[aria-label="Ad Blocker Detected"]
 ! SECTION[id=general]: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
+@@||gemeinsamerleben.com/js3caf.js
+gemeinsamerleben.com#@#.ads-item
 @@||unknowncheats.me/forum/clientscript/adv_teasers.js
 @@||dl-protect.link/adsc.js
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hausbau-forum.de
@@ -4233,6 +4235,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+doubleblindmag.com##div:not([class]):has(> div.needsclick div[aria-label="FLYOUT Form"])
+doubleblindmag.com##div:not([class]):has(.needsclick div[data-testid="animated-teaser"])
+doubleblindmag.com###page div.websitesignup
 baike.baidu.com##div[class^="index-module_drawerHand__"]
 litnet.com#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'modal-discount-day')
 renlife.ru##.opros-btn
@@ -12357,6 +12362,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+inews.zoombangla.com#?#blockquote.modern-quote > strong:contains(Follow)
 timesofindia.indiatimes.com##a[href="https://recipes.timesofindia.com#newsletter"]
 kamami.pl#%#//scriptlet('prevent-setTimeout', 'dfxpopup')
 reform.news###block-3
