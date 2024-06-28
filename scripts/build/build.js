@@ -79,7 +79,7 @@ const buildFilters = async () => {
         platformsPath,
         includedFilterIDs,
         excludedFilterIDs,
-        customPlatformsConfig
+        customPlatformsConfig,
     );
 
     // For the very first run, we should copy the built platforms into
