@@ -1,51 +1,14 @@
 // FIXME possibly no-console can be removed
 /* eslint-disable no-await-in-loop,no-restricted-syntax,no-console */
-import { promises as fs } from 'fs';
 import * as path from 'path';
 import { RuleParser } from '@adguard/agtree';
 // There is no type definition available for the following import.
 // @ts-ignore
 import { findDeadDomains } from '@adguard/dead-domains-linter/src/urlfilter';
-
 import { extractRuleDomains } from './domain-extractor';
 import { utils } from './utils';
 import { TOP_LEVEL_DOMAIN_LIST } from './top-tld';
-import { readFile, writeFile } from './file-utils';
-
-/**
- * Recursively searches a directory for files named 'filter.txt' and returns their full paths.
- * @param dir - The directory to start the search from.
- * @returns A promise that resolves to an array of full paths of the found files.
- * @throws Will throw an error if the directory cannot be read.
- */
-async function findFilterFiles(dir: string): Promise<string[]> {
-    const FILTER_FILENAME = 'filter.txt';
-
-    let results: string[] = [];
-
-    try {
-        const files = await fs.readdir(dir, { withFileTypes: true });
-
-        for (const file of files) {
-            const fullPath = path.join(dir, file.name);
-
-            if (file.isDirectory()) {
-                // If the item is a directory, recursively search it
-                const subDirFiles = await findFilterFiles(fullPath);
-                results = results.concat(subDirFiles);
-            } else if (file.isFile() && file.name === FILTER_FILENAME) {
-                // If the item is a file named 'filter.txt', add its full path to the results
-                results.push(fullPath);
-            }
-        }
-    } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(`Error processing directory ${dir}: ${e}`);
-        throw e;
-    }
-
-    return results;
-}
+import { findFilterFiles, readFile, writeFile } from './file-utils';
 
 /**
  * Parses a rule and extracts domains from it.
@@ -85,7 +48,7 @@ const getWildcardDomains = (filterContent: string): Set<string> => {
 /**
  * A map of wildcard domains with all possible TLDs.
  */
-type WildcardDomainsWithTld = { [key: string]: string[] };
+export type WildcardDomainsWithTld = { [key: string]: string[] };
 
 /**
  * Supplements the wildcard domains with all possible TLDs.
@@ -103,27 +66,19 @@ function supplementWithTld(wildcardDomains: Set<string>): WildcardDomainsWithTld
     return wildcardDomainsWithTld;
 }
 
-/**
- * Validates the domains by finding dead domains.
- * @param wildcardDomainsWithTld The wildcard domains with all possible TLDs.
- * @returns A promise that resolves to a map of wildcard domains with their dead domains.
- */
-async function validateDomains(wildcardDomainsWithTld: WildcardDomainsWithTld): Promise<WildcardDomainsWithTld> {
-    const start = performance.now();
-    console.log('start finding dead domains', start);
-    const validatedWildcardDomains: { [key: string]: string[] } = {};
-    let counter = 0;
-    for (const [key, value] of Object.entries(wildcardDomainsWithTld)) {
-        // FIXME remove this line
-        if (counter > 5) {
-            continue;
-        }
-        validatedWildcardDomains[key] = await findDeadDomains(value);
-        counter += 1;
-    }
-    console.log('end finding dead domains', performance.now() - start);
-    console.log(validatedWildcardDomains);
-    return validatedWildcardDomains;
+async function getAliveDomains(value: string[]) {
+    const deadDomains = new Set(await findDeadDomains(value));
+    const aliveDomains = value.filter((domain) => !deadDomains.has(domain));
+    return aliveDomains;
+}
+
+async function updateJsonFile(filename: string, key: string, value: string[]) {
+    const filePath = path.resolve(__dirname, filename);
+    const json = await readFile(filePath);
+    const parsedJson = JSON.parse(json);
+    parsedJson[key] = value;
+    const data = JSON.stringify(parsedJson, null, 4);
+    await writeFile(filePath, data);
 }
 
 /**
@@ -133,7 +88,7 @@ async function validateDomains(wildcardDomainsWithTld: WildcardDomainsWithTld): 
  * @throws Will throw an error if there are issues reading or writing files, or if dead domains cannot be found.
  */
 export const wildcardDomainProcessor = async (filtersDir: string, wildcardDomainsJson: string): Promise<void> => {
-    const filterFiles = await findFilterFiles(path.resolve(__dirname, filtersDir));
+    const filterFiles = await findFilterFiles(path.resolve(__dirname, filtersDir), 'filter.txt');
 
     const wildcardDomains = new Set<string>();
     for (const filterFile of filterFiles) {
@@ -143,8 +98,19 @@ export const wildcardDomainProcessor = async (filtersDir: string, wildcardDomain
     }
 
     const wildcardDomainsWithTld = supplementWithTld(wildcardDomains);
-    const validatedWildcardDomains = await validateDomains(wildcardDomainsWithTld);
+    console.log('Totally found wildcard domains length:', Object.keys(wildcardDomainsWithTld).length);
 
-    const json = JSON.stringify(validatedWildcardDomains);
-    await writeFile(wildcardDomainsJson, json);
+    const start = performance.now();
+    console.log('start finding dead domains', start);
+    const validatedWildcardDomains: { [key: string]: string[] } = {};
+    for (const [key, value] of Object.entries(wildcardDomainsWithTld)) {
+        const aliveDomains = await getAliveDomains(value);
+        // validation of one wildcard domain might take a while
+        // that's why we update the json file after each wildcard domain validation
+        await updateJsonFile(wildcardDomainsJson, key, aliveDomains);
+        validatedWildcardDomains[key] = aliveDomains;
+    }
+
+    // FIXME add removal of the domains that should be removed from the list of wildcard domains
+    console.log('end finding dead domains', performance.now() - start);
 };
