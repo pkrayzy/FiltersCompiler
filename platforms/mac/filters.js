@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.30.88",
-			"timeUpdated": "2024-06-28T18:47:57+0000",
+			"version": "2.3.30.89",
+			"timeUpdated": "2024-06-29T03:08:52+0000",
 			"languages": []
 		},
 		{
@@ -367,8 +367,8 @@
 			"displayNumber": 3,
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
-			"version": "2.1.24.76",
-			"timeUpdated": "2024-06-28T18:47:40+0000",
+			"version": "2.1.24.77",
+			"timeUpdated": "2024-06-29T03:08:32+0000",
 			"languages": []
 		},
 		{
@@ -603,8 +603,8 @@
 			"displayNumber": 2,
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
-			"version": "2.1.25.65",
-			"timeUpdated": "2024-06-28T18:47:43+0000",
+			"version": "2.1.25.66",
+			"timeUpdated": "2024-06-29T03:08:35+0000",
 			"languages": []
 		},
 		{
@@ -657,8 +657,8 @@
 			"displayNumber": 100,
 			"groupId": 4,
 			"subscriptionUrl": "https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt",
-			"version": "2.1.24.14",
-			"timeUpdated": "2024-06-28T18:47:49+0000",
+			"version": "2.1.24.15",
+			"timeUpdated": "2024-06-29T03:08:42+0000",
 			"languages": []
 		},
 		{
