@@ -1628,8 +1628,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.18.20",
-			"timeUpdated": "2024-06-28T23:32:51+0000",
+			"version": "2.1.18.21",
+			"timeUpdated": "2024-06-29T03:33:29+0000",
 			"languages": [
 				"zh"
 			],
