@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/3_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.71.55",
-			"timeUpdated": "2024-06-30T21:32:51+0000",
+			"version": "2.0.71.56",
+			"timeUpdated": "2024-06-30T22:32:31+0000",
 			"languages": [],
 			"tags": [
 				2,
