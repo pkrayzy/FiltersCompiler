@@ -1628,8 +1628,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.18.25",
-			"timeUpdated": "2024-06-30T12:32:58+0000",
+			"version": "2.1.18.26",
+			"timeUpdated": "2024-06-30T23:32:59+0000",
 			"languages": [
 				"zh"
 			],
