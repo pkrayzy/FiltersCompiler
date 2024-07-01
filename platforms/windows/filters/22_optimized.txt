@@ -1,5 +1,5 @@
-! Checksum: 2AOIjpoHGezd0P5rsU4Exg
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1719714942-3600.patch
+! Checksum: bJd+ELSRwaCavxwI1Q9Emg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1719801350-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.67
@@ -188,6 +188,7 @@ jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
 h-ken.net###footer-rssLinkListHtml
 kijomatomelog.com##div[style="margin:0px;padding:2px;"]
+kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"]
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"] ~ a[href][target="_blank"]
 baiku-sokuho.info##.links2
 ||baiku-sokuho.info/pickup-rss*.html
@@ -327,6 +328,7 @@ kokopyon.net##.plg_area:last-child
 ||aaieba.livedoor.biz^$subdocument,~third-party
 aaieba.livedoor.biz##.aaieba-b
 kijomatomelog.com##.related-wrapper
+kijomatomelog.com##div[style="line-height: 35px; border-top:dotted 1px gray; border-bottom:dotted 1px gray; margin-top:20px; margin-bottom:20px; padding: 10px 10px 10px 15px;"] + .t_h
 kijomatomelog.com##div[style="margin-bottom:30px;"] > b > span[style="font-size: medium; color: rgb(102, 102, 102);"]
 ||baiku-sokuho.info/top-rss.html
 carp-matome.blog.jp##.bw_outbox
@@ -404,6 +406,7 @@ burusoku-vip.com##.headline-body
 burusoku-vip.com##.headline-title
 kijomatomelog.com##div[style^="line-height: 35px; border-top:dotted 1px gray;"]
 kijomatomelog.com##div[style="line-height: 20px"]
+kijomatomelog.com#?#.article span[style="font-size: 125%;"]:has(> span >span[style^="font-weight: bold;"])
 ||all-nationz.com/feed-all-nationz.html
 ||amnewgame.blog.jp/TOPRSS3.html
 anihatsu.com##.rss-blogroll-header
@@ -628,6 +631,7 @@ bipblog.com##.main_center_block:first-child
 repsoku.net,hdouga.com,gekiyaku.com##.headline
 fx2ch.net##[class^="rss-blogroll"]
 momoniji.com###content-top-in > .widget-content-top:first-child
+||hosyusokuhou.jp/rss/
 hosyusokuhou.jp###top
 blog.domesoccer.jp##.article-header-rss
 minigob-matome.blog.jp,samuraisoccer.doorblog.jp##.bt-rss
@@ -717,7 +721,6 @@ beasoku.com##.l-rss-header
 ||envybox.io^$third-party
 ||extraaedge.com^$third-party
 ||eyenewton.ru^$third-party
-||fastcallagent.com^$third-party
 ||feedback.luxnet.ua^$third-party
 ||frase.io^$third-party
 ||getbutton.io^$third-party
