@@ -20,13 +20,19 @@ const patchNetworkRule = (ast: NetworkRule, wildcardDomains: WildcardDomainsWith
         if (modifier.modifier.value === 'domain') {
             const domain = modifier.value.value;
             if (utils.isDomainWithTldWildcard(domain)) {
+
             }
         }
     }
 };
 
 const patchCosmeticRule = (ast: CosmeticRule, wildcardDomains: WildcardDomainsWithTld): any => {
+    const domains = ast.domains;
+    for (let domain in domains.children) {
+        if (utils.isDomainWithTldWildcard(domain.value)) {
 
+        }
+    }
 };
 
 const patchDomainsInAst = (ast: AnyRule, wildcardDomains: WildcardDomainsWithTld): any => {
@@ -42,6 +48,7 @@ const patchDomainsInAst = (ast: AnyRule, wildcardDomains: WildcardDomainsWithTld
 
 export function patchRule(rule: string, wildcardDomains: WildcardDomainsWithTld): string {
     const ast = RuleParser.parse(rule);
+    console.log({ ast });
 
     const patchedAst = patchDomainsInAst(ast, wildcardDomains);
     const domains = extractRuleDomains(ast);
