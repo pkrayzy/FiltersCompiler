@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: XWgp14LnXwYBBegIdmpivA
-! Diff-Path: ../patches/14/14-s-1719826581-3600.patch
+! Checksum: dZG5owlSv7AuTbbV4vcSdA
+! Diff-Path: ../patches/14/14-s-1719830150-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.85
-! TimeUpdated: 2024-07-01T09:33:55+00:00
+! Version: 2.2.0.86
+! TimeUpdated: 2024-07-01T10:33:31+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2481,8 +2481,8 @@ spzozprzychodnia.pl##.cookies-info-box
 iledefrance-mobilites.fr#$#html[class^="stopScroll"] { overflow: auto !important; }
 iledefrance-mobilites.fr#$#.cookies-banner { display: none !important; }
 bnews.com.br##.amdb-user-notification-container
-bellroy.com#$#bellroy-cookie-dialog { display: none !important; }
-bellroy.com#$#body { overflow: auto !important; }
+bellroy.com#$?#bellroy-cookie-dialog { remove: true; }
+bellroy.com#$#body { overflow-y: auto !important; }
 ||images.tcdn.com.br/files/*/modal-lgpd$script
 ||schoeck.com/Build/3134.7da4de8d.js
 bel.ru##+js(set-cookie, cookie-accepted, true)
@@ -30621,6 +30621,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Genegic rules
 ! SECTION: Subscriptions - Generic
 !
+##.newsletter-simple
 ##.verbum-simple-subscribe-modal
 ##.home-subscribe
 ##a[href^="https://twitter.com/intent/follow?"]
@@ -35972,7 +35973,6 @@ producthunt.com#?#aside[class^="styles_sidebar__"] > div[class^="styles_containe
 citywire.co.uk##.alert-registration
 finextra.com##.module--signup
 elpais.com.uy,ovaciondigital.com.uy,protocol.com##.email-wrapper
-marinij.com,bostonherald.com,eastbaytimes.com##.newsletter-simple
 mercurynews.com,themorningsun.com,dailybreeze.com,dailynews.com,reviewjournal.com,eastbaytimes.com##.Mg2-newsletter-inline_notif_mng
 mag.auto.ru##.jrnl-article-subscription
 adpushup.com##a[href="https://www.adpushup.com/blog/newsletter-subscription/"]
@@ -51017,14 +51017,15 @@ comic.nan-net.com##.rssreader
 ||blog.livedoor.jp/nanjstu/bt_rss3.htm
 blog.livedoor.jp##.headlinerss
 ||bot.jaicp.com/chatwidget/
-ettina.blogterest.net##.cp_list
-ettina.blogterest.net##.main-01sp
-ettina.blogterest.net##.main-02sp
-ettina.blogterest.net###content > div.row > div.col-md-3
-ettina.blogterest.net###content > div.row > div.col-md-4
-ettina.blogterest.net##.blockAreaFooter > div.blockWrapper:first-child
-ettina.blogterest.net##.blockAreaHeader > div.blockWrapper:first-child:has(> div > div[style^="width: 120"])
-ettina.blogterest.net##.blockAreaMainFooter > div.blockWrapper > div.blockBody:has(> ul.cp_list)
+sukebelog.blogterest.net,ettina.blogterest.net##.entryDetail div[style^="width: 100%; height: 315px; overflow-y: hidden;"]
+sukebelog.blogterest.net,ettina.blogterest.net##.cp_list
+sukebelog.blogterest.net,ettina.blogterest.net##.main-01sp
+sukebelog.blogterest.net,ettina.blogterest.net##.main-02sp
+sukebelog.blogterest.net,ettina.blogterest.net###content > div.row > div.col-md-3
+sukebelog.blogterest.net,ettina.blogterest.net###content > div.row > div.col-md-4
+sukebelog.blogterest.net,ettina.blogterest.net##.blockAreaFooter > div.blockWrapper:first-child
+sukebelog.blogterest.net,ettina.blogterest.net##.blockAreaHeader > div.blockWrapper:first-child:has(> div > div[style^="width: 120"])
+sukebelog.blogterest.net,ettina.blogterest.net##.blockAreaMainFooter > div.blockWrapper > div.blockBody:has(> ul.cp_list)
 av-baron.com##.entry-content > div > div.dfad
 fob.jp###swell_ad_widget-7
 fob.jp##.widget_swell_ad_widget:has(> div.p-blogParts > div.ek-linked-block)

@@ -1,9 +1,9 @@
-! Checksum: dd3wwar1pd3NTzQew54VKw
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1719826577-3600.patch
+! Checksum: eQdTxpeHMdRFAAS4Jxrz4Q
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1719830147-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.85
-! TimeUpdated: 2024-07-01T09:33:55+00:00
+! Version: 2.2.0.86
+! TimeUpdated: 2024-07-01T10:33:31+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1481,8 +1481,8 @@ spzozprzychodnia.pl##.cookies-info-box
 iledefrance-mobilites.fr#$#html[class^="stopScroll"] { overflow: auto !important; }
 iledefrance-mobilites.fr#$#.cookies-banner { display: none !important; }
 bnews.com.br##.amdb-user-notification-container
-bellroy.com#$#bellroy-cookie-dialog { display: none !important; }
-bellroy.com#$#body { overflow: auto !important; }
+bellroy.com#$?#bellroy-cookie-dialog { remove: true; }
+bellroy.com#$#body { overflow-y: auto !important; }
 ||images.tcdn.com.br/files/*/modal-lgpd$script
 ||schoeck.com/Build/3134.7da4de8d.js
 bel.ru#%#//scriptlet('set-cookie', 'cookie-accepted', 'true')
@@ -14261,6 +14261,7 @@ phys.org###subscribeToWebPush
 @@||rdsubfrm.relateddigital.com/api/Unsubscription
 @@||powr.io/powr.js$domain=ipitaka.com
 @@||app.getbeamer.com^$domain=comss.ru
+##.newsletter-simple
 ##.verbum-simple-subscribe-modal
 ##.home-subscribe
 ##a[href^="https://twitter.com/intent/follow?"]
@@ -17155,7 +17156,6 @@ timesofindia.indiatimes.com##.toinewsletternudge
 motorfinity.uk,culturewhisper.com,wiseadvice-it.ru,aajtak.in##.subscribe-banner
 finextra.com##.module--signup
 elpais.com.uy,ovaciondigital.com.uy,protocol.com##.email-wrapper
-marinij.com,bostonherald.com,eastbaytimes.com##.newsletter-simple
 mercurynews.com,themorningsun.com,dailybreeze.com,dailynews.com,reviewjournal.com,eastbaytimes.com##.Mg2-newsletter-inline_notif_mng
 mshowto.org#?#.theiaStickySidebar > aside:has(> div.textwidget > center > a[href^="https://forms.office.com/Pages/ResponsePage.aspx"])
 nytimes.com##.expanded-dock
@@ -23007,14 +23007,15 @@ comic.nan-net.com##.rssreader
 ||blog.livedoor.jp/nanjstu/bt_rss3.htm
 blog.livedoor.jp##.headlinerss
 ||bot.jaicp.com/chatwidget/
-ettina.blogterest.net##.cp_list
-ettina.blogterest.net##.main-01sp
-ettina.blogterest.net##.main-02sp
-ettina.blogterest.net###content > div.row > div.col-md-3
-ettina.blogterest.net###content > div.row > div.col-md-4
-ettina.blogterest.net##.blockAreaFooter > div.blockWrapper:first-child
-ettina.blogterest.net##.blockAreaHeader > div.blockWrapper:first-child:has(> div > div[style^="width: 120"])
-ettina.blogterest.net##.blockAreaMainFooter > div.blockWrapper > div.blockBody:has(> ul.cp_list)
+sukebelog.blogterest.net,ettina.blogterest.net##.entryDetail div[style^="width: 100%; height: 315px; overflow-y: hidden;"]
+sukebelog.blogterest.net,ettina.blogterest.net##.cp_list
+sukebelog.blogterest.net,ettina.blogterest.net##.main-01sp
+sukebelog.blogterest.net,ettina.blogterest.net##.main-02sp
+sukebelog.blogterest.net,ettina.blogterest.net###content > div.row > div.col-md-3
+sukebelog.blogterest.net,ettina.blogterest.net###content > div.row > div.col-md-4
+sukebelog.blogterest.net,ettina.blogterest.net##.blockAreaFooter > div.blockWrapper:first-child
+sukebelog.blogterest.net,ettina.blogterest.net##.blockAreaHeader > div.blockWrapper:first-child:has(> div > div[style^="width: 120"])
+sukebelog.blogterest.net,ettina.blogterest.net##.blockAreaMainFooter > div.blockWrapper > div.blockBody:has(> ul.cp_list)
 av-baron.com##.entry-content > div > div.dfad
 fob.jp###swell_ad_widget-7
 fob.jp##.widget_swell_ad_widget:has(> div.p-blogParts > div.ek-linked-block)
