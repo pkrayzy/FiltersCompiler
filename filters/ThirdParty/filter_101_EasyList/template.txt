@@ -1,4 +1,21 @@
+! Homepage: https://github.com/AdguardTeam/AdGuardFilters
+! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
+!
+!-------------------------------------------------------------------------------!
+!------------------ General JS API ---------------------------------------------!
+!-------------------------------------------------------------------------------!
+
+@include "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/general_js_api.txt"
+
+!-------------------------------------------------------------------------------!
+!------------------ EasyList rules ---------------------------------------------!
+!-------------------------------------------------------------------------------!
+
 @include "https://github.com/AdguardTeam/FiltersRegistry/raw/master/platforms/extension/ublock/filters/101.txt" /exclude="../../exclusions.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.plus.mini.txt"
+
+!#if (adguard_ext_safari || adguard_app_ios)
+@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/content_blocker.txt"
+!#endif
 
 @include "https://github.com/pkrayzy/Krayzylist/raw/main/Blocklist"
 
@@ -13,7 +30,3 @@
 @include "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.plus.mini.txt"
 
 @include "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt" /exclude="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro.plus.mini.txt"
-
-!#if (adguard_ext_safari || adguard_app_ios)
-@include "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/content_blocker.txt"
-!#endif
