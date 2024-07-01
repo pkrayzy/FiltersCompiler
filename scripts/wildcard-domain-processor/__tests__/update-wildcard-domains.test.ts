@@ -1,4 +1,4 @@
-import { getDomains } from '../wildcard-domain-processor';
+import { getDomains } from '../wildcard-domains-updater';
 
 describe('getDomains', () => {
     it('extracts wildcard domains from the cosmetic rules', () => {

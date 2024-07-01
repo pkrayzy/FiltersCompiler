@@ -7,8 +7,9 @@ import agtree, {
     NetworkRule,
     RuleParser,
 } from '@adguard/agtree';
+
 import { findFilterFiles, readFile, writeFile } from './file-utils';
-import { WildcardDomainsWithTld } from './wildcard-domain-processor';
+import { WildcardDomains } from './wildcard-domains-updater';
 import { DOMAIN_MODIFIERS } from './domain-extractor';
 import { utils } from './utils';
 
@@ -18,9 +19,9 @@ import { utils } from './utils';
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated network rule AST with expanded wildcards, or null if no valid domains are left.
  */
-const expandNetworkRulesWildcard = (
+const expandWildcardsInNetworkRules = (
     ast: NetworkRule,
-    wildcardDomains: WildcardDomainsWithTld,
+    wildcardDomains: WildcardDomains,
 ): NetworkRule | null => {
     if (!ast.modifiers) {
         return ast;
@@ -110,9 +111,9 @@ const expandNetworkRulesWildcard = (
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated cosmetic rule AST with expanded wildcards, or null if no valid domains are left.
  */
-const expandCosmeticRulesWildcard = (
+const expandWildcardsInCosmeticRules = (
     ast: CosmeticRule,
-    wildcardDomains: WildcardDomainsWithTld,
+    wildcardDomains: WildcardDomains,
 ): AnyRule | null => {
     const domains = ast.domains.children;
     const newPermittedDomains = new Map();
@@ -180,12 +181,12 @@ const expandCosmeticRulesWildcard = (
  * @returns The updated AST with expanded wildcards, or null if no valid domains are left.
  * @throws Will throw an error if the AST category is unsupported.
  */
-const expandWildcardDomainsInAst = (ast: AnyRule, wildcardDomains: WildcardDomainsWithTld): AnyRule | null => {
+const expandWildcardsInAst = (ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null => {
     switch (ast.category) {
         case 'Network':
-            return expandNetworkRulesWildcard(ast as NetworkRule, wildcardDomains);
+            return expandWildcardsInNetworkRules(ast as NetworkRule, wildcardDomains);
         case 'Cosmetic':
-            return expandCosmeticRulesWildcard(ast as CosmeticRule, wildcardDomains);
+            return expandWildcardsInCosmeticRules(ast as CosmeticRule, wildcardDomains);
         case 'Comment':
             return ast;
         default:
@@ -199,19 +200,19 @@ const expandWildcardDomainsInAst = (ast: AnyRule, wildcardDomains: WildcardDomai
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated rule string with expanded wildcards, or null if no valid domains are left.
  */
-export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomainsWithTld): string | null {
+export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string | null {
     const ast = RuleParser.parse(rule);
 
-    const astWithExpandedWildcardDomain = expandWildcardDomainsInAst(ast, wildcardDomains);
-    if (astWithExpandedWildcardDomain === null) {
+    const astWithExpandedWildcards = expandWildcardsInAst(ast, wildcardDomains);
+    if (astWithExpandedWildcards === null) {
         return null;
     }
 
-    if (ast === astWithExpandedWildcardDomain) {
+    if (ast === astWithExpandedWildcards) {
         return rule;
     }
 
-    return RuleParser.generate(astWithExpandedWildcardDomain);
+    return RuleParser.generate(astWithExpandedWildcards);
 }
 
 /**
@@ -220,7 +221,7 @@ export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDom
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The patched filter content with expanded wildcards.
  */
-function patchWildcards(filterContent: string, wildcardDomains: WildcardDomainsWithTld): string {
+function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: WildcardDomains): string {
     const rules = filterContent.split(/\r?\n/);
     const newRules = [];
     for (const rule of rules) {
@@ -239,7 +240,7 @@ const WILDCARD_DOMAINS_FILE = 'wildcard_domains.json';
  * @param platformsDir - The directory containing the platform filter files.
  * @returns A promise that resolves when the patching is complete.
  */
-export async function patchPlatforms(platformsDir: string): Promise<void> {
+export async function expandWildcardDomains(platformsDir: string): Promise<void> {
     const filters = await findFilterFiles(path.resolve(__dirname, platformsDir), /filters\/\d+(_optimized)?\.txt/);
 
     const wildcardDomainsFilename = path.resolve(__dirname, WILDCARD_DOMAINS_FILE);
@@ -247,6 +248,6 @@ export async function patchPlatforms(platformsDir: string): Promise<void> {
     const wildcardDomains = JSON.parse(wildcardDomainsJson);
 
     const filter = await readFile(filters[0]);
-    const updatedFilter = patchWildcards(filter, wildcardDomains);
+    const updatedFilter = expandWildcardDomainsInFilter(filter, wildcardDomains);
     await writeFile(`${filters[0]}_copy`, updatedFilter);
 }

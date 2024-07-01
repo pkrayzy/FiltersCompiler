@@ -1,4 +1,3 @@
-// FIXME possibly no-console can be removed
 /* eslint-disable no-await-in-loop,no-restricted-syntax,no-console */
 import * as path from 'path';
 import { RuleParser } from '@adguard/agtree';
@@ -48,15 +47,15 @@ const getWildcardDomains = (filterContent: string): Set<string> => {
 /**
  * A map of wildcard domains with all possible TLDs.
  */
-export type WildcardDomainsWithTld = { [key: string]: string[] };
+export type WildcardDomains = { [key: string]: string[] };
 
 /**
  * Supplements the wildcard domains with all possible TLDs.
  * @param wildcardDomains - The set of wildcard domains to supplement.
  * @returns A map of wildcard domains with all possible TLDs.
  */
-function supplementWithTld(wildcardDomains: Set<string>): WildcardDomainsWithTld {
-    const wildcardDomainsWithTld: WildcardDomainsWithTld = {};
+function supplementWithTld(wildcardDomains: Set<string>): WildcardDomains {
+    const wildcardDomainsWithTld: WildcardDomains = {};
     for (const wildcardDomain of wildcardDomains) {
         const baseWithoutWildcard = wildcardDomain.slice(0, -2);
         wildcardDomainsWithTld[wildcardDomain] = [];
@@ -97,10 +96,13 @@ async function updateJsonFile(filename: string, key: string, value: string[]): P
 /**
  * Processes wildcard domains by finding, validating, and writing them to a JSON file.
  * @param filtersDir - The directory to search for filter files.
- * @param wildcardDomainsJson - The path to the JSON file where the validated wildcard domains will be written.
+ * @param wildcardDomainsJsonFilename - The path to the JSON file where the validated wildcard domains will be written.
  * @throws Will throw an error if there are issues reading or writing files, or if dead domains cannot be found.
  */
-export const wildcardDomainProcessor = async (filtersDir: string, wildcardDomainsJson: string): Promise<void> => {
+export const updateWildcardDomains = async (
+    filtersDir: string,
+    wildcardDomainsJsonFilename: string,
+): Promise<void> => {
     const filterFiles = await findFilterFiles(path.resolve(__dirname, filtersDir), 'filter.txt');
 
     const wildcardDomains = new Set<string>();
@@ -120,10 +122,10 @@ export const wildcardDomainProcessor = async (filtersDir: string, wildcardDomain
         const aliveDomains = await getAliveDomains(value);
         // validation of one wildcard domain might take a while
         // that's why we update the json file after each wildcard domain validation
-        await updateJsonFile(wildcardDomainsJson, key, aliveDomains);
+        await updateJsonFile(wildcardDomainsJsonFilename, key, aliveDomains);
         validatedWildcardDomains[key] = aliveDomains;
     }
 
-    // FIXME add removal of the domains that should be removed from the list of wildcard domains
+    // TODO add removal of the domains that should be removed from the list of wildcard domains
     console.log('end finding dead domains', performance.now() - start);
 };
