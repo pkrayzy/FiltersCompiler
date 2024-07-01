@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.67",
-			"timeUpdated": "2024-07-01T17:01:12+0000",
+			"version": "2.1.51.68",
+			"timeUpdated": "2024-07-01T21:01:29+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.66",
-			"timeUpdated": "2024-07-01T17:01:13+0000",
+			"version": "2.1.51.67",
+			"timeUpdated": "2024-07-01T21:01:30+0000",
 			"languages": [
 				"ar"
 			],
@@ -1308,8 +1308,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.44.98",
-			"timeUpdated": "2024-07-01T17:01:56+0000",
+			"version": "2.0.44.99",
+			"timeUpdated": "2024-07-01T21:02:14+0000",
 			"languages": [
 				"hi"
 			],
@@ -1392,8 +1392,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.76",
-			"timeUpdated": "2024-07-01T09:02:08+0000",
+			"version": "2.0.1.77",
+			"timeUpdated": "2024-07-01T21:02:16+0000",
 			"languages": [],
 			"tags": [
 				4
