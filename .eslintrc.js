@@ -67,6 +67,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'import/prefer-default-export': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-explicit-any': 'error',
     },
     'overrides': [
         {

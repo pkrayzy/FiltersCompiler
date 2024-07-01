@@ -2,7 +2,7 @@ import { expandWildcardsInRule } from '../wildcard-expander';
 
 describe('platforms-patcher', () => {
     describe('expandWildcardsInRule', () => {
-        describe('patch cosmetic rules', () => {
+        describe('expand wildcards in cosmetic rules', () => {
             it('should expand wildcard', () => {
                 const rule = 'example.*##h1';
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
@@ -10,7 +10,7 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('example.com,example.org##h1');
             });
 
-            it('should expand wildcard and not lose non wildcard', () => {
+            it('should expand wildcard and retain non-wildcard domains', () => {
                 const rule = 'example.*,test.com##h1';
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
@@ -24,15 +24,16 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('~example.com,~example.org##h1');
             });
 
-            it('should return null if wildcardDomains were empty', () => {
+            it('should return null if wildcardDomains is empty', () => {
                 const rule = 'example.*##h1';
                 const wildcardDomains = { 'example.*': [] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
                 expect(patchedRule).toEqual(null);
             });
 
-            it('if has restricted and permitted domains, they destroy each other', () => {
+            it('should handle conflicts between restricted and permitted domains', () => {
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
+
                 const ruleWithPermittedWildcard = 'example.*,~example.org##h1';
                 const patchedRuleWithPermittedWildcard = expandWildcardsInRule(
                     ruleWithPermittedWildcard,
@@ -48,11 +49,11 @@ describe('platforms-patcher', () => {
                 expect(patchedRuleWithRestrictedWildcard).toEqual('~example.com##h1');
             });
 
-            // eslint-disable-next-line max-len
-            it('returns null if after expanding wildcard and destroying permitted and restricted no domains left', () => {
+            it('should return null if no domains are left after resolving conflicts', () => {
                 const ruleWithPermittedWildcard = 'example.*,~example.com##h1';
                 const ruleWithRestrictedWildcard = '~example.*,example.com##h1';
                 const wildcardDomains = { 'example.*': ['example.com'] };
+
                 const patchedRuleWithPermittedWildcard = expandWildcardsInRule(
                     ruleWithPermittedWildcard,
                     wildcardDomains,
@@ -74,7 +75,7 @@ describe('platforms-patcher', () => {
             });
         });
 
-        describe('patch network rules', () => {
+        describe('expand wildcards in network rules', () => {
             it('should expand wildcard', () => {
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
 
@@ -95,7 +96,7 @@ describe('platforms-patcher', () => {
                 expect(expandedFromRule).toEqual('test$from=example.com|example.org');
             });
 
-            it('should expand wildcard and not lose non wildcard', () => {
+            it('should expand wildcard and retain non-wildcard domains', () => {
                 const rule = 'test$domain=example.*|test.com';
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
                 const expandedRule = expandWildcardsInRule(rule, wildcardDomains);
@@ -109,14 +110,14 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('test$domain=~example.com|~example.org');
             });
 
-            it('should return null if wildcardDomains were empty', () => {
+            it('should return null if wildcardDomains is empty', () => {
                 const rule = 'test$domain=example.*';
                 const wildcardDomains = { 'example.*': [] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
                 expect(patchedRule).toEqual(null);
             });
 
-            it('if has restricted and permitted domains, they destroy each other', () => {
+            it('should handle conflicts between restricted and permitted domains', () => {
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
                 const ruleWithPermittedWildcard = 'test$domain=example.*|~example.org';
                 const patchedRuleWithPermittedWildcard = expandWildcardsInRule(
@@ -133,8 +134,7 @@ describe('platforms-patcher', () => {
                 expect(patchedRuleWithRestrictedWildcard).toEqual('test$domain=~example.com');
             });
 
-            // eslint-disable-next-line max-len
-            it('returns null if after expanding wildcard and destroying permitted and restricted no domains left', () => {
+            it('should return null if no domains are left after resolving conflicts', () => {
                 const wildcardDomains = { 'example.*': ['example.com'] };
                 const ruleWithPermittedWildcard = 'test$domain=example.*|~example.com';
                 const patchedRuleWithPermittedWildcard = expandWildcardsInRule(

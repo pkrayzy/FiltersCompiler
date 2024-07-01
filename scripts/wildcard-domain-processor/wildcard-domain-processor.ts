@@ -39,7 +39,7 @@ const getWildcardDomains = (filterContent: string): Set<string> => {
     const wildcardDomains = new Set<string>();
     for (const rule of rules) {
         const domains = getDomains(rule);
-        const wildcardDomainsList = domains.filter((domain) => utils.isDomainWithTldWildcard(domain));
+        const wildcardDomainsList = domains.filter((domain) => utils.isWildcardDomain(domain));
         wildcardDomainsList.forEach((domain) => wildcardDomains.add(domain));
     }
     return wildcardDomains;
@@ -53,6 +53,7 @@ export type WildcardDomainsWithTld = { [key: string]: string[] };
 /**
  * Supplements the wildcard domains with all possible TLDs.
  * @param wildcardDomains - The set of wildcard domains to supplement.
+ * @returns A map of wildcard domains with all possible TLDs.
  */
 function supplementWithTld(wildcardDomains: Set<string>): WildcardDomainsWithTld {
     const wildcardDomainsWithTld: WildcardDomainsWithTld = {};
@@ -66,12 +67,24 @@ function supplementWithTld(wildcardDomains: Set<string>): WildcardDomainsWithTld
     return wildcardDomainsWithTld;
 }
 
-async function getAliveDomains(value: string[]): string[] {
+/**
+ * Filters out dead domains from a list of domains.
+ * @param value - The list of domains to filter.
+ * @returns A list of alive domains.
+ */
+async function getAliveDomains(value: string[]): Promise<string[]> {
     const deadDomains = new Set(await findDeadDomains(value));
     const aliveDomains = value.filter((domain) => !deadDomains.has(domain));
     return aliveDomains;
 }
 
+/**
+ * Updates a JSON file with a key-value pair.
+ * @param filename - The name of the JSON file.
+ * @param key - The key to update in the JSON file.
+ * @param value - The value to set for the key in the JSON file.
+ * @returns A promise that resolves when the file is updated.
+ */
 async function updateJsonFile(filename: string, key: string, value: string[]): Promise<void> {
     const filePath = path.resolve(__dirname, filename);
     const json = await readFile(filePath);

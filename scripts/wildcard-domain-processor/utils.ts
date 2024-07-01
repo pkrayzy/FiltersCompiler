@@ -26,7 +26,7 @@ const ALLOW_TLD = new Set([
  * @param domain Domain to check
  * @returns True if domain ends with wildcard Tld
  */
-const isDomainWithTldWildcard = (domain: string): boolean => {
+const isWildcardDomain = (domain: string): boolean => {
     return domain.endsWith('.*');
 };
 
@@ -38,7 +38,7 @@ const isDomainWithTldWildcard = (domain: string): boolean => {
  */
 function validDomain(domain: string): boolean {
     // If the domain ends with '.*', it is a wildcard domain and it is valid.
-    if (isDomainWithTldWildcard(domain)) {
+    if (isWildcardDomain(domain)) {
         return true;
     }
 
@@ -71,5 +71,5 @@ function validDomain(domain: string): boolean {
 export const utils = {
     validDomain,
     unique,
-    isDomainWithTldWildcard,
+    isWildcardDomain,
 };
