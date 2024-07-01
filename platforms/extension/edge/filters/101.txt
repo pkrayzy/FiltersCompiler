@@ -1,21 +1,82 @@
-! Checksum: JPxnkWvh7hDNg0Y6Su0Izw
+! Checksum: 4QTAJq2fzpzR1cjiMSmNRA
 ! Title: EasyList
 ! Description: EasyList is the primary subscription that removes adverts from web pages in English. Already included in AdGuard Base filter.
-! Version: 2.1.24.79
-! TimeUpdated: 2024-07-01T03:08:44+00:00
+! Version: 2.1.24.80
+! TimeUpdated: 2024-07-01T13:44:23+00:00
 ! Expires: 10 days (update frequency)
-! Checksum: f4EZTY+NkZHzo7B9uuyUag
-! Diff-Path: ../patches/101/101-s-1719795859-14400.patch
+! Homepage: https://github.com/AdguardTeam/AdGuardFilters
+! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
+!
+!-------------------------------------------------------------------------------!
+!------------------ General JS API ---------------------------------------------!
+!-------------------------------------------------------------------------------!
+! JS API START
+!
+! AG_removeCookie
+! Examples: AG_removeCookie('/REGEX/') or AG_removeCookie('part of the cookie name')
+!
+!
+! AG_defineProperty
+! See https://github.com/AdguardTeam/deep-override
+!
+!
+! AG_abortOnPropertyWrite(property, debug)
+! Aborts execution of a script when it attempts to write the specified property.
+! Based on AG_defineProperty (https://github.com/AdguardTeam/deep-override)
+!
+! Examples:
+! AG_abortOnPropertyWrite('String.fromCharCode');
+!
+! @param property property or properties chain
+! @param debug optional, if true - we will print warning when script is aborted.
+!
+!
+! AG_abortOnPropertyRead(property, debug)
+! Aborts execution of a script when it attempts to read the specified property.
+! Based on AG_defineProperty (https://github.com/AdguardTeam/deep-override)
+!
+! Examples:
+! AG_abortOnPropertyRead('String.fromCharCode');
+!
+! @param property property or properties chain
+! @param debug optional, if true - we will print warning when script is aborted.
+!
+!
+! AG_abortInlineScript(regex, property, debug)
+! Aborts execution of an inline script when it attempts to access the specified property
+! AND content of the <script> element matches specified regular expression.
+! Based on AG_defineProperty (https://github.com/AdguardTeam/deep-override)
+!
+! Examples:
+! AG_abortInlineScript(/zfgloadedpopup|zfgloadedpushopt/, 'String.fromCharCode');
+!
+! @param regex regular expression that the inline script contents must match
+! @param property property or properties chain
+! @param debug optional, if true - we will print warning when script is aborted.
+!
+!
+! AG_setConstant('property.chain', 'true') // defines boolean (true), same for false;
+! AG_setConstant('property.chain', '123') // defines Number 123;
+! AG_setConstant('property.chain', 'noopFunc') // defines function(){};
+! AG_setConstant('property.chain', 'trueFunc') // defines function(){return true};
+! AG_setConstant('property.chain', 'falseFunc') // defines function(){return false};
+!
+! JS API FINISH
+!-------------------------------------------------------------------------------!
+!------------------ EasyList rules ---------------------------------------------!
+!-------------------------------------------------------------------------------!
+! Checksum: euMNq7dp32ovCxi+mp70jg
+! Diff-Path: ../patches/101/101-s-1719839068-14400.patch
 ! Title: EasyList
 ! Description: EasyList is the primary subscription that removes adverts from web pages in English. Already included in AdGuard Base filter.
-! OriginalVersion: 2.1.28.63
-! TimeUpdated: 2024-07-01T01:01:06+00:00
+! OriginalVersion: 2.1.28.66
+! TimeUpdated: 2024-07-01T13:01:04+00:00
 ! Expires: 5 days (update frequency)
 !
-! Checksum: 53IcXzL6Q74pC7XLrEgrUw
-! OriginalVersion: 202407010050
+! Checksum: uDhWGZwWdIUe21Uf1wumKA
+! OriginalVersion: 202407011251
 ! Title: EasyList
-! Last modified: 01 Jul 2024 00:50 UTC
+! Last modified: 01 Jul 2024 12:51 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -53602,7 +53663,6 @@ browsershots.org#@#.advert_area
 ||zeyappland.com^
 ||zeydoo.com^
 ||zeypreland.com^
-||zfctrack.net^
 ||zfeaubp.com^
 ||zferral.com^
 ||zfgyvoarqreba.com^
@@ -53621,7 +53681,6 @@ browsershots.org#@#.advert_area
 ||zgtkxwqgebintr.com^
 ||zgxxvdlxc.com^
 ||zhaner.xyz^
-||zhctrack.net^
 ||zhedvge.com^
 ||zhej78i1an8w6ceu.com^
 ||zhfvwkkftg.com^
@@ -62933,6 +62992,7 @@ asgg.php$domain=ghostbin.me|paste.fo
 ||biblemenus.com/adframe
 ||bioinformatics.org/images/ack_banners/
 ||bit.com.au/scripts/js_$script
+||bitchute.com/static/ad2.html
 ||bitcotasks.com/je.php
 ||bitcotasks.com/yo.php
 ||bizjournals.com/static/dist/js/gpt.min.js
@@ -65283,6 +65343,7 @@ fastseduction.com,independent.co.uk###partners
 kingsleague.pro###partnersGrid
 arrivealive.co.za###partners_container
 binaries4all.com###payserver
+forums.golfwrx.com###pb-slot-top
 demap.info###pcad
 shine.cn###pdfModal
 investopedia.com###performance-marketing_1-0
@@ -65466,6 +65527,7 @@ thestar.com###sticky-ad-2
 rudrascans.com###sticky-ad-head
 ktbs.com###sticky-anchor
 datamation.com,esecurityplanet.com,eweek.com,serverwatch.com,webopedia.com###sticky-bottom
+stakingrewards.com###sticky-footer
 independent.co.uk,standard.co.uk###stickyFooterRoot
 afr.com###stickyLeaderboard
 bostonglobe.com###sticky_container.width_full
@@ -66011,7 +66073,7 @@ emojiphrasebook.com##.adBottom
 bigislandnow.com##.adBreak
 kijiji.ca##.adChoices-804693302
 economist.com##.adComponent_advert__kPVUI
-m.economictimes.com,someecards.com,trailspace.com##.adContainer
+m.economictimes.com,someecards.com,trailspace.com,wabetainfo.com##.adContainer
 etymonline.com##.adContainer--6CVz1
 hellomagazine.com##.adContainerClass_acvudum
 anews.com.tr##.adControl
@@ -66989,6 +67051,7 @@ counter.dev,lindaikejisblog.com##.da
 engadget.com##.da-container
 smartprix.com##.dadow-box
 lifewire.com##.daily-deal
+dailycaller.com##.dailycaller_adhesion
 4chan.org,boards.4channel.org##.danbo-slot
 cnbctv18.com##.davos-top-ad
 sportshub.stream##.db783ekndd812sdz-ads
@@ -67869,6 +67932,7 @@ sporcle.com##.main-content-unit-wrapper
 numuki.com##.main-header-responsive-wrapper
 ggrecon.com##.mainVenatusBannerContainer
 nordot.app##.main__ad
+gzeromedia.com##.main__post-sponsored
 livescores.biz##.make-a-bet_wrap
 get.pixelexperience.org##.mantine-arewlw
 whatsgabycooking.com##.manual-adthrive-sidebar
@@ -68607,7 +68671,7 @@ thesun.co.uk##.section-sponsorship-wrapper-article
 thesun.co.uk##.section-sponsorship-wrapper-section
 seattlepride.org##.section_sponsorship
 brandsoftheworld.com##.seedling
-searchenginejournal.com##.sej-bbb-section
+searchenginejournal.com##.sej-tt-link
 timesofisrael.com##.sellwild-label
 hypestat.com##.sem_banner
 spotifydown.com##.semi-transparent
@@ -68833,6 +68897,7 @@ ebay.co.uk,ebay.com,ebay.com.au##.srp-1p__link
 mlsbd.shop##.srzads
 theblueoceansgroup.com##.ss-on-media-container
 searchenginejournal.com##.sss2_sllo_o3
+searchenginejournal.com##.sss2_sllo_o4
 aupetitparieur.com##.st85ip42z1v3x
 cnn.com##.stack__ads
 barrons.com##.standard__AdWrapper-sc-14sjre0-6
@@ -68884,6 +68949,7 @@ nzherald.co.nz##.story-card--sponsored-text-below
 stadiumtalk.com##.story-section-inStory-inline
 interest.co.nz##.story-tag-wrapper
 healthshots.com##.storyBlockOne
+livemint.com##.storyPage_storyblockAd__r4wwE
 businesstoday.in##.stoybday-ad
 24fm.ps,datingscammer.info,kayifamily.net,news365.co.za,xboxera.com##.stream-item
 siasat.com##.stream-item-below-post-content
@@ -69282,7 +69348,7 @@ gsmserver.com##.widget_banner-container_three-horizontal
 discussingfilm.net,goonhammer.com,joemygod.com,shtfplan.com,thestrongtraveller.com,usmagazine.com##.widget_block
 wplift.com##.widget_bsa
 techweekmag.com##.widget_codewidget
-4sysops.com,9to5linux.com,backthetruckup.com,catcountry941.com,cnx-software.com,corrosionhour.com,corvetteblogger.com,dailyveracity.com,dcrainmaker.com,fastestvpns.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,iwatchsouthparks.com,macsources.com,metalsucks.net,mmoculture.com,nasaspaceflight.com,openloading.com,patriotfetch.com,planetofreviews.com,prepperwebsite.com,sashares.co.za,scienceabc.com,scienceandliteracy.org,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,trackalerts.com,trendingpoliticsnews.com##.widget_custom_html
+4sysops.com,9to5linux.com,backthetruckup.com,catcountry941.com,cnx-software.com,corrosionhour.com,corvetteblogger.com,dailyveracity.com,dcrainmaker.com,fastestvpns.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,iwatchsouthparks.com,macsources.com,metalsucks.net,mmoculture.com,nasaspaceflight.com,openloading.com,patriotfetch.com,planetofreviews.com,prepperwebsite.com,sashares.co.za,scienceabc.com,scienceandliteracy.org,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com##.widget_custom_html
 domaingang.com##.widget_execphp
 bestlifeonline.com,hellogiggles.com##.widget_gm_karmaadunit_widget
 faroutmagazine.co.uk##.widget_grv_mpu_widget
@@ -70974,6 +71040,7 @@ nordstrom.com#?#article:has(.Yw5es:-abp-contains(Sponsored))
 petco.com#?#[class^="CitrusCatapult-styled__LeftContent"]:-abp-has(div:-abp-contains(Sponsored))
 petco.com#?#[class^="HorizontalWidget"]:-abp-has(div:-abp-contains(Sponsored))
 petco.com#?#li:-abp-contains(Sponsored)
+bitchute.com#?#.row.justify-center:-abp-contains(Advertisement)
 rawstory.com#?#.body-description > div:-abp-contains(ADVERTISEMENT)
 regex101.com#?#div > header + div > div + div:-abp-contains(Sponsors)
 sainsburys.co.uk#?#.pt-grid-item:-abp-has([data-test-id="citrus-label"]:-abp-contains(Sponsored))
@@ -87109,11 +87176,6 @@ focus.de##[href^="https://www.cyberport.de"]
 ariva.de##.werb_textlink
 ariva.de###iqd_mainAd
 ! https://github.com/uBlockOrigin/uAssets/issues/1649
-! https://github.com/uBlockOrigin/uAssets/issues/1627
-! https://github.com/uBlockOrigin/uAssets/issues/1650
-! https://github.com/uBlockOrigin/uAssets/issues/2732
-@@||mercurynews.com^$generichide
-/wp-content/client-mu-plugins/src/Paywall/static/js/connext-paywall-analytics.min.js
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40124
 vsco.co##.page-wrap > section:has-text(Download the free)
 ! https://github.com/jspenguin2017/uBlockProtector/issues/873
@@ -101533,6 +101595,9 @@ shareus.site##.box-main:has(#countdown) > .blog-item
 ! https://github.com/uBlockOrigin/uAssets/issues/16176
 ! https://github.com/uBlockOrigin/uAssets/issues/16184
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170100
+! https://listauthorschat.slack.com/archives/C05G8V3NERH/p1719797252047079
+||html-load.com/loader.min.js^$script,third-party,domain=wfmz.com
+||wfmz.com^$csp=script-src-attr 'none'
 ! Title: uBlock filters (2023)
 ! Last modified: %timestamp%
 ! Description: Filters optimized for uBlock, to be used along EasyList
@@ -101709,6 +101774,7 @@ ero-anime.net###side_col #index_side_widget:has(.ninja-recommend-block)
 ero-anime.net###top_area_under
 dvdrev.com##.side_menu:has(> div > div.plugin-freearea > div.ninja-recommend-block)
 xn--r8jwklh769h2mc880dk1o431a.com##.underbox
+tousatu-ch.net##.widget_custom_html:has(> div.textwidget > div[style^="width: 100%;"] > div.ninja-recommend-block)
 ! Cxense/Piano
 jiji.com##.RecommendPianoWrapper
 jiji.com##.RecommendUnderlayer
@@ -104854,6 +104920,13 @@ pixiv.net##main > section > div > div:has(> iframe[name][Width="500"][height="52
 pixiv.net##section > div[class^="sc-"]:last-child:has(> div[style*="width: 728px;"]:only-child > iframe[name="footer"][Width="728"][height="90"]):matches-css(margin-bottom: -16px)
 ! https://github.com/uBlockOrigin/uAssets/issues/22418
 pixiv.net##section ul > li:has(> iframe[name="infeed"])
+! https://github.com/uBlockOrigin/uAssets/issues/1627
+! https://github.com/uBlockOrigin/uAssets/issues/1650
+! https://github.com/uBlockOrigin/uAssets/issues/2732
+! https://github.com/uBlockOrigin/uAssets/issues/4523
+mercurynews.com##.dfp-ad
+@@||mercurynews.com^$generichide
+/wp-content/client-mu-plugins/src/Paywall/static/js/connext-paywall-analytics.min.js
 ! END: Rules from filters.txt
 ! START: Regional lists
 ! <<<<< czech slovak filters >>>>>
@@ -110035,3 +110108,4 @@ emailnator.com##[style^="width: 15px; height: 15px; overflow: scroll; visibility
 ||tierlists.com^$script,~third-party,redirect-rule=noopjs
 ! https://ktla.com/video - video breakage
 ||imasdk.googleapis.com/js/sdkloader/ima3.js^$script,third-party,redirect=google-ima3,domain=ktla.com,important
+! https://github.com/uBlockOrigin/uAssets/issues/24321
