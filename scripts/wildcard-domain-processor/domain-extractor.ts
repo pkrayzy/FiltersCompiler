@@ -1,56 +1,14 @@
-import agtree, { AnyRule, Modifier, NetworkRule } from '@adguard/agtree';
+import agtree, {
+    AnyRule,
+    DomainListParser,
+    Modifier,
+} from '@adguard/agtree';
 import { utils } from './utils';
 
 /**
  * A list of network rule modifiers that are to be scanned for dead domains.
  */
-const DOMAIN_MODIFIERS = ['domain', 'denyallow', 'from', 'to'];
-
-/**
- * Regular expression that matches the domain in a network rule pattern.
- */
-const PATTERN_DOMAIN_REGEX = ((): RegExp => {
-    const startStrings = [
-        '||', '//', '://', 'http://', 'https://', '|http://', '|https://',
-        'ws://', 'wss://', '|ws://', '|wss://',
-    ];
-
-    const startRegex = startStrings.map((str) => {
-        return str.replace(/\//g, '\\/').replace(/\|/g, '\\|');
-    }).join('|');
-
-    return new RegExp(`^(@@)?(${startRegex})([a-z0-9-.]+)(\\^|\\/)`, 'i');
-})();
-
-/**
- * Attempts to extract the domain from the network rule pattern. If the pattern
- * does not contain a domain, returns null.
- *
- * @param ast The rule AST.
- * @returns The domain extracted from the AST.
- */
-function extractDomainFromPattern(ast: NetworkRule): string | null {
-    if (!ast.pattern) {
-        return null;
-    }
-
-    // Ignore regular expressions as we cannot be sure if it's for a hostname
-    // or not.
-    //
-    // TODO: Handle the most common cases like (negative lookahead + a list of domains).
-    if (ast.pattern.value.startsWith('/') && ast.pattern.value.endsWith('/')) {
-        return null;
-    }
-
-    const match = ast.pattern.value.match(PATTERN_DOMAIN_REGEX);
-    if (match && utils.validDomain(match[3])) {
-        const domain = match[3];
-
-        return domain;
-    }
-
-    return null;
-}
+export const DOMAIN_MODIFIERS = ['domain', 'denyallow', 'from', 'to'];
 
 /**
  * Extracts an array of domains from the network rule modifier.
@@ -58,7 +16,7 @@ function extractDomainFromPattern(ast: NetworkRule): string | null {
  * @param modifier The modifier that contains the domains.
  * @returns The list of domains extracted from the modifier.
  */
-function extractModifierDomains(modifier: Modifier): {
+export function extractModifierDomains(modifier: Modifier): {
     domain: string;
     negated: boolean;
 }[] {
@@ -66,8 +24,8 @@ function extractModifierDomains(modifier: Modifier): {
         return [];
     }
 
-    const domainList = agtree.DomainListParser.parse(modifier.value.value, agtree.PIPE_MODIFIER_SEPARATOR);
-    return domainList.children.map((domain) => {
+    const domains = DomainListParser.parse(modifier.value.value, agtree.PIPE_MODIFIER_SEPARATOR);
+    return domains.children.map((domain) => {
         return {
             domain: domain.value,
             negated: domain.exception,
@@ -100,12 +58,7 @@ function extractCosmeticRuleDomains(ast: agtree.CosmeticRule): string[] {
  * @returns The list of all domains that are used by this rule.
  */
 function extractNetworkRuleDomains(ast: agtree.NetworkRule): string[] {
-    const domains = [];
-
-    const patternDomain = extractDomainFromPattern(ast);
-    if (patternDomain) {
-        domains.push(patternDomain);
-    }
+    const domains: string[] = [];
 
     if (!ast.modifiers) {
         // No modifiers in the rule, return right away.

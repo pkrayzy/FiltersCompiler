@@ -41,6 +41,7 @@ export async function findFilterFiles(dir: string, ending: string | RegExp): Pro
             }
         }
     } catch (e) {
+        // eslint-disable-next-line no-console
         console.log(`Error processing directory ${dir}: ${e}`);
         throw e;
     }

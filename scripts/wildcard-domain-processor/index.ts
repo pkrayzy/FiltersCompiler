@@ -1,5 +1,5 @@
 import { wildcardDomainProcessor } from './wildcard-domain-processor';
-import { patchPlatforms } from './platforms-patcher';
+import { patchPlatforms } from './wildcard-expander';
 
 // FIXME check if this variable already used somewhere
 const FILTERS_DIR = '../../filters';

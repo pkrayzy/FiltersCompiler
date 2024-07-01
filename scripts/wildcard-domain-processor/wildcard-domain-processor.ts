@@ -66,13 +66,13 @@ function supplementWithTld(wildcardDomains: Set<string>): WildcardDomainsWithTld
     return wildcardDomainsWithTld;
 }
 
-async function getAliveDomains(value: string[]) {
+async function getAliveDomains(value: string[]): string[] {
     const deadDomains = new Set(await findDeadDomains(value));
     const aliveDomains = value.filter((domain) => !deadDomains.has(domain));
     return aliveDomains;
 }
 
-async function updateJsonFile(filename: string, key: string, value: string[]) {
+async function updateJsonFile(filename: string, key: string, value: string[]): Promise<void> {
     const filePath = path.resolve(__dirname, filename);
     const json = await readFile(filePath);
     const parsedJson = JSON.parse(json);
