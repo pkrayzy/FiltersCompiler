@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: f+KrgIPVvqMl6kdP4rJ77g
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1719844643-3600.patch
+! Checksum: b5g0JMOLA6EFTD9M2HArBw
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1719849994-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.90
-! TimeUpdated: 2024-07-01T14:34:44+00:00
+! Version: 2.2.0.91
+! TimeUpdated: 2024-07-01T16:04:00+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1367,6 +1367,7 @@ focus.it##+js(remove-class, cp-banner-visible, body)
 codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.*##+js(remove-class, force--consent|show--consent, html)
 ||cdn.jsdelivr.net/npm/@lmc-eu/cookie-consent-manager$domain=teamio.com
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
+megabank.com.tw##.gdpr-text-align
 inews.co.uk##div[data-project="mol-fe-cmp"]
 greencell.global###js-modern-cookie-modal
 relive.cc###ub-gdpr
@@ -4530,6 +4531,8 @@ h-ka.de,thi.de,oedp-mainz.de,oedp-koeln.de,oedp.de##.cookiemessage__overlay
 kizilayakademi.org.tr,duh.de,johanneswerk.de##.cc
 lakshmisri.com##.disclamierpage
 bremer-gewuerzhandel.de##[class*="heptacom--cookie-consent"]
+daa-kassel.de,daskrankenhaus.de#$#body { overflow: visible !important; }
+daa-kassel.de,daskrankenhaus.de#$##cookienotice_box { display: none !important; }
 herold.at###popupCookie
 eazwv.org,tbsbibles.org,worldbank.org##.privacy-widget
 shop.berliner-kaffeeroesterei.de,lanius.com,bremer-gewuerzhandel.de,delius-klasing.de,toner-dumping.de,lilienthal.berlin,mister-lady.at,mister-lady.com##.js--overlay
@@ -8370,6 +8373,7 @@ razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > 
 auto.ru##+js(json-prune, ads)
 drive2.ru##+js(abort-on-property-read, Object.prototype.AdChosen)
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
+mail.ru##+js(set-constant, Object.prototype.hideTgbAd, '')
 dzen.ru##body header#dzen-header ~ div[class*="__widgetContainer-"] div[style]:has(div.adv-skeleton___main)
 dzen.ru##div[class^="float-interview__float-"]
 !+ NOT_PLATFORM(windows, mac, android)
@@ -22892,6 +22896,7 @@ beasoku.com##.l-rss-header
 /wp-content/plugins/elfsight-whatsapp-chat-cc/*
 ||gubagootracking.com^$third-party
 ||cdn.gubagoo.io^$third-party
+||milionymonet.onet.pl/js/omm/widget/euroloterie.js
 ||quotiq.ru^$third-party
 ||prod-live-chat.sprinklr.com^$third-party
 ||widgets.binotel.com^$third-party,domain=~novaposhta.md
