@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 4nrEpEpv8jI34LPvXE6a2Q
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719837389-3600.patch
+! Checksum: 65NI1QKzggTF8PL3lv4bqA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1719840968-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.42.12
-! TimeUpdated: 2024-07-01T12:31:21+00:00
+! Version: 2.3.42.13
+! TimeUpdated: 2024-07-01T13:31:23+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -32738,6 +32738,11 @@ m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-p
 ||googlevideo.com/initplayback?source=youtube&*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com
 ! Fix SSAP ads
 www.youtube.com##+js(adjust-setTimeout, [native code], 17000, 0.001)
+! SSAP ads - fix for Firefox extension
+! Firefox extension cannot download new JavaScript rules, so we need to use a workaround by using $replace rule
+! Another problem is that commas must be escaped, but in Firefox extension escaped commas in "replacement" part are not converted to normal commas,
+! so we need to use capturing group for the comma and use it in the script
+! TODO: remmove it when new version of the extension will be released (current version is 4.3.53)
 ! Fix ads on https://www.youtube.com/shorts/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1991263854
 ! TODO: use scriptlet when this issue will be fixed - https://github.com/AdguardTeam/Scriptlets/issues/183
@@ -32835,6 +32840,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+money.usnews.com#?#aside[class*="AfterContentContainer"]:has(> div > p:contains(Sponsored))
 realbooru.com##div[style^="margin: 0px 0px 20px 20px;"]
 harpersbazaar.com##div[class*="css-"]:has(> div.ad-disclaimer)
 ourmatch.me##.adv21

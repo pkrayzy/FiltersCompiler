@@ -1,9 +1,9 @@
-! Checksum: iZfC+pgHklBMSgHUUwG3+g
-! Diff-Path: ../patches/14/14-s-1719837363-3600.patch
+! Checksum: HIrYdkkwGjiBbIHu6m0p2g
+! Diff-Path: ../patches/14/14-s-1719840948-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.0.88
-! TimeUpdated: 2024-07-01T12:33:47+00:00
+! Version: 2.2.0.89
+! TimeUpdated: 2024-07-01T13:33:43+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1706,6 +1706,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+||ucookie.app^$third-party
 ||collector.appconsent.io^
 ||cdn.cookiesuit.com^$third-party
 /wp-content/plugins/consent-magic-pro/*
@@ -4457,7 +4458,7 @@ ozdilek.com.tr##.KVKKcookie_altBar
 store.gaijin.net##.yp-cb.js-cb-policy
 crsed.net##gj-cookie-prompt
 star-conflict.com##aside + .sc-cb
-cptm.sp.gov.br,samokat.ru###modalCookie
+otvfoco.com.br,cptm.sp.gov.br,samokat.ru###modalCookie
 oakvillehydro.com##uxlib-cookie-infobar
 siepomaga.pl,docdoc.ru##div[data-testid="cookies-banner"]
 docdoc.ru##div[data-test-id="cookies-banner"]
@@ -8319,7 +8320,7 @@ sky.com.br###wrap-aviso-cookie
 c.po.co##.hy-musk-wrapper
 makezine.com,chartable.com###cookie-footer
 gameforge.com##.outer-overlay-container
-portal.stf.jus.br,upload.tn,i-ua.tv,shuttle.eu,habibs.com.br###glowCookies-banner
+retouch4.me,portal.stf.jus.br,upload.tn,i-ua.tv,shuttle.eu,habibs.com.br###glowCookies-banner
 sexandu.ca###alp-cookie-container
 pacific.org###cookieWarnLayer
 motorola.*###moto-cookies-container
@@ -23313,10 +23314,14 @@ api.flocktory.com
 ! that is why cosmetic rule `###credential_picker_container` does not work
 ! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
 ! Warning: check, if auth using Google is not broken
-||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com
 !
 ! SECTION: Popups - Regular rules
 !
+jaya9.win#$#html.overflow-y-hidden { overflow: auto !important; }
+jaya9.win#$#.v-dialog__content { display: none !important; }
+jaya9.win#$#.v-overlay { display: none !important; }
+otvfoco.com.br###modalPushArticle
 yes.fit##.needsclick
 ishachoku.com##.fix-ad
 jpsk.jp###footer-popup
@@ -31449,12 +31454,15 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+money.usnews.com##.investedpromo
+blog.domclick.ru##.push_footer_bottom > div:has(> div > div > a[href="https://t.me/domclick"])
 inews.co.uk##div[id^="inews__email-signup"]
 gamerescape.com##.side-house-ad
 belarus-news.by###block-bannervsaydbare
 rollingstone.com#%#//scriptlet('set-constant', 'pmcPiano.newsletterForm', 'emptyObj')
 lustery.com##div[class^="BaseSpecialCampaignBanner_"]
 lustery.com#$#div[class^="JoinMultiStepPopup_overlay__"] { display: none !important; }
+lustery.com#$#.ReactModal__Overlay--after-open { display: none !important; }
 lustery.com#$#div[class^="SingleCouplePageContainer_container__"] { -webkit-filter: none !important; filter: none !important; }
 lustery.com#$#body { overflow: auto !important; position: unset !important; margin-right: 0 !important; }
 mel.fm##.b-pb-publication-body > div.b-pb-publication-body__background:has(> p > a[href="https://vk.com/melgrammar"])
@@ -38457,6 +38465,9 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+jaya9.win#$#.download-bar { display: none !important; }
+jaya9.win#%#//scriptlet('remove-class', 'download-bar-height', 'header')
+jaya9.win#%#//scriptlet('remove-class', 'download-bar-height-body', 'div.body')
 news.sky.com##.ui-app-promo
 finance.sina.com.cn###pv_tag
 typhoon.yahoo.co.jp##img[alt="Yahoo!天気アプリ"]
