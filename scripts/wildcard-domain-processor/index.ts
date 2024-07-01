@@ -1,33 +1,33 @@
 /* eslint-disable no-console */
 import { Command } from 'commander';
+import path from 'path';
 
 import { updateWildcardDomains } from './wildcard-domains-updater';
 import { expandWildcardDomains } from './wildcard-expander';
 
-const FILTERS_DIR = '../../filters';
-const WILDCARD_DOMAINS_JSON_FILENAME = 'wildcard_domains.json';
-const PLATFORMS_DIR = '../../platforms';
-
 const program = new Command();
 
 program
-    .command('update-wildcard-domains')
+    .command('update-wildcard-domains <filtersDir> <wildcardDomainsFile>')
     .description('Run wildcard domain processor')
-    .action(async () => {
+    .action(async (filtersDir, wildcardDomainsFile) => {
+        const filtersDirPath = path.resolve(process.cwd(), filtersDir);
+        const wildcardDomainsFilePath = path.resolve(process.cwd(), wildcardDomainsFile);
         try {
-            // TODO this should be automated in the future
-            await updateWildcardDomains(FILTERS_DIR, WILDCARD_DOMAINS_JSON_FILENAME);
+            await updateWildcardDomains(filtersDirPath, wildcardDomainsFilePath);
         } catch (e) {
             console.error(e);
         }
     });
 
 program
-    .command('expand-wildcard-domains')
+    .command('expand-wildcard-domains <platformsDir> <wildcardDomainsFile>')
     .description('Run patch platforms to expand wildcards')
-    .action(async () => {
+    .action(async (platformsDir, wildcardDomainsFile) => {
+        const platformsDirPath = path.resolve(process.cwd(), platformsDir);
+        const wildcardDomainsFilePath = path.resolve(process.cwd(), wildcardDomainsFile);
         try {
-            await expandWildcardDomains(PLATFORMS_DIR);
+            await expandWildcardDomains(platformsDirPath, wildcardDomainsFilePath);
         } catch (e) {
             console.error(e);
         }

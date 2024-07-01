@@ -1,4 +1,4 @@
-/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-restricted-syntax,no-await-in-loop */
 import path from 'path';
 
 import agtree, {
@@ -201,7 +201,14 @@ const expandWildcardsInAst = (ast: AnyRule, wildcardDomains: WildcardDomains): A
  * @returns The updated rule string with expanded wildcards, or null if no valid domains are left.
  */
 export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string | null {
-    const ast = RuleParser.parse(rule);
+    let ast = null;
+    try {
+        ast = RuleParser.parse(rule);
+    } catch (e) {
+        // eslint-disable-next-line no-console
+        console.debug(`Was unable to parse rule: ${rule}, because of: ${e}`);
+        return rule;
+    }
 
     const astWithExpandedWildcards = expandWildcardsInAst(ast, wildcardDomains);
     if (astWithExpandedWildcards === null) {
@@ -233,21 +240,22 @@ function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: W
     return newRules.join('\n');
 }
 
-const WILDCARD_DOMAINS_FILE = 'wildcard_domains.json';
-
 /**
  * Patches platform filter files by expanding wildcards in all rules.
  * @param platformsDir - The directory containing the platform filter files.
+ * @param wildcardDomainsPath - The path to the wildcard domains JSON file.
  * @returns A promise that resolves when the patching is complete.
  */
-export async function expandWildcardDomains(platformsDir: string): Promise<void> {
-    const filters = await findFilterFiles(path.resolve(__dirname, platformsDir), /filters\/\d+(_optimized)?\.txt/);
+export async function expandWildcardDomains(platformsDir: string, wildcardDomainsPath: string): Promise<void> {
+    const filterPaths = await findFilterFiles(path.resolve(__dirname, platformsDir), /filters\/\d+(_optimized)?\.txt/);
 
-    const wildcardDomainsFilename = path.resolve(__dirname, WILDCARD_DOMAINS_FILE);
+    const wildcardDomainsFilename = path.resolve(__dirname, wildcardDomainsPath);
     const wildcardDomainsJson = await readFile(wildcardDomainsFilename);
     const wildcardDomains = JSON.parse(wildcardDomainsJson);
 
-    const filter = await readFile(filters[0]);
-    const updatedFilter = expandWildcardDomainsInFilter(filter, wildcardDomains);
-    await writeFile(`${filters[0]}_copy`, updatedFilter);
+    for (const filterPath of filterPaths) {
+        const filter = await readFile(filterPath);
+        const updatedFilter = expandWildcardDomainsInFilter(filter, wildcardDomains);
+        await writeFile(filterPath, updatedFilter);
+    }
 }

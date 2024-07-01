@@ -359,16 +359,50 @@ You can expand wildcard domains using the CLI commands provided in this project.
    This command extracts wildcard domains from the filters, converts them to a list of domains, selects the alive domains, and saves the resulting map to a JSON file [wildcard_domains.json](scripts%2Fwildcard-domain-processor%2Fwildcard_domains.json).
 
     ```bash
-    yarn update-wildcard-domains
+    yarn update-wildcard-domains <filtersDir> <wildcardDomainsFile>
     ```
+
+    - **Arguments**:
+        - `<filtersDir>`: Directory containing the filter files.
+        - `<wildcardDomainsFile>`: Filename for the wildcard domains JSON.
+
+    - **Example**:
+      ```bash
+      yarn update-wildcard-domains filters scripts/wildcard-domain-processor/wildcard_domains.json
+      ```
 
 1. **Expand Wildcard Domains**
 
    This command processes platform filters and expands wildcard domains based on the previously generated map in the file [wildcard_domains.json](scripts%2Fwildcard-domain-processor%2Fwildcard_domains.json).
 
     ```bash
-    yarn expand-wildcard-domains
+    yarn expand-wildcard-domains <platformsDir> <wildcardDomainsFile>
     ```
+
+    - **Arguments**:
+        - `<platformsDir>`: Directory containing the platform files.
+        - `<wildcardDomainsFile>`: Filename for the wildcard domains JSON.
+
+    - **Example**:
+      ```bash
+      yarn expand-wildcard-domains platforms scripts/wildcard-domain-processor/wildcard_domains.json
+      ```
+
+### CLI Commands Help
+
+To see the help information for each command, you can use the `-h` option:
+
+- **Update Wildcard Domains Help**:
+    ```bash
+    yarn update-wildcard-domains -h
+    ```
+
+- **Expand Wildcard Domains Help**:
+    ```bash
+    yarn expand-wildcard-domains -h
+    ```
+
+These commands must be run from the root directory of the project, and the directories specified will be resolved relative to the current working directory.
 
 ### Repository compression
 
