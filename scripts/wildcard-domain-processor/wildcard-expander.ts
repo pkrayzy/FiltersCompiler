@@ -12,6 +12,7 @@ import { findFilterFiles, readFile, writeFile } from './file-utils';
 import { WildcardDomains } from './wildcard-domains-updater';
 import { DOMAIN_MODIFIERS } from './domain-extractor';
 import { utils } from './utils';
+import { updateContentChecksum } from '../checksum';
 
 /**
  * Expands wildcards in a network rule AST.
@@ -256,6 +257,7 @@ export async function expandWildcardDomains(platformsDir: string, wildcardDomain
     for (const filterPath of filterPaths) {
         const filter = await readFile(filterPath);
         const updatedFilter = expandWildcardDomainsInFilter(filter, wildcardDomains);
-        await writeFile(filterPath, updatedFilter);
+        const filterWithUpdatedChecksums = updateContentChecksum(updatedFilter);
+        await writeFile(filterPath, filterWithUpdatedChecksums);
     }
 }
