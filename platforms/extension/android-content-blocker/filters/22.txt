@@ -1,9 +1,9 @@
-! Checksum: nruz2PVczldIJmXOq7EYCQ
-! Diff-Path: ../patches/22/22-s-1719563684-3600.patch
+! Checksum: EzpMnuBVgmRPtpe9EtrlnQ
+! Diff-Path: ../patches/22/22-s-1719855315-3600.patch
 ! Title: AdGuard Widgets filter
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.8.65
-! TimeUpdated: 2024-06-28T08:33:00+00:00
+! Version: 2.0.8.71
+! TimeUpdated: 2024-07-01T17:33:21+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -230,6 +230,11 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+tousatu-ch.net###side-fixed > div.widget_custom_html:not(:first-child):not(:last-child)
+tousatu-ch.net##.head-under.widget_custom_html
+tousatu-ch.net##.video-container
+tousatu-ch.net###foot-in
+tousatu-ch.net##.posts-list-upper-widget
 minkch.com##.click-drawing-container + div.yarpp-related-website
 minkch.com##.click-drawing-container + div.yarpp-related-website ~ li
 minkch.com###execphp-5
@@ -241,12 +246,13 @@ comic.nan-net.com##.rssreader
 ||blog.livedoor.jp/nanjstu/bt_rss3.htm
 blog.livedoor.jp##.headlinerss
 ||bot.jaicp.com/chatwidget/
-ettina.blogterest.net##.cp_list
-ettina.blogterest.net##.main-01sp
-ettina.blogterest.net##.main-02sp
-ettina.blogterest.net###content > div.row > div.col-md-3
-ettina.blogterest.net###content > div.row > div.col-md-4
-ettina.blogterest.net##.blockAreaFooter > div.blockWrapper:first-child
+sukebelog.blogterest.net,ettina.blogterest.net##.entryDetail div[style^="width: 100%; height: 315px; overflow-y: hidden;"]
+sukebelog.blogterest.net,ettina.blogterest.net##.cp_list
+sukebelog.blogterest.net,ettina.blogterest.net##.main-01sp
+sukebelog.blogterest.net,ettina.blogterest.net##.main-02sp
+sukebelog.blogterest.net,ettina.blogterest.net###content > div.row > div.col-md-3
+sukebelog.blogterest.net,ettina.blogterest.net###content > div.row > div.col-md-4
+sukebelog.blogterest.net,ettina.blogterest.net##.blockAreaFooter > div.blockWrapper:first-child
 av-baron.com##.entry-content > div > div.dfad
 fob.jp###swell_ad_widget-7
 emuokunmaster.com##div[style="margin: auto; text-align: center; width: 305px; height: 915px;"]
@@ -365,9 +371,8 @@ efire-matome.com###text-8
 efire-matome.com###text-17
 genshin-matomech.umadacchi.net###block-8
 genshin-matomech.umadacchi.net##.rss-flex
-blue-protocol-ch.com##.rss_aritcle
-geektushin.com##.widget-above-related-entries
-geektushin.com##.widget-below-related-entries
+eroist.site,geektushin.com##.widget-above-related-entries
+eroist.site,geektushin.com##.widget-below-related-entries
 nintendoevery.com,geektushin.com##.widget_rss
 uma-log.net###custom_html-8
 uma-log.net###custom_html-9
@@ -1136,6 +1141,8 @@ beasoku.com##.rss-block
 ! make it domain specific, block if the widget is really annoying
 !||zopim.com^$third-party,domain=
 !
+||milionymonet.onet.pl/js/omm/widget/euroloterie.js
+||quotiq.ru^$third-party
 ||prod-live-chat.sprinklr.com^$third-party
 ||widgets.binotel.com^$third-party,domain=~novaposhta.md
 ||gso.amocrm.ru^$third-party
