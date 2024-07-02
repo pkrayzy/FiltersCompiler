@@ -36,7 +36,7 @@ function isWildcardDomain(domain: string): boolean {
  * @param domain The domain name to check.
  * @returns Returns true if the domain is valid, false otherwise.
  */
-function validDomain(domain: string): boolean {
+function isValidDomain(domain: string): boolean {
     // If the domain ends with '.*', it is a wildcard domain and it is valid.
     if (isWildcardDomain(domain)) {
         return true;
@@ -69,7 +69,7 @@ function validDomain(domain: string): boolean {
 }
 
 export const utils = {
-    validDomain,
+    validDomain: isValidDomain,
     unique,
     isWildcardDomain,
 };
