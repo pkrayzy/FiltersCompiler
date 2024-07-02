@@ -346,7 +346,7 @@ For information on working with locales, please refer to the [Translations READM
 
 ### Expanding Wildcard Domains
 
-You can expand wildcard domains using the CLI commands provided in this project. These commands help update wildcard domains and expand wildcard domains for various platforms.
+You can expand wildcard domains using the CLI commands provided in this project. These commands help update and expand wildcard domains across various platforms. For more information on why this feature was needed, visit [this link](https://github.com/AdguardTeam/FiltersRegistry/issues/964).
 
 1. **Install Dependencies**
 
