@@ -33,8 +33,8 @@ function expandWildcardsInNetworkRules(
     const modifiers = ast.modifiers.children;
     const newPermittedDomains = new Map();
     const newRestrictedDomains = new Map();
-    let hadWildcard = false;
     const newModifiers = [];
+    let hadWildcard = false;
 
     for (const modifier of modifiers) {
         if (!DOMAIN_MODIFIERS.includes(modifier.modifier.value) || !modifier.value) {
