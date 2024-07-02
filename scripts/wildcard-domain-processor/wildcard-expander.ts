@@ -258,7 +258,10 @@ function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: W
  * @returns A promise that resolves when the patching is complete.
  */
 export async function expandWildcardDomains(platformsDir: string, wildcardDomainsPath: string): Promise<void> {
-    const filterPaths = await findFilterFiles(path.resolve(__dirname, platformsDir), /filters\/\d+(_optimized)?\.txt/);
+    const filterPaths = await findFilterFiles(
+        path.resolve(__dirname, platformsDir),
+        /filters[\/\\]\d+(_optimized)?\.txt/,
+    );
 
     const wildcardDomainsFilename = path.resolve(__dirname, wildcardDomainsPath);
     const wildcardDomainsJson = await readFile(wildcardDomainsFilename);
