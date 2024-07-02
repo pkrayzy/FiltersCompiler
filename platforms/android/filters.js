@@ -806,8 +806,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
 			"trustLevel": "full",
-			"version": "2.1.24.82",
-			"timeUpdated": "2024-07-02T01:16:37+0000",
+			"version": "2.1.24.83",
+			"timeUpdated": "2024-07-02T01:23:35+0000",
 			"languages": [],
 			"tags": [
 				1
