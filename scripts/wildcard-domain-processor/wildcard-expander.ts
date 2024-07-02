@@ -45,9 +45,10 @@ function expandWildcardsInNetworkRules(
         const domainList = DomainListParser.parse(modifier.value.value, agtree.PIPE_MODIFIER_SEPARATOR);
 
         for (const domain of domainList.children) {
-            if (utils.isWildcardDomain(domain.value)) {
+            const isWildcard = utils.isWildcardDomain(domain.value);
+            const nonWildcardDomains = wildcardDomains[domain.value];
+            if (isWildcard && nonWildcardDomains) {
                 hadWildcard = true;
-                const nonWildcardDomains = wildcardDomains[domain.value];
                 for (const nonWildcardDomain of nonWildcardDomains) {
                     const newDomainValue = {
                         ...domain,
@@ -124,9 +125,10 @@ function expandWildcardsInCosmeticRules(
     let hadWildcard = false;
 
     for (const domain of domains) {
-        if (utils.isWildcardDomain(domain.value)) {
+        const isWildcard = utils.isWildcardDomain(domain.value);
+        const nonWildcardDomains = wildcardDomains[domain.value];
+        if (isWildcard && nonWildcardDomains) {
             hadWildcard = true;
-            const nonWildcardDomains = wildcardDomains[domain.value];
             nonWildcardDomains.forEach((d) => {
                 const newDomain = {
                     ...domain,

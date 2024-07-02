@@ -10,6 +10,13 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('example.com,example.org##h1');
             });
 
+            it('should do nothing if wildcard is not in the wildcard domains', () => {
+                const rule = 'example.*##h1';
+                const wildcardDomains = { };
+                const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
+                expect(patchedRule).toEqual('example.*##h1');
+            });
+
             it('should expand wildcard and retain non-wildcard domains', () => {
                 const rule = 'example.*,test.com##h1';
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
@@ -94,6 +101,13 @@ describe('platforms-patcher', () => {
                 const fromRule = 'test$from=example.*';
                 const expandedFromRule = expandWildcardsInRule(fromRule, wildcardDomains);
                 expect(expandedFromRule).toEqual('test$from=example.com|example.org');
+            });
+
+            it('should do nothing if wildcard is not in the wildcard domains', () => {
+                const rule = 'test$domain=example.*';
+                const wildcardDomains = { };
+                const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
+                expect(patchedRule).toEqual('test$domain=example.*');
             });
 
             it('should expand wildcard and retain non-wildcard domains', () => {
