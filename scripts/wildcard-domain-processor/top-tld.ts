@@ -1,5 +1,8 @@
 /**
  * List of top level domains
+ *
+ * Note: This is a limited list of TLDs to ensure the script does not run for a long period of time.
+ * If this list is modified, re-run the script that collects wildcards manually to ensure consistency.
  */
 export const TOP_LEVEL_DOMAIN_LIST = [
     'com',
