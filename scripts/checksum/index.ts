@@ -12,7 +12,7 @@ const CHECKSUM_TAG = 'Checksum';
  * @returns The normalized message with '\r' removed and consecutive '\n' characters
  * replaced with a single '\n'.
  */
-const normalizeContent = (content: string): string => {
+function normalizeContent (content: string): string {
     return content
         .replace(/\r/g, '')
         .replace(/\n+/g, '\n');
@@ -32,12 +32,12 @@ const normalizeContent = (content: string): string => {
  * @param content The content to hash.
  * @returns The formatted checksum string.
  */
-export const calculateChecksumMD5 = (content: string): string => {
+function calculateChecksumMD5(content: string): string {
     content = normalizeContent(content);
     const checksum = Base64.stringify(MD5(content));
 
     return checksum.trim().replace(/=+$/g, '');
-};
+}
 
 /**
  * Splits a string by lines while preserving line breaks within the original lines.
@@ -46,10 +46,10 @@ export const calculateChecksumMD5 = (content: string): string => {
  * @returns An array of strings where each element is a complete line of text,
  * including its line break.
  */
-export const splitByLines = (s: string): string[] => {
+function splitByLines(s: string): string[] {
     // Preserve end-of-line characters in the split strings.
     return s.split(/(?<=\r?\n)/);
-};
+}
 
 /**
  * Checks if the provided file content contains a checksum tag within its first 200 characters.

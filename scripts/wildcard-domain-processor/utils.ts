@@ -26,9 +26,9 @@ const ALLOW_TLD = new Set([
  * @param domain Domain to check
  * @returns True if domain ends with wildcard Tld
  */
-const isWildcardDomain = (domain: string): boolean => {
+function isWildcardDomain(domain: string): boolean {
     return domain.endsWith('.*');
-};
+}
 
 /**
  * Checks if the given domain is valid.

@@ -20,10 +20,10 @@ import { updateContentChecksum } from '../checksum';
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated network rule AST with expanded wildcards, or null if no valid domains are left.
  */
-const expandWildcardsInNetworkRules = (
+function expandWildcardsInNetworkRules (
     ast: NetworkRule,
     wildcardDomains: WildcardDomains,
-): NetworkRule | null => {
+): NetworkRule | null {
     if (!ast.modifiers) {
         return ast;
     }
@@ -104,7 +104,7 @@ const expandWildcardsInNetworkRules = (
     newAst.modifiers!.children = newModifiers;
 
     return newAst;
-};
+}
 
 /**
  * Expands wildcards in a cosmetic rule AST.
@@ -112,10 +112,10 @@ const expandWildcardsInNetworkRules = (
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated cosmetic rule AST with expanded wildcards, or null if no valid domains are left.
  */
-const expandWildcardsInCosmeticRules = (
+function expandWildcardsInCosmeticRules (
     ast: CosmeticRule,
     wildcardDomains: WildcardDomains,
-): AnyRule | null => {
+): AnyRule | null {
     const domains = ast.domains.children;
     const newPermittedDomains = new Map();
     const newRestrictedDomains = new Map();
@@ -173,7 +173,7 @@ const expandWildcardsInCosmeticRules = (
     newAst.domains.children = newDomains;
 
     return newAst as AnyRule;
-};
+}
 
 /**
  * Expands wildcards in an AST based on its category.
@@ -182,7 +182,7 @@ const expandWildcardsInCosmeticRules = (
  * @returns The updated AST with expanded wildcards, or null if no valid domains are left.
  * @throws Will throw an error if the AST category is unsupported.
  */
-const expandWildcardsInAst = (ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null => {
+function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null {
     switch (ast.category) {
         case 'Network':
             return expandWildcardsInNetworkRules(ast as NetworkRule, wildcardDomains);
@@ -193,7 +193,7 @@ const expandWildcardsInAst = (ast: AnyRule, wildcardDomains: WildcardDomains): A
         default:
             throw new Error(`Unsupported rule category: ${ast.category}`);
     }
-};
+}
 
 /**
  * Expands wildcards in a rule string.

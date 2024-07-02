@@ -55,9 +55,9 @@ export async function findFilterFiles(dir: string, ending: string | RegExp): Pro
  * @returns A promise that resolves to the content of the file as a string.
  * @throws Will throw an error if the file cannot be read.
  */
-export const readFile = async (filePath: string): Promise<string> => {
+export async function readFile(filePath: string): Promise<string> {
     return fs.readFile(filePath, 'utf8');
-};
+}
 
 /**
  * Writes content to a file at a given path. If the file does not exist, it will be created.
@@ -66,6 +66,6 @@ export const readFile = async (filePath: string): Promise<string> => {
  * @returns A promise that resolves when the file has been written.
  * @throws Will throw an error if the file cannot be written.
  */
-export const writeFile = async (filePath: string, content: string): Promise<void> => {
+export async function writeFile (filePath: string, content: string): Promise<void> {
     await fs.writeFile(path.resolve(__dirname, filePath), content, 'utf8');
-};
+}

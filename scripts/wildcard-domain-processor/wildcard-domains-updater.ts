@@ -15,7 +15,7 @@ import { findFilterFiles, readFile, writeFile } from './file-utils';
  * @returns An array of domains extracted from the rule.
  * @throws Will log an error if the rule cannot be parsed.
  */
-export const getDomains = (rule: string): string[] => {
+export function getDomains(rule: string): string[] {
     let ruleAst;
     try {
         ruleAst = RuleParser.parse(rule);
@@ -26,14 +26,14 @@ export const getDomains = (rule: string): string[] => {
     }
     const domains = extractRuleDomains(ruleAst);
     return domains;
-};
+}
 
 /**
  * Extracts wildcard domains from the content of a filter.
  * @param filterContent - The content of the filter.
  * @returns A set of wildcard domains extracted from the filter content.
  */
-const getWildcardDomains = (filterContent: string): Set<string> => {
+function getWildcardDomains(filterContent: string): Set<string> {
     const rules = filterContent.split(/\r?\n/);
     const wildcardDomains = new Set<string>();
     for (const rule of rules) {
@@ -42,7 +42,7 @@ const getWildcardDomains = (filterContent: string): Set<string> => {
         wildcardDomainsList.forEach((domain) => wildcardDomains.add(domain));
     }
     return wildcardDomains;
-};
+}
 
 /**
  * A map of wildcard domains with all possible TLDs.
