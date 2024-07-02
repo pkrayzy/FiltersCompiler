@@ -13,7 +13,6 @@ import { findFilterFiles, readFile, writeFile } from './file-utils';
  * Parses a rule and extracts domains from it.
  * @param rule - The rule to extract domains from.
  * @returns An array of domains extracted from the rule.
- * @throws Will log an error if the rule cannot be parsed.
  */
 export function getDomains(rule: string): string[] {
     let ruleAst;
