@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.30.92",
-			"timeUpdated": "2024-07-01T13:44:41+0000",
+			"version": "2.3.30.93",
+			"timeUpdated": "2024-07-02T00:40:46+0000",
 			"languages": []
 		},
 		{
@@ -74,8 +74,8 @@
 			"displayNumber": 1,
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/3.txt",
-			"version": "2.0.69.40",
-			"timeUpdated": "2024-07-01T13:44:42+0000",
+			"version": "2.0.69.41",
+			"timeUpdated": "2024-07-02T00:40:47+0000",
 			"languages": []
 		},
 		{
@@ -87,8 +87,8 @@
 			"displayNumber": 1,
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/4.txt",
-			"version": "2.1.0.22",
-			"timeUpdated": "2024-07-01T13:44:43+0000",
+			"version": "2.1.0.23",
+			"timeUpdated": "2024-07-02T00:40:48+0000",
 			"languages": []
 		},
 		{
@@ -187,8 +187,8 @@
 			"displayNumber": 2,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/11.txt",
-			"version": "2.0.51.43",
-			"timeUpdated": "2024-07-01T13:44:32+0000",
+			"version": "2.0.51.44",
+			"timeUpdated": "2024-07-02T00:40:37+0000",
 			"languages": []
 		},
 		{
@@ -228,8 +228,8 @@
 			"displayNumber": 1,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/14.txt",
-			"version": "2.1.93.52",
-			"timeUpdated": "2024-07-01T13:44:35+0000",
+			"version": "2.1.93.53",
+			"timeUpdated": "2024-07-02T00:40:40+0000",
 			"languages": []
 		},
 		{
@@ -367,8 +367,8 @@
 			"displayNumber": 3,
 			"groupId": 1,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
-			"version": "2.1.24.80",
-			"timeUpdated": "2024-07-01T13:44:23+0000",
+			"version": "2.1.24.81",
+			"timeUpdated": "2024-07-02T00:40:26+0000",
 			"languages": []
 		},
 		{
@@ -603,8 +603,8 @@
 			"displayNumber": 2,
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
-			"version": "2.1.25.69",
-			"timeUpdated": "2024-07-01T13:44:25+0000",
+			"version": "2.1.25.70",
+			"timeUpdated": "2024-07-02T00:40:29+0000",
 			"languages": []
 		},
 		{
@@ -657,8 +657,8 @@
 			"displayNumber": 100,
 			"groupId": 4,
 			"subscriptionUrl": "https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt",
-			"version": "2.1.24.18",
-			"timeUpdated": "2024-07-01T13:44:31+0000",
+			"version": "2.1.24.19",
+			"timeUpdated": "2024-07-02T00:40:35+0000",
 			"languages": []
 		},
 		{
