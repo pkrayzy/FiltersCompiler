@@ -95,7 +95,7 @@ export const updateWildcardDomains = async (
     console.log('Totally found wildcard domains length:', Object.keys(wildcardDomainsWithTld).length);
 
     const start = performance.now();
-    console.log('start finding dead domains', start);
+    console.log('Start finding dead domains', start);
     const validatedWildcardDomains: { [key: string]: string[] } = {};
     for (const [key, value] of Object.entries(wildcardDomainsWithTld)) {
         const aliveDomains = await getAliveDomains(value);
@@ -105,6 +105,7 @@ export const updateWildcardDomains = async (
         validatedWildcardDomains[key] = aliveDomains;
     }
 
-    // TODO add removal of the domains that should be removed from the list of wildcard domains
-    console.log('end finding dead domains', performance.now() - start);
+    // TODO: Add removal of domains that should be removed from the list of wildcard domains
+    //  Currently, we only update lists of alive domains in the JSON file and do not remove them.
+    console.log('End finding dead domains', performance.now() - start);
 };
