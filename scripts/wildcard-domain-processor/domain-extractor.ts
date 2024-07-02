@@ -2,6 +2,7 @@ import agtree, {
     AnyRule,
     DomainListParser,
     Modifier,
+    RuleCategory,
 } from '@adguard/agtree';
 import { utils } from './utils';
 
@@ -88,9 +89,9 @@ function extractNetworkRuleDomains(ast: agtree.NetworkRule): string[] {
  */
 export function extractRuleDomains(ast: AnyRule): string[] {
     switch (ast.category) {
-        case 'Network':
+        case RuleCategory.Network:
             return extractNetworkRuleDomains(ast);
-        case 'Cosmetic':
+        case RuleCategory.Cosmetic:
             return extractCosmeticRuleDomains(ast);
         default:
             return [];

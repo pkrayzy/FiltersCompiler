@@ -3,8 +3,10 @@ import path from 'path';
 
 import agtree, {
     AnyRule,
-    CosmeticRule, DomainListParser,
+    CosmeticRule,
+    DomainListParser,
     NetworkRule,
+    RuleCategory,
     RuleParser,
 } from '@adguard/agtree';
 
@@ -184,11 +186,11 @@ function expandWildcardsInCosmeticRules(
  */
 function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null {
     switch (ast.category) {
-        case 'Network':
+        case RuleCategory.Network:
             return expandWildcardsInNetworkRules(ast as NetworkRule, wildcardDomains);
-        case 'Cosmetic':
+        case RuleCategory.Cosmetic:
             return expandWildcardsInCosmeticRules(ast as CosmeticRule, wildcardDomains);
-        case 'Comment':
+        case RuleCategory.Comment:
             return ast;
         default:
             throw new Error(`Unsupported rule category: ${ast.category}`);
