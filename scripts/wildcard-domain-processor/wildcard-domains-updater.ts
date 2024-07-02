@@ -48,13 +48,12 @@ function supplementWithTld(wildcardDomains: Set<string>): WildcardDomains {
 
 /**
  * Filters out dead domains from a list of domains.
- * @param value - The list of domains to filter.
+ * @param domains - The list of domains to filter.
  * @returns A list of alive domains.
  */
-async function getAliveDomains(value: string[]): Promise<string[]> {
-    const deadDomains = new Set(await findDeadDomains(value));
-    const aliveDomains = value.filter((domain) => !deadDomains.has(domain));
-    return aliveDomains;
+async function getAliveDomains(domains: string[]): Promise<string[]> {
+    const deadDomains = new Set(await findDeadDomains(domains));
+    return domains.filter((domain) => !deadDomains.has(domain));
 }
 
 /**
