@@ -3,6 +3,7 @@ import agtree, {
     DomainListParser,
     Modifier,
     RuleCategory,
+    RuleParser,
 } from '@adguard/agtree';
 import { utils } from './utils';
 
@@ -96,4 +97,22 @@ export function extractRuleDomains(ast: AnyRule): string[] {
         default:
             return [];
     }
+}
+
+/**
+ * Parses a rule and extracts domains from it.
+ * @param rule - The rule to extract domains from.
+ * @returns An array of domains extracted from the rule.
+ */
+export function getDomains(rule: string): string[] {
+    let ruleAst;
+    try {
+        ruleAst = RuleParser.parse(rule);
+    } catch (e) {
+        // eslint-disable-next-line no-console
+        console.log(`Unable to parse rule: "${rule}", because of the error: ${e}`);
+        return [];
+    }
+    const domains = extractRuleDomains(ruleAst);
+    return domains;
 }

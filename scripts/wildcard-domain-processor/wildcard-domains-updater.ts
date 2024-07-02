@@ -1,31 +1,12 @@
 /* eslint-disable no-await-in-loop,no-restricted-syntax,no-console */
 import * as path from 'path';
-import { RuleParser } from '@adguard/agtree';
 // There is no type definition available for the following import.
 // @ts-ignore
 import { findDeadDomains } from '@adguard/dead-domains-linter/src/urlfilter';
-import { extractRuleDomains } from './domain-extractor';
+import { getDomains } from './domain-extractor';
 import { utils } from './utils';
 import { TOP_LEVEL_DOMAIN_LIST } from './top-tld';
 import { findFilterFiles, readFile, writeFile } from './file-utils';
-
-/**
- * Parses a rule and extracts domains from it.
- * @param rule - The rule to extract domains from.
- * @returns An array of domains extracted from the rule.
- */
-export function getDomains(rule: string): string[] {
-    let ruleAst;
-    try {
-        ruleAst = RuleParser.parse(rule);
-    } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(`Unable to parse rule: "${rule}", because of the error: ${e}`);
-        return [];
-    }
-    const domains = extractRuleDomains(ruleAst);
-    return domains;
-}
 
 /**
  * Extracts wildcard domains from the content of a filter.
