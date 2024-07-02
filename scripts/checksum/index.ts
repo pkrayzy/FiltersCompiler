@@ -4,13 +4,13 @@ import Base64 from 'crypto-js/enc-base64';
 const CHECKSUM_TAG = 'Checksum';
 
 /**
- * Normalizes a message string by removing carriage return characters ('\r') and
- * replacing multiple newline characters ('\n') with a single newline character.
+ * Normalizes a message string by removing carriage return characters ('\r')
+ * and replacing multiple newline characters ('\n') with a single newline character.
  * This function standardizes the format of newline characters in the message.
  *
  * @param content The string to normalize.
- * @returns The normalized message with '\r' removed and consecutive '\n'
- * characters replaced with a single '\n'.
+ * @returns The normalized message with '\r' removed and consecutive '\n' characters
+ * replaced with a single '\n'.
  */
 const normalizeContent = (content: string): string => {
     return content
@@ -26,9 +26,8 @@ const normalizeContent = (content: string): string => {
  * Trailing '=' characters in the Base64 encoded string are removed to match
  * the expected format.
  *
- * @see
- * {@link https://adblockplus.org/en/filters#special-comments Adblock Plus special comments}
- * {@link https://hg.adblockplus.org/adblockplus/file/tip/addChecksum.py Adblock Plus checksum script}
+ * @see {@link https://adblockplus.org/en/filters#special-comments Adblock Plus special comments}
+ * @see {@link https://hg.adblockplus.org/adblockplus/file/tip/addChecksum.py Adblock Plus checksum script}
  *
  * @param content The content to hash.
  * @returns The formatted checksum string.
@@ -48,13 +47,13 @@ export const calculateChecksumMD5 = (content: string): string => {
  * including its line break.
  */
 export const splitByLines = (s: string): string[] => {
-    // Preserves end-of-line characters in the split strings.
+    // Preserve end-of-line characters in the split strings.
     return s.split(/(?<=\r?\n)/);
 };
 
 /**
  * Checks if the provided file content contains a checksum tag within its first 200 characters.
- * This approach is selected to exclude parsing checksums from included filters.
+ * This approach is used to exclude parsing checksums from included filters.
  *
  * @param file The file content as a string.
  * @returns `true` if the checksum tag is found, otherwise `false`.
@@ -69,17 +68,14 @@ function hasChecksum(file: string): boolean {
 /**
  * Creates a tag for filter list metadata.
  *
- * @param tagName Name of the tag.
- * @param value Value of the tag.
- * @param lineEnding Line ending to use in the created tag.
- * @returns Created tag in `! ${tagName}: ${value}` format.
+ * @param tagName The name of the tag.
+ * @param value The value of the tag.
+ * @param lineEnding The line ending to use in the created tag.
+ * @returns The created tag in the `! ${tagName}: ${value}` format.
  */
 function createTag(tagName: string, value: string, lineEnding: string): string {
     return `! ${tagName}: ${value}${lineEnding}`;
 }
-
-// Lines of filter metadata to parse
-const AMOUNT_OF_LINES_TO_PARSE = 50;
 
 /**
  * Removes a specified tag from an array of filter content strings.
@@ -89,7 +85,6 @@ const AMOUNT_OF_LINES_TO_PARSE = 50;
  *
  * @param tagName The name of the tag to be removed from the filter content.
  * @param filterContent An array of strings, each representing a line of filter content.
- *
  * @returns A new array of filter content with the specified tag removed.
  * If the tag is not found, the original array is returned unmodified.
  */
@@ -97,10 +92,13 @@ function removeTag(
     tagName: string,
     filterContent: string[],
 ): string[] {
-    // Make copy of array to avoid mutation.
+    // Lines of filter metadata to parse
+    const AMOUNT_OF_LINES_TO_PARSE = 50;
+
+    // Make a copy of the array to avoid mutation.
     const copy = filterContent.slice();
 
-    // Cut first 50 lines to parse. We don't need to parse all file.
+    // Parse only the first 50 lines. Parsing the entire file is unnecessary.
     const updatedFile = filterContent.slice(
         0,
         Math.min(AMOUNT_OF_LINES_TO_PARSE, filterContent.length),
@@ -116,7 +114,7 @@ function removeTag(
 }
 
 /**
- * Updates the file checksum.
+ * Updates the checksum of the filter file.
  *
  * @param filterContent The content of the filter file.
  * @returns The content of the filter file with the updated checksum.
@@ -127,7 +125,7 @@ export function updateContentChecksum(filterContent: string): string {
 
     const lineEnding = fileLines[0].endsWith('\r\n') ? '\r\n' : '\n';
 
-    // If the filter had a checksum, calculate and insert a new checksum tag at the start of the filter
+    // If the filter had a checksum, calculate and insert a new checksum tag at the beginning of the filter
     if (hasChecksum(filterContent)) {
         const updatedChecksum = calculateChecksumMD5(fileLines.join(''));
         const checksumTag = createTag(CHECKSUM_TAG, updatedChecksum, lineEnding);
