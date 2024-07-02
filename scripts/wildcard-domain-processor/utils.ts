@@ -69,7 +69,7 @@ function isValidDomain(domain: string): boolean {
 }
 
 export const utils = {
-    validDomain: isValidDomain,
+    isValidDomain,
     unique,
     isWildcardDomain,
 };

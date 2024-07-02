@@ -48,7 +48,7 @@ function extractCosmeticRuleDomains(ast: agtree.CosmeticRule): string[] {
 
     const domains = ast.domains.children
         .map((domain) => domain.value)
-        .filter(utils.validDomain);
+        .filter(utils.isValidDomain);
 
     return utils.unique(domains);
 }
@@ -79,7 +79,7 @@ function extractNetworkRuleDomains(ast: agtree.NetworkRule): string[] {
     }
 
     return utils.unique(domains)
-        .filter(utils.validDomain);
+        .filter(utils.isValidDomain);
 }
 
 /**
