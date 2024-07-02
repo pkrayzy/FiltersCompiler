@@ -1,5 +1,5 @@
-! Checksum: tWvadPU0Hkkt2X8IZBWeaQ
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1719855315-3600.patch
+! Checksum: PMTbUSz1nAm4QGCkCqeeAQ
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1719887692-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.71
@@ -269,6 +269,8 @@ ideal2ch.livedoor.biz,2chopmt.blog.jp##.rss-blogroll2
 doujinerosenka.blog.jp##.main-column-inner > div[style*="height:130px"]
 doujinerosenka.blog.jp##.main-column-inner > span[style="font-size: 79.75%;"]
 ysokuhou.blog.jp##.name2
+netouyonews.net##div[id^="head_rss"]
+netouyonews.net##div[id^="mid_rss"]
 kandatasokuho.com##div[style*="border:1px solid #000000;white-space:nowrap;text-overflow:ellipsis;background-color:"]
 akb48matomemory.com##.article_body_more div.t_h.t_i[style="box-sizing: border-box; margin: 0px; padding: 0px;"]
 akb48matomemory.com##.article_body_more > span[style^="font-size"]
@@ -298,6 +300,7 @@ news30over.com##div[class^="topbox"]
 uwakich.com##div[style^="height:"][style*="width:"][style$="px; overflow-y:scroll; text-decoration:none;"]
 mojokosan.doorblog.jp##.column-inner-2 > center > table
 mojokosan.doorblog.jp##.column-inner-2 > span[style="color: #333333; font-size: 16px"]
+nekowan.com##div[class^="blogroll-"]
 kazokuchannel.doorblog.jp##.left-column-inner > div.plugin-memo:first-child
 rastaneko-blog.com##div[style="background-color: #f5f5f5; padding: 10px; font-size: 18px; border: 1px dotted #000000;"]
 rastaneko-blog.com##div[style="background-color: #f5f5f5; padding: 10px; font-size: 18px; border: 1px dotted #000000;"] ~ dl:not([class])
@@ -547,10 +550,8 @@ bing.com###ev_talkbox_wrapper
 ||eegg.fun/js/exfd*.js$script,~third-party
 anacap.doorblog.jp##.column-inner-2 > center > table[border="1"]:first-child
 anacap.doorblog.jp##div[class^="anacap-roll"]
-matome-tarou.ldblog.jp###j_rss
 ||widget.oncustomer.asia^
 ||livechatv2.chat2desk.com$third-party
-||elog-ch.com/news/newsbbs/
 ||chaos2ch.com/rss$subdocument
 world-fusigi.net##.sticker
 24sata.hr##.admiral_widget
@@ -664,6 +665,7 @@ beasoku.com##.rss-block
 ||envybox.io^$third-party
 ||extraaedge.com^$third-party
 ||eyenewton.ru^$third-party
+||fastcallagent.com^$third-party
 ||feedback.luxnet.ua^$third-party
 ||frase.io^$third-party
 ||getbutton.io^$third-party
@@ -678,7 +680,6 @@ beasoku.com##.rss-block
 ||widget.profeat.team^$third-party
 ||web.redhelper.ru^$third-party
 ||webim.ru^$third-party
-||whatya.solairo-api.com^$third-party
 ||whisbi.com^$third-party
 ||whitesaas.com^$third-party
 ||widget-v*.tidiochat.com^$third-party
@@ -730,7 +731,6 @@ justanswer.com##.th-chat-window
 liquidweb.com##footer + div[class^="FixedButton_"]
 muzofond.fm##.feedback-main-container
 network.mobile.rakuten.co.jp###rexSurveyEmbedded
-networkguru.ru##.tbForm_CallMe
 ozon.ru##div[data-widget="webFeedbackForm"]
 rakuten.co.jp###rexSurveyRoot
 romarg.ro###deskpro-container
@@ -766,7 +766,6 @@ vinmec.com##.global-thread-create-cta
 ||static.olark.com/jsclient/$third-party,domain=~fooda.com
 ||support-widget.nakanohito.jp^$domain=jre-travel.com
 ||tars-file-upload.s*.amazonaws.com/bulb/js/widget.js$domain=healthians.com
-||tforms.fcc-online.pl/public/widget.js
 ||tocplus*.com/chatLoader.do?
 ||unpkg.com/blip-chat-widget$domain=apppay.com.br
 ||uxfeedback-cdn.s3.yandex.net/_static/widget/widget.js
@@ -801,6 +800,7 @@ lisani.jp##.widget__uzou
 yomuno.jp###similar_articles
 newsee-media.com,saitama-np.co.jp,htb.co.jp,oricon.co.jp,maidonanews.jp##.uz-ny
 ||gacraft.jp^$third-party
+houyhnhnm.jp##.section-similer-post
 yamakei-online.com##.ad-pop-nw3-nw4
 mbs.jp##.common-wrap--recommend
 getnews.jp,front-row.jp##._popIn_recommend
@@ -906,6 +906,7 @@ smartpress.by##.vidjet-template
 ||widget-am.misteraladin.com^$domain=inews.id
 eiga.com##.area-unext
 ||cdn.vuukle.com/platform.js$domain=joblo.com
+web.ultra-soccer.jp###kindle-side-banner
 hltv.org##.leftCol > aside > div.a-reset
 ||thetruestory.news/widget-top.iife.js$domain=echofm.online|zona.media|thebell.io
 telegram.hr##.offers-widget
@@ -934,7 +935,6 @@ laptopmag.com##.hawk-nest
 ||widgets.getsitecontrol.com^$third-party
 ||getsitecontrol.com/widgets/$third-party
 ||l.getsitecontrol.com^$domain=nv.ua|tedium.co
-||youtube.com/embed/?enablejsapi=1&origin=*3dnews.ru&widgetid=1
 aerzteblatt.de##iframe#civey
 sport1.de,nordbayern.de,heise.de##.apester-media
 t-online.de,welt.de##iframe[src^="https://widget.civey.com"]
@@ -987,7 +987,6 @@ charter97.org###donate-article
 nonciclopedia.org,miraheze.org###siteNotice
 winstall.app##div[class^="donateCard_container__"]
 openstreetmap.org###banner
-wbur.org##.section--takeover
 www.wikipedia.org##div[id^="portalBanner_"].banner-bottom
 ||wisepops.net/loader.js$domain=civileats.com
 ||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net|tgrthaber.com.tr
@@ -1000,6 +999,7 @@ apkmody.io###fixed-donate
 zn.ua##.content__news > div.news-support
 lyricstranslate.com###block-lyricstranslateblocks-91
 starfiles.co###support_alert
+takiedela.ru##.b-post__help
 istories.media##div[class^="DonateEmbed-module-"]
 diletant.media##.donations-coin
 ||ko-fi.com^$domain=luciferdonghua.in|magicemperor.online
