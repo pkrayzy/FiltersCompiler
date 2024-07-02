@@ -10,6 +10,26 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('example.com,example.org##h1');
             });
 
+            it('should expand only hide elements rules', () => {
+                const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
+
+                const cssRule = 'example.*#$#h1 { display: none; }';
+                const patchedCssRule = expandWildcardsInRule(cssRule, wildcardDomains);
+                expect(patchedCssRule).toEqual('example.*#$#h1 { display: none; }');
+
+                const scriptletRule = 'example.*#%#//scriptlet("log")';
+                const patchedScriptletRule = expandWildcardsInRule(scriptletRule, wildcardDomains);
+                expect(patchedScriptletRule).toEqual(scriptletRule);
+
+                const extendedCssHideRule = 'example.*#?#h1';
+                const patchedExtendedCssHideRule = expandWildcardsInRule(extendedCssHideRule, wildcardDomains);
+                expect(patchedExtendedCssHideRule).toEqual(extendedCssHideRule);
+
+                const extendedCssRule = 'example.*#$?#h1 { display: none; }';
+                const patchedExtendedCssRule = expandWildcardsInRule(extendedCssRule, wildcardDomains);
+                expect(patchedExtendedCssRule).toEqual(extendedCssRule);
+            });
+
             it('should do nothing if wildcard is not in the wildcard domains', () => {
                 const rule = 'example.*##h1';
                 const wildcardDomains = { };

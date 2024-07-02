@@ -4,6 +4,7 @@ import path from 'path';
 import agtree, {
     AnyRule,
     CosmeticRule,
+    CosmeticRuleSeparator,
     DomainListParser,
     NetworkRule,
     RuleCategory,
@@ -191,7 +192,12 @@ function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): A
         case RuleCategory.Network:
             return expandWildcardsInNetworkRules(ast as NetworkRule, wildcardDomains);
         case RuleCategory.Cosmetic:
-            return expandWildcardsInCosmeticRules(ast as CosmeticRule, wildcardDomains);
+            if (ast.separator.value === CosmeticRuleSeparator.ElementHiding
+                || ast.separator.value === CosmeticRuleSeparator.ElementHidingException
+            ) {
+                return expandWildcardsInCosmeticRules(ast as CosmeticRule, wildcardDomains);
+            }
+            return ast;
         case RuleCategory.Comment:
             return ast;
         default:
