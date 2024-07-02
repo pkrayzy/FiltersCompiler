@@ -17,7 +17,7 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('example.com,example.org,test.com##h1');
             });
 
-            it('should expand restrictive wildcard', () => {
+            it('should expand negated wildcard', () => {
                 const rule = '~example.*##h1';
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
@@ -103,7 +103,7 @@ describe('platforms-patcher', () => {
                 expect(expandedRule).toEqual('test$domain=example.com|example.org|test.com');
             });
 
-            it('should expand restrictive wildcard', () => {
+            it('should expand negated wildcard', () => {
                 const rule = 'test$domain=~example.*';
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
