@@ -603,8 +603,8 @@
 			"displayNumber": 2,
 			"groupId": 2,
 			"subscriptionUrl": "https://easylist.to/easylist/easyprivacy.txt",
-			"version": "2.1.25.70",
-			"timeUpdated": "2024-07-02T00:40:29+0000",
+			"version": "2.1.25.71",
+			"timeUpdated": "2024-07-02T00:46:19+0000",
 			"languages": []
 		},
 		{
@@ -657,8 +657,8 @@
 			"displayNumber": 100,
 			"groupId": 4,
 			"subscriptionUrl": "https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt",
-			"version": "2.1.24.19",
-			"timeUpdated": "2024-07-02T00:40:35+0000",
+			"version": "2.1.24.20",
+			"timeUpdated": "2024-07-02T00:46:25+0000",
 			"languages": []
 		},
 		{

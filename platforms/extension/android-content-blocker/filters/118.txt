@@ -1,8 +1,8 @@
-! Checksum: 442n2/sIYo1jGB4tQyfa+w
+! Checksum: 98ED58VvpfvqDae8XC39rQ
 ! Title: EasyPrivacy
 ! Description: Privacy protection supplement for EasyList.
-! Version: 2.1.25.70
-! TimeUpdated: 2024-07-02T00:40:29+00:00
+! Version: 2.1.25.71
+! TimeUpdated: 2024-07-02T00:46:19+00:00
 ! Expires: 5 days (update frequency)
 ! Checksum: HjjCIm1hEALdLT66HXrZ4Q
 ! Diff-Path: ../patches/118/118-s-1719867879-14400.patch
@@ -51484,9 +51484,11 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ! https://github.com/uBlockOrigin/uAssets/commit/5563840a319a26025290e17f4e9401b201ac2b99#commitcomment-118042265
 ||reddit.com/api/jail^$xmlhttprequest,~third-party
 ! https://www.reddit.com/r/uBlockOrigin/comments/tihpyw/oldredditcom_outbound_tracking_via_out_reddit_com/i1f290z/?context=3
+!reddit.com##+js(set, Object.prototype.allowClickTracking, false)
 ! https://www.reddit.com/r/worldnews/
 ! https://github.com/uBlockOrigin/uAssets/issues/18938
 ||redditstatic.com/shreddit/sentry-$domain=reddit.com
+! reddit.com##+js(aost, fetch, Ee/</<)
 reddit.com##reddit-breadcrumbs
 ||www.reddit.com/|$xmlhttprequest,~third-party,method=post
 ! https://github.com/uBlockOrigin/uAssets/pull/5997
@@ -51747,6 +51749,7 @@ reddit.com##reddit-breadcrumbs
 ||logging.pw.adn.cloud^
 ! https://github.com/easylist/easylist/pull/16317#issuecomment-1593693211
 !||analytics-sdk.yle.fi^$script,1p,important
+!yle.fi##+js(set, yleAnalytics, noopFunc)
 ! https://github.com/uBlockOrigin/uAssets/issues/18562
 ! https://github.com/uBlockOrigin/uAssets/issues/7646
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154632
@@ -51813,6 +51816,7 @@ reddit.com##reddit-breadcrumbs
 ! https://www.bing.com/
 ! https://www.msn.com/en-us/money/markets/elon-musk-s-outlook-on-our-future-turns-dour/ar-AA1iZxwn
 ! https://capcom.fandom.com/wiki/Gallery:Bishamon
+! fandom.com##+js(set-cookie, tracking_session_id, OK, , reload, 1)
 ! https://www.clickorlando.com/weather/2023/09/06/cone-computer-models-more-lee-forecast-to-become-major-hurricane/
 ! Query parameter stripping
 ! Google ads/analytics
@@ -51881,6 +51885,7 @@ reddit.com##reddit-breadcrumbs
 !*$1p,strict3p,script,header=via:1.1 google
 ! PersianBlocker filters
 ! web.bale.ai - Tracking (OS and browser)
+!web.bale.ai##+js(trusted-set, navigator.userAgent, '{"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML\, like Gecko) Chrome/119.0.0.0 Safari/537.36"}')
 ! https://www.halaldownload.com/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%82%d8%b3%d9%85%d8%aa-6-%d9%81%d8%b5%d9%84-2-%d8%b2%d8%ae%d9%85-%da%a9%d8%a7%d8%b1%db%8c-%d8%a8%d8%a7%d8%b2%da%af%d8%b4%d8%aa/ - Download links
 ! https://www.makeuseof.com/best-vs-code-chatgpt-extensions/ - Tracking cookies
 ! https://github.com/uBlockOrigin/uAssets/issues/20440
@@ -51888,6 +51893,7 @@ reddit.com##reddit-breadcrumbs
 ! https://github.com/uBlockOrigin/uAssets/issues/20530
 ! https://elevenlabs.io/dubbing - Stores the last dubbing result
 ! Pepper redirection - pepper.ru/deals/post-428233 | pepper.pl/promocje/post-750379 | dealabs.com/bons-plans/post-2674687
+! desidime.com##+js(href-sanitizer, a[href*="https://www.desidime.com/links?ref=][href*="&url="], &url)
 ! https://www.aachener-zeitung.de/
 ||r.aachener-zeitung.de^
 ||prod-mhaa.mhtr.be^
@@ -51921,6 +51927,7 @@ reddit.com##reddit-breadcrumbs
 ! https://github.com/uBlockOrigin/uAssets/issues/22493
 /^https:\/\/mudah\.my\/[a-zA-Z0-9]{16}\/[a-zA-Z0-9]{16}\?apiKey=/$script,~third-party,domain=mudah.my
 ! https://github.com/uBlockOrigin/uAssets/issues/20586#issuecomment-1949649857
+! m.youtube.com,music.youtube.com,tv.youtube.com,www.youtube.com,youtubekids.com,youtube-nocookie.com##+js(href-sanitizer, a[href^="https://www.youtube.com/redirect?event=video_description"][href*="&q=http"], ?q)
 ! https://github.com/uBlockOrigin/uAssets/issues/22631#issuecomment-1962238669
 ||view.mngusr.com^$domain=chapmanganato.to|manganato.com
 ! https://github.com/uBlockOrigin/uAssets/issues/22676
@@ -52002,6 +52009,7 @@ reddit.com##reddit-breadcrumbs
 ! https://github.com/uBlockOrigin/uAssets/issues/12648
 ||sudonull.com/stop-ru.js
 ! https://www.reddit.com/r/uBlockOrigin/comments/tznsj6/help_creating_a_block_filter_for_background/
+app.koinly.io#$#.login-page { -webkit-animation: none !important }
 ! https://github.com/uBlockOrigin/uAssets/pull/12979
 ! https://github.com/uBlockOrigin/uAssets/issues/14043
 *$websocket,domain=linuxtracker.org
@@ -52011,6 +52019,7 @@ reddit.com##reddit-breadcrumbs
 ||cdn-prod.securiti.ai/consent/auto_blocking/$domain=xfinity.com
 ! https://github.com/uBlockOrigin/uAssets/issues/18400
 ! https://github.com/uBlockOrigin/uAssets/issues/17711#issuecomment-1595710648
+duplichecker.com,plagiarismchecker.co,plagiarismdetector.net,searchenginereports.net,smallseotools.com#$#.icon_animation samp { animation: none !important; }
 ! https://tapewithadblock.org/v/8BeO77VBQbfovrj/ high CPU
 ! https://www.reddit.com/r/uBlockOrigin/comments/17nnfzm/how_to_stop_url_from_spamming_itself_so_that_when/
 ||survey.alchemer.eu/s3/$subdocument,third-party,domain=airforce-technology.com
