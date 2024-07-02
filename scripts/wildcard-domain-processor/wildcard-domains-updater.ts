@@ -50,7 +50,7 @@ function getWildcardDomains(filterContent: string): Set<string> {
 export type WildcardDomains = Record<string, string[]>;
 
 /**
- * Supplements the wildcard domains with all possible TLDs.
+ * Supplements the wildcard domains with all possible TLDs from the list.
  * @param wildcardDomains - The set of wildcard domains to supplement.
  * @returns A map of wildcard domains with all possible TLDs.
  */
