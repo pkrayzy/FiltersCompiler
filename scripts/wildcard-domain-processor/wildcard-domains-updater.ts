@@ -47,7 +47,7 @@ function getWildcardDomains(filterContent: string): Set<string> {
 /**
  * A map of wildcard domains with all possible TLDs.
  */
-export type WildcardDomains = { [key: string]: string[] };
+export type WildcardDomains = Record<string, string[]>;
 
 /**
  * Supplements the wildcard domains with all possible TLDs.
