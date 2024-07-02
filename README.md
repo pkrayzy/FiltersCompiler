@@ -373,7 +373,7 @@ You can expand wildcard domains using the CLI commands provided in this project.
 
 1. **Expand Wildcard Domains**
 
-   This command processes platform filters and expands wildcard domains based on the previously generated map in the file [wildcard_domains.json](scripts%2Fwildcard-domain-processor%2Fwildcard_domains.json).
+   This command processes platform filters and expands wildcard domains based on the previously generated map in the file [wildcard_domains.json](scripts/wildcard-domain-processor/wildcard_domains.json).
 
     ```bash
     yarn expand-wildcard-domains <platformsDir> <wildcardDomainsFile>
