@@ -12,11 +12,11 @@ const CHECKSUM_TAG = 'Checksum';
  * @returns The normalized message with '\r' removed and consecutive '\n' characters
  * replaced with a single '\n'.
  */
-function normalizeContent (content: string): string {
+function normalizeContent(content: string): string {
     return content
         .replace(/\r/g, '')
         .replace(/\n+/g, '\n');
-};
+}
 
 /**
  * Calculates the checksum of the given content using the MD5 hashing algorithm

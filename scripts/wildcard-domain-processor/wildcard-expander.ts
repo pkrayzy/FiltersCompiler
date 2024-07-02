@@ -20,7 +20,7 @@ import { updateContentChecksum } from '../checksum';
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated network rule AST with expanded wildcards, or null if no valid domains are left.
  */
-function expandWildcardsInNetworkRules (
+function expandWildcardsInNetworkRules(
     ast: NetworkRule,
     wildcardDomains: WildcardDomains,
 ): NetworkRule | null {
@@ -112,7 +112,7 @@ function expandWildcardsInNetworkRules (
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated cosmetic rule AST with expanded wildcards, or null if no valid domains are left.
  */
-function expandWildcardsInCosmeticRules (
+function expandWildcardsInCosmeticRules(
     ast: CosmeticRule,
     wildcardDomains: WildcardDomains,
 ): AnyRule | null {

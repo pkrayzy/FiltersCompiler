@@ -66,6 +66,6 @@ export async function readFile(filePath: string): Promise<string> {
  * @returns A promise that resolves when the file has been written.
  * @throws Will throw an error if the file cannot be written.
  */
-export async function writeFile (filePath: string, content: string): Promise<void> {
+export async function writeFile(filePath: string, content: string): Promise<void> {
     await fs.writeFile(path.resolve(__dirname, filePath), content, 'utf8');
 }
