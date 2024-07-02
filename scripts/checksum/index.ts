@@ -80,7 +80,7 @@ function createTag(tagName: string, value: string, lineEnding: string): string {
 /**
  * Removes a specified tag from an array of filter content strings.
  * This function searches for the first occurrence of the specified tag within
- * the array and removes the entire line containing that tag. If the tag is not
+ * the first N lines and removes the entire line containing that tag. If the tag is not
  * found, the array remains unchanged.
  *
  * @param tagName The name of the tag to be removed from the filter content.
