@@ -6,6 +6,7 @@ import agtree, {
     CosmeticRule,
     CosmeticRuleSeparator,
     DomainListParser,
+    FilterListParser,
     NetworkRule,
     RuleCategory,
     RuleParser,
@@ -204,11 +205,11 @@ export function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDoma
             ) {
                 return expandWildcardsInCosmeticRules(ast as CosmeticRule, wildcardDomains);
             }
-            return ast;
+            return null;
         case RuleCategory.Comment:
         case RuleCategory.Empty:
         case RuleCategory.Invalid:
-            return ast;
+            return null;
         default:
             throw new Error(`Unsupported rule category in the ast: ${ast}`);
     }
@@ -221,7 +222,7 @@ export function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDoma
  * @returns The patched filter content with expanded wildcards.
  */
 export function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: WildcardDomains): string {
-    const listAst = agtree.FilterListParser.parse(filterContent);
+    const listAst = FilterListParser.parse(filterContent);
 
     if (!listAst.children || listAst.children.length === 0) {
         return filterContent;
@@ -233,7 +234,6 @@ export function expandWildcardDomainsInFilter(filterContent: string, wildcardDom
         const newAst = expandWildcardsInAst(ruleAst, wildcardDomains);
 
         if (newAst && newAst.raws) {
-            // FIXME add in the tests case with mixed new lines
             // Make sure that the new rule will be re-built.
             newAst.raws.text = RuleParser.generate(newAst);
 

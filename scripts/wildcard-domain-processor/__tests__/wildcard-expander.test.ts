@@ -11,7 +11,7 @@ import { readFile } from '../file-utils';
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The updated rule string with expanded wildcards, or null if no valid domains are left.
  */
-export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string | null {
+export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string {
     let ast = null;
     try {
         ast = RuleParser.parse(rule);
@@ -23,7 +23,7 @@ export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDom
 
     const astWithExpandedWildcards = expandWildcardsInAst(ast, wildcardDomains);
     if (astWithExpandedWildcards === null) {
-        return null;
+        return rule;
     }
 
     if (ast === astWithExpandedWildcards) {
@@ -67,7 +67,7 @@ describe('platforms-patcher', () => {
                 const rule = 'example.*##h1';
                 const wildcardDomains = {};
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
-                expect(patchedRule).toEqual('example.*##h1');
+                expect(patchedRule).toEqual(rule);
             });
 
             it('should expand wildcard and retain non-wildcard domains', () => {
@@ -249,6 +249,17 @@ describe('platforms-patcher', () => {
                     { 'example.*': ['example.com', 'example.org'] },
                 );
                 expect(updatedFilter).toEqual(expectedFilter);
+            });
+        });
+
+        describe('does not changes rules', () => {
+            it('should not update rules', async () => {
+                const filter = await readFile(path.resolve(__dirname, './resources/unchanged.txt'));
+                const updatedFilter = expandWildcardDomainsInFilter(
+                    filter,
+                    { },
+                );
+                expect(updatedFilter).toEqual(filter);
             });
         });
     });
