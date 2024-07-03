@@ -1,7 +1,37 @@
 import path from 'path';
 
-import { expandWildcardDomainsInFilter, expandWildcardsInRule } from '../wildcard-expander';
+import { RuleParser } from '@adguard/agtree';
+import { expandWildcardDomainsInFilter, expandWildcardsInAst } from '../wildcard-expander';
+import { WildcardDomains } from '../wildcard-domains-updater';
 import { readFile } from '../file-utils';
+
+/**
+ * Expands wildcards in a rule string.
+ * @param rule - The rule string to process.
+ * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
+ * @returns The updated rule string with expanded wildcards, or null if no valid domains are left.
+ */
+export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string | null {
+    let ast = null;
+    try {
+        ast = RuleParser.parse(rule);
+    } catch (e) {
+        // eslint-disable-next-line no-console
+        console.debug(`Was unable to parse rule: ${rule}, because of: ${e}`);
+        return rule;
+    }
+
+    const astWithExpandedWildcards = expandWildcardsInAst(ast, wildcardDomains);
+    if (astWithExpandedWildcards === null) {
+        return null;
+    }
+
+    if (ast === astWithExpandedWildcards) {
+        return rule;
+    }
+
+    return RuleParser.generate(astWithExpandedWildcards);
+}
 
 describe('platforms-patcher', () => {
     describe('expandWildcardsInRule', () => {
@@ -35,7 +65,7 @@ describe('platforms-patcher', () => {
 
             it('should do nothing if wildcard is not in the wildcard domains', () => {
                 const rule = 'example.*##h1';
-                const wildcardDomains = { };
+                const wildcardDomains = {};
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
                 expect(patchedRule).toEqual('example.*##h1');
             });
@@ -128,7 +158,7 @@ describe('platforms-patcher', () => {
 
             it('should do nothing if wildcard is not in the wildcard domains', () => {
                 const rule = 'test$domain=example.*';
-                const wildcardDomains = { };
+                const wildcardDomains = {};
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
                 expect(patchedRule).toEqual('test$domain=example.*');
             });

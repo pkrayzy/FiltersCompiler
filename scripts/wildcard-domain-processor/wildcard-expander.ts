@@ -8,7 +8,6 @@ import agtree, {
     DomainListParser,
     NetworkRule,
     RuleCategory,
-    RuleParser,
 } from '@adguard/agtree';
 
 import { findFilterFiles, readFile, writeFile } from './file-utils';
@@ -79,7 +78,7 @@ function expandWildcardsInNetworkRules(
         }
 
         if (!hadWildcard) {
-            return ast;
+            return null;
         }
 
         const newDomains = [];
@@ -159,7 +158,7 @@ function expandWildcardsInCosmeticRules(
     }
 
     if (!hadWildcard) {
-        return ast as AnyRule;
+        return null;
     }
 
     const newDomains = [];
@@ -194,7 +193,7 @@ function expandWildcardsInCosmeticRules(
  * @returns The updated AST with expanded wildcards, or null if no changes were made.
  * @throws Will throw an error if the AST category is unsupported.
  */
-function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null {
+export function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null {
     switch (ast.category) {
         case RuleCategory.Network:
             return expandWildcardsInNetworkRules(ast as NetworkRule, wildcardDomains);
@@ -212,34 +211,6 @@ function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): A
         default:
             throw new Error(`Unsupported rule category: ${ast.category}`);
     }
-}
-
-/**
- * Expands wildcards in a rule string.
- * @param rule - The rule string to process.
- * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
- * @returns The updated rule string with expanded wildcards, or null if no valid domains are left.
- */
-export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string | null {
-    let ast = null;
-    try {
-        ast = RuleParser.parse(rule);
-    } catch (e) {
-        // eslint-disable-next-line no-console
-        console.debug(`Was unable to parse rule: ${rule}, because of: ${e}`);
-        return rule;
-    }
-
-    const astWithExpandedWildcards = expandWildcardsInAst(ast, wildcardDomains);
-    if (astWithExpandedWildcards === null) {
-        return null;
-    }
-
-    if (ast === astWithExpandedWildcards) {
-        return rule;
-    }
-
-    return RuleParser.generate(astWithExpandedWildcards);
 }
 
 /**
