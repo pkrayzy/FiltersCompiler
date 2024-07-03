@@ -16,7 +16,6 @@ import { WildcardDomains } from './wildcard-domains-updater';
 import { DOMAIN_MODIFIERS } from './domain-extractor';
 import { utils } from './utils';
 import { updateContentChecksum } from '../checksum';
-import { splitByLines } from '../utils/splitter';
 
 /**
  * Expands wildcards in a network rule AST.
@@ -241,15 +240,25 @@ export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDom
  * @returns The patched filter content with expanded wildcards.
  */
 function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: WildcardDomains): string {
-    const rules = splitByLines(filterContent);
-    const newRules = [];
-    for (const rule of rules) {
-        const newRule = expandWildcardsInRule(rule, wildcardDomains);
-        if (newRule !== null) {
-            newRules.push(newRule);
+    const listAst = agtree.FilterListParser.parse(filterContent);
+
+    if (!listAst.children || listAst.children.length === 0) {
+        return filterContent;
+    }
+
+    for (let i = 0; i < listAst.children.length; i += 1) {
+        const ruleAst = listAst.children[i];
+
+        const newAst = expandWildcardsInAst(ruleAst, wildcardDomains);
+        if (newAst) {
+            // Make sure that the new rule will be re-built.
+            newAst.raws = undefined;
+
+            listAst.children[i] = newAst;
         }
     }
-    return newRules.join('');
+
+    return agtree.FilterListParser.generate(listAst, true);
 }
 
 /**
