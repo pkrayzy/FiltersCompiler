@@ -1,5 +1,5 @@
-! Checksum: eGf23Gl5Yqsl3vtte5oRsA
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1719920325-3600.patch
+! Checksum: mayRlPTXWGPyG9vVB4c6lQ
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1719974123-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
 ! Version: 2.0.23.87
@@ -59,7 +59,6 @@ realtime-chart.info##.osn_base
 fotospor.com##a[href="https://twitter.com/EfsaneFotospor"] > img
 fotospor.com##a[href="https://t.me/efsanefotospor"] > img
 fotospor.com##a[href="https://www.youtube.com/c/Fotosporcom"] > img
-nihongomaster.com##div[class]:has(> div[wire\:snapshot*="newsletter-signup"])
 sueddeutsche.de##div[data-newsletter-id]
 24sata.hr#%#//scriptlet('remove-class', 'sticky-top', '.vjs-wrapper')
 24sata.hr#%#//scriptlet('remove-class', 'sticky-bottom', '.video-js')
@@ -200,6 +199,7 @@ goodreads.com#%#//scriptlet('remove-class', 'Header__siteHeaderBanner', 'header.
 novosti-n.org##.top-banner
 gordonua.com#%#//scriptlet('hide-in-shadow-dom', '.google_news')
 starfiles.co#%#//scriptlet('trusted-click-element', '[style*="flex"]#download_prompt button[onclick="downloadFileB()"]')
+progroshi.news##.article__btn
 autoevolution.com##.padcol2.mgtop_20
 huffingtonpost.fr###dailymotion-pip-large-viewport
 dumskaya.net##.twitter-follow-button
@@ -699,6 +699,7 @@ mail.ru#?#body > div.tooltip:has(div.m-push-notifications__buttons)
 ||pogoda.mail.ru/*/ct-push-notifications/ct-push-notifications.xml.js
 mail.ru,~e.mail.ru,~octavius.mail.ru##.js-promo-popup
 sportmail.ru##div[id^="notification"]
+mail.ru##[class*="js-subscription"]
 ##.arcontactus-message-button
 ##.arcontactus-prompt
 ##.hs-sosyal
@@ -716,6 +717,7 @@ cgtips.org#$#.mts-cl[id^="content-locker-"] { display: none !important; }
 3dmodelshare.org,3dzip.org#$#.mts-cl[id^="content-locker-"] { display: none !important; }
 3dmodelshare.org,3dzip.org#$#div[class][data-locker-id] { display: block !important; }
 yasir252.com#%#AG_onLoad(function(){setTimeout(function(){var a=document.querySelector(".onp-sl-content");if("function"===typeof jQuery&&"object"===typeof bizpanda.lockerOptions&&a)try{a=0;for(var c=Object.keys(bizpanda.lockerOptions);a<c.length;a++){var d=c[a];if(d.includes("onpLock")){var b=bizpanda.lockerOptions[d];b&&jQuery.ajax({url:b.ajaxUrl,method:"post",data:{lockerId:b.lockerId,action:"opanda_loader",hash:b.contentHash},success:function(a){var b=jQuery(".onp-sl-content"),c=jQuery(".onp-sl-social-locker"); b.append(a);b.css("display","block");c.css("display","none")}})}}}catch(e){}},1E3)});
+||trimay.ru/?
 inkorr.com##.content--main div.sub-tg-wrapper
 krymr.com###GR-1872-nar
 gazeta.ru###_id_telegram_subscriber
@@ -767,6 +769,7 @@ mag.103.by,mag.103.ua##.b-journal-cat-banner
 news-postseven.com##.w-Share
 datarobot.com,bessarabiainform.com##.news-bar
 ||wionews.com/live-tv/embed?autoplay=1&mute=1
+taishu.jp##.youtube-content
 full-count.jp##.erase_space-ad
 full-count.jp#?#.l-sidebar > aside.l-sidebar__block:has(> div.l-sidebar-ranking > h2:contains(SAMURAI JAPAN))
 ntv.com.tr##.article-socialFrame-widget
@@ -1000,6 +1003,7 @@ easylearn.baidu.com##.kaixue-dialog-mask
 easylearn.baidu.com##.vip-banner-cont
 frag-mutti.de###fm-shadow
 thebell.co.kr##.bannerBox
+m.thebell.co.kr##article[class$="_banner"]
 ||appewa.com/assets/promo-$image
 appewa.com##.modal-wrapper
 more.tv#$#body { overflow: auto !important; }
@@ -1055,7 +1059,6 @@ kurashinista.jp##.pickup-content__link
 fmv-mypage.fmworld.net##.home-news-pr-text
 thepythoncode.com##.col-md-3 a[href*="&utm_medium=banner"][target="_blank"] > img
 ||newsstat.dallasnews.com^
-tokyo-calendar.jp##.ad-premium-panel
 cookpad.com###sticky_reference_element
 ||yimg.jp/images/realestate/special/*compTopImpact_$image,domain=realestate.yahoo.co.jp
 carview.yahoo.co.jp###bnr
@@ -1194,6 +1197,7 @@ webcg.net##.ad-sub-top-info
 vokrug.tv###sponsor
 vokrug.tv##.sponsor-false-bg
 rakko.tools##.rakkoma-widget-iframe
+w3schools.com###right > div#internalCourses
 w3schools.com###getdiploma
 findamasters.com###billboard
 findamasters.com##.inSearchAdRow
@@ -1359,7 +1363,6 @@ pcgameshardware.de,pcgames.de##.cms-teaser
 wondershare.com##a[onclick^="_gaq.push(['_trackEvent', this.href, "]
 irccloud.com###sidebar > #limits.info
 foreignpolicy.com##.subscribe--long
-shemaleporn.xxx##a[href^="/a/premium"]
 heise.de##.stage-advertising
 ||playwire.com^$domain=psprices.com
 ||myshows.me/shared/img/fe/banners/pro-*.gif
@@ -1510,12 +1513,12 @@ dotnet.microsoft.com##.swim-purple
 streamable.com##nav ~ div[class]:has(> a[href$="page-video-ad"])
 flightradar24.com##.size-full > div.relative > div.size-full ~ div.justify-between.absolute > div.justify-center.flex + div.items-end
 hepper.com##body div.opportunity-container.active
+astral.sh##main ~ div.container:has(> div > div.relative > div > a[href="https://docs.astral.sh/ruff/"])
 rakumachi.jp###js-MultiPageHeader
 rakumachi.jp##.postBanner
 ||utatane-plts.com/images/banner/utatane-plts_pr_$domain=m-pe.tv
 insideclimatenews.org##.icn-call-out-block
 home.kingsoft.jp##.col-md-3 > a[href] > img
-ptsecurity.com##.sidebar-item_banner
 eikoh.co.jp##.targetSpace
 dbook.docomo.ne.jp##.p-top-banner
 sbermarket.ru##div[class^="BannersAndSlidersThroughCatalog"]
@@ -1540,6 +1543,7 @@ microsoftedge.microsoft.com###banner
 dns-shop.ru##.products-list__banner
 tumblr.com##.HOjIH
 e-chords.com##.v_banner > div:has(> div[style="margin-top: 30px;"])
+e-chords.com##.v_banner > div[style="text-align:center; margin-top:20px;"]
 deepl.com##div[data-testid="app-ad-callout-callout"]
 trampos.co##.breadwin-box
 onlinetrade.ru##.fullWidth_bnr
@@ -1842,7 +1846,6 @@ urbandictionary.com##a[href^="https://ads.urbandictionary.com"]
 g2a.com#?#main > div[class^="PageBlock_"]:has(> section a[href="https://www.g2a.com/best-deals/consoles"])
 realsound.jp###bookStore
 24h.tv##.notify.is_freshdesk
-chugainippoh.co.jp##header > div.pr
 chugainippoh.co.jp##header > div[class$="_mc"]
 rakuten-card.co.jp##.logoutArea > div.box__inner
 rakuten-card.co.jp##.logoutArea > h2.box__ttl
