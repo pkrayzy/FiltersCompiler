@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ul4qBW2cIJZnFFwVruJfaQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1719925493-14400.patch
+! Checksum: tkAsX1378ySB5CG06sgwSA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1719983499-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.14.52
-! TimeUpdated: 2024-07-02T13:02:20+00:00
+! Version: 2.0.14.53
+! TimeUpdated: 2024-07-03T05:01:48+00:00
 ! Expires: 5 days (update frequency)
 ###smart-banner
 ##.app-banner:not(html,body,:empty)
@@ -104,7 +104,6 @@ drivereasy.com#?#.pakb-content div.info.note:has-text(drivereasy.com)
 drivereasy.com#?#.pakb-content img[sizes^="(max-width: 80"]
 drivereasy.com#?#.pakb-content p:has-text(the FREE version)
 drivereasy.com#?#.pakb-content p:has-text(the Pro version)
-drivereasy.com#?#.pakb-content img[sizes^="(max-width: 79"]
 drivereasy.com#?#.pakb-content figcaption:has-text(for free if you like)
 drivereasy.com#?#.pakb-content p:has-text(click Update All)
 cfoc.org###top_custom_banner
@@ -123,6 +122,7 @@ exefiles.com##.row:has(a[href*="/recommended/"])
 /^https?:\/\/((?!www)[a-z]{3,5}\.)?[-0-9a-z]{6,}\.(?:com|fun|guru|life|online|pw|site|space|top)\/\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,match-case,domain=com|fun|guru|life|online|pw|site|space|top
 /^https?:\/\/(?:www\.)?[-0-9a-z]{14,}\.(?:biz|fun|live)\/[a-zA-Z]{10,}\.php$/$document,domain=biz|fun|live
 ||freeroms.com^$document
+||ps1games.online^$document
 ||roms-download.com^$document
 ||gamesgx.net^$document
 coolrom.com.au,coolrom.com##.download_link
@@ -843,6 +843,7 @@ airchina.com.cn##[href="http://www.airchina.com.cn/cn/client_download.shtml"]
 amap.com###amap-result-banner
 amap.com###amapAppDownload
 amap.com###to_lushu
+bestwehotel.com##.header-phone-container
 bilibili.com##.mobile-link-l
 coolapk.com##.apk_topba_code
 ctrip.com##.service-notice-right
@@ -873,6 +874,9 @@ lianjia.com##.content-guarantee
 flights.ctrip.com##.seo-links
 mafengwo.cn###footer
 jandan.net###footer
+globalpublishers.co.tz##.adcontainer
+globalpublishers.co.tz##.widget_custom_html a[href="#"]
+globalpublishers.co.tz###custom_html-40
 alaroye.org#@#.navbar-ad-section
 knowyourmeme.com###popular_galleries
 knowyourmeme.com###sticky-sidebar
@@ -915,6 +919,7 @@ fandom.com##div:not([class],[id],[style]):has(> [data-testid^=QuizBanner i])
 spleis.no##+js(set-constant, __INITIAL_STATE__.features.should-show-snow, false)
 /particles.min.js^
 /snowfall.min.js^
+/snowfall.min.jquery.js
 /snowplow$script,domain=casamundo.se|hemnet.se
 /snowplow-tracker$script
 alpresor.se##+js(abort-current-script, snowMax)
@@ -940,7 +945,6 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@||ntdtv.com^
 @@||secretchina.com^
 @@||shenyun.com^
-@@||soundofhope.org^
 @@||wujieliulan.com^
 @@||buzzfeed.com^
 @@||mewe.com^
@@ -1036,8 +1040,8 @@ channel4.com###playerContrastOverlay
 netflix.com#$#div[class^=watch-video--][class*="-container "] { background-image: none !important }
 *#$?#.playkit-bottom-bar { background: none !important }
 *#$?#.playkit-top-bar { background: none !important }
-www.youtube.com##div[class*="-gradient-bottom "]
-www.youtube.com##div[class$=-gradient-bottom]
+www.youtube.com##head:has(meta[property$=":video:url"]) + body div[class*="-gradient-bottom "]
+www.youtube.com##head:has(meta[property$=":video:url"]) + body div[class$=-gradient-bottom]
 ##div[class^=ytp-gradient-]
 twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 play.max.com##div[class*=Gradient-Beam-]:empty
@@ -1055,7 +1059,6 @@ play.max.com##div[class*=Gradient-Beam-]:empty
 ~imdb.com##.imdb-score:not(html,body,:empty)
 ~imdb.com##div[title="IMDb Rating" i]
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
-rakuten.tv##a[href*=".imdb.com/title/"]
 playpilot.com##.ratings
 www.google.*#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
 www.google.*##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
@@ -1209,7 +1212,6 @@ $removeparam=ggtgt
 $removeparam=ftag
 $document,removeparam=/^__xts__.*$/
 $removeparam=akmClientCountry
-$removeparam=hss_channel
 $removeparam=ns_mchannel
 $removeparam=ns_source
 $removeparam=ns_campaign
@@ -1446,7 +1448,6 @@ $removeparam=cm_ainfo
 $removeparam=CSID
 $removeparam=cnxclid
 $document,removeparam=/^source=webgains$/
-$document,removeparam=/^network=webgains$/i
 $document,removeparam=/^kk=\w{6,}-\w{10,}-\w{5,}$/
 $document,removeparam=/^from=kelkoo.*$/
 $removeparam=paid
@@ -1522,6 +1523,7 @@ $removeparam=au_advert_id
 $removeparam=au_car_id
 $document,removeparam=/^from=rss$/
 $document,removeparam=/^source=rss$/
+ref=rss^$document,removeparam=ref
 $removeparam=mindbox-click-id
 $removeparam=tj,domain=baidu.com|sina.com.cn
 $removeparam=tagtag_uid
@@ -2170,6 +2172,7 @@ $document,removeparam=/^siteid=.*$/i,domain=agentprovocateur.com|amerimark.com|a
 ||kochava.com^$removeparam=device_id
 ||skyscanner.$removeparam=redirectedFrom
 ||skyscanner.$removeparam=previousCultureSource
+||shopbop.com^$removeparam=extid
 ||saksfifthavenue.com^$removeparam=LSoid
 ||saksfifthavenue.com^$removeparam=LSlinkid
 ||saksfifthavenue.com^$removeparam=LScreativeid
@@ -2555,7 +2558,6 @@ $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid
 ||login.yahoo.com^$document,removeparam=activity
-$removeparam=cgkit_search_word
 ||windscribe.com^$document,removeparam=pcpid
 ||carousell.$removeparam=t-id
 ||carousell.$removeparam=t-referrer_browse_type
@@ -2622,7 +2624,6 @@ fandom.com,wikia.org#$?#a:link { cursor: pointer !important }
 cursor_hover.$image
 ||nocookie.net/*_cursor_*.png^
 ||nocookie.net/*cursor.png^
-_Cursor1.png^
 tumblr.com#$#.custom-cursor { cursor: unset !important }
 tumblr.com#$#.custom-cursor a { cursor: pointer !important }
 tumblr.com#$#body { cursor: unset !important }
