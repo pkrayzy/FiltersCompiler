@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: mVmTS2I6gK5w+oxk4UufUA
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1720006527-3600.patch
+! Checksum: bG+NEDt4KZAAx5U4poZ1Iw
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1720011243-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.39.11
-! TimeUpdated: 2024-07-03T11:30:47+00:00
+! Version: 2.0.39.12
+! TimeUpdated: 2024-07-03T12:51:46+00:00
 ! Expires: 5 days (update frequency)
 ://yandex.*/images/_$xmlhttprequest,method=post
 ya.ru,yandex.*##:matches-path(/images).Root > div.MastHead
@@ -51,6 +51,7 @@ auto.ru##+js(json-prune, ads)
 drive2.ru##+js(abort-on-property-read, Object.prototype.AdChosen)
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru##+js(set-constant, Object.prototype.hideTgbAd, '')
+e.mail.ru,octavius.mail.ru##+js(no-setTimeout-if, /\(\)=>[a-z]{1}\(\)$/)
 dzen.ru##body header#dzen-header ~ div[class*="__widgetContainer-"] div[style]:has(div.adv-skeleton___main)
 dzen.ru##div[class^="float-interview__float-"]
 !+ NOT_PLATFORM(windows, mac, android)
