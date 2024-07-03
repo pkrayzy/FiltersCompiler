@@ -21,7 +21,7 @@ import { updateContentChecksum } from '../checksum';
  * Expands wildcards in a network rule AST.
  * @param ast - The network rule AST to process.
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
- * @returns The updated network rule AST with expanded wildcards, or null if no valid domains are left.
+ * @returns The updated network rule AST with expanded wildcards, or null if no changes were made.
  */
 function expandWildcardsInNetworkRules(
     ast: NetworkRule,
@@ -43,7 +43,14 @@ function expandWildcardsInNetworkRules(
             continue;
         }
 
-        const domainList = DomainListParser.parse(modifier.value.value, agtree.PIPE_MODIFIER_SEPARATOR);
+        let domainList;
+        try {
+            domainList = DomainListParser.parse(modifier.value.value, agtree.PIPE_MODIFIER_SEPARATOR);
+        } catch (e) {
+            // eslint-disable-next-line no-console
+            console.log(`Can not parse domains in the rule: ${ast.raws?.text}, because of error ${e}`);
+            continue;
+        }
 
         for (const domain of domainList.children) {
             const isWildcard = utils.isWildcardDomain(domain.value);
@@ -184,7 +191,7 @@ function expandWildcardsInCosmeticRules(
  * Expands wildcards in an AST based on its category.
  * @param ast - The AST to process.
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
- * @returns The updated AST with expanded wildcards, or null if no valid domains are left.
+ * @returns The updated AST with expanded wildcards, or null if no changes were made.
  * @throws Will throw an error if the AST category is unsupported.
  */
 function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null {
@@ -200,6 +207,7 @@ function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): A
             return ast;
         case RuleCategory.Comment:
         case RuleCategory.Empty:
+        case RuleCategory.Invalid:
             return ast;
         default:
             throw new Error(`Unsupported rule category: ${ast.category}`);
@@ -251,15 +259,17 @@ export function expandWildcardDomainsInFilter(filterContent: string, wildcardDom
         const ruleAst = listAst.children[i];
 
         const newAst = expandWildcardsInAst(ruleAst, wildcardDomains);
+
         if (newAst && newAst.raws) {
+            // FIXME add in the tests case with mixed new lines
             // Make sure that the new rule will be re-built.
-            newAst.raws.text = RuleParser.generate(newAst);
+            // newAst.raws.text = RuleParser.generate(newAst);
 
             listAst.children[i] = newAst;
         }
     }
 
-    return agtree.FilterListParser.generate(listAst, true);
+    return agtree.FilterListParser.generate(listAst);
 }
 
 /**
