@@ -1,9 +1,9 @@
-! Checksum: nszSOw3nFPLBFvvIKoLUvw
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1719984915-3600.patch
+! Checksum: wY14laIjN8Ojg9rYkiHNrg
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1719988533-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.42.36
-! TimeUpdated: 2024-07-03T05:31:19+00:00
+! Version: 2.3.42.37
+! TimeUpdated: 2024-07-03T06:31:28+00:00
 ! Expires: 5 days (update frequency)
 ||jazzyzest.cfd^
 ||dj2550.com^
@@ -1733,6 +1733,8 @@ delicious-audio.com#$#body { overflow: auto !important; }
 #@#.ads_banner
 ##.stickyads:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"]):not(:empty)
 ##.ads_banner:not([style^="width: 32px"], [style^="width: 33px"])
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||v.fwmrm.net/?$xmlhttprequest,domain=u.co.uk
 theouterhaven.net#@#.ad-slot
 theouterhaven.net#@#.ad-250
 @@||javtiful.com/ad-engine.js
@@ -7040,7 +7042,6 @@ elektroda.pl##.sidebar-wrap > .row > .widgets > .boombox-content > a[href][targe
 elektroda.pl##a[href]:not([href^="https://www.elektroda.pl/"]) > picture > source[media^="(min-width:"] + img
 !+ PLATFORM(ios, ext_android_cb)
 @@||iiv.pl^$generichide
-$script,third-party,denyallow=ckeditor.com|fastly.net|statically.io|sharecast.ws|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io,_____,domain=shinden.pl
 shinden.pl##iframe[src^="https://reklama.shinden.eu/adpeeps.php?"]
 @@/^https:\/\/www\.[a-z]{7,14}\.com\/[a-z]{1,4}\.js/$script,third-party,domain=shinden.pl,badfilter
 @@||spolecznosci.net/core/*/main.js$domain=shinden.pl
@@ -7059,6 +7060,8 @@ shinden.pl##iframe[src^="https://reklama.shinden.eu/adpeeps.php?"]
 @@||popads.net/pop.js$script,important,domain=shinden.pl
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 @@||cdn.jsdelivr.net/npm/fuckadblock*/fuckadblock.js$domain=shinden.pl
+!+ NOT_PLATFORM(ext_ublock)
+$script,third-party,denyallow=ckeditor.com|fastly.net|statically.io|sharecast.ws|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io,_____,domain=shinden.pl
 ||llog.pl^
 dobreprogramy.pl##button[class][type="button"] + a[href*="?utm_source=dobreprogramy&utm_medium=avastseal&utm_campaign=download"]
 dobreprogramy.pl#$#body:not(#bd):not([style*="background-image:"]) { background-image:none!important; }
@@ -32861,6 +32864,7 @@ dexerto.com##.external\:bg-custom-ad-background
 tvtropes.org##.fad
 slideshare.net##.fallback-ad-container
 tokyvideo.com##.fan--related-videos.fan
+channelnewsasia.com##.fast-ads-wrapper
 imgur.com##.fast-grid-ad
 futbin.com##.fb-ad-placement
 whatismyipaddress.com##.fbx-player-wrapper
