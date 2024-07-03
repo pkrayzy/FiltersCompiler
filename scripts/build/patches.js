@@ -87,7 +87,7 @@ const main = async () => {
             }
 
             return res;
-        }
+        },
     );
 
     for (let i = 0; i < newFilterFiles.length; i += 1) {

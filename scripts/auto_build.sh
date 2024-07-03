@@ -14,6 +14,12 @@ ADGUARD_FILTERS="1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,224"
 # Default mode is "all"
 MODE="all"
 
+# Define paths for wildcard domain expansion
+CHROMIUM_MV3_PATH="./platforms/extension/chromium-mv3"
+SAFARI_PATH="./platforms/extension/safari"
+IOS_PATH="./platforms/ios"
+WILDCARD_DOMAINS_JSON_PATH="./scripts/wildcard-domain-processor/wildcard_domains.json"
+
 # Loop through command-line arguments
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -42,11 +48,23 @@ if [[ "$MODE" == "all" ]]; then
     # Build all filters except ours to keep 1 hour update cycle of patches
     # for our filters.
     yarn build --skip=$ADGUARD_FILTERS --report='report-third-party.txt'
+
+    # Expand wildcard domains
+    yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
+
     # Set the time live of patches to '4 hours' in seconds
     yarn build:patches --time=14400 --resolution=s --skip=$ADGUARD_FILTERS
 elif [[ "$MODE" == "adguard" ]]; then
     # Build specific AdGuard filters based on the filter IDs
     yarn build --include=$ADGUARD_FILTERS --report='report-adguard.txt'
+
+    # Expand wildcard domains
+    yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
+
     # Set the time live of patches to '60 minutes' in seconds
     yarn build:patches --time=3600 --resolution=s --include=$ADGUARD_FILTERS
 fi
