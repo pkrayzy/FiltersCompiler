@@ -199,6 +199,7 @@ function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): A
             }
             return ast;
         case RuleCategory.Comment:
+        case RuleCategory.Empty:
             return ast;
         default:
             throw new Error(`Unsupported rule category: ${ast.category}`);
@@ -239,7 +240,7 @@ export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDom
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The patched filter content with expanded wildcards.
  */
-function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: WildcardDomains): string {
+export function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: WildcardDomains): string {
     const listAst = agtree.FilterListParser.parse(filterContent);
 
     if (!listAst.children || listAst.children.length === 0) {

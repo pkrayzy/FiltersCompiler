@@ -1,4 +1,7 @@
-import { expandWildcardsInRule } from '../wildcard-expander';
+import path from 'path';
+
+import { expandWildcardDomainsInFilter, expandWildcardsInRule } from '../wildcard-expander';
+import { readFile } from '../file-utils';
 
 describe('platforms-patcher', () => {
     describe('expandWildcardsInRule', () => {
@@ -190,6 +193,32 @@ describe('platforms-patcher', () => {
                 const wildcardDomains = { 'example.*': ['example.com', 'example.org'] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
                 expect(patchedRule).toEqual('test$domain=example.com|example.org');
+            });
+        });
+    });
+
+    describe('expandWildcardDomainsInFilter', () => {
+        describe('keeps newlines', () => {
+            it('keeps lf-newlines', async () => {
+                const filter = await readFile(path.resolve(__dirname, './resources/lf-newlines.txt'));
+                const expectedFilter = await readFile(path.resolve(__dirname, './resources/lf-newlines-expected.txt'));
+                const updatedFilter = expandWildcardDomainsInFilter(
+                    filter,
+                    { 'example.*': ['example.com', 'example.org'] },
+                );
+                expect(updatedFilter).toEqual(expectedFilter);
+            });
+
+            it('keeps crlf-newlines', async () => {
+                const filter = await readFile(path.resolve(__dirname, './resources/crlf-newlines.txt'));
+                const expectedFilter = await readFile(
+                    path.resolve(__dirname, './resources/crlf-newlines-expected.txt'),
+                );
+                const updatedFilter = expandWildcardDomainsInFilter(
+                    filter,
+                    { 'example.*': ['example.com', 'example.org'] },
+                );
+                expect(updatedFilter).toEqual(expectedFilter);
             });
         });
     });
