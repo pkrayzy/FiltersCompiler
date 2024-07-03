@@ -250,9 +250,9 @@ function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: W
         const ruleAst = listAst.children[i];
 
         const newAst = expandWildcardsInAst(ruleAst, wildcardDomains);
-        if (newAst) {
+        if (newAst && newAst.raws) {
             // Make sure that the new rule will be re-built.
-            newAst.raws = undefined;
+            newAst.raws.text = RuleParser.generate(newAst);
 
             listAst.children[i] = newAst;
         }
