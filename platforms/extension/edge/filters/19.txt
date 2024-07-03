@@ -1,9 +1,9 @@
-! Checksum: Pmg+hPYIgYTu12mxlRwmUw
-! Diff-Path: ../patches/19/19-s-1720006504-3600.patch
+! Checksum: uojKzbvMesc9BXCCG4RY3A
+! Diff-Path: ../patches/19/19-s-1720017398-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.39.11
-! TimeUpdated: 2024-07-03T11:30:47+00:00
+! Version: 2.0.39.13
+! TimeUpdated: 2024-07-03T14:34:48+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -234,6 +234,8 @@ drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 !
 ! mail.ru
 mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asResolved')
+! e.mail.ru
+e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
 ! dzen.ru
 ! Under the search
 dzen.ru##body header#dzen-header ~ div[class*="__widgetContainer-"] div[style]:has(div.adv-skeleton___main)
@@ -11552,6 +11554,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+tku.co.jp###js-webpush
 discordservers.com#%#//scriptlet('set-session-storage-item', 'footer-notification', 'false')
 ||24sata.hr/static/scripts/notifications/notifications.min.js
 sirabee.com#%#//scriptlet('trusted-click-element', '.slideDown .is-later')

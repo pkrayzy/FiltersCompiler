@@ -1,9 +1,9 @@
-! Checksum: nglpxPaQvAfdjMEHEzRpTA
-! Diff-Path: ../patches/224_optimized/224_optimized-s-1720006548-3600.patch
+! Checksum: zMipTA2t80DlSYVE8aG/BA
+! Diff-Path: ../patches/224_optimized/224_optimized-s-1720013730-3600.patch
 ! Title: AdGuard Chinese filter (Optimized)
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.18.44
-! TimeUpdated: 2024-07-03T11:30:55+00:00
+! Version: 2.1.18.46
+! TimeUpdated: 2024-07-03T13:33:26+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -238,8 +238,6 @@
 ||two.fsylr.com^
 ||ad.juksy.com^
 ||ads.tvb.com^
-52bdys.com#@##ayx
-52bdys.com#$##ayx { visibility: hidden !important; }
 ftchinese.com#@#.AdsBox
 ftchinese.com#%#//scriptlet('prevent-setTimeout', '.offsetHeight')
 manwa.fun#%#//scriptlet("prevent-setTimeout", "/alert\('请关闭.*Chrome/")
@@ -548,8 +546,21 @@ iwatchme2u.com#%#//scriptlet("prevent-window-open", "/bit\.ly|kbtv/")
 iwatchme2u.com#%#//scriptlet("adjust-setTimeout", "video-ad-timeout", "*", "0.02")
 o8tv.com#%#//scriptlet("abort-current-inline-script", "document.write", "tips")
 xvideo.cc#%#//scriptlet("set-constant", "poped", "true")
-msn.cn#%#//scriptlet("json-prune", "*", "list.*.link.ad list.*.link.kicker")
-msn.com#%#//scriptlet('hide-in-shadow-dom', 'msft-article-card:not([class="contentCard"])')
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', '.ad-container, .vd-ad, cs-native-ad-card-no-hover, display-ads, .display-ad-container, .display-ads-container, .views-right-rail-top-display, #entry-point-hp-wc-banner, .me-stripe-title-subtitle, #displayAdCard, a[href*=".booking.com/"], a[href^="https://amzn.to/"] { display: none !important; }')
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', 'cs-native-ad-card { visibility: hidden !important; }')
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', '#entry-point-hp-wc-header[style^="top:"] { top: 0 !important; }')
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', '#entry-point-hp-wc-root-wrapper[style^="margin-top:"] { margin-top: 0 !important; }')
+msn.cn#%#//scriptlet('json-prune', '*.*', 'adFeedbackData adType adServedUrls')
+msn.cn#%#//scriptlet('json-prune', '*', 'list.*.link.ad list.*.link.kicker')
+msn.cn#%#//scriptlet('hide-in-shadow-dom', 'msft-article-card:not([class="contentCard"])')
+msn.cn#%#//scriptlet('json-prune', 'configs.*.properties.slideshowWCSettings.interstitialNativeAds configs.*.properties.fullScreenSlideshowSettings.interstitialNativeAds properties.componentConfigs.slideshowConfigs.interstitialNativeAds properties.componentConfigs.slideshowConfigs.slideshowSettings.interstitialNativeAds')
+||assets.msn.cn/service/news/feed/pages/$jsonprune=\$.sections..subSections..cards..[?(key-substr 'type' 'nativead')]
+||assets.msn.cn/serviceak/news/feed/pages/viewspage$jsonprune=\$.sections..cards..[?(key-substr 'type' 'PartnerUpsell')]
+||msn.cn/resolver/api/resolve/$jsonprune=\$.configs['GalleryPage/ntpmsn'].properties.slideshowWCSettings.interstitialNativeAds
+||msn.cn/resolver/api/resolve/$jsonprune=\$.configs['GalleryPage/ntpmsn'].properties.fullScreenSlideshowSettings.interstitialNativeAds
+||msn.cn/resolver/api/resolve/$jsonprune=\$.configs['SlideShow/ntpmsn'].properties.additionalChildExperiences..children..childExperienceConfigInfo.configRef[?(key-substr '\$' 'NativeAd')]
+||assets.msn.cn/periconfigs/feature-configs/consumptionpage/gallery_default/config.json$jsonprune=\$.properties.componentConfigs.slideshowConfigs.interstitialNativeAds
+||assets.msn.cn/periconfigs/feature-configs/consumptionpage/gallery_default/config.json$jsonprune=\$.properties.componentConfigs.slideshowConfigs.slideshowSettings.interstitialNativeAds
 ucptt.com#%#(function() { window.open_ = window.open; var w_open = window.open, regex = /tw\.jav321\.com/; window.open = function(a, b) { if (typeof a !== 'string' || !regex.test(a)) { w_open(a, b); } }; })();
 goodav17.com#%#//scriptlet("abort-on-property-read", "popunder")
 v-wb.youku.com#%#//scriptlet('set-constant', 'Object.prototype.adData', 'emptyObj')
