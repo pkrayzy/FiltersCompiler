@@ -1,0 +1,35 @@
+d1 2
+a2 2
+! Checksum: vC7YJx1JL9RBimcVC/V7oQ
+! Diff-Path: ../patches/224/224-s-1720013733-3600.patch
+d5 2
+a6 2
+! Version: 2.1.18.46
+! TimeUpdated: 2024-07-03T13:33:26+00:00
+a841 1
+! https://github.com/AdguardTeam/AdguardFilters/issues/182779
+d843 2
+a844 23
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', '.ad-container, .vd-ad, cs-native-ad-card-no-hover, display-ads, .display-ad-container, .display-ads-container, .views-right-rail-top-display, #entry-point-hp-wc-banner, .me-stripe-title-subtitle, #displayAdCard, a[href*=".booking.com/"], a[href^="https://amzn.to/"] { display: none !important; }')
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', 'cs-native-ad-card { visibility: hidden !important; }')
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', '#entry-point-hp-wc-header[style^="top:"] { top: 0 !important; }')
+msn.cn#%#//scriptlet('inject-css-in-shadow-dom', '#entry-point-hp-wc-root-wrapper[style^="margin-top:"] { margin-top: 0 !important; }')
+msn.cn#%#//scriptlet('json-prune', '*.*', 'adFeedbackData adType adServedUrls')
+msn.cn#%#//scriptlet('json-prune', '*', 'list.*.link.ad list.*.link.kicker')
+msn.cn#%#//scriptlet('hide-in-shadow-dom', 'msft-article-card:not([class="contentCard"])')
+! Removes ad placeholders in sliders
+! Current path is "properties.componentConfigs.slideshowConfigs.slideshowSettings.interstitialNativeAds"
+! Other paths probably can be removed, but keep them just in case for some time
+msn.cn#%#//scriptlet('json-prune', 'configs.*.properties.slideshowWCSettings.interstitialNativeAds configs.*.properties.fullScreenSlideshowSettings.interstitialNativeAds properties.componentConfigs.slideshowConfigs.interstitialNativeAds properties.componentConfigs.slideshowConfigs.slideshowSettings.interstitialNativeAds')
+! Removes ad placeholders on the main page
+||assets.msn.cn/service/news/feed/pages/$jsonprune=\$.sections..subSections..cards..[?(key-substr 'type' 'nativead')]
+! Removes ad placeholders in articles in "More for You" section
+||assets.msn.cn/serviceak/news/feed/pages/viewspage$jsonprune=\$.sections..cards..[?(key-substr 'type' 'PartnerUpsell')]
+! Removes ad placeholders in sliders
+! Current path is "properties.componentConfigs.slideshowConfigs.slideshowSettings.interstitialNativeAds"
+! Other rules probably can be removed, but keep them just in case for some time
+||msn.cn/resolver/api/resolve/$jsonprune=\$.configs['GalleryPage/ntpmsn'].properties.slideshowWCSettings.interstitialNativeAds
+||msn.cn/resolver/api/resolve/$jsonprune=\$.configs['GalleryPage/ntpmsn'].properties.fullScreenSlideshowSettings.interstitialNativeAds
+||msn.cn/resolver/api/resolve/$jsonprune=\$.configs['SlideShow/ntpmsn'].properties.additionalChildExperiences..children..childExperienceConfigInfo.configRef[?(key-substr '\$' 'NativeAd')]
+||assets.msn.cn/periconfigs/feature-configs/consumptionpage/gallery_default/config.json$jsonprune=\$.properties.componentConfigs.slideshowConfigs.interstitialNativeAds
+||assets.msn.cn/periconfigs/feature-configs/consumptionpage/gallery_default/config.json$jsonprune=\$.properties.componentConfigs.slideshowConfigs.slideshowSettings.interstitialNativeAds
