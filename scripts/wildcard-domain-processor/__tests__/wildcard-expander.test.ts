@@ -84,11 +84,11 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('~example.com,~example.org##h1');
             });
 
-            it('should return null if wildcardDomains is empty', () => {
+            it('should return empty string if wildcardDomains is empty', () => {
                 const rule = 'example.*##h1';
                 const wildcardDomains = { 'example.*': [] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
-                expect(patchedRule).toEqual(null);
+                expect(patchedRule).toEqual('');
             });
 
             it('should handle conflicts between restricted and permitted domains', () => {
@@ -118,13 +118,13 @@ describe('platforms-patcher', () => {
                     ruleWithPermittedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithPermittedWildcard).toEqual(null);
+                expect(patchedRuleWithPermittedWildcard).toEqual('');
 
                 const patchedRuleWithRestrictedWildcard = expandWildcardsInRule(
                     ruleWithRestrictedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithRestrictedWildcard).toEqual(null);
+                expect(patchedRuleWithRestrictedWildcard).toEqual('');
             });
 
             it('should expand wildcard without duplicates', () => {
@@ -181,7 +181,7 @@ describe('platforms-patcher', () => {
                 const rule = 'test$domain=example.*';
                 const wildcardDomains = { 'example.*': [] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
-                expect(patchedRule).toEqual(null);
+                expect(patchedRule).toEqual('');
             });
 
             it('should handle conflicts between restricted and permitted domains', () => {
@@ -208,14 +208,14 @@ describe('platforms-patcher', () => {
                     ruleWithPermittedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithPermittedWildcard).toEqual(null);
+                expect(patchedRuleWithPermittedWildcard).toEqual('');
 
                 const ruleWithRestrictedWildcard = 'test$domain=~example.*|example.com';
                 const patchedRuleWithRestrictedWildcard = expandWildcardsInRule(
                     ruleWithRestrictedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithRestrictedWildcard).toEqual(null);
+                expect(patchedRuleWithRestrictedWildcard).toEqual('');
             });
 
             it('should expand wildcard without duplicates', () => {
@@ -261,6 +261,16 @@ describe('platforms-patcher', () => {
                 );
                 expect(updatedFilter).toEqual(filter);
             });
+        });
+
+        it('removes rules with dead domains', async () => {
+            const filter = await readFile(path.resolve(__dirname, './resources/dead.txt'));
+            const expectedFilter = await readFile(path.resolve(__dirname, './resources/dead-expected.txt'));
+            const actualFilter = expandWildcardDomainsInFilter(
+                filter,
+                { 'example.*': [] },
+            );
+            expect(actualFilter).toEqual(expectedFilter);
         });
     });
 });
