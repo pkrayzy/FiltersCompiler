@@ -8,6 +8,7 @@ import agtree, {
     DomainListParser,
     NetworkRule,
     RuleCategory,
+    RuleParser,
 } from '@adguard/agtree';
 
 import { findFilterFiles, readFile, writeFile } from './file-utils';
@@ -234,13 +235,13 @@ export function expandWildcardDomainsInFilter(filterContent: string, wildcardDom
         if (newAst && newAst.raws) {
             // FIXME add in the tests case with mixed new lines
             // Make sure that the new rule will be re-built.
-            // newAst.raws.text = RuleParser.generate(newAst);
+            newAst.raws.text = RuleParser.generate(newAst);
 
             listAst.children[i] = newAst;
         }
     }
 
-    return agtree.FilterListParser.generate(listAst);
+    return agtree.FilterListParser.generate(listAst, true);
 }
 
 /**
