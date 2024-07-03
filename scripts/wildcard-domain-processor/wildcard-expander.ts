@@ -210,7 +210,7 @@ export function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDoma
         case RuleCategory.Invalid:
             return ast;
         default:
-            throw new Error(`Unsupported rule category: ${ast.category}`);
+            throw new Error(`Unsupported rule category in the ast: ${ast}`);
     }
 }
 
