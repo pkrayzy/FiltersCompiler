@@ -837,8 +837,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.28.77",
-			"timeUpdated": "2024-07-03T05:01:03+0000",
+			"version": "2.1.28.78",
+			"timeUpdated": "2024-07-04T10:20:24+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -907,8 +907,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.39.84",
-			"timeUpdated": "2024-07-03T05:01:06+0000",
+			"version": "2.1.39.85",
+			"timeUpdated": "2024-07-04T10:20:27+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -957,8 +957,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.51.74",
-			"timeUpdated": "2024-07-03T05:01:06+0000",
+			"version": "2.1.51.75",
+			"timeUpdated": "2024-07-04T10:20:27+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -981,8 +981,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.13.54",
-			"timeUpdated": "2024-07-02T21:02:32+0000",
+			"version": "2.0.13.55",
+			"timeUpdated": "2024-07-04T10:20:28+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1026,8 +1026,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.76",
-			"timeUpdated": "2024-07-03T05:01:08+0000",
+			"version": "2.1.51.77",
+			"timeUpdated": "2024-07-04T10:20:29+0000",
 			"languages": [
 				"it"
 			],
@@ -1098,8 +1098,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.75",
-			"timeUpdated": "2024-07-03T05:01:08+0000",
+			"version": "2.1.51.76",
+			"timeUpdated": "2024-07-04T10:20:30+0000",
 			"languages": [
 				"ar"
 			],
@@ -1125,8 +1125,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.51.74",
-			"timeUpdated": "2024-07-03T05:01:10+0000",
+			"version": "2.1.51.75",
+			"timeUpdated": "2024-07-04T10:20:31+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1173,8 +1173,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.29.9",
-			"timeUpdated": "2024-07-03T05:01:13+0000",
+			"version": "2.1.29.10",
+			"timeUpdated": "2024-07-04T10:20:34+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -1216,8 +1216,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
-			"version": "2.0.20.86",
-			"timeUpdated": "2024-07-02T21:02:40+0000",
+			"version": "2.0.20.87",
+			"timeUpdated": "2024-07-04T10:20:35+0000",
 			"languages": [
 				"id"
 			],
@@ -1266,8 +1266,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.29.4",
-			"timeUpdated": "2024-07-03T05:01:19+0000",
+			"version": "2.1.29.5",
+			"timeUpdated": "2024-07-04T10:20:40+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1289,8 +1289,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.26.47",
-			"timeUpdated": "2024-07-03T05:01:20+0000",
+			"version": "2.1.26.48",
+			"timeUpdated": "2024-07-04T10:20:41+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -1312,8 +1312,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.23.49",
-			"timeUpdated": "2024-07-03T05:01:21+0000",
+			"version": "2.0.23.50",
+			"timeUpdated": "2024-07-04T10:20:41+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1429,8 +1429,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.51.75",
-			"timeUpdated": "2024-07-03T05:01:23+0000",
+			"version": "2.1.51.76",
+			"timeUpdated": "2024-07-04T10:20:43+0000",
 			"languages": [],
 			"tags": [
 				50
@@ -1448,8 +1448,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.96.72",
-			"timeUpdated": "2024-07-03T01:01:27+0000",
+			"version": "2.0.96.73",
+			"timeUpdated": "2024-07-04T10:20:44+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1470,8 +1470,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.51.0",
-			"timeUpdated": "2024-07-03T05:01:23+0000",
+			"version": "2.1.51.1",
+			"timeUpdated": "2024-07-04T10:20:44+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -1490,8 +1490,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.17",
-			"timeUpdated": "2024-07-03T05:01:24+0000",
+			"version": "2.0.30.18",
+			"timeUpdated": "2024-07-04T10:20:45+0000",
 			"languages": [
 				"vi"
 			],
@@ -1725,8 +1725,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.51.76",
-			"timeUpdated": "2024-07-03T05:01:31+0000",
+			"version": "2.1.51.77",
+			"timeUpdated": "2024-07-04T10:20:52+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1749,8 +1749,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.58.18",
-			"timeUpdated": "2024-07-02T21:03:07+0000",
+			"version": "2.0.58.19",
+			"timeUpdated": "2024-07-04T10:20:56+0000",
 			"languages": [],
 			"tags": [
 				4,
@@ -1817,8 +1817,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
 			"trustLevel": "high",
-			"version": "2.0.4.52",
-			"timeUpdated": "2024-06-30T21:01:46+0000",
+			"version": "2.0.4.53",
+			"timeUpdated": "2024-07-04T10:20:57+0000",
 			"languages": [
 				"fa",
 				"tg",
@@ -1870,8 +1870,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "1.0.31.52",
-			"timeUpdated": "2024-06-30T21:01:49+0000",
+			"version": "1.0.31.53",
+			"timeUpdated": "2024-07-04T10:21:00+0000",
 			"languages": [],
 			"tags": [
 				41,
@@ -1939,8 +1939,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.34.85",
-			"timeUpdated": "2024-07-03T05:01:40+0000",
+			"version": "2.1.34.86",
+			"timeUpdated": "2024-07-04T10:21:02+0000",
 			"languages": [],
 			"tags": [
 				6
@@ -1958,8 +1958,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.87",
-			"timeUpdated": "2024-07-03T05:01:40+0000",
+			"version": "2.0.18.88",
+			"timeUpdated": "2024-07-04T10:21:03+0000",
 			"languages": [
 				"sv"
 			],
@@ -2010,8 +2010,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.47.82",
-			"timeUpdated": "2024-07-03T05:01:42+0000",
+			"version": "2.1.47.83",
+			"timeUpdated": "2024-07-04T10:21:04+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -2158,8 +2158,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.7",
-			"timeUpdated": "2024-07-03T05:01:50+0000",
+			"version": "2.0.45.8",
+			"timeUpdated": "2024-07-04T10:21:12+0000",
 			"languages": [
 				"hi"
 			],
@@ -2204,8 +2204,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.76",
-			"timeUpdated": "2024-07-03T01:01:56+0000",
+			"version": "2.0.1.77",
+			"timeUpdated": "2024-07-04T10:21:13+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -2223,8 +2223,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.0.92",
-			"timeUpdated": "2024-07-03T05:01:51+0000",
+			"version": "2.0.0.93",
+			"timeUpdated": "2024-07-04T10:21:13+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -2242,8 +2242,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.81",
-			"timeUpdated": "2024-07-02T21:03:31+0000",
+			"version": "2.0.1.82",
+			"timeUpdated": "2024-07-04T10:21:14+0000",
 			"languages": [],
 			"tags": [
 				4
