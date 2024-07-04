@@ -49,8 +49,8 @@ if [[ "$MODE" == "all" ]]; then
     # for our filters.
     yarn build --skip=$ADGUARD_FILTERS --report='report-third-party.txt'
 
-#    # Expand wildcard domains
-#    yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
+    # Expand wildcard domains
+    yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
 #    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
 #    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
 
@@ -60,8 +60,8 @@ elif [[ "$MODE" == "adguard" ]]; then
     # Build specific AdGuard filters based on the filter IDs
     yarn build --include=$ADGUARD_FILTERS --report='report-adguard.txt'
 
-#    # Expand wildcard domains
-#    yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
+    # Expand wildcard domains
+    yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
 #    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
 #    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
 

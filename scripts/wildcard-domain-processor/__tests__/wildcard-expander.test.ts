@@ -1,4 +1,37 @@
-import { expandWildcardsInRule } from '../wildcard-expander';
+import path from 'path';
+
+import { RuleParser } from '@adguard/agtree';
+import { expandWildcardDomainsInFilter, expandWildcardsInAst } from '../wildcard-expander';
+import { WildcardDomains } from '../wildcard-domains-updater';
+import { readFile } from '../file-utils';
+
+/**
+ * Expands wildcards in a rule string.
+ * @param rule - The rule string to process.
+ * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
+ * @returns The updated rule string with expanded wildcards, or null if no valid domains are left.
+ */
+export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string {
+    let ast = null;
+    try {
+        ast = RuleParser.parse(rule);
+    } catch (e) {
+        // eslint-disable-next-line no-console
+        console.debug(`Was unable to parse rule: ${rule}, because of: ${e}`);
+        return rule;
+    }
+
+    const astWithExpandedWildcards = expandWildcardsInAst(ast, wildcardDomains);
+    if (astWithExpandedWildcards === null) {
+        return rule;
+    }
+
+    if (ast === astWithExpandedWildcards) {
+        return rule;
+    }
+
+    return RuleParser.generate(astWithExpandedWildcards);
+}
 
 describe('platforms-patcher', () => {
     describe('expandWildcardsInRule', () => {
@@ -32,9 +65,9 @@ describe('platforms-patcher', () => {
 
             it('should do nothing if wildcard is not in the wildcard domains', () => {
                 const rule = 'example.*##h1';
-                const wildcardDomains = { };
+                const wildcardDomains = {};
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
-                expect(patchedRule).toEqual('example.*##h1');
+                expect(patchedRule).toEqual(rule);
             });
 
             it('should expand wildcard and retain non-wildcard domains', () => {
@@ -51,11 +84,11 @@ describe('platforms-patcher', () => {
                 expect(patchedRule).toEqual('~example.com,~example.org##h1');
             });
 
-            it('should return null if wildcardDomains is empty', () => {
+            it('should return empty string if wildcardDomains is empty', () => {
                 const rule = 'example.*##h1';
                 const wildcardDomains = { 'example.*': [] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
-                expect(patchedRule).toEqual(null);
+                expect(patchedRule).toEqual('');
             });
 
             it('should handle conflicts between restricted and permitted domains', () => {
@@ -85,13 +118,13 @@ describe('platforms-patcher', () => {
                     ruleWithPermittedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithPermittedWildcard).toEqual(null);
+                expect(patchedRuleWithPermittedWildcard).toEqual('');
 
                 const patchedRuleWithRestrictedWildcard = expandWildcardsInRule(
                     ruleWithRestrictedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithRestrictedWildcard).toEqual(null);
+                expect(patchedRuleWithRestrictedWildcard).toEqual('');
             });
 
             it('should expand wildcard without duplicates', () => {
@@ -125,7 +158,7 @@ describe('platforms-patcher', () => {
 
             it('should do nothing if wildcard is not in the wildcard domains', () => {
                 const rule = 'test$domain=example.*';
-                const wildcardDomains = { };
+                const wildcardDomains = {};
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
                 expect(patchedRule).toEqual('test$domain=example.*');
             });
@@ -148,7 +181,7 @@ describe('platforms-patcher', () => {
                 const rule = 'test$domain=example.*';
                 const wildcardDomains = { 'example.*': [] };
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
-                expect(patchedRule).toEqual(null);
+                expect(patchedRule).toEqual('');
             });
 
             it('should handle conflicts between restricted and permitted domains', () => {
@@ -175,14 +208,14 @@ describe('platforms-patcher', () => {
                     ruleWithPermittedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithPermittedWildcard).toEqual(null);
+                expect(patchedRuleWithPermittedWildcard).toEqual('');
 
                 const ruleWithRestrictedWildcard = 'test$domain=~example.*|example.com';
                 const patchedRuleWithRestrictedWildcard = expandWildcardsInRule(
                     ruleWithRestrictedWildcard,
                     wildcardDomains,
                 );
-                expect(patchedRuleWithRestrictedWildcard).toEqual(null);
+                expect(patchedRuleWithRestrictedWildcard).toEqual('');
             });
 
             it('should expand wildcard without duplicates', () => {
@@ -191,6 +224,53 @@ describe('platforms-patcher', () => {
                 const patchedRule = expandWildcardsInRule(rule, wildcardDomains);
                 expect(patchedRule).toEqual('test$domain=example.com|example.org');
             });
+        });
+    });
+
+    describe('expandWildcardDomainsInFilter', () => {
+        describe('keeps newlines', () => {
+            it('keeps lf-newlines', async () => {
+                const filter = await readFile(path.resolve(__dirname, './resources/lf-newlines.txt'));
+                const expectedFilter = await readFile(path.resolve(__dirname, './resources/lf-newlines-expected.txt'));
+                const updatedFilter = expandWildcardDomainsInFilter(
+                    filter,
+                    { 'example.*': ['example.com', 'example.org'] },
+                );
+                expect(updatedFilter).toEqual(expectedFilter);
+            });
+
+            it('keeps crlf-newlines', async () => {
+                const filter = await readFile(path.resolve(__dirname, './resources/crlf-newlines.txt'));
+                const expectedFilter = await readFile(
+                    path.resolve(__dirname, './resources/crlf-newlines-expected.txt'),
+                );
+                const updatedFilter = expandWildcardDomainsInFilter(
+                    filter,
+                    { 'example.*': ['example.com', 'example.org'] },
+                );
+                expect(updatedFilter).toEqual(expectedFilter);
+            });
+        });
+
+        describe('does not changes rules', () => {
+            it('should not update rules', async () => {
+                const filter = await readFile(path.resolve(__dirname, './resources/unchanged.txt'));
+                const updatedFilter = expandWildcardDomainsInFilter(
+                    filter,
+                    { },
+                );
+                expect(updatedFilter).toEqual(filter);
+            });
+        });
+
+        it('removes rules with dead domains', async () => {
+            const filter = await readFile(path.resolve(__dirname, './resources/dead.txt'));
+            const expectedFilter = await readFile(path.resolve(__dirname, './resources/dead-expected.txt'));
+            const actualFilter = expandWildcardDomainsInFilter(
+                filter,
+                { 'example.*': [] },
+            );
+            expect(actualFilter).toEqual(expectedFilter);
         });
     });
 });

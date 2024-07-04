@@ -2,10 +2,13 @@
 import path from 'path';
 
 import agtree, {
+    AdblockSyntax,
     AnyRule,
     CosmeticRule,
     CosmeticRuleSeparator,
     DomainListParser,
+    EmptyRule,
+    FilterListParser,
     NetworkRule,
     RuleCategory,
     RuleParser,
@@ -16,18 +19,24 @@ import { WildcardDomains } from './wildcard-domains-updater';
 import { DOMAIN_MODIFIERS } from './domain-extractor';
 import { utils } from './utils';
 import { updateContentChecksum } from '../checksum';
-import { splitByLines } from '../utils/splitter';
+
+const EMPTY_RULE: EmptyRule = {
+    syntax: AdblockSyntax.Adg,
+    type: 'EmptyRule',
+    category: RuleCategory.Empty,
+};
 
 /**
  * Expands wildcards in a network rule AST.
  * @param ast - The network rule AST to process.
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
- * @returns The updated network rule AST with expanded wildcards, or null if no valid domains are left.
+ * @returns The updated network rule AST with expanded wildcards, null if no changes were made or empty ast if all
+ * domains were eliminated
  */
 function expandWildcardsInNetworkRules(
     ast: NetworkRule,
     wildcardDomains: WildcardDomains,
-): NetworkRule | null {
+): NetworkRule | EmptyRule | null {
     if (!ast.modifiers) {
         return ast;
     }
@@ -44,7 +53,14 @@ function expandWildcardsInNetworkRules(
             continue;
         }
 
-        const domainList = DomainListParser.parse(modifier.value.value, agtree.PIPE_MODIFIER_SEPARATOR);
+        let domainList;
+        try {
+            domainList = DomainListParser.parse(modifier.value.value, agtree.PIPE_MODIFIER_SEPARATOR);
+        } catch (e) {
+            // eslint-disable-next-line no-console
+            console.log(`Can not parse domains in the rule: ${ast.raws?.text}, because of error ${e}`);
+            continue;
+        }
 
         for (const domain of domainList.children) {
             const isWildcard = utils.isWildcardDomain(domain.value);
@@ -73,7 +89,7 @@ function expandWildcardsInNetworkRules(
         }
 
         if (!hadWildcard) {
-            return ast;
+            return null;
         }
 
         const newDomains = [];
@@ -92,7 +108,7 @@ function expandWildcardsInNetworkRules(
         }
 
         if (newDomains.length === 0) {
-            return null;
+            return EMPTY_RULE;
         }
 
         const newDomainsModifier = {
@@ -115,12 +131,13 @@ function expandWildcardsInNetworkRules(
  * Expands wildcards in a cosmetic rule AST.
  * @param ast - The cosmetic rule AST to process.
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
- * @returns The updated cosmetic rule AST with expanded wildcards, or null if no valid domains are left.
+ * @returns The updated cosmetic rule AST with expanded wildcards, null if no valid domains are left, or empty rule if
+ * all domains were eliminated.
  */
 function expandWildcardsInCosmeticRules(
     ast: CosmeticRule,
     wildcardDomains: WildcardDomains,
-): AnyRule | null {
+): AnyRule | EmptyRule | null {
     const domains = ast.domains.children;
     const newPermittedDomains = new Map();
     const newRestrictedDomains = new Map();
@@ -153,7 +170,7 @@ function expandWildcardsInCosmeticRules(
     }
 
     if (!hadWildcard) {
-        return ast as AnyRule;
+        return null;
     }
 
     const newDomains = [];
@@ -172,7 +189,7 @@ function expandWildcardsInCosmeticRules(
     }
 
     if (newDomains.length === 0) {
-        return null;
+        return EMPTY_RULE;
     }
 
     const newAst = structuredClone(ast);
@@ -185,10 +202,11 @@ function expandWildcardsInCosmeticRules(
  * Expands wildcards in an AST based on its category.
  * @param ast - The AST to process.
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
- * @returns The updated AST with expanded wildcards, or null if no valid domains are left.
+ * @returns The updated AST with expanded wildcards, null if no changes were made or empty rule if all domains
+ * were eliminated.
  * @throws Will throw an error if the AST category is unsupported.
  */
-function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null {
+export function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): AnyRule | null {
     switch (ast.category) {
         case RuleCategory.Network:
             return expandWildcardsInNetworkRules(ast as NetworkRule, wildcardDomains);
@@ -198,40 +216,14 @@ function expandWildcardsInAst(ast: AnyRule, wildcardDomains: WildcardDomains): A
             ) {
                 return expandWildcardsInCosmeticRules(ast as CosmeticRule, wildcardDomains);
             }
-            return ast;
+            return null;
         case RuleCategory.Comment:
-            return ast;
+        case RuleCategory.Empty:
+        case RuleCategory.Invalid:
+            return null;
         default:
-            throw new Error(`Unsupported rule category: ${ast.category}`);
+            throw new Error(`Unsupported rule category in the ast: ${ast}`);
     }
-}
-
-/**
- * Expands wildcards in a rule string.
- * @param rule - The rule string to process.
- * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
- * @returns The updated rule string with expanded wildcards, or null if no valid domains are left.
- */
-export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDomains): string | null {
-    let ast = null;
-    try {
-        ast = RuleParser.parse(rule);
-    } catch (e) {
-        // eslint-disable-next-line no-console
-        console.debug(`Was unable to parse rule: ${rule}, because of: ${e}`);
-        return rule;
-    }
-
-    const astWithExpandedWildcards = expandWildcardsInAst(ast, wildcardDomains);
-    if (astWithExpandedWildcards === null) {
-        return null;
-    }
-
-    if (ast === astWithExpandedWildcards) {
-        return rule;
-    }
-
-    return RuleParser.generate(astWithExpandedWildcards);
 }
 
 /**
@@ -240,16 +232,31 @@ export function expandWildcardsInRule(rule: string, wildcardDomains: WildcardDom
  * @param wildcardDomains - A map of wildcard domains to their non-wildcard equivalents.
  * @returns The patched filter content with expanded wildcards.
  */
-function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: WildcardDomains): string {
-    const rules = splitByLines(filterContent);
-    const newRules = [];
-    for (const rule of rules) {
-        const newRule = expandWildcardsInRule(rule, wildcardDomains);
-        if (newRule !== null) {
-            newRules.push(newRule);
+export function expandWildcardDomainsInFilter(filterContent: string, wildcardDomains: WildcardDomains): string {
+    const listAst = FilterListParser.parse(filterContent);
+
+    if (!listAst.children || listAst.children.length === 0) {
+        return filterContent;
+    }
+
+    for (let i = listAst.children.length - 1; i >= 0; i -= 1) {
+        const ruleAst = listAst.children[i];
+
+        const newAst = expandWildcardsInAst(ruleAst, wildcardDomains);
+
+        if (newAst) {
+            if (newAst.raws) {
+                // Make sure that the new rule will be re-built.
+                newAst.raws.text = RuleParser.generate(newAst);
+
+                listAst.children[i] = newAst;
+            } else if (newAst.category === RuleCategory.Empty) {
+                listAst.children.splice(i, 1);
+            }
         }
     }
-    return newRules.join('');
+
+    return agtree.FilterListParser.generate(listAst, true);
 }
 
 /**
