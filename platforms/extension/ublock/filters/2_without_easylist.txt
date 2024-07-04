@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: oVxfddVgLGGEBIMHjS9TEA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720107679-3600.patch
+! Checksum: NsomL6pGN9gvJeq9ullUHQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720111095-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.42.60
-! TimeUpdated: 2024-07-04T15:31:35+00:00
+! Version: 2.3.42.61
+! TimeUpdated: 2024-07-04T16:31:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -10035,9 +10035,6 @@ tyla.com,gamingbible.com,unilad.com,ladbible.com##+js(set-constant, pbjs.adUnits
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115190
 !+ NOT_PLATFORM(windows, mac, android)
 ||googletagmanager.com/gtag/js$script,redirect=noop.js,domain=faucetofbob.xyz
-! https://github.com/AdguardTeam/AdguardFilters/issues/164665
-! https://github.com/AdguardTeam/AdguardFilters/issues/115352
-uploadbank.com##+js(abort-on-stack-trace, setTimeout, win)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114134
 ||aaxwall.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115162
@@ -13447,9 +13444,15 @@ kissanime.si##+js(set-constant, check_adblock, true)
 heidisql.com##+js(set-constant, floovy, undefined)
 ! https://forum.adguard.com/index.php?threads/up-4-net.30856
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=www.up-4.net
-! https://github.com/AdguardTeam/AdguardFilters/issues/19256
-! https://github.com/AdguardTeam/AdguardFilters/issues/30296
+! uploadbank.com
+uploadbank.com#@#.AdSense
+uploadbank.com#@#iframe[width="728"][height="90"]
+uploadbank.com#@#.adSense
+uploadbank.com#@#.Adsense
 uploadbank.com##+js(abort-current-script, f)
+uploadbank.com##+js(abort-on-stack-trace, setTimeout, win)
+uploadbank.com##+js(set-constant, adBlockDetected, noopFunc)
+@@||d1r3ddyrqrmcjv.cloudfront.net^$domain=uploadbank.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121637
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36005
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30143
@@ -27678,7 +27681,7 @@ sitenable.*,filesdownloader.com,siteget.net,freeproxy.io,glodls.to##+js(abort-cu
 !
 ! FingerprintJS
 1337x.*##+js(abort-on-property-write, LAST_CORRECT_EVENT_TIME)
-sitenable.*,filesdownloader.com,siteget.net,freeproxy.io,glodls.to##+js(abort-on-stack-trace, navigator, Object.isFlashEnabled)
+uploadbank.com,sitenable.*,filesdownloader.com,siteget.net,freeproxy.io,glodls.to##+js(abort-on-stack-trace, navigator, Object.isFlashEnabled)
 mirrored.to,wishanimes.com,hd-streams.org,skidrowreloaded.com##+js(abort-current-script, Promise, FingerprintJS)
 olkuj.com,ijvam.com,olympicstreams.*,buffsports.me,uploadhaven.com,sunci.net,yoykp.com,arcjav.com,mc-hacks.net,mycivillinks.com,woiden.com,wonderapk.com,megaup.net,exeo.app,vidsrc.*,cricstream.me,vipleague.*,socceronline.me,igg-games.co,crackstreams.*,torrentmac.net,vipboxtv.*,vipbox.*,userscloud.com,game3rb.com,soap2day.*,soccerworldcup.me,igg-games.com,miraculous.to,coloredmanga.com,hentaispark.com,send.cm##+js(abort-current-script, navigator, FingerprintJS)
 !
