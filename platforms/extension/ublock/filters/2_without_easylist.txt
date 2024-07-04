@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: fAg/wp2bJpNUt4ncGNoJ1g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720100246-3600.patch
+! Checksum: G3IR+OSb19IeARAi7iDB7w
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720103912-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.42.58
-! TimeUpdated: 2024-07-04T13:31:40+00:00
+! Version: 2.3.42.59
+! TimeUpdated: 2024-07-04T14:31:57+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7034,6 +7034,10 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182806
+@@||timesunion.com/sites/jquery.adx.js
+@@||n730.timesunion.com/script.js
+||n730.timesunion.com/script.js$script,redirect=noop.js,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182858
 ||popcdn.day/magnitude.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182743
@@ -32886,6 +32890,10 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+goal.com##.component-promo-panels
+timesunion.com##div.package:has(> div > div[data-block-type="ad"])
+timesunion.com##div[data-eid="item-100624"]
+mobalytics.gg##div[style^="width: 400px; height:"]
 nayisahara.com##center > #btnx
 nayisahara.com##div[id$="-Ads"]
 foxnxx.com##div[style^="height:250px;max-width:300px;"]
