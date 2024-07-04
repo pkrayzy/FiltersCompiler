@@ -1,9 +1,9 @@
-! Checksum: FOmjmzCq7JYra/6wShNQSg
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1720095171-3600.patch
+! Checksum: gvEPiKdi3LooJReDUHbeGA
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1720096699-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.92.2
-! TimeUpdated: 2024-07-04T09:31:17+00:00
+! Version: 2.0.92.3
+! TimeUpdated: 2024-07-04T12:31:14+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2312,6 +2312,8 @@ minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "showAd")
 otvet.mail.ru#%#//scriptlet('json-prune', 'baits css direct *.slot')
 @@||e.mail.ru^$generichide
 @@||octavius.mail.ru^$generichide
+!+ PLATFORM(android, ios)
+e.mail.ru,octavius.mail.ru#$?#html.mobile .letter-list__react div.ReactVirtualized__Grid__innerScrollContainer { margin-top: var(--vkui--octavius_size_portal-menu_height--regular); }
 ok.ru#%#//scriptlet('json-prune', 'result.body.direct')
 ||ok.ru/res/js/app/RightColumn_*.js
 ok.ru##.dialogWrapperBanner
