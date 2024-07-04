@@ -51,8 +51,8 @@ if [[ "$MODE" == "all" ]]; then
 
     # Expand wildcard domains
     yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
-#    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
-#    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
 
     # Set the time live of patches to '4 hours' in seconds
     yarn build:patches --time=14400 --resolution=s --skip=$ADGUARD_FILTERS
@@ -62,8 +62,8 @@ elif [[ "$MODE" == "adguard" ]]; then
 
     # Expand wildcard domains
     yarn expand-wildcard-domains $CHROMIUM_MV3_PATH $WILDCARD_DOMAINS_JSON_PATH
-#    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
-#    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $SAFARI_PATH $WILDCARD_DOMAINS_JSON_PATH
+    yarn expand-wildcard-domains $IOS_PATH $WILDCARD_DOMAINS_JSON_PATH
 
     # Set the time live of patches to '60 minutes' in seconds
     yarn build:patches --time=3600 --resolution=s --include=$ADGUARD_FILTERS
