@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.42.65",
-			"timeUpdated": "2024-07-05T01:31:30+0000",
+			"version": "2.3.42.66",
+			"timeUpdated": "2024-07-05T05:31:25+0000",
 			"languages": [],
 			"tags": [
 				10,
