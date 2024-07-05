@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.3.2",
-			"timeUpdated": "2024-07-05T15:32:49+0000",
+			"version": "2.1.3.3",
+			"timeUpdated": "2024-07-05T21:33:06+0000",
 			"languages": [],
 			"tags": [
 				3,
