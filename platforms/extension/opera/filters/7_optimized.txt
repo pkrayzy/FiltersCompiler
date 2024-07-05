@@ -1,9 +1,9 @@
-! Checksum: jse05kISybJ+HgGnYEwuQg
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1720179454-3600.patch
+! Checksum: N+R6HqkwQc90+X+ys4zMEA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1720183084-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.53.62
-! TimeUpdated: 2024-07-05T11:33:32+00:00
+! Version: 2.0.53.63
+! TimeUpdated: 2024-07-05T12:33:48+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -759,7 +759,6 @@ nasubiblog.com,kyukyoku-matome.com##.widget_pc_ad
 ##div[id^="JP_"][style]
 ##iframe.lazyloaded[data-src^="https://ad.jp.ap.valuecommerce.com/"]
 ##iframe[id^="IFTG"]
-##.article-body a[title^="コミックINN"][href^="https://px.a8.net/svt/ejp"][target="_blank"] img.pict
 ##.plugin-freearea > div[id^="msmaflink"]
 ##.plugin-freearea a[href*="al.dmm.co"]
 ##.plugin-freearea a[href*="amazon.co.jp"]
@@ -776,6 +775,7 @@ nasubiblog.com,kyukyoku-matome.com##.widget_pc_ad
 ##.t_b ~ a[href^="https://www.amazon.co.jp"]
 ##.t_b ~ div > a[href^="https://al.dmm.co"]
 ##.t_b ~ div > a[href^="https://www.amazon.co.jp"]
+##.textwidget a[href^="https://pcmax.jp/lp/?ad_id="] > img
 ##.widget_custom_html > .custom-html-widget > a[href^="https://www.e-nls.com/access.php"]
 itest.bbspink.com#$#.footer-with-ad { padding-bottom: 10px !important; }
 akibablog.blog.jp#%#//scriptlet('abort-current-inline-script', 'document.write', 'sitejack')
@@ -1272,12 +1272,14 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+adult-video.tokyo#?#body:xpath(//div[contains(@class, "entry-content ")]//a[@target="_blank" and contains(@rel, "noopener") and not(@href=ancestor::div[contains(@class, "entry-content ")]/p[2]/a[1]/@href)]/img)
+dot.asahi.com##ul[class^="m-article-list"][class$="readmore"] > li.m-article-list__item:has(> div[id^="taboola-below-article-"])
 cat.benesse.ne.jp,dog.benesse.ne.jp##div[style="min-height: 600px;"]
 cat.benesse.ne.jp,dog.benesse.ne.jp##.text_c[style="height: 50px;"]
 recipe.rakuten.co.jp##.box_banner--top
-the21.php.co.jp##.bnr_wrap
-the21.php.co.jp##div[style="height:250px;"]
-the21.php.co.jp##div[style="height: 250px"]
+voice.php.co.jp,the21.php.co.jp##.bnr_wrap
+voice.php.co.jp,the21.php.co.jp##div[style="height:250px;"]
+voice.php.co.jp,the21.php.co.jp##div[style="height: 250px"]
 the21.php.co.jp###sc_pc_article_billboard
 ||cont.pancolle-movie.jp/goods/$third-party
 ||cont.pancolle-movie.jp/affer_img/$third-party
