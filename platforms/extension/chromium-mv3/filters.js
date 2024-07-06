@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.87",
-			"timeUpdated": "2024-07-06T01:01:21+0000",
+			"version": "2.1.51.88",
+			"timeUpdated": "2024-07-06T05:01:11+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.51.86",
-			"timeUpdated": "2024-07-06T01:01:22+0000",
+			"version": "2.1.51.87",
+			"timeUpdated": "2024-07-06T05:01:12+0000",
 			"languages": [
 				"ar"
 			],
@@ -1227,8 +1227,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.88",
-			"timeUpdated": "2024-07-04T10:21:03+0000",
+			"version": "2.0.18.89",
+			"timeUpdated": "2024-07-06T05:01:44+0000",
 			"languages": [
 				"sv"
 			],
@@ -1308,8 +1308,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.18",
-			"timeUpdated": "2024-07-06T01:02:05+0000",
+			"version": "2.0.45.19",
+			"timeUpdated": "2024-07-06T05:01:53+0000",
 			"languages": [
 				"hi"
 			],
@@ -1373,8 +1373,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.0.94",
-			"timeUpdated": "2024-07-05T05:02:00+0000",
+			"version": "2.0.0.95",
+			"timeUpdated": "2024-07-06T05:01:54+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1392,8 +1392,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.85",
-			"timeUpdated": "2024-07-05T13:01:59+0000",
+			"version": "2.0.1.86",
+			"timeUpdated": "2024-07-06T05:01:55+0000",
 			"languages": [],
 			"tags": [
 				4
