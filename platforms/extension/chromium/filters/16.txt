@@ -1,9 +1,9 @@
-! Checksum: PzqMH912dMQhdb+rtQtjUQ
-! Diff-Path: ../patches/16/16-s-1720168641-3600.patch
+! Checksum: y1TsnUvXb9fV/wFBkt3nMA
+! Diff-Path: ../patches/16/16-s-1720254992-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.45.47
-! TimeUpdated: 2024-07-05T08:33:59+00:00
+! Version: 2.0.45.48
+! TimeUpdated: 2024-07-06T08:33:34+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -211,8 +211,10 @@ japscan.lol#@##banner-top-right
 japscan.lol##.blur-background
 japscan.lol##.notice-message
 japscan.lol###promo.sticky-top
+japscan.lol##.text-center > a[target="_blank"] > img
+||japscan.lol/imgs/jopy/best.gif
 japscan.lol#%#//scriptlet("remove-node-text", "script", "/ApoZow|'(map'|\/imgs\/|ads?-\d+|ad-img-slot|ad_inview_area|div-leader-ad)|\['style'\]\['display'\]|\.length;var|\.substr\(0|\.reduce\(\(acc, curr\)/")
-japscan.lol#%#!function(){const t={apply:(t,n,o)=>{if(n&&n.match?.(/_\$_|innerHTML|DklzSoz|_adbn_/))throw Error();return Reflect.apply(t,n,o)}};window.String.prototype.split=new Proxy(window.String.prototype.split,t)}();
+japscan.lol#%#!function(){const t={apply:(t,n,o)=>{if(n&&n.match?.(/_\$_|DklzSoz|_adbn_/))throw Error();return Reflect.apply(t,n,o)}};window.String.prototype.split=new Proxy(window.String.prototype.split,t)}();
 ! Fixes popups
 japscan.lol#%#//scriptlet("prevent-addEventListener", "DOMContentLoaded", "/\['classList'\][\s\S]*?\['target'\]/")
 ! Fixes incorrect blocking - search does not work
