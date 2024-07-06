@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: O3X8jPD+h19V8L0b01ZHdA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720258622-3600.patch
+! Checksum: E652ICZ+Oge6C2qjfYib2w
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720262195-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.42.84
-! TimeUpdated: 2024-07-06T09:31:26+00:00
+! Version: 2.3.42.85
+! TimeUpdated: 2024-07-06T10:31:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7037,6 +7037,9 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183031
+kimcartoon.li##+js(no-setTimeout-if, (), 15000)
+||kimcartoon.li/Scripts/ozzz.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182806
 @@||timesunion.com/sites/jquery.adx.js
 @@||n730.timesunion.com/script.js
@@ -7353,6 +7356,7 @@ investguiding-com.custommapposter.com##+js(no-fetch-if, adsbygoogle)
 @@||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup_nohtml_fy2021.html$domain=alliptvlinks.com
 @@||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup_inhead_fy2021.html$domain=alliptvlinks.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2021.js$domain=alliptvlinks.com
+alliptvlinks.com#@#ins.adsbygoogle[data-ad-client]
 alliptvlinks.com#@#ins.adsbygoogle[data-ad-slot]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173728
 ! TODO: Check after 2024 May 1.
@@ -7427,11 +7431,13 @@ vectr.com##+js(no-setTimeout-if, showAdBlockDialog)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171977
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=copyseeker.net
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=copyseeker.net
+copyseeker.net#@#ins.adsbygoogle[data-ad-client]
 copyseeker.net#@#ins.adsbygoogle[data-ad-slot]
 copyseeker.net#@#.adsbygoogle-noablate
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171768
 xkeezmovies.com##+js(remove-node-text, script, eazy_ad)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171758
+yoykp.com#@#ins.adsbygoogle[data-ad-client]
 yoykp.com#@#ins.adsbygoogle[data-ad-slot]
 yoykp.com#$#body ins.adsbygoogle { display: block !important; }
 yoykp.com##+js(no-fetch-if, pagead2.googlesyndication.com)
@@ -7476,6 +7482,7 @@ $subdocument,redirect-rule=noop.html,domain=ytlarge.com
 @@||tpc.googlesyndication.com^$domain=ytlarge.com
 @@||googleads.g.doubleclick.net/pagead/html/*/zrt_lookup_fy2021.html$domain=ytlarge.com
 @@||googleads.g.doubleclick.net/pagead/ads?client=ca-pub-*&adk=$~xmlhttprequest,~script,~image,domain=ytlarge.com
+ytlarge.com#@#ins.adsbygoogle[data-ad-client]
 ytlarge.com#@#ins.adsbygoogle[data-ad-slot]
 ytlarge.com#@##adcontent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170718
@@ -7808,6 +7815,7 @@ vk.com#@#[data-ad-cls]
 vk.com#@#div[data-ad]
 vk.com#$#div[data-ad][data-ad-cls] { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/153355
+okdebrid.com#@#ins.adsbygoogle[data-ad-client]
 okdebrid.com#@#ins.adsbygoogle[data-ad-slot]
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=okdebrid.com
 @@||static.yieldmo.com/ym.adv.min.js$domain=okdebrid.com
@@ -7962,6 +7970,7 @@ listvpn.net##+js(no-fetch-if, pagead2.googlesyndication.com)
 chatgptlogin.ai##+js(addEventListener-defuser, load, adsbygoogle)
 ||chatgptlogin.ai/chat/assets/js/secret.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163549
+estudyme.com#@#ins.adsbygoogle[data-ad-client]
 estudyme.com#@#ins.adsbygoogle[data-ad-slot]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163406
 videosgay.me##+js(set-constant, cRAds, true)
@@ -7969,6 +7978,7 @@ videosgay.me##+js(set-constant, cRAds, true)
 perchance.org##+js(set-constant, ad1sAreShowing, trueFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163466
 smsonline.cloud#@##ad-slot
+smsonline.cloud#@#ins.adsbygoogle[data-ad-client]
 smsonline.cloud#@#ins.adsbygoogle[data-ad-slot]
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=smsonline.cloud
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163297
@@ -8353,6 +8363,7 @@ vwforum.ro##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155181
 freepikdownloader.com,freepic-downloader.com##+js(addEventListener-defuser, load, modal_blocker)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155375
+bedfix.wurstclient.net#@#ins.adsbygoogle[data-ad-client]
 bedfix.wurstclient.net#@#ins.adsbygoogle[data-ad-slot]
 bedfix.wurstclient.net#$?#ins[data-ad-client^="ca-pub-"] { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155341
@@ -8472,6 +8483,7 @@ leak.sx,comohoy.com,pornleaks.in##+js(addEventListener-defuser, load, abDetector
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=zefoy.com
 zefoy.com#$?#ins.adsbygoogle[data-ad-slot] { height: 0 !important; }
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=zefoy.com
+zefoy.com#@#ins.adsbygoogle[data-ad-slot]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171608
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152204
 quackr.io##+js(no-fetch-if, cdn.fuseplatform.net, , opaque)
@@ -8625,6 +8637,7 @@ anyporn.com##+js(set-constant, banner_is_blocked, false)
 ||purposegames.com/api/*/adblock?token=
 purposegames.com##+js(set-constant, googletag.apiReady, true)
 ! www.mcoc-guide.com anti-adb
+mcoc-guide.com#@#ins.adsbygoogle[data-ad-client]
 mcoc-guide.com#@#ins.adsbygoogle[data-ad-slot]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149402
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149326
@@ -8944,6 +8957,7 @@ xszav2.com##+js(no-setTimeout-if, $("body").html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130807
 sonixgvn.net#@#.Ad-Container
 sonixgvn.net#@#.sidebar-ad
+sonixgvn.net#@#ins.adsbygoogle[data-ad-client]
 sonixgvn.net#@#ins.adsbygoogle[data-ad-slot]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141883
 ||topsporter.net/wp-content/plugins/wptqn
@@ -9250,6 +9264,7 @@ jiocinema.com#$#body .ad-zone { display: block !important; height: 1px !importan
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication.com/adsbygoogle.js,domain=techkeshri.com,important,xmlhttprequest,script
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techkeshri.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/138488
+cutty.app#@#ins.adsbygoogle[data-ad-client]
 cutty.app#@#ins.adsbygoogle[data-ad-slot]
 cutty.app#$#.adsbygoogle { position: absolute !important; left: -4000px !important; }
 cutty.app##+js(no-fetch-if, pagead2.googlesyndication.com)
@@ -9422,6 +9437,7 @@ adikhealth.xyz###adb
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130891
 karvitt.com#$#ins.adsbygoogle[data-ad-slot] { height: 1px!important; }
 karvitt.com#@#.adsbygoogle-noablate
+karvitt.com#@#ins.adsbygoogle[data-ad-client]
 karvitt.com#@#ins.adsbygoogle[data-ad-slot]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130888
 blisseyhusband.in#@#.ad-unit
@@ -9743,6 +9759,7 @@ getintoway.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 nullforums.net##+js(no-setTimeout-if, show, 0*1000)
 @@||nullforums.net/js/*/uvb-tag-ad.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124475
+mohammedkhc.com#@#ins.adsbygoogle[data-ad-client]
 mohammedkhc.com#@#ins.adsbygoogle[data-ad-slot]
 mohammedkhc.com##+js(set-constant, detectAdblock, {})
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124348#issuecomment-1185811321
@@ -9887,6 +9904,7 @@ cined.com##+js(set-constant, ulp_noadb, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120054
 go.techgeek.digital##+js(set-constant, adblockDetector, noopFunc)
 ! https://github.com/uBlockOrigin/uAssets/issues/13369
+tamrieltradecentre.com#@#ins.adsbygoogle[data-ad-client]
 tamrieltradecentre.com#@#ins.adsbygoogle[data-ad-slot]
 tamrieltradecentre.com#$#ins.adsbygoogle[data-ad-slot] { height: 10px !important; }
 tamrieltradecentre.com##+js(set-constant, adsbygoogle.loaded, true)
@@ -10236,6 +10254,7 @@ streamsb.net##+js(set-constant, isadb, false)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110513
 worldappsstore.xyz##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/bogachenko/fuckfuckadblock/issues/269
+safe.elektroupdate.com#@#ins.adsbygoogle[data-ad-client]
 safe.elektroupdate.com#@#ins.adsbygoogle[data-ad-slot]
 safe.elektroupdate.com#$#.adsbygoogle { height: 1px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117009
@@ -10817,6 +10836,7 @@ infobel.com##+js(set-constant, canRunAds, true)
 asiaflix.app#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126106
 anydebrid.com#@#.responsive-ad-wrapper
+anydebrid.com#@#ins.adsbygoogle[data-ad-client]
 anydebrid.com#@#ins.adsbygoogle[data-ad-slot]
 anydebrid.com#@#.adsbygoogle-noablate
 anydebrid.com#@#[id^="aswift_"]
@@ -12723,6 +12743,7 @@ pch.com##+js(abort-current-script, pAPI, location)
 asianrun.com##+js(set-constant, allow_ads, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72376
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43231
+teemo.gg#@#ins.adsbygoogle[data-ad-client]
 teemo.gg#@#ins.adsbygoogle[data-ad-slot]
 teemo.gg#$#.bg-gray-200 { background: none !important; height: 1px !important; min-height: 1px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42869
@@ -14184,12 +14205,13 @@ readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndic
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##.kcAds1:not(#ad-promo)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#@#.kcAds1
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#@##ad-promo
-kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#$#body #ad-promo[style] { display: block !important; }
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-on-property-write, ads_urls)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-on-property-write, checkAdsBlocked)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-on-property-write, xaZlE)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, tryHard, noopFunc)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, alb, false)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, isAdb, false)
-kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(no-xhr-if, /mgid\.com|pagead2\.googlesyndication\.com/)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(no-xhr-if, /mgid\.com|pagead2\.googlesyndication\.com|\/ads\/advert/)
 ||bebi.com/js/plugins.js$domain=lifestylehack.info|keephealth.info|kimcartoon.li|kissorg.net|kisstvshow.to|kissasian.*|kisstvshow.net,redirect=noop.txt,important,image,media,subdocument,stylesheet,script,xmlhttprequest,other
 ||propellerads.com/wp-content/plugins/radiantthemes-addons/tabs/js/radiantthemes-tab-element-four.js$domain=lifestylehack.info|keephealth.info|kimcartoon.li|kissorg.net|kisstvshow.to|kissasian.*|kisstvshow.net,redirect=noop.txt,important,image,media,subdocument,stylesheet,script,xmlhttprequest,other
 ||propellerads.com/wp-content/themes/Zephyr/framework/js/jquery.simpleplaceholder.js$domain=lifestylehack.info|keephealth.info|kimcartoon.li|kissorg.net|kisstvshow.to|kissasian.*|kisstvshow.net,redirect=noop.txt,important,image,media,subdocument,stylesheet,script,xmlhttprequest,other
@@ -15194,6 +15216,7 @@ ehubsoft.net##+js(set-constant, gadb, false)
 ! https://forum.adguard.com/index.php?threads/getfreesmsnumber-com-anti-ad-block-ubo-on-chrome.23091/
 @@||getfreesmsnumber.com/js/advertisement.js^
 ! https://forum.adguard.com/index.php?threads/receive-a-sms-com-anti-ad-block-ubo-on-chrome.23087/
+receive-a-sms.com#@#ins.adsbygoogle[data-ad-client]
 receive-a-sms.com#@#ins.adsbygoogle[data-ad-slot]
 ! realclearpolitics.com antiadblock
 @@||realclearpolitics.com/asset/section/ad-blocker.js
@@ -15577,6 +15600,7 @@ download.mokeedev.com##+js(set-constant, detectVerified, false)
 @@||pagead2.googlesyndication.com/pagead/osd.js$domain=download.mokeedev.com
 @@||download.mokeedev.com/ad*.php$generichide
 download.mokeedev.com#$#body ins.adsbygoogle { display: block!important; position: absolute!important; left: -3000px!important; }
+download.mokeedev.com#@#ins.adsbygoogle[data-ad-client]
 download.mokeedev.com#@#ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
 ! dasolo.org
 @@||js.adscale.de/getads.js:adscale_slot_id/$domain=dasolo.org
@@ -52075,6 +52099,7 @@ thestreet.com#@#.pbs__player
 ! from EasyList:
 si.com#@#.l-inline.m-detail--feature-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161687
+gergerhaber.net#@#ins.adsbygoogle[data-ad-client]
 gergerhaber.net#@#ins.adsbygoogle[data-ad-slot]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161514
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=soonersports.com
