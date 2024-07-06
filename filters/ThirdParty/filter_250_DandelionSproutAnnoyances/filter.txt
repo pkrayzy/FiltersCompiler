@@ -30946,7 +30946,7 @@ todaytime.ir##.navbar-nav [href="/اوقات-شرعی-اذان"]
 ~albayan.ae##.prayertime:not(html, body)
 !#endif
 ! Title: 🧗 Anti-'Functionality removal' List
-! OriginalVersion: 23June2024v1-Beta
+! OriginalVersion: 06July2024v1-Beta
 ! Expires: 9 days
 ! Description: This list aims to combat some sites' attempts to make it impossible to copy text, right-click on pages, open the F12 menu, create fake loading times, or who otherwise obstruct people from features that they should be perfectly in their rights to have access to.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -30970,12 +30970,21 @@ delfi.lt#%#//scriptlet('ubo-aeld.js', 'copy')
 ! From "Frellwit's Swedish Filter"
 /plugins/wp-content-copy-protection^
 /plugins/wp-copy-protect-with-color-design^
+! https://github.com/DandelionSprout/adfilt/pull/1045
+/secure-copy-content-protection-public.css^$stylesheet
 ! Prevents sites from removing the ability to right-click on images 📛
 ! https://www•matprat•no/oppskrifter/kos/koreansk-beef-bulgogi/ (29/03/2024)
 ! Prevents sites from removing the ability to copy text 📛
 respublika.lt#$?#[class^=com_] { user-select: unset !important; -webkit-user-select: unset !important; -moz-user-select: unset !important }
 hirunews.lk,ada.lk#$?#body { user-select: unset !important; -webkit-user-select: unset !important; -moz-user-select: unset !important }
 ||laisvadienis.lt^$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:
+! https://github.com/DandelionSprout/adfilt/pull/1045
+niskevesti.rs$$script[tag-content="ays_tooltip"][max-length="262144"]
+niskevesti.rs#$#:not(input):not(textarea)::selection { background-color: #B4D5FFA0 !important }
+!#if !env_firefox
+niskevesti.rs#$?#style:not([class],[id]) { remove: true; }
+||niskevesti.rs^$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:
+!#endif
 ! Prevents sites from disabling DevTools keyboard shortcuts 📛
 dropgalaxy.*#%#//scriptlet('ubo-acs.js', 'document.onkeydown')
 ! Defuse anti-debugging measures in sites 📛
