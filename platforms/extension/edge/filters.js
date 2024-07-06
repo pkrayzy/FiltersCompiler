@@ -1628,8 +1628,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.18.61",
-			"timeUpdated": "2024-07-06T03:33:46+0000",
+			"version": "2.1.18.62",
+			"timeUpdated": "2024-07-06T07:33:58+0000",
 			"languages": [
 				"zh"
 			],
