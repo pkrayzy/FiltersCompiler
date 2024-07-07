@@ -1628,8 +1628,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.18.66",
-			"timeUpdated": "2024-07-07T05:33:43+0000",
+			"version": "2.1.18.67",
+			"timeUpdated": "2024-07-07T11:33:50+0000",
 			"languages": [
 				"zh"
 			],
