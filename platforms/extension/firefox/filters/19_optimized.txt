@@ -1,9 +1,9 @@
-! Checksum: FFKcwwX16fTGGA0cJQrbWA
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1720442403-3600.patch
+! Checksum: oQf/WUXiNOCPyj7gfVucyQ
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1720445924-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.39.35
-! TimeUpdated: 2024-07-08T12:35:03+00:00
+! Version: 2.0.39.36
+! TimeUpdated: 2024-07-08T13:34:45+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -77,8 +77,6 @@ mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asR
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
 dzen.ru##body header#dzen-header ~ div[class*="__widgetContainer-"] div[style]:has(div.adv-skeleton___main)
 dzen.ru##div[class^="float-interview__float-"]
-!+ NOT_PLATFORM(windows, mac, android)
-dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.registerPlacement', 'undefined')
 rambler.ua,rambler.ru#%#//scriptlet('set-cookie', '_blocker_hidden', '1')
 !+ NOT_PLATFORM(windows, mac, android)
 championat.com#%#//scriptlet('json-prune', 'Blocks')
@@ -1577,6 +1575,7 @@ api.flocktory.com
 ||widget.pico.tools^$third-party
 ||widget.privy.com^$third-party
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com|nypost.com
+nativecamp.net##div[class$="-bottom-link-banner"]
 kino-ulyanka.ru##.app > div.popup-container
 open.spotify.com##div[data-testid="signup-bar"]
 qjweb.jp##.p-footerBanner
