@@ -1,9 +1,9 @@
-! Checksum: a+Dfa0dMBqGsIj+/y4eRYg
-! Diff-Path: ../patches/257/257-s-1720386346-14400.patch
+! Checksum: 2vmq1bHp8FIGO/mvIDl0LQ
+! Diff-Path: ../patches/257/257-s-1720415143-14400.patch
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.1.93
-! TimeUpdated: 2024-07-07T21:02:04+00:00
+! Version: 2.0.1.94
+! TimeUpdated: 2024-07-08T05:01:55+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -1306,11 +1306,12 @@ thepiratebay3.com^$all
 !+ NOT_OPTIMIZED
 /^https:\/\/[a-z]{2,3}\d\.biz\/go\/[0-9a-z]{15,18}$/$document,domain=biz
 ! fake dating/prize/video sites
+! https://github.com/AdguardTeam/AdguardFilters/issues/183117
 !+ NOT_OPTIMIZED
-/^https?:\/\/[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\.?[a-z]{0,7}\/(?:[0-9a-z]{6,10}\/)?\/?(?:article\d{4}\.doc)?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,subdocument,match-case
+/^https?:\/\/[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\.?[a-z]{0,7}\/(?:[0-9a-z]{6,10}\/)?\/?(?:article\d{4}\.doc)?\?(?:cid=[0-9a-z]+&)?u=[0-9a-z]{7}(?:&t=\d+)?&o=[0-9a-z]{7}/$document,subdocument,match-case
 ! https://github.com/uBlockOrigin/uAssets/commit/df17084b4815e87d420e8adf19bf4959e828e6e5#commitcomment-66510549
 !+ NOT_OPTIMIZED
-/^https?:\/\/[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\.?[a-z]{0,7}\/(?:[0-9a-z]{6,10}\/)?\/?(?:article\d{4}\.doc)?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$document,subdocument,match-case
+/^https?:\/\/[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\.?[a-z]{0,7}\/(?:[0-9a-z]{6,10}\/)?\/?(?:article\d{4}\.doc)?\?(?:cid=[0-9a-z]+&)?o=[0-9a-z]{7}(?:&t=\d+)?&u=[0-9a-z]{7}/$document,subdocument,match-case
 !+ NOT_OPTIMIZED
 .live/web/?sid=t*~$document
 ! https://urlscan.io/result/fb21aa1b-9c79-4ac4-8e82-386403964206/
@@ -6389,6 +6390,10 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 /^https:\/\/(?:[a-z]+\.)?hotel-(?:id)?\d{5,8}\.eu\//$document,domain=eu|~booking.com
 !+ NOT_OPTIMIZED
 /^https:\/\/(?:[a-z]+\.)?hotel-(?:id)?\d{5,8}\.com\//$document,domain=com|~booking.com
+! airbnb
+! https://www.virustotal.com/gui/url/8cdc4c3ca9313a9cdd27dc03d855105f37aebe9abac62265ea45993121cf7b31
+!+ NOT_OPTIMIZED
+/^https:\/\/support-\d{1,2}\.ru\//$document,domain=ru
 ! vodafone
 !+ NOT_OPTIMIZED
 ||vodafone.scralead.com^$all,to=~vodafone.es
@@ -6423,6 +6428,9 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://www.virustotal.com/gui/url/9377fb4aca4525f2725505be1fa956898fe427deb060f273f48ed5f7fe05684b
 !+ NOT_OPTIMIZED
 ||mybluehost.me/*/netflix/net/login.php$document
+! https://www.virustotal.com/gui/url/f4d836eca8bb2ce50a96dac7d031502d47c0a6ce85af040b911bf9883fbe157a
+!+ NOT_OPTIMIZED
+||mybluehost.me/watch/a/flix/$document
 ! https://urldna.io/scan/66789b18c766226ae8d6e3ee
 ! https://www.virustotal.com/gui/url/30bc6d0ab3c42c34c0317e50e0b24db16a8996394bb39f6c959464bc4557fbb3
 !+ NOT_OPTIMIZED
@@ -6432,6 +6440,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||allegrostore.cc^$all
 !+ NOT_OPTIMIZED
 ||allegrostu.com^$all
+!+ NOT_OPTIMIZED
+||allegrostroe.vip^$all
 !+ NOT_OPTIMIZED
 ||wz-2-allegro-4dv.pages.dev^$all
 ! rackspace
@@ -6457,6 +6467,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||xclaimz-id-danakagetxid7.x-id.my.id^$all,to=~dana.id
 !+ NOT_OPTIMIZED
 ||bntuanoffcl-dna.hdco.my.id^$all,to=~dana.id
+!+ NOT_OPTIMIZED
+||dana-dnr.dana-idn.xyz^$all,to=~dana.id
 ! orange.fr
 !+ NOT_OPTIMIZED
 ||orange53.yolasite.com^$all,to=~orange.fr
@@ -6468,6 +6480,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||orange234.wixsite.com^$all,to=~orange.fr
 !+ NOT_OPTIMIZED
 ||exbtengineers.com/o/$all,to=~orange.fr
+!+ NOT_OPTIMIZED
+||enjoymatic.com/landings/es-avengers/$all,to=~orange.es
 ! https://infosec.exchange/@urldna/112456905938157006
 !+ NOT_OPTIMIZED
 ||servicemailorange25.wixsite.com^$all,to=~orange.fr
@@ -6497,12 +6511,17 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||ebayasean.com^$all
 !+ NOT_OPTIMIZED
 ||new-ebay.shop^$all
+!+ NOT_OPTIMIZED
+||helsoialsnfience.top^$all
 ! https://www.reddit.com/r/Scams/comments/1cux08b/whatsapp_telegram_instagram_work_from_home_posts/
 !+ NOT_OPTIMIZED
 ||51eabay.com^$all
 ! https://infosec.exchange/@urldna/112476252310873324
 !+ NOT_OPTIMIZED
 ||135buy.com^$all
+! https://www.virustotal.com/gui/url/8b2c822dc9c9130367597b14aa848cfacdd6022ad474c0af8c244856e30ee6ae
+!+ NOT_OPTIMIZED
+||ebaydw.cc^$all
 ! AT&T
 !+ NOT_OPTIMIZED
 ||wixsite.com/att-support/$document
@@ -6662,6 +6681,12 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://www.virustotal.com/gui/url/6091a6693b5581524198c73b1f84c58e9272f1b100d7e68d7ed5fae7d05a06e2
 !+ NOT_OPTIMIZED
 ||request-page-violation-*.surge.sh^$all
+! https://www.virustotal.com/gui/url/a9ef0c410c76df46d4871a247df980ac912b93df02d7c7012477107171c78964
+!+ NOT_OPTIMIZED
+||violation-*.surge.sh^$document
+! https://www.virustotal.com/gui/url/6eeee02278ccbecd060a66c9948c69d98b79c249876e03f7ff410180fa4b4057
+!+ NOT_OPTIMIZED
+||copyrights-*.surge.sh^$document
 !+ NOT_OPTIMIZED
 ||instructions-video.vercel.app/detailed_video.mp4$media
 ! shopping sites
@@ -6676,6 +6701,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! shopee
 !+ NOT_OPTIMIZED
 /^https:\/\/sp\d{2,3}88(?:vn)?\.com\//$document,domain=com|~shopee.vn
+!+ NOT_OPTIMIZED
+||shopee-mall.cc^$all
 !+ NOT_OPTIMIZED
 ||mez.ink/reademcashbackshopee.1.1^$all
 ! sendo
@@ -6702,6 +6729,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||11steam.com^$all
 !+ NOT_OPTIMIZED
 ||sp.26skins.com^$all
+!+ NOT_OPTIMIZED
+||gtm.you1.cn^$all
 ! https://urldna.io/scan/6677498cbecc3349716ec446
 ! https://www.virustotal.com/gui/url/04a4187b81f801e1dcafed01b49229ddae5bd5406c6f170b0b2c4b2b4fdae712
 !+ NOT_OPTIMIZED
@@ -6797,6 +6826,12 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://www.virustotal.com/gui/url/6842be99947bd0db1671500f4ab7774846e34f7d951b190be9e58b9e84536f39
 !+ NOT_OPTIMIZED
 ||hergunavantaj.com.tr^$all
+! https://www.virustotal.com/gui/url/121614b7a02a5f9bfe0df6bea30184ef2c28a03df07b6ae41c489de241554344?nocache=1
+!+ NOT_OPTIMIZED
+||irrigationservices.co^$all
+! https://www.virustotal.com/gui/url/49d7a628c9179a385101a8b2375318dd7659b95ecaa8c35fe8a04383f3414809
+!+ NOT_OPTIMIZED
+||antivhelp.com^$all
 ! telegram
 !+ NOT_OPTIMIZED
 ||telegramhcn.com^$all
@@ -6804,6 +6839,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||web.telegram.data-bees.cn^$all
 !+ NOT_OPTIMIZED
 ||telegramkv.com^$all
+!+ NOT_OPTIMIZED
+||haveplentymusic.com^$all
 ! usps
 ! https://infosec.exchange/@urldna/112224043535026915
 ! https://infosec.exchange/@urldna/112244333356436954
