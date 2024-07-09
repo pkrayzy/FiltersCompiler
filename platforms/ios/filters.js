@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/1_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.92.9",
-			"timeUpdated": "2024-07-09T09:31:17+0000",
+			"version": "2.0.92.10",
+			"timeUpdated": "2024-07-09T11:31:12+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.43.19",
-			"timeUpdated": "2024-07-09T10:31:26+0000",
+			"version": "2.3.43.20",
+			"timeUpdated": "2024-07-09T11:31:28+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.82",
-			"timeUpdated": "2024-07-09T10:33:38+0000",
+			"version": "2.0.53.83",
+			"timeUpdated": "2024-07-09T11:34:03+0000",
 			"languages": [
 				"ja"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.1.61",
-			"timeUpdated": "2024-07-09T10:33:57+0000",
+			"version": "2.2.1.62",
+			"timeUpdated": "2024-07-09T11:34:20+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -702,8 +702,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/19_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.39.39",
-			"timeUpdated": "2024-07-09T10:34:04+0000",
+			"version": "2.0.39.40",
+			"timeUpdated": "2024-07-09T11:34:27+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -723,8 +723,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/20_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.15.15",
-			"timeUpdated": "2024-07-08T17:33:45+0000",
+			"version": "2.0.15.16",
+			"timeUpdated": "2024-07-09T11:34:27+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -786,8 +786,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/23_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.4.91",
-			"timeUpdated": "2024-06-27T14:32:56+0000",
+			"version": "2.0.4.92",
+			"timeUpdated": "2024-07-09T11:34:29+0000",
 			"languages": [
 				"uk"
 			],
