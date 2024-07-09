@@ -1,9 +1,9 @@
-! Checksum: 6sp6luBn0mV2ucH9q2snPA
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1720453183-3600.patch
+! Checksum: 71SXFeS8v+GRkA6O+Pkp6A
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1720499815-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.53.78
-! TimeUpdated: 2024-07-08T15:34:34+00:00
+! Version: 2.0.53.79
+! TimeUpdated: 2024-07-09T04:33:19+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -401,6 +401,7 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
+exploader.net#$##js_download { display: block !important; }
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
 kotobank.jp#%#//scriptlet('prevent-setTimeout', 'return')
 guitarmagazine.jp#$#.tp-backdrop { display: none !important; }
@@ -7246,9 +7247,9 @@ fx-koryaku.com##.textwidget > center > a[target="_blank"]
 exploader.net#%#//scriptlet('prevent-setTimeout', 'daotag')
 exploader.net###newfiles > ul.list > li[style*="height: 120px;"]
 exploader.net##div[style*="1120px;"][style*="450px;"]
-exploader.net##[data-style]
+exploader.net##[data-style]:not(#js_download)
 exploader.net##a[href^="#"]
-exploader.net##div[class^="d_"]
+exploader.net##div[class^="d_"]:not(#js_download)
 exploader.net##div[style*="305px"][style*="align-items:"]
 exploader.net##body ul.list > li[style="clear: left;width: calc(100% + 3px) !important;margin-right: -1px;height: 120px;margin-left: -2px;float: none;display: block !important;"]
 exploader.net##.tag + div[class]

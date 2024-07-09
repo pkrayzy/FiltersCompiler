@@ -1,9 +1,9 @@
-! Checksum: C+fBHXb2YDUnUi7FWONDvA
-! Diff-Path: ../patches/7/7-s-1720453218-3600.patch
+! Checksum: NFTngO8LOXFXz5+DCiexcg
+! Diff-Path: ../patches/7/7-s-1720499837-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.53.78
-! TimeUpdated: 2024-07-08T15:34:34+00:00
+! Version: 2.0.53.79
+! TimeUpdated: 2024-07-09T04:33:19+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -507,6 +507,8 @@
 !
 !
 !
+! exploader.net anti-adb
+exploader.net#$##js_download { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181591
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179614
@@ -7732,9 +7734,9 @@ fx-koryaku.com##.textwidget > center > a[target="_blank"]
 exploader.net#%#//scriptlet('prevent-setTimeout', 'daotag')
 exploader.net###newfiles > ul.list > li[style*="height: 120px;"]
 exploader.net##div[style*="1120px;"][style*="450px;"]
-exploader.net##[data-style]
+exploader.net##[data-style]:not(#js_download)
 exploader.net##a[href^="#"]
-exploader.net##div[class^="d_"]
+exploader.net##div[class^="d_"]:not(#js_download)
 exploader.net##div[style*="305px"][style*="align-items:"]
 exploader.net##body ul.list > li[style="clear: left;width: calc(100% + 3px) !important;margin-right: -1px;height: 120px;margin-left: -2px;float: none;display: block !important;"]
 exploader.net##.tag + div[class]
