@@ -1,9 +1,9 @@
-! Checksum: dGzswddl9bFOdg+C7uEMlw
-! Diff-Path: ../patches/7/7-s-1720532276-3600.patch
+! Checksum: XLQLA9U7akYgVBthO7ieBA
+! Diff-Path: ../patches/7/7-s-1720535881-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.53.85
-! TimeUpdated: 2024-07-09T13:33:15+00:00
+! Version: 2.0.53.86
+! TimeUpdated: 2024-07-09T14:33:59+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7736,11 +7736,12 @@ fx-koryaku.com##.textwidget > center > a[target="_blank"]
 ||dmm.co.jp^$domain=exploader.net
 ||exploader.net/d/$image
 ||dmm.co.jp^$popup,domain=exploader.net
-exploader.net#%#//scriptlet('prevent-setTimeout', 'daotag')
+||exploader.net/js/$xmlhttprequest
+exploader.net#$#div[style*="1120px;"][style*="450px;"] { height: 0 !important; overflow: hidden !important; }
 exploader.net###newfiles > ul.list > li[style*="height: 120px;"]
-exploader.net##div[style*="1120px;"][style*="450px;"]
-exploader.net##a[href^="#"]
-exploader.net##div[style*="305px"][style*="align-items:"]
+exploader.net###wrapper > div[data-style][style*="fixed"]
+exploader.net##a[link*="al.dmm.co.jp"]
+exploader.net##article > div[style*="305px"][style*="align-items:"]
 exploader.net##body ul.list > li[style="clear: left;width: calc(100% + 3px) !important;margin-right: -1px;height: 120px;margin-left: -2px;float: none;display: block !important;"]
 exploader.net##.tag + div[class]
 coromoo.com##div[class$="-ad"]
