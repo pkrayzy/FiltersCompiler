@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.43.20",
-			"timeUpdated": "2024-07-09T11:31:28+0000",
+			"version": "2.3.43.21",
+			"timeUpdated": "2024-07-09T12:31:23+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/3_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.71.98",
-			"timeUpdated": "2024-07-09T09:33:21+0000",
+			"version": "2.0.71.99",
+			"timeUpdated": "2024-07-09T12:33:15+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.83",
-			"timeUpdated": "2024-07-09T11:34:03+0000",
+			"version": "2.0.53.84",
+			"timeUpdated": "2024-07-09T12:33:29+0000",
 			"languages": [
 				"ja"
 			],
@@ -553,8 +553,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/11_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.80",
-			"timeUpdated": "2024-07-09T09:33:42+0000",
+			"version": "2.0.52.81",
+			"timeUpdated": "2024-07-09T12:33:35+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.1.62",
-			"timeUpdated": "2024-07-09T11:34:20+0000",
+			"version": "2.2.1.63",
+			"timeUpdated": "2024-07-09T12:33:44+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.67.77",
-			"timeUpdated": "2024-07-09T06:34:01+0000",
+			"version": "2.0.67.78",
+			"timeUpdated": "2024-07-09T12:33:44+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -681,8 +681,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.42.80",
-			"timeUpdated": "2024-07-09T10:34:03+0000",
+			"version": "2.0.42.81",
+			"timeUpdated": "2024-07-09T12:33:49+0000",
 			"languages": [],
 			"tags": [
 				5,
