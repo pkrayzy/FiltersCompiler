@@ -1,9 +1,9 @@
-! Checksum: bgAHdukYpa8D7foeumem8w
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1720539434-3600.patch
+! Checksum: ckwSwoCpvHosBN1YCgpFlg
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1720543034-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.53.87
-! TimeUpdated: 2024-07-09T15:33:27+00:00
+! Version: 2.0.53.88
+! TimeUpdated: 2024-07-09T16:33:36+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -403,7 +403,7 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-exploader.net#$##download { display: block !important; }
+exploader.net#%#//scriptlet('prevent-xhr', '.js')
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
 kotobank.jp#%#//scriptlet('prevent-setTimeout', 'return')
 guitarmagazine.jp#$#.tp-backdrop { display: none !important; }
@@ -7277,7 +7277,7 @@ fx-koryaku.com##.textwidget > center > a[target="_blank"]
 ||dmm.co.jp^$domain=exploader.net
 ||exploader.net/d/$image
 ||dmm.co.jp^$popup,domain=exploader.net
-||exploader.net/js/$xmlhttprequest
+||exploader.net/js/$xmlhttprequest,redirect=nooptext
 exploader.net#$#div[style*="1120px;"][style*="450px;"] { height: 0 !important; overflow: hidden !important; }
 exploader.net###newfiles > ul.list > li[style*="height: 120px;"]
 exploader.net###wrapper > div[data-style][style*="fixed"]
