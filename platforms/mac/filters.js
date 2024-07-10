@@ -250,8 +250,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.0.67.79",
-			"timeUpdated": "2024-07-09T18:33:56+0000",
+			"version": "2.0.67.80",
+			"timeUpdated": "2024-07-10T00:33:43+0000",
 			"languages": []
 		},
 		{
