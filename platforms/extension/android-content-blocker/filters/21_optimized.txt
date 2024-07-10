@@ -1,5 +1,5 @@
-! Checksum: yO3v5OuTomHhvaPm9hEq8w
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1720517845-3600.patch
+! Checksum: /6Boo5QQe7jZU3pyaB9uzg
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1720578998-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
 ! Version: 2.0.24.8
@@ -25,6 +25,7 @@ roskomsvoboda.org###post-foreign-agent
 douyu.com###js-room-activity
 joshi-spa.jp,nikkan-spa.jp##.affiliate_banner
 comic.nan-net.com##.rssimg-list
+cpt.com.br###faixa-bottom
 ||cdn.jsdelivr.net/npm/disable-devtool^
 realtime-chart.info##.osn_base
 [$path=/\/(search|tag)\//]www.nicovideo.jp##.nicoadVideoItem
@@ -44,6 +45,7 @@ sports.kz##div.stories_
 marketing-interactive.com##a.full-skin-image__desktop-banner
 marketing-interactive.com##a.full-skin-image
 ||geo.dailymotion.com/player/x2ww.js$domain=letribunaldunet.fr
+zelvia.co.jp##.p-sticky
 ||geo.dailymotion.com/player/xdgu3.html$domain=idntimes.com
 m.censor.net##.block-social-link
 forum.outerspace.com.br##.focus-guest
@@ -147,6 +149,7 @@ femmeactuelle.fr###dailymotion-pip-large-viewport
 tecnologia.libero.it###iol_player_container.vjs-floater-parent
 gayforit.eu#$#.vid_page #glbtPlayer { margin-top: 0 !important; }
 googlewatchblog.de###mc4wp_form_widget-2
+filmweb.pl#$#.videoPlayer.isPinned { visibility: hidden !important; }
 burninghut.ru#$#.layout-default__content--brand { margin-top: 0 !important; }
 gfoodd.com##div[class^="code-block code-block-"][style="margin: 8px 0; clear: both;"]
 jeanmarcmorandini.com###dailymotion-pip-large-viewport
@@ -267,7 +270,6 @@ heise.de##.sidebar-deal
 securitymagazine.com##.sponsored-content-widget
 gismeteo.ru##.follow-zen
 diamond.jp###trend-watch
-vgr.by##body .edgtf-post-group
 kv.by###our-channels
 kv.by##.telegramim_button
 fb.ru##.intext
@@ -307,7 +309,6 @@ shakko.ru,mirovich.media,livejournal.com##.lj-recommended
 ||api.rnet.plus^$important,domain=shakko.ru|mirovich.media|livejournal.com
 movieparadise.org##.sidebar > aside[id^="text-"]:first-child
 context.reverso.net##.home-banner-wrapper
-glavred.info##.content-right > div.infinite-container > div.loader
 mag2.com##.sidebar-content > section#text-18.widget_text
 699pic.com###landlord
 down.mdiaload.com##a[href*="download"][href*=".html"]
@@ -421,7 +422,6 @@ qyer.com##.q-footer-banner
 qyer.com##.qyer_layer_fix._jsbeforelogindiv
 tweakers.net##.relatedItProContent
 viatrolebus.com.br##.herald-single-sticky
-vc.ru##.island--company_entries
 genius.com##apple-music-player
 last.fm##.nag-bar--language-mismatch-prompt
 desired.de#$#body { padding-top: 0!important; }
@@ -547,6 +547,7 @@ gazeta.ru###_id_telegram_subscriber
 tecnoblog.net###tb-banner-whatsapp
 thenewstack.io###tns-promo-voxpop
 thenewstack.io###tns-footer-bar
+zelvia.co.jp##.p-sticky > div.container > div.p-side_sticky
 sport5.by###news > div[style="margin-bottom: 50px; margin-top: -40px;"]
 istories.media##div[class^="SocialMediaBanner"]
 abc-mart.net###___ratingbadge_0
@@ -589,7 +590,6 @@ delovoymir.biz##.dmpr_bl_mini
 mag.103.by,mag.103.ua##.b-journal-cat-banner
 news-postseven.com##.w-Share
 datarobot.com,bessarabiainform.com##.news-bar
-||wionews.com/live-tv/embed?autoplay=1&mute=1
 taishu.jp##.youtube-content
 full-count.jp##.erase_space-ad
 ntv.com.tr##.article-socialFrame-widget
@@ -601,7 +601,6 @@ mssqltips.com###signup-div
 zap-hosting.com###social-media-button-instance-container
 ||robinlinus.github.io/share-the-love/$domain=robinlinus.com
 rubaltic.ru##.link-telegram
-disco-polo.info##a[href="https://www.instagram.com/discopoloinfo/"] > img
 thediplomat.com###td-share-bar
 xi.express##span[class*="Footer_like__"]
 xi.express##span[class*="Footer_dislike__"]
@@ -722,6 +721,7 @@ beyondvape.jp##.common_header_banner
 menshealth.de##div[class*="inlinePaidShopify"]
 menshealth.de##article strong > a[matomo-tracking-link="true"]
 ||news.google.com/swg$domain=premierguitar.com
+cpt.com.br##.banner-relacionado
 mimikama.org##div[id^="kadence-conversion-"]
 ||s3.amazonaws.com/knowt.com/images/radb$image,domain=knowt.com
 golem.de##.remp-banner
@@ -754,6 +754,7 @@ pngtree.com##a[data-huejs="enterprise_hours_left"]
 pngtree.com##a[data-huejs="couponfixed-nologin-click"]
 pngtree.com##.stylusid-anniversary
 iqiyi.com#$#body[style="overflow: hidden;"] { overflow: auto !important; }
+gentosha-go.com##.footer-banner
 gentosha-go.com##.side-banner
 taxscan.in##.taxsc-mobile-popup-ad
 thesimsresource.com##.vip-square
@@ -805,7 +806,6 @@ appewa.com##.modal-wrapper
 more.tv#$#body { overflow: auto !important; }
 !+ NOT_PLATFORM(windows, mac, android)
 liga.net##a[href="https://www.liga.net/adfree"]
-m.yahoo.co.jp##a[class^="TimelineTargeting_TimelineTargeting__link__"]
 abczdrowie.pl##.be-healthy
 ||img5.lalafo.com/i/banners
 washingtonpost.com#$#body[style*="position: fixed"] { height: auto !important; width: auto !important; position: static !important; min-width: auto !important; max-width: auto !important; }
@@ -898,6 +898,7 @@ jibunbank.co.jp##.c-prDefault-01
 ||rakuten-sonpo.co.jp/Portals/0/images/common/group/bnr_pr_life_partner_
 hoken.rakuten.co.jp,rakuten-insurance.co.jp,rakuten-sonpo.co.jp,rakuten-ssi.co.jp##.topBankArea
 kidona.rakuten.co.jp,hoken.rakuten.co.jp,rakuten-insurance.co.jp##.mnoBnrArea
+hoken.rakuten.co.jp###inc-header-inner > div.pcOnly[style="width:100%; background: #ff0088; text-align: center;"]
 rakuten.co.jp###mno-header
 azby.fmworld.net###subContents > div.mrgB10:last-of-type
 cyzo.com##.rmodule > a[href^="https://cyzo.co.jp/publicity/"]
@@ -1168,7 +1169,6 @@ jin10.com##.side-poster
 jin10.com##.vip-exclusive
 jin10.com##.cooperation-container
 fastweb.it##.banner_offerta_a
-live.nicovideo.jp##a[class*="premium-merit-"][class*="banner"]
 gigazine.net###banner-ef
 vc.ru##.distribution
 sahibinden.com##.special-day.tff-sponsor
@@ -1223,6 +1223,7 @@ itc.ua##.partner-posts
 mailchimp.com##aside[data-module-id="inlineArticleCta"]
 wolframalpha.com##a[href^="/pro/"]
 worldsextrip.com##.add
+worldsextrip.com,eigo.plus###text-27
 ||jorudan.co.jp/com/img/bnr/w685_
 infourok.ru##.how-to-earn
 infourok.ru###rating-worksheets-react-app
@@ -1241,6 +1242,7 @@ efe.com###media_image-2
 pokebattler.com##a[href="https://www.patreon.com/join/pokebattler?"]
 dotnet.microsoft.com##.swim-purple
 flightradar24.com##.size-full > div.relative > div.size-full ~ div.justify-between.absolute > div.justify-center.flex + div.items-end
+hepper.com##body div.opportunity-container.active
 rakumachi.jp###js-MultiPageHeader
 rakumachi.jp##.postBanner
 ||utatane-plts.com/images/banner/utatane-plts_pr_$domain=m-pe.tv
@@ -1390,7 +1392,6 @@ sejuku.net#$##fv-banner_article { display: none !important; }
 sejuku.net###fix_sidebar > div.widget_setting_banner_widget
 360.com,360.cn##.topbnr
 byjus.com##div[id^="middlebanner"]
-elperiodicoextremadura.com,laopiniondemalaga.es###nlt_signup_botton
 engineer.fabcross.jp##.cpinfo
 blog.logrocket.com##.metrics-banner
 blog.logrocket.com##.code-block-52
@@ -1580,10 +1581,10 @@ renso-ruigo.com##.sidebar-box4
 wiadomosci.onet.pl##.premiumBanner
 wiadomosci.onet.pl###pianoInfo
 retty.me##.restaurant-top-banner
+thebaffler.com##aside[aria-label="Donations"]
 ||leechpremium.link/img/banner/
 hackster.io##div[data-hypernova-key="ModularAd"]
 hexnode.com##.nav-sub-menu-wrap__trail-wrap
-eyeondesign.aiga.org#$#.promo-bar { display: none !important; }
 stackexchange.com##.hero-box
 propublica.org##.site-header__banner[data-pp-location="promo-bar"]
 carsensor.net##.sub_header_bn
