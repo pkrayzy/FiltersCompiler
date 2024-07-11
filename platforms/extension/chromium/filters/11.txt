@@ -1,9 +1,9 @@
-! Checksum: X6cGGUxOh4ilvnubCVdftA
-! Diff-Path: ../patches/11/11-s-1720676149-3600.patch
+! Checksum: 1M5uBX4Zn6UtUns2A9aexA
+! Diff-Path: ../patches/11/11-s-1720697894-3600.patch
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.52.84
-! TimeUpdated: 2024-07-11T05:32:36+00:00
+! Version: 2.0.52.85
+! TimeUpdated: 2024-07-11T11:34:21+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -219,6 +219,7 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||ad.iwhop.cn^
 ||s-odx.oleads.com^
 ||mediation.unity3d.com^
 ||cdn-ad.wtzw.com^
@@ -1384,6 +1385,9 @@ sasisa.ru#%#AG_onLoad(function() { window.Umobi = function() {}; });
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183388
+tss-tv.co.jp#$#.hns_wrap { min-height: 0 !important; }
+tss-tv.co.jp#$#.tss_spbtmnavi { bottom: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182180
 balarm.it#$#.main-container#top[style^="margin-top:"] { margin-top: 110px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181367
@@ -2376,6 +2380,8 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+tss-tv.co.jp##div[style="margin:0 auto;height:100px;"]
+tss-tv.co.jp##div[style*="height:116px;"][style*="z-index:99998;"]
 sports.yahoo.co.jp##.cm-videoEmbed__banner
 s.response.jp###ad20
 s.response.jp#?#main > div.itd-head:has(> h3:contains([PR]))
