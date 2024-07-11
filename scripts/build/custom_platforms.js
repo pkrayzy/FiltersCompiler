@@ -610,7 +610,7 @@ module.exports = {
         },
         'defines': {
             'adguard': true,
-            'adguard_ext_chromium': true,
+            'adguard_ext_chromium_mv3': true,
         },
     },
     'EXTENSION_EDGE': {
