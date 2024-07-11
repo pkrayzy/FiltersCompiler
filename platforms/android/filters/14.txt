@@ -1,9 +1,9 @@
-! Checksum: s6PFi6/lZyjvu1NoWEFNsA
-! Diff-Path: ../patches/14/14-s-1720701422-3600.patch
+! Checksum: JKd5nvdSHXzpKhQIXh/F0Q
+! Diff-Path: ../patches/14/14-s-1720705001-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.1.88
-! TimeUpdated: 2024-07-11T12:33:45+00:00
+! Version: 2.2.1.89
+! TimeUpdated: 2024-07-11T13:33:34+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2443,6 +2443,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+aranypiac.hu#%#//scriptlet('trusted-click-element', 'button.cookie-alert__btn-set', '', '1500')
+gglot.com###tsu-cookie-consent-popup
 voguescandinavia.com##div[class^="cookieNotification_"]
 thoughtco.com#$#html:has(>body>div#onetrust-consent-sdk.show-banner) { overflow-y: auto !important; }
 figma.com##div[aria-label="Cookie-Einwilligung"]
@@ -15472,6 +15474,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183417
+aranypiac.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183409
 thoughtco.com#@##onetrust-consent-sdk
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=thoughtco.com
@@ -31681,6 +31685,8 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+babai.ru##.hide_form
+vox.com##form:has(> .duet--cta--newsletter)
 verstka.media##.verstka-telegram-banner
 cinemore.jp##.m-article-entry > div[style="min-height:105px;"]
 hollywoodreporter.jp##.sidebar-inner-wrap > section:has(form.kb-form)
@@ -37931,7 +37937,7 @@ sebeadmin.ru###scrollable
 stylevamp.de###secondary > .widget-ads + .widget.widget-highlight
 indianpornvideos.com###secondary.widget-area > .widget
 welt.de###sectionSponsor + div
-iguides.ru###sender-subscribe
+babai.ru,iguides.ru###sender-subscribe
 sport-express.ru###sendsay_form
 slidetoplay.com###side-bar > #bl_html-6
 comicallyincorrect.com###sidebar > #text-4.widget_text
@@ -54456,6 +54462,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+vox.com##aside:has(> div > a[href^="https://vox.memberful.com/checkout"])
 freetp.org##noindex:has(> a[href="/donat.html"])
 veved.ru##.donating-top
 theins.ru###app-root main > div[class] > div[class] > div[class]:has(> div[class] > p > a[href="https://donate.theins.ru"])

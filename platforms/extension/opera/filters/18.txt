@@ -1,9 +1,9 @@
-! Checksum: F6HduHbjXShgZ+lWAxnYrQ
-! Diff-Path: ../patches/18/18-s-1720697910-3600.patch
+! Checksum: P+q8NjfYCa+mNEZipGyz4Q
+! Diff-Path: ../patches/18/18-s-1720705015-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.42.96
-! TimeUpdated: 2024-07-11T11:34:38+00:00
+! Version: 2.0.42.97
+! TimeUpdated: 2024-07-11T13:33:39+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2443,6 +2443,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+aranypiac.hu#%#//scriptlet('trusted-click-element', 'button.cookie-alert__btn-set', '', '1500')
+gglot.com###tsu-cookie-consent-popup
 voguescandinavia.com##div[class^="cookieNotification_"]
 thoughtco.com#$#html:has(>body>div#onetrust-consent-sdk.show-banner) { overflow-y: auto !important; }
 figma.com##div[aria-label="Cookie-Einwilligung"]
@@ -15412,6 +15414,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183417
+aranypiac.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183409
 thoughtco.com#@##onetrust-consent-sdk
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=thoughtco.com
