@@ -420,8 +420,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/5.txt",
 			"trustLevel": "full",
-			"version": "2.0.1.59",
-			"timeUpdated": "2024-07-11T20:43:40+0000",
+			"version": "2.0.1.60",
+			"timeUpdated": "2024-07-11T21:33:01+0000",
 			"languages": [],
 			"tags": [
 				45
