@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.43.64",
-			"timeUpdated": "2024-07-12T06:31:29+0000",
+			"version": "2.3.43.65",
+			"timeUpdated": "2024-07-12T07:31:26+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/3_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.9",
-			"timeUpdated": "2024-07-11T11:33:59+0000",
+			"version": "2.0.72.10",
+			"timeUpdated": "2024-07-12T07:33:05+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.3.28",
-			"timeUpdated": "2024-07-12T00:33:09+0000",
+			"version": "2.1.3.29",
+			"timeUpdated": "2024-07-12T07:33:08+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -553,8 +553,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/11_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.87",
-			"timeUpdated": "2024-07-11T18:33:22+0000",
+			"version": "2.0.52.88",
+			"timeUpdated": "2024-07-12T07:33:25+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.1.94",
-			"timeUpdated": "2024-07-12T06:33:37+0000",
+			"version": "2.2.1.95",
+			"timeUpdated": "2024-07-12T07:33:35+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -681,8 +681,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.0",
-			"timeUpdated": "2024-07-12T06:33:42+0000",
+			"version": "2.0.43.1",
+			"timeUpdated": "2024-07-12T07:33:41+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1428,6 +1428,7 @@
 			"timeUpdated": "2024-07-12T01:01:35+0000",
 			"languages": [],
 			"tags": [
+				10,
 				4
 			],
 			"downloadUrl": "https://filters.adtidy.org/ios/filters/208_optimized.txt"
