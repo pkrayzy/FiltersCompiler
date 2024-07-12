@@ -813,8 +813,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.29.24",
-			"timeUpdated": "2024-07-12T01:01:16+0000",
+			"version": "2.1.29.25",
+			"timeUpdated": "2024-07-12T05:01:11+0000",
 			"languages": [],
 			"tags": [
 				1
@@ -883,8 +883,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.40.8",
-			"timeUpdated": "2024-07-12T01:01:19+0000",
+			"version": "2.1.40.9",
+			"timeUpdated": "2024-07-12T05:01:14+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -933,8 +933,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.52.21",
-			"timeUpdated": "2024-07-12T01:01:19+0000",
+			"version": "2.1.52.22",
+			"timeUpdated": "2024-07-12T05:01:15+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1002,8 +1002,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.23",
-			"timeUpdated": "2024-07-12T01:01:21+0000",
+			"version": "2.1.52.24",
+			"timeUpdated": "2024-07-12T05:01:16+0000",
 			"languages": [
 				"it"
 			],
@@ -1074,8 +1074,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.22",
-			"timeUpdated": "2024-07-12T01:01:21+0000",
+			"version": "2.1.52.23",
+			"timeUpdated": "2024-07-12T05:01:17+0000",
 			"languages": [
 				"ar"
 			],
@@ -1101,8 +1101,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.52.21",
-			"timeUpdated": "2024-07-12T01:01:23+0000",
+			"version": "2.1.52.22",
+			"timeUpdated": "2024-07-12T05:01:18+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1149,8 +1149,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.29.48",
-			"timeUpdated": "2024-07-12T01:01:25+0000",
+			"version": "2.1.29.49",
+			"timeUpdated": "2024-07-12T05:01:21+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -1242,8 +1242,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.29.51",
-			"timeUpdated": "2024-07-12T01:01:31+0000",
+			"version": "2.1.29.52",
+			"timeUpdated": "2024-07-12T05:01:27+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1265,8 +1265,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.26.86",
-			"timeUpdated": "2024-07-12T01:01:32+0000",
+			"version": "2.1.26.87",
+			"timeUpdated": "2024-07-12T05:01:28+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -1288,8 +1288,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.23.96",
-			"timeUpdated": "2024-07-12T01:01:33+0000",
+			"version": "2.0.23.97",
+			"timeUpdated": "2024-07-12T05:01:28+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1360,8 +1360,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.16.59",
-			"timeUpdated": "2024-07-11T17:01:28+0000",
+			"version": "2.0.16.60",
+			"timeUpdated": "2024-07-12T05:01:29+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -1405,8 +1405,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.52.22",
-			"timeUpdated": "2024-07-12T01:01:35+0000",
+			"version": "2.1.52.23",
+			"timeUpdated": "2024-07-12T05:01:30+0000",
 			"languages": [],
 			"tags": [
 				50
@@ -1446,8 +1446,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.51.47",
-			"timeUpdated": "2024-07-12T01:01:35+0000",
+			"version": "2.1.51.48",
+			"timeUpdated": "2024-07-12T05:01:31+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -1651,8 +1651,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter-AdGuard.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.74",
-			"timeUpdated": "2024-07-08T09:01:45+0000",
+			"version": "2.0.18.75",
+			"timeUpdated": "2024-07-12T05:01:37+0000",
 			"languages": [
 				"ko"
 			],
@@ -1701,8 +1701,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.52.23",
-			"timeUpdated": "2024-07-12T01:01:42+0000",
+			"version": "2.1.52.24",
+			"timeUpdated": "2024-07-12T05:01:38+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1823,8 +1823,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.0.2.64",
-			"timeUpdated": "2024-07-07T17:01:41+0000",
+			"version": "2.0.2.65",
+			"timeUpdated": "2024-07-12T05:01:43+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -1915,8 +1915,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.35.21",
-			"timeUpdated": "2024-07-12T01:01:51+0000",
+			"version": "2.1.35.22",
+			"timeUpdated": "2024-07-12T05:01:47+0000",
 			"languages": [],
 			"tags": [
 				6
@@ -1986,8 +1986,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.48.29",
-			"timeUpdated": "2024-07-12T01:01:53+0000",
+			"version": "2.1.48.30",
+			"timeUpdated": "2024-07-12T05:01:49+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -2109,8 +2109,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.54",
-			"timeUpdated": "2024-07-12T01:02:01+0000",
+			"version": "2.0.45.55",
+			"timeUpdated": "2024-07-12T05:01:57+0000",
 			"languages": [
 				"hi"
 			],
@@ -2174,8 +2174,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.0",
-			"timeUpdated": "2024-07-11T05:01:54+0000",
+			"version": "2.0.1.1",
+			"timeUpdated": "2024-07-12T05:01:58+0000",
 			"languages": [],
 			"tags": [
 				4

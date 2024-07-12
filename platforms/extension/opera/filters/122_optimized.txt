@@ -1,11 +1,12 @@
-! Checksum: bYu4if789Py8NUnE+jQBAQ
-! Diff-Path: ../patches/122_optimized/122_optimized-s-1720746329-14400.patch
+! Checksum: /m7xVu9RhlW73DtYvj9q9g
+! Diff-Path: ../patches/122_optimized/122_optimized-s-1720760727-14400.patch
 ! Title: Fanboy's Annoyances (Optimized)
 ! Description: Removes in-page pop-ups and other annoyances. Includes Fanboy's Social Blocking & EasyList Cookie Lists.
-! Version: 2.1.29.51
-! TimeUpdated: 2024-07-12T01:01:31+00:00
+! Version: 2.1.29.52
+! TimeUpdated: 2024-07-12T05:01:27+00:00
 ! Expires: 10 days (update frequency)
 /arscode-ninja-popups/*$~stylesheet
+/detectIncognito.js
 /dreamgrow-scroll-triggered-box/js/script.js
 /jquery.simplemodal.$script,domain=breakingdefense.com
 /onlineopinionV5/oo_engine.min.js
@@ -209,7 +210,6 @@ _backToTop.
 /sns_naverband.
 /social-bar.
 /social-footer.png
-/social_bookmarks/*
 /social_footer.
 /social_widget/*
 /socialappsintegrator.
@@ -266,6 +266,7 @@ _social_footer_
 /?spu_action=spu_load$xmlhttprequest
 /__enzuzo-cookiebar.js
 /acc.cookienotification.js
+/ajax/gdpr-desc
 /amp-consent-
 /approvazione-gdpr/*
 /assets/gdpr/*
@@ -294,7 +295,6 @@ _social_footer_
 /consent-tracking-api.js
 /consent.min.js?
 /consent_banner.js
-/consentcookie.js
 /cookie-accept.js
 /cookie-banner.js
 /cookie-banner.min.js
@@ -401,7 +401,6 @@ _social_footer_
 /gdpr_consent.js
 /gdpr_plugin.js
 /gdprcookie.js
-/gdprscript.js
 /gestione_cookie.js
 /getcookieconsent.php
 /grt-cookie-consent.min.js
@@ -434,7 +433,6 @@ _social_footer_
 /oneTrust-
 /oneTrust.
 /onetrust/consent/*
-/onetrustConsent.js
 /os19ccm/public/index.php/*
 /otBannerSdk.js
 /plugins/easy-wp-cookie-popup/*
@@ -482,6 +480,7 @@ _social_footer_
 /fp/clear.png
 /fp/clear1.png
 /fp/clear3.png
+/fp/es.js
 /fp/HP?session_id
 /fp/tags.js
 -footer-newsletter.
@@ -504,7 +503,6 @@ _social_footer_
 /newsletter_wdgts.js
 /newsletterpopup.css
 /newsletterpopup.js
-/newsletterpopup.min.js
 /newsletterwidget/mngcep/mg2nw.min.js
 /plugins/newsletter/style.css
 /plugins/newsletter/subscription/validate.js
@@ -546,6 +544,7 @@ _social_footer_
 ##.pin-it-btn-wrapper
 ##.ppsPopupShell
 ##.prev-next-article
+##.prevNextPost
 ##.td-more-articles-box
 ##.trustpilot-widget
 ##.upNext-container
@@ -749,7 +748,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###totopBtn
 ###totopscroller
 ###ts-back-to-top
-###tweScrollTop
 ###ui-to-top
 ###uix_jumpToFixed
 ###uix_jumpToTopFixed
@@ -812,6 +810,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.bd-backtotop-1
 ##.block_to_top
 ##.body-back-to-top
+##.bottom-scroll-top
 ##.btn-back-to-top
 ##.btn-cmn-pagetop-wrap
 ##.btn-go-top
@@ -977,6 +976,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.site-footer__back-to-top
 ##.site-scroll-top
 ##.slideToTop
+##.sm-page-scroll-to-top
 ##.sp-scroll-up
 ##.sticky-back-to-top
 ##.stotop
@@ -1031,7 +1031,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.ad400
 ###___ndtvpushdiv
 ###app-follow-banner
-###confirmaPush_Cont
 ###desktop-notifications
 ###grow-consent-modal
 ###modalCognitoPush
@@ -1064,6 +1063,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.jeg_push_notification_content
 ##.js-notifications-button
 ##.js-push-allow
+##.modal-push
 ##.notf-overlay
 ##.notificacao.registerPush
 ##.notification-pwa
@@ -1125,6 +1125,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###Share2
 ###ShareButton
 ###ShareItemBtn
+###SharePanel
 ###SocialMedia
 ###SocialShare
 ###TwitterShare
@@ -1244,6 +1245,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###fb_like_widget
 ###fb_link
 ###fb_share
+###fb_share_btn
 ###fb_share_button
 ###fb_social
 ###fb_video_link
@@ -1276,7 +1278,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###followIcons
 ###followTab
 ###followUs
-###follow_box
 ###follow_buttons
 ###follow_facebook
 ###follow_twitter
@@ -1335,7 +1336,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###headersocial
 ###heateor_ss_browser_popup_bg
 ###highlight-share
-###home-social
 ###hshare
 ###iNavSocial
 ###ic_footer_share-wrapper
@@ -1420,6 +1420,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###partShare
 ###pinterest-link
 ###pinterest-share
+###pinterestLink
 ###playerShare
 ###plug-facebook
 ###plug-twitter
@@ -1435,6 +1436,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###reseaux-sociaux
 ###reseaux_sociaux
 ###reseauxsociaux
+###rshare
 ###rsociaux
 ###sb-social
 ###sb_instagram
@@ -1646,6 +1648,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###social-sharing
 ###social-sharing-bar
 ###social-sharing-buttons
+###social-side
 ###social-side2
 ###social-sidebar
 ###social-slideout
@@ -1758,6 +1761,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###socialicons
 ###socialleft
 ###sociallinks
+###socialmedia-icons
 ###socialmediaicons
 ###socialnav
 ###socialnet
@@ -1791,7 +1795,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###tronReddiShare
 ###twShare
 ###tweet-button
-###tweetContainer
 ###twitter-2
 ###twitter-box
 ###twitter-button
@@ -1900,6 +1903,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.ShareList
 ##.ShareMenu
 ##.ShareOptions
+##.SharePanelText
 ##.ShareThis
 ##.ShareTools
 ##.Sharebar
@@ -2003,7 +2007,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.admania_postsocial
 ##.admania_singleshare
 ##.af-share
-##.af-social-share-v2
 ##.agencies-about-share
 ##.akamai-share
 ##.amp-facebook
@@ -2036,7 +2039,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.art-social
 ##.artShare
 ##.arti-sharing-wrapper
-##.artical-social-media-share
 ##.article--share
 ##.article--social
 ##.article-bottom-share
@@ -2316,7 +2318,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.c-share
 ##.c-share1
 ##.c-sharebtn
-##.c-site-footer__social-icons
 ##.c-sns
 ##.c-social-bar
 ##.c-social-buttons--popover
@@ -2621,7 +2622,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.facebook_24
 ##.facebook_block
 ##.facebook_box
-##.facebook_follow
 ##.facebook_icn
 ##.facebook_icon
 ##.facebook_image
@@ -2739,6 +2739,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.follow-text
 ##.follow-tw
 ##.follow-twitter
+##.follow-twt
 ##.follow-us-block
 ##.follow-us-box
 ##.follow-us-button
@@ -2881,7 +2882,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.footer_share
 ##.footer_social
 ##.footer_social-icon
-##.footer_social_button
+##.footer_social_bar
 ##.footer_social_facebook
 ##.footer_social_icons
 ##.footer_social_links
@@ -2905,7 +2906,9 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.fuse_social_icons_links
 ##.fusion-sharing-box
 ##.fusion-social-network-icon
+##.fv-sharing
 ##.fv-social
+##.fvfacebook_share
 ##.g-header__share
 ##.g1-drop-the-socials
 ##.g1-socials-item
@@ -3014,7 +3017,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.header-google-plus
 ##.header-icon-instagram
 ##.header-item-social
-##.header-item__social
 ##.header-main-socs
 ##.header-menu__social
 ##.header-nav-social
@@ -3023,7 +3025,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.header-share
 ##.header-share-facebook
 ##.header-social--link
-##.header-social-area
 ##.header-social-button
 ##.header-social-buttons
 ##.header-social-facebook
@@ -3374,7 +3375,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.like-box
 ##.like-fb
 ##.like-holder
-##.like-layer
 ##.like-share
 ##.like-us
 ##.like_block
@@ -3490,7 +3490,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.mb-social
 ##.mc-share-post
 ##.mc-share-toggle
-##.md-lite-share
 ##.md-social-toolbar-circle
 ##.mdi-facebook
 ##.mdi-share
@@ -3578,7 +3577,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.mod-twitter
 ##.modSharing
 ##.modSocialbar
-##.mod_footer_sociallist_iconlink
 ##.modal-share-icons
 ##.module--share
 ##.module-follow
@@ -3709,10 +3707,8 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.page-social
 ##.page_share
 ##.pane-menu-footer-social-links
-##.pane-share-widgets
 ##.pane-social-links
 ##.panel--social
-##.panel-follow-social
 ##.panel-share-networks
 ##.parent-shareBox
 ##.partial-share
@@ -3773,7 +3769,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.post-fb
 ##.post-footer-share
 ##.post-footer-social
-##.post-footer__share
 ##.post-like-share
 ##.post-meta-share
 ##.post-meta-social
@@ -3819,7 +3814,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.post_share_icons
 ##.post_share_text
 ##.post_shrBtn_topBox
-##.postcontent__socials
 ##.postshare
 ##.powa-share
 ##.powerkit_social_links_widget
@@ -3887,7 +3881,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.resp-sharing-button
 ##.rhd-social-box-wrapper
 ##.ri-facebook
-##.ri-instagram
 ##.right-social
 ##.rightShare
 ##.right_rail-follow_us
@@ -3900,6 +3893,8 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.rrssb-buttons-container
 ##.rss-social
 ##.rt-social-buttons
+##.rui-footer-social
+##.rui-social
 ##.rvt-c-footer-social
 ##.s-btns
 ##.s-content__share
@@ -3910,6 +3905,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.s-pinterest
 ##.s-share
 ##.s-share-button
+##.s-sns-link
 ##.s-social
 ##.s-social-item
 ##.s-social-share
@@ -4091,7 +4087,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.share-link-facebook
 ##.share-link-twitter
 ##.share-linkedin
-##.share-links-footer
 ##.share-links-label
 ##.share-list
 ##.share-list-container
@@ -4146,7 +4141,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.share-social-list
 ##.share-social-media
 ##.share-socials
-##.share-soundcloud
 ##.share-sticky
 ##.share-story
 ##.share-story-container
@@ -4469,7 +4463,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.sharingContainer
 ##.sharingLinks
 ##.sharingList
-##.sharingOptions
 ##.sharingPanel
 ##.sharing__list
 ##.sharing_block
@@ -4490,7 +4483,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.show-all-sharetool
 ##.show-share
 ##.showShareMore
-##.showsocial
 ##.shr-bookmarks
 ##.shr-btn
 ##.shr-btns
@@ -4508,6 +4500,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.side_sns
 ##.side_social
 ##.side_twitter
+##.sidebar-action-share
 ##.sidebar-facebook
 ##.sidebar-share
 ##.sidebar-social
@@ -5002,6 +4995,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.social_bar
 ##.social_bind
 ##.social_blk
+##.social_block_content
 ##.social_bookmark
 ##.social_bookmarks
 ##.social_bottom
@@ -5021,7 +5015,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.social_links_footer
 ##.social_links_top
 ##.social_links_wrapper
-##.social_media_header
 ##.social_media_section
 ##.social_popup
 ##.social_post
@@ -5080,6 +5073,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.sociallinks
 ##.sociallist
 ##.socially-btn
+##.socialmain
 ##.socialmedia-article
 ##.socialmedia-buttons
 ##.socialmedia-container
@@ -5153,6 +5147,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.sqs-svg-icon--list
 ##.ss-facebook
 ##.ss-follow-network
+##.ss-follow-total-counter
 ##.ss-ic
 ##.ss-inline-share-content
 ##.ss-instagram
@@ -5365,7 +5360,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.twitter-feed-wrapper
 ##.twitter-follow
 ##.twitter-follow-box
-##.twitter-follow-us
 ##.twitter-followers
 ##.twitter-footer
 ##.twitter-ft
@@ -5461,7 +5455,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.us_share_buttons
 ##.us_twitter
 ##.user-share
-##.user__socials-list
 ##.usr-social
 ##.ut2-social-link-block
 ##.util-bar-module-firefly-visible
@@ -5581,7 +5574,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.widget_synved_social_share
 ##.widget_tie-instagram-theme
 ##.widget_trifacebookbox_widget
-##.widget_tweetblender
 ##.widget_twitter
 ##.widget_twitter_timeline
 ##.widget_vw_widget_social_counter
@@ -5596,6 +5588,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.wp_social_bookmarking_light
 ##.wpa-social-icons
 ##.wpautbox-socials
+##.wpbfsb-schema-org
 ##.wpcw-widget-social
 ##.wpex-social-share
 ##.wpex-social-share-wrap
@@ -5847,6 +5840,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###WCPcookieBannerId
 ###WP-cookie-info
 ###__cookies_
+###__pb-cookie
 ###__shopwired_cookie_consent_container
 ###__tealiumDNS_banner
 ###__traceurs_widget
@@ -5889,6 +5883,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###acris--page-wrap--cookie-permission
 ###adc_aviso_cookies_bar_style
 ###adtoniq-msg-bar
+###agree-with-cookies
 ###agreeCookie
 ###agree_cookie_div
 ###agree_cookies
@@ -5922,7 +5917,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###area-cookie2021-sfondo
 ###aside_cookie_pol
 ###askForCookiesBackground
-###asterix_cookie_widget
 ###avcn_notification
 ###avis-cookies
 ###aviso-cookies
@@ -5946,6 +5940,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###bandeau_cookies
 ###banner-cookie
 ###banner-cookies
+###banner-politica-cookies
 ###bannerCookie
 ###bannerCookies
 ###banner_cookie
@@ -6006,7 +6001,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cc-notification
 ###cc-tag
 ###cc__modal__container
-###cc_banner
 ###cc_cookies
 ###ccbar
 ###ccc-notify
@@ -6036,6 +6030,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###ciasteczka_alert
 ###ckWrap.ckW
 ###ck_dsclr_v2
+###cky-consent
 ###cl-banner
 ###cl-consent
 ###clearfy-cookie
@@ -6082,6 +6077,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###contenedor_cookies
 ###contenitoreCookie
 ###content-alert-cookie
+###content_cookie
 ###coocies_warning
 ###coockie
 ###coockies_box
@@ -6208,6 +6204,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie-notice-bar
 ###cookie-notice-box
 ###cookie-notice-container
+###cookie-notice-popup
 ###cookie-notice-section
 ###cookie-notice-wrapper
 ###cookie-notice-wrapper-advanced
@@ -6227,12 +6224,14 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie-policy
 ###cookie-policy-banner
 ###cookie-policy-bar
+###cookie-policy-basic-holder
 ###cookie-policy-block
 ###cookie-policy-container
 ###cookie-policy-disclaimer
 ###cookie-policy-modal
 ###cookie-policy-msg
 ###cookie-policy-notice
+###cookie-policy-notification
 ###cookie-policy-popup
 ###cookie-policy-warning
 ###cookie-pop
@@ -6244,7 +6243,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie-prefs-icon
 ###cookie-privacy
 ###cookie-privacy-policy
-###cookie-prompt
 ###cookie-required
 ###cookie-rodo
 ###cookie-section
@@ -6256,6 +6254,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie-space
 ###cookie-statement
 ###cookie-status-widget-holder
+###cookie-table
 ###cookie-terms
 ###cookie-text
 ###cookie-text-banner
@@ -6264,7 +6263,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie-warn
 ###cookie-warning
 ###cookie-warning-container
-###cookie-widget
 ###cookie-wrapper
 ###cookie.active
 ###cookie.cookie
@@ -6302,12 +6300,12 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookieBlock
 ###cookieBnr
 ###cookieBox
-###cookieCard
 ###cookieCheck
 ###cookieChoice
 ###cookieChoiceInfo
 ###cookieCnil
 ###cookieCompliance
+###cookieConcent
 ###cookieConf
 ###cookieConfirm
 ###cookieConsent
@@ -6332,7 +6330,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookieDisc
 ###cookieDisclaimer
 ###cookieDiv
-###cookieDlg
 ###cookieDough
 ###cookieFooter
 ###cookieFrame
@@ -6391,6 +6388,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookiePolicyDialog
 ###cookiePolicyDiv
 ###cookiePolicyId
+###cookiePolicyInfo
 ###cookiePolicyModal
 ###cookiePolicyNotice
 ###cookiePolicyNotification
@@ -6503,6 +6501,9 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie_notification_bar
 ###cookie_notify
 ###cookie_ok
+###cookie_opt_in
+###cookie_opt_in_anchor
+###cookie_opt_in_container
 ###cookie_optin
 ###cookie_optin_back
 ###cookie_panel
@@ -6569,6 +6570,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookiediv
 ###cookiefooter
 ###cookieform
+###cookiefy_bar
 ###cookieglobal
 ###cookiehint
 ###cookiehinweis.alert
@@ -6656,6 +6658,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookies-policy-notification
 ###cookies-policy-popup
 ###cookies-popup
+###cookies-popup-overlay
 ###cookies-privacy
 ###cookies-prompt
 ###cookies-section
@@ -6687,14 +6690,12 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookiesAceitar
 ###cookiesAgreement
 ###cookiesAlert
-###cookiesAllow
 ###cookiesArea
 ###cookiesArticle
 ###cookiesBanner
 ###cookiesBannerContainer
 ###cookiesBar
 ###cookiesBox
-###cookiesCard
 ###cookiesConsent
 ###cookiesContainer
 ###cookiesCotainer
@@ -6757,6 +6758,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookies_footer
 ###cookies_gdpr_drawer
 ###cookies_header
+###cookies_hint
 ###cookies_info
 ###cookies_info_box
 ###cookies_infos
@@ -6819,7 +6821,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookit
 ###cookix-body
 ###cp-cookie-banner
-###cpnb_manager_wrap_close_bg
 ###ct-ultimate-gdpr-cookie-popup
 ###ctl00_cookieNotice
 ###ctt_w_cookie_notice
@@ -6851,6 +6852,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###divCookie
 ###divCookieAcceptance
 ###divCookieAlert
+###divCookieConfirm
 ###divCookieConsent
 ###divCookieInfo
 ###divCookiePolicy
@@ -6858,6 +6860,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###divCookies
 ###divCookiesConfirmation
 ###divDisclaimer
+###divFrmUserCookieConfirm
 ###divPrivacy
 ###div_cnil_cookie
 ###div_coockies
@@ -6882,6 +6885,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###dvCookies
 ###dvPrivacy
 ###dynamic-cookies-bar
+###dynamic-cookies-bar-overlay
 ###eagerly-tools-cookie-overlay
 ###easy-cookies-policy-main-wrapper
 ###easyCookie
@@ -6952,6 +6956,8 @@ dashboard.razorpay.com#@##credential_picker_container
 ###footercookies
 ###formalAgreementModal ~ #modalBackdrop
 ###formalAgreementModal.custom-modal
+###fr3ex-cookiewarning
+###full-content-cookies
 ###gccookiemessage
 ###gcms_cookie_manager
 ###gdc-container.gdc-container
@@ -7044,7 +7050,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###gld_cookie_flag
 ###global-cookie-banner
 ###global-cookie-message
-###globalCookies
 ###glowCookies-banner
 ###google-policy-box
 ###gp-cookie-agreements
@@ -7096,6 +7101,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###informativa-privacy
 ###informativaCookie
 ###informativa_cookie
+###init-cookie-container
 ###ip-user-consent
 ###iqitcookielaw
 ###isCookie
@@ -7160,7 +7166,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###messageCookie
 ###mfn-gdpr
 ###mnd-cookie-bar
-###mod-eu-cookies-overlay
 ###modPrivacySettings
 ###modal-cookie-consent
 ###modal-cookie-info
@@ -7176,9 +7181,9 @@ dashboard.razorpay.com#@##credential_picker_container
 ###moove_gdpr_save_popup_settings_button
 ###mpc_cookie_intro
 ###ms-cookie-banner
-###ms-cookie-consent-banner
 ###msg-cookie
 ###msg-cookies
+###msgCookie
 ###msgCookies
 ###msg_cookies_fbox
 ###my-agile-privacy-notification-area
@@ -7232,6 +7237,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###ot-sdk-btn:not(button)
 ###overlay-cookie
 ###overlay-cookies
+###overlayCookieNotification
 ###overlay_cookies
 ###pandectes-banner
 ###panel-cookies
@@ -7276,10 +7282,8 @@ dashboard.razorpay.com#@##credential_picker_container
 ###pop-up-cookie
 ###popinCookies
 ###popin_tc_privacy
-###popup-accept-cookies
 ###popup-cookie
 ###popup-cookies
-###popup-cookies-bottom
 ###popup-gdpr
 ###popupCookie
 ###popupCookies
@@ -7305,7 +7309,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###privacy-policy-banner
 ###privacy-policy-link-wrapper
 ###privacy-policy-modal
-###privacy-policy-notice
 ###privacy-policy-panel
 ###privacy-policy-popup
 ###privacy-pop-up
@@ -7364,12 +7367,14 @@ dashboard.razorpay.com#@##credential_picker_container
 ###section-cookies
 ###sfCookieWarningBar
 ###sfCookieWarningBarSpacer
+###shaim_cks
 ###shaim_cks_eu
 ###shopify-section-cookies_law
 ###shopify-section-cookies_popup
 ###shortpixel-cookies
 ###showCookie
 ###showcookie
+###showcookiealert
 ###simple-cookie-consent
 ###simpleCookieBar
 ###simpleCookieConsent-popup
@@ -7429,6 +7434,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###use_cookie
 ###usecookies
 ###user-cookie-confirm
+###userAgreementBanner
 ###usercookieshow
 ###v-cookielaw
 ###vc-bar-cookie
@@ -7450,6 +7456,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###we_use_cookies
 ###welcomebar-wrapper
 ###welcomebar-wrapper-gdpr
+###wf_cookie_notice_wrapper
 ###wh_cookie_advice
 ###wolf-gdpr
 ###wp-gdpr-cookie-notice
@@ -7514,6 +7521,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.Navbar-toastContainer
 ##.PiwikPROConsentForm-container
 ##.PopMessage.cookie
+##.PrivacyPolicyNotice
 ##.SCK_Banner
 ##.Section-Cookie
 ##.UN_FRAME_gdpr
@@ -7565,7 +7573,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.altumcode-cookie-notification-wrapper
 ##.amdb-lgpd-consent
 ##.amgdprcookie-bar-template
-##.animate-cookie-message
 ##.anonymous-consent-banner
 ##.apa-consent-reset
 ##.apa-consent-wrapper
@@ -7617,7 +7624,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.bannercookie
 ##.bar--cookie-bar
 ##.bar-cookies
-##.bar-cookies-ph
 ##.bar.cookie
 ##.barCookie
 ##.base-cookies
@@ -7677,11 +7683,11 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.c-cookies__container
 ##.c-cookies__frame
 ##.c-cookies__wrapper
+##.c-cookiewarning
 ##.c-notice.c-floating
 ##.c-onetrust-backup
 ##.c-toast--gdpr
 ##.c-unique_cookie-attention
-##.ca-cookie-consent
 ##.capa-cookies
 ##.capaCookies
 ##.card-lgpd
@@ -7885,13 +7891,11 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie-confirmation
 ##.cookie-confirmation-notice
 ##.cookie-consent--GDPR
-##.cookie-consent--wrapper
 ##.cookie-consent-acknowledgement-conatiner
 ##.cookie-consent-alert
 ##.cookie-consent-area
 ##.cookie-consent-backdrop
 ##.cookie-consent-badge
-##.cookie-consent-banner-container
 ##.cookie-consent-banner-opt-out
 ##.cookie-consent-banner-overlay
 ##.cookie-consent-box
@@ -7903,7 +7907,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie-consent-div
 ##.cookie-consent-footer
 ##.cookie-consent-holder
-##.cookie-consent-manager
 ##.cookie-consent-message
 ##.cookie-consent-notice
 ##.cookie-consent-panel
@@ -8000,7 +8003,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie-notice-dialog
 ##.cookie-notice-dsvgo
 ##.cookie-notice-inner
-##.cookie-notice-overlay
 ##.cookie-notice-ui
 ##.cookie-notice-wrap
 ##.cookie-notice.alert
@@ -8013,6 +8015,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie-notification-message
 ##.cookie-notification-modal
 ##.cookie-notification__wrap
+##.cookie-notifications
 ##.cookie-notifier
 ##.cookie-notify
 ##.cookie-notify-container
@@ -8204,7 +8207,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookieStatement
 ##.cookieText
 ##.cookieToolbar
-##.cookieTooltipKontener
 ##.cookieWarn
 ##.cookieWarning
 ##.cookieWarningBox
@@ -8286,6 +8288,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie_policy_message
 ##.cookie_politics
 ##.cookie_popup_wrapper
+##.cookie_privacy_info_bar
 ##.cookie_rules
 ##.cookie_section
 ##.cookie_setting
@@ -8460,7 +8463,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookies.row
 ##.cookies.show:not(html):not(body)
 ##.cookies.site-msg
-##.cookies.slideInUp
+##.cookies.text-center
 ##.cookies1
 ##.cookiesAlert
 ##.cookiesBar:not(body)
@@ -8507,7 +8510,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookies__wr
 ##.cookies__wrap
 ##.cookies_accept
-##.cookies_accept_containter
 ##.cookies_aff
 ##.cookies_agreement
 ##.cookies_alert
@@ -8572,6 +8574,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cv2-wrapper
 ##.cwc-cookie-banner-ui-sdk
 ##.cwcookielaw
+##.dCookiesAlert
 ##.daac-desktop-notice
 ##.dark.gdpr-settings
 ##.data-protection-notice
@@ -8602,13 +8605,13 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.dvCookies
 ##.e-cookie
 ##.eGDSCookiesOverlay
+##.ebc-cookie-compliance-banner
 ##.ebu-cookies-layer__modal
 ##.ec-gtm-cookie-directive
 ##.ec-notice--warning
 ##.ec-notices__wrap
 ##.eds-notification-bar
 ##.eightworks-cookie-consent-plus
-##.eightworks-cookie-consent-plus-toggler
 ##.eksCookieContainer
 ##.elfsight-widget-cookie-consent
 ##.enhanced-privacy-cookie-policy
@@ -8627,16 +8630,13 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.eu-cookies-bar-cookies-bar
 ##.eu-cookies-bar-cookies-bar-settings
 ##.eu-cookies-bar-cookies-bar-wrap
-##.eu-cookies-wrapper
 ##.eucookie
-##.eucookielaw-banner
 ##.eucookies
 ##.eucookies-wrapper
 ##.eupopup-container
 ##.eupopup-container-bottomright
 ##.eut-privacy-wrapper
 ##.evt-cookie-element
-##.exp-cookies
 ##.exponea-banner
 ##.extreme-cookie
 ##.ezoic-floating-bottom
@@ -8783,7 +8783,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.hz-consents-banner
 ##.hz-visitor-consents
 ##.i-layout__cookie-notification
-##.iCookie
 ##.icms-cookiealert
 ##.id-CookieConsent
 ##.identity-noticebar-content
@@ -8821,7 +8820,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.js-consent-popup
 ##.js-cook.page-cook
 ##.js-cookie
-##.js-cookie-agree
 ##.js-cookie-agreement
 ##.js-cookie-alert
 ##.js-cookie-banner
@@ -8872,6 +8870,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.js-nanobar-first-login
 ##.js-notification-cookie-banner
 ##.js-privacy-notification
+##.js-silent-consent
 ##.js-terms-of-use-disclaimer
 ##.js-tracking-popup
 ##.js.tc-banner
@@ -8935,6 +8934,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.mdx-std-cookie-popup
 ##.message-cookie
 ##.message-cookies
+##.message_cookie
 ##.messages_cookies
 ##.mf-cookie-banner
 ##.mgdpr-popup
@@ -8942,6 +8942,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.mi-cookie-banner
 ##.mi-gdpr
 ##.mihoyo-cookie-tips
+##.min-cookie-container
 ##.miniConsent
 ##.mkt_consent_manager_wrapper
 ##.mm-page > #cookie
@@ -8993,7 +8994,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.notice_cookies
 ##.notice_notice_cookies
 ##.notif-bar
-##.notification--cookies
 ##.notification-cookie
 ##.notification-cookie__wrapper
 ##.notification-cookies
@@ -9015,6 +9015,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.nvcookies-outer
 ##.nwjs_cookie_consent
 ##.o-cookie
+##.o-cookie-bar
 ##.o_cookies_discrete
 ##.ob-eu-cookie-consent
 ##.obfx-cookie-bar-container
@@ -9033,6 +9034,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.ot-sdk-show-settings
 ##.otCookiesNotification
 ##.overlay-cookie
+##.overlay-cookies
 ##.overlaycookie
 ##.p-coockie
 ##.p-cookiebar
@@ -9053,6 +9055,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.pea_cook_wrapper
 ##.penci-gprd-law
 ##.penci-wrap-gprd-law
+##.personalDataConfirmWrapper
 ##.pfx-cookie-consent
 ##.ph-cookie-compliance
 ##.ph-cookie-popup-v2-view2-default
@@ -9121,7 +9124,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.privacy-policy-popup
 ##.privacy-popup
 ##.privacy-popup-wrapper
-##.privacy-toast
 ##.privacy-update
 ##.privacy-warning
 ##.privacyBanner
@@ -9156,12 +9158,10 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.rgpd-banner
 ##.rgpd-consent
 ##.rgpd-cookies
-##.rgpd-footer
 ##.rgpd-notice
 ##.rgpd-popup
 ##.rgpd_banner
 ##.rhweb-overlay-cookie-change
-##.rm-cookies-belt
 ##.rodo-info
 ##.rodo-popup
 ##.rodo__container
@@ -9423,6 +9423,8 @@ dashboard.razorpay.com#@##credential_picker_container
 ##aside#eu_cookie_law_widget-2
 ##aside.amgdprjs-bar-template
 ##aside.cookie-bar
+##div#ACClayerBackground
+##div#ACCsmallCookieLayer
 ##div#__tealiumGDPRecModal
 ##div#accept-cookie
 ##div#cc_container
@@ -9522,7 +9524,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##div.cookie-header
 ##div.cookie-hint
 ##div.cookie-hinweis
-##div.cookie-hold
 ##div.cookie-info
 ##div.cookie-layer
 ##div.cookie-message
@@ -9548,7 +9549,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##div.cookieBanner
 ##div.cookieConsent
 ##div.cookieDisclaimer
-##div.cookieInfo
 ##div.cookieMessage
 ##div.cookieMsg
 ##div.cookiePolicy
@@ -9626,8 +9626,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##div.ammodals-overlay
 ##.js-notice.notice--cookie
 ##.notice--cookieAdvanced
-##.cajaNegraAlerta
-##.modalNuestraCookies
 ##section.cookie-consent--visible
 ##.active.disclaimer
 ###cookie-law-info-bar ~ .cli-modal-backdrop
@@ -9721,29 +9719,19 @@ dashboard.razorpay.com#@##credential_picker_container
 ###newsletter-subscribe-sidebar
 ###newsletter-toggle
 ###newsletterFooter
-###newsletterFormWrapper
-###newsletterModuleForm
 ###newsletterOverlay
-###newsletterSignUpForm
-###newsletterSubscription
-###newsletter_articles
 ###newsletter_block_left
-###newsletter_div
 ###newsletter_popup
 ###newsletter_signup_footer
-###newsletterbox
 ###newsletters-1-form
 ###newsletters-1-form-wrapper
 ###newsletters-footer-content
 ###newsletters-signup-sidebar
-###nletter2
 ###nm-subscribe-box
 ###nm-subscribe-wrapper
-###notification-articleblock
 ###piano-article-newsletter
 ###popup-newsletter
 ###popupNewsletter
-###post-newsletter
 ###rail-newsletter
 ###rr_newsletter
 ###sbnewsletter-signup-wrap
@@ -9876,7 +9864,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.formkit-slide-in
 ##.ft_newsletter
 ##.ftr-nwsltr
-##.gcap-layout-popup
 ##.gd-newsletter-subscribe-box-outer
 ##.gd-newsletter-subscribe-container
 ##.gdm-newsletter-banner__container
@@ -9985,7 +9972,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.newsletter-push
 ##.newsletter-r
 ##.newsletter-recomendation-wrapper
-##.newsletter-rightbar
 ##.newsletter-sb
 ##.newsletter-shortcode
 ##.newsletter-sidebar
@@ -10021,6 +10007,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.newsletter-widget__wrapper
 ##.newsletter.cta
 ##.newsletter.node
+##.newsletter.panel-body
 ##.newsletter.widget
 ##.newsletter1
 ##.newsletterArticle
@@ -10132,6 +10119,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.tm-editoral-subscription
 ##.tnp-subscription
 ##.tnp-subscription-minimal
+##.ts-newslatter
 ##.tve-leads-widget
 ##.ue-c-article__newsletter-widget
 ##.vc-email-subscribe__wrapper
@@ -10237,6 +10225,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||getresponse.com^$third-party
 ||google.com/shopping/customerreviews/$subdocument,third-party
 ||gravityrd-services.com^$third-party
+||healthgrades.com^$third-party
 ||hellobar.com^$third-party
 ||hsleadflows.net^$third-party
 ||images.dmca.com/Badges/DMCABadgeHelper.min.js$third-party
@@ -10295,7 +10284,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ||rokt.com^$third-party
 ||sail-horizon.com^$third-party
 ||sail-personalize.com^$third-party
-||scrolltotop.com^$third-party
 ||sendsay.ru^$third-party
 ||siteswithcontent.com^$third-party
 ||sleeknote.com^$third-party
@@ -10567,7 +10555,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ||cookietractor.com^$third-party
 ||crta.and.co.uk^
 ||cscript-cdn-irl.cassiecloud.com/loader.js
-||cscript-cdn-use.concordia.ca/loader.js
 ||dmgmediaprivacy.co.uk^$third-party
 ||ecookie.nl^$third-party
 ||efilli.com^$third-party
@@ -10667,7 +10654,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||alibaba.com/sw.js
 ||bdstatic.com/linksubmit/push.js
 ||dailymail.co.uk/api/web-push-notification/
-||gstatic.com/firebasejs/$domain=joins.com
+||gstatic.com/firebasejs/$domain=joins.com|packaginginsights.com
 ||hindustantimes.com/sw.js
 ||hulkprod.anm.co.uk/api/web-push-notification/
 ||imyfone.com/*/notification/$script
@@ -10801,7 +10788,6 @@ worldhistory.org##.ahe-ad
 screamingfrog.co.uk##.animate-fly
 soundcloud.com##.announcement
 tutsplus.com##.announcement-bar
-forbesindia.com##.artical-controls
 elespanol.com##.article__arrow
 elespanol.com##.article__footer-nav
 livejournal.com##.b-fader
@@ -10958,6 +10944,7 @@ leawo.org###widget-tracking
 fivebooks.com##.-donate
 tabletmag.com##.DonationPopup
 talkingpointsmemo.com##.Footer__ModalAds
+techlila.com##.IRPP_button
 orlandoweekly.com,sacurrent.com##.KeepFreeBanner
 disk.yandex.com,disk.yandex.ru##.PSHeader-Center
 weather.com##.PromoDriver--card--15FjK
@@ -11015,7 +11002,6 @@ thenightly.com.au##.css-t03kxs-StickyBreachContainer
 theguardian.com##.dcr-v2o9qm
 designtaxi.com##.displayboard
 electronicintifada.net,fullfact.org,opendemocracy.net##.donate
-mprnews.org##.donate-ask
 jurist.org##.donate-banner
 rabble.ca,sciencenews.org,thedp.com##.donate-box
 lifesitenews.com##.donate-callout
@@ -11518,7 +11504,6 @@ huffingtonpost.es##.banner-app__container
 relax-job.com##.js-smartapp-banner
 ziare.com##.modal-backdrop
 ziare.com##.modal__wp
-metroworldnews.com.br,publimetro.cl##.notification-subs
 almanar.com.lb##.notification-wrap
 interfax.ru##.popupNowReading
 flvto.biz##.push-offer
@@ -11546,6 +11531,7 @@ geeksforgeeks.org###openInApp-modal
 linkedin.com###protip-capsule
 mail.google.com###sdppromo
 google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.cn,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.je,google.jo,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.vg,google.vu,google.ws###stUuGf
+vietnamairlines.com###store-notify
 yandex.com##.Distribution-Popup
 airasia.com##.QRPopUp__QRPopUpWrapper-sc-8gx7le-0
 www.google.com##.QWEVge
@@ -11567,10 +11553,10 @@ atlasobscura.com##.apple-store-icon
 qatarairways.com##.appstore
 atptour.com##.atp_apps
 bing.com##.b_bnp_bopc
+gibiru.com##.banner-button
 deepl.com##.bg-deepl-blue
 canberratimes.com.au##.bg-gray-100.block
 banggood.com##.bottom-app-contain
-map.baidu.com##.bottom-banner-float
 filmarks.com##.c-header-download-banner
 ctvnews.ca##.c-text > ul > li
 apkpure.com,apkpure.net##.chrome-install-pop
@@ -11732,7 +11718,6 @@ oneindia.com###youtube_promo
 tennis.com##.-sharebar
 nhl.com,petri.com##.-social
 ynetnews.com##.AccordionShareWrapper
-scrippsnews.com##.ActionBar
 kpbs.org##.ActionBar-items
 newscientist.com##.ArticleHeader__SocialWrapper
 nordvpn.com##.BlogPost__social-block
@@ -11749,6 +11734,7 @@ whatcar.com##.ReviewSocialSection_reviewSocialSection__qzV0o
 manofmany.com##.ShareBar_listItem__6t0E_
 cbssports.com##.SocialIconsBar
 complex.com##.SocialLinks__SocialButtonsContainer-sc-vif6xs-0
+itprotoday.com##.SocialShare
 sfstandard.com##.StickySharer_list__Lirqs
 grammarly.com##._3fq8S-container
 tableconvert.com##._share-wrapper
@@ -11776,6 +11762,7 @@ dailystar.com.lb,eurekalert.org##.article-tools
 nationalreview.com##.article-utility-nav
 rt.com##.article__google-news
 armeniasputnik.am,spnfa.ir,sputnik-abkhazia.info,sputnik-georgia.com,sputnik-ossetia.com,sputnik.af,sputnik.az,sputnik.by,sputnik.kg,sputnik.kz,sputnik.tj,sputnikarabic.ae,sputnikglobe.com,sputniknews.africa,sputniknews.cn,sputniknews.com,sputniknews.com.tr,sputniknews.in,sputniknews.jp,sputniknews.lat,sputniknews.ru,sputniknews.uz,sputniknews.vn,sputniknewsbr.com.br,sputnikportal.rs##.article__news-services-subscribe
+greenbuildingadvisor.com##.article__social
 news18.com##.article_bnow
 news.tvbs.com.tw##.article_community_box
 salemnews.net##.article_details_icons
@@ -11812,7 +11799,6 @@ thenextweb.com##.c-engage
 lawandcrime.com##.c-header-social-item
 businessplus.ie##.c-padding-xs.ct-div-block
 kyivindependent.com##.c-share__wrapper
-cityoflondon.police.uk##.c-social-links
 marketplace.org##.c-story-meta__share
 ctvnews.ca##.c-teaser
 cgdirector.com##.cgd-social-wrapper
@@ -12046,7 +12032,6 @@ thenation.com##.sharethis-menu
 12tomatoes.com##.sharetocare-popup
 welivesecurity.com##.sidebar-card-media
 tribune.com.pk##.sidebar-social-icons
-newsshooter.com##.simple-social-icons
 budgetbytes.com##.single-share-wrap
 nme.com,operawire.com##.site-footer-social
 news.sky.com,skysports.com##.site-share-wrapper
@@ -12078,6 +12063,7 @@ birdsandblooms.com,familyhandyman.com,rd.com,tasteofhome.com,thehealthy.com##.so
 toofab.com##.social-nav
 apkpure.net##.social-network
 adrenaline.com.br,mundoconectado.com.br,sportsbusinessjournal.com##.social-networks
+businessinsider.in##.social-panel-rgt
 iflscience.com##.social-share-elements
 cio.com,computerworld.com##.social-share-sticky-menu
 csoonline.com##.social-share-sticky-menu__wrapper
@@ -12113,7 +12099,6 @@ thepopverse.com##.socials_promo
 citizen.digital##.socilamedia-share-btns
 cryptonews.com##.ssk
 bbc.co.uk##.ssrcss-11faxz6-TagShareWrapper
-middleeasteye.net##.st-inline-share-buttons
 atlantablackstar.com##.stay-social
 deutschland.de##.sticky-bar
 allafrica.com##.sticky-panel-container
@@ -12142,6 +12127,7 @@ decrypt.co##.text-neutral-700
 twitchy.com##.thm-sc
 chinadaily.com.cn##.three-right
 ncaa.com##.tile-follow
+techlila.com##.tl-social
 xbiz.com##.tool-list
 daily.jstor.org##.top-bar-right
 secretchicago.com##.top-bar-social-media
@@ -12296,8 +12282,6 @@ babeland.com###bottomAlert
 freemake.com###bottombar
 agar.io###btn-privacy-settings
 brandwatch.com###bw-cookie-sys-active
-viomi.com###c-home-tips
-campfirewriting.com###campfire-cookie-banner
 accounts.meister.co,meisterlabs.com,mindmeister.com###cb-wrapper
 rtk.lt###ccc
 uptimerobot.com###ck-consent
@@ -12349,7 +12333,6 @@ jagranjosh.com,mid-day.com###gdprbx
 parafix.com###gui_cookie_policy
 all3dp.com###iubenda-cs-banner
 playstation.com###js-SIEWS1lib-header-Base
-cityoflondon.police.uk###js-consent-banner
 accounts.pixiv.net###js-privacy-policy-banner
 glashuette-original.com###js_dataNnoticeBackdrop
 glashuette-original.com###js_dataNnoticeBtns
@@ -12404,6 +12387,7 @@ vive.com###vive-cookie-notice
 wyze.com###wyze-cookie-banner
 giphy.com##.Banner-sc-iopojr
 quora.com##.Banner___StyledFlex-sf9g3d-0
+classicalarchives.com##.Cdiv
 2nt.com,say-move.org##.CoZ9Nu8Z
 anthropic.com##.ConsentBanner_consentBanner__bLexV
 nordpass.com,support.nordvpn.com##.ConsentWidget__container
@@ -12455,6 +12439,7 @@ welcometothejungle.com##.axeptio_mount
 bitpay.com##.banner-container
 23andme.com,tunnelbear.com##.banner-wrap
 wetransfer.com##.banner__container
+my.machinations.io##.banner_container
 batchgeo.com##.batchgeo-cookie-notice
 linkedin.com##.bg-color-background-container-tint.top-2
 rowertour.com##.bg-trans-full-cookie
@@ -12676,6 +12661,7 @@ ambassador-enterprises.com,aweray.com,cbc.ca,dailyselect.co.uk,ferrerocareers.co
 sundayworld.com##.privacy-button
 ign.com,pcmag.com##.privacy-content
 businessinsider.com##.privacy-link
+petalmaps.com##.privacy-menu
 hotdeals.com##.privacy-policy-pop
 petalmaps.com##.privacy-setting
 data.worldbank.org##.privacy-widget
@@ -12736,6 +12722,7 @@ visme.co##.vismecookie
 wizards.com##.wizardCookieBanner
 uvdesk.com##.wk-cookie-wrapper
 webopedia.com##.wo-consent
+patchstack.com##.wrapper-wrapper
 xvideos.com##.x-message
 eneba.com##.xIPhuO
 yvr.ca##.yvr-cookies
@@ -12748,6 +12735,7 @@ kaspersky.com##[class*="CookiesAccept"]
 noovo.ca##[class*="modalstyles__StyledModalContainer-"]
 bybit.com##[class^="style_gdpr"]
 myworkdayjobs.com##[data-automation-id="legalNotice"]
+uber.com##[data-baseweb="toaster"]
 ticketmaster.com##[data-bdd="terms-of-use"]
 www.nature.com##[data-cc-banner]
 wizards.com##[data-fetch-key="TheCookiePrompt:0"]
@@ -12783,9 +12771,9 @@ deepl.com##div[data-testid="dl-cookieBanner"]
 reddit.com##div[style*="--Toaster-indicatorColor"]
 qrzcq.com##div[style^="border: 2px solid blue;"]
 globaltuners.com,psychomedia.qc.ca,speedtestcustom.com,zerochan.net##div[style^="position: fixed; bottom"]
-exporterhub.io,goodingco.com,nllb.metademolab.com,socean.fi##div[style^="position: fixed; left: 0px; top: 0px;"]
 playok.com##div[style^="position: fixed;"]
 fi.google.com##fi-cookie-consent
+jovemnerd.com.br##footer + div[style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 999; background-color: rgba(0, 0, 0, 0.3);"]
 duckduckgo.com##li[data-layout="ad"]
 material.io##mio-cookie-notice
 beatstars.com##mp-snackbar-info-messages
@@ -12826,6 +12814,7 @@ beleuchtung.at,beleuchtung.de,fotistikosmos.gr,lambimaailm.ee,lampak.hu,lampaman
 acast.com,bais.de,birgit-bittermann.de,builds.gg,catcat.com,checkyourmath.com,ciaoflorence.it,codementor.io,costume.dk,culturecalling.com,dateks.lv,discoversouthcarolina.com,franklintech.com,gezondheidsplein.nl,grandepremio.com.br,grips-automation.com,grotekleren-webwinkel.nl,iyengaryoga.it,klartale.no,mbc.net,mcdonalds.hu,megfoglak.hu,onzetaal.nl,pinterestacademy.com,scentre.pl,smarttrip.it,speicherguide.de,therisecalifornia.com,uio.no##.consent
 2pdfconverter.com,allradio.nl,changefaces.com,chartle.com,clashtv.app,diagrameditor.com,elektro-plus.com,fakechatapp.com,files2zip.com,fotofilter.de,glitterphoto.net,htmlgames.com,mapimage.com,mindmapeditor.com,neonspellen.nl,phideo.com,photocollage.com,photoeditor.com,photoenlarger.com,photofilters.com,photofiltres.fr,photoresizer.com,postermaker.com,printscreenshot.com,qrapp.com,stripbackground.com,toonytool.com,uio.no,wordclouds.com,youtubetrimmer.com##.consent-overlay
 agendatrad.org,alarabiya.net,alhadath.net,bagira.bg,cardzmania.com,chiccentre.com,cleverreisen.de,co.jpf.go.jp,datacite.org,digminecraft.com,drugstore.bg,e-confirm.de,eismoinfo.lt,encycolorpedia.fr,find-dvd.co.uk,framar.bg,ft.com,heathrowexpress.com,heroforge.com,hifi4you.de,holition.com,hospiz-bodhicharya.de,hospiz-horizont.de,hunsruecktouristik.de,itt.bg,jtl-software.de,kaeltewolf.de,kauppasatama.fi,kigu.nl,kinopolis.de,kunstnet.de,lacsiboltja.hu,lzf-lamps.com,mapcarta.com,notebookinfo.de,nperf.com,pardini.de,plasico.bg,produkt.easyweb.travel,reisebuero-marzian.de,reisetreff-muecke.de,schulthess.ch,stat.gov.lt,techonthenet.com,terminal-bgt.de,tourismos.net,touristikerfotos.net,wellnissimo.de,zitatezumnachdenken.com###consent
+reproduccionasistida.org,salmonsoftware.ie,wemabank.com##.cli-bar-popup
 alcatraz.ai,dobro.ru,lawline.se##[class^="CookiesModal"]
 it-notes.dragas.net,lehmanns.de,solas.ie##.cc_dialog
 adammendrek.cz,airsoft.ch,airsoftzone.at,armamat.at,poistenievyhodne.sk,racius.com##.cb
@@ -12888,6 +12877,7 @@ afiklmem.com,antenne.at,ars.particify.de,betsafe.ee,betsafe.lv,biblio.cyldigital
 40gold.de,afh-group.de,auto-rhein.de,barmherzige-brueder.at,belfortinternational.be,berghotel-sudelfeld.de,book-n-drive.de,buecher-sale.de,buecher.de,builtbybel.com,cd-cc.si,christ-sucht-christ.de,comet-cine-center.de,deskmodder.de,dnca-investments.com,duracell.co.uk,duracell.com.au,duracell.de,duracell.dk,duracell.es,duracell.fr,duracell.it,duracell.nl,duracell.pl,enercoop.fr,estudiografenno.com.br,eukanuba.eu,flooring.regupol.de,gipuzkoa.eus,handicap-love.de,hechingen.zollernalb-kinos.de,jokers.de,kinopalast-neuburg.de,klaro.org,kubi-online.de,kug.ac.at,lumos-kino-nidda.de,luontoliving.com,lvstrucks.nl,mewo-mm.de,mischgastauchen.de,muehlhausen.filmpalast.de,muesliswap.com,nunido.de,oelwechsel-muenchen.de,osteopathiepraxis-hamburg.de,papier-mettler.com,pasts.lv,petermachtpause.de,pohjanmaan.fi,pohjanmaan.se,powerhouse-fitness.co.uk,prolific.co,publicidadconcursal.es,radldiscount.de,rebreather-ccr.de,redaktionsbuero-niemuth.de,roman-graf.ch,saldus.lv,salesviewer.com,schachermayer.at,schrack-seconet.com,suedtirol.com,supplementa.com,tarif4you.de,tauchen-richtig-lernen.de,trendingtopics.eu,triaswestland.nl,trimix-tauchen.de,volksmusik-notenshop.de,volksmusiknoten.de,westerhofcafe-im-stielerhaus.de###klaro
 einbecker-morgenpost.de,filati-outlet.com,filati.cc,filati.de,filati.ru,heizung-billiger.de##.klaro
 bistum-essen.de,bistumlimburg.de,bjr.de,bundesanzeiger-verlag.de,camerapricebuster.co.uk,dbk.de,domicile-emploi.net,dtvp.de,ecouter-en-direct.com,fairtrade-deutschland.de,fairtrade.at,hey.bayern,journalist.de,languagelab.nl,mariahimmelfahrtimtaunus.de,neuwagenduft.de,radioemu.com,volksbund.de###cc
+ascentmanagement.ca,franciszkaniewieliczka.pl,knieskinderzoo.ch,lvgmc.lv,simpleone.ru,tablaocordobes.es##.cookies__container
 centreforaviation.com,joinhoney.com,picofme.io,scinapse.io,truewealth.ch,x2o.be##[class^="cookieConsent"]
 24h-pflege-check.de,adata.com,afribaba.bi,afribaba.bj,afribaba.cd,afribaba.cf,afribaba.co.ke,afribaba.co.tz,afribaba.co.za,afribaba.com,afribaba.gq,afribaba.mg,afribaba.ml,afribaba.ng,afribaba.so,afribaba.tg,afribaba.ug,afribobo.com,agencedelaposte.com,agroterra.com,ahlulbayt.tv,aia.com.ph,aicom.pl,akvis.com,alivecolors.com,allsmo.com,altervista.org,amadeus.com,americanairlines.fi,armpension.com,askdifference.com,asklion.co.uk,bankid.com,banklinth.ch,barker.com.tr,basilica.ro,batpower.fi,betmagician.com,bim-review.com,bpi-aia.com.ph,broadcasting-services.eu,bucurobor.ro,calamos.com,cfainstitute.org,chatron.pt,cleantalk.org,coalsoft.cz,communitycouncils.scot,comune.novara.it,convert-my-image.com,costaclub.com,delonghi.ru,dirigentindustria.it,e-marilyn.pl,efinancialcareers.com,eichendorff21.de,eks.sk,enablingguide.sg,exatasistemas.com.br,fandor.com,faperme.it,fazauto.com.br,fecareers.co.uk,findaphd.com,fitd.it,fredlist.com,gambling-affiliation.com,gamesjobsdirect.com,garantibbva.com.tr,go4schools.com,graco.com,grupoautentica.com.br,gtalfh.com,hallo-minden.de,hattrick.org,hotelbellevue.lv,hotelier101.com,integrasul.com.br,iochpe.com.br,itaincontri.com,jetcs.co,jobflurry.com,jobsinwales.com,kenweego.com,kupbilet.pl,laislabonita.fm,lankamaailma.fi,lavozdegalicia.es,lawyersonline.co.uk,lifescience.net,linuxcompatible.org,localcouncillor.scot,lonelyplanet.com,lth.se,m-a.org.uk,mazeikiai.lt,montenisa.com,nature.com,netonnet.no,netonnet.se,netweather.tv,newhome.ch,nexaresources.com,nironmagnetics.com,norwegian.com,nyman.media,openuserjs.org,osevio.com,osthammar.se,pneusb2b.com,policlinicovalencia.es,poolandspacentre.co.uk,povr.com,pozyx.io,privacy.gov.ph,rcip.co.il,rshb.ru,saperesalute.it,schlaganfall-hilfe.de,siderweb.com,smorgasbord.com,smullers.nl,stocktoninformationdirectory.org,stylevamp.de,supercell.com,sweetcare.pt,tchncs.de,teogkaffespecialisten.dk,theonlinesurgery.co.uk,tinyurl.com,tufauto.it,tullverket.se,uabstyle.it,ukpressonline.co.uk,upolujebooka.pl,ustabilir.com,valka.cz,varlesca.pl,vernemq.com,viewsonic.com,viewsoniceurope.com,visitnarva.ee,warp2search.net,yithlibrary.com,youngsseafood.co.uk,yumisu.pl##.alert
 arbys.com,buffalowildwings.com,dashboard-deutschland.de,neoplants.com,oresundstag.se,quince.com##[class^="cookieBanner"]
@@ -12919,7 +12909,6 @@ airnewzealand.eu,aluminiosbrinas.com,arlingtoncemetery.mil,arthrex.com,axminster
 aeerc.com,centreceramique.nl,eplan.at,eplan.ch,eplan.co.uk,eplan.de,eplan.es,eplan.hr,fusacq.com,illicopharma.com,kathond.be,kathond.com,kathond.de,kathond.nl,motointegrator.de,optisweb.com,petcure.de,petcure.nl###fancybox-wrap
 caldigit.com##.elementor-element-31e18001
 acogo.pl,alcatelmobile.com,alpedhuez.com,apotheke-villingen.de,audirvana.com,bananathaischool.com,bearable.app,bebocommunication.fr,begindot.com,beyondthebox.it,blocksite.co,boulderholisticvet.com,budgetinsurance.com,buehlerzuerich.ch,codesignal.com,codeworks.me,conjunctconsulting.org,correctiv.org,cover-4-less.com,dialdirect.co.uk,discoveryfrance.fr,dissept.com,doyouevenblog.com,droneacademy.com,dunense.com,easycookasia.de,editalo.pro,epoha.com.hr,everydaymarksman.co,faktograf.hr,fortisclothing.co.uk,funnelytics.io,green.hr,herbata.info,hombresevolucionantes.com,howsmart.pl,interreg-croatia-serbia.eu,interreg-hr-ba-me.eu,kalani-home.com,lajtmobile.pl,leica-enthusiast.de,lemondeencommun.info,lionsroar.com,loading.com.br,mainzahn.com,mcg-digital.de,megasvet.cz,mekongpackraft.com,mondenissin.com,mudes.org.br,nineambell.com,outkick.com,paperlessmovement.com,parametric-architecture.com,po-bandzie.com.pl,pogodadlaslaska.pl,porttechnology.org,rdlfitness.com,realitysandwich.com,reputationup.com,restaurant-tribeca.com,romo-tonder.dk,roonlabs.com,rse-get-it-right.org.uk,schwabenhaus.de,selle-proust.fr,spolem.olawa.pl,stoppub.fr,strasbourg-europe.eu,surfacescan.co.uk,thecountersignal.com,thegapdecaders.com,thesweetfactory.gr,tldallas.com,tutolino.net,urbex-tour.com,vr-expert.nl,weglot.com,whereyourebetween.com,wolfgangkrebs.com,woovin.com,zencare.org##.elementor-popup-modal
-hertz.at,hertz.be,hertz.ch,hertz.co.uk,hertz.cz,hertz.de,hertz.es,hertz.fi,hertz.fr,hertz.ie,hertz.it,hertz.lt,hertz.nl,hertz.no,hertz.pl,hertz.pt,hertz.se,hertzdk.dk###light-box-1
 actievandedag.nl,bairesdev.com,bootstrap.academy,doppelherz.com,energydashboard.co.uk,freelway.com,help.adjust.com,livecounts.io,mymorrisons.com,natron.energy,perplexity.ai,posthog.com,zealy.io##.z-50
 ancestry.com,ancestry.de,ancestry.fr,ancestry.it,ancestry.mx,ancestry.se###bannerOverlay
 amazon.ca,amazon.co.uk,amazon.com,amazon.com.au,amazon.com.be,amazon.com.tr,amazon.de,amazon.es,amazon.fr,amazon.in,amazon.it,amazon.nl,amazon.pl,amazon.se###sp-cc
@@ -14263,6 +14252,7 @@ nextdaycatering.co.uk,costautoricambi.com,digabrielericambi.it,pevgrow.com,pivo-
 bederhomes.ch,beterhomes.ch,betterhome.ch,betterhomes-international.com,betterhomes.at,betterhomes.ch,betterhoms.ch#$#html { overflow: auto !important; position: initial !important; }
 digitalo.de,smdv.de##.reveal__overlay
 digitalo.de,smdv.de#$#body,html { overflow: auto !important; position: initial !important; }
+replacebase.co.uk,obelink.de,obelink.es,obelink.it,obelink.at,obelink.fr,obelink.be,obelink.nl,houseofwatches.co.uk,cameraworld.co.uk,vitalpoint.cz,combat.pl,intersport.si,intersport.ba,intersport.me,intersport.hr,productosqp.com,alpinawein.de,hydroscand.co.za,hydroscand.dk,hydroscand.fr,navygreen-eshop.gr,drgoerg.com,bloomfashion.nl,artero.com,cd-lux.de,gutes-shop.de,elvezio.com,jeans-fritz.de,naturalpower.at,myrobotcenter.at,myrobotcenter.co.uk,myrobotcenter.de,intersport.rs,remarketed.com,wendoverart.com,alles-im-lackshop.de##.modals-wrapper
 replacebase.co.uk,obelink.de,obelink.es,obelink.it,obelink.at,obelink.fr,obelink.be,obelink.nl,houseofwatches.co.uk,cameraworld.co.uk,vitalpoint.cz,combat.pl,intersport.si,intersport.ba,intersport.me,intersport.hr,productosqp.com,alpinawein.de,hydroscand.co.za,hydroscand.dk,hydroscand.fr,navygreen-eshop.gr,drgoerg.com,bloomfashion.nl,artero.com,cd-lux.de,gutes-shop.de,elvezio.com,jeans-fritz.de,naturalpower.at,myrobotcenter.at,myrobotcenter.co.uk,myrobotcenter.de,intersport.rs,remarketed.com,wendoverart.com,alles-im-lackshop.de#$#body { overflow: auto !important; position: initial !important; }
 shop.blautel.com,hobbysaliplant.com,trcfrant.ru,artesaniasmontejo.com,fadenkreuz-shop.de,partycenter.ro,viduca.com,bioitalia.it,elrobleperfumado.com,sokalapesca.com,paraetpharmacie.com,protec-sai.es,shop-univer.de,outletbodegas.com,atelierstore.fr,zootecniasl.com,recail.es,ieftin-da-bun.ro,voltabaterias.com,fuzeau.com,pointblankmusicschool.com,acino.co.za,acino.swiss,pharmaciefontvieille.com,werkenmetmerken.nl,werkenmetmerken.be,marleyplumbinganddrainage.com,hungariasport.com,centroculturalmva.es,farajan.es,consorciorsumalaga.com,costadelsolmalaga.org,iznate.es,villanuevadelaconcepcion.es,parauta.es,sedella.es,teba.es,cartama.es,alozaina.es,elburgo.es,ojen.es,humilladero.es,benamocarra.es,cuevasdesanmarcos.es,alpandeire.es,cortesdelafrontera.es,benarraba.es,jimeradelibar.es,almargen.es,archez.es,benadalid.es,salares.es,totalan.es,pujerra.es,periana.es,ardales.es,birdingmalaga.es,carratraca.es,gaucin.es,algatocin.es,mollina.es,alfarnatejo.es,montecorto.es,alfarnate.es,valledeabdalajis.es,fuentedepiedra.es,almogia.es,jubrique.es,canillasdeaceituno.es,benalauria.es,elborge.es,riogordo.es,comares.es,cuevasbajas.es,villanuevadetapia.es,benamargosa.es,lavinuela.es,benahavis.es,gransendademalaga.es,monda.es,malagaviva.org,genalguacil.es,omau-malaga.com,atajate.es,villanuevadeltrabuco.es,campillos.es,cartajima.es,tolox.es,colmenar.es,serrato.es,sierradeyeguas.es,casabermeja.es,sendalitoral.es,juzcar.es,arriate.es,archidona.es,cutar.es,alameda.es,lavinuela.es,foxtons.co.uk,alexanderhall.co.uk,e-sigaret.ee,wuestenrot.at,faberkabel.de,sabinastore.com#$#body,html { overflow: auto !important; position: initial !important; }
 mypalmshop.de,dcshoes.it,atticabank.gr,intersport.hu,mironet.cz,learnattack.de,campingcabodegata.com,campingred.es,campingriojerte.com,campingurbasa.com,campingboltana.com,campingcuenca.com,campingelastral.es,campingfuentescarrionas.com,campingelmolino.com,campingcastillo.com,campingcabodegata.es,lascorralizas.com,campingetxarri.com,campingdeharo.com,lagoresort.com,enracha.es,sgim.org,montkov.cz,birkenstock.com,piscine-champerret.fr,piscine-godard.fr,citeaquademie.fr,billetterie.elysee-montmartre.com,couzeo.fr,piscine-estrees.fr,espontoise.fr,complexe-citelium.fr,ca-laloue.fr,billetterie.stadetoulousain.fr,billetterie.stade.fr,duo-caudry.fr,lavague-plainevallee.fr,piscine-berlioux.fr,wetixpro.com,billetterie-bopb.fr,piscine-baker.fr,casinodeparis.fr,letrianon.fr,dragons-billetterie.com,aquazergues.fr,lo-obernai.fr,fcgticket.com,sceneo-capso.fr,helicea-cab.fr,billetterie-ffhandball.fr##.ui-widget-overlay
@@ -14279,6 +14269,7 @@ anacondastores.com#$#body,html { height: auto !important; overflow: auto !import
 drimsim.com#%#//scriptlet('ubo-rc.js', 'remodal-bg', '', 'stay')
 drimsim.com#$#body,html { overflow: auto !important; }
 store.godox.eu#$#body { overflow: auto !important; position: initial !important; }
+vevovo.be,vendezvotrevoiture.be,wirkaufendeinauto.at,vikoberallebiler.dk,wijkopenautos.nl,vikoperdinbil.se,noicompriamoauto.it,vendezvotrevoiture.fr,compramostucoche.es,wijkopenautos.be##.modal-root
 vevovo.be,vendezvotrevoiture.be,wirkaufendeinauto.at,vikoberallebiler.dk,wijkopenautos.nl,vikoperdinbil.se,noicompriamoauto.it,vendezvotrevoiture.fr,compramostucoche.es,wijkopenautos.be#$#body,html { overflow: auto !important; position: initial !important; }
 trkcancer.com,cteph.jp,kadinsagligitv.com,adempas.jp,berlis.ch,xarelto.ch,birthcontrol101.com,eylea.ch,gyndoc.ch,secuidadoutor.com.br,mybodymyway.com.au,endometriose-info.ch,your-life.hk,colaborator.jp,g4atokyo.jp,aspirinprotect.co.kr,ckdandt2d.com,your-life-sa.com,hoyelijo.com.ar,nubeqa.ch,loveeyesight.hk,aimhigher8.ca#$#body,html { overflow: auto !important; position: initial !important; }
 bayaspirina.com.ar,actron.com.ar,restoralax.ca,aspirina-ca.com,rennie.com.ar,aerius.ca,flintstonesvitamins.ca,aleve.ca,hydrasense.ca,oneaday.ca,supradyn.com.ar,canesten.co.nz,bepanthol.cl,cardioaspirina.cl,aspirinetas.com.ar,bepanthene.com,aerius.net.au,empecid.com.ar,canesten.com.au,bepanthen.com.au,iberogast.com.au,clarityne.com.cn,nasonexallergy.com.au,claratyne.co.nz,bepanthen.co.nz,bezbryli.cz,bepanthen.ma,bepanthen.com.pe,bepanthen.com.sg,bepanthen.com.vn,bepanthen.com.ec,bepanthen.dz,losecextra.co.nz,antibiopro.com.vn#$#body,html { overflow: auto !important; position: initial !important; }
@@ -14328,7 +14319,6 @@ abi.de,studienwahl.de#%#//scriptlet('ubo-set-cookie.js', 'mrm_gdpr', '1')
 abi.de,studienwahl.de#%#//scriptlet('ubo-set-cookie.js', 'necessary_consent', 'accepted')
 noesis-corporation.com,nseguros.pt,oney.pt,noesis.pt,noesis.com.br,lusitania.pt#$#body,html { height: auto !important; overflow: auto !important }
 bachhaus.de,byseum.de,dreieich-museum.de,bronzezeit-bayern-museum.de,edvtage.de,fabrikmuseum-roth.de,floesser-lechbruck.de,freilandmuseum-fladungen.de,gasversorgung-biedenkopf.de,herkomer.de,hirtenmuseum.de,hotel-sonneck.com,imt-museum.de,isergebirgs-museum.de,jan-bouman-haus.de,kassel-recht.com,kasselwasser.de,kongress-palais.de,museen-schloss-aschach.de,museen-weissenburg.de,museum-am-dom.de,museum-der-hand.de,museum-hofmuehle.de,museum-landsberg.de,orgelbaumuseum.de,plassenburg.de,pro-mi-s.de,ralf-china.de,spielzeugmuseum-neustadt.de,spielzeugmuseum.net,stadtmuseum-amberg.de,stadtmuseum-kaufbeuren.de,stadtmuseum-neuburg.de,stadtwerke-weilburg.de,structogram.de,toepfermuseum-thurnau.de,trachtenkulturmuseum.de,vsninfo.de,zirkelmuseum.de,zvsn.de#$#body,html { overflow: auto !important; position: initial !important; }
-plesk.com,leankoala.com##.ch2
 plesk.com,leankoala.com#$#body { overflow: auto !important; position: initial !important; }
 dr-schweizer-schubert.com,siebenbuergisches-museum.de,eckstein-bandoneon.de,oh-heilbronn.de,boehringer.net,schule-mainhardt.de,museumsfreunde.org#$#body,html { overflow: auto !important; position: initial !important; }
 rynekzdrowia.pl,horecatrends.pl,portalspozywczy.pl,motofaktor.pl#$#body,html { overflow: auto !important; position: initial !important; }
@@ -15075,7 +15065,6 @@ androidpolice.com,cbr.com,collider.com,dualshockers.com,gamerant.com,makeuseof.c
 breitbart.com###bbd_incontent
 designtaxi.com###below-article
 politico.com###below-story-text > .story-enhancement
-esquireme.com,fedsmith.com###block-12
 askleo.com###block-13
 askleo.com###block-14
 askleo.com,musically.com###block-15
@@ -15178,6 +15167,7 @@ nerdist.com###pr-sidebar-subscribe
 trailspace.com###prefooter
 jpost.com###premium-link
 dentonrc.com,sfexaminer.com,wfmz.com###promo-designer-modal-custom-pop
+racketboy.com###rb-newsletter
 bankinfosecurity.com###section-newsletter-blk
 12tomatoes.com###sg_email
 clutchpoints.com###sib-form
@@ -15239,10 +15229,12 @@ newscientist.com##.SidebarNewsletterWrapper
 thefinancialdiet.com##.SplitCTA
 opensecrets.org##.StayConnected
 iotworldtoday.com##.SubscribeBanner
+itprotoday.com##.SubscribeBanner-Wrapper
 darkreading.com##.SubscribeBannerTopicPage-Content
 nordvpn.com##.SubscribeSection
 otcmarkets.com##.Subscribe__Subscribe___2hrcO
 naturalnews.com##.Subscription-Article-Box
+esrt.space,rt.com##.Subscription-isReact
 interestingengineering.com##.SubscriptionInlineForm_articleInlineVariant__dcdCo
 talkingpointsmemo.com##.SubstackWidget
 axios.com##.\!bg-blue-core
@@ -15313,7 +15305,6 @@ ctvnews.ca##.bm-footer__wrapper__subscribeButton
 ntd.com##.border-\[\#000777\]
 mashable.com##.border-secondary-300
 nysun.com##.border-sunGolden
-mashable.com##.border-warmgray-100
 themonthly.com.au##.border-years
 quillette.com##.border.bg-white.mb-4
 brighteon.com,cruxnow.com##.bottom-banner
@@ -15379,6 +15370,7 @@ geneticliteracyproject.org##.elementor-element-1922719
 geneticliteracyproject.org##.elementor-element-241f781c
 analyticsindiamag.com,gastgewerbe-magazin.de,houseandleisure.co.za,lalaskinessentials.com,parametric-architecture.com,redhuntlabs.com,swidget.com,techbomb.ca,tlv1.fm,whereyourebetween.com##.elementor-popup-modal
 washingtontimes.com##.email-alerts
+nzherald.co.nz##.email-boost
 thegatewaypundit.com##.email-list-subscribe
 rte.ie##.email-marketing-embed
 alexcityoutlook.com,crooksandliars.com,drewberquist.com,heartlandalliance.org,kentuckytoday.com,keysnews.com,ktbs.com,kulr8.com,lifezette.com,msmagazine.com,newsmirror.net,newsnow.co.uk,novaramedia.com,redvoicemedia.com,refinery29.com,trueachievements.com,truetrophies.com,urbanmilwaukee.com##.email-signup
@@ -15394,13 +15386,13 @@ factinate.com##.f-ssw
 factinate.com##.f-ssw-subscribe-hook
 edition.cnn.com##.factbox_inline-small
 fender.com##.fender-EmailSignup
-en.mercopress.com##.fixed-footer
 jorgegalindo.me##.flex-block-11
 evcars.club##.flex.mt-20.my-10
 gazoo.com##.floating-banner
 bikerumor.com,gearjunkie.com,soaphub.com##.flyout_newsletter_center
 cryptopolitan.com,izismile.com,techsupportalert.com##.followit--follow-form-container
 iai.tv##.footer--signup
+mediamatters.org##.footer--upper
 sneakernews.com##.footer-email-subscribe
 medicalxpress.com,paloaltonetworks.com,techxplore.com##.footer-form
 minitool.com##.footer-join-wrapper
@@ -15597,6 +15589,7 @@ neurosciencenews.com##.optinforms-form-container
 babylonbee.com##.overflow-hidden.bg-primary-orange
 bookforum.com,fairplanet.org,ny1.com,realclearpolitics.com,realclearscience.com,tubefilter.com##.overlay
 babylonbee.com,notthebee.com##.overscroll-contain
+foreignaffairs.com##.p-0.container-fluid > .mt-5
 levernews.com##.p-7.border-eerie-black
 tvseriesfinale.com##.p2-subscribe
 asiaresearchnews.com##.pane-mailchimp-signup-signup-to-our-emails
@@ -15628,8 +15621,6 @@ reuters.com##.regular-article-layout__newsletter__3wzPk
 triblive.com##.related
 axios.com##.right-rail-cta
 tweaktown.com##.right_subscribe
-religionnews.com##.rns-newsletter-embed-content
-religionnews.com##.rns-pop-up-wrapper
 urbandictionary.com##.rounded-md.md\:p-8.mb-4.dark\:text-white
 readwrite.com##.rw-subscribe-sec
 pymnts.com##.sailthru-nl-signup
@@ -15733,7 +15724,6 @@ jpl.nasa.gov##.text-center.bg-gray-light
 nymag.com,thecut.com##.text-form-wrapper
 cntraveller.com,them.us##.ticker-view
 moneysavingexpert.com##.tip-email-popup
-justthenews.com##.top-bar
 efinancialcareers-gulf.com##.top-news-letter-cta
 businesstech.co.za,mybroadband.co.za##.top-subscribe
 slaynews.com##.totalpoll-container
@@ -15776,7 +15766,6 @@ bikerumor.com,gearjunkie.com##.wp-block-ldm-blocks-call-to-action
 thewrap.com##.wp-block-newsletter-builder-signup-form
 observer.com##.wp-block-observer-newsletters
 pewresearch.org##.wp-block-prc-block-promo
-san.com##.wp-block-san-san-inarticle-newsletter-signup
 san.com##.wp-block-san-sidebar-cta__content
 techcrunch.com##.wp-block-tc23-newsletter-signup-compact
 minnpost.com##.wp-elements-6af074a2b773903132682d24a9a289ae
@@ -15806,7 +15795,6 @@ hackster.io##[class^="article_layout__signupCTA_"]
 tapinto.net##[class^="mobile_newsletter_"]
 technologyreview.com##[class^="stayConnected__wrapper-"]
 driving.ca##[data-aqa="widget-breaking-banner"]
-plantbasednews.org##[data-class="support-us__wrapper"]
 sundayworld.com##[data-mht-widget="signu-up-black-background"]
 foreignpolicy.com##[data-shortcode-newsletter]
 theguardian.com##[data-spacefinder-type="model.dotcomrendering.pageElements.NewsletterSignupBlockElement"]
@@ -15869,6 +15857,7 @@ brownstone.org,coincodecap.com,diarioelregionaldelzulia.com,homesteading.com,inn
 motor.com.co,thejakartapost.com,ultimominuto.news##.suscribe
 altreconomia.it,dezeen.com,discogs.com,sbs.com.au,soft112.com###newsletter-form
 edweek.org,francebleu.fr,telegraaf.nl##.NewsletterForm
+marieclaire.fr##.NewsletterBox
 dailynewshungary.com,designersbrasileiros.com.br,fosspost.org,justrunlah.com,michaelwest.com.au,osxdaily.com,roadiscalling.com,upinthesky.nl##.ml-subscribe-form
 6sqft.com,alhayat.tv,alquds.co.uk,augustman.com,brighteon.com,cgsociety.org,cityam.com,hagerty.co.uk,healthboards.com,lifestyleasia.com,livejournal.com,news.bg,noticiasmagazine.pt##.subscription
 fakartany.com,iai.tv,loopchicago.com,loopnet.com,nintendonews.com,tbn.org##.sign-up
@@ -15889,13 +15878,13 @@ browardpalmbeach.com,dallasobserver.com,miaminewtimes.com,phoenixnewtimes.com,we
 dagelijksestandaard.nl,egyptianstreets.com,evonomics.com,gimmesomeoven.com,investordaily.com.au,macrumors.com,reductress.com,reliefweb.int,theawesomer.com,themichiganstar.com,theminnesotasun.com,theohiostar.com,wweek.com###mc-embedded-subscribe-form
 agenziaimpress.it,alreporter.com,americanmilitarynews.com,appleinsider.com,benwajdi.com,bisnis.com,biznews.com,bowenislandundercurrent.com,burnabynow.com,businessinsider.mx,californiasunday.com,capitolhillseattle.com,caribjournal.com,chinafile.com,churchmilitant.com,cinainitalia.com,circuitdigest.com,cjr.org,convertingcolors.com,culturemap.com,current.org,dailyfreepress.com,dailytimes.com.pk,davidemaggio.it,delta-optimist.com,demokraatti.fi,dv.is,ebar.com,engineering.columbia.edu,exstreamist.com,firstpost.com,francescocosta.net,funcheap.com,gamereactor.dk,gamereactor.es,gamereactor.eu,gamereactor.fi,gamereactor.fr,gamereactor.no,gamereactor.se,ghafla.com,grapevine.is,howlermagazine.com,idropnews.com,ilfarosulmondo.it,ilprimatonazionale.it,indiaclimatedialogue.net,informagiovani-italia.com,iowapublicradio.org,kliknijwzdrowie.pl,kyivpost.com,lacapital.com.ar,lapatilla.com,lascimmiapensa.com,leoweekly.com,majorgeeks.com,meteonetwork.it,metrotime.be,mg.co.za,moked.it,money.it,national-justice.com,newsshooter.com,newzimbabwe.com,nextbigfuture.com,nsnews.com,ny1.com,onorient.com,pallacanestrotrieste.it,pcgamesn.com,pharmacyscanner.it,planetware.com,playstationbit.com,politifact.com,portlandmercury.com,prescouter.com,publinews.gt,punchng.com,resett.no,richmond-news.com,russia-insider.com,scoop.co.nz,sfpublicpress.org,techzilla.it,thedrinknation.com,thegrayzone.com,theloadout.com,thestandnews.com,thestar.com.my,thestranger.com,thethaiger.com,ticotimes.net,trancentral.tv,tricitynews.com,tvsvizzera.it,union-bulletin.com,volkskrant.nl,vvox.it,wayfm.com,winedharma.com,worldhistory.org,wpr.org###mc_embed_signup
 arabnews.com,castanet.net,onmeda.de,tribalfootball.com##.mc_embed_signup
-01net.it,2gb.com,4investors.de,aawsat.com,addictivetips.com,administradores.com.br,adventures.com,advisoronline.it,aeroporto.net,airliners.de,airqualitynews.com,aldianews.com,alexander-wallasch.de,algemeiner.com,antlionaudio.com,apracticalwedding.com,arab24.com,artnews.com,astrooroscopo.it,atimes.com,atlantadailyworld.com,atlatszo.hu,autoguide.com,automotive-fleet.com,basketinside.com,billboard.com,bintmusic.it,biometricupdate.com,bit.pt,bitmag.com.br,boardgameprices.co.uk,boerse-express.com,bolzano-bozen.it,bostonglobe.com,bostonmagazine.com,brindisisera.it,brooklynbased.com,businessfleet.com,capx.co,carpicalcionews.it,ccmagazine.es,cdt.ch,cheapies.nz,chicagodefender.com,chiesadimilano.it,cittaceleste.it,clevelandclinic.org,cmjornal.pt,cnn.com,coachmag.co.uk,completesportsnigeria.com,condominioweb.com,corsedimoto.com,crn.com,cronista.com,crypto.news,cuisineetvinsdefrance.com,cyberscoop.com,dazeddigital.com,delamar.de,denofgeek.com,deraktionaer.tv,diepresse.com,digiday.com,digitaleterrestrefacile.it,dirt.com,discoverymedia.com,dissipatio.it,dn.pt,dojacat.com,doktersvandewereld.org,dreambigtravelfarblog.com,edscoop.com,electronicsweekly.com,elmostrador.cl,enstarz.com,epicurious.com,essentialbaby.com.au,essentialkids.com.au,estadao.com.br,estrelando.com.br,etonline.com,euractiv.com,euractiv.de,eventfinda.co.nz,evz.ro,ezalenyeg.hu,familyhandyman.com,fandom.com,fantamagazine.com,fashionotes.com,fcinter1908.it,fdr.com.br,fedscoop.com,fleetfinancials.com,fliegermagazin.de,fmc.hu,focusardegna.com,forbesafrica.com,forzaroma.info,francetvinfo.fr,gazzamercato.it,giornaledibrescia.it,gizchina.com,gogedizioni.it,golssip.it,goodbye.be,goodfood.com.au,goodnet.org,goodrx.com,gooieneemlander.nl,government-fleet.com,greatbritishchefs.com,greenbot.com,haarlemsdagblad.nl,handdoekentoiletpapier.nl,hannity.com,hcb.net,hdwallpapers.in,healthday.com,hits973.com,hngn.com,hodinkee.com,hollywoodreporter.com,horse-canada.com,hottopics.ht,huffpost.com,i24news.tv,icij.org,ilgiorno.it,ilmilanista.it,ilposticipo.it,ilrestodelcarlino.it,ilsecoloxix.it,ilsussidiario.net,iltascabile.com,imasters.com.br,indypendent.org,infoq.com,investopedia.com,israeltoday.co.il,itasportpress.it,itechpost.com,jewishjournal.com,jfrog.com,jornaldebrasilia.com.br,jornaldenegocios.pt,jornaldocomercio.com,juvenews.eu,key4biz.it,kipparilehti.fi,kleinezeitung.at,kpfa.org,lanazione.it,lanutrition.fr,laopinion.com,laprensafl.com,laraza.com,lctmag.com,legab.it,leidschdagblad.nl,leitgamhof.com,lescienze.it,life.com,linkiesta.it,lintellettualedissidente.it,livability.com,longislandpress.com,lvh.it,madeinbz.info,maplin.co.uk,maritimejobs.com,massivesci.com,mcsweeneys.net,mediagol.it,meteolive.it,michiganchronicle.com,mlb.com,mmajunkie.usatoday.com,mondoudinese.it,moodiedavittreport.com,motorionline.com,multichannel.com,muscleandfitness.com,muslimnews.co.uk,nationalinterest.org,networkworld.com,newbeauty.com,newpittsburghcourier.com,newrepublic.com,news.jstor.org,newsdeeply.com,nieuwrechts.nl,nofilmschool.com,noordhollandsdagblad.nl,nooun.net,noticiasrcn.com,numericalcio.it,offresasaisir.fr,oilcity.news,out-law.com,ozbargain.com.au,padovasport.tv,paidcontent.org,paratimujer.us,participaties.nl,passioneinter.com,pbs.org,phonandroid.com,pianetagenoa1893.net,pianetamilan.it,piriform.com,pitchfork.com,pomade.com,portalinsights.com.br,prospectmagazine.co.uk,psfk.com,quickanddirtytips.com,quotidiano.net,rainbowplantlife.com,recombu.com,record.pt,redsharknews.com,revealnews.org,rivistacontrasti.it,rollingstone.com,sabado.pt,sangbadpratidin.in,sapo.pt,sassuolocalcionews.it,saucemagazine.com,schoolbusfleet.com,sciencemag.org,screencrush.com,servus.com,sfitalianheritage.org,sheknows.com,silicon.co.uk,silicon.de,silicon.es,slashfilm.com,sourcingjournal.com,speedcafe.com,sportavellino.it,sportico.com,spy.com,startpage.com,statescoop.com,superfly.fm,surfer.com,swz.it,syria.tv,taste.com.au,tasteofhome.com,tech.trivago.com,techbeat.com,tenniscircus.com,thawrah2day.com,the-decoder.com,the-decoder.de,the-star.co.ke,theblaze.com,thedp.com,thedrinknation.com,theepochtimes.com,theitaliantimes.it,themeshreport.com,thenevadaindependent.com,theodysseyonline.com,thetruthaboutcars.com,time.com,timeslive.co.za,timesofisrael.com,topdocumentaryfilms.com,toronews.net,torresette.news,toutelanutrition.com,transworld.net,travelweekly.com,trendy.letudiant.fr,truckinginfo.com,truthdig.com,tuasaude.com,tunisna.tv,tuttobolognaweb.it,tvquran.com,twice.com,twitchy.com,ukraine-nachrichten.de,undercurrentnews.com,usatoday.com,usopen.org,valori.it,variety.com,verdesmares.com.br,verportugal.net,vibe.com,violanews.com,voetbalnieuws.be,voltaaomundo.pt,voxeurop.eu,voydeviaje.com.ar,vtvgujarati.com,web3wire.news,wgnamerica.com,wikihow.com,wikitribune.com,wizworkwear.com,workscoop.com,worktruckonline.com,wwd.com,ziarulevenimentul.ro##.newsletter
+01net.it,2gb.com,4investors.de,aawsat.com,addictivetips.com,administradores.com.br,adventures.com,advisoronline.it,aeroporto.net,airliners.de,airqualitynews.com,aldianews.com,alexander-wallasch.de,algemeiner.com,antlionaudio.com,apracticalwedding.com,arab24.com,artnews.com,astrooroscopo.it,atimes.com,atlantadailyworld.com,atlatszo.hu,autoguide.com,automotive-fleet.com,basketinside.com,billboard.com,bintmusic.it,biometricupdate.com,bit.pt,bitmag.com.br,boardgameprices.co.uk,boerse-express.com,bolzano-bozen.it,bostonglobe.com,bostonmagazine.com,brindisisera.it,brooklynbased.com,businessfleet.com,capx.co,carpicalcionews.it,ccmagazine.es,cdt.ch,cheapies.nz,chicagodefender.com,chiesadimilano.it,cittaceleste.it,clevelandclinic.org,clubic.com,cmjornal.pt,cnn.com,coachmag.co.uk,completesportsnigeria.com,condominioweb.com,corsedimoto.com,crn.com,cronista.com,crypto.news,cuisineetvinsdefrance.com,cyberscoop.com,dazeddigital.com,delamar.de,denofgeek.com,deraktionaer.tv,diepresse.com,digiday.com,digitaleterrestrefacile.it,dirt.com,discoverymedia.com,dissipatio.it,dn.pt,dojacat.com,doktersvandewereld.org,dreambigtravelfarblog.com,edscoop.com,electronicsweekly.com,elmostrador.cl,enstarz.com,epicurious.com,essentialbaby.com.au,essentialkids.com.au,estadao.com.br,estrelando.com.br,etonline.com,euractiv.com,euractiv.de,eventfinda.co.nz,evz.ro,ezalenyeg.hu,familyhandyman.com,fandom.com,fantamagazine.com,fashionotes.com,fcinter1908.it,fdr.com.br,fedscoop.com,fleetfinancials.com,fliegermagazin.de,fmc.hu,focusardegna.com,forbesafrica.com,forzaroma.info,francetvinfo.fr,gazzamercato.it,giornaledibrescia.it,gizchina.com,gogedizioni.it,golssip.it,goodbye.be,goodfood.com.au,goodnet.org,goodrx.com,gooieneemlander.nl,government-fleet.com,greatbritishchefs.com,greenbot.com,haarlemsdagblad.nl,handdoekentoiletpapier.nl,hannity.com,hcb.net,hdwallpapers.in,healthday.com,hits973.com,hngn.com,hodinkee.com,hollywoodreporter.com,horse-canada.com,hottopics.ht,huffpost.com,i24news.tv,icij.org,ilgiorno.it,ilmilanista.it,ilposticipo.it,ilrestodelcarlino.it,ilsecoloxix.it,ilsussidiario.net,iltascabile.com,imasters.com.br,indypendent.org,infoq.com,investopedia.com,israeltoday.co.il,itasportpress.it,itechpost.com,jewishjournal.com,jfrog.com,jornaldebrasilia.com.br,jornaldenegocios.pt,jornaldocomercio.com,juvenews.eu,key4biz.it,kipparilehti.fi,kleinezeitung.at,kpfa.org,lanazione.it,lanutrition.fr,laopinion.com,laprensafl.com,laraza.com,lctmag.com,legab.it,leidschdagblad.nl,leitgamhof.com,lescienze.it,life.com,linkiesta.it,lintellettualedissidente.it,livability.com,longislandpress.com,lvh.it,madeinbz.info,maplin.co.uk,maritimejobs.com,massivesci.com,mcsweeneys.net,mediagol.it,meteolive.it,michiganchronicle.com,mlb.com,mmajunkie.usatoday.com,mondoudinese.it,moodiedavittreport.com,motorionline.com,multichannel.com,muscleandfitness.com,muslimnews.co.uk,nationalinterest.org,networkworld.com,newbeauty.com,newpittsburghcourier.com,newrepublic.com,news.jstor.org,newsdeeply.com,nieuwrechts.nl,nofilmschool.com,noordhollandsdagblad.nl,nooun.net,noticiasrcn.com,numericalcio.it,offresasaisir.fr,oilcity.news,out-law.com,ozbargain.com.au,padovasport.tv,paidcontent.org,paratimujer.us,participaties.nl,passioneinter.com,pbs.org,phonandroid.com,pianetagenoa1893.net,pianetamilan.it,piriform.com,pitchfork.com,pomade.com,portalinsights.com.br,prospectmagazine.co.uk,psfk.com,quickanddirtytips.com,quotidiano.net,rainbowplantlife.com,recombu.com,record.pt,redsharknews.com,revealnews.org,rivistacontrasti.it,rollingstone.com,sabado.pt,sangbadpratidin.in,sapo.pt,sassuolocalcionews.it,saucemagazine.com,schoolbusfleet.com,sciencemag.org,screencrush.com,servus.com,sfitalianheritage.org,sheknows.com,silicon.co.uk,silicon.de,silicon.es,slashfilm.com,sourcingjournal.com,speedcafe.com,sportavellino.it,sportico.com,spy.com,startpage.com,statescoop.com,superfly.fm,surfer.com,swz.it,syria.tv,taste.com.au,tasteofhome.com,tech.trivago.com,techbeat.com,tenniscircus.com,thawrah2day.com,the-decoder.com,the-decoder.de,the-star.co.ke,theblaze.com,thedp.com,thedrinknation.com,theepochtimes.com,theitaliantimes.it,themeshreport.com,thenevadaindependent.com,theodysseyonline.com,thetruthaboutcars.com,time.com,timeslive.co.za,timesofisrael.com,topdocumentaryfilms.com,toronews.net,torresette.news,toutelanutrition.com,transworld.net,travelweekly.com,trendy.letudiant.fr,truckinginfo.com,truthdig.com,tuasaude.com,tunisna.tv,tuttobolognaweb.it,tvquran.com,twice.com,twitchy.com,ukraine-nachrichten.de,undercurrentnews.com,usatoday.com,usopen.org,valori.it,variety.com,verdesmares.com.br,verportugal.net,vibe.com,violanews.com,voetbalnieuws.be,voltaaomundo.pt,voxeurop.eu,voydeviaje.com.ar,vtvgujarati.com,web3wire.news,wgnamerica.com,wikihow.com,wikitribune.com,wizworkwear.com,workscoop.com,worktruckonline.com,wwd.com,ziarulevenimentul.ro##.newsletter
 7digital.com,aawsat.com,acento.com.do,acpm.fr,alligator-sunglasses.com,atalanta.it,bloomberg.com,boldsky.com,cjr.org,codefresh.io,dailymaverick.co.za,deploy.equinix.com,download3k.com,drivespark.com,envol-vert.org,filmibeat.com,fundatiacaleavictoriei.ro,gainkit.com,gamblingitalia.com,gardeningaustralia.com.au,gizbot.com,heraldextra.com,hispantv.com,ilfattoalimentare.it,iol.pt,lacnews24.it,langenscheidt.com,largus.fr,leseclaireuses.com,lintellettualedissidente.it,malwarebytes.org,mattinonline.ch,mayoclinic.com,misya.info,modern-banking.at,modern-banking.de,monitorimmobiliare.it,movies.com,nativeplanet.com,ohmyrockness.com,oneindia.com,opendemocracy.net,pdfcoffee.com,penny-arcade.com,pewforum.org,producebluebook.com,publicradio.org,quantamagazine.org,radiospeaker.it,rivistastudio.com,salemnews.net,scottishrugby.org,silhouettedonna.it,soldioggi.it,sscnapoli.it,styleite.com,termometropolitico.com,termometropolitico.it,terranuova.it,thetruthaboutcars.com,thewalrus.ca,valgardena.it,vidaextra.com,wdcb.org###newsletter
 elcaribe.com.do,gaytimes.co.uk,momentarecovery.com,slate.fr,starlocalmedia.com,thedial.world##.newsletter-block
 fashionrepublicmagazine.com##.featherlight
 aeiou.pt,appfigures.com,blog.google,carwashpro.nl,challenges.fr,cined.com,cnnturk.com,dnevnik.bg,eff.org,foxnews.com,frandroid.com,infostart.hu,infrasite.nl,news247.gr,pitcherlist.com,rijschoolpro.nl,securityaffairs.com,spoorpro.nl,superdeluxeedition.com,tankpro.nl,taxipro.nl,thecanadianpressnews.ca,usmagazine.com,visualstudiomagazine.com,wayfairertravel.com,wsbtv.com,zelfrijdendvervoer.nl##.newsletter-form
 404media.co,a-z-animals.com,al-shabaka.org,alhurra.com,allocine.fr,android.gs,artscanvas.org,attn.com,bamargera.com,blackagendareport.com,boardingarea.com,briefly.co.za,broadwayworld.com,cheeserank.com,chicagomag.com,cityandstateny.com,coincodex.com,coinspeaker.com,cointelegraph.com,cybernews.com,dailyfeed.co.uk,damndelicious.net,defense.gov,defenseone.com,divascancook.com,doordash.engineering,downshiftology.com,ebayinkblog.com,electronicsweekly.com,foxnews.com,freshersworld.com,fromthegrapevine.com,gadgets360.com,gellerreport.com,gimmesomeoven.com,gotquestions.org,govexec.com,greece-is.com,greenbot.com,hpcwire.com,ilglobo.com.au,inc-aus.com,indaily.com.au,irishpost.com,jewishinsider.com,kristineskitchenblog.com,lafiamma.com.au,livewellbakeoften.com,messynessychic.com,miaminewtimes.com,mouser.com,mpr.org,mumbrella.com.au,mygaming.co.za,naij.com,naija.ng,nationalpost.com,ndtv.com,news.usc.edu,newsclick.in,newsmaxtv.com,newsthump.com,nextgov.com,notquitenigella.com,outerplaces.com,pando.com,pandodaily.com,parentherald.com,people.com,player.one,politicsweb.co.za,poundsterlinglive.com,professionearchitetto.it,rabble.ca,rbth.com,recipetineats.com,route-fifty.com,searchengineland.com,selenagomez.com,seroundtable.com,shopify.engineering,skiptomylou.org,smartcompany.com.au,space.com,spoonuniversity.com,statescoop.com,stream.org,svpino.com,techeye.net,ted.com,teenchatdecoder.com,theaircurrent.com,thechunkychef.com,thecookierookie.com,therichest.org,today.ucsd.edu,tourismupdate.co.za,tuko.co.ke,tv.com,twice.com,up.com,vagabomb.com,venezuelastar.com,viewfromthewing.com,wackymania.com,wccftech.com,windows7news.com##.subscribe
-greenbiz.com,iranwire.com,techtimes.com##.subscribe-block
+greenbiz.com,iranwire.com,proofpoint.com,techtimes.com##.subscribe-block
 androidauthority.com#?#div[class^="-_"] > form:-abp-contains(newsletters)
 cultofmac.com#?#.section > .wrapper:-abp-contains(Newsletters)
 merriam-webster.com##.footer-subscribe-block
@@ -16114,6 +16103,8 @@ iconduck.com#%#//scriptlet('ubo-set-cookie.js', 'client-mailingListModalShown', 
 shojiwax.com#%#//scriptlet('ubo-set-cookie.js', 'jetpack_post_subscribe_modal_dismissed', 'true')
 apotekfordeg.no#$#body { overflow: auto !important; position: initial !important; }
 spring.org.uk#$#body,html { overflow: auto !important; position: initial !important; }
+relieved.co,sweetandsavory.co,animalchannel.co,seeitlive.co,parentingisnteasy.co,spotlightstories.co,homehacks.co###email-modal-overlay
+relieved.co,sweetandsavory.co,animalchannel.co,seeitlive.co,parentingisnteasy.co,spotlightstories.co,homehacks.co###email-modal-container
 relieved.co,sweetandsavory.co,animalchannel.co,seeitlive.co,parentingisnteasy.co,spotlightstories.co,homehacks.co#$#body { overflow: auto !important; position: initial !important; }
 lilysilk.com#$#body { overflow: auto !important; position: initial !important; }
 dgmlive.com#$#body { overflow: auto !important; position: initial !important; }
@@ -16159,6 +16150,7 @@ croq-kilos.com##.ck-newsletter
 francetvinfo.fr##.content-banner-nl
 justgeek.fr##.cs-entry__subscribe
 doctissimo.fr##.doc-newsletter-banner-wrapper
+clubic.com##.gklQZJ
 pcastuces.com##.inscriptionmail
 lorientlejour.com##.newsletter-box-container
 lematin.ma##.newsletterPopupBtn
@@ -16230,7 +16222,6 @@ elespanol.com##.md-subscription
 ciperchile.cl##.mt-3
 depor.com##.navbar-nm__n
 elfinanciero.com.mx##.newsletter-subscription
-perfil.com##.pw-nl-su__container
 tycsports.com##.subs-box
 elgrafico.com,laprensagrafica.com##.suscribe
 tonica.la##.suscribevertical
@@ -17891,6 +17882,7 @@ nextdaycatering.co.uk,costautoricambi.com,digabrielericambi.it,pevgrow.com,pivo-
 bederhomes.ch,beterhomes.ch,betterhome.ch,betterhomes-international.com,betterhomes.at,betterhomes.ch,betterhoms.ch#$#html { overflow: auto !important; position: initial !important; }
 digitalo.de,smdv.de##.reveal__overlay
 digitalo.de,smdv.de#$#body,html { overflow: auto !important; position: initial !important; }
+replacebase.co.uk,obelink.de,obelink.es,obelink.it,obelink.at,obelink.fr,obelink.be,obelink.nl,houseofwatches.co.uk,cameraworld.co.uk,vitalpoint.cz,combat.pl,intersport.si,intersport.ba,intersport.me,intersport.hr,productosqp.com,alpinawein.de,hydroscand.co.za,hydroscand.dk,hydroscand.fr,navygreen-eshop.gr,drgoerg.com,bloomfashion.nl,artero.com,cd-lux.de,gutes-shop.de,elvezio.com,jeans-fritz.de,naturalpower.at,myrobotcenter.at,myrobotcenter.co.uk,myrobotcenter.de,intersport.rs,remarketed.com,wendoverart.com,alles-im-lackshop.de##.modals-wrapper
 replacebase.co.uk,obelink.de,obelink.es,obelink.it,obelink.at,obelink.fr,obelink.be,obelink.nl,houseofwatches.co.uk,cameraworld.co.uk,vitalpoint.cz,combat.pl,intersport.si,intersport.ba,intersport.me,intersport.hr,productosqp.com,alpinawein.de,hydroscand.co.za,hydroscand.dk,hydroscand.fr,navygreen-eshop.gr,drgoerg.com,bloomfashion.nl,artero.com,cd-lux.de,gutes-shop.de,elvezio.com,jeans-fritz.de,naturalpower.at,myrobotcenter.at,myrobotcenter.co.uk,myrobotcenter.de,intersport.rs,remarketed.com,wendoverart.com,alles-im-lackshop.de#$#body { overflow: auto !important; position: initial !important; }
 shop.blautel.com,hobbysaliplant.com,trcfrant.ru,artesaniasmontejo.com,fadenkreuz-shop.de,partycenter.ro,viduca.com,bioitalia.it,elrobleperfumado.com,sokalapesca.com,paraetpharmacie.com,protec-sai.es,shop-univer.de,outletbodegas.com,atelierstore.fr,zootecniasl.com,recail.es,ieftin-da-bun.ro,voltabaterias.com,fuzeau.com,pointblankmusicschool.com,acino.co.za,acino.swiss,pharmaciefontvieille.com,werkenmetmerken.nl,werkenmetmerken.be,marleyplumbinganddrainage.com,hungariasport.com,centroculturalmva.es,farajan.es,consorciorsumalaga.com,costadelsolmalaga.org,iznate.es,villanuevadelaconcepcion.es,parauta.es,sedella.es,teba.es,cartama.es,alozaina.es,elburgo.es,ojen.es,humilladero.es,benamocarra.es,cuevasdesanmarcos.es,alpandeire.es,cortesdelafrontera.es,benarraba.es,jimeradelibar.es,almargen.es,archez.es,benadalid.es,salares.es,totalan.es,pujerra.es,periana.es,ardales.es,birdingmalaga.es,carratraca.es,gaucin.es,algatocin.es,mollina.es,alfarnatejo.es,montecorto.es,alfarnate.es,valledeabdalajis.es,fuentedepiedra.es,almogia.es,jubrique.es,canillasdeaceituno.es,benalauria.es,elborge.es,riogordo.es,comares.es,cuevasbajas.es,villanuevadetapia.es,benamargosa.es,lavinuela.es,benahavis.es,gransendademalaga.es,monda.es,malagaviva.org,genalguacil.es,omau-malaga.com,atajate.es,villanuevadeltrabuco.es,campillos.es,cartajima.es,tolox.es,colmenar.es,serrato.es,sierradeyeguas.es,casabermeja.es,sendalitoral.es,juzcar.es,arriate.es,archidona.es,cutar.es,alameda.es,lavinuela.es,foxtons.co.uk,alexanderhall.co.uk,e-sigaret.ee,wuestenrot.at,faberkabel.de,sabinastore.com#$#body,html { overflow: auto !important; position: initial !important; }
 mypalmshop.de,dcshoes.it,atticabank.gr,intersport.hu,mironet.cz,learnattack.de,campingcabodegata.com,campingred.es,campingriojerte.com,campingurbasa.com,campingboltana.com,campingcuenca.com,campingelastral.es,campingfuentescarrionas.com,campingelmolino.com,campingcastillo.com,campingcabodegata.es,lascorralizas.com,campingetxarri.com,campingdeharo.com,lagoresort.com,enracha.es,sgim.org,montkov.cz,birkenstock.com,piscine-champerret.fr,piscine-godard.fr,citeaquademie.fr,billetterie.elysee-montmartre.com,couzeo.fr,piscine-estrees.fr,espontoise.fr,complexe-citelium.fr,ca-laloue.fr,billetterie.stadetoulousain.fr,billetterie.stade.fr,duo-caudry.fr,lavague-plainevallee.fr,piscine-berlioux.fr,wetixpro.com,billetterie-bopb.fr,piscine-baker.fr,casinodeparis.fr,letrianon.fr,dragons-billetterie.com,aquazergues.fr,lo-obernai.fr,fcgticket.com,sceneo-capso.fr,helicea-cab.fr,billetterie-ffhandball.fr##.ui-widget-overlay
@@ -17907,6 +17899,7 @@ anacondastores.com#$#body,html { height: auto !important; overflow: auto !import
 drimsim.com#%#//scriptlet('ubo-rc.js', 'remodal-bg', '', 'stay')
 drimsim.com#$#body,html { overflow: auto !important; }
 store.godox.eu#$#body { overflow: auto !important; position: initial !important; }
+vevovo.be,vendezvotrevoiture.be,wirkaufendeinauto.at,vikoberallebiler.dk,wijkopenautos.nl,vikoperdinbil.se,noicompriamoauto.it,vendezvotrevoiture.fr,compramostucoche.es,wijkopenautos.be##.modal-root
 vevovo.be,vendezvotrevoiture.be,wirkaufendeinauto.at,vikoberallebiler.dk,wijkopenautos.nl,vikoperdinbil.se,noicompriamoauto.it,vendezvotrevoiture.fr,compramostucoche.es,wijkopenautos.be#$#body,html { overflow: auto !important; position: initial !important; }
 trkcancer.com,cteph.jp,kadinsagligitv.com,adempas.jp,berlis.ch,xarelto.ch,birthcontrol101.com,eylea.ch,gyndoc.ch,secuidadoutor.com.br,mybodymyway.com.au,endometriose-info.ch,your-life.hk,colaborator.jp,g4atokyo.jp,aspirinprotect.co.kr,ckdandt2d.com,your-life-sa.com,hoyelijo.com.ar,nubeqa.ch,loveeyesight.hk,aimhigher8.ca#$#body,html { overflow: auto !important; position: initial !important; }
 bayaspirina.com.ar,actron.com.ar,restoralax.ca,aspirina-ca.com,rennie.com.ar,aerius.ca,flintstonesvitamins.ca,aleve.ca,hydrasense.ca,oneaday.ca,supradyn.com.ar,canesten.co.nz,bepanthol.cl,cardioaspirina.cl,aspirinetas.com.ar,bepanthene.com,aerius.net.au,empecid.com.ar,canesten.com.au,bepanthen.com.au,iberogast.com.au,clarityne.com.cn,nasonexallergy.com.au,claratyne.co.nz,bepanthen.co.nz,bezbryli.cz,bepanthen.ma,bepanthen.com.pe,bepanthen.com.sg,bepanthen.com.vn,bepanthen.com.ec,bepanthen.dz,losecextra.co.nz,antibiopro.com.vn#$#body,html { overflow: auto !important; position: initial !important; }
@@ -17956,7 +17949,6 @@ abi.de,studienwahl.de#%#//scriptlet('ubo-set-cookie.js', 'mrm_gdpr', '1')
 abi.de,studienwahl.de#%#//scriptlet('ubo-set-cookie.js', 'necessary_consent', 'accepted')
 noesis-corporation.com,nseguros.pt,oney.pt,noesis.pt,noesis.com.br,lusitania.pt#$#body,html { height: auto !important; overflow: auto !important }
 bachhaus.de,byseum.de,dreieich-museum.de,bronzezeit-bayern-museum.de,edvtage.de,fabrikmuseum-roth.de,floesser-lechbruck.de,freilandmuseum-fladungen.de,gasversorgung-biedenkopf.de,herkomer.de,hirtenmuseum.de,hotel-sonneck.com,imt-museum.de,isergebirgs-museum.de,jan-bouman-haus.de,kassel-recht.com,kasselwasser.de,kongress-palais.de,museen-schloss-aschach.de,museen-weissenburg.de,museum-am-dom.de,museum-der-hand.de,museum-hofmuehle.de,museum-landsberg.de,orgelbaumuseum.de,plassenburg.de,pro-mi-s.de,ralf-china.de,spielzeugmuseum-neustadt.de,spielzeugmuseum.net,stadtmuseum-amberg.de,stadtmuseum-kaufbeuren.de,stadtmuseum-neuburg.de,stadtwerke-weilburg.de,structogram.de,toepfermuseum-thurnau.de,trachtenkulturmuseum.de,vsninfo.de,zirkelmuseum.de,zvsn.de#$#body,html { overflow: auto !important; position: initial !important; }
-plesk.com,leankoala.com##.ch2
 plesk.com,leankoala.com#$#body { overflow: auto !important; position: initial !important; }
 dr-schweizer-schubert.com,siebenbuergisches-museum.de,eckstein-bandoneon.de,oh-heilbronn.de,boehringer.net,schule-mainhardt.de,museumsfreunde.org#$#body,html { overflow: auto !important; position: initial !important; }
 rynekzdrowia.pl,horecatrends.pl,portalspozywczy.pl,motofaktor.pl#$#body,html { overflow: auto !important; position: initial !important; }
@@ -18910,6 +18902,8 @@ iconduck.com#%#//scriptlet('ubo-set-cookie.js', 'client-mailingListModalShown', 
 shojiwax.com#%#//scriptlet('ubo-set-cookie.js', 'jetpack_post_subscribe_modal_dismissed', 'true')
 apotekfordeg.no#$#body { overflow: auto !important; position: initial !important; }
 spring.org.uk#$#body,html { overflow: auto !important; position: initial !important; }
+relieved.co,sweetandsavory.co,animalchannel.co,seeitlive.co,parentingisnteasy.co,spotlightstories.co,homehacks.co###email-modal-overlay
+relieved.co,sweetandsavory.co,animalchannel.co,seeitlive.co,parentingisnteasy.co,spotlightstories.co,homehacks.co###email-modal-container
 relieved.co,sweetandsavory.co,animalchannel.co,seeitlive.co,parentingisnteasy.co,spotlightstories.co,homehacks.co#$#body { overflow: auto !important; position: initial !important; }
 lilysilk.com#$#body { overflow: auto !important; position: initial !important; }
 dgmlive.com#$#body { overflow: auto !important; position: initial !important; }
@@ -19058,7 +19052,6 @@ sncf-connect.com###block-patchonboardinginvictus
 comment-economiser.fr###goup
 boursier.com###infos-boursier_panel
 comment-economiser.fr###simplemodal-container
-electromenager-compare.com,homecine-compare.com,lcd-compare.com##.bar-thin
 automobile-magazine.fr##.bloc-nl
 lemondeinformatique.fr##.bloc-promo-nl
 lemondeinformatique.fr##.bloc.advice
@@ -19139,9 +19132,11 @@ informazionefiscale.it##.top-page
 davinotti.com##.top-scroll
 internazionale.it##.top_arrow_footer
 lagazzettadelmezzogiorno.it##.top_sali
+||superguidatv.it^*/head-tgCom.
 oh-my-teeth.com###cta-sticky-banner
 comnico.jp###hs-web-interactives-bottom-anchor
 suumo.jp###js-pageTop
+nyanpedia.com###melmaga-popup
 kotobank.jp###myPaymentModal
 280blocker.net,biglobe.ne.jp###page-top
 tabelog.com###page-up
@@ -19226,7 +19221,6 @@ streamkiste.tv##.sb
 teltarif.de##.sbm
 orf.at##.share-dialog
 89.0rtl.de##.share__block__wrapper
-mindfactory.de##.sliderbar
 derfinanzinvestor.de,esg-aktien.de,inv3st.de,kapitalerhoehungen.de##.smIconsWrap
 goldinvest.de##.social-block
 presseportal.de##.story-sharing
@@ -19310,7 +19304,6 @@ iolecal.it###whatsapp
 focusjunior.it##.SATover
 consigli.it##.a2a_kit
 skuola.net##.actions
-raiplaysound.it##.banner-buttons
 consigli.it##.box-canale-telegram
 calciomercato.com##.cm-share
 consigli.it##.company-social
@@ -19405,10 +19398,10 @@ aventurasnahistoria.uol.com.br##.d-flex.col-12.col-sm-4.align-items-end.justify-
 poder360.com.br##.fixed-list
 canaltech.com.br##.flex.h-14.w-full.items-center.justify-center.gap-4.rounded.bg-\[\#25D366\].px-4
 steamverde.net##.focus-social
-metroworldnews.com.br##.follow-us-wrap
 noticiasaominuto.com##.footer-info-social
 aventurasnahistoria.uol.com.br##.header-block-right.d-block.my-auto.ml-auto.ml-md-0
 tviplayer.iol.pt##.icon-share
+rr.sapo.pt##.ink-button-share
 jota.info##.jota-actions
 jota.info##.jota-article__share
 uol.com.br##.jupiter-share
@@ -19442,7 +19435,6 @@ sapo.pt##.wp-block-newsplex-social-share
 r7.com##[class*="article-fill-social-"]
 infomoney.com.br##[data-ds-element^="social-Links-"]
 infomoney.com.br##[data-ds-element^="social-share-"]
-||aventurasnahistoria.uol.com.br/static/socialmedia/
 newsweek.ro##.icons
 inforesist.org###push_notificationBlock
 sibnet.ru###telegram_push
@@ -19490,13 +19482,11 @@ eltiempo.com##.c-subheader__social
 adnradio.cl,cadenaser.com,caracol.com.co,wradio.com.co##.cnt-interaccion
 adslzone.net##.comments-social-share
 ecologiaverde.com,el9nou.cat,elsaltodiario.com,lanacion.com.ar,laverdad.com,psicologia-online.com,qmusica.tv,revistafamilia.ec##.compartir
-portafolio.co##.container__boton-whatsapp
 caustica.co,futbolred.com,portafolio.co##.container__btngoogle
 elcolombiano.com##.contenedor-google-noticias
 neomotor.epe.es##.detail_rrss
 rpdrlatino.com##.dt_social_single
 a24.com,perfil.com##.footer-redes
-portafolio.co##.footer__redes
 sport.es##.ft-mol-rrss
 elperiodico.com,sport.es##.ft-mol-rrss-column
 ecuavisa.com##.google-news
@@ -19555,7 +19545,7 @@ swissquote.ch###consent-form-root
 beckmann-kg.de,kraemer.de###consentLayer
 brf.be###cookieDashboard
 westend61.de###cookie_Modal
-speisekarte24.de###dasu
+backstagepro.de###cookiescript_injected_wrapper
 squale.ch###divcookiepolicy
 apotal.de###footer
 pokewiki.de###gl-topbar-bg
@@ -19689,6 +19679,7 @@ telekom.hu##.sze2020-container
 dinamalar.com##.quickslide
 ubuntu-it.org###\5f ubuntu-it_cookie_policy
 indire.it###bannerContent
+cosedicasa.com###blur-bg
 prezzoforte.it###bottombar
 aldi.it###c-modal
 infojobs.it###cmpContainer
@@ -19732,7 +19723,6 @@ aio.lv##.popup-message
 telenor.no###global-overlay-background
 eiendomsmegler1.no,sparebank1.no###opt-in
 ruter.no##.fixed-messages
-oslosportslager.no##.footerCurtainCookie
 nrk.no##.nrk-masthead__info-banner
 norsk-tipping.no##div[data-test="cookie-toaster"]
 film.wp.pl,money.pl,pudelek.pl,sportowefakty.wp.pl,wiadomosci.wp.pl###WP-cookie-info
@@ -19760,7 +19750,6 @@ ksiegaimion.com##.eucl
 pepper.pl##.messages
 hardware24.pl##.modalRODO
 bilkom.pl##.policy
-konsbud-hifi.com.pl##.sticky-footer
 ktomalek.pl##.ui-dialog[aria-describedby="cookies"]
 ktomalek.pl##.ui-dialog[aria-describedby="cookies"] ~ .ui-widget-overlay
 optyczne.pl##.w3-modal
@@ -19781,7 +19770,6 @@ escavador.com##.c-popup-consentimento
 sescsp.org.br##.container-policy
 asae.gov.pt,valecred.com.br##.cookiesModal
 buson.com.br##.gv-cookie-lgpd-alert-container
-chrysler.com.br,citroen.com.br,dodge.com.br,fiat.com.br,jeep.com.br,ram.com.br##.hub-info-bar-component
 honda.com.br##.info-notification
 jcconcursos.com.br##.jc-lgpd-consent
 rede-expressos.pt##.jss4
@@ -19819,7 +19807,6 @@ startsmile.ru###access_cookie
 1000.menu###cookiescript_injected_wrapper
 upread.ru###kuk
 volnamobile.ru###message-block-cookie
-alfazdrav.ru###modalcookie
 stentex.ru###overlay
 rosbank.ru###personal-data-processing
 antiplagiat.ru###policyConfirmation
@@ -19831,6 +19818,8 @@ novayagazeta.eu##.Je58f
 etm.ru##.MuiAlert-standardSuccess
 citilink.ru##.PersonalDataConfirm
 hoff.ru##.Toastify__toast-container
+detmir.ru##.X
+alfadirect.ru##._2QU59
 2gis.ru,2gis.uz##._nlniiu
 culture.ru##.afWIX
 holodilnik.ru##.alert-compliance
@@ -19936,7 +19925,6 @@ sport.ua###policy-accept
 m.censor.net###usage-notice-message
 i.ua##.Disclaimer
 meest.shopping##.df__cookie-popup
-forklog.com,forklog.com.ua##.terms_popup
 olx.ua##div[data-testid="cookies-overlay__container"]
 rajabacklink.com###idpop_cookie
 ||amazonaws.com/website/js/tagcommander/$domain=cosmosdirekt.de
@@ -20599,6 +20587,7 @@ concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.b
 @@||www.digikey.*/cookie-notice.css$stylesheet,~third-party
 @@||ziffstatic.com^*/zdconsent.js$domain=allestoringen.be|allestoringen.nl|downdetector.ae|downdetector.ca|downdetector.cl|downdetector.co.nz|downdetector.co.uk|downdetector.co.za|downdetector.com|downdetector.com.ar|downdetector.com.au|downdetector.com.br|downdetector.com.co|downdetector.cz|downdetector.dk|downdetector.ec|downdetector.es|downdetector.fi|downdetector.fr|downdetector.gr|downdetector.hk|downdetector.hr|downdetector.hu|downdetector.id|downdetector.ie|downdetector.in|downdetector.it|downdetector.jp|downdetector.mx|downdetector.my|downdetector.no|downdetector.pe|downdetector.ph|downdetector.pk|downdetector.pl|downdetector.pt|downdetector.ro|downdetector.ru|downdetector.se|downdetector.sg|downdetector.sk|downdetector.tw|downdetector.web.tr|humblebundle.com|ign.com|xn--allestrungen-9ib.at|xn--allestrungen-9ib.ch|xn--allestrungen-9ib.de
 @@||inflight.pacwisp.net^
+@@||areaclienti.generali.it/AreaClienti/plugins/
 @@||cdn.transcend.io/cm/$script,domain=outlier.org|pluralsight.com|visible.com
 @@||ciaopeople.it^*/gdpr.min.js$script,domain=cookist.com|cookist.it|fanpage.it|geopop.it|ohga.it
 @@||cloudflare.com^*/cookieconsent.min.js$domain=bab.la|firkloveren.no|satkurier.pl
@@ -20644,7 +20633,6 @@ concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.b
 @@||player.fm^*/social-icons/$image
 @@||s7.addthis.com^*/addthis_widget.js$domain=mediamatters.org|politico.com
 @@||sharethis.com/button/buttons.js$domain=bristan.com
-@@||softicons.com/download/$image
 @@||svgrepo.com/show/$image,~third-party
 @@||toneden.io/production/javascripts/social.js$script,~third-party
 @@||wettercomassets.com/wcomv5/images/footer/$domain=wetter.com

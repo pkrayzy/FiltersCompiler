@@ -1,5 +1,5 @@
-! Checksum: uyVb44nQEbUWRP0CIq7NCA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1720674310-14400.patch
+! Checksum: Txacm70gLi/QoKMOWCo1LA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1720760717-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.59
@@ -928,6 +928,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 !+ NOT_PLATFORM(windows, mac, android)
 ||167.71.252.38^$all
 ||howtofix.guide^$document
+||accompanycollapse.com^$all
 ||advancedhosters.com^$all
 ||feelsjet.com^$all
 ||stretchedcreepy.com^$all
@@ -1246,7 +1247,6 @@ www.google.*##.isv-r:has(a[href*=".aspx?cname="])
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##[class*=facebookShare i]:not(html,body,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##[class*=fb-share]:not(html,body,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##[class*=share-facebook]:not(html,body,:empty)
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[data-share$=Facebook i]
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[data-sharer=facebook]
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/feed"]
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/send?"]
@@ -1836,6 +1836,7 @@ $removeparam=ns_mchannel
 $removeparam=ns_source
 $removeparam=ns_campaign
 $removeparam=ns_linkname
+$removeparam=ns_fee
 $removeparam=zanpid
 $removeparam=wgu
 $removeparam=wgexpiry
@@ -2104,6 +2105,7 @@ $removeparam=i_cid
 $removeparam=waad
 $removeparam=_gac
 $removeparam=af_medium
+$removeparam=af_campaign
 $removeparam=ko_click_id
 $removeparam=mr:device
 $removeparam=mr:adType
@@ -2145,7 +2147,6 @@ $removeparam=tj,domain=baidu.com|sina.com.cn
 $removeparam=tagtag_uid
 $removeparam=affiliateCode
 $removeparam=affcode
-$document,removeparam=/^source=admitad$/
 $removeparam=ref_lp
 $removeparam=cx_testId
 $removeparam=cx_testVariant
@@ -2424,7 +2425,6 @@ $removeparam=settings_tracking
 $~xmlhttprequest,removeparam=/^refsrc=.*$/i
 $removeparam=_rdr
 $document,removeparam=_ft_
-$removeparam=m_entstream_source
 $removeparam=referral_code,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com
 $removeparam=referral_story_type,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com
 $removeparam=_nc_cat,domain=~instagram.com
@@ -2503,6 +2503,7 @@ $removeparam=share_link_id
 $removeparam=si,document,domain=open.spotify.com|soundcloud.com|zappos.com
 $removeparam=gtm
 $removeparam=referral,domain=tv2.no|spotify.com|yubo.live
+||open.spotify.com^$removeparam=uid
 ||aliexpress.*/item/$removeparam=pvid
 ||aliexpress.$removeparam=_t
 ||aliexpress.$removeparam=gps-id
@@ -2556,6 +2557,7 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=sa
 ||baidu.com^$removeparam=params_ssrt
 ||baidu.com^$removeparam=t_kt
+||m.baidu.com^$removeparam=from
 ||baidu.com^$removeparam=vit
 ||baidu.com^$removeparam=lm
 ||baidu.com^$removeparam=od
@@ -2581,6 +2583,7 @@ $removeparam=aff_click_id
 ||map.baidu.com^$removeparam=pcevaname
 ||map.baidu.com^$removeparam=ugc_type
 ||map.baidu.com^$removeparam=ugc_ver
+||wenku.baidu.com^$removeparam=rec_flag
 ||baidu.com^$removeparam=hl_tag
 ||zhidao.baidu.com^$removeparam=qbl
 ||baike.baidu.com^$removeparam=lemmaFrom
@@ -2644,7 +2647,6 @@ wenku.baidu.com#%#//scriptlet('ubo-set.js', 'history.replaceState', 'noopFunc')
 ||iqiyi.com^$removeparam=r_area
 ||iqiyi.com^$removeparam=r_source
 ||iqiyi.com^$removeparam=stype
-||iqiyi.com^$removeparam=s_source
 ||iqiyi.com^$removeparam=source
 ||help.iqiyi.com^$removeparam=entry
 ||sogou.com^$removeparam=_asf
@@ -2771,7 +2773,6 @@ $removeparam=soc_trk
 $removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com|media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|dermstore.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|hawaiianairlines.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com|media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|bhphotovideo.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
-$removeparam=acid,domain=lenovo.com
 $removeparam=aid,domain=adguard-dns.com|adguard-vpn.com|adguard.com|brownells.*|cafago.com|get.protonmail.com|get.protonvpn.com|tomtop.com|viator.com|wevpn.com
 $removeparam=camp,domain=amazon.*|calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com|bestbuy.com
@@ -2782,6 +2783,7 @@ $document,removeparam=/^siteid=.*$/i,domain=agentprovocateur.com|amerimark.com|a
 ||kohls.com^$removeparam=pfm
 ||kohls.com^$removeparam=prdPV
 ||kochava.com^$removeparam=network_id
+||kochava.com^$removeparam=device_id
 ||skyscanner.$removeparam=redirectedFrom
 ||skyscanner.$removeparam=previousCultureSource
 ||shopbop.com^$removeparam=extid
@@ -2930,7 +2932,6 @@ $removeparam=xcreo
 ||skimresources.com^$removeparam=xed
 $removeparam=rffrid
 $removeparam=ad_name
-$removeparam=rcode,domain=kucoin.com
 ||deezer.com^$removeparam=deferredFl
 $removeparam=pr_prod_strat
 $removeparam=pr_rec_id
@@ -3045,7 +3046,6 @@ $removeparam=is,domain=nextdoor.com
 $removeparam=mar,domain=nextdoor.com
 ||dzen.ru^$removeparam=yredirect
 ||youtube.com^$removeparam=source_ve_path
-^ref=hackernoon.com^$removeparam=ref
 ||notion.so^$removeparam=gspk
 ||notion.so^$removeparam=gsxid
 ||notion.so^$removeparam=pscd
@@ -3085,7 +3085,6 @@ $removeparam=embeds_referring_euri
 ||open.substack.com^$removeparam=r,document
 ||businessinsider.com^$document,removeparam=r
 ||businessinsider.com^$removeparam=op,document
-ref=spreadprivacy.com$removeparam=ref
 $removeparam=checkout_entry_point,document,domain=theathletic.com|nytimes.com
 $removeparam=ref_page,document,domain=theathletic.com|nytimes.com
 $removeparam=login_source,document,domain=theathletic.com|nytimes.com
@@ -3231,6 +3230,7 @@ fandom.com,wikia.org#$?#a:link { cursor: pointer !important }
 cursor_hover.$image
 ||nocookie.net/*_cursor_*.png^
 ||nocookie.net/*cursor.png^
+_Cursor1.png^
 tumblr.com#$#.custom-cursor { cursor: unset !important }
 tumblr.com#$#.custom-cursor a { cursor: pointer !important }
 tumblr.com,strategix.dk#$#body { cursor: unset !important }
