@@ -1,9 +1,9 @@
-! Checksum: RUTBoLDDmOUYJ6jTg1GxHw
-! Diff-Path: ../patches/14/14-s-1720787888-3600.patch
+! Checksum: bB9LKfEdlvHN3ojLsx/yzw
+! Diff-Path: ../patches/14/14-s-1720791403-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.1.99
-! TimeUpdated: 2024-07-12T12:34:08+00:00
+! Version: 2.2.2.0
+! TimeUpdated: 2024-07-12T13:33:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2445,6 +2445,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+suppi.pl#%#//scriptlet('trusted-set-cookie', 'suppi_privacy_consents', '{}')
 pixiv.net##div[data-theme] > div > span:has(> div > div > p > span + a[href^="https://policies.pixiv.net/"])
 ||dealabs.com/assets/*/CookiesMessage
 aranypiac.hu#%#//scriptlet('trusted-click-element', 'button.cookie-alert__btn-set', '', '1500')
@@ -12219,7 +12220,7 @@ rtl.fr##.cnil-banner-v2
 go.cnn.com##.cnn-toasts > li[ng-repeat="toast in toasts track by $index"]
 carrefourjordan.com##.comp-cookie_banner
 dallasobserver.com,westword.com,miaminewtimes.com##.compliance
-mathmammoth.com,cuic.eu,dateks.lv,gezondheidsplein.nl,cetin.cz,softorino.com,aatreeshop.de,speicherguide.de,fotav.hu,dayz.xam.nu,figyelo.hu,ibs-b.hu##.consent
+tempmail.zone,mathmammoth.com,cuic.eu,dateks.lv,gezondheidsplein.nl,cetin.cz,softorino.com,aatreeshop.de,speicherguide.de,fotav.hu,dayz.xam.nu,figyelo.hu,ibs-b.hu##.consent
 sportskeeda.com##.consent-pop-up
 perspective-daily.de##.consent_cookies
 lapeyre.fr##.consentement_cookie
@@ -31837,6 +31838,8 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+abplive.com##.join-channels
+dp.ru##app-article-social-discussion
 news24.com##.newsletter-subscription:has(> a[href^="https://www.news24.com/individualnewsletter/signup/"])
 myfanserials.net##.novelty-banner
 gastronom.ru##aside > div[class*="wrapper"]:has(> div[class*="root"] > div > div[class*="form"] > label[placeholder="Ваш e-mail"])
@@ -49366,6 +49369,8 @@ eiga.com##.header-pure-banner
 !##############################
 ! SECTION: Tweaks - CSS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182950
+abplive.com#%#//scriptlet('trusted-click-element', '#read-full-article')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183012
 beautifulfashionnailart.com,crewbase.net,batmanfactor.com#%#//scriptlet('remove-attr', 'disabled', 'button')
 beautifulfashionnailart.com,crewbase.net,batmanfactor.com#$#.text-center > div[id][style^="display:"] { display: block !important; }
@@ -53978,7 +53983,7 @@ miningclub.info#?#.p-body-sidebar > div.block:has(> div.block-container > h3.blo
 !
 !   NOTE: Weather widgets
 !
-irliepaja.lv##.weather-widget
+abplive.com,irliepaja.lv##.weather-widget
 syzran-small.ru##.pogoda
 ||money.hu/assets-new/js/calculator-widget-init.js
 mind.ua##.block_archive
