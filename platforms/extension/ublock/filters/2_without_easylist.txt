@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: f2Cwu1UZMrLuUs8kvr+0ag
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720784217-3600.patch
+! Checksum: JH/eOB9Xs0L37V+K/7XWoA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720787898-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.43.69
-! TimeUpdated: 2024-07-12T11:31:31+00:00
+! Version: 2.3.43.70
+! TimeUpdated: 2024-07-12T12:31:39+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,7 @@
 !
 !
 !
+||equipmentapes.com^
 ||vg876yuj.click^$all
 ||lmj8i.pro^$all
 ||ytru4.pro^$all
@@ -7502,8 +7503,11 @@ freeminecrafthost.com#@#.AdsBox
 newbharatyojna.com###adb
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180610
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183082
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=crazygames.com|shellshock.io
-@@||api.adinplay.com/libs/aiptag/*/tag.min.js$domain=crazygames.com|shellshock.io
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=crazygames.com|shellshock.io|minijuegos.com
+@@||api.adinplay.com/libs/aiptag/*/tag.min.js$domain=crazygames.com|shellshock.io|minijuegos.com
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=crazygames.com|shellshock.io|minijuegos.com
+crazygames.com,shellshock.io,minijuegos.com##+js(set-constant, COMPCHWBUBBLE, {})
+crazygames.com,shellshock.io,minijuegos.com##.chw-progress-bar-wrap
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180503
 4khd.com##.popup
 4khd.com##+js(no-xhr-if, magsrv.com)
@@ -11126,10 +11130,13 @@ cdkm.com##+js(set-constant, google_jobrunner, noopFunc)
 @@||smartnator.com/assets/js/prebid-ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93416
 cryptofans.news##+js(no-setTimeout-if, swal)
+! https://github.com/AdguardTeam/AdguardFilters/issues/183483
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166834
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158258
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94208
-hentaihaven.xxx##+js(no-fetch-if, ads-twitter.com)
+! Rule $referrerpolicy is required for apps, becasue source of ima3.js is not detected and due to this it's not redirected
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=hentaihaven.xxx
+hentaihaven.xxx##+js(no-fetch-if, /ads-twitter\.com|pagead|googleads|doubleclick/, , opaque)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94598
 eviltranslator.xyz##+js(abort-current-script, document.createElement, adsbygoogle.js)
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noop.js,domain=eviltranslator.xyz
@@ -33369,6 +33376,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+manhuatop.org##.c-sidebar
+dic.pixiv.net##article div:has(> div[id^="adsdk-"])
 nexus-games.net,ppssppisoclub.com##a[href*="?php echo substr(md5(microtime())"]
 themeparktycoon2.com##.wix-blog-print-in-full-width > div.wix-blog-hide-in-print > div[data-testid="inline-content"]
 extramovies.ist###stickyb
