@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.43.75",
-			"timeUpdated": "2024-07-12T17:31:18+0000",
+			"version": "2.3.43.76",
+			"timeUpdated": "2024-07-12T20:31:22+0000",
 			"languages": [],
 			"tags": [
 				10,
