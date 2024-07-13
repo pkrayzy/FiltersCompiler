@@ -1,9 +1,9 @@
-! Checksum: uEzWZr9eyiA+t7tqFA52nw
-! Diff-Path: ../patches/9/9-s-1720683418-3600.patch
+! Checksum: e0oeCIOaTK5480EoAMmXsg
+! Diff-Path: ../patches/9/9-s-1720877801-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.25.71
-! TimeUpdated: 2024-07-11T07:33:24+00:00
+! Version: 2.0.25.72
+! TimeUpdated: 2024-07-13T13:33:08+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -277,6 +277,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183544
+@@||www3.doubleclick.net/|$domain=acortalink.me
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182228
 r7.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181874
@@ -437,6 +439,7 @@ animeszone.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 megacanaisonline.me##div[id][class^="popup"][class$="wrap"][style]
 megacanaisonline.me#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159034
+acortados.com,acortalink.me#%#//scriptlet('prevent-fetch', '/ads-twitter\.com|pagead|googleads|doubleclick/', '', 'opaque')
 acortados.com,todoandroid.live,gadgetzona.net,qwanturankpro.com,desbloquea.me,mega-enlace.com#%#//scriptlet('prevent-fetch', 'method:HEAD')
 ! https://github.com/uBlockOrigin/uAssets/issues/19312
 softwareany.net#%#//scriptlet('prevent-addEventListener', 'load', 'detect-modal')
@@ -1779,8 +1782,10 @@ paky3.me,pelismart.com,pelismarthd.com#%#//scriptlet("prevent-window-open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111452
 tiohentai.xyz#%#//scriptlet("set-constant", "loadingAds", "undefined")
 tiohentai.xyz#%#//scriptlet("abort-current-inline-script", "document.addEventListener", "create_")
+! https://github.com/AdguardTeam/AdguardFilters/issues/183544
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111261
-acortalink.me#%#AG_onLoad(function(){try{var a;"function"==typeof decode_link&&"string"==typeof link_out&&(a=decode_link(atob(link_out)),location.assign(a)),"string"==typeof api_key&&(document.cookie=`${api_key}=Wn275; path=/`);var b=document.querySelector("* > .button#contador");b&&a&&setTimeout(()=>{var c=b.cloneNode(!0);b.parentNode.replaceChild(c,b),c.addEventListener("click",function(){location.assign(a)},!1)},500)}catch(a){}});
+acortalink.me#%#//scriptlet('prevent-setTimeout', 'window.location.href')
+acortalink.me#%#(()=>{window.addEventListener("message",(e=>{e?.data?.includes("__done__")&&e?.data?.length<9&&Object.defineProperty(e,"source",{value:""})}),!0);const e=new MutationObserver((()=>{document.querySelector("a.button#contador")&&(e.disconnect(),setTimeout((()=>{postMessage("__done__")}),100))}));e.observe(document,{childList:!0,subtree:!0})})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109027
 pelispedia-v1.wtf#%#//scriptlet("prevent-window-open")
 pelispedia-v1.wtf#%#//scriptlet("adjust-setInterval", "Loading player", "", "0.02")

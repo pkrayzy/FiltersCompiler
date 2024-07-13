@@ -1,9 +1,9 @@
-! Checksum: jtdrs4Fj1hgqe6s47aKwAQ
-! Diff-Path: ../patches/9_optimized/9_optimized-s-1720683424-3600.patch
+! Checksum: nPuXIceh9qMWDYrhqdVBlQ
+! Diff-Path: ../patches/9_optimized/9_optimized-s-1720877808-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.25.71
-! TimeUpdated: 2024-07-11T07:33:24+00:00
+! Version: 2.0.25.72
+! TimeUpdated: 2024-07-13T13:33:08+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -178,6 +178,7 @@
 ||xad.dnoticias.pt^
 ||adclient-uol.lp.uol.com.br^
 ||adv.r7.com^
+@@||www3.doubleclick.net/|$domain=acortalink.me
 r7.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 cerisetoon.com#%#//scriptlet('prevent-fetch', 'adskeeper.com')
 daemon-hentai.com#%#//scriptlet('remove-node-text', 'script', '/function.*adblock/')
@@ -316,6 +317,7 @@ animeszone.net#%#//scriptlet('set-constant', 'detectAdBlock', 'noopFunc')
 animeszone.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 megacanaisonline.me##div[id][class^="popup"][class$="wrap"][style]
 megacanaisonline.me#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+acortados.com,acortalink.me#%#//scriptlet('prevent-fetch', '/ads-twitter\.com|pagead|googleads|doubleclick/', '', 'opaque')
 acortados.com,todoandroid.live,gadgetzona.net,qwanturankpro.com,desbloquea.me,mega-enlace.com#%#//scriptlet('prevent-fetch', 'method:HEAD')
 @@||static.ads-twitter.com/uwt.js$xmlhttprequest,domain=mega-enlace.com|desbloquea.me|qwanturankpro.com|acortados.com
 @@||pagead2.googlesyndication.com/|$xmlhttprequest,domain=mega-enlace.com|desbloquea.me|qwanturankpro.com|acortados.com
@@ -1115,7 +1117,8 @@ pelispedia-v2.wtf#%#//scriptlet("adjust-setInterval", "Loading player", "", "0.0
 paky3.me,pelismart.com,pelismarthd.com#%#//scriptlet("prevent-window-open")
 tiohentai.xyz#%#//scriptlet("set-constant", "loadingAds", "undefined")
 tiohentai.xyz#%#//scriptlet("abort-current-inline-script", "document.addEventListener", "create_")
-acortalink.me#%#AG_onLoad(function(){try{var a;"function"==typeof decode_link&&"string"==typeof link_out&&(a=decode_link(atob(link_out)),location.assign(a)),"string"==typeof api_key&&(document.cookie=`${api_key}=Wn275; path=/`);var b=document.querySelector("* > .button#contador");b&&a&&setTimeout(()=>{var c=b.cloneNode(!0);b.parentNode.replaceChild(c,b),c.addEventListener("click",function(){location.assign(a)},!1)},500)}catch(a){}});
+acortalink.me#%#//scriptlet('prevent-setTimeout', 'window.location.href')
+acortalink.me#%#(()=>{window.addEventListener("message",(e=>{e?.data?.includes("__done__")&&e?.data?.length<9&&Object.defineProperty(e,"source",{value:""})}),!0);const e=new MutationObserver((()=>{document.querySelector("a.button#contador")&&(e.disconnect(),setTimeout((()=>{postMessage("__done__")}),100))}));e.observe(document,{childList:!0,subtree:!0})})();
 pelispedia-v1.wtf#%#//scriptlet("prevent-window-open")
 pelispedia-v1.wtf#%#//scriptlet("adjust-setInterval", "Loading player", "", "0.02")
 atomohd.com,atomtt.com,atomixhq.*#%#//scriptlet("prevent-window-open", "!/download\/|link|atomtt\.com\//")
