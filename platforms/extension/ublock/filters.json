@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.43.81",
-			"timeUpdated": "2024-07-13T14:31:18+0000",
+			"version": "2.3.43.82",
+			"timeUpdated": "2024-07-13T15:31:20+0000",
 			"languages": [],
 			"tags": [
 				10,

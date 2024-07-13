@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: sKTsFig9G+MaDKC8j/X5xQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720881402-3600.patch
+! Checksum: OMdQU6lxZ/k/r69InIUZMQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1720885008-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.43.81
-! TimeUpdated: 2024-07-13T14:31:18+00:00
+! Version: 2.3.43.82
+! TimeUpdated: 2024-07-13T15:31:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -33556,7 +33556,6 @@ sportlemons.tv###sidebar
 goal.com##.fco-scoreboard__sponsorship
 freemp3.tube##+js(remove-attr, onclick, button[onclick^="window.open("])
 ||btvsports.cam/ads/
-imgur.com##div[id*="/InContent/"][style*="min-height: 250px;"]
 freckledine.net,bong.ink,crackstreams.dev,tutlehd4.com,topembed.pw,redditsoccerstream.online##div[style*="2147483647"]
 gpblog.com##div[class^="ArticlePromoItem_ArticlePromoItem"]
 gpblog.com##li[data-tracker-name="advertorialNewsList"]
@@ -52221,6 +52220,11 @@ thetalko.com##.ad-zone-container
 dailymail.co.uk##.ad-wrapper
 !+ NOT_OPTIMIZED
 mail.yahoo.com##[data-test-id^="pencil-ad"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/182161
+! https://github.com/AdguardTeam/AdguardFilters/issues/178096
+! imgur.com
+! Do not hide ad leftovers, because it breaks loading new images when scrolling down
+! For example - imgur.com##div[id*="/InContent/"][style*="min-height: 250px;"]
 !
 ! We're getting tons of questions from users who do not understand why some test on the internet does not show 100%.
 ! We're tired of explaining why this or that domain should not be blocked in reality so there's that
