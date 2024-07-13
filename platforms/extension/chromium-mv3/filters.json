@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.32",
-			"timeUpdated": "2024-07-13T13:01:09+0000",
+			"version": "2.1.52.33",
+			"timeUpdated": "2024-07-13T17:01:12+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.31",
-			"timeUpdated": "2024-07-13T13:01:09+0000",
+			"version": "2.1.52.32",
+			"timeUpdated": "2024-07-13T17:01:13+0000",
 			"languages": [
 				"ar"
 			],
@@ -1254,8 +1254,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuard.txt",
 			"trustLevel": "high",
-			"version": "2.0.7.57",
-			"timeUpdated": "2024-07-08T13:01:52+0000",
+			"version": "2.0.7.58",
+			"timeUpdated": "2024-07-13T17:01:46+0000",
 			"languages": [
 				"no",
 				"da",
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.63",
-			"timeUpdated": "2024-07-13T13:01:51+0000",
+			"version": "2.0.45.64",
+			"timeUpdated": "2024-07-13T17:01:54+0000",
 			"languages": [
 				"hi"
 			],
