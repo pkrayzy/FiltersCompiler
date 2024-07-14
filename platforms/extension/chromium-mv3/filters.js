@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.35",
-			"timeUpdated": "2024-07-14T01:01:12+0000",
+			"version": "2.1.52.36",
+			"timeUpdated": "2024-07-14T05:01:11+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.34",
-			"timeUpdated": "2024-07-14T01:01:13+0000",
+			"version": "2.1.52.35",
+			"timeUpdated": "2024-07-14T05:01:12+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.45",
-			"timeUpdated": "2024-07-13T13:01:24+0000",
+			"version": "2.0.30.46",
+			"timeUpdated": "2024-07-14T05:01:27+0000",
 			"languages": [
 				"vi"
 			],
@@ -1228,8 +1228,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.94",
-			"timeUpdated": "2024-07-12T09:01:45+0000",
+			"version": "2.0.18.95",
+			"timeUpdated": "2024-07-14T05:01:44+0000",
 			"languages": [
 				"sv"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.66",
-			"timeUpdated": "2024-07-14T01:01:55+0000",
+			"version": "2.0.45.67",
+			"timeUpdated": "2024-07-14T05:01:54+0000",
 			"languages": [
 				"hi"
 			],
@@ -1374,8 +1374,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.2",
-			"timeUpdated": "2024-07-13T05:01:51+0000",
+			"version": "2.0.1.3",
+			"timeUpdated": "2024-07-14T05:01:55+0000",
 			"languages": [],
 			"tags": [
 				4
