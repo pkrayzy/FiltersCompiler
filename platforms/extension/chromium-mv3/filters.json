@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.45",
-			"timeUpdated": "2024-07-15T17:01:10+0000",
+			"version": "2.1.52.46",
+			"timeUpdated": "2024-07-15T21:01:19+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.44",
-			"timeUpdated": "2024-07-15T17:01:11+0000",
+			"version": "2.1.52.45",
+			"timeUpdated": "2024-07-15T21:01:20+0000",
 			"languages": [
 				"ar"
 			],
@@ -994,8 +994,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.2.98",
-			"timeUpdated": "2024-06-19T13:01:45+0000",
+			"version": "2.0.2.99",
+			"timeUpdated": "2024-07-15T21:01:32+0000",
 			"languages": [
 				"hu"
 			],
@@ -1178,8 +1178,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
 			"trustLevel": "high",
-			"version": "2.0.4.56",
-			"timeUpdated": "2024-07-10T13:01:42+0000",
+			"version": "2.0.4.57",
+			"timeUpdated": "2024-07-15T21:01:45+0000",
 			"languages": [
 				"fa",
 				"tg",
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.76",
-			"timeUpdated": "2024-07-15T17:01:55+0000",
+			"version": "2.0.45.77",
+			"timeUpdated": "2024-07-15T21:01:59+0000",
 			"languages": [
 				"hi"
 			],
@@ -1393,8 +1393,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.9",
-			"timeUpdated": "2024-07-15T17:01:56+0000",
+			"version": "2.0.2.10",
+			"timeUpdated": "2024-07-15T21:02:01+0000",
 			"languages": [],
 			"tags": [
 				4

@@ -1,9 +1,9 @@
-! Checksum: VZW7mU4Y1DtuVN2hrFjE4Q
-! Diff-Path: ../patches/235/235-s-1720616765-14400.patch
+! Checksum: 5xI4KocuZMgCB/DvYfWURQ
+! Diff-Path: ../patches/235/235-s-1721077551-14400.patch
 ! Title: Persian Blocker
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.56
-! TimeUpdated: 2024-07-10T13:01:42+00:00
+! Version: 2.0.4.57
+! TimeUpdated: 2024-07-15T21:01:45+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: PersianBlocker
@@ -430,7 +430,8 @@ anaj.ir,salamatnews.com#%#//scriptlet('ubo-set.js', 'document.referrer', 'undefi
 ||appahang5.com/cdn/ads^$image,~third-party
 ! alibaba.ir##+js(json-prune, data.0.attributes.loadingBanner.0.image)
 ||alibaba.ir/adtrace-latest.min.js^$script,~third-party
-alibaba.ir##div.loading-banner-modal.is-loading > div.loading-banner.is-brand > div.loading-banner__frame
+alibaba.ir#$?#div.loading-banner-modal.is-loading { remove: true; }
+alibaba.ir##div#modal_container > span.a-modal-backdrop
 ||aboutall.ir/Administrator/files/Baner^$image,~third-party
 aboutall.ir##div#BodyMain > div#Body > div#Content > div[style] > div.Box:has(> div.CenterSmall > div.AdsBanerDiv)
 asbe-bokhar.com##div#mobile-headerads
@@ -1902,11 +1903,8 @@ p30afzar.com##.ADS_header_all
 p30afzar.com##.download-link-ads-below
 ||p30download.ir/page/*.gif^$image,~third-party
 p30download.ir##main#main-content > div[class^="tabliq-"]
-p30download.ir##aside#sidebar > div[style="width: 100%;height: 250px;margin: 0px auto 10px;"]
-p30download.ir##aside#sidebar > div:has(> h4:has-text(/ت.*?ب.*?ل.*?ی.*?غ.*?ا.*?ت/))
-p30download.ir##aside#sidebar > div:has(> h4:has-text(/ل.*?ی.*?ن.*?ک.*?د.*?و.*?ن.*?ی/))
-p30download.ir##div.support-center
-p30download.ir##div#footer-wrapper > div.copyright-wrapper > div#copyright > a
+p30download.ir##aside > div:not(:has(a[href*="/entry/"]))
+p30download.ir##div.copyright-wrapper > div#copyright > a
 ||film.persianv.com/frontend/js/ads/
 persianv.com##.ads_box
 persianv.com#@#.ads-text
