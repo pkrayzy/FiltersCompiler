@@ -1,9 +1,9 @@
-! Checksum: 6H1n3VJ+7K5wqdOmtIYKHQ
-! Diff-Path: ../patches/18/18-s-1721050600-3600.patch
+! Checksum: MQ3KLrNGIB8MI4jBiMjLkw
+! Diff-Path: ../patches/18/18-s-1721057798-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.43.13
-! TimeUpdated: 2024-07-15T13:33:01+00:00
+! Version: 2.0.43.14
+! TimeUpdated: 2024-07-15T15:32:52+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2446,6 +2446,10 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+etyres.co.uk,asdatyres.co.uk#$##cookieBanner { display: none !important; }
+etyres.co.uk,asdatyres.co.uk#$#.modal-backdrop { display: none !important; }
+etyres.co.uk,asdatyres.co.uk#$#body { overflow: auto !important; padding-right: 0 !important; }
+autodesk.com##div[class^="adsk-gdpr-footer-wrapper"]
 hammerphones.com##main > header ~ div > section ~ div:has(a[href="/privacy-policy/"])
 hammerphones.com##main > header ~ div > section ~ div:has(a[href="/privacy-policy/"]) + div:empty
 nytimes.com#%#//scriptlet('trusted-click-element', '#fides-banner-container .fides-accept-all-button')
@@ -15458,6 +15462,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183620
+etyres.co.uk,asdatyres.co.uk#@##cookieBanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183609
 @@||sdk.privacy-center.org/*/loader.js$domain=video-streaming.orange.fr
 @@||sdk.privacy-center.org/sdk/$domain=video-streaming.orange.fr
