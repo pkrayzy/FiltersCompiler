@@ -2079,8 +2079,8 @@
 				"description": "EasyList Dutch + AdGuards holländska filter. Filterlista som specifikt avlägsnar reklam på holländskspråkiga webbplatser."
 			},
 			"tr": {
-				"name": "AdGuard Flemenkçe filtresi",
-				"description": "EasyList Dutch + AdGuard Flemenkçe filtresi. Özellikle Flemenkçe dilindeki sitelerde reklamları kaldıran filtre listesi."
+				"name": "AdGuard Felemenkçe filtresi",
+				"description": "EasyList Dutch + AdGuard Felemenkçe filtresi. Özellikle Felemenkçe dilindeki sitelerde reklamları kaldıran filtre listesi."
 			},
 			"uk": {
 				"name": "Голландський фільтр AdGuard",
@@ -3028,7 +3028,7 @@
 			},
 			"tr": {
 				"name": "AdGuard Can Sıkıcı Öğeler filtresi",
-				"description": "Çerez bildirimleri, üçüncü taraf araçları ve sayfa içi açılır pencereler dahil olmak üzere web sayfalarındaki sinir bozucu öğeleri engeller. Aşağıdaki AdGuard filtrelerini içerir: Çerez Bildirimleri, Açılır Pencereler, Mobil Uygulama Afişleri, Diğer Can Sıkıcı Öğeler ve Araçlar."
+				"description": "Çerez bildirimleri, üçüncü taraf araçları ve sayfa içi açılır pencereler dâhil olmak üzere web sayfalarındaki sinir bozucu öğeleri engeller. Aşağıdaki AdGuard filtrelerini içerir: Çerez Bildirimleri, Açılır Pencereler, Mobil Uygulama Afişleri, Diğer Can Sıkıcı Öğeler ve Araçlar."
 			},
 			"uk": {
 				"name": "Фільтр подразників AdGuard",
@@ -3730,7 +3730,7 @@
 			},
 			"fi": {
 				"name": "AdGuardin ponnahdussuodatin",
-				"description": "Estää kaikenlaisia ponnahduksia, jotka eivät ole välttämättömiä verkkosivustojen toiminnalle suodatinkäytäntömme mukaisesti."
+				"description": "Estää kaikenlaisia ponnahduksia, jotka eivät suodatinkäytäntömme mukaisesti ole verkkosivuston toiminnan kannalta välttämättömiä."
 			},
 			"fr": {
 				"name": "Filtre AdGuard Popups",
@@ -4445,8 +4445,8 @@
 				"description": "Filter som gör det möjligt att blockera annonser på webbplatser på ukrainska."
 			},
 			"tr": {
-				"name": "AdGuard Ukrayna filtresi",
-				"description": "Özellikle Ukrayna dilindeki sitelerde reklamları engelleyen filtre."
+				"name": "AdGuard Ukraynaca filtresi",
+				"description": "Özellikle Ukraynaca dilindeki sitelerde reklamları engelleyen filtre."
 			},
 			"uk": {
 				"name": "Український фільтр AdGuard",
@@ -4461,7 +4461,7 @@
 				"description": "此过滤器可以在乌克兰语网站上启用广告拦截功能。"
 			},
 			"zh_TW": {
-				"name": "AdGuard 烏克蘭語過濾器",
+				"name": "AdGuard 烏克蘭文過濾器",
 				"description": "啟用於烏克蘭語網站上的廣告封鎖之過濾器。"
 			}
 		},
@@ -4584,7 +4584,7 @@
 			},
 			"tr": {
 				"name": "EasyList",
-				"description": "EasyList, İngilizce web sayfalarından reklamları kaldıran birincil aboneliktir. AdGuard Temel filtresine zaten dahildir."
+				"description": "EasyList, İngilizce web sayfalarından reklamları kaldıran birincil aboneliktir. AdGuard Temel filtresine zaten dâhildir."
 			},
 			"uk": {
 				"name": "EasyList",
@@ -4726,7 +4726,7 @@
 			},
 			"tr": {
 				"name": "ABPindo",
-				"description": "Endonezyaca siteleri için ek filtre listesi."
+				"description": "Endonezce siteleri için ek filtre listesi."
 			},
 			"uk": {
 				"name": "ABPindo",
@@ -5002,7 +5002,7 @@
 			},
 			"tr": {
 				"name": "EasyList China",
-				"description": "Çince siteleri için ek filtre listesi. AdGuard Çince filtresine zaten dahildir."
+				"description": "Çince siteleri için ek filtre listesi. AdGuard Çince filtresine zaten dâhildir."
 			},
 			"uk": {
 				"name": "EasyList China",
@@ -5278,7 +5278,7 @@
 			},
 			"tr": {
 				"name": "EasyList Dutch",
-				"description": "Flemenkçe siteleri için ek filtre listesi. AdGuard Flemenkçe filtresine zaten dahildir."
+				"description": "Felemenkçe siteleri için ek filtre listesi. AdGuard Felemenkçe filtresine zaten dâhildir."
 			},
 			"uk": {
 				"name": "EasyList Dutch",
@@ -5416,7 +5416,7 @@
 			},
 			"tr": {
 				"name": "EasyList Germany",
-				"description": "Almanca siteleri için ek filtre listesi. AdGuard Almanca filtresine zaten dahildir."
+				"description": "Almanca siteleri için ek filtre listesi. AdGuard Almanca filtresine zaten dâhildir."
 			},
 			"uk": {
 				"name": "EasyList Germany",
@@ -5830,7 +5830,7 @@
 			},
 			"tr": {
 				"name": "EasyList Lithuania",
-				"description": "Litvanyaca siteleri için ek filtre listesi."
+				"description": "Litvanca siteleri için ek filtre listesi."
 			},
 			"uk": {
 				"name": "EasyList Lithuania",
@@ -6248,7 +6248,7 @@
 			},
 			"tr": {
 				"name": "Liste FR",
-				"description": "Fransızca siteleri için ek filtre listesi. AdGuard Fransızca filtresine zaten dahildir."
+				"description": "Fransızca siteleri için ek filtre listesi. AdGuard Fransızca filtresine zaten dâhildir."
 			},
 			"uk": {
 				"name": "Liste FR",
@@ -6950,7 +6950,7 @@
 			},
 			"tr": {
 				"name": "AdBlockID",
-				"description": "Endonezyaca siteleri için ek filtre listesi."
+				"description": "Endonezce siteleri için ek filtre listesi."
 			},
 			"uk": {
 				"name": "AdBlockID",
@@ -7364,7 +7364,7 @@
 			},
 			"tr": {
 				"name": "Fanboy's Social Blocking List",
-				"description": "Sosyal içeriği, sosyal araçları, sosyal betiklerini, sosyal simgeleri gizler ve engeller. Fanboy's Annoyances listesine zaten dahildir."
+				"description": "Sosyal içeriği, sosyal araçları, sosyal betiklerini, sosyal simgeleri gizler ve engeller. Fanboy's Annoyances listesine zaten dâhildir."
 			},
 			"uk": {
 				"name": "Fanboy's Social Blocking List",
@@ -12084,7 +12084,7 @@
 			},
 			"tr": {
 				"name": "Polish Annoyances Filters",
-				"description": "Açılır pencereleri, araçları, haber bültenlerini, anlık bildirimlerini, okları, konu dışı etiketli dahili bağlantıları ve diğer can sıkıcı öğeleri gizleyen ve engelleyen filtre listesi. Polish GDPR-Cookies Filters'in içinde zaten var."
+				"description": "Açılır pencereleri, araçları, haber bültenlerini, anlık bildirimlerini, okları, konu dışı etiketli dâhili bağlantıları ve diğer can sıkıcı öğeleri gizleyen ve engelleyen filtre listesi. Polish GDPR-Cookies Filters zaten bunun içindedir."
 			},
 			"uk": {
 				"name": "Polish Annoyances Filters",
@@ -12636,7 +12636,7 @@
 			},
 			"tr": {
 				"name": "EasyList Cookie List",
-				"description": "Çerez ve gizlilik uyarılarını kaldırır. Fanboy's Annoyances listesine zaten dahildir."
+				"description": "Çerez ve gizlilik uyarılarını kaldırır. Fanboy's Annoyances listesine zaten dâhildir."
 			},
 			"uk": {
 				"name": "EasyList Cookie List",
@@ -13772,141 +13772,81 @@
 			}
 		},
 		"251": {
-			"ar": {
-				"name": "Legitimate URL Shortener",
-				"description": "يقوم تلقائيًا بإزالة قيم \"$\" و \"&\" غير الضرورية من عناوين URL ، مما يسهل نسخها من شريط URL ولصقها في مكان آخر كروابط."
-			},
-			"be": {
-				"name": "Legitimate URL Shortener",
-				"description": "Аўтаматычна выдаляе непатрэбныя «$» і «&» з URL-адрасоў, каб іх было прасцей капіраваць з адраснага радка і ўстаўляць кудысьці як спасылкі."
-			},
-			"cs": {
-				"name": "Legitimate URL Shortener",
-				"description": "Automaticky odstraňuje nepotřebné hodnoty '$' a '&' z adres URL, což usnadňuje jejich kopírování z panelu URL a vkládání jako odkazy."
-			},
 			"da": {
 				"name": "Legitimate URL Shortener",
-				"description": "Fjerner automatisk unødvendige '$'- og '&'-værdier fra URL'er, hvilket gør dem nemmere at kopiere fra adressebjælken og indsætte som links andre steder."
+				"description": "Fjerner automatisk unødvendige '$'- og '&'-værdier fra URL'er, hvilket gør dem nemmere at kopiere fra adressebjælken og indsætte som links andre steder. Allerede inkluderet i Dandelion Sprout's Annoyances List."
 			},
 			"de": {
 				"name": "URL-Kürzungsdienst von Legitimate",
-				"description": "Entfernt automatisch unnötige Werte wie „$“ und „&“ aus Webadressen, so dass diese leichter aus der Adressleiste kopiert und an anderer Stelle als Links eingefügt werden können."
-			},
-			"el": {
-				"name": "Legitimate URL Shortener",
-				"description": "Αφαιρεί αυτόματα τις περιττές τιμές «$» και «&» από τα URL, κάνοντας ευκολότερη την αντιγραφή τους από τη γραμμή URL και την επικόλλησή τους οπουδήποτε αλλού ως συνδέσμους."
+				"description": "Entfernt automatisch unnötige Werte wie „$“ und „&“ aus Webadressen, so dass diese leichter aus der Adressleiste kopiert und an anderer Stelle als Links eingefügt werden können. Bereits in der Dandelion Sprout's Annoyances List enthalten."
 			},
 			"en": {
 				"name": "Legitimate URL Shortener",
-				"description": "Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links."
+				"description": "Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List."
 			},
 			"es": {
 				"name": "Legitimate URL Shortener",
-				"description": "Elimina automáticamente los valores '$' y '&' innecesarios de las URL, lo que facilita la copia de la barra de URL y el pegado en otros lugares como enlaces."
+				"description": "Elimina automáticamente los valores '$' y '&' innecesarios de las URL, lo que facilita la copia de la barra de URL y el pegado en otros lugares como enlaces. Ya incluido en la lista Dandelion Sprout's Annoyances."
 			},
 			"es_ES": {
 				"name": "Legitimate URL Shortener",
-				"description": "Elimina automáticamente los valores '$' y '&' innecesarios de las URL, lo que facilita la copia de la barra de URL y el pegado en otros lugares como enlaces."
-			},
-			"fi": {
-				"name": "Legitimate URL Shortener",
-				"description": "Poistaa URL-osoitteiden tarpeettomat '$' ja '&' -arvot automaattisesti, mikä helpottaa kopiointia selaimen osoitepalkista ja liittämistä muualle linkkeinä."
+				"description": "Elimina automáticamente los valores '$' y '&' innecesarios de las URL, lo que facilita la copia de la barra de URL y el pegado en otros lugares como enlaces. Ya incluido en la lista Dandelion Sprout's Annoyances."
 			},
 			"fr": {
 				"name": "Legitimate URL Shortener",
-				"description": "Supprime automatiquement les valeurs « $ » et « & » inutiles des URL, ce qui les rend plus faciles à copier à partir de la barre d’adresse et à coller ailleurs en tant que liens."
-			},
-			"he": {
-				"name": "Legitimate URL Shortener",
-				"description": "מסיר באופן אוטומטי ערכים של '$' וכן '&' ממענים, הופך אותם לקלים יותר להעתקה משורת הכתובת ולהדבקה בכל מקום אחר כקישורים."
-			},
-			"hr": {
-				"name": "Legitimni skračivać adresa",
-				"description": "Automatski uklanja nepotrebne znakove '$' '&' iz adresa, čineći ih tako lakšim za kopiranje iz adresne trake i ljepljenjem istih bilo gdje kao poveznice."
-			},
-			"hu": {
-				"name": "URL rövidítő",
-				"description": "Automatikusan eltávolítja a szükségtelen '$' és '&' értékeket az URL-ekből, így könnyebben másolhatók ki az URL-sávból és illeszthetők be linkként máshová."
-			},
-			"id": {
-				"name": "Legitimate URL Shortener",
-				"description": "Secara otomatis menghapus nilai '$' dan '&' yang tidak perlu dari URL, membuatnya lebih mudah untuk disalin dari bilah URL dan menempel di tempat lain sebagai tautan."
+				"description": "Supprime automatiquement les valeurs « $ » et « & » inutiles des URL, ce qui les rend plus faciles à copier à partir de la barre d’adresse et à coller ailleurs en tant que liens. Déjà inclus dans la liste Dandelion Sprout's Annoyances List."
 			},
 			"it": {
 				"name": "Legittima riduzione degli URL",
-				"description": "Rimuove automaticamente i valori \"$\" e \"&\" non necessari dagli URL, rendendoli più facili da copiare dalla barra degli Indirizzi per incollarli altrove come collegamenti."
+				"description": "Rimuove automaticamente i valori \"$\" e \"&\" non necessari dagli URL, rendendoli più facili da copiare dalla barra degli URL e incollarli altrove come collegamenti. Già incluso nell'elenco dei fastidi Dandelion Sprout's Annoyances List."
 			},
 			"ja": {
 				"name": "Legitimate URL Shortener（URL短縮）",
-				"description": "URLから不要な「$」や「&」の値を自動的に削除し、URLバーからコピーして他の場所にリンクとして貼り付けやすくします。"
+				"description": "URLから不要な「$」や「&」値を自動的に削除し、URLバーからコピーして他の場所にリンクとして貼り付けやすくします。既に Dandelion Sprout の Annoyances List にも含まれています。"
 			},
 			"ko": {
 				"name": "Legitimate URL Shortener",
-				"description": "자동으로 URL에서 불필요한 '$'나 '&'를 제거합니다. URL 바에서 복사하고 다른 어딘가에 링크 형태로 붙여넣기 쉽도록 해 줍니다."
-			},
-			"mk": {
-				"name": "Легитимен скратувач на URL",
-				"description": "Автоматски ги отстранува непотребните вредности како „$“ и „&“ од URL-адресите, што го олеснува нивното копирање од лентата за URL и нивното залепување на друго место како линкови."
+				"description": "URL에서 불필요한 '$' 및 '&' 값을 자동으로 제거하여 URL 표시줄에서 쉽게 복사하고 다른 곳에 링크로 붙여넣을 수 있도록 합니다. 이미 Dandelion Sprout's Annoyances List에 포함되어 있습니다."
 			},
 			"nl": {
 				"name": "Legitieme URL-verkorter",
-				"description": "Verwijdert automatisch onnodige '$'- en '&'-waarden van URL's, waardoor ze gemakkelijker van de URL-balk kunnen worden gekopieerd en elders als koppeling kunnen worden geplakt."
-			},
-			"pl": {
-				"name": "Legitimate URL Shortener",
-				"description": "Automatycznie usuwa niepotrzebne wartości „$” i „&” z adresów URL, ułatwiając ich kopiowanie z paska adresu URL i wklejanie w innym miejscu jako linki."
+				"description": "Verwijdert automatisch onnodige '$'- en '&'-waarden uit URL's, waardoor ze gemakkelijker van de URL-balk kunnen worden gekopieerd en elders als links kunnen worden geplakt. Al opgenomen in de ergernislijst van Dandelion Sprout."
 			},
 			"pt": {
 				"name": "Legitimate URL Shortener",
-				"description": "Remove automaticamente os valores desnecessários '$' e '&' dos URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outro lugar como links."
+				"description": "Remove automaticamente os valores desnecessários '$' e '&' dos URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outro lugar como links. Já incluído na lista Dandelion Sprout's Annoyances."
 			},
 			"pt_BR": {
 				"name": "Legitimate URL Shortener",
-				"description": "Remove automaticamente os valores desnecessários '$' e '&' dos URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outro lugar como links."
+				"description": "Remove automaticamente os valores desnecessários de '$' e '&' de URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outros lugares na forma de links. Já incluído na lista Dandelion Sprout's Annoyances."
 			},
 			"pt_PT": {
 				"name": "Legitimate URL Shortener",
-				"description": "Remove automaticamente os valores desnecessários '$' e '&' dos URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outro lugar como links."
-			},
-			"ro": {
-				"name": "Legitimate URL Shortener",
-				"description": "Înlătură automat valorile '$' și '&' inutile de pe adresele URL, ceea ce le face mai ușor de copiat din bara URL și de lipit în altă parte ca linkuri."
+				"description": "Remove automaticamente os valores desnecessários '$' e '&' dos URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outro lugar como links. Já incluído na lista Dandelion Sprout's Annoyances."
 			},
 			"ru": {
 				"name": "Legitimate URL Shortener",
-				"description": "Автоматически удаляет ненужные «$» и «&» из URL-адресов, чтобы их было проще копировать из адресной строки и вставлять куда-то как ссылки."
+				"description": "Автоматически удаляет ненужные «$» и «&» из URL-адресов, чтобы их было проще копировать из адресной строки и вставлять куда-то как ссылки. Уже включён в Dandelion Sprout's Annoyances List."
 			},
 			"sk": {
 				"name": "Legitímne skracovače URL adries",
-				"description": "Automaticky odstraňuje nepotrebné hodnoty '$' a '&' z URL adries, čím uľahčuje ich kopírovanie z panela URL adries a ich prilepenie inam ako odkazy."
-			},
-			"sl": {
-				"name": "Legitimno orodje za krajšanje URL-jev",
-				"description": "Samodejno odstrani nepotrebne vrednosti '$' in '&' iz URL-jev, zaradi česar jih je lažje kopirati iz vrstice URL in prilepiti drugam kot povezave."
-			},
-			"sr": {
-				"name": "Legitiman URL skraćivač",
-				"description": "Automatski uklanja nepotrebne '$' i '&' vrednosti iz URLova, čineći ih lakšim za kopiranje sa URL trake i lepljenje negde kao vezu."
+				"description": "Automaticky odstraňuje nepotrebné hodnoty '$' a '&' z adries URL, čím uľahčuje ich kopírovanie z panela adries URL a ich prilepenie inam ako odkazy. Už zahrnuté v zozname Dandelion Sprout's Annoyances."
 			},
 			"tr": {
 				"name": "Legitimate URL Shortener",
-				"description": "URL'lerden gereksiz '$' ve '&' değerlerini otomatik olarak kaldırarak, bunların URL çubuğundan kopyalanmasını ve bağlantı olarak başka bir yere yapıştırılmasını kolaylaştırır."
+				"description": "Gereksiz '$' ve '&' değerlerini URL'lerden otomatik olarak kaldırarak bunların URL çubuğundan kopyalanmasını ve başka bir yere bağlantı olarak yapıştırılmasını kolaylaştırır. Dandelion Sprout's Annoyances List'e zaten dâhildir."
 			},
 			"uk": {
 				"name": "Legitimate URL Shortener",
-				"description": "Автоматично видаляє зайві параметри «$» та «&» з URL-адрес, у такий спосіб роблячи їх простішими для копіювання та поширення."
-			},
-			"vi": {
-				"name": "Tiện ích rút gọn URL hợp lệ",
-				"description": "Tự động xoá giá trị '$' và '&' không cần thiết khỏi URL, để dễ dàng hơn trong việc chép URL ở thanh địa chỉ và dán liên kết ở nơi khác."
+				"description": "Автоматично видаляє зайві параметри «$» та «&» з URL-адрес, у такий спосіб роблячи їх простішими для копіювання та поширення. Уже входить до складу фільтра Dandelion Sprout's Annoyances List."
 			},
 			"zh": {
 				"name": "Legitimate URL Shortener",
-				"description": "自动从 URL 中删除不必要的 '$' 和 '&' 值，使它们更容易从 URL 栏中复制并作为链接粘贴到其他地方。"
+				"description": "自动从 URL 中删除不必要的 '$' 和 '&' 值，使它们更容易从 URL 栏中复制并作为链接粘贴到其他地方。已包含在 Dandelion Sprout 的防骚扰列表中。"
 			},
 			"zh_TW": {
 				"name": "Legitimate URL Shortener",
-				"description": "從網址中自動地移除不必要的'$'和'&'值，使它們更容易從網址列中被複製並作為連結在別處被貼上。"
+				"description": "從網址中自動地移除不必要的'$'和'&'值，使它們更容易從網址列中被複製並作為連結在別處被貼上。它已被列入 Dandelion Sprout's Annoyances List 中。"
 			}
 		},
 		"252": {
@@ -14386,7 +14326,7 @@
 			},
 			"id": {
 				"name": "Phishing URL Blocklist",
-				"description": "Daftar blokir URL phishing untuk uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, file Hosts, Dnsmasq, BIND, Unbound, Snort dan Suricata."
+				"description": "Daftar blokir URL phishing untuk uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, berkas host, Dnsmasq, BIND, Unbound, Snort dan Suricata."
 			},
 			"it": {
 				"name": "Phishing URL Blocklist",
@@ -14399,6 +14339,10 @@
 			"ko": {
 				"name": "피싱 URL 차단 목록",
 				"description": "uBlock Origin(uBO), AdGuard, Vivaldi, Pi-hole, 호스트 파일, Dnsmasq, BIND, Unbound, Snort 및 Suricata에 대한 피싱 URL 차단 목록입니다."
+			},
+			"mk": {
+				"name": "Блок листа на URL-адреси за фишинг",
+				"description": "Блок листа за фишинг URL за uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort и Suricata."
 			},
 			"nl": {
 				"name": "Phishing-URL blokkeerlijst",

@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.92.26",
-			"timeUpdated": "2024-07-16T14:31:12+0000",
+			"version": "2.0.92.27",
+			"timeUpdated": "2024-07-16T15:31:11+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.44.17",
-			"timeUpdated": "2024-07-16T14:31:27+0000",
+			"version": "2.3.44.18",
+			"timeUpdated": "2024-07-16T15:31:26+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.27",
-			"timeUpdated": "2024-07-16T14:32:56+0000",
+			"version": "2.0.72.28",
+			"timeUpdated": "2024-07-16T15:33:24+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.3.49",
-			"timeUpdated": "2024-07-16T14:32:59+0000",
+			"version": "2.1.3.50",
+			"timeUpdated": "2024-07-16T15:33:27+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.16",
-			"timeUpdated": "2024-07-16T13:32:32+0000",
+			"version": "2.0.54.17",
+			"timeUpdated": "2024-07-16T15:33:37+0000",
 			"languages": [
 				"ja"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.31",
-			"timeUpdated": "2024-07-16T14:33:24+0000",
+			"version": "2.2.2.32",
+			"timeUpdated": "2024-07-16T15:33:54+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.21",
-			"timeUpdated": "2024-07-16T12:35:47+0000",
+			"version": "2.0.43.22",
+			"timeUpdated": "2024-07-16T15:33:59+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.39.81",
-			"timeUpdated": "2024-07-16T13:32:55+0000",
+			"version": "2.0.39.82",
+			"timeUpdated": "2024-07-16T15:34:00+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -789,8 +789,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.84",
-			"timeUpdated": "2024-07-16T11:32:58+0000",
+			"version": "2.0.8.85",
+			"timeUpdated": "2024-07-16T15:34:01+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.19.8",
-			"timeUpdated": "2024-07-16T11:33:02+0000",
+			"version": "2.1.19.9",
+			"timeUpdated": "2024-07-16T15:34:06+0000",
 			"languages": [
 				"zh"
 			],
@@ -2101,7 +2101,7 @@
 		{
 			"filterId": 251,
 			"name": "Legitimate URL Shortener",
-			"description": "Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links.",
+			"description": "Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.",
 			"timeAdded": "2021-07-12T10:46:44+0000",
 			"homepage": "https://github.com/DandelionSprout/adfilt",
 			"expires": 864000,
