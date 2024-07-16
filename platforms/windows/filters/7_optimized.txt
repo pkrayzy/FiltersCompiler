@@ -1,9 +1,9 @@
-! Checksum: +3JxXAbQr9JBHKX7Vu+x5A
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1721151441-3600.patch
+! Checksum: ObVeJD9aWqKHDROA51e5vg
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1721173033-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.18
-! TimeUpdated: 2024-07-16T17:33:10+00:00
+! Version: 2.0.54.19
+! TimeUpdated: 2024-07-16T23:33:09+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -404,8 +404,7 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-||exploader.net^$replace=/window\.[0-9a-f]+ = true;//
-exploader.net#%#//scriptlet('set-constant', 'load_daotag', 'true')
+exploader.net#%#//scriptlet('remove-attr', 'id', '.information > div[id]')
 exploader.net#%#//scriptlet('prevent-xhr', '.js')
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
 kotobank.jp#%#//scriptlet('prevent-setTimeout', 'return')
