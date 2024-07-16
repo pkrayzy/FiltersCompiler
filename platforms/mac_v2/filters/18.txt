@@ -1,9 +1,9 @@
-! Checksum: 8wsuru8hg3HKYPY/DuV9dg
-! Diff-Path: ../patches/18/18-s-1721111805-3600.patch
+! Checksum: UA+JhhqXWpKqYm6Pry962Q
+! Diff-Path: ../patches/18/18-s-1721115426-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.43.16
-! TimeUpdated: 2024-07-16T06:33:16+00:00
+! Version: 2.0.43.17
+! TimeUpdated: 2024-07-16T07:33:33+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.ets_cookie_banber_block
 ##.cli-popupbar-overlay
 ##.seopress-user-consent
 ###buzzblogpro-cookie-banner
@@ -2444,6 +2445,11 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Marketing', 'true')
+shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Techniques', 'true')
+esm-computer.de#$#.modal-backdrop-open { display: none !important; }
+esm-computer.de#$#.cookie-permission-container { display: none !important; }
+esm-computer.de#$#.no-scroll  { overflow: auto !important; }
 trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'cookie-preference', '1')
 trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'google-maps-consent', '1')
 trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'vimeo-consent', '1')
@@ -15487,6 +15493,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183716
+esm-computer.de#@#.cookie-permission-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183620
 etyres.co.uk,asdatyres.co.uk#@##cookieBanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183609

@@ -1,9 +1,9 @@
-! Checksum: vvijcuaTuTJJes2aExlXtA
-! Diff-Path: ../patches/14/14-s-1721111789-3600.patch
+! Checksum: ZW6huqaEwMh7Ir5eedCGGg
+! Diff-Path: ../patches/14/14-s-1721115410-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.23
-! TimeUpdated: 2024-07-16T06:33:12+00:00
+! Version: 2.2.2.24
+! TimeUpdated: 2024-07-16T07:33:28+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.ets_cookie_banber_block
 ##.cli-popupbar-overlay
 ##.seopress-user-consent
 ###buzzblogpro-cookie-banner
@@ -2444,6 +2445,11 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Marketing', 'true')
+shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Techniques', 'true')
+esm-computer.de#$#.modal-backdrop-open { display: none !important; }
+esm-computer.de#$#.cookie-permission-container { display: none !important; }
+esm-computer.de#$#.no-scroll  { overflow: auto !important; }
 trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'cookie-preference', '1')
 trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'google-maps-consent', '1')
 trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'vimeo-consent', '1')
@@ -15459,6 +15465,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183716
+esm-computer.de#@#.cookie-permission-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183620
 etyres.co.uk,asdatyres.co.uk#@##cookieBanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183609
@@ -23480,6 +23488,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+shopbuddies.*###banner
 bestproducts.com##.journey-container-wrapper
 kenja-succession.com###modal-overlay
 trinity-tech.co.jp###cv-fixed
@@ -41914,6 +41923,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+anadolu.edu.tr###smartbanner
 view.inews.qq.com##div[class^="bottom-bar_buttonWrap__"]
 yama.minato-yamaguchi.co.jp##._phn._on
 minkara.carview.co.jp##.dlbanner
