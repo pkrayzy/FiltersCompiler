@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.48",
-			"timeUpdated": "2024-07-16T05:01:13+0000",
+			"version": "2.1.52.49",
+			"timeUpdated": "2024-07-16T09:01:19+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.47",
-			"timeUpdated": "2024-07-16T05:01:13+0000",
+			"version": "2.1.52.48",
+			"timeUpdated": "2024-07-16T09:01:20+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.54",
-			"timeUpdated": "2024-07-16T05:01:28+0000",
+			"version": "2.0.30.55",
+			"timeUpdated": "2024-07-16T09:01:35+0000",
 			"languages": [
 				"vi"
 			],
@@ -1228,8 +1228,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.96",
-			"timeUpdated": "2024-07-15T09:01:44+0000",
+			"version": "2.0.18.97",
+			"timeUpdated": "2024-07-16T09:01:51+0000",
 			"languages": [
 				"sv"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.79",
-			"timeUpdated": "2024-07-16T05:01:55+0000",
+			"version": "2.0.45.80",
+			"timeUpdated": "2024-07-16T09:02:01+0000",
 			"languages": [
 				"hi"
 			],
@@ -1393,8 +1393,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.10",
-			"timeUpdated": "2024-07-15T21:02:01+0000",
+			"version": "2.0.2.11",
+			"timeUpdated": "2024-07-16T09:02:02+0000",
 			"languages": [],
 			"tags": [
 				4
