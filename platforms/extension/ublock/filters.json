@@ -576,8 +576,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.39",
-			"timeUpdated": "2024-07-15T16:33:17+0000",
+			"version": "2.0.52.40",
+			"timeUpdated": "2024-07-16T06:33:05+0000",
 			"languages": [
 				"tr"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.22",
-			"timeUpdated": "2024-07-15T18:33:33+0000",
+			"version": "2.2.2.23",
+			"timeUpdated": "2024-07-16T06:33:12+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.4",
-			"timeUpdated": "2024-07-16T00:32:46+0000",
+			"version": "2.0.68.5",
+			"timeUpdated": "2024-07-16T06:33:12+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.15",
-			"timeUpdated": "2024-07-15T16:33:31+0000",
+			"version": "2.0.43.16",
+			"timeUpdated": "2024-07-16T06:33:16+0000",
 			"languages": [],
 			"tags": [
 				5,
