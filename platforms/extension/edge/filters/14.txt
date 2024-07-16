@@ -1,9 +1,9 @@
-! Checksum: x+e1Ls+Tkh9zweIMa6vmDQ
-! Diff-Path: ../patches/14/14-s-1721144248-3600.patch
+! Checksum: lKWXTGLf4qN5P3s3cjpN6w
+! Diff-Path: ../patches/14/14-s-1721147804-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.32
-! TimeUpdated: 2024-07-16T15:33:54+00:00
+! Version: 2.2.2.33
+! TimeUpdated: 2024-07-16T16:33:17+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2444,6 +2444,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+bitrix24.ru##.bx-main-cookie-policy-sidebar
+neomouv.com#$##pnvconsent { display: none !important; }
+neomouv.com#$#body { overflow: auto !important; position: static !important; }
 mirrormedia.mg##div[class^="gdpr"]
 pressone.ro##body > div[style^="position: fixed;"]:has(> .cookie-notice)
 maudau.com.ua###__next > div[class^="css-"]:has(> div > button.chakra-button)
@@ -3005,7 +3008,7 @@ drweb.com##div[aria-live="polite"] > div[x-show="toast_show"]:has(> div[x-data*=
 anc.ua##.cookies--container
 culture.gov.ru###form-accept-cookie
 p2pb2b.com##div[class^="CookieNotification_wrapper"]
-inrlp.de#%#//scriptlet('trusted-click-element', 'div[data-nosnippet="data-nosnippet"] ._i3809i8')
+insideevs.de,inrlp.de#%#//scriptlet('trusted-click-element', 'div[data-nosnippet="data-nosnippet"] ._i3809i8')
 zen.com##body.disable-background::before
 gazprom.ru##.js-cookie-agreement
 meta.com#%#//scriptlet('trusted-click-element', 'body > div[class="x1n2onr6 x1vjfegm"] div[aria-hidden="true"] + div[class] > div[role="button"] > div[role="none"][class^="x1n2onr6 x1ja2u2z"]')
@@ -15454,6 +15457,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183775
+neomouv.com#@#.orejime-Notice
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183715
 piceramic.com#@#.cc-window[aria-label="cookieconsent"]
 piceramic.com#@#.cc-floating
@@ -31617,6 +31622,9 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+i38.ru##td[valign="top"] ul:has(> li a[target="_blank"][rel="nofollow"][href="https://vk.com/tochki.nadgorodomi"])
+i38.ru##span.ots
+lordserials.fan##.telegraminfo
 zed.dev##section.flex > div.w-full:has(> label[for="email"])
 bestproducts.com#%#//scriptlet('trusted-set-cookie', 'journey-last-action', '{}')
 bestproducts.com#%#//scriptlet('trusted-set-cookie', 'journeyHidden', '{}')
@@ -49175,6 +49183,8 @@ eiga.com##.header-pure-banner
 !##############################
 ! SECTION: Tweaks - CSS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183581 - copy/right text
+||i38.ru/templates/teleinform/js/cprgt.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182950
 abplive.com#%#//scriptlet('trusted-click-element', '#read-full-article')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183012
