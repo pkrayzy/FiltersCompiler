@@ -1,9 +1,9 @@
-! Checksum: UA+JhhqXWpKqYm6Pry962Q
-! Diff-Path: ../patches/18/18-s-1721115426-3600.patch
+! Checksum: GDLNgT3WmsIL1bCiMutosg
+! Diff-Path: ../patches/18/18-s-1721122647-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.43.17
-! TimeUpdated: 2024-07-16T07:33:33+00:00
+! Version: 2.0.43.18
+! TimeUpdated: 2024-07-16T09:33:44+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2445,6 +2445,10 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+uvcw.be#$##cookieModal { display: none !important; }
+uvcw.be#$#.modal-backdrop { display: none !important; }
+uvcw.be#$#body[class] { overflow: auto !important; padding-right: 0 !important; }
+readmedium.com##body > .bg-gray-800
 shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Marketing', 'true')
 shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Techniques', 'true')
 esm-computer.de#$#.modal-backdrop-open { display: none !important; }
@@ -15493,6 +15497,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183740
+uvcw.be#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183716
 esm-computer.de#@#.cookie-permission-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183620

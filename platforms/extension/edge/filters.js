@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.44.11",
-			"timeUpdated": "2024-07-16T00:31:24+0000",
+			"version": "2.3.44.12",
+			"timeUpdated": "2024-07-16T09:31:28+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.24",
-			"timeUpdated": "2024-07-15T17:32:57+0000",
+			"version": "2.0.72.25",
+			"timeUpdated": "2024-07-16T09:33:08+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -439,8 +439,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/6.txt",
 			"trustLevel": "full",
-			"version": "2.0.42.82",
-			"timeUpdated": "2024-07-13T20:33:18+0000",
+			"version": "2.0.42.83",
+			"timeUpdated": "2024-07-16T09:33:18+0000",
 			"languages": [
 				"de"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.25",
-			"timeUpdated": "2024-07-16T08:33:35+0000",
+			"version": "2.2.2.26",
+			"timeUpdated": "2024-07-16T09:33:38+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.17",
-			"timeUpdated": "2024-07-16T07:33:33+0000",
+			"version": "2.0.43.18",
+			"timeUpdated": "2024-07-16T09:33:44+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.39.78",
-			"timeUpdated": "2024-07-16T07:33:34+0000",
+			"version": "2.0.39.79",
+			"timeUpdated": "2024-07-16T09:33:45+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.19.6",
-			"timeUpdated": "2024-07-16T00:32:57+0000",
+			"version": "2.1.19.7",
+			"timeUpdated": "2024-07-16T09:33:50+0000",
 			"languages": [
 				"zh"
 			],
