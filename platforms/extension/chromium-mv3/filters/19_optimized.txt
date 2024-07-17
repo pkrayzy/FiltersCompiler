@@ -1,8 +1,8 @@
-! Checksum: NYYGnw4OOSkjdT3QH1pA4Q
+! Checksum: gXNSym3hU9TzzoK0fXHKZQ
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.39.87
-! TimeUpdated: 2024-07-17T10:33:25+00:00
+! Version: 2.0.39.88
+! TimeUpdated: 2024-07-17T13:33:43+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -71,6 +71,8 @@ shakko.ru,vadimrazumov.ru,levik.blog,varlamov.ru,lena-miro.ru,olegmakarenko.ru,p
 razlozhi.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.initTime')
 auto.ru#%#//scriptlet('json-prune', 'ads')
 drive2.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.AdChosen')
+drive2.ru##.js-page > div[class*=" "] > div[data-track]
+drive2.ru#?#.js-page > div[class*=" "] > div[itemscope] ~ div[class]:not([id]):has(> div[class]:matches-css(position: relative))
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru#%#//scriptlet('trusted-replace-fetch-response', '{"direct":{"ads":', '')
 mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asResolved')

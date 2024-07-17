@@ -1,9 +1,9 @@
-! Checksum: BtvlS13gIJwtDqMHASE3MQ
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1721219903-3600.patch
+! Checksum: OwAs2xMC2ZEf+iKSdIZ4/w
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1721223434-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.40
-! TimeUpdated: 2024-07-17T12:34:46+00:00
+! Version: 2.2.2.41
+! TimeUpdated: 2024-07-17T13:33:36+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -9041,6 +9041,8 @@ shakko.ru,vadimrazumov.ru,levik.blog,varlamov.ru,lena-miro.ru,olegmakarenko.ru,p
 razlozhi.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.initTime')
 auto.ru#%#//scriptlet('json-prune', 'ads')
 drive2.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.AdChosen')
+drive2.ru##.js-page > div[class*=" "] > div[data-track]
+drive2.ru#?#.js-page > div[class*=" "] > div[itemscope] ~ div[class]:not([id]):has(> div[class]:matches-css(position: relative))
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru#%#//scriptlet('trusted-replace-fetch-response', '{"direct":{"ads":', '')
 mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asResolved')
@@ -20903,6 +20905,10 @@ alexfitness.ru#$#div.modal-backdrop { display: none!important; }
 alexfitness.ru#$#.modal-open { overflow: visible!important; }
 banggood.com##.top_mt.datacube_banner
 ||contributions.guardianapis.com^
+##a[href^="https://apay-up-banner.com?merchantId="] > img
+||apay-up-banner.com^$image,third-party
+||site.pfm.moneyforward.com/prod/appstorage/pfm/web_banner/
+pixiv.net##div[style^="margin-left: 0px; --columns"] div[class^="sc-"] > div[class^="sc-"] > section[class^="sc-"]:has(> div[class^="sc-"] > a[href^="/premium/lead/lp/?"])
 pixiv.net##.banner-ad-footer-scale
 prospectmagazine.co.uk###piano_ribbon_collapsible_container
 myupchar.com##a[class^="ad_slot_"]

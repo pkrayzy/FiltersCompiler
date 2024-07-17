@@ -1,9 +1,9 @@
-! Checksum: Ij0sNiSWYNMvPw/MpHSTaA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1721219891-3600.patch
+! Checksum: fpy9Xz4WbQRJ6Cx/t4pA7g
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1721223426-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.40
-! TimeUpdated: 2024-07-17T12:34:46+00:00
+! Version: 2.2.2.41
+! TimeUpdated: 2024-07-17T13:33:36+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -7572,6 +7572,7 @@ liveinternet.ru##.leftcolumn > script[type] + div[style="clear:both;"]
 liveinternet.ru##.rightcolumn > div.news
 razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style$="px;"] { width: 100% !important }
 razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style^="top:"] ~ div[class]:not([style]) { left: 100% !important; }
+drive2.ru##.js-page > div[class*=" "] > div[data-track]
 dzen.ru##div[class^="float-interview__float-"]
 !#safari_cb_affinity(general)
 rambler.ua,rambler.ru#@#.ad
@@ -17798,6 +17799,9 @@ alexfitness.ru#$#div.modal-backdrop { display: none!important; }
 alexfitness.ru#$#.modal-open { overflow: visible!important; }
 banggood.com##.top_mt.datacube_banner
 ||contributions.guardianapis.com^
+##a[href^="https://apay-up-banner.com?merchantId="] > img
+||apay-up-banner.com^$image,third-party
+||site.pfm.moneyforward.com/prod/appstorage/pfm/web_banner/
 pixiv.net##.banner-ad-footer-scale
 prospectmagazine.co.uk###piano_ribbon_collapsible_container
 myupchar.com##a[class^="ad_slot_"]

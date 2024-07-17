@@ -1,9 +1,9 @@
-! Checksum: PY43om6zXnkyEk5KwKiwwg
-! Diff-Path: ../patches/14/14-s-1721219903-3600.patch
+! Checksum: B6kbNekEAlQuqWg8EUZYiA
+! Diff-Path: ../patches/14/14-s-1721223434-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.40
-! TimeUpdated: 2024-07-17T12:34:46+00:00
+! Version: 2.2.2.41
+! TimeUpdated: 2024-07-17T13:33:36+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -19479,6 +19479,8 @@ razlozhi.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.initTime')
 auto.ru#%#//scriptlet('json-prune', 'ads')
 ! drive2.ru
 drive2.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.AdChosen')
+drive2.ru##.js-page > div[class*=" "] > div[data-track]
+drive2.ru#?#.js-page > div[class*=" "] > div[itemscope] ~ div[class]:not([id]):has(> div[class]:matches-css(position: relative))
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 !   NOTE: Yandex direct end ⬆️
 !   !SECTION: Anti-adblock - Yandex direct
@@ -47709,8 +47711,14 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+! Amazon Pay promos (Japan)
+##a[href^="https://apay-up-banner.com?merchantId="] > img
+||apay-up-banner.com^$image,third-party
+!
 ! SECTION: Self-promo - Regular rules
 !
+||site.pfm.moneyforward.com/prod/appstorage/pfm/web_banner/
+pixiv.net##div[style^="margin-left: 0px; --columns"] div[class^="sc-"] > div[class^="sc-"] > section[class^="sc-"]:has(> div[class^="sc-"] > a[href^="/premium/lead/lp/?"])
 pixiv.net##.banner-ad-footer-scale
 prospectmagazine.co.uk###piano_ribbon_collapsible_container
 myupchar.com##a[class^="ad_slot_"]

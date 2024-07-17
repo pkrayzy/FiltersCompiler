@@ -1,9 +1,9 @@
-! Checksum: +M/Uyh7e2FQAgzVodOeaOA
-! Diff-Path: ../patches/14/14-s-1721219891-3600.patch
+! Checksum: b0Spo6P+m3cd+m62OCGdsw
+! Diff-Path: ../patches/14/14-s-1721223425-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.40
-! TimeUpdated: 2024-07-17T12:34:46+00:00
+! Version: 2.2.2.41
+! TimeUpdated: 2024-07-17T13:33:36+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -17688,6 +17688,7 @@ razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > 
 razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style^="top:"] ~ div[class]:not([style]) { left: 100% !important; }
 ! auto.ru
 ! drive2.ru
+drive2.ru##.js-page > div[class*=" "] > div[data-track]
 !   NOTE: Yandex direct end ⬆️
 !   !SECTION: Anti-adblock - Yandex direct
 !
@@ -43087,8 +43088,13 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+! Amazon Pay promos (Japan)
+##a[href^="https://apay-up-banner.com?merchantId="] > img
+||apay-up-banner.com^$image,third-party
+!
 ! SECTION: Self-promo - Regular rules
 !
+||site.pfm.moneyforward.com/prod/appstorage/pfm/web_banner/
 pixiv.net##.banner-ad-footer-scale
 prospectmagazine.co.uk###piano_ribbon_collapsible_container
 myupchar.com##a[class^="ad_slot_"]

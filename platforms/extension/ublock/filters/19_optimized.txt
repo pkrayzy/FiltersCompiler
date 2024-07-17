@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: +BHpihOEG180vHOe0eD+Pg
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1721212626-3600.patch
+! Checksum: X1ZrCWqE8Hdmi4ADhOZVdg
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1721223444-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.39.87
-! TimeUpdated: 2024-07-17T10:33:25+00:00
+! Version: 2.0.39.88
+! TimeUpdated: 2024-07-17T13:33:43+00:00
 ! Expires: 5 days (update frequency)
 ://yandex.*/images/_$xmlhttprequest,method=post
 ya.ru,yandex.*##:matches-path(/images).AdvMastHead
@@ -50,6 +50,8 @@ razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > 
 razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style^="top:"] ~ div[class]:not([style]) { left: 100% !important; }
 auto.ru##+js(json-prune, ads)
 drive2.ru##+js(abort-on-property-read, Object.prototype.AdChosen)
+drive2.ru##.js-page > div[class*=" "] > div[data-track]
+drive2.ru#?#.js-page > div[class*=" "] > div[itemscope] ~ div[class]:not([id]):has(> div[class]:matches-css(position: relative))
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru##+js(set-constant, Object.prototype.hideTgbAd, '')
 e.mail.ru,octavius.mail.ru##+js(no-setTimeout-if, /\(\)=>[a-z]{1}\(\)$/)
