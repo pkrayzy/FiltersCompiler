@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: mIxPMiRFlFNcMvDFe/bQew
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721216261-3600.patch
+! Checksum: 0/gLuMfGFwv2pZC9pEQ59w
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721219918-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.44.32
-! TimeUpdated: 2024-07-17T11:31:42+00:00
+! Version: 2.3.44.33
+! TimeUpdated: 2024-07-17T12:31:31+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7518,6 +7518,11 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183838
+@@||itv.com/itv/tserver/$~third-party,badfilter
+@@||itv.com/itv/tserver/*size=*/*/viewid=$badfilter
+@@||spike.itv.com/itv/lserver/tserver/random=$xmlhttprequest
+@@||itv.com/itv/tserver/*size=*/*/viewid=
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183825
 metode.my.id,sigaptech.com,tutorialsaya.com,bantenexis.com###adb
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183826
@@ -15704,10 +15709,6 @@ trancepodcasts.com#$#.w3eden { display: block!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5655
 @@||cdn.hackintosh.zone/ipscdn/adsense/$domain=hackintosh.zone
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5626
-! https://github.com/AdguardTeam/AdguardFilters/issues/65443
-! https://github.com/AdguardTeam/AdguardFilters/issues/377
-@@||spike.itv.com/itv/lserver/tserver/random=$xmlhttprequest
-@@||itv.com/itv/tserver/*size=*/*/viewid=
 ! https://forum.adguard.com/index.php?threads/23302/
 @@||destyy.com^$generichide
 ! https://forum.adguard.com/index.php?threads/23262/
@@ -29291,8 +29292,6 @@ eegybest.xyz##+js(remove-attr, href, #clickfakeplayer)
 ! TODO: use scriptlet when it will be added - https://github.com/AdguardTeam/Scriptlets/issues/202
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126547
 maxstream.video##+js(window.open-defuser)
-! https://github.com/AdguardTeam/AdguardFilters/issues/124322
-itv.com##+js(json-prune, Playlist.ContentBreaks)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136960
 hurawatch.at##+js(abort-current-script, window.onclick, https)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126253
@@ -33474,6 +33473,10 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+xv-ru.com#?##content > div#video-right + div[class]:has(> a[href^="https://cams.xvideos.com"])
+xv-ru.com##div[id^="ad-footer"]
+xv-ru.com##.thumb-nat-ad
+xv-ru.com###video-right
 si.com##.viewablity-block > figure:has(> div[class] > div#mmvid)
 ||cdn.flowplayer.com/releases/*/plugins/ads$script
 climaeradar.com.br,havadurumuveradar.com,idojarasesradar.hu,kairosradar.gr,meteoetradar.be,meteoetradar.com,meteoeradar.it,meteoradar.ro,meteoetradar.ch,meteounradars.lv,orasonline.lt,pocasiaradar.cz,pocasieradar.sk,pogodairadar.pl,pogodairadar.com,pogodairadar.com.ua,tempoeradar.pt,tiempoyradar.com.ar,tiempoyradar.es,vejrogradar.dk,vremeradar.si,vremeradar.rs,vrijemeradar.ba,vrijemeradar.me,vrijemeradar.hr,vremeiradar.bg,vremetoiradar.com,weatherandradar.co.uk,weatherandradar.in,weatherandradar.ie,weatherandradar.com,weerenradar.be,weerenradar.nl##wo-ad
