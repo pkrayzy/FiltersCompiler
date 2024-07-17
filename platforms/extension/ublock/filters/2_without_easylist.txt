@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: WMY6I9TBmF2vUFMsb3LTxA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721205448-3600.patch
+! Checksum: vhT9VphlYG4LAEkTtsa2+w
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721209051-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.44.29
-! TimeUpdated: 2024-07-17T08:31:33+00:00
+! Version: 2.3.44.30
+! TimeUpdated: 2024-07-17T09:31:25+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -6482,6 +6482,8 @@ serve.bussyhunter.com^
 ||xmlv4.reklama.network^
 ||static.rvndigital.com^
 !
+! Rule for detecting hidden trackers when the main domain cannot be blocked.
+||d162h6x3rxav67.cloudfront.net^$third-party
 !
 ! NOTE: CNAME disguised advertisin networks end ⬆️
 ! !SECTION: CNAME disguised advertising networks
@@ -14710,14 +14712,13 @@ readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndic
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35064
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20387
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18523
-kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(remove-node-text, script, dcmarvel)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(no-setTimeout-if, userAgent)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, cpe, false)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##.kcAds1:not(#ad-promo)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#@#.kcAds1
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#@##ad-promo
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-current-script, document.getElementById, /\.indexOf[(]'iframe'[)]|isAdb|#ad-promo/)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(no-fetch-if, bidgear.com/pubbidgear-ad.js)
-kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-on-property-write, xaZlE)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, tryHard, noopFunc)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, isAdb, false)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#$?#div[id^="greenTree"] { remove: true; }
@@ -27979,6 +27980,8 @@ truyenqqhot.com##div[id^="ads_"]
 ! Popular ad on streaming services
 ##button[data-openuri="|BTN_URL|"]
 !
+##.player-section__ad-b
+##.video.ad-w
 ##.advMasthead
 ##iframe[src^="https://mmmdn.net/"]
 ##body .top-advert
@@ -37023,13 +37026,11 @@ pornxs.com##div[id^="div_theAd"]
 pornstream.org##.player > div.right
 justswallows.net##a[title="For video ad companies"]
 crazyporn.xxx##.list-videos > div > div[class="item"]:empty
-hdsex.org##.player-section__ad-b
-hdsex.org##.ad-w
 pornburst.xxx##div[class$="-iframe mb-20 text-center"]
 pornburst.xxx,serviporno.com##.ntv-disclaimer
 porn300.net,tokyvideo.com,pornburst.xxx,serviporno.com###overlay-video
 cuteasiangirl.net,matureclub.com##.videos-adv
-matureclub.com##.player__banner
+shemale.movie,matureclub.com##.player__banner
 cuteasiangirl.net,matureclub.com##.video-item--adv
 ||sleazyneasy.com/contents/images-container/*.gif
 ||sexy-egirls.com/vast/
@@ -45536,7 +45537,6 @@ efukt.com##.hardlinks.font700
 javhay.net###sidebar > #custom_html-2 center > a[href] > img
 gestyy.com,sh.st##.skip-advert
 ||hdmoza.com/nb^
-kimcartoon.li##.w-right .kcAds2
 kimcartoon.*##.kcAds1
 ||kimcartoon.li/Ads/
 apkpure.*##.left > .box[style="overflow: hidden; padding-bottom: 20px"]
