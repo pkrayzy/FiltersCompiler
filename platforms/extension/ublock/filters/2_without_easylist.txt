@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: vhT9VphlYG4LAEkTtsa2+w
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721209051-3600.patch
+! Checksum: PkhtC1spCpDnn+hKW8rXag
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721212628-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.44.30
-! TimeUpdated: 2024-07-17T09:31:25+00:00
+! Version: 2.3.44.31
+! TimeUpdated: 2024-07-17T10:31:40+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -9658,6 +9658,10 @@ shareus.site##+js(no-setTimeout-if, _0x)
 nexnoo.com,simana.online,efhjd.com,upfilesurls.com#@#.ad-element
 nexnoo.com,simana.online,efhjd.com,upfilesurls.com#@#.ad-inner
 nexnoo.com,simana.online,efhjd.com,upfilesurls.com##+js(no-fetch-if, pagead2.googlesyndication.com)
+! BUG: https://github.com/AdguardTeam/tsurlfilter/issues/131
+! TODO: enable the hint after fixing
+!!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=nexnoo.com|simana.online|efhjd.com|upfilesurls.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/138484
 @@||citynews.ca/*/get_ad_$domain=citynews.ca
 ||citynews.ca/*/get_ad_$xmlhttprequest,redirect=noop.json,domain=citynews.ca,important
@@ -20142,7 +20146,7 @@ bagas31.info##.socialproff-bottom
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51656
 ||firebasestorage.googleapis.com/*/ABP.$stylesheet,script,domain=pekalongan-cits.blogspot.com
 ! tokopedia.com
-tokopedia.com#?#div[data-testid="topadsCPMWrapper"] ~ div[data-testid="divSRPContentProducts"] > div[class^="css-"]:has(a[href*="tokopedia.com"] span:contains(Ad))
+tokopedia.com##div[data-testid="topadsCPMWrapper"] ~ div[data-testid="divSRPContentProducts"] > div[class^="css-"] div:has(a[href*="src=topads"])
 tokopedia.com#?#div[data-testid="cntrFindProductsResult"] div[data-testid^="divFindProduct"]:has(a[href^="https://ta.tokopedia.com/promo/"] span:contains(Ad))
 tokopedia.com##div[data-testid="divSRPContentProducts"] > div[class^="css"] > div[class^="css"]:has( div[data-testid^="master-product-card"] div.prd_container-card [data-testid="divSRPTopadsIcon"])
 tokopedia.com##div[data-testid="divSRPContentProducts"] div[data-testid^="master-product-card"]:has(div.prd_container-card [data-testid="divSRPTopadsIcon"])

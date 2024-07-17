@@ -2449,8 +2449,8 @@
 				"name": "Референца на филтерот AdGuard Base"
 			},
 			"nl": {
-				"description": "Refereert aan het Engelse filter",
-				"name": "Engels filter referentie"
+				"description": "Refereert aan het AdGuard-basisfilter",
+				"name": "Referentie voor AdGuard-basisfilters"
 			},
 			"no": {
 				"description": "Har referanser til AdGuards hovedfilter",
@@ -11035,8 +11035,8 @@
 				"description": "EasyList + Основен филтер на AdGuard. Овој филтер е неопходен за квалитетно блокирање реклами."
 			},
 			"nl": {
-				"name": "Engels filter",
-				"description": "Gebaseerd op EasyList. Filter dat het verwijderen van advertenties op websites met Engelse inhoud mogelijk maakt."
+				"name": "AdGuard-basisfilter",
+				"description": "EasyList + AdGuard-basisfilter. Dit filter is nodig voor hoogwaardige advertentieblokkering."
 			},
 			"no": {
 				"name": "AdGuards hovedfilter",
@@ -16120,7 +16120,7 @@
 			},
 			"nl": {
 				"name": "List-KR",
-				"description": "Filter dat advertenties en verschillende scripts uit Koreaanse websites verwijdert. Gecombineerd en verbeterd met AdGuard-specifieke regels voor betere filtering. Deze filter gebruik je best samen met AdGuard Base filter."
+				"description": "Filter dat advertenties en verschillende scripts verwijdert van websites met Koreaanse inhoud. Gecombineerd en aangevuld met AdGuard-specifieke regels voor verbeterde filtering. Dit filter zal naar verwachting samen met het AdGuard-basisfilter worden gebruikt."
 			},
 			"pl": {
 				"name": "List-KR",

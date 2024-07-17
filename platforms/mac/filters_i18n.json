@@ -1083,8 +1083,8 @@
 				"description": "EasyList + Основен филтер на AdGuard. Овој филтер е неопходен за квалитетно блокирање реклами."
 			},
 			"nl": {
-				"name": "Engels filter",
-				"description": "Gebaseerd op EasyList. Filter dat het verwijderen van advertenties op websites met Engelse inhoud mogelijk maakt."
+				"name": "AdGuard-basisfilter",
+				"description": "EasyList + AdGuard-basisfilter. Dit filter is nodig voor hoogwaardige advertentieblokkering."
 			},
 			"no": {
 				"name": "AdGuards hovedfilter",
@@ -3138,7 +3138,7 @@
 			},
 			"nl": {
 				"name": "AdGuard DNS filter",
-				"description": "Filter samengesteld uit diverse andere filters (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) en vereenvoudigd om beter compatibel te zijn met DNS-level adblocking."
+				"description": "Filter samengesteld uit verschillende andere filters (AdGuard-basisfilter, Sociale media filter, Traceerbeveiligingsfilter, Filter voor mobiele advertenties, EasyList en EasyPrivacy) en specifiek vereenvoudigd om beter compatibel te zijn met advertentieblokkering op DNS-niveau."
 			},
 			"no": {
 				"name": "AdGuards forenklede domenenavnfilter",
@@ -4544,7 +4544,7 @@
 			},
 			"nl": {
 				"name": "EasyList",
-				"description": "EasyList is een basis abonnement dat advertenties verwijdert van websites in het Engels. Inbegrepen in de AdGuard Basis filter."
+				"description": "EasyList is een basis abonnement dat advertenties verwijdert van websites in het Engels. Inbegrepen in de AdGuard-basisfilter."
 			},
 			"pl": {
 				"name": "EasyList",
@@ -10660,7 +10660,7 @@
 			},
 			"nl": {
 				"name": "List-KR",
-				"description": "Filter dat advertenties en verschillende scripts uit Koreaanse websites verwijdert. Gecombineerd en verbeterd met AdGuard-specifieke regels voor betere filtering. Deze filter gebruik je best samen met AdGuard Base filter."
+				"description": "Filter dat advertenties en verschillende scripts verwijdert van websites met Koreaanse inhoud. Gecombineerd en aangevuld met AdGuard-specifieke regels voor verbeterde filtering. Dit filter zal naar verwachting samen met het AdGuard-basisfilter worden gebruikt."
 			},
 			"pl": {
 				"name": "List-KR",
