@@ -1,9 +1,9 @@
-! Checksum: zFPlAKfSSHT/hHEMvF4tcA
-! Diff-Path: ../patches/3/3-s-1721219910-3600.patch
+! Checksum: WZhFxTU/mk6r91/rjXdecA
+! Diff-Path: ../patches/3/3-s-1721227039-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.72.34
-! TimeUpdated: 2024-07-17T12:34:12+00:00
+! Version: 2.0.72.35
+! TimeUpdated: 2024-07-17T14:33:16+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -103,6 +103,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183797
+sahibinden.com#%#//scriptlet('set-constant', 'gaTrackData', 'trueFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183745
 focus.de#%#//scriptlet('set-constant', 'trackIVWFOL', 'noopFunc')
 ! faz.net Adobe
@@ -74957,6 +74959,8 @@ link.gmapp*.net$image
 ! it's problematic that due to how Gmail proxy work, these domains aren't even exposed on the network level
 ! fortunately, extensions can see them (Gmail puts the real URL in the location.hash part of the src)
 !
+! instahyre.com
+click.instahyre.com$image
 ! disqus.com
 referrer.disqus.com$image
 ! files.fm
@@ -77636,6 +77640,8 @@ inapps.appsflyersdk.com^
 ! For platforms which do not support $redirect rules
 !
 !
+! https://github.com/tofukko/filter/issues/99
+e-begin.jp#$#.inviewSection:not(.is-show) { transform: translateY(0) !important; opacity: 1 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183720
 ||shemale6.com/player/stats.php?event=Init$image,redirect=1x1-transparent.gif,domain=shemale6.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183621
