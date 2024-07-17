@@ -1,9 +1,9 @@
-! Checksum: 8ho+Ec8MUceKrU7GeVW/xA
-! Diff-Path: ../patches/18/18-s-1721230628-3600.patch
+! Checksum: fWK+XEVawWH3i+jv9cG/0g
+! Diff-Path: ../patches/18/18-s-1721234216-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.43.27
-! TimeUpdated: 2024-07-17T15:33:26+00:00
+! Version: 2.0.43.28
+! TimeUpdated: 2024-07-17T16:33:32+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2448,6 +2448,7 @@ fotogena.de,gqmagazine.fr,rossmann.pl,reuters.com,foto-erhardt.fr,ryobitools.eu,
 !
 ! NOTE: Regular rules
 !
+unsplash.com##body > dialog[class^="styles-module_dialog__"]
 backmarket.co.jp#%#//scriptlet('set-cookie', 'BM_Advertising', 'false')
 backmarket.co.jp#%#//scriptlet('set-cookie', 'BM_Analytics', 'false')
 backmarket.co.jp#%#//scriptlet('set-cookie', 'BM_User_Experience', 'false')
@@ -4357,7 +4358,7 @@ pprx.team##.dbtfy-cookie_box
 portofoonwinkel.nl#$#body .cookie-container { display: none !important; }
 portofoonwinkel.nl#$##cookieDialog + .modal-backdrop { display: none !important; }
 portofoonwinkel.nl#$#body { overflow: auto !important; padding-right: 0 !important; }
-kgcshop.it##.ammodals-overlay
+panini.com.br,kgcshop.it##.ammodals-overlay
 v.youku.tv##div[class^="cookieModalWrapper_"]
 honvedfc.hu#$#body { overflow: auto !important; }
 honvedfc.hu#$#.cookie-consent__container { display: none !important; }
@@ -5082,7 +5083,7 @@ turkishexporter.com.tr##.fixed-cookie-policy
 kayahotels.com###kvkkbox
 mvideo.ru##mvid-cookie-notification
 ||resources.jetbrains.com/storage/ui/cookies-banner-
-powercolor.com##.Privacy
+vogue.com.cn,powercolor.com##.Privacy
 europa.eu###deu-cookie-banner
 liveagent.com##.Medovnicky
 fruugo.se#%#//scriptlet('trusted-click-element', '.js-consent-btn-decline')
@@ -15488,6 +15489,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183565
+@@||panini.com.br/*/Amasty_GdprFrontendUi/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183855
 fotogena.de#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183827

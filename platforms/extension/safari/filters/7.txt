@@ -1,9 +1,9 @@
-! Checksum: MqU+ywt8LT/u1KWk+Y9jbA
-! Diff-Path: ../patches/7/7-s-1721230640-3600.patch
+! Checksum: 6QzUQNmZym4wISMNRPgwag
+! Diff-Path: ../patches/7/7-s-1721234226-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.25
-! TimeUpdated: 2024-07-17T15:33:01+00:00
+! Version: 2.0.54.26
+! TimeUpdated: 2024-07-17T16:33:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -509,7 +509,7 @@
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183252
-exploader.net#%#//scriptlet('abort-current-inline-script', '$', 'ajax')
+exploader.net#%#//scriptlet('remove-node-text', 'script', 'window.load_daotag')
 exploader.net#%#//scriptlet('prevent-xhr', '.js')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181591
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
@@ -1775,6 +1775,7 @@ gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 !
 !
 ||s3.goodpic.com/jquery/blog.ajaxamazon.js
+skebetter.com#%#//scriptlet('prevent-setTimeout', 'return n(!0)', '10000')
 skebetter.com##.mt-2 > div.items-center:has(> ul.horizontal-list-tweet-detail > li > div > a[rel="noopener sponsored"])
 yogajournal.jp##.admarking_label
 business-mail.jp##article > div:not([class]):has(> p[align="center"] > ins.adsbygoogle)

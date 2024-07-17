@@ -1,9 +1,9 @@
-! Checksum: e9TSNlBqX6bLH1HWAezcfQ
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1721230650-3600.patch
+! Checksum: fwBJDWgEmwlrN3lHrzeDjQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1721234234-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.25
-! TimeUpdated: 2024-07-17T15:33:01+00:00
+! Version: 2.0.54.26
+! TimeUpdated: 2024-07-17T16:33:10+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -404,7 +404,7 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-exploader.net#%#//scriptlet('abort-current-inline-script', '$', 'ajax')
+exploader.net#%#//scriptlet('remove-node-text', 'script', 'window.load_daotag')
 exploader.net#%#//scriptlet('prevent-xhr', '.js')
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
 kotobank.jp#%#//scriptlet('prevent-setTimeout', 'return')
@@ -1351,6 +1351,7 @@ city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hir
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 ||s3.goodpic.com/jquery/blog.ajaxamazon.js
+skebetter.com#%#//scriptlet('prevent-setTimeout', 'return n(!0)', '10000')
 skebetter.com##.mt-2 > div.items-center:has(> ul.horizontal-list-tweet-detail > li > div > a[rel="noopener sponsored"])
 yogajournal.jp##.admarking_label
 business-mail.jp##article > div:not([class]):has(> p[align="center"] > ins.adsbygoogle)
