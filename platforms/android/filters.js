@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.44.52",
-			"timeUpdated": "2024-07-18T17:31:30+0000",
+			"version": "2.3.44.53",
+			"timeUpdated": "2024-07-18T18:33:16+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/3_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.44",
-			"timeUpdated": "2024-07-18T17:33:12+0000",
+			"version": "2.0.72.45",
+			"timeUpdated": "2024-07-18T18:34:53+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.3.61",
-			"timeUpdated": "2024-07-18T16:33:02+0000",
+			"version": "2.1.3.62",
+			"timeUpdated": "2024-07-18T18:34:56+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.57",
-			"timeUpdated": "2024-07-18T16:33:29+0000",
+			"version": "2.2.2.58",
+			"timeUpdated": "2024-07-18T18:35:26+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.14",
-			"timeUpdated": "2024-07-18T12:33:01+0000",
+			"version": "2.0.68.15",
+			"timeUpdated": "2024-07-18T18:35:27+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -686,8 +686,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.8.81",
-			"timeUpdated": "2024-07-18T07:34:03+0000",
+			"version": "2.0.8.82",
+			"timeUpdated": "2024-07-18T18:35:31+0000",
 			"languages": [],
 			"tags": [
 				2
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.37",
-			"timeUpdated": "2024-07-18T15:32:51+0000",
+			"version": "2.0.43.38",
+			"timeUpdated": "2024-07-18T18:35:32+0000",
 			"languages": [],
 			"tags": [
 				5,
