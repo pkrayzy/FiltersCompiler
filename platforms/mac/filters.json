@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.44.43",
-			"timeUpdated": "2024-07-18T03:31:29+0000",
+			"version": "2.3.44.44",
+			"timeUpdated": "2024-07-18T07:31:34+0000",
 			"languages": []
 		},
 		{
@@ -283,8 +283,8 @@
 				"ext_safari",
 				"ext_android_cb"
 			],
-			"version": "2.0.8.80",
-			"timeUpdated": "2024-07-16T12:35:46+0000",
+			"version": "2.0.8.81",
+			"timeUpdated": "2024-07-18T07:34:03+0000",
 			"languages": []
 		},
 		{
