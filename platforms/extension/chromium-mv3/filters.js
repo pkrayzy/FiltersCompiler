@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.58",
-			"timeUpdated": "2024-07-17T21:01:28+0000",
+			"version": "2.1.52.59",
+			"timeUpdated": "2024-07-18T01:01:18+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.57",
-			"timeUpdated": "2024-07-17T21:01:28+0000",
+			"version": "2.1.52.58",
+			"timeUpdated": "2024-07-18T01:01:18+0000",
 			"languages": [
 				"ar"
 			],
@@ -948,8 +948,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
-			"version": "2.0.21.9",
-			"timeUpdated": "2024-07-17T21:01:33+0000",
+			"version": "2.0.21.10",
+			"timeUpdated": "2024-07-18T01:01:23+0000",
 			"languages": [
 				"id"
 			],
@@ -1018,8 +1018,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.96.96",
-			"timeUpdated": "2024-07-17T01:01:33+0000",
+			"version": "2.0.96.97",
+			"timeUpdated": "2024-07-18T01:01:33+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.89",
-			"timeUpdated": "2024-07-17T21:02:09+0000",
+			"version": "2.0.45.90",
+			"timeUpdated": "2024-07-18T01:02:01+0000",
 			"languages": [
 				"hi"
 			],
@@ -1355,8 +1355,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.4",
-			"timeUpdated": "2024-07-17T13:02:48+0000",
+			"version": "2.0.2.5",
+			"timeUpdated": "2024-07-18T01:02:02+0000",
 			"languages": [],
 			"tags": [
 				4
