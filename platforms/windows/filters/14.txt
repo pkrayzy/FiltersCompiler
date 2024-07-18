@@ -1,9 +1,9 @@
-! Checksum: QoK/5rD8HHQZdmDwIuNU0A
-! Diff-Path: ../patches/14/14-s-1721309891-3600.patch
+! Checksum: HEH/Vy+Vwo4LWgUhOEcshQ
+! Diff-Path: ../patches/14/14-s-1721313527-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.54
-! TimeUpdated: 2024-07-18T13:34:07+00:00
+! Version: 2.2.2.55
+! TimeUpdated: 2024-07-18T14:34:35+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2449,6 +2449,9 @@ seriouseats.com,fotogena.de,gqmagazine.fr,rossmann.pl,reuters.com,foto-erhardt.f
 !
 ! NOTE: Regular rules
 !
+base.org##div[class]:has(> div[class^="sc-"] > a[href="/cookie-policy"])
+coinbase.com###root > div > div[style*="position: fixed"]:has(> div > p > a[href^="https://www.coinbase.com/legal/cookie"])
+sharesight.com###gatsby-focus-wrapper > div[class^="Containerstyled__BannerContainer-"]:has(> p > a[href="/cookie-policy/"])
 craftscouncil.org.uk#$#.cookie-banner:not(body):not(html) { display: none !important; }
 craftscouncil.org.uk#$#body { overflow: auto !important; }
 tabakhero.de#%#//scriptlet('trusted-click-element', 'button.js-offcanvas-cookie-submit')
