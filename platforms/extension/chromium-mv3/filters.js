@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.62",
-			"timeUpdated": "2024-07-18T13:01:16+0000",
+			"version": "2.1.52.63",
+			"timeUpdated": "2024-07-18T17:01:15+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.61",
-			"timeUpdated": "2024-07-18T13:01:17+0000",
+			"version": "2.1.52.62",
+			"timeUpdated": "2024-07-18T17:01:16+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.61",
-			"timeUpdated": "2024-07-18T09:01:27+0000",
+			"version": "2.0.30.62",
+			"timeUpdated": "2024-07-18T17:01:30+0000",
 			"languages": [
 				"vi"
 			],
@@ -1178,8 +1178,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
 			"trustLevel": "high",
-			"version": "2.0.4.57",
-			"timeUpdated": "2024-07-15T21:01:45+0000",
+			"version": "2.0.4.58",
+			"timeUpdated": "2024-07-18T17:01:41+0000",
 			"languages": [
 				"fa",
 				"tg",
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.93",
-			"timeUpdated": "2024-07-18T13:01:59+0000",
+			"version": "2.0.45.94",
+			"timeUpdated": "2024-07-18T17:01:55+0000",
 			"languages": [
 				"hi"
 			],
