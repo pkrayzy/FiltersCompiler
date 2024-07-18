@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.92.37",
-			"timeUpdated": "2024-07-18T10:31:16+0000",
+			"version": "2.0.92.38",
+			"timeUpdated": "2024-07-18T12:31:19+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.44.46",
-			"timeUpdated": "2024-07-18T11:31:32+0000",
+			"version": "2.3.44.47",
+			"timeUpdated": "2024-07-18T12:31:35+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.40",
-			"timeUpdated": "2024-07-18T11:33:02+0000",
+			"version": "2.0.72.41",
+			"timeUpdated": "2024-07-18T12:32:27+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.52",
-			"timeUpdated": "2024-07-18T11:33:32+0000",
+			"version": "2.2.2.53",
+			"timeUpdated": "2024-07-18T12:33:00+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.13",
-			"timeUpdated": "2024-07-18T06:33:25+0000",
+			"version": "2.0.68.14",
+			"timeUpdated": "2024-07-18T12:33:01+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.33",
-			"timeUpdated": "2024-07-18T11:33:38+0000",
+			"version": "2.0.43.34",
+			"timeUpdated": "2024-07-18T12:33:06+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -768,8 +768,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.38",
-			"timeUpdated": "2024-07-18T10:34:04+0000",
+			"version": "2.0.24.39",
+			"timeUpdated": "2024-07-18T12:33:08+0000",
 			"languages": [],
 			"tags": [
 				5,
