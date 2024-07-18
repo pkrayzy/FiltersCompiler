@@ -1,9 +1,9 @@
-! Checksum: N7fxGLbQhDhRBNJGffjneg
-! Diff-Path: ../patches/14/14-s-1721295538-3600.patch
+! Checksum: J1sx5iY8h4c9dLmNjcNivg
+! Diff-Path: ../patches/14/14-s-1721299032-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.50
-! TimeUpdated: 2024-07-18T09:35:25+00:00
+! Version: 2.2.2.51
+! TimeUpdated: 2024-07-18T10:33:56+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2448,6 +2448,9 @@ fotogena.de,gqmagazine.fr,rossmann.pl,reuters.com,foto-erhardt.fr,ryobitools.eu,
 !
 ! NOTE: Regular rules
 !
+sport.ua##.adl_cmp_consent-dialog-module_backdrop
+technisat.com#%#//scriptlet('trusted-click-element', '.protected-accept')
+technisat.com###usercentrics-root
 unsplash.com##body > dialog[class^="styles-module_dialog__"]
 backmarket.co.jp#%#//scriptlet('set-cookie', 'BM_Advertising', 'false')
 backmarket.co.jp#%#//scriptlet('set-cookie', 'BM_Analytics', 'false')
@@ -15472,6 +15475,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183927
+@@||app.usercentrics.eu/browser-ui/$domain=technisat.com
+@@||api.usercentrics.eu/settings/$domain=technisat.com
+@@||api.usercentrics.eu/translations/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183565
 @@||panini.com.br/*/Amasty_GdprFrontendUi/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183855
@@ -30811,6 +30818,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||dealabs.com/assets/js/PushNotifications_
 ||api.personaclick.com/push
 ||cdn.personaclick.com/v3.js
 ||app.personaclick.com/assets/webpush/sw.js
@@ -31642,6 +31650,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+kultfilmler.com##.video-top-alert
 flatpanelshd.com##.newslettercontainer
 ti.ua###myoverlay
 ti.ua##div[id^="pp-email-widget-"]
@@ -47132,6 +47141,9 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+octane.jp##.contRight > a#bnr_membersignup
+dealabs.com##div[id^="eventBanner-id"]
+dealabs.com##div[id^="customBannerList-id"]
 ||site.pfm.moneyforward.com/prod/appstorage/pfm/web_banner/
 pixiv.net##div[style^="margin-left: 0px; --columns"] div[class^="sc-"] > div[class^="sc-"] > section[class^="sc-"]:has(> div[class^="sc-"] > a[href^="/premium/lead/lp/?"])
 pixiv.net##.banner-ad-footer-scale
@@ -49773,7 +49785,7 @@ tech5s.co,yoshare.net#$##go_d { display: none !important; }
 tech5s.co,yoshare.net#$##tp-snp1 { display: none !important; }
 tech5s.co,yoshare.net#%#//scriptlet('trusted-click-element', '#t_modal_close_x')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166635
-tech5s.co,yoshare.net,tanytech.com,themezon.net#%#//scriptlet('adjust-setInterval', 'tp-time', '*', '0.001')
+computerpedia.in,tech5s.co,yoshare.net,tanytech.com,themezon.net#%#//scriptlet('adjust-setInterval', 'tp-time', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183044
 torrentgalaxy.to#%#//scriptlet('adjust-setInterval', 'loader', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182815
@@ -51914,6 +51926,10 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+||vipsister23.com/vipsister.html
+vipsister23.com###share2
+vipsister23.com###share3
+vipsister23.com##blockquote
 eroangle.club##.article > h3.frontTitle:last-of-type ~ article.excerpt_pick
 eroangle.club##article.excerpt_pick:has(> a[href*="new"])
 eroangle.club##.table_pickup2
