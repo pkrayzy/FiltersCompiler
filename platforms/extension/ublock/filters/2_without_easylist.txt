@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Jd08P8BFHF9aN04BatK0tg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721385431-3600.patch
+! Checksum: bGBBUp/xIlW35Z6Qk2IH3A
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721389109-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.44.62
-! TimeUpdated: 2024-07-19T10:31:30+00:00
+! Version: 2.3.44.63
+! TimeUpdated: 2024-07-19T11:31:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7522,6 +7522,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183985
+||snigelweb.com^$domain=editpad.org,redirect=noop.txt,important,image,media,subdocument,stylesheet,script,xmlhttprequest,other
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183599
 555fap.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183925
@@ -14003,6 +14005,7 @@ uploadbank.com#@#.Adsense
 uploadbank.com##+js(abort-current-script, f)
 uploadbank.com##+js(abort-on-stack-trace, setTimeout, win)
 uploadbank.com##+js(set-constant, adBlockDetected, noopFunc)
+@@||dcbbwymp1bhlf.cloudfront.net^$domain=uploadbank.com
 @@||d1r3ddyrqrmcjv.cloudfront.net^$domain=uploadbank.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121637
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36005
@@ -14729,7 +14732,9 @@ readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndic
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35064
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20387
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18523
-kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(no-setTimeout-if, dcmarvel, 25000)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(remove-node-text, script, /firework|stormmega|dcCheck/)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#$##divContentVideo { display: block !important; }
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#?##centerDivVideo > div[id]:has(> img[src^="https://i.imgur.com"])
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, cpe, false)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##.kcAds1:not(#ad-promo)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#@#.kcAds1

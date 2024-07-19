@@ -1,9 +1,9 @@
-! Checksum: m8cSWn0i9f3p1EGLRjHw6A
-! Diff-Path: ../patches/7/7-s-1721378264-3600.patch
+! Checksum: 8WHKH0KT3drh1FOXIObHMQ
+! Diff-Path: ../patches/7/7-s-1721389125-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.36
-! TimeUpdated: 2024-07-19T08:33:18+00:00
+! Version: 2.0.54.37
+! TimeUpdated: 2024-07-19T11:33:39+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -512,8 +512,10 @@
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183252
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ダウンロード', '/if \(.+?\{\n(.+innerHTML = \'<a .+)\n\}/', '$1')
 exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/[0-9A-z]{20,}\.innerHTML === \'<span.+>\'/', '1')
 exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/\{\n.{20,}\.innerHTML = \'<span.+>\';/g', '{')
+!+ NOT_PLATFORM(ios, ext_android_cb)
 exploader.net#%#//scriptlet('prevent-xhr', '.js')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181591
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
@@ -1554,6 +1556,7 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/themes/CashLINESystem/js/modal.$script
 !
 ! Malware/Phishing
+/?Rfunccode=*&nextfunc=$document,domain=cn
 .one/Sign|$document
 ://sm*/sp/index$document,domain=buzz|cfd
 .fixdynamics.info/hh/$document
