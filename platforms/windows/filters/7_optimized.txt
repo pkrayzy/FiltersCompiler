@@ -1,9 +1,9 @@
-! Checksum: 53NVobE7mcAnXXca5KQKSg
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1721399875-3600.patch
+! Checksum: k78KtlapK3xkAp+b8vRjwQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1721403442-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.39
-! TimeUpdated: 2024-07-19T14:33:35+00:00
+! Version: 2.0.54.40
+! TimeUpdated: 2024-07-19T15:33:06+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -407,10 +407,8 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-javball.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ダウンロード', '/if \(.+?\{\n(.+innerHTML = \'<a .+)\n\}/', '$1')
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/[0-9A-z]{20,}\.innerHTML === \'<span.+>\'/', '1')
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/\{\n.{20,}\.innerHTML = \'<span.+>\';/g', '{')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/\([0-9A-z]{20,}\.innerHTML === \'<span.+?>\'\)/g', '(1)')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/\{[0-9A-z]{20,}\.innerHTML = \'<span.+?span>\';?\}/g', '{}')
 !+ NOT_PLATFORM(ios, ext_android_cb)
 exploader.net#%#//scriptlet('prevent-xhr', '.js')
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')

@@ -1,9 +1,9 @@
-! Checksum: OLCYPwojsinFc1XgkJ2plA
-! Diff-Path: ../patches/7/7-s-1721399861-3600.patch
+! Checksum: 8xzcX89vNKLr3INOZRtFJg
+! Diff-Path: ../patches/7/7-s-1721403431-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.39
-! TimeUpdated: 2024-07-19T14:33:35+00:00
+! Version: 2.0.54.40
+! TimeUpdated: 2024-07-19T15:33:06+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -508,12 +508,9 @@
 !
 !
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/183713
-javball.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183252
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ダウンロード', '/if \(.+?\{\n(.+innerHTML = \'<a .+)\n\}/', '$1')
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/[0-9A-z]{20,}\.innerHTML === \'<span.+>\'/', '1')
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/\{\n.{20,}\.innerHTML = \'<span.+>\';/g', '{')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/\([0-9A-z]{20,}\.innerHTML === \'<span.+?>\'\)/g', '(1)')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'ブロック', '/\{[0-9A-z]{20,}\.innerHTML = \'<span.+?span>\';?\}/g', '{}')
 !+ PLATFORM(ios, ext_android_cb)
 @@||daotag.com^$script,domain=exploader.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181591
