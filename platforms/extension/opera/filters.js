@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.92.42",
-			"timeUpdated": "2024-07-19T06:31:15+0000",
+			"version": "2.0.92.43",
+			"timeUpdated": "2024-07-19T10:31:14+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.44.61",
-			"timeUpdated": "2024-07-19T09:31:51+0000",
+			"version": "2.3.44.62",
+			"timeUpdated": "2024-07-19T10:31:30+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.3.65",
-			"timeUpdated": "2024-07-19T06:32:28+0000",
+			"version": "2.1.3.66",
+			"timeUpdated": "2024-07-19T10:33:02+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -553,8 +553,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.3",
-			"timeUpdated": "2024-07-19T07:33:26+0000",
+			"version": "2.0.53.4",
+			"timeUpdated": "2024-07-19T10:33:19+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -576,8 +576,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.45",
-			"timeUpdated": "2024-07-18T16:33:21+0000",
+			"version": "2.0.52.46",
+			"timeUpdated": "2024-07-19T10:33:21+0000",
 			"languages": [
 				"tr"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.66",
-			"timeUpdated": "2024-07-19T09:33:56+0000",
+			"version": "2.2.2.67",
+			"timeUpdated": "2024-07-19T10:33:30+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.40.3",
-			"timeUpdated": "2024-07-19T07:33:44+0000",
+			"version": "2.0.40.4",
+			"timeUpdated": "2024-07-19T10:33:37+0000",
 			"languages": [],
 			"tags": [
 				5,
