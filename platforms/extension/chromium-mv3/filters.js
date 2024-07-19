@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.68",
-			"timeUpdated": "2024-07-19T13:01:27+0000",
+			"version": "2.1.52.69",
+			"timeUpdated": "2024-07-19T17:01:19+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.67",
-			"timeUpdated": "2024-07-19T13:01:28+0000",
+			"version": "2.1.52.68",
+			"timeUpdated": "2024-07-19T17:01:20+0000",
 			"languages": [
 				"ar"
 			],
@@ -948,8 +948,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
-			"version": "2.0.21.10",
-			"timeUpdated": "2024-07-18T01:01:23+0000",
+			"version": "2.0.21.11",
+			"timeUpdated": "2024-07-19T17:01:25+0000",
 			"languages": [
 				"id"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.65",
-			"timeUpdated": "2024-07-19T13:01:44+0000",
+			"version": "2.0.30.66",
+			"timeUpdated": "2024-07-19T17:01:35+0000",
 			"languages": [
 				"vi"
 			],
@@ -1155,8 +1155,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/gh-pages/Finland_adb.txt",
 			"trustLevel": "high",
-			"version": "2.0.11.6",
-			"timeUpdated": "2024-06-21T18:57:25+0000",
+			"version": "2.0.11.7",
+			"timeUpdated": "2024-07-19T17:01:46+0000",
 			"languages": [
 				"fi"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.45.99",
-			"timeUpdated": "2024-07-19T13:02:13+0000",
+			"version": "2.0.46.0",
+			"timeUpdated": "2024-07-19T17:02:01+0000",
 			"languages": [
 				"hi"
 			],
