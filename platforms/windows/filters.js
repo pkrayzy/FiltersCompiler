@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.34",
-			"timeUpdated": "2024-07-18T16:33:12+0000",
+			"version": "2.0.54.35",
+			"timeUpdated": "2024-07-19T01:32:32+0000",
 			"languages": [
 				"ja"
 			],
