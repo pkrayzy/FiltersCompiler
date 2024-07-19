@@ -1,5 +1,5 @@
-! Checksum: Z4sXmLKA6dJtZtLFqAyXkg
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1721279107-14400.patch
+! Checksum: Ezw37jHQWgl1zgQRcFShOQ
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1721365511-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.63
@@ -124,7 +124,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 !+ PLATFORM(windows, mac, android)
 103.224.212.249$network
-||speedtest.com^$document,domain=~you-were-likely-looking-for-speedtest.net
 !+ PLATFORM(windows, mac, android)
 199.59.243.222$network
 |http://ww01.$document,domain=~very-very-extremely-frequently-used-in-malware-redirections.*
@@ -243,6 +242,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 192.243.61.*$network
 !+ PLATFORM(windows, mac, android)
 178.128.142.109$network
+/^https://\d{1,2}\.[a-z0-9-]{1,}\.(club|me)(/|$)/$document
 !+ PLATFORM(windows, mac, android)
 134.209.136.174$network
 !+ PLATFORM(windows, mac, android)
@@ -969,6 +969,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||paddlemoscowsplit.com^$all
 ||profitabledisplaycontent.com^$all
 ||recipientpopulationregret.com^$all
+||temperaturetwit.com^$all
 ||tobaccosturgeon.com^$all
 ||vendingboatsunbutton.com^$all
 ||whiteinflammablejaws.com^$all
@@ -2624,7 +2625,6 @@ quizlet.com#$#.SetPageTerm-largeSide { filter: none !important }
 dev.mysql.com##.login-callout
 investing.com###PromoteSignUpPopUp
 context.reverso.net###register-popup-bottom
-vg.no###comments
 ||comment.youmaker.com^$domain=theepochtimes.com
 ||facebook.com/plugins/*comments.php?*%26domain%3Dglobalnews.ca%26
 ||viafoura.co^$domain=nottinghampost.com|liverpoolecho.co.uk
@@ -2955,7 +2955,6 @@ $document,removeparam=referringSource
 $document,removeparam=source_location
 $document,removeparam=psf_variant
 $document,removeparam=es_id
-$document,removeparam=tracking_type
 $document,removeparam=bxid
 $document,removeparam=cndid
 $document,removeparam=hasha
@@ -3271,6 +3270,7 @@ $removeparam=adtype
 $removeparam=tmcampid
 $removeparam=s_afcid
 $removeparam=n_cid
+$removeparam=szredirectid
 $removeparam=af_ad
 $removeparam=af_ad_id
 $removeparam=af_adset
@@ -3315,6 +3315,7 @@ $removeparam=iclid
 $removeparam=affc
 $removeparam=a_fid
 $removeparam=afCampaignId
+$removeparam=afCreativeId
 $removeparam=trk_contact
 $removeparam=trk_msg
 $removeparam=trk_module
@@ -3946,6 +3947,7 @@ $removeparam=adcampaigngroup
 ||dell.com^$removeparam=VEN1
 ||dell.com^$removeparam=nclid
 ||dell.com^$removeparam=gacd
+||expedia.com^$removeparam=my_ad
 ||asahi.com^$removeparam=iref
 ||malwarebytes.com^$removeparam=guard
 ||malwarebytes.com^$removeparam=x-source
@@ -4094,6 +4096,7 @@ $removeparam=ppref,domain=digidip.net
 ||zhihu.com^$removeparam=hybrid_search_source
 ||zhihu.com^$removeparam=hybrid_search_extra
 ||theregister.com^$removeparam=td
+||feedspot.com^$removeparam=_src
 $removeparam=plink,domain=audible.*
 ||startpage.$removeparam=segment
 ||netflix.com^$removeparam=trackId
@@ -4188,7 +4191,6 @@ $removeparam=ueid,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|d
 $removeparam=qo,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com|search.ask.com
 $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
 ||baike.com^$removeparam=prd
-||baike.com^$removeparam=view_id
 ||baike.com^$removeparam=search_id
 ||qvc.com^$removeparam=qq
 ||jcpenney.com^$removeparam=deptId
@@ -4274,6 +4276,8 @@ $removeparam=embeds_referring_euri
 ||open.substack.com^$removeparam=r,document
 ||businessinsider.com^$document,removeparam=r
 ||businessinsider.com^$removeparam=op,document
+ref=spreadprivacy.com$removeparam=ref
+$removeparam=caniuse_source,document
 ||github.com^$removeparam=reference_location
 $removeparam=afSmartRedirect
 ||app.snyk.io^$removeparam=page,document
