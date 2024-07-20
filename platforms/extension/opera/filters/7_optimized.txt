@@ -1,9 +1,9 @@
-! Checksum: 1kqkaVO3iikf8MVT2Kr/og
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1721486209-3600.patch
+! Checksum: /n5V7YdODQnuVhDsUQyAkA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1721489802-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.45
-! TimeUpdated: 2024-07-20T14:33:06+00:00
+! Version: 2.0.54.46
+! TimeUpdated: 2024-07-20T15:33:06+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -405,8 +405,8 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'style', '/if \(\!window\.load_daotag\) \{\n?\}[\S\s]+;\n?\}/', '')
-exploader.net#%#//scriptlet('remove-node-text', 'script', '/\$\.ajax|result === false/')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'style', '/[0-9A-z]{20,} = false;if \([0-9A-z]{20,}\).+?;\}\}/', '')
+exploader.net#%#//scriptlet('remove-node-text', 'script', '/\$\.ajax|document\.getElementById\(\'([0-9A-z]+)\'\)\.style\.display = \'block\';\n?document\.getElementById\(\'([0-9A-z]+)\'\)\.style\.display = \'none\';\n?\}\n?[0-9A-z]+ = false;\n?if \([0-9A-z]+\) \{\n?document\.getElementById\(\'\1\'\)/')
 !+ NOT_PLATFORM(ios, ext_android_cb)
 exploader.net#%#//scriptlet('prevent-xhr', '.js')
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
@@ -1284,6 +1284,7 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+||api.twieromanga.com/api/headerancherad
 weathernews.jp##.pc[style="text-align: center; min-height: 100px;"]
 weathernews.jp###sub > section.dmenu-non:has(> div[style="width: 100%; margin: 0px auto 10px; text-align: center;"] > div[id^="div-gpt-"])
 weathernews.jp#$##footer[style="margin-bottom: 100px;"] { margin-bottom: 0 !important; }
@@ -5506,6 +5507,7 @@ how-to-inc.com##.adblocks
 game8.jp###g8-ad-placement-pc_side_head
 game8.jp##.l-jack__top_container
 game8.jp##.track_mario
+doujin.koe-koe.com##.ranking > li > a[href^="https://ac.congrab.com/"]
 koe-koe.com###comment_list > div[style$="height:80"]
 koe-koe.com###mane_ad
 koe-koe.com##.nan_ad
@@ -9037,7 +9039,6 @@ masterwiki.net#?##content > center:has(> script[src="http://pagead2.googlesyndic
 nishinippon.co.jp#?#.l-section-side h2.c-heading-side-h2--otherStyle__text:upward(.l-section-side)
 ldblog.jp,blogo.jp#?#.plugin-memo:has(> div.side > a[href*="www.dlsite"])
 ascii2d.net#?#.col-lg-4 > .p-t-1:has(> h5:contains(広告))
-urahame.com#?#h2.MuiStack-root > div.MuiStack-root:has(> div.MuiBox-root > script[src^="https://adtest.pages.dev"])
 news.tennis365.net#?##cntAreaR > div[style*="padding:"]:has(div[id^="div-gpt-"])
 shikaku-fan.net#?#div[align="center"]:has(> ins.adsbygoogle)
 stds.jp#?#.content > .obj_centering:has(ins.adsbygoogle)
