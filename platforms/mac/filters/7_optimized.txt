@@ -1,9 +1,9 @@
-! Checksum: R1tDEuxL2u96DIr+D1OrJg
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1721489808-3600.patch
+! Checksum: FE+zTfM8ZlbXhD5y950iQg
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1721518581-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.46
-! TimeUpdated: 2024-07-20T15:33:06+00:00
+! Version: 2.0.54.47
+! TimeUpdated: 2024-07-20T23:32:34+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -407,8 +407,7 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'style', '/[0-9A-z]{20,} = false;if \([0-9A-z]{20,}\).+?;\}\}/', '')
-exploader.net#%#//scriptlet('remove-node-text', 'script', '/\$\.ajax|document\.getElementById\(\'([0-9A-z]+)\'\)\.style\.display = \'block\';\n?document\.getElementById\(\'([0-9A-z]+)\'\)\.style\.display = \'none\';\n?\}\n?[0-9A-z]+ = false;\n?if \([0-9A-z]+\) \{\n?document\.getElementById\(\'\1\'\)/')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', '$.ajax', '/if \(\!window.load_daotag\) \{\$\.ajax.+if \(data\) (\{[0-9A-z]{20,} = true;)\}\}\}\);\}/', 'if (1) $1}')
 !+ NOT_PLATFORM(ios, ext_android_cb)
 exploader.net#%#//scriptlet('prevent-xhr', '.js')
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
