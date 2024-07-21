@@ -1,9 +1,9 @@
-! Checksum: nbctwPq1kPnh8OaZ/ojNzQ
-! Diff-Path: ../patches/7/7-s-1721554608-3600.patch
+! Checksum: LAThGX8NH4dmqVaENgvd0A
+! Diff-Path: ../patches/7/7-s-1721576236-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.48
-! TimeUpdated: 2024-07-21T09:33:13+00:00
+! Version: 2.0.54.49
+! TimeUpdated: 2024-07-21T15:33:12+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -509,7 +509,9 @@
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183252
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', '$.ajax', '/if \(\!window\.load_daotag\) \{let nodeList[\S\s]*/', 'window.load_daotag = true;')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'location', '/(if \(top \!= self\))/', 'window.load_daotag = true;$1')
+exploader.net#%#//scriptlet('prevent-element-src-loading', 'script', 'exploader.net/js/')
+exploader.net#%#//scriptlet('prevent-xhr', '.js')
 !+ PLATFORM(ios, ext_android_cb)
 @@||daotag.com^$script,domain=exploader.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181591
