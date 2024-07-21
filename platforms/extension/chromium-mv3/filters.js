@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.76",
-			"timeUpdated": "2024-07-20T21:01:20+0000",
+			"version": "2.1.52.77",
+			"timeUpdated": "2024-07-21T01:01:17+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.52.75",
-			"timeUpdated": "2024-07-20T21:01:21+0000",
+			"version": "2.1.52.76",
+			"timeUpdated": "2024-07-21T01:01:17+0000",
 			"languages": [
 				"ar"
 			],
@@ -1018,8 +1018,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.97.0",
-			"timeUpdated": "2024-07-20T01:01:34+0000",
+			"version": "2.0.97.1",
+			"timeUpdated": "2024-07-21T01:01:31+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.46.7",
-			"timeUpdated": "2024-07-20T21:02:03+0000",
+			"version": "2.0.46.8",
+			"timeUpdated": "2024-07-21T01:01:59+0000",
 			"languages": [
 				"hi"
 			],
@@ -1355,8 +1355,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.10",
-			"timeUpdated": "2024-07-20T13:01:52+0000",
+			"version": "2.0.2.11",
+			"timeUpdated": "2024-07-21T01:02:00+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1393,8 +1393,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.17",
-			"timeUpdated": "2024-07-20T17:01:54+0000",
+			"version": "2.0.2.18",
+			"timeUpdated": "2024-07-21T01:02:01+0000",
 			"languages": [],
 			"tags": [
 				4
