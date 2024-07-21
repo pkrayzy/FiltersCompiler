@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.78",
-			"timeUpdated": "2024-07-20T17:32:40+0000",
+			"version": "2.2.2.79",
+			"timeUpdated": "2024-07-21T06:32:44+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.23",
-			"timeUpdated": "2024-07-21T00:33:38+0000",
+			"version": "2.0.68.24",
+			"timeUpdated": "2024-07-21T06:32:45+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.40.7",
-			"timeUpdated": "2024-07-19T15:33:30+0000",
+			"version": "2.0.40.8",
+			"timeUpdated": "2024-07-21T06:32:51+0000",
 			"languages": [],
 			"tags": [
 				5,
