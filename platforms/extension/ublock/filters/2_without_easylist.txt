@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: hq3WURIBYQ/97jtwXmC3iw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721633824-3600.patch
+! Checksum: r1rHF36VoaDvWKt5NG/Ubg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721637465-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.45.1
-! TimeUpdated: 2024-07-22T07:31:30+00:00
+! Version: 2.3.45.2
+! TimeUpdated: 2024-07-22T08:31:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -9032,14 +9032,14 @@ cordtpoint.co.in,mealcold.com###adb
 ! ||shrinkearn.com/modern_theme/img/dwndbnr1.png$image,redirect=1x1-transparent.gif,domain=tii.la
 ! oko.sh,tii.la#$#.banner-inner > * { visibility: hidden !important; }
 oko.sh,tii.la##+js(no-xhr-if, /^(?!.*(oko\.sh|tii\.la)).*/ method:GET)
-aii.sh,oko.sh,tii.la#$#.banner-inner { display: block; width: 0 !important; }
+tvi.la,aii.sh,oko.sh,tii.la#$#.banner-inner { display: block; width: 0 !important; }
 oko.sh,tii.la#$#.myads > a { visibility: hidden !important; }
 oko.sh,tii.la##+js(abort-current-script, XMLHttpRequest, .innerHTML)
 oko.sh,tii.la##+js(abort-current-script, document.addEventListener, innerHTML)
 oko.sh,tii.la##+js(abort-current-script, document.createElement, /\.innerHTML|break;case \$\./)
 oko.sh,tii.la##+js(no-fetch-if, /pagead2\.googlesyndication\.com|inklinkor\.com/)
-oko.sh##+js(set-constant, app_vars.force_disable_adblock, undefined)
-aii.sh##+js(no-xhr-if, /pagead2\.googlesyndication\.com|inklinkor\.com/)
+tvi.la,oko.sh##+js(set-constant, app_vars.force_disable_adblock, undefined)
+tvi.la,aii.sh##+js(no-xhr-if, /pagead2\.googlesyndication\.com|inklinkor\.com/)
 $xmlhttprequest,redirect-rule=noop.txt,domain=oko.sh|tii.la
 $script,redirect-rule=noop.js,domain=oko.sh|tii.la
 ! https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-6011881
@@ -33514,6 +33514,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+axios.com##.relative.col-span-full > div[style*="background-color:"][style*="height:"][style*="width:"]:empty:has(+ .shortFormNativeAd)
 mirrored.to###result > .col-sm > table.hoverable > tbody > tr:has(> td[data-label="Host"] > img[src="https://www.mirrored.to/templates/mirrored/images/hosts/FilesDL.png"])
 ||polarjs.net/apiJS.php
 ||pol.azureedge.net/apiJS.php
@@ -34176,7 +34177,7 @@ allegiantair.com##a[data-hook="header-merchandise-banner_link"]
 /tag.min.js$redirect=noop.js,important,domain=4fnet.org|clickndownload.*|clicknupload.*|vipbox.lc|1qwebplay.xyz,script
 /?oo=1&aab=1|$script,third-party,xmlhttprequest,redirect=noop.js,important,domain=4fnet.org|clickndownload.*|clicknupload.*|vipbox.lc|fstream365.com
 convertio.co##.softobar-container
-cosplay18.pics,hianime.to,mobiletvshows.site,movies4u.*,x-x-x.tube,pornx.to,4khd.com,dlhd.*,playhydrax.com,kissanime.*,vidsrc.*,pahe.*##+js(window.open-defuser)
+insmyst.com,iir.la,tvi.la,cosplay18.pics,hianime.to,mobiletvshows.site,movies4u.*,x-x-x.tube,pornx.to,4khd.com,dlhd.*,playhydrax.com,kissanime.*,vidsrc.*,pahe.*##+js(window.open-defuser)
 hogwarts.cafe#$#body[class*="adthrive-"]:not(.home) .site-footer-wrap { margin-bottom: 0 !important; }
 retromania.gg##.banner > *
 startpage.com#?#:matches-path(/search)#main > div[class^="css-"]:has(> div[class^="css-"] > p[class^="css-"]:contains(/Annoncer|Anzeigen|Ads|Anuncios|Publicités|Advertenties|Annonser|Reklamy|Anúncios/))
@@ -41305,9 +41306,9 @@ uptomega.me,uptomega.com##[align="center"] > a[href] > img
 worldfree4u-lol.online##img[width="468"][height="90"]
 kutchuday.in,worldfree4u-lol.online##img[width="300"][height="300"]
 snowfl.com,domain-status.com##.aunit
-oei.la,tii.la,iir.ai###link-view a[target="_blank"] > img
+tvi.la,oei.la,tii.la,iir.ai###link-view a[target="_blank"] > img
 tei.ai,cutw.in###link-view > a[target="_blank"] > img
-oei.la,tii.la,cutw.in##.box-main > a[target="_blank"] > img
+tvi.la,oei.la,tii.la,cutw.in##.box-main > a[target="_blank"] > img
 litegpt.com##a[href^="https://litegpt.com/link.aspx?id="][target="_blank"] > img
 globalnews.ca##.c-posts__ad
 topstreams.info##.ui-widget-overlay
@@ -52023,6 +52024,9 @@ thepostmillennial.com###leader-mot
 thepostmillennial.com##.surfsharkcontent
 !+ NOT_OPTIMIZED
 masalaseen.com##a[target="_blank"] > img
+! https://github.com/AdguardTeam/AdguardFilters/issues/184177
+! Speed up loading video player
+gizchina.com##+js(adjust-setTimeout, ()=>e(, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182224
 ||edgeservices.bing.com/edgesvc/turing/BingChatAdsFetch?showonlyads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183317
