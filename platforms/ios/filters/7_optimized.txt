@@ -1,9 +1,9 @@
-! Checksum: jmSS+rQlHUXTDzP46R0tdw
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1721666238-3600.patch
+! Checksum: I71S6aKLfSNP3j+WVcPSyg
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1721669806-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.56
-! TimeUpdated: 2024-07-22T16:33:29+00:00
+! Version: 2.0.54.57
+! TimeUpdated: 2024-07-22T17:32:55+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -404,7 +404,7 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'window', '/((if \(\! window\.[0-9A-z]+\) \{\n?if[\S\s]+?\})\})/g', 'if(window.canRunAds){throw new Error()};$1')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'window', '/(if \(\! window\.[0-9A-z]+\) \{\n?if[\S\s]+?\}\n?\})/g', 'if(window.canRunAds){throw new Error()};$1')
 !+ PLATFORM(ios, ext_android_cb)
 @@||daotag.com^$script,domain=exploader.net
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
