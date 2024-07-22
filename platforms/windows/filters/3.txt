@@ -1,9 +1,9 @@
-! Checksum: gavTNmfSGv2e33nuAuEWXw
-! Diff-Path: ../patches/3/3-s-1721576245-3600.patch
+! Checksum: qDbvebVNug98X3RVxeYGXw
+! Diff-Path: ../patches/3/3-s-1721648228-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.72.52
-! TimeUpdated: 2024-07-21T15:32:59+00:00
+! Version: 2.0.72.53
+! TimeUpdated: 2024-07-22T11:32:24+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -457,6 +457,10 @@ accountkiller.com#%#window.ga = function(){var a = arguments[5];a&&a.hitCallback
 ! Suppressing Google's Topics API:
 ! https://developers.google.com/privacy-sandbox/relevance/topics
 #%#//scriptlet('no-topics')
+!
+! Suppressing Privacy-Preserving Attribution Measurement API
+! https://github.com/mozilla/explainers/tree/main/ppa-experiment
+#%#//scriptlet('set-constant', 'navigator.privateAttribution', 'undefined')
 !
 ! Suppressing Google's "Protected" Audience API:
 ! https://wicg.github.io/turtledove/
