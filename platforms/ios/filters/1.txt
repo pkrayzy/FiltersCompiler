@@ -1,9 +1,9 @@
-! Checksum: XUYd93h9szx/EQOehO4lkA
-! Diff-Path: ../patches/1/1-s-1721648211-3600.patch
+! Checksum: D6ukN8nfZkxcVbmjqj9iPQ
+! Diff-Path: ../patches/1/1-s-1721652417-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.92.45
-! TimeUpdated: 2024-07-22T11:31:12+00:00
+! Version: 2.0.92.46
+! TimeUpdated: 2024-07-22T12:31:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5713,6 +5713,9 @@ yandex.*#?#.business-card-title-view__actions > div.business-card-title-view__ad
 [$path=/maps]yandex.*#?#.toponym-card-view__overview > div.toponym-card-view__section:has(> div.banner-placeholder-view)
 [$path=/maps]yandex.*#?#.business-card-view__overview > div.business-card-view__section > div.business-card-view__offers:upward(1)
 [$path=/maps]yandex.com,yandex.ru,yandex.net,yandex.org,yandex.in,yandex.com.tr,yandex.co.uk,yandex.io,yandex.co,yandex.ca,yandex.com.ua,yandex.de,yandex.fr,yandex.me,yandex.by,yandex.jp,yandex.xyz,yandex.ua,yandex.com.tw,yandex.co.za,yandex.co.il,yandex.eu,yandex.it,yandex.es,yandex.ch,yandex.kz,yandex.nl,yandex.pro,yandex.us,yandex.pl,yandex.cl,yandex.ro,yandex.su,yandex.site,yandex.cc,yandex.rs,yandex.cn,yandex.ae,yandex.mx,yandex.top,yandex.gov,yandex.ac.id,yandex.be,yandex.dk,yandex.hu,yandex.az,yandex.uz,yandex.md,yandex.no,yandex.com.bd,yandex.ie,yandex.asia,yandex.at,yandex.com.np,yandex.fi,yandex.lv,yandex.sk,yandex.lt,yandex.cloud,yandex.gov.bd,yandex.website,yandex.pt,yandex.blog,yandex.mobi,yandex.ee,yandex.uk,yandex.kg,yandex.ba,yandex.al,yandex.fm,yandex.gov.np,yandex.org.in,yandex.work##.promo-button
+[$path=/maps]yandex.ru#%#//scriptlet('json-prune', 'config.banner.blockIds.*')
+[$path=/maps]yandex.ru#%#//scriptlet('json-prune', 'config.errorBooster.sendErrors')
+[$path=/maps]yandex.ru#%#//scriptlet('json-prune', 'config.errorBooster.sendMetrics')
 !
 ! Yandex.Pogoda
 !
@@ -6037,8 +6040,6 @@ scrin.org#%#//scriptlet("abort-on-property-read", "windowprops")
 scrin.org#%#//scriptlet('remove-attr', 'onclick', '#view-full-image > a[target="_blank"][onclick]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65645
 4rl.ru#%#//scriptlet("prevent-window-open")
-! playground.ru - clickunder
-playground.ru#%#//scriptlet('remove-attr', 'data-settings', 'body[id="userNotAuthorized"]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64994
 720video.me#%#//scriptlet("prevent-window-open")
 ! audit-it.ru - ads replacement
@@ -7808,6 +7809,10 @@ ivanovonews.ru,gorodn.ru,bits.media,devyatka.ru,gazeta-n1.ru,gorod48.ru,hi-fi.ru
 !
 !
 !
+||tourister.ru/files/adver/$image
+tourister.ru##.adver_placeholder
+||tourister.ru/js/acrt_obs_$script
+playground.ru#%#//scriptlet('remove-attr', 'data-settings', 'body')
 media.vkplay.ru##.editorial-banner-right
 vkplay.ru##iframe[src^="https://cdn.pwonline.ru/"]
 ||cdn.pwonline.ru^$third-party,subdocument
