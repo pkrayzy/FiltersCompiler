@@ -1,9 +1,9 @@
-! Checksum: cIl+LFUz212J/Qbrov+2HQ
-! Diff-Path: ../patches/113_optimized/113_optimized-s-1721610315-14400.patch
+! Checksum: 1FyFeIw83KQ3DhM7AlgBmA
+! Diff-Path: ../patches/113_optimized/113_optimized-s-1721624699-14400.patch
 ! Title: Liste FR (Optimized)
 ! Description: Additional filter list for websites in French. Already included in AdGuard French filter.
-! Version: 2.1.52.81
-! TimeUpdated: 2024-07-22T01:01:18+00:00
+! Version: 2.1.52.82
+! TimeUpdated: 2024-07-22T05:01:10+00:00
 ! Expires: 5 days (update frequency)
 &ad_count=
 &ad_unit_
@@ -163,6 +163,7 @@
 .php?aid=pause_
 .php?banner=$subdocument
 .php?id=*&ref=$script,third-party
+.php?sponsor=
 .productads.
 .ru/ads.
 .ru/banner/$third-party
@@ -401,12 +402,12 @@
 /adsenseloader/*
 /adserve?
 /adserver-us.
-/adserverimages/*
 /adserwer.
 /adSettings?
 /adsext/*
 /adslider.
 /adsmanager.js
+/adsoptimal/*
 /adsplus.
 /AdsPub/*
 /adsquare-
@@ -499,7 +500,6 @@
 /banner/iframe?
 /banner/pop/*
 /banner/sas-
-/banner/sponsor.
 /banner/top?
 /banner160.
 /banner300.
@@ -592,7 +592,6 @@
 /display/ads.
 /display/items.*&
 /display_pub.
-/doks/ad.js
 /doubleclick_dmm/*
 /eaCtrl.js
 /eas/ads/*
@@ -668,6 +667,7 @@
 /jp_display.
 /jquery.adsenseloader.
 /jquery.dfp.
+/jquery.fake.
 /js/adv_
 /js/marketing/marketing.js
 /js/pub.js
@@ -1115,7 +1115,6 @@ _werbebanner_
 /ads.php$popup
 /ads/out.$popup
 /ads2.php$popup
-/ads?*=|$popup
 /ads_$popup
 /adv.php$popup
 /advertisers/?utm_$popup
@@ -1454,7 +1453,6 @@ _pornofolies_$popup
 ||stripchat.com^$third-party
 ||strpjmp.com^$third-party
 ||sunmedia.tv^$third-party
-||surfactif.fr^$third-party
 ||svonm.com^$third-party
 ||tagsrvcs.com^$third-party
 ||tapub.fr^$third-party
@@ -1522,6 +1520,7 @@ _pornofolies_$popup
 ||2cnjuh34jbhub.com^
 ||3692022.com^
 ||69688qp.com^
+||a2adjk.com^
 ||aanqylta.com^
 ||abdicatebirchcoolness.com^
 ||abedflaskuncover.com^
@@ -1747,6 +1746,7 @@ _pornofolies_$popup
 ||epilreoffer.com^
 ||etpsn.com^
 ||ewbrutage.com^
+||eweconciliate.com^
 ||expansioneggnog.com^
 ||ext-files.net^
 ||exypnes-idees.gr^
@@ -1771,7 +1771,6 @@ _pornofolies_$popup
 ||foundtr.com^
 ||fumaringodlet.com^
 ||furocmay.com^
-||fuselshots.com^
 ||fznpq.com^
 ||gamersterritory.com^
 ||ganzielionced.com^
@@ -1793,6 +1792,7 @@ _pornofolies_$popup
 ||gridiogrid.com^
 ||grottogamer.com^
 ||growleading.click^
+||grtyi.com^
 ||gxxcbj.com^
 ||hajilijnemo.com^
 ||haupsoti.net^
@@ -1951,7 +1951,6 @@ _pornofolies_$popup
 ||oecistbenton.com^
 ||offclaydolon.com^
 ||ogrid.org^
-||oionsglearned.com^
 ||ojrq.net^
 ||oleousjosher.com^
 ||omlahpewing.com^
@@ -2022,6 +2021,7 @@ _pornofolies_$popup
 ||questionfly.com^
 ||questormyxo.com^
 ||qwqeifbsbxqozy.com^
+||raggerdough.com^
 ||raufajoo.net^
 ||ravishoctopi.com^
 ||ready-for-download.com^
@@ -2052,7 +2052,6 @@ _pornofolies_$popup
 ||sedgierlassoes.com^
 ||sedgygalways.com^
 ||see-work.info^
-||selecttopon.com^
 ||semitaestigme.com^
 ||sepianshap.com^
 ||sepulttrocha.com^
@@ -2268,6 +2267,7 @@ _pornofolies_$popup
 ||go2cliks.net^$popup
 ||grottogamer.com^$popup
 ||growleading.click^$popup
+||grtyi.com^$popup,third-party
 ||gsurl.in^$popup
 ||iqoption.com^$popup
 ||jdoqocy.com^$popup,third-party
@@ -2289,7 +2289,6 @@ _pornofolies_$popup
 ||passion.com^$popup
 ||porncrash.com^$popup,third-party
 ||profitablecpmnetwork.com^$popup
-||promotools.biz^$popup,third-party
 ||redirectingat.com^$popup,third-party
 ||redlightcenter.com^$popup,third-party
 ||revenuehits.com^$popup,third-party
@@ -2363,6 +2362,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||cashtravel.info/banners/
 ||cdn.citytourgirls.com/static/bn/
 ||cdn.escortdude.com/static/bn/
+||cdn.ev.mu/js/optim/gg_cc/ev/boot.js$domain=~easyviaggio.com|~easyviajar.com|~easyvols.fr|~easyvoyage.co.uk|~easyvoyage.com|~easyvoyage.de
 ||cdn.playwire.com^$domain=filehippo.com
 ||cdn.x1cdn.com^*/banner/
 ||cdnpark.com/registrar/*/loader.js
@@ -2453,7 +2453,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||paruvendu.fr^$subdocument,third-party
 ||philatelistes.net/liens/cptr/
 ||pixel-secure.solvemedia.com^
-||planete-hit.com/hit.php?
 ||pm.gamedistribution.com^
 ||prehraj.to^*/banner
 ||prettybigescorts.com/images/$third-party
@@ -2537,6 +2536,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||shortem.com^$script,subdocument,third-party
 ||zap.buzz^$script,subdocument,third-party
 ||1.bp.blogspot.com/-F1hVz0Ov_54/X7PxUM5Ua_I/AAAAAAAAH3E/_jcDu8y2mJUg0XeHRPNG1YIZoZliPi3fACLcBGAsYHQ/s300/poonam-pandey-hot.jpg
+||2.bp.blogspot.com/-9pkVLFyu5bw/W_n1R5ZXJYI/AAAAAAAAA5A/IQVV2P_BESwsbmjl2q1E9dr721zU_232wCLcBGAs/s1600/jack-icon.png
 ||hostpic.org^$domain=fdesouche.com
 ||i.imgur.com/32xkKog.jpg
 ||nsa40.casimages.com/img/2020/05/11/200511033032222532.png
@@ -2817,6 +2817,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||plx.tukif.com^
 ||porn.com^$xmlhttprequest
 ||pornburst.xxx/assets/js/head.
+||pov-house.com/images/banners/
 ||pronosoft.com/*/bookmakers/unibet/
 ||pub.le360.ma^
 ||rapeporn.name^$script
@@ -2955,6 +2956,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ###appnexus-placement-teaser2
 ###appnexus-placement-welcomeAd
 ###ban728
+###bannerad1
 ###bas_pub
 ###bloc-pub
 ###bloc_pub
@@ -3012,8 +3014,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ###mobileMessageAd
 ###native_ad
 ###nf-fixed-ads
-###partner-ads
-###partner-ads2
 ###pavePub
 ###pie_pub_google
 ###pre-ad
@@ -3203,7 +3203,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.article__article-ads
 ##.article_pub
 ##.arunn-ad
-##.ban_pub
 ##.bandeauClosePub
 ##.banner-ad-link
 ##.banner-leaderboard
@@ -3267,11 +3266,9 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.header_pub
 ##.header_sponsors
 ##.hmads_300x250
-##.iframeads
 ##.iklan
 ##.iklan1
 ##.iklan2
-##.in_stream_banner
 ##.inside-pub-container
 ##.it-sponsor-site
 ##.jeg_ad_module
@@ -3317,6 +3314,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.placeholder-pub_dfp
 ##.player-adv
 ##.player__ads
+##.playerpub
 ##.pmd-ads-mobile
 ##.popupads
 ##.porn-videos-ads
@@ -3425,7 +3423,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.sponsored-panel
 ##.sponsoredPrisma
 ##.srcPubZone
-##.stackcommerce-widget
 ##.standard_adv_link
 ##.sticky-ad-holder
 ##.structure_wrapper-ad
@@ -3787,6 +3784,7 @@ boulanger.com##.criteoEms
 basketsession.com##.d-mezz
 maison-et-domotique.com##.deal_daywoo
 replay.fr##.dfa
+actu.fr,cinenews.be##.dfp
 nestoria.fr##.dfpDiv
 beaute-test.com##.dfp_banner_atf
 linguee.com,linguee.fr##.dlTopBanner
@@ -3945,7 +3943,6 @@ amateur2sexe.fr,pornovore.fr##a[href*="/?id="]
 exefiles.com##a[href*="/recommended/"]
 zone-mania.com##a[href*="/telecharger/"]
 seneweb.com##a[href*="/xban/"]
-rtl.be##a[href*="://ad.doubleclick.net/"]
 jeuxetcompagnie.fr##a[href*="://www.ludeek.com/"] > img
 jds.fr##a[href*="_clic.php?"]
 boursorama.com,zdnet.fr##a[href*="smartadserver.com/h/cc?imgid="]
@@ -3970,7 +3967,6 @@ solutions-numeriques.com##a[href^="https://www.solutions-numeriques.com/r/?"]
 undernews.fr##a[href^="https://www.undernews.fr/redirect/"]
 windsurfjournal.com##a[href^="link,"]
 savefrom.net##a[id][href][target][style]
-petit-bulletin.fr##a[onclick^="_gaq.push(['_trackEvent'"]
 thefreeagent.fr##a[rel*="sponsored"]
 lejournaldelamaison.fr,maison-travaux.fr,mariefrance.fr##a[rel="sponsored"]
 buzzporn.net,esoxiste.com,seriezone.org,upload4earn.org##a[target="_blank"] > img
