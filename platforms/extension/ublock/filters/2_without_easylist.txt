@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: RQ+4P1GvKOb4fO7i3L7osA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721626597-3600.patch
+! Checksum: eWztPSLlXeutaA8nvNmJzA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721630221-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.44.99
-! TimeUpdated: 2024-07-22T05:31:25+00:00
+! Version: 2.3.45.0
+! TimeUpdated: 2024-07-22T06:31:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7553,9 +7553,10 @@ stly.link##+js(remove-node-text, script, detectAnyAdblocker)
 paste-drop.com##+js(no-xhr-if, adsbygoogle)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183542
 hentaigasm.com##+js(no-fetch-if, agead2.googlesyndication.com/pagead/js/adsbygoogle.js)
+! https://github.com/AdguardTeam/AdguardFilters/issues/184181
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183429
-gfx-station.com##.popSc
-gfx-station.com##+js(abort-on-property-write, checkAdsStatus)
+innateblogger.com,gfx-station.com##.popSc
+innateblogger.com,gfx-station.com##+js(abort-on-property-write, checkAdsStatus)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183386
 hqq.ac##+js(set-constant, adblockcheck, false)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183383
@@ -12964,9 +12965,9 @@ podu.me##+js(set-constant, adsAreBlocked, false)
 soup.io##+js(set-constant, canRunAds, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128326
 dvdgayonline.com,gaypornhdfree,dood.re##+js(set-constant, bab, noopFunc)
-jav-scvp.com,d000d.com,d0000d.com,do0od.com,ds2play.com,doods.pro,dooood.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws##+js(abort-current-script, document.getElementsByClassName, allow adblock)
-jav-scvp.com,d000d.com,d0000d.com,do0od.com,ds2play.com,doods.pro,dooood.com,dvdgayonline.com,fxggxt.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws##+js(set-constant, googleAd, true)
-jav-scvp.com,d000d.com,d0000d.com,do0od.com,ds2play.com,doods.pro,dooood.com,dvdgayonline.com,fxggxt.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws##+js(set-constant, xPoPAdS, false)
+dood.li,jav-scvp.com,d000d.com,d0000d.com,do0od.com,ds2play.com,doods.pro,dooood.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws##+js(abort-current-script, document.getElementsByClassName, allow adblock)
+dood.li,jav-scvp.com,d000d.com,d0000d.com,do0od.com,ds2play.com,doods.pro,dooood.com,dvdgayonline.com,fxggxt.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws##+js(set-constant, googleAd, true)
+dood.li,jav-scvp.com,d000d.com,d0000d.com,do0od.com,ds2play.com,doods.pro,dooood.com,dvdgayonline.com,fxggxt.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws##+js(set-constant, xPoPAdS, false)
 !+ NOT_OPTIMIZED
 @@||i.doodcdn.co/ads/ad.js
 !+ NOT_OPTIMIZED
@@ -21986,6 +21987,11 @@ instalki.pl##center > a.gofollow > img
 onet.pl##a[href^="https://milionymonet.onet.pl/"]
 transfery.info##.advertisement
 pograne.eu###custom_html-8
+! https://github.com/AdguardTeam/AdguardFilters/issues/184088
+fxmag.pl##div[class^="AdBlockDetect_container"]
+fxmag.pl##+js(no-xhr-if, pagead2.googlesyndication.com)
+fxmag.pl##div[class*="Container_header_ad_"] > div[style="min-height:90px;min-width:1px"]
+fxmag.pl#?#div[class^="Box_Box__container_"] > div[class^="EducationWidget_container_"]:has(> p[class^="EducationWidget_disclaimer_"]:contains(Sekcja sponsorowana))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183998
 naekranie.pl##body #screening-mobile-container
 naekranie.pl##body .prawa-szpalta2
@@ -33506,6 +33512,11 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+mirrored.to###result > .col-sm > table.hoverable > tbody > tr:has(> td[data-label="Host"] > img[src="https://www.mirrored.to/templates/mirrored/images/hosts/FilesDL.png"])
+||polarjs.net/apiJS.php
+||pol.azureedge.net/apiJS.php
+usersdrive.com##main > div[style] > center > a[target="_blank"] > img
+usersdrive.com##+js(abort-on-property-read, popurl)
 lightnovelworld.co##div[data-mobid]
 pig69.com,cnxx.me,ai18.pics,porn4f.com,ninja-scans.com##+js(window.open-defuser)
 ninja-scans.com##body ~ *:empty
