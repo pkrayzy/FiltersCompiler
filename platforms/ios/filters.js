@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.45.7",
-			"timeUpdated": "2024-07-22T13:31:26+0000",
+			"version": "2.3.45.8",
+			"timeUpdated": "2024-07-22T14:31:30+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.53",
-			"timeUpdated": "2024-07-22T13:33:26+0000",
+			"version": "2.0.54.54",
+			"timeUpdated": "2024-07-22T14:33:10+0000",
 			"languages": [
 				"ja"
 			],
@@ -511,8 +511,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/9_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.25.79",
-			"timeUpdated": "2024-07-22T12:35:53+0000",
+			"version": "2.0.25.80",
+			"timeUpdated": "2024-07-22T14:33:15+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.2.87",
-			"timeUpdated": "2024-07-22T13:33:45+0000",
+			"version": "2.2.2.88",
+			"timeUpdated": "2024-07-22T14:33:30+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -681,8 +681,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.61",
-			"timeUpdated": "2024-07-22T13:33:52+0000",
+			"version": "2.0.43.62",
+			"timeUpdated": "2024-07-22T14:33:36+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -723,8 +723,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/20_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.15.36",
-			"timeUpdated": "2024-07-20T07:33:41+0000",
+			"version": "2.0.15.37",
+			"timeUpdated": "2024-07-22T14:33:37+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1605,8 +1605,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.19.38",
-			"timeUpdated": "2024-07-22T13:33:59+0000",
+			"version": "2.1.19.39",
+			"timeUpdated": "2024-07-22T14:33:43+0000",
 			"languages": [
 				"zh"
 			],

@@ -1,9 +1,9 @@
-! Checksum: aVNBqLQW3/3qRuYY1vgrPg
-! Diff-Path: ../patches/14/14-s-1721655413-3600.patch
+! Checksum: iqLRFUc32MCGOjq+14wtXg
+! Diff-Path: ../patches/14/14-s-1721659001-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.2.87
-! TimeUpdated: 2024-07-22T13:33:45+00:00
+! Version: 2.2.2.88
+! TimeUpdated: 2024-07-22T14:33:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2450,6 +2450,11 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+moncommerce35.fr#$##modalCookie { display: none !important; }
+moncommerce35.fr#$##modalCookie ~ div.modal-backdrop { display: none !important; }
+moncommerce35.fr#$#body { overflow: auto !important; }
+sparkasse-koelnbonn.de#%#//scriptlet('remove-class', 'lightbox-visible', '.if6_eprivacy.lightbox-visible')
+piecesdix.com,recambiosdiez.com,pecasdez.com,piecesdix.be,piecesdix.lu##.hi-cookie-block
 farmaciasunipreco.com.br##.wd-data-usage-confirm
 ||nowyswiat.online/gfx/frontend/js/cookies-dialog.js
 ascentoptics.com###WishCookieBox
@@ -11499,8 +11504,8 @@ andro4all.com##.c_i_container
 clario.co,sketchfab.com,internations.org##.js-gdpr-banner
 uniqlo.com##.h-modal-cookie
 gilmoreglobal.com,cronycle.com##.dialog-lightbox-widget-content
-rynekzdrowia.pl,horecatrends.pl,portalspozywczy.pl#$#.rodo { display: none !important; }
-rynekzdrowia.pl,horecatrends.pl,portalspozywczy.pl#$#body.windowOpen { overflow: auto !important; }
+poszkole.pl,rynekzdrowia.pl,horecatrends.pl,portalspozywczy.pl#$#.rodo { display: none !important; }
+poszkole.pl,rynekzdrowia.pl,horecatrends.pl,portalspozywczy.pl#$#body { overflow: auto !important; }
 visionexpress.pl##body > div[style*="position: fixed;"][style*="z-index:"][style*="background-color"]:not([class]):not([id])
 zrzutka.pl##.plicy
 daikin.com.tr,find.com.tr###KVK_Cerez
@@ -15569,6 +15574,7 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184123
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184160
 @@||cmp.osano.com/*/osano.js$domain=account.bhvr.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184052
@@ -42190,6 +42196,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+news.1242.com##.area_banner
 myhome.nifty.com##.bottom-follow-modal
 myhome.nifty.com##section[data-tracking-selfmade-smart-app-banner]
 anadolu.edu.tr###smartbanner
