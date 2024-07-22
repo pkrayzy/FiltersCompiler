@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: FZ+j9UP+3OpSZ4rQF4HCSQ
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1721662716-3600.patch
+! Checksum: ev8ytlnn3kkrKrZqtsKjnw
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1721666235-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.55
-! TimeUpdated: 2024-07-22T15:34:27+00:00
+! Version: 2.0.54.56
+! TimeUpdated: 2024-07-22T16:33:29+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||adma.xsrv.jp^$third-party
@@ -395,7 +395,8 @@
 ||ad-hatena.com^
 ||advert.punyu.com^
 ||gum.dlbooks.to^
-exploader.net##+js(no-xhr-if, .js)
+||exploader.net/js/$script,redirect=prebid-ads.js
+||exploader.net/js/$xmlhttprequest,redirect=prebid-ads.js
 iwb.jp##+js(addEventListener-defuser, DOMContentLoaded, getComputedStyle(a).height)
 kotobank.jp##+js(no-setTimeout-if, return)
 guitarmagazine.jp#$#.tp-backdrop { display: none !important; }
@@ -7269,7 +7270,6 @@ fx-koryaku.com##.textwidget > center > a[target="_blank"]
 ||dmm.co.jp^$domain=exploader.net
 ||exploader.net/d/$image
 ||dmm.co.jp^$popup,domain=exploader.net
-||exploader.net/js/$script,xmlhttprequest,redirect=noop.js
 exploader.net#$#div[style*="1120px;"][style*="450px;"] { height: 0 !important; overflow: hidden !important; }
 exploader.net###newfiles > ul.list > li[style*="height: 120px;"]
 exploader.net###wrapper > div[data-style][style*="fixed"]

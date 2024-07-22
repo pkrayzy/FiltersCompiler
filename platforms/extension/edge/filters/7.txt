@@ -1,9 +1,9 @@
-! Checksum: jvs0PdfVxciy1b396SrRhg
-! Diff-Path: ../patches/7/7-s-1721662704-3600.patch
+! Checksum: Z4stRDcAfTftlkQ/hOKO9w
+! Diff-Path: ../patches/7/7-s-1721666226-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.54.55
-! TimeUpdated: 2024-07-22T15:34:27+00:00
+! Version: 2.0.54.56
+! TimeUpdated: 2024-07-22T16:33:29+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -510,9 +510,10 @@
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183252
-exploader.net#%#AG_onLoad((async function(){const t="undefined"!=typeof dl_link?Object.values(dl_link):null,e=document.querySelector('a.dl_button[href*="?"]');if(!t||!e)return;const n=e.getAttribute("href");let l=null;t.forEach((async t=>{const e=n.replace(/\?.*/,`?${t}`);await(async t=>{const e=await fetch(t);return!(await e.text()).includes("広告ブロック")})(e)&&(l=t,document.querySelectorAll('a.dl_button[href*="?"]').forEach((t=>{let e=t.getAttribute("href");e=e.replace(/\?.*/,`?${l}`),t.setAttribute("href",e)})))}))}));
-exploader.net#%#//scriptlet('prevent-element-src-loading', 'script', 'exploader.net/js/')
-exploader.net#%#//scriptlet('prevent-xhr', '.js')
+exploader.net#%#//scriptlet('trusted-replace-node-text', 'script', 'window', '/((if \(\! window\.[0-9A-z]+\) \{\n?if[\S\s]+?\})\})/g', 'if(window.canRunAds){throw new Error()};$1')
+||exploader.net/js/$script,redirect=prebid-ads
+||exploader.net/js/$xmlhttprequest,redirect=prebid-ads
+!exploader.net#%#//scriptlet('prevent-xhr', '.js')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181591
 iwb.jp#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'getComputedStyle(a).height')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179614
@@ -7748,7 +7749,6 @@ fx-koryaku.com##.textwidget > center > a[target="_blank"]
 ||dmm.co.jp^$domain=exploader.net
 ||exploader.net/d/$image
 ||dmm.co.jp^$popup,domain=exploader.net
-||exploader.net/js/$script,xmlhttprequest,redirect=noopjs
 exploader.net#$#div[style*="1120px;"][style*="450px;"] { height: 0 !important; overflow: hidden !important; }
 exploader.net###newfiles > ul.list > li[style*="height: 120px;"]
 exploader.net###wrapper > div[data-style][style*="fixed"]
