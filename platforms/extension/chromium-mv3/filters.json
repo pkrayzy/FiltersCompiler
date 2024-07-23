@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.3.74",
-			"timeUpdated": "2024-07-22T13:33:14+0000",
+			"version": "2.1.3.75",
+			"timeUpdated": "2024-07-23T05:32:57+0000",
 			"languages": [],
 			"tags": [
 				3,
