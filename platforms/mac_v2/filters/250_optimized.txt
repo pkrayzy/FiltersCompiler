@@ -1,5 +1,5 @@
-! Checksum: JyzYtUFQ57W+72/9fR2OPQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1721653604-14400.patch
+! Checksum: b6HV0/gPFIaWJI1YlWhelw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1721711135-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.66
@@ -16,6 +16,7 @@
 ##.AppBanner:not(html,body,:empty)
 ##.download-app-banner:not(html,body,:empty)
 ##.download-app:not(html,body,:empty)
+##.download_app:not(html,body,:empty)
 ##.downloadapp:not(html,body,:empty)
 ##.mobile-app-links:not(html,body,:empty)
 ##.mobile_apps:not(html,body,:empty)
@@ -469,7 +470,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 !+ PLATFORM(windows, mac, android)
 182.59.69.21$network
 ||chip-secured-download.de^$all
-||driversupport.com^$document
 !+ PLATFORM(windows, mac, android)
 160.202.163.100$network
 !+ PLATFORM(windows, mac, android)
@@ -902,6 +902,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 ||crmentjg.com^$all
 ||jsmcrptjmp.com^$all
 ||prtord.com^$all
+||ptosrd.com^$all
 ||wmptengate.com^$all
 !+ PLATFORM(windows, mac, android)
 93.93.51.223$network
@@ -909,7 +910,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 !+ PLATFORM(windows, mac, android)
 103.174.102.240$network
 ||exs7oilq14cz6.click^$all
-||getintopcc.pro^$all
 162.214.80.*$network
 !+ PLATFORM(windows, mac, android)
 38.180.96.244$network
@@ -2392,6 +2392,7 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 /addthis_widget.js^
 /btn_share_fb.
 /btn_share_tw.
+/mixx_share.gif$image
 /modules/responsive_share_buttons^
 /share/*-icon.png$image
 /sharing/facebook.$image
@@ -2684,6 +2685,8 @@ map.baidu.com###leadDownloadCard
 mi.com##.item-image.item
 qunar.com##.q_header_app_logo
 qyer.com##.advertising
+secure.booking.com##.modal-mask
+secure.booking.com##.modal-wrapper
 smzdm.com##.qrcode
 smzdm.com##.share_app_icon
 smzdm.com###index-elevator > li:nth-of-type(2)
@@ -2808,7 +2811,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 @@||fanboy.co.nz/*.txt^
 ||timesprayer.com/widgets.php^$third-party
 ||jugantor.com/web-assets/js/PrayTimes.js^$~third-party
-yenisafak.com,yeniakit.com.tr,haber7.com##.prayer
 elwatannews.com##li > [href$="/pray"]
 star.com.tr##.pray
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
@@ -3127,7 +3129,6 @@ $document,removeparam=trackid,domain=~nzpost.co.nz
 $removeparam=afsrc
 $removeparam=lctid
 $~ping,removeparam=lcid,domain=~rekono.si
-$removeparam=usource
 $document,removeparam=/^mpid=.*$/i,domain=~miguvideo.*
 $removeparam=c3ch
 $removeparam=c3nid
@@ -3172,6 +3173,7 @@ $removeparam=ad_id,domain=~olx.ua
 $document,removeparam=/^affSource.*$/i
 $document,removeparam=/^_s=afl_impact$/
 $document,removeparam=/^cid_.*$/
+$removeparam=p_sid
 $removeparam=depth_1-utm_source
 $removeparam=cmp_id
 $removeparam=adg_id
@@ -3383,7 +3385,6 @@ $removeparam=relatedposts_origin
 $removeparam=relatedposts_position
 ref=itsfoss.com$document,removeparam=ref
 ref=news.itsfoss.com$document,removeparam=ref
-$removeparam=b_campaign
 $removeparam=gad_source
 $removeparam=_gid
 $removeparam=ga_vid
@@ -3486,7 +3487,6 @@ $removeparam=geniuslink
 ||amazon.$removeparam=store_ref
 ||amazon.$removeparam=lp_asins
 ||amazon.$removeparam=lp_slot
-||amazon.$removeparam=lp_page_asin
 ||amazon.$removeparam=asc_contentid
 ||amazon.$removeparam=visitId
 ||amazon.$removeparam=field-lbr_brands_browse-bin
@@ -3795,6 +3795,7 @@ wenku.baidu.com#%#//scriptlet('ubo-set.js', 'history.replaceState', 'noopFunc')
 ||baidu.com^$document,removeparam=miniId
 ||baidu.com^$document,removeparam=/^from.*$/
 ||baidu.com^$document,removeparam=tpl_from
+||bilibili.com^$removeparam=/^current.*$/
 ||bilibili.com^$removeparam=/^from.*$/
 ||bilibili.com^$removeparam=/^share_.*$/
 ||bilibili.com^$removeparam=bbid
@@ -3961,7 +3962,6 @@ $removeparam=acid,domain=lenovo.com
 $removeparam=aid,domain=adguard-dns.com|adguard-vpn.com|adguard.com|brownells.*|cafago.com|get.protonmail.com|get.protonvpn.com|tomtop.com|viator.com|wevpn.com
 $removeparam=camp,domain=amazon.*|calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com|bestbuy.com
-$removeparam=/^publisher=.*$/i,domain=asos.com|bose.*|dell.com|josbank.com|metmuseum.org|riteaid.com|shutterfly.com|tous.com|untilgone.com
 $document,removeparam=/^refID=.*$/i,domain=allmodern.com|calphalon.com|priceline.com|questrade.com|wayfair.*|yankeecandle.com
 $document,removeparam=/^siteid=.*$/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|barenecessities.com|barrons.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|ebay.*|famousfootwear.com|finishline.com|freetaxusa.com|gap.com|gapcanada.ca|gucci.com|hanes.com|hotwire.com|hulu.com|hunterboots.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|laroche-posay.us|loft.com|magazines.com|marketwatch.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|online4baby.com|radissonhotelsamericas.com|ralphlauren.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|skinceuticals.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com
 ||kohls.com^$removeparam=kls_sbp
@@ -4204,7 +4204,6 @@ $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch
 ||bandcamp.com^$removeparam=search_page_no
 ||bandcamp.com^$removeparam=search_rank
 ||app.slack.com^$removeparam=entry_point
-||nicovideo.jp/comic^$removeparam=track
 ||onenote.com^$removeparam=nf
 ||onenote.com^$removeparam=fromAR
 ||adobe.com^$removeparam=mv2
@@ -4313,6 +4312,7 @@ $document,removeparam=bpli,domain=blogger.com
 ||cimri.com^$document,removeparam=offerCount
 ||cimri.com^$document,removeparam=offerFiltered
 ||cimri.com^$document,removeparam=hasFavorite
+ref=buffer.com$document,removeparam=ref
 $document,removeparam=af_reengagement_window
 ||instagram.com^$document,removeparam=short_redirect
 ||privatbank.ua^$removeparam=visit_id
@@ -4354,6 +4354,7 @@ $document,removeparam=vjk,domain=indeed.com
 $document,removeparam=fvj,domain=indeed.com
 ||bp.blogspot.com^$removeparam=/^r[hn].*$/
 $document,removeparam=ttclid
+||datareportal.com^$document,removeparam=rq
 $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid
@@ -4388,7 +4389,6 @@ $document,removeparam=s_campaign
 ||www.roblox.com^$removeparam=gameSearchSessionInfo
 $document,removeparam=entrypoint,domain=bing.com
 $document,removeparam=esrc,domain=arstechnica.com|newyorker.com|wired.com
-||zoominfo.com^$document,removeparam=ch_source
 ||sky.it^$document,removeparam=social
 ||landevei.no^$removeparam=email
 $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
@@ -4423,6 +4423,7 @@ tumblr.com,strategix.dk#$#body { cursor: unset !important }
 .cur|$image,domain=~pixiv.net|~deviantart.com
 @@://maps.gstatic.com/*.cur|$image
 /puntatore_$image
+ourcodeworld.com##.mouse-cursor
 /wp-content/uploads/*/cursor.png|
 nerdelandslaget.no#$#html { cursor: auto !important }
 strategix.dk##.cursor

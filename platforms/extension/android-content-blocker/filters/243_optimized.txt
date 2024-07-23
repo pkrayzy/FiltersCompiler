@@ -1,9 +1,9 @@
-! Checksum: h8cR+eUieTbE6ypJpuIBjw
-! Diff-Path: ../patches/243_optimized/243_optimized-s-1721639130-14400.patch
+! Checksum: JyPff9IyZrBkkvEFfxri8g
+! Diff-Path: ../patches/243_optimized/243_optimized-s-1721711101-14400.patch
 ! Title: Frellwit's Swedish Filter (Optimized)
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.19.2
-! TimeUpdated: 2024-07-22T09:01:47+00:00
+! Version: 2.0.19.3
+! TimeUpdated: 2024-07-23T05:01:43+00:00
 ! Expires: 5 days (update frequency)
 .ads-gdprlock
 .ax/ad/
@@ -91,7 +91,7 @@ advokaten.se##.cookieconsent-optin-marketing
 affarerinorr.se##a[href^="/nyheter/native-artiklar/"]
 affarsvarlden.se##.cookies-wrap, .Modal, .article-list-item--native, .advert-notice-box, .native-popup, .takeover-wrap, .native-notice-box, .darwin--content
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
-aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
+aftonbladet.se,godare.se,livsstil.se##[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se#$#.sp-message-open body { overflow:initial!important; position:unset!important; margin-top:unset!important; }
 aftonbladet.se,halsasverige.se,mandarinmedia.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se##.advert
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
@@ -209,9 +209,8 @@ byggipedia.se##.protect_contents-overlay, .ai_widget
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts, #gan-popup
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
 byggvarlden.se,omtanke.today##a[href*="/annons/"], .newsletter-popup-content-overlay, .newsletter-popup, .ai-viewports
-bytbil.com#$#html,body { overflow: auto !important; }
-bytbil.com###privacyModal
-bytbil.com##.available-services
+bytbil.com#$#html,body { overflow:auto!important; }
+bytbil.com##.listpage-banner, .available-services
 cafe.se,kingmagazine.se,mestmotor.se##.card-partner, .partner
 campingsverige.se##.banner_window, .banner_label, .card_veckans_pryl, .bg_camping_se
 camping.se##.ads-above-header, .ads-teaser, .paragraph--type--ad-script, div[about*="/annons/"], a[href*="/sv/annons"]
@@ -534,7 +533,7 @@ livetsgoda.se##.penci-rlt-popup
 livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se##a[target$="blank"] img:not([class^="tweet"])
 livsmedelsverket.se###CookieConsent
 livsmedelsverket.se#$#.lock-scroll { overflow:unset!important }
-livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype], [data-test-tag="prisjakt-carousel"]
+livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype]
 ljudochbild.se#$##MoreLink_content-container { height:unset!important; }
 ljudochbild.se###MoreLink_fade-out-div
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright
@@ -624,7 +623,7 @@ nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.
 nyhetersto.se##.site-branding a ~ p, .wp-block-jetpack-slideshow
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"]
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se##.g
-obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
+obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area, a[target][href*="svenskaspel"], .sponsor-img
 obsid.se##a[href*="casino"]
 offside.org###opab-modal, .opab-footer-offer
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
@@ -1877,7 +1876,6 @@ zeromagazine.nu##div[id^="ads"]
 @@/aff/images/*$image,domain=alltforforaldrar.se
 @@/appbanner.jpg$image,domain=guldkanalen.se
 @@/assets/ads-dm.js$~third-party,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|kindaposten.se|gotlandjustnu.se
-@@/freemium/di/analytics$script,domain=di.se
 @@/lazy_load.js?gcb$domain=hemmanytt.se
 @@/plugins/ad-ace/*/adblock-detector
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
@@ -2257,6 +2255,7 @@ zeromagazine.nu##div[id^="ads"]
 ||leadconnect.ipmaxi.se^$third-party
 ||leadenhancer.com^$third-party
 ||leazard.io^$domain=varmepumpsforum.com
+||lendo.se^$third-party
 ||libring.com^$third-party
 ||lib.atomik.vip/loader.min.js
 ||lifeofsvea.se/production/borka/
@@ -2446,7 +2445,7 @@ zeromagazine.nu##div[id^="ads"]
 ||schibsted.com/pulse$domain=aftonbladet.se
 ||script.e-space.se^$third-party
 ||sdk.mrf.io/statics/marfeel-sdk
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com
 ||seenthis.se^$third-party
 ||selectofmychoices.com^
 ||sellingsimplified.net^$third-party
