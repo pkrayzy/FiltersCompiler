@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: jfHIVQwHYGVwpQHZqRMSXQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721723829-3600.patch
+! Checksum: wq4u1d5qr933ej4NsBfy6A
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721727435-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.45.13
-! TimeUpdated: 2024-07-23T08:31:30+00:00
+! Version: 2.3.45.14
+! TimeUpdated: 2024-07-23T09:31:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -8625,10 +8625,8 @@ videosgay.me##+js(set-constant, cRAds, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163449
 perchance.org##+js(set-constant, ad1sAreShowing, trueFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163466
-smsonline.cloud#@##ad-slot
-smsonline.cloud#@#ins.adsbygoogle[data-ad-client]
-smsonline.cloud#@#ins.adsbygoogle[data-ad-slot]
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=smsonline.cloud
+!+ NOT_PLATFORM(windows, mac, android, ext_chromium, ext_opera)
+@@||smsonline.cloud^$genericblock
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163297
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163284
 ||ngontinh24.com/js/newsike.js
@@ -14859,7 +14857,8 @@ readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndic
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35064
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20387
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18523
-kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(remove-node-text, script, /gameover|i.*\..*i.*m.*g.*u.*r.*\..*c.*o.*m|_batCheck/)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-current-script, setTimeout, /i.*\..*i.*m.*g.*u.*r.*\..*c.*o.*m/)
+kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(remove-node-text, script, _batCheck)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#$##divContentVideo { display: block !important; }
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#?##centerDivVideo > div[id]:has(> img[src^="https://i.imgur.com"])
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, cpe, false)
@@ -27824,6 +27823,8 @@ truyenqqhot.com##div[id^="ads_"]
 !
 !
 !+ NOT_OPTIMIZED
+##.ads-cont
+!+ NOT_OPTIMIZED
 ##.adsense_block
 !+ NOT_OPTIMIZED
 ##.banner-player
@@ -33636,6 +33637,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+smsonline.cloud#?#aside:has(> div:contains(Advertisements))
+smsonline.cloud##div[data-google-query-id]
 filehaus.su##main > div[class]:has(> a[href] > img[src^="ads/"])
 axios.com##.relative.col-span-full > div[style*="background-color:"][style*="height:"][style*="width:"]:empty:has(+ .shortFormNativeAd)
 mirrored.to###result > .col-sm > table.hoverable > tbody > tr:has(> td[data-label="Host"] > img[src="https://www.mirrored.to/templates/mirrored/images/hosts/FilesDL.png"])
