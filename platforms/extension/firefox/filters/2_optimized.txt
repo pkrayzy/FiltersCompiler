@@ -1,9 +1,9 @@
-! Checksum: oCJx4w8ODNuvbBGl388BrQ
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1721731038-3600.patch
+! Checksum: Lg0LjpZczElpHLVHezwmOQ
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1721738230-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.45.15
-! TimeUpdated: 2024-07-23T10:31:30+00:00
+! Version: 2.3.45.16
+! TimeUpdated: 2024-07-23T12:31:36+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2186,8 +2186,9 @@ techrifle.com,sawbank.com,true-tech.net,dailyboulder.com,aclsports.com,route-one
 gearingcommander.com#%#//scriptlet('prevent-setTimeout', 'fnMaskAdBlock')
 veev.to#%#//scriptlet('set-constant', 'fapit.check', 'noopFunc')
 veev.to#%#//scriptlet('trusted-suppress-native-method', 'XMLHttpRequest.prototype.open', ' |"adsbygoogle"', 'prevent')
+veev.to#%#//scriptlet('trusted-suppress-native-method', 'XMLHttpRequest.prototype.open', ' |"magsrv.com"', 'prevent')
 veev.to#%#//scriptlet('trusted-replace-xhr-response', '/"vast_ad":".*?"/', '"vast_ad":""', '=player_api')
-veev.to#%#(()=>{const e={apply:(e,t,p)=>{const o=p[1];return o&&"string"==typeof o&&o.includes("adsbygoogle.js")&&(t.prevent=!0),Reflect.apply(e,t,p)}};window.XMLHttpRequest.prototype.open=new Proxy(window.XMLHttpRequest.prototype.open,e);const t={apply:(e,t,p)=>{if(!t.prevent)return Reflect.apply(e,t,p)}};window.XMLHttpRequest.prototype.send=new Proxy(window.XMLHttpRequest.prototype.send,t)})();
+veev.to#%#(()=>{const e={apply:(e,t,p)=>{const o=p[1];return o&&"string"==typeof o&&o.match(/adsbygoogle\.js|magsrv\.com/)&&(t.prevent=!0),Reflect.apply(e,t,p)}};window.XMLHttpRequest.prototype.open=new Proxy(window.XMLHttpRequest.prototype.open,e);const t={apply:(e,t,p)=>{if(!t.prevent)return Reflect.apply(e,t,p)}};window.XMLHttpRequest.prototype.send=new Proxy(window.XMLHttpRequest.prototype.send,t)})();
 myabandonware.com#%#//scriptlet('set-constant', 'j321', 'true')
 myabandonware.com#%#//scriptlet('abort-on-stack-trace', 'XMLHttpRequest', 'putPb')
 @@||myabandonware.com/wp-content/plugins/wp-banners/js/wp-banners.js
