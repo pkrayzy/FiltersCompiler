@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.45.17",
-			"timeUpdated": "2024-07-23T14:31:34+0000",
+			"version": "2.3.45.18",
+			"timeUpdated": "2024-07-23T15:31:36+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.58",
-			"timeUpdated": "2024-07-23T14:33:13+0000",
+			"version": "2.0.72.59",
+			"timeUpdated": "2024-07-23T15:33:24+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.63",
-			"timeUpdated": "2024-07-23T13:33:28+0000",
+			"version": "2.0.54.64",
+			"timeUpdated": "2024-07-23T15:33:41+0000",
 			"languages": [
 				"ja"
 			],
@@ -536,8 +536,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/10.txt",
 			"trustLevel": "full",
-			"version": "2.0.3.43",
-			"timeUpdated": "2024-07-13T18:33:04+0000",
+			"version": "2.0.3.44",
+			"timeUpdated": "2024-07-23T15:33:49+0000",
 			"languages": [],
 			"tags": [],
 			"downloadUrl": "https://filters.adtidy.org/extension/edge/filters/10.txt"
@@ -553,8 +553,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.15",
-			"timeUpdated": "2024-07-23T12:33:26+0000",
+			"version": "2.0.53.16",
+			"timeUpdated": "2024-07-23T15:33:52+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.3.0",
-			"timeUpdated": "2024-07-23T14:33:48+0000",
+			"version": "2.2.3.1",
+			"timeUpdated": "2024-07-23T15:34:06+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.40.19",
-			"timeUpdated": "2024-07-23T10:33:55+0000",
+			"version": "2.0.40.20",
+			"timeUpdated": "2024-07-23T15:34:16+0000",
 			"languages": [],
 			"tags": [
 				5,
