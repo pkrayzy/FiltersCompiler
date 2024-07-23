@@ -2735,7 +2735,7 @@
         },
         {
             "domains": "exploader.net",
-            "script": "AG_onLoad((async function(){const t=document.querySelector(\"body script\");if(!t)return;const e=t.textContent.match(/\"] = '(.*?)'/g);if(!e)return;const r=[];e.forEach((t=>{const e=t.replace(/.*'(.*?)'/,\"$1\");r.push(e)}));const c=document.querySelector('a.dl_button[href*=\"?\"]');if(!r||!c)return;let n=null;const o=c.getAttribute(\"href\");r.forEach((async t=>{const e=o.replace(/\\?.*/,`?${t}`);await(async t=>{const e=await fetch(t);return!(await e.text()).includes(\"広告ブロックをしていると画像プレビューを使用できません。\")})(e)&&(n=t,document.querySelectorAll('a.dl_button[href*=\"?\"]').forEach((t=>{let e=t.getAttribute(\"href\");e=e.replace(/\\?.*/,`?${n}`),t.setAttribute(\"href\",e)})))}))}));"
+            "script": "(()=>{let t=null;const e=e=>{const n=document.createElement(\"iframe\");n.style.display=\"none\",n.src=e,n.onload=e=>{const o=e.target?.contentDocument?.body?.textContent?.includes(\"広告ブロックをしていると画像プレビューを使用できません。\");if(!o){if(t=e.target.src.split(\"?\")[1],!t)return;document.querySelectorAll('a.dl_button[href*=\"?\"]').forEach((e=>{let n=e.getAttribute(\"href\");n=n.replace(/\\?.*/,`?${t}`),e.setAttribute(\"href\",n)}))}document.body.removeChild(n)},document.body.appendChild(n)};AG_onLoad((async function(){const t=document.querySelector(\"body script\");if(!t)return;const n=t.textContent.match(/\"] = '(.*?)'/g);if(!n)return;const o=[];n.forEach((t=>{const e=t.replace(/.*'(.*?)'/,\"$1\");o.push(e)}));const r=document.querySelector('a.dl_button[href*=\"?\"]');if(!o||!r)return;const c=r.getAttribute(\"href\");o.forEach((t=>{const n=c.replace(/\\?.*/,`?${t}`);e(n)}))}))})();"
         },
         {
             "domains": "youpouch.com,rocketnews24.com",
