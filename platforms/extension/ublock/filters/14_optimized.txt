@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: sDEbJu+QdICPAEzEFO0YQQ
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1721813831-3600.patch
+! Checksum: 50SoEWSWHLyWlV4VePFeWw
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1721817540-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.6
-! TimeUpdated: 2024-07-24T09:33:39+00:00
+! Version: 2.2.3.7
+! TimeUpdated: 2024-07-24T10:35:06+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1932,6 +1932,10 @@ interamt.de#$#.ia-modal-opened { overflow: auto !important; }
 business.truecaller.com##.tc__cookie-wrap--outer
 ||assets.kompas.com/*/sdk-cookie-consent*.js$domain=kompasiana.com
 freshauto.ru##.wrapp-cookie
+dosenmatrosen.de,par71.de#$#.modal-open { overflow: auto !important; }
+dosenmatrosen.de,par71.de#$#.acris-cookie-consent { display: none !important; }
+dosenmatrosen.de,par71.de#$##ccAcivateModal { display: none !important; }
+dosenmatrosen.de,par71.de#$#.modal-backdrop { display: none !important; }
 developer.x.com,developer.twitter.com##.u12-data-protection-notice__item
 modpda.com##.message_warn
 bcb.gov.br##bcb-cookies
@@ -17013,6 +17017,7 @@ tabletki.ua#$#.modal-backdrop { display: none !important; }
 tabletki.ua#$#body.modal-open { overflow: auto !important; }
 kurashiru.com#$#.dly-modal-root { display: none !important; }
 lefigaro.fr#?#.fig-crosslinking:has(> .fig-crosslinking__list > .fig-crosslinking__item > a[href^="https://app.adjust.com/"])
+muragon.com,blogmura.com##.popup-app
 ||liputan6.com/pages/widget-gateway-mobile-app
 m.liputan6.com,liputan6.com##.gateway__mobile-app
 mail.google.com###nav > #speedbump
@@ -18226,7 +18231,9 @@ typhoon.yahoo.co.jp,weather.yahoo.co.jp##.footerPromo
 !+ NOT_OPTIMIZED
 navitime.com##.app-banner-header
 !+ NOT_OPTIMIZED
-hinative.com###fullscreen_app_recommend
+hinative.com#$#body[style="overflow: hidden;"] { overflow: auto!important; }
+!+ NOT_OPTIMIZED
+hinative.com#$##fullscreen_app_recommend { display: none!important; }
 !+ NOT_OPTIMIZED
 hinative.com##.mod_header_horizontal_app_banner
 !+ NOT_OPTIMIZED
@@ -21333,7 +21340,6 @@ cbsnews.com##+js(remove-class, floating, .embed__sticky-content)
 pimpandhost.com##+js(adjust-setTimeout, count, 1000, 0.001)
 myprivatejobs.com##+js(set-constant, count, 0)
 mywatchseries.cyou##+js(nano-setInterval-booster, counter, *, 0.001)
-wdho.ru##+js(set-constant, window.c, 1)
 dwgshare.com##+js(nano-setInterval-booster, secounds, *, 0.001)
 shortix.co,learnmany.in##+js(nano-setInterval-booster, count, *, 0.001)
 mp4upload.com##+js(adjust-setTimeout, tick, *, 0.001)

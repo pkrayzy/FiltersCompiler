@@ -1,9 +1,9 @@
-! Checksum: /SqRr6s3A+o7940AVOue7g
-! Diff-Path: ../patches/17/17-s-1721723821-3600.patch
+! Checksum: W/ueakBJEt/vd45SRAOPag
+! Diff-Path: ../patches/17/17-s-1721817532-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.8.83
-! TimeUpdated: 2024-07-23T08:33:43+00:00
+! Version: 2.0.8.84
+! TimeUpdated: 2024-07-24T10:35:11+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -359,6 +359,11 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! lumosvpn.com promo
+||lumosvpn.com/?cep=$removeparam
+! https://github.com/AdguardTeam/AdguardFilters/issues/184386
+||shop.adidas.jp^$removeparam=source_caller
+||shop.adidas.jp^$removeparam=shortlink
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184272
 ||daohang.qq.com^$removeparam=fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183694

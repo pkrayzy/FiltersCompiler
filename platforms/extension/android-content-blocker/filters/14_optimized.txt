@@ -1,9 +1,9 @@
-! Checksum: tON5xOmPkjFpHSY1hT4w5g
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1721813805-3600.patch
+! Checksum: Y/jzG04xaUVwiUOQNvwROQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1721817516-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.6
-! TimeUpdated: 2024-07-24T09:33:39+00:00
+! Version: 2.2.3.7
+! TimeUpdated: 2024-07-24T10:35:06+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1790,6 +1790,10 @@ interamt.de#$#.ia-modal-opened { overflow: auto !important; }
 business.truecaller.com##.tc__cookie-wrap--outer
 ||assets.kompas.com/*/sdk-cookie-consent*.js$domain=kompasiana.com
 freshauto.ru##.wrapp-cookie
+dosenmatrosen.de,par71.de#$#.modal-open { overflow: auto !important; }
+dosenmatrosen.de,par71.de#$#.acris-cookie-consent { display: none !important; }
+dosenmatrosen.de,par71.de#$##ccAcivateModal { display: none !important; }
+dosenmatrosen.de,par71.de#$#.modal-backdrop { display: none !important; }
 developer.x.com,developer.twitter.com##.u12-data-protection-notice__item
 modpda.com##.message_warn
 bcb.gov.br##bcb-cookies
@@ -15189,6 +15193,7 @@ tabletki.ua#$##downloadAppModal { display: none !important; }
 tabletki.ua#$#.modal-backdrop { display: none !important; }
 tabletki.ua#$#body.modal-open { overflow: auto !important; }
 kurashiru.com#$#.dly-modal-root { display: none !important; }
+muragon.com,blogmura.com##.popup-app
 ||liputan6.com/pages/widget-gateway-mobile-app
 m.liputan6.com,liputan6.com##.gateway__mobile-app
 mail.google.com###nav > #speedbump
@@ -16263,7 +16268,9 @@ typhoon.yahoo.co.jp,weather.yahoo.co.jp##.footerPromo
 !+ NOT_OPTIMIZED
 navitime.com##.app-banner-header
 !+ NOT_OPTIMIZED
-hinative.com###fullscreen_app_recommend
+hinative.com#$#body[style="overflow: hidden;"] { overflow: auto!important; }
+!+ NOT_OPTIMIZED
+hinative.com#$##fullscreen_app_recommend { display: none!important; }
 !+ NOT_OPTIMIZED
 hinative.com##.mod_header_horizontal_app_banner
 !+ NOT_OPTIMIZED
