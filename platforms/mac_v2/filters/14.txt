@@ -1,9 +1,9 @@
-! Checksum: umMY0yslNeNThIBpCLMOOQ
-! Diff-Path: ../patches/14/14-s-1721835539-3600.patch
+! Checksum: HZUqq7XMiQ2Q1fh5RkyOxw
+! Diff-Path: ../patches/14/14-s-1721839152-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.10
-! TimeUpdated: 2024-07-24T15:33:32+00:00
+! Version: 2.2.3.11
+! TimeUpdated: 2024-07-24T16:34:01+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14477,6 +14477,7 @@ grland.info,flash.pt,wackojaco.com,gpblog.com#%#//scriptlet('trusted-click-eleme
 kupi.cz#%#(()=>{let t;const e=new MutationObserver(((e,o)=>{const n=t?.querySelector('button[data-testid="button-agree"]');n&&(setTimeout((()=>{n.click()}),500),o.disconnect())})),o={apply:(o,n,c)=>{const a=Reflect.apply(o,n,c);return n.matches(".szn-cmp-dialog-container")&&(t=a),e.observe(a,{subtree:!0,childList:!0}),a}};window.Element.prototype.attachShadow=new Proxy(window.Element.prototype.attachShadow,o)})();
 cmp.seznam.cz#%#(()=>{let t;const e=new MutationObserver(((e,o)=>{const n=t?.querySelector('button[data-testid="cw-button-agree"]');n&&(setTimeout((()=>{n.click()}),100),o.disconnect())})),o={apply:(o,n,c)=>{const a=Reflect.apply(o,n,c);return n.matches(".szn-cmp-dialog-container")&&(t=a),e.observe(a,{subtree:!0,childList:!0}),a}};window.Element.prototype.attachShadow=new Proxy(window.Element.prototype.attachShadow,o)})();
 !
+bergans.com#%#//scriptlet('trusted-set-cookie', 'cc', '2:f')
 seventeen-web.jp##.cookie-consent-footer
 stolichki.ru##.pop-coockie
 my.sch.gr##.mycc-banner
@@ -50002,6 +50003,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184361
+wdho.ru#%#//scriptlet('set-constant', 'window.c', '5')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184186
 insmyst.com,iir.la#%#//scriptlet('adjust-setInterval', 'timeSec--', '*', '0.001')
 insmyst.com,iir.la#%#//scriptlet('adjust-setTimeout', '/nextPageForm|getlink|getmylink/', '*', '0.001')
