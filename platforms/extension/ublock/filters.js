@@ -486,8 +486,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.7.13",
-			"timeUpdated": "2024-07-23T09:33:18+0000",
+			"version": "2.0.7.14",
+			"timeUpdated": "2024-07-25T18:33:15+0000",
 			"languages": [
 				"nl"
 			],
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.42",
-			"timeUpdated": "2024-07-25T12:35:08+0000",
+			"version": "2.0.68.43",
+			"timeUpdated": "2024-07-25T18:33:29+0000",
 			"languages": [],
 			"tags": [
 				45,
