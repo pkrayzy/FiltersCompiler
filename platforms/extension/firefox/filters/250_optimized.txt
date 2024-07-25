@@ -1,5 +1,5 @@
-! Checksum: ZiSJS5DHK4PPjvtox1R+lA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1721826418-14400.patch
+! Checksum: cGy9/XVqm53tkyhj776wCQ
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1721883911-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.67
@@ -21,10 +21,10 @@
 ##.mobile-app-links:not(html,body,:empty)
 ##.mobile_apps:not(html,body,:empty)
 ##.open-in-app:not(html,body,:empty)
-##.OpenInAppButton:not(html,body,:empty)
 ##.smartbanner:not(html,body,:empty)
 ##div[class*=smart-banner i]:not(.smart-banner-visible)
 ##div[class*=smartbanner i]
+##div[class^=app-download-wrap]
 ##div[class^=app_banner]
 ##div[class^=app_download]
 ##div[class^=AppBanner__]
@@ -116,7 +116,6 @@ processlibrary.com##.bottom > .row:last-of-type
 ||outbyte.com^$document
 ||testedforyou.net^$all
 ||solvusoft.com^$document
-exefiles.com##.row:has(a[href*="/recommended/"])
 /^https?:\/\/((?!www)[a-z]{3,5}\.)?[-0-9a-z]{6,}\.(?:com|fun|guru|life|online|pw|site|space|top)\/\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,match-case,domain=com|fun|guru|life|online|pw|site|space|top
 ||ps1games.online^$document
 ||roms-download.com^$document
@@ -125,6 +124,7 @@ coolrom.com.au,coolrom.com##.download_link
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 !+ NOT_PLATFORM(windows, mac, android)
 ||103.224.212.249^$all
+||speedtest.com^$document,domain=~you-were-likely-looking-for-speedtest.net
 !+ NOT_PLATFORM(windows, mac, android)
 ||199.59.243.222^$all
 |http://ww01.$document,domain=~very-very-extremely-frequently-used-in-malware-redirections.*
@@ -2036,7 +2036,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 ||185.149.120.175^$all
 ||accompanycollapse.com^$all
 ||advancedhosters.com^$all
-||feelsjet.com^$all
 ||videosprofitnetwork.com^$all
 !+ NOT_PLATFORM(windows, mac, android)
 ||192.243.59.12^$all
@@ -2347,7 +2346,6 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##[class*=facebookShare i]:not(html,body,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##[class*=fb-share]:not(html,body,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##[class*=share-facebook]:not(html,body,:empty)
-~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[data-share$=Facebook i]
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[data-sharer=facebook]
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/feed"]
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[href*="facebook.com/dialog/send?"]
@@ -2594,7 +2592,6 @@ bilibili.com##.mobile-link-l
 coolapk.com##.apk_topba_code
 ctrip.com##.service-notice-right
 jd.com###J_mobile
-lianjia.com,zu.ke.com,csair.com##.qr-code
 map.baidu.com##.poi-ads
 map.baidu.com###leadDownloadCard
 mi.com##.item-image.item
@@ -2614,7 +2611,6 @@ taobao.com###J_SiteFooter
 tmall.com##.sn-mobile
 baidu.com##.leadDownloadCard
 baidu.com##.poiLeadDownloadCard
-lianjia.com##.content-guarantee
 12306.cn##.foot-code
 flights.ctrip.com##.seo-links
 mafengwo.cn###footer
@@ -2893,7 +2889,6 @@ $document,removeparam=/^utm-.*$/
 $~subdocument,removeparam=aff,domain=~discoverbank.com|~discover.com
 $removeparam=mc_cid
 $removeparam=mc_eid
-$removeparam=afftag
 $document,removeparam=/^affid=.*$/i,domain=~redir.tradedoubler.com|~affiliate.geekbuying.com
 $removeparam=referralCode
 $removeparam=LSNPUBID
@@ -2946,7 +2941,6 @@ $removeparam=algo_expid
 $removeparam=btsid
 $removeparam=ws_ab_test
 $removeparam=spLa
-$removeparam=affTrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
 $removeparam=SSAID
@@ -3720,6 +3714,7 @@ wenku.baidu.com#%#//scriptlet('ubo-set.js', 'history.replaceState', 'noopFunc')
 ||bilibili.com^$removeparam=refer_from
 ||bilibili.com^$removeparam=msource
 ||bilibili.com/bangumi$removeparam=theme
+||bilibili.com/audio/au*?$removeparam=type
 ^p=1^$removeparam=p,domain=bilibili.com
 ^t=0^$removeparam=t,domain=bilibili.com
 ||bilibili.com^$removeparam=-Arouter
@@ -3806,6 +3801,7 @@ $removeparam=promo,domain=thegay.com|hammacher.com|upornia.com|hclips.com
 $removeparam=sref,domain=bloomberg.com|go.skimresources.com|go.skimlinks.com|go.redirectingat.com
 $removeparam=ctc,domain=avantlink.com
 $removeparam=pid,document,domain=123inkjets.com|appsflyer.com|bergfreunde.*|bybit.com|dobrytextil.cz|farfetch.com|fifa.com|glami.cz|hepsiburada.com|neeva.com|onelink.me|play.google.com|samsclub.com|shopee.*|th.bing.com|tiktok.com
+$removeparam=tracking,domain=affiliatefuture.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|gtomega.*|malwarebytes.com|messenger.com
 $removeparam=u1,domain=linksynergy.com|shop-links.co
 $removeparam=origin,denyallow=platform.twitter.com,domain=archive.org|buzzfeed.com|buzzfeednews.com|drop.com|flaticon.com|nordstrom.com|norton.com|philips.*|symbolab.com|yle.fi|dressmann.com
 $removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com|adtraction.com|tradedoubler.com
@@ -3865,7 +3861,6 @@ $removeparam=soc_src
 $removeparam=soc_trk
 ||spartoo.$removeparam=track_id
 ||as.com^$removeparam=omnil
-$removeparam=kw,domain=udemy.com|hotels.com
 ||surfshark.com^$removeparam=transaction_id
 $removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com|media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|dermstore.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|hawaiianairlines.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com|media-cdn.costco.ca|media-cdn.costco.com
@@ -4277,9 +4272,9 @@ $document,removeparam=af_xp
 ||carousell.$removeparam=t-referrer_search_query_source
 ||carousell.$removeparam=t-referrer_sort_by
 ||carousell.$removeparam=t-tap_index
-$document,removeparam=pk_cid
 ||qzone.qq.com^$document,removeparam=jumptoqzone
 ||qzone.qq.com^$document,removeparam=g
+||asos.com^$removeparam=ctaref
 ||gumroad.com^$removeparam=recommended_by
 $document,removeparam=s_campaign
 ||www.booking.com^$document,removeparam=aid
@@ -4311,6 +4306,7 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@||youtube.com/videoplayback$removeparam=source
 @@||facebook.com^$removeparam=__s
 @@||bing.*/ws/redirect/$removeparam
+@@/unsub/?$removeparam
 @@||email-link.$removeparam
 @@||urldefense.com^$removeparam
 @@|wss://$removeparam
