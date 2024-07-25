@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: wbHCTFHj/+pFFnJncApkYg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721911133-3600.patch
+! Checksum: U7OffnWpUpE2+WNTAgnZmQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721918239-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.45.42
-! TimeUpdated: 2024-07-25T12:31:37+00:00
+! Version: 2.3.45.43
+! TimeUpdated: 2024-07-25T14:31:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7916,6 +7916,7 @@ gearingcommander.com##+js(no-setTimeout-if, fnMaskAdBlock)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182040
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179916
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175439
+@@||veev.to^$generichide
 veev.to##+js(set-constant, fapit.check, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175266
 @@||rddywd.com/advertising.js$domain=herokuapp.com
@@ -14868,7 +14869,6 @@ readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndic
 ||kimcartoon.li/Ads/$subdocument,important
 ||kisscartoon.se/Ads/$subdocument,important
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(abort-current-script, setTimeout, /i.*\..*i.*m.*g.*u.*r.*\..*c.*o.*m/)
-kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(remove-node-text, script, Check)
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#$##divContentVideo { display: block !important; }
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*#?##centerDivVideo > div[id]:has(> img[src^="https://i.imgur.com"])
 kisstvshow.net,lifestylehack.info,keephealth.info,kimcartoon.li,kissorg.net,kisstvshow.to,kissasian.*##+js(set-constant, cpe, false)
@@ -33166,7 +33166,7 @@ _clickunder&pb=$popup
 .com/pw/waWQiOjEw
 ! Clickadu
 ! ex. https://kaqppajmofte.com/en/owh/avw?spfrctux=ude&qdsp=jzub&dce=808204&jvkcce=391260&iilmwn=auge&id=1971897
-/^https:\/\/[a-z]{8,12}\.com\/[\/a-z]{2,}\?(?:[a-z]+=(?:\d+|[a-z]+)&)*?id=[12]\d{6}/$script,third-party,match-case,header=x-js-ab2
+/^https:\/\/[a-z]{8,12}\.com\/en\/(?:[a-z]{2,5}\/){2}[a-z]{2,}\?(?:[a-z]+=(?:\d+|[a-z]+)&)+?id=[12]\d{6}/$script,third-party,match-case,header=etag
 ?zoneid=*&ab=1|$script,third-party
 /get/*?zoneid=*&jp=$script
 ! https://github.com/AdguardTeam/AdguardFilters/pull/83787
@@ -33656,7 +33656,6 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 ! NOTE: Specific rules
 !
 thebarentsobserver.com##div[class*="field-name-adsense"]
-thebarentsobserver.com#?#.field > h2:contains(/^ADVERTISEMENT$/)
 livemint.com##.rightblockAd
 pornwex.tv##+js(addEventListener-defuser, click, fp-screen)
 pornhoarder.net##.cdl-banner a[rel="nofollow"] > img
@@ -50356,7 +50355,7 @@ homeworklib.com#?#.span8 > div.box:has(> div.adsbyvli)
 news18.com#?##right > div[style="height:250px;"]:has(> div.expandoad)
 news18.com#?#.recomeded_story > ul > li:has(> div[style]> div[class*="dfp-ad"])
 addmusictophoto.com#?#h6:contains(/^Advertisement$/)
-fromtexttospeech.com#?#h2:contains(/^Advertisement$/)
+thebarentsobserver.com,fromtexttospeech.com#?#h2:contains(/^Advertisement$/)
 cgtips.org#?#.sidebar > div.widget:has(> div[class] ins.adsbygoogle)
 sweethentai.com#?##picture > center:has(> b:contains(Recommended Hentai games))
 dmitripavlutin.com#?#header + div[class] > main + aside[class] > div[class]:has(> div[class] > div > script[src^="//cdn.carbonads.com/"])
