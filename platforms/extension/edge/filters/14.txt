@@ -1,9 +1,9 @@
-! Checksum: gGDQAFpqXyKk/zuQkqVqrg
-! Diff-Path: ../patches/14/14-s-1722001037-3600.patch
+! Checksum: j+d9UckJyzbvcS9ASJllPg
+! Diff-Path: ../patches/14/14-s-1722004630-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.31
-! TimeUpdated: 2024-07-26T13:33:47+00:00
+! Version: 2.2.3.32
+! TimeUpdated: 2024-07-26T14:33:39+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2451,10 +2451,14 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+sslmentor.com#$#.modal-backdrop { display: none !important; }
+sslmentor.com#$##cookie-modal { display: none !important; }
+sslmentor.com#$#body.modal-open { overflow: auto !important; }
 lastdodo.de,lastdodo.nl,lastdodo.com,lastdodo.fr##div[data-controller="cookie-bar"]
 perfectcorp.com##div[class^="cookie-statement_"]
 cooppank.ee#%#//scriptlet('trusted-set-cookie', 'cookie-consent', 'necessary%2B1721979799357')
 op-media.fi###ocm-container
+kroesewatersport.nl##div.cookie-position
 slackgreen.com##one-time-notice
 kyoceradocumentsolutions.*##div[data-gdpr]
 cherryservers.com##[x-data="cookiesConsent"]
@@ -15557,6 +15561,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+!https://github.com/AdguardTeam/AdguardFilters/issues/184092
+sslmentor.com#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184091
 cooppank.ee#@##cookie-modal
 cooppank.ee#@#.cookie-notice:not(body):not(html)
@@ -31781,6 +31787,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+unitis.jp##.l-sidebar > section.p-sideRegister
 comicsands.com##.newsletter-aside
 report.az##.subs-in-social
 moemax.de##main > div[class] > div[data-testid="fullWidthComponent"] ~ div[class]:has(> div[class] > form[novalidate] button[data-purpose="newsletter.submit"])
@@ -33600,6 +33607,7 @@ novyny.live##.sidebar-item_social
 skyscanner.*###email-capture-trigger
 re.kufar.by###rec580813437
 re.kufar.by###t-footer
+planbmedia.io##div[class^="single-wrap"]
 regberry.ru###feedburner_form
 zn.ua##.recent-events
 theglobeandmail.com#$?#body > div.ReactModalPortal:has(> div.ReactModal__Overlay > div.mobile-interstitial__content) { display: none!important; }
@@ -54117,6 +54125,7 @@ proekt.media##proekt-group > proekt-block:has(> proekt-columns span#donateButton
 novayagazeta.ru##main > div:has(> svg[Width="10000"] + div)
 suntimes.com#%#//scriptlet('trusted-click-element', '.tp-iframe-wrapper.tp-active > button[aria-label="Close"]')
 suntimes.com##.piano_group_banner
+||donorbox.org/embed/$domain=planbmedia.io
 suntimes.com##.piano-after-body
 suntimes.com##.piano_article_sidebar
 nycpokemap.com,londonpogomap.com,vanpokemap.com,sgpokemap.com,sydneypogomap.com###overlay

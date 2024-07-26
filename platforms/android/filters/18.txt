@@ -1,9 +1,9 @@
-! Checksum: 0aD1BeNBM9L0bLK22Hs8cg
-! Diff-Path: ../patches/18/18-s-1722001025-3600.patch
+! Checksum: YG53JIHDdU/d53h7c1rXdQ
+! Diff-Path: ../patches/18/18-s-1722004618-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.43.96
-! TimeUpdated: 2024-07-26T13:33:53+00:00
+! Version: 2.0.43.97
+! TimeUpdated: 2024-07-26T14:33:44+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2451,10 +2451,14 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+sslmentor.com#$#.modal-backdrop { display: none !important; }
+sslmentor.com#$##cookie-modal { display: none !important; }
+sslmentor.com#$#body.modal-open { overflow: auto !important; }
 lastdodo.de,lastdodo.nl,lastdodo.com,lastdodo.fr##div[data-controller="cookie-bar"]
 perfectcorp.com##div[class^="cookie-statement_"]
 cooppank.ee#%#//scriptlet('trusted-set-cookie', 'cookie-consent', 'necessary%2B1721979799357')
 op-media.fi###ocm-container
+kroesewatersport.nl##div.cookie-position
 slackgreen.com##one-time-notice
 kyoceradocumentsolutions.*##div[data-gdpr]
 cherryservers.com##[x-data="cookiesConsent"]
@@ -15611,6 +15615,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+!https://github.com/AdguardTeam/AdguardFilters/issues/184092
+sslmentor.com#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184091
 cooppank.ee#@##cookie-modal
 cooppank.ee#@#.cookie-notice:not(body):not(html)

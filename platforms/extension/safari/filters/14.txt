@@ -1,9 +1,9 @@
-! Checksum: o2pDmHPpcFrcnkKc+RMNpA
-! Diff-Path: ../patches/14/14-s-1722001052-3600.patch
+! Checksum: kMHydfQOLoF5GMEX0eGiQA
+! Diff-Path: ../patches/14/14-s-1722004641-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.31
-! TimeUpdated: 2024-07-26T13:33:47+00:00
+! Version: 2.2.3.32
+! TimeUpdated: 2024-07-26T14:33:39+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2452,10 +2452,14 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+sslmentor.com#$#.modal-backdrop { display: none !important; }
+sslmentor.com#$##cookie-modal { display: none !important; }
+sslmentor.com#$#body.modal-open { overflow: auto !important; }
 lastdodo.de,lastdodo.nl,lastdodo.com,lastdodo.fr##div[data-controller="cookie-bar"]
 perfectcorp.com##div[class^="cookie-statement_"]
 cooppank.ee#%#//scriptlet('trusted-set-cookie', 'cookie-consent', 'necessary%2B1721979799357')
 op-media.fi###ocm-container
+kroesewatersport.nl##div.cookie-position
 slackgreen.com##one-time-notice
 kyoceradocumentsolutions.*##div[data-gdpr]
 cherryservers.com##[x-data="cookiesConsent"]
@@ -15566,6 +15570,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+!https://github.com/AdguardTeam/AdguardFilters/issues/184092
+sslmentor.com#@##cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184091
 cooppank.ee#@##cookie-modal
 cooppank.ee#@#.cookie-notice:not(body):not(html)
@@ -32068,6 +32074,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+unitis.jp##.l-sidebar > section.p-sideRegister
 comicsands.com##.newsletter-aside
 report.az##.subs-in-social
 moemax.de##main > div[class] > div[data-testid="fullWidthComponent"] ~ div[class]:has(> div[class] > form[novalidate] button[data-purpose="newsletter.submit"])
@@ -33887,6 +33894,7 @@ novyny.live##.sidebar-item_social
 skyscanner.com,skyscanner.ru,skyscanner.net,skyscanner.org,skyscanner.ir,skyscanner.in,skyscanner.com.au,skyscanner.com.tr,skyscanner.co.uk,skyscanner.io,skyscanner.co,skyscanner.gr,skyscanner.ca,skyscanner.com.ua,skyscanner.de,skyscanner.fr,skyscanner.jp,skyscanner.com.tw,skyscanner.co.za,skyscanner.co.il,skyscanner.it,skyscanner.tv,skyscanner.id,skyscanner.com.br,skyscanner.es,skyscanner.ch,skyscanner.co.in,skyscanner.kz,skyscanner.com.vn,skyscanner.co.id,skyscanner.nl,skyscanner.us,skyscanner.pl,skyscanner.cl,skyscanner.com.mx,skyscanner.ro,skyscanner.co.nz,skyscanner.com.ar,skyscanner.cc,skyscanner.ae,skyscanner.co.kr,skyscanner.mx,skyscanner.pk,skyscanner.se,skyscanner.com.my,skyscanner.cz,skyscanner.tw,skyscanner.ai,skyscanner.com.sg,skyscanner.com.co,skyscanner.co.th,skyscanner.be,skyscanner.dk,skyscanner.hu,skyscanner.am,skyscanner.com.pk,skyscanner.com.hk,skyscanner.my,skyscanner.no,skyscanner.com.bd,skyscanner.ie,skyscanner.at,skyscanner.co.ke,skyscanner.com.np,skyscanner.ph,skyscanner.fi,skyscanner.lv,skyscanner.space,skyscanner.pe,skyscanner.sk,skyscanner.hk,skyscanner.vip,skyscanner.gov.bd,skyscanner.kr,skyscanner.pt,skyscanner.gg,skyscanner.com.ph,skyscanner.mobi,skyscanner.fun,skyscanner.bg,skyscanner.com.sa,skyscanner.ee,skyscanner.one,skyscanner.uk,skyscanner.com.pe,skyscanner.is,skyscanner.com.uy,skyscanner.gov.np,skyscanner.work,skyscanner.sh###email-capture-trigger
 re.kufar.by###rec580813437
 re.kufar.by###t-footer
+planbmedia.io##div[class^="single-wrap"]
 regberry.ru###feedburner_form
 zn.ua##.recent-events
 theglobeandmail.com#$?#body > div.ReactModalPortal:has(> div.ReactModal__Overlay > div.mobile-interstitial__content) { display: none!important; }
@@ -54389,6 +54397,7 @@ proekt.media##proekt-group > proekt-block:has(> proekt-columns span#donateButton
 novayagazeta.ru##main > div:has(> svg[width="10000"] + div)
 suntimes.com#%#//scriptlet('trusted-click-element', '.tp-iframe-wrapper.tp-active > button[aria-label="Close"]')
 suntimes.com##.piano_group_banner
+||donorbox.org/embed/$domain=planbmedia.io
 suntimes.com##.piano-after-body
 suntimes.com##.piano_article_sidebar
 nycpokemap.com,londonpogomap.com,vanpokemap.com,sgpokemap.com,sydneypogomap.com###overlay
