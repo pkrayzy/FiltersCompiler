@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 9rFGZ/39IW+fN3CaCYoX/g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721983032-3600.patch
+! Checksum: qBWBzoG4/I2W3Mz3ncMB3g
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721986632-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.45.53
-! TimeUpdated: 2024-07-26T08:31:28+00:00
+! Version: 2.3.45.54
+! TimeUpdated: 2024-07-26T09:31:29+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -29133,7 +29133,9 @@ pornstash.in##+js(abort-on-property-write, atOptions)
 strikeout.*,buffstreams.*##+js(abort-current-script, atob, decodeURIComponent)
 ! https://github.com/abp-filters/abp-filters-anti-cv/pull/1288
 socialmediagirls.com##+js(addEventListener-defuser, load, puHref)
+! https://github.com/AdguardTeam/AdguardFilters/issues/184566
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143608
+mov18plus.cloud##+js(abort-on-property-read, popURL)
 mov18plus.cloud,sexhd.co##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143493
 yoho.games##+js(set-constant, showads, noopFunc)
@@ -33550,7 +33552,6 @@ youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPla
 youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, playerResponse.adPlacements, undefined)
 !
 ! Modify YT xhr responses
-! $replace rules for Firefox
 m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots)
 ! TODO: remove trusted-replace-xhr-response/trusted-replace-fetch-response rules below when json-prune-fetch-response/json-prune-xhr-response will be supported by Safari extension
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1925290685
@@ -33659,6 +33660,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+javeng.com##center > form > a[target="_blank"]
+javeng.com##iframe[src*="/NativeBanner.html"]
 olympics.com#$?##header-adv-banner { remove: true; }
 olympics.com#$#header.-sticky { top: 0 !important; }
 eurosport.com##.d3-top-advert
