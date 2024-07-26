@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: JkI8wy+nIPyID9ewl7J7qg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721979423-3600.patch
+! Checksum: 9rFGZ/39IW+fN3CaCYoX/g
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1721983032-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.45.52
-! TimeUpdated: 2024-07-26T07:31:29+00:00
+! Version: 2.3.45.53
+! TimeUpdated: 2024-07-26T08:31:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23967,7 +23967,7 @@ meczyki.pl##.screening
 meczyki.pl#$#.has-screening { background-image: none !important; cursor: auto !important; }
 meczyki.pl##+js(window.open-defuser, bit.ly)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139579
-meczyki.pl##.content > .grid-news-slider > .large:has(> a[rel] .ads-info)
+meczyki.pl##.content > .grid-news-slider > :is(.large, .news-item):has(> a[rel] .ads-info)
 meczyki.pl##.background-custom[style*="width:"][style*="height:"][style*="background-image:"]
 meczyki.pl#?#div[class^="col-md-"] > .row > div[class^="col"] > .widget-wrapper:has(> .widget-wrapper__header > h3[title="Bukmacherzy"])
 !+ NOT_OPTIMIZED
@@ -29283,9 +29283,10 @@ videobin.co##+js(abort-current-script, document.attachEvent, initBCPopunder)
 birminghammail.co.uk##+js(set-constant, chameleonVideo.adDisabledRequested, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136546
 hentaiworld.tv##+js(window.open-defuser, hyenadata)
+! https://github.com/AdguardTeam/AdguardFilters/issues/184560
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135825
-stbturbo.xyz,emturbovid.com##+js(no-setTimeout-if, window.open)
-stbturbo.xyz,emturbovid.com##+js(set-constant, premium, '')
+findjav.com,stbturbo.xyz,emturbovid.com##+js(no-setTimeout-if, window.open)
+findjav.com,stbturbo.xyz,emturbovid.com##+js(set-constant, premium, '')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135902
 mega4upload.com##+js(remove-attr, onclick, #direct_link > a[onclick])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135953
@@ -33658,6 +33659,10 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+olympics.com#$?##header-adv-banner { remove: true; }
+olympics.com#$#header.-sticky { top: 0 !important; }
+eurosport.com##.d3-top-advert
+eurosport.com##.d3-side-advert
 thebarentsobserver.com##div[class*="field-name-adsense"]
 livemint.com##.rightblockAd
 pornwex.tv##+js(addEventListener-defuser, click, fp-screen)

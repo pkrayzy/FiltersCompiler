@@ -1,9 +1,9 @@
-! Checksum: YNAuZNPcNww4WwTd0Pp5aA
-! Diff-Path: ../patches/14/14-s-1721979417-3600.patch
+! Checksum: jdoAXKffvlSPywWrOuyAvw
+! Diff-Path: ../patches/14/14-s-1721983026-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.25
-! TimeUpdated: 2024-07-26T07:33:37+00:00
+! Version: 2.2.3.26
+! TimeUpdated: 2024-07-26T08:33:34+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2452,6 +2452,7 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+cooppank.ee#%#//scriptlet('trusted-set-cookie', 'cookie-consent', 'necessary%2B1721979799357')
 op-media.fi###ocm-container
 cherryservers.com##[x-data="cookiesConsent"]
 drogariavenancio.com.br##.cookiesModal__wrapper
@@ -15560,6 +15561,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184091
+cooppank.ee#@##cookie-modal
+cooppank.ee#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184123
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184160
 @@||cmp.osano.com/*/osano.js$domain=account.bhvr.com
@@ -32058,6 +32062,7 @@ moemax.de##main > div[class] > div[data-testid="fullWidthComponent"] ~ div[class
 friendly2.me##.site-bottombar
 governing.com##.hbspt-form
 ||static.birgun.net/images/abone_banner_light
+katolik.life##.itemFullText > blockquote[class]:has(> p a[href="https://t.me/katolik_life"])
 twojemeble.pl#%#//scriptlet('set-cookie', 'showNewsletterPopup', '0')
 foodwatch.org##.sticky-box--newsletter
 foodwatch.org##.document-footer__newsletter
@@ -51976,6 +51981,7 @@ piyonote.com,dora-guide.com,codedosa.com,gradium.co.kr,semesters.in#%#//scriptle
 ! #%#//scriptlet("set-constant", 'disable_copy_ie', 'noopFunc')
 piyonote.com,dora-guide.com,codedosa.com,gradium.co.kr,semesters.in#%#//scriptlet("set-constant", "disable_copy_ie", "noopFunc")
 !
+meczyki.pl#%#//scriptlet('prevent-addEventListener', 'copy', '.attached')
 secrets.tinkoff.ru#%#//scriptlet('prevent-addEventListener', 'copy')
 topsporter.net#%#//scriptlet('set-constant', 'cancelContextMenu', 'noopFunc')
 topsporter.net#%#//scriptlet('abort-on-property-write', 'ConsoleBan')
