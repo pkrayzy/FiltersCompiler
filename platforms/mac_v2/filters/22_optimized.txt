@@ -1,5 +1,5 @@
-! Checksum: N1HoqA6KWIXXOTkh3MU37Q
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1722004661-3600.patch
+! Checksum: l/sxmpRtmBFYmGonDIPOBw
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1722047808-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.92
@@ -67,6 +67,7 @@ blog.livedoor.jp##center > div[style$="ine-height:1.3;width:826px;background-col
 ||blog.livedoor.jp/i6469/RSS/
 blog.livedoor.jp##.rss_top
 blog.livedoor.jp##.rss_top6
+blog.livedoor.jp##.RSS05
 blog.livedoor.jp#?#.plugin-memo > div.side > div > script[src$="/blogroll.js"]:upward(3)
 blog.livedoor.jp###rssheader
 blog.livedoor.jp###rssinner
@@ -200,17 +201,16 @@ chooinkya.com##.wp-block-rss
 ameblo.jp##header ~ div div[style^="min-height:"]:has(div[id^="blogInfeed"])
 etude000.com###side-fixed
 korewaeroi.com##div[class^="divider"] > aside.widget-main
-eromovie-s.com##.recommend-site
-||eromovie-s.com/feed/
 ||ryusoku.com/assets/html/headline.html
 aaieba.livedoor.biz##.left-container
 blog.tinect.jp##p + .g.g-46 > .g-single
+jiwasoku.com###pcpc-rss
+jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
 h-ken.net###footer-rssLinkListHtml
 kijomatomelog.com##div[style="margin:0px;padding:2px;"]
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"] ~ a[href][target="_blank"]
 baiku-sokuho.info##.links2
-||baiku-sokuho.info/pickup-rss*.html
 seikeidouga.blog.jp##fieldset
 porn-selection.net##main > div[style^="width: 100%; height:"][style*="border:"]
 moeimg.net###pc-pickup-link-frame
@@ -255,7 +255,6 @@ urapic.com###main-box > br
 urapic.com##.row-body
 rastaneko-blog.com##.plugin3_outline + br
 kosoch.com##.plugin3
-jishin-yogen.com##.kiji_rss
 hayamimi-gunpla.com###outline > div.hide-on-mobile
 turbo-bee.com##.aspranker
 2chav.com#$##left[style^="position: fixed"] { position: static !important; }
@@ -269,9 +268,7 @@ inutomo11.com##.article-body-more > script ~ b
 inutomo11.com##.article-body-more > script ~ br
 mudainodocument.com##.entry-content > span[style="font-size: x-large; font-weight: bold;"]
 brow2ing.com##.popular_article_pick_up
-jishin-yogen.com##.rss_outline02
 mudasure.com##.footerrss
-vipcle2.com##.art_table
 oomonoyoutubersokuhou.blogo.jp##.kijisitasougorss
 aatyu.livedoor.blog#?##blog-header > div[align="center"] > div.logbox
 aatyu.livedoor.blog##.custom5
@@ -308,6 +305,7 @@ you1news.com##div[class^="article-bottom-rss"]
 ||matomeantena.com/scripts/parts/category/vip.js
 inutomo11.com##.main-column-inner > br
 idol-blog.com###leftcol > div[style^="width:"]
+karmanima.net##.headerRss
 karmanima.net##.rssTextList
 channel-jk.com##.widget-under-article
 dng65.com###center_outline > div[class^="mheadline"]
@@ -493,6 +491,7 @@ sexytvcap.com,pokebrary.blog.jp,gundam-futab.info##.blogroll-channel
 warotanikki.com##.mainwidget
 warotanikki.com##div.img-grid
 korewaeroi.com,nadarenews.com##div[class^="blogroll"]
+nadarenews.com##.check
 himanatokiniyaruo.com###plugin1
 mutyun.com###chuukan
 /blogparts_iframe.php?sc=$subdocument,third-party
@@ -675,6 +674,7 @@ beasoku.com##.l-rss-header
 ||widgets.binotel.com^$third-party,domain=~novaposhta.md
 ||gso.amocrm.ru^$third-party
 ||leadball.ru^$third-party
+||widget.flowxo.com^$third-party
 ||chatntr.com^
 ||formilla.com^$third-party
 ||app.livechatoo.com^$third-party
@@ -1073,7 +1073,6 @@ novaramedia.com##.support-section
 nonciclopedia.org,miraheze.org###siteNotice
 winstall.app##div[class^="donateCard_container__"]
 openstreetmap.org###banner
-www.wikipedia.org##div[id^="portalBanner_"].banner-bottom
 ||wisepops.net/loader.js$domain=civileats.com
 ||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net|tgrthaber.com.tr
 cavalierdaily.com#$#.modal-backdrop { display: none !important; }
