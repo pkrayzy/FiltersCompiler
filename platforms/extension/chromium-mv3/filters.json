@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.53.13",
-			"timeUpdated": "2024-07-27T09:01:15+0000",
+			"version": "2.1.53.14",
+			"timeUpdated": "2024-07-27T13:01:15+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.53.12",
-			"timeUpdated": "2024-07-27T09:01:16+0000",
+			"version": "2.1.53.13",
+			"timeUpdated": "2024-07-27T13:01:15+0000",
 			"languages": [
 				"ar"
 			],
@@ -1018,8 +1018,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.97.10",
-			"timeUpdated": "2024-07-27T01:01:43+0000",
+			"version": "2.0.97.11",
+			"timeUpdated": "2024-07-27T13:01:29+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -1155,8 +1155,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/gh-pages/Finland_adb.txt",
 			"trustLevel": "high",
-			"version": "2.0.11.10",
-			"timeUpdated": "2024-07-26T17:01:36+0000",
+			"version": "2.0.11.11",
+			"timeUpdated": "2024-07-27T13:01:40+0000",
 			"languages": [
 				"fi"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.46.44",
-			"timeUpdated": "2024-07-27T09:02:00+0000",
+			"version": "2.0.46.45",
+			"timeUpdated": "2024-07-27T13:01:55+0000",
 			"languages": [
 				"hi"
 			],
@@ -1355,8 +1355,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.23",
-			"timeUpdated": "2024-07-27T01:02:11+0000",
+			"version": "2.0.2.24",
+			"timeUpdated": "2024-07-27T13:01:56+0000",
 			"languages": [],
 			"tags": [
 				4
