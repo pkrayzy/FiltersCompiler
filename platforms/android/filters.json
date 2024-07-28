@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.51",
-			"timeUpdated": "2024-07-27T18:32:49+0000",
+			"version": "2.0.68.52",
+			"timeUpdated": "2024-07-28T00:33:46+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.19.64",
-			"timeUpdated": "2024-07-27T23:32:52+0000",
+			"version": "2.1.19.65",
+			"timeUpdated": "2024-07-28T00:33:57+0000",
 			"languages": [
 				"zh"
 			],
