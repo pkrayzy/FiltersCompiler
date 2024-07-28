@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.45.81",
-			"timeUpdated": "2024-07-28T17:31:21+0000",
+			"version": "2.3.45.82",
+			"timeUpdated": "2024-07-28T18:31:21+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.3.93",
-			"timeUpdated": "2024-07-26T18:33:25+0000",
+			"version": "2.1.3.94",
+			"timeUpdated": "2024-07-28T18:32:51+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.85",
-			"timeUpdated": "2024-07-28T14:33:18+0000",
+			"version": "2.0.54.86",
+			"timeUpdated": "2024-07-28T18:33:00+0000",
 			"languages": [
 				"ja"
 			],
@@ -553,8 +553,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.28",
-			"timeUpdated": "2024-07-28T13:33:17+0000",
+			"version": "2.0.53.29",
+			"timeUpdated": "2024-07-28T18:33:07+0000",
 			"languages": [],
 			"tags": [
 				1,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.3.42",
-			"timeUpdated": "2024-07-28T08:33:34+0000",
+			"version": "2.2.3.43",
+			"timeUpdated": "2024-07-28T18:33:16+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.54",
-			"timeUpdated": "2024-07-28T12:33:29+0000",
+			"version": "2.0.68.55",
+			"timeUpdated": "2024-07-28T18:33:17+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -789,8 +789,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.92",
-			"timeUpdated": "2024-07-26T14:33:46+0000",
+			"version": "2.0.8.93",
+			"timeUpdated": "2024-07-28T18:33:23+0000",
 			"languages": [],
 			"tags": [
 				5,
