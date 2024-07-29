@@ -1,9 +1,9 @@
-! Checksum: VCzA2oT2T9K1IC1M2dDBSw
-! Diff-Path: ../patches/14/14-s-1722242318-3600.patch
+! Checksum: 0EuyAZBR649eymYsdb4kUg
+! Diff-Path: ../patches/14/14-s-1722245802-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.47
-! TimeUpdated: 2024-07-29T08:34:44+00:00
+! Version: 2.2.3.48
+! TimeUpdated: 2024-07-29T09:33:24+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2451,6 +2451,9 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+top4mobile.hr#$#body #cookieModal { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) .modal-backdrop { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) { overflow: auto !important; padding-right: 0 !important; }
 e-tec.at#%#//scriptlet('set-cookie', 'cc_functional', 'true')
 e-tec.at#%#//scriptlet('set-cookie', 'cc_granted', 'true')
 e-tec.at#%#//scriptlet('set-cookie', 'cc_analytic', 'false')
@@ -15560,6 +15563,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184910
+! https://github.com/AdguardTeam/AdguardFilters/issues/184918
+top4mobile.hr#@##cookieModal
 ! https://info.yomiuri.co.jp/privacypolicy/datapolicy.html contents blocked
 @@||cmp.datasign.co^$script,domain=info.yomiuri.co.jp
 ! sparda-m.de - unable to use the site
@@ -33361,7 +33367,9 @@ singkinderlieder.de#?#.relative ~ .max-w-screen-xl:has(button[name="subscribe"])
 londonreal.tv###popup1
 maxroll.gg#?#main > div.flex:has(> div[class] > form[action="/api/newsletter/subscribe"])
 investordaily.com.au#?#.b_yrl:has(> #mc-embedded-subscribe-form)
-||nikkansports.com/mod2015/js/piano/members_only.js
+nikkansports.com#$#.tp-backdrop { display: none !important; }
+nikkansports.com#$#.tp-modal:has(> div > button.tp-close + div.plan-wrapper)  { display: none !important; }
+nikkansports.com#$#.tp-modal-open { overflow: auto !important; height: unset !important; }
 reebok.eu#?#section[class^="css-"]:has([data-test="newsletter-banner-title"])
 nsenergybusiness.com##.share-content-signup-form
 oberbank.at##.dt-newsletter
@@ -50005,6 +50013,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184901
+lokerwfh.net#%#//scriptlet('adjust-setInterval', 'Wait...', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184361
 wdho.ru#%#//scriptlet('set-constant', 'window.c', '5')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184186

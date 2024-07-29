@@ -1,9 +1,9 @@
-! Checksum: j8na5RI9BSwCR2QIQ+Ts+w
-! Diff-Path: ../patches/18/18-s-1722242319-3600.patch
+! Checksum: FQnGNGG6eu2rbd7bYtrUQw
+! Diff-Path: ../patches/18/18-s-1722245803-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.44.4
-! TimeUpdated: 2024-07-29T08:34:51+00:00
+! Version: 2.0.44.5
+! TimeUpdated: 2024-07-29T09:33:30+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2451,6 +2451,9 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+top4mobile.hr#$#body #cookieModal { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) .modal-backdrop { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) { overflow: auto !important; padding-right: 0 !important; }
 e-tec.at#%#//scriptlet('set-cookie', 'cc_functional', 'true')
 e-tec.at#%#//scriptlet('set-cookie', 'cc_granted', 'true')
 e-tec.at#%#//scriptlet('set-cookie', 'cc_analytic', 'false')
@@ -15560,6 +15563,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184910
+! https://github.com/AdguardTeam/AdguardFilters/issues/184918
+top4mobile.hr#@##cookieModal
 ! https://info.yomiuri.co.jp/privacypolicy/datapolicy.html contents blocked
 @@||cmp.datasign.co^$script,domain=info.yomiuri.co.jp
 ! sparda-m.de - unable to use the site

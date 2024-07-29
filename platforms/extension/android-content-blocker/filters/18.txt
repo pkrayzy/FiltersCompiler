@@ -1,9 +1,9 @@
-! Checksum: BMincq5ghvRHke+7dS6lBg
-! Diff-Path: ../patches/18/18-s-1722242305-3600.patch
+! Checksum: bxpTI9ZZYcms85unWQtsGQ
+! Diff-Path: ../patches/18/18-s-1722245789-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.44.4
-! TimeUpdated: 2024-07-29T08:34:51+00:00
+! Version: 2.0.44.5
+! TimeUpdated: 2024-07-29T09:33:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2406,6 +2406,9 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+top4mobile.hr#$#body #cookieModal { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) .modal-backdrop { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) { overflow: auto !important; padding-right: 0 !important; }
 sslmentor.com#$#.modal-backdrop { display: none !important; }
 sslmentor.com#$##cookie-modal { display: none !important; }
 sslmentor.com#$#body.modal-open { overflow: auto !important; }
@@ -13653,6 +13656,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184910
+! https://github.com/AdguardTeam/AdguardFilters/issues/184918
+top4mobile.hr#@##cookieModal
 ! https://info.yomiuri.co.jp/privacypolicy/datapolicy.html contents blocked
 @@||cmp.datasign.co^$script,domain=info.yomiuri.co.jp
 ! sparda-m.de - unable to use the site

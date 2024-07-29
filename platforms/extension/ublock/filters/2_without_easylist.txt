@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Q7/T8JlPhY3JOFsVblLGpQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722242328-3600.patch
+! Checksum: hVS7lZmsZg84uf+uB7m5lQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722245813-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.45.91
-! TimeUpdated: 2024-07-29T08:31:31+00:00
+! Version: 2.3.45.92
+! TimeUpdated: 2024-07-29T09:31:23+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7650,6 +7650,10 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184901
+lokerwfh.net#$#body { overflow: auto !important; }
+lokerwfh.net#$##adblock-warning { display: none !important; }
+lokerwfh.net##+js(no-xhr-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184630
 online2pdf.com##.adbox_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184403
@@ -30983,8 +30987,6 @@ pornwhite.com##+js(abort-on-property-read, customScript)
 vjav.com##+js(set-constant, adver, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53709
 shemalez.com##+js(set-constant, adver, noopFunc)
-! https://github.com/AdguardTeam/AdguardFilters/issues/53688
-91porn.com##+js(set-constant, player.preroll, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53501
 imgtorrnt.in##+js(abort-on-property-write, pndrCodeScript)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92228
@@ -34357,7 +34359,7 @@ allegiantair.com##a[data-hook="header-merchandise-banner_link"]
 /tag.min.js$redirect=noop.js,important,domain=4fnet.org|clickndownload.*|clicknupload.*|vipbox.lc|1qwebplay.xyz,script
 /?oo=1&aab=1|$script,third-party,xmlhttprequest,redirect=noop.js,important,domain=4fnet.org|clickndownload.*|clicknupload.*|vipbox.lc|fstream365.com
 convertio.co##.softobar-container
-insmyst.com,iir.la,tvi.la,cosplay18.pics,hianime.to,mobiletvshows.site,movies4u.*,x-x-x.tube,pornx.to,4khd.com,dlhd.*,playhydrax.com,kissanime.*,vidsrc.*,pahe.*##+js(window.open-defuser)
+lokerwfh.net,insmyst.com,iir.la,tvi.la,cosplay18.pics,hianime.to,mobiletvshows.site,movies4u.*,x-x-x.tube,pornx.to,4khd.com,dlhd.*,playhydrax.com,kissanime.*,vidsrc.*,pahe.*##+js(window.open-defuser)
 hogwarts.cafe#$#body[class*="adthrive-"]:not(.home) .site-footer-wrap { margin-bottom: 0 !important; }
 retromania.gg##.banner > *
 startpage.com#?#:matches-path(/search)#main > div[class^="css-"]:has(> div[class^="css-"] > p[class^="css-"]:contains(/Annoncer|Anzeigen|Ads|Anuncios|Publicités|Advertenties|Annonser|Reklamy|Anúncios/))
@@ -41929,7 +41931,7 @@ macworld.com###articleLeaderboardWrapper
 ndtv.com##.__pcwgtlhs
 memeful.com##.naughty-box
 ||1001freedownloads.s3.amazonaws.com/vector/thumb/83198/green_download_button.png
-dz4up.com##div[style="text-align: center;"] > a[target="_blank"] > img
+lokerwfh.net,dz4up.com##div[style="text-align: center;"] > a[target="_blank"] > img
 temporary-phone-number.com##div[class^="adsense-"]
 /main.js$domain=softairbay.com|pixeldrain.com
 designrush.com##.banner-side-wrap
@@ -43084,7 +43086,6 @@ abc11.com###vembaModule
 printedelectronicsnow.com##.globalOverlay
 printedelectronicsnow.com###exposeMask
 ||shemalez.com/assets/jwplayer-*/vast.js
-91porn.com##.vjs-preroll
 pornhd6k.net##.col-md-4 > div.one_p94 > div.one_p95
 famousinternetgirls.com##.video-details ~ div[id^="text-"][class="widget widget_text"]
 famousinternetgirls.com##.sidebar > div[id^="text-"][class="widget widget_text"]
@@ -49365,7 +49366,6 @@ you.com#?#ul[data-testid="web-results"] > li[data-testid]:has(> div[class^="sc-"
 digminecraft.com#?#body > div[class]:has(> div[id$="_slot"])
 pornwhite.com#?#.items-container > div.items-holder:has(> div[data-banner])
 sextu.com#?#.video-page__content > .left > section:has(> div[id^="underplayer_"])
-91porn.com#?##videodetails > div:has(> a[href][target="_blank"])
 animeidhentai.com#?#.player > div[class]:not([class*="player"]) > aside[class]:has(> div[class]:not(.embed) > iframe[name^="spot_id_"])
 xhdporno.sexy#?#.contentbl > #preview:has(> .innercont > div[class^="preview_screen"] > .preview_title:contains(Advertisement))
 giznext.com#?#.listing-brandicon ~ section:has(iframe[id^="google_ads_iframe_"])

@@ -2451,6 +2451,9 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+top4mobile.hr#$#body #cookieModal { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) .modal-backdrop { display: none !important; }
+top4mobile.hr#$#body:not([data-bs-overflow]) { overflow: auto !important; padding-right: 0 !important; }
 e-tec.at#%#//scriptlet('set-cookie', 'cc_functional', 'true')
 e-tec.at#%#//scriptlet('set-cookie', 'cc_granted', 'true')
 e-tec.at#%#//scriptlet('set-cookie', 'cc_analytic', 'false')
@@ -15707,6 +15710,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184910
+@@||consent.cookiebot.com^$app=ee.telia.selfservice
+! https://github.com/AdguardTeam/AdguardFilters/issues/184918
+top4mobile.hr#@##cookieModal
 ! https://info.yomiuri.co.jp/privacypolicy/datapolicy.html contents blocked
 @@||cmp.datasign.co^$script,domain=info.yomiuri.co.jp
 ! sparda-m.de - unable to use the site
@@ -31301,6 +31308,7 @@ kurashiru.com#$#html.dly-modal-active { overflow: auto !important; }
 ! SECTION: Popups - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb || ext_ublock)
 !
+||img.able.co.jp/able/sp/sp/asset/js/agent/agentAppealJsonStatic.js
 die-max-und-moritz-apo.de#$##modal-cb { display: none !important; }
 die-max-und-moritz-apo.de#$#.modal-backdrop { display: none !important; }
 die-max-und-moritz-apo.de#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
@@ -34311,7 +34319,9 @@ singkinderlieder.de#?#.relative ~ .max-w-screen-xl:has(button[name="subscribe"])
 londonreal.tv###popup1
 maxroll.gg#?#main > div.flex:has(> div[class] > form[action="/api/newsletter/subscribe"])
 investordaily.com.au#?#.b_yrl:has(> #mc-embedded-subscribe-form)
-||nikkansports.com/mod2015/js/piano/members_only.js
+nikkansports.com#$#.tp-backdrop { display: none !important; }
+nikkansports.com#$#.tp-modal:has(> div > button.tp-close + div.plan-wrapper)  { display: none !important; }
+nikkansports.com#$#.tp-modal-open { overflow: auto !important; height: unset !important; }
 reebok.eu#?#section[class^="css-"]:has([data-test="newsletter-banner-title"])
 nsenergybusiness.com##.share-content-signup-form
 oberbank.at##.dt-newsletter
@@ -43128,6 +43138,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+samsung.com##.cod05-app-banner
+m1.able.co.jp##body > section:has(> div.appinst)
 lightinthebox.com##.top_open_app
 msdmanuals.com##div[data-testid="marketing-block-container"]
 news.1242.com##.area_banner
@@ -51606,6 +51618,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184901
+lokerwfh.net#%#//scriptlet('adjust-setInterval', 'Wait...', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184361
 wdho.ru#%#//scriptlet('set-constant', 'window.c', '5')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184186
