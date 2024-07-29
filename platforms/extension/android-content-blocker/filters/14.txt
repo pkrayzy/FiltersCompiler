@@ -1,9 +1,9 @@
-! Checksum: NvBH4AaZ88DELzzU7hsUKg
-! Diff-Path: ../patches/14/14-s-1722256732-3600.patch
+! Checksum: HOlVgAB6Nut+3Y79ClaTfA
+! Diff-Path: ../patches/14/14-s-1722260325-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.51
-! TimeUpdated: 2024-07-29T12:34:18+00:00
+! Version: 2.2.3.52
+! TimeUpdated: 2024-07-29T13:33:37+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2406,6 +2406,8 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+just-eat.*##pie-cookie-banner
+club.autodoc.*##.gdpr-panel
 contabilizei.com.br##div[class^="container-modal modal-cookie"]
 conference-board.org##body > div.browserCacheBox
 manutan.it##div[class*="cookieConsentBanner"]
@@ -3153,8 +3155,8 @@ ceneo.pl###js_cookie-consent-banner
 autodoc.pl#$#.gdpr-panel { display: none !important; }
 autodoc.pl#$#div[data-popup-cookies] { display: none !important; }
 auto-doc.*,autodoc.*,autodoc24.*#$#body { overflow: auto !important; }
-auto-doc.*,autodoc.*,autodoc24.*#$#.cookies-popup { display: none !important; }
 auto-doc.*,autodoc.*,autodoc24.*#$#.overlay { display: none !important; }
+auto-doc.*,autodoc.*,autodoc24.*#$#div[data-popup-cookies] { display: none !important; }
 process.st##.pookie
 coinbase.com##div[style="width: 100%; position: fixed; bottom: 0px; z-index: 1000; transition: bottom 1s ease 0s;"]
 galliker.com##.st20-cookie-info-middle
@@ -13681,7 +13683,8 @@ moncommerce35.fr#@##cookie_info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184160
 @@||cmp.osano.com/*/osano.js$domain=account.bhvr.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184052
-agyserkento.hu#@#.cookie-alert
+! https://github.com/AdguardTeam/AdguardFilters/issues/184810
+pergeepker.hu,agyserkento.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183969
 griffbereit24.de#@##cookie-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183973
@@ -21634,6 +21637,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+club.autodoc.*##.popup.popup-visitor-auth
+club.autodoc.*##.header__b
 cloud.mail.ru##.Snackbars__snackbar--a-agp
 hanako.tokyo##.overlay-wrapper
 digitallydownloaded.net##.sliding-box
@@ -28414,6 +28419,7 @@ g123.jp,accounts.binance.com#@##credential_picker_container
 !
 ! SECTION: Push notifications - Regular rules
 !
+/firebase-messaging-sw.js$domain=club.autodoc.*
 miamiherald.com###brzpushpermission
 ||popcrush.com/rest/carbon/api/scripts.js
 ||dealabs.com/assets/js/PushNotifications_
@@ -35268,6 +35274,9 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 !
 !
+just-eat.*##section[data-qa="download-app-section"]
+club.autodoc.*##.section.section-apps
+menulog.com.au##div[data-test-id="appsBannerContainer"]
 reddit.com##shreddit-async-loader[paint-group="xpromo"][bundlename="app_selector"]
 foodistnote.recipe-blog.jp##.block-app-side-banner
 m.facebook.com##div[data-status-bar-color]:not(.vscroller) > div[data-is-pull-to-refresh-allowed="true"] + .fixed-container.bottom
