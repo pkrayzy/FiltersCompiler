@@ -1,9 +1,9 @@
-! Checksum: r3Qw6Fe7jeF+gufLHOy4jA
-! Diff-Path: ../patches/19/19-s-1722271005-3600.patch
+! Checksum: rTKERevQTg+7zVKnZS+vog
+! Diff-Path: ../patches/19/19-s-1722274591-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.40.52
-! TimeUpdated: 2024-07-29T16:33:31+00:00
+! Version: 2.0.40.53
+! TimeUpdated: 2024-07-29T17:33:34+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -238,7 +238,9 @@ mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asR
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
 ! dzen.ru
 ! Under the search
-dzen.ru##body header#dzen-header ~ div[class*="__widgetContainer-"] div[style]:has(div.adv-skeleton___main)
+dzen.ru#?#div:matches-attr(*data-*=/^ad-banner$/)
+! Ads in news
+dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 ! Ads in the feed
 dzen.ru#$?#.feed__item > article._with_big_card_height._dzen-feed._carousel:contains(/[реклама]{7,10}/) { remove: true; }
 dzen.ru##body .card-wrapersome

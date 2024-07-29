@@ -1,9 +1,9 @@
-! Checksum: uszLNEETfi+k1c+l2g2Vcw
-! Diff-Path: ../patches/18/18-s-1722271026-3600.patch
+! Checksum: Rt/jfsS/jsYXP3INwkc62A
+! Diff-Path: ../patches/18/18-s-1722274613-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.44.12
-! TimeUpdated: 2024-07-29T16:33:29+00:00
+! Version: 2.0.44.13
+! TimeUpdated: 2024-07-29T17:33:33+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2452,6 +2452,9 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+kkh.de#$#.cookiebanner { display: none !important; }
+kkh.de#$#.modal-backdrop { display: none !important; }
+kkh.de#$#.modal-open { overflow: auto !important; }
 spacehive.com#%#//scriptlet('trusted-set-local-storage-item', 'acceptedCookiePolicy', '1.4')
 products.wera.de###dsgvo-modal
 rawfuckclub.com#%#//scriptlet('trusted-click-element', '#consentDialogRow3 > .consentDialogButton.notclicked > button[data-ref="consentDialogRow3"]', '', '1000')
@@ -2732,7 +2735,7 @@ bellroy.com#$?#bellroy-cookie-dialog { remove: true; }
 bellroy.com#$#body { overflow-y: auto !important; }
 ||images.tcdn.com.br/files/*/modal-lgpd$script
 ||schoeck.com/Build/3134.7da4de8d.js
-dns.pl,bel.ru#%#//scriptlet('set-cookie', 'cookie-accepted', 'true')
+newia.ru,dns.pl,bel.ru#%#//scriptlet('set-cookie', 'cookie-accepted', 'true')
 ||lahar.com.br^$third-party
 mydealz.de#%#//scriptlet('trusted-click-element', 'button[data-t^="acceptAll"]', '!cookie:cookie_policy_agreement', '1000')
 ||kosik.cz/vue/*/CookieBarModal.
@@ -15588,6 +15591,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! kkh.de - broken page
+kkh.de#@#.cookiebanner:not(body)
+kkh.de#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184899
 oeko-tex.com#@#.cc-window[aria-label="cookieconsent"]
 oeko-tex.com#@#.cc-floating

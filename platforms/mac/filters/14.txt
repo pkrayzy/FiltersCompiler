@@ -1,9 +1,9 @@
-! Checksum: 8hnkmZo7bpJZ8dlv/lgzzQ
-! Diff-Path: ../patches/14/14-s-1722271038-3600.patch
+! Checksum: PFyLnJnflVYrnLtIQawirw
+! Diff-Path: ../patches/14/14-s-1722274624-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.55
-! TimeUpdated: 2024-07-29T16:33:24+00:00
+! Version: 2.2.3.56
+! TimeUpdated: 2024-07-29T17:33:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2451,6 +2451,9 @@ foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.de,gqmagazine.fr,rossm
 !
 ! NOTE: Regular rules
 !
+kkh.de#$#.cookiebanner { display: none !important; }
+kkh.de#$#.modal-backdrop { display: none !important; }
+kkh.de#$#.modal-open { overflow: auto !important; }
 spacehive.com#%#//scriptlet('trusted-set-local-storage-item', 'acceptedCookiePolicy', '1.4')
 products.wera.de###dsgvo-modal
 rawfuckclub.com#%#//scriptlet('trusted-click-element', '#consentDialogRow3 > .consentDialogButton.notclicked > button[data-ref="consentDialogRow3"]', '', '1000')
@@ -2731,7 +2734,7 @@ bellroy.com#$?#bellroy-cookie-dialog { remove: true; }
 bellroy.com#$#body { overflow-y: auto !important; }
 ||images.tcdn.com.br/files/*/modal-lgpd$script
 ||schoeck.com/Build/3134.7da4de8d.js
-dns.pl,bel.ru#%#//scriptlet('set-cookie', 'cookie-accepted', 'true')
+newia.ru,dns.pl,bel.ru#%#//scriptlet('set-cookie', 'cookie-accepted', 'true')
 ||lahar.com.br^$third-party
 mydealz.de#%#//scriptlet('trusted-click-element', 'button[data-t^="acceptAll"]', '!cookie:cookie_policy_agreement', '1000')
 ||kosik.cz/vue/*/CookieBarModal.
@@ -15627,6 +15630,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! kkh.de - broken page
+kkh.de#@#.cookiebanner:not(body)
+kkh.de#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184899
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184910
 @@||consent.cookiebot.com^$app=ee.telia.selfservice
@@ -19652,7 +19658,9 @@ mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asR
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
 ! dzen.ru
 ! Under the search
-dzen.ru##body header#dzen-header ~ div[class*="__widgetContainer-"] div[style]:has(div.adv-skeleton___main)
+dzen.ru#?#div:matches-attr(*data-*=/^ad-banner$/)
+! Ads in news
+dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 ! Ads in the feed
 dzen.ru#$?#.feed__item > article._with_big_card_height._dzen-feed._carousel:contains(/[реклама]{7,10}/) { remove: true; }
 dzen.ru##body .card-wrapersome
@@ -47460,6 +47468,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+x.com,twitter.com##div[aria-label="Trending"] > div div:has(>aside[aria-label="Subscribe to Premium"])
 ign.com##.plus-promo
 deepl.com##.z-40.bg-blue-next-100.py-3.items-start.sm\:items-center:has(> div.flex-1 > div > a[href="/pro-write"])
 wisecleaner.com##.header-background-index-banner-box
