@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.3.43",
-			"timeUpdated": "2024-07-28T18:33:16+0000",
+			"version": "2.2.3.44",
+			"timeUpdated": "2024-07-29T05:33:17+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -747,8 +747,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/20.txt",
 			"trustLevel": "full",
-			"version": "2.0.15.49",
-			"timeUpdated": "2024-07-26T16:39:45+0000",
+			"version": "2.0.15.50",
+			"timeUpdated": "2024-07-29T05:33:24+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.19.69",
-			"timeUpdated": "2024-07-29T04:33:39+0000",
+			"version": "2.1.19.70",
+			"timeUpdated": "2024-07-29T05:33:29+0000",
 			"languages": [
 				"zh"
 			],
