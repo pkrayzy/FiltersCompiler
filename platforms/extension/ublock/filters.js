@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.92.59",
-			"timeUpdated": "2024-07-29T12:31:23+0000",
+			"version": "2.0.92.60",
+			"timeUpdated": "2024-07-29T14:31:35+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.45.96",
-			"timeUpdated": "2024-07-29T13:31:27+0000",
+			"version": "2.3.45.97",
+			"timeUpdated": "2024-07-29T14:31:52+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.3.52",
-			"timeUpdated": "2024-07-29T13:33:37+0000",
+			"version": "2.2.3.53",
+			"timeUpdated": "2024-07-29T14:33:58+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -656,8 +656,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.45.71",
-			"timeUpdated": "2024-07-29T11:33:40+0000",
+			"version": "2.0.45.72",
+			"timeUpdated": "2024-07-29T14:34:03+0000",
 			"languages": [
 				"fr"
 			],
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.9",
-			"timeUpdated": "2024-07-29T13:33:43+0000",
+			"version": "2.0.44.10",
+			"timeUpdated": "2024-07-29T14:34:04+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.40.49",
-			"timeUpdated": "2024-07-29T13:33:44+0000",
+			"version": "2.0.40.50",
+			"timeUpdated": "2024-07-29T14:34:05+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -747,8 +747,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/20.txt",
 			"trustLevel": "full",
-			"version": "2.0.15.53",
-			"timeUpdated": "2024-07-29T13:33:44+0000",
+			"version": "2.0.15.54",
+			"timeUpdated": "2024-07-29T14:34:06+0000",
 			"languages": [],
 			"tags": [
 				5,
