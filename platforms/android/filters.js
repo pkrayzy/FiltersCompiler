@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.45.93",
-			"timeUpdated": "2024-07-29T10:31:21+0000",
+			"version": "2.3.45.94",
+			"timeUpdated": "2024-07-29T11:31:29+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/3_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.74",
-			"timeUpdated": "2024-07-29T10:32:55+0000",
+			"version": "2.0.72.75",
+			"timeUpdated": "2024-07-29T11:33:05+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -439,8 +439,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/6_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.42.94",
-			"timeUpdated": "2024-07-28T12:33:10+0000",
+			"version": "2.0.42.95",
+			"timeUpdated": "2024-07-29T11:33:15+0000",
 			"languages": [
 				"de"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.3.49",
-			"timeUpdated": "2024-07-29T10:33:26+0000",
+			"version": "2.2.3.50",
+			"timeUpdated": "2024-07-29T11:33:36+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -656,8 +656,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/16_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.45.70",
-			"timeUpdated": "2024-07-29T10:33:30+0000",
+			"version": "2.0.45.71",
+			"timeUpdated": "2024-07-29T11:33:40+0000",
 			"languages": [
 				"fr"
 			],
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.6",
-			"timeUpdated": "2024-07-29T10:33:31+0000",
+			"version": "2.0.44.7",
+			"timeUpdated": "2024-07-29T11:33:41+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -768,8 +768,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/21_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.59",
-			"timeUpdated": "2024-07-29T09:33:31+0000",
+			"version": "2.0.24.60",
+			"timeUpdated": "2024-07-29T11:33:43+0000",
 			"languages": [],
 			"tags": [
 				5,
