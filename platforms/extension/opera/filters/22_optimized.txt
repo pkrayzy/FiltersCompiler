@@ -1,5 +1,5 @@
-! Checksum: yYOhYn7I7SEAk1EqHUv/1g
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1722191799-3600.patch
+! Checksum: Cvp+drZEOyDH6qVWpoMgTg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1722220615-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.93
@@ -188,7 +188,6 @@ ddd-smart.net##.video-play
 uwakich.com##.blogroll-channel7
 syakouba.com##div[style]:has(> table > tbody > tr > td > div.rank_deck1)
 newmatosoku.com##.waku-zentai:has(> span.waku-left)
-erostopics.net##.head-under
 h-ken.net##.mainColumn > div > .sidebarList
 h-ken.net##.mainColumn > div > p.midashiPink
 xn--r8jwklh769h2mc880dk1o431a.com##.morepickup
@@ -207,7 +206,6 @@ jiwasoku.com###pcpc-rss
 jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
 h-ken.net###footer-rssLinkListHtml
-kijomatomelog.com##div[style="margin:0px;padding:2px;"]
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"] ~ a[href][target="_blank"]
 baiku-sokuho.info##.links2
 seikeidouga.blog.jp##fieldset
@@ -300,6 +298,9 @@ kininaru-geinou-m.blog.jp##.rss-blogroll + div.sub-title-box
 kininaru-geinou-m.blog.jp##.rss-blogroll1box
 kininaru-geinou-m.blog.jp##.sub-title-box:first-child
 pokemon-goh.doorblog.jp##.article-body-inner > div.t_b + div[style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;"]
+re-file.com#?#.frame:has(> script[src$="/blogroll.js"]) + br
+re-file.com#?#.frame > script[src$="/blogroll.js"]:upward(1)
+re-file.com#?#.page-title:contains(/話題の|ピックアップ/)
 you1news.com##div[class^="article-bottom-rss"]
 ||matomeantena.com/scripts/parts/category/vip.js
 inutomo11.com##.main-column-inner > br
@@ -340,7 +341,6 @@ joker004.blog.fc2.com#?#.t_h2:contains(他記事)
 kokopyon.net##.plg_area:last-child
 ||aaieba.livedoor.biz^$subdocument,~third-party
 aaieba.livedoor.biz##.aaieba-b
-kijomatomelog.com##.related-wrapper
 carp-matome.blog.jp##.bw_outbox
 anihatsu.com##.rss-blogroll-kobetu
 news30over.com##div[class^="topbox"]
@@ -414,7 +414,6 @@ oumaga-times.com##.popular-list
 oumaga-times.com##.popular-list-header
 burusoku-vip.com##.headline-body
 burusoku-vip.com##.headline-title
-kijomatomelog.com##div[style^="line-height: 35px; border-top:dotted 1px gray;"]
 ||all-nationz.com/feed-all-nationz.html
 ||amnewgame.blog.jp/TOPRSS3.html
 anihatsu.com##.rss-blogroll-header
@@ -587,6 +586,7 @@ koe-koe.com##.rss_c
 ||doujinlist.com/rss.js
 ||2nt.com/b/o/t/bottisoku/$subdocument,domain=bottisoku.blog.2nt.com
 .sprss002.html$domain=moeero-library.com|eromanga-moeerolibrar.com
+||eromanga-cafe.com^$subdocument,~third-party
 eromanga-cafe.com,revuestarlightre.com###custom_html-4
 eromanga-cafe.com##.loop-single-widget
 kidan-m.com,otakumix.doorblog.jp###rss1
@@ -618,7 +618,6 @@ ironsaga-msoku.xyz#$##content { margin-top: 180px!important; }
 ironsaga-msoku.xyz#$##rss_wrap { display: none!important; }
 ||monhan-mhw.com^$subdocument,~third-party
 monhan-mhw.com###main div.column-inner-2 > div[style$="background: #FFFFFF;"]
-||toushichannel.net^$subdocument,~third-party
 coolpan.net##.pickupList
 erogazou-pinkline.com###adnex-text-widget
 xn--r8jwklh769h2mc880dk1o431a.com##.headlinewra
@@ -675,6 +674,7 @@ beasoku.com##.l-rss-header
 ||widgets.binotel.com^$third-party,domain=~novaposhta.md
 ||gso.amocrm.ru^$third-party
 ||leadball.ru^$third-party
+||widget.flowxo.com^$third-party
 ||chatntr.com^
 ||formilla.com^$third-party
 ||app.livechatoo.com^$third-party
@@ -761,7 +761,6 @@ support.apple.com##.accsoffer-wrapper
 botanicheskoe-rk.ru#%#//scriptlet('hide-in-shadow-dom', '.chat')
 botanicheskoe-rk.ru#%#//scriptlet('hide-in-shadow-dom', 'div[class^="feedot-"]')
 navitime.co.jp##.ntj-web-nps
-jotform.com##.jfFeedbackButton
 ||selfservice.robinhq.com/external/robin$domain=freshcotton.com
 kinsta.com##kinsta-article-feedback
 phoenixnap.com##.live-chat-btn
@@ -777,6 +776,7 @@ my.rakuten.co.jp###survey-area
 amazon.*###customer-survey_feature_div
 infranken.de###singlewidget_standalone
 /motchat/design/defaulttheme/js/widgetv*/index.js$domain=incredibleindia.org
+unitedutilities.com##.c-recite-me
 blamper.ru##div[data-module^="widgets/common/FakeChat/"]
 centr-hirurgii.ru,smclinic.ru###call-btn
 eldorado.ru###custom-livetex-fab
@@ -1070,6 +1070,7 @@ novaramedia.com##.support-section
 nonciclopedia.org,miraheze.org###siteNotice
 winstall.app##div[class^="donateCard_container__"]
 openstreetmap.org###banner
+wbur.org##.section--takeover
 ||wisepops.net/loader.js$domain=civileats.com
 ||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net|tgrthaber.com.tr
 cavalierdaily.com#$#.modal-backdrop { display: none !important; }
