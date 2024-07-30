@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: dVLpPQpgZc2y4HZ2z8spAw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722350261-3600.patch
+! Checksum: CSJN9gOgsKZ2c1TJ+CHr+Q
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722353830-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.46.14
-! TimeUpdated: 2024-07-30T14:31:29+00:00
+! Version: 2.3.46.15
+! TimeUpdated: 2024-07-30T15:31:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7648,6 +7648,9 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/24688
+rule34porn.net##+js(no-fetch-if, magsrv.com)
+@@||a.magsrv.com/ad-provider.js$domain=rule34porn.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185022
 tempinbox.xyz##+js(no-setTimeout-if, enable_ad_block_detector)
 @@||tempinbox.xyz/storage/js/mnpw3.js
@@ -33697,6 +33700,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+stream.offidocs.com###adxx
 worldsports.me##.h-100.w-100.bg-dark
 ||worldsports.me/partytown/partytown-sw.js
 nintendolife.com###mastfoot
