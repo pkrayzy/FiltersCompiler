@@ -1,9 +1,9 @@
-! Checksum: gmnfbjSpKkzXMF/2nL7BoQ
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1722005493-14400.patch
+! Checksum: r0AX7tS1B4GBwFRaWRLdQg
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1722315917-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.18.82
-! TimeUpdated: 2024-07-26T14:47:33+00:00
+! Version: 2.0.18.83
+! TimeUpdated: 2024-07-30T05:01:33+00:00
 ! Expires: 10 days (update frequency)
 ||centaurs-rest.coupang.com^
 ||ad.cashdoc.io^
@@ -1714,7 +1714,6 @@ dt.co.kr##center + .bk20
 dt.co.kr##iframe[src*="//adreal.dt.co.kr/"]
 dt.co.kr##iframe[src*="dt.co.kr/ad.html"]
 itempage3.auction.co.kr###content > div[class^="ad_"] *
-search.shopping.naver.com##div[class^="aside_aside_"] div[class^="basicView_recommend_brand_"]
 m.gamechosun.co.kr##div[id*="_banner"]
 nocutnews.co.kr##div[data-id*="-ad-"]
 www.naver.com##a[class*="_banner_"]
@@ -2741,6 +2740,7 @@ x86.co.kr#@#.download_ad
 @@||dasibogo.net/wp-content/uploads/sites/23/2024/04/dasibogologo$domain=dasibogo.net
 auto.danawa.com#%#//scriptlet('set-constant', 'NAVER_ADPOST_V2', 'noopFunc')
 ||shopsquare.naver.com^$badfilter
+search.shopping.naver.com#$#.seller_filter_area ~ div[class*="_list_"] div[class^="adProduct_item"] { visibility: hidden !important; height: 1px !important; padding: 0 !important; }
 academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) { display: none !important; }
 academy.prompie.com#$#body.modal-open:has(> #academyMainModal a[href^="https://academy.prompie.com/banners/"]) { overflow: auto !important; }
 academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) ~ .modal-backdrop { display: none !important; }

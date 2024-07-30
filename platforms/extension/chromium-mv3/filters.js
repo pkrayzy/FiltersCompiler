@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.53.29",
-			"timeUpdated": "2024-07-30T01:01:16+0000",
+			"version": "2.1.53.30",
+			"timeUpdated": "2024-07-30T05:01:11+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.53.28",
-			"timeUpdated": "2024-07-30T01:01:17+0000",
+			"version": "2.1.53.29",
+			"timeUpdated": "2024-07-30T05:01:11+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.30.91",
-			"timeUpdated": "2024-07-29T13:02:34+0000",
+			"version": "2.0.30.92",
+			"timeUpdated": "2024-07-30T05:01:27+0000",
 			"languages": [
 				"vi"
 			],
@@ -1131,8 +1131,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/List-KR/List-KR/master/filter-AdGuard.txt",
 			"trustLevel": "high",
-			"version": "2.0.18.82",
-			"timeUpdated": "2024-07-26T14:47:33+0000",
+			"version": "2.0.18.83",
+			"timeUpdated": "2024-07-30T05:01:33+0000",
 			"languages": [
 				"ko"
 			],
@@ -1228,8 +1228,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.19.8",
-			"timeUpdated": "2024-07-29T09:01:50+0000",
+			"version": "2.0.19.9",
+			"timeUpdated": "2024-07-30T05:01:45+0000",
 			"languages": [
 				"sv"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.46.60",
-			"timeUpdated": "2024-07-30T01:02:00+0000",
+			"version": "2.0.46.61",
+			"timeUpdated": "2024-07-30T05:01:55+0000",
 			"languages": [
 				"hi"
 			],
