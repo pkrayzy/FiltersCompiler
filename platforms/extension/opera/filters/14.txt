@@ -1,9 +1,9 @@
-! Checksum: OUM8palPT4JVuMIhwzbhEw
-! Diff-Path: ../patches/14/14-s-1722335926-3600.patch
+! Checksum: JwprkLY5qlBhEoZJ+FwfjA
+! Diff-Path: ../patches/14/14-s-1722339442-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.64
-! TimeUpdated: 2024-07-30T10:33:50+00:00
+! Version: 2.2.3.65
+! TimeUpdated: 2024-07-30T11:33:42+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2451,6 +2451,9 @@ communityfibre.co.uk,foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.d
 !
 ! NOTE: Regular rules
 !
+elektrodigit.hu#$#body { overflow: auto !important; }
+elektrodigit.hu#$#body .cookie-alert { display: none !important; }
+elektrodigit.hu#$##exposeMaskOverlay { display: none !important; }
 community.flutterflow.io##.cookie-concent-popup
 superyachttimes.com##div[class^="cookiePopup_cookiePopupWrapper"]
 thebushcraftstore.co.uk###shopui-cookie-popup-container
@@ -15576,6 +15579,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/184973
+elektrodigit.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185020
 @@||onetrust.com^$domain=communityfibre.co.uk
 communityfibre.co.uk#@##onetrust-consent-sdk
@@ -31837,6 +31842,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+voyce.me###__next > div.overflow-visible:has(div.flex > .gradient-scarlet > form)
 rnd.de##div[class^="SpacingWrapper"]:has(> div[data-testid="newsletter-widget"])
 blog.domclick.ru###podpiska + div[class]:has(> img[alt="Телеграм-канал Домклик"])
 superyachttimes.com##section[class^="newsletter-signup_"]
@@ -38959,6 +38965,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
 !
+voyce.me##div[id^="adnewappbanner_"]
 bestmovie.it###bestmovie-store-apps
 just-eat.*##section[data-qa="download-app-section"]
 club.autodoc.*##.section.section-apps
@@ -47399,6 +47406,9 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+ggsel.net##a[class^="buttons_btn-wheel"]
+ggsel.net##a[target="_blank"][href^="https://gleam.io/"]
+fromcocoro.com###text-12
 x.com,twitter.com##div[aria-label="Trending"] > div div:has(>aside[aria-label="Subscribe to Premium"])
 ign.com##.plus-promo
 deepl.com##.z-40.bg-blue-next-100.py-3.items-start.sm\:items-center:has(> div.flex-1 > div > a[href="/pro-write"])
