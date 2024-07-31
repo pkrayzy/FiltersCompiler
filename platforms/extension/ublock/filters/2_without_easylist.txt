@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: qdiP+0VR2eBwqwXmpaOq5Q
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722429435-3600.patch
+! Checksum: 1poHu2BrzVtHw4HIYfHv8Q
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722433040-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.46.32
-! TimeUpdated: 2024-07-31T12:31:32+00:00
+! Version: 2.3.46.33
+! TimeUpdated: 2024-07-31T13:31:31+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7650,6 +7650,7 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185133
 ! https://github.com/uBlockOrigin/uAssets/issues/24688
 rule34porn.net##+js(no-fetch-if, magsrv.com)
 @@||a.magsrv.com/ad-provider.js$domain=rule34porn.net
@@ -19655,6 +19656,7 @@ ncore.cc#@#.text-ad-links
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185130
 jagonews24.com##div.text-center:has(> div[id^="div-gpt-ad-"])
+jagonews24.com##.featured-inImage-ad-unit
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182968
 nagpurtoday.in##aside[id^="custom_html-"][class*="widget"]:has(img + .popup)
 nagpurtoday.in###header-sidebar
@@ -33720,6 +33722,11 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+poki.com##div:has(> div > div[style] > div[data-poki-ad-id])
+uploadbank.com##.dl
+thelivenagpur.com##.theiaStickySidebar > aside[id^="media_image-"]
+thelivenagpur.com##.theiaStickySidebar > aside[id^="custom_html-"]
+thelivenagpur.com##.inner-post-entry > div[id^="media_image-"]
 tennisuptodate.com##.raw-html-component:has(div[id^="snack_"])
 tennisuptodate.com##.raw-html-component:has(> div[id^="taboola-"])
 worldsports.me##.btn-danger
@@ -33790,7 +33797,7 @@ mirrored.to###result > .col-sm > table.hoverable > tbody > tr:has(> td[data-labe
 usersdrive.com##main > div[style] > center > a[target="_blank"] > img
 usersdrive.com##+js(abort-on-property-read, popurl)
 lightnovelworld.co##div[data-mobid]
-pig69.com,cnxx.me,ai18.pics,porn4f.com,ninja-scans.com##+js(window.open-defuser)
+fullboys.com,pig69.com,cnxx.me,ai18.pics,porn4f.com,ninja-scans.com##+js(window.open-defuser)
 ninja-scans.com##body ~ *:empty
 download.cnet.com##div[data-meta="placeholder-slot"]
 mlssoccer.com##.mls-o-adv-container
