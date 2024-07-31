@@ -1,9 +1,9 @@
-! Checksum: wuLWCkpaPEwoDB5KFHYz3A
-! Diff-Path: ../patches/14/14-s-1722418561-3600.patch
+! Checksum: CV9tyUBvFAHVrLXmEcPTsw
+! Diff-Path: ../patches/14/14-s-1722422226-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.79
-! TimeUpdated: 2024-07-31T09:32:58+00:00
+! Version: 2.2.3.80
+! TimeUpdated: 2024-07-31T10:33:45+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2452,6 +2452,8 @@ communityfibre.co.uk,foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.d
 !
 ! NOTE: Regular rules
 !
+hornet.com#%#//scriptlet('set-cookie', '_consent_ads', '0')
+hornet.com#%#//scriptlet('set-cookie', '_consent_analytics', '0')
 airstop.sk,airstop.cz,airstop.pl#$#body[style^="overflow:"] { overflow: auto !important; }
 airstop.sk,airstop.cz,airstop.pl#$#div[class^="cookiebar"] { display: none !important; }
 moss.co.uk,international.mossbros.com#%#//scriptlet('trusted-set-cookie', 'consent_acceptance', '{"functionality_storage":"granted","security_storage":"granted","ad_personalization":"denied","ad_user_data":"denied","personalization_storage":"denied","ad_storage":"denied","analytics_storage":"denied"}')
@@ -14763,7 +14765,6 @@ berlinerfestspiele.de#%#//scriptlet('set-constant', 'cookieConsentConfig', 'empt
 vivantis.sk#%#//scriptlet('set-local-storage-item', 'gdpr-done', 'true')
 vivantis.sk#%#//scriptlet('set-local-storage-item', 'cookiesSettings', 'emptyObj')
 adshnk.com#%#//scriptlet('trusted-click-element', '.fc-consent-root button.fc-cta-manage-options, .fc-consent-root button.fc-confirm-choices')
-hornet.com#%#//scriptlet('set-cookie', '_consent_analytics', '0')
 cmp-sp.waz-online.de#%#//scriptlet('trusted-click-element', 'button[title="Akzeptieren und weiter"]')
 carvertical.com#%#//scriptlet('trusted-set-local-storage-item', 'cv:cookiesAllowed', '{"mandatoryCookies":true,"statsCookies":true,"marketingCookies":true}')
 ctrana.news#%#//scriptlet('set-cookie', 'is_agree', '1')
@@ -23658,6 +23659,7 @@ api.flocktory.com
 /cmp/cmp.*.js
 /cmp/cmp.js
 !
+||web.telemetric.dk^$third-party
 ||pt.wisernotify.com^
 ||ex1tp.com^$third-party
 ||player.gliacloud.com^$third-party
@@ -31175,6 +31177,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+gq.co.za###root > div.modal:has(> div[style^="position: fixed;"] div.push-notification)
 /firebase-messaging-sw.js$domain=club.autodoc.*
 miamiherald.com###brzpushpermission
 ||popcrush.com/rest/carbon/api/scripts.js
@@ -32011,6 +32014,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+voguescandinavia.com##section[class*="newsletterSection_"]
 wired.me##.break--newsletter
 wired.me##.bb-newsletter
 vogue.sg##.footer-ads-fixed-home
@@ -37639,7 +37643,7 @@ xda-developers.com###newsletter-sidebar-subscribe
 theregister.com##.newsletter_signup_unit
 theregister.com###index_page > .srow > .faux-article > .newsletter_link
 theregister.com#$?##index_page > .srow > .faux-article:has(> .newsletter_link) { visibility: hidden !important; }
-franceinter.fr,time.com,techbang.com,fivethirtyeight.com,eschuhe.de,kotaku.com.au,gizmodo.com.au,finanzen100.de##.newsletter-subscribe
+gq.co.za,franceinter.fr,time.com,techbang.com,fivethirtyeight.com,eschuhe.de,kotaku.com.au,gizmodo.com.au,finanzen100.de##.newsletter-subscribe
 lancashiretelegraph.co.uk##div[data-block-pull="newsletter-interstitial"]
 bestbuy.com###footer-email-block
 actualcomment.ru##.ya_dzen__container
@@ -43035,7 +43039,9 @@ utaten.com###philippines_banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182476
 kotaku.com##div[class^="sc-"] > div[class^="sc-"]:has(> div.related-stories-inset-video)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182473
-vogue.*,newyorker.com#$?#figure[data-testid="cne-interlude-container"] { remove: true; }
+vogue.es#$?#.body__inner-container > figure.cne-video-embed { remove: true; }
+wired.jp,vogue.*,newyorker.com#$?#figure[data-testid="cne-interlude-container"] { remove: true; }
+wired.com#$?#.grid-layout__aside > .sticky-box > .sticky-box__primary > div[data-in-view] > figure[data-testid="cne-interlude-container-right-rail"]:has(> .cne-video-embed) { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182413
 futurebeat.pl##body > .f2size > .fbt-f5-cc:has(> #outsider2 > #insider2 > .fbt-prod-box)
 ! Steam autoplay trailer
@@ -43782,8 +43788,6 @@ football-tribe.com##.dugout_video_cont
 ||embed.dugout.com^$script,third-party,domain=~sportowefakty.wp.pl|~ultra-soccer.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117432
 cureco.jp##object[width="640"][height="480"]
-! https://github.com/AdguardTeam/AdguardFilters/issues/172712
-wired.com#$?#.grid-layout__aside > .sticky-box > .sticky-box__primary > div[data-in-view] > figure[data-testid="cne-interlude-container-right-rail"]:has(> .cne-video-embed) { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116397
 ais.th##.container_float_shop
 ||ais.th/asset_index2020/js/chat_and_shop.js
@@ -48176,6 +48180,8 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+voguescandinavia.com##div[class^="AdssetsAd_"]
+voguescandinavia.com#?#div[class^="RichText_"]:has(> p > em:contains(All products featured on Vogue are independently selected by our editors.))
 proson.gr##.ros
 rbc.ru##.companies-block--in-text
 ggsel.net##a[class^="buttons_btn-wheel"]
