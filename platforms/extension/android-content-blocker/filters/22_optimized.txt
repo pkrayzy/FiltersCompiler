@@ -1,5 +1,5 @@
-! Checksum: 0C3mff60IRSGPYYRvjFd7w
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1722307013-3600.patch
+! Checksum: UdMp350Q7zkizkmDEb4Vtg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1722393401-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.8.93
@@ -22,7 +22,6 @@
 ||blog.livedoor.jp/plugin/ldblog_rss_plugin.js
 ||tanganrss.com^$third-party
 ||fukugan.com^$third-party
-||3site-rss.s3-ap-northeast-1.amazonaws.com^
 ||blogroll.livedoor.net^
 ||rss-loader.com^$third-party
 ||blozoo.info/js/rsstool/
@@ -195,6 +194,8 @@ negisoku.com##.t_h div[class^="res_"] .t_a div[style*="padding: 10px; margin: 5p
 incident-wo.com,nandemoiiyoch.com###custom_html-13
 genshin-matomech.umadacchi.net###block-8
 genshin-matomech.umadacchi.net##.rss-flex
+geektushin.com##.widget-above-related-entries
+geektushin.com##.widget-below-related-entries
 nintendoevery.com,geektushin.com##.widget_rss
 negisoku.com##.t_a > span
 negisoku.com##.article-body-more > p[style="color:gray;text-align:right;"]
@@ -387,13 +388,13 @@ oniyomediary.com###footer-rss
 gameinn.jp##.p-linkList
 moyugenn.com##.main-column-inner > div[align="center"]
 moyugenn.com##.main-column-inner > div[align="center"] ~ br
+||2chnewsblog.blog.jp/imgrss_$subdocument
 squallchannel.com,2chnewsblog.blog.jp##.article-body-more > a[target="_blank"]
 squallchannel.com,2chnewsblog.blog.jp##.article-body-more > a[target="_blank"] + br
 ||dameparts.com/pbanner/
 blog-news.doorblog.jp##.column-inner-2 > .rss
 squallchannel.com##div[class^="rss02"]
 2ch-matomenews.com##.postTopRss
-nanjde.blog.jp###blogroll-box
 nanjde.blog.jp##div[id^="rsslink"]
 gadget2ch.com##.article-text-rss-box
 ||jin115.com/rss*$subdocument,~third-party
@@ -443,6 +444,7 @@ stocktwits.com##div[class^="UserPage_primis"]
 /rss_$subdocument,domain=eegg.fun
 umaumanews.com,karapaia.com,blog.fc2.com,blog.jp###blogroll
 tokimeki-s.com,rabitsokuhou.2chblog.jp###rss
+kijomatomelog.com,kijyomatome.com##.ga-rss
 meshinews.blog.jp##div[class^="mainrss"]
 gsch.tfmwish.com##.rssti
 gsch.tfmwish.com##div[class^="blogroll-wrapper"]
@@ -616,7 +618,6 @@ beasoku.com##.rss-block
 ||leadbooster-chat.pipedrive.com^$third-party
 ||leadgenic.ru^$third-party
 ||js.driftt.com^$third-party
-||informers.sinoptik.ua^$third-party
 ||helpscout.net^$third-party
 ||foresee.com^$third-party
 ||consultsystems.ru^$third-party
@@ -788,7 +789,6 @@ news.audee.jp###popinBox
 yamakei-online.com##.ad-pop-nw3-nw4
 mbs.jp##.common-wrap--recommend
 getnews.jp,front-row.jp##._popIn_recommend
-lmaga.jp##.feed
 dramanavi.net###block-97
 kahoku.news##div[style="min-height:492px;"]
 news.ntv.co.jp##.recommend-list-wrapper
@@ -990,6 +990,7 @@ klto9.com,klz9.com,baominh.tech##div[id^="kofi-widget"]
 zn.ua##.content__news > div.news-support
 lyricstranslate.com###block-lyricstranslateblocks-91
 takiedela.ru##.b-post__help
+istories.media##div[class^="DonateEmbed-module-"]
 m4ex.com##div[class^="rssframe"]
 diletant.media##.donations-coin
 ||ko-fi.com^$domain=luciferdonghua.in|magicemperor.online
