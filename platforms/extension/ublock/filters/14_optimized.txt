@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: xPGAVBklIUr1lPAp5qCzrA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1722436733-3600.patch
+! Checksum: YDwkV7yNjtEOoSus8B9wJw
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1722440231-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.3.84
-! TimeUpdated: 2024-07-31T14:35:15+00:00
+! Version: 2.2.3.85
+! TimeUpdated: 2024-07-31T15:33:29+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -3219,7 +3219,7 @@ privacy.samsung.com#$#div[class^='cookie-'] { display: none !important; }
 pracodawcy.pracuj.pl#$#body { overflow-y: auto !important; }
 sackyvysavace.cz,doplnvitamin.cz###xx-cookies-plugin
 console.scaleway.com#$#body { overflow: auto !important; padding-right: 0 !important; }
-nhl.com###onetrust-consent-sdk
+costco.ca,nhl.com###onetrust-consent-sdk
 worksmile.com##.cookies-component
 oponeo.*,pneus-oponeo.be,banden-oponeo.be,centrumrowerowe.pl###consentsPolicyDialog
 tvtv.ca,tvtv.us##div[class^="MuiSnackbar-root"][role="presentation"]
@@ -3577,7 +3577,6 @@ trekitt.co.uk###GDPRCookieBox
 parking.spb.ru###user-agreement-notify
 dunelm.com#$#div[data-testid="cookie-consent-modal-backdrop"] { display: none !important; }
 dunelm.com#$#body { overflow: auto !important; }
-costco.co.uk###gdprMessage
 mustijamirri.fi#$#body[style^="overflow:"] { overflow: auto !important; height: auto !important; }
 mustijamirri.fi#$#html[style^="overflow:"] { overflow: auto !important; height: auto !important; }
 mustijamirri.fi#$#.privacy_headsup_overlay { display: none !important; }
@@ -8470,6 +8469,9 @@ e.mail.ru,octavius.mail.ru##+js(no-setTimeout-if, /\(\)=>[a-z]{1}\(\)$/)
 dzen.ru#?#div:matches-attr(*data-*=/^ad-banner$/)
 dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 dzen.ru##div[class^="float-interview__float-"]
+dzen.ru##:matches-path(/a/)div[class*="_position_articleRight "][style*="max-height:"]
+dzen.ru##:matches-path(/a/)div[class^="article__"][class$="-wrapper"] > div[class*="_position_"][class$="_color_white"]
+dzen.ru#?#:matches-path(/a/).zen-page div.feed__item article:matches-css(align-items: center)
 dzen.ru##.viewer-layout__sidebar div[aria-label*="екламная карта"]
 rambler.ua,rambler.ru##+js(set-cookie, _blocker_hidden, 1)
 !+ NOT_PLATFORM(windows, mac, android)
@@ -19168,6 +19170,7 @@ stopcor.org##.videoOfDay
 so.toutiao.com##.s-side-list > div.result-content > div[id^="s-dom-"]
 tribuna.com##.dugout-video
 football-tribe.com##.dugout_video_cont
+besoccer.com##.dugout-wrapper
 ||embed.dugout.com^$script,third-party,domain=~sportowefakty.wp.pl|~ultra-soccer.jp
 gala.fr###dailymotion-pip-large-viewport
 turkishairlines.com#?##page_wrapper > section.nopadding:has(> div.middle-wrapper img[title^="Turkish Airlines"])

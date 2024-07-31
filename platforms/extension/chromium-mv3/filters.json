@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.92.70",
-			"timeUpdated": "2024-07-31T12:31:19+0000",
+			"version": "2.0.92.71",
+			"timeUpdated": "2024-07-31T15:31:13+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.46.34",
-			"timeUpdated": "2024-07-31T14:32:58+0000",
+			"version": "2.3.46.35",
+			"timeUpdated": "2024-07-31T15:31:27+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -649,8 +649,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.36",
-			"timeUpdated": "2024-07-31T14:35:21+0000",
+			"version": "2.0.44.37",
+			"timeUpdated": "2024-07-31T15:33:34+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -670,8 +670,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.40.68",
-			"timeUpdated": "2024-07-31T13:33:42+0000",
+			"version": "2.0.40.69",
+			"timeUpdated": "2024-07-31T15:33:35+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -712,8 +712,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.70",
-			"timeUpdated": "2024-07-31T13:33:42+0000",
+			"version": "2.0.24.71",
+			"timeUpdated": "2024-07-31T15:33:36+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1107,8 +1107,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.19.90",
-			"timeUpdated": "2024-07-31T13:33:47+0000",
+			"version": "2.1.19.91",
+			"timeUpdated": "2024-07-31T15:33:41+0000",
 			"languages": [
 				"zh"
 			],

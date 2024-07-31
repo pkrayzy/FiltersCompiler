@@ -1,9 +1,9 @@
-! Checksum: npp1QGVUH3l063aCL+4Lyg
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1722433033-3600.patch
+! Checksum: LX0YzyPVwpbVS486tMyY0Q
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1722440228-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.40.68
-! TimeUpdated: 2024-07-31T13:33:42+00:00
+! Version: 2.0.40.69
+! TimeUpdated: 2024-07-31T15:33:35+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -81,6 +81,9 @@ e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\
 dzen.ru#?#div:matches-attr(*data-*=/^ad-banner$/)
 dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 dzen.ru##div[class^="float-interview__float-"]
+[$path=/a/]dzen.ru##div[class*="_position_articleRight "][style*="max-height:"]
+[$path=/a/]dzen.ru##div[class^="article__"][class$="-wrapper"] > div[class*="_position_"][class$="_color_white"]
+[$path=/a/]dzen.ru#?#.zen-page div.feed__item article:matches-css(align-items: center)
 dzen.ru##.viewer-layout__sidebar div[aria-label*="екламная карта"]
 rambler.ua,rambler.ru#%#//scriptlet('set-cookie', '_blocker_hidden', '1')
 !#safari_cb_affinity(general)
