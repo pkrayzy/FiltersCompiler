@@ -1,9 +1,9 @@
-! Checksum: RnNjuwHj4DqmoP3bxukM/A
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1722393406-3600.patch
+! Checksum: B82E95GRGxVX4qr6mcwI/w
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1722447398-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.45.75
-! TimeUpdated: 2024-07-30T22:33:37+00:00
+! Version: 2.0.45.76
+! TimeUpdated: 2024-07-31T17:33:33+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -242,7 +242,8 @@ jeune-gay.fr#%#//scriptlet('prevent-setTimeout', 'randno', '25')
 jeune-gay.fr#%#//scriptlet('set-cookie', 'p_view', 'true')
 occasions.decathlon.fr#%#//scriptlet('set-constant', 'FastClick', 'noopFunc')
 occasions.decathlon.fr#%#//scriptlet('set-constant', 'FastClick.attach', 'noopFunc')
-20min.ch#%#(()=>{window.TATM=window.TATM||{},TATM.init=()=>{},TATM.initAdUnits=()=>{},TATM.pageReady=()=>{},TATM.getVast=function(n){return new Promise((n=>{n()}))},TATM.push=function(n){if("function"==typeof n)try{n()}catch(n){console.debug(n)}};})();
+lessentiel.lu,20min.ch#%#//scriptlet('adjust-setTimeout', 'setTimeoutIds_', '*', '0.001')
+lessentiel.lu,20min.ch#%#(()=>{window.TATM=window.TATM||{},TATM.init=()=>{},TATM.initAdUnits=()=>{},TATM.pageReady=()=>{},TATM.getVast=function(n){return new Promise((n=>{n()}))},TATM.push=function(n){if("function"==typeof n)try{n()}catch(n){console.debug(n)}};})();
 empire-stream.net#%#//scriptlet('trusted-create-element', 'body', 'iframe')
 empire-stream.net#%#//scriptlet('set-constant', 'empire.pop', 'undefined')
 empire-stream.net#%#//scriptlet('set-constant', 'empire.direct', 'undefined')
@@ -685,6 +686,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_french
 !+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 app.molotov.tv#%#//scriptlet('prevent-xhr', '/ping?token=')
+!+ NOT_PLATFORM(windows, mac, android, ext_chromium, ext_opera)
+@@||tdn.da-services.ch/current/lessentiel_durable.js$domain=lessentiel.lu
 @@||sohosystems.co.za/gfx/banners/$~third-party
 pisos.com#@#div[data-ad-id]
 #@#.croco_wrapper, [onclick*="_"], [onclick*="var"], [onmousedown*="\x"], [style*="height: 90px;"]
