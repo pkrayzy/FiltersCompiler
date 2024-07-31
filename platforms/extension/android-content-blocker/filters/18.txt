@@ -1,9 +1,9 @@
-! Checksum: HNdOuEZgmt8Lql7wf8fa6A
-! Diff-Path: ../patches/18/18-s-1722411418-3600.patch
+! Checksum: jLVxvV76/ZFNis8pdffb9w
+! Diff-Path: ../patches/18/18-s-1722415032-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.44.31
-! TimeUpdated: 2024-07-31T07:33:47+00:00
+! Version: 2.0.44.32
+! TimeUpdated: 2024-07-31T08:33:47+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2407,6 +2407,11 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+czesci.strefakierowcy.pl#$#body.modal-open { overflow: auto !important; padding-top: 0 !important; padding-right: 0 !important; }
+czesci.strefakierowcy.pl#$#div[data-control-type="CookieInfo"] { display: none !important; }
+czesci.strefakierowcy.pl#$#.modal-backdrop { display: none !important; }
+strefakierowcy.pl#$#body[class*="overflow"] { overflow: auto !important; }
+strefakierowcy.pl#$#.cookies-popup { display: none !important; }
 hola.org##div[class^="allow_cookies_"]
 onesports.ph##.cookies-notif
 on1.com###on1-cookie-banner
@@ -13679,6 +13684,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185114
+strefakierowcy.pl#@#.cookies-popup
+strefakierowcy.pl#@#.cookies-info:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184973
 elektrodigit.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185020
