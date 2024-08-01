@@ -68,7 +68,7 @@
 				"name": "Блокирање на реклами"
 			},
 			"nl": {
-				"name": "Reclame blokkeren"
+				"name": "Advertentie blokkering"
 			},
 			"no": {
 				"name": "Annonseblokkeringer"
@@ -2347,8 +2347,8 @@
 				"name": "AdGuardrekommendation"
 			},
 			"tr": {
-				"description": "AdGuard reklam engelleyici ile kullanılması tavsiye edilir",
-				"name": "AdGuard'ın tavsiyesi"
+				"description": "AdGuard reklam engelleyici ile kullanılması önerilir",
+				"name": "AdGuard'ın önerisi"
 			},
 			"uk": {
 				"description": "Рекомендовано до використання з AdGuard",
@@ -10716,6 +10716,10 @@
 				"description": "Dizajniran posebno za blokiranje reklama na web stranicama na makedonskom jeziku",
 				"name": "Blokiranje oglasa specifično za makedonski jezik"
 			},
+			"hu": {
+				"description": "Kifejezetten a macedón nyelvű weboldalakon megjelenő hirdetések blokkolására tervezték",
+				"name": "Macedón nyelvspecifikus blokkolás"
+			},
 			"it": {
 				"description": "Progettato specificatamente per il blocco degli annunci su pagine web in lingua macedone",
 				"name": "Blocco degli annunci specifico per lingua macedone"
@@ -17065,7 +17069,7 @@
 				"description": "Filtar koji blokira oglase na tajlandskim web stranicama."
 			},
 			"hu": {
-				"name": "EasyList Thaiföld",
+				"name": "EasyList Thailand",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket a thai nyelvű webhelyeken."
 			},
 			"id": {
@@ -17203,7 +17207,7 @@
 				"description": "Popis filtara posebno dizajniranih za blokiranje oglasa na mađarskom jeziku."
 			},
 			"hu": {
-				"name": "Magyar szűrő",
+				"name": "Hungarian filter",
 				"description": "Hufilter. Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a magyar nyelvű webhelyeken."
 			},
 			"id": {
@@ -17759,7 +17763,7 @@
 				"description": "Blokira domene za koje se zna da se koriste za širenje zlonamjernog i špijunskog softvera."
 			},
 			"hu": {
-				"name": "Rosszindulatú URL-ek tiltólistája",
+				"name": "Online Malicious URL Blocklist",
 				"description": "Blokkolja azokat a domaineket, amelyeket köztudottan rosszindulatú programok és kémprogramok terjesztésére használnak."
 			},
 			"id": {
@@ -17897,7 +17901,7 @@
 				"description": "RU AdList dodatak za blokiranje pratitelja."
 			},
 			"hu": {
-				"name": "RU AdList: Számlálók",
+				"name": "RU AdList: Counters",
 				"description": "Kiegészítés a RU AdList-hez, amely blokkolja a nyomkövetőket."
 			},
 			"id": {
@@ -18035,8 +18039,8 @@
 				"description": "Vietnamese adblock filter list."
 			},
 			"hu": {
-				"name": "ABPVN Lista",
-				"description": "Vietnami hirdetésszűrő lista."
+				"name": "ABPVN List",
+				"description": "Vietnamese adblock filter list."
 			},
 			"id": {
 				"name": "ABPVN List",
@@ -18173,7 +18177,7 @@
 				"description": "Poljski dodatak za EasyList."
 			},
 			"hu": {
-				"name": "Hivatalos lengyel szűrők az AdBlock, uBlock Origin &AdGuard számára",
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
 				"description": "További szűrőlista lengyel nyelvű weboldalakhoz."
 			},
 			"id": {
@@ -18311,7 +18315,7 @@
 				"description": "Poljski popis filtara za blokiranje kolačića."
 			},
 			"hu": {
-				"name": "Lengyel GDPR Süti Szűrő",
+				"name": "Polish GDPR-Cookies Filters",
 				"description": "Lengyel szűrőlista a sütik blokkolásához."
 			},
 			"id": {
@@ -18449,7 +18453,7 @@
 				"description": "Filtar za blokiranje oglasa na estonskim web stranicama."
 			},
 			"hu": {
-				"name": "Észt lista",
+				"name": "Estonian List",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket az észt nyelvű webhelyeken."
 			},
 			"id": {
@@ -18725,7 +18729,7 @@
 				"description": "Lista poljskih socijalnih filtara."
 			},
 			"hu": {
-				"name": "Lengyel Közösségi Média Szűrő",
+				"name": "Polish Social Filters",
 				"description": "Lengyel szűrőlista a közösségi kisalkalmazásokhoz, felugró ablakokhoz, stb."
 			},
 			"id": {
@@ -19711,7 +19715,7 @@
 				"description": "Finnish ad blocking filter list."
 			},
 			"hu": {
-				"name": "Finn hirdetésszűrő",
+				"name": "Adblock List for Finland",
 				"description": "Finn hirdetésblokkoló lista."
 			},
 			"id": {
@@ -19918,7 +19922,7 @@
 			},
 			"tr": {
 				"name": "ROLIST2",
-				"description": "Bu, afiş olması gerekmeyen can sıkıcı öğeler ile ROList için tamamlayıcı bir listedir. Bu çok agresif bir listedir ve yeni başlayanlar için tavsiye edilmez."
+				"description": "Bu, afiş olması gerekmeyen can sıkıcı öğeler ile ROList için tamamlayıcı bir listedir. Bu çok agresif bir listedir ve yeni başlayanlar için önerilmez."
 			},
 			"uk": {
 				"name": "ROLIST2",
@@ -20405,7 +20409,7 @@
 				"description": "Službeni poljski filtri protiv AdBlock upozorenja."
 			},
 			"hu": {
-				"name": "Lengyel Anti Adblock Szűrők",
+				"name": "Polish Anti Adblock Filters",
 				"description": "Hivatalos lengyel szűrők, amelyek a hirdetésblokkolók elleni figyelmeztetéseket tiltják."
 			},
 			"id": {
@@ -20664,6 +20668,10 @@
 				"name": "EasyList Cookie List",
 				"description": "Elimina los avisos de privacidad y cookies. Ya está incluido en Fanboy's Annoyances list."
 			},
+			"fa": {
+				"name": "EasyList Cookie List",
+				"description": "کلوچک‌ها و هشدارهای حریم خصوصی را حذف می‌کند. در حال حاضر در فهرست Fanboy's Annoyances قرار دارد."
+			},
 			"fi": {
 				"name": "EasyList Cookie List",
 				"description": "Poistaa eväste- ja tietosuojavaroitukset. Sisältyy jo Fanboy's Annoyances -listaan."
@@ -20681,7 +20689,7 @@
 				"description": "Uklanja upozorenja o kolačićima i privatnosti. Već uvršten na Fanboy's Annoyances list."
 			},
 			"hu": {
-				"name": "EasyList Süti Lista",
+				"name": "EasyList Cookie List",
 				"description": "Eltávolítja a sütikkel és az adatvédelemmel kapcsolatos figyelmeztetéseket. Már szerepel a Fanboy Annoyances listában."
 			},
 			"id": {
@@ -21517,7 +21525,7 @@
 				"description": "Ovaj je popis napravljen u stilu AdGuardovih i Fanboyevih popisa iritirajućih elemenata. Isti kombinira više Dandelion Sprout's poznatih i često obnavljanih popisa, kao pročišćeni popis zarad jednostavnosti."
 			},
 			"hu": {
-				"name": "Dandelion Sprout kellemetlenségek elleni listája",
+				"name": "Dandelion Sprout's Annoyances List",
 				"description": "Ez a lista az AdGuard és a Fanboy kellemetlenségek elleni listák stílusában készült. Egyesíti Dandelion Sprout legjobb és leggyakrabban karbantartott nemzetközi listáit, az egyszerűség kedvéért válogatott összeállításként."
 			},
 			"id": {
@@ -21663,7 +21671,7 @@
 				"description": "Popis filtara za web stranice na srpskom, crnogorskom, hrvatskom i bosanskom jeziku."
 			},
 			"hu": {
-				"name": "Dandelion Sprout szerb-horvát listája",
+				"name": "Dandelion Sprout's Serbo-Croatian List",
 				"description": "Szűrőlista szerb, montenegrói, horvát és bosnyák nyelvű webhelyekhez."
 			},
 			"id": {
@@ -21889,6 +21897,10 @@
 			"ar": {
 				"name": "مرشحات adBlock المقدونية",
 				"description": "يحظر الإعلانات وأدوات التتبع على مختلف المواقع الإلكترونية المقدونية."
+			},
+			"be": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Блакіруе рэкламу і трэкеры на розных македонскіх сайтах."
 			},
 			"cs": {
 				"name": "Makedonské filtry adBlokc",
@@ -22207,7 +22219,7 @@
 				"description": "Popis blokova za zaštitu korisnika od nepouzdanih web-mjesta."
 			},
 			"hu": {
-				"name": "DurableNapkin átverések elleni listája",
+				"name": "Scam Blocklist by DurableNapkin",
 				"description": "A megbízhatatlan webhelyek blokkolásának listája."
 			},
 			"id": {

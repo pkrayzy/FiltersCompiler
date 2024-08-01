@@ -68,7 +68,7 @@
 				"name": "Блокирање на реклами"
 			},
 			"nl": {
-				"name": "Reclame blokkeren"
+				"name": "Advertentie blokkering"
 			},
 			"no": {
 				"name": "Annonseblokkeringer"
@@ -7571,7 +7571,7 @@
 				"description": "Filtar koji blokira oglase na tajlandskim web stranicama."
 			},
 			"hu": {
-				"name": "EasyList Thaiföld",
+				"name": "EasyList Thailand",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket a thai nyelvű webhelyeken."
 			},
 			"id": {
@@ -7709,7 +7709,7 @@
 				"description": "Popis filtara posebno dizajniranih za blokiranje oglasa na mađarskom jeziku."
 			},
 			"hu": {
-				"name": "Magyar szűrő",
+				"name": "Hungarian filter",
 				"description": "Hufilter. Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a magyar nyelvű webhelyeken."
 			},
 			"id": {
@@ -8265,7 +8265,7 @@
 				"description": "Blokira domene za koje se zna da se koriste za širenje zlonamjernog i špijunskog softvera."
 			},
 			"hu": {
-				"name": "Rosszindulatú URL-ek tiltólistája",
+				"name": "Online Malicious URL Blocklist",
 				"description": "Blokkolja azokat a domaineket, amelyeket köztudottan rosszindulatú programok és kémprogramok terjesztésére használnak."
 			},
 			"id": {
@@ -8403,7 +8403,7 @@
 				"description": "Filtar za kineske mobilne stranice."
 			},
 			"hu": {
-				"name": "ADgk Mobile Kína listája",
+				"name": "Online Malicious URL Blocklist",
 				"description": "Szűrő kínai mobil webhelyekhez."
 			},
 			"id": {
@@ -8683,7 +8683,7 @@
 				"description": "RU AdList dodatak za blokiranje pratitelja."
 			},
 			"hu": {
-				"name": "RU AdList: Számlálók",
+				"name": "RU AdList: Counters",
 				"description": "Kiegészítés a RU AdList-hez, amely blokkolja a nyomkövetőket."
 			},
 			"id": {
@@ -8959,8 +8959,8 @@
 				"description": "Vietnamese adblock filter list."
 			},
 			"hu": {
-				"name": "ABPVN Lista",
-				"description": "Vietnami hirdetésszűrő lista."
+				"name": "ABPVN List",
+				"description": "Vietnamese adblock filter list."
 			},
 			"id": {
 				"name": "ABPVN List",
@@ -9097,7 +9097,7 @@
 				"description": "Poljski dodatak za EasyList."
 			},
 			"hu": {
-				"name": "Hivatalos lengyel szűrők az AdBlock, uBlock Origin &AdGuard számára",
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
 				"description": "További szűrőlista lengyel nyelvű weboldalakhoz."
 			},
 			"id": {
@@ -9235,7 +9235,7 @@
 				"description": "Poljski popis filtara za blokiranje kolačića."
 			},
 			"hu": {
-				"name": "Lengyel GDPR Süti Szűrő",
+				"name": "Polish GDPR-Cookies Filters",
 				"description": "Lengyel szűrőlista a sütik blokkolásához."
 			},
 			"id": {
@@ -9373,7 +9373,7 @@
 				"description": "Filtar za blokiranje oglasa na estonskim web stranicama."
 			},
 			"hu": {
-				"name": "Észt lista",
+				"name": "Estonian List",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket az észt nyelvű webhelyeken."
 			},
 			"id": {
@@ -9787,7 +9787,7 @@
 				"description": "Lista poljskih socijalnih filtara."
 			},
 			"hu": {
-				"name": "Lengyel Közösségi Média Szűrő",
+				"name": "Polish Social Filters",
 				"description": "Lengyel szűrőlista a közösségi kisalkalmazásokhoz, felugró ablakokhoz, stb."
 			},
 			"id": {
@@ -9925,7 +9925,7 @@
 				"description": "Persian ad blocking filter list."
 			},
 			"hu": {
-				"name": "Perzsa hirdetésszűrő lista",
+				"name": "Adblock-Persian list",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket a perzsa nyelvű webhelyeken."
 			},
 			"id": {
@@ -10063,7 +10063,7 @@
 				"description": "Popis filtara za web stranice na švedskom."
 			},
 			"hu": {
-				"name": "Fanboy Svéd listája",
+				"name": "Fanboy's Swedish",
 				"description": "Szűrőlista a svéd webhelyekhez."
 			},
 			"id": {
@@ -10497,7 +10497,7 @@
 				"description": "Popis filtara za web stranice na vijetnamskom."
 			},
 			"hu": {
-				"name": "Fanboy Vietnámi listája",
+				"name": "Fanboy's Vietnamese",
 				"description": "Szűrőlista a vietnámi webhelyekhez."
 			},
 			"id": {
@@ -11049,7 +11049,7 @@
 				"description": "Popis filtara za web stranice na španjolskom i portugalskom."
 			},
 			"hu": {
-				"name": "Fanboy Spanyol/Portugál listája",
+				"name": "Fanboy's Spanish/Portuguese",
 				"description": "Szűrőlista a spanyol és portugál webhelyekhez."
 			},
 			"id": {
@@ -11463,7 +11463,7 @@
 				"description": "Finnish ad blocking filter list."
 			},
 			"hu": {
-				"name": "Finn hirdetésszűrő",
+				"name": "Adblock List for Finland",
 				"description": "Finn hirdetésblokkoló lista."
 			},
 			"id": {
@@ -11670,7 +11670,7 @@
 			},
 			"tr": {
 				"name": "ROLIST2",
-				"description": "Bu, afiş olması gerekmeyen can sıkıcı öğeler ile ROList için tamamlayıcı bir listedir. Bu çok agresif bir listedir ve yeni başlayanlar için tavsiye edilmez."
+				"description": "Bu, afiş olması gerekmeyen can sıkıcı öğeler ile ROList için tamamlayıcı bir listedir. Bu çok agresif bir listedir ve yeni başlayanlar için önerilmez."
 			},
 			"uk": {
 				"name": "ROLIST2",
@@ -12157,7 +12157,7 @@
 				"description": "Službeni poljski filtri protiv AdBlock upozorenja."
 			},
 			"hu": {
-				"name": "Lengyel Anti Adblock Szűrők",
+				"name": "Polish Anti Adblock Filters",
 				"description": "Hivatalos lengyel szűrők, amelyek a hirdetésblokkolók elleni figyelmeztetéseket tiltják."
 			},
 			"id": {
@@ -12554,6 +12554,10 @@
 				"name": "EasyList Cookie List",
 				"description": "Elimina los avisos de privacidad y cookies. Ya está incluido en Fanboy's Annoyances list."
 			},
+			"fa": {
+				"name": "EasyList Cookie List",
+				"description": "کلوچک‌ها و هشدارهای حریم خصوصی را حذف می‌کند. در حال حاضر در فهرست Fanboy's Annoyances قرار دارد."
+			},
 			"fi": {
 				"name": "EasyList Cookie List",
 				"description": "Poistaa eväste- ja tietosuojavaroitukset. Sisältyy jo Fanboy's Annoyances -listaan."
@@ -12571,7 +12575,7 @@
 				"description": "Uklanja upozorenja o kolačićima i privatnosti. Već uvršten na Fanboy's Annoyances list."
 			},
 			"hu": {
-				"name": "EasyList Süti Lista",
+				"name": "EasyList Cookie List",
 				"description": "Eltávolítja a sütikkel és az adatvédelemmel kapcsolatos figyelmeztetéseket. Már szerepel a Fanboy Annoyances listában."
 			},
 			"id": {
@@ -12709,7 +12713,7 @@
 				"description": "Ovaj filtar onemogućava rudare temeljene na pregledniku, kao što je coin-hive."
 			},
 			"hu": {
-				"name": "NoCoin szűrőlista",
+				"name": "NoCoin Filter List",
 				"description": "Ez a szűrő letiltja a böngészőalapú bányászokat, például coin-hive."
 			},
 			"id": {
@@ -13687,7 +13691,7 @@
 				"description": "Ovaj je popis napravljen u stilu AdGuardovih i Fanboyevih popisa iritirajućih elemenata. Isti kombinira više Dandelion Sprout's poznatih i često obnavljanih popisa, kao pročišćeni popis zarad jednostavnosti."
 			},
 			"hu": {
-				"name": "Dandelion Sprout kellemetlenségek elleni listája",
+				"name": "Dandelion Sprout's Annoyances List",
 				"description": "Ez a lista az AdGuard és a Fanboy kellemetlenségek elleni listák stílusában készült. Egyesíti Dandelion Sprout legjobb és leggyakrabban karbantartott nemzetközi listáit, az egyszerűség kedvéért válogatott összeállításként."
 			},
 			"id": {
@@ -13772,6 +13776,10 @@
 			}
 		},
 		"251": {
+			"cs": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automaticky odstraňuje nepotřebné hodnoty '$' a '&' z adres URL, což usnadňuje jejich kopírování z panelu URL a vkládání jako odkazy. Již zařazeno do Dandelion Sprout's Annoyances List."
+			},
 			"da": {
 				"name": "Legitimate URL Shortener",
 				"description": "Fjerner automatisk unødvendige '$'- og '&'-værdier fra URL'er, hvilket gør dem nemmere at kopiere fra adressebjælken og indsætte som links andre steder. Allerede inkluderet i Dandelion Sprout's Annoyances List."
@@ -13795,6 +13803,10 @@
 			"fr": {
 				"name": "Legitimate URL Shortener",
 				"description": "Supprime automatiquement les valeurs « $ » et « & » inutiles des URL, ce qui les rend plus faciles à copier à partir de la barre d’adresse et à coller ailleurs en tant que liens. Déjà inclus dans la liste Dandelion Sprout's Annoyances List."
+			},
+			"hu": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automatikusan eltávolítja a felesleges '$' és '&' értékeket az URL-ekből, így azok könnyebben másolhatók az URL-sávból, és máshová beilleszthetők linkként. Már szerepel a Dandelion Sprout kártevők elleni listáján."
 			},
 			"it": {
 				"name": "Legittima riduzione degli URL",
@@ -13826,7 +13838,7 @@
 			},
 			"ru": {
 				"name": "Legitimate URL Shortener",
-				"description": "Автоматически удаляет ненужные «$» и «&» из URL-адресов, чтобы их было проще копировать из адресной строки и вставлять куда-то как ссылки. Уже включён в Dandelion Sprout's Annoyances List."
+				"description": "Автоматически удаляет ненужные '$' и '&' из URL-адресов, чтобы их было проще копировать из адресной строки и вставлять куда-то как ссылки. Уже включён в Dandelion Sprout's Annoyances List."
 			},
 			"sk": {
 				"name": "Legitímne skracovače URL adries",
@@ -13911,7 +13923,7 @@
 				"description": "Popis filtara za web stranice na srpskom, crnogorskom, hrvatskom i bosanskom jeziku."
 			},
 			"hu": {
-				"name": "Dandelion Sprout szerb-horvát listája",
+				"name": "Dandelion Sprout's Serbo-Croatian List",
 				"description": "Szűrőlista szerb, montenegrói, horvát és bosnyák nyelvű webhelyekhez."
 			},
 			"id": {
@@ -14137,6 +14149,10 @@
 			"ar": {
 				"name": "مرشحات adBlock المقدونية",
 				"description": "يحظر الإعلانات وأدوات التتبع على مختلف المواقع الإلكترونية المقدونية."
+			},
+			"be": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Блакіруе рэкламу і трэкеры на розных македонскіх сайтах."
 			},
 			"cs": {
 				"name": "Makedonské filtry adBlokc",
@@ -14455,7 +14471,7 @@
 				"description": "Popis blokova za zaštitu korisnika od nepouzdanih web-mjesta."
 			},
 			"hu": {
-				"name": "DurableNapkin átverések elleni listája",
+				"name": "Scam Blocklist by DurableNapkin",
 				"description": "A megbízhatatlan webhelyek blokkolásának listája."
 			},
 			"id": {
