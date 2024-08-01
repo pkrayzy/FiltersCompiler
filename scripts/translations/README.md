@@ -59,6 +59,7 @@ It's essential to import strings from the service before exporting them, as some
     ```
 
 1. (optional) **Validate builded platforms:**
+
     After compiling filters into platforms, validate their locales by schema using the following command:
 
     ```bash
