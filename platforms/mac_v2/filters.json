@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.92.72",
-			"timeUpdated": "2024-08-01T12:31:12+0000",
+			"version": "2.0.92.73",
+			"timeUpdated": "2024-08-01T15:31:15+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.46.51",
-			"timeUpdated": "2024-08-01T14:31:29+0000",
+			"version": "2.3.46.52",
+			"timeUpdated": "2024-08-01T15:31:35+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.55.5",
-			"timeUpdated": "2024-08-01T13:34:13+0000",
+			"version": "2.0.55.6",
+			"timeUpdated": "2024-08-01T15:34:02+0000",
 			"languages": [
 				"ja"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.3.95",
-			"timeUpdated": "2024-08-01T14:33:56+0000",
+			"version": "2.2.3.96",
+			"timeUpdated": "2024-08-01T15:34:21+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.42",
-			"timeUpdated": "2024-08-01T10:33:49+0000",
+			"version": "2.0.44.43",
+			"timeUpdated": "2024-08-01T15:34:27+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.40.75",
-			"timeUpdated": "2024-08-01T14:34:03+0000",
+			"version": "2.0.40.76",
+			"timeUpdated": "2024-08-01T15:34:28+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -747,8 +747,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/20.txt",
 			"trustLevel": "full",
-			"version": "2.0.15.59",
-			"timeUpdated": "2024-08-01T14:34:04+0000",
+			"version": "2.0.15.60",
+			"timeUpdated": "2024-08-01T15:34:29+0000",
 			"languages": [],
 			"tags": [
 				5,
