@@ -16,7 +16,7 @@ This repository contains the known filters subscriptions available to AdGuard us
 1. [Use cases](#use-cases)
     1. [Build AdGuard filters](#build-adguard-filters-and-update-filters-and-patches-in-the-repository)
     1. [Build all filters](#build-all-filters-and-update-filters-and-patches-in-the-repository)
-    1. [Work with locales](#work-with-locales)
+    1. [Working with Locales](#working-with-locales)
     1. [Expanding Wildcard Domains](#expanding-wildcard-domains)
     1. [Repository compression](#repository-compression)
 
