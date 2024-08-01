@@ -1,9 +1,9 @@
-! Checksum: mQEzVkVNf1nF2n01Owkl4A
-! Diff-Path: ../patches/9/9-s-1722407804-3600.patch
+! Checksum: h6/Ip1S2OJZervzwfoqW7w
+! Diff-Path: ../patches/9/9-s-1722497811-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.25.90
-! TimeUpdated: 2024-07-31T06:33:17+00:00
+! Version: 2.0.25.91
+! TimeUpdated: 2024-08-01T07:33:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -769,6 +769,11 @@ seriesretro.com#$#.publicite.text-ad.adsbox { display: block !important; }
 audiotools.in##div[id^="chp_ads_blocker-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184038
 /asb1.js$domain=anitube.vip|hinatasoul.com
+! Scriptlets are injected too late - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2855
+! and $redirect rule doesn't work because responseURL is checked and it doesn't return original URL
+! TODO: change hint to PLATFORM(ios, ext_android_cb, ext_safari) when issue will be fixed
+!+ NOT_PLATFORM(windows, mac, android, ext_ublock)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=anitube.vip|hinatasoul.com
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||cdn.adligature.com/work.ink/prod/rules.css$domain=anitube.vip|hinatasoul.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157756
