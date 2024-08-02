@@ -1,9 +1,9 @@
-! Checksum: WHmiqMFjzx+c3YiDd/ODvQ
-! Diff-Path: ../patches/17/17-s-1722361087-3600.patch
+! Checksum: Ruah0VK1qVGWFiKw1uv6fA
+! Diff-Path: ../patches/17/17-s-1722587831-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.8.91
-! TimeUpdated: 2024-07-30T17:34:23+00:00
+! Version: 2.0.8.92
+! TimeUpdated: 2024-08-02T08:33:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -359,6 +359,13 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185179
+||fikfapcams.com^$removeparam=referrer
+||fikfapcams.com^$removeparam=realDomain
+||fikfapcams.com^$removeparam=affiliateId
+||go.xliirdr.com/?*&targetDomain=$removeparam=p
+||go.xliirdr.com/?*&targetDomain=$removeparam=userId
+||go.xliirdr.com/?*&targetDomain=$removeparam=campaignId
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185036
 ||windscribe.com^$removeparam=pcpid
 ||windscribe.com^$removeparam=temp_session

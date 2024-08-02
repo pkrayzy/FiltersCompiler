@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Wc9FtrBbwpM2SoMDwc0EdQ
-! Diff-Path: ../patches/18/18-s-1722580624-3600.patch
+! Checksum: kSJCXkX3qFVHcyhm4vIZsA
+! Diff-Path: ../patches/18/18-s-1722587823-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.44.47
-! TimeUpdated: 2024-08-02T06:33:26+00:00
+! Version: 2.0.44.48
+! TimeUpdated: 2024-08-02T08:33:25+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14843,6 +14843,10 @@ gadgethacks.com##+js(set-constant, WHT.ShowConsentForm, trueFunc)
 ! TODO: Rework when support for clicking inside the shadow root appears.
 !
 ! TODO: Rework when support for clicking on an element containing a given text appears: https://github.com/AdguardTeam/Scriptlets/issues/409
+dailywrap.ca,dailywrap.uk,dailywrap.net#$#body > * { filter: none !important; }
+dailywrap.ca,dailywrap.uk,dailywrap.net#$#html > body { overflow: auto !important; }
+dailywrap.ca,dailywrap.uk,dailywrap.net#$#html:not(#style_important) { overflow: auto !important; }
+dailywrap.ca,dailywrap.uk,dailywrap.net#?#body > div[class]:has(> div[class] > div[class] > div[class] > div[class] > button:contains(/^I ACCEPT AND GO TO THE WEBSITE$/))
 !
 ! trusted-click-element doesn't work for cookie acceptance here
 ! Rework when this issue will be fixed: https://github.com/AdguardTeam/Scriptlets/issues/391
@@ -14938,6 +14942,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185262
+zsedrive.sk#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185195
 @@||usercentrics.eu^$domain=br.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184547

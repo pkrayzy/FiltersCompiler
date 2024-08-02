@@ -1,9 +1,9 @@
-! Checksum: ydtsP4SJx6H8w3PPIiaKTA
-! Diff-Path: ../patches/14/14-s-1722584211-3600.patch
+! Checksum: 7zj+HHlhzAsjHZL16R0KOg
+! Diff-Path: ../patches/14/14-s-1722587798-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.2
-! TimeUpdated: 2024-08-02T07:33:28+00:00
+! Version: 2.2.4.3
+! TimeUpdated: 2024-08-02T08:33:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -15600,6 +15600,7 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !
 ||loewenbraeukeller.com^$replace=/type="text\/plain" data-usercentrics/type="text\/javascript" data-usercentrics/,document
 !
+||dailywrap.*/$replace=/(\n|"use strict";)\((window\._|self\.webpackChunk)_proto_[\s\S]*?"I[\s\S]*?ACCEPT[\s\S]*?AND[\s\S]*?GO[\s\S]*?TO[\s\S]*?THE[\s\S]*?WEBSITE".*//,script,domain=dailywrap.ca|dailywrap.uk|dailywrap.net
 ||pysznosci.pl/$replace=/(\n|"use strict";)\((window\._|self\.webpackChunk)_proto_[\s\S]*?"AKCEPTUJ.[\s\S]*?I PRZECHODZ.[\s\S]*?DO SERWISU".*//,script
 ||genialne.pl/$replace=/(\n|"use strict";)\((window\._|self\.webpackChunk)_proto_[\s\S]*?"AKCEPTUJ.[\s\S]*?I PRZECHODZ.[\s\S]*?DO SERWISU".*//,script
 ||deliciousmagazine.pl/$replace=/(\n|"use strict";)\((window\._|self\.webpackChunk)_proto_[\s\S]*?"AKCEPTUJ.[\s\S]*?I PRZECHODZ.[\s\S]*?DO SERWISU".*//,script
@@ -15667,6 +15668,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185262
+zsedrive.sk#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185195
 @@||usercentrics.eu^$domain=br.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184547
@@ -48223,6 +48226,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+dic.pixiv.net##.ranobe_body_ad
 crowdstrike.com###categorySidebarBanner
 blog.knowbe4.com##.blog-sidebar > div.row-fluid-wrapper:has(.widget-type-cta)
 blog.knowbe4.com##.blog-sidebar > div.row-fluid-wrapper:has(.widget-type-cta) + div.row-fluid-wrapper
