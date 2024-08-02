@@ -1,8 +1,8 @@
-! Checksum: jf3dPDwc///GFkN+7nQzHw
+! Checksum: Pc3DFwI1lmX5nqskXl9LEg
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.44.48
-! TimeUpdated: 2024-08-02T08:33:25+00:00
+! Version: 2.0.44.49
+! TimeUpdated: 2024-08-02T09:33:29+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2456,7 +2456,6 @@ tjpr.jus.br###politica-privacidade-tjpr
 cuvva.com###cuvva-app-injection-site > div:has(> div button[data-testid="accept-cookies"])
 sheepesports.com##body > .fixed.bottom-0.right-0:has(> .border > .flex > p.text-sm > a[href="/terms"])
 chrono24.*#%#//scriptlet('trusted-set-cookie-reload', 'c24-consent', 'AAEAIwEq')
-xe.com###__next > div[class^="__variable_"] > div[style^="position:"] ~ div > section
 hornet.com#%#//scriptlet('set-cookie', '_consent_ads', '0')
 hornet.com#%#//scriptlet('set-cookie', '_consent_analytics', '0')
 airstop.sk,airstop.cz,airstop.pl#$#body[style^="overflow:"] { overflow: auto !important; }
@@ -10429,7 +10428,7 @@ infobus.*#?#body > #layer1:has(> div#layer2 > div.layer-message-container button
 portalbhp.pl,portalprzedszkolny.pl,portaloswiatowy.pl#$#.overlay-cookie { display: none !important; }
 portalbhp.pl,portalprzedszkolny.pl,portaloswiatowy.pl#$#.overlay-hidden-cookie { overflow: visible !important; }
 tankionline.com,easycosmetic.de##.footer-cookies
-folhavitoria.com.br,giffits.de,easycosmetic.de##.overlay
+4kdownload.com,folhavitoria.com.br,giffits.de,easycosmetic.de##.overlay
 easycosmetic.de##.cookies-consent-container
 plk-sa.pl,dge.de,mohrsiebeck.com,lempertz.com,starnbergammersee.de,merten.de,bwi.de,medizinischerdienst.de,kunstmuseum-moritzburg.de,bmeia.gv.at,integrationsfonds.at,landesentwicklung-bayern.de,landsberg.de,w-hs.de,stmwi.bayern.de,easybell.de###cookieman-modal
 plk-sa.pl##.modal-backdrop
@@ -13938,10 +13937,11 @@ harmonie-im-garten.de,jimdosite.com##main + div:last-child
 ! It seems that for some reason search bar and "add to cart" button doesn't work when cookie notice is just hidden
 obi-de.app.baqend.com,obi.de#$?#.colorbox-cookiepolicy { remove: true; }
 obi-de.app.baqend.com,obi.de#$#.colorbox-cookiepolicy { position: absolute !important; left: -3000px !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/184799
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83583
-! Website is broken if "display: none" is used - ##div[class*="ConsentBannerstyles_"]
-xe.com#$#div[class*="ConsentBannerstyles_"] { position: absolute !important; left: -3000px !important; }
-accounts.xe.com#$#body > div#cookieBannerContainer > * { position: absolute !important; left: -3000px !important; }
+! Website is broken if "display: none" is used
+xe.com#$##__next > div[class^="__variable_"] > div[style^="position:"] ~ div > section { position: absolute !important; left: -3000px !important; }
+account.xe.com#$#.consentCardOverlay { position: absolute !important; left: -3000px !important; }
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81056
 ||consent.gameforge.com/cookiebanner.js$important

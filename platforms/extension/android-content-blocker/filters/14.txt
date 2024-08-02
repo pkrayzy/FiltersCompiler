@@ -1,9 +1,9 @@
-! Checksum: v8hDU9dnBHulYtLtXNQJ7w
-! Diff-Path: ../patches/14/14-s-1722587802-3600.patch
+! Checksum: C2/L1/OjvLWTR30PmcHQDA
+! Diff-Path: ../patches/14/14-s-1722591402-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.3
-! TimeUpdated: 2024-08-02T08:33:18+00:00
+! Version: 2.2.4.4
+! TimeUpdated: 2024-08-02T09:33:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2409,7 +2409,6 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 lemanapro.ru##div[data-qa="cookie-notification"]
 tjpr.jus.br###politica-privacidade-tjpr
-xe.com###__next > div[class^="__variable_"] > div[style^="position:"] ~ div > section
 airstop.sk,airstop.cz,airstop.pl#$#body[style^="overflow:"] { overflow: auto !important; }
 airstop.sk,airstop.cz,airstop.pl#$#div[class^="cookiebar"] { display: none !important; }
 cisss.gov.sk##.idsk-cookie-banner
@@ -9605,7 +9604,7 @@ ep.de#$#body.cookielayer-open { overflow: auto !important; }
 portalbhp.pl,portalprzedszkolny.pl,portaloswiatowy.pl#$#.overlay-cookie { display: none !important; }
 portalbhp.pl,portalprzedszkolny.pl,portaloswiatowy.pl#$#.overlay-hidden-cookie { overflow: visible !important; }
 tankionline.com,easycosmetic.de##.footer-cookies
-folhavitoria.com.br,giffits.de,easycosmetic.de##.overlay
+4kdownload.com,folhavitoria.com.br,giffits.de,easycosmetic.de##.overlay
 easycosmetic.de##.cookies-consent-container
 plk-sa.pl,dge.de,mohrsiebeck.com,lempertz.com,starnbergammersee.de,merten.de,bwi.de,medizinischerdienst.de,kunstmuseum-moritzburg.de,bmeia.gv.at,integrationsfonds.at,landesentwicklung-bayern.de,landsberg.de,w-hs.de,stmwi.bayern.de,easybell.de###cookieman-modal
 plk-sa.pl##.modal-backdrop
@@ -12986,10 +12985,11 @@ harmonie-im-garten.de,jimdosite.com##main + div:last-child
 ! https://github.com/AdguardTeam/AdguardFilters/issues/84273
 ! It seems that for some reason search bar and "add to cart" button doesn't work when cookie notice is just hidden
 obi-de.app.baqend.com,obi.de#$#.colorbox-cookiepolicy { position: absolute !important; left: -3000px !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/184799
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83583
-! Website is broken if "display: none" is used - ##div[class*="ConsentBannerstyles_"]
-xe.com#$#div[class*="ConsentBannerstyles_"] { position: absolute !important; left: -3000px !important; }
-accounts.xe.com#$#body > div#cookieBannerContainer > * { position: absolute !important; left: -3000px !important; }
+! Website is broken if "display: none" is used
+xe.com#$##__next > div[class^="__variable_"] > div[style^="position:"] ~ div > section { position: absolute !important; left: -3000px !important; }
+account.xe.com#$#.consentCardOverlay { position: absolute !important; left: -3000px !important; }
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81056
 ||consent.gameforge.com/cookiebanner.js$important
@@ -38201,6 +38201,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+typhoon.yahoo.co.jp##a[id$="earthquake_banner_a"]
+||s.yimg.jp/images/emg/bnr/2015/emgApp_*.png
 perplexity.ai##a[href="/download-mobile"]
 perplexity.ai##a[href="https://www.perplexity.ai/download-android"]
 samsung.com##.cod05-app-banner
