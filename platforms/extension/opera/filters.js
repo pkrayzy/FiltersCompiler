@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.46.83",
-			"timeUpdated": "2024-08-03T15:31:26+0000",
+			"version": "2.3.46.84",
+			"timeUpdated": "2024-08-03T16:31:22+0000",
 			"languages": [],
 			"tags": [
 				10,
