@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.68.76",
-			"timeUpdated": "2024-08-03T00:33:35+0000",
+			"version": "2.0.68.77",
+			"timeUpdated": "2024-08-03T06:33:29+0000",
 			"languages": [],
 			"tags": [
 				45,
