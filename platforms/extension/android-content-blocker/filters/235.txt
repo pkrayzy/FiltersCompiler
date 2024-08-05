@@ -1,9 +1,9 @@
-! Checksum: pmVK+YHZjBSzul/5CgLq7A
-! Diff-Path: ../patches/235/235-s-1722589536-14400.patch
+! Checksum: s1ss3KhvT15k70v3jCgr/A
+! Diff-Path: ../patches/235/235-s-1722863133-14400.patch
 ! Title: Persian Blocker
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.63
-! TimeUpdated: 2024-08-02T09:01:49+00:00
+! Version: 2.0.4.64
+! TimeUpdated: 2024-08-05T13:01:41+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: PersianBlocker
@@ -20,7 +20,7 @@
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
 ! Popup: needpop (vc_url)
 ! rouydad24.ir, ibena.ir, tejaratemrouz.ir, irdc.ir
-/files/fa/adv^$image,~third-party,domain=ir|asriran.com|parsine.com|ana.press|niniban.com|vananews.com|barghnews.com
+/files/fa/adv^$image,~third-party,domain=ir|asriran.com|parsine.com|ana.press|niniban.com|vananews.com|barghnews.com|niniban.com|eghtesadonline.com
 ! meliyat.ir, aftabnews.ir, eghtesadgardan.ir, entekhab.ir, nabzefanavari.ir, boursenews.ir, snn.ir,
 !! basirat.ir, khootoot.ir, didarnews.ir, 598.ir
 /files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news
@@ -237,13 +237,11 @@ niloblog.com##bloglinksblock
 ||my-pishvaz.com^$third-party
 ||pooye-ads.com^
 ||promizer.com^
-! ^ Example: eghtesadonline.com
 ||phonroid.com^
 ||popina.ir^
 ||popupdl.ir^
 ||popland.info^
 ||peyvandha.ir^$third-party
-||10.10.34.$subdocument,third-party
 ! ^ Example: imovie-dl.org
 ||phoenixad.io^
 ||partclick.ir^
@@ -890,8 +888,10 @@ eghtesadnews.com##.advs-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95321
 ! https://github.com/MasterKia/PersianBlocker/issues/85
 ! https://github.com/MasterKia/PersianBlocker/issues/223
-||media.eghtesadonline.com/d/*.gif^$image,~third-party
-eghtesadonline.com##section.ads
+eghtesadonline.com##div.ads-sec
+eghtesadonline.com##div.heightAds
+eghtesadonline.com##div.bottomTextAdv
+eghtesadonline.com##div.ads-sec-web
 elmefarda.com#$#div#post p { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
 elmefarda.com##div.textwidget > div.ads
 elmefarda.com#@##head728
@@ -1466,7 +1466,6 @@ namayesh.com###promotion
 ! Example: mihanvideo.com
 ! https://github.com/MasterKia/PersianBlocker/issues/72
 ! https://github.com/MasterKia/PersianBlocker/pull/81
-||niniban.com/files/fa/adv^$image,~third-party
 ||niniban.com/DaartAds.min$script,stylesheet,~third-party
 niniban.com##div.all_adv_mrg
 niniban.com##div.padding_news_right_adv
