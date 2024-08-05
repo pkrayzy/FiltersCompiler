@@ -1,9 +1,9 @@
-! Checksum: U4Mx2+7qLPQbU8AvXTMuIg
-! Diff-Path: ../patches/224/224-s-1722854228-3600.patch
+! Checksum: Pd01HHHY6NtOpp7Quensxg
+! Diff-Path: ../patches/224/224-s-1722857849-3600.patch
 ! Title: AdGuard Chinese filter
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.19.99
-! TimeUpdated: 2024-08-05T10:33:56+00:00
+! Version: 2.1.20.0
+! TimeUpdated: 2024-08-05T11:34:03+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -351,9 +351,11 @@ sports.qq.com#@#.txp_ad_center
 baomidou.com#%#//scriptlet('set-constant', '_AdBlockInit', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179468
 wandhi.com#%#//scriptlet('prevent-fetch', '/googlesyndication\.com|doubleclick\.net/')
+! https://github.com/AdguardTeam/AdguardFilters/issues/185380
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177998
 colamanga.com#$#html { overflow: auto !important; }
-colamanga.com#$#div[class^="layui-layer-"] { display: none !important; }
+colamanga.com#$#div[class^="layui-layer-"]:not(#color) { display: none !important; }
+@@||colamanga.com/js/*/load.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177065
 bilinovel.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'pagead2.googlesyndication.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176112
