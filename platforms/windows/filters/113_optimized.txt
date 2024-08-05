@@ -1,15 +1,14 @@
-! Checksum: +mV8kBKxVvUbdY5EL3S6hQ
-! Diff-Path: ../patches/113_optimized/113_optimized-s-1722819961-14400.patch
+! Checksum: fhnYwjBYYNqD7n6xqr2iaQ
+! Diff-Path: ../patches/113_optimized/113_optimized-s-1722834341-14400.patch
 ! Title: Liste FR (Optimized)
 ! Description: Additional filter list for websites in French. Already included in AdGuard French filter.
-! Version: 2.1.53.64
-! TimeUpdated: 2024-08-05T01:01:22+00:00
+! Version: 2.1.53.65
+! TimeUpdated: 2024-08-05T05:01:13+00:00
 ! Expires: 12 hours (update frequency)
 &ad_count=
 &ad_unit_
 &adInstanceId=
 &ADMode=
-&adplace=
 &adPlayhead=
 &adposition=
 &adsExpected=
@@ -187,7 +186,6 @@
 /160x600adblock.
 /182x600/*
 /200x300.gif
-/2017/ads/*
 /300-x-250-
 /300-x-250.
 /300/250|$subdocument
@@ -285,10 +283,10 @@
 /adformat.
 /adfuel-
 /adfuel/*
+/adfusion/ads/*
 /adimage-
 /adimage3.
 /adinit?
-/adintop.
 /adland.
 /admantium.
 /admarktTopSpot.
@@ -379,6 +377,7 @@
 /ads_data/*
 /ads_data_
 /ads_fol_
+/ads_html5/*
 /ads_left.
 /ads_right.
 /ads_script.
@@ -519,7 +518,6 @@
 /banner_top.$subdocument
 /bannerinf.js
 /banners-pub/*
-/banners.php?zone
 /banners/*/adx.
 /banners/*_ads_
 /banners/120x240.
@@ -801,6 +799,7 @@
 /servlet/banner?id=
 /servlet/effi.show?
 /set_popup.
+/setAds.
 /sex_ad.
 /sfibanners.
 /SGPMPopup.
@@ -834,6 +833,7 @@
 /TiscaliAds.
 /trackads.
 /travelAds.
+/ttn_adspaces
 /twitter-ads.
 /txt_publi_vert.
 /update.adsvertisement.
@@ -1173,7 +1173,6 @@ digitalocean.gif|
 /syndication.*&idzone=$popup
 /tour-web/*&tour=*&utm_$popup
 /tour/?nats=$popup
-/trk/|$popup
 ://ad.*?_site=$popup
 ://ads2.$popup
 ://click.*&utm_$popup
@@ -1206,7 +1205,6 @@ digitalocean.gif|
 ?pubid=*&subid=$popup,third-party
 ?subid=*&clickid=$popup
 _build=iclick-$popup
-_close_ad$popup
 _lx.ads/$popup
 ||xyz^*&zoneid=$popup
 ||1-1ads.com^$third-party
@@ -1283,6 +1281,7 @@ _lx.ads/$popup
 ||biznolimit.com^$third-party
 ||broadcast.pm^$third-party
 ||buckridge.link^$third-party
+||buzzvet.com^$third-party
 ||camsoda.com^$third-party
 ||captchme.net^$third-party
 ||caramec.fr^$third-party
@@ -1443,6 +1442,7 @@ _lx.ads/$popup
 ||sexyxxx.biz^$third-party
 ||shareaholic.com^$third-party
 ||sharemyads.com^$third-party
+||shmokiads.com^$third-party
 ||shoosh.co^$third-party
 ||smartclip.net^$~object,third-party
 ||smartmovies.net^$third-party
@@ -1496,7 +1496,6 @@ _lx.ads/$popup
 ||xxxtraffic.biz^$third-party
 ||yospace.com^$~object,third-party
 ||youborafds01.com^$third-party
-||youwatch.org^$third-party
 ||zebestof.com^$third-party
 ||zmctrack.net^$third-party
 ||zononi.com^$third-party
@@ -1882,7 +1881,6 @@ _lx.ads/$popup
 ||icyporno.com^
 ||igrid.org^
 ||ikiif.com^
-||imglov.com^
 ||impressexaltsculptor.com^
 ||imzahrwl.xyz^
 ||incontro-veloce.com^
@@ -2045,6 +2043,7 @@ _lx.ads/$popup
 ||ouabecrib.com^
 ||ourtetotum.com^
 ||outshroomishan.com^
+||ovularlinkup.com^
 ||ozjga.top^
 ||ozwvd.com^
 ||paarsvc.com^
@@ -2097,7 +2096,6 @@ _lx.ads/$popup
 ||puscomosca.com^
 ||pvrtx.net^
 ||qhip.com^
-||qjudpxkisv.xyz^
 ||questionfly.com^
 ||questormyxo.com^
 ||qwqeifbsbxqozy.com^
@@ -2308,10 +2306,10 @@ _lx.ads/$popup
 ||browsealoud.com/plus/scripts/$script
 ||browsermine.com^$third-party
 ||clgserv.pro^$third-party
-||cloud-miner.eu^$third-party
 ||cnhv.co^$third-party
 ||coincheck.com^$third-party
 ||coinpot.co^$third-party
+||crypto-loot.com^$third-party
 ||duckdns.org^$third-party,websocket
 ||ethereum-pocket.com^$third-party
 ||ethers.io^$third-party
@@ -2438,14 +2436,12 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||alfafile.net/img/buttons/promo/
 ||ali.pub^$subdocument,third-party
 ||alicdn.com^*-300x250.$domain=~alibaba.com|~aliexpress.com|~aliexpress.ru
-||all-ladies.net/banners/
 ||alloref.com^$image,third-party
 ||amazonaws.com/pubfig/
 ||ams.cdn.arkadiumhosted.com/advertisement/$media
 ||ams.cdn.arkadiumhosted.com/advertisement/display/*/display-ads.js
 ||api.gamerprices.com/compare/$third-party
 ||app.partnerlottery.com/widget/$third-party
-||apycdn.com^*/banner/
 ||arc.io/widget$third-party
 ||astore.amazon.com^$subdocument,third-party
 ||asumi.shinobi.jp^
@@ -2725,6 +2721,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||bongacams.com/?bcs=$popup
 ||booking.com^$popup,domain=viamichelin.at|viamichelin.be|viamichelin.ch|viamichelin.co.uk|viamichelin.com|viamichelin.de|viamichelin.es|viamichelin.fr|viamichelin.ie|viamichelin.it|viamichelin.nl|viamichelin.pl|viamichelin.pt
 ||box10.com^*?utm_source=$popup
+||buziol.pl^$popup
 ||ccbill.com/cgi-bin/clicks.cgi?$popup,third-party
 ||chaturbate.com/in/?*&tour=$popup,third-party
 ||g2a.com/r/$popup
@@ -2812,6 +2809,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||esoxiste.com/wp-content/images/*.gif
 ||esoxiste.com/wp-content/images/bandeau-
 ||esoxiste.com/wp-content/images/banni%C3%A8re-
+||etr.fr/partner/
 ||fiches-auto.fr/_carre_300_
 ||file-upload.net/include/$subdocument
 ||files.macg.co/macgupload/
@@ -2901,7 +2899,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||passionlachasse.com/publi
 ||pcgamestorrents.com/wp-content/uploads/20*.gif
 ||permispratique.com/photo/*_habillage_
-||petit-bulletin.fr/multimedia/fond/
 ||pharmnet-dz.com/img/pubs/
 ||plancul-gratuit.*/disclamer.
 ||plancul-gratuit.*/popupPerso/
@@ -2916,7 +2913,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||pub.le360.ma^
 ||rapeporn.name^$script
 ||rapidgator.net/images/pics/
-||reflectim.fr/wp-content/plugins/popup-builder/
 ||regie.story-fr.com^
 ||rencontresanslendemain.net/wp-content/uploads/*/banniere-
 ||ruedesjoueurs.com/images/articles-/promo/
@@ -3056,7 +3052,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ###bloc-pub
 ###bloc_pub
 ###block-gc-ad-bloc-centre-1
-###block-gc-ad-bloc-droite-1
 ###bottom-adv
 ###bsa-block-300--250
 ###bsa-block-300--600
@@ -3228,6 +3223,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.ad_sense
 ##.ad_vertical
 ##.ad_video
+##.adbloc
 ##.adblock1
 ##.adbox-inner
 ##.adbox3
@@ -3339,7 +3335,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.e3lan-cell
 ##.e3lan-post
 ##.e3lan300-600
-##.e3lanat-layout-rotator
 ##.ebam_ad
 ##.fakeAd
 ##.fake_player

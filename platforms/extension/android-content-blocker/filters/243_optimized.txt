@@ -1,9 +1,9 @@
-! Checksum: 9usv5WVlCLDyxCWefLI+SQ
-! Diff-Path: ../patches/243_optimized/243_optimized-s-1722762327-14400.patch
+! Checksum: cwOxMdtKc2W8wuKOGknpXA
+! Diff-Path: ../patches/243_optimized/243_optimized-s-1722834307-14400.patch
 ! Title: Frellwit's Swedish Filter (Optimized)
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.19.13
-! TimeUpdated: 2024-08-04T09:01:46+00:00
+! Version: 2.0.19.14
+! TimeUpdated: 2024-08-05T05:01:43+00:00
 ! Expires: 5 days (update frequency)
 .ads-gdprlock
 .ax/ad/
@@ -232,8 +232,7 @@ computersweden.se##.nativo
 com.se,~www.com.se,~pagalnew.com.se#$#html::before { content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från det svenska filtret i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important; }
 cookaholic.se###loftloader-wrapper
 cookie-consent$domain=upphandling24.se
-corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native
-corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##iris-subscribe-footer
+corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native, iris-subscribe-footer
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se,tv.nu,klart.se#$#.sp-message-open body { overflow:unset!important;position:unset!important; }
 curateContext=affiliate$domain=aftonbladet.se
 cykla.se##.featured-post--sponsored, .grid-item--sponsored, #advert-once-banner-fullskarm
@@ -1052,6 +1051,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div[class^="borka-panorama"]
 ##div[class^="borka-widescreen"]
 ##div[class^="holid_desktop"]
+##div[data-adk-container]
 ##div[data-losjs^="borka-insider"]
 ##div[data-losjs^="borka-panorama"]
 ##div[data-losjs^="borka-widescreen"]
@@ -1183,7 +1183,6 @@ zeromagazine.nu##div[id^="ads"]
 /SitesterSurvey*.$script
 /Smile_ElasticsuiteTracker/*$script
 /SponsorsList$script,domain=hockeyallsvenskan.se
-/TSPD/*$script,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|kindaposten.se|gotlandjustnu.se
 /TopBanner$subdocument,domain=hitta.se
 /TrackPageView$domain=mestmotor.se
 /Vizzit/vizzit.$script
@@ -2139,7 +2138,6 @@ zeromagazine.nu##div[id^="ads"]
 ||events.forzasys.com/get.min.js
 ||evertiq.se/bimg/
 ||evidon.com^$third-party,domain=fasting.nu
-||evt-api.ntm.eu/api/*/datacollector
 ||execute-api.eu-west-1.amazonaws.com/live/analytics
 ||existenz.se/img/o/
 ||exitintel.com^$third-party
