@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 04cJ0vCDwc5/FEm5zsYsIQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722883009-3600.patch
+! Checksum: Z8vVRt4w3BnhMqwHPgLjiA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722886614-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.47.4
-! TimeUpdated: 2024-08-05T18:31:29+00:00
+! Version: 2.3.47.5
+! TimeUpdated: 2024-08-05T19:31:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -32978,6 +32978,9 @@ neowin.net#$#div[class^="banner-"] { height: 0!important; min-height: 0!importan
 ! /asset/jquery/slim-3.2.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185532
+! Example: https://sheegiwo.com/tag.min.js
+/^https:\/\/\w+\.(?=com|net\/tag\.min\.js$)/$script
 ! ex. https://jzjj.jeoawamjbbzjy.top/kljyjjeajazry/mevjvz?d=1
 /^https:\/\/[a-z]{3,5}\.[a-z]{10,14}\.top\/[a-z]{10,16}\/[a-z]{5,6}(?:\?d=\d)?$/$script,third-party,match-case
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182734
@@ -33204,6 +33207,7 @@ _ad_content.
 ://creative.*/widgets/Spot/lib.js$third-party
 ://creative.*/widgets/v4/Universal?$subdocument,third-party
 /?oo=1&aab=1|$script,third-party,xmlhttprequest
+/?oo=1&aab=1|$script,third-party,xmlhttprequest,redirect=noop.js
 /images/static/github-org-members.min.js
 .com/sha512.min.js
 /api/imagine.min.js$third-party
@@ -33586,6 +33590,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+viwlivehdplay.ru##+js(abort-on-property-read, JSON.parse)
 1001tracklists.com###top > div[style] > a[rel="noopener noreferrer"]
 1001tracklists.com###root > div[style^="width: 300px;"][style*="height"]
 ungeek.ph##.ungee-bottom-sticky-ad
@@ -34344,7 +34349,6 @@ neporn.com##a[href="https://google.com"]
 rahim-soft.com##.theiaStickySidebar > .widget_text:has(> .textwidget > p > .adsbygoogle)
 allegiantair.com##a[data-hook="header-merchandise-banner_link"]
 /tag.min.js$redirect=noop.js,important,domain=4fnet.org|clickndownload.*|clicknupload.*|vipbox.lc|1qwebplay.xyz,script
-/?oo=1&aab=1|$script,third-party,xmlhttprequest,redirect=noop.js,important,domain=4fnet.org|clickndownload.*|clicknupload.*|vipbox.lc|fstream365.com
 convertio.co##.softobar-container
 tutwuri.id,lokerwfh.net,insmyst.com,iir.la,tvi.la,cosplay18.pics,hianime.to,mobiletvshows.site,movies4u.*,x-x-x.tube,pornx.to,4khd.com,dlhd.*,playhydrax.com,kissanime.*,vidsrc.*,pahe.*##+js(window.open-defuser)
 hogwarts.cafe#$#body[class*="adthrive-"]:not(.home) .site-footer-wrap { margin-bottom: 0 !important; }
