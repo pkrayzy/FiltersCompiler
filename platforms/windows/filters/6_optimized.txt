@@ -1,5 +1,5 @@
-! Checksum: 1vCwpuEA+dNaqboaweRjwA
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1722879433-3600.patch
+! Checksum: NC/ax9eCqeUyvRTBtWITUw
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1722911808-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.43.4
@@ -752,6 +752,7 @@ mydealz.de##.listLayout-main > div:not([id], [class])
 [$path=/forum]heise.de###bottom-up ~ .a-layout:has(> div[data-append-outbrain])
 [$path=/forum]heise.de###bottom-up ~ .a-layout:has(> .a-layout__container:only-child > .a-layout__item:only-child > .ad-label)
 mopo.de#?#div[data-tb-region-item]:has(> .main-preview__content > .main-preview__tags > .main-preview__tags-item > a:contains(Anzeige))
+jolie.de##article:has(> .teaser__media > .teaser__adtype)
 weltwoche.de##div[id^="werbung"]
 weltwoche.de##div[class^="werbung"]
 forum.pcgames.de###bannerWrap
@@ -1055,8 +1056,6 @@ eispop.com##.vjs-toolbar[style]
 pornohirsch.net##.video > div[id][style^="background-image:"] + aside[id]
 pornohirsch.net###wrapper_content > div.cf + aside[id]
 paris360.de,portugal360.de###block-adsenseleaderboard
-firstname.de##.mod_footer_werbung
-firstname.de##iframe[src^="https://api.heise.de/svc/pvg-widget/"]
 immowelt.de##div[class^="BillboardBanner"]
 kurier.de,np-coburg.de,frankenpost.de##a[data-tags*="Advertorial"]
 kurier.de,np-coburg.de,frankenpost.de##div[data-b-title^="HCSB - HTML"]
@@ -1230,6 +1229,7 @@ katzen-forum.net##.js-replyNewMessageContainer > div.block-row
 3druck.com##.adv-link
 3druck.com##div[class^="druck-sidebar-"]
 handwerk-magazin.de##div[id^="AdSlot_"]
+handwerk-magazin.de##[id^="hzm-ads-widget-"]
 meinestadt.de##.-dfp[data-component="adplace"]
 grazia-magazin.de,maedchen.de##kas[type="placement"]
 autouncle.de##body > div[style^="text-align: center;"][style$="min-height: 180px;"]
@@ -1568,7 +1568,6 @@ pi-news.net##.wpb_wrapper > div > a[target="_blank"] > img
 gut-erklaert.de##.bottomWb
 gut-erklaert.de###superFormat
 gut-erklaert.de##.contentlabel
-1000ps.at##.berichtwerbungshow
 zeit.de##.cp-region--standard > section:not(.cp-area--headed-zplus) > .zon-teaser-standard--ad
 meinestadt.de##div[class^="a-ettElement -dfp -n"][style^="min-height:"]
 ||ih.adscale.de/map?ssl=1&format=video
@@ -2246,6 +2245,7 @@ rtl.de#@#.rtlde-medium-rectangle
 /werbenetz/*
 /werbepartner.
 /werbepartner/*
+/werbeteaser/*
 /werbung.$third-party
 /werbung.gif
 /werbung/*$third-party
@@ -2277,7 +2277,6 @@ _werbung.php
 ###bannerwerbung
 ###gwerbung
 ###header_werbung
-###headerwerbung
 ###nativendo-artikel
 ###nativendo-home
 ###nativendo-home-2
@@ -2490,7 +2489,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||auxmoney-partnerprogramm.de^$third-party
 ||ay.delivery^$third-party
 ||ba-content.de^$third-party
-||bannerheld.de^$third-party
+||blogads.de^$third-party
 ||cashdorado.de^$third-party
 ||chatntr.com^$third-party
 ||cmadserver.de^$third-party
@@ -2548,7 +2547,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||trmads.eu^$third-party
 ||trmwidget.eu^$third-party
 ||twiago.com^$third-party
-||w-m-w.net^$third-party
 ||werbeflut.net^$third-party
 ||wowpornlist.xyz^$third-party
 ||yoomedia.de^$third-party
@@ -2738,7 +2736,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||hardware-mag.de/js/ads.min.js
 ||help.ch/ads/
 ||hifi-forum.de/js/hifi-ad-manager.js
-||hifi-today.de/wp-content/uploads/*/banner-
 ||hifistatement.net/images/banners/
 ||hifistatement.net/images/content/banner/
 ||hifitest.de/images/trademarks/
@@ -2750,7 +2747,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||kalenderwoche.de/bobs/
 ||kath.net/mod/
 ||kauf6.com/img/banner/
-||kaufland.de^*&showSpads=true^
 ||kauperts.de/images/partners/
 ||kinox.top/templates/Kinox/images/stream.gif
 ||kitzanzeiger.at^*/sponsoren/
@@ -3060,8 +3056,6 @@ ariva.de,handelsblatt.com###iqd_mainAd
 rp-online.de###ir_rpd_lb
 juraforum.de###jf-stroer-sky
 juraforum.de###jf-stroer-superbanner
-klamm.de###klamm\.de_forum_1
-klamm.de###klamm\.de_forum_3
 klamm.de###klamm\.de_incontent_1
 wallstreet-online.de###kosocgen
 mein-wetter.com###labelpub
@@ -3086,8 +3080,6 @@ wallstreet-online.de###mooTicker
 wallstreet-online.de###mooTickerContainerMobile
 bild.de,bz-berlin.de,finanzen.net###mrec
 mein-schoener-garten.de###msg_leaderboard_1_mobile_wrapper
-rezeptwelt.de###mso-dplusc-banner_1
-rezeptwelt.de###mso-dplusc-banner_2
 rezeptwelt.de###mso-dplusc-banner_5
 mein-schoener-garten.de###native_desktop_wrapper
 mein-schoener-garten.de###native_mobile_wrapper
@@ -3170,7 +3162,6 @@ fernseher.org,kopfhoerer.com,kuehlschrank.com,laufband.org,schlafsack.net,staubs
 bluray-disc.de###top-angebote-box
 focus.de,fool.de,it-production.com###top-banner
 otr.datenkeller.net###topBanner
-my-ladies.ch###topBannerContainer
 lust24.ch###topCustomers
 raidrush.net###top_ga
 wintotal.de###topads
@@ -3207,7 +3198,6 @@ chip.de##.FC.mt-md-so[role="complementary"]
 netmoms.de,praxistipps.focus.de##.FC__Ad
 kostenlose-urteile.de##.RTaktAds
 de.rt.com##.TopBanner-root
-suchen.mobile.de##.ViD7S
 via-ferrata.de##.YouTubeoetz
 gartenjournal.net##._gartenjournal_billboard
 1200grad.com,rotor-magazin.com##.a-single
@@ -3359,7 +3349,6 @@ finanznachrichten.de##.c-sban2
 scfreiburg.com,sgf1903.de##.c-sponsors-list
 focus.de##.cad
 focus.de##.cad_native
-1000ps.at##.cadbox
 heizsparer.de##.cadheight[style="min-height:600px;"]
 faktastisch.de##.cca
 all-electronics.de,automobil-produktion.de,automotiveit.eu,chemietechnik.de,fertigung.de,fluid.de,instandhaltung.de,ke-next.de,kgk-rubberpoint.de,ki-portal.de,neue-verpackung.de,pharma-food.de,plastverarbeiter.de,produktion.de,technik-einkauf.de,werkzeug-formenbau.de##.ce_banneradbox
@@ -3377,6 +3366,7 @@ raptastisch.net##.code-block-12
 ibooks.to,raptastisch.net##.code-block-7
 tech-review.de,wallstreet-online.de,watson.de,wn.de##.commercial
 fotomagazin.de##.commercial-post-container
+coincierge.de##.compar_tbl_body_plugin
 nordschleswiger.dk##.component-code-snippet
 ak-kurier.de,nr-kurier.de,ww-kurier.de##.container-banner
 1000ps.at,1000ps.de##.container-billboard
@@ -3899,6 +3889,7 @@ journalistenwatch.com##div[id^="journ-"]
 20min.ch##div[id^="lifestyle_fashion__inside-"]
 20min.ch##div[id^="lifestyle_living__inside-"]
 20min.ch##div[id^="lifestyle_reisen__inside-"]
+modified-shop.org##div[id^="modifiedwerbung_"]
 wallstreet-online.de##div[id^="nativendo-"]
 noz.de##div[id^="nozmhn_ad_"]
 faktastisch.de,frustfrei-lernen.de##div[id^="npm_"]
@@ -4063,6 +4054,7 @@ finanzen.net##article.page-content__item:has(img[alt="UBS"])
 abendzeitung-muenchen.de##article[class^="teaser nummer-"]:has(span.specialfeature)
 hornoxe.com##div.post.hentry.ivycat-post:has(a[href^="https://www.amazon.de/"])
 douglas.de##div.product-grid-column:has(span.product-tile__sponsored)
+nydus.org##div.ui-tabs:has(#nydus_org_300x600_desktop_1)
 nydus.org##div:has(> #nydus_org_970x300_billboard_responsive)
 wayfair.de##div[data-hb-id="Grid.Item"]:has(a[href*="&sponsoredid="])
 mediamarkt.at,mediamarkt.de,saturn.de##div[data-test="mms-product-card"]:has(div[data-test="mms-plp-sponsored"])
