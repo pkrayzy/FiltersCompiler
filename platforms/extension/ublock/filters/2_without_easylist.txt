@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: WSxYbz+7ckqIHcoEuTGQYg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722933437-3600.patch
+! Checksum: rLuMbIwXtlLpCgaL6hz3SA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1722937051-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.47.11
-! TimeUpdated: 2024-08-06T08:31:33+00:00
+! Version: 2.3.47.12
+! TimeUpdated: 2024-08-06T09:31:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7492,6 +7492,9 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185579
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication.com/adsbygoogle.js,domain=arahdrive.com,important,xmlhttprequest,script
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=arahdrive.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185371
 whatsafterthemovie.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185379
@@ -29216,8 +29219,8 @@ birminghammail.co.uk##+js(set-constant, chameleonVideo.adDisabledRequested, true
 hentaiworld.tv##+js(window.open-defuser, hyenadata)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184560
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135825
-turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(no-setTimeout-if, window.open)
-turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(set-constant, premium, '')
+javggvideo.xyz,turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(no-setTimeout-if, window.open)
+javggvideo.xyz,turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(set-constant, premium, '')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135902
 mega4upload.com##+js(remove-attr, onclick, #direct_link > a[onclick])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135953
@@ -32979,6 +32982,8 @@ neowin.net#$#div[class^="banner-"] { height: 0!important; min-height: 0!importan
 ! /asset/jquery/slim-3.2.min.js$domain=avple.video|javhdfree.icu|nekolink.site|mambast.tk|netflav.com|fembed-hd.com|ndrama.xyz|pornhole.club|ffem.club|jvembed.com|dzmdplay.xyz|jav247.top|yuistream.xyz|javfu.net|iframe2videos.xyz|viplayer.cc|watchjavnow.xyz|cdn-myhdjav.info|embed-media.com|fembed9hd.com|cloudrls.com|vidgo.top
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185532
+! Example: https://sheegiwo.com/tag.min.js
 ! ex. https://jzjj.jeoawamjbbzjy.top/kljyjjeajazry/mevjvz?d=1
 /^https:\/\/[a-z]{3,5}\.[a-z]{10,14}\.top\/[a-z]{10,16}\/[a-z]{5,6}(?:\?d=\d)?$/$script,third-party,match-case
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182734
@@ -36931,7 +36936,7 @@ meracalculator.com##.mt-md-3  >.col-12
 meracalculator.com##.col-sm-12 > div[style^="min-height:"]
 ||timesnownews.com/dfpamzn.js
 timesnownews.com##._1ML8q
-fastupload.io,video.hizliresim.com##.vr-adv-unit
+arahdrive.com,fastupload.io,video.hizliresim.com##.vr-adv-unit
 ||kisscartoon.*/api/pop*.php
 businessgreen.com##.notice-slot-full-below-header
 alternativeto.net##div[style^="min-height:114px;background-color:"]
@@ -51194,8 +51199,9 @@ charismanews.com###articles > article.article:has(> div.contentBoxWrap a[href^="
 charismanews.com#$##headerAreaWrap { height: 180px !important; }
 !
 ! check-host.net
-check-host.net##.rn-elative
-check-host.net#?#a:contains(/[ÉéE][Zz][Aa]|[hH][oO][rR]|[lL][eE][xX]|[𝅺]/):upward(3)
+check-host.net#?#*[class*="extra-"]:upward(4)
+check-host.net##.rm-elative
+check-host.net#?#a:contains(/[Éé]|[xX][hH][oO]|[Oo][fF][fF]|[𝅺]/):upward(3)
 !
 ! quora.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149846

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: gmHPRBXRvmvAmsnOcsk/GQ
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1722933436-3600.patch
+! Checksum: QXbh+Kp6YWMu4eOmLYFn7g
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1722937051-3600.patch
 ! Title: AdGuard Base filter + EasyList (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.47.11
-! TimeUpdated: 2024-08-06T08:31:33+00:00
+! Version: 2.3.47.12
+! TimeUpdated: 2024-08-06T09:31:30+00:00
 ! Expires: 5 days (update frequency)
 ||bogus-disk.com^
 ||jeoawamjbbzjy.top^
@@ -1912,6 +1912,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 #@#.ads_banner
 ##.stickyads:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"]):not(:empty)
 ##.ads_banner:not([style^="width: 32px"], [style^="width: 33px"])
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication.com/adsbygoogle.js,domain=arahdrive.com,important,xmlhttprequest,script
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=arahdrive.com
 whatsafterthemovie.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 luluvdo.com##+js(abort-on-property-read, showADBOverlay)
 rule34porn.net##+js(no-fetch-if, magsrv.com)
@@ -8363,8 +8365,8 @@ videobin.co##+js(set-cookie, overlay, true)
 videobin.co##+js(abort-current-script, document.attachEvent, initBCPopunder)
 birminghammail.co.uk##+js(set-constant, chameleonVideo.adDisabledRequested, true)
 hentaiworld.tv##+js(window.open-defuser, hyenadata)
-turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(no-setTimeout-if, window.open)
-turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(set-constant, premium, '')
+javggvideo.xyz,turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(no-setTimeout-if, window.open)
+javggvideo.xyz,turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com##+js(set-constant, premium, '')
 mega4upload.com##+js(remove-attr, onclick, #direct_link > a[onclick])
 igg-games.com##+js(set-constant, advanced_ads_ready, noopFunc)
 mpgun.com##+js(window.open-defuser)
@@ -11000,6 +11002,7 @@ data-load.in##.p-body-pageContent > center > a[target="_blank"]
 ||ccp.digitaltrends.com/go/ccp/products/*/offers
 modfyp.com,prothomalo.com##body .adsBox
 science.org##body .adplaceholder
+arahdrive.com,fastupload.io,video.hizliresim.com##.vr-adv-unit
 12tomatoes.com##.sheknows-infuse-ad-callout
 economictimes.indiatimes.com###budgetAd
 777score.com##.target-payload
@@ -12811,8 +12814,9 @@ mmtv01.xyz##+js(no-setTimeout-if, window.open)
 mmtv01.xyz##+js(set-constant, premium, '')
 7mmtv.sx##+js(window.open-defuser)
 7mm003.cc,7mmtv.sx##body .set_height_250
-check-host.net##.rn-elative
-check-host.net#?#a:contains(/[ÉéE][Zz][Aa]|[hH][oO][rR]|[lL][eE][xX]|[𝅺]/):upward(3)
+check-host.net#?#*[class*="extra-"]:upward(4)
+check-host.net##.rm-elative
+check-host.net#?#a:contains(/[Éé]|[xX][hH][oO]|[Oo][fF][fF]|[𝅺]/):upward(3)
 quora.com#?#.qu-pb--medium > .q-box.qu-borderAll:has(> .q-box > .qu-py--small > .q-box > div[id^="div-gpt-"])
 quora.com#?#.q-box[style^="box-sizing:"] > div.q-box:has(> span[data-nosnippet="true"] > div.q-box[style="display: none !important;"])
 it.quora.com#?#.q-box > div:has(> div.q-box > div[style="box-sizing: border-box; display: flex; flex: 1 1 0%;"] > div:contains(Annuncio))
@@ -29173,6 +29177,7 @@ graziadaily.co.uk##.adContainer--inline
 hellomagazine.com##.adContainerClass_acvudum
 bramptonguardian.com,guelphmercury.com,insideottawavalley.com,niagarafallsreview.ca,niagarathisweek.com,thepeterboroughexaminer.com,therecord.com,thespec.com,thestar.com,wellandtribune.ca##.adLabelWrapper
 bramptonguardian.com,insideottawavalley.com,niagarafallsreview.ca,thepeterboroughexaminer.com,therecord.com,thestar.com,wellandtribune.ca##.adLabelWrapperManual
+cosmopolitan.in##.adMainWrp
 drive.com.au##.adSpacing_drive-ad-spacing__HdaBg
 forecast7.com##.ad[align="center"]
 indy100.com##.ad_300x250
@@ -29200,6 +29205,7 @@ moneycontrol.com##.add-spot
 ndtv.com##.add-wrp
 ndtv.com##.add__txt
 harpersbazaar.in##.add_box
+bridestoday.in##.add_container
 harpersbazaar.in##.add_wrapper
 nesabamedia.com##.adfullwrap
 auto-data.net##.adin
@@ -29218,6 +29224,7 @@ vccircle.com##.ads_ads__qsWIu
 collegedunia.com##.ads_body_ad_code_container
 harvardmagazine.com##.adsbygoogle-block
 gayvegas.com,looktothestars.org,nintandbox.net,plurk.com,rockpasta.com,thebarentsobserver.com,tolonews.com,webtor.io##.adsense
+cosmopolitan.in,indiatodayne.in,miamitodaynews.com##.adtext
 cooking.nytimes.com##.adunit_ad-unit__IhpkS
 ansamed.info,baltic-course.com,futbol24.com,gatewaynews.co.za,gsmarena.com,gulfnews.com,idealista.com,jetphotos.com,karger.com,mangaku.vip,maritimejobs.com,newagebd.net,prohaircut.com,railcolornews.com,titter.com,zbani.com##.adv
 48hills.org,audiobacon.net,bhamnow.com,clevercreations.org,cnaw2news.com,coinedition.com,coinquora.com,creativecow.net,elements.visualcapitalist.com,forexcracked.com,iconeye.com,kdnuggets.com,laprensalatina.com,londonnewsonline.co.uk,manageditmag.co.uk,mondoweiss.net,ottverse.com,overclock3d.net,smallarmsreview.com,sportsspectrum.com,sundayworld.co.za,tampabayparenting.com,theaudiophileman.com##.adv-link
