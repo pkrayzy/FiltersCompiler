@@ -1,17 +1,15 @@
-! Checksum: dAcmCR7L11ZToFuoYJkpOA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1722906368-14400.patch
+! Checksum: p7nrsR5tRMfiKjKwIY+GMA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1722920753-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.14.74
-! TimeUpdated: 2024-08-06T01:02:00+00:00
+! Version: 2.0.14.75
+! TimeUpdated: 2024-08-06T05:01:57+00:00
 ! Expires: 12 hours (update frequency)
 ###smart-banner
 ###smartbanner
 ##.app-banner:not(html,body,:empty)
 ##.app-btn:not(html,body,:empty)
 ##.app-download:not(html,body,section,.content)
-##.app-nag-body:not(html,body,:empty)
-##.app-nag:not(html,body,:empty)
 ##.AppBanner:not(html,body,:empty)
 ##.download-app-banner:not(html,body,:empty)
 ##.download-app:not(html,body,:empty)
@@ -102,6 +100,8 @@ drivereasy.com#?#.pakb-content img[sizes^="(max-width: 79"]
 drivereasy.com#?#.pakb-content figcaption:has-text(for free if you like)
 drivereasy.com#?#.pakb-content p:has-text(click Update All)
 cfoc.org###top_custom_banner
+sensorstechforum.com##center:has([href="https://www.enigmasoftware.com/spyhunter5-eula/"])
+sensorstechforum.com###win_top_new_hidden
 windowsreport.com##div[class^=restoro-download] + section
 appuals.com##p + div > div:first-of-type
 ||driver-soft.com^$document
@@ -756,7 +756,6 @@ coolrom.com.au,coolrom.com##.download_link
 !+ PLATFORM(windows, mac, android)
 209.141.51.49$network
 ||agacelebir.com^$all
-||alpidoveon.com^$all
 ||beklefkiom.com^$all
 ||benoopto.com^$all
 ||betotodilea.com^$all
@@ -887,7 +886,7 @@ coolrom.com.au,coolrom.com##.download_link
 ||banquetunarmedgrater.com^$all
 ||entreatyfungusgaily.com^$all
 ||highcpmrevenuegate.com^$all
-||techniciancocoon.com^$all
+||influxgodless.com^$all
 ||unseenreport.com^$all
 ||variedslimecloset.com^$all
 ||varycares.com^$all
@@ -958,7 +957,6 @@ coolrom.com.au,coolrom.com##.download_link
 ||recipientpopulationregret.com^$all
 ||roundspaniardindefinitely.com^$all
 ||temperaturetwit.com^$all
-||tobaccosturgeon.com^$all
 ||unfairgenelullaby.com^$all
 ||vendingboatsunbutton.com^$all
 !+ PLATFORM(windows, mac, android)
@@ -2519,7 +2517,7 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ~chess.com##button[data-share-url]
 ##button[title^="Share this "]
 ##div[button=share]
-##div[class$=-sticky-share]
+##div[class$=-sticky-share]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=post-with-stick])
 ##div[class*=_share_button]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##div[class*=addthis]
 ##div[class*=article-share]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-article-share])
@@ -2539,7 +2537,6 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ##span[class*=-social-share-]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##span[class*=share-icon]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##span[class^=share_btn]
-##span[data-lnkd-debug]
 ##ul[class*=-share-buttons]
 */images/share_icons/
 */images/social-share/
@@ -2672,6 +2669,8 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ##div[class*=social-share]:not([preload],[class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-social-share])
 ##a[class*=social-share]:not([preload],[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.react-share__ShareButton:not(body,html,:empty)
+##button.btn-twitter-liveblog
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##button.btn-facebook-liveblog
 ##[class*=socialshare i]:not(html,body,article,[class*=body i],[id*=body i])
 ~kjokkenskriveren.no##[class*=ShareButton i]:not(button,body,html,article,[class*=body i],[id*=body i])
 pixivision.net##._floated-bottom-bar
@@ -2844,7 +2843,6 @@ jd.com###J_mobile
 map.baidu.com##.poi-ads
 map.baidu.com###leadDownloadCard
 mi.com##.item-image.item
-qunar.com##.q_header_app_logo
 qyer.com##.advertising
 secure.booking.com##.modal-mask
 secure.booking.com##.modal-wrapper
@@ -2988,8 +2986,6 @@ delfi.lt#%#//scriptlet('ubo-aeld.js', 'copy')
 /secure-copy-content-protection-public.css^$stylesheet
 niskevesti.rs$$script[tag-content="ays_tooltip"][max-length="262144"]
 niskevesti.rs#$#:not(input):not(textarea)::selection { background-color: #B4D5FFA0 !important }
-niskevesti.rs#$?#style:not([class],[id]) { remove: true; }
-||niskevesti.rs^$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:
 dropgalaxy.*#%#//scriptlet('ubo-acs.js', 'document.onkeydown')
 ||jsdelivr.net/npm/disable-devtool$script
 dropgalaxy.*#%#//scriptlet('ubo-acs.js', 'isWesternEuropeanTimezone')
@@ -3305,6 +3301,7 @@ $removeparam=impradid
 $removeparam=impradname
 $removeparam=cm_type
 Ref=CJ^$document,removeparam=ref
+ref=awin^$document,removeparam=ref
 $document,removeparam=/^source=cj$/
 $document,removeparam=/^source=awin$/i
 $removeparam=affil
@@ -3348,7 +3345,6 @@ $removeparam=otracker1
 $removeparam=ft_source
 $removeparam=ft_medium
 $removeparam=ref_source
-$removeparam=ref_medium
 $removeparam=ref_campaign
 $removeparam=spMailingID
 $removeparam=spUserID
@@ -3416,8 +3412,8 @@ $removeparam=cm_ainfo
 $removeparam=cnxclid
 $document,removeparam=/^source=webgains$/
 $document,removeparam=/^kk=\w{6,}-\w{10,}-\w{5,}$/
-$removeparam=sClickID
 $removeparam=paid
+$removeparam=pacid
 $removeparam=adtype
 $removeparam=tmcampid
 $removeparam=s_afcid
@@ -4359,6 +4355,7 @@ $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch
 ||bandcamp.com^$removeparam=search_page_no
 ||bandcamp.com^$removeparam=search_rank
 ||app.slack.com^$removeparam=entry_point
+||nicovideo.jp/comic^$removeparam=track
 ||onenote.com^$removeparam=nf
 ||onenote.com^$removeparam=fromAR
 ||adobe.com^$removeparam=mv2
@@ -4473,7 +4470,6 @@ $document,removeparam=bpli,domain=blogger.com
 ||cimri.com^$document,removeparam=hasFavorite
 ref=buffer.com$document,removeparam=ref
 $document,removeparam=af_reengagement_window
-||instagram.com^$document,removeparam=short_redirect
 ||privatbank.ua^$removeparam=visit_id
 ||yandex.com/portal/set/any$removeparam=sk
 ||affiliate.insider.com^$document,removeparam=amazonTrackingID
@@ -4512,8 +4508,6 @@ $removeparam=sjdu,domain=indeed.com
 $document,removeparam=bb,domain=indeed.com
 $document,removeparam=pub,domain=indeed.com
 $document,removeparam=jsa,domain=indeed.com
-$document,removeparam=oc,domain=indeed.com
-$document,removeparam=sal,domain=indeed.com
 $document,removeparam=vjk,domain=indeed.com
 $document,removeparam=fvj,domain=indeed.com
 ||bp.blogspot.com^$removeparam=/^r[hn].*$/
@@ -4547,7 +4541,6 @@ $document,removeparam=s_campaign
 ||www.roblox.com^$removeparam=gameSearchSessionInfo
 $document,removeparam=entrypoint,domain=bing.com
 ||sky.it^$document,removeparam=social
-||landevei.no^$removeparam=email
 ref=producthunt$document,removeparam=ref
 $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
