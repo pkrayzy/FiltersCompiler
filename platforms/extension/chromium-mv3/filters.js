@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.53.78",
-			"timeUpdated": "2024-08-07T01:01:20+0000",
+			"version": "2.1.53.79",
+			"timeUpdated": "2024-08-07T05:01:14+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.53.77",
-			"timeUpdated": "2024-08-07T01:01:21+0000",
+			"version": "2.1.53.78",
+			"timeUpdated": "2024-08-07T05:01:14+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.31.7",
-			"timeUpdated": "2024-08-06T13:01:34+0000",
+			"version": "2.0.31.8",
+			"timeUpdated": "2024-08-07T05:01:29+0000",
 			"languages": [
 				"vi"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.47.9",
-			"timeUpdated": "2024-08-07T01:02:04+0000",
+			"version": "2.0.47.10",
+			"timeUpdated": "2024-08-07T05:01:55+0000",
 			"languages": [
 				"hi"
 			],
@@ -1374,8 +1374,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.26",
-			"timeUpdated": "2024-08-06T05:02:00+0000",
+			"version": "2.0.1.27",
+			"timeUpdated": "2024-08-07T05:01:56+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1393,8 +1393,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.65",
-			"timeUpdated": "2024-08-06T21:02:03+0000",
+			"version": "2.0.2.66",
+			"timeUpdated": "2024-08-07T05:01:57+0000",
 			"languages": [],
 			"tags": [
 				4
