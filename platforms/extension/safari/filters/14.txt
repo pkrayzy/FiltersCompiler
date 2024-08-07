@@ -1,9 +1,9 @@
-! Checksum: e9iCxJze/XbYzimvTBg2JA
-! Diff-Path: ../patches/14/14-s-1723019849-3600.patch
+! Checksum: a7vXsCcxXhkFcuB/uiCqvA
+! Diff-Path: ../patches/14/14-s-1723023474-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.46
-! TimeUpdated: 2024-08-07T08:33:37+00:00
+! Version: 2.2.4.47
+! TimeUpdated: 2024-08-07T09:34:11+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2454,6 +2454,7 @@ communityfibre.co.uk,foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.d
 !
 ! NOTE: Regular rules
 !
+myhome.ge###CookieAgreement
 govx.com##footer + div:has(> div[class^="jss"] > div[class^="jss"] > a[href="/privacyinfo#useOfCookies"])
 ||benq.eu/apps/*/clientlibs/clientlib-site/components/*-cookie*bar.min.
 benq.eu#$#body { overflow-y: auto !important; }
@@ -15076,6 +15077,7 @@ nonsolocap.it#%#//scriptlet("set-constant", "cookieChoices.showCookieConsent", "
 romeo.com#%#//scriptlet('set-local-storage-item', 'cookiesConsent', '1')
 bk-licht.eu,shirtlabor.de,vanlaack.com#%#//scriptlet("set-cookie", "cookie-preference", "1")
 boohooman.com#%#document.cookie="dw_cookies_accepted=D; path=/;";
+filmweb.pl#%#//scriptlet('adjust-setTimeout', '[native code]', '2000', '0.001')
 filmweb.pl#%#//scriptlet("set-constant", "rodo.waitForConsent", "noopPromiseResolve")
 filmweb.pl#%#//scriptlet("set-constant", "rodo.validateStoragePurpose", "noopPromiseResolve")
 filmweb.pl#%#//scriptlet("set-constant", "consentManagerIsOn", "false")
@@ -24025,6 +24027,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+itselect.itmedia.co.jp##.footer-cv
 themoscowtimes.com##.contribute-stickybottom
 cyberghostvpn.com#%#//scriptlet("abort-current-inline-script", "eiDisplayed")
 turbovpn.com##.container > div.daily-popup.show-daily-popup
@@ -32237,6 +32240,10 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+home.ss.ge##main div#listing-search-subscribe
+te-st.org##.subscribe-l
+goodnewsnetwork.org##.mrf-newsletter
+goodnewsnetwork.org##.wpb_widgetised_column > div.wpb_wrapper > aside.widget_text:has(> div.textwidget > form.af-form-wrapper)
 luciferdonghua.in#?##sidebar > div.widget_text:has(> div.releases > h3:contains(/WhatsApp|Telegram/))
 luciferdonghua.in##.mvelement > div.announ:has(a.telegramim_button)
 journal.tinkoff.ru#?#div[class^="_articleView_"] > div[class^="_container_"]:has(> div[class^="_banner_"] > div[class^="_root_"] > div[class^="_footer_"] > div[class] > button:contains(Подписаться))
@@ -34893,8 +34900,8 @@ wonderzine.com,furfur.me###subscription_digest
 bilyayivka.city,thegard.city##.mc-google-news-link
 mlyn.by##.wp-block-quote
 lnews.jp,ryutsuu.biz##.sp-btn-mail-magazine
-te-st.ru##.subscribe-l
-te-st.ru##.tst-entry-newsletter
+te-st.org,te-st.ru##.subscribe-l
+te-st.org,te-st.ru##.tst-entry-newsletter
 heise.de##a-sticky-footer[data-component="StickyFooter"].group-open > *
 wikihow.it,wikihow.com,wikihow.jp###rr_newsletter
 news.mydrivers.com###news_guanzhu
@@ -53358,7 +53365,7 @@ ssimas72.blog.jp##div[style^="width:990px;height:300px;"]
 tokimeki-s.com,rabitsokuhou.2chblog.jp###rss
 xn--gmq92kd2rm1kx34a.com###rssrole
 vtuber-matomeblog.com###custom_html-44
-kijyomatome.com###top-rss
+vtuber-matomeblog.com,kijyomatome.com###top-rss
 kijomatomelog.com,kijyomatome.com##.ga-rss
 meshinews.blog.jp###rsstop
 meshinews.blog.jp##.article-sub-popular
