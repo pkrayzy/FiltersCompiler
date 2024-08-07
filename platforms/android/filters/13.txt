@@ -1,9 +1,9 @@
-! Checksum: pyX/E0GE8LVyXRcoDz/jMA
-! Diff-Path: ../patches/13/13-s-1723037837-3600.patch
+! Checksum: 4idp9qpt5Y0M/6Tb+4siSQ
+! Diff-Path: ../patches/13/13-s-1723041481-3600.patch
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.52.68
-! TimeUpdated: 2024-08-07T13:33:52+00:00
+! Version: 2.0.52.69
+! TimeUpdated: 2024-08-07T14:34:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -747,6 +747,8 @@ dizipal700.com,dizipal701.com,dizipal702.com,dizipal703.com,dizipal704.com,dizip
 ##.fuck-ivr
 ##.fuck-ivr ~ p[style^="background-color:"]
 !
+###footer_fad
+##.play_ust_txt
 ##.g-title > div.containerAds
 ##.pageskin > div.mbl_psc
 ##div[class^="menu_alti_reklam"]
@@ -968,13 +970,6 @@ dizikral.com#%#//scriptlet('trusted-replace-node-text', 'script', 'manageAds', '
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177389
 dizigom1.tv#%#//scriptlet('prevent-setTimeout', '/img[\s\S]*?\.gif/')
 dizigom1.tv#%#//scriptlet('abort-current-inline-script', 'document.write', '_blank')
-! https://github.com/AdguardTeam/AdguardFilters/issues/182211
-! https://github.com/AdguardTeam/AdguardFilters/issues/177159
-! https://github.com/AdguardTeam/AdguardFilters/issues/174577
-! https://github.com/AdguardTeam/AdguardFilters/issues/173741
-fullhdfilmizletv.*,filmizletv.*,filmizlehdfilm.com,hdfilmcehennemi.*,hdfilmizlesene.org#%#//scriptlet('set-constant', 'reklamsayisi', '1')
-fullhdfilmizletv.*,filmizletv.*,filmizlehdfilm.com,hdfilmcehennemi.*,hdfilmizlesene.org#%#//scriptlet('adjust-setInterval', 'sec--', '*', '0.001')
-fullhdfilmizletv.*,filmizletv.*,filmizlehdfilm.com,hdfilmcehennemi.*,hdfilmizlesene.org#%#//scriptlet('trusted-replace-node-text', 'script', 'var checkReady', 'var checkReady', 'try{window.parent.ilk_part_getir();}catch(ex){};var checkReady')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178808
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171861
 filmizlehdizle.com,fullfilmizlesene.net#%#//scriptlet('set-constant', 'app.ads', 'emptyObj')
@@ -1803,8 +1798,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+fullfilmizle.cc#$#body { margin-top: 0 !important; background-image: none !important; }
 ||hdfilmcix.org/Hdfilmcix-pop.js
-||hdfilmcix.org/*.mp4
 hdfilmcix.org###reklamCode
 erotikhdfilmx3.shop#%#//scriptlet('abort-on-property-write', 'getLink')
 koinfinans.com#$#.fixed-header-promo { display: none !important; }
@@ -2528,11 +2523,6 @@ ensonhaber.com###top-adbar
 ensonhaber.com##.esx-home-mansetalt
 ||dizilost.com/popunderxx.js
 turkiyegazetesi.com.tr###random-ads
-.mp4$~third-party,domain=filmizletv.*|fullhdfilmizletv.*
-filmizletv.cx,fullhdfilmizletv.*##.video_content > a[target="_blank"]
-fullhdfilmizletv.*,filmizletv.*,filmizlehdfilm.com,sinema.cx,fullhdfilmizle.*##div[class^="r_header_"]
-fullhdfilmizletv.*,filmizletv.*,filmizlehdfilm.com,hdfilmcehennemi.*,hdfilmizlesene.org,fullhdfilm.pro,fullhdfilmizle.*###footer_fad
-filmizletv.*##.play_ust_txt
 n11.com##.header-banner-cover
 search.donanimhaber.com###searchForm > .bottomcontainer > #products
 trdoktor.com##a[href^="core.php?ajax=reklam_say"]
@@ -5508,6 +5498,14 @@ isguc.org##td[width="200"] a[target="_blank"] img[width="200"][alt]
 ||ulasimonline.com/*/banner/
 ||vidout.net/vidoutMedia/ads/
 ||bolununsesi.com/ilangorsel/
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/173741
+.mp4$~third-party,domain=filmizlehdfilm.com|filmizletv.*|fullfilmizle.*|fullfilmizle.cc|fullhdfilmizle.*|fullhdfilmizletv.*|hdfilmcehennemi.*|hdfilmcix.org|hdfilmizlesene.org|sinema.cx
+filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullfilmizle.cc,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcehennemi.*,hdfilmcix.org,hdfilmizlesene.org,sinema.cx##.video_content > a[target="_blank"]
+filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullfilmizle.cc,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcehennemi.*,hdfilmcix.org,hdfilmizlesene.org,sinema.cx##div[class^="r_header_"]
+filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullfilmizle.cc,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcehennemi.*,hdfilmcix.org,hdfilmizlesene.org,sinema.cx#%#//scriptlet('set-constant', 'reklamsayisi', '1')
+filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullfilmizle.cc,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcehennemi.*,hdfilmcix.org,hdfilmizlesene.org,sinema.cx#%#//scriptlet('adjust-setInterval', 'sec--', '*', '0.001')
+filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullfilmizle.cc,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcehennemi.*,hdfilmcix.org,hdfilmizlesene.org,sinema.cx#%#//scriptlet('trusted-replace-node-text', 'script', 'var checkReady', 'var checkReady', 'try{window.parent.ilk_part_getir();}catch(ex){};var checkReady')
 !
 ! yabancidizi - frequently changed domains
 yabancidizi.*#%#//scriptlet("adjust-setInterval", "timeleft", "*", "0.02")

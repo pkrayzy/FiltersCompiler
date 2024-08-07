@@ -1,9 +1,9 @@
-! Checksum: gt+1X4oYAHzA5s0SDH7opA
-! Diff-Path: ../patches/13/13-s-1723037842-3600.patch
+! Checksum: TI5X6IA8FDwAPTH1OjxAEg
+! Diff-Path: ../patches/13/13-s-1723041486-3600.patch
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.52.68
-! TimeUpdated: 2024-08-07T13:33:52+00:00
+! Version: 2.0.52.69
+! TimeUpdated: 2024-08-07T14:34:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -748,6 +748,8 @@ baho.com.tr#$#.adsmd { height: 1px!important; }
 ##.fuck-ivr
 ##.fuck-ivr ~ p[style^="background-color:"]
 !
+###footer_fad
+##.play_ust_txt
 ##.g-title > div.containerAds
 ##.pageskin > div.mbl_psc
 ##div[class^="menu_alti_reklam"]
@@ -950,10 +952,6 @@ baho.com.tr#$#.adsmd { height: 1px!important; }
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179591
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177389
-! https://github.com/AdguardTeam/AdguardFilters/issues/182211
-! https://github.com/AdguardTeam/AdguardFilters/issues/177159
-! https://github.com/AdguardTeam/AdguardFilters/issues/174577
-! https://github.com/AdguardTeam/AdguardFilters/issues/173741
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178808
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171861
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172168
@@ -1636,8 +1634,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 ! Sometimes some images do not load if above request is blocked, redirect rule fixes it
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+fullfilmizle.cc#$#body { margin-top: 0 !important; background-image: none !important; }
 ||hdfilmcix.org/Hdfilmcix-pop.js
-||hdfilmcix.org/*.mp4
 hdfilmcix.org###reklamCode
 koinfinans.com#$#.fixed-header-promo { display: none !important; }
 koinfinans.com#$##main { margin-top: 0px !important; }
@@ -2198,11 +2196,6 @@ ensonhaber.com###top-adbar
 ensonhaber.com##.esx-home-mansetalt
 ||dizilost.com/popunderxx.js
 turkiyegazetesi.com.tr###random-ads
-.mp4$~third-party,domain=filmizletv.*|fullhdfilmizletv.*
-filmizletv.cx,fullhdfilmizletv.*##.video_content > a[target="_blank"]
-fullhdfilmizletv.*,filmizletv.*,filmizlehdfilm.com,sinema.cx,fullhdfilmizle.*##div[class^="r_header_"]
-fullhdfilmizletv.*,filmizletv.*,filmizlehdfilm.com,hdfilmcehennemi.*,hdfilmizlesene.org,fullhdfilm.pro,fullhdfilmizle.*###footer_fad
-filmizletv.*##.play_ust_txt
 n11.com##.header-banner-cover
 search.donanimhaber.com###searchForm > .bottomcontainer > #products
 trdoktor.com##a[href^="core.php?ajax=reklam_say"]
@@ -5175,6 +5168,11 @@ isguc.org##td[width="200"] a[target="_blank"] img[width="200"][alt]
 ||ulasimonline.com/*/banner/
 ||vidout.net/vidoutMedia/ads/
 ||bolununsesi.com/ilangorsel/
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/173741
+.mp4$~third-party,domain=filmizlehdfilm.com|filmizletv.*|fullfilmizle.*|fullfilmizle.cc|fullhdfilmizle.*|fullhdfilmizletv.*|hdfilmcehennemi.*|hdfilmcix.org|hdfilmizlesene.org|sinema.cx
+filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullfilmizle.cc,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcehennemi.*,hdfilmcix.org,hdfilmizlesene.org,sinema.cx##.video_content > a[target="_blank"]
+filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullfilmizle.cc,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcehennemi.*,hdfilmcix.org,hdfilmizlesene.org,sinema.cx##div[class^="r_header_"]
 !
 ! yabancidizi - frequently changed domains
 yabancidizi.*#$#body > main#wrapper { margin-top: 0 !important; }
