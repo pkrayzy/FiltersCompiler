@@ -1,5 +1,5 @@
-! Checksum: pqq6HKdrFm4H63/441rS0Q
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1722911805-3600.patch
+! Checksum: TAR1XJb5zJqpCtiEI+261A
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1722998208-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.43.4
@@ -477,7 +477,6 @@ onvista.de#@##SMART_BILLBOARD
 onvista.de#%#//scriptlet("set-constant", "window.ovHasAdBlocker", "false")
 sportdeutschland.tv#%#//scriptlet('set-constant', 'IOMm', 'noopFunc')
 @@||sportdeutschland.tv/assets/ads.js
-@@||news-und-nachrichten.de/js/_advertisement.js
 ||sinoptik.de/js/*/concat.min.js$replace=/(document\.createElement\("script"\)\)\.textContent=')[\s\S]*?(zmctrack|ShadowRoot)[\s\S]*?('\,)/\$1\$3/,domain=sinoptik.de
 zappn.tv#%#!function(){window.somtag={cmd:function(){}};}();
 raidrush.net#%#//scriptlet("prevent-setTimeout", "window.getComputedStyle(el)")
@@ -752,7 +751,6 @@ mydealz.de##.listLayout-main > div:not([id], [class])
 [$path=/forum]heise.de###bottom-up ~ .a-layout:has(> div[data-append-outbrain])
 [$path=/forum]heise.de###bottom-up ~ .a-layout:has(> .a-layout__container:only-child > .a-layout__item:only-child > .ad-label)
 mopo.de#?#div[data-tb-region-item]:has(> .main-preview__content > .main-preview__tags > .main-preview__tags-item > a:contains(Anzeige))
-jolie.de##article:has(> .teaser__media > .teaser__adtype)
 weltwoche.de##div[id^="werbung"]
 weltwoche.de##div[class^="werbung"]
 forum.pcgames.de###bannerWrap
@@ -1023,6 +1021,7 @@ plastverarbeiter.de,neue-verpackung.de##div[class*="adrow_"]
 baby-vornamen.de##div[class*="ad--content-"]
 windows-faq.de##.etad
 manager-magazin.de##section[data-app-hidden] > .w-full:empty
+krautundrueben.de##div[id^="block-billboard"]
 sport.de##div[id^="superbanner"]
 sport.de##.MoltenBundle
 kleinezeitung.at##.js-ad + .t-label-s
@@ -1443,6 +1442,7 @@ techstage.de##div[class^="heise-ad"]
 desired.de##body > div[id][class]:empty
 raidrush.net###top_ga
 raidrush.net###foot_ga
+pcgames.de##.centerRectad
 focus.de###top-banner
 focus.de##div[class*="cls_slot_"]
 file-upload.net###dwdiv2-ads
@@ -1529,6 +1529,7 @@ amazon.de##div[data-cel-widget*="desktop-dp-sims_SponsoredProductsSims"]
 ecomento.de##.external-ad
 faz.net##.ctn-PlaceholderBox-is-in-article-text-right
 manager-magazin.de,spiegel.de##div[data-advertisement]
+||slashcam.de/images/basic/anzeige_aufweiss.gif
 n-land.de##.asdf
 motor-talk.de##div[id^="div-gpt"]
 chefkoch.de##div[amp-access^="NOT hasPaid"]
@@ -1710,6 +1711,7 @@ donnerwetter.de##.prepend-top > .block-content > div[style="font-size: 60%; colo
 ||chip.de/*/img/deals/CHIP_Software_Deals_
 1erforum.de###logoBlock > div.pageWidth > div[id="oc24_container_top"]
 tagesspiegel.de##div[id^="iqadtile"]
+sozialversicherung-kompetent.de,deutsche-porn.com,techbook.de,lr-online.de,stylebook.de,fitbook.de,travelbook.de##.ads
 autobild.de,travelbook.de##a[href^="https://secure.adnxs.com"]
 haustechnikdialog.de##.webspot
 haustechnikdialog.de##.advertouter
@@ -1859,6 +1861,7 @@ wallstreet-online.de##body > #siteteaser
 wallstreet-online.de##.newsFlagSlider
 wallstreet-online.de###mooTickerContainer
 winfuture-forum.de##.ExtraPostBlock > div[class$="post_block hentry clear"]
+deutschland-in-zahlen.de##.werbung_oben
 deutschland-in-zahlen.de##div[style*="font-size:10px;margin-top:1px"]
 transfermarkt.de##div[style="margin-top:20px;"] > div.fl
 businessinsider.de#?#.sponsored:has(> .teaser-post__inner > .teaser-post__header .list-labels__item > .post-term-label:contains(Anzeige))
@@ -2307,6 +2310,7 @@ _werbung.php
 ###startwerbung
 ###topwerbung
 ###werb11
+###werbeanzeige
 ###werbebanner
 ###werbeblock
 ###werbeflaeche
@@ -2372,7 +2376,6 @@ _werbung.php
 ##.werbung2
 ##.werbung3
 ##.werbung301
-##.werbung970x250
 ##.werbungContainer
 ##.werbung_300x250
 ##.werbung_banner
@@ -2687,7 +2690,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||docma.info/wp-content/banners/
 ||drehscheibe-online.de/ds_cms/banner/
 ||druckerchannel.de/script/dc/ofr_single.php
-||dtb.de/fileadmin/user_upload/dtb.de/Sponsoren/
 ||dubisthalle.de/wp-content/uploads/*_300x300_
 ||dubisthalle.de/wp-content/uploads/*_banner_
 ||egun.de/market/images/banner/
@@ -2937,6 +2939,8 @@ tips.at###Leaderboard_1_Superbanner_1_Billboard_1_Top_
 teltarif.de###LxShop
 mtb-news.de###MTB_M_ROS_Sticky
 bauexpertenforum.de,elektrikforen.de,megane-board.de,windows-7-forum.net###MidRectangle
+seo-suedwest.de###Mod373
+seo-suedwest.de###Mod416
 netmoms.de###R1C2
 netmoms.de###R1C3
 wiesbaden.de###SP-commercials
@@ -3246,7 +3250,6 @@ smartdroid.de##.advorp1
 erf.de,greenbyte.ch,rtl.de##.adwrapper
 rtl.de##.adwrapper--mobile
 fitbook.de,myhomebook.de,stylebook.de,techbook.de,travelbook.de##.affiliate-amex
-pcgames.de##.affiliateBelowArticle
 t-online.de##.afl-widget-root
 nachbelichtet.com##.ai-track
 nextpit.de##.al-amazon
@@ -3329,11 +3332,12 @@ suedostschweiz.ch##.block-np8-audienzz
 computerbase.de##.block1--banner
 computerbase.de##.block1--skyscraper
 oberberg-aktuell.de##.bnrad
-gesundheit.de,onmeda.de##.box--ad
 wetter.at##.box.contentBoard.default.highlights
 schiene.de##.box.w300.h250.mb40
 liveticker.com##.boxOverContent
 xmedia-recode.de##.box_banner-container
+offroadforen.de##.boxesBottom
+offroadforen.de##.boxgenericBox41
 msxfaq.de##.boxjob
 koerperverletzung.com,scheidung.org,urheberrecht.de##.brave_popup
 boersennews.de##.btn-smartbroker
@@ -3384,6 +3388,7 @@ finanzen.net##.cpg_incontent2-container
 daswetter.com##.creatividad
 douglas.de##.criteo-product-carousel
 filmstreaming-de.life##.custom-ban-wrap
+boerse-express.com##.custom-bexad
 ingolstadt-today.de,mittelbayerische.de##.d-sm-block
 unnuetzes.com##.da-container
 unnuetzes.com##.da-container-sky
@@ -3423,6 +3428,7 @@ toyota-forum.de##.fh-sidebar.block > .block-container
 rewe.de##.flagship-container
 kleinezeitung.at##.flex.justify-center.mx-auto.hidden.lg\:flex.lg\:mb-4.lg\:pb-4
 tvinfo.de##.floatLeft[style="padding:10px;"]
+seo-suedwest.de##.fnet-banner
 deutschepornos.co,erotik-sexvideos.com,geilesexclips.com,gratis-sex-videos.net,gratisfickvideos.net,kostenlose-sexvideos.biz,sexfilmetube.net,sexkostenlos.biz,xhamsterdeutsch.xyz##.footer-dingens
 hottime.ch##.footer-grey
 ecrbs.redbulls.com,fussball.de##.footer-partner
@@ -3443,6 +3449,7 @@ pr0gramm.com##.gpt
 modernhifi.de##.grey-banner
 modernhifi.de##.grey-banner-bottom
 epd-film.de##.group-externe-links
+seo-suedwest.de##.gruenebox2
 gelbeseiten.de##.gs-searchblock--adContainer
 my-homo.net##.gstsk
 fussballtransfers.com##.gtag
@@ -3451,6 +3458,7 @@ my-homo.net##.gxt_banner
 my-homo.net##.gxt_feed
 qiez.de##.h5v
 helpster.de##.h5v-ad
+hallobuer.ruhr##.hallo-inhalt_2
 pornohut.info##.happy-player-beside
 ak-kurier.de##.hd-banner
 deine-tierwelt.de##.header-leaderboard-container
@@ -3730,6 +3738,7 @@ kunststoffweb.de##.werbeplatzierung-container
 wetter.com##.werbung:not(.toolbar-wrapper)
 winfuture-forum.de##.wf_gcsi
 bikesport-emtb.de,radfahren.de,radsport-rennrad.de##.wide-banner
+1000ps.ch##.wideboard-cad
 nau.ch##.wideboard-top
 aerotelegraph.com##.widget--marktplatz
 gameswirtschaft.de,haus-garten-magazin.de##.widget_aawp_widget_bestseller
