@@ -1,9 +1,9 @@
-! Checksum: S2LxNZUUZ5SnWwiGR/Qu1w
-! Diff-Path: ../patches/14/14-s-1723016211-3600.patch
+! Checksum: 8R2dQPbnPEz9MQ0ZoxFHGQ
+! Diff-Path: ../patches/14/14-s-1723019835-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.45
-! TimeUpdated: 2024-08-07T07:33:31+00:00
+! Version: 2.2.4.46
+! TimeUpdated: 2024-08-07T08:33:37+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7535,10 +7535,10 @@ mirrormedia.mg##.the-gdpr
 cablemonkey.co.uk##.cookie_popup_overlay
 stories.bsh-group.com##.cookies_overlay-wrapper
 oyunfor.com#$#.cookieNotify { position: absolute !important; left: -3000px !important; }
-bsh-group.com#$##cookie-layer { display: none!important; }
-bsh-group.com#$##cookie-overlay { display: none!important; }
-bsh-group.com#$#html { overflow: visible!important; }
-bsh-group.com#$#body { overflow: visible!important; }
+bsh-group.com#$##cookie-layer { display: none !important; }
+bsh-group.com#$##cookie-overlay { display: none !important; }
+bsh-group.com#$#html { overflow: visible !important; }
+bsh-group.com#$#body { overflow-y: visible !important; }
 verivox.de##.usercentrics-bg
 verivox.de##.cmp-container
 cleveroad.com##.bd_l0
@@ -11073,9 +11073,13 @@ thomas-krenn.com##div[data-cookie-policy] + div[class="xtxNavigationOffCanvasOve
 kotex.com.tr##.notification-bar-top-zero
 toloka.yandex.com.tr,oculus.com,messenger.com##div[data-cookiebanner]
 trinityaudio.ai###cookie_toolbar
-siemens-home.bsh-group.com#$#body { overflow: auto !important; }
+siemens-home.bsh-group.com#$#html > body { overflow-y: auto !important; }
 siemens-home.bsh-group.com#$#.cookielaw-modal-layer { display: none!important; }
 siemens-home.bsh-group.com#$#body.cookielaw-blur-background > :not([data-t-decorator="CookieLaw"]) { filter: none!important; }
+siemens-home.bsh-group.com#$#body.pinned .o-headerrebrush { opacity: 1 !important; }
+siemens-home.bsh-group.com#%#//scriptlet('remove-class', 'pinned', 'body.pinned.cookielaw-blur-background')
+siemens-home.bsh-group.com#%#//scriptlet('trusted-click-element', '.cmptxt_btn_yes')
+siemens-home.bsh-group.com#%#//scriptlet('trusted-click-element', '.cookielaw-actions > button.js-accept', '', '1000')
 loccitane.com.tr,erborian.ru,loccitane.ru###cookieslaw
 ups.com###__tealiumImplicitmodal
 play.tv2.dk##div[class^="CookieWarning"]
@@ -15655,6 +15659,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185626
+@@||b.delivery.consentmanager.net/delivery/cmp.php$domain=siemens-home.bsh-group.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185376
 myloview.*#@#.cookiesInfo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185473
@@ -51743,6 +51749,7 @@ surfsees.com#%#//scriptlet("set-constant", "count", "0")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34918
 win10.vn#%#//scriptlet("set-constant", "fiveSecs", "0")
 ! link-to.net - skip timer
+linkvertise.com#%#//scriptlet('trusted-replace-xhr-response', '/"remaining_waiting_time": ?\d+/', '"remaining_waiting_time": 0', '/graphql')
 linkvertise.com,link-to.net#%#!function(){if(-1<window.location.href.indexOf("dynamic?r=")&&!/https?:\/\/(www\.)?h-gen\.xyz\//.test(document.referrer)){var a=location.href.split("?r=");if(a&&a[1])try{window.location=atob(a[1])}catch(b){}}}();
 link-to.net#%#AG_onLoad(function(){if(window.location.href.match(/https?:\/\/link-to\.net\/\d+\//)){var a=document.body.textContent.match(/window\.location\.href = \("([\s\S]*?)"\);/);if(a&&a[1])location=a[1];}});
 linkvertise.com#%#//scriptlet("json-prune", "data.meta.require_addon data.meta.require_video data.meta.require_notifications data.meta.require_og_ads data.meta.require_web data.meta.require_countdown data.meta.require_related_topics data.meta.require_custom_ad_step data.meta.og_ads_offers data.displayAds data.linkCustomAdOffers")
