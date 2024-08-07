@@ -1,9 +1,9 @@
-! Checksum: wtDVUXTKtrxJY6fYUZB8zA
-! Diff-Path: ../patches/237/237-s-1722978360-14400.patch
+! Checksum: NUVZeuhVoj2OKzFVmzDAJQ
+! Diff-Path: ../patches/237/237-s-1723064777-14400.patch
 ! Title: Polish Annoyances Filters
 ! Description: Filter list that hides and blocks pop-ups, widgets, newsletters, push notifications, arrows, tagged internal links that are off-topic, and other irritating elements. Polish GDPR-Cookies Filters is already in it.
-! Version: 1.0.31.76
-! TimeUpdated: 2024-08-06T21:01:49+00:00
+! Version: 1.0.31.77
+! TimeUpdated: 2024-08-07T21:01:58+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: 🇵🇱 Polskie Filtry Elementów Irytujących
@@ -12,8 +12,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego przeciwdziałania komunikatom RODO-Ciasteczkowym wymagana jest lista EasyList Cookie Notices!
 ! Expires: 2 days
-! Last modified: Tue, 06 Aug 2024, 22:31 UTC+02:00
-! OriginalVersion: 2024.8.6.0
+! Last modified: Wed, 07 Aug 2024, 21:30 UTC+02:00
+! OriginalVersion: 2024.8.7.0
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
@@ -22,7 +22,7 @@
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: wto, 06 sie 2024, 22:31 UTC+02:00
+! Aktualizacja: śro, 07 sie 2024, 21:30 UTC+02:00
 !
 !
 ! Newslettery (nie popupy)
@@ -3189,6 +3189,7 @@ zyrtec.pl##.buy-now
 ~pl###ue_popups:lang(pl)
 ~pl##body:not(.x13popup-open) #x13popup-container:lang(pl)
 ~pl##body:not(.x13popup-open) #x13popup-cover:lang(pl)
+~pl##cwc-floating-box[name="newsletterSignupFloatingBox"]:lang(pl)
 pl###dzinga .overlay, #dzinga .popup
 pl###edrone--main--pu--container
 pl###esns_background_layer
@@ -3214,6 +3215,7 @@ pl##.stayMore__container
 pl##.TloPopUpCiemne
 pl##body:not(.x13popup-open) #x13popup-container
 pl##body:not(.x13popup-open) #x13popup-cover
+pl##cwc-floating-box[name="newsletterSignupFloatingBox"]
 !@ <<<<<<<< popupy_ogolne + https://raw.githubusercontent.com/FiltersHeroes/PolishSocialCookiesFiltersDev/master/sections/adblock_social_list/popupy_ogolne.txt
 !
 !
@@ -3663,7 +3665,6 @@ centrum-marino.com,systempartnerski.pl,ubraniadooddania.pl###scroll-up-button
 centrumdom.info##.tm-my-totop-scroller
 centrumxp.pl##.OnTop
 cepik.gov.pl##.btn__scroll-top
-cewe.pl##cwc-to-top-button
 chemko.com.pl##.go-to-top-ui #top-button-ui
 chimmo.pl###arrow-up
 chmielnik.com###na_gore
@@ -3902,7 +3903,7 @@ humanitas.edu.pl##.jump_arrow
 hungryeyes.pl##.w-inline-block.anchor-link
 hurtowniawalizek.pl##.pk-scroll-totop
 hurtowniazabawek.pl##.footerBox_btop
-hurtum.pl,juvepoland.com,myphone.pl##.scroller
+hurtum.pl,juvepoland.com,myphone.pl,reeva-foods.com##.scroller
 i-apteka.pl##.n60972_main_cop_right
 iautomatyka.pl##.pf-up-but
 ibif.pl##.js-up.up
@@ -4468,6 +4469,7 @@ zszywka.pl###scroolToTop
 ~pl##.scrollup:lang(pl):not(body):not(html)
 ~pl##.td-scroll-up:lang(pl)
 ~pl##a#backTop:lang(pl)
+~pl##cwc-to-top-button:lang(pl)
 com,pl###profilki_uparrow
 pl###ast-scroll-top
 pl###back-top
@@ -4591,6 +4593,7 @@ pl##.vw_m520_topbar
 pl##.w-toplink
 pl##.z-navigation-footer_backToTop
 pl##a#backTop
+pl##cwc-to-top-button
 pl##div.up > a[title="do góry"]
 pl##scroll-up
 pl,~sklep.lobos.pl##.to-the-top
@@ -5042,6 +5045,7 @@ kaktus24.pl###messenger_chat
 kamaciuch.pl###bonwhatsappchat
 kamaciuch.pl###btn-boncall-wrapper-bottom
 karmi.pl##.scrolled.homecontact
+kaufland.pl##.rd-footer-social-media__channels > a.rd-footer-social-media__anchor--whatsapp
 kawaly.tja.pl,tapeciarnia.pl###div_okienko_shoutbox_schowane
 kind.com##.AP_mod--button-symbol
 king-poligrafia.pl###face-slider
@@ -5576,6 +5580,8 @@ pl##.quickcontact-box
 ||widgets.okazje.info.pl^$third-party
 ||xiegarnia.pl/wp-content/themes/xiegarnia.pl-theme/assets/images/authors-label.png
 ||youtube.com/embed/*origin=*zapytaj.onet.pl$subdocument,domain=zapytaj.onet.pl
+!instagram.com#?#section > main + footer + nav > div[class*=" "] > div[class*=" "]:-abp-has(div[class*=" "][role="button"]:-abp-contains(Pobierz aplikację))
+!instagram.com#?#section > main + footer + nav > div[class*=" "] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) > div[class*=" "] > div[class]:not([class*=" "]) > div:not([class]) > div[class]:not([class*=" "]) > div[class*=" "][style*="width:"]:-abp-has(a[href^="/accounts/emailsignup/"])
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.back-arrow[href*="//wp.pl/"], .back-arrow[href*="//ww.wp.pl/"]
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.back_bar
 ~1login.wp.pl,abczdrowie.pl,autokult.pl,cdn.ampproject.org,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,open.fm,parenting.pl,~poczta.wp.pl,polygamia.pl,pudelek.pl,smaczneblogi.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl##.backToWp, #goToSG
@@ -6071,8 +6077,6 @@ ing.pl###get_ingmobile_app_wrapper
 inpost.pl###app-banner
 insomnia.pl##.ptw-articles.ptw-widget
 inspro.org.pl##.donate
-instagram.com#?#section > main + footer + nav > div[class*=" "] > div[class*=" "]:-abp-has(div[class*=" "][role="button"]:-abp-contains(Pobierz aplikację))
-instagram.com#?#section > main + footer + nav > div[class*=" "] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) > div[class*=" "] > div[class]:not([class*=" "]) > div:not([class]) > div[class]:not([class*=" "]) > div[class*=" "][style*="width:"]:-abp-has(a[href^="/accounts/emailsignup/"])
 instalaton.pl###pd_cs_box
 instalhurt.sklep.pl,moto125.pl,sklephormann.pl,tylkostylowe.pl###widget_shop3
 instalki.pl##.plista_widget_slide
