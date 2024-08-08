@@ -1,9 +1,9 @@
-! Checksum: OezBxBL8BUgjDf7NrTsQjA
-! Diff-Path: ../patches/257/257-s-1723122434-14400.patch
+! Checksum: 9qNksR+SKiV0VuOdehApjQ
+! Diff-Path: ../patches/257/257-s-1723136863-14400.patch
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.2.71
-! TimeUpdated: 2024-08-08T13:02:08+00:00
+! Version: 2.0.2.72
+! TimeUpdated: 2024-08-08T17:04:11+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -662,8 +662,6 @@ howtoremove.guide###gray_de
 /fb_video_googleplay/*/index.html?*p1=$document
 !+ NOT_OPTIMIZED
 .sbs/c/*?s1=$document
-!+ NOT_OPTIMIZED
-^click_id=*&s1=$document
 ! https://github.com/uBlockOrigin/uAssets/issues/24602
 ! https://www.virustotal.com/gui/url/ce2b833adda2f862d77398203bbe33ea331097ba2a803d1a763492d2ac0d5a60
 ! https://safeweb.norton.com/report/show?url=discordvip.createsocialcard.top
@@ -988,6 +986,8 @@ origincrack.com##center > button
 %3C?php%20echo%20substr(md5(microtime()),0,rand(10,30));?%3E&$document
 !+ NOT_OPTIMIZED
 /?*&gkss=$document,to=cfd|click|pro|world|xyz
+!+ NOT_OPTIMIZED
+^click_id=*&s1=$document
 ! https://github.com/uBlockOrigin/uAssets/issues/11394
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109902
 !+ NOT_OPTIMIZED
@@ -4582,11 +4582,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 /^https:\/\/ourtime\.[a-z]+-[a-z]+\.workers\.dev\//$document,to=workers.dev|~ourtime.com
 ! tiktok
 ! https://www.virustotal.com/gui/url/8fd29e49e539b6bab6c0a55c1d15321b7df02367fe1a9049c94fbf0b3aea1af8
-!+ NOT_OPTIMIZED
-/^https:\/\/(?:[a-z]{4,6}\.)?tiktok\d{2,5}\.com\//$document,to=com|~tiktok.com
 ! https://www.virustotal.com/gui/url/bd11af06bb1ed081ae7b373bd79e5601c17e0664be6856d922a92f771b24aee0
-!+ NOT_OPTIMIZED
-/^https:\/\/(?:[a-z]{4,6}\.)?tiktok\d{2,5}\.cc\//$document,to=cc|~tiktok.com
+! https://github.com/uBlockOrigin/uAssets/issues/24829
 !+ NOT_OPTIMIZED
 ! made-in-china.com
 ! https://infosec.exchange/@urldna/112553754973872125
@@ -5611,3 +5608,4 @@ app##html > body[style]:not([class]):not([id]) > center#yangchen[style]:not([cla
 !+ NOT_OPTIMIZED
 ||cdmx-gob-mx.com^$document,to=~cdmx.gob.mx
 ! comdirect.de phishing
+! https://github.com/uBlockOrigin/uAssets/issues/24779
