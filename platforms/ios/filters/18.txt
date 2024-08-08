@@ -1,9 +1,9 @@
-! Checksum: IckCcGzrck63TdcVnHMKYg
-! Diff-Path: ../patches/18/18-s-1723109847-3600.patch
+! Checksum: 8AzEUCp6EFZYkL8WJMmvbA
+! Diff-Path: ../patches/18/18-s-1723113465-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.44.89
-! TimeUpdated: 2024-08-08T09:33:49+00:00
+! Version: 2.0.44.90
+! TimeUpdated: 2024-08-08T10:33:42+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2455,6 +2455,10 @@ communityfibre.co.uk,foto-erhardt.com,foto-erhardt.de,seriouseats.com,fotogena.d
 !
 ! NOTE: Regular rules
 !
+ocre-project.eu#$#body { overflow: auto !important; }
+ocre-project.eu#$#body #cookiePopup { display: none !important; }
+bitchute.com###q-notify
+tti.com#%#//scriptlet('set-cookie-reload', 'cookieNecessary', 'true')
 /consentManager/js/*$domain=lastowiec.pl|biuropodrozymax.pl
 ultraleds.co.uk#%#//scriptlet('set-local-storage-item', 'cookies_accepted_6pzworitz8', 'true')
 ||webwavecms.com/files/assets/webpack/cookiePopupApp.bundle-*.js
@@ -2599,14 +2603,14 @@ ennebiservice.shipping-portal.com#$#body { overflow: auto !important; }
 trudzan.tverreg.ru##body > div[id^="container_"]
 successteam.typeform.com##div[data-qa="cookie-region"]
 directupload.eu###cookboxback
-seetickets.com###seeGdprCookieConsent
+gigsandtours.com,seetickets.com###seeGdprCookieConsent
 vodokanal.spb.ru###vdk_cookies
 tekla.com##.cookies-settings-dialog-overlay
 musement.com##msm-cookie-banner
 moncommerce35.fr#$##modalCookie { display: none !important; }
 moncommerce35.fr#$##modalCookie ~ div.modal-backdrop { display: none !important; }
 moncommerce35.fr#$#body { overflow: auto !important; }
-sparkasse-leerwittmund.de,sparkasse-koelnbonn.de#%#//scriptlet('remove-class', 'lightbox-visible', '.if6_eprivacy.lightbox-visible')
+lzo.com,sparkasse-leerwittmund.de,sparkasse-koelnbonn.de#%#//scriptlet('remove-class', 'lightbox-visible', '.if6_eprivacy.lightbox-visible')
 piecesdix.com,recambiosdiez.com,pecasdez.com,piecesdix.be,piecesdix.lu##.hi-cookie-block
 farmaciasunipreco.com.br##.wd-data-usage-confirm
 ||nowyswiat.online/gfx/frontend/js/cookies-dialog.js
@@ -15711,6 +15715,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185373
+ocre-project.eu#@##cookieBox
+ocre-project.eu#@##cookiePopup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185736
 @@||cdn.privacy-mgmt.com/mms/v2/get_site_data?$domain=discover.hubpages.com
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=discover.hubpages.com

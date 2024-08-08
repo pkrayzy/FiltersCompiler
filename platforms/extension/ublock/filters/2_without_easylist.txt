@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: PPCt/Hdcgto8j3E9AVUvUA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1723109844-3600.patch
+! Checksum: 4wQ7wLfKGQ9GP433dzTrJA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1723113462-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.47.46
-! TimeUpdated: 2024-08-08T09:31:31+00:00
+! Version: 2.3.47.47
+! TimeUpdated: 2024-08-08T10:31:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14762,7 +14762,9 @@ readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndic
 @@||kimcartoon.li^$subdocument,~third-party
 @@||kc.linksgen.com^$subdocument,~third-party
 @@||kisscartoon.se^$subdocument,~third-party
-kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(remove-node-text, script, /_btcCheck(?![\s\S]*\.src)|i\.imgur\.com[\s\S]*?(\.remove\(\)|\.innerHTML)/)
+kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(set-constant, _btcCheck, noopFunc)
+kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(no-setTimeout-if, dcmarvel)
+kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(remove-node-text, script, /document\.getElementById\(\'divContentVideo\'\)\.innerHTML|var cpe = true;/)
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*#$##divContentVideo { display: block !important; }
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*#?##centerDivVideo > div[id]:has(> img[src^="https://i.imgur.com"])
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##.kcAds1:not(#ad-promo)
@@ -33625,6 +33627,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+||bitchute.com/static/ad-sidebar
+bitchute.com###advertisement-banner
 gtplanet.net##.two-column-container--right > div > a > img
 hentaipaw.com#$#div[class^="container"][class*="min-h-"] { min-height: 0 !important; }
 fastp.org##.slide-out-div
