@@ -1605,8 +1605,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.20.17",
-			"timeUpdated": "2024-08-08T15:34:06+0000",
+			"version": "2.1.20.18",
+			"timeUpdated": "2024-08-08T23:33:23+0000",
 			"languages": [
 				"zh"
 			],
