@@ -1,5 +1,5 @@
-! Checksum: oErBoqwLteHd8aYWf8Pt6g
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1723165545-14400.patch
+! Checksum: VhZH1rPKpkAjyQw32doMQg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1723179921-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.77
@@ -284,6 +284,7 @@ coolrom.com.au,coolrom.com##.download_link
 !+ NOT_PLATFORM(windows, mac, android)
 ||192.3.110.170^$all
 ||totalav.com^$all
+||totalwebshield.com^$all
 !+ NOT_PLATFORM(windows, mac, android)
 ||91.241.19.38^$all
 !+ NOT_PLATFORM(windows, mac, android)
@@ -846,7 +847,6 @@ coolrom.com.au,coolrom.com##.download_link
 ||38.180.96.244^$all
 ||artistictastesnly.info^$all
 ||aysesuretobea.com^$all
-||ksehinkitw.hair^$all
 ||oefanyorbesttn.info^$all
 ||pohsoneche.info^$all
 ||pringed.space^$all
@@ -2321,7 +2321,6 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(Viagra)
 www.microsoft.com##a[data-pfns][href*=bus-sim]
 www.microsoft.com##.card[data-bi-cn*=poppy i][data-bi-cn*=playtime i]
-www.microsoft.com##a[data-pfns][data-pfns^="2"][data-pfns*="game."]
 !+ NOT_PLATFORM(windows, mac, android)
 ||212.27.60.108^$all
 ||amazonaws.com^$all,badfilter
@@ -2425,6 +2424,7 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ##div[class*=share-article]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-share-article])
 ##div[class*=social-panel]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-social-panel])
 ##div[class*=social][class*=sharing]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
+##div[class*=social_slide]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##div[class*=socials-share]
 ##div[class^=shareLinks]
 ##div[class^=social-like]
@@ -2802,7 +2802,6 @@ fandom.com##nav.is-community-bar-in .mobile-global-navigation__community-bar
 fandom.com##div:not([class],[id],[style]):has(> [data-testid^=QuizBanner i])
 spleis.no#%#//scriptlet('ubo-set.js', '__INITIAL_STATE__.features.should-show-snow', 'false')
 /particles.min.js^
-/snowfall.min.js^
 ||static.tumblr.com/*/f8.js^
 /snowfall.min.jquery.js
 /snowplow$script,domain=casamundo.se|hemnet.se
@@ -2955,7 +2954,6 @@ $removeparam=ysclid
 $document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp
 $document,removeparam=/^itm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_.*$/,domain=~redir.tradedoubler.com
-$document,removeparam=/^_utm_.*$/i
 $removeparam=logTag,document
 $removeparam=gclsrc,document
 $document,removeparam=smid,domain=~amazon.*|~opinion.no
@@ -2968,6 +2966,7 @@ $document,removeparam=afid
 $document,removeparam=tt_content
 $document,removeparam=tt_medium
 $document,removeparam=scid,domain=~pnc.com
+$document,removeparam=trackID
 $document,removeparam=awc
 $document,removeparam=exta
 $document,removeparam=ranMID
@@ -3125,6 +3124,7 @@ $document,removeparam=/^amp=$/,domain=~eurasiantimes.com|~cybersecuritynews.com
 $removeparam=_gl
 $removeparam=vfadid
 $document,removeparam=/^outputType=amp$/
+$removeparam=orig_referrer
 $removeparam=AgentCode
 $removeparam=ncid
 $document,removeparam=/^ecid=.*$/i,domain=~account.microsoft.com
@@ -3182,7 +3182,6 @@ $removeparam=c3nid
 $removeparam=om_mmc
 $removeparam=trackingCode
 $removeparam=k_clickid
-$removeparam=affiliateCustomId
 $removeparam=CJAID
 $removeparam=CJPID,domain=~keyade.com
 $removeparam=CJSID
@@ -3210,6 +3209,7 @@ $removeparam=subacctname
 $document,removeparam=/^.*affcid.*$/i
 $removeparam=afflid
 $removeparam=fcref
+$removeparam=mclk
 $document,removeparam=maid
 $document,removeparam=mcid,domain=~miguvideo.*
 $document,removeparam=msid,domain=~rsc.org
@@ -3336,7 +3336,6 @@ $removeparam=deep_link_sub1
 $removeparam=sub_aff_id
 $document,removeparam=/^sub_id\d=.*$/
 $removeparam=dt_dapp
-$removeparam=i_cid
 $removeparam=waad
 $removeparam=_gac
 $removeparam=af_medium
@@ -3505,7 +3504,6 @@ $removeparam=ref,document,domain=404media.co|abebooks.com|accounts.binance.com|a
 $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobile.com|nhl.com|zulily.com
 $removeparam=src,document,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hallmark.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|msn.com|neeva.com|newbalance.com|nexo.io|officestationery.co.uk|okdo.com|raspipc.es|reichelt.*|tandfonline.com|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|x.com|yahoo.com|tumblr.com
 $document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|about.gitlab.com|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|bluemountain.com|boscovs.com|boxboat.com|britishcornershop.co.uk|brownells.*|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|cmswire.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|educba.com|edx.org|eonline.com|escentual.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hbomax.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|ilgusto.it|instagram.com|italian.tech|itnext.io|jacquielawson.com|jobs.deepl.com|just-eat.co.uk|kasta.io|ladbible.com|lastampa.it|learn.microsoft.com|medium.com|microsoftedgewelcome.microsoft.com|monster.fi|nautica.com|netflix.com|ngx.me|nortonsafe.search.ask.com|nytimes.com|onehanesplace.com|outnorth.fi|paypal.com|petsupplies.com|phonesoap.com|privatehomeclips.com|propublica.org|quizlet.com|remppatori.fi|repubblica.it|riteaid.com|runnode.com|search.brave.com|seekingalpha.com|sonos.com|spiceworks.com|squarespace.com|studio.co.uk|subscribe.gq.com|t.me|tcgplayer.com|theathletic.com|thedailybeast.com|themeditelegraph.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|trendmicro.com|tumblr.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|x.com|xd.wayin.com|ylighting.com|youtube.com|yubo.live
-$removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|marketwatch.com|penews.com
 $removeparam=sid,domain=anrdoezrs.net|dpbolvw.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com|gamereactor.*
 $removeparam=from,document,domain=apkpure.com|bandcamp.com|browserling.com|ettoday.net|landevei.no|luisaviaroma.com|sogou.com|store.hbr.org|app.snyk.io|onlinepngtools.com|indiatimes.com|jetbrains.com|nextdns.io|tvtropes.org|yandex.com
 $removeparam=keyword,domain=bindright.com|lendgo.com|reddit.app.link
@@ -3526,6 +3524,7 @@ $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws|xkcd.com|linkedin.com|
 ||amazon.$removeparam=crid
 ||amazon.$removeparam=/^cv_ct_.*$/
 ||amazon.$removeparam=sprefix
+||amazon.$removeparam=ac_md
 $removeparam=coliid
 $removeparam=geniuslink
 ||amazon.$removeparam=aaxitk
@@ -3650,7 +3649,6 @@ $removeparam=device,domain=ebay.*
 ||ebay.$removeparam=osub
 ||ebay.$removeparam=segname
 ://www.ebay.$document,removeparam=/^itm[a-zA-Z0-9].*$/
-$removeparam=hc_ref
 $removeparam=hc_location
 $removeparam=sfnsn
 ?*__$~xmlhttprequest,removeparam=/^__[bce-z]/,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com
@@ -3803,7 +3801,6 @@ $removeparam=aff_click_id
 ||baidu.com/search/index?$removeparam=ct
 ||baidu.com^$removeparam=asctag
 ||baidu.com^$removeparam=rq
-||baidu.com^$removeparam=vslid
 ||baidu.com^$removeparam=logid
 ||baidu.com^$removeparam=srcp
 ||baidu.com^$removeparam=sfrom
@@ -3927,6 +3924,8 @@ $removeparam=nettype
 ||mp.weixin.qq.com^$removeparam=chksm
 ||mp.weixin.qq.com^$removeparam=count
 ||mp.weixin.qq.com^$removeparam=enterid
+||mp.weixin.qq.com^$removeparam=from_msgid
+||mp.weixin.qq.com^$removeparam=from_itemidx
 ||mp.weixin.qq.com^$removeparam=sessionid
 ||mp.weixin.qq.com^$removeparam=subscene
 $removeparam=report_recomm_player
@@ -3945,6 +3944,7 @@ $document,removeparam=channel,domain=1sol.io|amazon.*|bybit.com|coinpanel.com|do
 $removeparam=fr,domain=baidu.com|thegay.com|todayonline.com|hclips.com|search.yahoo.com
 $removeparam=promo,domain=thegay.com|hammacher.com|upornia.com|hclips.com
 $removeparam=sref,domain=bloomberg.com|go.skimresources.com|go.skimlinks.com|go.redirectingat.com
+$removeparam=argsite,domain=metaffiliation.com
 $removeparam=pid,document,domain=123inkjets.com|appsflyer.com|bergfreunde.*|bybit.com|dobrytextil.cz|farfetch.com|fifa.com|glami.cz|hepsiburada.com|neeva.com|onelink.me|play.google.com|samsclub.com|shopee.*|th.bing.com|tiktok.com
 $removeparam=tracking,domain=affiliatefuture.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|gtomega.*|malwarebytes.com|messenger.com
 $removeparam=u1,domain=linksynergy.com|shop-links.co
@@ -3969,7 +3969,6 @@ $removeparam=module,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj
 $removeparam=pgtype,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion|scmp.com
 $removeparam=section,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion|nextdoor.com|store.thesims3.com
 $document,removeparam=ref_,domain=amazon.*|awesomeopensource.com|boxofficemojo.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|imdb.com|primevideo.com|shopbop.com
-||hostinger.$removeparam=session
 ||xbox.com^$removeparam=xr
 $removeparam=medium,domain=1sol.io|bybit.com|coinpanel.com|deepdiscount.com|discord.*|docs.google.com|docsend.com|eonline.com|eventbrite.*|forms.gle|gleam.io|goodcrypto.app|instagram.com|kasta.io|ngx.me|outnorth.fi|runnode.com|t.me|twitter.com|xd.wayin.com|x.com|youtube.com
 ||thehackernews.com^$removeparam=_m
@@ -3993,7 +3992,6 @@ $removeparam=bsencid
 $removeparam=adcampaigngroup
 ||dell.com^$removeparam=dgc
 ||dell.com^$removeparam=VEN1
-||dell.com^$removeparam=nclid
 ||dell.com^$removeparam=gacd
 ||expedia.com^$removeparam=my_ad
 ||asahi.com^$removeparam=iref
@@ -4193,7 +4191,6 @@ $removeparam=af,domain=1fichier.com|comodo.com
 ||qwant.com^$removeparam=client
 ||ecosia.org^$removeparam=addon
 $removeparam=referralInfo,domain=wix.com
-$removeparam=tck,domain=mongodb.com
 $removeparam=locale,domain=udemy.com
 ||zoho.com^$removeparam=zsrc
 ||nortonsafe.search.ask.com^$removeparam=installsource
@@ -4481,7 +4478,6 @@ tumblr.com,strategix.dk#$#body { cursor: unset !important }
 ourcodeworld.com##.mouse-cursor
 /wp-content/uploads/*/cursor.png|
 nerdelandslaget.no#$#html { cursor: auto !important }
-strategix.dk##.cursor
 .ani|$domain=~pixiv.net|~deviantart.com
 !+ NOT_OPTIMIZED
 freelancer.com##.PageProjectViewLogout-freelancerInfo:has(.small-flag.bangladesh)
