@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: giXrSPk5raDHJPyF7ndATQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1723232207-3600.patch
+! Checksum: 19+kgxPMgMI5hDi+b7q8zg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1723235818-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.47.71
-! TimeUpdated: 2024-08-09T19:31:29+00:00
+! Version: 2.3.47.72
+! TimeUpdated: 2024-08-09T20:31:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -25584,6 +25584,9 @@ medonet.pl,onet.pl#$#div[class*="ad" i][style^="width: 1px; height: 1px; positio
 auto-swiat.pl,businessinsider.com.pl,fakt.pl,medonet.pl,noizz.pl,onet.pl,plejada.pl,przegladsportowy.pl,vod.pl,komputerswiat.pl##+js(no-setTimeout-if, /document\.body\.getAttribute\("abp"/)
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari, ext_ublock)
 @@||businessinsider.com.pl^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/185924
+filmweb.pl##body > .faSponsoring
+filmweb.pl##+js(set-constant, globals.module.AdsRichContentModule, undefined)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157455
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155134
 filmweb.pl##+js(set-constant, rodo.canProfileVisitor, noopPromiseReject)
@@ -25622,8 +25625,8 @@ filmweb.pl#@##flashcontent3
 filmweb.pl#@##skyBanner
 filmweb.pl#@#body .ws__wrapper
 !+ NOT_OPTIMIZED
-filmweb.pl#$#.ws__wrapper { visibility: hidden!important; }
-filmweb.pl#$#.lightboxNEW:not(.fullscreen)[style] { top: 0!important; }
+filmweb.pl#$#.ws__wrapper { visibility: hidden !important; }
+filmweb.pl#$#.lightboxNEW:not(.fullscreen)[style] { top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/70948
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109192
 mmorpg.org.pl##div[id*="_bill_"]

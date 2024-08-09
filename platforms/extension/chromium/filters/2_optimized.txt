@@ -1,9 +1,9 @@
-! Checksum: +iTBa/RqCcaxsCCg4Xq3eg
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1723232191-3600.patch
+! Checksum: YiH+7TzXS1D8g85Cf2rqiw
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1723235805-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.47.71
-! TimeUpdated: 2024-08-09T19:31:29+00:00
+! Version: 2.3.47.72
+! TimeUpdated: 2024-08-09T20:31:35+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -6361,6 +6361,8 @@ pclab.pl#%#//scriptlet('prevent-setTimeout', 'document.body.getAttribute("abp")'
 medonet.pl,onet.pl#$#body { overflow: visible !important; }
 medonet.pl,onet.pl#$#div[class*="ad" i][style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"] { display: block !important; }
 auto-swiat.pl,businessinsider.com.pl,fakt.pl,medonet.pl,noizz.pl,onet.pl,plejada.pl,przegladsportowy.pl,vod.pl,komputerswiat.pl#%#//scriptlet('prevent-setTimeout', '/document\.body\.getAttribute\("abp"/')
+filmweb.pl##body > .faSponsoring
+filmweb.pl#%#//scriptlet('set-constant', 'globals.module.AdsRichContentModule', 'undefined')
 filmweb.pl#%#//scriptlet('set-constant', 'rodo.canProfileVisitor', 'noopPromiseReject')
 filmweb.pl#%#//scriptlet('set-cookie', 'ws_ad', '1')
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=filmweb.pl,important
@@ -6384,7 +6386,8 @@ filmweb.pl#@##flashcontent3
 filmweb.pl#@##skyBanner
 filmweb.pl#@#body .ws__wrapper
 !+ NOT_OPTIMIZED
-filmweb.pl#$#.ws__wrapper { visibility: hidden!important; }
+filmweb.pl#$#.ws__wrapper { visibility: hidden !important; }
+filmweb.pl#$#.lightboxNEW:not(.fullscreen)[style] { top: 0 !important; }
 mmorpg.org.pl##div[id*="_bill_"]
 mmorpg.org.pl##div[id*="_bill_"] + a[href="/premium"]
 mmorpg.org.pl##div[id*="_half_"]:empty
