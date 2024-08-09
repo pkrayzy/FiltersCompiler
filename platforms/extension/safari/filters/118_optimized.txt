@@ -1,9 +1,9 @@
-! Checksum: Kp+WtWpTd2pvafZsMV9hhw
-! Diff-Path: ../patches/118_optimized/118_optimized-s-1723151146-14400.patch
+! Checksum: 13e6E5+qxAhGxOlPn7OLKQ
+! Diff-Path: ../patches/118_optimized/118_optimized-s-1723165547-14400.patch
 ! Title: EasyPrivacy (Optimized)
 ! Description: Privacy protection supplement for EasyList.
-! Version: 2.1.30.90
-! TimeUpdated: 2024-08-08T21:01:25+00:00
+! Version: 2.1.30.91
+! TimeUpdated: 2024-08-09T01:01:31+00:00
 ! Expires: 5 days (update frequency)
 &action=js_stats&
 &ev=PageView&
@@ -174,7 +174,6 @@
 /api/v1/firehose?_
 /api/v1/metrics
 /api/v2/collector
-/api/v2/jsonlogger
 /api_ip_info.php
 /appdynamics/adrum-
 /appGoogleTagManager-
@@ -1046,6 +1045,7 @@
 /stats.php?*http
 /stats.wp.com/*
 /stats/api/event
+/stats/c/*$image
 /stats/collect/*
 /stats/events$xmlhttprequest
 /stats/footer.js
@@ -7338,7 +7338,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||linkedin.com/sensorCollect/
 ||lists.ccmbg.com^
 ||littlebigsnake.com/event?
-||livehdcams.com/api/metrics
 ||livejournal.com/ljcounter/
 ||livejournal.com/log?
 ||lms.roblox.com^
@@ -7372,8 +7371,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||manua.ls/gtag
 ||marketing.alibaba.com^
 ||marketing.dropbox.com^
-||massivecams.com/api/statsd
-||massivecams.com/api/v1/activity
 ||mat6tube.com/api/stats?
 ||mcs-ie.tiktokw.eu^
 ||mcs-va.tiktokv.com^
@@ -7905,6 +7902,11 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||aliyuncs.com/r.png
 ||oneid.mmstat.com^
 /rest/high/api/cogitoergosum
+/api/events|$ping,~third-party
+/api/statsd|$~third-party,xmlhttprequest
+/api/v1/activity|$~third-party,xmlhttprequest
+/api/v2/jsonlogger
+||naiadsystems.com/api/v1/xment/
 /^https?:\/\/pov\.spectrum\.net\/[a-zA-Z0-9]{14,}\.js/$script,domain=spectrum.net
 /^https?:\/\/tmx\.(td|tdbank)\.com\/[a-z0-9]{14,18}\.js.*/$script,domain=mbna.ca|td.com|tdbank.com
 ||127.0.0.1^$third-party,domain=53.com|ameriprise.com|beachbody.com|chick-fil-a.com|citi.com|ebay.at|ebay.be|ebay.ca|ebay.ch|ebay.cn|ebay.co.uk|ebay.com|ebay.com.au|ebay.com.hk|ebay.com.my|ebay.com.sg|ebay.de|ebay.es|ebay.fr|ebay.ie|ebay.it|ebay.nl|ebay.ph|ebay.pl|equifax.ca|equifax.com|globo.com|gumtree.com|kleinanzeigen.de|lendup.com|mbna.ca|rusneb.ru|sciencedirect.com|sky.com|spectrum.net|td.com|tiaa.org|vedacheck.com|wepay.com|whatleaks.com
@@ -12694,7 +12696,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||glomex.com^$ping
 ||gmx.net/monitoring/
 ||golem.de/staticrl/scripts/golem_cpxl_
-||horizont.net/stats/
 ||js.tag24.de/main.js
 ||kaufland.de/uts/events/
 ||lokalwerben.t-online.de^
@@ -12709,6 +12710,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||px.derstandard.at^
 ||pxc.otto.de^
 ||ricardo.ch/api/browser-statistics/
+||ruw.de/js/trackSidebarClicks.js
 ||shoop.de/mgtrx/
 ||shop.rewe.de/api/xrd/web-vitals
 ||srf.ch/udp/tracking/
@@ -13364,6 +13366,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 @@||adobedtm.com^*/s-code-$script
 @@||adobedtm.com^*/satellite-$script
 @@||analytics.analytics-egain.com/onetag/$script,domain=boohoo.com|digikey.at|digikey.be|digikey.bg|digikey.ca|digikey.ch|digikey.cn|digikey.co.il|digikey.co.nz|digikey.co.th|digikey.co.uk|digikey.co.za|digikey.com|digikey.com.au|digikey.com.br|digikey.com.mx|digikey.cz|digikey.de|digikey.dk|digikey.ee|digikey.es|digikey.fi|digikey.fr|digikey.gr|digikey.hk|digikey.hu|digikey.ie|digikey.in|digikey.it|digikey.jp|digikey.kr|digikey.lt|digikey.lu|digikey.lv|digikey.my|digikey.nl|digikey.no|digikey.ph|digikey.pl|digikey.pt|digikey.ro|digikey.se|digikey.sg|digikey.si|digikey.sk|digikey.tw
+@@||api.aliagents.ai/api/v1/activity$~third-party,xmlhttprequest
 @@||api.perfops.net^$script,xmlhttprequest,domain=cdnperf.com|dnsperf.com
 @@||api.vk.com/method/statEvents.$~third-party
 @@||assets.msn.com/staticsb/statics/latest/adboxes/$script,~third-party
@@ -13566,6 +13569,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 @@||baidu.com/api/bidder/$domain=jump2.bdimg.com
 @@||mail.163.com/fetrack/api/27/envelope/?sentry_key=$xmlhttprequest
 @@||nobook.com/open-interface/official-sensors.git/$script,~third-party
+@@||pubscholar.cn/static/common/fingerprint.js$script,~third-party
 @@||pv.sohu.com/cityjson$domain=ems.com.cn
 @@||statics.zcool.com.cn/track/sensors.$script,~third-party
 @@||tianyancha.com^*/sensorsdata.$script,~third-party
