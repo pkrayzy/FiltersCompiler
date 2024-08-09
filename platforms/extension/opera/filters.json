@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.93.0",
-			"timeUpdated": "2024-08-09T12:31:32+0000",
+			"version": "2.0.93.1",
+			"timeUpdated": "2024-08-09T13:31:20+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.47.65",
-			"timeUpdated": "2024-08-09T12:31:46+0000",
+			"version": "2.3.47.66",
+			"timeUpdated": "2024-08-09T13:31:34+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.73.25",
-			"timeUpdated": "2024-08-09T06:33:05+0000",
+			"version": "2.0.73.26",
+			"timeUpdated": "2024-08-09T13:33:03+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.4.52",
-			"timeUpdated": "2024-08-09T12:33:17+0000",
+			"version": "2.1.4.53",
+			"timeUpdated": "2024-08-09T13:33:06+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.55.34",
-			"timeUpdated": "2024-08-09T12:33:27+0000",
+			"version": "2.0.55.35",
+			"timeUpdated": "2024-08-09T13:33:17+0000",
 			"languages": [
 				"ja"
 			],
@@ -511,8 +511,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.26.0",
-			"timeUpdated": "2024-08-09T07:33:33+0000",
+			"version": "2.0.26.1",
+			"timeUpdated": "2024-08-09T13:33:22+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.4.69",
-			"timeUpdated": "2024-08-09T12:33:45+0000",
+			"version": "2.2.4.70",
+			"timeUpdated": "2024-08-09T13:33:35+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.94",
-			"timeUpdated": "2024-08-09T07:33:52+0000",
+			"version": "2.0.44.95",
+			"timeUpdated": "2024-08-09T13:33:41+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.19",
-			"timeUpdated": "2024-08-09T12:33:52+0000",
+			"version": "2.0.41.20",
+			"timeUpdated": "2024-08-09T13:33:42+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -747,8 +747,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/20.txt",
 			"trustLevel": "full",
-			"version": "2.0.15.80",
-			"timeUpdated": "2024-08-09T12:33:52+0000",
+			"version": "2.0.15.81",
+			"timeUpdated": "2024-08-09T13:33:43+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -768,8 +768,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.92",
-			"timeUpdated": "2024-08-08T14:33:42+0000",
+			"version": "2.0.24.93",
+			"timeUpdated": "2024-08-09T13:33:43+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -789,8 +789,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.9.5",
-			"timeUpdated": "2024-08-08T13:36:40+0000",
+			"version": "2.0.9.6",
+			"timeUpdated": "2024-08-09T13:33:43+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.20.22",
-			"timeUpdated": "2024-08-09T09:34:10+0000",
+			"version": "2.1.20.23",
+			"timeUpdated": "2024-08-09T13:33:48+0000",
 			"languages": [
 				"zh"
 			],
