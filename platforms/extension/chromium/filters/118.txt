@@ -1,14 +1,14 @@
-! Checksum: 7M7is1P4ApmusABrJ/21AA
-! Diff-Path: ../patches/118/118-s-1723266320-14400.patch
+! Checksum: DFSXfz2+YtfA1kVHWXXzRw
+! Diff-Path: ../patches/118/118-s-1723280719-14400.patch
 ! Title: EasyPrivacy
 ! Description: Privacy protection supplement for EasyList.
-! Version: 2.1.30.97
-! TimeUpdated: 2024-08-10T05:01:25+00:00
+! Version: 2.1.30.98
+! TimeUpdated: 2024-08-10T09:01:25+00:00
 ! Expires: 10 days (update frequency)
 !
-! OriginalVersion: 202408100444
+! OriginalVersion: 202408100823
 ! Title: EasyPrivacy
-! Last modified: 10 Aug 2024 04:44 UTC
+! Last modified: 10 Aug 2024 08:23 UTC
 ! Expires: 4 days (update frequency)
 ! *** easylist:template_header.txt ***
 !
@@ -60,7 +60,6 @@
 .gif?Log=
 .jp/pv?
 .jp/static/js/track.js
-.js?id=GTM-
 .net/l.gif?
 .no/app/aas/a
 .php?action=browse&
@@ -2741,6 +2740,7 @@
 ?statify_referrer=
 ?type=page&event=
 ?type=pageview&
+?v=2&tid=G-$~third-party
 _beacon?
 _c.gif?c=
 _chartbeat.js
@@ -2817,6 +2817,11 @@ _WebVitalsReporter_
 /csi_204?$image,other,ping,script
 /gen_204?$image,other,ping,script
 /generate_204?$image
+! Server-side GTM
+&l=dataLayer&cx=c
+.js?id=GTM-
+://gtm.*.js?st=
+://load.*.js?st=$~third-party
 ||adservice.google.
 ||google.*/url?$ping
 ||google.com/gen_204?
@@ -5045,6 +5050,7 @@ omni.soundestlink.com$image
 ||pagefair.com^$third-party
 ||pages05.net^$third-party
 ||pagesense.io^$third-party
+||pageview.click^$third-party
 ||parametre.online^$third-party
 ||parklogic.com^$third-party
 ||parrable.com^$third-party
@@ -9063,6 +9069,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||thesmilingpencils.com^$third-party
 ||trackfeed.com^$third-party
 ||uncn.jp^$third-party
+||viaklera.com^$third-party
 ||wonder-ma.com^$third-party
 ||zerostats.com^$third-party
 ||ziyu.net^$third-party
@@ -13612,6 +13619,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||cultofmac.com/djrxqhzkbsgf.js
 ||cvs.com/tnadstlinj.js
 ||cwt.citywire.info^
+||d.analyticsmania.com^
 ||d.skk.moe^
 ||d401.dollartree.com^
 ||d712.theinformation.com^
@@ -13899,6 +13907,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||groupondata.com/tracky
 ||gsght.com/twizards.js
 ||gso.amocrm.com/humans/
+||gtm.lercio.it^
 ||gtm.wise.com^
 ||gtreus.aliexpress.com^
 ||gumtree.com.au/tracking/
@@ -14466,7 +14475,9 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||srchoffer.com/tracking/
 ||srtb.msn.com^
 ||srv.plesk.com^
+||ss.esade.edu^
 ||ss.photospecialist.co.uk^
+||sst.shopware.com^
 ||sstats.adobe.com^
 ||st.sawlive.tv^
 ||stackoverflow.com/_/client-timings
@@ -14518,6 +14529,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||stayz.com.au/cl/data/omgpixel.json
 ||strcdn.org/cdn-cgi/trace
 ||strcloud.in/stat/
+||stream.corporatefinanceinstitute.com^
 ||streamadblocker.cc/stat/
 ||streamadblocker.com/stat/
 ||streamadblocker.store/stat/
@@ -14712,6 +14724,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||trackr.vivenu.com^
 ||tradingview.com/ping
 ||trck.coomeet.com^
+||trckng.dainese.com^
 ||trcksplt.miro.com^
 ||treatment.grammarly.com^
 ||tredir.go.com^
@@ -51286,6 +51299,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||rt.bunte.de^
 ||ruw.de/js/trackSidebarClicks.js
 ||schnaeppchenfuchs.com/js/default-
+||sgtm.tennis-point.de^
 ||shoop.de/mgtrx/
 ||shop.rewe.de/api/xrd/web-vitals
 ||sparkasse.de/frontend/setTrackingCookie.htm
@@ -51322,6 +51336,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tgw.web.de^
 ||timing.uhrforum.de^
 ||tm.swp.de^
+||tr.wbstraining.de^
 ||tracer.autoscout24.ch^
 ||track.dws.de^
 ||track.express.de^
@@ -51386,6 +51401,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||ymprove.web.de^
 ||zooplus.de/om/pxl/
 ! Danish
+||gtm.mandesager.dk^
 ||ia.ekstrabladet.dk^
 ||jv.dk/assets/statistics/
 ! French
@@ -51975,8 +51991,10 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||repstatic.it^*/nielsen_static_mapping_repubblica_
 ||seat.it/cgi-bin/getcod.cgi?
 ||servizi.unionesarda.it/controlli/
+||sgtm.tagmanageritalia.it^
 ||smsaffari.it/count_new.php?
 ||spaziogames.it/ajax/player_impression.ashx?
+||sst.colemanfurniture.com^
 ||stats.splinder.com^
 ||stats.stylight.it^
 ||stats.suedtirolerjobs.it^
