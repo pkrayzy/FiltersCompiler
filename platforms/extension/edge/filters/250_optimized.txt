@@ -1,5 +1,5 @@
-! Checksum: m1P9YFN0LPRMi4/u4a7GkA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1723295125-14400.patch
+! Checksum: 5CYDEXKBWfv2KQMWY50Zlg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1723352720-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.78
@@ -104,10 +104,10 @@ windll.com##.download-block
 windll.com##.dll > p
 softwaretested.com##.st-alternative
 softwaretested.com##.snippet-content
-processlibrary.com##.bottom > .row:last-of-type
 ||outbyte.com^$document
 ||testedforyou.net^$all
 ||solvusoft.com^$document
+exefiles.com##.row:has(a[href*="/recommended/"])
 /^https?:\/\/((?!www)[a-z]{3,5}\.)?[-0-9a-z]{6,}\.(?:com|fun|guru|life|online|pw|site|space|top)\/\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,match-case,domain=com|fun|guru|life|online|pw|site|space|top
 ||freeroms.com^$document
 ||gamesgx.net^$document
@@ -446,7 +446,6 @@ coolrom.com.au,coolrom.com##.download_link
 ||45.148.120.171^$all
 !+ NOT_PLATFORM(windows, mac, android)
 ||159.148.186.228^$all
-||yotube.com^$all
 !+ NOT_PLATFORM(windows, mac, android)
 ||39.83.80.247^$all
 !+ NOT_PLATFORM(windows, mac, android)
@@ -2181,7 +2180,6 @@ coolrom.com.au,coolrom.com##.download_link
 !+ NOT_PLATFORM(windows, mac, android)
 ||185.149.120.173^$all
 ||howtofix.guide^$document
-||accompanycollapse.com^$all
 ||advancedhosters.com^$all
 ||videosprofitnetwork.com^$all
 !+ NOT_PLATFORM(windows, mac, android)
@@ -2429,7 +2427,6 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ##div[class*=share-article]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-share-article])
 ##div[class*=social-panel]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-social-panel])
 ##div[class*=social][class*=sharing]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
-##div[class*=social_slide]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##div[class*=socials-share]
 ##div[class^=shareLinks]
 ##div[class^=social-like]
@@ -2439,7 +2436,6 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ##span[class*=-social-share-]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##span[class*=share-icon]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##span[class^=share_btn]
-##span[data-lnkd-debug]
 ##ul[class*=-share-buttons]
 */images/share_icons/
 */images/social-share/
@@ -2719,7 +2715,6 @@ artstation.com#?#projects-list-item:has-text(/^.*slot\sga\me.*$/i)
 artstation.com#?#projects-list-item:has-text(Artforgame Gamedesign)
 fandom.com##.ad-slot-placeholder
 amap.com##.dir_qr
-csair.com##.qrcode
 ctrip.com##.set-wechat.set-list > .nav-myctrip.person-text
 jd.com##.jdm-tbar-tab-qrcode.jdm-toolbar-tab.J-trigger
 mi.com##div.section:nth-of-type(31)
@@ -2937,7 +2932,6 @@ rakuten.tv##a[href*=".imdb.com/title/"]
 playpilot.com##.ratings
 www.google.*#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
 www.google.*##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
-tv.nu#?#a[title] span:has-text(IMDb)
 tv.nu##a[title] span:has(path[d^="M9.465 "])
 primewire.*#?#div:has(> span:has-text(IMDb))
 m4uhd.net##.quality
@@ -3409,6 +3403,7 @@ $removeparam=gaa_ts
 $removeparam=gaa_sig
 $removeparam=amp_gsa
 $removeparam=vgo_ee
+ref=prisjakt^$document,removeparam=ref
 $document,removeparam=/^amp;utm_.*$/
 $removeparam=sap-outbound-id
 $removeparam=analyticsCorrelationId
@@ -3547,8 +3542,6 @@ $removeparam=geniuslink
 ||amazon.$removeparam=maas
 ||amazon.$removeparam=/^aa_.*$/
 ||amazon.$removeparam=refinements
-||amazon.$removeparam=qsid
-||amazon.$removeparam=sres
 ||amazon.$removeparam=ingress
 $removeparam=hvadid
 $removeparam=hvpos
@@ -3664,7 +3657,6 @@ $removeparam=fref
 $removeparam=privacy_mutation_token
 $~xmlhttprequest,removeparam=/^refsrc=.*$/i
 $removeparam=_rdr
-$document,removeparam=_ft_
 $removeparam=m_entstream_source
 $removeparam=referral_code,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com
 $removeparam=referral_story_type,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com
@@ -3798,7 +3790,6 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=sa
 ||baidu.com^$removeparam=params_ssrt
 ||baidu.com^$removeparam=t_kt
-||m.baidu.com^$removeparam=from
 ||baidu.com^$removeparam=vit
 ||baidu.com^$removeparam=lm
 ||baidu.com^$removeparam=od
@@ -3990,7 +3981,6 @@ $removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moose
 ||walmart.com^$removeparam=veh
 ||bbc.$removeparam=at_campaign
 $removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
-||gog.com^$removeparam=pp
 ||roblox.com^$removeparam=refPageId
 ||newegg.com^$removeparam=nm_mc
 $removeparam=bsencid
@@ -4089,6 +4079,7 @@ $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
 ||apple.com^$removeparam=mttnsubad
 ||apple.com^$removeparam=mttnsubkw
 ||apple.com^$removeparam=mttnsubplmnt
+||apple.com^$removeparam=mttnpid
 $removeparam=wfr,domain=weidian.com|baidu.com
 $removeparam=organic_search_click
 $removeparam=pro,domain=etsy.com
@@ -4148,7 +4139,6 @@ $removeparam=ppref,domain=digidip.net
 ||zhihu.com^$removeparam=hybrid_search_extra
 ||theregister.com^$removeparam=td
 ||feedspot.com^$removeparam=_src
-$removeparam=plink,domain=audible.*
 ||startpage.$removeparam=segment
 ||netflix.com^$removeparam=trackId
 ||netflix.com^$removeparam=trackIdJaw
@@ -4385,7 +4375,6 @@ $document,removeparam=af_reengagement_window
 $document,removeparam=_x_ns_sku_id,domain=temu.com
 $document,removeparam=_x_ads_channel,domain=temu.com
 $document,removeparam=_x_gmc_account,domain=temu.com
-$document,removeparam=_x_gmc_catalog,domain=temu.com
 $document,removeparam=_x_ads_creative_id,domain=temu.com
 $document,removeparam=_x_ns_device,domain=temu.com
 $document,removeparam=_x_ads_account,domain=temu.com
