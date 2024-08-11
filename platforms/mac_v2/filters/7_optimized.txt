@@ -1,9 +1,9 @@
-! Checksum: 7eMvcH9H1bxW2HUzubyXoA
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1723387032-3600.patch
+! Checksum: EPQIXSUyV6KCiPVmSickLQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1723390630-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.55.42
-! TimeUpdated: 2024-08-11T14:33:15+00:00
+! Version: 2.0.55.43
+! TimeUpdated: 2024-08-11T15:32:55+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -798,7 +798,7 @@ twi-fans.com#%#//scriptlet('prevent-addEventListener', '/touchmove|wheel/', 'pre
 !+ NOT_PLATFORM(ext_ublock)
 twi-fans.com#%#//scriptlet('remove-attr', 'data-scroll-locked', 'body[data-scroll-locked]')
 kasegeru.blog.jp#%#//scriptlet('remove-node-text', '#text', '/スポンサードリンク：?|楽天広告：/')
-blog.livedoor.jp#%#//scriptlet('abort-current-inline-script', 'Math.floor', 'amazon')
+blog.livedoor.jp#%#//scriptlet('abort-current-inline-script', 'Array.prototype.join', 'amazon')
 erommd-street.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'overview')
 twivideo.net#%#//scriptlet('prevent-addEventListener', 'load', 'interstitialAd')
 ac-illust.com,photo-ac.com#%#//scriptlet('abort-current-inline-script', '$', 'google_ads_iframe_')
@@ -1288,6 +1288,8 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+nanjpride.blog.jp##.article-body-inner > table[height="250"]
+||blog.livedoor.com/ad/
 pokemonsleep.club##.banner-image
 pet-home.jp###PC_side_chase01
 pet-home.jp##.header_ads_wrap
@@ -2048,7 +2050,6 @@ erocommu.jp##.sidebar:has(> div > div.plugin-freearea > a[href*="e-nls.com/acces
 hametaro.net##.sidemenu_content:has(> div.plg_body > div.plugin-freearea > a[href="https://superfreesex.blog.2nt.com/"])
 ||cross-way.net/market-value/wp-content/uploads/2023/12/banner.png$third-party
 doujin-master.fc2.xxx###l-sidecontents > aside.plugin_first:first-child
-motimoti3d.jp#%#//scriptlet('abort-on-stack-trace', 'document.write', 'fc2.com/motimoti3d/dl')
 $script,third-party,denyallow=fc2.com|googleapis.com|llnwd.net,domain=motimoti3d.jp
 @@||file.blog.fc2.com/motimoti3d/jsic/$script,domain=motimoti3d.jp
 @@||file.blog.fc2.com/motimoti3d/rdiv.js|$domain=motimoti3d.jp
@@ -2057,7 +2058,7 @@ $script,third-party,denyallow=fc2.com|googleapis.com|llnwd.net,domain=motimoti3d
 ||fc2.com/motimoti3d/$script,domain=motimoti3d.jp
 ||dlsite.jp/modpub/images2/work/doujin/$domain=motimoti3d.jp
 ||dlsite.com^$popup,domain=motimoti3d.jp
-motimoti3d.jp#?#.sidemenu_body:has(> dt.plg_title:contains(/^スポンサーリンク$/))
+motimoti3d.jp#?#.sidemenu_body:has(> dt.plg_title:contains(/^スポンサー/))
 motimoti3d.jp##a[href*="://www.dlsite.com"]
 teradas.net##.sticky-container
 teradas.net##.ads-statement
@@ -2892,7 +2893,7 @@ musicman.co.jp##.bannerBox
 ||tool2.nan-net.com/doujin/depression1.jpg
 nan-net.com###fixed_ad
 anichoice.com##.archiveItem-infeed
-kagoshima-gourmet.jp##.l-mainContent__inner > div.post_content > center
+anytime-report.com,kagoshima-gourmet.jp##.l-mainContent__inner > div.post_content > center
 skypenguin.net###sidebar-scroll > aside.widget_custom_html
 city.minami-alps.yamanashi.jp###adBnrArea
 ||games.nme-jp.com/nmegames/wp-content/themes/theme-nmegames/assets/img/banner/billboard/
@@ -9966,7 +9967,7 @@ blog.livedoor.jp##.popularArticleWithImage > div > a[href^="https://www.mgstage.
 blog.livedoor.jp##div[class^="article-body"] > dt.net[id] > span[style="background-color: rgb(255, 255, 255); font-size: 68.75%;"] > div[style$="word-break: break-all;"]
 blog.livedoor.jp##.fluct-2ad
 blog.livedoor.jp###pickrightcon > .right-container-ads
-blog.livedoor.jp##.kiziue > div.random-content[style]
+blog.livedoor.jp##.kiziue > div[style^="width:600px; font-family:"][style$="text-align: center;"]
 blog.livedoor.jp##.ads_more ~ .article-main2 > div[style^="margin: 60px"][style*="#fff"]
 javtheater.com##div[class^="chatbanner"]
 mensnonno.jp##.inarticle-ad
