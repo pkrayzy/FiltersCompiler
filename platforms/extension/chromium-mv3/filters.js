@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.9",
-			"timeUpdated": "2024-08-12T05:01:08+0000",
+			"version": "2.1.54.10",
+			"timeUpdated": "2024-08-12T09:01:19+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.8",
-			"timeUpdated": "2024-08-12T05:01:09+0000",
+			"version": "2.1.54.9",
+			"timeUpdated": "2024-08-12T09:01:20+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.31.19",
-			"timeUpdated": "2024-08-12T05:01:24+0000",
+			"version": "2.0.31.20",
+			"timeUpdated": "2024-08-12T09:01:35+0000",
 			"languages": [
 				"vi"
 			],
@@ -1178,8 +1178,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
 			"trustLevel": "high",
-			"version": "2.0.4.67",
-			"timeUpdated": "2024-08-11T21:01:42+0000",
+			"version": "2.0.4.68",
+			"timeUpdated": "2024-08-12T09:01:47+0000",
 			"languages": [
 				"fa",
 				"tg",
@@ -1228,8 +1228,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.19.17",
-			"timeUpdated": "2024-08-09T09:01:59+0000",
+			"version": "2.0.19.18",
+			"timeUpdated": "2024-08-12T09:01:52+0000",
 			"languages": [
 				"sv"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.47.40",
-			"timeUpdated": "2024-08-12T05:01:51+0000",
+			"version": "2.0.47.41",
+			"timeUpdated": "2024-08-12T09:02:02+0000",
 			"languages": [
 				"hi"
 			],
