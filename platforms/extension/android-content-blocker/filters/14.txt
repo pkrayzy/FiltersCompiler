@@ -1,9 +1,9 @@
-! Checksum: EKveFYHIBWgcth4kzmV5DQ
-! Diff-Path: ../patches/14/14-s-1723484203-3600.patch
+! Checksum: v816O0EUXm9KHXlqkKvwHg
+! Diff-Path: ../patches/14/14-s-1723487819-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.93
-! TimeUpdated: 2024-08-12T17:33:30+00:00
+! Version: 2.2.4.94
+! TimeUpdated: 2024-08-12T18:33:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -79,6 +79,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.flexit_cookie
 ##.cookiesBackground
 ###tfm_dsgvo_disclaimer
 ###cconsent-bar
@@ -2410,6 +2411,11 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+uswitch.com##div[data-include="cookie-banner"]
+tf-robots.nl##div[data-testid="consent-bar-container"]
+toonpool.com#$##privacyModal { display: none !important; }
+toonpool.com#$##privacyModal ~ div.modal-backdrop { display: none !important; }
+toonpool.com#$#body { overflow: auto !important; padding-right: 0 !important; }
 store.grapht.tokyo##div[class^="_cookie-consent_"]
 dexatel.com##div[class^="cookie-box_cookie-box__"]
 flyt-trafikkskole.no###tracking-warning
@@ -2567,8 +2573,8 @@ healthlottery.co.uk##.cookie-slider
 ||d2qrx616zfqhjn.cloudfront.net/releases/*.entry.js
 gira.de###giracst-dialog-wrapper
 getdirecto.com##.cookies-components
-openforce.com#$#div[id^="dsgvo-widget__popup"] { display: none !important; }
-openforce.com#$#.dsgvo-widget__fixBody { overflow: auto !important; }
+greatplacetowork.ch,openforce.com#$#div[id^="dsgvo-widget__popup"] { display: none !important; }
+greatplacetowork.ch,openforce.com#$#.dsgvo-widget__fixBody { overflow: auto !important; }
 avantehs.com##.eu-popup
 dedicatedbrand.com###js-cookieConsent
 griffbereit24.de#$##cookie-banner { display: none !important; }
@@ -29869,7 +29875,7 @@ h2-mobile.fr##.modal-backdrop
 journal.tinkoff.ru##div[data-analytics="banner"] > a[href^="/one-page-to-rule-them-all/"]
 click-or-die.ru##div[class^="click-admitad-mobile_"]
 mlbtraderumors.com###fv_tr_mobile_before_comments
-npmtrends.com##.email-signup
+northcentralpa.com,npmtrends.com##.email-signup
 fxstreet.com##div[id^="subscribetonewsletter"]
 allevents.in##.bottom-right-subscribe
 azcapitoltimes.com##.newsletter-acton-form-rightsidebar
@@ -38890,7 +38896,7 @@ instagram.com##._aagw:empty
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185502
 cyberleninka.ru###content > div.viewer-similars
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184333
-kakuchopurei.com##.live-news-widget
+kakuchopurei.com##.live-news-widget-wrap
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184763
 rockpapershotgun.com##.poll_wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182947

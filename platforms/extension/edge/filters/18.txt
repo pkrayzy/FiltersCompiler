@@ -1,9 +1,9 @@
-! Checksum: mhylPfotNcKg91pl687oyw
-! Diff-Path: ../patches/18/18-s-1723484212-3600.patch
+! Checksum: Juxmx86Yd5O7Qp4SbxF+iA
+! Diff-Path: ../patches/18/18-s-1723487828-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.45.11
-! TimeUpdated: 2024-08-12T17:33:35+00:00
+! Version: 2.0.45.12
+! TimeUpdated: 2024-08-12T18:33:42+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.flexit_cookie
 ##.cookiesBackground
 ###tfm_dsgvo_disclaimer
 ###cconsent-bar
@@ -2456,6 +2457,12 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+uswitch.com##div[data-include="cookie-banner"]
+vakantieveilingen.nl###__next > div > div:has(> header) > div:has(button[data-aq="accept-cookies-button"])
+tf-robots.nl##div[data-testid="consent-bar-container"]
+toonpool.com#$##privacyModal { display: none !important; }
+toonpool.com#$##privacyModal ~ div.modal-backdrop { display: none !important; }
+toonpool.com#$#body { overflow: auto !important; padding-right: 0 !important; }
 store.grapht.tokyo##div[class^="_cookie-consent_"]
 dexatel.com##div[class^="cookie-box_cookie-box__"]
 flyt-trafikkskole.no###tracking-warning
@@ -2656,8 +2663,8 @@ telefonicaempresas.es##body > div:not([class]):not([id]) > div[data-cy]:has(> di
 joinrs.com#%#//scriptlet('trusted-set-cookie', 'cookie-consent-settings', '%5B%5D')
 gira.de###giracst-dialog-wrapper
 getdirecto.com##.cookies-components
-openforce.com#$#div[id^="dsgvo-widget__popup"] { display: none !important; }
-openforce.com#$#.dsgvo-widget__fixBody { overflow: auto !important; }
+greatplacetowork.ch,openforce.com#$#div[id^="dsgvo-widget__popup"] { display: none !important; }
+greatplacetowork.ch,openforce.com#$#.dsgvo-widget__fixBody { overflow: auto !important; }
 etherpad.org#%#//scriptlet('set-cookie', 'cookiesAccepted', 'false')
 avantehs.com##.eu-popup
 floydsbarbershop.com#%#//scriptlet('trusted-set-cookie', 'fb_cookie_prefs', '%7B%22consented%22%3Atrue%2C%22functional%22%3Afalse%2C%22performance%22%3Afalse%2C%22data%22%3Afalse%7D')

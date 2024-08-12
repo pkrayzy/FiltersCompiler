@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: DQdbnJhw/4gISgnJXXcovw
-! Diff-Path: ../patches/18/18-s-1723484229-3600.patch
+! Checksum: 3tFqBlhKPXxnUkNj7XUdIA
+! Diff-Path: ../patches/18/18-s-1723487846-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.45.11
-! TimeUpdated: 2024-08-12T17:33:35+00:00
+! Version: 2.0.45.12
+! TimeUpdated: 2024-08-12T18:33:42+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -80,6 +80,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.flexit_cookie
 ##.cookiesBackground
 ###tfm_dsgvo_disclaimer
 ###cconsent-bar
@@ -2420,6 +2421,12 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+uswitch.com##div[data-include="cookie-banner"]
+vakantieveilingen.nl###__next > div > div:has(> header) > div:has(button[data-aq="accept-cookies-button"])
+tf-robots.nl##div[data-testid="consent-bar-container"]
+toonpool.com#$##privacyModal { display: none !important; }
+toonpool.com#$##privacyModal ~ div.modal-backdrop { display: none !important; }
+toonpool.com#$#body { overflow: auto !important; padding-right: 0 !important; }
 store.grapht.tokyo##div[class^="_cookie-consent_"]
 dexatel.com##div[class^="cookie-box_cookie-box__"]
 flyt-trafikkskole.no###tracking-warning
@@ -2604,8 +2611,8 @@ healthlottery.co.uk##.cookie-slider
 telefonicaempresas.es##body > div:not([class]):not([id]) > div[data-cy]:has(> div[data-cy="Popup cookies"])
 gira.de###giracst-dialog-wrapper
 getdirecto.com##.cookies-components
-openforce.com#$#div[id^="dsgvo-widget__popup"] { display: none !important; }
-openforce.com#$#.dsgvo-widget__fixBody { overflow: auto !important; }
+greatplacetowork.ch,openforce.com#$#div[id^="dsgvo-widget__popup"] { display: none !important; }
+greatplacetowork.ch,openforce.com#$#.dsgvo-widget__fixBody { overflow: auto !important; }
 etherpad.org##+js(set-cookie, cookiesAccepted, false)
 avantehs.com##.eu-popup
 dedicatedbrand.com###js-cookieConsent
