@@ -7210,7 +7210,7 @@
 			},
 			"ru": {
 				"name": "Fanboy's Annoyances",
-				"description": "Удаляет всплывающие окна на странице и другие неприятности. Включает списки cookie-файлов Fanboy's Social Blocking и EasyList."
+				"description": "Удаляет всплывающие окна на странице и другие раздражающие элементы. Включает в себя фильтры EasyList Cookie List и Fanboy's Social Blocking List."
 			},
 			"sk": {
 				"name": "Fanboy's Annoyances",
