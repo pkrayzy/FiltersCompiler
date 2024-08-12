@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/1_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.93.2",
-			"timeUpdated": "2024-08-09T14:31:27+0000",
+			"version": "2.0.93.3",
+			"timeUpdated": "2024-08-12T13:31:34+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.48.8",
-			"timeUpdated": "2024-08-12T12:31:27+0000",
+			"version": "2.3.48.9",
+			"timeUpdated": "2024-08-12T13:31:49+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.4.59",
-			"timeUpdated": "2024-08-12T12:33:01+0000",
+			"version": "2.1.4.60",
+			"timeUpdated": "2024-08-12T13:33:13+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -576,8 +576,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/13_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.77",
-			"timeUpdated": "2024-08-12T12:33:23+0000",
+			"version": "2.0.52.78",
+			"timeUpdated": "2024-08-12T13:33:33+0000",
 			"languages": [
 				"tr"
 			],
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.4.89",
-			"timeUpdated": "2024-08-12T12:33:31+0000",
+			"version": "2.2.4.90",
+			"timeUpdated": "2024-08-12T13:33:42+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -681,8 +681,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.45.7",
-			"timeUpdated": "2024-08-12T12:33:38+0000",
+			"version": "2.0.45.8",
+			"timeUpdated": "2024-08-12T13:33:48+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -744,8 +744,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/21_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.24.98",
-			"timeUpdated": "2024-08-12T05:33:44+0000",
+			"version": "2.0.24.99",
+			"timeUpdated": "2024-08-12T13:33:49+0000",
 			"languages": [],
 			"tags": [
 				5,
