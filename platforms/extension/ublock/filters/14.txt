@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: zpOzTTeRlhhWdgA+FiPlvg
-! Diff-Path: ../patches/14/14-s-1723487845-3600.patch
+! Checksum: 6ztBLHDiMMI0lLVf/wVJgg
+! Diff-Path: ../patches/14/14-s-1723491422-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.94
-! TimeUpdated: 2024-08-12T18:33:35+00:00
+! Version: 2.2.4.95
+! TimeUpdated: 2024-08-12T19:33:34+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14567,7 +14567,6 @@ nbsklep.pl##+js(set-cookie, newbalance_policy, true)
 readspeaker.com##+js(remove-class, show--consent, html.show--consent)
 abcya.com##+js(remove-class, cookie, body > .root.fixed-padding.cookie, stay)
 newbalance.ru##+js(set-local-storage-item, cookieDate, emptyObj)
-ekstrabladet.dk##+js(set-cookie, CookieConsent, 1)
 ieatfoodtours.co.uk,londraculturale.it,onceinrome.com,weliketuscany.it##+js(set-cookie, fh_should_track, false)
 voka.tv##+js(set-local-storage-item, ALLOW_COOKIES, false)
 gns3.com##+js(set-local-storage-item, user-has-accepted-cookies, true)
@@ -14604,7 +14603,7 @@ o2.fr##+js(set-cookie, cookie.consent.done, true)
 m.ter.sncf.com##+js(set-cookie, cookiesConsent, 0)
 zpruszkowa.pl##+js(set-cookie, impgdpr, 0)
 enwi-hz.de##+js(set-cookie, cookieAgreed, true)
-keil.eu,egmont.com,storyhouseegmont.dk,storyhouseegmont.no,storyhouseegmont.se##+js(set-cookie, CookieConsent, 1)
+ekstrabladet.dk,stokker.ee,keil.eu,egmont.com,storyhouseegmont.dk,storyhouseegmont.no,storyhouseegmont.se##+js(set-cookie, CookieConsent, 1)
 friv5online.com##+js(abort-current-script, document.getElementById, gdprModal)
 audi-mediacenter.com##+js(set-cookie, AUDI_ENSIGHTEN_PRIVACY_MODAL_VIEWED, 1)
 audi-mediacenter.com##+js(set-cookie, AUDI_ENSIGHTEN_PRIVACY_Functional, 1)
@@ -23040,6 +23039,11 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+stokker.ee##div[class^="layout_scroller-"]
+nytimes.com#$##article-container-grid > div.article-content-container + div:empty { display: none !important; }
+nytimes.com#$#main > div#body-container > div#darken-overlay { display: none !important; }
+nytimes.com#$#main > div#body-container > div#slideup-regwall { display: none !important; }
+nytimes.com#$#body.noscroll { position: unset !important; }
 guidetoiceland.is##+js(set-cookie, exitEntant, true)
 e-food.gr##body div[class^="sc-"]:has(> div[class^="sc-"] > div[class^="sc-"] > [src$="_campaign_icon.png"])
 prtimes.jp##.document-download-banner
@@ -31259,6 +31263,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+stokker.ee##div[class*="typeWarning-"]
 explorethearchive.com##.copyRight-div
 newsmax.com###nmsbma__container
 iz.ru##.get_news_link
@@ -53317,6 +53322,7 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 ||s.9111s.ru/*/js/robot_chat/addQ_chat.js
 ||s.acquire.io/*/init.js
 ||s.blamper.ru/js/app/widgets/common/FakeChat/
+||my.salesforce.com/embeddedservice/*/esw.min.js
 ||salesforce.com/*/webpack-script-manifest-liveChat-js.*.js
 ||salesforceliveagent.com^$domain=liquidweb.com|intimissimi.com
 ||salesiq.zoho.com/widget

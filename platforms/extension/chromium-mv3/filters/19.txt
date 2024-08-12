@@ -1,8 +1,8 @@
-! Checksum: WXgEakHYPcY5qvebCREBYQ
+! Checksum: z8Qbil7dc6L43kg/2IbcqQ
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.41.31
-! TimeUpdated: 2024-08-12T18:33:44+00:00
+! Version: 2.0.41.32
+! TimeUpdated: 2024-08-12T19:33:41+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4282,6 +4282,11 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+stokker.ee##div[class^="layout_scroller-"]
+nytimes.com#$##article-container-grid > div.article-content-container + div:empty { display: none !important; }
+nytimes.com#$#main > div#body-container > div#darken-overlay { display: none !important; }
+nytimes.com#$#main > div#body-container > div#slideup-regwall { display: none !important; }
+nytimes.com#$#body.noscroll { position: unset !important; }
 guidetoiceland.is#%#//scriptlet('set-cookie', 'exitEntant', 'true')
 e-food.gr##body div[class^="sc-"]:has(> div[class^="sc-"] > div[class^="sc-"] > [src$="_campaign_icon.png"])
 prtimes.jp##.document-download-banner
@@ -12490,6 +12495,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+stokker.ee##div[class*="typeWarning-"]
 explorethearchive.com##.copyRight-div
 newsmax.com###nmsbma__container
 iz.ru##.get_news_link

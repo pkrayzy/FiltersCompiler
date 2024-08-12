@@ -1,9 +1,9 @@
-! Checksum: 4TU86Sgl4Gla42ul2nbu+w
-! Diff-Path: ../patches/14/14-s-1723487822-3600.patch
+! Checksum: OZDc20PjzedReZVnjsfZDw
+! Diff-Path: ../patches/14/14-s-1723491410-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.94
-! TimeUpdated: 2024-08-12T18:33:35+00:00
+! Version: 2.2.4.95
+! TimeUpdated: 2024-08-12T19:33:34+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -15053,7 +15053,6 @@ nbsklep.pl#%#//scriptlet('set-cookie', 'newbalance_policy', 'true')
 readspeaker.com#%#//scriptlet('remove-class', 'show--consent', 'html.show--consent')
 abcya.com#%#//scriptlet('remove-class', 'cookie', 'body > .root.fixed-padding.cookie', 'stay')
 newbalance.ru#%#//scriptlet('set-local-storage-item', 'cookieDate', 'emptyObj')
-ekstrabladet.dk#%#//scriptlet('set-cookie', 'CookieConsent', '1')
 ieatfoodtours.co.uk,londraculturale.it,onceinrome.com,weliketuscany.it#%#//scriptlet('set-cookie', 'fh_should_track', 'false')
 pdf24.org#%#//scriptlet('trusted-click-element', 'div[id*="EntryPage"] > .buttons > .declineAll')
 vr.fi#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem('cookieConsent','{"consented":true,"levels":{"level1":true,"level2":false,"level3":false,"level4":false}}'))}catch(a){}})();
@@ -15097,7 +15096,7 @@ m.ter.sncf.com#%#//scriptlet('set-cookie', 'cookiesConsent', '0')
 zpruszkowa.pl#%#//scriptlet('set-cookie', 'impgdpr', '0')
 enwi-hz.de#%#//scriptlet('set-cookie', 'cookieAgreed', 'true')
 finanzchef24.de#%#document.cookie='cookie_consent_level={"functionality":true,"strictly-necessary":true,"targeting":false,"tracking":false}; path=/;';
-keil.eu,egmont.com,storyhouseegmont.dk,storyhouseegmont.no,storyhouseegmont.se#%#//scriptlet('set-cookie', 'CookieConsent', '1')
+ekstrabladet.dk,stokker.ee,keil.eu,egmont.com,storyhouseegmont.dk,storyhouseegmont.no,storyhouseegmont.se#%#//scriptlet('set-cookie', 'CookieConsent', '1')
 friv5online.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "gdprModal")
 audi-mediacenter.com#%#//scriptlet('set-cookie', 'AUDI_ENSIGHTEN_PRIVACY_MODAL_VIEWED', '1')
 audi-mediacenter.com#%#//scriptlet('set-cookie', 'AUDI_ENSIGHTEN_PRIVACY_Functional', '1')
@@ -23805,6 +23804,11 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+stokker.ee##div[class^="layout_scroller-"]
+nytimes.com#$##article-container-grid > div.article-content-container + div:empty { display: none !important; }
+nytimes.com#$#main > div#body-container > div#darken-overlay { display: none !important; }
+nytimes.com#$#main > div#body-container > div#slideup-regwall { display: none !important; }
+nytimes.com#$#body.noscroll { position: unset !important; }
 guidetoiceland.is#%#//scriptlet('set-cookie', 'exitEntant', 'true')
 e-food.gr##body div[class^="sc-"]:has(> div[class^="sc-"] > div[class^="sc-"] > [src$="_campaign_icon.png"])
 prtimes.jp##.document-download-banner
@@ -32011,6 +32015,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+stokker.ee##div[class*="typeWarning-"]
 explorethearchive.com##.copyRight-div
 newsmax.com###nmsbma__container
 iz.ru##.get_news_link
@@ -53857,6 +53862,7 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 ||s.9111s.ru/*/js/robot_chat/addQ_chat.js
 ||s.acquire.io/*/init.js
 ||s.blamper.ru/js/app/widgets/common/FakeChat/
+||my.salesforce.com/embeddedservice/*/esw.min.js
 ||salesforce.com/*/webpack-script-manifest-liveChat-js.*.js
 ||salesforceliveagent.com^$domain=liquidweb.com|intimissimi.com
 ||salesiq.zoho.com/widget

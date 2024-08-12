@@ -1,9 +1,9 @@
-! Checksum: v816O0EUXm9KHXlqkKvwHg
-! Diff-Path: ../patches/14/14-s-1723487819-3600.patch
+! Checksum: AEypuGOLtwX8DeKva7Yqfw
+! Diff-Path: ../patches/14/14-s-1723491408-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.94
-! TimeUpdated: 2024-08-12T18:33:35+00:00
+! Version: 2.2.4.95
+! TimeUpdated: 2024-08-12T19:33:34+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21777,6 +21777,11 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+stokker.ee##div[class^="layout_scroller-"]
+nytimes.com#$##article-container-grid > div.article-content-container + div:empty { display: none !important; }
+nytimes.com#$#main > div#body-container > div#darken-overlay { display: none !important; }
+nytimes.com#$#main > div#body-container > div#slideup-regwall { display: none !important; }
+nytimes.com#$#body.noscroll { position: unset !important; }
 prtimes.jp##.document-download-banner
 itselect.itmedia.co.jp##.footer-cv
 turbovpn.com##.container > div.daily-popup.show-daily-popup
@@ -29388,6 +29393,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+stokker.ee##div[class*="typeWarning-"]
 explorethearchive.com##.copyRight-div
 newsmax.com###nmsbma__container
 iz.ru##.get_news_link
@@ -48245,6 +48251,7 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 ||s.9111s.ru/*/js/robot_chat/addQ_chat.js
 ||s.acquire.io/*/init.js
 ||s.blamper.ru/js/app/widgets/common/FakeChat/
+||my.salesforce.com/embeddedservice/*/esw.min.js
 ||salesforce.com/*/webpack-script-manifest-liveChat-js.*.js
 ||salesforceliveagent.com^$domain=liquidweb.com|intimissimi.com
 ||salesiq.zoho.com/widget
