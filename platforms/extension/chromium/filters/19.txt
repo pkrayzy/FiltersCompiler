@@ -1,9 +1,9 @@
-! Checksum: VBVoex8y4S32jZH92p1rRw
-! Diff-Path: ../patches/19/19-s-1723538207-3600.patch
+! Checksum: UoHtrTu+QvCRUjvlcDuHOg
+! Diff-Path: ../patches/19/19-s-1723541803-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.41.33
-! TimeUpdated: 2024-08-13T08:33:24+00:00
+! Version: 2.0.41.34
+! TimeUpdated: 2024-08-13T09:33:17+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -238,8 +238,9 @@ mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asR
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
 ! dzen.ru
 ! Under the search
-dzen.ru#%#//scriptlet('set-constant', 'Ya.Neo.dataSource.news.isAdvertEnabled', 'false')
+dzen.ru##div:matches-attr("data-*"="ad-banner")
 ! Ads in news
+dzen.ru##div[class^="news-"][class$="_banner"]
 dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 ! Ads in the feed
 dzen.ru#$?#.feed__item > article._with_big_card_height._dzen-feed._carousel:contains(/[реклама]{7,10}/) { remove: true; }
@@ -252,6 +253,9 @@ dzen.ru##div[class^="float-interview__float-"]
 [$path=/a/]dzen.ru#?#.zen-page div.feed__item article:matches-css(align-items: center)
 !
 ! Video
+dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.rtb', 'undefined')
+[$path=/video]dzen.ru##div[class*="item-info__videoViewerItemInfo-"] + div:not([class])
+[$path=/video]dzen.ru##div[class^="video-view-sidebar"] div[class]:matches-attr("aria-label"=/[Рр]екламная карта/)
 dzen.ru##.viewer-layout__sidebar div[aria-label*="екламная карта"]
 !
 ! END: VK group

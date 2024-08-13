@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: s3VakgdIM4dEoAf7EANWxQ
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1723538226-3600.patch
+! Checksum: DllbpwtlSS50/HgZTnUlKA
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1723541826-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.99
-! TimeUpdated: 2024-08-13T08:33:17+00:00
+! Version: 2.2.5.0
+! TimeUpdated: 2024-08-13T09:33:10+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -8540,12 +8540,16 @@ drive2.ru##.js-page > div[class*=" "] > div[itemscope] ~ div[class]:not([id], [d
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru##+js(set-constant, Object.prototype.hideTgbAd, '')
 e.mail.ru,octavius.mail.ru##+js(no-setTimeout-if, /\(\)=>[a-z]{1}\(\)$/)
-dzen.ru##+js(set-constant, Ya.Neo.dataSource.news.isAdvertEnabled, false)
+dzen.ru##div:matches-attr("data-*"="ad-banner")
+dzen.ru##div[class^="news-"][class$="_banner"]
 dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 dzen.ru##div[class^="float-interview__float-"]
 dzen.ru##:matches-path(/a/)div[class*="_position_articleRight "][style*="max-height:"]
 dzen.ru##:matches-path(/a/)div[class^="article__"][class$="-wrapper"] > div[class*="_position_"][class$="_color_white"]
 dzen.ru#?#:matches-path(/a/).zen-page div.feed__item article:matches-css(align-items: center)
+dzen.ru##+js(set-constant, Object.prototype.rtb, undefined)
+dzen.ru##:matches-path(/video)div[class*="item-info__videoViewerItemInfo-"] + div:not([class])
+dzen.ru##:matches-path(/video)div[class^="video-view-sidebar"] div[class]:matches-attr("aria-label"=/[Рр]екламная карта/)
 dzen.ru##.viewer-layout__sidebar div[aria-label*="екламная карта"]
 rambler.ua,rambler.ru##+js(set-cookie, _blocker_hidden, 1)
 !+ NOT_PLATFORM(windows, mac, android)

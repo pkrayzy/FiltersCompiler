@@ -1,9 +1,9 @@
-! Checksum: oHpYQQMIY0aN6M1RO1TI+A
-! Diff-Path: ../patches/14/14-s-1723538241-3600.patch
+! Checksum: p1UzMBnk+ulaFsRbEYiMqA
+! Diff-Path: ../patches/14/14-s-1723541845-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.4.99
-! TimeUpdated: 2024-08-13T08:33:17+00:00
+! Version: 2.2.5.0
+! TimeUpdated: 2024-08-13T09:33:10+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2555,7 +2555,6 @@ lemanapro.ru##div[data-qa="cookie-notification"]
 tjpr.jus.br###politica-privacidade-tjpr
 cuvva.com###cuvva-app-injection-site > div:has(> div button[data-testid="accept-cookies"])
 sheepesports.com##body > .fixed.bottom-0.right-0:has(> .border > .flex > p.text-sm > a[href="/terms"])
-chrono24.*#%#//scriptlet('trusted-set-cookie-reload', 'c24-consent', 'AAEAIwEq')
 hornet.com#%#//scriptlet('set-cookie', '_consent_ads', '0')
 hornet.com#%#//scriptlet('set-cookie', '_consent_analytics', '0')
 airstop.sk,airstop.cz,airstop.pl#$#body[style^="overflow:"] { overflow: auto !important; }
@@ -19816,8 +19815,9 @@ mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asR
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
 ! dzen.ru
 ! Under the search
-dzen.ru#%#//scriptlet('set-constant', 'Ya.Neo.dataSource.news.isAdvertEnabled', 'false')
+dzen.ru##div:matches-attr("data-*"="ad-banner")
 ! Ads in news
+dzen.ru##div[class^="news-"][class$="_banner"]
 dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 ! Ads in the feed
 dzen.ru#$?#.feed__item > article._with_big_card_height._dzen-feed._carousel:contains(/[реклама]{7,10}/) { remove: true; }
@@ -19830,6 +19830,9 @@ dzen.ru##div[class^="float-interview__float-"]
 [$path=/a/]dzen.ru#?#.zen-page div.feed__item article:matches-css(align-items: center)
 !
 ! Video
+dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.rtb', 'undefined')
+[$path=/video]dzen.ru##div[class*="item-info__videoViewerItemInfo-"] + div:not([class])
+[$path=/video]dzen.ru##div[class^="video-view-sidebar"] div[class]:matches-attr("aria-label"=/[Рр]екламная карта/)
 dzen.ru##.viewer-layout__sidebar div[aria-label*="екламная карта"]
 !
 ! END: VK group
