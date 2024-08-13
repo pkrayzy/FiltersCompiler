@@ -1107,8 +1107,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.20.36",
-			"timeUpdated": "2024-08-12T17:33:42+0000",
+			"version": "2.1.20.37",
+			"timeUpdated": "2024-08-13T00:32:32+0000",
 			"languages": [
 				"zh"
 			],
