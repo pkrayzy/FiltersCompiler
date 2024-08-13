@@ -1,9 +1,9 @@
-! Checksum: myaVX1dOMkUjwczdWYD6xQ
-! Diff-Path: ../patches/18/18-s-1723552679-3600.patch
+! Checksum: NkHcSZCtnkXD9O8UTu4kKA
+! Diff-Path: ../patches/18/18-s-1723556272-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.45.19
-! TimeUpdated: 2024-08-13T12:34:06+00:00
+! Version: 2.0.45.20
+! TimeUpdated: 2024-08-13T13:33:57+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2457,6 +2457,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+fixpart.*#%#//scriptlet('trusted-click-element', 'button.cookie-accept', '', '300')
 mercedes-benz.com.tr#%#//scriptlet('trusted-click-element', 'cmm-cookie-banner >>> .button--accept-all')
 junglegym.*##div[x-ref="am-cookie-bar"]
 starlux-airlines.com##.vue-portal-target > div[role="dialog"]:has(a[href*="cookie-policy"])
@@ -15773,6 +15774,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186046
+insidecloset.com#@#.cookie-bar:not(body)
+insidecloset.com#@#.cookie-popup:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186066
 @@||assets.oneweb.mercedes-benz.com/plugin/cmm-cookie-banner/
 @@||usercentrics.eu^$domain=mercedes-benz.com.tr

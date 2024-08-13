@@ -1,9 +1,9 @@
-! Checksum: jXe7l0BQL9rVNR0vNznF2A
-! Diff-Path: ../patches/14/14-s-1723552644-3600.patch
+! Checksum: Yv7vHB/ff9jOlhyjBzbYjg
+! Diff-Path: ../patches/14/14-s-1723556232-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.3
-! TimeUpdated: 2024-08-13T12:34:00+00:00
+! Version: 2.2.5.4
+! TimeUpdated: 2024-08-13T13:33:51+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2457,6 +2457,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+fixpart.*#%#//scriptlet('trusted-click-element', 'button.cookie-accept', '', '300')
 mercedes-benz.com.tr#%#//scriptlet('trusted-click-element', 'cmm-cookie-banner >>> .button--accept-all')
 junglegym.*##div[x-ref="am-cookie-bar"]
 starlux-airlines.com##.vue-portal-target > div[role="dialog"]:has(a[href*="cookie-policy"])
@@ -15779,6 +15780,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186046
+insidecloset.com#@#.cookie-bar:not(body)
+insidecloset.com#@#.cookie-popup:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186066
 @@||assets.oneweb.mercedes-benz.com/plugin/cmm-cookie-banner/
 @@||usercentrics.eu^$domain=mercedes-benz.com.tr
@@ -31364,6 +31368,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||trusthalloween.com/?ze=
 iz.ru###p4s-confirm-widget
 mail.ru##body > div[class][style^="top:"][style*="left:"]:has(> div[class] > div[class] > div[class] > button[data-logger="PushSubscribeButton"])
 trendyol.com#%#//scriptlet('set-constant', 'WebPushManager', 'noopFunc')
@@ -32202,6 +32207,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+youcine.plus##a.ads-embed[href^="https://wa.me/"]
 stokker.ee##div[class*="typeWarning-"]
 explorethearchive.com##.copyRight-div
 newsmax.com###nmsbma__container
@@ -39392,6 +39398,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
 !
+m.aksam.com.tr##.footerSocials
 homerun.co.uk###appstore-desktop
 guidetoiceland.is##h2 ~ div[class^="x-"]:has(> aside[class^="x-"] > div[class^="x-"] > a[href^="https://apps.apple.com/ua/app/"])
 guidetoiceland.is###attractionContainer + div[style]:has(> div[class^="Container_container"] > div[class*="Section_notFirstSection__"])
