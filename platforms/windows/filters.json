@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.48.19",
-			"timeUpdated": "2024-08-13T07:31:06+0000",
+			"version": "2.3.48.20",
+			"timeUpdated": "2024-08-13T08:31:12+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -400,8 +400,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.4.64",
-			"timeUpdated": "2024-08-13T06:32:47+0000",
+			"version": "2.1.4.65",
+			"timeUpdated": "2024-08-13T08:32:47+0000",
 			"languages": [],
 			"tags": [
 				3,
@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.55.45",
-			"timeUpdated": "2024-08-12T17:33:12+0000",
+			"version": "2.0.55.46",
+			"timeUpdated": "2024-08-13T08:32:58+0000",
 			"languages": [
 				"ja"
 			],
@@ -511,8 +511,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.26.9",
-			"timeUpdated": "2024-08-13T07:32:55+0000",
+			"version": "2.0.26.10",
+			"timeUpdated": "2024-08-13T08:33:03+0000",
 			"languages": [
 				"es",
 				"pt"
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.4.98",
-			"timeUpdated": "2024-08-13T07:33:08+0000",
+			"version": "2.2.4.99",
+			"timeUpdated": "2024-08-13T08:33:17+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.32",
-			"timeUpdated": "2024-08-12T19:33:41+0000",
+			"version": "2.0.41.33",
+			"timeUpdated": "2024-08-13T08:33:24+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.20.38",
-			"timeUpdated": "2024-08-13T07:33:20+0000",
+			"version": "2.1.20.39",
+			"timeUpdated": "2024-08-13T08:33:30+0000",
 			"languages": [
 				"zh"
 			],
