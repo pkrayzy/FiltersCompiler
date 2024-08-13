@@ -1,9 +1,9 @@
-! Checksum: uNKl/0RDJM9GD0xBWv6ihg
-! Diff-Path: ../patches/14/14-s-1723549111-3600.patch
+! Checksum: OwQz1Q6S4m0QC4bneTuUHw
+! Diff-Path: ../patches/14/14-s-1723552674-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.2
-! TimeUpdated: 2024-08-13T11:34:16+00:00
+! Version: 2.2.5.3
+! TimeUpdated: 2024-08-13T12:34:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2459,6 +2459,12 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+mercedes-benz.com.tr#%#//scriptlet('trusted-click-element', 'cmm-cookie-banner >>> .button--accept-all')
+junglegym.*##div[x-ref="am-cookie-bar"]
+starlux-airlines.com##.vue-portal-target > div[role="dialog"]:has(a[href*="cookie-policy"])
+airchina.*###cookie-notice-popin
+airchina.*##.cav2-notification_cookie
+m.airchina.com.cn###full-page > div.am-cf:has(> div#cookiesTips)
 purusmeda.cz###js-cc-banner
 zinio.com###modal-consent-init
 wemystic.fr##.consent_policy_banner
@@ -3489,7 +3495,6 @@ doppelmayr.com###dop-cookiebanner-overlay
 doppelmayr.com###dop-cookiebanner
 ctpost.com,ctinsider.com,beaumontenterprise.com,manisteenews.com,myjournalcourier.com,sfchronicle.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":["jwp","twitter","facebook"]}')
 mysanantonio.com,expressnews.com,sfgate.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":[]}')
-auf1.tv#%#//scriptlet('trusted-set-local-storage-item', 'consent', '{"analytics":false,"location":false,"video":false}')
 rutube.ru##noindex.eu-cookie-popup-module__eu_cookie_popup
 thesports.com##.cookie-message-page
 miniclip.com##.mc-consents-wrapper
@@ -5123,7 +5128,7 @@ nomadgoods.com##.DataPrivacyBanner
 strazakom.pl,sklep-brennenstuhl.pl,kinetixxpolska.pl###pdcookielaw
 luna.amazon.com,luna.amazon.ru,luna.amazon.net,luna.amazon.org,luna.amazon.ir,luna.amazon.in,luna.amazon.com.au,luna.amazon.com.tr,luna.amazon.co.uk,luna.amazon.co,luna.amazon.gr,luna.amazon.ca,luna.amazon.com.ua,luna.amazon.vn,luna.amazon.info,luna.amazon.de,luna.amazon.fr,luna.amazon.me,luna.amazon.by,luna.amazon.jp,luna.amazon.ua,luna.amazon.com.tw,luna.amazon.co.za,luna.amazon.co.il,luna.amazon.eu,luna.amazon.it,luna.amazon.tv,luna.amazon.id,luna.amazon.com.br,luna.amazon.es,luna.amazon.ch,luna.amazon.co.in,luna.amazon.com.vn,luna.amazon.biz,luna.amazon.app,luna.amazon.nl,luna.amazon.us,luna.amazon.pl,luna.amazon.cl,luna.amazon.com.mx,luna.amazon.ro,luna.amazon.co.jp,luna.amazon.co.nz,luna.amazon.ma,luna.amazon.com.ar,luna.amazon.cc,luna.amazon.rs,luna.amazon.cn,luna.amazon.ae,luna.amazon.co.kr,luna.amazon.mx,luna.amazon.pk,luna.amazon.se,luna.amazon.cz,luna.amazon.tw,luna.amazon.ai,luna.amazon.com.sg,luna.amazon.com.co,luna.amazon.co.th,luna.amazon.be,luna.amazon.dk,luna.amazon.hu,luna.amazon.az,luna.amazon.com.pk,luna.amazon.md,luna.amazon.tech,luna.amazon.ge,luna.amazon.com.cn,luna.amazon.sg,luna.amazon.no,luna.amazon.com.bd,luna.amazon.to,luna.amazon.dev,luna.amazon.mk,luna.amazon.com.ng,luna.amazon.ie,luna.amazon.at,luna.amazon.co.ke,luna.amazon.com.np,luna.amazon.ph,luna.amazon.fi,luna.amazon.lv,luna.amazon.space,luna.amazon.life,luna.amazon.pe,luna.amazon.ng,luna.amazon.lt,luna.amazon.hk,luna.amazon.cloud,luna.amazon.gov.bd,luna.amazon.sa,luna.amazon.pt,luna.amazon.gg,luna.amazon.hr,luna.amazon.mobi,luna.amazon.fun,luna.amazon.bg,luna.amazon.com.sa,luna.amazon.mn,luna.amazon.ws,luna.amazon.ee,luna.amazon.uk,luna.amazon.com.pe,luna.amazon.ml,luna.amazon.dz,luna.amazon.org.il,luna.amazon.world,luna.amazon.is,luna.amazon.gov.np,luna.amazon.si,luna.amazon.org.in,luna.amazon.digital,luna.amazon.work,luna.amazon.agency,luna.amazon.sh##div[data-portal-id="cookie-consent"]
 fotmob.com###__next > div[style^="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index:"]
-miniso.com.tr##div[class^="cookies_container__"]
+airchina.com.cn,miniso.com.tr##div[class^="cookies_container__"]
 businessnovinite.bg,btvplus.bg,ladyzone.bg,btvsport.bg,btvnovinite.bg#$#html { overflow: auto !important; }
 businessnovinite.bg,btvplus.bg,ladyzone.bg,btvsport.bg,btvnovinite.bg#$#body { overflow: auto !important; }
 businessnovinite.bg,btvplus.bg,ladyzone.bg,btvsport.bg,btvnovinite.bg#$#body .cc_banner-wrapper { display: none !important; }
@@ -5384,7 +5389,9 @@ starmoney.de#$#body { overflow: auto !important; padding-right: 0 !important; }
 strato-hosting.co.uk#$#.consent { display: none !important; }
 strato-hosting.co.uk#%#//scriptlet('remove-class', 'noscroll', 'body')
 go2senkyo.com###m_foot_msg
-auf1.info,auf1.tv#?##__nuxt > div:has(> div.overflow-scroll > div > div.flex > button[class*="primary"])
+auf1.tv#%#//scriptlet('set-local-storage-item', 'isTrackingAllowed', 'false')
+auf1.tv##.flex-col.fixed.bottom-0.overflow-scroll:has(> div > .p-2 > a[href="/datenschutz"])
+auf1.info###__nuxt > div:has(> div.overflow-scroll > div > div.flex > button[class*="primary"])
 izolace-info.cz,hrad-bezdez.cz###ccnst__main
 eldorado.ru#?##__next > div[class]:has(> div[class] > a[href*="Cookie_Policy"])
 seb.lv#$##cookiesMessage { display: none !important; }
@@ -6167,7 +6174,7 @@ pojezierze24.pl###privModal
 playtech.ro##.ot_cookie_settings_btn
 vrchat.com##div[aria-label*="COOKIE WARNING"]
 rmf24.pl,rmfclassic.pl,rmfmaxx.pl,rmf.fm,rmfmaxxx.pl###gr-consent-layer-area
-volvocars-partner.pl,stalirov.lawyer,billetter.drammensbadet.no,subtleartmovie.com,contexto.io,twojpsycholog.pl##div[class^="cookies_"]
+airchina.com.cn,volvocars-partner.pl,stalirov.lawyer,billetter.drammensbadet.no,subtleartmovie.com,contexto.io,twojpsycholog.pl##div[class^="cookies_"]
 kardiologiaprewencyjna.eu##div[id^="cp"][style*="position: fixed;"]
 sercedziecka.org.pl#$##cooModal { display: none !important; }
 nutricia.pl###cookie-first
@@ -15750,6 +15757,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186066
+@@||assets.oneweb.mercedes-benz.com/plugin/cmm-cookie-banner/
+@@||usercentrics.eu^$domain=mercedes-benz.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186143
 @@||geolocation.onetrust.com/cookieconsentpub/v1/geo/location$domain=cbssports.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186067
