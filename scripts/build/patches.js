@@ -63,6 +63,13 @@ const main = async () => {
                 return false;
             }
 
+            const isAndroidContentBlocker = file.includes('/android-content-blocker/')
+                || file.includes('\\android-content-blocker\\');
+            if (isAndroidContentBlocker) {
+                console.log('Skipped generating patch for android-content-blocker');
+                return false;
+            }
+
             const filename = path.basename(file);
 
             if (!/\d+(_optimized|_without_easylist)?\.txt/.test(filename)) {
