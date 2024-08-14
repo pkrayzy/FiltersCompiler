@@ -1,16 +1,17 @@
 ![Adblock Plus 2.0]
-! Checksum: JehCjIYRvKevm4/ml1ABnw
+! Checksum: J3iRIIDE9s6YsbPrTSt4lg
+! Diff-Path: ../patches/235_optimized/235_optimized-s-1723655118-14400.patch
 ! Title: Persian Blocker (Optimized)
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.68
-! TimeUpdated: 2024-08-12T09:01:47+00:00
+! Version: 2.0.4.69
+! TimeUpdated: 2024-08-14T17:01:29+00:00
 ! Expires: 5 days (update frequency)
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.site/"]
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
-artmusics.top,musicpars3.ir,musicguitars.ir,subf2m.ir,zeemusic.ir,najiremix.ir,musichi.ir,likeemusic.ir##+js(window.open-defuser)
-/files/fa/adv^$image,~third-party,domain=ir|asriran.com|parsine.com|ana.press|niniban.com|vananews.com|barghnews.com|niniban.com|eghtesadonline.com
+artmusics.top,musicpars3.ir,musicguitars.ir,subf2m.ir,zeemusic.ir,najiremix.ir,musichi.ir,likeemusic.ir,appiroid.ir,androidtime.com##+js(window.open-defuser)
+/files/fa/adv^$image,~third-party,domain=ir|asriran.com|parsine.com|ana.press|niniban.com|vananews.com|barghnews.com|niniban.com|eghtesadonline.com|borna.news
 /files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news
-/wp-content/uploads/*.gif^$image,~third-party,domain=ir|~ifixit.ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com|takskin.com|avapedia.com|honarfardi.com|graphiran.com|tasvirezendegi.com|par30dl.net|par30games.net|elmefarda.com|asbe-bokhar.com|binaopt.com|farachart.com|farsiro.com|techtik.com
+/wp-content/uploads/*.gif^$image,~third-party,domain=ir|~ifixit.ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com|takskin.com|avapedia.com|honarfardi.com|graphiran.com|tasvirezendegi.com|par30dl.net|par30games.net|elmefarda.com|asbe-bokhar.com|binaopt.com|farachart.com|farsiro.com|techtik.com|androidtime.com
 /images/advertise^$image,~third-party,domain=ir|bazimag.com|jahannews.com
 /wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest,~third-party
 ##.zxc
@@ -280,6 +281,10 @@ anaj.ir,salamatnews.com##+js(set-constant, document.referrer, undefined)
 ||uptrendsdata.com^$third-party
 ||webpu.sh^$third-party
 ||web.webpushs.com^
+appnab.ir##div#ZAD
+androidtime.com##div.single-text-ads
+androidtime.com##div.block-content[class*="a.d.s-sidebar"]
+appiroid.ir##div.b-cont > div.download-link-ads-below
 animelist.tv##+js(nano-setInterval-booster, timeLeft, *, 0.02)
 ||appahang5.com/cdn/ads^$image,~third-party
 ||alibaba.ir/adtrace-latest.min.js^$script,~third-party
@@ -515,12 +520,7 @@ barsadic.com##div.text-center.col-md-3 > .paddingAll10.panel-success.panel
 ||banki.ir/images/banners/
 ||bankemardom.ir/Files/Ads
 ||backtory.com/Bucket/deepchart/DeepChartAnalytics.js
-borna.news##[href^="/advertisements/"]
-borna.news##.side_adv
-borna.news##.webgardi
-borna.news#$#.cols_cnt { max-width: 95% !important; }
-borna.news#$#.first_col, .n_first_col { width: 70% !important; }
-borna.news#$#.second_col, .n_second_col { width: 30% !important; }
+borna.news##div.selected-news:has(> div.txt_adv_parent)
 ||beautyhome.ir/wp-content/plugins/meks-easy-ads
 ||beautyhome.ir/wp-content/plugins/ads
 ||beautyhome.ir/wp-content/plugins/sticky-ad
@@ -826,6 +826,7 @@ fileboro.com##div.ads-content
 ||filmtarin.com^$third-party,domain=fastmobile.ir
 fastmobile.ir##div#ADbox-1
 fastmobile.ir##div#phon
+fastmobile.ir##div.floating-banner
 ftdigital.ir##a[href="https://maktabsharif.ir/"]
 forsatnet.ir##div.col-md-12 > div.card:has(> a > img[src$=".gif"])
 footofan.com#@#.ad-custom-size
@@ -1551,8 +1552,9 @@ persiangfx.com##div.tab.sidebar-box:nth-of-type(2) > h3
 p30afzar.com##.ADS_header_all
 p30afzar.com##.download-link-ads-below
 ||p30download.ir/page/*.gif^$image,~third-party
-p30download.ir##main#main-content > div[class^="tabliq-"]
+p30download.ir##[id*="kaprila"]
 p30download.ir##aside > div:not(:has(a[href*="/entry/"]))
+p30download.ir##aside > div:has(a[href*="links.p30download.ir"], a[class][target="_blank"][title][rel="nofollow"])
 p30download.ir##div.copyright-wrapper > div#copyright > a
 ||film.persianv.com/frontend/js/ads/
 persianv.com##.ads_box
@@ -1566,6 +1568,7 @@ pedal.ir##div.dotline-sticky
 ||patoghu.com/analytics.js^$script,~third-party
 ||img.patoghu.com/patoghu-$script,~third-party
 ||img.patoghu.com/new^$image,~third-party
+patoghu.com##div.wblock > a[href*="patoghu.com/repotaz/"]
 parstools.com##.widget_whmcs_ads_widget.widget
 parstools.com##.wpb_content_element.sidebar.wpb_widgetised_column
 parstools.com##.topbanners
@@ -1786,13 +1789,10 @@ sarzamindownload.com##.OpenTable > h2:has-text(مقالات):upward(.OpenTable)
 sarzamindownload.com##.GSLiveTab > .tab_container1 > #tab3 > h2:has-text(مقالات):upward(.GSLiveTab)
 sarzamindownload.com##.GSAdsLR
 @@||sarzamindownload.com/images/Ads_Place.jpg$image,~third-party
-||softgozar.com/Image/SiteAde/
-softgozar.com###advBan
-softgozar.com##.adv_text
-softgozar.com###RightPan
-softgozar.com###PopAlert
-softgozar.com##.AdvertiseD2Ban
-softgozar.com##.DTOPBan
+||softgozar.com/Image/SiteAde^$image,~third-party
+softgozar.com##div#advBan
+softgozar.com##div#advBan2
+softgozar.com##div#left_panel > div#RightPan:has(ul.adv_text)
 instagram.com##+js(window-close-if, /[Ss][Mm][Oo][Ss][Tt][Aa][Ff][Aa][Mm][Oo][Oo][Ss][Aa][Vv][Ii]/)
 subf2m.ir##a[class^="text-ads-"]
 subf2m.ir##div.backoritybase
