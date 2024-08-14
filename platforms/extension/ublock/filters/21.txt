@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: /lgbeDMjyIki51DhxEi58A
-! Diff-Path: ../patches/21/21-s-1723534619-3600.patch
+! Checksum: b0YPvsvjNtCM6sh2xEMsZA
+! Diff-Path: ../patches/21/21-s-1723649853-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.25.3
-! TimeUpdated: 2024-08-13T07:33:16+00:00
+! Version: 2.0.25.6
+! TimeUpdated: 2024-08-14T15:33:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -96,6 +96,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! 43rumors.com - newsletter sidebar
+43rumors.com##div[id^="mailpoet_form"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185581
 luciferdonghua.in##.wrapper > div.announ:contains(No one like ads)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185502
@@ -3310,6 +3312,7 @@ ya.ru,yandex.*##:matches-path(/search).EContent.SearchPage-RMG
 ya.ru,yandex.*##:matches-path(/search).serp-item[data-fast-subtype="product_tiles_adv"]
 ya.ru,yandex.*##:matches-path(/search).serp-item:has(> div[data-state-id] > article > div[class*="-"] span[id*="-PriceDisclaimer"])
 ! popup
+ya.ru,yandex.*##:matches-path(/search)div[class*="Distribution-SplashScreenModal"]:has(a[href^="https://ya.ru/search/_crpd/"])
 ya.ru,yandex.*##:matches-path(/search).Distribution-Popup
 ya.ru,yandex.*#$#:matches-path(/search)div[class*="Distribution-SplashScreenModal"][outercrosstitle="Нет, спасибо"] { display: none !important; }
 ya.ru,yandex.*##:matches-path(/search)div.Root[id]:has(> button.Distribution-SplashScreenModalCloseButtonOuter)
@@ -4900,6 +4903,8 @@ xhtab4.com,xhbranch5.com,galleryxh.site,xhbig.com,xhaccess.com,xhofficial.com,se
 xhamster20.desi,xhwebsite2.com,xhamster18.desi,xhadult3.com,xhadult2.com,xhmoon5.com,xhwide1.com,xhamster4.*,xhamster2.com,xhamster10.com,xhamster.com##iframe[src^="https://xhamsterpremium.com/"]
 xhamster.com##.premium-overlay
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185950
+iobit.com##.right-pop
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185514
 evrimagaci.org##div[data-url*="cbox-no-ads"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78407
@@ -5192,6 +5197,10 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+djmag.com##div[id^="masthead_"]
+rumble.com###premium-popup__container--aria
+rumble.com##.body-container > .block:has(> button[hx-get="/-premium/htmx/premium-value-prop"]:only-child)
+rumble.com##main > .homepage-section:not([id]):has(> .constrained:only-child > div[class*="img/rumble-premium-banner-"])
 uptodown.com###uptodown-turbo-promo
 apkpure.com##img[data-slot-code]
 newsmax.com###SMSbanner
@@ -7968,6 +7977,8 @@ uptoearn.xyz##+js(nano-setInterval-booster, generateDownloadLink, *, 0.001)
 melongmovie.site##+js(addEventListener-defuser, DOMContentLoaded, adlinkfly_api_token)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163764
 uploadhaven.com##+js(nano-setInterval-booster, countDown(), *, 0.28)
+! https://github.com/AdguardTeam/AdguardFilters/issues/185912
+babup.com##+js(nano-setInterval-booster, timer, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163761
 file-upload.com##+js(adjust-setTimeout, tick, , 0.02)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164028
@@ -9336,6 +9347,7 @@ qanda.ai##div[class^="Picture__Protector-"]
 codedosa.com###wpcp-error-message
 !--- CSS ---
 ! NOTE: Context menu - CSS
+open.spotify.com#$#div[data-testid="lyrics-container"] p.encore-text { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 sportskeeda.com#$##article-content p { user-select: auto !important; }
 teammy.ru#$?#head > style:contains(user-select:none) { remove: true; }
 afrikalyrics.com#$#div[style*="user-select:"] { user-select: auto !important; }
