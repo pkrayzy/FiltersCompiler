@@ -70,6 +70,13 @@ const main = async () => {
                 return false;
             }
 
+            // currently supported mac platform is 'mac_v2' so no patch needed for 'mac' platform
+            const isOldMac = file.includes('/mac/') || file.includes('\\mac\\');
+            if (isOldMac) {
+                console.log('Skipped generating patch for old mac');
+                return false;
+            }
+
             const filename = path.basename(file);
 
             if (!/\d+(_optimized|_without_easylist)?\.txt/.test(filename)) {
