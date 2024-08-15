@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.55.57",
-			"timeUpdated": "2024-08-15T12:32:39+0000",
+			"version": "2.0.55.58",
+			"timeUpdated": "2024-08-15T23:32:29+0000",
 			"languages": [
 				"ja"
 			],
