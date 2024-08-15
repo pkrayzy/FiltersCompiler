@@ -1,9 +1,9 @@
-! Checksum: fYjOQWCWmGEGKKseppifQw
-! Diff-Path: ../patches/9/9-s-1723671384-3600.patch
+! Checksum: UmsrY1PcIse9uzAm+ugLDA
+! Diff-Path: ../patches/9/9-s-1723721834-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.26.16
-! TimeUpdated: 2024-08-14T21:32:38+00:00
+! Version: 2.0.26.17
+! TimeUpdated: 2024-08-15T11:33:02+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -277,6 +277,10 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186364
+istigo.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=istigo.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186243
 cozinhabr.top#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -1791,6 +1795,8 @@ peru21.pe#@#.adstop
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186362
+pobreflix.do#%#//scriptlet('remove-attr', 'href', 'a[href]#clickfakeplayer')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186250
 clickjogos.com.br#%#//scriptlet('set-constant', 'ShowRewards', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186166
