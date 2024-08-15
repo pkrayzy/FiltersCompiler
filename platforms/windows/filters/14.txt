@@ -1,9 +1,9 @@
-! Checksum: 3RX/peDWn1KIDZiExKRLJA
-! Diff-Path: ../patches/14/14-s-1723711021-3600.patch
+! Checksum: RDAKAopSe3AxwiDCPbiUVw
+! Diff-Path: ../patches/14/14-s-1723714680-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.25
-! TimeUpdated: 2024-08-15T08:33:21+00:00
+! Version: 2.2.5.26
+! TimeUpdated: 2024-08-15T09:32:56+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2457,6 +2457,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+qamadness.com#$##cookie-law-info-bar { display: none !important; }
+qamadness.com#$#body { overflow: auto !important; }
 heidelberg24.de#$?#.cmp-modal-open { overflow: auto !important; }
 design.com#%#//scriptlet('trusted-click-element', '#accept-all-cookies button', '', '1000')
 crumblcookies.com#%#//scriptlet('trusted-set-local-storage-item', 'necessary_cookies', '"true"')
@@ -15790,6 +15792,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186237
+qamadness.com#@##cookie-law-info-bar
+qamadness.com#@##cliSettingsPopup
 ! heidelberg24.de - broken comments
 @@||cdn.opencmp.net/tcf-v2/cmp-stub-latest.js$domain=heidelberg24.de
 ! ruhr24.de - embed not working
