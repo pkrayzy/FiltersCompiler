@@ -1,9 +1,9 @@
-! Checksum: vY9ewYk3BfymAZ7qK+eirQ
-! Diff-Path: ../patches/14/14-s-1723736216-3600.patch
+! Checksum: 3X8ZjG26/mCTiqYKLNGcJw
+! Diff-Path: ../patches/14/14-s-1723739788-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.31
-! TimeUpdated: 2024-08-15T15:33:04+00:00
+! Version: 2.2.5.32
+! TimeUpdated: 2024-08-15T16:32:54+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2457,6 +2457,9 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+minimeal.com#$#body { overflow: auto !important; padding-right: 0 !important; }
+minimeal.com#$##id_cookie_banner ~ div.offcanvas-backdrop { display: none !important; }
+minimeal.com#$##id_cookie_banner { display: none !important; }
 samsung.com###consent_bottombar
 advgazeta.ru##.popup--confidential
 olajwebshop.hu##.cookie-alert ~ div#exposeMaskOverlay
@@ -23936,6 +23939,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+cloud.tencent.com##.cdc-portal-wrapper
 vogue.com.tr##.popup-message
 qiita.com##div[data-testid^="popup-"][data-testid$="-signup"]
 bing.com##.b_bnp_bopc
@@ -47855,6 +47859,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+cloud.tencent.com##.cdc-top-ad
 yomuno.jp##aside >.getters-banner:has(> a[href^="/goseisanshins?"])
 djmag.com##div[id^="masthead_"]
 rumble.com###premium-popup__container--aria
