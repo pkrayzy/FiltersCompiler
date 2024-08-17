@@ -1,9 +1,9 @@
-! Checksum: 80tIm2uOpa9e1uAdLzB+TA
-! Diff-Path: ../patches/16/16-s-1723822609-3600.patch
+! Checksum: BzXfmhXbOPakgBqVV3fVuQ
+! Diff-Path: ../patches/16/16-s-1723872962-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.46.7
-! TimeUpdated: 2024-08-16T15:33:22+00:00
+! Version: 2.0.46.8
+! TimeUpdated: 2024-08-17T05:33:00+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -215,6 +215,8 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147842
+japscan.lol#@#[class^="copine"]
+@@||japscan.lol/adcount.js$~third-party
 @@||japscan.lol^$generichide
 japscan.lol##.blur-background
 japscan.lol##.text-center > a[target="_blank"] > img
@@ -222,8 +224,6 @@ japscan.lol##.text-center > a[target="_blank"] > img
 japscan.lol#%#//scriptlet('abort-current-inline-script', 'addEventListener', 'String.fromCharCode')
 japscan.lol#%#(()=>{const n={construct:(n,o,t)=>{const e=o[0];if(e&&e.includes("return typeof"))throw new ReferenceError;return Reflect.construct(n,o,t)}};window.Function=new Proxy(window.Function,n)})();
 japscan.lol#%#!function(){const t={apply:(t,n,o)=>{if(n&&n.match?.(/_\$_|DklzSoz|_adbn_/))throw Error();return Reflect.apply(t,n,o)}};window.String.prototype.split=new Proxy(window.String.prototype.split,t)}();
-! Fixes incorrect blocking - search does not work
-||japscan.lol/ujs/$script,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147701
 trustmyscience.com##.adb-border
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146165
@@ -917,7 +917,6 @@ wiflix.date##center[style="padding: 20px;"]
 lephoceen.fr##div[class^="ad_ad_"]
 lephoceen.fr##div[class^="layout_megabanTopContainer"]
 lesechos.fr#?#span[shape="circle"] + span:contains(Publicité):upward(2)
-japscan.lol##.copineess
 japscan.lol##.tangoai
 japscan.lol##a[href^="https://www.tourpowouro.shop/"]
 nouvelobs.com##.advertising
@@ -952,7 +951,6 @@ h2-mobile.fr#?##main-container .blog__content:has(> .title-wrap--pr > h3:contain
 h2-mobile.fr###main-container .blog__content:has(> .col-md-4 > div[id^="optidigital-adslot-"])
 cosmopolitan.fr##.External
 /japs/*_1200x2000_banner_fr.jpg$xmlhttprequest,domain=japscan.lol
-||japscan.lol/ujs/$script
 japscan.lol###blur-inter
 japscan.lol###interstitial
 japscan.lol##a[target="_blank"].donate
