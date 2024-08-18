@@ -1,5 +1,5 @@
-! Checksum: n26CrVCMfXnOE8Yrm1ozTw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1723928706-14400.patch
+! Checksum: aYDnwrzWw1BX9vwmAdwL2w
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1723957486-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.82
@@ -95,7 +95,6 @@ drivereasy.com#?#.pakb-content p:has-text(click Update All)
 cfoc.org###top_custom_banner
 sensorstechforum.com##center:has([href="https://www.enigmasoftware.com/spyhunter5-eula/"])
 sensorstechforum.com###win_top_new_hidden
-windowsreport.com##div[class^=restoro-download] + section
 appuals.com##p + div > div:first-of-type
 ||driver-soft.com^$document
 wikidll.com,dllfile.net,dll-files.org##.detection-os
@@ -316,6 +315,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 192.3.110.170$network
 ||totalav.com^$all
 ||totalwebshield.com^$all
+||totaladblock.com^$all
 !+ PLATFORM(windows, mac, android)
 91.241.19.38$network
 !+ PLATFORM(windows, mac, android)
@@ -839,7 +839,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 !+ PLATFORM(windows, mac, android)
 57.128.71.215$network
 103.224.182.*$network
-||deephicy.net^$all
 ||keewoach.net^$all
 ||meenetiy.com^$all
 ||ossmightyenar.net^$all
@@ -892,7 +891,9 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||profitabledisplaynetwork.com^$all
 ||unseenreport.com^$all
 ||varycares.com^$all
+||awejmp.com^$all
 ||crmentjg.com^$all
+||jsmcrptjmp.com^$all
 ||prtord.com^$all
 ||ptapjmp.com^$all
 ||ptosrd.com^$all
@@ -2134,7 +2135,6 @@ smzdm.com##.qr-buy-container
 12306.cn##.fixed-right-menu > li.menu-item:nth-of-type(3)
 58.com##.app.rightbtn
 58.com##.wx-xcx-qrcode
-airchina.com.cn##[href="http://www.airchina.com.cn/cn/client_download.shtml"]
 amap.com###amapAppDownload
 amap.com###to_lushu
 bilibili.com##.mobile-link-l
@@ -2614,7 +2614,6 @@ $removeparam=hvarAID
 $removeparam=sv_affiliate_id
 $removeparam=sv_campaign_id
 $document,removeparam=/^sv_tax.*$/
-$document,removeparam=/^icid_.*$/
 $removeparam=LSNSUBSITE
 $removeparam=subacctid
 $removeparam=subacctname
@@ -2837,6 +2836,7 @@ $removeparam=af_id
 $removeparam=trafficSource
 $removeparam=gps_adid
 $removeparam=unicorn_click_id
+$removeparam=ebisAdID
 $removeparam=app_clickref
 $removeparam=as_campaign
 $removeparam=as_camptype
@@ -2982,7 +2982,6 @@ $removeparam=cstrackid
 $removeparam=returnFromLogin,domain=amazon.*
 @@/b/ref=$removeparam=ie
 ||amazon.*/dp/$removeparam=tag,document
-||amazon.*/stores/$removeparam=tag,document
 ||amazon.*/product/$removeparam=tag,document
 ||amazon.$removeparam=qu
 ||amazon.*/dp/$removeparam=rps,document
@@ -3054,6 +3053,9 @@ $removeparam=googleloc
 $removeparam=_sacat,domain=~ebay.*
 ||ebay.$removeparam=campid
 ||ebay.$removeparam=toolid
+$removeparam=crlp,domain=ebay.*
+$removeparam=MT_ID,domain=ebay.*
+$removeparam=geo_id,domain=ebay.*
 $removeparam=device,domain=ebay.*
 ||ebay.*/itm/$removeparam=LH_BIN
 ||ebay.$removeparam=mkpid
@@ -3107,7 +3109,6 @@ $removeparam=ogbl
 ||www.google.$removeparam=uact
 ://www.google.*/search^$removeparam=kgs
 ://www.google.*/search^$removeparam=shndl
-://www.google.*/search^$removeparam=entrypoint
 ||google.*/search$removeparam=sqi
 ||google.$removeparam=gs_ssp
 ||google.$removeparam=prds
@@ -3401,6 +3402,7 @@ $removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moose
 ||walmart.com^$removeparam=veh
 ||bbc.$removeparam=at_campaign
 $removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
+||gog.com^$removeparam=pp
 ||roblox.com^$removeparam=refPageId
 ||newegg.com^$removeparam=nm_mc
 $removeparam=bsencid
@@ -3409,7 +3411,6 @@ $removeparam=adcampaigngroup
 ||dell.com^$removeparam=dgc
 ||dell.com^$removeparam=VEN1
 ||dell.com^$removeparam=gacd
-||expedia.com^$removeparam=my_ad
 ||asahi.com^$removeparam=iref
 ||malwarebytes.com^$removeparam=guard
 ||malwarebytes.com^$removeparam=x-source
@@ -3417,6 +3418,7 @@ $removeparam=adcampaigngroup
 ||ozon.ru^$removeparam=advert
 $removeparam=soc_src
 $removeparam=soc_trk
+||blue-tomato.com^$removeparam=varid
 $removeparam=ia-pkpmtrack
 ||spartoo.$removeparam=track_id
 ||as.com^$removeparam=omnil
@@ -3550,7 +3552,6 @@ $removeparam=deep_and_deferred
 ||everesttech.net^$removeparam=/^ev_.*$/
 ||kelkoogroup.net^$removeparam=custom1
 ||welt.de^$removeparam=wtrid
-||vimeo.com^$removeparam=owner
 ||lenovo.com^$removeparam=orgRef
 $removeparam=ppref,domain=digidip.net
 ||dhgate.com^$removeparam=f
