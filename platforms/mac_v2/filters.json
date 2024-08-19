@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.48.85",
-			"timeUpdated": "2024-08-19T01:31:07+0000",
+			"version": "2.3.48.86",
+			"timeUpdated": "2024-08-19T03:31:11+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -656,8 +656,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.46.11",
-			"timeUpdated": "2024-08-18T12:33:11+0000",
+			"version": "2.0.46.12",
+			"timeUpdated": "2024-08-19T03:33:08+0000",
 			"languages": [
 				"fr"
 			],
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.20.56",
-			"timeUpdated": "2024-08-18T23:33:13+0000",
+			"version": "2.1.20.57",
+			"timeUpdated": "2024-08-19T03:33:17+0000",
 			"languages": [
 				"zh"
 			],
