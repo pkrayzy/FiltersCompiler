@@ -1,9 +1,9 @@
-! Checksum: jkHC/UdzputeyM2+hfL4oA
-! Diff-Path: ../patches/14/14-s-1724049355-3600.patch
+! Checksum: JcWzDo2vP7g1ahnc/s8myw
+! Diff-Path: ../patches/14/14-s-1724052956-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.51
-! TimeUpdated: 2024-08-19T06:32:34+00:00
+! Version: 2.2.5.52
+! TimeUpdated: 2024-08-19T07:32:40+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2458,6 +2458,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+uber.com##body > div[role="dialog"]:has(> div[class^="css-"] > div[class^="css-"] > p[class^="css-"] > a[href*="cookie-notice"])
 trello.com##div[data-testid="cookies-consent-banner"]
 [$path=/^((?!\/privacy\/consent).)*$/]tumblr.com##body #cmp-app-container
 adventica.lt###gdpr_full_content
@@ -4073,7 +4074,7 @@ secrid.com#%#//scriptlet('set-cookie', 'cookies', 'true')
 vente-unique.*,kauf-unique.at,kauf-unique.de###vu_consent
 maklerinmuenster.de,garten-bienen.at###privacyCtrl
 blachotrapez.eu,sklep-mietus.pl##.TsConsentWrapper
-brandvital.eu,leclerc.pl###lmk_cookiebaner_container
+helmuzeum.pl,brandvital.eu,leclerc.pl###lmk_cookiebaner_container
 zeebiz.com##.cookieScreenOverlay
 ilmattino.it,leggo.it#$#html { overflow: auto !important; }
 ilmattino.it,leggo.it#$##richiesta_accettazione_abbonamento { display: none !important; }
@@ -15757,6 +15758,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186717
+@@||healthsites.io/static/js/global/cookie-bar.*.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186505
 @@||cdn.privacy-mgmt.com/mms/v2/get_site_data$domain=athlonsports.com
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=athlonsports.com
