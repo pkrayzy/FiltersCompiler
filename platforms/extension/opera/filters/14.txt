@@ -1,9 +1,9 @@
-! Checksum: GxLo0PG8UJNyrp2LV6Cw8A
-! Diff-Path: ../patches/14/14-s-1724060214-3600.patch
+! Checksum: r3Mqa7wxFOj/I6TcfZ31nA
+! Diff-Path: ../patches/14/14-s-1724063848-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.54
-! TimeUpdated: 2024-08-19T09:33:20+00:00
+! Version: 2.2.5.55
+! TimeUpdated: 2024-08-19T10:33:39+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2458,6 +2458,11 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+||cookie.marketing/api/
+nehody-uzavirky.cz#$#div[id^="cookies-"] { display: none !important; }
+otokoc.com.tr#$#body #cookieModal { display: none !important; }
+otokoc.com.tr#$#.modal-backdrop:not(.modal-backdrop + div + .modal-backdrop) { display: none !important; }
+otokoc.com.tr#$#body { overflow: auto !important; padding-right: 0 !important; }
 easywintergarten.de###chc-cookiehint-modal
 bangkokbank.com##.alert-cookie-consent
 picturethisai.com#$#body { overflow-y: auto !important; }
@@ -7986,7 +7991,7 @@ seb.ee#$##cookiesMessage ~ .modal-backdrop { display: none !important; }
 seb.ee#$#body { overflow: visible !important; padding-right: 0 !important; }
 broadbandspeedtest.org.uk##.cm-wrapper-wrapper
 pucsp.br##.fundasp-lgpd-alert-wrapper
-uninove.br##.wrapper-cookie
+kocfinans.com.tr,uninove.br##.wrapper-cookie
 afkgaming.com##header > div[class] > div.lazyload-wrapper
 tonhalle-orchester.ch,ukbonn.de###privacywire-wrapper
 uniklinikum-saarland.de###uks_cookies
@@ -15764,6 +15769,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186730
+nehody-uzavirky.cz#@#.cookies-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/186680
+otokoc.com.tr#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186701
 thesprucecrafts.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186713
@@ -32154,6 +32163,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+jetbrains.com###form-section
 43rumors.com##div[id^="mailpoet_form"]
 journal.tinkoff.ru##div[class^="_container_"]:has(> div[data-is-fullsize="true"] input[type="email"])
 hdmotori.it###modal
@@ -39356,6 +39366,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
 !
+bundle.app#?#.fixed-bottom:has(> div.popup button.download)
 zukan.com##.topbar__news:has(> p > a[href="https://mikke.zukan.com"])
 m.aksam.com.tr##.footerSocials
 homerun.co.uk###appstore-desktop
@@ -42680,6 +42691,9 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186732
+blog.jetbrains.com##.jb-download-button
+blog.jetbrains.com##.banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186423
 evrimagaci.org##.inarticle-feed
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185581
