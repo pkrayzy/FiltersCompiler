@@ -1,9 +1,9 @@
-! Checksum: rPFoVb1fyPiaNIj7V4lisA
-! Diff-Path: ../patches/18/18-s-1724063864-3600.patch
+! Checksum: ovyMpVnsFnzsg/zv4f9AIA
+! Diff-Path: ../patches/18/18-s-1724068626-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.45.53
-! TimeUpdated: 2024-08-19T10:33:50+00:00
+! Version: 2.0.45.54
+! TimeUpdated: 2024-08-19T11:33:37+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2458,6 +2458,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+mixcloud.com##div[class*="CookieWarning__"]
+aviasales.com##.s__y2gjNiIS0o1RA_5Ebnkw
 ||cookie.marketing/api/
 nehody-uzavirky.cz#$#div[id^="cookies-"] { display: none !important; }
 otokoc.com.tr#$#body #cookieModal { display: none !important; }
@@ -3813,7 +3815,7 @@ aptelia.pl,dozapteka.pl#$#.popup-cookies { display: none !important; }
 aptelia.pl,dozapteka.pl#$#body.no-scroll { overflow: auto !important; }
 quillbot.com#%#//scriptlet('set-local-storage-item', 'showPrivacyBannerNov2023', 'false')
 movavi.com,movavi.ru##.v-privacy-policy-popup
-melawear.de##.ccklayer
+outlet46.de,melawear.de##.ccklayer
 auo.com##.gdpr-mask
 wink.ru#?#header ~ footer + div[class]:has(> div[data-test="cookie"])
 octagonshop.pl,angela.pl,berdsen.pl,hard-pc.pl###kqs-box-tlo
@@ -12599,7 +12601,7 @@ pz-news.de,gsmchoice.com,mgsm.pl##.cookieBackground
 justanswer.de##.cookieBannerText
 bonuszbrigad.hu##.cookieHeaderCenter
 tebkariyer.com,cepteteb.com.tr,teb.com.tr##.cookieMain
-maxxroyal.com,secmarket.com.tr,marketcentral.hu##.cookieModal
+tsb.org.tr,maxxroyal.com,secmarket.com.tr,marketcentral.hu##.cookieModal
 baby-walz.de,moderne-hausfrau.de##.cookieOptInFooter
 journals.asm.org,ahajournals.org,onlinelibrary.wiley.com##.cookiePolicy-popup
 elwood.io,shop.huawei.ru##.cookie__panel
@@ -12724,7 +12726,7 @@ nordot.app##.page__gdpr
 pantaflix.com##.panta-js-cookieNotificationBar
 priberam.org##.pb-cookies
 create.vista.com,shephardmedia.com,roosterteeth.com##.policy-banner
-hotellook.com,kongregate.com##.policy-bar
+jetradar.com,hotellook.com,kongregate.com##.policy-bar
 pdftoexcel.com,netart-registrar.com,nazwa.pl##.policy-box
 lesmobiles.com##.popin-cnil
 forum.fok.nl##.popup_1TXMW
@@ -15682,6 +15684,10 @@ propertydesign.pl#%#(()=>{let t,e=!1;const o=new MutationObserver(((e,o)=>{const
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156057
 ! TODO: rewrite and move to top when https://github.com/AdguardTeam/Scriptlets/issues/284 is resolved
 voorkeuren.tvgids.nl#%#//scriptlet('trusted-click-element', '.v4vptQ ._-5rsyq .xEPIo4')
+! https://github.com/AdguardTeam/AdguardFilters/issues/186661
+! https://github.com/AdguardTeam/CoreLibs/issues/1904
+!+ PLATFORM(windows, mac, android)
+gxr.world#%#(()=>{if("adoptedStyleSheets"in document)try{const t=new CSSStyleSheet;t.replaceSync("#cc--main { display: none !important; } html:not(#style_important) { overflow-y: auto !important; }"),document.adoptedStyleSheets=[...document.adoptedStyleSheets,t]}catch(t){}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143411
 ! Eika bank sites
 ! Note: remove these rules if you find incorrect blocking
