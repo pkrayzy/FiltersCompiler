@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.49",
-			"timeUpdated": "2024-08-20T09:00:59+0000",
+			"version": "2.1.54.50",
+			"timeUpdated": "2024-08-20T13:00:59+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.48",
-			"timeUpdated": "2024-08-20T09:01:00+0000",
+			"version": "2.1.54.49",
+			"timeUpdated": "2024-08-20T13:01:00+0000",
 			"languages": [
 				"ar"
 			],
@@ -1018,8 +1018,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.97.49",
-			"timeUpdated": "2024-08-19T13:01:21+0000",
+			"version": "2.0.97.50",
+			"timeUpdated": "2024-08-20T13:01:14+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -1254,8 +1254,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuard.txt",
 			"trustLevel": "high",
-			"version": "2.0.7.63",
-			"timeUpdated": "2024-08-17T21:01:32+0000",
+			"version": "2.0.7.64",
+			"timeUpdated": "2024-08-20T13:01:35+0000",
 			"languages": [
 				"no",
 				"da",
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.47.80",
-			"timeUpdated": "2024-08-20T09:01:44+0000",
+			"version": "2.0.47.81",
+			"timeUpdated": "2024-08-20T13:01:44+0000",
 			"languages": [
 				"hi"
 			],
@@ -1355,8 +1355,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.2.69",
-			"timeUpdated": "2024-08-20T01:01:42+0000",
+			"version": "2.0.2.70",
+			"timeUpdated": "2024-08-20T13:01:54+0000",
 			"languages": [],
 			"tags": [
 				4
