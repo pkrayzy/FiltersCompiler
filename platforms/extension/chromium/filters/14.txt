@@ -1,9 +1,9 @@
-! Checksum: 5+q0B18ornEfuYEmwSSuGQ
-! Diff-Path: ../patches/14/14-s-1724146571-3600.patch
+! Checksum: J88jjfldg4V5gWstqrHPeA
+! Diff-Path: ../patches/14/14-s-1724150631-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.66
-! TimeUpdated: 2024-08-20T09:33:05+00:00
+! Version: 2.2.5.67
+! TimeUpdated: 2024-08-20T10:40:07+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2317,6 +2317,9 @@ tarsushaber.com,mhrs.gov.tr,malatyasoz.com,nehir.net,yeniufuk.com.tr,enpolitik.c
 creativefabrica.com,flickplay.co,globenewswire.com,fashionunited.*,ahaan.co.uk,afteracademy.com,shoppingcidademaringa.com.br##.MuiSnackbar-anchorOriginBottomCenter
 ! consentmanager.net (check, if embed content and videos are not broken)
 ||consentmanager.net^$domain=visions.de|gartenlexikon.de|tausendkind.de|hausgarten.net|kundendienst-info.de|baunetz.de|rabe-bike.de|heinze.de|ais-online.de|dasoertliche.de|reno.de|walbusch.de|mathe-lexikon.at|katzen-forum.net|deutsche-apotheker-zeitung.de|brandible.de|my.games|vergleich.org|finanztip.de|baunetzwissen.de|trusted.de|universal-music.de|web2.cylex.de|mey-edlich.de|schuhe.de|qiez.de|benz24.de|hervis.de|avena.de|heimwerker.de|bauemotion.de|nw.de|kicker.de|herold.at|kalledaskabel.de|bussgeldkatalog.org|plantopedia.de|poetschke.de|weltbild.de|genialokal.de|jokers.de|leoncycle.de|wolfsburger-nachrichten.de|braunschweiger-zeitung.de|mediengestalter.info|sugafari.com|gdv.de|uk-essen.de|dieversicherer.de|tomaten.de|aquarienpflanzen-shop.de|jobs.shz.de|nrz.de|leichtathletik.de|ikz-online.de|radiobollerwagen.de|hervis.at|frustfrei-lernen.de|entsorgen.org|waz.de|wr.de|harzkurier.de|consentmanager.net|juraforum.de|history.de|inrlp.de|teslamag.de|e-konomista.pt|cylex-polska.pl|agrarheute.com|allesbeste.de|azubiyo.de|olympia-einkaufszentrum.de|mannheimer-morgen.de|autopay.pl|r.pl|datacenter-insider.de|eternalgod.de|news.de|quoka.de|correctiv.org|ak-kurier.de|verliebt-in-den-westerwald.de|ww-kurier.de|nzz.ch|masterstudies.com|littlebigsnake.com|skr.de|morgenpost.de|astat.pl|9monate.de|bildderfrau.de|donna-magazin.de|eatclub.tv|heftig.de|reviersport.de|winfuture-forum.de|chemie.de|sylt.de|grin.com
+! privacy-center.org / didomi
+lalibre.be,index.hr,filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '.didomi-consent-popup-actions > button.didomi-components-button:not(.highlight-button)')
+lalibre.be,index.hr,filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '#didomi-notice-learn-more-button')
 !
 ! Didomi
 ! ###didomi-host
@@ -2458,6 +2461,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+fin.do##div[class^="AcceptCookies"]
 santander.rewardgateway.co.uk##div[data-testid="cookie-consent-banner-background"]
 whatsmyname.app#%#//scriptlet('set-session-storage-item', 'cookieConsent', 'true')
 audiovisualfromspain.com,icex.es##.cookies-modal-footer-cmp__container
@@ -3552,7 +3556,7 @@ doppelmayr.com###dop-cookiebanner-overlay
 doppelmayr.com###dop-cookiebanner
 michigansthumb.com,ctpost.com,ctinsider.com,beaumontenterprise.com,manisteenews.com,myjournalcourier.com,sfchronicle.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":["jwp","twitter","facebook"]}')
 mysanantonio.com,expressnews.com,sfgate.com#%#//scriptlet('trusted-set-cookie', '_consent_cookie', '{"services":[]}')
-rutube.ru##noindex.eu-cookie-popup-module__eu_cookie_popup
+rutube.ru##.eu-cookie-popup-module__eu_cookie_popup
 thesports.com##.cookie-message-page
 miniclip.com##.mc-consents-wrapper
 caminteresse.fr#%#//scriptlet('trusted-click-element', 'button[title="Accepter"]')
@@ -6025,7 +6029,6 @@ rainfordsolutions.com#$#body #cookieModal { display: none !important; }
 rainfordsolutions.com#?#.jquery-modal:has(> #cookieModal)
 merkur.si#$#body { overflow: auto !important; }
 merkur.si#$#.cookie-notice { display: none !important; }
-rutube.ru##.eu-cookie-popup
 ||cmp.omni.se/messagingNoTcfApi.js
 bet365.*##.ccm-CookieConsentPopup
 immohal.de#%#//scriptlet('remove-class', 'sticky-top', 'body')
@@ -14933,8 +14936,6 @@ androidacy.com#%#//scriptlet('trusted-click-element', '.qc-cmp2-container .qc-cm
 motopedia.otomoto.pl#%#//scriptlet('set-cookie', 'cc-cookie-accept', 'false')
 eurogrow.es#%#//scriptlet('set-constant', 'hiCookieLaw', 'emptyObj')
 downloadsource.net,download-source.de,downloadsource.fr,downloadsource.es,downloadsource.com.br,adnkronos.com,bandaancha.eu,tviplayer.iol.pt,selfie.iol.pt,thefunpost.com,the-express.com,tvi.iol.pt,cnnportugal.iol.pt,mirror.co.uk#%#//scriptlet('trusted-click-element', '.qc-cmp2-summary-buttons > button[mode="primary"]')
-index.hr,filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '.didomi-consent-popup-actions > button.didomi-components-button:not(.highlight-button)')
-index.hr,filmstarts.de,nrj-play.fr,movilzona.es,softonic.com#%#//scriptlet('trusted-click-element', '#didomi-notice-learn-more-button')
 idmobile.co.uk#%#//scriptlet('trusted-click-element', '.banner-actions-container > button#onetrust-accept-btn-handler')
 lovethesales.com#%#//scriptlet("set-cookie", "lts-cookie-consent", "1")
 mapcarta.com#%#//scriptlet('set-constant', 'runads', 'false')
@@ -15793,6 +15794,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186795
+@@||sdk.privacy-center.org^$domain=lalibre.be
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186550
 southernliving.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186730
@@ -23860,6 +23863,7 @@ api.flocktory.com
 /cmp/cmp.*.js
 /cmp/cmp.js
 !
+||webwidget.shanon-services.com^$third-party
 ||bot.agerun.jp^$third-party
 ||pop.devil.services^$third-party
 ||web.telemetric.dk^$third-party
@@ -23948,6 +23952,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+rutube.ru##.wdp-promo-modal-module__wdpPromoModalOverlay
 wunderweib.de#$#div[aria-label="Das könnte Dich auch interessieren"] { display: none !important; }
 wunderweib.de#$#.bx-js-dialog-opened { overflow: auto !important; padding: unset !important; }
 lefigaro.fr##.figaro-player.is-sticky
@@ -32170,6 +32175,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+bigthink.com##.prose > div.bt-block
 corriere.it##.bck-promo-news
 tanba.jp###scrollButton
 tanba.jp##.teikikodoku-baner
