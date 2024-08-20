@@ -1,13 +1,14 @@
-! Checksum: /utdAMlN+fy/+srQecAKKA
-! Diff-Path: ../patches/237_optimized/237_optimized-s-1724101511-14400.patch
+! Checksum: zi4BqgJ7/RBeuNoBFgcK+w
+! Diff-Path: ../patches/237_optimized/237_optimized-s-1724187912-14400.patch
 ! Title: Polish Annoyances Filters (Optimized)
 ! Description: Filter list that hides and blocks pop-ups, widgets, newsletters, push notifications, arrows, tagged internal links that are off-topic, and other irritating elements. Polish GDPR-Cookies Filters is already in it.
-! Version: 1.0.31.88
-! TimeUpdated: 2024-08-19T21:01:33+00:00
+! Version: 1.0.31.89
+! TimeUpdated: 2024-08-20T21:01:35+00:00
 ! Expires: 10 days (update frequency)
 ||4prm.pl/*/4p_newsletter.jpg
 ||a-ajurweda.pl/images/layout/ajurweda/newsletter_ajurweda.png
 ||app2.salesmanago.pl/cf/*/zapis_na_newsletter_$subdocument
+||bee.pl/System/Files/*/theme/*zapisz-sie*.jpg
 ||biuroprasowe.pl/userfiles/_CMS_/EPR3/baner_newsletter.jpg
 ||biuroprasowe.pl/userfiles/_CMS_/EPR/biuroprasowe-reklama.jpg
 ||carry.pl//themes/default/img/newsletter1.png
@@ -27,7 +28,6 @@
 ||rynekzdrowia.pl/images/socialBox/mail-a.png
 ||salonydenon.pl/images/footer-newsletter.png
 ||salonydenon.pl/modules/tvcmssingleblock/views/img/newsletter
-||siati.cal24.pl/newsletter$domain=bioindygo.pl
 ||solnemiasto.eu/wp-content/uploads/2014/08/newsletter.png
 ||static.parastorage.com/services/shoutout-get-subscriber/*/modules/widget/main.html
 ||szukam-ksiazki.pl/image/newsletter.png
@@ -793,6 +793,7 @@ iparts.pl##.newsletter-blok
 iposto.com##.cf.news_box.bottom-box
 irisimo.pl##.footer-email > .row > div:nth-child(2)
 irobot.pl##.a-inputcomponent
+ita.tools##.ComponentsFooterNewsletterWrapperWithoutLeft
 iwanowice.pl##.col-lg-3.col-md-4.col-sm-6.col-xs-12:nth-of-type(2)
 izba-lekarska.pl##.add-to-newsletter-button
 izigsm.pl###footer > .footMenu > .color.columnBox
@@ -2175,9 +2176,9 @@ pl,~znak.com.pl##.newsletter-container
 2drink.pl,imperiumromanum.edu.pl,mirafaber.pl,olagosciniak.pl,poradniktransportowy.pl,wiokoniku.pl###wbounce-modal
 3i-store.com,biogo.pl,bodyhouse.pl,eltrox.pl,megascena.pl,militarialodz.pl,modini.pl,yalu.pl###exit--popup--container
 4lifedirect.pl##.leadinModal
-6paknutrition.com,alfaelektro.pl,archicom.pl,cebit.pl,eveline.pl,matopat24.pl,medonetmarket.pl,porta.com.pl,sympatia.onet.pl###bhr-items .bhr-image-popup-container
-6paknutrition.com,alfaelektro.pl,archicom.pl,cebit.pl,eveline.pl,matopat24.pl,medonetmarket.pl,porta.com.pl,sympatia.onet.pl#?##bhr-items .bhr-popup-advanced:-abp-has(iframe[src*="salesmanago.pl/"])
-6paknutrition.com,alfaelektro.pl,archicom.pl,cebit.pl,eveline.pl,matopat24.pl,medonetmarket.pl,porta.com.pl,sympatia.onet.pl#?##bhr-items .bhr-popup-basic:-abp-has(iframe[src*="salesmanago.pl/"])
+6paknutrition.com,alfaelektro.pl,archicom.pl,cebit.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,porta.com.pl,sympatia.onet.pl###bhr-items .bhr-image-popup-container
+6paknutrition.com,alfaelektro.pl,archicom.pl,cebit.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,porta.com.pl,sympatia.onet.pl#?##bhr-items .bhr-popup-advanced:-abp-has(iframe[src*="salesmanago.pl/"])
+6paknutrition.com,alfaelektro.pl,archicom.pl,cebit.pl,eveline.pl,ita.tools,matopat24.pl,medonetmarket.pl,porta.com.pl,sympatia.onet.pl#?##bhr-items .bhr-popup-basic:-abp-has(iframe[src*="salesmanago.pl/"])
 9c.com.pl,agagrzelak.pl,ledco.pl,sklepdlalekarza.com,tendina.pl,warsztatogrodnika.pl###iqitpopup, #iqitpopup-overlay
 24hurt.pl##.wt-popup, #overlay
 29aleja.pl##.popupWrap
@@ -3325,7 +3326,6 @@ deccoria.pl##.dc-floatingvideo__wrapper[class*="fixed"]
 dziennik.pl,forsal.pl,gazetaprawna.pl,infor.pl##.videoScroll, .closeVideoBtn
 elle.pl,focus.pl,gala.pl,glamour.pl,kobieta.pl,mojegotowanie.pl,mojpieknyogrod.pl,national-geographic.pl,przyslijprzepis.pl##.flyMoviPlayer
 encyklopedia.pwn.pl,sjp.pwn.pl##div[id^="vjs-rcp"].video-js
-eurosport.tvn24.pl##div.nuvi-video-wrapper.floating
 eurosport.tvn24.pl##div.picture-in-picture.fixed, div[data-testid="player-pip-active"]
 filmweb.pl##.isPinned.videoPlayer > .videoPlayer__container
 gdansk.pl###players_rama > img ~ #players_close[style*="display:"][style*="block"], #players_rama > img ~ #players_close[style*="display:"][style*="block"] ~ #players
@@ -3879,6 +3879,7 @@ invest.przemysl.eu###totop.goto-top
 irass.pl##body > div.right.btn[class*="czr"]
 isabellenails.pl,odzyskamyodszkodowanie.pl,raraavis.krakow.pl,vwfs.pl##.js-back-to-top
 isp.org.pl##.icon-arrow-up
+ita.tools##.ScrollButtonContainer
 italiapozaszlakiem.com##.vw-scroll-to-top
 ithardware.pl##.btnScrollToTop
 itholding.pl##.progressScroll
@@ -4867,6 +4868,7 @@ etoto.pl###sbChatMinimizedIdle
 eurobank.pl##.reviews
 euroelectronics.pl,kompan.pl,lanesta.eu##.b24-widget-button-wrapper
 eurosport.tvn24.pl##div[data-testid="share-icons"] > div[class*="title"] ~ div > span[data-social="whatsapp" i]
+eurosport.tvn24.pl##div[data-testid="social-share-block-molecule"] > div button[aria-label="whatsapp"]
 eurotargetshow.pl##.chatContainer
 eventy-online.pl###phone-tag
 ewakacje.pl##.classNotesList_button
