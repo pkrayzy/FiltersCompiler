@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.93.24",
-			"timeUpdated": "2024-08-21T11:30:59+0000",
+			"version": "2.0.93.25",
+			"timeUpdated": "2024-08-21T16:31:39+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.49.28",
-			"timeUpdated": "2024-08-21T15:31:11+0000",
+			"version": "2.3.49.29",
+			"timeUpdated": "2024-08-21T16:31:55+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -380,8 +380,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.73.80",
-			"timeUpdated": "2024-08-21T15:32:55+0000",
+			"version": "2.0.73.81",
+			"timeUpdated": "2024-08-21T16:32:56+0000",
 			"languages": [],
 			"tags": [
 				2,
@@ -649,8 +649,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.45.77",
-			"timeUpdated": "2024-08-21T15:33:36+0000",
+			"version": "2.0.45.78",
+			"timeUpdated": "2024-08-21T16:33:34+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -670,8 +670,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.41.93",
-			"timeUpdated": "2024-08-21T15:33:37+0000",
+			"version": "2.0.41.94",
+			"timeUpdated": "2024-08-21T16:33:35+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -754,8 +754,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/23.txt",
 			"trustLevel": "full",
-			"version": "2.0.5.9",
-			"timeUpdated": "2024-08-20T14:33:04+0000",
+			"version": "2.0.5.10",
+			"timeUpdated": "2024-08-21T16:33:37+0000",
 			"languages": [
 				"uk"
 			],
