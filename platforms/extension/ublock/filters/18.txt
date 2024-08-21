@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: cEKdAy1JEP3xelOTCJVGGA
-! Diff-Path: ../patches/18/18-s-1724168227-3600.patch
+! Checksum: sYDlHpozq6jDHVZ5xNm93Q
+! Diff-Path: ../patches/18/18-s-1724218584-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.45.68
-! TimeUpdated: 2024-08-20T15:33:19+00:00
+! Version: 2.0.45.69
+! TimeUpdated: 2024-08-21T05:33:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -80,6 +80,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+###pnl-cookie
 ##.flexit_cookie
 ##.cookiesBackground
 ###tfm_dsgvo_disclaimer
@@ -2423,6 +2424,12 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+turkishairlines.com##+js(set-cookie, COOKIE_ADVERTISEMENTS, false)
+turkishairlines.com##+js(set-cookie, COOKIE_ANALYTICS, false)
+turkishairlines.com##+js(set-cookie, COOKIE_FUNCTIONAL, false)
+turkishairlines.com##+js(set-cookie, COOKIE_WARNING_ACCEPTED, false)
+turkishairlines.com##+js(set-cookie, COOKIE_WARNING_REJECTED, true)
+turkishairlines.com##+js(set-cookie, COOKIE_WARNING_VIEWED, true)
 norton.com##div[src] > div:has(> label + p + button)
 simyo.es##.m-cookies-notice
 cheaperthandirt.com##.new-consent-banner:not(#style_important)
@@ -4208,7 +4215,7 @@ myshopify.com,quantumleapfitness.de,sanctum.shop,nakedoptics.net,tartanblanketco
 myshopify.com,quantumleapfitness.de,sanctum.shop,nakedoptics.net,tartanblanketco.com#$##gdpr-blocking-page-overlay { display: none !important; position: absolute !important; left: -3000px !important; z-index: 0 !important; }
 phonegigant.nl##.cookie-fade
 gov.wales###wg_cookie
-web.dev,workspace.google.com,ai.google.dev,tensorflow.org,play.google.*,developer.chrome.com,developers.google.com,cloud.google.com,landing.google.*,edu.google.com,ai.google,android.com##.glue-cookie-notification-bar
+deepmind.google,web.dev,workspace.google.com,ai.google.dev,tensorflow.org,play.google.*,developer.chrome.com,developers.google.com,cloud.google.com,landing.google.*,edu.google.com,ai.google,android.com##.glue-cookie-notification-bar
 redd.it##reddit-cookie-banner
 imkergut.de##.page-wrap--cookie-permission-background
 trucksbook.eu#$#.modal-backdrop { display: none !important; }
