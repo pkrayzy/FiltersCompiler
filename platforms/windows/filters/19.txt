@@ -1,9 +1,9 @@
-! Checksum: JPB7MzGBN9rMYVgVODr5Hg
-! Diff-Path: ../patches/19/19-s-1724251034-3600.patch
+! Checksum: QwXDczJBA5ZRnjhwzOtZZQ
+! Diff-Path: ../patches/19/19-s-1724254670-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.41.92
-! TimeUpdated: 2024-08-21T14:32:49+00:00
+! Version: 2.0.41.93
+! TimeUpdated: 2024-08-21T15:33:37+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4323,6 +4323,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+itc.ua#%#//scriptlet('set-cookie', 'popupbottom', '1')
 asus.com#$#div[class^="IndexLightboxYouTube__lb-container"] { display: none !important; }
 asus.com#$#html { overflow: auto !important; }
 livemint.com##body #signInPopUp
@@ -12551,6 +12552,10 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+rua.gr#%#//scriptlet('trusted-set-local-storage-item', 'lastPopupShown', '$now$')
+vice.com##aside > div.block-visibility-hide-medium-screen:has(div.wp-block-savage-platform-beehiiv-form)
+amaze.org#$#html { overflow: auto !important; }
+amaze.org#$##pum-21750 { display: none !important; }
 cnnbrasil.com.br##.newNewsletter
 blogmura.com##.subscription-flow
 interestingengineering.com##div[class^="NewsLetterBanner"]
