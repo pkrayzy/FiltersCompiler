@@ -1,9 +1,9 @@
-! Checksum: /PzZVfTcwKu5KjrsZCnVVQ
-! Diff-Path: ../patches/14/14-s-1724319400-3600.patch
+! Checksum: VoUkWpneFpmGqBfSPu9pjA
+! Diff-Path: ../patches/14/14-s-1724323016-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.95
-! TimeUpdated: 2024-08-22T09:33:23+00:00
+! Version: 2.2.5.96
+! TimeUpdated: 2024-08-22T10:33:26+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2377,8 +2377,8 @@ flightradar24.com,pedelecforum.de#$?#body { overflow: auto !important; }
 ! #$?#body { overflow: auto !important; position: static !important; }
 lesmoutonsrebelles.com,onlinestreet.de#$?#body { overflow: auto !important; position: static !important; }
 ! in case if using just "overflow" causes that there is additional scrollbar at the bottom
-pagenews.gr,lyrics.com,arcadehole.com,gazetevatan.com,androidpolice.com,milliyet.com.tr,collider.com,thegamer.com,ortsdienst.de,cbr.com,makeuseof.com#$#body div.fc-consent-root { display: none !important; }
-pagenews.gr,lyrics.com,arcadehole.com,gazetevatan.com,androidpolice.com,milliyet.com.tr,collider.com,thegamer.com,ortsdienst.de,cbr.com,makeuseof.com#$#body { overflow-y: auto !important; }
+kongregate.com,pagenews.gr,lyrics.com,arcadehole.com,gazetevatan.com,androidpolice.com,milliyet.com.tr,collider.com,thegamer.com,ortsdienst.de,cbr.com,makeuseof.com#$#body div.fc-consent-root { display: none !important; }
+kongregate.com,pagenews.gr,lyrics.com,arcadehole.com,gazetevatan.com,androidpolice.com,milliyet.com.tr,collider.com,thegamer.com,ortsdienst.de,cbr.com,makeuseof.com#$#body { overflow-y: auto !important; }
 ! If content is blurred
 win-10-forum.de,pedelecforum.de#$#body[style*="overflow: hidden;"] .p-pageWrapper { filter: none !important; }
 ! For the case if 'fundingchoicesmessages.google.com' is blocked
@@ -2464,6 +2464,9 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+plusliga.pl##.cokie-manager-dialog
+ed.ac.uk#$#body { overflow: auto !important; padding-right: 0 !important; }
+ed.ac.uk#$#uoe-consent { display: none !important; }
 gla.ac.uk#%#//scriptlet('set-cookie', 'gu_consent_set', 'true')
 leeds.ac.uk###cookie-control-prompt
 zadowolenie.pl#$#body { overflow: auto !important; }
@@ -24017,6 +24020,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+easepdf.com##.fixed-box
 kids-laboratory.co.jp##.modal_wrap
 more.tenki.jp###pop-up_set
 itc.ua#%#//scriptlet('set-cookie', 'popupbottom', '1')
@@ -43186,9 +43190,9 @@ hindustantimes.com##.alsoReadSectionAppend
 ||geo.dailymotion.com/player/x8agi.html$domain=cumhuriyet.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149873
 ||fcp.codes^$domain=areanapoli.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/186917
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149849
-kongregate.com###overlay
-kongregate.com##.kred_purchase
+kongregate.com#%#//scriptlet('trusted-click-element', '.kred_purchase:not(.lightbox_login) .header_bar > a[onclick].close_link')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156703
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154274
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150352
@@ -47938,6 +47942,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+easepdf.com##.adsbygoogle
 blogmura.com##.subscription-flow
 search.goo.ne.jp##.ocnBoard
 livemint.com##div[class^="PLOffersRHSBannerCss_"]
