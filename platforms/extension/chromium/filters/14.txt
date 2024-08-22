@@ -1,9 +1,9 @@
-! Checksum: tPEKwPLCUEm/GKZ06hLIVg
-! Diff-Path: ../patches/14/14-s-1724304972-3600.patch
+! Checksum: umhcSle3u/rroaSV6OcZFg
+! Diff-Path: ../patches/14/14-s-1724308586-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.5.92
-! TimeUpdated: 2024-08-22T05:33:07+00:00
+! Version: 2.2.5.93
+! TimeUpdated: 2024-08-22T06:33:09+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2464,6 +2464,9 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+zadowolenie.pl#$#body { overflow: auto !important; }
+zadowolenie.pl#$#.cookie-message { display: none !important; }
+zadowolenie.pl#$#.modal-backdrop { display: none !important; }
 united-camera.at#%#//scriptlet('set-cookie-reload', 'cookie-preference', '1')
 orange.jobs#%#//scriptlet('trusted-click-element', '.js-consent-all-submit')
 iberiaexpress.com#%#//scriptlet('trusted-click-element', '#rejectCookiesTerms')
@@ -9008,7 +9011,7 @@ omlet.de,wdc.wholesale.telecomitalia.it#$##cookieModal { display: none !importan
 omlet.de,wdc.wholesale.telecomitalia.it#$#body.modal-open { overflow: auto!important; }
 demo.yubico.com##.MuiSnackbarContent-root[role="alert"]
 fujifilmshop.com###consident
-proddigital.com.br,coachdaveacademy.com,saferpass.com,getspace.us,medyascope.tv##.elementor-popup-modal
+powerzone.com,proddigital.com.br,coachdaveacademy.com,saferpass.com,getspace.us,medyascope.tv##.elementor-popup-modal
 celikhalat.com.tr,ditas.com.tr##.cerez_politikasi
 businessaccountingbasics.co.uk,krotosaudio.com,textmaster.com#$#.wt-cli-cookie-bar-container { display: none !important; }
 businessaccountingbasics.co.uk,krotosaudio.com,textmaster.com#$#.cli-barmodal-open { overflow: visible !important; }
@@ -15828,6 +15831,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/186932
+zadowolenie.pl#@#.cookie-message:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186549
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186825
 gamescom.global#@##onetrust-consent-sdk
@@ -24002,6 +24007,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+kids-laboratory.co.jp##.modal_wrap
 more.tenki.jp###pop-up_set
 itc.ua#%#//scriptlet('set-cookie', 'popupbottom', '1')
 asus.com#$#div[class^="IndexLightboxYouTube__lb-container"] { display: none !important; }
