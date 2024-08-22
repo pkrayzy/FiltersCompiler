@@ -463,8 +463,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.55.71",
-			"timeUpdated": "2024-08-21T17:33:16+0000",
+			"version": "2.0.55.72",
+			"timeUpdated": "2024-08-22T04:32:52+0000",
 			"languages": [
 				"ja"
 			],
@@ -1629,8 +1629,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.20.71",
-			"timeUpdated": "2024-08-22T00:33:23+0000",
+			"version": "2.1.20.72",
+			"timeUpdated": "2024-08-22T04:33:22+0000",
 			"languages": [
 				"zh"
 			],
