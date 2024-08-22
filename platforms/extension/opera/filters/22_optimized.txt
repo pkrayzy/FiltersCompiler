@@ -1,5 +1,5 @@
-! Checksum: 8svaYWmHpMb9Udwei9fbCw
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1724207796-3600.patch
+! Checksum: NlSZ9jDm7Q00nr8IdKAqsw
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1724294202-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.9.15
@@ -174,6 +174,7 @@ tyoieronews.blog.jp###more > blockquote:has(> span > a[href^="http://"][href*="d
 maspiai.com###sidebar > div.sticky
 maspiai.com##.recommended-summary
 tousatu.xyz##.textwidget > div[style]:has(> div[style] > div[id^="blz_rss"])
+tousatu.xyz###related-box
 ameblo.jp##header ~ div div[style^="min-height:"]:has(div[id^="blogInfeed"])
 etude000.com###side-fixed
 korewaeroi.com##div[class^="divider"] > aside.widget-main
@@ -244,6 +245,7 @@ vipnews.jp#%#AG_onLoad(() => { var element = document.querySelector('.article-bo
 inazumanews2.com##.link01
 inutomo11.com##.article-body-more > script ~ b
 inutomo11.com##.article-body-more > script ~ br
+mudainodocument.com##.entry-content > span[style="font-size: x-large; font-weight: bold;"]
 brow2ing.com##.popular_article_pick_up
 jishin-yogen.com##.rss_outline02
 mudasure.com##.footerrss
@@ -325,7 +327,6 @@ carp-matome.blog.jp##.bw_outbox
 anihatsu.com##.rss-blogroll-kobetu
 news30over.com##div[class^="topbox"]
 uwakich.com##div[style^="height:"][style*="width:"][style$="px; overflow-y:scroll; text-decoration:none;"]
-mojokosan.doorblog.jp##.column-inner-2 > center > table
 nekowan.com##div[class^="rss_comsita_saigo"]
 nekowan.com##div[class^="blogroll-"]
 gundamlog.com#?#.plugin-memo > div.side > div > script[src$="/blogroll.js"]:upward(3)
@@ -427,7 +428,6 @@ pioncoo.net##.rssBlock
 hiroburo.com##div[style="margin:0px;padding:0px;line-height:1.3;width:780px;"]
 oniyomediary.com###footer-rss
 gameinn.jp##.p-linkList
-moyugenn.com##.main-column-inner > div[align="center"] ~ br
 ||2chnewsblog.blog.jp/imgrss_$subdocument
 squallchannel.com,2chnewsblog.blog.jp##.article-body-more > a[target="_blank"]
 squallchannel.com,2chnewsblog.blog.jp##.article-body-more > a[target="_blank"] + br
@@ -577,6 +577,7 @@ bing.com###ev_talkbox_wrapper
 ||cubikachatuiuat.azurefd.net/cubikbot
 ||product.instiengage.com^$domain=sonichits.com
 ||eegg.fun/js/exfd*.js$script,~third-party
+||eegg.fun/js/sougo_list.js
 anacap.doorblog.jp##.column-inner-2 > center > table[border="1"]:first-child
 anacap.doorblog.jp##div[class^="anacap-roll"]
 ||widget.oncustomer.asia^
@@ -606,7 +607,6 @@ bipblog.com##.main_center_block:first-child
 ||burusoku-vip.com/users/burusoku-headline-mein.html
 repsoku.net,hdouga.com,gekiyaku.com##.headline
 fx2ch.net##[class^="rss-blogroll"]
-hosyusokuhou.jp###top
 minigob-matome.blog.jp,samuraisoccer.doorblog.jp##.bt-rss
 tarosoku.com##div[class^="kijishita_rss"]
 ||fc2.com/2/c/h/2chxvideos/rss_$subdocument,domain=2chav.com
@@ -914,7 +914,6 @@ moluch.ru##.ask_out
 ||collectcdn.com/launcher.js$domain=dila.ua
 ||csportal.directstar.ru^$domain=store.sony.ru
 ||hospitaloswaldocruz.my.salesforce.com^$domain=hospitaloswaldocruz.org.br
-||lenov.ru/engine/modules/light_chat/
 ||liquidweb.my.salesforce.com^$domain=nexcess.net
 ||procdncache.com/chat.php
 ||reactive.factor.ua/buhgalter911_chat/$domain=buhgalter.com.ua
@@ -928,7 +927,6 @@ moluch.ru##.ask_out
 @@||client.crisp.chat^$domain=journey.cloud
 @@||service.force.com/embeddedservice/*/esw.min.js$domain=microchip.com|visible.com|playstation.com|cyberpowersystems.com|lego.com|support.sonos.com
 journal.sovcombank.ru#?#article > div[class^="sc-"] > div:not([class]):has(div:contains(Факт дня))
-tengrisport.kz###side-widget-tablo
 ||s-cdn.sportbox.ru/sites/*/coefs-parser/coefs-parser.global.js
 ||api-*.spot.im/*/feed/pitc/*/no^post$domain=olhardigital.com.br
 ||quiz.rambler.ru^$domain=lenta.ru
@@ -998,6 +996,7 @@ sport1.de,nordbayern.de,heise.de##.apester-media
 ||civey.com^$third-party
 ||compass.pressekompass.net/compasses^$third-party
 ||widgets.opinary.com^$third-party
+||app.mycountrytalks.org^$third-party
 ||js-seeker.newjobs.com^$domain=monster.com
 ||js.jebbit.com/companion/*/widget.js$third-party
 nextpit.de##.jobbioapp
