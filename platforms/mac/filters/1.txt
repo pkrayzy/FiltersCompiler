@@ -1,8 +1,8 @@
-! Checksum: ReEidAXK8OX5Xfabbr/zaA
+! Checksum: /q6kPFzk+6G6ZyGLyBS9OA
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.93.33
-! TimeUpdated: 2024-08-23T15:30:57+00:00
+! Version: 2.0.93.34
+! TimeUpdated: 2024-08-23T16:31:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5708,8 +5708,9 @@ afisha.yandex.*##.adfox
 ! Yandex.Music
 ||content.adfox.ru/*/branding*.html$domain=music.yandex.*
 ||strm.yandex.*/get/$media,domain=vh.yandex.*
-! TODO: uncomment the rule when the issue is fixed
-! ||strm.yandex.*/get/$script,xmlhttprequest,other,redirect=noopvast-3.0,domain=yastatic.net|kinopoisk.ru|frontend.vh.yandex.*
+! TODO: remove the hint when the issue is fixed
+!+ PLATFORM(windows, mac, android)
+||strm.yandex.*/get/$script,xmlhttprequest,other,redirect=noopvast-3.0,domain=yastatic.net|kinopoisk.ru|frontend.vh.yandex.*
 ! Audio ad + popup
 ||storage.mds.yandex.net/get-music/*/ad-exp/$media,domain=music.yandex.*
 /public/prerolls/*.mp3$domain=music.yandex.*
@@ -5740,6 +5741,9 @@ rasp.yandex.ru##.ThreadLayout__topDirect
 ! the rule also relates to Afisha, Realty, Video
 ||yandex-video.naydex.net/*/*/*_$script,replace=/adblock//
 ||yandex-*.naydex.net/*/*/*_$script,replace=/adblock//,domain=tv.yandex.*|afisha.yandex.*|realty.ya.*
+tv.yandex.*##.grid-chunk > div.grid-chunk__column-box:has(> div.grid-chunk__adv-column)
+tv.yandex.*##div[class*="is-top"] > div[class^="grid"][class*=" "]:has(> div[class*="__"] > div.channel_abcd)
+tv.yandex.*##div[class] > div[class^="grid"][class*=" "]:has(> div.channel_abcd)
 !
 ! Yandex.Realty
 realty.ya.*##div[class*="PostBlocks__ad"]
@@ -7867,6 +7871,7 @@ ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita.ru,lenta.ru,motor.ru,progorod58.ru,74.ru,
 !
 !
 !
+shikimori.*##.b-news-topic.b-topic-preview:has(> div.inner > footer div.promo.other)
 habr.com##.sidebar-small-banner
 ||lordikfilms.xyz/templates/lordfilm-light/images/bg.jpg
 lordikfilms.xyz###trailer-place + br + p > a[href^="https://t.me/"]
