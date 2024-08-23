@@ -828,8 +828,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
 			"trustLevel": "high",
-			"version": "2.0.4.94",
-			"timeUpdated": "2024-08-22T13:01:04+0000",
+			"version": "2.0.4.95",
+			"timeUpdated": "2024-08-23T17:01:00+0000",
 			"languages": [
 				"he"
 			],
@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.68",
-			"timeUpdated": "2024-08-23T13:01:02+0000",
+			"version": "2.1.54.69",
+			"timeUpdated": "2024-08-23T17:01:01+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.67",
-			"timeUpdated": "2024-08-23T13:01:03+0000",
+			"version": "2.1.54.68",
+			"timeUpdated": "2024-08-23T17:01:02+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.31.42",
-			"timeUpdated": "2024-08-23T09:01:19+0000",
+			"version": "2.0.31.43",
+			"timeUpdated": "2024-08-23T17:01:17+0000",
 			"languages": [
 				"vi"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.47.99",
-			"timeUpdated": "2024-08-23T13:01:47+0000",
+			"version": "2.0.48.0",
+			"timeUpdated": "2024-08-23T17:01:44+0000",
 			"languages": [
 				"hi"
 			],
@@ -1393,8 +1393,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.3.7",
-			"timeUpdated": "2024-08-23T09:01:50+0000",
+			"version": "2.0.3.8",
+			"timeUpdated": "2024-08-23T17:01:45+0000",
 			"languages": [],
 			"tags": [
 				4
