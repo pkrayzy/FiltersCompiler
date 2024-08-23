@@ -1,9 +1,9 @@
-! Checksum: uJg9xtQLT2eUTeebTmlH9Q
-! Diff-Path: ../patches/18/18-s-1724402249-3600.patch
+! Checksum: IcWNl1zEyT1dF6nfI+UiIg
+! Diff-Path: ../patches/18/18-s-1724406371-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.45.92
-! TimeUpdated: 2024-08-23T08:33:48+00:00
+! Version: 2.0.45.93
+! TimeUpdated: 2024-08-23T09:41:08+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2466,6 +2466,9 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+goldpreis.de#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
+pirelli.com#$##cookie-bar { display: none !important; }
+pirelli.com#$#body[class^="cookie"] { overflow: auto !important; }
 otopratik.com.tr##.overlay
 redbook.com.au##.csn-gdpr-toaster
 web.basemark.com##.cookie-law
@@ -15896,6 +15899,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187010
+@@||consent.cookiebot.com^$domain=goldpreis.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/187007
+pirelli.com#@##cookie-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186987
 @@||sdk.privacy-center.org/sdk/*.js$domain=mundodeportivo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186932
