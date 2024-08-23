@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: WBzyJAa4wI+6+AiWpPVR5w
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1724303124-14400.patch
+! Checksum: fE4PwqntI0T38hATk/3x5g
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1724389522-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.14.86
@@ -826,6 +826,7 @@ tumblr.com##div[data-id][tabindex="-1"]:has(a[href^="https://href.li/?https://bi
 ||45.136.49.35^$document
 ||only2leaked.co^$document
 |http://www6.$document,domain=~often-used-in-malware-redirections.*
+|http://www1.*&kw$document,domain=~often-used-in-malware-redirections.*
 ||45.33.2.79^$document
 ||45.33.18.44^$document
 ||45.33.20.235^$document
@@ -1079,7 +1080,6 @@ www.google.*##div[data-attrid^="images "]:has(a[href*=".aspx?cname="])
 ##ul[class*=-share-buttons]
 */images/share_icons/
 */images/social-share/
-/^.*(\.|//)shar(e|ing)\.[a-z0-9-]{2,60}\..*$/$image,domain=~discord.com|~reddit.com
 /addthis_widget.js^
 /btn_share_fb.
 /btn_share_tw.
@@ -1317,7 +1317,6 @@ vg.no###comments
 indiatimes.com##div[class$="cmtwrapper "]
 ghacks.net###comments
 color-hex.com##.txtgray
-color-hex.com##.well-sm.well.commentcontainer
 color-hex.com##a[href="#comments"]
 rule34.paheal.net###comment-list-recent
 rule34.xxx###comment-list
@@ -1463,10 +1462,8 @@ daz3d.ru##+js(set-constant, snow, undefined)
 @@||epochtimes.com^
 @@||ntdtv.com.tw^
 @@||ntdtv.com^
-@@||secretchina.com^
 @@||shenzhoufilm.com^
 @@||soundofhope.org^
-@@||zhengjian.org^
 @@||buzzfeed.com^
 @@||mewe.com^
 @@||wikileaks.org^
@@ -1562,7 +1559,6 @@ channel4.com###playerContrastOverlay
 netflix.com#$#div[class^=watch-video--][class*="-container "] { background-image: none !important }
 *#$?#.playkit-bottom-bar { background: none !important }
 *#$?#.playkit-top-bar { background: none !important }
-www.youtube.com##head:has(meta[property$=":video:url"]) + body div[class*="-gradient-bottom "]
 www.youtube.com##head:has(meta[property$=":video:url"]) + body div[class$=-gradient-bottom]
 ##div[class^=ytp-gradient-]
 www.youtube.com#$#.ytp-time-display > span { font-weight: 800 !important; text-shadow: black 0 0 3px !important }
@@ -1587,6 +1583,7 @@ playpilot.com##.ratings
 www.google.*#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
 www.google.*##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 tv.nu##a[title] span:has(path[d^="M9.465 "])
+cinerama.uz##div[class^=MovieDescription_rating__]:nth-of-type(1)
 primewire.*#?#div:has(> span:has-text(IMDb))
 m4uhd.net##.quality
 justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
@@ -1826,6 +1823,7 @@ $removeparam=o_sch
 $removeparam=o_xid
 $removeparam=wtExtndSource
 $removeparam=CAID
+$removeparam=FpAffiliate
 $removeparam=rfsn
 $removeparam=bctid
 $document,removeparam=trackid,domain=~nzpost.co.nz
@@ -1888,6 +1886,7 @@ $removeparam=vero_id
 $removeparam=a_aid
 $removeparam=otracker
 $removeparam=ref_source
+$removeparam=ref_medium
 $removeparam=ref_campaign
 $removeparam=spMailingID
 $removeparam=spUserID
@@ -2470,6 +2469,7 @@ $removeparam=aff_click_id
 ||haokan.baidu.com/v?$removeparam=pd
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaId
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaTitle
+||baike.baidu.com^$removeparam=fromModule
 ||baidu.com^$removeparam=sourceFrom
 ||baidu.com^$removeparam=frs
 ||baidu.com/link?$removeparam=eqid
@@ -2838,6 +2838,7 @@ $document,removeparam=refresh,domain=cnn.com|startribune.com
 ||emag.ro^$removeparam=recid
 ||emag.ro^$removeparam=scenario_ID
 $removeparam=mt_click_id,domain=mail.ru|vkplay.ru
+$removeparam=nvid,domain=nvidia.com
 $removeparam=ico,domain=dailymail.co.uk|inews.co.uk|metro.co.uk|thisismoney.co.uk
 ||mercadolibre.com.ar^$removeparam=pdp_filters
 $removeparam=cxt,domain=twitter.com|x.com
@@ -2878,6 +2879,7 @@ $removeparam=regi_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2d
 $removeparam=segment_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=te,document,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 $removeparam=user_id,document,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
+||redirect.appmetrica.yandex.com^$removeparam=c
 ||linkedin.com^$removeparam=original_referer
 $document,removeparam=refId,domain=aebn.com|linkedin.com
 ||eporner.$removeparam=trx
@@ -3032,6 +3034,7 @@ $document,removeparam=af_reengagement_window
 $document,removeparam=_x_ns_sku_id,domain=temu.com
 $document,removeparam=_x_ads_channel,domain=temu.com
 $document,removeparam=_x_gmc_account,domain=temu.com
+$document,removeparam=_x_gmc_catalog,domain=temu.com
 $document,removeparam=_x_ads_creative_id,domain=temu.com
 $document,removeparam=_x_ns_device,domain=temu.com
 $document,removeparam=_x_ads_account,domain=temu.com
@@ -3062,7 +3065,6 @@ $document,removeparam=vjk,domain=indeed.com
 $document,removeparam=fvj,domain=indeed.com
 ||bp.blogspot.com^$removeparam=/^r[hn].*$/
 $document,removeparam=ttclid
-||datareportal.com^$document,removeparam=rq
 $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid
