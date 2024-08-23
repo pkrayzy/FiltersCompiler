@@ -1,9 +1,9 @@
-! Checksum: aNIRx2tUmV1FTlYi+K7Khw
-! Diff-Path: ../patches/14/14-s-1724412993-3600.patch
+! Checksum: JvlG1WpGqwRxijU2uYL0/w
+! Diff-Path: ../patches/14/14-s-1724416608-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.6.10
-! TimeUpdated: 2024-08-23T11:33:19+00:00
+! Version: 2.2.6.11
+! TimeUpdated: 2024-08-23T12:33:14+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2466,6 +2466,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+onb.ac.at#$#.fcc-cookie-modal { position: absolute !important; left: -3000px !important; }
+onb.ac.at#%#//scriptlet('set-cookie', 'cookie_ytvideo', '1')
 statistik-berlin-brandenburg.de##.afs-cookie-banner
 gaming.amazon.com##div[data-a-target="cookie-policy-banner"]
 goldpreis.de#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
@@ -20167,6 +20169,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.InA
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.SidebarAd
 !#safari_cb_affinity
 !
+||landandfloor.com^$third-party
 ||astralhustle.com^$third-party
 ||monacobeatles.com^$third-party
 ||proofconvert.com^$third-party
@@ -24040,6 +24043,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+novayagazeta.ru##main > div[style]:has(> a[href^="https://supportnovaya.club/"])
 otopratik.com.tr#$#.mfp-wrap { display: none !important; }
 otopratik.com.tr#$#.mfp-bg { display: none !important; }
 otopratik.com.tr#$#html[style*="overflow:"] { overflow: auto !important; margin-right: 0 !important; }
@@ -32275,6 +32279,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+novayagazeta.ru###mainNode > div:has(> a[href="/landing/email"])
 aida64.com###block-aida64-v5-followbuttons
 predictasearch.com##div[class^="_wrapper"]:has(> form)
 fortune.com##div[data-cy="subscriptionPlea"]
@@ -47973,6 +47978,10 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+footballista.jp##.post_detail__content > div.post_detail__loginbox
+footballista.jp##.post_detail__dazn
+lookmovie2.to##.banner-become-affiliate
+novayagazeta.ru##div[id^="materialBlock"] > div[style="height: 794.625px;"]
 easepdf.com##.adsbygoogle
 blogmura.com##.subscription-flow
 search.goo.ne.jp##.ocnBoard
@@ -54833,6 +54842,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+moscowtimes.eu,moscowtimes.news,moscowtimes.ru##contribute-teaser-mobile
 hechingerreport.org##.newspack-lightbox-placement-top
 motherjones.com##section[id^="mj-article-bottom-membership"]
 gigazine.net##div[id^="donate"]
