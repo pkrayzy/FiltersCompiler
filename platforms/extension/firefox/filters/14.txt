@@ -1,9 +1,9 @@
-! Checksum: 880DF0878eNCq7PuLzRVYQ
-! Diff-Path: ../patches/14/14-s-1724513854-3600.patch
+! Checksum: Kz/FsYafA+VqFzkOnkKdrQ
+! Diff-Path: ../patches/14/14-s-1724517481-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.6.19
-! TimeUpdated: 2024-08-24T15:33:43+00:00
+! Version: 2.2.6.20
+! TimeUpdated: 2024-08-24T16:34:24+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2466,6 +2466,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+tester.userbrain.com#%#//scriptlet('set-cookie', 'CookieConsent', 'true')
 pethelpful.com##.m-in-content-recommendation
 music.amazon.com#?##overlay div#banner:has(> div[class] > #bannerHeader:contains(cookie))
 onb.ac.at#$#.fcc-cookie-modal { position: absolute !important; left: -3000px !important; }
@@ -15876,6 +15877,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! tester.userbrain.com - antiadblock on the login page
+@@||tester.userbrain.com/js/cookieconsent.js$domain=tester.userbrain.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187010
 @@||consent.cookiebot.com/uc.js$domain=goldpreis.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187007

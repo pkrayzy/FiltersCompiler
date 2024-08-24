@@ -1,8 +1,8 @@
-! Checksum: EE5TVQImr7xp6fuGScgjMA
+! Checksum: 6SoaPT+RgyU+izdRzORH5g
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.46.1
-! TimeUpdated: 2024-08-24T15:34:06+00:00
+! Version: 2.0.46.2
+! TimeUpdated: 2024-08-24T16:34:31+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2465,6 +2465,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+tester.userbrain.com#%#//scriptlet('set-cookie', 'CookieConsent', 'true')
 pethelpful.com##.m-in-content-recommendation
 music.amazon.com#?##overlay div#banner:has(> div[class] > #bannerHeader:contains(cookie))
 onb.ac.at#$#.fcc-cookie-modal { position: absolute !important; left: -3000px !important; }
@@ -15905,6 +15906,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! tester.userbrain.com - antiadblock on the login page
+@@||tester.userbrain.com/js/cookieconsent.js$domain=tester.userbrain.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187010
 @@||consent.cookiebot.com/uc.js$domain=goldpreis.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187007
