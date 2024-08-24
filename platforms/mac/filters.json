@@ -379,8 +379,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.31.73",
-			"timeUpdated": "2024-08-24T05:00:54+0000",
+			"version": "2.1.31.74",
+			"timeUpdated": "2024-08-24T09:00:56+0000",
 			"languages": []
 		},
 		{
@@ -458,8 +458,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.54.70",
-			"timeUpdated": "2024-08-24T05:00:58+0000",
+			"version": "2.1.54.71",
+			"timeUpdated": "2024-08-24T09:01:11+0000",
 			"languages": []
 		},
 		{
@@ -502,8 +502,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
-			"version": "2.1.54.72",
-			"timeUpdated": "2024-08-24T05:00:59+0000",
+			"version": "2.1.54.73",
+			"timeUpdated": "2024-08-24T09:01:14+0000",
 			"languages": [
 				"it"
 			]
@@ -547,8 +547,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
-			"version": "2.1.54.71",
-			"timeUpdated": "2024-08-24T05:01:00+0000",
+			"version": "2.1.54.72",
+			"timeUpdated": "2024-08-24T09:01:15+0000",
 			"languages": [
 				"ar"
 			]
@@ -565,8 +565,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.54.70",
-			"timeUpdated": "2024-08-24T05:01:01+0000",
+			"version": "2.1.54.71",
+			"timeUpdated": "2024-08-24T09:01:16+0000",
 			"languages": []
 		},
 		{
@@ -708,8 +708,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.32.0",
-			"timeUpdated": "2024-08-24T05:01:10+0000",
+			"version": "2.1.32.1",
+			"timeUpdated": "2024-08-24T09:01:28+0000",
 			"languages": []
 		},
 		{
@@ -740,8 +740,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.0.26.45",
-			"timeUpdated": "2024-08-24T05:01:11+0000",
+			"version": "2.0.26.46",
+			"timeUpdated": "2024-08-24T09:01:30+0000",
 			"languages": []
 		},
 		{
@@ -866,8 +866,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.54.71",
-			"timeUpdated": "2024-08-24T05:01:13+0000",
+			"version": "2.1.54.72",
+			"timeUpdated": "2024-08-24T09:01:32+0000",
 			"languages": []
 		},
 		{
@@ -940,8 +940,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.53.96",
-			"timeUpdated": "2024-08-24T05:01:14+0000",
+			"version": "2.1.53.97",
+			"timeUpdated": "2024-08-24T09:01:33+0000",
 			"languages": []
 		},
 		{
@@ -969,8 +969,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
-			"version": "2.0.31.43",
-			"timeUpdated": "2024-08-23T17:01:17+0000",
+			"version": "2.0.31.44",
+			"timeUpdated": "2024-08-24T09:01:35+0000",
 			"languages": [
 				"vi"
 			]
@@ -1233,8 +1233,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.54.72",
-			"timeUpdated": "2024-08-24T05:01:22+0000",
+			"version": "2.1.54.73",
+			"timeUpdated": "2024-08-24T09:02:04+0000",
 			"languages": []
 		},
 		{
@@ -1249,8 +1249,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.0.60.23",
-			"timeUpdated": "2024-08-23T21:01:35+0000",
+			"version": "2.0.60.24",
+			"timeUpdated": "2024-08-24T09:02:08+0000",
 			"languages": []
 		},
 		{
@@ -1392,8 +1392,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.37.70",
-			"timeUpdated": "2024-08-24T05:01:31+0000",
+			"version": "2.1.37.71",
+			"timeUpdated": "2024-08-24T09:02:22+0000",
 			"languages": []
 		},
 		{
@@ -1468,8 +1468,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.50.78",
-			"timeUpdated": "2024-08-24T05:01:33+0000",
+			"version": "2.1.50.79",
+			"timeUpdated": "2024-08-24T09:02:24+0000",
 			"languages": []
 		},
 		{
@@ -1566,8 +1566,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
-			"version": "2.0.48.3",
-			"timeUpdated": "2024-08-24T05:01:42+0000",
+			"version": "2.0.48.4",
+			"timeUpdated": "2024-08-24T09:02:55+0000",
 			"languages": [
 				"hi"
 			]
