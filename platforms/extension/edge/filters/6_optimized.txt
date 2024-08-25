@@ -1,5 +1,5 @@
-! Checksum: GPorXZT6chy3OIKNPqsvSQ
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1724513853-3600.patch
+! Checksum: ZJJLXj3sC65w5317zhNbGg
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1724553401-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.43.28
@@ -936,6 +936,7 @@ sueddeutsche.de##er-ad-slot
 mapio.net##.floating-ad
 brutto-netto-rechner.info##div[class^="adarea"]
 winfuture.de###news_content > #vergleich
+winfuture.de###news_content > #vergleich + iframe
 fraenkische-rezepte.de##.banner-desktop
 giga.de##.alice-teaser-list-item:has(> article[style="display: none !important;"]:only-child)
 ip-phone-forum.de##.xcx-ad
@@ -1219,7 +1220,6 @@ stern.de##.affiliate-widget
 community.spontacts.com,community.gemeinsamerleben.com##.responsive-smart-wrapper
 infranken.de##.teaser-section_special
 infranken.de##section[data-module="Shopping-Deal"]
-chip.de,webfail.com##div[style="min-height:250px;"]
 mopo.de##a[href*="campaign"][target="_blank"]
 frankenpost.de,insuedthueringen.de,np-coburg.de###hcsb-topteaser-upper
 spiegel.de##div[data-area="heise-widget"]
@@ -1668,6 +1668,7 @@ borncity.com##div#content .code-block[style="margin: 8px 0; clear: both;"]
 borncity.com##div.code-block[style="margin: 8px auto; text-align: center; display: block; clear: both;"]
 schnittberichte.com##a[href^="out.php?"]
 ||schnittberichte.com/resources/images/*_250x250
+pocketpc.ch##aside[id^="ads_"]
 ntower.de##div[id^="n"][id*="Commerce"]
 deskmodder.de###gwerbung
 lokalo24.de,kreiszeitung.de,merkur.de,tz.de,hna.de##.id-Teaser-el--proBEEP
@@ -1780,6 +1781,7 @@ elektrikforum.de,bauexpertenforum.de##.sidebar > .funbox
 welt.de##.c-channel-header__sponsoring a
 welt.de##.c-channel-header__sponsoring-element
 journalistenwatch.com##a[data-bid]
+silicon.de###div-gpt-ad-DESKTOP_MEGA-1 > .dfp_word
 silicon.de##div[id^="div-gpt-ad"]:not([id^="div-gpt-ad-DESKTOP_MEGA"])
 heise.de,nzz.ch##.recommendations
 ||vodafone.de/csp/csp.php?b_id=$third-party
@@ -1911,7 +1913,6 @@ sueddeutsche.de###iqd_mainAd
 szbz.de,hardwareluxx.de,geliebte-katze.de###leaderboard
 seatforum.de###posts > ins[id^="AABI-"]
 golem.de###pricehits
-hilfdirselbst.ch###r230
 rollingstone.de,idea.de,3c.gmx.net,niederlausitz-aktuell.de,tonight.de,win-8-forum.net###superbanner
 focus.de##.adMarkerBlock
 abnehmen.com,seatforum.de##.ad_marker
@@ -2263,7 +2264,6 @@ rtl.de#@#.rtlde-medium-rectangle
 /werbemittel/*
 /werbemittel_
 /werbenetz/*
-/werbepartner.
 /werbepartner/*
 /werbeteaser/*
 /werbung.$third-party
@@ -2324,7 +2324,6 @@ _werbung.php
 ###reklame-rechts-mitte
 ###startwerbung
 ###topwerbung
-###werb11
 ###werbeanzeige
 ###werbebanner
 ###werbeblock
@@ -2360,7 +2359,6 @@ _werbung.php
 ##.bannergroup_werbung
 ##.banneritemwerbung_head_1
 ##.banneritemwerbung_head_3
-##.big-werb
 ##.boxstartwerbung
 ##.dk-ad-ident
 ##.firstload
@@ -2384,6 +2382,7 @@ _werbung.php
 ##.werbemainneu
 ##.werbenbox
 ##.werbung
+##.werbung-1
 ##.werbung-container
 ##.werbung-content
 ##.werbung-label
@@ -2622,6 +2621,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||modules.wikifolio.com/v2/de/autocontent/stock/*?partner=
 ||mothor.de/webbanner/
 ||partner.fondsdiscount.de^
+||phonepublisher.com/banner.do?
 ||pornme.pm/wrb/
 ||profiseller.de/banner/$third-party
 ||publisher.outtra.com^$third-party
@@ -2744,7 +2744,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||free-gay.org^*/eaCtrl.js
 ||freenet.de^*/mail/ads/
 ||freieporno.com^*/ssu.v2.js
-||fuechse.berlin^*/modul-hauptsponsoren/
 ||fundresearch.de^*/partnercenter/
 ||funkbasis.de/_static/ban-
 ||fussball.de^*/partner/
@@ -2816,7 +2815,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||oefb.at/netzwerk/imagedownload/
 ||oeffentlichen-dienst.de/images/banners/
 ||okey-online.com/prg/daten/datenbanken/banner
-||omano.de/AdServer/
 ||onlinekorrektor.de/cnc/
 ||osthessen-zeitung.de/uploads/tx_macinabanners/
 ||otto.de/wato-onsite/assets/*.wato.onsite.module.
@@ -3339,6 +3337,8 @@ immobilienscout24.de##.banner-top-placeholder
 fickverein.com##.banner3box
 eishockeynews.de##.bannerContent
 moviejones.de##.bannerInfo
+cherry.ch,lust24.ch##.bannerListPremium
+cherry.ch##.bannerListPremiumTop
 sg-flensburg-handewitt.de##.bannerWrap
 erotikforum.at##.bannerWrapper
 bluray-disc.de,der-farang.com##.banner_container
@@ -3549,7 +3549,6 @@ mt.de##.min-280.mr
 schweizer-illustrierte.ch##.ministage-channel-sponsor-paragraph
 polizei.news,reiseziele.ch##.mobile-billboard-box
 gartenflora.de##.mobile-interscroller
-gelbeseiten.de##.mod-RechteWerbespalteStartseite
 wohnglueck.de##.mod-adslot
 stuttgarter-zeitung.de##.mod-weekli
 basses-blatt.de,beobachter-online.de,blaue-blume.tv,einbecker-morgenpost.de,gandersheimer-kreisblatt.de,goldstar-tv.de,romance-tv.de,studio-magazin.de##.mod_banner
@@ -3728,6 +3727,7 @@ kaufland.de##.teaser-orchestration__wrapper--online
 watson.ch##.teaser_type_paid_content
 familie.de##.teaserheld-header-wrapper
 donaukurier.de##.text-center.container.d-none.d-sm-block.margin-bottom-10.bb-fixheight
+analsexporno.net,deutsche-sexfilme.net,pornomonster.com,scharfe-pornos.com##.tf-de
 analsexporno.net,fickverein.com##.tf-ho
 analsexporno.net,fickverein.com##.tf-sp
 m.tvspielfilm.de##.tfm-banner
@@ -3781,6 +3781,7 @@ zwischengas.com##.zgsky
 heise.de##A-PATERNOSTER
 mediamarkt.de##[data-test="mms-search-showcase"]
 skodacommunity.de##[id^="fh-afp_"]
+hallo-minden.de##a[data-adid]:not([data-adid="12937"])
 ariva.de##a[data-google_analytics_id^="wo"]
 schlager.de##a[data-name="topbanner"]
 onvista.de##a[href*="&adname="]
