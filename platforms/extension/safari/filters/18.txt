@@ -1,9 +1,9 @@
-! Checksum: UHUHCaQod3qGlozxPsEbVg
-! Diff-Path: ../patches/18/18-s-1724675809-3600.patch
+! Checksum: 6wi24DIa2PPSk6goukLDGw
+! Diff-Path: ../patches/18/18-s-1724679405-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.46.12
-! TimeUpdated: 2024-08-26T12:33:25+00:00
+! Version: 2.0.46.13
+! TimeUpdated: 2024-08-26T13:33:25+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2470,6 +2470,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+superchat.de##footer + div.fixed[class*="bottom"][style*="z-index"]
+abel-falisse.be#$##cookie-consent-popup { display: none !important; }
 gtv.com.pl#%#//scriptlet('set-cookie-reload', 'info_cookie', '1')
 meshok.net##div[class^="privacyAlert_"]
 futoncompany.co.uk#$#.cookie-line { display: none !important; }
@@ -2522,7 +2524,7 @@ gla.ac.uk#%#//scriptlet('set-cookie', 'gu_consent_set', 'true')
 leeds.ac.uk###cookie-control-prompt
 zadowolenie.pl#$#body { overflow: auto !important; }
 zadowolenie.pl#$#.cookie-message { display: none !important; }
-zadowolenie.pl#$#.modal-backdrop { display: none !important; }
+abel-falisse.be,zadowolenie.pl#$#.modal-backdrop { display: none !important; }
 united-camera.at#%#//scriptlet('set-cookie-reload', 'cookie-preference', '1')
 orange.jobs#%#//scriptlet('trusted-click-element', '.js-consent-all-submit')
 iberiaexpress.com#%#//scriptlet('trusted-click-element', '#rejectCookiesTerms')
@@ -2748,7 +2750,7 @@ utkonos.ru##app-cookie-agree
 tcz.pl#%#//scriptlet('set-cookie', 'rodo_exit', '1')
 kkh.de#$#.cookiebanner { display: none !important; }
 kkh.de#$#.modal-backdrop { display: none !important; }
-kkh.de#$#.modal-open { overflow: auto !important; }
+abel-falisse.be,kkh.de#$#.modal-open { overflow: auto !important; }
 spacehive.com#%#//scriptlet('trusted-set-local-storage-item', 'acceptedCookiePolicy', '1.4')
 products.wera.de###dsgvo-modal
 rawfuckclub.com#%#//scriptlet('trusted-click-element', '#consentDialogRow3 > .consentDialogButton.notclicked > button[data-ref="consentDialogRow3"]', '', '1000')
@@ -2975,7 +2977,7 @@ igmetall.de#%#//scriptlet('remove-class', 'cookie-overlay', 'body.cookie-overlay
 virustotal.com##privacy-policy-changes-banner
 arhcity.ru###cookieAnnounce
 sex.com#%#//scriptlet('trusted-set-cookie-reload', 'privacy-preferences', '%7B%22essential%22%3Atrue%2C%22analytics%22%3Afalse%7D')
-yes.fit,copaamerica.com#%#//scriptlet('set-cookie', 'localConsent', 'true')
+apunyalometre.cat,yes.fit,copaamerica.com#%#//scriptlet('set-cookie', 'localConsent', 'true')
 spk-bergkamen-boenen.de#%#//scriptlet('trusted-click-element', 'a[data-form=".eprivacy_optin_decline"]')
 backmarket.de#%#//scriptlet('set-cookie-reload', 'BM_Advertising', 'false')
 backmarket.de#%#//scriptlet('set-cookie', 'BM_Analytics', 'false')
@@ -7643,7 +7645,7 @@ renewal.ru##div[data-cookie-banner]
 craft-cv.com###rodo_notice
 ||xsuite.com/typo3conf/ext/cu_cookies/
 itau.com.br##app-marco-civil
-skechers.com.tr,cira.ca,infosport.pl,copcorp.pl,xlap24.pl,fargotex.pl,kolobrzeg.info.pl,nowpatient.com,forms.clickup.com,aftermath.site,streetsblog.org,deepbits.com,webtv.sk,teksavvy.com,info.cz,figliedisancamillo.it,nzip.cz,packtpub.com,auxologico.it,reteimprese.it,ininal.com,wasgehtapp.de,stocksy.com,flowforge.com,zeno.fm,spielregeln-spielanleitungen.de,boardgamegeek.com###cc--main
+entega.de,skechers.com.tr,cira.ca,infosport.pl,copcorp.pl,xlap24.pl,fargotex.pl,kolobrzeg.info.pl,nowpatient.com,forms.clickup.com,aftermath.site,streetsblog.org,deepbits.com,webtv.sk,teksavvy.com,info.cz,figliedisancamillo.it,nzip.cz,packtpub.com,auxologico.it,reteimprese.it,ininal.com,wasgehtapp.de,stocksy.com,flowforge.com,zeno.fm,spielregeln-spielanleitungen.de,boardgamegeek.com###cc--main
 skechers.com.tr###cl-cookie-settings
 realme.com##.r-cookie-footer ~ div.mask-untouch
 boxy-svg.com,checkpoint.com###notification
@@ -7736,7 +7738,7 @@ oferta.lotto.pl,raportdekra.pl##.landend-infobar-light
 ||rest.arbeitsagentur.de/headerfooter/*^feature=disclaimerwc
 joinhoney.com##div[class^="cookieConsentBannerContainer"]
 przelewy24.pl##body .gdpr
-turk.net##body .rey-cookieNotice:not(#style_important)
+frost.co.uk,turk.net##body .rey-cookieNotice:not(#style_important)
 menmania.pl###times-legal-notice
 modamelis.com###btz-cookie-popup
 gouv.fr##.fr-consent-banner
@@ -15894,6 +15896,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187179
+abel-falisse.be#@##cookie-consent-popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/187183
+@@||ems.entega.de/js/lib/cookieconsent.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187182
 gtv.com.pl#@#.panel_cookie
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187184
