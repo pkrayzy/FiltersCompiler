@@ -1,9 +1,9 @@
-! Checksum: HZ3/aMF/oTFNYTZEBV+njw
-! Diff-Path: ../patches/18/18-s-1724683252-3600.patch
+! Checksum: ZJkvlNj5YE9AtUWJi5i3vg
+! Diff-Path: ../patches/18/18-s-1724697388-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.46.14
-! TimeUpdated: 2024-08-26T14:36:24+00:00
+! Version: 2.0.46.15
+! TimeUpdated: 2024-08-26T18:33:09+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2469,6 +2469,9 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+tallink.com#$##cms-web-consent-root { display: none !important; }
+tallink.com#$#body { overflow: auto !important; }
+topin.cz#%#//scriptlet('trusted-set-cookie', '_GTM_Consent', '{"ad_storage":"denied","analytics_storage":"denied","functionality_storage":"granted","personalization_storage":"denied","security_storage":"granted"}')
 superchat.de##footer + div.fixed[class*="bottom"][style*="z-index"]
 abel-falisse.be#$##cookie-consent-popup { display: none !important; }
 gtv.com.pl#%#//scriptlet('set-cookie-reload', 'info_cookie', '1')
@@ -15939,6 +15942,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187263
+topin.cz#@#.cookies-box
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187179
 abel-falisse.be#@##cookie-consent-popup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187183
