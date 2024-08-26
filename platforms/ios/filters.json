@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.6.23",
-			"timeUpdated": "2024-08-26T03:33:03+0000",
+			"version": "2.2.6.24",
+			"timeUpdated": "2024-08-26T04:33:12+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -681,8 +681,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.46.4",
-			"timeUpdated": "2024-08-26T03:33:08+0000",
+			"version": "2.0.46.5",
+			"timeUpdated": "2024-08-26T04:33:17+0000",
 			"languages": [],
 			"tags": [
 				5,
