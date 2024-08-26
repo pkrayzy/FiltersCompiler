@@ -1,16 +1,16 @@
-! Checksum: fnOYx12otiuv5PO70tOm5A
-! Diff-Path: ../patches/244/244-s-1723655135-14400.patch
+! Checksum: XhBjmUEbnS15z7d37S6vuw
+! Diff-Path: ../patches/244/244-s-1724663152-14400.patch
 ! Title: YousList
 ! Description: Filter that blocks ads on Korean sites.
-! Version: 2.0.10.77
-! TimeUpdated: 2024-08-14T17:01:35+00:00
+! Version: 2.0.10.78
+! TimeUpdated: 2024-08-26T09:01:46+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Homepage: https://github.com/yous/YousList
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 1 days
-! OriginalVersion: 20240813
+! OriginalVersion: 20240826
 ! General element hiding rules
 ##amp-ad
 ##amp-embed.ad_cnt
@@ -1469,6 +1469,7 @@
 ||image.lottorich.co.kr/lottorich/partnership/
 ||image.melon.com/svc/images/main/floatingBanner/floatingBanner_*.swf^
 ||image.munhwa.com/www/banner/$domain=m.munhwa.com|munhwa.com
+||image.newsis.com/h_www/advertise/$domain=newsis.com
 ||image.ruliweb.com/view/view.js^$domain=bbs.ruliweb.com|m.ruliweb.com|ruliweb.com
 ||image.sportsseoul.com/ad/$domain=sportsseoul.com
 ||image.thebell.co.kr/banner/$domain=thebell.co.kr
@@ -1818,9 +1819,6 @@
 ||minitoon.net/js/adblockblock.js^
 ||minor.town/api/ads^$domain=minor.town
 ||minor.town/static/ad/^$domain=namu.wiki
-||mobile.newsis.com/ad_list/ad.html^$domain=mobile.newsis.com
-||mobile.newsis.com/ad_list/ad_*.html^$domain=mobile.newsis.com
-||mobile.newsis.com/direct_copy2.html^$domain=mobile.newsis.com
 ||moeni.org/img/sponsor/$domain=moeni.org
 ||moja-ostroleka.pl/uploads/banery/$domain=moja-ostroleka.pl
 ||montelena-rcv.gmarket.co.kr^$domain=gmarket.co.kr
@@ -1838,6 +1836,7 @@
 ||mxttrf.com/ads^
 ||mxttrf.com/js/show_ads_mxttrf.js^
 ||my.newscover.co.kr/common/c/js/sidecover.js^
+||my.newscover.co.kr/common/c/js/sidecover2.js^
 ||mycdn.co/adServe/imgBanner*/*_image-banner.cib^
 ||mydaily.co.kr/ad/adimage/$domain=mydaily.co.kr
 ||mydaily.co.kr/upload/ads/$domain=mydaily.co.kr
@@ -1881,9 +1880,8 @@
 ||news1.kr/ads/iframe/$domain=news1.kr
 ||news1.kr/ads/mobile/$domain=news1.kr
 ||newscomm.nate.com/Etc/SocialAD^
-||newsis.com/ad/view_banner.html^$domain=newsis.com
-||newsis.com/ad/viewad/*.html^$domain=newsis.com
 ||newsis.com/view/ad/proc_iframe_*.html^$domain=newsis.com
+||newsis.com/view/ad/proc_view_body*.html^$domain=newsis.com
 ||newspic.kr/inc/js/facebookAd.js^$domain=newspic.kr
 ||newsprime.co.kr/data/banner/$domain=newsprime.co.kr
 ||newswave.kr/ad/
@@ -3242,6 +3240,7 @@ docdocdoc.co.kr##iframe[src^="/banner/rollbanner_"][src$=".html"]
 dogdrip.net##div.clayerbox-left-ad
 dogdrip.net##div.clayerbox-right-ad
 dogdrip.net##div.ddnad-board
+dogdrip.net#@#ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
 dogjoa.com,dogzoa.com##div.at-title
 dogjoa.com,dogzoa.com##div.exo
 dogjoa.com,dogzoa.com##div.movie-bot
@@ -3804,6 +3803,11 @@ googleads.g.doubleclick.net##a[href^="https://googleads.g.doubleclick.net/aclk"]
 googleads.g.doubleclick.net##a[href^="https://www.googleadservices.com/pagead/aclk"][href*="&client="]
 googleads.g.doubleclick.net##div#mys-wrapper div.ad
 googleads.g.doubleclick.net##div#mys-wrapper div.url-ad-badge
+gorani.kr##div.bottom_adv
+gorani.kr##div.instream_banner
+gorani.kr##div.top_first_adv
+gorani.kr##div.top_second_adv
+gorani.kr##div.top_third_adv
 gramho.com##div.adv
 grammar.yourdictionary.com##div.ui-advertisement
 grammar.yourdictionary.com##div[data-openweb-ad]
@@ -3830,9 +3834,11 @@ gyunggijh.co.kr##ins[data-ad-slot="6372983748"]
 hackintosh.zone##div#ipsLayout_mainArea>div[align="center"]
 hackintosh.zone##ins#aswift_3_expand
 hani.co.kr##div[class*=" BaseAd_adWrapper__"]
+hani.co.kr##div[class^="ArticleAdTop_topAdWrapper__"]
 hani.co.kr##div[class^="ArticleBottomFixedAd_adFixed__"]
 hani.co.kr##div[class^="ArticleDetail_adGroup__"]
 hani.co.kr##div[class^="BaseAd_adWrapper__"]
+hani.co.kr##div[class^="MainTopArticleList_adWrap__"]
 hani.co.kr##div[class^="article_bottomAdWrap__"]
 hani.co.kr##div[class^="article_leftAd__"]
 hankooki.com##div#SideBannerL
@@ -4013,6 +4019,8 @@ ibric.org##div#layerAdNum
 icdrama.to##div#closeADV
 icdrama.to##div[id^="MYADV_"]
 icdrama.to##div[id^="mynewads_"]
+ichannela.com##div.add_txt_banner
+ichannela.com##section.main_ad
 idaegu.com##aside.sidebar>div[style="text-align:center;margin-bottom:10px;"]
 idaegu.com##div.content-column>div[style="text-align:center; margin-bottom:5px; width:100%; overflow:hidden;"]
 idaegu.com##div.post-header>div[style="text-align:center;margin-bottom:10px;"]
@@ -5761,17 +5769,10 @@ mobile.gmarket.co.kr##div#layer_hmBanner
 mobile.gmarket.co.kr##div#layer_lgUBanner
 mobile.missyusa.com##div.div_banner
 mobile.missyusa.com##iframe[src*="//ad1.missyusa.com:448/"]
-mobile.newsis.com##body>div[style="position:fixed;bottom:0px;width:100%;z-index:2001;margin: auto; text-align: center;"]
-mobile.newsis.com##div#btm_layer
-mobile.newsis.com##div#cont>div.bxcn[style="width: 100%; height: 250px; padding: 0px; border: 0px solid; text-align:center; margin: 0 auto;"]
-mobile.newsis.com##div.article>div[style="padding:10px 0 0 10px;"]
-mobile.newsis.com##div.article>div[style="text-align: center;"]
+mobile.newsis.com##div.adPos.listStyle04
+mobile.newsis.com##div.bannerGroup
 mobile.newsis.com##div.bxcn
-mobile.newsis.com##div.con_area>div[style="width: 320px; height: 250px; padding: 0px; border: 0px solid; text-align:center; margin: 0 auto;"]
 mobile.newsis.com##div.con_area_ad1
-mobile.newsis.com##div[class~="adPos"][class~="listStyle04"]
-mobile.newsis.com##iframe[src^="/ad_list/ad.html"]
-mobile.newsis.com##iframe[src^="/ad_list/ad_"][src*=".html"]
 mobile.nytimes.com##div[class^="ResponsiveAd-"]
 mobile.reuters.com##div.amp-ad-container
 mobile.reuters.com##div.mpu_ad
@@ -6109,25 +6110,15 @@ newsen.com##ins[data-ad-slot="9967208540"]
 newsen.com##td[align="left"][style="margin-right:10px;"][valign="top"][width="741"]>table.black[align="center"][border="0"][cellpadding="0"][cellspacing="0"][width="741"]:first-of-type:not([style])>tbody>tr:first-of-type:not([valign])
 newshankuk.com##div.bannerBottomR
 newshankuk.com##div.bannerTopR
-newsis.com##div#detail1-1
-newsis.com##div#detail3-1
-newsis.com##div#detail3-2
-newsis.com##div#detail3-3
+newsis.com##div#banner1
+newsis.com##div#banner2
 newsis.com##div#shuffle
 newsis.com##div#view_ad
-newsis.com##div.ad_border_bottom
-newsis.com##div.ad_border_in
-newsis.com##div.ad_border_top
-newsis.com##div[class^="banner_1024_1024_"]
-newsis.com##div[data-widget_id="goPGerXQ"]
-newsis.com##iframe[src^="/ad/view_banner.html"]
-newsis.com##iframe[src^="/ad/viewad/"][src*=".html"]
+newsis.com##div.adBox
+newsis.com##div.adBox4
+newsis.com##div.banner300
 newsis.com##iframe[src^="/view/ad/proc_iframe_"][src*=".html"]
-newsis.com##li#detail2-11
-newsis.com##span.banner1
-newsis.com##span.banner2
-newsis.com##table.article_photo.right:not([id])
-newsis.com##table.viewerAd
+newsis.com##iframe[src^="/view/ad/proc_view_body"][src*=".html"]
 newsnack.tv##div.sm_dfp_ads
 newsnjoy.or.kr##div#veritasaApp
 newspic.kr##div#app-promotion-top-layer
