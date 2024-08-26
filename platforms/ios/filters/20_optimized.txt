@@ -1,5 +1,5 @@
-! Checksum: J8yhE0AnbgZ/7UF/rQb4fQ
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1724553411-3600.patch
+! Checksum: 3FG618Pfl72QxwxM+Xlrmg
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1724639803-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
 ! Version: 2.0.16.12
@@ -101,6 +101,7 @@ news.ntv.co.jp##.introduction
 cdek.ru##.mobile-applications
 weathernews.jp##a[href^="https://weathernews.jp/app/"]
 trip.com###new-app-download-component
+teb.com.tr###lblBanner2819
 e.mail.ru,octavius.mail.ru#?#.octopus__icon_qr-code
 e.mail.ru,octavius.mail.ru#?#.octopus__icon_qr-code + div.octopus__text > span.octopus__line:has(> span.octopus__subtitle > div:contains(/^Скачайте Почту на телефон/))
 akakce.com#%#//scriptlet('set-constant', 'initAppBanner', 'noopFunc')
@@ -141,7 +142,6 @@ totaljobs.com##article[data-testid="hp-app-banner-holder"]
 tripadvisor.com,tripadvisor.ru,tripadvisor.net,tripadvisor.org,tripadvisor.in,tripadvisor.com.au,tripadvisor.com.tr,tripadvisor.co.uk,tripadvisor.co,tripadvisor.ca,tripadvisor.com.ua,tripadvisor.de,tripadvisor.fr,tripadvisor.jp,tripadvisor.xyz,tripadvisor.ua,tripadvisor.com.tw,tripadvisor.co.za,tripadvisor.co.il,tripadvisor.eu,tripadvisor.it,tripadvisor.tv,tripadvisor.com.br,tripadvisor.es,tripadvisor.ch,tripadvisor.co.in,tripadvisor.com.vn,tripadvisor.co.id,tripadvisor.nl,tripadvisor.us,tripadvisor.cl,tripadvisor.com.mx,tripadvisor.ro,tripadvisor.club,tripadvisor.co.jp,tripadvisor.co.nz,tripadvisor.com.ar,tripadvisor.site,tripadvisor.cc,tripadvisor.rs,tripadvisor.cn,tripadvisor.co.kr,tripadvisor.pk,tripadvisor.se,tripadvisor.com.my,tripadvisor.cz,tripadvisor.com.sg,tripadvisor.com.co,tripadvisor.be,tripadvisor.dk,tripadvisor.com.hk,tripadvisor.com.cn,tripadvisor.sg,tripadvisor.org.uk,tripadvisor.com.bd,tripadvisor.dev,tripadvisor.com.ng,tripadvisor.ie,tripadvisor.at,tripadvisor.com.np,tripadvisor.fi,tripadvisor.lv,tripadvisor.space,tripadvisor.pe,tripadvisor.sk,tripadvisor.gov.bd,tripadvisor.pt,tripadvisor.com.ph,tripadvisor.hr,tripadvisor.one,tripadvisor.com.pe,tripadvisor.is,tripadvisor.gov.np##section[data-automation$="_AdPlaceholder"]:has(a[href*="&af_channel=Phoenix_App_On_Site&"])
 kproxy.com###kproxy_float_extension_ad
 ||erli.pl/static/media/mobile_go_footer_desktop.
-jobsite.co.uk##div[data-testid="appBanner"]
 yce.perfectcorp.com##div[class^="app-buttons_appButtonBlock__"]
 atptour.com##.atp_apps
 atptour.com##.atp_article > p:has(> a[href^="https://www.atptour.com/"][href*="/apps?"][href*="app_banner"])
@@ -384,13 +384,11 @@ baike.baidu.com##.wgt-baikeapp-promote-container
 kavkazr.com##.banner__a
 outlook.live.com#%#//scriptlet('trusted-set-cookie', 'speedbumpShown', '$now$')
 espreso.co.rs###installAndroidApp
-vesti.kz##.button-install
 flagma.by#%#//scriptlet('set-cookie-reload', 'flagmajob_ads_shown', '1')
 ithome.com##.down_app
 m.shein.com###branch-app
 anime-sharing.com##.js-installPromptContainer
 ||tvcdn.netkeiba.com/img.dir/common/img/keibamatome/banner/
-epocacosmeticos.com##div[data-testid="baixe-app"]
 [$path=/maps]google.com##div[jsaction*="promotion"]
 [$path=/maps]yandex.*#?#form.route-form-view > div.card-banner-view
 web.playerapp.tokyo#?#main > aside:has(> div > a[href^="https://itunes.apple.com/app/"])
@@ -566,6 +564,7 @@ bhaskar.com#?#div > div[class]:has(> a[href^="https://dainik-b-alternate.app.lin
 mall.jd.com##.jTdCode.fixed
 st.benesse.ne.jp##.regist_box
 st.benesse.ne.jp###regist
+instagram.com##main ~ div:not([style]) > div[class] > div[style="width: 100%;"]
 ||tenki.jp/images/icon/radar/radar48h-banner-
 ||telnavi.jp/img/sf/app.png
 coolblue.be#?#.grid > div[class^="col"]:has(> div[class] > a[href^="https://www.coolblue.be/"][href$="/app.html"])
@@ -629,6 +628,7 @@ newsdig.tbs.co.jp##a[id^="appbanner_"]
 poczta.interia.pl##.header-container > .container-store
 ilkha.com##.backroundcolor-white-ss > h3.dowlandapptitle
 ilkha.com##.backroundcolor-white-ss > h3.dowlandapptitle + div.footer-download-store
+sofy.jp##.uc-mod-article-pop-up
 myhome.nifty.com##.toappstore
 tv.wp.pl#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem(`promo-info`,`{"closeDatetime":${Date.now()}}`))}catch(a){}})();
 medal.tv#%#document.cookie="dl-mobile-banner=hidden;path=/";
@@ -642,7 +642,6 @@ kinopoisk.ru##div[id$="touch_mobile_app_promo_footer"]
 kinopoisk.ru##div[id$="touch_bottom_banner"]
 filmarks.com##.p-top-hero
 realestate.yahoo.co.jp##.compFooterGlobalNavigation__app
-partner.yahoo.co.jp##.GuestFooterApp
 comic-days.com##div[class^="Original_app_area_wrapper"]
 family.co.jp###sptabnemu
 slickdeals.net#$#.sdModalOverlay { display: none !important; }
@@ -682,6 +681,7 @@ recotripp.com###is-app
 walmart.com#?#div[data-automation-id="sb-div-bottom-module"]:has(> button[data-automation-id="sb-btn-get-the-app"])
 at-s.com###news2020AplBtn
 douyu.com##div[class^="recommendApp"]
+apfelpage.de##.widget_appful
 nytimes.com##button[data-testid="getstarted-magic-link"]
 m.haber7.com###makroo-sticky-adunit
 ||loader.to/images/loader/loader_app.jpg
@@ -1077,7 +1077,6 @@ account.mail.ru##.mail-app-promo
 10jqka.com.cn###backWashNav
 nur.kz##.js-page-top
 nperf.com##.mobilePromoLogos
-house.goo.ne.jp,kusurinomadoguchi.com,bleacherreport.com,tvbs.com.tw##.smart_banner
 myanimelist.net##.header-mini-banner
 sport.tvp.pl,buser.com.br,belsat.eu##.banner-app
 fanfox.net###edShow
@@ -1126,6 +1125,7 @@ thelocal.fr,m.mobile01.com,indianexpress.com,financialexpress.com##.app-btn
 f2movies.to##a[href="/android-movies-apk"]
 player.fm#$#.open-in-app-promo { display: none !important; }
 ||i2.sinaimg.cn/*/searchCallup.js$domain=gu.sina.cn
+imgur.io,imgur.com##.get-app-block
 bing.com###bnp_hfly
 quora.com##.q-box > div[class^="CssComponent-"][style*="height: 50px;"]
 parcelsapp.com##.badges
@@ -1176,6 +1176,7 @@ klook.com,japantaxi.jp,crichd.com,crichd.net,crichd.org,crichd.co,crichd.info,cr
 sirabee.com##a[href^="https://app.sirabee.com"]
 ozon.by,ozon.ru##[data-widget="webToAppBanner"]
 game-state.com###playstore
+arzamas.academy##.ra__heading .ra__app__btns
 arzamas.academy#$#body { margin-top: 0! important; }
 papara.com###smart
 expedia.be,expedia.nl,expedia.ch,expedia.de,expedia.it,expedia.fr,expedia.at,expedia.dk,expedia.es,expedia.no,expedia.fi,expedia.co.uk,expedia.ie,expedia.se###mad-footer-container
