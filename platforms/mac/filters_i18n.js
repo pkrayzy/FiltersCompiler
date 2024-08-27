@@ -3802,7 +3802,7 @@
 			},
 			"sk": {
 				"name": "AdGuard filter vyskakovacích okien",
-				"description": "Blokuje všetky druhy vyskakovacích okien, ktoré nie sú potrebné na prevádzku webových stránok podľa našich Zásad filtrovania."
+				"description": "Blokuje všetky druhy vyskakovacích okien, ktoré nie sú potrebné na prevádzku webových stránok podľa našich Zásad filtrácie."
 			},
 			"sl": {
 				"name": "Filter pojavnih oken AdGuard",
@@ -14658,7 +14658,7 @@
 			},
 			"sk": {
 				"name": "uBlock Origin - riziká spojené so škodlivým softvérom",
-				"description": "Filtrovanie rizikových lokalít a upozorňovanie používateľov na potenciálne hrozby."
+				"description": "Filtrácia rizikových lokalít a upozorňovanie používateľov na potenciálne hrozby."
 			},
 			"sl": {
 				"name": "uBlock Origin – Badware risks",
