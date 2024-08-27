@@ -1,8 +1,8 @@
-! Checksum: rvLpkKf+VetoenezVsSH/Q
+! Checksum: yvcqFEpMwNuhH4P2gbnnVw
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.6.47
-! TimeUpdated: 2024-08-27T12:33:03+00:00
+! Version: 2.2.6.48
+! TimeUpdated: 2024-08-27T13:33:02+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -13879,6 +13879,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187287
+@@||transcend-cdn.com/*/airgap.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187263
 topin.cz#@#.cookies-box
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187179
@@ -14860,6 +14862,7 @@ praca.by#@#.cookie-confirm
 @@||cdn-ukwest.onetrust.com/vendorlist/iab2Data.json$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||cdn-ukwest.onetrust.com/scripttemplates/*/otBannerSdk.js$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
 @@||cdn-ukwest.onetrust.com/scripttemplates/*/assets/otCenterRounded.json$domain=nintendolife.com|pushsquare.com|purexbox.com|timeextension.com
+@@||cdn-ukwest.onetrust.com/scripttemplates/*/assets/*/otPcCenter.json$domain=timeextension.com
 timeextension.com,nintendolife.com,purexbox.com,pushsquare.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159512
 leibniz.com#@#.cookie-box:not(body):not(html)
@@ -43860,8 +43863,10 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+yuba.douyu.com##div[class^="bannerWrapper_"]
 medal.tv##div[data-test-id="virtuoso-item-list"] > div[data-index] > div[class] > div[rows] > div[class^="sc-"][style^="aspect-ratio: 1 / 1; grid-area:"]
-tracker.gg##.bordered-davert
+r6.tracker.network,tracker.gg##.bordered-davert
+r6.tracker.network##.trn-grid > a.profile-hint[href="/r6siege/app"]
 protonvpn.com##a[href="/free-vpn"] > img
 theverge.com##.newsletter-wrapper
 travelrussia.ru#$##widget-topBar { display: none !important; }
