@@ -1,9 +1,9 @@
-! Checksum: Z49YZlT4hv7bGX40Oa1jNQ
-! Diff-Path: ../patches/19/19-s-1724758600-3600.patch
+! Checksum: FqylcrtyeYgkiLqdjzr5bA
+! Diff-Path: ../patches/19/19-s-1724762185-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.42.17
-! TimeUpdated: 2024-08-27T11:33:15+00:00
+! Version: 2.0.42.18
+! TimeUpdated: 2024-08-27T12:33:11+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -240,6 +240,7 @@ e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\
 ! Under the search
 dzen.ru##div:matches-attr("data-*"="ad-banner")
 ! Ads in news
+dzen.ru#%#//scriptlet('abort-on-stack-trace', 'Promise', 'initContext')
 dzen.ru##div[class^="news-"][class$="_banner"]
 dzen.ru##.news-app-layout-redesign__content > div[class*="_position_tsar news-"]
 ! Ads in the feed
@@ -4309,6 +4310,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+sky.pro##header ~ div[class^="modal_"]:has(div[class^="modal_modalContent"] > div[class^="popup-banner_popupBanner"])
 optigura.fr#%#//scriptlet('trusted-set-cookie', 'hide_exit_intent', 'true')
 optigura.fr#%#//scriptlet('trusted-set-cookie', 'hide_intent', 'true')
 developer.apple.com##.push-subscription-banner-container
