@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: bhccvij8JhPcIWTifmxjkg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1724776701-3600.patch
+! Checksum: bz+NziYBxc0XoWZ9n51awg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1724780192-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.50.3
-! TimeUpdated: 2024-08-27T16:31:24+00:00
+! Version: 2.3.50.4
+! TimeUpdated: 2024-08-27T17:31:17+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7338,6 +7338,7 @@ filecr.com#@#.text_ad
 ||googleads.g.doubleclick.net/pagead/id$domain=filecr.com,redirect=noop.txt,important,image,media,subdocument,stylesheet,script,xmlhttprequest,other
 portable4pc.com##div[class^="mdpDeblocker-"]
 ! In case of DNS filtering
+codec.kyiv.ua#$?#style[id="mdpDeblocker-css"] { remove: true; }
 alliptvlinks.com##+js(abort-on-stack-trace, document.getElementsByTagName, /[a-z]{5\,20}.*\/plugins\/.*\.js/)
 blisseyhusband.in,freecoursesite.com,novelmultiverse.com##+js(abort-current-script, decodeURIComponent, String.fromCharCode)
 ! Another possible solution for iOS, when the scriplets above do not work, and used DNS filtering
@@ -34064,7 +34065,9 @@ http://www.ads.$third-party
 ! SECTION: Temporary
 ! Malware spam on GitHub
 ! Example: https://github.com/AdguardTeam/AdguardFilters/issues/187256
-||mediafire.com/file/xs3e15yonljh4bk/fix.zip/file$all
+||bit.ly/3MjP129$all
+||cdn.discordapp.com/attachments/1277836331501883449/1278023442498588702/fix.zip$all
+github.com##:matches-path(/AdguardTeam/AdguardFilters)a[href="https://bit.ly/3MjP129"]
 github.com##:matches-path(/AdguardTeam/AdguardFilters)a[href^="https://www.mediafire.com/file/"][href$="/fix.zip/file"]
 github.com##:matches-path(/AdguardTeam/AdguardFilters)a[href^="https://www.mediafire.com/file/"][href$="/fix.rar/file"]
 ! https://github.com/AdguardTeam/CoreLibs/issues/1887
@@ -34309,6 +34312,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+battlefieldtracker.com##.header-davert
 independent.co.uk##.indy100-trending
 hurriyetdailynews.com##div[class*="advertorial"]
 newsweek.com##.right-rail-ads
