@@ -828,8 +828,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
 			"trustLevel": "high",
-			"version": "2.0.4.95",
-			"timeUpdated": "2024-08-23T17:01:00+0000",
+			"version": "2.0.4.96",
+			"timeUpdated": "2024-08-27T05:01:00+0000",
 			"languages": [
 				"he"
 			],
@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.89",
-			"timeUpdated": "2024-08-27T01:01:05+0000",
+			"version": "2.1.54.90",
+			"timeUpdated": "2024-08-27T05:01:01+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.54.88",
-			"timeUpdated": "2024-08-27T01:01:06+0000",
+			"version": "2.1.54.89",
+			"timeUpdated": "2024-08-27T05:01:01+0000",
 			"languages": [
 				"ar"
 			],
@@ -948,8 +948,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
-			"version": "2.0.21.46",
-			"timeUpdated": "2024-08-26T21:01:16+0000",
+			"version": "2.0.21.47",
+			"timeUpdated": "2024-08-27T05:01:06+0000",
 			"languages": [
 				"id"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.31.51",
-			"timeUpdated": "2024-08-26T13:01:36+0000",
+			"version": "2.0.31.52",
+			"timeUpdated": "2024-08-27T05:01:16+0000",
 			"languages": [
 				"vi"
 			],
@@ -1228,8 +1228,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.19.28",
-			"timeUpdated": "2024-08-26T05:01:32+0000",
+			"version": "2.0.19.29",
+			"timeUpdated": "2024-08-27T05:01:34+0000",
 			"languages": [
 				"sv"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.48.20",
-			"timeUpdated": "2024-08-27T01:01:49+0000",
+			"version": "2.0.48.21",
+			"timeUpdated": "2024-08-27T05:01:44+0000",
 			"languages": [
 				"hi"
 			],
@@ -1374,8 +1374,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.45",
-			"timeUpdated": "2024-08-26T05:01:43+0000",
+			"version": "2.0.1.46",
+			"timeUpdated": "2024-08-27T05:01:45+0000",
 			"languages": [],
 			"tags": [
 				4
@@ -1393,8 +1393,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.3.16",
-			"timeUpdated": "2024-08-26T17:02:01+0000",
+			"version": "2.0.3.17",
+			"timeUpdated": "2024-08-27T05:01:46+0000",
 			"languages": [],
 			"tags": [
 				4
