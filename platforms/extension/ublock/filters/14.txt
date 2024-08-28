@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 4P58msaoN3ugZiTWbnyPtQ
-! Diff-Path: ../patches/14/14-s-1724834214-3600.patch
+! Checksum: cU97gztWfSR3PuMjFfQ+Kw
+! Diff-Path: ../patches/14/14-s-1724838081-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.6.62
-! TimeUpdated: 2024-08-28T08:33:31+00:00
+! Version: 2.2.6.63
+! TimeUpdated: 2024-08-28T09:36:42+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -20974,10 +20974,9 @@ boylove.cc##.blocked_hint_msg_pc
 videoaktiv.de###_su1
 videoaktiv.de###sp-rect
 penize.cz,strategium.ru##+js(no-setTimeout-if, adblock)
-android.com.pl##+js(set-constant, hasAdblock, false)
+android.com.pl##+js(set-constant, isAdblockEnabled, false)
 101soundboards.com,android.com.pl#$#body > div:not([class], [id]) > #AdHeader { display: block !important; }
 101soundboards.com,android.com.pl#$#body > div:not([class], [id]) > #AdHeader ~ * { display: block !important; }
-android.com.pl##.post__content > div[style^="background-color: var(--clr-danger); color:"][style$="border-radius: var(--border-radius); font-size: 0.9em;"]
 rutube.ru#?#.notification-module__infoNotifications:has(> div[class^="infoNotificationsItem"] span[class^="freyja_char-notification__description"]:contains(Блокировщик рекламы может помешать правильной работе плеера.))
 ||it-actual.ru/wp-content/themes/iconic-one/js/lcr.js
 advancedtomato.com##.donate-container
@@ -22143,6 +22142,8 @@ iqiyi.com##.black-screen[data-cupid="adblock-blackscreen"]
 @@||t7z.cupid.iqiyi.com/show2?e$domain=m.iqiyi.com
 !#safari_cb_affinity
 !
+!+ NOT_OPTIMIZED
+android.com.pl##.post__content > div[style^="background-color: var(--clr-danger); color:"][style$="border-radius: var(--border-radius); font-size: 0.9em;"]
 !+ NOT_OPTIMIZED
 stereogum.com#$##sg-ad-block-notice { display: none !important; }
 !+ NOT_OPTIMIZED
@@ -45888,9 +45889,10 @@ ya.ru,yandex.*##:matches-path(/search).EContent.SearchPage-RMG
 ya.ru,yandex.*##:matches-path(/search).serp-item[data-fast-subtype="product_tiles_adv"]
 ya.ru,yandex.*##:matches-path(/search).serp-item:has(> div[data-state-id] > article > div[class*="-"] span[id*="-PriceDisclaimer"])
 ! popup
-ya.ru,yandex.*##:matches-path(/search)div[class*="Distribution-SplashScreenModal"]:has(a[href^="https://ya.ru/search/_crpd/"])
 ya.ru,yandex.*##:matches-path(/search).Distribution-Popup
 ya.ru,yandex.*#$#:matches-path(/search)button[type="button"][title="Нет, спасибо"] { display: none !important; }
+ya.ru,yandex.*#$#:matches-path(/search)div[class*="Distribution-SplashScreenModal"]:has(a[href^="https://yabs.yandex.ru/count/"]) { display: none !important; }
+ya.ru,yandex.*#$#:matches-path(/search)div[class*="Distribution-SplashScreenModal"]:has(a[href^="https://ya.ru/search/_crpd/"]) { display: none !important; }
 ya.ru,yandex.*#$#:matches-path(/search)div[class*="Distribution-SplashScreenModal"][outercrosstitle="Нет, спасибо"] { display: none !important; }
 ya.ru,yandex.*##:matches-path(/search)div.Root[id]:has(> button.Distribution-SplashScreenModalCloseButtonOuter)
 ya.ru,yandex.*#$#:matches-path(/search)body[style] { padding-right: 0 !important; overflow: auto !important; }

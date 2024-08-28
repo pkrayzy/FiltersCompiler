@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: zSxzwagoo5k46MEHESnidg
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1724834214-3600.patch
+! Checksum: 22JjfLcU3Q7RyldAHQJc6w
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1724838082-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.6.62
-! TimeUpdated: 2024-08-28T08:33:31+00:00
+! Version: 2.2.6.63
+! TimeUpdated: 2024-08-28T09:36:42+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -9085,7 +9085,7 @@ smods.ru###ab-warning
 casper.tw##.container > div.row > div.rounded-top + div.d-lg-block
 boylove.cc##.blocked_hint_msg_pc
 penize.cz,strategium.ru##+js(no-setTimeout-if, adblock)
-android.com.pl##+js(set-constant, hasAdblock, false)
+android.com.pl##+js(set-constant, isAdblockEnabled, false)
 101soundboards.com,android.com.pl#$#body > div:not([class], [id]) > #AdHeader { display: block !important; }
 101soundboards.com,android.com.pl#$#body > div:not([class], [id]) > #AdHeader ~ * { display: block !important; }
 rutube.ru#?#.notification-module__infoNotifications:has(> div[class^="infoNotificationsItem"] span[class^="freyja_char-notification__description"]:contains(Блокировщик рекламы может помешать правильной работе плеера.))
@@ -9545,6 +9545,8 @@ www.iqiyi.com##+js(set-constant, Object.prototype.blackscreenDuration, 1)
 iqiyi.com##.black-screen[data-cupid="adblock-blackscreen"]
 !#safari_cb_affinity(general)
 !#safari_cb_affinity
+!+ NOT_OPTIMIZED
+android.com.pl##.post__content > div[style^="background-color: var(--clr-danger); color:"][style$="border-radius: var(--border-radius); font-size: 0.9em;"]
 !+ NOT_OPTIMIZED
 stereogum.com#$##sg-ad-block-notice { display: none !important; }
 !+ NOT_OPTIMIZED
@@ -19791,9 +19793,10 @@ ya.ru,yandex.*##.simple-popup__overlay_shown_true
 ya.ru,yandex.*##:matches-path(/search).AdvOffers
 ya.ru,yandex.*##:matches-path(/search).EContent.SearchPage-RMG
 ya.ru,yandex.*##:matches-path(/search).serp-item:has(> div[data-state-id] > article > div[class*="-"] span[id*="-PriceDisclaimer"])
-ya.ru,yandex.*##:matches-path(/search)div[class*="Distribution-SplashScreenModal"]:has(a[href^="https://ya.ru/search/_crpd/"])
 ya.ru,yandex.*##:matches-path(/search).Distribution-Popup
 ya.ru,yandex.*#$#:matches-path(/search)button[type="button"][title="Нет, спасибо"] { display: none !important; }
+ya.ru,yandex.*#$#:matches-path(/search)div[class*="Distribution-SplashScreenModal"]:has(a[href^="https://yabs.yandex.ru/count/"]) { display: none !important; }
+ya.ru,yandex.*#$#:matches-path(/search)div[class*="Distribution-SplashScreenModal"]:has(a[href^="https://ya.ru/search/_crpd/"]) { display: none !important; }
 ya.ru,yandex.*#$#:matches-path(/search)div[class*="Distribution-SplashScreenModal"][outercrosstitle="Нет, спасибо"] { display: none !important; }
 ya.ru,yandex.*##:matches-path(/search)div.Root[id]:has(> button.Distribution-SplashScreenModalCloseButtonOuter)
 ya.ru,yandex.*#$#:matches-path(/search)body[style] { padding-right: 0 !important; overflow: auto !important; }
