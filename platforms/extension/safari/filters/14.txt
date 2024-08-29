@@ -1,9 +1,9 @@
-! Checksum: BErz2JJstQdDjJi2UTkgNQ
-! Diff-Path: ../patches/14/14-s-1724935135-3600.patch
+! Checksum: wLlUkrCMMVlavSrOtk4UEg
+! Diff-Path: ../patches/14/14-s-1724938679-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.6.79
-! TimeUpdated: 2024-08-29T12:34:06+00:00
+! Version: 2.2.6.80
+! TimeUpdated: 2024-08-29T13:33:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2471,6 +2471,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+onliner.by##.consent-app
 gridinsoft.com##.ckConsent
 kabelvilag.hu#%#//scriptlet('prevent-setTimeout', 'cookie_alert_overlay')
 idnes.cz#%#//scriptlet('trusted-click-element', '#didomi-host ~ #main > .content .boxes > .box > .btn-cons.contentwall_ok')
@@ -24422,6 +24423,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+||cifrus.ru/ruletka/widget_cifrus.png
 cgcreativeshop.com##.ulp-overlay
 cgcreativeshop.com##.ulp-window-middle-center
 developer.baidu.com#$#a[class^="articel_detail_top-market-pos__"] { display: none !important; }
@@ -39047,7 +39049,7 @@ moneysavingexpert.com###fixed-cross-site-tipbox
 it-times.de###follow-service
 xelent.ru###footer-feedback
 news-journalonline.com###footer-main-newsletter
-nssgclub.com,nssmag.com,stiefelparadies.de###footer-newsletter
+cifrus.ru,nssgclub.com,nssmag.com,stiefelparadies.de###footer-newsletter
 comic.browserling.com,soft98.ir###footer-subscribe
 actu-environnement.com,caseking.de###footer_newsletter
 igniel.com###ignielNewsletter > .email__
@@ -51126,6 +51128,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187267
+top-mods.com#%#//scriptlet('adjust-setInterval', 'timer_num', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186443
 cloutgist.com#%#//scriptlet('adjust-setInterval', 'counter', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186247
