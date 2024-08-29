@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.93.48",
-			"timeUpdated": "2024-08-29T17:31:02+0000",
+			"version": "2.0.93.49",
+			"timeUpdated": "2024-08-29T18:31:05+0000",
 			"languages": [
 				"ru"
 			],
@@ -358,8 +358,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.50.42",
-			"timeUpdated": "2024-08-29T17:31:18+0000",
+			"version": "2.3.50.43",
+			"timeUpdated": "2024-08-29T18:31:21+0000",
 			"languages": [],
 			"tags": [
 				10,
@@ -603,8 +603,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.6.84",
-			"timeUpdated": "2024-08-29T17:33:16+0000",
+			"version": "2.2.6.85",
+			"timeUpdated": "2024-08-29T18:33:32+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +626,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.69.83",
-			"timeUpdated": "2024-08-29T12:34:07+0000",
+			"version": "2.0.69.84",
+			"timeUpdated": "2024-08-29T18:33:33+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -705,8 +705,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.46.47",
-			"timeUpdated": "2024-08-29T16:33:15+0000",
+			"version": "2.0.46.48",
+			"timeUpdated": "2024-08-29T18:33:38+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -726,8 +726,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.42.38",
-			"timeUpdated": "2024-08-29T17:33:23+0000",
+			"version": "2.0.42.39",
+			"timeUpdated": "2024-08-29T18:33:39+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -810,8 +810,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/23.txt",
 			"trustLevel": "full",
-			"version": "2.0.5.15",
-			"timeUpdated": "2024-08-29T17:33:25+0000",
+			"version": "2.0.5.16",
+			"timeUpdated": "2024-08-29T18:33:41+0000",
 			"languages": [
 				"uk"
 			],
