@@ -1,9 +1,9 @@
-! Checksum: YqJWPx64L4AdTWvXLOFnAw
-! Diff-Path: ../patches/18/18-s-1724924202-3600.patch
+! Checksum: 1mhePvqh9u7VoI0taBEnBw
+! Diff-Path: ../patches/18/18-s-1724931396-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.46.43
-! TimeUpdated: 2024-08-29T09:33:11+00:00
+! Version: 2.0.46.44
+! TimeUpdated: 2024-08-29T11:32:55+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2470,6 +2470,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+gridinsoft.com##.ckConsent
+kabelvilag.hu#%#//scriptlet('prevent-setTimeout', 'cookie_alert_overlay')
 idnes.cz#%#//scriptlet('trusted-click-element', '#didomi-host ~ #main > .content .boxes > .box > .btn-cons.contentwall_ok')
 autos.suzuki.com.mx#%#//scriptlet('set-cookie', 'suzuki-accept-cookie', 'true')
 wizards.com#%#//scriptlet('set-session-storage-item', 'cookie-agreed', '0')
@@ -6321,7 +6323,7 @@ kurgo.com##div[class^="PrivacyNotice__PrivacyWrapper-"]
 lalettrea.fr#$#.modal-cookie-consent { display: none !important; }
 lalettrea.fr#$#.modal-cookie-consent ~ div.modal-backdrop { display: none !important; }
 lalettrea.fr#$#body { overflow: auto !important; padding-right: 0 !important; }
-barrier.ru,belgazprombank.by###js-alert-cookie-window
+gastore.ru,barrier.ru,belgazprombank.by###js-alert-cookie-window
 apix-drive.com###cookie_confirmation_box
 racked.com##.m-privacy-options
 edit.chromium.org,shinden.pl,magbak.com##cookie-bar
@@ -15958,6 +15960,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187181
+kabelvilag.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187433
 @@||cart.hostinger.com/assets/CookieConsent-*.css$domain=cart.hostinger.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187077
