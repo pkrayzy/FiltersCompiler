@@ -334,8 +334,9 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/1_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.93.51",
-			"timeUpdated": "2024-08-30T10:31:05+0000",
+			"version": "2.0.93.52",
+			"timeUpdated": "2024-08-30T12:31:21+0000",
+			"deprecated": false,
 			"languages": [
 				"ru"
 			],
@@ -358,8 +359,9 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.50.51",
-			"timeUpdated": "2024-08-30T11:31:21+0000",
+			"version": "2.3.50.52",
+			"timeUpdated": "2024-08-30T12:31:38+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				10,
@@ -382,6 +384,7 @@
 			"trustLevel": "full",
 			"version": "2.0.74.22",
 			"timeUpdated": "2024-08-30T11:32:33+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				2,
@@ -400,8 +403,9 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.5.31",
-			"timeUpdated": "2024-08-29T22:32:40+0000",
+			"version": "2.1.5.32",
+			"timeUpdated": "2024-08-30T12:32:53+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				3,
@@ -422,6 +426,7 @@
 			"trustLevel": "full",
 			"version": "2.0.1.60",
 			"timeUpdated": "2024-07-11T21:33:01+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				45
@@ -441,6 +446,7 @@
 			"trustLevel": "full",
 			"version": "2.0.43.33",
 			"timeUpdated": "2024-08-30T06:32:49+0000",
+			"deprecated": false,
 			"languages": [
 				"de"
 			],
@@ -463,8 +469,9 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.55.97",
-			"timeUpdated": "2024-08-29T15:33:53+0000",
+			"version": "2.0.55.98",
+			"timeUpdated": "2024-08-30T12:33:03+0000",
+			"deprecated": false,
 			"languages": [
 				"ja"
 			],
@@ -488,6 +495,7 @@
 			"trustLevel": "full",
 			"version": "2.0.7.16",
 			"timeUpdated": "2024-08-29T22:32:53+0000",
+			"deprecated": false,
 			"languages": [
 				"nl"
 			],
@@ -513,6 +521,7 @@
 			"trustLevel": "full",
 			"version": "2.0.26.43",
 			"timeUpdated": "2024-08-30T06:32:56+0000",
+			"deprecated": false,
 			"languages": [
 				"es",
 				"pt"
@@ -538,6 +547,7 @@
 			"trustLevel": "full",
 			"version": "2.0.3.45",
 			"timeUpdated": "2024-08-23T15:32:56+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [],
 			"downloadUrl": "https://filters.adtidy.org/extension/safari/filters/10_optimized.txt"
@@ -553,8 +563,9 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/11_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.99",
-			"timeUpdated": "2024-08-29T16:32:58+0000",
+			"version": "2.0.54.0",
+			"timeUpdated": "2024-08-30T12:33:10+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -576,8 +587,9 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/13_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.9",
-			"timeUpdated": "2024-08-28T07:33:08+0000",
+			"version": "2.0.53.10",
+			"timeUpdated": "2024-08-30T12:33:12+0000",
+			"deprecated": false,
 			"languages": [
 				"tr"
 			],
@@ -603,8 +615,9 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.6.93",
-			"timeUpdated": "2024-08-30T10:33:06+0000",
+			"version": "2.2.6.94",
+			"timeUpdated": "2024-08-30T12:33:20+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -626,8 +639,9 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.69.86",
-			"timeUpdated": "2024-08-30T06:33:10+0000",
+			"version": "2.0.69.87",
+			"timeUpdated": "2024-08-30T12:33:21+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				45,
@@ -658,6 +672,7 @@
 			"trustLevel": "full",
 			"version": "2.0.46.39",
 			"timeUpdated": "2024-08-30T11:33:08+0000",
+			"deprecated": false,
 			"languages": [
 				"fr"
 			],
@@ -681,8 +696,9 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.46.54",
-			"timeUpdated": "2024-08-30T10:33:11+0000",
+			"version": "2.0.46.55",
+			"timeUpdated": "2024-08-30T12:33:26+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -702,8 +718,9 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/19_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.42.42",
-			"timeUpdated": "2024-08-30T08:33:29+0000",
+			"version": "2.0.42.43",
+			"timeUpdated": "2024-08-30T12:33:27+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -725,6 +742,7 @@
 			"trustLevel": "full",
 			"version": "2.0.16.23",
 			"timeUpdated": "2024-08-29T17:33:23+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -744,8 +762,9 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/21_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.25.56",
-			"timeUpdated": "2024-08-30T09:33:15+0000",
+			"version": "2.0.25.57",
+			"timeUpdated": "2024-08-30T12:33:28+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -767,6 +786,7 @@
 			"trustLevel": "full",
 			"version": "2.0.9.29",
 			"timeUpdated": "2024-08-30T09:33:15+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -788,6 +808,7 @@
 			"trustLevel": "full",
 			"version": "2.0.5.16",
 			"timeUpdated": "2024-08-29T18:33:41+0000",
+			"deprecated": false,
 			"languages": [
 				"uk"
 			],
@@ -815,6 +836,7 @@
 			"trustLevel": "low",
 			"version": "2.1.32.10",
 			"timeUpdated": "2024-08-30T09:06:12+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1
@@ -837,6 +859,7 @@
 			"trustLevel": "high",
 			"version": "2.0.7.4",
 			"timeUpdated": "2024-08-26T13:01:12+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -858,6 +881,7 @@
 			"trustLevel": "high",
 			"version": "2.0.0.38",
 			"timeUpdated": "2024-02-20T17:01:45+0000",
+			"deprecated": false,
 			"languages": [
 				"bg"
 			],
@@ -885,6 +909,7 @@
 			"trustLevel": "high",
 			"version": "2.1.41.40",
 			"timeUpdated": "2024-08-30T09:06:15+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -906,6 +931,7 @@
 			"trustLevel": "high",
 			"version": "2.0.2.68",
 			"timeUpdated": "2024-08-30T09:06:16+0000",
+			"deprecated": false,
 			"languages": [
 				"cs",
 				"sk"
@@ -935,6 +961,7 @@
 			"trustLevel": "low",
 			"version": "2.1.55.7",
 			"timeUpdated": "2024-08-30T09:06:16+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -959,6 +986,7 @@
 			"trustLevel": "low",
 			"version": "2.0.13.73",
 			"timeUpdated": "2024-08-20T17:01:04+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -980,6 +1008,7 @@
 			"trustLevel": "high",
 			"version": "2.0.4.97",
 			"timeUpdated": "2024-08-29T05:01:04+0000",
+			"deprecated": false,
 			"languages": [
 				"he"
 			],
@@ -1004,6 +1033,7 @@
 			"trustLevel": "high",
 			"version": "2.1.55.9",
 			"timeUpdated": "2024-08-30T09:06:18+0000",
+			"deprecated": false,
 			"languages": [
 				"it"
 			],
@@ -1028,6 +1058,7 @@
 			"trustLevel": "high",
 			"version": "2.0.2.86",
 			"timeUpdated": "2024-08-29T21:01:12+0000",
+			"deprecated": false,
 			"languages": [
 				"lt"
 			],
@@ -1052,6 +1083,7 @@
 			"trustLevel": "high",
 			"version": "2.0.0.59",
 			"timeUpdated": "2024-04-16T17:01:03+0000",
+			"deprecated": false,
 			"languages": [
 				"lv"
 			],
@@ -1076,6 +1108,7 @@
 			"trustLevel": "high",
 			"version": "2.1.55.8",
 			"timeUpdated": "2024-08-30T09:06:19+0000",
+			"deprecated": false,
 			"languages": [
 				"ar"
 			],
@@ -1103,6 +1136,7 @@
 			"trustLevel": "low",
 			"version": "2.1.55.7",
 			"timeUpdated": "2024-08-30T09:06:21+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1127,6 +1161,7 @@
 			"trustLevel": "low",
 			"version": "2.0.1.36",
 			"timeUpdated": "2024-06-30T05:01:15+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1151,6 +1186,7 @@
 			"trustLevel": "low",
 			"version": "2.1.31.59",
 			"timeUpdated": "2024-08-29T21:01:17+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				2
@@ -1173,6 +1209,7 @@
 			"trustLevel": "high",
 			"version": "2.0.0.13",
 			"timeUpdated": "2022-11-21T17:00:48+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1194,6 +1231,7 @@
 			"trustLevel": "high",
 			"version": "2.0.21.52",
 			"timeUpdated": "2024-08-29T21:01:18+0000",
+			"deprecated": false,
 			"languages": [
 				"id"
 			],
@@ -1220,6 +1258,7 @@
 			"trustLevel": "low",
 			"version": "2.0.1.0",
 			"timeUpdated": "2024-08-18T09:01:05+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1244,6 +1283,7 @@
 			"trustLevel": "high",
 			"version": "2.1.32.37",
 			"timeUpdated": "2024-08-30T09:06:33+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -1267,6 +1307,7 @@
 			"trustLevel": "low",
 			"version": "2.1.28.97",
 			"timeUpdated": "2024-08-29T21:01:25+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				3,
@@ -1290,6 +1331,7 @@
 			"trustLevel": "low",
 			"version": "2.0.26.82",
 			"timeUpdated": "2024-08-30T09:06:34+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1312,6 +1354,7 @@
 			"trustLevel": "high",
 			"version": "2.0.0.17",
 			"timeUpdated": "2024-03-28T21:02:50+0000",
+			"deprecated": false,
 			"languages": [
 				"th"
 			],
@@ -1335,6 +1378,7 @@
 			"trustLevel": "high",
 			"version": "2.0.3.4",
 			"timeUpdated": "2024-08-28T17:01:19+0000",
+			"deprecated": false,
 			"languages": [
 				"hu"
 			],
@@ -1362,6 +1406,7 @@
 			"trustLevel": "low",
 			"version": "2.0.16.84",
 			"timeUpdated": "2024-08-23T13:01:17+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				2
@@ -1384,6 +1429,7 @@
 			"trustLevel": "low",
 			"version": "2.0.1.95",
 			"timeUpdated": "2024-08-19T05:01:11+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1407,6 +1453,7 @@
 			"trustLevel": "low",
 			"version": "2.1.55.8",
 			"timeUpdated": "2024-08-30T09:06:37+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				50
@@ -1426,6 +1473,7 @@
 			"trustLevel": "low",
 			"version": "2.0.97.65",
 			"timeUpdated": "2024-08-30T01:01:23+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				10,
@@ -1449,6 +1497,7 @@
 			"trustLevel": "low",
 			"version": "2.1.54.33",
 			"timeUpdated": "2024-08-30T09:06:38+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				2,
@@ -1469,6 +1518,7 @@
 			"trustLevel": "high",
 			"version": "2.0.31.63",
 			"timeUpdated": "2024-08-30T09:06:39+0000",
+			"deprecated": false,
 			"languages": [
 				"vi"
 			],
@@ -1492,6 +1542,7 @@
 			"trustLevel": "high",
 			"version": "2.0.15.57",
 			"timeUpdated": "2024-08-19T17:01:25+0000",
+			"deprecated": false,
 			"languages": [
 				"pl"
 			],
@@ -1518,6 +1569,7 @@
 			"trustLevel": "high",
 			"version": "2.0.5.15",
 			"timeUpdated": "2024-08-24T17:01:32+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				6,
@@ -1538,6 +1590,7 @@
 			"trustLevel": "low",
 			"version": "2.0.3.61",
 			"timeUpdated": "2024-07-16T17:01:30+0000",
+			"deprecated": false,
 			"languages": [
 				"et"
 			],
@@ -1564,6 +1617,7 @@
 			"trustLevel": "low",
 			"version": "2.0.5.51",
 			"timeUpdated": "2024-08-06T01:01:36+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -1587,6 +1641,7 @@
 			"trustLevel": "high",
 			"version": "2.0.4.83",
 			"timeUpdated": "2024-08-24T17:01:41+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				3,
@@ -1607,6 +1662,7 @@
 			"trustLevel": "full",
 			"version": "2.1.21.4",
 			"timeUpdated": "2024-08-30T10:33:18+0000",
+			"deprecated": false,
 			"languages": [
 				"zh"
 			],
@@ -1634,6 +1690,7 @@
 			"trustLevel": "low",
 			"version": "2.0.8.48",
 			"timeUpdated": "2024-07-08T13:01:37+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				2,
@@ -1654,6 +1711,7 @@
 			"trustLevel": "high",
 			"version": "2.0.18.97",
 			"timeUpdated": "2024-08-29T13:01:34+0000",
+			"deprecated": false,
 			"languages": [
 				"ko"
 			],
@@ -1681,6 +1739,7 @@
 			"trustLevel": "high",
 			"version": "2.0.2.90",
 			"timeUpdated": "2024-08-24T01:01:29+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1704,6 +1763,7 @@
 			"trustLevel": "low",
 			"version": "2.1.55.9",
 			"timeUpdated": "2024-08-30T09:06:48+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1728,6 +1788,7 @@
 			"trustLevel": "low",
 			"version": "2.0.60.49",
 			"timeUpdated": "2024-08-30T09:06:54+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				4,
@@ -1748,6 +1809,7 @@
 			"trustLevel": "high",
 			"version": "2.0.11.12",
 			"timeUpdated": "2024-07-29T13:02:46+0000",
+			"deprecated": false,
 			"languages": [
 				"fi"
 			],
@@ -1774,6 +1836,7 @@
 			"trustLevel": "low",
 			"version": "2.0.0.71",
 			"timeUpdated": "2023-09-28T09:01:32+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				45,
@@ -1796,6 +1859,7 @@
 			"trustLevel": "high",
 			"version": "2.0.4.78",
 			"timeUpdated": "2024-08-27T09:01:51+0000",
+			"deprecated": false,
 			"languages": [
 				"fa",
 				"tg",
@@ -1826,6 +1890,7 @@
 			"trustLevel": "high",
 			"version": "2.0.2.67",
 			"timeUpdated": "2024-08-26T09:01:40+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1849,6 +1914,7 @@
 			"trustLevel": "high",
 			"version": "1.0.31.93",
 			"timeUpdated": "2024-08-25T21:01:57+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				41,
@@ -1869,6 +1935,7 @@
 			"trustLevel": "high",
 			"version": "2.0.3.54",
 			"timeUpdated": "2023-12-06T17:02:32+0000",
+			"deprecated": false,
 			"languages": [
 				"pl"
 			],
@@ -1895,6 +1962,7 @@
 			"trustLevel": "low",
 			"version": "2.0.4.96",
 			"timeUpdated": "2024-02-25T21:03:06+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				2,
@@ -1918,6 +1986,7 @@
 			"trustLevel": "high",
 			"version": "2.1.38.7",
 			"timeUpdated": "2024-08-30T09:07:02+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				6
@@ -1937,6 +2006,7 @@
 			"trustLevel": "high",
 			"version": "2.0.19.32",
 			"timeUpdated": "2024-08-30T09:07:02+0000",
+			"deprecated": false,
 			"languages": [
 				"sv"
 			],
@@ -1966,6 +2036,7 @@
 			"trustLevel": "high",
 			"version": "2.0.10.79",
 			"timeUpdated": "2024-08-29T17:01:41+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -1989,6 +2060,7 @@
 			"trustLevel": "low",
 			"version": "2.1.51.15",
 			"timeUpdated": "2024-08-30T09:07:04+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				1,
@@ -2013,6 +2085,7 @@
 			"trustLevel": "high",
 			"version": "2.0.3.84",
 			"timeUpdated": "2024-08-25T01:01:42+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				41,
@@ -2034,6 +2107,7 @@
 			"trustLevel": "high",
 			"version": "2.0.7.65",
 			"timeUpdated": "2024-08-29T05:01:41+0000",
+			"deprecated": false,
 			"languages": [
 				"no",
 				"da",
@@ -2067,6 +2141,7 @@
 			"trustLevel": "high",
 			"version": "2.0.14.90",
 			"timeUpdated": "2024-08-30T09:07:13+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				5,
@@ -2087,6 +2162,7 @@
 			"trustLevel": "high",
 			"version": "2.0.0.51",
 			"timeUpdated": "2024-07-11T01:02:02+0000",
+			"deprecated": false,
 			"languages": [
 				"sr",
 				"hr"
@@ -2112,6 +2188,7 @@
 			"trustLevel": "low",
 			"version": "2.0.48.40",
 			"timeUpdated": "2024-08-30T09:07:16+0000",
+			"deprecated": false,
 			"languages": [
 				"hi"
 			],
@@ -2135,6 +2212,7 @@
 			"trustLevel": "low",
 			"version": "2.0.0.9",
 			"timeUpdated": "2024-04-13T11:23:42+0000",
+			"deprecated": false,
 			"languages": [
 				"mk"
 			],
@@ -2158,6 +2236,7 @@
 			"trustLevel": "low",
 			"version": "2.0.2.88",
 			"timeUpdated": "2024-08-30T01:01:54+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				4
@@ -2177,6 +2256,7 @@
 			"trustLevel": "low",
 			"version": "2.0.1.49",
 			"timeUpdated": "2024-08-30T09:07:17+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				4
@@ -2196,6 +2276,7 @@
 			"trustLevel": "low",
 			"version": "2.0.3.27",
 			"timeUpdated": "2024-08-30T01:01:55+0000",
+			"deprecated": false,
 			"languages": [],
 			"tags": [
 				4
