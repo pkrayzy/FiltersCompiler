@@ -1,14 +1,14 @@
-! Checksum: u+90p23fahvspMAd//nA0A
-! Diff-Path: ../patches/243/243-s-1724907910-14400.patch
+! Checksum: wALP84DN06PON7c4nZ1/Ww
+! Diff-Path: ../patches/243/243-s-1725009079-14400.patch
 ! Title: Frellwit's Swedish Filter
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.19.31
-! TimeUpdated: 2024-08-29T05:01:38+00:00
+! Version: 2.0.19.32
+! TimeUpdated: 2024-08-30T09:07:02+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-08-29 05:54:54 CEST
+! Last modified: 2024-08-30 08:26:42 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -255,6 +255,7 @@ bilsport.se##fl-gdpr, fl-panorama-top, fl-newsletter-popup
 bilsport.se##.includingFeaturedSliderArticle:has(.native-mark)
 bilwebben.ax##.front #secondary-content-wrapper, .banner-wrapper, .content-prefix-banner-wrapper
 bioenergitidningen.se###cookieinfo
+bioenergitidningen.se##.flowad, .nativepuff
 biostock.se,hejauppsala.com,svenskfilmdatabas.se,bredband.se##.wt-cli-cookie-bar-container
 biostock.se,tobaksfakta.se#$#.pum-open { overflow:auto!important }
 birthday.se##.datax
@@ -457,8 +458,8 @@ ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockey
 electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div
-elevspel.se#%#//scriptlet('ubo-rmnt.js', 'script', 'removeAttr("id")')
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] + div):has(a[href*="medlem"], .adsbygoogle)
+elevspel.se#%#//scriptlet('ubo-rmnt.js', 'script', 'removeAttr')
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 elle.se##section.c-native_banner:upward(2)
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
 emocore.se###sticky-panorama-container, #mob-wrap
@@ -1270,6 +1271,7 @@ sydasien.se##.thb-cookie-bar
 sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner
 synonyma.se##amp-user-notification.cookie
 synonymer.se#%#//scriptlet('ubo-cookie-remover.js', '/^ev_did|ev_sid/')
+synonymer.se#%#//scriptlet('ubo-set-local-storage-item.js', '/^ev_did|ev_sid/', '$remove$')
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
 tabyallehanda.se##p:has-text(ANNONS)
 tabyallehanda.se##section[id^="Panorama"]

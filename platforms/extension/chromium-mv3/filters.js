@@ -802,8 +802,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
 			"trustLevel": "high",
-			"version": "2.0.2.67",
-			"timeUpdated": "2024-07-24T21:01:35+0000",
+			"version": "2.0.2.68",
+			"timeUpdated": "2024-08-30T09:06:16+0000",
 			"languages": [
 				"cs",
 				"sk"
@@ -852,8 +852,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.55.8",
-			"timeUpdated": "2024-08-30T05:01:06+0000",
+			"version": "2.1.55.9",
+			"timeUpdated": "2024-08-30T09:06:18+0000",
 			"languages": [
 				"it"
 			],
@@ -924,8 +924,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.55.7",
-			"timeUpdated": "2024-08-30T05:01:07+0000",
+			"version": "2.1.55.8",
+			"timeUpdated": "2024-08-30T09:06:19+0000",
 			"languages": [
 				"ar"
 			],
@@ -1038,8 +1038,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.31.62",
-			"timeUpdated": "2024-08-30T05:01:22+0000",
+			"version": "2.0.31.63",
+			"timeUpdated": "2024-08-30T09:06:39+0000",
 			"languages": [
 				"vi"
 			],
@@ -1228,8 +1228,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.19.31",
-			"timeUpdated": "2024-08-29T05:01:38+0000",
+			"version": "2.0.19.32",
+			"timeUpdated": "2024-08-30T09:07:02+0000",
 			"languages": [
 				"sv"
 			],
@@ -1309,8 +1309,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.48.39",
-			"timeUpdated": "2024-08-30T05:01:49+0000",
+			"version": "2.0.48.40",
+			"timeUpdated": "2024-08-30T09:07:16+0000",
 			"languages": [
 				"hi"
 			],
@@ -1374,8 +1374,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.48",
-			"timeUpdated": "2024-08-29T05:01:49+0000",
+			"version": "2.0.1.49",
+			"timeUpdated": "2024-08-30T09:07:17+0000",
 			"languages": [],
 			"tags": [
 				4
