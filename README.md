@@ -64,10 +64,12 @@ We may add third-party filters to AdGuard Filters Registry. When making a decisi
     * `description` — filter description
     * `timeAdded` — time when this filter was added to the registry; milliseconds since January 1, 1970; you can exec `new Date().getTime()` in the browser console to get the current time
     * `homepage` — filter website/homepage
+    * `deprecated` - filter is deprecated and must not be used
     * `expires` — filter's default expiration period; used as filter update interval if "Default" is chosen for according setting in AdGuard product
     * `displayNumber` — this number is used when AdGuard sorts available filters (GUI)
     * `groupId` — [group](#groups) identifier
-    * `subscriptionUrl` — default filter subscription URL
+    * `subscriptionUrl` — This field only makes sense for third-party lists that come from the registry. The idea is that these lists are re-hosted by the registry and downloaded not from the source url
+    * `downloadUrl` — main filter download url 
     * `tags` — a list of [tags](#tags)
     * <a id="trustLevel"></a> `trustLevel` — level of trust which describe [allowed and permitted rules types](https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels); possible values:
         * `low` — only low-risk rule types are allowed; defaults to **low** if trust level is not configured at all
