@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: wC+8G/F2rHp0+NlAFHkI8w
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1725014191-3600.patch
+! Checksum: ykl1lglXxfHiKrdhL/eMeQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1725017789-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.50.50
-! TimeUpdated: 2024-08-30T10:31:21+00:00
+! Version: 2.3.50.51
+! TimeUpdated: 2024-08-30T11:31:21+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -8056,6 +8056,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187120
+videopoker.com##+js(set-constant, checkAdsBlocked, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187544
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,redirect=googlesyndication.com/adsbygoogle.js,domain=joktop.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187536
@@ -15363,7 +15365,7 @@ readcomiconline.li##+js(no-xhr-if, /bidgear\.com|mgid\.com|pagead2\.googlesyndic
 @@||kisscartoon.se^$subdocument,~third-party
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(set-constant, _btcCheck, false)
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(no-setTimeout-if, dcmarvel)
-kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(remove-node-text, script, /document\.getElementById\(\'divContentVideo\'\)\.innerHTML|var cpe = true;[\S\s\n]+?Func\(\)[\S\s\n]+?cpe = false;|function dcmarvel\(prm\)[\S\s\n]+?_btcCheck = false;[\S\s\n]+?function postback\(\)/)
+kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##+js(remove-node-text, script, /divCParent\.html\([\S\s\n]+?document\.getElementById\(\'divContentVideo\'\)\.innerHTML =|var cpe = true;[\S\s\n]+?Func\(\)[\S\s\n]+?cpe = false;|function dcmarvel\(prm\)[\S\s\n]+?_btcCheck = false;[\S\s\n]+?function postback\(\)/)
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*#$##divContentVideo { display: block !important; }
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*#?##centerDivVideo > div[id]:has(> img[src^="https://i.imgur.com"])
 kc.linksgen.com,kisscartoon.se,kimcartoon.li,kissorg.net,kissasian.*##.kcAds1:not(#ad-promo)
@@ -34286,6 +34288,12 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+videopoker.com##div[id^="adSpace"]
+videopoker.com###topDisp
+videopoker.com##.adNote
+tubator.com##.recommend
+tubator.com###nva_block
+tubator.com##div[id][style*="height: 250px;"]
 ||v.poki-cdn.com/*/advertisement.*.mp4$media,redirect=noop-1s.mp4
 notthebee.com##div[id^="commentList"] + div.overflow-hidden:has(> div > a[href="/join"])
 bangla.bdnews24.com##main > div.container:has(> div.row iframe[src^="https://welcome.bdnews24.com/innstar/"])
@@ -49743,7 +49751,7 @@ nowwatchtvlive.com##div[id="4c1dba77d15"]
 breakingmuscle.com##div[id^="OA_posid_"]
 newgrounds.com##div[id^="SuperbImaginativeBunting"]
 overclockers.com##div[id^="ad-widget"]
-musescore.com,fap18.net,gamereactor.eu##div[id^="ad_"]
+videopoker.com,musescore.com,fap18.net,gamereactor.eu##div[id^="ad_"]
 kitguru.net##div[id^="adflash-"]
 file.fm,files.fm##div[id^="any_media_banner"]
 techstips.co,reblop.com,dupose.com##div[id^="bannerfloat"]
