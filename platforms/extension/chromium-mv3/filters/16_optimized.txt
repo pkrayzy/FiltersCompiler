@@ -1,8 +1,8 @@
-! Checksum: 17n0HMt1xAw03nYF/spKuA
+! Checksum: 7uVMJrLN+0qj2sbNUFeXWg
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.46.37
-! TimeUpdated: 2024-08-29T17:33:20+00:00
+! Version: 2.0.46.38
+! TimeUpdated: 2024-08-30T09:33:12+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -56,7 +56,8 @@ benjaminellisbernard.fr#%#//scriptlet('abort-on-property-read', 'adsBlocked')
 darkino.*#%#//scriptlet('prevent-fetch', 'tag.min.js')
 france.tv#%#//scriptlet('prevent-fetch', 'fwmrm')
 lameteoagricole.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
-empire-streamz.fr,empire-streaming.*,empire-stream.net#%#//scriptlet('set-constant', 'navigator.brave', 'undefined')
+empire-anime.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
+empire-anime.com,empire-streamz.fr,empire-streaming.*,empire-stream.net#%#//scriptlet('set-constant', 'navigator.brave', 'undefined')
 meteo-grenoble.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 cinefil.com#%#//scriptlet('set-constant', 'checkDiv', 'noopFunc')
 @@||rustica.fr/*.iads.js
@@ -230,18 +231,23 @@ occasions.decathlon.fr#%#//scriptlet('set-constant', 'FastClick', 'noopFunc')
 occasions.decathlon.fr#%#//scriptlet('set-constant', 'FastClick.attach', 'noopFunc')
 lessentiel.lu,20min.ch#%#//scriptlet('adjust-setTimeout', 'setTimeoutIds_', '*', '0.001')
 lessentiel.lu,20min.ch#%#(()=>{window.TATM=window.TATM||{},TATM.init=()=>{},TATM.initAdUnits=()=>{},TATM.pageReady=()=>{},TATM.getVast=function(n){return new Promise((n=>{n()}))},TATM.push=function(n){if("function"==typeof n)try{n()}catch(n){console.debug(n)}};})();
-empire-streamz.fr,empire-stream.net#%#//scriptlet('trusted-create-element', 'body', 'iframe')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.pop', 'undefined')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.direct', 'undefined')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.isAdbActive', 'false')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.directHideAds', 'undefined')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremium.film', '0')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremium.serie', '0')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremiumaccount.film', '0')
-empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremiumaccount.serie', '0')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('trusted-create-element', 'body', 'iframe')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.pop', 'undefined')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.direct', 'undefined')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.isAdbActive', 'false')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.directHideAds', 'undefined')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremium.film', '0')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremium.serie', '0')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremiumaccount.film', '0')
+empire-anime.com,empire-streamz.fr,empire-stream.net#%#//scriptlet('set-constant', 'empire.countpremiumaccount.serie', '0')
+empire-anime.com#%#//scriptlet('set-constant', 'empire.mediaData.advisorDirect', '')
+empire-anime.com#%#//scriptlet('set-constant', 'empire.mediaData.advisorMovie', '1')
+empire-anime.com#%#//scriptlet('set-constant', 'empire.mediaData.advisorSerie', '1')
+empire-anime.com#%#(()=>{document.location.href.includes("/pop_advisor")&&AG_onLoad((function(){const e=new CustomEvent("visibilitychange"),t=t=>{Object.defineProperty(t.view.top.document,"hidden",{value:!0,writable:!0}),t.view.top.document.dispatchEvent(e),setTimeout((()=>{Object.defineProperty(t.view.top.document,"hidden",{value:!1,writable:!0}),t.view.top.document.dispatchEvent(e)}),100)},n=document.querySelector("button.btn-continu");n&&n.addEventListener("click",t)}));})();
 e-player-stream.*#%#//scriptlet('set-constant', 'adsConfig', 'emptyArr')
-empire-streamz.fr,empire-streaming.*,empire-stream.net#%#//scriptlet('prevent-window-open')
+empire-anime.com,empire-streamz.fr,empire-streaming.*,empire-stream.net#%#//scriptlet('prevent-window-open')
 e-player-stream.app#%#//scriptlet('set-constant', 'isSetupAccess', 'true')
+[$path=/iframe_ad]empire-anime.com#%#//scriptlet('set-constant', 'empire.data', 'emptyArr')
 [$path=/iframe_ad]empire-streamz.fr#%#//scriptlet('set-constant', 'empire.data', 'emptyArr')
 [$path=/iframe_ad]empire-stream.net#%#//scriptlet('set-constant', 'empire.data', 'emptyArr')
 [$path=/iframe_ad]empire-streaming.*#%#//scriptlet('set-constant', 'empire.data', 'emptyArr')
@@ -284,7 +290,7 @@ prod-player.tf1.fr#%#(function(){let callCounter=0;const nativeJSONParse=JSON.pa
 6play.fr,tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithXMLHTTPRequest', 'trueFunc')
 6play.fr,tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.sendAdRequestWithXMLHTTPRequest', 'trueFunc')
 tf1info.fr#%#//scriptlet('set-constant', '__NEXT_DATA__.runtimeConfig.playerTF1.ads.enable', 'false')
-empire-streamz.fr,empire-stream.net#$#body > iframe:not([src]) { position: absolute !important; left: -3000px !important; }
+empire-anime.com,empire-streamz.fr,empire-stream.net#$#body > iframe:not([src]) { position: absolute !important; left: -3000px !important; }
 rustica.fr#$#@media (min-width: 992px) { html > body.hasHabillage { padding-top: 0 !important; } }
 deco.fr,fourchette-et-bikini.fr#$#.site_content { margin-top: 0 !important; }
 caminteresse.fr#$#.sticky-wrapper { height: auto !important; }

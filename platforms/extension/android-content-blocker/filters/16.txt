@@ -1,8 +1,8 @@
-! Checksum: c5MB0Paf2IysS1G6WIWqow
+! Checksum: lZBiTKt7b9ifRnRnDuhe8w
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.46.37
-! TimeUpdated: 2024-08-29T17:33:20+00:00
+! Version: 2.0.46.38
+! TimeUpdated: 2024-08-30T09:33:12+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -662,6 +662,12 @@ prod-player.tf1.fr,tf1.fr,tf1info.fr#@#.carbon-ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157906
 ! lessentiel.lu, 20min.ch - fixes video player
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182538
+! empire-anime.com
+! It's required to load video player because website uses "visibilitychange" event to detect if popup has been opened and then check if "document.hidden" is changed,
+! and after that loads video player
+! Rule below adds "click" event listener to the button that opens the popup and then dispatches "visibilitychange" event to the top document,
+! and then changes "document.hidden" to "true" and then back to "false" after 100ms
+! TODO: maybe find a better way to change "document.hidden" value
 ! https://github.com/uBlockOrigin/uAssets/issues/19339
 ! https://github.com/uBlockOrigin/uAssets/issues/18840#issuecomment-1623546469
 ! https://github.com/AdguardTeam/AdguardFilters/issues/153795
@@ -712,7 +718,7 @@ prod-player.tf1.fr,tf1.fr,tf1info.fr#@#.carbon-ads
 !--------------------------------------!
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182538
-empire-streamz.fr,empire-stream.net#$#body > iframe:not([src]) { position: absolute !important; left: -3000px !important; }
+empire-anime.com,empire-streamz.fr,empire-stream.net#$#body > iframe:not([src]) { position: absolute !important; left: -3000px !important; }
 ! https://github.com/uBlockOrigin/uAssets/issues/22958
 rustica.fr#$#@media (min-width: 992px) { html > body.hasHabillage { padding-top: 0 !important; } }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172925
