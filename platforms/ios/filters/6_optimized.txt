@@ -1,5 +1,5 @@
-! Checksum: n8PQ87yR9sNuIEv2yPkaDQ
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1724906193-3600.patch
+! Checksum: hFIy66abhkEdQOwrk+DTbQ
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1724985411-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.43.32
@@ -1591,6 +1591,7 @@ woxikon.de##.ads-sticky-container
 kabeleins.de,sat1.de,sixx.de,prosieben.de##div[data-testid="display-ad"]
 ||yastatic.net/pcode/adfox/loader.js$domain=rtde.site
 rtde.site##.ArticleView-taboola
+winfuture.de###news_content > a.big_download_button[href*="redirect"]
 android-hilfe.de##.billboard-ad-footer
 ||email.t-online.de/res/*/frame/anzeige_hor.gif
 dazn.com##div[class^="AdBanner_adBannerWrapper_"]
@@ -2389,6 +2390,7 @@ spox.com##.dazn
 games.ch##.rect
 chip.de###hp-neongelb .copy-sm > a[href]:not([href*=".chip.de"])
 vorsprung-online.de##.custom > p[style="text-align: center;"]
+vorsprung-online.de##a[href="/index.php/anzeigenpreise.html"]
 pi-news.net##a[href^="http://www.pi-news.net/werben-auf-pi/"]
 donnerwetter.de##.col-xs-12 > center > div[style="font-size: 60%; color: #aab5b5;"]
 ||chip.de/*/img/deals/CHIP_Software_Deals_
@@ -2516,7 +2518,6 @@ winfuture.de##div[class$="p_widget nointelliTXT"]
 jetztspielen.de##div[class*="advert"]
 isnichwahr.de##div[class*="simpleads-ad-"]
 regensburg-digital.de##div[class="uk-panel uk-panel-box widget_text"]
-informationsarchiv.net##div[class^="ads_"]
 handelsblatt.com##div[class^="hcf-ad-"]
 meinestadt.de##div[class^="ms-ad"]
 metal-hammer.de,musikexpress.de##div[class^="ph-ad"]
@@ -2847,7 +2848,6 @@ rtl.de#@#.rtlde-medium-rectangle
 /werbung/*$third-party
 /Werbung/*_banner_
 /werbung/banner_
-/werbung2^
 /werbung5jw/*
 /werbung90.
 /werbung_*?
@@ -3160,7 +3160,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||recognified.net^$third-party
 ||arminius.io^$popup,third-party
 ||xtreff69.com^$popup
-||zomap.de^$popup,third-party
 ||a.check24.net/misc/view.php$domain=~wechseln.de
 ||ad.71i.de^
 ||aff.carvertical.com^$third-party
@@ -3439,6 +3438,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||stadtradio-goettingen.de/apool/srg/content/ads
 ||stereo.de^*/banner/
 ||steuertipps.de/scripts/google-ad/
+||suche.1und1.de/amazon?
 ||suche.gmx.net/amazon?
 ||suche.t-online.de/web/amazon?
 ||suche.t-online.de/web/billiger?
@@ -3464,7 +3464,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||viralize.tv^$domain=n-tv.de
 ||volksblatt.at/wp-content/banners/
 ||vorsprung-online.de^*/Werbung/
-||wbbanner.mrn-news.de^
 ||webwiki.de/images/seobility_
 ||werbemanager.w24.at^
 ||wetter.at/mowis/cpc_teaser/
@@ -3547,7 +3546,6 @@ teltarif.de###SpaceRectangle
 teltarif.de###SpaceTgtLink
 back-intern.de###StyleTM-TopBanner
 1erforum.de,bauexpertenforum.de,dasheimwerkerforum.de,elektrikforen.de,fitness-foren.de,lpgforum.de,mazda-forum.info,megane-board.de,mercedes-forum.com,notebookforum.at,pkw-forum.de,skodacommunity.de,toyota-forum.de,vermieter-forum.com,windows-7-forum.net###TopRectangle
-bbv-net.de,stadtanzeiger-borken.de###WallpaperBanner
 spielesite.com###acTop
 pokewiki.de,timeanddate.de###ad1
 pokewiki.de###ad2
@@ -4374,7 +4372,6 @@ nacktefoto.com##a[href^="/red/red.php?"]
 zensiert.net##a[href^="http://camgirly.net"]
 3fach.ch##a[href^="https://3fach.ch/track/"]
 anderes-wort.de,bitreporter.de,fairytail-tube.org,onepiece-tube.com,picdumps.com##a[href^="https://amzn.to/"]
-googlewatchblog.de,schrift-generator.com##a[href^="https://amzn.to/"] > img
 chip.de##a[href^="https://campaigns.avira.com/"] > img
 ligaportal.at##a[href^="https://de.johnnybet.com/"]
 koeln.de##a[href^="https://ed.koeln.de/ad/www/delivery/ck.php"]
@@ -4593,7 +4590,6 @@ autobild.de###sky_btf_rlWr
 autobild.de,rollingstone.de###sky_rlWr
 autobild.de###superbanner_rlWr
 focus.de###tfm_admanagerTeaser
-ratehase.de##.adcolor
 focus.de##.adsBlock
 t-online.de##.css-2k2lok
 n-tv.de##.ems-slot
@@ -4637,6 +4633,7 @@ kaufland.de##.product:has(div.product__sponsored-ad-label)
 kaufland.de##.rd-recommender__tile:has(div.rd-product-tile__badge--ad)
 metager.de##.result:has(a[href^="https://metager.de/partner/r?"])
 metager.de##.result:has(a[href^="https://r.search.yahoo.com/"])
+zwischengas.com##.row.mt-0.mb-3.d-print-none:has(.fa-ad)
 wallstreet-online.de##.sbteaser:has(span.generalAdTag)
 podcast.de##.section:has(.ad-container)
 wallstreet-online.de##.similarNews:has(span[title="Anzeige"])
