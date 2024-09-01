@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.50.67",
-			"timeUpdated": "2024-08-31T23:31:17+0000",
+			"version": "2.3.50.68",
+			"timeUpdated": "2024-09-01T01:31:20+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
