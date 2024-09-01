@@ -214,10 +214,18 @@
 /^https?:\/\/[\w]+\.cloudfront\.net\/rev\/pl\/v/$doc,important,to=~asystent-pobierania-na-komputerswiat-dobreprogramy.*|cloudfront.net
 ! Rule "|http://a2g.me/$doc,important,to=~zalecane-wymuszenie-https.*" converted to: "|http://a2g.me/$document,important,to=~zalecane-wymuszenie-https.*"
 |http://a2g.me/$doc,important,to=~zalecane-wymuszenie-https.*
+! Rule "~support.ublock.org,ublock.org##body main::before:style(content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important)" converted to: "~support.ublock.org,ublock.org#$#body main::before { content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important }"
+~support.ublock.org,ublock.org##body main::before:style(content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important)
 ! Rule "github.com##:matches-path(/FiltersHeroes/KAD/issues/1241) :is(#close-as-unplanned, .js-comment-and-button, .js-comment-and-button + details):remove()" converted to: "[$path=/FiltersHeroes/KAD/issues/1241]github.com#$?#:is(#close-as-unplanned, .js-comment-and-button, .js-comment-and-button + details) { remove: true; }"
 github.com##:matches-path(/FiltersHeroes/KAD/issues/1241) :is(#close-as-unplanned, .js-comment-and-button, .js-comment-and-button + details):remove()
 ! Rule "porta.salesmanago.pl##+js(href-sanitizer, a[href*="porta.salesmanago.pl/ms/rd.htm?url"], ?url)" converted to: "porta.salesmanago.pl#%#//scriptlet('ubo-href-sanitizer.js', 'a[href*="porta.salesmanago.pl/ms/rd.htm?url"]', '?url')"
 porta.salesmanago.pl##+js(href-sanitizer, a[href*="porta.salesmanago.pl/ms/rd.htm?url"], ?url)
+! Rule "support.ublock.org##body div.hero-unit > div.search-box--hero-unit::before:style(content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important)" converted to: "support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit::before { content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important }"
+support.ublock.org##body div.hero-unit > div.search-box--hero-unit::before:style(content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important)
+! Rule "support.ublock.org##body div.hero-unit > div.search-box--hero-unit::before:style(display: inline-block !important; text-align: center !important)" converted to: "support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit::before { display: inline-block !important; text-align: center !important }"
+support.ublock.org##body div.hero-unit > div.search-box--hero-unit::before:style(display: inline-block !important; text-align: center !important)
+! Rule "support.ublock.org##body div.hero-unit > div.search-box--hero-unit:matches-media((min-width: 978px)):style(min-width: 900px !important)" converted to: "support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit:matches-media((min-width: 978px)) { min-width: 900px !important }"
+support.ublock.org##body div.hero-unit > div.search-box--hero-unit:matches-media((min-width: 978px)):style(min-width: 900px !important)
 ! Rule "tyfloswiat.pl##^responseheader(location)" converted to: "||tyfloswiat.pl^$removeheader=location"
 tyfloswiat.pl##^responseheader(location)
 ! Rule "www.dobreprogramy.pl##:matches-path(/\/[a-zA-Z0-9-]{1,99},program,/) article#main-content > div[class]:not([id]) > div[class]:not([id]):watch-attr(class):has(> div[class]:not([id]) > div:not([class]):not([id]) > div[class]:not([id]) > a[class][href*="niepotrzebne-pliki"][href*=","]:not([id]):has-text(naszego poradnika)) > div:nth-child(-n+2):not(:empty):not(:has(a[href*="oprogramowanie-z-rosji"], a[href*="niepotrzebne-pliki"]))" converted to: "[$path=/\\/\[a-zA-Z0-9-\]{1\,99}\,program\,/]www.dobreprogramy.pl##article#main-content > div[class]:not([id]) > div[class]:not([id]):watch-attr(class):has(> div[class]:not([id]) > div:not([class]):not([id]) > div[class]:not([id]) > a[class][href*="niepotrzebne-pliki"][href*=","]:not([id]):has-text(naszego poradnika)) > div:nth-child(-n+2):not(:empty):not(:has(a[href*="oprogramowanie-z-rosji"], a[href*="niepotrzebne-pliki"]))"
@@ -226,11 +234,21 @@ www.dobreprogramy.pl##:matches-path(/\/[a-zA-Z0-9-]{1,99},program,/) article#mai
 xja.pl,xn.pl##+js(refresh-defuser, 5)
 ! Rule "kadantiscam.netlify.app,kadantiscam.netlify.com##+js(set, kadetect, true)" converted to: "kadantiscam.netlify.app,kadantiscam.netlify.com#%#//scriptlet('ubo-set.js', 'kadetect', 'true')"
 kadantiscam.netlify.app,kadantiscam.netlify.com##+js(set, kadetect, true)
-! Rule "*$doc,domain=104.248.94.172" converted to: "*$document,domain=104.248.94.172"
-*$doc,domain=104.248.94.172
+! ~support.ublock.org,ublock.org#$#body main::before { content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important } is excluded by "#$#" in exclusions-low.txt
+~support.ublock.org,ublock.org#$#body main::before { content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important }
 ! porta.salesmanago.pl#%#//scriptlet('ubo-href-sanitizer.js', 'a[href*="porta.salesmanago.pl/ms/rd.htm?url"]', '?url') is excluded by "#%#//scriptlet" in exclusions-low.txt
 porta.salesmanago.pl#%#//scriptlet('ubo-href-sanitizer.js', 'a[href*="porta.salesmanago.pl/ms/rd.htm?url"]', '?url')
+! support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit::before { content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important } is excluded by "#$#" in exclusions-low.txt
+support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit::before { content: 'uBlock nie jest powiązany z dobrze znanym uBlock Origin.' !important }
+! support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit::before { display: inline-block !important; text-align: center !important } is excluded by "#$#" in exclusions-low.txt
+support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit::before { display: inline-block !important; text-align: center !important }
+! support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit:matches-media((min-width: 978px)) { min-width: 900px !important } is excluded by "#$#" in exclusions-low.txt
+support.ublock.org#$#body div.hero-unit > div.search-box--hero-unit:matches-media((min-width: 978px)) { min-width: 900px !important }
 ! xja.pl,xn.pl#%#//scriptlet('ubo-refresh-defuser.js', '5') is excluded by "#%#//scriptlet" in exclusions-low.txt
 xja.pl,xn.pl#%#//scriptlet('ubo-refresh-defuser.js', '5')
 ! kadantiscam.netlify.app,kadantiscam.netlify.com#%#//scriptlet('ubo-set.js', 'kadetect', 'true') is excluded by "#%#//scriptlet" in exclusions-low.txt
 kadantiscam.netlify.app,kadantiscam.netlify.com#%#//scriptlet('ubo-set.js', 'kadetect', 'true')
+! ~support.ublock.org,ublock.org#$#main::before { font-size: 32px !important; color: red !important; font-weight: bold !important; } is excluded by "#$#" in exclusions-low.txt
+~support.ublock.org,ublock.org#$#main::before { font-size: 32px !important; color: red !important; font-weight: bold !important; }
+! support.ublock.org#$#div.hero-unit > div.search-box--hero-unit::before { font-size: var(--font-size-h2) !important; color: red !important; font-weight: bold !important; } is excluded by "#$#" in exclusions-low.txt
+support.ublock.org#$#div.hero-unit > div.search-box--hero-unit::before { font-size: var(--font-size-h2) !important; color: red !important; font-weight: bold !important; }
