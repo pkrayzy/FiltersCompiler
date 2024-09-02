@@ -1,9 +1,9 @@
-! Checksum: cTdPJqu7DFv/k/wi8IkurA
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1725295052-3600.patch
+! Checksum: HyEPsKgUwIeJWXadmvYW9Q
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1725298594-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.56.11
-! TimeUpdated: 2024-09-02T16:32:53+00:00
+! Version: 2.0.56.12
+! TimeUpdated: 2024-09-02T17:32:46+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -16,6 +16,8 @@
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_setConstant=function(e,a){if("undefined"===a)a=void 0;else if("false"===a)a=!1;else if("true"===a)a=!0;else if("noopFunc"===a)a=function(){};else if("trueFunc"===a)a=function(){return!0};else if("falseFunc"===a)a=function(){return!1};else if(/^\d+$/.test(a)){if(a=parseFloat(a),isNaN(a)||32767<Math.abs(a))return}else return;var b=!1;AG_defineProperty(e,{get:function(){return a},set:function(c){if(b)var d=!0;else void 0!==c&&void 0!==a&&typeof c!==typeof a&&(b=!0),d=b;d&&(a=c)}})};
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
+||creative-klepon-3f0ecb.netlify.app^
+||effulgent-stroopwafel-efb9ce.netlify.app^
 ||cdn.rossoad.com^
 ||adma.xsrv.jp^$third-party
 ||amazones-tools.com^$third-party
@@ -1304,6 +1306,8 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 mako69037965.tokyo,okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+seikeidouga.blog.jp##div[align="center"] > span[style="color: #FF0000;"]
+seikeidouga.blog.jp##.blog_ad2
 eorzean.info###leftbar-inner > a[href="http://www.eorzean.info/archives/3415373.html"] ~ a
 eorzean.info###leftbar-inner > a[href="http://www.eorzean.info/archives/3415373.html"] ~ img
 eorzean.info###leftbar-inner > a[href="http://www.eorzean.info/archives/3415373.html"] + br + div ~ div
@@ -6449,6 +6453,10 @@ n-styles.com##.entry center
 timeout.jp##div[class^="_inlineAdWrapper_"]
 timeout.jp##div[id^="ad-promo-"]
 timeout.jp##div[id^="ad-side-"]
+amaebi.co##.article__content > div > a[href^="https://jp.mercari.com/user/profile/"] > img.pict
+ebitsu.net##a[target="_blank"]:not([href*="ebitsu.net"]):not([href*="amaebi.co"]):not([href^="https://www.youtube.com"]) > img.pict
+ebitsu.net##.side > b > span[style="color: rgb(255, 0, 0);"]
+ebitsu.net##.plugin-memo > div.side > div.plugin-memo:has(> div.side > div[id^="bnc_ad_"])
 ebitsu.net##.itemTitle
 all-nationz.com,kyarabetsunijiero.net##.right-column-inner > div.plugin-memo:first-child
 gamedaradara.doorblog.jp,seikeidouga.blog.jp,kyarabetsunijiero.net,ebitsu.net##.left-column-inner > div.plugin-memo:last-child

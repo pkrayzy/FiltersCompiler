@@ -1,9 +1,9 @@
-! Checksum: 1e3nIpN8hFNppQgia3cV6w
-! Diff-Path: ../patches/14/14-s-1725295043-3600.patch
+! Checksum: dHACLBzeBJ+n0S5kaWZZZg
+! Diff-Path: ../patches/14/14-s-1725298587-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.7.20
-! TimeUpdated: 2024-09-02T16:33:12+00:00
+! Version: 2.2.7.21
+! TimeUpdated: 2024-09-02T17:33:04+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2469,6 +2469,9 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+konyhatizezercikk.hu##.nanobar:has(> div[class] > .js-nanobar-cookies)
+konyhatizezercikk.hu#$#body { padding-top: 0px !important; }
+ukmeds.co.uk#%#//scriptlet('trusted-click-element', 'div[class^="CookieConsent"] > .button--white .button__content')
 eyesandmore.se,eyesandmore.nl,eyesandmore.de,eyesandmore.be,eyesandmore.at###cookie-dialog-wrapper
 expat.com#$##sd-cmp { display: none !important; }
 expat.com#$?#html[class*="sd-cmp"] { overflow: auto !important; }
@@ -15941,6 +15944,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187592
+konyhatizezercikk.hu#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187707
 ccifp.pl,ccifrance-international.org#@#.orejime-Notice
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187698
@@ -32450,6 +32455,9 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+konyhatizezercikk.hu#$##cookieModal { display: none !important; }
+konyhatizezercikk.hu#$#.modal-backdrop { display: none !important; }
+konyhatizezercikk.hu#$#.modal-open { overflow: auto !important; }
 kotsovolos.gr##.MuiGrid-root > .MuiGrid-item:has(> div.footer-sections)
 snipcart.com##.site-newsletter-popup
 mrowka.com.pl##.sticked-newsletter-container
