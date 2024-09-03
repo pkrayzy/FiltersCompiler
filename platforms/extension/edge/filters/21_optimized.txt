@@ -1,9 +1,9 @@
-! Checksum: 647qPCSU1HIaTiha5ffyHQ
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1725330967-3600.patch
+! Checksum: PM9YK/iu8isXD7CkOPRRkw
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1725359828-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.25.68
-! TimeUpdated: 2024-09-02T16:33:20+00:00
+! Version: 2.0.25.69
+! TimeUpdated: 2024-09-03T10:33:45+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -19,6 +19,7 @@
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com##._aagw:empty
+mynet.com##.interest-widget-container
 eurogamer.net##.article_body_content > aside.poll_wrapper
 independent.co.uk##.sponsored-features
 pethelpful.com##.m-in-content-recommendation
@@ -1377,7 +1378,6 @@ cnews.ru##.news_container > noindex:has(> ul > li > a[href^="https://market.cnew
 world-tt.com##.column_pin.mobile_width100
 world-tt.com##.plusCounteiner
 ||hachiraw.net/01.png
-2gis.ru#?#div[style="justify-content:flex-end"] button:has(> div:contains(Ваши друзья на карте))
 ||ichiba.faq.rakuten.net/resource/*/RakutenMobile_Banner/
 tempestfansub.com##a[href="https://tempestfansub.com/blog/reklamsiz-uyelik/"] > img
 eldorado.ru##.gr-top-banner
@@ -1556,7 +1556,6 @@ investorgain.com##.position-fixed.bottom-0
 investorgain.com###right > div.sticky-xl-top
 12ft.io###ad
 banggood.com##.top-item
-2gis.*##div[class^="_im"]
 auf1.tv#?#.w-full:has(> div.text-sm:contains(Werbung))
 kupujemprodajem.com##div[class^="Banner"]
 eksmo.ru##.cheader__personal-offer
@@ -1938,9 +1937,6 @@ tuoitre.vn##.boxraovat_catedetail
 amazon.*##article[data-automation-id="hero-quick-promo"]
 atida.fr###top-info
 weather.yahoo.co.jp###rbnr > p[style="margin:0px 0px 20px 0px;text-align:center;"]
-!+ NOT_PLATFORM(ext_ublock)
-nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe#%#//scriptlet('json-prune', 'ads.[].imageUrl')
-nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe##.xF6dY
 bilibili.com##.video-page-special-card-small
 getpocket.com#?##__next > aside:has(> div[class][style^="max-width:"] > div[class] > a[href^="https://getpocket.com/premium?"])
 answers.microsoft.com##.ucsUhfContainer
@@ -2357,6 +2353,12 @@ golem.de##iframe[Width="940"][height="250"]
 ||illicium.wmtransfer.com^
 ||illicium.web.money^
 v.qq.com#?#div.nav-wrap > div > div:has(> a[href^="https://iwan.video.qq.com"])
+nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe##.xF6dY
+!+ NOT_PLATFORM(ext_ublock)
+nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe#%#//scriptlet('json-prune', 'ads.[].imageUrl')
+2gis.*#?#div[style="justify-content:flex-end"] button:has(> div:contains(Ваши друзья на карте))
+2gis.*##div[class^="_im"]
+2gis.*#%#//scriptlet('set-cookie', 'dg5_bnrcls_dskfrdprm', '1')
 tele2.ru#$##downloadMobileAppOfferDialog { display: none!important; }
 tele2.ru#$#body { overflow: auto!important; }
 tele2.ru##.personalized-banner

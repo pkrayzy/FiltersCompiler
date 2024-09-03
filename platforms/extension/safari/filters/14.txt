@@ -1,9 +1,9 @@
-! Checksum: LKUWnHK/42Hx9t58P0DOnA
-! Diff-Path: ../patches/14/14-s-1725356224-3600.patch
+! Checksum: 2T/7tjV8Y8xtwA2MqeeS5Q
+! Diff-Path: ../patches/14/14-s-1725359840-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.7.28
-! TimeUpdated: 2024-09-03T09:33:18+00:00
+! Version: 2.2.7.29
+! TimeUpdated: 2024-09-03T10:33:37+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2471,6 +2471,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+2gis.com,2gis.ru,2gis.io,2gis.by,2gis.ua,2gis.it,2gis.kz,2gis.biz,2gis.app,2gis.pro,2gis.cl,2gis.site,2gis.ae,2gis.cz,2gis.az,2gis.uz,2gis.tech,2gis.my,2gis.com.bd,2gis.dev,2gis.com.np,2gis.gov.bd,2gis.one,2gis.kg,2gis.gov.np##div[style="height:100%"] > div._121zpzx > div._e27xbxx > div._1jefphjl
 filen.io#%#//scriptlet('trusted-set-cookie', 'cookieConsent', 'needed')
 reports.turnerandtownsend.com#%#//scriptlet('trusted-click-element', 'div[data-testid="accept-cc-button"] > a')
 gpz-opskrba.hr###gdc-shade
@@ -2513,7 +2514,7 @@ tribunnews.com##.kgmModal-cookie
 people.andersenlab.com##div[class^="CookiesPolicy_"]
 onliner.by##.consent-app
 gridinsoft.com##.ckConsent
-takaritogep.hu,kabelvilag.hu#%#//scriptlet('prevent-setTimeout', 'cookie_alert_overlay')
+szaniteronline.hu,takaritogep.hu,kabelvilag.hu#%#//scriptlet('prevent-setTimeout', 'cookie_alert_overlay')
 idnes.cz#%#//scriptlet('trusted-click-element', '#didomi-host ~ #main > .content .boxes > .box > .btn-cons.contentwall_ok')
 autos.suzuki.com.mx#%#//scriptlet('set-cookie', 'suzuki-accept-cookie', 'true')
 wizards.com#%#//scriptlet('set-session-storage-item', 'cookie-agreed', '0')
@@ -15963,6 +15964,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187783
+szaniteronline.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187802
 @@||sdk.privacy-center.org/*/loader.js$domain=nicematin.com
 @@||sdk.privacy-center.org/sdk/*/modern/*.*.js$domain=nicematin.com
@@ -39997,6 +40000,8 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
 !
+cloud.boosteroid.com##app-load-app-notification
+revolut.com#?##__next > div[class^="Box-rui__sc"]:has(> span[class^="Box-rui__sc"] > a[href^="https://get.revolut.com/"])
 finance.yahoo.co.jp##div[class^="AppBanner"]
 socket.dev##header + div[class^="css-"] > div[data-theme="dark"]:has(> div[data-theme="dark"] > div.chakra-stack > a[href="/github-app"])
 downdetector.com,downdetector.ru,downdetector.in,downdetector.com.au,downdetector.co.uk,downdetector.co,downdetector.gr,downdetector.ca,downdetector.fr,downdetector.jp,downdetector.xyz,downdetector.co.za,downdetector.co.il,downdetector.eu,downdetector.it,downdetector.id,downdetector.com.br,downdetector.es,downdetector.ch,downdetector.pl,downdetector.cl,downdetector.ro,downdetector.co.nz,downdetector.com.ar,downdetector.su,downdetector.ae,downdetector.mx,downdetector.pk,downdetector.se,downdetector.cz,downdetector.tw,downdetector.com.co,downdetector.dk,downdetector.hu,downdetector.sg,downdetector.my,downdetector.no,downdetector.com.bd,downdetector.ie,downdetector.com.np,downdetector.ph,downdetector.fi,downdetector.pe,downdetector.sk,downdetector.hk,downdetector.gov.bd,downdetector.website,downdetector.pt,downdetector.hr,downdetector.gov.np##.app-promo-card
@@ -43340,6 +43345,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187812
+mynet.com##.interest-widget-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187329
 eurogamer.net##.article_body_content > aside.poll_wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187035
@@ -48544,7 +48551,6 @@ cnews.ru##.news_container > noindex:has(> ul > li > a[href^="https://market.cnew
 world-tt.com##.column_pin.mobile_width100
 world-tt.com##.plusCounteiner
 ||hachiraw.net/01.png
-2gis.ru#?#div[style="justify-content:flex-end"] button:has(> div:contains(Ваши друзья на карте))
 ||ichiba.faq.rakuten.net/resource/*/RakutenMobile_Banner/
 tempestfansub.com##a[href="https://tempestfansub.com/blog/reklamsiz-uyelik/"] > img
 eldorado.ru##.gr-top-banner
@@ -48791,7 +48797,6 @@ investorgain.com##.position-fixed.bottom-0
 investorgain.com###right > div.sticky-xl-top
 12ft.io###ad
 banggood.com##.top-item
-2gis.com,2gis.ru,2gis.io,2gis.by,2gis.ua,2gis.it,2gis.kz,2gis.biz,2gis.app,2gis.pro,2gis.cl,2gis.site,2gis.ae,2gis.cz,2gis.az,2gis.uz,2gis.tech,2gis.my,2gis.com.bd,2gis.dev,2gis.com.np,2gis.gov.bd,2gis.one,2gis.kg,2gis.gov.np##div[class^="_im"]
 mlbtraderumors.com###tr-rotate-ads
 auf1.tv#?#.w-full:has(> div.text-sm:contains(Werbung))
 kupujemprodajem.com##div[class^="Banner"]
@@ -49464,9 +49469,6 @@ llbean.ca###pc5
 atida.fr##header .cmpt_flash_info
 atida.fr###top-info
 weather.yahoo.co.jp###rbnr > p[style="margin:0px 0px 20px 0px;text-align:center;"]
-!+ NOT_PLATFORM(ext_ublock)
-nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe#%#//scriptlet('json-prune', 'ads.[].imageUrl')
-nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe##.xF6dY
 bilibili.com##.video-page-special-card-small
 123pan.com##div[style="width:100%;position:fixed;bottom:25px"]
 123pan.com##div[style="width:100%;position:fixed;bottom:80px"]
@@ -50628,7 +50630,15 @@ pixiv.net##section.popular-introduction
 ||new-line.net.ua/templates/CounterStrike/images/8831.png
 vk.com###lovina_ads_row
 v.qq.com#?#div.nav-wrap > div > div:has(> a[href^="https://iwan.video.qq.com"])
+nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe##.xF6dY
+!+ NOT_PLATFORM(ext_ublock)
+nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe#%#//scriptlet('json-prune', 'ads.[].imageUrl')
 !
+! 2gis
+2gis.*#?#div[style="justify-content:flex-end"] button:has(> div:contains(Ваши друзья на карте))
+2gis.com,2gis.ru,2gis.io,2gis.by,2gis.ua,2gis.it,2gis.kz,2gis.biz,2gis.app,2gis.pro,2gis.cl,2gis.site,2gis.ae,2gis.cz,2gis.az,2gis.uz,2gis.tech,2gis.my,2gis.com.bd,2gis.dev,2gis.com.np,2gis.gov.bd,2gis.one,2gis.kg,2gis.gov.np##div[class^="_im"]
+! If no `dg5_bnrcls_dskfrdprm` in scripts - remove/update
+2gis.*#%#//scriptlet('set-cookie', 'dg5_bnrcls_dskfrdprm', '1')
 !
 tele2.ru#$##downloadMobileAppOfferDialog { display: none!important; }
 tele2.ru#$#body { overflow: auto!important; }
