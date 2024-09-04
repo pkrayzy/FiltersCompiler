@@ -1,9 +1,9 @@
-! Checksum: vawZMF9qOUS/h8OMbpvlfA
-! Diff-Path: ../patches/16/16-s-1725460678-3600.patch
+! Checksum: P45p92bd0qjtPE7JgnyZ9w
+! Diff-Path: ../patches/16/16-s-1725467791-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.46.51
-! TimeUpdated: 2024-09-04T14:34:27+00:00
+! Version: 2.0.46.52
+! TimeUpdated: 2024-09-04T16:33:05+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -222,7 +222,7 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147842
-japscan.lol#%#//scriptlet('prevent-fetch', '/\/468[-x]60/')
+japscan.lol#%#//scriptlet('prevent-fetch', '/\/\d{3}[-x]\d{2}/')
 japscan.lol#%#//scriptlet('prevent-fetch', 'method:/HEAD|GET/')
 $script,xmlhttprequest,redirect-rule=noopjs,domain=japscan.lol
 japscan.lol#%#//scriptlet('spoof-css', '.navbar-nav > li.nav-item > a[href^="https://www.origoclick.com"]', 'display', 'block')
@@ -234,6 +234,7 @@ japscan.lol#@#[class^="copine"]
 @@||japscan.lol^$generichide
 japscan.lol#%#(()=>{const n={construct:(n,o,t)=>{const e=o[0];if(e&&e.includes("return typeof"))throw new ReferenceError;return Reflect.construct(n,o,t)}};window.Function=new Proxy(window.Function,n)})();
 japscan.lol#%#!function(){const t={apply:(t,n,o)=>{if(n&&n.match?.(/_\$_|DklzSoz|_adbn_/))throw Error();return Reflect.apply(t,n,o)}};window.String.prototype.split=new Proxy(window.String.prototype.split,t)}();
+@@||imageshack.com^$xmlhttprequest,domain=japscan.lol
 @@||drive.google.com^$xmlhttprequest,domain=japscan.lol
 @@||postimg.cc^$xmlhttprequest,domain=japscan.lol
 @@||i.ibb.co^$xmlhttprequest,domain=japscan.lol
