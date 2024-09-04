@@ -1,9 +1,9 @@
-! Checksum: RIC5s6mD6myf5v6b3dtUMw
-! Diff-Path: ../patches/3/3-s-1725370623-3600.patch
+! Checksum: KKhUCWqfK7V99ZFnGDIvPg
+! Diff-Path: ../patches/3/3-s-1725438991-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.74.35
-! TimeUpdated: 2024-09-03T13:32:50+00:00
+! Version: 2.0.74.36
+! TimeUpdated: 2024-09-04T08:32:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -606,6 +606,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||notix.io^
+||pub.pixels.ai^
+||data.tm-awx.com^
 ||eu-1-id5-sync.com^
 ||octotracking.com^
 ||cartx.cloud^
@@ -1280,7 +1283,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||cl*.k5a.io^$third-party
 ||analytics.superstructure.ai^
 ||cdn.raekdata.com^
-||felix.data.tm-awx.com^
 ||imzahrwl.xyz^
 ||gae.karte.io^
 ||script.anura.io^
@@ -76969,6 +76971,13 @@ inapps.appsflyersdk.com^
 !
 ! For platforms which do not support $redirect rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187876
+@@||cdn.clerk.io/clerk.js$domain=industrivarer.no
+! Rule $referrerpolicy is required for apps, becasue source of "cdn.clerk.io/clerk.js" is not detected
+!+ PLATFORM(windows, mac, android)
+||industrivarer.no^$referrerpolicy=origin
+! https://github.com/AdguardTeam/AdguardFilters/issues/187569
+@@||cdn.livechatinc.com/tracking.js$domain=bitdefender.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187827
 @@||cdn.clerk.io/clerk.js$domain=garmont.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187278

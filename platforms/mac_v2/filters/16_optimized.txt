@@ -1,9 +1,9 @@
-! Checksum: kgSfuQhn5XBH8IkiFXGlfw
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1725370661-3600.patch
+! Checksum: 7rNmb1vrxFC/6ZomP4qTSQ
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1725439035-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.46.48
-! TimeUpdated: 2024-09-03T13:33:29+00:00
+! Version: 2.0.46.49
+! TimeUpdated: 2024-09-04T08:33:10+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -76,8 +76,9 @@ ebookdz.com#%#//scriptlet('abort-on-property-read', 'ABDetector')
 ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 ||ebookdz.com/forum/libab/script.js
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
-japscan.lol#%#//scriptlet('spoof-css', 'body > .container > .row > #main + #sidebar.col-md-3 > .card.mt-1 > .card[style="margin: 0px auto; display: block;"] > a.aikoi.donate[href^="http"][href*="/?utm_source=index&utm_"][target="_blank"][rel="noopener noreferrer nofollow"]:not([href^="http://japscan.lol"]) > img', 'display', 'inline')
-japscan.lol#%#//scriptlet('spoof-css', '.navbar-nav > li.nav-item > a[href^="https://www.origoclick.com/manga/?type=nav&"]', 'display', 'block')
+japscan.lol#%#//scriptlet('prevent-fetch', 'method:/HEAD|GET/')
+$xmlhttprequest,redirect-rule=nooptext,domain=japscan.lol
+japscan.lol#%#//scriptlet('spoof-css', '.navbar-nav > li.nav-item > a[href^="https://www.origoclick.com"]', 'display', 'block')
 @@||google.$image,domain=japscan.lol
 @@||japscan.lol^$image,xmlhttprequest,~third-party
 japscan.lol#@#.tangoai
@@ -86,6 +87,7 @@ japscan.lol#@#[class^="copine"]
 @@||japscan.lol^$generichide
 japscan.lol#%#(()=>{const n={construct:(n,o,t)=>{const e=o[0];if(e&&e.includes("return typeof"))throw new ReferenceError;return Reflect.construct(n,o,t)}};window.Function=new Proxy(window.Function,n)})();
 japscan.lol#%#!function(){const t={apply:(t,n,o)=>{if(n&&n.match?.(/_\$_|DklzSoz|_adbn_/))throw Error();return Reflect.apply(t,n,o)}};window.String.prototype.split=new Proxy(window.String.prototype.split,t)}();
+@@||i.ibb.co^$xmlhttprequest,domain=japscan.lol
 !+ PLATFORM(windows, mac, android)
 geo.fr,capital.fr#%#(()=>{const a=function(){};window.apstag={fetchBids(c,a){"function"==typeof a&&a([])},init:a,setDisplayBids:a,targetingKeys:a}})();
 signal-arnaques.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
@@ -384,8 +386,8 @@ cookomix.com##.AdMB
 ||voirdrama.org/rotateva.php
 cosmopolitan.fr##.External
 japscan.lol##body > .container.text-center > div.mt-3[style="margin: 0px auto; display: block;"] > a.Aikoi.donate[target="_blank"][href^="https://www."][href*="/?utm_source=manga&utm_"]:not([href^="https://www.google"]):not([href^="https://www.japscan"]):not([href^="https://www.example"]) > img.img-fluid[src^="/imgs/onc/"]
-japscan.lol##.navbar-nav > li.nav-item > a[href^="https://www.origoclick.com/manga/?type=nav&"]
-japscan.lol##body > .container > .row > #main + #sidebar.col-md-3 > .card.mt-1 > .card[style="margin: 0px auto; display: block;"] > a.aikoi.donate[href^="http"][href*="/?utm_source=index&utm_"][target="_blank"][rel="noopener noreferrer nofollow"]:not([href^="http://japscan.lol"]) > img
+japscan.lol##.navbar-nav > li.nav-item > a[href^="https://www.origoclick.com"]
+[$path=/^\/$/]japscan.lol##body > style + .container:first-of-type > .row > #main + #sidebar.col-md-3 > .card.mt-1 > .card[style="margin: 0px auto; display: block;"] > a.aikoi.donate[href^="http"][href*="/?utm_source=index&utm_medium=extra_large&"][target="_blank"][rel="noopener noreferrer nofollow"]:not([href^="http://japscan.lol"]) > img
 femina.fr##.p-aside
 femina.fr##.p-inread
 femina.fr##.p-pave
@@ -1205,7 +1207,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 .ru/ads.
 .ru/banner/$third-party
 .ru/banners/$third-party
-.ru/i/banners/$third-party
 .ru/uploads/banner/
 .ru/uploads/banners/
 .tn/ads/
@@ -1318,7 +1319,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 /adformat.
 /adfuel-
 /adfuel/*
-/adfusion/ads/*
 /adimage-
 /adimage3.
 /adinit?
@@ -1483,7 +1483,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 /affiliates/media/banners/*
 /affiliates/promotools/*
 /afiliados/*
-/alipromo.replace.js
 /altad.
 /amazonaffiliate-
 /amazonaffiliate.
@@ -1683,7 +1682,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 /jsk?zoneid=
 /layout/728x90
 /lgads.
-/lgpub.
 /lib/*&adl=$subdocument
 /libs/ads.
 /license.packed.$script
@@ -1693,7 +1691,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 /logpopup/*
 /mads/*
 /main/ads_
-/marketing/*/pub/*
 /markt/banner/*
 /media-ads/*
 /medias/ads/*
@@ -1813,7 +1810,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 /servlet/banner?id=
 /servlet/effi.show?
 /set_popup.
-/setAds.
 /sfibanners.
 /SGPMPopup.
 /shareaholic.js
@@ -1847,7 +1843,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 /totemtools/*
 /trackads.
 /travelAds.
-/ttn_adspaces
 /twitter-ads.
 /upload/ad/*
 /upload/adv/*
@@ -1994,7 +1989,6 @@ _90x728_
 _970_90_
 _970x250.
 _990x557.
-_ad.html?utm_
 _ad160x600.
 _ad_agency_
 _ad_campaign_
@@ -2260,7 +2254,6 @@ _lx.ads/$popup
 ||adsixmedia.fr^$third-party
 ||adskom.com^$third-party
 ||adsmmgp.com^$third-party
-||adspredictiv.com^$third-party
 ||adspsp.com^$third-party
 ||adsrvs.com^$third-party
 ||adstune.com^$third-party
@@ -2297,7 +2290,6 @@ _lx.ads/$popup
 ||bionestraff.pro^$third-party
 ||broadcast.pm^$third-party
 ||buckridge.link^$third-party
-||buzzvet.com^$third-party
 ||camsoda.com^$third-party
 ||caramec.com^$third-party
 ||caramec.fr^$third-party
@@ -2561,6 +2553,7 @@ _lx.ads/$popup
 ||ainsaibs.xyz^
 ||aircraftreign.com^
 ||aj2178.online^
+||ajaiguhubeh.com^
 ||ajsyxphfpr.com^
 ||akjoyjkrwaoam.top^
 ||akvvkmrqokjab.top^
@@ -2610,12 +2603,12 @@ _lx.ads/$popup
 ||aywgucxmh.com^
 ||azclip.co.ua^
 ||backforward.bid^
+||bairnsvibrion.top^
 ||baitpros.net^
 ||bakingbeheld.com^
 ||basetts.com^
 ||basnetoverpot.com^
 ||bbnfcfrvjs.com^
-||bbocajxn.com^
 ||bdros.com^
 ||beatentransfer.com^
 ||becassestaffer.top^
@@ -2626,7 +2619,6 @@ _lx.ads/$popup
 ||beliefnormandygarbage.com^
 ||bestcontentcost.top^
 ||bestfreecounterstat.com^
-||betjeyxf.com^
 ||bgejgulprscgv.com^
 ||bhabhiporn.pro^
 ||bhfxfyii.com^
@@ -2666,7 +2658,6 @@ _lx.ads/$popup
 ||caritydidicoy.click^
 ||cassockknyazi.com^
 ||cataianviruela.top^
-||cathyimemediate.com^
 ||caudataolibene.com^
 ||caverculpon.top^
 ||caviarechomp.top^
@@ -2838,6 +2829,7 @@ _lx.ads/$popup
 ||guppyfrument.click^
 ||gxxcbj.com^
 ||hainiwho.net^
+||halbertduffed.top^
 ||hauforip.net^
 ||hdbcell.com^
 ||hdtcode.com^
@@ -2989,7 +2981,6 @@ _lx.ads/$popup
 ||moustocwides.shop^
 ||mr2cnjuh34jb.com^
 ||msgby.ru^
-||muchadmiredin.info
 ||muddiesirenica.com^
 ||muggarsocyroe.top^
 ||multiupload.com^
@@ -2997,7 +2988,6 @@ _lx.ads/$popup
 ||mwcvu.com^
 ||mxatooknlavb.com^
 ||mxdadjpe.com^
-||n1gopush.com^
 ||n7pusher.com^
 ||nahnoji.cz^
 ||namershills.com^
@@ -3052,7 +3042,6 @@ _lx.ads/$popup
 ||ourtetotum.com^
 ||outshroomishan.com^
 ||overseagyassa.com^
-||ovularlinkup.com^
 ||ozjga.top^
 ||ozwvd.com^
 ||paarsvc.com^
@@ -3210,6 +3199,7 @@ _lx.ads/$popup
 ||swailsdang.com^
 ||swangylockjaw.com^
 ||swardflawed.click^
+||swervercutup.top^
 ||taivoofasoo.net^
 ||talktomeplease.biz^
 ||tankahuncoked.click^
@@ -3247,7 +3237,6 @@ _lx.ads/$popup
 ||transfto.com^
 ||trantalkes.top^
 ||travelaudience.com^
-||trekachy.com^
 ||trisulcteapot.com^
 ||trowanesteeler.com^
 ||trustiseverything.de^
@@ -3296,6 +3285,7 @@ _lx.ads/$popup
 ||wedespirale.com^
 ||whataboutnews.com^
 ||whehilru.com^
+||whilieesrogs.top^
 ||whiteclick.biz^
 ||whoansodroas.net^
 ||whuzucot.net^
@@ -3416,7 +3406,6 @@ _lx.ads/$popup
 ||redlightcenter.com^$popup,third-party
 ||revenuehits.com^$popup,third-party
 ||revsharecash.com^$popup,third-party
-||schjmp.com^$popup
 ||sersh.com^$popup,third-party
 ||slutroulette.com^$popup,third-party
 ||spklmis.com^$popup,third-party
@@ -3738,7 +3727,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||bongacams.com/?bcs=$popup
 ||booking.com^$popup,domain=viamichelin.at|viamichelin.be|viamichelin.ch|viamichelin.co.uk|viamichelin.com|viamichelin.de|viamichelin.es|viamichelin.fr|viamichelin.ie|viamichelin.it|viamichelin.nl|viamichelin.pl|viamichelin.pt
 ||box10.com^*?utm_source=$popup
-||buziol.pl^$popup
 ||ccbill.com/cgi-bin/clicks.cgi?$popup,third-party
 ||chaturbate.com/in/?*&tour=$popup,third-party
 ||g2a.com/r/$popup
@@ -3814,7 +3802,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ||elahmad.com/js/extreme.js
 ||electromenager-compare.com/images/main/*/pub.jpg
 ||emu-france.com/wp-content/themes/emufrance/*casino
-||etr.fr/partner/
 ||fiches-auto.fr/_carre_300_
 ||file-upload.net/include/$subdocument
 ||files.macg.co/macgupload/
@@ -4054,7 +4041,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ###ads-300x250
 ###ads-container-1
 ###ads-content-bottom
-###ads-loader
 ###ads-medium-rectangle
 ###ads-top-banner
 ###adsBox
@@ -4469,7 +4455,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.ads-foot
 ##.ads-footerBanner
 ##.ads-group
-##.ads-information
 ##.ads-inner-video-title
 ##.ads-left-block
 ##.ads-loc-holder
@@ -4587,6 +4572,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshr.ink|adshr
 ##.desktop-ff-ads__main
 ##.dfp-ads
 ##.dfp-slot.megaban
+##.divAdsBottom
 ##.div_ads
 ##.dm_ads_InRead
 ##.dp-ad-visible
@@ -5222,6 +5208,7 @@ hellokids.com###preroll
 lacanausurfinfo.com###promo
 ouedkniss.com###promo-header
 journaldemontreal.com###promo-pkp
+youtube.com###promotion-shelf
 01streaming.net,aliasdmc.fr,allocine.fr,annuaire-streaming.com,centerblog.net,cocostream.rip,cpasfini.me,cpasmieux.buzz,elbilad.net,film01stream.ws,filmgratuit.net,filmzenstream.rip,iphonesoft.fr,jeux-2-filles.com,mac2sell.net,monstream.win,novaflix.me,novaflix.one,nrj.be,nrj.fr,nuked-klan.org,olivierdauvers.fr,orange.fr,papystreaming.win,planet-casio.com,planet-streaming.ws,redirection-web.net,science-et-vie.com,series-streamings.vin,service-public.fr,sortir47.fr,streampourvous.lol,terre.tv,tirexo.fun,topsitestreaming.top,toutpratique.com,turf-fr.com,val-de-marne.gouv.fr,vfserie.win,virtuoflash.com,vofilms.vin,voirfilms.al,voirfilms.bz,voirfilms.live,voirfilms.win,voirseries.co,voirseries.rip,wareziens.net,wawacity.nl,weserie.info,wifilix.club,wiflix.dev###pub
 ledemondujeu.com,minuteur-en-ligne.fr,musculaction.com,planeterenault.com,quiveutdufromage.com###pub2
 betaseries.com,soundlightup.com###pubSidebar1

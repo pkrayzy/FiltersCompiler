@@ -1,9 +1,9 @@
-! Checksum: sLjIOlPNYdULYJ6Bt6LyhA
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1725377808-3600.patch
+! Checksum: FOm46VcNIAJTTG2HdOR0RA
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1725439019-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.25.72
-! TimeUpdated: 2024-09-03T15:33:05+00:00
+! Version: 2.0.25.73
+! TimeUpdated: 2024-09-04T08:33:13+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -69,7 +69,6 @@ realtime-chart.info##.osn_base
 [$path=/tag/]www.nicovideo.jp##.nicodicNicoadVideoList
 fotospor.com##a[href="https://twitter.com/EfsaneFotospor"] > img
 fotospor.com##a[href="https://t.me/efsanefotospor"] > img
-fotospor.com##a[href="https://www.youtube.com/c/Fotosporcom"] > img
 sueddeutsche.de##div[data-newsletter-id]
 24sata.hr#%#//scriptlet('remove-class', 'sticky-top', '.vjs-wrapper')
 24sata.hr#%#//scriptlet('remove-class', 'sticky-bottom', '.video-js')
@@ -291,6 +290,7 @@ farmer.pl##body > .p-top > .p-top-container > .p-top-right
 is.fi#%#//scriptlet('remove-class', 'stuck', '.placeholder > .sticky-container.stuck')
 surfshark.com##.post-content .get-surfshark
 ||player.gliacloud.com^$third-party
+ejje.weblio.jp##.mainBlock[style="min-height: 270px;"]
 ##.gliaplayer-container
 weblio.jp##.firstDictVideoAd
 maquia.hpplus.jp##.section-fireworkTag
@@ -984,6 +984,7 @@ techtarget.itmedia.co.jp#?##tmplCol2 > div.cbox:has(> .vendorcontents)
 portal.librus.pl#$?#advertisement-module { remove: true; }
 portal.librus.pl#?#.article-list .row > .article__container:has(> .article__link > .article__image-container > .article__content-inner > .article__sponsored)
 portal.librus.pl#?#.container__row--synergia-login > div[class] ~ div[class]:has(> div[class] > div[class]:only-child div > picture > source[media][srcset^="https://portal.librus.pl/images/base/"] + img[src^="https://portal.librus.pl/images/base/"])
+portal.librus.pl#?#.article-list > div[class]:not(.row):has(> div[class] > div[class]:only-child div > picture > source[media][srcset^="https://portal.librus.pl/images/base/"] + img[src^="https://portal.librus.pl/images/base/"])
 portal.librus.pl##.container__row--synergia-login > div[class] ~ div[class] > div[class] > div[class]:only-child div > picture > source[media][srcset^="https://portal.librus.pl/images/base/"] + img[src^="https://portal.librus.pl/images/base/"]
 portal.librus.pl##.article-list > div[class]:not(.row) > div[class] > div[class]:only-child div > picture > source[media][srcset^="https://portal.librus.pl/images/base/"] + img[src^="https://portal.librus.pl/images/base/"]
 portal.librus.pl##.widget-portal > div[class]:not(.row) > div[class] > div[class]:only-child div > picture > source[media][srcset^="https://portal.librus.pl/images/base/"] + img[src^="https://portal.librus.pl/images/base/"]
@@ -1008,8 +1009,6 @@ carview.yahoo.co.jp###bnr
 roadway.yahoo.co.jp###rc_sns
 contents.fc2.com#?#div[class] > div[class] > a[class^="c-cntCard-110"][class*="_thumb"][href*="/?tag="]:upward(2)
 member.livedoor.com###loginAdwall
-||mj-king.net/img/BannerAdvertisement/
-mj-king.net,mjk-r.net###bg-banner
 ||gamewith.jp/ad/
 lvz.de#$#.tp-modal:has(> div.tp-iframe-wrapper > iframe[src^="https://buy-eu.piano.io/"]) { display: none !important; }
 lvz.de#$#.tp-backdrop.tp-active { display: none !important; }
@@ -1315,6 +1314,7 @@ alexfitness.ru#$#.modal-open { overflow: visible!important; }
 ||contributions.guardianapis.com^
 ##a[href^="https://apay-up-banner.com?merchantId="] > img
 ||apay-up-banner.com^$image,third-party
+zielonyogrodek.pl##article .shoper-recommended
 civitai.com##div[class^="mantine-"][style^="grid-template-columns:"] > div.flex-col.border.p-2
 beeline.ru##.desktopOnlyElement > div > div[style^="background-color:"]:has(> div > button[aria-label="Скрыть баннер"])
 fotosklad.ru##div[class^="HeaderTopline_topline__"]
@@ -1490,7 +1490,6 @@ terabox.com##.coupon-Popup-box
 ||player.cnevids.com/interlude/gq-jp.js
 spiderum.com##spiderum-ads
 zerohedge.com##div[class^="PromoBanner_"]
-weedleteam.com##.kickstarter-visible
 renosy.com##.floatBanner
 wcostream.tv##td[width="160"][height="900"][align="left"]
 okmusi.com##.footer-banner
@@ -1870,7 +1869,6 @@ ivoox.com#$#.modal-backdrop { display: none !important; }
 sslkn.com,sslkn.ru,sslkn.net,sslkn.org,sslkn.me,sslkn.xyz,sslkn.online,sslkn.tv,sslkn.biz,sslkn.pro,sslkn.club,sslkn.site,sslkn.cc,sslkn.com.bd,sslkn.com.np,sslkn.space,sslkn.gov.bd,sslkn.mobi,sslkn.fun,sslkn.gov.np##.stiker_wrap
 apartmenttherapy.com,thekitchn.com,cubbyathome.com##.PromotionalRibbon
 mintmanga.live#%#//scriptlet('set-cookie', 'list-banner', 'true')
-nikkei-cnbc.co.jp##li > a[href="https://www.nikkei-cnbc.co.jp/kouza"]
 ozon.ru##div[data-widget="objectBannerList"]
 infoq.com##.event__container
 dev.ua##.afterheader-widget
@@ -1950,6 +1948,7 @@ rlsnet.ru##.js-banner-group
 smbc-card.com##div[class^="cv__banner-area"]
 smbc-card.com##.banner_area
 novayagazeta.eu##.donate-block-europe
+skysports.com##.polaris-sponsor-banner
 medium.com#?#div:not([class]):has(> a[href^="/plans?source=upgrade_membership-"])
 tonkosti.ru##.SeasonBloks
 c-o-k.ru,archiproducts.com##.banner-wrapper

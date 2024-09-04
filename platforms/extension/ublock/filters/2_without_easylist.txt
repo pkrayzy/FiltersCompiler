@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: J4sDaK3zRF0k/KDxSk8+0A
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1725377812-3600.patch
+! Checksum: Hiu8cM1eV9KyxrdeQVsM+g
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1725439025-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.51.14
-! TimeUpdated: 2024-09-03T15:31:12+00:00
+! Version: 2.3.51.15
+! TimeUpdated: 2024-09-04T08:31:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,8 @@
 !
 !
 !
+||giraingoats.net^
+||nrqjoxar.com^
 ||s1search.co^$third-party
 ||hadronid.net^
 ||octonewjs.com^
@@ -7631,6 +7633,10 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187899
+rateyourmusic.com##+js(set-constant, adsSlotRenderEndSeen, true)
+! https://github.com/AdguardTeam/AdguardFilters/issues/187574
+*$redirect-rule=noop.js,xmlhttprequest,domain=werfgt.fun
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187647
 superpsx.com#@#.sidebar-ad
 superpsx.com#@#.Ad-Container
@@ -20630,6 +20636,8 @@ movie76.com##img[alt="ads"]
 !---------------------------------------------------------------------
 ! NOTE: Italian
 !
+spazioplay.it##.stream-item
+spazioplay.it##.stream-item-widget
 tuttoandroid.net##.article-banner-container
 skdesu.com##.inside-article > div.gb-container:has(> center > ins.adsbygoogle)
 ||api.everyeye.it/amazon/topskin/
@@ -22190,6 +22198,22 @@ gospodarkamorska.pl##.Home_categories_box > div.polecamy-slider > div[class*="po
 instalki.pl##center > a.gofollow > img
 onet.pl##a[href^="https://milionymonet.onet.pl/"]
 pograne.eu###custom_html-8
+! https://github.com/AdguardTeam/AdguardFilters/issues/187895
+5mindlazdrowia.pl###sticky-anchor
+5mindlazdrowia.pl##div[id^="mediapop-"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/187858
+estradaistudio.pl##.tritable-970x250
+estradaistudio.pl##.right > .d-block[style*="max-width: 300px;"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/187857
+zielonyogrodek.pl##.zo-recommended
+zielonyogrodek.pl##.zo-recommended-top
+! https://github.com/AdguardTeam/AdguardFilters/issues/187856
+budujemydom.pl##body .wide-bg
+! https://github.com/AdguardTeam/AdguardFilters/issues/187860
+audio.com.pl##body > .hp-wide-top
+audio.com.pl##body > .subpages-top
+! https://github.com/AdguardTeam/FiltersReports/issues/10
+ebok.pgnig.pl##.slick-track > .slick-slide:has(> div > .news-lists-ad)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187699
 opoka.org.pl##.webpart-wrap-raw_html:has(> a[name="reklama"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187669
@@ -33446,17 +33470,6 @@ http://www.ads.$third-party
 ! SECTION: Temporary
 ! Malware spam on GitHub
 ! Example: https://github.com/AdguardTeam/AdguardFilters/issues/187256
-||app.mediafire.com/dqajf1x14ccfd$all
-||mediafire.com/file/6tl0g3hwyz6vefb/fix.rar/file$all
-||app.mediafire.com/9mrkd33xulszl$all
-||mediafire.com/file/3hzk77cxvxc9nq2/fix.zip/file$all
-||mediafire.com/file/jc5ws0hujgycrp5/fix.zip/file$all
-||mediafire.com/file/gflovmzz19y7lv4/x86_64-win64-ranlib.rar/file$all
-||bit.ly/3MjP129$all
-||cdn.discordapp.com/attachments/1277836331501883449/1280291965879193731/fix.zip$all
-||cdn.discordapp.com/attachments/1277836331501883449/1278023442498588702/fix.zip$all
-github.com##:matches-path(/AdguardTeam/AdguardFilters)a[href="https://bit.ly/3MjP129"]
-github.com##:matches-path(/AdguardTeam/AdguardFilters)a[href="https://app.mediafire.com/9mrkd33xulszl"]
 github.com##.comment-body a[href*="/fix.zip"]
 github.com##.comment-body a[href*="/fix.rar"]
 ! https://github.com/AdguardTeam/CoreLibs/issues/1887
@@ -33562,7 +33575,6 @@ eztv.unblocked.sh,vidzi.tv##body > div[id][style*="position: fixed"][style*="z-i
 gogoanimes.tv,animeflv.net##div[style*="visibility:hidden;"] > div[style*="z-index"] > a[href][rel*="nofollow"][rel*="noindex"]
 wcostream.com,watchcartoonsonline.eu,gogoanimes.tv,animeflv.net##div > div[id][style*="overflow:"][style*="hidden;"][style*="height:"]
 ! no referrer anymore for ad request
-|/Scripts^$image
 ! old versions
 ! /(readcomiconline|kimcartoon|kiss-anime|9anime|gogoanime|toonova|animeflv|animeplus|goodanime|animewow|animenova|animetoon|mangapanda|memecenter|mangareader)\.[a-z]{2,4}\/(?!(assets|scripts|player)\/)[a-zA-Z0-9]{4,}[\s\S]*.js/$domain=animeflv.net
 ! /(readcomiconline|kimcartoon|kiss-anime|9anime|gogoanime|toonova|animeflv|animeplus|goodanime|animewow|animenova|animetoon|mangapanda|memecenter|mangareader)\.[a-z]{2,4}\/(?!(assets|scripts|player)\/)[a-zA-Z0-9]{4,}[\s\S]a*\/[a-zA-Z0-9]{4,}[\s\S]*.js/$domain=animeflv.net
@@ -33685,14 +33697,16 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+englismovies.pro##+js(abort-current-script, document.addEventListener, window.open)
+||e.snmc.io/3.0/js/pb/pb-*.js
+iphone.apkpure.com##.ads-box
+dlhd.online##.aplr-fxd-bnr
 redgifs.com##div[class^="_liveAdButton_"]
 bigbumfun.com##.col-video > div.container:has(> div#awe-customiframe-container)
 bigbumfun.com##.thumbs > div.thumb:has(> script[src*="ad-provider"])
 shemale6.com##ul.primary > li:has(> a[href="https://theporndude.com"])
 shemale6.com##.block-video > div.table
 shemale6.com##.adv-banner_under
-book18.fans###main > div[style*="height: 400px;"]
-book18.fans###main > div.home-h:has(> a[href^="https://stripchat.com/"])
 iptvcodes.xyz##+js(abort-on-property-write, onload)
 fandom.com##iframe[data-s1search-id="mainline-top-ads-bing-top"]
 livemint.com###subscribeAd
@@ -34632,7 +34646,7 @@ rahim-soft.com##.theiaStickySidebar > .widget_text:has(> .textwidget > p > .adsb
 allegiantair.com##a[data-hook="header-merchandise-banner_link"]
 convertio.co##.softobar-container
 vidsrc2.*##body > div[style*="position: absolute;"][style*="inset:"][style*="z-index:"]
-tpi.li,go.cloutgist.com,brbeast.com,vidsrc2.*,tutwuri.id,lokerwfh.net,insmyst.com,iir.la,tvi.la,cosplay18.pics,hianime.to,mobiletvshows.site,movies4u.*,x-x-x.tube,pornx.to,4khd.com,dlhd.*,kissanime.*,vidsrc.*,pahe.*##+js(window.open-defuser)
+englismovies.pro,tpi.li,go.cloutgist.com,brbeast.com,vidsrc2.*,tutwuri.id,lokerwfh.net,insmyst.com,iir.la,tvi.la,cosplay18.pics,hianime.to,mobiletvshows.site,movies4u.*,x-x-x.tube,pornx.to,4khd.com,dlhd.*,kissanime.*,vidsrc.*,pahe.*##+js(window.open-defuser)
 hogwarts.cafe#$#body[class*="adthrive-"]:not(.home) .site-footer-wrap { margin-bottom: 0 !important; }
 retromania.gg##.banner > *
 startpage.com#?#:matches-path(/search)#main > div[class^="css-"]:has(> div[class^="css-"] > p[class^="css-"]:contains(/Annoncer|Anzeigen|Ads|Anuncios|Publicités|Advertenties|Annonser|Reklamy|Anúncios/))
@@ -38576,7 +38590,7 @@ freehdinterracialporn.in###video > div.border + div[class]
 freehdinterracialporn.in##.my-ad
 ||moanmyip.com/images/removemyphone.png
 justalternativeto.com##.justa-adlabel
-pornhat.*##.top_spot
+ok.porn,pornhat.*##.top_spot
 coingape.com##.midadsafter
 coingape.com##.dragads
 heyiamindians.com##.banlink
@@ -47729,7 +47743,7 @@ dailytelegraph.com.au##.widget_newscorpau_promo_collection
 amazon.com##.slot__ad
 memeburn.com,ventureburn.com##[id^="x_inter_ad"]
 memeburn.com,ventureburn.com###site > #fadeMe
-theinquirer.net##.ad-slot
+iphone.apkpure.com,theinquirer.net##.ad-slot
 theinquirer.net##[id^="google_ads_iframe_"]
 ||wp.com/i.imgur.com/O9R5Ahq.gif
 namibian.com.na##.container.wrap > .extras-min
@@ -47813,7 +47827,7 @@ onegoodthingbyjillee.com##.textwidget > a[href^="http://amzn.to/"] > img
 dotesports.com##a[href^="http://bit.ly/"][target="_blank"] > [style^="background:"]
 dotesports.com##.row > ._5kaapu-o_O-_13fiz6u-o_O-_kgqxma-o_O-_k2fyes
 patched.to,foxnews.com##.partners
-tmail.io,englishtorrent.co,4gay.fans,serialeonline.biz,tophostingapp.com,mdn.lol,techydino.net,bclikeqt.com,dailyporn.club,freefeds.com,teleriumtv.com,deportealdia.live,techgeek.digital,sharer.pw,za.gl,xozilla.com,analdin.com,sportsbay.org,fc.lc,mp4upload.com###overlay
+englismovies.pro,tmail.io,englishtorrent.co,4gay.fans,serialeonline.biz,tophostingapp.com,mdn.lol,techydino.net,bclikeqt.com,dailyporn.club,freefeds.com,teleriumtv.com,deportealdia.live,techgeek.digital,sharer.pw,za.gl,xozilla.com,analdin.com,sportsbay.org,fc.lc,mp4upload.com###overlay
 softonic.com##.ad--displayed
 ||cam4.com/directoryFanClubs^
 versus.com##.PrimeBadge__root___1mHM7
@@ -57123,6 +57137,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187834
 ! http://comci.net:4082/st - specifing option does not work.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187430
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187096
