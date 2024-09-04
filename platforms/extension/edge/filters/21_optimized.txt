@@ -1,9 +1,9 @@
-! Checksum: A1xPetuvsNJruTiiILm0qw
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1725453645-3600.patch
+! Checksum: WiGmib/krVDwWZWTUnQ++g
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1725471421-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.25.74
-! TimeUpdated: 2024-09-04T12:37:07+00:00
+! Version: 2.0.25.75
+! TimeUpdated: 2024-09-04T17:33:31+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -203,6 +203,7 @@ goodreads.com#$#.SiteHeaderBanner { display: none !important; }
 goodreads.com#$#header.Header__siteHeaderBanner { height: 5rem !important; }
 goodreads.com#%#//scriptlet('remove-class', 'Header__siteHeaderBanner', 'header.Header__siteHeaderBanner')
 novosti-n.org##.top-banner
+meduza.io##.Layout-bannerTop
 gordonua.com#%#//scriptlet('hide-in-shadow-dom', '.google_news')
 starfiles.co#%#//scriptlet('trusted-click-element', '[style*="flex"]#download_prompt button[onclick="downloadFileB()"]')
 autoevolution.com##.padcol2.mgtop_20
@@ -299,10 +300,9 @@ maquia.hpplus.jp##.section-fireworkTag
 fudge.jp##.ratio-wrapper
 blogto.com##.fire_video_style
 ||fireworkapi1.com/embed/v2/playlists/*/feeds?page_size=10
-||fireworkapi1.com^$domain=jj-jj.net|mensnonno.jp|olive-hitomawashi.com|gizmodo.jp|final-inc.com|roomie.jp|gendai.media|as-web.jp|boldsky.com|blogto.com|getnews.jp|lp.p.pia.jp|fudge.jp|motor-fan.jp|madamefigaro.jp|forzastyle.com|maquia.hpplus.jp|web.gekisaka.jp
+||fireworkapi1.com^$domain=jj-jj.net|mensnonno.jp|gizmodo.jp|final-inc.com|roomie.jp|gendai.media|as-web.jp|boldsky.com|blogto.com|getnews.jp|lp.p.pia.jp|fudge.jp|motor-fan.jp|madamefigaro.jp|forzastyle.com|maquia.hpplus.jp|web.gekisaka.jp
 forzastyle.com##.m-firework
 madamefigaro.jp##.firework_story_block_col
-olive-hitomawashi.com##.ly_main_inner[style^="margin-top: 50px; "]
 sunnylife.tw##.bottom-side-menu > li > a:not([title="GOTOP"])
 rlsnet.ru##.attention-modal
 leparisien.fr###dailymotion-pip-large-viewport
@@ -315,7 +315,7 @@ csoonline.com#%#//scriptlet('set-cookie', 'aiia', 'true')
 csoonline.com#%#//scriptlet('set-cookie-reload', 'nsdr', '1')
 chip.de###footer-white-global
 biglobe.ne.jp###spage-bnr
-meduza.global.ssl.fastly.net,meduza.io##div[class^="AnnouncementInText-module_root__"]
+meduza.io##div[class^="AnnouncementInText-module_root__"]
 banbye.com#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.getItem("npm-vuex")||localStorage.setItem("npm-vuex",'{"app":{"snackbarMessage":"","snackbarDelay":5000,"snackbar":false},"auth":{"user":{},"token":"","loginDialogDismissed":true}}'))}catch(a){}})();
 vedomosti.ru##.the-header-announce
 ananweb.jp##nav.related-links:first-of-type
@@ -558,7 +558,7 @@ animedia.tv##.right-sidebar > center > a[target="_blank"]
 mob-mobile.ru##a[href="#puzzle"]
 groupon.be,groupon.co.uk,groupon.com,groupon.fr,groupon.pl###spotlight
 groupon.be,groupon.co.uk,groupon.com,groupon.fr,groupon.pl###subscribe_modal_container
-||cdn.playwire.com/*/embed.js$domain=tasteofcinema.com|slant.co|gtplanet.net|readlightnovel.org|filehippo.com
+||cdn.playwire.com/*/embed.js$domain=tasteofcinema.com|slant.co|gtplanet.net|filehippo.com
 pornerbros.com##img[alt="Please Disable Adblock"]
 ||nnmstatic.win/forum/new_year/
 ||cloudfront.net/_next/chunks/eea-*.js$domain=healthline.com
@@ -2366,13 +2366,13 @@ tele2.ru##.personalized-banner
 tele2.ru##div[data-cartridge-type="PersonalizedTizer"]
 ||bb.tele2.ru/media/video/*mobile$domain=tele2.ru
 ||bb.tele2.ru/media/video/*desktop$domain=tele2.ru
-ficbook.me,ficbook.com,ficbook.net##section.fanfic-promo-carousel
-ficbook.me,ficbook.com,ficbook.net##.save-as-feed-box
-ficbook.me,ficbook.com,ficbook.net##.fanfic-promo
-ficbook.me,ficbook.com,ficbook.net#?#.home-block > h3:contains(Промо фанфиков)
-ficbook.me,ficbook.com,ficbook.net##.help-box
-ficbook.me,ficbook.com,ficbook.net##a[class^="global-banner"][href^="https://t.me/"]
-ficbook.me,ficbook.com,ficbook.net##.ficfan-banner
+ficbook.me,ficbook.net##section.fanfic-promo-carousel
+ficbook.me,ficbook.net##.save-as-feed-box
+ficbook.me,ficbook.net##.fanfic-promo
+ficbook.me,ficbook.net#?#.home-block > h3:contains(Промо фанфиков)
+ficbook.me,ficbook.net##.help-box
+ficbook.me,ficbook.net##a[class^="global-banner"][href^="https://t.me/"]
+ficbook.me,ficbook.net##.ficfan-banner
 !+ NOT_OPTIMIZED
 paperpaper.ru##.stk-post > div.stk-grid:has(> div[class] > a[href^="https://papersupport.ru/"])
 !+ NOT_OPTIMIZED
