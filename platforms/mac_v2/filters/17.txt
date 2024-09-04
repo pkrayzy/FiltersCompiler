@@ -1,9 +1,9 @@
-! Checksum: hJcid/AZFgOlvquGFIuRdw
-! Diff-Path: ../patches/17/17-s-1725377818-3600.patch
+! Checksum: tCQVaGHRT8+OXwOGMYXdCg
+! Diff-Path: ../patches/17/17-s-1725460693-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.9.12
-! TimeUpdated: 2024-09-03T15:33:02+00:00
+! Version: 2.0.9.13
+! TimeUpdated: 2024-09-04T14:34:28+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -371,6 +371,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187917
+||darkroomvr.com^$removeparam=nats
 ! rozetka.com.ua
 ||rozetka.com.ua^$removeparam=afclid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187661
@@ -826,6 +828,7 @@ $removeparam=NaPm,domain=msearch.shopping.naver.com|search.shopping.naver.com
 ! https://duckduckgo.github.io/duckduckgo-help-pages/privacy/atb/
 ! breaks redirect when their Extension is installed - https://github.com/AdguardTeam/AdguardFilters/issues/161751
 ! ||duckduckgo.com^$removeparam=atb
+||duckduckgo.com^$removeparam=from
 ||duckduckgo.com^$removeparam=vis
 ||duckduckgo.com^$removeparam=perf_id
 ||duckduckgo.com^$removeparam=parent_perf_id
