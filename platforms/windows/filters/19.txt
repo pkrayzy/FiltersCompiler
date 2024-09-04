@@ -1,9 +1,9 @@
-! Checksum: RwFI4lQRAkCnzJRc1qxp4w
-! Diff-Path: ../patches/19/19-s-1725453675-3600.patch
+! Checksum: RaXcARi0QSvhyGFQEZTo6Q
+! Diff-Path: ../patches/19/19-s-1725457080-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.42.68
-! TimeUpdated: 2024-09-04T12:37:00+00:00
+! Version: 2.0.42.69
+! TimeUpdated: 2024-09-04T13:33:59+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4325,6 +4325,8 @@ api.flocktory.com
 ! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
 ! Warning: check, if auth using Google is not broken
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com|nypost.com|etnownews.com|timesnownews.com|menshealth.com|themirror.com|cq.ru|voetbalzone.nl|perplexity.ai|lefigaro.fr|lifehacker.ru
+! The rule for sites, where URL blocking rule blocks also Google's log in button
+g123.jp,binance.com,boredpanda.com#%#//scriptlet('set-constant', 'navigator.credentials.get', 'noopPromiseReject')
 !
 ! SECTION: Popups - Regular rules
 !
@@ -11252,8 +11254,6 @@ labs.google.com#@##google-hats-survey
 @@||api.flocktory.com/v2/loader.js$domain=citilink.ru
 ! unblock featured content
 @@||sdk.*.braze.com^$domain=forum.paradoxplaza.com
-! Unblock "Sign in with your Google account" popup, where it is used as the only way to log in using Google account
-g123.jp,accounts.binance.com#@##credential_picker_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164746
 @@||technode.com/wp-content/plugins/newspack-popups/dist/view.css
 ! https://github.com/uBlockOrigin/uAssets/issues/16321
