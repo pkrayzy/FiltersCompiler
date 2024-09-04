@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.5.50",
-			"timeUpdated": "2024-09-04T18:32:33+0000",
+			"version": "2.1.5.51",
+			"timeUpdated": "2024-09-04T19:32:57+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
