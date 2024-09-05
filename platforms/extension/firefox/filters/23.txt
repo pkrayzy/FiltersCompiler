@@ -1,9 +1,9 @@
-! Checksum: gh50GmIBj7w7TutWHUN3gg
-! Diff-Path: ../patches/23/23-s-1725471427-3600.patch
+! Checksum: rO3koRFPtNn41BoXMmGqZg
+! Diff-Path: ../patches/23/23-s-1725547107-3600.patch
 ! Title: AdGuard Ukrainian filter
 ! Description: Filter that enables ad blocking on websites in Ukrainian language.
-! Version: 2.0.5.20
-! TimeUpdated: 2024-09-04T17:33:32+00:00
+! Version: 2.0.5.21
+! TimeUpdated: 2024-09-05T14:34:45+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -84,8 +84,6 @@
 ! Good: .org/ads/
 ! Bad: .org/ads/$domain=example.org (for instance, should be in speficic.txt)
 !
-! luckyfeed.tech
-/.feed/v5/ad?stream_uuid=
 ! HDVB player
 /content/stream/1xbet/*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175774
@@ -104,7 +102,10 @@
 ! rutor mirrors
 /esh-kichum.js
 ! luckyads.tech - 'Lucky' at advertising domain tab's name
-/render?surfer_uuid=$third-party
+/.feed/v5/ad?stream_uuid=
+?surfer_uuid=*&block_uuid=$xmlhttprequest
+/confirm/ad?uuid$xmlhttprequest
+/confirm/block?uuid=$xmlhttprequest
 ! ads2.bid / AdProfex
 /json/?*=*%2C690%$xmlhttprequest,third-party
 /json/?user_id=*&site_id=*&blocks=$third-party
