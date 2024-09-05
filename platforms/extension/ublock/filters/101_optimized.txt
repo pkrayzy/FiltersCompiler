@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: npMQcO0UDOw4H8iE8Kj83g
-! Diff-Path: ../patches/101_optimized/101_optimized-s-1725527200-14400.patch
+! Checksum: snix7iAw8WNDqXfeGmbENg
+! Diff-Path: ../patches/101_optimized/101_optimized-s-1725541607-14400.patch
 ! Title: EasyList (Optimized)
 ! Description: EasyList is the primary subscription that removes adverts from web pages in English. Already included in AdGuard Base filter.
-! Version: 2.1.32.42
-! TimeUpdated: 2024-09-05T09:01:13+00:00
+! Version: 2.1.32.43
+! TimeUpdated: 2024-09-05T13:01:19+00:00
 ! Expires: 5 days (update frequency)
 &sadbl=1$third-party
 -ad-300x600-
@@ -137,10 +137,10 @@
 /ad?type=
 /ad_728.js
 /ad_banner/*$image,domain=~ccf.com.cn
+/ad_bottom.jpg$image
 /ad_bottom.js
 /ad_break?
 /ad_campaign?
-/ad_code.js
 /ad_common.js
 /ad_counter.aspx
 /ad_display.js
@@ -155,9 +155,10 @@
 /ad_pos=
 /ad_position=
 /ad_request.js
-/ad_right.
+/ad_right.$subdocument
 /ad_server.cgi$subdocument
-/ad_side.
+/ad_side.$~xmlhttprequest
+/ad_skyscraper.gif$image
 /ad_sticky.js
 /ad_top.js
 /adanalytics.js
@@ -168,7 +169,7 @@
 /adbanners/*$image
 /adbox.js
 /adcgi?
-/adchoice.
+/adchoice.png$image
 /adcommon?
 /adconfig.js$script
 /adengine.js
@@ -197,7 +198,7 @@
 /ads-250.
 /ads-300.
 /ads-async.
-/ads-common.
+/ads-common.$image,script
 /ads-front.min.js
 /ads-frontend.min.js
 /ads-home.js
@@ -229,7 +230,7 @@
 /ads/popup.
 /ads/revgen.
 /ads/serve?
-/ads/show.
+/ads/show.$script
 /ads/spacer.
 /Ads/sponsor.$stylesheet
 /ads/square.
@@ -238,7 +239,6 @@
 /ads/xtcore.
 /ads1.
 /ads160.
-/ads3.
 /ads4.
 /ads468.
 /ads468x60.
@@ -265,13 +265,11 @@
 /adsbanner-$image
 /adsbanner.
 /adsbanner/*$image
-/adscontrol.js
 /adscontroller.js
 /adscroll.js
-/adserv.
+/adserv.$script
 /adserve/*$script
 /adserver.$~stylesheet,~xmlhttprequest
-/adserver1.
 /adserver2.
 /adserver3.
 /adserver?
@@ -311,18 +309,14 @@
 /adv.css?
 /adv_468.
 /adv_out.js$third-party
-/adv_teasers.js
+/adv_teasers.js$script
 /adv_vert.js
 /advanced-ads-$domain=~wordpress.org
 /advert.$~script,~xmlhttprequest,domain=~advert.ae|~advert.club|~advert.com.tr|~advert.ee|~advert.ge|~advert.io|~advert.media|~advert.org.pl|~motortrader.com.my
-/advert01.
 /advert2.
-/advert24.
 /advert3.
 /advert4.
-/advert5.
 /advert6.
-/advert8.
 /advert?
 /advertbanner.
 /advertising/banners/*$image
@@ -355,7 +349,7 @@
 /api-ads.
 /api.ad.
 /api.ads.$domain=~ads.instacart.com|~www.ads.com
-/Api/Ad.
+/api/ad.$script
 /api/ads?
 /apopwin.js
 /apstag.js
@@ -383,7 +377,7 @@
 /banner_468.
 /banner_ads/*$~xmlhttprequest,domain=~clickbd.com
 /bannerad.
-/bannerad3.js
+/bannerad3.js$script
 /bannerads/*$~xmlhttprequest,domain=~coldwellbankerhomes.com
 /banners.cgi?
 /banners/468$image
@@ -425,12 +419,10 @@
 /didna_config.js
 /discourse-adplugin-$script
 /displayad?
-/displayAdFrame.
 /dmcads_$script
 /doubleclick.aspx
 /doubleclick.min
 /dynamicad?
-/ero.htm
 /erobanner.js
 /exitpop.js
 /exitpopunder.js
@@ -452,7 +444,6 @@
 /flyad.js
 /footer-ad.$~script
 /footer_ad.js
-/footerad.
 /footerads.
 /fro_lo.js
 /frontend_loader.js
@@ -463,6 +454,7 @@
 /getad?
 /getads?
 /getAdsysCode?
+/globals_ps_afc.js$script
 /google-adsense.js
 /google_caf.js?
 /googleafc.js
@@ -488,7 +480,7 @@
 /index_ads.js
 /infinity.js.aspx?
 /insertads.js
-/jquery.ad.js
+/jquery.ad.js$script
 /jquery.adi.js
 /jquery.adx.js
 /jquery.dfp.js
@@ -518,7 +510,6 @@
 /media/ads/*$image
 /mgid.html
 /mnpw3.js
-/mobile-ad.
 /mobile_ad.
 /mobileads.
 /mod_ijoomla_adagency_zone/*$~xmlhttprequest
@@ -527,6 +518,7 @@
 /modules/ad/*$~xmlhttprequest
 /modules/ads/*$~xmlhttprequest
 /MPUAdHelper.js
+/mysimpleads/mysa_output.php$script
 /nativead.
 /nativeads-v2.js
 /nativeads.js
@@ -587,13 +579,13 @@
 /pop_ads.js
 /popu.js
 /popunder.min.js
-/popunder1.js
+/popunder1.js$script
 /popunder2.js
 /popunder5.js
 /popunder?
 /popup2.js
 /popup3.js
-/popup_ad.js
+/popup_ad.js$script
 /popupads.js$script
 /popupunder.js
 /prebid-video.js
@@ -668,6 +660,7 @@
 /skyadright.
 /skyscraperad.
 /slider_ad.js
+/sliderad.js$script
 /small_ad.
 /smartlinks.epl?
 /soralink.js
@@ -690,6 +683,7 @@
 /stickyad.js
 /stickyads.js
 /suv4.js
+/suv5.js$third-party
 /sync2ad.js
 /taboola-footer.js
 /taboola-header.js
@@ -735,7 +729,6 @@
 /weborama.js
 /welcome_ad.js
 /widget-advert?
-/wp-ad.min.
 /wp-auto-affiliate-links/*$script,stylesheet
 /wp-bannerize-$script,stylesheet
 /wp-bannerize.$script,stylesheet
@@ -753,7 +746,6 @@
 /wppas.min.js
 /www/delivery/*$script,subdocument
 /xads.php
-/xpopunder.js
 /xpopup.js
 /yhs/ads?
 /~cdn/ads/*
@@ -763,6 +755,7 @@
 ://ad1.
 ://ads.$~image,domain=~ads.8designers.com|~ads.ac.uk|~ads.adstream.com.ro|~ads.allegro.pl|~ads.am|~ads.amazon|~ads.apple.com|~ads.atmosphere.copernicus.eu|~ads.band|~ads.bestprints.biz|~ads.bikepump.com|~ads.brave.com|~ads.buscaempresas.co|~ads.business.bell.ca|~ads.cafebazaar.ir|~ads.colombiaonline.com|~ads.comeon.com|~ads.cvut.cz|~ads.doordash.com|~ads.dosocial.ge|~ads.dosocial.me|~ads.elevateplatform.co.uk|~ads.finance|~ads.google.cn|~ads.google.com|~ads.gree.net|~ads.gurkerl.at|~ads.harvard.edu|~ads.instacart.com|~ads.jiosaavn.com|~ads.kaipoke.biz|~ads.kazakh-zerno.net|~ads.kifli.hu|~ads.knuspr.de|~ads.listonic.com|~ads.magalu.com|~ads.mercadolivre.com.br|~ads.mgid.com|~ads.microsoft.com|~ads.midwayusa.com|~ads.mobilebet.com|~ads.mojagazetka.com|~ads.msstate.edu|~ads.mst.dk|~ads.mt|~ads.nc|~ads.nipr.ac.jp|~ads.olx.pl|~ads.pinterest.com|~ads.red|~ads.rohlik.cz|~ads.route.cc|~ads.safi-gmbh.ch|~ads.scotiabank.com|~ads.selfip.com|~ads.shopee.cn|~ads.shopee.co.th|~ads.shopee.com.br|~ads.shopee.com.mx|~ads.shopee.com.my|~ads.shopee.kr|~ads.shopee.ph|~ads.shopee.pl|~ads.shopee.sg|~ads.shopee.tw|~ads.shopee.vn|~ads.smartnews.com|~ads.snapchat.com|~ads.socialtheater.com|~ads.spotify.com|~ads.studyplus.co.jp|~ads.taboola.com|~ads.tiktok.com|~ads.typepad.jp|~ads.us.tiktok.com|~ads.viksaffiliates.com|~ads.vk.com|~ads.watson.ch|~ads.x.com|~ads.yandex|~badassembly.com|~caravansforsale.co.uk|~fusac.fr|~memo2.nl|~reempresa.org|~satmetrix.com|~seriouswheels.com
 ://ads2.
+://adserver1.
 ://adv.$domain=~adv.asahi.com|~adv.bet|~adv.blue|~adv.chunichi.co.jp|~adv.cincsys.com|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.design|~adv.digimatix.ru|~adv.ec|~adv.ee|~adv.gg|~adv.hokkaido-np.co.jp|~adv.kompas.id|~adv.lack-girl.com|~adv.mcr.club|~adv.mcu.edu.tw|~adv.michaelgat.com|~adv.msk.ru|~adv.neosystem.co.uk|~adv.peronihorowicz.com.br|~adv.rest|~adv.ru|~adv.tools|~adv.trinet.ru|~adv.ua|~adv.vg|~adv.yomiuri.co.jp|~advancedradiology.com|~advids.co|~farapp.com|~pracuj.pl|~r7.com|~typeform.com|~welaika.com
 ://affiliate.$third-party
 ://affiliates.$third-party
@@ -887,6 +880,7 @@ _widget_ad.
 /pn07uscr/f/tr/zavbn/*$third-party
 /q/tdl/95/dnt/*$third-party
 /sc4fr/rwff/f9ef/*$third-party
+/script/awesome.js$third-party
 /tabu/display.js
 /cmbdv2.js
 /greenoaks.gif?
@@ -896,43 +890,45 @@ _widget_ad.
 /push-skin/skin.min.js
 /search/tsc.php?
 /full-page-script.js$script
-/beardeddragon/drake.js
-/beardeddragon/gilamonster.js
-/beardeddragon/tortoise.js
-/beardeddragon/turtle.js
-/detroitchicago/anaheim.js
-/detroitchicago/augusta.js
-/detroitchicago/boise.js
-/detroitchicago/houston.js
-/detroitchicago/kenai.js
-/detroitchicago/memphis.js
-/detroitchicago/minneapolis.js
-/detroitchicago/portland.js
-/detroitchicago/raleigh.js
-/detroitchicago/reportads.js
-/detroitchicago/rochester.js
+/beardeddragon/armadillo.js$script
+/beardeddragon/drake.js$script
+/beardeddragon/gilamonster.js$script
+/beardeddragon/tortoise.js$script
+/beardeddragon/turtle.js$script
+/detroitchicago/anaheim.js$script
+/detroitchicago/augusta.js$script
+/detroitchicago/boise.js$script
+/detroitchicago/denver.js$script
+/detroitchicago/gateway.js$script
+/detroitchicago/houston.js$script
+/detroitchicago/kenai.js$script
+/detroitchicago/memphis.js$script
+/detroitchicago/minneapolis.js$script
+/detroitchicago/portland.js$script
+/detroitchicago/raleigh.js$script
+/detroitchicago/reportads.js$script
+/detroitchicago/rochester.js$script
 /detroitchicago/sidebarwall.js$script
-/detroitchicago/springfield.js
-/detroitchicago/stickyfix.js
-/detroitchicago/tampa.js
-/detroitchicago/tulsa.js
-/detroitchicago/tuscon.js
-/detroitchicago/vista.js
+/detroitchicago/springfield.js$script
+/detroitchicago/stickyfix.js$script
+/detroitchicago/tampa.js$script
+/detroitchicago/tulsa.js$script
+/detroitchicago/tuscon.js$script
+/detroitchicago/vista.js$script
 /detroitchicago/vpp.gif?
-/detroitchicago/wichita.js
+/detroitchicago/wichita.js$script
 /ezoic/*$script,~third-party
-/parsonsmaize/abilene.js
-/parsonsmaize/chanute.js
-/parsonsmaize/mulvane.js
+/parsonsmaize/abilene.js$script
+/parsonsmaize/chanute.js$script
+/parsonsmaize/mulvane.js$script
 /parsonsmaize/olathe.js$script
-/tardisrocinante/austin.js
+/tardisrocinante/austin.js$script
 /tardisrocinante/vitals.js$script
 -prebid/
 .prebid-bundle.
 .prebid.$domain=~prebid.org
 /_js/prbd_6.19.0.js
 /ad/postbid_handler1.0.9.js
-/AudienceNetworkPrebid.
 /gpt-prebid.js
 /pbjsandwich.
 /plugins/prebidjs/*$script
@@ -943,16 +939,15 @@ _widget_ad.
 /prebid-sdk.
 /prebid.$domain=~prebid.org
 /prebid/*$script
-/prebid1.
-/prebid2.
-/prebid3.
-/prebid35.
-/prebid4.
-/prebid5.
+/prebid1.$script
+/prebid2.$script
+/prebid3.$script
+/prebid4.$script
+/prebid5.$script
 /prebid6.$script
-/prebid7.
+/prebid7.$script
 /prebid8.$script
-/prebid9.
+/prebid9.$script
 /prebid?
 /prebid_$script,third-party
 /prebid_v4.
@@ -10437,6 +10432,7 @@ browsershots.org#@#.advert_area
 ||atpclqff.com^
 ||atraff.com^
 ||atraichuor.com^
+||atriahatband.com^
 ||atriblethetch.com^
 ||atris.xyz^
 ||atriumsmiddum.com^
@@ -12328,6 +12324,7 @@ browsershots.org#@#.advert_area
 ||certificaterainbow.com^
 ||certifiedstarveeminent.com^
 ||cervixskips.com^
+||ceryldelaine.com^
 ||ces2007.org^
 ||ceschemicalcovenings.info^
 ||cesebsir.xyz^
@@ -13531,15 +13528,12 @@ browsershots.org#@#.advert_area
 ||d1x9q8w2e4.xyz^
 ||d24ak3f2b.top^
 ||d26e83b697.com^
-||d2a4qm4se0se0m.cloudfront.net^
 ||d2e3e68fb3.com^
-||d2uu46itxfd65q.cloudfront.net^
 ||d36f31688a.com^
 ||d37914770f.com^
 ||d3befd5a11.com^
 ||d3c.life^
 ||d3da127b69.com^
-||d3o9njeb29ydop.cloudfront.net^
 ||d44501d9f7.com^
 ||d483501b04.com^
 ||d4b138a7aa.com^
@@ -13689,7 +13683,6 @@ browsershots.org#@#.advert_area
 ||dayznews.biz^
 ||dazedarticulate.com^
 ||dazedengage.com^
-||dazu57wmpm14b.cloudfront.net^
 ||db20da1532.com^
 ||dbbsrv.com^
 ||dbizrrslifc.com^
@@ -14598,7 +14591,6 @@ browsershots.org#@#.advert_area
 ||dspultra.com^
 ||dswqtkpk.com^
 ||dsxwcas.com^
-||dt3y1f1i1disy.cloudfront.net^
 ||dt4ever.com^
 ||dt51.net^
 ||dtadnetwork.com^
@@ -15283,6 +15275,7 @@ browsershots.org#@#.advert_area
 ||eshouloo.net^
 ||esjvrfq.com^
 ||eskimi.com^
+||eslisorchenet.click^
 ||esmyinteuk.info^
 ||esnlynotquiteso.com^
 ||esodnbhzdpl.com^
@@ -16219,6 +16212,7 @@ browsershots.org#@#.advert_area
 ||forensiccharging.com^
 ||forensicssociety.com^
 ||forenteion.com^
+||foreseebobbers.com^
 ||forestallbladdermajestic.com^
 ||forestallunconscious.com^
 ||forestcremate.com^
@@ -18580,6 +18574,7 @@ browsershots.org#@#.advert_area
 ||impulsiveenabled.com^
 ||impureattirebaking.com^
 ||imstks.com^
+||imyanmarads.com^
 ||in-appadvertising.com^
 ||in-page-push.com^
 ||in-page-push.net^
@@ -24827,6 +24822,7 @@ browsershots.org#@#.advert_area
 ||psychiczygaena.top^
 ||psychologicalpaperworkimplant.com^
 ||psychologycircumvent.com^
+||psykterfaulter.com^
 ||pt-xb.xyz^
 ||pta.wcm.pl^
 ||ptaicoamt.com^
@@ -25250,6 +25246,7 @@ browsershots.org#@#.advert_area
 ||qroagwadndwy.com^
 ||qrpenodnn.com^
 ||qrprobopassor.com^
+||qrredraws.com^
 ||qrtrsucg.com^
 ||qservz.com^
 ||qskxpvncyjly.com^
@@ -25577,6 +25574,7 @@ browsershots.org#@#.advert_area
 ||rebillsegomism.com^
 ||rebindskayoes.com^
 ||rebonebilify.click^
+||rebukessedgier.shop^
 ||recageddolabra.shop^
 ||recalledmesnarl.com^
 ||recalledriddle.com^
@@ -26586,6 +26584,7 @@ browsershots.org#@#.advert_area
 ||sauptoacoa.com^
 ||sauptowhy.com^
 ||saurelwithsaw.shop^
+||saurfeued.com^
 ||sausagegirlieheartburn.com^
 ||savableee.com^
 ||savagelylizard.com^
@@ -27744,6 +27743,7 @@ browsershots.org#@#.advert_area
 ||sppolexrumj.com^
 ||sprangsugar.com^
 ||spreespoiled.com^
+||sprewcereous.com^
 ||sprinlof.com^
 ||sprkl.io^
 ||sptrkr.com^
@@ -31162,6 +31162,7 @@ browsershots.org#@#.advert_area
 ||withholdrise.com^
 ||withinresentful.com^
 ||withmefeyaukna.com^
+||withnimmunger.com^
 ||withnimskither.com^
 ||withoutcontrol.com^
 ||witnessedworkerplaid.com^
@@ -32905,7 +32906,9 @@ browsershots.org#@#.advert_area
 ||72075223.xyz^$document,popup
 ||72560514.xyz^$document,popup
 ||74142961.xyz^$document,popup
+||75690049.xyz^$document,popup
 ||78b78ff8.xyz^$document,popup
+||83887336.xyz^$document,popup
 ||88129513.xyz^$document,popup
 ||89263907.xyz^$document,popup
 ||89407765.xyz^$document,popup
@@ -33331,6 +33334,7 @@ browsershots.org#@#.advert_area
 ||bidder.criteo.com^
 ||bidder.newspassid.com^
 ||bids.concert.io^
+||bitent.com/lock_html5/adscontrol.js
 ||bs-adserver.b-cdn.net^
 ||btr.domywife.com^
 ||c.bannerflow.net^
@@ -33512,6 +33516,7 @@ browsershots.org#@#.advert_area
 ||vultr.com/media/banner
 ||vuukle.com/ads/
 ||vv.7vid.net^
+||washingtonpost.com/wp-stat/ad/zeus/wp-ad.min.js
 ||webapps.leasing.com^
 ||weby.aaas.org^
 ||widget.engageya.com/engageya_loader.js
@@ -33694,6 +33699,7 @@ browsershots.org#@#.advert_area
 ||d29dbajta0the9.cloudfront.net^
 ||d29i6o40xcgdai.cloudfront.net^
 ||d29mxewlidfjg1.cloudfront.net^
+||d2a4qm4se0se0m.cloudfront.net^
 ||d2b4jmuffp1l21.cloudfront.net^
 ||d2bkkt3kqfmyo0.cloudfront.net^
 ||d2bvfdz3bljcfk.cloudfront.net^
@@ -33758,6 +33764,7 @@ browsershots.org#@#.advert_area
 ||d2uaktjl22qvg4.cloudfront.net^
 ||d2uap9jskdzp2.cloudfront.net^
 ||d2uhnetoehh304.cloudfront.net^
+||d2uu46itxfd65q.cloudfront.net^
 ||d2uy8iq3fi50kh.cloudfront.net^
 ||d2v02itv0y9u9t.cloudfront.net^
 ||d2v4wf9my00msd.cloudfront.net^
@@ -33881,6 +33888,7 @@ browsershots.org#@#.advert_area
 ||d8dcj5iif1uz.cloudfront.net^
 ||d9c5dterekrjd.cloudfront.net^
 ||d9leupuz17y6i.cloudfront.net^
+||dazu57wmpm14b.cloudfront.net^
 ||dba9ytko5p72r.cloudfront.net^
 ||dbcdqp72lzmvj.cloudfront.net^
 ||dbw7j2q14is6l.cloudfront.net^
@@ -33938,6 +33946,7 @@ browsershots.org#@#.advert_area
 ||dsh7ky7308k4b.cloudfront.net^
 ||dsnymrk0k4p3v.cloudfront.net^
 ||dsuyzexj3sqn9.cloudfront.net^
+||dt3y1f1i1disy.cloudfront.net^
 ||dtv5loup63fac.cloudfront.net^
 ||dtv5ske218f44.cloudfront.net^
 ||dtyry4ejybx0.cloudfront.net^
@@ -34160,6 +34169,7 @@ browsershots.org#@#.advert_area
 ||ownedcore.com/forums/ocpbanners/
 ||pafvertizing.crazygames.com^
 ||pandora.com/api/v1/ad/
+||pandora.com/web-client-assets/displayAdFrame.
 ||pcmag.com/js/alpine/$domain=speedtest.net
 ||picrew.me/vol/ads/
 ||pixlr.com/fad/
@@ -37129,6 +37139,12 @@ pricespy.*##.AdPlacementMarginTop-sc-15ga2eg-3
 pricespy.*##.AdPlacementWrapper-sc-0-3
 pricespy.*##.StyledAdPlacementWrapper-sc-0-5
 pricespy.*##.StyledAdWrapper-sc-0-1
+yandex.*##.mini-suggest__item[data-suggest-counter*="/yandex.ru/clck/safeclick/"]
+yandex.*##.ProductGallery
+yandex.*##.search-list-view__advert-offer-banner
+yandex.*##a[href^="https://yandex.ru/an/count/"]
+yandex.*##li[class*="_card"]:has(a[href^="https://yabs.yandex.ru/count/"])
+yandex.*##li[class*="_card"]:has(a[href^="https://yandex.com/search/_crpd/"])
 windowscentral.com###article-body > .hawk-nest[data-widget-id]:has(a[class^="hawk-affiliate-link-"][class$="-button"])
 winaero.com###content p:has(~ ins.adsbygoogle)
 gtaforums.com###ipsLayout_mainArea div:has(> #pwDeskLbAtf)
@@ -37177,6 +37193,7 @@ fortune.com##[class]:has(> #Leaderboard0)
 skyscanner.com##[class^="FlightsResults"] > div:has([class^="Sponsored"])
 svgrepo.com##[class^="style_native"]:has([href*="buysellads.com"])
 argos.co.uk##[class^="styles__LazyHydrateCard"]:has([class*="ProductCardstyles__FlyoutBadge"])
+cargurus.com##[data-cg-ft="car-blade"]:has([data-eyebrow^="FEATURED"])
 cargurus.com##[data-cg-ft="car-blade-link"]:has([data-cg-ft="srp-listing-blade-sponsored"])
 wayfair.com##[data-hb-id="Card"]:has([data-node-id^="ListingCardSponsored"])
 petco.com##[data-testid="product-buy-box"]:has([class*="SponsoredText"])
@@ -37215,13 +37232,6 @@ thehansindia.com##section:has(> [class*="level_ad"])
 tripadvisor.at,tripadvisor.be,tripadvisor.ca,tripadvisor.ch,tripadvisor.cl,tripadvisor.cn,tripadvisor.co,tripadvisor.co.id,tripadvisor.co.il,tripadvisor.co.kr,tripadvisor.co.nz,tripadvisor.co.uk,tripadvisor.co.za,tripadvisor.com,tripadvisor.com.ar,tripadvisor.com.au,tripadvisor.com.br,tripadvisor.com.eg,tripadvisor.com.gr,tripadvisor.com.hk,tripadvisor.com.mx,tripadvisor.com.my,tripadvisor.com.pe,tripadvisor.com.ph,tripadvisor.com.sg,tripadvisor.com.tr,tripadvisor.com.tw,tripadvisor.com.ve,tripadvisor.com.vn,tripadvisor.de,tripadvisor.dk,tripadvisor.es,tripadvisor.fr,tripadvisor.ie,tripadvisor.in,tripadvisor.it,tripadvisor.jp,tripadvisor.nl,tripadvisor.pt,tripadvisor.ru,tripadvisor.se##section[data-automation$="_AdPlaceholder"]:has(.txxUo)
 opensubtitles.org##tr[style]:has([src*="php"])
 oneindia.com##ul > li:has(> div[class^="adg_"])
-yandex.*##.ProductGallery
-yandex.*##.mini-suggest__item[data-suggest-counter*="/yandex.ru/clck/safeclick/"]
-yandex.*##.search-list-view__advert-offer-banner
-yandex.*##.search-snippet-view:has(span.search-advert-badge__advert)
-yandex.*##a[href^="https://yandex.ru/an/count/"]
-yandex.*##li[class*="_card"]:has(a[href^="https://yabs.yandex.ru/count/"])
-yandex.*##li[class*="_card"]:has(a[href^="https://yandex.com/search/_crpd/"])
 modrinth.com##.normal-page__content [href*="bisecthosting.com/"] > img
 modrinth.com##.normal-page__content [href^="http://bloom.amymialee.xyz"] > img
 modrinth.com##.normal-page__content [href^="https://billing.apexminecrafthosting.com/"] > img
@@ -38088,6 +38098,7 @@ reddxxx.com#?#[role="gridcell"]:-abp-contains(/^AD$/)
 @@||cloudfront.net/js/common/invoke.js
 @@||commons.wikimedia.org/w/api.php?$~third-party,xmlhttprequest
 @@||connatix.com*/connatix.player.$script,domain=ebaumsworld.com|funker530.com|tvinsider.com|washingtonexaminer.com
+@@||d.socdm.com/adsv/*/tver_splive$xmlhttprequest,domain=imasdk.googleapis.com
 @@||delivery-cdn-cf.adswizz.com/adswizz/js/SynchroClient*.js$script,domain=tunein.com
 @@||discretemath.org^$image,stylesheet
 @@||disqus.com/embed/comments/$subdocument

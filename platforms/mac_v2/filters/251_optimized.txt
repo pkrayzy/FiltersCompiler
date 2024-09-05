@@ -1,9 +1,9 @@
-! Checksum: 7oWFyCAFOvq8dRYslhzXGA
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1725484013-14400.patch
+! Checksum: IXeM9g+sUwLLVCqScBdD6g
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1725541623-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.12
-! TimeUpdated: 2024-09-04T21:02:20+00:00
+! Version: 2.0.8.13
+! TimeUpdated: 2024-09-05T13:02:18+00:00
 ! Expires: 12 hours (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -1405,7 +1405,7 @@ $removeparam=aff_click_id
 ||baidu.com^$document,removeparam=cf
 ||baidu.com^$document,removeparam=miniId
 ||baidu.com^$document,removeparam=/^from.*$/
-||baidu.com^$document,removeparam=tpl_from
+||baidu.com^$document,removeparam=tpl_from,domain=~graph.baidu.com
 ||bilibili.com^$removeparam=/^current.*$/
 ||bilibili.com^$removeparam=/^from.*$/
 ||bilibili.com^$removeparam=/^network.*$/
@@ -2662,3 +2662,4 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@||urldefense.com^$removeparam
 @@||startpage.com/sp/qi$removeparam=sc
 @@||flagpedia.net^$ping,xmlhttprequest,removeparam=gtm
+@@/login-redirect/*$removeparam
