@@ -1,9 +1,9 @@
-! Checksum: pKRX6R9cCS3hdp+ADZ13/g
-! Diff-Path: ../patches/14/14-s-1725514583-3600.patch
+! Checksum: bPGXlDXl5opMVTl8nvlzfw
+! Diff-Path: ../patches/14/14-s-1725518184-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.7.47
-! TimeUpdated: 2024-09-05T05:33:01+00:00
+! Version: 2.2.7.48
+! TimeUpdated: 2024-09-05T06:33:04+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2470,6 +2470,10 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+art.wearmedicine.com##div[class^="Modal_modal_"]:has(> div[class*="CookiesConsentPopup"])
+wearmedicine.com#$#.modal:has(> .grid-container > div[class*="CookiesConsentPopUp"]) { display: none !important; }
+wearmedicine.com#$#html.modal--open { overflow: auto !important; position: static !important; width: 100% !important; }
+||utiq.t-online.de^
 lifesum.com#$#body { overflow: auto !important; }
 lifesum.com#$#div[data-testid="overlay-backdrop"] { display: none !important; }
 seswater.co.uk##body.cookie-open::before
