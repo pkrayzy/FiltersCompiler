@@ -1,8 +1,8 @@
-! Checksum: G+VBDUFF8dQXKPJxm7ZzQw
+! Checksum: 92V8cfbTmyXsxP4/C2rPRA
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.9.21
-! TimeUpdated: 2024-09-05T16:33:33+00:00
+! Version: 2.0.9.22
+! TimeUpdated: 2024-09-05T17:33:05+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -372,6 +372,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187866
+||kwiky.com^$removeparam=AFNO
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187874
 ||ai-porn.ai^$removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187863
@@ -1430,6 +1432,9 @@ $removeparam=stm_source,domain=shopee.ph|shopee.co.th|shopee.co.id
 ||campaigns-serving.cognativex.com^$xmlhttprequest,removeparam=history_adids
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129287
 ||dzen.ru/api/*/launcher/stats/$image,xmlhttprequest,removeparam
+||dzen.ru^$removeparam=from
+||dzen.ru^$removeparam=cl4url
+||dzen.ru^$removeparam=tst
 ||dzen.ru^$document,removeparam=clid
 ||dzen.ru^$removeparam=yredirect
 ||dzen.ru^$removeparam=stid
