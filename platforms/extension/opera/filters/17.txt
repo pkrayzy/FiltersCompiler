@@ -1,9 +1,9 @@
-! Checksum: TEI3YV2Dd1+uFXbiY/hH5Q
-! Diff-Path: ../patches/17/17-s-1725536365-3600.patch
+! Checksum: MZFl2cAp3ZjFqsGD/kca/g
+! Diff-Path: ../patches/17/17-s-1725550634-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.9.19
-! TimeUpdated: 2024-09-05T11:35:14+00:00
+! Version: 2.0.9.20
+! TimeUpdated: 2024-09-05T15:33:09+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21,6 +21,8 @@
 ! Bad:  $removeparam=utm_id,domain=example.org (for instance, should be in specific.txt)
 !
 !
+! Unidentified email subscription system
+$removeparam=_bhlid
 ! Not identified. Popular on Japanese sites
 $removeparam=_bdadid
 ! a8.net
@@ -371,6 +373,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187863
+||camsoda.com^$removeparam=id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188010
 ||aeza.net^$removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187850
