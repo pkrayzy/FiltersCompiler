@@ -1,9 +1,9 @@
-! Checksum: UHYbFC01iV/kgRvhSrGKIA
-! Diff-Path: ../patches/14/14-s-1725604585-3600.patch
+! Checksum: 6D97Nx06CLrEAgckDTk1mw
+! Diff-Path: ../patches/14/14-s-1725615432-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.7.62
-! TimeUpdated: 2024-09-06T06:33:07+00:00
+! Version: 2.2.7.63
+! TimeUpdated: 2024-09-06T09:33:36+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2471,6 +2471,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+tipsport.cz##div[class^="Consentstyled__Banner"]
 kudyznudy.cz##.sx-cinfo
 rtl2.de#%#//scriptlet('trusted-click-element', '.message-component > button[title="Einstellungen anpassen"]')
 rtl2.de#%#//scriptlet('trusted-click-element', '.message-component > button[title="Auswahl speichern"]')
@@ -2526,6 +2527,7 @@ herohero.co#%#//scriptlet('trusted-set-local-storage-item', '__heroheroCookies',
 kanaldim.tv##.privacy-policy-block
 snipcart.com##.site-cookie-alert
 flocktory.com##.sc-CookiesNotification
+woolworth.de,woolworth.pl,woolworth.at#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialog input#CybotCookiebotDialogBodyLevelButtonPreferences, #CybotCookiebotDialog input#CybotCookiebotDialogBodyLevelButtonMarketing, #CybotCookiebotDialog button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection')
 mullerpolska.pl#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialog a#CybotCookiebotDialogBodyButtonAccept')
 tass.ru##div[class^="CookieAcceptance_container"]
 go.bancatransilvania.ro##.gdprcookie-wrapper
@@ -15999,6 +16001,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188113
+@@||consent.cookiebot.eu/uc.js$domain=woolworth.de|woolworth.pl|woolworth.at
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187965
 godollokertje.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187946
@@ -24530,6 +24534,7 @@ g123.jp,binance.com,boredpanda.com#%#//scriptlet('set-constant', 'navigator.cred
 !
 ! SECTION: Popups - Regular rules
 !
+archive.org##psa-banners
 store.shopping.yahoo.co.jp###smlmdl
 store.shopping.yahoo.co.jp##div[class^="styles_buttons"] > div.Tip:has(> div.Tip__contents p.Tip__title:contains(ギフト機能が追加されました))
 avrebo.com#$?#body > div.MuiDialog-root:has(> div.MuiDialog-container img[src^="/images/recruit/"]) { display: none !important; }
@@ -32803,12 +32808,13 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+paratiritis-news.gr##.page-footer > div[class]:has(> .container > .row > div[class] > form[data-name="Newsletter Form"])
 tproger.ru##.tp-tag-subscription-banner
 tproger.ru##.tp-layout-default__aside-right-widget--digest-subscribe
 politico.com##.content-heading:has(> div > h2 > a[href="https://www.politico.com/newsletters"])
 nitroflare.com###superbox-wrapper
 nitroflare.com###superbox-overlay
-baseball-reference.com###content > .callout:has(> div > a[href*="/email?"])
+baseball-reference.com###content > .callout
 thebignewsletter.com##div[class*="_subscribeDialog_"]
 thebignewsletter.com##div[class*="_subscribeDialog_"] + div[class^="_background_"]
 israelnationalnews.com##.article-join
@@ -41418,8 +41424,10 @@ mts.by##.main-slider__item[style*="/content/app"]
 news.nifty.com##.widget_official_full_app
 vk.sportsbull.jp##.banner-area
 livelaw.in###header_ad_mobile
-sports.smt.docomo.ne.jp#$##app_ad_bnr { display: none!important; }
+sports.smt.docomo.ne.jp#$##app_ad_bnr { display: none !important; }
 sports.smt.docomo.ne.jp#$##wrapper_low[style^="top:"] { top: 0 !important; }
+service.smt.docomo.ne.jp###app_ad_bnr
+service.smt.docomo.ne.jp#$##wrapper_low { padding-top: 0px !important; }
 kotobank.jp###ftInfo
 flightradar24.com##.overlay-open-in-app-button
 giphy.com##div[class*="OpenInAppContainer"]
@@ -46771,6 +46779,10 @@ habr.com##.tm-article-card-list > li.tm-article-card-list__item:has(> div.tm-pro
 habr.com#?#section.tm-block_spacing-around:has(> header > div > h2:contains(Ближайшие события))
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188041
+op.gg##a[href="https://tft.op.gg/meta-trends/comps"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/188045
+topics.smt.docomo.ne.jp##.dmenu_modal_hide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187600
 viherpeukalot.fi#$#.fancybox-container { display: none !important; }
 viherpeukalot.fi#$#.fancybox-active { overflow: auto !important; }
@@ -54635,6 +54647,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 !   SECTION: Widgets - Marketing (specific)
 !
+spb.t2.ru##div[data-cartridge-type="MiaRecommendationsT2"]
 cifrus.ru###pop_up_bl
 iguides.ru##.listing-mini
 biggeek.ru###callback-btn

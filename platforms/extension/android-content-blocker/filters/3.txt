@@ -1,8 +1,8 @@
-! Checksum: N0icpsrMQBImfke/hG4WAA
+! Checksum: zlEUhwa39iiNjkXkiB8Yig
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.74.46
-! TimeUpdated: 2024-09-05T20:32:18+00:00
+! Version: 2.0.74.47
+! TimeUpdated: 2024-09-06T09:33:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -253,16 +253,18 @@ itmedia.co.jp#$##ulCommentWidget[style*="display"] { display: block !important; 
 !
 ! Suppressing Google's "Protected" Audience API:
 ! https://wicg.github.io/turtledove/
-! TODO: Add a scriptlet: https://github.com/AdguardTeam/Scriptlets/issues/395
+! https://github.com/AdguardTeam/Scriptlets/issues/395
 !
 ! Suppressing both Google's Topics API and Topics API using Permissions policy
-! Works in CoreLibs-based AdGuard versions, the browser extension waits for https://github.com/AdguardTeam/tsurlfilter/issues/66
-! Part with "://*.*" before "$permissions=" is required, otherwise it will be marked as too wide rule
 ! AGLint temporarily disabled for this rule due to https://github.com/AdguardTeam/AGLint/issues/191
 ! TODO: Enable it back when AGLint is fixed.
-! TODO: remove $document modifier after versions with Corelibs 1.14.38+ will be released
 ! aglint-disable-next-line
-://*.*$document,permissions=join-ad-interest-group=()\,run-ad-auction=()\,browsing-topics=()
+! aglint-disable-next-line
+! aglint-disable-next-line
+!
+! Suppressing Private State Token API
+! aglint-disable-next-line
+! aglint-disable-next-line
 !
 ! End: Rules for Google "Privacy" Sandbox
 !
