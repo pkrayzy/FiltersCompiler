@@ -1,9 +1,9 @@
-! Checksum: wEMYMB1iaDP+m62RLYiJSA
-! Diff-Path: ../patches/16/16-s-1725687391-3600.patch
+! Checksum: Haq/0ovc/wLBnWjG0GsGSQ
+! Diff-Path: ../patches/16/16-s-1725766599-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.46.62
-! TimeUpdated: 2024-09-07T05:33:14+00:00
+! Version: 2.0.46.63
+! TimeUpdated: 2024-09-08T03:33:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -251,13 +251,13 @@ monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementB
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147842
 japscan.lol#%#//scriptlet('spoof-css', '.navbar-nav > li.nav-item > a[href^="https://www.origoclick.com"]', 'display', 'block')
 @@$image,domain=japscan.lol
-@@||japscan.lol^$image,xmlhttprequest,~third-party
+@@||japscan.lol^$image,xmlhttprequest,script,~third-party
 japscan.lol#@#.tangoai
 japscan.lol#@#[class^="copine"]
-@@||japscan.lol^$script,~third-party
 @@||japscan.lol^$generichide
 japscan.lol#%#(()=>{const n={construct:(n,o,t)=>{const e=o[0];if(e&&e.includes("return typeof"))throw new ReferenceError;return Reflect.construct(n,o,t)}};window.Function=new Proxy(window.Function,n)})();
 japscan.lol#%#!function(){const t={apply:(t,n,o)=>{if(n&&n.match?.(/_\$_|DklzSoz|_adbn_/))throw Error();return Reflect.apply(t,n,o)}};window.String.prototype.split=new Proxy(window.String.prototype.split,t)}();
+@@||statically.io^$script,domain=japscan.lol
 @@||netlify.app^$script,domain=japscan.lol
 @@||iili.io^$xmlhttprequest,domain=japscan.lol
 @@||imageshack.com^$xmlhttprequest,domain=japscan.lol
