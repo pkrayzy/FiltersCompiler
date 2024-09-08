@@ -4,8 +4,8 @@
 ! Codename: PASS
 ! Description: Filtry blokujące i ukrywające elementy RSS oraz resztki po ukrytych newsletterach złączonych z elementami społecznościowymi na polskojęzycznych stronach.
 ! Używanie listy „Polski Antyirytujący Dodatek Specjalny" jest jednoznaczne ze świadomością, co do jej zawartości (co blokuje itp.) a twórcy nie ponoszą odpowiedzialności za niewiedzę użytkownika.
-! Last modified: Sun, 08 Sep 2024, 00:55 UTC+02:00
-! OriginalVersion: 2024.9.1
+! Last modified: Sun, 08 Sep 2024, 14:09 UTC+02:00
+! OriginalVersion: 2024.9.4
 ! Expires: 7 days
 ! Support:
 !   Github => https://github.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/issues
@@ -16,7 +16,39 @@
 ! Aktualizacja: @localizedDT
 !
 !
-! Specyficzne reguły ukrywające
+! Ogólne filtry ukrywające
+~google.co.uk,~google.com,~google.de,~pl##.google-news-banner:lang(pl)
+~google.co.uk,~google.com,~google.de,~pl##.google-news:lang(pl)
+~google.co.uk,~google.com,~pl##a[href*="news.google.com/publications/"] img:lang(pl)
+~google.pl,pl##.google-news
+~google.pl,pl##.google-news-banner
+~pl##footer a[href$="/rss.xml"]:lang(pl)
+~pl##li > a > .icon-rss:lang(pl)
+info,pl##.stickySocialIcon a[href*=".xml"]
+pl###naglowek-link-rss
+pl###s_rss[href*="/feed"]
+pl##.art-bar-googlenews
+pl##.fa-rss
+pl##.fa-rss-square
+pl##.fusion-icon-rss
+pl##.g-news
+pl##.rss-button
+pl##.rss:not(.block)
+pl##.s_rss[href*="/feed"]
+pl##.slide-rss-out-div
+pl##.top-bar .social a[href="/rss"]
+pl##a[href*="news.google.com/publications/"] img
+pl##footer .social a[href="/rss"]
+pl##footer a[href$="/rss.xml"]
+pl##li > a > .icon-rss
+!
+!
+! Ogólne filtry blokujące
+/ico_rss.
+/rss.png
+!
+!
+! Specyficzne filtry ukrywające
 4kdownload.com##.community__item--feed.community__item
 4media.com,tvmaster.eu,wielicka.tv##.social > .rss
 10minut.tv##.td-header-sp-top-widget a[href*="feedburner.com/"]
@@ -587,14 +619,12 @@ zxu.pl#?#.code-block:-abp-has(> a[href*="news.google.com/"])
 zyleta.info##.followupdate
 !
 !
-! Specyficzne reguły blokujące
+! Specyficzne filtry blokujące
 /feed.png$domain=booklips.pl|dzeta.com.pl|marcinmazurek.com.pl
-/ico_rss.
 /images/index_r.png$domain=deblin24.eu|lipsko24.pl|pionki24.pl
 /layouts/_sources/panel/img/icons/panel_rss.gif$domain=spzaduszniki.pl|superszkolna.pl
 /NKS-subscription/*$script,stylesheet,domain=ekorekta24.pl|niezlasztuka.net|sprawyzdrowia.pl
 /rss.gif$domain=e-moda.com.pl|mojacukrzyca.org|oglaszamy24.pl|sandecja.org
-/rss.png
 /rss_ico.png$domain=sprzedajemy.pl
 /rssfeed.gif$domain=wzzw.wordpress.com
 ||armybazar.eu/style/images/footer_rss.jpg
@@ -638,33 +668,13 @@ zyleta.info##.followupdate
 ||zdmk.krakow.pl/wp-content/themes/justidea_theme/assets/img/rss.svg
 !
 !
-! Ogólne reguły ukrywające
-~google.co.uk,~google.com,~google.de##a[href*="news.google.com/publications/"] img
-~google.co.uk,~google.com,~google.de,~pl##.google-news-banner:lang(pl)
-~google.co.uk,~google.com,~google.de,~pl##.google-news:lang(pl)
-~google.pl,pl##.google-news
-~google.pl,pl##.google-news-banner
-~pl##footer a[href$="/rss.xml"]:lang(pl)
-~pl##li > a > .icon-rss:lang(pl)
-info,pl##.stickySocialIcon a[href*=".xml"]
-pl###naglowek-link-rss
-pl###s_rss[href*="/feed"]
-pl##.art-bar-googlenews
-pl##.fa-rss
-pl##.fa-rss-square
-pl##.fusion-icon-rss
-pl##.g-news
-pl##.rss-button
-pl##.rss:not(.block)
-pl##.s_rss[href*="/feed"]
-pl##.slide-rss-out-div
-pl##.top-bar .social a[href="/rss"]
-pl##footer .social a[href="/rss"]
-pl##footer a[href$="/rss.xml"]
-pl##li > a > .icon-rss
+! Specyficzne filtry usuwające ABP
+!#if (ext_abp)
+!
+!#endif
 !
 !
-! Dodatkowe reguły dla uBO & AG
+! Dodatkowe filtry dla uBO & AG
 !#if (!adguard_ext_android_cb && !adguard_app_ios)
 30minut.pl#$#.gora_ikony { background: #00adef !important; padding: 0 0 3px 0 }
 30minut.pl#$#.gora_ikony_rss { visibility: hidden !important }
@@ -680,9 +690,6 @@ powiatkwidzynski.pl#$#a[href*="/index.php?format=feed&type=rss"], img[src="/port
 rootblog.pl#%#//scriptlet('ubo-rmnt.js', '#text', 'Chcesz być na bieżąco?')
 rootblog.pl##a[href*="news.google.com/publications/"] b
 sprzedajemy.pl#$##cntListRssLink { background-image: none !important }
-um.kielce.pl#%#//scriptlet('ubo-ra.js', 'href|title', 'map > area[alt="RSS"]', 'stay')
-um.kielce.pl#$?#map > area[alt="RSS"] { remove: true; }
-um.kielce.pl$$area[alt="RSS"]
 wsqn.pl#$#.extralight-border { border: none !important }
 www.lenovo.com#$#.footerForumsIcon:lang(pl) > a::before { color: white !important; content: "Z"; font-size: 18pt; font-weight: 700; position: relative; top: -3px; left: 10px }
 www.lenovo.com#$#.footerForumsIcon:lang(pl):hover { background: #e1140a !important }
