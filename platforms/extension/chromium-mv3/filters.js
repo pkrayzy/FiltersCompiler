@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.51.96",
-			"timeUpdated": "2024-09-09T10:31:24+0000",
+			"version": "2.3.51.97",
+			"timeUpdated": "2024-09-09T11:31:23+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.74.55",
-			"timeUpdated": "2024-09-09T09:32:18+0000",
+			"version": "2.0.74.56",
+			"timeUpdated": "2024-09-09T11:33:08+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -469,8 +469,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.56.34",
-			"timeUpdated": "2024-09-08T07:32:42+0000",
+			"version": "2.0.56.35",
+			"timeUpdated": "2024-09-09T11:33:22+0000",
 			"deprecated": false,
 			"languages": [
 				"ja"
@@ -643,8 +643,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.9.29",
-			"timeUpdated": "2024-09-08T21:33:11+0000",
+			"version": "2.0.9.30",
+			"timeUpdated": "2024-09-09T11:33:45+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -663,8 +663,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.47.19",
-			"timeUpdated": "2024-09-09T10:33:45+0000",
+			"version": "2.0.47.20",
+			"timeUpdated": "2024-09-09T11:33:46+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -786,6 +786,29 @@
 				11
 			],
 			"downloadUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/23.txt"
+		},
+		{
+			"filterId": 24,
+			"name": "AdGuard Quick Fixes filter",
+			"description": "Filter to quickly resolve content filtering issues on popular websites without updating the extension.",
+			"timeAdded": "2024-08-27T08:25:05+0000",
+			"homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
+			"expires": 864000,
+			"displayNumber": 2,
+			"groupId": 1,
+			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/24.txt",
+			"platformsIncluded": [
+				"ext_chromium_mv3"
+			],
+			"trustLevel": "full",
+			"version": "2.0.0.1",
+			"timeUpdated": "2024-09-09T11:33:50+0000",
+			"deprecated": false,
+			"languages": [],
+			"tags": [
+				10
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/24.txt"
 		},
 		{
 			"filterId": 103,
