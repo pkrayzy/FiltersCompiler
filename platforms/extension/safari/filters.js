@@ -444,8 +444,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/6_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.36",
-			"timeUpdated": "2024-09-09T09:32:29+0000",
+			"version": "2.0.43.37",
+			"timeUpdated": "2024-09-09T19:32:48+0000",
 			"deprecated": false,
 			"languages": [
 				"de"
