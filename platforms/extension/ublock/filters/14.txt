@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: x0LqvIZY5NV8wKhG9gNL7g
-! Diff-Path: ../patches/14/14-s-1725882235-3600.patch
+! Checksum: qVHRiwj6Vc0atoxyJn7f1g
+! Diff-Path: ../patches/14/14-s-1725885486-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.7.84
-! TimeUpdated: 2024-09-09T11:33:41+00:00
+! Version: 2.2.7.85
+! TimeUpdated: 2024-09-09T12:33:56+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2434,6 +2434,10 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+impotusa.com##div[id^="cookiesplus-"]
+stmas.bayern.de#$#body { overflow: auto !important; padding-right: 0 !important; }
+stmas.bayern.de#$##cookie { display: none !important; }
+stmas.bayern.de#$#.modal-backdrop { display: none !important; }
 meest.cn###cookiesModal
 meestposhta.com.ua##.df__cookie-popup
 volnamobile.ru##section.mantine-Modal-content
@@ -2589,9 +2593,9 @@ ed.ac.uk#$#body { overflow: auto !important; padding-right: 0 !important; }
 ed.ac.uk#$#uoe-consent { display: none !important; }
 gla.ac.uk##+js(set-cookie, gu_consent_set, true)
 leeds.ac.uk###cookie-control-prompt
-zadowolenie.pl#$#body { overflow: auto !important; }
-zadowolenie.pl#$#.cookie-message { display: none !important; }
-abel-falisse.be,zadowolenie.pl#$#.modal-backdrop { display: none !important; }
+wyspaszkrabow.pl,zadowolenie.pl#$#body { overflow: auto !important; }
+wyspaszkrabow.pl,zadowolenie.pl#$#.cookie-message { display: none !important; }
+wyspaszkrabow.pl,abel-falisse.be,zadowolenie.pl#$#.modal-backdrop { display: none !important; }
 united-camera.at##+js(set-cookie-reload, cookie-preference, 1)
 shop.mango.com##div[class^="CookiesLayout_"]
 iroszer24.hu##+js(set-constant, cookie_alert_overlay, undefined)
@@ -5886,7 +5890,8 @@ nebenan.de##.c-layout-wrap + article[class^="goodhood-components__"]
 hager.com#$#.ch2 { display: none!important; }
 hager.com#$#body { overflow: auto!important; }
 tea.ru##.blog__cookie
-xinedome.de,japannews.yomiuri.co.jp###consentModal
+p.sokai.jp,xinedome.de,japannews.yomiuri.co.jp###consentModal
+p.sokai.jp###consent_overlay
 more.hpplus.jp##.cookie-inquiry-container
 smarturl.it#$#div[aria-describedby="lnk-c-cta__description"] { display: none !important; }
 zuckerjagdwurst.com#$?##gatsby-focus-wrapper > div[class^="index-module--wrapper"]:has(div:contains(/^Wir verwenden Cookies!$/)) { display: none!important; }
@@ -15285,6 +15290,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188278
+wyspaszkrabow.pl#@#.cookie-message:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188261
 forrasztastechnologia.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188113
@@ -23458,12 +23465,14 @@ api.flocktory.com
 ! that is why cosmetic rule `###credential_picker_container` does not work
 ! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
 ! Warning: check, if auth using Google is not broken
-||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com|nypost.com|etnownews.com|timesnownews.com|menshealth.com|themirror.com|cq.ru|voetbalzone.nl|perplexity.ai|lefigaro.fr|lifehacker.ru
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com|nypost.com|etnownews.com|timesnownews.com|menshealth.com|themirror.com|cq.ru|voetbalzone.nl|perplexity.ai|lefigaro.fr|lifehacker.ru|app.notta.ai
 ! The rule for sites, where URL blocking rule blocks also Google's log in button
 g123.jp,binance.com,boredpanda.com##+js(set-constant, navigator.credentials.get, noopPromiseReject)
 !
 ! SECTION: Popups - Regular rules
 !
+app.notta.ai##section > div[class^="container__"]:has(> svg.close_icon___fko4e)
+scaler.com##div[class^="exit-intent_modal_main_container"]
 slevomat.cz#$#body { overflow: auto !important; padding-right: 0 !important; }
 slevomat.cz#$#.message-overlay--leave { display: none !important; }
 support.reddithelp.com##.lt-article-vote-feedback-container
@@ -50718,6 +50727,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188255
+meteomedia.com##+js(set-constant, jwplayer.defaults.autostart, '')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187267
 top-mods.com##+js(nano-setInterval-booster, timer_num, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186443

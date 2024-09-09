@@ -1,9 +1,9 @@
-! Checksum: nedPCDNL0plST9kQKKY/yw
-! Diff-Path: ../patches/18/18-s-1725881989-3600.patch
+! Checksum: 5otRT1m7IeUMG8A5RHg1Wg
+! Diff-Path: ../patches/18/18-s-1725885467-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.47.20
-! TimeUpdated: 2024-09-09T11:33:46+00:00
+! Version: 2.0.47.21
+! TimeUpdated: 2024-09-09T12:34:01+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2472,6 +2472,10 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+impotusa.com##div[id^="cookiesplus-"]
+stmas.bayern.de#$#body { overflow: auto !important; padding-right: 0 !important; }
+stmas.bayern.de#$##cookie { display: none !important; }
+stmas.bayern.de#$#.modal-backdrop { display: none !important; }
 meest.cn###cookiesModal
 meestposhta.com.ua##.df__cookie-popup
 volnamobile.ru##section.mantine-Modal-content
@@ -2657,9 +2661,9 @@ ed.ac.uk#$#body { overflow: auto !important; padding-right: 0 !important; }
 ed.ac.uk#$#uoe-consent { display: none !important; }
 gla.ac.uk#%#//scriptlet('set-cookie', 'gu_consent_set', 'true')
 leeds.ac.uk###cookie-control-prompt
-zadowolenie.pl#$#body { overflow: auto !important; }
-zadowolenie.pl#$#.cookie-message { display: none !important; }
-abel-falisse.be,zadowolenie.pl#$#.modal-backdrop { display: none !important; }
+wyspaszkrabow.pl,zadowolenie.pl#$#body { overflow: auto !important; }
+wyspaszkrabow.pl,zadowolenie.pl#$#.cookie-message { display: none !important; }
+wyspaszkrabow.pl,abel-falisse.be,zadowolenie.pl#$#.modal-backdrop { display: none !important; }
 united-camera.at#%#//scriptlet('set-cookie-reload', 'cookie-preference', '1')
 orange.jobs#%#//scriptlet('trusted-click-element', '.js-consent-all-submit')
 iberiaexpress.com#%#//scriptlet('trusted-click-element', '#rejectCookiesTerms')
@@ -6215,7 +6219,8 @@ nebenan.de##.c-layout-wrap + article[class^="goodhood-components__"]
 hager.com#$#.ch2 { display: none!important; }
 hager.com#$#body { overflow: auto!important; }
 tea.ru##.blog__cookie
-xinedome.de,japannews.yomiuri.co.jp###consentModal
+p.sokai.jp,xinedome.de,japannews.yomiuri.co.jp###consentModal
+p.sokai.jp###consent_overlay
 more.hpplus.jp##.cookie-inquiry-container
 smarturl.it#$#div[aria-describedby="lnk-c-cta__description"] { display: none !important; }
 zuckerjagdwurst.com#$?##gatsby-focus-wrapper > div[class^="index-module--wrapper"]:has(div:contains(/^Wir verwenden Cookies!$/)) { display: none!important; }
@@ -16017,6 +16022,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188278
+wyspaszkrabow.pl#@#.cookie-message:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188261
 forrasztastechnologia.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188113
