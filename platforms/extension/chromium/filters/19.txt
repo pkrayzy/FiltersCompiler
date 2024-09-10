@@ -1,9 +1,9 @@
-! Checksum: /JksI91qnMDKTHxw+JXJbg
-! Diff-Path: ../patches/19/19-s-1725950185-3600.patch
+! Checksum: V8WtBuZHRRxI6GwSX/ZDJg
+! Diff-Path: ../patches/19/19-s-1725964620-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.42.95
-! TimeUpdated: 2024-09-10T06:33:23+00:00
+! Version: 2.0.42.96
+! TimeUpdated: 2024-09-10T10:33:38+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4318,10 +4318,11 @@ api.flocktory.com
 ! Warning: check, if auth using Google is not broken
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com|nypost.com|etnownews.com|timesnownews.com|menshealth.com|themirror.com|cq.ru|voetbalzone.nl|perplexity.ai|lefigaro.fr|lifehacker.ru|app.notta.ai
 ! The rule for sites, where URL blocking rule blocks also Google's log in button
-tradingview.com,cnn.com,g123.jp,binance.com,boredpanda.com#%#//scriptlet('set-constant', 'navigator.credentials.get', 'noopPromiseReject')
+investing.com,tradingview.com,cnn.com,g123.jp,binance.com,boredpanda.com#%#//scriptlet('set-constant', 'navigator.credentials.get', 'noopPromiseReject')
 !
 ! SECTION: Popups - Regular rules
 !
+investing.com#%#//scriptlet('set-cookie', 'r_p_s_n', '1')
 404media.co###announcement-bar-root
 mental-navi.net##.c-flt-banner
 app.notta.ai##section > div[class^="container__"]:has(> svg.close_icon___fko4e)
@@ -10698,6 +10699,7 @@ ya.ru,yandex.*###distr-pcode-container
 ! Yandex.Mail
 mail.yandex.ru#$#div[data-test-id="promopopup"] { display: none !important; }
 mail.yandex.ru#$#body[style*="overflow:"] { overflow: auto !important; }
+mail.yandex.ru##main > div.ns-view-react-promo-container:has(> div.yagpt-neurofilter-banner-portal)
 !
 ! Yandex.Market
 market.yandex.*##div[data-apiary-widget-name="@MarketNode/ReviewPollPopup"]
