@@ -46,8 +46,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/1.txt",
-			"version": "2.0.93.67",
-			"timeUpdated": "2024-09-06T09:31:07+0000",
+			"version": "2.0.93.68",
+			"timeUpdated": "2024-09-10T11:31:05+0000",
 			"languages": [
 				"ru"
 			]
@@ -87,8 +87,8 @@
 			"displayNumber": 1,
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/4.txt",
-			"version": "2.1.5.62",
-			"timeUpdated": "2024-09-10T07:32:51+0000",
+			"version": "2.1.5.63",
+			"timeUpdated": "2024-09-10T11:32:55+0000",
 			"languages": []
 		},
 		{
@@ -234,8 +234,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.2.7.99",
-			"timeUpdated": "2024-09-10T10:33:30+0000",
+			"version": "2.2.8.0",
+			"timeUpdated": "2024-09-10T11:33:23+0000",
 			"languages": []
 		},
 		{
@@ -296,8 +296,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/18.txt",
-			"version": "2.0.47.32",
-			"timeUpdated": "2024-09-10T10:33:37+0000",
+			"version": "2.0.47.33",
+			"timeUpdated": "2024-09-10T11:33:28+0000",
 			"languages": []
 		},
 		{
@@ -309,8 +309,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/19.txt",
-			"version": "2.0.42.96",
-			"timeUpdated": "2024-09-10T10:33:38+0000",
+			"version": "2.0.42.97",
+			"timeUpdated": "2024-09-10T11:33:29+0000",
 			"languages": []
 		},
 		{
@@ -335,8 +335,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/21.txt",
-			"version": "2.0.25.94",
-			"timeUpdated": "2024-09-10T08:34:45+0000",
+			"version": "2.0.25.95",
+			"timeUpdated": "2024-09-10T11:33:30+0000",
 			"languages": []
 		},
 		{
@@ -1123,8 +1123,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/224.txt",
-			"version": "2.1.21.63",
-			"timeUpdated": "2024-09-10T10:33:44+0000",
+			"version": "2.1.21.64",
+			"timeUpdated": "2024-09-10T11:33:35+0000",
 			"languages": [
 				"zh"
 			]
