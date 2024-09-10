@@ -1,9 +1,9 @@
-! Checksum: Fc7lDYTjs+GOIBdgGgBENQ
-! Diff-Path: ../patches/18/18-s-1725975406-3600.patch
+! Checksum: ixD5miN65NfBCHUFzTZAxw
+! Diff-Path: ../patches/18/18-s-1725986380-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.47.35
-! TimeUpdated: 2024-09-10T13:32:48+00:00
+! Version: 2.0.47.36
+! TimeUpdated: 2024-09-10T16:35:33+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2475,6 +2475,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+octopusenergy.de#%#//scriptlet('trusted-click-element', 'a.cmptxt_btn_no')
+telemetr.io##.fixed.bottom-12
 nowysacz.pl#%#//scriptlet('trusted-set-cookie', 'settings', '{"ci":1,"ga":0,"gf":0}')
 verfwebwinkel.be#$#body { overflow: auto !important; padding-right: 0 !important; }
 verfwebwinkel.be#$##main-div > div[class]:empty { display: none !important; }
@@ -4709,7 +4711,7 @@ grillfuerst.de###cb-overlay
 theprotocol.it#?##__next > div[class] > div:not([class]):has([role="dialog"] a[href="/polityka-cookies"])
 theprotocol.it#?#div[class*="ContainerElement_"] > div[class*="GridElement_"] > div[data-xs]:has(a[href="/polityka-cookies"])
 theprotocol.it#?#div[class^="ContainerElement_"] > div:not([class]) > div[class^="Container_"]:has(> aside[data-test="section-cookieModal"])
-solanamobile.com,merlin.foyer.work##.rhc-banner
+allenai.org,solanamobile.com,merlin.foyer.work##.rhc-banner
 teztour.ee##.dialog-window
 x.com,communitynotes.twitter.com#?##main > div[class^="wrapper__"]:has(> div[aria-labelledby^="notice"])
 x.com,communitynotes.twitter.com#?##main > div[class^="sc-"] > div[class^="src__InlineCalloutElement"]
@@ -16071,6 +16073,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/25282
+@@||d.delivery.consentmanager.net/delivery/cmp.php$domain=octopusenergy.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/188362
+ibank.asb.by#@#.cc_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188386
 kh.hu#@##cookieConsentContainer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188365
