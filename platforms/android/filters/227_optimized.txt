@@ -1,9 +1,9 @@
-! Checksum: cohdTGj70zP6xT4rQ6K+vQ
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1725872751-14400.patch
+! Checksum: 32NW63PtQaKfo6bdg1523g
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1725944707-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.19.1
-! TimeUpdated: 2024-09-09T09:01:44+00:00
+! Version: 2.0.19.2
+! TimeUpdated: 2024-09-10T05:01:29+00:00
 ! Expires: 1 day (update frequency)
 ||centaurs-rest.coupang.com^
 ||ad.cashdoc.io^
@@ -499,6 +499,9 @@
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
+||kilho.net/img/b/
+/partners/*$domain=kilho.net
+||cpaheaven.co.kr/files/pr_banner/
 ||url.kr/my_url_ad.png
 ||d2c8akc1t97nhh.cloudfront.net/static/images/academies/*_ad_banner_$domain=academy.prompie.com
 ||d2c8akc1t97nhh.cloudfront.net/media/creators/$domain=academy.prompie.com
@@ -1477,6 +1480,8 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+kilho.net###coupangModal
+kilho.net##.modal-backdrop
 a-ha.io##div[class*=" "]:has(> .gliaplayer-container)
 lol.ps##div[class~="before:bg-psgr-disabled"]
 lol.ps##div[data-ad]
