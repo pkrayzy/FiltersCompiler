@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: U6D9EMCYJ0ayI2OX8jPMlg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726069152-3600.patch
+! Checksum: klKdy+svNCR3CrGXmYNPYw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726072642-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.52.32
-! TimeUpdated: 2024-09-11T15:31:24+00:00
+! Version: 2.3.52.33
+! TimeUpdated: 2024-09-11T16:31:21+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -78,6 +78,7 @@
 !
 !
 !
+||js.trendmd.com^$third-party
 ||fimrg.ajscdn.com^
 ||2497may2024.com^
 ||wgnefmhwookdh.com^
@@ -7730,9 +7731,10 @@ freedrivemovie.com##+js(abort-on-property-write, onload)
 docsmall.com#$#body { overflow: auto !important; }
 docsmall.com#$#.modal-ads-tip { display: none !important; }
 docsmall.com##+js(set-constant, adsbygoogle.loaded, true)
+! https://github.com/AdguardTeam/AdguardFilters/issues/188543
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188040
-drakecomic.com##+js(abort-on-property-write, checkAdBlocker)
-||drakecomic.com/wp-content/themes/mangareader/script.js
+drakecomic.*##+js(abort-on-property-write, checkAdBlocker)
+||drakecomic.*/wp-content/themes/mangareader/script.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187439#issuecomment-2324127972
 cruisingearth.com##+js(no-setTimeout-if, show())
 @@||cruisingearth.com/community/js/BJumh/top-ads.js
@@ -33805,6 +33807,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+techxplore.com,phys.org##.embed-responsive-trendmd
 ||quest4play.xyz/blast.js
 slang.net##.adTopLB
 slang.net##.adBotLB
