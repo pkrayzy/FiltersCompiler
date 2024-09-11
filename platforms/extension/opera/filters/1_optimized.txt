@@ -1,9 +1,9 @@
-! Checksum: rRh3LjR8GT5UnRJW3O0iGw
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1726069142-3600.patch
+! Checksum: +JAVUmeIN0gOPMcwGdY4MQ
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1726076227-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.93.75
-! TimeUpdated: 2024-09-11T15:31:06+00:00
+! Version: 2.0.93.76
+! TimeUpdated: 2024-09-11T17:31:38+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2073,6 +2073,8 @@ mail.ru,sportmail.ru##div[class*="m-fixed-panel__box"]
 mail.ru,sportmail.ru,~e.mail.ru,~my.mail.ru,~touch.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.mimic', 'null')
 @@||ad.mail.ru/adp/?_SITEZONE=$domain=mail.ru
 [$path=/^\/$|mail\.ru\/\?/]mail.ru##div[slot="main-column"] > div.tgb-wrapper
+mail.ru##div[slot="main-column"] > article[class]:empty
+mail.ru#$?#div[slot="main-column"] > *:has(*:matches-css(height:90px)) { remove: true; }
 [$path]mail.ru#%#//scriptlet('json-prune', '[].slot')
 my.mail.ru##.l-music__banner-728x90
 my.mail.ru##.sp-video__billboard
