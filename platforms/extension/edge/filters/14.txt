@@ -1,9 +1,9 @@
-! Checksum: Rh0j8BHb0ZWCTJLdemHqIg
-! Diff-Path: ../patches/14/14-s-1726036588-3600.patch
+! Checksum: Pe27yjxiKO1kZc+q9er3+Q
+! Diff-Path: ../patches/14/14-s-1726040178-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.8.8
-! TimeUpdated: 2024-09-11T06:33:16+00:00
+! Version: 2.2.8.9
+! TimeUpdated: 2024-09-11T07:33:06+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2473,6 +2473,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+zus.pl#$#body[class*="overflow"] { overflow: auto !important; }
+zus.pl#$#.p-dialog-mask-scrollblocker:has(> .cookie-consent-modal) { display: none !important; }
 explus.com.tw###amg-privacy-banner
 physiotherapie-naurod.de#$#div[id^="chimpify-"] { display: none !important; }
 physiotherapie-naurod.de#$#body { overflow: auto !important; }
@@ -15270,7 +15272,7 @@ augsburger-allgemeine.de#%#//scriptlet('trusted-click-element', 'button[onclick=
 tiktok.com#%#//scriptlet('prevent-addEventListener', 'touchmove', '.preventDefault():void')
 wartezeiten.app#%#//scriptlet('set-cookie-reload', 'wartezeitenapp_dsgvo', 'true')
 factcool.com#%#//scriptlet('set-cookie', 'cookieconsent_dismissed', 'yes')
-kick.com#%#//scriptlet('set-local-storage-item', 'kick_cookie_accepted', 'true')
+kick.com#%#//scriptlet('set-local-storage-item', 'cookies_accepted', 'false')
 ebilet.pl#%#//scriptlet('set-cookie', 'eb_cookie_agree', '1')
 roxy.fi,roxy.fr,roxy-denmark.dk,roxy-ireland.ie,roxy-store.se,roxy-uk.co.uk#%#//scriptlet('set-cookie', 'CONSENTMGR', '1')
 senda.pl#%#//scriptlet('set-cookie', 'cookieConsent3', 'true')
