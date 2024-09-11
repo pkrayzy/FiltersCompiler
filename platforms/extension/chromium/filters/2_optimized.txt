@@ -1,9 +1,9 @@
-! Checksum: 4o+/CkjqvdjakRDqnEHGiw
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1726047392-3600.patch
+! Checksum: TOmaqIU6pacmumuV0qoEOw
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1726051036-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.52.26
-! TimeUpdated: 2024-09-11T09:31:18+00:00
+! Version: 2.3.52.27
+! TimeUpdated: 2024-09-11T10:31:20+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -5594,6 +5594,11 @@ tko.pl##div[id^="nol24-"]
 niestatystyczny.pl#$#body { background-image: none !important; }
 jastrzebieonline.pl##div[class^="ad_"]
 onet.pl##a[href^="https://milionymonet.onet.pl/"]
+po-bandzie.com.pl##.elementor-widget-container > a:not([href*="po-bandzie.com.pl"], [href^="/"]) > img:is([alt=""], [alt*="_290x300"])
+po-bandzie.com.pl##.elementor-widget-container > aside > a:not([href*="po-bandzie.com.pl"], [href^="/"]) > img:is([alt=""], [alt*="_290x300"])
+po-bandzie.com.pl#?#div[data-widget_type="theme-post-content.default"] > .elementor-widget-container > p > strong:contains(/^REKLAMA/)
+po-bandzie.com.pl#?#div[data-widget_type="theme-post-content.default"] > .elementor-widget-container > p:has(> strong:contains(/^REKLAMA/)) + p:last-child > a
+po-bandzie.com.pl#?#div[data-widget_type="theme-post-content.default"] > .elementor-widget-container > p:has(> strong:contains(/^REKLAMA/)) + p > img
 conowego.pl##a.gofollow[data-track]
 dnarynkow.pl##section[class^="banner"][class*="-spacer-"]
 pulshr.pl##.sad
@@ -9221,7 +9226,7 @@ infinityfree.com,timesofindia.indiatimes.com,heraldm.com,pravda.com.ua,winfuture
 missyusa.com,blog.esuteru.com,blog.livedoor.jp,carscoops.com,dziennik.pl,eurointegration.com.ua,flatpanelshd.com,fourfourtwo.co.kr,issuya.com,itainews.com,iusm.co.kr,logicieleducatif.fr,mydaily.co.kr,onlinegdb.com,pravda.com.ua,reportera.co.kr,sportsrec.com,taxguru.in,text-compare.com,thestar.co.uk,tweaksforgeeks.com,videogamemods.com,wfmz.com,winfuture.de,worldhistory.org,yorkshirepost.co.uk,dramabeans.com#%#//scriptlet('prevent-setTimeout', 'error-report.com')
 crosswordsolver.com#%#//scriptlet('abort-current-inline-script', 'Symbol', 'error-report.com')
 thesaurus.net#%#//scriptlet('prevent-setTimeout', 'loader.min.js')
-tweaksforgeeks.com#%#//scriptlet('remove-node-text', 'script', 'KCgpPT57bGV0IGU')
+mlbpark.donga.com,tweaksforgeeks.com#%#//scriptlet('remove-node-text', 'script', 'KCgpPT57bGV0IGU')
 www.infinityfree.com#%#//scriptlet('trusted-create-element', 'head', 'link', 'rel="stylesheet" href="https://www.infinityfree.com/css/bundle.min.1f303fb496f0cf32c84c7d78432ca78e7e88ad2dc984192e4faa19b8c1fffc8c.css"')
 dash.infinityfree.com#%#//scriptlet('trusted-create-element', 'head', 'link', 'rel="stylesheet" href="https://dash.infinityfree.com/build/assets/clients-041be5e3.css"')
 dogdrip.net,smsonline.cloud,infinityfree.com#%#!function(){const e={apply:(e,r,o)=>{const t=(new Error).stack,n=r?.getAttribute("onerror");if(n&&n?.includes(".error-report.")&&t.includes("loader.min.js"))throw Reflect.apply(e,r,o),new ReferenceError;return Reflect.apply(e,r,o)}};window.Element.prototype.remove=new Proxy(window.Element.prototype.remove,e)}();
@@ -14251,7 +14256,6 @@ telegraph.bg##.banner
 zamunda.*##a[href^="https://dmsbg.com/"]
 zamunda.ch,zamunda.net##.clickads
 -ad-bottom-
--ad-column-
 -ad-manager/$~stylesheet
 -ad-right.
 -ad-unit.
@@ -14342,7 +14346,7 @@ zamunda.ch,zamunda.net##.clickads
 /ad.html?
 /ad.min.js$script
 /ad/a.aspx?
-/ad/dfp/js/dfp.js
+/ad/dfp/*$script
 /ad/image/*$image
 /ad/images/*$image,domain=~studiocalling.it
 /ad/img/*$image,domain=~eki-net.com|~jiji.com
@@ -14394,7 +14398,7 @@ zamunda.ch,zamunda.net##.clickads
 /adpartner.min.js$script
 /adplayer.$script,domain=~adplayer.pro
 /adplugin.
-/adpopup.js
+/adpopup.js$script
 /adright.$domain=~adright.com
 /adriver.$~script,domain=~adriver.co
 /ads-250.$image
@@ -14494,7 +14498,6 @@ zamunda.ch,zamunda.net##.clickads
 /amp4ads-host-v0.js$script
 /ane-popup-1/ane-popup.js$script
 /ane-popup-banner.js$script
-/annonser.
 /api/ad.$script
 /api/ads?
 /apstag.js
@@ -14537,6 +14540,7 @@ zamunda.ch,zamunda.net##.clickads
 /delivery/fc.php$script,subdocument
 /delivery/lg.php$script,subdocument
 /dfp.min.js$third-party
+/dfp_async.js$script
 /didna_config.js
 /discourse-adplugin-$script
 /dmcads_$script
@@ -14624,8 +14628,7 @@ zamunda.ch,zamunda.net##.clickads
 /nb/frot_lud.js$script
 /new/floatadv.js$script
 /ntv.json?key=
-/nwm-fcn.min.js
-/nwm-pw2.min.js
+/nwm-pw2.min.js$script
 /nxst-advertising/dist/htlbid-advertising.min.js
 /oiopub-direct/js.php$script
 /oncc-ad.js$script
@@ -14728,7 +14731,7 @@ zamunda.ch,zamunda.net##.clickads
 /script/xxAG1.js$third-party
 /scripts/chatur.js
 /sdk/push_web/?zid=
-/serveads.php
+/serveads.php$script
 /servlet/view/*$script
 /sft-prebid.js$script
 /show-ad.js$script
@@ -14951,7 +14954,6 @@ _top_ad.
 /pubfig.min.js
 _prebid.js
 ?zoneid=*&ab=1
-/datomata.widget.js
 /jquery.peelback.
 -detect-adblock.
 /ad-blocking-advisor/*$script,stylesheet
@@ -29363,7 +29365,7 @@ the-express.com##.stn-video-container
 si.com##.style_hfl21i-o_O-style_uhlm2
 gamesradar.com,tomsguide.com,tomshardware.com,whathifi.com##.vid-present
 sportskeeda.com##.vidazoo-player-container
-justthenews.com,movieweb.com,thegamer.com##.video
+justthenews.com##.video
 bowhunter.com,firearmsnews.com,flyfisherman.com,gameandfishmag.com,gunsandammo.com,handgunsmag.com,in-fisherman.com,northamericanwhitetail.com,petersenshunting.com,rifleshootermag.com,shootingtimes.com,wildfowlmag.com##.video-detail-player
 ukrinform.de,ukrinform.es,ukrinform.fr,ukrinform.jp,ukrinform.net,ukrinform.pl,ukrinform.ua##[style^="min-height: 280px;"]
 yahoo.com###Lead-0-Ad-Proxy
@@ -29740,6 +29742,7 @@ thegay.com##.video-slider-container
 kisscos.net##.video-sponsor
 senzuri.tube##.video-tube-friends
 china-tube.site,china-tubex.site##.videoAd
+koreanjav.com##.videos > .column:not([id])
 eporner.com##.vjs-inplayer-container
 porndoe.com##.vpr-section
 pornone.com##.warp
@@ -29823,6 +29826,7 @@ cam4.*##div[class^="SponsoredAds_"]
 redgifs.com##.SideBar-Item:has(> [class^="_liveAdButton"])
 kimochi.info##.gridlove-posts > .layout-simple:has(.gridlove-archive-ad)
 4kporn.xxx,crazyporn.xxx,hoes.tube,love4porn.com##.item:has(> [class*="ads"])
+vagina.nl##.list-item:has([data-idzone])
 darknessporn.com,familyporner.com,freepublicporn.com,pisshamster.com,punishworld.com,xanimu.com##.no-gutters > .col-6:has(> #special-block)
 pornhub.com##.sectionWrapper:has(> #bottomVideos > .wrapVideoBlock)
 pornhub.com##div[class="video-wrapper"] > .clear.hd:has(.adsbytrafficjunky)
