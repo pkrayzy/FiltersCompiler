@@ -1,9 +1,9 @@
-! Checksum: uSM+DEbTkNutwzMwwxMGDQ
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1726065444-3600.patch
+! Checksum: UDOLcFlaHUGC+Ksg9YM+PQ
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1726069158-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.93.74
-! TimeUpdated: 2024-09-11T14:31:04+00:00
+! Version: 2.0.93.75
+! TimeUpdated: 2024-09-11T15:31:06+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2250,6 +2250,9 @@ yandex.*##body[data-bem*="turbo"] div[class*="_type_"][class*="aside-"][data-nam
 yandex.*##body[data-bem*="turbo"] div[class*="auto"][data-name][data-log-node]
 yandex.*##body[data-bem*="turbo"] div.turbo-advert
 yandex.*##body[data-bem*="turbo"] div[data-name="advert"]
+[$path=/games]yandex.*##div[class$="-wrapper_with-disable-ad-button"]
+[$path=/games]yandex.*#$#div[style^="width: calc(100% - "] { width: 100% !important; }
+[$path=/games]yandex.*#%#//scriptlet('trusted-click-element', '.play-yandex-yandex-adaptive + span.close-button_type_adv-fullscreen', '', '5000')
 ||yandex.*/games/$xmlhttprequest,jsonprune=\$..[direct\, "rtb"]
 yandex.*##.stack > div[class^="sticky-"]
 [$path=/games]yandex.*##div[style="width: 240px; margin-top: -32px; height: 100vh;"]
@@ -6654,6 +6657,7 @@ knigipofoto.ru#@#.wrapad
 @@||op.yandex.ru$document
 zerkalo.io##div[style="text-align: center; height: 250px;"]
 zerkalo.io##div[style="height:250px; text-align: center;"]
+sn.kz##.top-adv-sec
 stan.kz##.admanager_block
 ||stan.kz/js/admanager_v*.js
 stan.kz##[class^="branding_"]
