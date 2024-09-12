@@ -1,8 +1,8 @@
-! Checksum: Mt+K9piqswgDpCy4D1r88g
+! Checksum: gro4Nw9q1KZ2WRVQUQ0y7Q
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.8.26
-! TimeUpdated: 2024-09-12T10:33:14+00:00
+! Version: 2.2.8.27
+! TimeUpdated: 2024-09-12T11:33:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2472,6 +2472,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+generativeai.pub###root ~ div:has(button[data-testid="close-button"])
 culturaocio.com##.bloquePie
 przegladpiaseczynski.pl#%#//scriptlet('set-cookie', 'cc', '1')
 florence.com.tr#%#//scriptlet('trusted-set-local-storage-item', 'cookieConsent', '{"requiredCookies":true,"functionality":false,"advertisingAndRetargeting":false,"analytics":false}')
@@ -51249,6 +51250,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188611
+bcvc.ink#%#//scriptlet('adjust-setInterval', 'bcvcCountDown', '*', '0.001')
+bcvc.ink#%#//scriptlet('trusted-click-element', '.redirectSc a[href="#getLink"]#getLink:not([style="display: none"])')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188255
 meteomedia.com#%#//scriptlet('set-constant', 'jwplayer.defaults.autostart', '')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187267
