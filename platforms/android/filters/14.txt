@@ -1,9 +1,9 @@
-! Checksum: 0+YR8PZne5Mg5NQAw8I3/A
-! Diff-Path: ../patches/14/14-s-1726119382-3600.patch
+! Checksum: m1V5ZoLdx9RamW1OdTeI6A
+! Diff-Path: ../patches/14/14-s-1726122997-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.8.23
-! TimeUpdated: 2024-09-12T05:33:15+00:00
+! Version: 2.2.8.24
+! TimeUpdated: 2024-09-12T06:33:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2473,6 +2473,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+florence.com.tr#%#//scriptlet('trusted-set-local-storage-item', 'cookieConsent', '{"requiredCookies":true,"functionality":false,"advertisingAndRetargeting":false,"analytics":false}')
 chemist-4-u.com#%#//scriptlet('trusted-set-cookie', 'CookieConsent', '%5B%7B%22name%22%3A%22basic%22%2C%22value%22%3Atrue%7D%2C%7B%22name%22%3A%22preferences%22%2C%22value%22%3Afalse%7D%2C%7B%22name%22%3A%22statistics%22%2C%22value%22%3Afalse%7D%2C%7B%22name%22%3A%22marketing%22%2C%22value%22%3Afalse%7D%5D')
 monro.com#%#//scriptlet('trusted-set-cookie', 'cookiemonster-gdpr', '$now$')
 seenebula.com###shopify-section-fixed-message
@@ -4756,7 +4757,7 @@ myshopify.com,quantumleapfitness.de,sanctum.shop,nakedoptics.net,tartanblanketco
 myshopify.com,quantumleapfitness.de,sanctum.shop,nakedoptics.net,tartanblanketco.com#$##gdpr-blocking-page-overlay { display: none !important; position: absolute !important; left: -3000px !important; z-index: 0 !important; }
 phonegigant.nl##.cookie-fade
 gov.wales###wg_cookie
-blog.google,about.google,translate.google.*,photomath.com,youtube.com,deepmind.google,web.dev,workspace.google.com,ai.google.dev,tensorflow.org,play.google.*,developer.chrome.com,developers.google.com,cloud.google.com,landing.google.*,edu.google.com,ai.google,android.com##.glue-cookie-notification-bar
+chromeenterprise.google,blog.google,about.google,translate.google.*,photomath.com,youtube.com,deepmind.google,web.dev,workspace.google.com,ai.google.dev,tensorflow.org,play.google.*,developer.chrome.com,developers.google.com,cloud.google.com,landing.google.*,edu.google.com,ai.google,android.com##.glue-cookie-notification-bar
 redd.it##reddit-cookie-banner
 imkergut.de##.page-wrap--cookie-permission-background
 trucksbook.eu#$#.modal-backdrop { display: none !important; }
@@ -16117,6 +16118,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188542
+florence.com.tr#@#.cookie-modal
+florence.com.tr#@##cookieModal
+florence.com.tr#@#.consent-container
 ! https://github.com/uBlockOrigin/uAssets/issues/25282
 @@||d.delivery.consentmanager.net/delivery/cmp.php$domain=octopusenergy.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188362
@@ -21798,6 +21803,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+bleachernation.com#%#//scriptlet('set-session-storage-item', 'fs.adb6512.dis', '1')
 bilibili.com#$?#.bili-video-card > div[class]:only-child:matches-css(before, content: /Adblock/) { remove: true; }
 bilibili.com##.recommended-swipe-body div[class*="slide "]:has(> div.carousel-area > div > a[href*="cm.bilibili.com"][data-target-url]:not([data-target-url*=".bilibili.com/"]))
 xxtt.info##.popup
@@ -25948,7 +25954,7 @@ rainews.it##.the_player > div[style*="position: fixed;"]
 moroccoworldnews.com###worldCC
 douyu.com##.ANNUAL202211
 visualstudio.microsoft.com###vscom-modal-surveypopup
-ficbook.me,ficbook.net##button.discount
+ficbook.net##button.discount
 unionpedia.org#$#.modalBack { display: none !important; }
 unionpedia.org#$#body[style="overflow: hidden;"] { overflow: auto !important; }
 style.yahoo.com##.player > div.vp-docked
@@ -32158,9 +32164,9 @@ fotospor.com,igfhaber.com,sozbursa.com,bursahayat.com.tr,bursahakimiyet.com.tr##
 sport24.ua,24tv.ua##app-notification-popup
 insider.com##.notification-prompt-wrapper
 ||aylink.co/*/js/push.latest.min.js
-ficbook.me,ficbook.net#$##notificationsSubscribeModal { display: none !important; }
-ficbook.me,ficbook.net#$#body { overflow: visible !important; padding-right: 0 !important; }
-ficbook.me,ficbook.net#$##notificationsSubscribeModal ~ .modal-backdrop { display: none !important; }
+ficbook.net#$##notificationsSubscribeModal { display: none !important; }
+ficbook.net#$#body { overflow: visible !important; padding-right: 0 !important; }
+ficbook.net#$##notificationsSubscribeModal ~ .modal-backdrop { display: none !important; }
 eisamay.com,samayam.com,indiatimes.com##.notification_popup
 ||149.56.24.226/service-worker.js
 ||fahrradmagazin.net/p/app.js
@@ -36463,7 +36469,7 @@ coop-land.ru##article > div.text-center[style="margin-bottom: 20px;"]
 coop-land.ru##article > div[class="center m10"]
 genshinpedia.ru,hochschul-bibelkreise.de,ganc-chas.by##.wp-block-wptelegram-widget-join-channel
 vesti.ua##.mainContentBlock > div.mainContent > div.singleContentFooter
-ficbook.me,ficbook.net##.header-holder > div.alert
+ficbook.net##.header-holder > div.alert
 reform.news##div[class="b-r b-r--after_p_1"]
 reform.news##.b-r > noindex
 blobstreaming.org,quillette.com,creativerly.com,axion.zone,crio.do###ghost-portal-root
@@ -41635,7 +41641,7 @@ lazada.co.th###module_guide_app
 getpocket.com##div[data-cy="reader-flyaway-apps"]
 operanewsapp.com##.footer-wrapper
 navitime.co.jp###appli-dl-frame
-ficbook.me,ficbook.net##.install-app-container
+ficbook.net##.install-app-container
 translate.google.*##div[class][jsname] > div[class] > c-wiz > div[class][jsname][style^="transform: matrix("]
 budzdorov.ru##.popup-metadata-popup__paranja
 selfmind.ai##.store-bannar-container
@@ -51358,13 +51364,13 @@ tele2.ru##div[data-cartridge-type="PersonalizedTizer"]
 ||bb.tele2.ru/media/video/*desktop$domain=tele2.ru
 !
 ! ficbook.net
-ficbook.me,ficbook.net##section.fanfic-promo-carousel
-ficbook.me,ficbook.net##.save-as-feed-box
-ficbook.me,ficbook.net##.fanfic-promo
-ficbook.me,ficbook.net#?#.home-block > h3:contains(Промо фанфиков)
-ficbook.me,ficbook.net##.help-box
-ficbook.me,ficbook.net##a[class^="global-banner"][href^="https://t.me/"]
-ficbook.me,ficbook.net##.ficfan-banner
+ficbook.net##section.fanfic-promo-carousel
+ficbook.net##.save-as-feed-box
+ficbook.net##.fanfic-promo
+ficbook.net#?#.home-block > h3:contains(Промо фанфиков)
+ficbook.net##.help-box
+ficbook.net##a[class^="global-banner"][href^="https://t.me/"]
+ficbook.net##.ficfan-banner
 !
 !+ NOT_OPTIMIZED
 paperpaper.ru##.stk-post > div.stk-grid:has(> div[class] > a[href^="https://papersupport.ru/"])
