@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: AQSOdQxZKu5hQI8X+NgG+A
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726205821-3600.patch
+! Checksum: NaFe9atLKwG0ozTf84Bsuw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726209431-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.52.51
-! TimeUpdated: 2024-09-13T05:31:20+00:00
+! Version: 2.3.52.52
+! TimeUpdated: 2024-09-13T06:31:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7724,6 +7724,9 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188653
+||plustream.com//assets/detect_extension.js
+plustream.com##+js(no-fetch-if, /suurl5)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188452
 zeemoontv-28.blogspot.com##+js(abort-on-property-write, antiAdBlockerHandler)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188413
@@ -33807,6 +33810,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+lifewire.com#$#main#main { margin-top: 0px !important; }
+opencritic.com##div[_ngcontent-serverapp-c75]:has(> app-home-carousel-v3[title="Featured Deals"])
 transtxxx.com##.index-page > .wrapper > div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
 transtxxx.com##.suggestion ~ div[class]:has(> div[class] > div[id][class]:empty + div[id][class]:empty)
 transtxxx.com##.video-content div[class]:has(> div[class] > div[id][class] > noscript)
@@ -33932,6 +33937,7 @@ vods.tv##div:is(.container, [class^="jss"]) > a[target="_blank"]
 livarava.com##div[id^="ad-"]
 livarava.com##div:has(> div[id^="ad-"]:only-child)
 livarava.com##div:has(> div:empty:first-child + div[id^="ad-"]:last-child)
+lolalytics.com##.hidden > .h-\[100px\][q\:id]:has(> div[id*="\:leaderboard"]:only-child)
 lolalytics.com##.flex > .hidden > div[id="tl\:rect"][q\:id]:empty
 vxxx.com#?#.main-content > .wrapper > div[class]:has(> div:contains(Advertisement))
 /whisperingauroras\.com\/[a-z0-9]{20,32}\.js/$domain=whisperingauroras.com
