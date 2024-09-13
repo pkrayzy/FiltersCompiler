@@ -639,8 +639,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.70.43",
-			"timeUpdated": "2024-09-13T16:05:31+0000",
+			"version": "2.0.70.44",
+			"timeUpdated": "2024-09-13T16:12:16+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -847,8 +847,8 @@
 		},
 		{
 			"filterId": 101,
-			"name": "EasyList",
-			"description": "EasyList is the primary subscription that removes adverts from web pages in English. Already included in AdGuard Base filter.",
+			"name": "EasyList iOS",
+			"description": "Compilation of EasyList Fliters, Excluding Domains Blocked by DNS",
 			"timeAdded": "2014-06-30T07:56:55+0000",
 			"homepage": "https://github.com/easylist/easylist/",
 			"expires": 43200,
@@ -858,9 +858,9 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"trustLevel": "low",
-			"version": "2.1.32.92",
-			"timeUpdated": "2024-09-13T15:57:01+0000",
+			"trustLevel": "high",
+			"version": "2.1.32.93",
+			"timeUpdated": "2024-09-13T16:13:04+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1197,8 +1197,8 @@
 		},
 		{
 			"filterId": 118,
-			"name": "EasyPrivacy",
-			"description": "Privacy protection supplement for EasyList.",
+			"name": "EasyList Safari",
+			"description": "Compilation of EasyList Fliters, Excluding Domains Blocked by DNS",
 			"timeAdded": "2014-06-30T07:56:55+0000",
 			"homepage": "https://github.com/easylist/easylist/",
 			"expires": 43200,
@@ -1208,9 +1208,9 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"trustLevel": "low",
-			"version": "2.1.32.6",
-			"timeUpdated": "2024-09-13T15:57:04+0000",
+			"trustLevel": "high",
+			"version": "2.1.32.7",
+			"timeUpdated": "2024-09-13T16:16:19+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
