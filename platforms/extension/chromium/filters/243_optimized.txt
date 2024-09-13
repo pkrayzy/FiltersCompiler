@@ -1,9 +1,9 @@
-! Checksum: Lb3/9R/xRovJ1v6NEp/VSw
-! Diff-Path: ../patches/243_optimized/243_optimized-s-1726146355-14400.patch
+! Checksum: 3lp4gdwLYVR+1N0BUhbmAQ
+! Diff-Path: ../patches/243_optimized/243_optimized-s-1726203916-14400.patch
 ! Title: Frellwit's Swedish Filter (Optimized)
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.19.45
-! TimeUpdated: 2024-09-12T13:01:46+00:00
+! Version: 2.0.19.46
+! TimeUpdated: 2024-09-13T05:01:40+00:00
 ! Expires: 10 days (update frequency)
 .ads-gdprlock
 .ax/ad/
@@ -781,7 +781,7 @@ kb.se,dansportalen.se,hh.se##.sv-marketplace-sitevision-cookie-consent, .sv-cook
 kiacarclub.se##.forumlist-main-inner > div[style]
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se##a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], div[class^="yw-"], a[data-wpel-link="external"][target="_blank"]
-kimura.se##:is(div[data-elementor-type="loop-item"].post, .post > .e-con > .e-con > .e-con:not([data-settings])):has(.yw-midbanner)
+kimura.se##.post:not([data-elementor-type="single-post"]):has(div[class$="annonser"])
 kingmagazine.se##.card-partner, .partner
 kingmagazine.se##.card-partner:upward(1)
 kingsizemag.se##a:has(.disclaimer-tag-img)
@@ -1528,6 +1528,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.CMACG_AdChangerWidget
 ##div.Container--ad
 ##div.External-ad
+##div.I-artiklar-annonser
 ##div.adform-container
 ##div.adnuntius-ad
 ##div.ads-sticky-container
@@ -1542,6 +1543,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.after-article-ad
 ##div.annons-yta
 ##div.article-ad-container
+##div.artikelflode-annonser
 ##div.ashe-preloader-wrap
 ##div.bam-ad-wrapper
 ##div.banner-size.proad
@@ -1580,6 +1582,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.o-indenter--ad
 ##div.panorama-ad
 ##div.panorama-ad-standard
+##div.panorama-annonser
 ##div.partnership-ads
 ##div.phpbb-ads-center
 ##div.prebid-ad-slot
@@ -1596,6 +1599,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.td-a-rec img
 ##div.td-banner-bg
 ##div.topmost-banner
+##div.tower-annonser
 ##div.view-annons-banner
 ##div.vue-ad-wrapper
 ##div.widget_widget_dfp
@@ -2111,7 +2115,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/christmas-panda
 /plugins/cm-pop-up-banners
 /plugins/cm-takeover-ad
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|betongforeningen.se|maklarvarlden.se|sjomannen.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|betongforeningen.se|maklarvarlden.se|sjomannen.se|home2tiny.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent
 /plugins/convertplug
