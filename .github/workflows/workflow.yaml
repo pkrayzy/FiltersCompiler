@@ -1,6 +1,8 @@
-name: Test build filters and patches
+name: Build Filters
 
 on:
+  schedule:
+  - cron: "0 3 * * *"
   # For manual run builds
   workflow_dispatch:
   push:
@@ -12,30 +14,30 @@ on:
 
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    # if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 20.x
 
       - name: Install dependencies
         run: yarn install --network-concurrency 1
 
-      # TODO: add a separate workflow for linting
-      - name: Lint code
-        run: yarn lint
+      - name: Build DNS Filter
+        run: TLS=insecure yarn build -i=15
 
-      - name: Build filters
-        run: TLS=insecure yarn build
+      - name: Build Adblock Filters
+        run: TLS=insecure yarn build -i=101,118
+        # run: TLS=insecure yarn build -i=12,5,101
 
-      - name: Build patches
-        # Does not matter how long patches are valid because
-        # these patches (as well as filter) would not be merged to master,
-        # so for example set it to '10 minutes' in seconds.
-        run: yarn build:patches --time=600 --resolution=s
-
-      - name: Validate platforms and locales
-        run: yarn validate
+      - name: Push to repository
+        run: |
+          git config --global user.name "pkrayzy"
+          git config --global user.email "pkrayzy@users.noreply.github.com"
+          now=$(date)
+          git add -A
+          git commit -m "Update Filters on $now"
+          git push
