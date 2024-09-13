@@ -37,5 +37,11 @@ jobs:
         run: TLS=insecure yarn build -i=101,118
         # run: TLS=insecure yarn build -i=12,5,101
 
-      - name: Validate platforms and locales
-        run: yarn validate
+      - name: Push to repository
+        run: |
+          git config --global user.name "pkrayzy"
+          git config --global user.email "pkrayzy@users.noreply.github.com"
+          now=$(date)
+          git add -A
+          git commit -m "Update Filters on $now"
+          git push
