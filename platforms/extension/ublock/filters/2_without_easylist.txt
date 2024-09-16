@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: gQEl02L/LMj73Xpz1vxWww
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726486996-3600.patch
+! Checksum: 7cz+vUhzCEfchXdra5yMiA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726490229-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.52.94
-! TimeUpdated: 2024-09-16T11:31:28+00:00
+! Version: 2.3.52.95
+! TimeUpdated: 2024-09-16T12:31:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -8123,6 +8123,8 @@ vectorx.top,boltx.stream##+js(no-fetch-if, pagead2.googlesyndication.com)
 @@/https?:\/\/(www\.)?sonixgvn\.net\/.{1,15}\.js$/$script,~third-party,domain=sonixgvn.net
 sonixgvn.net##body > div[class][style*="position:"][style*="visibility:"]
 sonixgvn.net##body > div[class][style*="position:"][style*="z-index:"]
+sonixgvn.net#$#.sonix > .boton { display: block !important; }
+sonixgvn.net##+js(abort-on-stack-trace, setTimeout, /https?:\/\/sonixgvn\.net\/.*\.js:|data:text\/javascript;base64|blocker|crabdance\.com|\/ads\//)
 sonixgvn.net##+js(abort-on-stack-trace, Object.defineProperty, /https?:\/\/sonixgvn\.net\/.*\.js:|data:text\/javascript;base64|blocker|crabdance\.com|\/ads\//)
 sonixgvn.net##+js(addEventListener-defuser, DOMContentLoaded, overlays)
 sonixgvn.net##+js(abort-on-stack-trace, document.getElementById, window.onload)
@@ -33898,6 +33900,9 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+f2movies.*##+js(set-constant, document.write, undefined)
+plutomovies.com###dl-btn-wrapper + a[rel="nofollow"]
+plutomovies.com##a[href^="https://go.wapdg.com/"]
 ||assets.genius.com/javascripts/compiled/ads-*.js
 ||assets.genius.com/javascripts/compiled/reactAds.*.js
 ||shinigami05.com/*/*.gif
@@ -53234,6 +53239,8 @@ $popup,third-party,domain=dood.ws,badfilter
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188838
+plutomovies.com#@#.ad-slot
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187639
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187736
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=tractorsupply.com
