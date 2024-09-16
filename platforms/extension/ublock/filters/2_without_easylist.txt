@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: F7ipFuivIT6nEHCFQ0wGvQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726468609-3600.patch
+! Checksum: R+CcS7wTBeiSJdyaTbgpiA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726475847-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.52.90
-! TimeUpdated: 2024-09-16T06:31:19+00:00
+! Version: 2.3.52.91
+! TimeUpdated: 2024-09-16T08:31:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -33820,6 +33820,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+||netgames.io/js/page-ads.js
 javplayer.me##+js(window.open-defuser)
 swiftuploads.com##+js(remove-attr, onclick, button[onclick*='window.open('])
 lifewire.com#$#main#main { margin-top: 0px !important; }
@@ -36120,6 +36121,9 @@ freepik.com##.detail__aside--left.detail__spr
 snaptik.app###modal-vignette
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=crunchyroll.com,important
 trakt.tv##.add-top
+trakt.tv##+js(set-constant, art3m1sItemNames.desktop-wrapper, undefined)
+trakt.tv##+js(set-constant, art3m1sItemNames.affiliate-wrapper, undefined)
+trakt.tv##body > div[id*="-wrapper"]:has(> div[id*="-"]:only-child > a[href="/vip/advertising"])
 cryptopolitan.com###sticky_sidebar_ads_parrent
 waifubitches.com##div[class^="grid"] > div[class^="grid-item"].mx-auto
 nanoreview.net###nfloat-sb-right
