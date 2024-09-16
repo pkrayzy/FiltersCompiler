@@ -1,9 +1,9 @@
-! Checksum: FlPWnriRBbV581vI+lP15A
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1726501103-3600.patch
+! Checksum: s7tmJkg6Dn8Ts2NRCRMs7A
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1726504637-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.47.79
-! TimeUpdated: 2024-09-16T15:34:03+00:00
+! Version: 2.0.47.80
+! TimeUpdated: 2024-09-16T16:33:23+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -2350,7 +2350,8 @@ searchpeoplefree.com##div[id^="cookie_terms"]
 racingnews365.com#%#//scriptlet('trusted-click-element', 'a[href="#allow-cookieconsent"]')
 konsument.at#%#//scriptlet('trusted-set-cookie-reload', 'vkicookieconsent', '4')
 favbet.hr#%#//scriptlet('trusted-click-element', 'button[class*="CookieManagementButtons_allowAllButton"]')
-whatsapp.com##div[data-testid="wa_cookies_banner_modal"]
+whatsapp.com#$#div[data-testid="wa_cookies_banner_modal"] { display: none !important; }
+whatsapp.com#$#.hasCookieBanner > div[data-testid="whatsapp_www_full_page"] { position: static !important; }
 fantasypros.com#%#//scriptlet('set-cookie', 'fp_policy', '1')
 woman.tvbs.com.tw#?##root > div[class^="css-"]:has(div > a[href^="https://member.tvbs.com.tw//index/privacy_policy?back_url"])
 hisense.com#$#body { overflow: auto !important; padding-right: 0 !important; }
@@ -3458,7 +3459,6 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##div[s
 livescore.com###simpleCookieBar
 accademiadellacrusca.it##.info-privacy
 blitzortung.org###topdiv
-whatsapp.com#%#//scriptlet('remove-class', 'hasCookieBanner', 'body')
 sport.ua###policy-accept
 domeny.pl,kei.pl,cyberfolks.pl##.cfGdprCookieConsentPopup
 ||spreadshirt.de/resources/cookie/js/consent.js
