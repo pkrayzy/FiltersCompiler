@@ -1,9 +1,9 @@
-! Checksum: WwhNtFPpHnmrLVX2bH0YSQ
-! Diff-Path: ../patches/243_optimized/243_optimized-s-1726477708-14400.patch
+! Checksum: 7XoV1Dkyz0sxvwvNDdaX9g
+! Diff-Path: ../patches/243_optimized/243_optimized-s-1726563969-14400.patch
 ! Title: Frellwit's Swedish Filter (Optimized)
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.19.49
-! TimeUpdated: 2024-09-16T09:03:01+00:00
+! Version: 2.0.19.50
+! TimeUpdated: 2024-09-17T09:01:58+00:00
 ! Expires: 10 days (update frequency)
 .ads-gdprlock
 .ax/ad/
@@ -617,8 +617,9 @@ futsalmagasinet.se#$#html.modal-cacsp-open { position:unset!important }
 futsalmagasinet.se##span:has-text(/annonserat innehåll/i):upward(.td_block_wrap)
 futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 futsalmagasinet.se,newsvoice.se,obsid.se##aside.widget:has(a[href*="casino"])
-fz.se##.article-facebook
+fz.se##.article-facebook, .col-outer-side
 fz.se##.card:has(.article-sponsored, a[href*="/sponsrat"])
+fz.se#$#.col-content+.col-side,.col-content-extra-wide { margin-right: unset !important; }
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se,fssweden.se#%#//scriptlet('ubo-set.js', 'adblock', 'false')
 gaffa.se##a[href*="/annonser/"], a[href*="/sponsrat-"], div[id^="cncpt-"]
@@ -958,7 +959,8 @@ mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"], .a-wrap
 mobilanyheter.net#%#//scriptlet('ubo-set.js', 'ai_run_scripts', 'noopFunc')
-mobil.se,kamerabild.se##a[href^="/partner"]
+mobil.se,kamerabild.se##article:has(a[href*="/partner"])
+mobil.se,kamerabild.se##a[href*="/partner"]
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
 modernalivet.se#$#body.modal-active { overflow:unset!important }
 modernalivet.se##h3:has-text(/annons/i):upward(.sidebar-widget)
