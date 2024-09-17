@@ -1,9 +1,9 @@
-! Checksum: gioo09KCSOIYr5QWroWfKw
-! Diff-Path: ../patches/14/14-s-1726565828-3600.patch
+! Checksum: RFFEw+v24a3JnndHuWvttQ
+! Diff-Path: ../patches/14/14-s-1726569438-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.8.70
-! TimeUpdated: 2024-09-17T09:33:27+00:00
+! Version: 2.2.8.71
+! TimeUpdated: 2024-09-17T10:33:20+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2478,6 +2478,9 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+bricksandlogic.co.uk#%#//scriptlet('trusted-set-local-storage-item', 'cookie_consent', 'denied')
+play-asia.com##.cookie_popup-dialog
+play-asia.com##.ui-widget:has(> .cookie_popup-dialog) + .ui-widget-overlay
 letgo.com##.cookie-policy-banner-wrapper
 ganyancanavari.com###contract
 unka.bilecik.edu.tr#%#//scriptlet('set-cookie-reload', '.AspNet.Consent', 'yes')
@@ -15179,7 +15182,7 @@ roboter-forum.com#%#//scriptlet('trusted-click-element', '.fc-footer-buttons > b
 deutschlandkurier.de#%#//scriptlet('trusted-click-element', '#CookieBoxTextDescription ~ p > a[data-cookie-accept-all]', '', '500')
 fruugonorge.com#%#//scriptlet('trusted-set-cookie', 'consents', 'essential')
 flex.orange.pl#%#//scriptlet('set-local-storage-item', 'cookies-banner', 'false')
-compact-online.de#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="0"][id]', '!real_cookie_banner-v:3_blog:1_path:f4adc5d')
+wegwandern.ch,compact-online.de#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="0"][id]', '!real_cookie_banner-v:3_blog:1_path:f4adc5d')
 futar.bkk.hu#%#//scriptlet('set-local-storage-item', 'cookie_consent', 'false')
 moneyfarm.com#%#//scriptlet('set-cookie', 'consent_updated', 'true')
 matkahuolto.fi#%#//scriptlet('trusted-set-cookie', 'CookieConsentV2', 'YES,TOI,ANA,KOH')
@@ -28542,7 +28545,7 @@ interestingengineering.com#$##newsletter-modal { display: none !important; }
 interestingengineering.com#$#.modal-backdrop { display: none !important; }
 interestingengineering.com#$#body { overflow: auto !important; }
 attacomsian.com,catwalkyourself.com,egyptianstreets.com,sklum.com,comicbook.com###newsletterModal
-||cdn.viqeo.tv/*/vq_fly_widget.js$domain=showgamer.com|sibmedia.ru|liveinternet.ru|femmie.ru|solenka.info|gorodche.ru|kp.ru|osnmedia.ru|muz-tv.ru
+||cdn.viqeo.tv/*/vq_fly_widget.js$domain=showgamer.com|sibmedia.ru|liveinternet.ru|femmie.ru|solenka.info|gorodche.ru|kp.ru|osnmedia.ru|muz-tv.ru|itinfo.media
 stylus.ua###roulette-widget
 livehindustan.com##.co-bannerparent
 livehindustan.com##.show_login_inner
@@ -31801,6 +31804,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+kingbolentool.com###uppush-notification
 sparkchess.com###pushRequest
 ||tproger.ru/_nuxt/PushNotificationPermissionModal.
 ||assets.boredpanda.com/blog/wp-content/themes/boredpanda/push/main.js
@@ -32654,6 +32658,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+kingbolentool.com##.spinWheelWrapper
 muzyka.sklep.pl#$#body { overflow: auto !important; }
 muzyka.sklep.pl#$##Widget1 ~ .modal-backdrop { display: none !important; }
 muzyka.sklep.pl#$#.modal#Widget1:has(div[id^="Newsletter"]) { display: none !important; }
@@ -39942,6 +39947,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 !
 !
 !
+msn.com##div[class^="weatherMobileUpsellContainer-"]
 digitimes.com.tw#%#//scriptlet('abort-current-inline-script', '$', 'apppromo')
 cultura.uol.com.br###homecampanha
 moises.ai##.relative > div.flex-col:has(> div[role="group"] > a[title="App Store"])
@@ -41422,7 +41428,7 @@ home.kingsoft.jp#?#.popup:has(button#open-app)
 pokemongo-get.com###text-26.widget-over-sns-buttons
 m.finance.yahoo.co.jp##.appNotice
 uniqlo.com##.uq-ec-cms-smart-banner
-m.kariyer.net##.download-app-wrapper
+kariyer.net##.download-app-wrapper
 pointcard.rakuten.co.jp###optionalAppDownload
 lepoint.fr#$##Ad4screen { display: none !important; }
 news.yahoo.co.jp##img[src^="https://s.yimg.jp/images/news-app/promo/banner/"]
@@ -54959,6 +54965,7 @@ freestreams-live.my###custom_html-9
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com
 litres.ru###call_support
 !
+||k-pilot.kariyer.net^
 ||assistant.watson.appdomain.cloud^$domain=smartmetertexas.com
 ||chester-tax.com/wp-chester-tax/wp-content/plugins/chester-chatbot/
 ||chatdealer.jp^$domain=zeirisi.co.jp
