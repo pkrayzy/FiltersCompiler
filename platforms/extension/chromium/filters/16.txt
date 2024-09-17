@@ -1,9 +1,9 @@
-! Checksum: gygLJo7g3Qvd4bwXQ2mbpQ
-! Diff-Path: ../patches/16/16-s-1726580199-3600.patch
+! Checksum: ir+6y/0Wr9WAXaLTigFQ9w
+! Diff-Path: ../patches/16/16-s-1726591042-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.46.78
-! TimeUpdated: 2024-09-17T13:33:19+00:00
+! Version: 2.0.46.79
+! TimeUpdated: 2024-09-17T16:33:35+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -220,7 +220,9 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147842
-japscan.lol#%#//scriptlet('remove-node-text', 'script', 'imgHola')
+japscan.lol#%#//scriptlet('remove-node-text', 'script', '/holaImg|jso\$|spliteraf|[A-z]+;\(function\(\)\{function |window\[\'document\'\]|return doc;|"innerHTML"|\._\[|return eval/')
+japscan.lol#%#//scriptlet('abort-current-inline-script', 'eval', '/\+=|\{return/')
+japscan.lol#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', '/^_.+\+\'\);\'\)\( ?\);\}catch/')
 japscan.lol#$#.navbar-nav > li.nav-item > a[href^="https://www.origoclick.com"] { visibility: hidden !important; }
 $script,xmlhttprequest,redirect-rule=noopjs,domain=japscan.lol
 @@$image,domain=japscan.lol
