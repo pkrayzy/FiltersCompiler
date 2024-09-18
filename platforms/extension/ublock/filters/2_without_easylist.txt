@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: xVJr0v/1xUcGL66+1uwpWA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726663031-3600.patch
+! Checksum: Q0tVHRjHS/JUmJXUNWG49w
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726666619-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.53.26
-! TimeUpdated: 2024-09-18T12:31:18+00:00
+! Version: 2.3.53.27
+! TimeUpdated: 2024-09-18T13:31:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7803,6 +7803,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188805
+mixrootmod.com###adBlockModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188711
 bagi.co.in##+js(no-xhr-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188703
@@ -10240,6 +10242,7 @@ cutty.app##+js(no-fetch-if, pagead2.googlesyndication.com)
 faucetcrypto.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135305
 editpad.org#$#body #detect[class] { display: block !important; }
+editpad.org##+js(addEventListener-defuser, error, blockedUrl)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135568
 ||s1cdn.vnecdn.net/*/production/modules/home.defer.js$domain=vnexpress.net
 vnexpress.net##a[data-event-label="Button-TatAdblock"]
@@ -31567,9 +31570,6 @@ hihbt.com##+js(abort-current-script, window.open)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35611
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167726
 multiup.io##+js(no-setInterval-if, $("form").submit())
-! https://github.com/AdguardTeam/AdguardFilters/issues/162788
-! https://github.com/AdguardTeam/AdguardFilters/issues/112379
-! https://github.com/AdguardTeam/AdguardFilters/issues/35520
 ! https://forum.adguard.com/index.php?threads/up-4ever-org-cookie-notice.33762/
 up-4ever.org##+js(remove-attr, onclick, a[onclick*="window.open"][data-target*="up4ever.download"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33663
@@ -33893,6 +33893,9 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+club386.com#$#body { background-image: none !important; }
+club386.com##+js(set-constant, td_ad_background_click_link, undefined)
+club386.com#$#body.td-background-link { cursor: auto !important; }
 adultswim.com##article > .band > .container-fluid:has(> div[data-testid="layoutTest"]:only-child > div[data-testid="columnTest"]:only-child > div[data-testid="advert-test"]:only-child)
 cnn.com##.dianomi-amp-ad
 cyberdaily.au##.b-article-wrapper__right__wrapper > div.b-module:has(> div[id^="mm-"])
