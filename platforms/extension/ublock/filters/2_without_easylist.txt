@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: tFfND9BHC0/ab+xtxdvZkQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726756795-3600.patch
+! Checksum: 9C8DO/lbljN4of7B/ERocw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1726760274-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.53.39
-! TimeUpdated: 2024-09-19T14:31:40+00:00
+! Version: 2.3.53.40
+! TimeUpdated: 2024-09-19T15:31:21+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7805,6 +7805,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/189102
+nfl.com##+js(set-constant, Object.prototype.bannerIds, undefined)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188805
 mixrootmod.com###adBlockModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188711
@@ -33901,6 +33903,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+||macheforum.com/sponsorship/
 ldplayer.net###blog-double-banner
 ||static-cdn.spot.im/production/conversation/*/ad-container-
 onefootball.com##div[class^="CommentsOpenWeb_adWrapper"]
@@ -51651,6 +51654,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! https://github.com/AdguardTeam/AdguardFilters/issues/84827
 ||outlook.live.com/ows/*/OutlookOptions/AdsAggregate
 /owa.MailBoot~MessageAdList.json$domain=outlook.live.com
+outlook.live.com##div[data-app-section="MessageList"] div[class][id*="-"]:has(> div:not([class]) > div[class] > div[class] > div[class] > div[class] > div[class] > div[class] > div[class] + .ms-Button--hasMenu.ms-Button--icon)
 outlook.live.com##div[role="region"][data-max-height] > div.threeColItemViewSenderImageOn + div div:empty
 outlook.live.com#?##app > .ms-Fabric > div[class] > div[class] > div[class]:has(> div > div > div[id^="owaadbar"])
 outlook.live.com#?#div[data-app-section="MessageList"] div[role="listbox"] .customScrollBar > div[style] > div[style^="position: absolute"]:first-child:has(i[data-icon-name="Delete"] + div + button)
