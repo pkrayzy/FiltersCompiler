@@ -1,9 +1,9 @@
-! Checksum: 4r5kgED+4VrF98sw5UlaVA
-! Diff-Path: ../patches/14/14-s-1726828640-3600.patch
+! Checksum: Ozyw+q+vOwf3AzE1PsfpxA
+! Diff-Path: ../patches/14/14-s-1726832358-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.0
-! TimeUpdated: 2024-09-20T10:33:22+00:00
+! Version: 2.2.9.1
+! TimeUpdated: 2024-09-20T11:35:08+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2480,6 +2480,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+unihobby.cz##.cookies-confirm
 omv.cz##.cookie-popup-overlay
 usaco.co.jp###consent_container
 ||rb.cz/attachments/applications/scripts/apps/cookie-wall.js
@@ -24677,6 +24678,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+skysmart.ru#%#//scriptlet('remove-class', 'cdk-global-scrollblock', 'html')
+skysmart.ru#$#.cdk-overlay-container { display: none !important; }
 apacer.com###go-cta-btn
 purelovers.com###floating-footer-banner
 infourok.ru##.tg-chatbot-popup
@@ -32976,6 +32979,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+monetory.io##.community
 watchguard.com##.blog__sidebar--subscribe
 fontanka.ru##div[class^="uiArticleBlockText"]:has(> p > a[href="https://t.me/fontankaspb"])
 bbc.com##section[aria-labelledby="podcast-promo"]
@@ -39138,7 +39142,7 @@ thebarentsobserver.com,cannagardening.com,rz.com.ua##.pane-simplenews
 limo.media##div[class^="formbox-editor"]
 limo.media#?#.article-body > h4:contains(ニュースレター)
 vokrug.tv##.subscribe-false-bg
-buro247.ua##.subscribtion
+monetory.io,buro247.ua##.subscribtion
 mycredit.ua##.mailSubs
 optimakomp.ru##.menu > div[id="conteiner"] ~ div[class]:last-child
 bestfree.ru###right-menu > section:first-child
@@ -48797,6 +48801,11 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+skysmart.ru##cms-blocks-layout-promotion-banners-container
+skysmart.ru##.form > cis-main-form
+skysmart.ru##.form > ssm-cms-general-lead-form
+skysmart.ru##ssm-articles-content-promo-slot:not(:has(.mc-comments))
+skysmart.ru#?#.block:has(> div[class] > span.button > span.button-text:contains(/^(Узнать бесплатно|Начать учиться)/))
 p-game.jp##a[href="https://www.p-game.jp/present/result/27"]
 sports.ru##.write-post
 ip.me##.cta-container
