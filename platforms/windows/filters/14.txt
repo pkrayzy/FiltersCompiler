@@ -1,9 +1,9 @@
-! Checksum: FDJK2H0UO+lO2lBhRg0m4Q
-! Diff-Path: ../patches/14/14-s-1726843042-3600.patch
+! Checksum: 7jTuDJ8FQI9eIpZ4Y1PybA
+! Diff-Path: ../patches/14/14-s-1726846667-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.4
-! TimeUpdated: 2024-09-20T14:33:19+00:00
+! Version: 2.2.9.5
+! TimeUpdated: 2024-09-20T15:33:31+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2460,7 +2460,7 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.*#%#//scriptlet('remove-class', 'force--consent|show--consent', 'html')
 ||cdn.jsdelivr.net/npm/@lmc-eu/cookie-consent-manager$domain=teamio.com
 ! orestbida/cookieconsent
-||cdn.jsdelivr.net/gh/orestbida/*/cookieconsent.js$domain=wedos.com
+/cookieconsent.js$domain=wedos.com|scssoft.com
 ! GitBook instances
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 !
@@ -2479,6 +2479,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+xxxlutz.cz#%#//scriptlet('trusted-click-element', 'button[data-purpose="cookieBar.button.accept"] + div[class] > button', '', '2000')
 ||elearn.sunway.edu.my/webapps/privacy-disclosure/js/cookieConsent.js
 makro.cz#%#//scriptlet('trusted-click-element', '.btn-secondary')
 tenshoku.mynavi.jp##.infoConsentModal
@@ -6051,7 +6052,7 @@ evium.de,u-bordeaux.fr,flyingblue.fr,ppk.pzu.pl#$#html { overflow: auto !importa
 zinio.com##div[class^="CookiePolicyContainer-"]
 drogi.gddkia.gov.pl###c_popek
 sklep.lak-auto.pl,waterpikpolska.pl,malachowski.pl###poscookielaw
-fio.cz,unica.esse3.cineca.it,americantrucksimulator.com,shop.bauerfitness.com,doshisha.ac.jp,milanreports.com,cheater.ninja,apetilo.com,assyst.app,turbopizza.cz,rsd.cz###cc_div
+eurotrucksimulator2.com,fio.cz,unica.esse3.cineca.it,americantrucksimulator.com,shop.bauerfitness.com,doshisha.ac.jp,milanreports.com,cheater.ninja,apetilo.com,assyst.app,turbopizza.cz,rsd.cz###cc_div
 eberry.cz##.c-cookie-consent-bar
 newyorker.com,self.com,gq.com,vanityfair.com,vogue.com,allure.com,teenvogue.com,pitchfork.com##div[data-testid="message-banner"]
 jove.com##.css-ad08s1
@@ -21864,6 +21865,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+kudyznudy.cz##.sx-info-c-message
 modthesims.info###adblockmessage
 gisarea.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 bleachernation.com#%#//scriptlet('set-session-storage-item', 'fs.adb6512.dis', '1')
@@ -24472,6 +24474,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+game8.co##.news_wipe_media_player
 skysmart.ru#%#//scriptlet('remove-class', 'cdk-global-scrollblock', 'html')
 skysmart.ru#$#.cdk-overlay-container { display: none !important; }
 apacer.com###go-cta-btn
@@ -27907,10 +27910,6 @@ sks-auto.ru##.jllikeproSharesContayner
 developer.chrome.com##announcement-banner
 elie.net##.signup-right
 glasswire.com###subscription-modal
-b.hatena.ne.jp#$#.entry-notfound-modal { display: none!important; }
-b.hatena.ne.jp#$#.bookmark-guest-guide-modal { display: none!important; }
-b.hatena.ne.jp#$#.modal-overlay { display: none!important; }
-b.hatena.ne.jp#$#body.is-overlay { overflow: auto!important; }
 buzip.net###linkerBanner
 ||unpkg.com/micromodal*/dist/micromodal.min.js$domain=versii.if.ua
 salonsecret.ru##a[class^="Support_whatsapp__"]
@@ -31339,6 +31338,14 @@ easy-deutsch.de#%#AG_onLoad(function() { setTimeout(function() { var el = docume
 ! Blocking it also causes that videos are not playing automatically
 ! twitter.com##div[data-testid="BottomBar"]
 !
+!+ NOT_OPTIMIZED
+b.hatena.ne.jp#$#.entry-notfound-modal { display: none!important; }
+!+ NOT_OPTIMIZED
+b.hatena.ne.jp#$#.bookmark-guest-guide-modal { display: none!important; }
+!+ NOT_OPTIMIZED
+b.hatena.ne.jp#$#.modal-overlay { display: none!important; }
+!+ NOT_OPTIMIZED
+b.hatena.ne.jp#$#body.is-overlay { overflow: auto!important; }
 !+ NOT_OPTIMIZED
 mikle.jp##div[style^="position: absolute;"][style*="z-index: 1000;"]
 !+ NOT_OPTIMIZED
@@ -48616,6 +48623,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+tweakers.net##.useVisitedState.nonspot.headlineItem
 mapion.co.jp##section:has(> div.sec-col-recommend)
 mapion.co.jp##.pickup-bnr
 mapion.co.jp##a[href^="https://www.toppan.co.jp/"]
