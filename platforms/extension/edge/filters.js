@@ -639,8 +639,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.70.52",
-			"timeUpdated": "2024-09-19T03:15:45+0000",
+			"version": "2.0.70.53",
+			"timeUpdated": "2024-09-20T03:16:00+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -859,8 +859,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.33.1",
-			"timeUpdated": "2024-09-19T03:21:37+0000",
+			"version": "2.1.33.2",
+			"timeUpdated": "2024-09-20T03:21:49+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1209,8 +1209,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.32.15",
-			"timeUpdated": "2024-09-19T03:38:43+0000",
+			"version": "2.1.32.16",
+			"timeUpdated": "2024-09-20T03:39:41+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
