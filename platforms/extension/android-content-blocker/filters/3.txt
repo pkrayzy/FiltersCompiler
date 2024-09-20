@@ -1,8 +1,8 @@
-! Checksum: JWwZR96czRrxX3czMJamFQ
+! Checksum: /RifNg+83GwTgZhSmj5Zrw
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.74.80
-! TimeUpdated: 2024-09-20T13:33:25+00:00
+! Version: 2.0.74.81
+! TimeUpdated: 2024-09-20T14:32:45+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -259,18 +259,19 @@ itmedia.co.jp#$##ulCommentWidget[style*="display"] { display: block !important; 
 ! Suppressing both Google's Topics API and Topics API using Permissions policy
 ! AGLint temporarily disabled for this rule due to https://github.com/AdguardTeam/AGLint/issues/191
 ! TODO: Enable it back when AGLint is fixed.
+! TODO: remove document modifier when this issue is fixed - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2954
 ! aglint-disable-next-line
-/.*/$permissions=join-ad-interest-group=()
+/.*/$permissions=join-ad-interest-group=(),document
 ! aglint-disable-next-line
-/.*/$permissions=run-ad-auction=()
+/.*/$permissions=run-ad-auction=(),document
 ! aglint-disable-next-line
-/.*/$permissions=browsing-topics=()
+/.*/$permissions=browsing-topics=(),document
 !
 ! Suppressing Private State Token API
 ! aglint-disable-next-line
-/.*/$permissions=private-state-token-issuance=()
+/.*/$permissions=private-state-token-issuance=(),document
 ! aglint-disable-next-line
-/.*/$permissions=private-state-token-redemption=()
+/.*/$permissions=private-state-token-redemption=(),document
 !
 ! End: Rules for Google "Privacy" Sandbox
 !
@@ -35818,6 +35819,7 @@ adseek.site#$##primary { display: block !important; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||msite.baidu.com^
 ||analitik.pendik.bel.tr^
 ||analytics-api.sconto.cz^
 ||log-ana.h3z.jp^
