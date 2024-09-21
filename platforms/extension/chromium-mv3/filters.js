@@ -898,8 +898,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.56.35",
-			"timeUpdated": "2024-09-21T01:01:09+0000",
+			"version": "2.1.56.36",
+			"timeUpdated": "2024-09-21T14:11:38+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -973,8 +973,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.56.34",
-			"timeUpdated": "2024-09-21T01:01:10+0000",
+			"version": "2.1.56.35",
+			"timeUpdated": "2024-09-21T14:11:39+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1071,8 +1071,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.98.1",
-			"timeUpdated": "2024-09-20T13:01:54+0000",
+			"version": "2.0.98.2",
+			"timeUpdated": "2024-09-21T14:11:54+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1092,8 +1092,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.32.6",
-			"timeUpdated": "2024-09-21T01:01:25+0000",
+			"version": "2.0.32.7",
+			"timeUpdated": "2024-09-21T14:11:55+0000",
 			"deprecated": false,
 			"languages": [
 				"vi"
@@ -1290,8 +1290,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.19.52",
-			"timeUpdated": "2024-09-20T09:02:06+0000",
+			"version": "2.0.19.53",
+			"timeUpdated": "2024-09-21T14:12:13+0000",
 			"deprecated": false,
 			"languages": [
 				"sv"
@@ -1374,8 +1374,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.49.66",
-			"timeUpdated": "2024-09-21T01:01:54+0000",
+			"version": "2.0.49.67",
+			"timeUpdated": "2024-09-21T14:12:24+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"
@@ -1422,8 +1422,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.3.32",
-			"timeUpdated": "2024-09-21T01:01:55+0000",
+			"version": "2.0.3.33",
+			"timeUpdated": "2024-09-21T14:12:25+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1442,8 +1442,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.70",
-			"timeUpdated": "2024-09-20T09:02:20+0000",
+			"version": "2.0.1.71",
+			"timeUpdated": "2024-09-21T14:12:25+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1462,8 +1462,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.3.64",
-			"timeUpdated": "2024-09-19T13:01:53+0000",
+			"version": "2.0.3.65",
+			"timeUpdated": "2024-09-21T14:12:25+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
