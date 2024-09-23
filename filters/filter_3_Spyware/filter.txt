@@ -99,6 +99,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/189259
+webviewer.interstuhlnet.de#%#//scriptlet('set-constant', 'WURFL', 'emptyObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188967
 qpp.caq.org.cn#%#//scriptlet('prevent-element-src-loading', 'script', 'hm.baidu.com/hm.js')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185857
@@ -204,10 +206,6 @@ futura-sciences.com#%#//scriptlet('set-constant', 'pa', 'emptyObj')
 futura-sciences.com#%#//scriptlet('set-constant', 'pa.privacy', 'emptyObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157140
 perlego.com#%#(()=>{const t={getExperimentStates:function(){return[]}};window.optimizely={get:function(){return t}}})();
-! https://github.com/AdguardTeam/AdguardFilters/issues/158318
-! https://github.com/AdguardTeam/AdguardFilters/issues/157248
-northerntool.com#%#//scriptlet('prevent-xhr', 'configure.rapid.js')
-northerntool.com#%#AG_onLoad((function(){"function"===typeof window.Yo?.rum?.initialize&&Yo.rum.initialize()}));
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147282
 clickhole.com,lifehacker.com,splinternews.com,avclub.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,qz.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#%#//scriptlet('set-constant', 'ga', 'noopFunc')
 ! https://github.com/uBlockOrigin/uAssets/issues/16512#issuecomment-1639236636
@@ -79315,6 +79313,9 @@ inapps.appsflyersdk.com^
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/189259
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||wurfl.io/wurfl.js$domain=webviewer.interstuhlnet.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189134
 @@||rat.rakuten.co.jp^$app=jp.co.rakuten.pay
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188799
@@ -79974,8 +79975,6 @@ reuters.com#%#//scriptlet('set-constant', 'analytics', 'undefined')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158318
 ! https://github.com/AdguardTeam/AdguardFilters/issues/157248
 ||cdn.yottaa.com/rapid.security.min.*.js$script,redirect=noopjs,domain=northerntool.com
-||qoe-*.yottaa.net/*/configure.rapid.js$xmlhttprequest,redirect=nooptext,domain=northerntool.com
-!+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||qoe-*.yottaa.net/*/configure.rapid.js$domain=northerntool.com
 ! fix recomendations
 @@||googletagmanager.com/gtm.js$domain=elcomercio.es|eldiariomontanes.es|elcorreo.com|lasprovincias.es|hoy.es
