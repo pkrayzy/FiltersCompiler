@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: PIclwtzh4E+7SOX4lxhX3w
-! Diff-Path: ../patches/18/18-s-1727073400-3600.patch
+! Checksum: EkQeEHOQQDzca1CDg5bMaA
+! Diff-Path: ../patches/18/18-s-1727084253-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.48.16
-! TimeUpdated: 2024-09-23T06:33:18+00:00
+! Version: 2.0.48.17
+! TimeUpdated: 2024-09-23T09:33:50+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2442,6 +2442,13 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+dhbbank.com#$#.cookie-bar:not(body)  { display: none !important; }
+dhbbank.com#$#.js-cookie-bar  { display: none !important; }
+dhbbank.com#$#body.js-show-cookie-bar { overflow: auto !important; }
+netbanking.dhbbank.com#$#body.modal-open { overflow: auto !important; }
+netbanking.dhbbank.com#$##cookie-warning { display: none !important; }
+netbanking.dhbbank.com#$#.cookie-modal { display: none !important; }
+netbanking.dhbbank.com#$#.modal-backdrop { display: none !important; }
 imazing.com#$#body.modal-open { overflow: auto !important; }
 imazing.com#$#div#cookie-consent-modal { display: none !important; }
 imazing.com#$#div.modal-backdrop { display: none !important; }
@@ -8497,7 +8504,9 @@ boxspring-welt.de,ssb-ag.de,filmdienst.de,penguinrandomhouse.de,vegdog.de,werner
 vegdog.de#$#div[class^="overlay-"] { display: none !important; }
 intermiles.com###gdprBand
 alltours.de##div[class^="CookieNotificationBox__root--"]
-swiatzdrowia.pl,lsm.lv,blutspendedienst.com,aldifotos.de,meinfoto.de##.cookiefirst-root
+lsm.lv#$#.cookiefirst-root { display: none!important; }
+lsm.lv#$?#.cookiefirst-root { remove: true; }
+swiatzdrowia.pl,blutspendedienst.com,aldifotos.de,meinfoto.de##.cookiefirst-root
 posterstore.de##.cookie-control-banner-wrapper
 elu24.ee#$#.cookie-container { display: none!important; }
 elu24.ee#$#body { overflow: auto !important; }
@@ -15371,6 +15380,11 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/189329
+dhbbank.com#@#.cookie-bar:not(body)
+dhbbank.com#@#.js-cookie-bar
+netbanking.dhbbank.com#@##cookie-warning
+netbanking.dhbbank.com#@#.cookie-modal
 ! https://github.com/uBlockOrigin/uAssets/issues/25365
 @@||sdk.privacy-center.org^$domain=24sata.hr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188709
