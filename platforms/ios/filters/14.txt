@@ -1,9 +1,9 @@
-! Checksum: gY2XtSG3RIKmzIK3HAdf7A
-! Diff-Path: ../patches/14/14-s-1727084257-3600.patch
+! Checksum: DxcaOIytBL4iypORIKkrxw
+! Diff-Path: ../patches/14/14-s-1727088075-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.15
-! TimeUpdated: 2024-09-23T09:33:43+00:00
+! Version: 2.2.9.16
+! TimeUpdated: 2024-09-23T10:36:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -15061,8 +15061,8 @@ grland.info,flash.pt,wackojaco.com,gpblog.com#%#//scriptlet('trusted-click-eleme
 ! TODO: replace by the scriptlet when https://github.com/AdguardTeam/Scriptlets/issues/423
 !       will be done and products with new Scriptlets lib will be released
 kupi.cz#%#(()=>{let t;const e=new MutationObserver(((e,o)=>{const n=t?.querySelector('button[data-testid="button-agree"]');n&&(setTimeout((()=>{n.click()}),500),o.disconnect())})),o={apply:(o,n,c)=>{const a=Reflect.apply(o,n,c);return n.matches(".szn-cmp-dialog-container")&&(t=a),e.observe(a,{subtree:!0,childList:!0}),a}};window.Element.prototype.attachShadow=new Proxy(window.Element.prototype.attachShadow,o)})();
-cmp.seznam.cz#%#(()=>{let t;const e=new MutationObserver(((e,o)=>{const n=t?.querySelector('button[data-testid="cw-button-non-targeted-ad"]');n&&(setTimeout((()=>{n.click()}),100),o.disconnect())})),o={apply:(o,n,c)=>{const a=Reflect.apply(o,n,c);return n.matches(".szn-cmp-dialog-container")&&(t=a),e.observe(a,{subtree:!0,childList:!0}),a}};window.Element.prototype.attachShadow=new Proxy(window.Element.prototype.attachShadow,o)})();
 !
+cmp.seznam.cz#%#//scriptlet('trusted-click-element', '.szn-cmp-dialog-container >>> button[data-testid="cw-button-non-targeted-ad"]', '', '500')
 speedtest.vodafone.de#%#//scriptlet('trusted-click-element', 'div[data-cy="modal-dialog"] .css-1kjdcue > .css-s9m06g > div[role="button"][style="cursor: pointer; display: inline;"]', '', '500')
 bergans.com#%#//scriptlet('trusted-set-cookie-reload', 'cc', '2:f')
 seventeen-web.jp##.cookie-consent-footer
@@ -33282,6 +33282,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+reason.com##.incontent-email-signup_wrapper
 sports.ru##.news-layout__soc
 monetory.io##.community
 watchguard.com##.blog__sidebar--subscribe
