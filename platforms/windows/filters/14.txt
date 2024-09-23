@@ -1,9 +1,9 @@
-! Checksum: lYx1Y+ZkSB9aQX+tCHZDRw
-! Diff-Path: ../patches/14/14-s-1727092622-3600.patch
+! Checksum: 4ho12GK5K5+lyLGGkcArwQ
+! Diff-Path: ../patches/14/14-s-1727095010-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.17
-! TimeUpdated: 2024-09-23T11:33:45+00:00
+! Version: 2.2.9.18
+! TimeUpdated: 2024-09-23T12:32:52+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -24495,6 +24495,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+deals.neowin.net#$#.fb_lightbox-overlay { display: none !important; }
+deals.neowin.net#$#div[aria-label="Modal Overlay Box"] { display: none !important; }
+deals.neowin.net#$?#style#dghstyles { remove: true; }
 journaldequebec.com##.rotobanner-container
 game8.co##.news_wipe_media_player
 skysmart.ru#%#//scriptlet('remove-class', 'cdk-global-scrollblock', 'html')
@@ -31361,6 +31364,8 @@ easy-deutsch.de#%#AG_onLoad(function() { setTimeout(function() { var el = docume
 ! twitter.com##div[data-testid="BottomBar"]
 !
 !+ NOT_OPTIMIZED
+ladyblog.me,apkmodhub.in,freshercooker.in,henryharvin.com##.chaty-widget
+!+ NOT_OPTIMIZED
 b.hatena.ne.jp#$#.entry-notfound-modal { display: none!important; }
 !+ NOT_OPTIMIZED
 b.hatena.ne.jp#$#.bookmark-guest-guide-modal { display: none!important; }
@@ -32794,6 +32799,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+mariosfakiolas.com#?#main div[class] > article[class]:has(> h3:contains(Newsletter))
 reason.com##.incontent-email-signup_wrapper
 sports.ru##.news-layout__soc
 monetory.io##.community
@@ -43479,6 +43485,11 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! Google search - trending results (Italian mobile version)
+! https://github.com/AdguardTeam/AdguardFilters/issues/188923#issuecomment-2366913755
+google.*###main > div[jscontroller="OPwjEf"]
+google.*##.OBMEnb:has(> .ynRric)
+google.*##.ftihzf:has(> .ynRric)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188884
 lasestrellas.tv###video-players-container > .fixed.bottom-0
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188673
