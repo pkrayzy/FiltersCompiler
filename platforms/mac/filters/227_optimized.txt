@@ -1,8 +1,8 @@
-! Checksum: Iamgif0UqYkfpQ3Oh+qA2A
+! Checksum: 4akO/0WVAt/xG9PuFUB7NQ
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.19.6
-! TimeUpdated: 2024-09-23T09:01:45+00:00
+! Version: 2.0.19.7
+! TimeUpdated: 2024-09-24T13:01:39+00:00
 ! Expires: 1 day (update frequency)
 ||centaurs-rest.coupang.com^
 ||ad.cashdoc.io^
@@ -498,6 +498,7 @@
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
+||moneypin.biz/_next/image/?url=https%3A%2F%2Fmoneypin-web.s3.ap-northeast-2.amazonaws.com%2Fbizno-ad%2F
 ||kilho.net/img/b/
 /partners/*$domain=kilho.net
 ||cpaheaven.co.kr/files/pr_banner/
@@ -1479,6 +1480,7 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+moneypin.biz##.flex > a[href][target="_blank"]
 chzzk.naver.com##div[class^="popup_cheat_key_container__"]
 kilho.net###coupangModal
 kilho.net##.modal-backdrop
@@ -3381,6 +3383,7 @@ lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lo
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=~investing.com
+meeco.kr$$script:contains(error-report.com)
 ||newspic.kr^$removeparam=cp
 tv.nate.com#%#AG_onLoad(() => { var BuildObs, PlayerObs; let PlayerCall = (mutationList, observer) => { mutationList.forEach((e) => { if (Array.from(e.target.classList).some((e) => { return e === "ntv-ad-playing" })) { player.trigger("adended"); PlayerObs.disconnect() }})}; let BuildCall = (mutationList, observer) => { mutationList.forEach((e) => { Array.from(e.addedNodes).filter((o) => { return o.id === "natePlayer" }).forEach((k) => { PlayerObs = new MutationObserver(PlayerCall); PlayerObs.observe(k, { attributes: true }); BuildObs.disconnect() })})}; BuildObs = new MutationObserver(BuildCall); BuildObs.observe(document.querySelector(".player-wrapper"), { childList: true }) })
 dealbada.com#%#AG_onLoad(() => { Array.from(document.querySelectorAll("a[href*='dealbada.com/bbs/link']")).forEach((e) => { e.href = e.innerText })})
