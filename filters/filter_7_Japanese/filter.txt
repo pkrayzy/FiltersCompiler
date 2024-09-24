@@ -1665,6 +1665,7 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/uploads/2024/09/fanza_ad$image
 !
 ! Malware/Phishing
+://web-mbservice.*.*.top/login^$document
 ||b-cdn.net/admin%20pop/$document
 .cn/member/login.php?aid=net-service$document
 .cn/ap/signin?openid.*&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp$document
@@ -1714,6 +1715,7 @@ _co_jp.*.php$document,domain=cc|com
 count/login/?=id/log/*/login.asp$document,domain=cc|com
 /KDDI2024.apk^$document
 .top/nc/bbs22.php$document
+/shopping/item/m*/?zenid=$document,domain=cfd|top
 /mart/*.html?zenid=$document,domain=cfd|top
 ?bcda=($document
 /?bcda=+$document
@@ -1823,11 +1825,16 @@ _ap/signin*?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=
 ://eki*.*.com/Personal/member/Login/index.php?oneTimeAccessID=$document
 /\.(?:club|cn|icu|top|pro|site|work)\/Personal\/member\/Login\/index\.php\?oneTimeAccessID=/$document,domain=club|cn|icu|top|pro|site|work
 !
-!+ NOT_PLATFORM(ios, ext_android_cb, ext_safari)
+!#if (!adguard_app_ios && !adguard_ext_android_cb && !adguard_ext_safari)
+/^https:\/\/[a-z]{4,8}\.[a-z]{7,10}\.shop\/product\/\d{4,7}$/$document,match-case
+/^https:\/\/[a-z]{6,8}\.com\/item-[0-9a-z]{10}\.html$/$document,match-case
 /^https?:\/\/([-0-9a-z]{3,}\.)?[a-z]{8,}\.[a-z]{3,6}\/product\/\d{6,}(\.html)?$/$document,domain=online|top
-!+ PLATFORM(ios, ext_safari)
+!#endif
+!#if (adguard_app_ios || adguard_ext_safari)
+/^https:\/\/[a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?\.shop\/product\/[0-9][0-9][0-9][0-9][0-9]?[0-9]?[0-9]?$/$document,match-case
+/^https:\/\/[a-z][a-z][a-z][a-z][a-z][a-z][a-z]?[a-z]?\.com\/item-[0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]\.html$/$document,match-case
 /^https:\/\/[0-9a-z][-0-9a-z][-0-9a-z]+\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]+\.[a-z][a-z][a-z]+\/product\/\[0-9][0-9][0-9][0-9][0-9][0-9]+\.html$/$domain=online|top
-
+!#endif
 !---------------------------------------------------------------------------!
 !-------------- Rules for specific websites --------------------------------!
 !---------------------------------------------------------------------------!
@@ -1893,6 +1900,8 @@ gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 !
 !
 !
+xn--gck1f423k.xn--1bvt37a.tools##div[class^="amazonHomeAd_"]
+xn--gck1f423k.xn--1bvt37a.tools##.fresnel-greaterThanOrEqual-maxContent
 adult-machiko.com##.entry_detail > a[onclick^="_gaq.push"] > img
 adult-machiko.com##.entry_detail > p[style="margin: 40px 0 0px;"]:has(+ a[onclick^="_gaq.push"] > img)
 app.oshioki24.com#?#.v-list-item.thd-enter-to[tabindex="-1"]:first-child:contains(/^ad\s+$/)

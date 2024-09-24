@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 4HvH1/nURzrNh2rvOGF0iA
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1727178001-3600.patch
+! Checksum: cJqboDnYYJk/kxC5dgrYRQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1727185098-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.57.0
-! TimeUpdated: 2024-09-24T11:35:09+00:00
+! Version: 2.0.57.1
+! TimeUpdated: 2024-09-24T13:34:23+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||creative-klepon-3f0ecb.netlify.app^
@@ -1093,6 +1093,7 @@ jikayosha.jp#$#.wym-v2022__header.is-scroll-up ~ .wym-v2022__footer-fixed.is-pc-
 /wp-content/plugins/amazonjs/*
 /wp-content/themes/CashLINESystem/js/modal.$script
 /wp-content/uploads/2024/09/fanza_ad$image
+://web-mbservice.*.*.top/login^$document
 ||b-cdn.net/admin%20pop/$document
 .cn/member/login.php?aid=net-service$document
 .cn/ap/signin?openid.*&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp$document
@@ -1142,6 +1143,7 @@ _co_jp.*.php$document,domain=cc|com
 count/login/?=id/log/*/login.asp$document,domain=cc|com
 /KDDI2024.apk^$document
 .top/nc/bbs22.php$document
+/shopping/item/m*/?zenid=$document,domain=cfd|top
 /mart/*.html?zenid=$document,domain=cfd|top
 ?bcda=($document
 /?bcda=+$document
@@ -1248,7 +1250,8 @@ _ap/signin*?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=
 /index.php?main_page=product_info&products_id=$document,domain=asia|bar|beauty|best|bond|buzz|cam|cfd|click|cloud|cyou|fit|fun|homes|icu|ink|life|live|ltd|me|monster|online|pics|quest|ru.com|sa.com|sbs|shop|site|space|store|tokyo|top|website|work|xyz|za.com
 ://eki*.*.com/Personal/member/Login/index.php?oneTimeAccessID=$document
 /\.(?:club|cn|icu|top|pro|site|work)\/Personal\/member\/Login\/index\.php\?oneTimeAccessID=/$document,domain=club|cn|icu|top|pro|site|work
-!+ NOT_PLATFORM(ios, ext_android_cb, ext_safari)
+/^https:\/\/[a-z]{4,8}\.[a-z]{7,10}\.shop\/product\/\d{4,7}$/$document,match-case
+/^https:\/\/[a-z]{6,8}\.com\/item-[0-9a-z]{10}\.html$/$document,match-case
 /^https?:\/\/([-0-9a-z]{3,}\.)?[a-z]{8,}\.[a-z]{3,6}\/product\/\d{6,}(\.html)?$/$document,domain=online|top
 /^(?!.*(authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,_____,domain=viki.ja-jp.nina.az|uraaka-joshi.com
 eroita.net,city.hirosaki.aomori.jp,iyasiya.com,adacomi.com,pref.shimane.lg.jp,pref.osaka.lg.jp,illust-ai.com,nan-net.com,radiolife.com,keimei.ne.jp,5ch.net,bbspink.com,crank-in.net###banner
@@ -1275,6 +1278,8 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+xn--gck1f423k.xn--1bvt37a.tools##div[class^="amazonHomeAd_"]
+xn--gck1f423k.xn--1bvt37a.tools##.fresnel-greaterThanOrEqual-maxContent
 adult-machiko.com##.entry_detail > a[onclick^="_gaq.push"] > img
 adult-machiko.com##.entry_detail > p[style="margin: 40px 0 0px;"]:has(+ a[onclick^="_gaq.push"] > img)
 app.oshioki24.com#?#.v-list-item.thd-enter-to[tabindex="-1"]:first-child:contains(/^ad\s+$/)
