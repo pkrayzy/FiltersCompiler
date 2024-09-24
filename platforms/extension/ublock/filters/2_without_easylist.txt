@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: eiiF5ZdRFIoH1mO+l26Ckg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1727167104-3600.patch
+! Checksum: CAtIO8b8vxCiHwNMgyk66g
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1727170646-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.53.90
-! TimeUpdated: 2024-09-24T08:31:38+00:00
+! Version: 2.3.53.91
+! TimeUpdated: 2024-09-24T09:31:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7947,6 +7947,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/188763
+meteum.ai##+js(abort-on-stack-trace, Promise, loadAdvManager)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189126
 perchance.org##+js(no-setTimeout-if, adIframesExist)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189130
@@ -34085,6 +34087,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+meteum.ai##div[id^="adfox_"]
 ||statics.fleshed.com/min/*/fleshed/p/ujsavd-*.js
 fleshed.com##body > div[id^="flim_"]
 fleshed.com###cb_iframe
