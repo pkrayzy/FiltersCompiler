@@ -493,8 +493,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.7.17",
-			"timeUpdated": "2024-09-24T21:32:36+0000",
+			"version": "2.0.7.18",
+			"timeUpdated": "2024-09-24T22:32:31+0000",
 			"deprecated": false,
 			"languages": [
 				"nl"
