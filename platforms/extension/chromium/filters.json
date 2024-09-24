@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.53.86",
-			"timeUpdated": "2024-09-23T18:31:19+0000",
+			"version": "2.3.53.87",
+			"timeUpdated": "2024-09-24T05:31:14+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.74.90",
-			"timeUpdated": "2024-09-23T15:32:35+0000",
+			"version": "2.0.74.91",
+			"timeUpdated": "2024-09-24T05:32:32+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -519,8 +519,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.26.68",
-			"timeUpdated": "2024-09-20T13:33:42+0000",
+			"version": "2.0.26.69",
+			"timeUpdated": "2024-09-24T05:32:49+0000",
 			"deprecated": false,
 			"languages": [
 				"es",
@@ -615,8 +615,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.9.21",
-			"timeUpdated": "2024-09-23T15:33:07+0000",
+			"version": "2.2.9.22",
+			"timeUpdated": "2024-09-24T05:33:01+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -701,8 +701,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.9.52",
-			"timeUpdated": "2024-09-20T15:33:36+0000",
+			"version": "2.0.9.53",
+			"timeUpdated": "2024-09-24T05:33:06+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -721,8 +721,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.48.20",
-			"timeUpdated": "2024-09-23T13:33:33+0000",
+			"version": "2.0.48.21",
+			"timeUpdated": "2024-09-24T05:33:07+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -743,8 +743,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.59",
-			"timeUpdated": "2024-09-23T15:33:14+0000",
+			"version": "2.0.43.60",
+			"timeUpdated": "2024-09-24T05:33:08+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
