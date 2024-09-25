@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.94.10",
-			"timeUpdated": "2024-09-25T12:31:10+0000",
+			"version": "2.0.94.11",
+			"timeUpdated": "2024-09-25T14:31:05+0000",
 			"deprecated": false,
 			"languages": [
 				"ru"
@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.54.7",
-			"timeUpdated": "2024-09-25T13:31:42+0000",
+			"version": "2.3.54.8",
+			"timeUpdated": "2024-09-25T14:31:22+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.74.95",
-			"timeUpdated": "2024-09-24T15:32:27+0000",
+			"version": "2.0.74.96",
+			"timeUpdated": "2024-09-25T14:33:19+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -444,8 +444,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/6.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.56",
-			"timeUpdated": "2024-09-25T11:33:53+0000",
+			"version": "2.0.43.57",
+			"timeUpdated": "2024-09-25T14:33:31+0000",
 			"deprecated": false,
 			"languages": [
 				"de"
@@ -493,8 +493,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.7.18",
-			"timeUpdated": "2024-09-24T22:32:31+0000",
+			"version": "2.0.7.19",
+			"timeUpdated": "2024-09-25T14:33:37+0000",
 			"deprecated": false,
 			"languages": [
 				"nl"
@@ -831,8 +831,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/23.txt",
 			"trustLevel": "full",
-			"version": "2.0.5.26",
-			"timeUpdated": "2024-09-24T13:34:49+0000",
+			"version": "2.0.5.27",
+			"timeUpdated": "2024-09-25T14:34:03+0000",
 			"deprecated": false,
 			"languages": [
 				"uk"
