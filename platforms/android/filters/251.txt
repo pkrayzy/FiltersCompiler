@@ -1,13 +1,13 @@
-! Checksum: iONkhv9DheETzsinf4MtdQ
-! Diff-Path: ../patches/251/251-s-1726928153-14400.patch
+! Checksum: aqQJHhqqZaUKuD6VPG/Tkw
+! Diff-Path: ../patches/251/251-s-1727312696-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.20
-! TimeUpdated: 2024-09-21T14:12:23+00:00
+! Version: 2.0.8.21
+! TimeUpdated: 2024-09-26T01:01:49+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 21September2024v4
+! OriginalVersion: 25September2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -249,7 +249,6 @@ $removeparam=cmpid
 $removeparam=CMP
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
 $document,removeparam=/^OCID=.*$/i,domain=~youtube.com|~reiseauskunft.bahn.de|~msn.com
-@@$removeparam=/^OCID=.*$/i,app=Microsoft.Msn.News.exe
 $removeparam=tduid,domain=~tradedoubler.com
 $removeparam=irclickid
 $removeparam=irclicid
@@ -4009,3 +4008,6 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ! https://github.com/DandelionSprout/adfilt/issues/1051
 @@/login-redirect/*$removeparam
 @@/login?$removeparam=referrer
+! For when one really doesn't want to have a harder time with uBO's log error checker
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
+@@$removeparam=/^OCID=.*$/i,app=Microsoft.Msn.News.exe
