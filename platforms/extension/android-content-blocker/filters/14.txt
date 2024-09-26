@@ -1,8 +1,8 @@
-! Checksum: fv+RRWqETD796O2zTItbvA
+! Checksum: Yv8hk7H1EfY4Zz7Qq32xuQ
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.45
-! TimeUpdated: 2024-09-26T10:34:18+00:00
+! Version: 2.2.9.46
+! TimeUpdated: 2024-09-26T11:33:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2433,6 +2433,7 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+officemag.ru##.ddMainInfoPanel--cookies
 letu.ru##.web-cookie-popup
 shoppers.media##div[class^="CookiePopup"]
 2gis.ru##._4xmcmq
@@ -22279,6 +22280,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+adbeat.com#$##forced_signup { display: none !important; }
+adbeat.com#$#.modal-backdrop { display: none !important; }
+adbeat.com#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
 elarus.ru##.popup-right-angle
 elarus.ru#$#div[class^="mfp-"] { display: none !important; }
 elarus.ru#$#html[style] { overflow: auto !important; margin-right: 0 !important; }
@@ -39029,6 +39033,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+hinata.me#$#.promotion-banner { display: none !important; }
 tanoshiiosake.jp##.app-induction
 mobil.akilliphone.com#$#html { overflow: auto !important; }
 mobil.akilliphone.com#$#.v-overlay { display: none !important; }
@@ -39613,7 +39618,10 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
-! Baidu search - hot results
+! Baidu
+! https://github.com/AdguardTeam/AdguardFilters/issues/189502
+wap.baidu.com##.tab_news
+! search - hot results
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189327#issue-2541929185
 baidu.com##.s-hotsearch-wrapper
 ! Google search - trending results (Italian mobile version)
@@ -42586,6 +42594,7 @@ ya.ru##.search3__inner > div.link-bro
 ya.ru##.promo-gallery
 ! Yandex Browser promo
 ! "a"
+ya.ru,yandex.*##.simple-popup
 ya.ru,yandex.*##.simple-popup__overlay_shown_true
 !
 ! Yandex.Search

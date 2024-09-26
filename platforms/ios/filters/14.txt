@@ -1,9 +1,9 @@
-! Checksum: gAcqgZHiXYDQHbhuMDkX8Q
-! Diff-Path: ../patches/14/14-s-1727347110-3600.patch
+! Checksum: ri3mrFW/Tuqp99U+JtNlFA
+! Diff-Path: ../patches/14/14-s-1727350624-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.45
-! TimeUpdated: 2024-09-26T10:34:18+00:00
+! Version: 2.2.9.46
+! TimeUpdated: 2024-09-26T11:33:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2484,6 +2484,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+officemag.ru##.ddMainInfoPanel--cookies
 letu.ru##.web-cookie-popup
 meta.com#%#//scriptlet('trusted-click-element', 'body > div[class="x1n2onr6 x1vjfegm"] div[aria-hidden="false"] > div[class="x6ikm8r x10wlt62"] div[role="button"] > div.x972fbf[role="none"][class^="x1ja2u2z"][class$="x1oktzhs"]')
 about.meta.com#%#//scriptlet('trusted-click-element', 'button[data-cookiebanner="accept_only_essential_button"]')
@@ -24916,6 +24917,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+adbeat.com#$##forced_signup { display: none !important; }
+adbeat.com#$#.modal-backdrop { display: none !important; }
+adbeat.com#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
 philips.com.tr#%#//scriptlet('set-cookie', 'p-gc35', 'true')
 elarus.ru##.popup-right-angle
 elarus.ru#$#div[class^="mfp-"] { display: none !important; }
@@ -43930,6 +43934,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+hinata.me#$#.promotion-banner { display: none !important; }
+hinata.me#%#//scriptlet('remove-class', 'show-app-banner', 'div[class^="Header__StyledComponent"]')
 tanoshiiosake.jp##.app-induction
 mobil.akilliphone.com#$#html { overflow: auto !important; }
 mobil.akilliphone.com#$#.v-overlay { display: none !important; }
@@ -44600,7 +44606,10 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
-! Baidu search - hot results
+! Baidu
+! https://github.com/AdguardTeam/AdguardFilters/issues/189502
+wap.baidu.com##.tab_news
+! search - hot results
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189327#issue-2541929185
 baidu.com##.s-hotsearch-wrapper
 ! Google search - trending results (Italian mobile version)
@@ -47876,6 +47885,7 @@ ya.ru##.search3__inner > div.link-bro
 ya.ru##.promo-gallery
 ! Yandex Browser promo
 ! "a"
+ya.ru,yandex.com,yandex.ru,yandex.net,yandex.org,yandex.in,yandex.com.tr,yandex.co.uk,yandex.io,yandex.co,yandex.ca,yandex.com.ua,yandex.de,yandex.fr,yandex.me,yandex.by,yandex.jp,yandex.xyz,yandex.ua,yandex.com.tw,yandex.co.za,yandex.co.il,yandex.eu,yandex.it,yandex.es,yandex.ch,yandex.kz,yandex.nl,yandex.pro,yandex.us,yandex.pl,yandex.cl,yandex.ro,yandex.su,yandex.site,yandex.cc,yandex.rs,yandex.cn,yandex.ae,yandex.mx,yandex.top,yandex.gov,yandex.ac.id,yandex.be,yandex.dk,yandex.hu,yandex.az,yandex.uz,yandex.md,yandex.no,yandex.com.bd,yandex.ie,yandex.asia,yandex.at,yandex.com.np,yandex.fi,yandex.lv,yandex.sk,yandex.lt,yandex.cloud,yandex.gov.bd,yandex.website,yandex.pt,yandex.blog,yandex.mobi,yandex.ee,yandex.uk,yandex.kg,yandex.ba,yandex.al,yandex.fm,yandex.gov.np,yandex.org.in,yandex.work##.simple-popup
 ya.ru,yandex.com,yandex.ru,yandex.net,yandex.org,yandex.in,yandex.com.tr,yandex.co.uk,yandex.io,yandex.co,yandex.ca,yandex.com.ua,yandex.de,yandex.fr,yandex.me,yandex.by,yandex.jp,yandex.xyz,yandex.ua,yandex.com.tw,yandex.co.za,yandex.co.il,yandex.eu,yandex.it,yandex.es,yandex.ch,yandex.kz,yandex.nl,yandex.pro,yandex.us,yandex.pl,yandex.cl,yandex.ro,yandex.su,yandex.site,yandex.cc,yandex.rs,yandex.cn,yandex.ae,yandex.mx,yandex.top,yandex.gov,yandex.ac.id,yandex.be,yandex.dk,yandex.hu,yandex.az,yandex.uz,yandex.md,yandex.no,yandex.com.bd,yandex.ie,yandex.asia,yandex.at,yandex.com.np,yandex.fi,yandex.lv,yandex.sk,yandex.lt,yandex.cloud,yandex.gov.bd,yandex.website,yandex.pt,yandex.blog,yandex.mobi,yandex.ee,yandex.uk,yandex.kg,yandex.ba,yandex.al,yandex.fm,yandex.gov.np,yandex.org.in,yandex.work##.simple-popup_direction_center:has(> div > div > div.dist-overlay__description)
 ya.ru,yandex.com,yandex.ru,yandex.net,yandex.org,yandex.in,yandex.com.tr,yandex.co.uk,yandex.io,yandex.co,yandex.ca,yandex.com.ua,yandex.de,yandex.fr,yandex.me,yandex.by,yandex.jp,yandex.xyz,yandex.ua,yandex.com.tw,yandex.co.za,yandex.co.il,yandex.eu,yandex.it,yandex.es,yandex.ch,yandex.kz,yandex.nl,yandex.pro,yandex.us,yandex.pl,yandex.cl,yandex.ro,yandex.su,yandex.site,yandex.cc,yandex.rs,yandex.cn,yandex.ae,yandex.mx,yandex.top,yandex.gov,yandex.ac.id,yandex.be,yandex.dk,yandex.hu,yandex.az,yandex.uz,yandex.md,yandex.no,yandex.com.bd,yandex.ie,yandex.asia,yandex.at,yandex.com.np,yandex.fi,yandex.lv,yandex.sk,yandex.lt,yandex.cloud,yandex.gov.bd,yandex.website,yandex.pt,yandex.blog,yandex.mobi,yandex.ee,yandex.uk,yandex.kg,yandex.ba,yandex.al,yandex.fm,yandex.gov.np,yandex.org.in,yandex.work##.simple-popup__overlay_shown_true
 !
