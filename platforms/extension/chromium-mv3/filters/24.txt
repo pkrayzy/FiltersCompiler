@@ -1,8 +1,8 @@
-! Checksum: Mgkd8yeR6ylqJqtIjtVC1A
+! Checksum: /iydBhGMKX7JxfkUmjzeYA
 ! Title: AdGuard Quick Fixes filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.0.9
-! TimeUpdated: 2024-09-25T16:33:25+00:00
+! Version: 2.0.0.10
+! TimeUpdated: 2024-09-26T07:06:21+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -31,6 +31,21 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100000 01-01-2024
 ! example.com#@#body
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/189504
+watchadsontape.com,advertisertape.com#@#.google-ad
+watchadsontape.com,advertisertape.com#@#.skyscraper.ad
+watchadsontape.com,advertisertape.com#%#//scriptlet("set-constant", "googleAd", "true")
+watchadsontape.com,advertisertape.com#%#//scriptlet("prevent-setInterval", "adblock", "700")
+watchadsontape.com,advertisertape.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "adblock")
+watchadsontape.com,advertisertape.com#%#//scriptlet("prevent-window-open")
+watchadsontape.com,advertisertape.com#%#//scriptlet('abort-on-stack-trace', 'String.prototype.charAt', '$0')
+watchadsontape.com,advertisertape.com#%#//scriptlet("abort-on-property-write", "_pop")
+watchadsontape.com,advertisertape.com#%#//scriptlet('abort-current-inline-script', 'atob', '/popundersPerIP[\s\S]*?Date[\s\S]*?getElementsByTagName[\s\S]*?insertBefore|w47DisKcw5g/')
+watchadsontape.com,advertisertape.com#%#//scriptlet('trusted-click-element', '.play-overlay, .play-overlay, .play-overlay')
+! https://github.com/AdguardTeam/AdguardFilters/issues/189256 26-09-2024
+flexispot.co.uk,flexispot.es,flexispot.nl,flexispot.it,flexispot.se,flexispot.de,flexispot.pl###gdprMask
+! https://github.com/AdguardTeam/AdguardFilters/issues/189259 26-09-2024
+webviewer.interstuhlnet.de#%#//scriptlet('set-constant', 'WURFL', 'emptyObj')
 ! https://github.com/AdguardTeam/FiltersRegistry/pull/1007 25-09-2024
 playzone.cz#%#//scriptlet('abort-on-stack-trace', 'Element.prototype.appendChild', 'loadAab')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189428 25-09-2024
