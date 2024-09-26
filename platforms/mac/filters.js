@@ -250,13 +250,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-<<<<<<< HEAD
-			"version": "2.0.70.62",
-			"timeUpdated": "2024-09-25T03:20:46+0000",
-=======
-			"version": "2.0.70.92",
-			"timeUpdated": "2024-09-26T00:32:58+0000",
->>>>>>> upstream/master
+			"version": "2.0.70.63",
+			"timeUpdated": "2024-09-26T02:54:15+0000",
 			"languages": []
 		},
 		{
@@ -384,13 +379,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-<<<<<<< HEAD
-			"version": "2.1.33.10",
-			"timeUpdated": "2024-09-25T03:25:38+0000",
-=======
-			"version": "2.1.33.57",
-			"timeUpdated": "2024-09-26T01:01:01+0000",
->>>>>>> upstream/master
+			"version": "2.1.33.11",
+			"timeUpdated": "2024-09-26T02:59:42+0000",
 			"languages": []
 		},
 		{
@@ -655,13 +645,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-<<<<<<< HEAD
-			"version": "2.1.32.25",
-			"timeUpdated": "2024-09-25T03:42:56+0000",
-=======
-			"version": "2.1.32.47",
-			"timeUpdated": "2024-09-25T21:01:31+0000",
->>>>>>> upstream/master
+			"version": "2.1.32.26",
+			"timeUpdated": "2024-09-26T03:19:05+0000",
 			"languages": []
 		},
 		{
