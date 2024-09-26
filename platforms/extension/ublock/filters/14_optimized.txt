@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 1E4YaWapXvlOOniZzH3hzw
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1727343411-3600.patch
+! Checksum: mNcFge/2xGzLISHADYsUXA
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1727347106-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.44
-! TimeUpdated: 2024-09-26T09:33:19+00:00
+! Version: 2.2.9.45
+! TimeUpdated: 2024-09-26T10:34:18+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1163,6 +1163,7 @@ focus.it##+js(remove-class, cp-banner-visible, body)
 codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.*##+js(remove-class, force--consent|show--consent, html)
 /cookieconsent.js$domain=wedos.com|scssoft.com
 docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
+letu.ru##.web-cookie-popup
 shoppers.media##div[class^="CookiePopup"]
 mediately.co###__next > div[class^="sc-"]:has(> div[class^="sc-"] > div[class^="sc-"] > div[class^="sc-"] > a[href$="/docs/privacy"])
 2gis.ru##._4xmcmq
@@ -1735,6 +1736,7 @@ widoczni.com##+js(set-cookie, rodopolicy, false)
 pakamera.pl###ccpm
 nordpass.com,nordlocker.com,nordvpn.com##.ConsentWidget__container
 emu-land.net##.policy-validation
+codedead.com,etelecinema.hu##div[role="alert"]
 wildberries.ru##.fixed-block__cookies
 casaevideo.com.br##+js(set-cookie, acceptPolicy, true)
 ||consent.wko.at^
@@ -5952,7 +5954,10 @@ eurowings.com#@#.cookieConsentBanner
 xn--bafg-7qa.de#@##cookiebanner
 xn--bafg-7qa.de#@#.cookiebanner:not(body)
 starmoney.de#@#.tx-om-cookie-consent
+!+ NOT_OPTIMIZED
 observatornews.ro#@##onetrust-consent-sdk
+!+ NOT_OPTIMIZED
+@@||cookie-cdn.cookiepro.com^$domain=observatornews.ro
 seb.lv#@##cookiesMessage
 @@||consent.cookiebot.com/uc.js$domain=plaion.com
 channel5.com#@##onetrust-consent-sdk
@@ -13266,6 +13271,8 @@ buttondown.email#@##subscribe-form
 ###smartbanner.ios
 ###SmBnLink
 turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-mail.org,ortobom.com.br,dicionarioinformal.com.br,5-fifth.com,news.sky.com,chat.babel.com,getwordly.com,school-turnup.com,naked-science.ru,vod.tvp.pl,tvn24.pl,m.lamoda.ru,lkfl2.nalog.ru,kocailem.com,dartworld.shopgate.com,m.alles10euro.de,dodopizza.ru,allo.ua,tempo.co,beymen.com,tvnmeteo.tvn24.pl,outsidetv.com,golfchannel.com,sportsnet.ca,euronews.com,pkobp.pl,tesco.hu,prima.hu,immobilienscout24.de,lcwaikiki.com,m.sigrun-woehr.com,transfermarkt.de,fragfinn.de,hh.ru,eraffe24.de,infranken.de,m.computeruniverse.net,m.emp.de,meduza.io##body .smartbanner
+sp.manga.nicovideo.jp##div.fixed.bottom-2
+sakurazaka46.com##.app-button
 hangikredi.com##div[class*="bg-bannerLeftGradient"]
 meteum.ai##button[class^="AppPromo_container"]
 theportugalnews.com##header > .p-3 > .mx-auto > .row:has(> .col-8 > a.btn-download)
@@ -14497,6 +14504,7 @@ honeysanime.com#$##header-line-2 { margin-top: -60px !important; }
 honeysanime.com#$##wrap-app-notice { display: none !important; }
 !+ NOT_OPTIMIZED
 m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
+tanoshiiosake.jp##.app-induction
 mobil.akilliphone.com#$#html { overflow: auto !important; }
 mobil.akilliphone.com#$#.v-overlay { display: none !important; }
 mobil.akilliphone.com#$#.v-dialog__content { display: none !important; }
