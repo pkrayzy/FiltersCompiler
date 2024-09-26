@@ -1,8 +1,8 @@
-! Checksum: ch2qUarWIwePjTJ05RQrXw
+! Checksum: cb0XRmbkHbcBk/qqVleYBg
 ! Title: Persian Blocker
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.82
-! TimeUpdated: 2024-09-10T21:01:53+00:00
+! Version: 2.0.4.88
+! TimeUpdated: 2024-09-24T17:01:33+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: PersianBlocker
@@ -815,6 +815,7 @@ digiato.com#$#.todaysNewsList__posts { max-width: 100% !important; flex-grow: 1 
 www.digikala.com##div#ProductListPagesWrapper > section[class*="product-list_ProductList__sidebar__"] > div.sticky-outer-wrapper > div.sticky-inner-wrapper > a[href*="?ad_variant_id"]
 ! Search products ads
 ! Ads in product page
+! https://www.digikala.com/search/category-mobile-phone/product-list/?brands%5B0%5D=1662&has_selling_stock=1&sort=20
 ||digistyle.com/tracker^
 ||sentry.divar.cloud^$third-party,domain=divar.ir
 ||actionlog.divar.ir^$~third-party
@@ -1698,9 +1699,8 @@ rouzegar.com##.widget_text.widget.primary-sidebar-widget.w-t.h-i
 ||rooziato.com/wp-content/plugins/duracelltomi-google-tag-manager/js/analytics-talk-content-tracking
 roozno.com##.adv-box
 ||rondbaz.com/js/analytics.js
-||rond.ir/Content/SimBannerFile/Files/
-||rond.ir/Content/images/homeImages/blank-loading.png
-rond.ir##.banner-box
+||rond.ir/api/ns/common/web/advertisement/page^$xmlhttprequest,~third-party
+rond.ir##section.ads-section
 rastannews.ir##.all_ads
 ||rajanews.com/sites/default/files/superadmin/*.gif
 rajanews.com###block-block-22.ads
@@ -2126,12 +2126,14 @@ vipofilm.com##.ads
 ! https://github.com/uBlockOrigin/uAssets/issues/12411
 vakil.net#$#* { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/215
+||countly.virgool.io^$~third-party
 ||sentry.virgool.io^$~third-party
-||countly.virgool.io/sdk/web/countly.min.js^$script,~third-party
 ||virgool.io/api2/app/users/relatedAds^$xmlhttprequest,~third-party
-! virgool.io##input[type="hidden"]:is(input#log_id, input#log_code):remove-attr(value)
+/^https?:\/\/virgool\.io\/api/v1\.4\/post\/[0-9a-z]+$/$domain=virgool.io,xmlhttprequest,~third-party,method=post
+||virgool.io/api2/app/posts/*/ad^$xmlhttprequest,~third-party
+||virgool.io/api2/app/session/start^$xmlhttprequest,~third-party,method=post
+||virgool.io/api2/app/session/read-ratio^$xmlhttprequest,~third-party,method=post
 virgool.io##div.js-userLogin-popup
-virgool.io##div.feedAdsBox
 ! https://github.com/MasterKia/PersianBlocker/pull/10
 ! https://github.com/MasterKia/PersianBlocker/pull/15
 vgdl.ir##div#ads__start_of_the_post
@@ -2235,7 +2237,7 @@ zohur12.ir##.sideads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110569
 ! https://github.com/MasterKia/PersianBlocker/issues/4
 ||analytics.zoomit.ir^
-||theforge.ir^
+||theforge.ir/intake/v2/rum/events^$xmlhttprequest,third-party,domain=zoomit.ir|zoomg.ir
 /ads^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
 /editorial/api/articles/*/visit^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
 zoomit.ir,zoomg.ir##div[class^="AdvertisingParser"]

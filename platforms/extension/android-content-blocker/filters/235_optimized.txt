@@ -1,8 +1,8 @@
-! Checksum: 3YnZsxD/t59rkVrWW7Ae7w
+! Checksum: EIU7u2XsHux7gs17og8K3A
 ! Title: Persian Blocker (Optimized)
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.82
-! TimeUpdated: 2024-09-10T21:01:53+00:00
+! Version: 2.0.4.88
+! TimeUpdated: 2024-09-24T17:01:33+00:00
 ! Expires: 5 days (update frequency)
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.site/"]
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
@@ -1339,9 +1339,8 @@ rouzegar.com##.widget_text.widget.primary-sidebar-widget.w-t.h-i
 ||rooziato.com/wp-content/plugins/duracelltomi-google-tag-manager/js/analytics-talk-content-tracking
 roozno.com##.adv-box
 ||rondbaz.com/js/analytics.js
-||rond.ir/Content/SimBannerFile/Files/
-||rond.ir/Content/images/homeImages/blank-loading.png
-rond.ir##.banner-box
+||rond.ir/api/ns/common/web/advertisement/page^$xmlhttprequest,~third-party
+rond.ir##section.ads-section
 rastannews.ir##.all_ads
 ||rajanews.com/sites/default/files/superadmin/*.gif
 rajanews.com###block-block-22.ads
@@ -1685,11 +1684,14 @@ varandaz.com##.zxc-visible-fixed
 vipofilm.com##.tabligh
 vipofilm.com##.ads
 vakil.net#$#* { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+||countly.virgool.io^$~third-party
 ||sentry.virgool.io^$~third-party
-||countly.virgool.io/sdk/web/countly.min.js^$script,~third-party
 ||virgool.io/api2/app/users/relatedAds^$xmlhttprequest,~third-party
+/^https?:\/\/virgool\.io\/api/v1\.4\/post\/[0-9a-z]+$/$domain=virgool.io,xmlhttprequest,~third-party,method=post
+||virgool.io/api2/app/posts/*/ad^$xmlhttprequest,~third-party
+||virgool.io/api2/app/session/start^$xmlhttprequest,~third-party,method=post
+||virgool.io/api2/app/session/read-ratio^$xmlhttprequest,~third-party,method=post
 virgool.io##div.js-userLogin-popup
-virgool.io##div.feedAdsBox
 vgdl.ir##div#ads__start_of_the_post
 ||vazeh.com/banners/us/*.gif^$image,~third-party
 ||up.varoone.ir/view/*/adv
@@ -1768,7 +1770,7 @@ zibamoon.com##div[id^="BehinAva"]
 zibamoon.com##.DetailArea > .AdAreaDetail
 zohur12.ir##.sideads
 ||analytics.zoomit.ir^
-||theforge.ir^
+||theforge.ir/intake/v2/rum/events^$xmlhttprequest,third-party,domain=zoomit.ir|zoomg.ir
 /ads^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
 /editorial/api/articles/*/visit^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
 zoomit.ir,zoomg.ir##div[class^="AdvertisingParser"]

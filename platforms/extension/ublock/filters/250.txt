@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: RCvz5IeLgl3V8YZooCxzRg
-! Diff-Path: ../patches/250/250-s-1726117525-14400.patch
+! Checksum: 1IZyPFCIEtM3SCTDlYiGjQ
+! Diff-Path: ../patches/250/250-s-1727312717-14400.patch
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.15.2
-! TimeUpdated: 2024-09-12T05:01:48+00:00
+! Version: 2.0.15.13
+! TimeUpdated: 2024-09-26T01:01:48+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
@@ -37,7 +37,7 @@
 ! • Unnecessary login prompts.
 ! • URL parameters believed to be unnecessary or trackers.
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
-! OriginalVersion: 22July2024v1
+! OriginalVersion: 20September2024v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -494,6 +494,8 @@ no#$#html.smartbanner-show[data-paywall] { margin-top: 0 !important }
 ###journeyBanner
 ! https://github.com/DandelionSprout/adfilt/pull/956 / https://www.valdemarsro.dk/
 ~applink.dk##a[href*="/applink.dk/"]
+! For sites that have $generichide
+media.tumblr.com###app-download-links-container
 ! Below are entries that I borrowed from "I Don't Want Your App", which was maintained by https://github.com/lassekongo83 at https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt, and which was licenced as GPLv3
 ! Generic
 ##a[href*=".app.link/"]
@@ -512,7 +514,7 @@ quora.com##.modal_bg
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 10September2024v1
+! OriginalVersion: 21September2024v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -532,7 +534,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 ! Palau (Put on break due to too many whitelistings being needed)
 !!!||pw^$doc,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~buttercup.pw|~rezka.pw|~darkcrystal.pw|~xor.pw|~fullhdfilmizlesene.pw|~gopass.pw|~vost.pw|~core.pw|~bittor.pw|~plutonium.pw|~nitter.pw|~kge.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
-||top^$document,domain=~caitlin.top|~callmebymygender.top|~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top|~chillx.top|~strims.top|~thedesk.top|~audioforyou.top|~pegelinux.top|~awavenue.top|~reyhub.top
+||top^$document,domain=~caitlin.top|~callmebymygender.top|~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top|~chillx.top|~strims.top|~thedesk.top|~audioforyou.top|~pegelinux.top|~awavenue.top|~reyhub.top|~iboxs.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 !!!||agency^$doc,domain=~battlefield.agency|~baam.agency|~robotzebra.agency|~uphotel.agency|~ws.agency (Can't remember the last time I saw it used in a redirection train.)
@@ -1556,7 +1558,7 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||topshineauto.no^$document
 ||vossblues.no^$document
 ||yttersiden.no^$document
-://162.214.80.$document
+!!!://162.214.80.$doc
 ! https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-7873648
 ||monetrizer*.$all
 ||38.180.96.244^$all
@@ -3936,12 +3938,12 @@ fileinfo.com##.top:has(a[href*="/windows_file_viewer"])
 ! ——— Prompts about outdated browsers... within reasonable limits ———
 ! nettavisenNO (24/05/2023)
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 09September2024v1
+! OriginalVersion: 24September2024v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! This is an extension file, not an independent list.
-! Extension file's version: 05August2024v1-Extension
+! Extension file's version: 24September2024v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -4056,6 +4058,8 @@ www.instagram.com#$?#[id^=mount]:has(a[class][href*="/accounts/login/?"]) ~ div[
 www.instagram.com##[id^=mount]:has(a[class][href*="/accounts/login/?"]) ~ div[class*=" "][style^=--][style*="255"]
 ! https://www.the-inquisitor-magazine.com/swedish-noc-on-dubious-2030-winter-games-decisions/
 the-inquisitor-magazine.com#$#.c-content--has-shadow { mask-image: none !important; -webkit-mask-image: none !important }
+! https://github.com/DandelionSprout/adfilt/issues/1055
+vk.com##+js(set-constant, window.Unauthorized2, undefined)
 ! ——————————————————————————————————————————————————————————————————————
 ! Entries below are fixed in other lists that are included in uBO as of the 2nd of March 2019, but are also in this list to serve minimal-setup users.
 !! Removing the blurring of random Pinterest images ↪️📛 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
@@ -4257,6 +4261,8 @@ douyin.com##script[src*=websdk] + div:not([class], [id])
 /tncms/api/access.js|$script,domain=westernstandard.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171530
 www.deviantart.com##body > header[role=banner]:not([class*=" "]) ~ div[class^=_][class*=" "]:has(a[href*="/login"])
+! https://github.com/DandelionSprout/adfilt/issues/1055
+vk.com###page_bottom_banners_root
 ! ——————————————————————————————————————————————————————————————————————
 ! Below are entries that I borrowed from «Strappazzon's Annoyances filter list», which is maintained by https://github.com/Strappazzon at https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Annoyances.txt, and which is licenced under MIT.
 ! Amazon
@@ -5767,7 +5773,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 watchseries.*##.imdb
 justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 10September2024v1
+! OriginalVersion: 25September2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -5948,7 +5954,7 @@ $document,removeparam=igshid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3041969
 $document,removeparam=snr,domain=steampowered.com|steamcommunity.com|steamgames.com
 ! https://www.trouw.nl/nieuws/het-draagvlak-in-crisistijd-doet-premier-rutte-bijna-zweven-maar-hij-kan-ook-hard-vallen~bf367a86/?referrer=https%3A%2F%2Fwww.theguardian.com%2Fworld%2Fcommentisfree%2F2021%2Fmar%2F04%2Fcovid-derailed-great-hope-dutch-far-right-thierry-baudet (05/03/2021)
-$document,removeparam=referrer,domain=~bolt.com|~f4map.com|~deviantart.com|~github.com|~discover.*|~vimeo.*|~123-reg.co.uk|~cravesandflames.com|~portswigger.net
+$document,removeparam=referrer,domain=~bolt.com|~f4map.com|~deviantart.com|~github.com|~discover.*|~vimeo.*|~123-reg.co.uk|~cravesandflames.com|~portswigger.net|~aluminate.net
 $document,removeparam=ext_source
 ! https://graphicriver.net/item/invoice-estimation-brief/20668760?iradid=275988&irpid=1288974&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1 (17/03/2021)
 $removeparam=iradid
@@ -6209,7 +6215,7 @@ $document,removeparam=elqah
 $document,removeparam=elqcst
 $document,removeparam=elqcsid
 $document,removeparam=/^ga_.*$/
-$removeparam=_hsenc
+$document,removeparam=_hsenc
 $removeparam=_hsmi
 $removeparam=__hstc
 $removeparam=__hssc
@@ -8947,7 +8953,7 @@ $removeparam=sub_ad,domain=hotels.com
 $removeparam=sub_site,domain=hotels.com
 $removeparam=sub_publisher,domain=hotels.com
 ! https://www.ebookers.com/lp/deals/sun-and-beach?rfrr=editorial.Sun_&%20beach.click
-$removeparam=rfrr,domain=ebookers.*
+$removeparam=rfrr,domain=ebookers.*|hotels.com
 ! https://gitlab.com/ClearURLs/rules/-/issues/222
 $removeparam=fbid,domain=festo-didactic.com
 ! https://www.tokopedia.com/legoclassic/my-little-pony-a-new-generation-crystal-princess-petals-figure-set?src=topads&xClientId=amp-IWyM3dL4bS8QlacnZO4hyg&cid=amp-IWyM3dL4bS8QlacnZO4hyg&amp=true
@@ -9714,6 +9720,16 @@ $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.
 $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 ! https://www.ikea.com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5.jpg?f=xl
 ||ikea.com/*/images/products^$removeparam=f
+! https://www•smartasaker•no/no/sportstromper-mot-gnagsar?dema_id=6299778080439
+||smartasaker.$removeparam=dema_id
+! https://no•hotels•com/ho548198/tropical-islands-krausnick-gross-wasserburg-tyskland/?chkin=2024-11-09&chkout=2024-11-10&x_pwa=1&rfrr=HSR&pwa_ts=1726867399106&referrerUrl=aHR0cHM6Ly9uby5ob3RlbHMuY29tL0hvdGVsLVNlYXJjaA%3D%3D&useRewards=false&rm1=a1&regionId=6349111&destination=Krausnick-Gross+Wasserburg%2C+Brandenburg+Region%2C+Tyskland&destType=MARKET&selected=12064742&latLong=52•040134%2C13•81408&sort=RECOMMENDED&top_dp=1558&top_cur=NOK&userIntent=&selectedRoomType=202442481&selectedRatePlan=212420506&expediaPropertyId=12064742&searchId=b3ed9457-a7b5-4191-998a-1c3cd8e802f0
+||hotels.com^$removeparam=referrerUrl
+!+ NOT_OPTIMIZED
+||hotels.com^$removeparam=x_pwa
+!+ NOT_OPTIMIZED
+||hotels.com^$removeparam=pwa_ts
+!+ NOT_OPTIMIZED
+||hotels.com^$removeparam=latLong
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
 actionewz.com,animemojo.com,comicbookmovie.com,fearhq.com,gamefragger.com,mtvuutiset.fi,sffgazette.com,theringreport.com,toonado.com##+js(set-constant, GSvars.addressTracking, false)
@@ -9754,6 +9770,7 @@ buffalonews.com##+js(set-constant, lee_trkLinkSrc, noopFunc)
 ! Fix driver download section
 @@||canon.*/supportproduct/gettabcontent$removeparam=referrer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89618
+! https://github.com/uBlockOrigin/uAssets/issues/25350
 @@||urldefense.com^$removeparam
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5475592
 @@||startpage.com/sp/qi$removeparam=sc
@@ -9762,8 +9779,9 @@ buffalonews.com##+js(set-constant, lee_trkLinkSrc, noopFunc)
 ! Account login pages are likely also a place where you generally don't want error messages from false positive parameter removals
 ! https://github.com/DandelionSprout/adfilt/issues/1051
 @@/login-redirect/*$removeparam
+@@/login?$removeparam=referrer
 ! Title: 🈺 Japanese Text Softener
-! OriginalVersion: 02September2024v1-Beta
+! OriginalVersion: 23September2024v1-Beta
 ! Expires: 6 days
 ! Description: The font situation on many Japanese websites is kind-of absolutely atrocious on Windows (Other OSs are much less affected). They use super-stiff janky fonts resemblant of Windows 95 or Amiga. And even worse, many of the sites also default to the stiff Japanese fonts' atrocious Latin letter types. Here's how to use the sites in a way that is compatible with the 3rd decade of the 21st century.
 ! 🇯🇵: Windows における多くの日本語サイトのフォント状況はまったくもってゾッとします（他のOSでは遥かにマシです）。Windows 95 か Amiga を思わせるギッザギザのクズフォントが使用されており、さらに悪いことにそういったサイトの多くは、欧文書体に至ってもこのゾッとするギザギザ日本語フォントをデフォルトとして採用しているのです。令和の時代に相応しくサイトを利用する方法は次のとおりです。
@@ -9771,7 +9789,7 @@ buffalonews.com##+js(set-constant, lee_trkLinkSrc, noopFunc)
 ! Note 2: Many more sites can be fixed by installing "Optional features → Show features → Extra Japanese fonts" in Windows 10/11 to get the Meiryu font (but whose kana are ugly); or by uninstalling "MS PGothic" from your system entirely. But even then, Latin letters can look slightly strange.
 ! Note 3: Starting 10 April 2024, South Korean Hangul sites can also become softened in extraordinarily bad cases, e.g. https://www•nintendo•co•kr/news?idx=164
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-1000mg.jp,1geki.jp,2nn.jp,4travel.jp,account.nicovideo.jp,altema.jp,amiami.jp,amy.tokyo,ark-pc.co.jp,ascii.jp,athome.co.jp,atpress.ne.jp,auone.jp,automaton-media.com,biccamera.com,blog.esuteru.com,bloomberg.co.jp,books-sanseido.jp,cdjapan.co.jp,cero.gr.jp,ch.nicovideo.jp,cinematoday.jp,coat.co.jp,cookpad.com,dengekionline.com,diamond.jp,direct.sanwa.co.jp,dmkt-sp.jp,dmm.co.jp,dmm.com,doope.jp,doorblog.jp,dto.jp,eagate.573.jp,entabe.jp,entamepost.jp,eonet.jp,epark.jp,eposcard.co.jp,expresscard.jp,expy.jp,familio-folkloro.com,famitsu.com,faq.radiko.jp,fgomatomeplus.com,g123.jp,gamefactory.jp,gamepedia.jp,gameranbu.jp,gamewith.jp,geekjob.jp,getchu.com,gigazine.net,goguynet.jp,granbluefantasy.jp,gta5.jp,h1g.jp,hentai-image.com,hentai-img.com,hosyusokuhou.jp,hotpepper.jp,huffingtonpost.jp,hulu.jp,ib-game.jp,impress.co.jp,innervision.co.jp,insightnow.jp,iphone-mania.jp,itmedia.co.jp,japan-animemusic.com,jgrants-portal.go.jp,jmty.jp,joshinweb.jp,jp.ign.com,jp.nexon.com,jp.wsj.com,k-manga.jp,kabutan.jp,kakaku.com,kamigame.jp,kinokuniya.co.jp,kitimama-matome.net,kojima.net,konoyubitomare.jp,livedoor.com,logroid.blogspot.com,maidonanews.jp,mainichi.jp,mapion.co.jp,matu.cocolog-nifty.com,mechacomic.jp,melonbooks.co.jp,mgjshop.co.jp,mineo.jp,mixi.jp,mora.jp,nazonazo.jp,nec.co.jp,neowing.co.jp,news.infoseek.co.jp,newsweekjapan.jp,nicenature.top,nicoco.net,nijie.info,nikkan.co.jp,nojima.co.jp,ntj.jac.go.jp,nttxstore.jp,ocn.ne.jp,odakyu.jp,omni7.jp,onojibi.jp,originalnews.nico,osawa-inc.co.jp,otakomu.jp,otanew.jp,pex.jp,platinedispositif.net,point.recruit.co.jp,poptapbeat.taiko-ch.net,qa.nicovideo.jp,qoo10.jp,rakuten.co.jp,rank-king.jp,recipe-blog.jp,research-panel.jp,sankei.com,sanwa-d.co.jp,security-next.com,seesaa.jp,seiga.nicovideo.jp,sengokuixa.jp,shogakukan.co.jp,store-tsutaya.tsite.jp,suruga-ya.jp,suumo.jp,takarazuka-an.co.jp,taking-a-stand.jp,tenki.jp,tinami.com,tokubai.co.jp,tokyo-np.co.jp,tsukumo.co.jp,tv-tokyo.co.jp,vector.co.jp,vippers.jp,vita.taiko-ch.net,weathernews.jp,web-ace.jp,webcomics.jp,weblio.jp,westjr.co.jp,wowkorea.jp,wowma.jp,www.gpoint.co.jp,www.homes.co.jp,www.infoseek.co.jp,www.jorudan.co.jp,www.meti.go.jp,www.nikkei.com,www.nintendo.co.kr,www.swiki.jp,yahoo.co.jp,yamanashirei.blog.fc2.com,yodobashi.com,yomiuri.co.jp,yugioh-card.com,~justpass.epark.jp,~mall.epark.jp,bookmeter.com,mottainaihonpo.com,netoff.co.jp,tokyodisneyresort.jp#$#:is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
+1000mg.jp,1geki.jp,2nn.jp,4travel.jp,account.nicovideo.jp,altema.jp,amiami.jp,amy.tokyo,ark-pc.co.jp,ascii.jp,athome.co.jp,atpress.ne.jp,auone.jp,automaton-media.com,biccamera.com,blog.esuteru.com,bloomberg.co.jp,books-sanseido.jp,cdjapan.co.jp,cero.gr.jp,ch.nicovideo.jp,cinematoday.jp,coat.co.jp,cookpad.com,dengekionline.com,diamond.jp,direct.sanwa.co.jp,dmkt-sp.jp,dmm.co.jp,dmm.com,doope.jp,doorblog.jp,dto.jp,eagate.573.jp,entabe.jp,entamepost.jp,eonet.jp,epark.jp,eposcard.co.jp,expresscard.jp,expy.jp,familio-folkloro.com,famitsu.com,faq.radiko.jp,fgomatomeplus.com,g123.jp,gamefactory.jp,gamepedia.jp,gameranbu.jp,gamewith.jp,geekjob.jp,getchu.com,gigazine.net,goguynet.jp,granbluefantasy.jp,gta5.jp,h1g.jp,hentai-image.com,hentai-img.com,hosyusokuhou.jp,hotpepper.jp,huffingtonpost.jp,hulu.jp,ib-game.jp,impress.co.jp,innervision.co.jp,insightnow.jp,iphone-mania.jp,itmedia.co.jp,japan-animemusic.com,jgrants-portal.go.jp,jmty.jp,joshinweb.jp,jp.ign.com,jp.nexon.com,jp.wsj.com,k-manga.jp,kabutan.jp,kakaku.com,kamigame.jp,kinokuniya.co.jp,kitimama-matome.net,kojima.net,konoyubitomare.jp,livedoor.com,logroid.blogspot.com,maidonanews.jp,mainichi.jp,mapion.co.jp,matu.cocolog-nifty.com,mechacomic.jp,melonbooks.co.jp,mgjshop.co.jp,mineo.jp,mixi.jp,mora.jp,nazonazo.jp,nec.co.jp,neowing.co.jp,news.infoseek.co.jp,newsweekjapan.jp,nicenature.top,nicoco.net,nijie.info,nikkan.co.jp,nojima.co.jp,ntj.jac.go.jp,nttxstore.jp,ocn.ne.jp,odakyu.jp,omni7.jp,onojibi.jp,originalnews.nico,osawa-inc.co.jp,otakomu.jp,otanew.jp,pex.jp,platinedispositif.net,point.recruit.co.jp,poptapbeat.taiko-ch.net,qa.nicovideo.jp,qoo10.jp,rakuten.co.jp,rank-king.jp,recipe-blog.jp,research-panel.jp,sankei.com,sanwa-d.co.jp,security-next.com,seesaa.jp,seiga.nicovideo.jp,sengokuixa.jp,shogakukan.co.jp,store-tsutaya.tsite.jp,suruga-ya.jp,suumo.jp,takarazuka-an.co.jp,taking-a-stand.jp,tenki.jp,tinami.com,tokubai.co.jp,tokyo-np.co.jp,tsukumo.co.jp,tv-tokyo.co.jp,vector.co.jp,vippers.jp,vita.taiko-ch.net,weathernews.jp,web-ace.jp,webcomics.jp,weblio.jp,westjr.co.jp,wowkorea.jp,wowma.jp,www.gpoint.co.jp,www.homes.co.jp,www.infoseek.co.jp,www.jorudan.co.jp,www.meti.go.jp,www.nikkei.com,www.nintendo.co.kr,www.swiki.jp,yahoo.co.jp,yamanashirei.blog.fc2.com,yodobashi.com,yomiuri.co.jp,yugioh-card.com,~justpass.epark.jp,~mall.epark.jp,bookmeter.com,mottainaihonpo.com,netoff.co.jp,tokyodisneyresort.jp,nijimen.kusuguru.co.jp,applion.jp#$#:is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
 store.playstation.com,1999.co.jp#$#html[lang=ja] :is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana" !important }
 ! https://www.nicovideo.jp/watch/sm28685290 (20/08/2024)
 www.nicovideo.jp#$##CommonHeader * { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }

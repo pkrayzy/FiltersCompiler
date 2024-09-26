@@ -1,15 +1,15 @@
 ![Adblock Plus 2.0]
-! Checksum: P5f55HdpY+Uug/vge/CTbg
-! Diff-Path: ../patches/249/249-s-1725901579-14400.patch
+! Checksum: kkEtzkPW9aApyW4WiD2J5g
+! Diff-Path: ../patches/249/249-s-1727183185-14400.patch
 ! Title: Dandelion Sprout's Nordic Filters
 ! Description: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population.
-! Version: 2.0.7.67
-! TimeUpdated: 2024-09-09T17:02:19+00:00
+! Version: 2.0.7.70
+! TimeUpdated: 2024-09-24T13:01:53+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 08September2024v1
+! Last modified: 22September2024v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -732,6 +732,7 @@ e24.no##.dr-edition-teaser
 apningstider.org##.block_w3 + .block_w3
 itavisen.no#?#.td-c-loop-item:has(.meta-info:has-text(Annonse))
 jyllands-posten.dk##.jp-banner
+dagens.no##div > [href*="partner-ads.com/no/klikbanner."][style*=float]
 minmote.no##.advert-container-inline
 mbl.is#$#.main-header { margin-top: 0 !important }
 borsen.dk##.dfp
@@ -1088,6 +1089,7 @@ dmi.dk##.section-1-ad:upward(1)
 e24.no###main > div:nth-of-type(3)
 alt.dk##.section-banner
 sedirekte.com###streamstopad
+dagens.no##.row-container:not(:has(+*)) div[data-type=generic-widget]:has(div[data-ad-unit-id])
 purehelp.no##.h-300px
 sykepleien.no##.advertisement-responsive
 bygge-anlaegsavisen.dk##.main--add
@@ -1226,6 +1228,8 @@ nyheder24.dk##.generic-widget:has(.annonce)
 nyheder24.dk##div[class*=inArticleBanner i]
 abcnyheter.no##.c-article__bottom-ad
 sykepleien.no##.content-extra__ads
+custompublish.com##.bannerlocation
+motorhobby.no##.hidden-phone.rt-block
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -1426,6 +1430,10 @@ _visittkortannonse_$image
 ||tize.no^$subdocument,third-party
 ! sn•dk (19/07/2024)
 /annoncer/scripts/*
+! https://inmagasinet•custompublish•com/blir-det-gull•4528974-87197•html
+/annonser-vert.gif^
+! https://www•motorhobby•no/no/events/arr-etter-type/item/6-stjordal-motorshow-trondheim-mai-2025-stjordal-motorshow-i-abrahallen (13/09/2024)
+.no/images/banners/$image
 ! — — — — —
 ! 🇳🇴: Domenefokuserte blokkeringsoppføringer
 ! 🇳🇴🏞: Domenefokuserande bloknadsoppføringar
@@ -2157,8 +2165,6 @@ babyklar.dk#@#.ads300-250
 babyklar.dk#@#.ads300_250-widget
 ! Makes 1p info banners show up correctly
 @@_980x100.$domain=ruijan-kaiku.no
-! Makes most links show up correctly (Fixed in AdGuard Base)
-ni.dk#@#a[href*=".adform.net/"]
 ! https://github.com/uBlockOrigin/uAssets/issues/11546 (Not yet forwarded to EasyList)
 findbolig.nu#@#.advertLink
 ! https://github.com/uBlockOrigin/uAssets/issues/13907
@@ -2284,8 +2290,6 @@ gamer.no##.fullscreen-ad
 gamer.no##header ~ * > [class]:has(> [data-name="gamer_toppbanner"])
 gulindex.no###cintmodal
 jobindex.dk##div[aria-label="Annonce"]
-jyllands-posten.dk##html[lang] > body section[id^="monster_"]
-jyllands-posten.dk,finans.dk##html[lang] > body div[class*=banner-container]
 klikk.no##.affiliate-content
 klikk.no##iframe[src^="//widget.tippebannere.no/"]
 kundeavisogtilbud.no##div[class^="ad_"]
@@ -2302,11 +2306,9 @@ xn--bredbnd-ixa.dk##div[class^="speedtest-bg"] > a > img
 ||freewheel-mtgx-tv.akamaized.net/*.mp4$media,redirect=noop-1s.mp4,domain=bold.dk
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=tv3sport.dk
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices_gpt.js,domain=vegetarbloggen.no,important
-||img.sofabold.dk/images/banner
 ||v.fwmrm.net/ad/g/$domain=ekstrabladet.dk,important
 ||vgc.no/cdn/js/libs/homad-config.json$xmlhttprequest,redirect=noop.json
 ||widget.tippebannere.no^$third-party
-||widgets.sprinklecontent.com^$domain=klikk.no
 inky.no#@#iframe[width="200"][height="240"]
 ni.dk#@#a[href*=".adform.net/"]
 @@||borsen.dk/themes/borsen.dk/js/dfp.js
