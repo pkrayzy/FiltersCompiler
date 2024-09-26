@@ -1,9 +1,9 @@
-! Checksum: ldw7tlNsNFfrrbxcFUo+6g
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1727357803-3600.patch
+! Checksum: gdKYZ/XjKxJSJoqucPKFtA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1727365025-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.57.12
-! TimeUpdated: 2024-09-26T13:32:53+00:00
+! Version: 2.0.57.13
+! TimeUpdated: 2024-09-26T15:33:08+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -434,7 +434,7 @@ jukenbbs.com#%#//scriptlet('prevent-addEventListener', 'load', 'delayCheckAdBloc
 shindanmaker.com#$#div[id^="div-gpt-"] { min-height: 1px !important; }
 @@||freepdfcomic.com^$generichide
 qa.crefan.jp#%#//scriptlet('abort-current-inline-script', 'onload', 'google_esf')
-tters.jp#$#.ad-section { height: 10px !important; position: absolute !important; left: -3000px !important; }
+tters.jp#$##check-ad { height: 10px !important; position: absolute !important; left: -3000px !important; }
 tters.jp#@#ins.adsbygoogle[data-ad-client]
 tters.jp#@#ins.adsbygoogle[data-ad-slot]
 tters.jp#@#.ad-section
@@ -1247,7 +1247,7 @@ _ap/signin*?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=
 /^https?:\/\/([-0-9a-z]{3,}\.)?[a-z]{8,}\.[a-z]{3,6}\/product\/\d{6,}(\.html)?$/$document,domain=online|top
 /^(?!.*(authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,_____,domain=viki.ja-jp.nina.az|uraaka-joshi.com
 nanbbs.jp,eroita.net,city.hirosaki.aomori.jp,iyasiya.com,adacomi.com,pref.shimane.lg.jp,pref.osaka.lg.jp,illust-ai.com,nan-net.com,radiolife.com,keimei.ne.jp,5ch.net,bbspink.com,crank-in.net###banner
-cyclesports.jp,precious.jp,creatorzine.jp,pointi.jp,townnews.co.jp,point-game.jp,azby.fmworld.net,adult-machiko.com,newsoku.blog,nikkan-gendai.com,ceron.jp,kids.gakken.co.jp,5chan.jp,toyokeizai.net,twpf.jp,chunichi.co.jp,tokyo-np.co.jp,db.msin.jp,minpo.jp##.pr
+minyu-net.com,cyclesports.jp,precious.jp,creatorzine.jp,pointi.jp,townnews.co.jp,point-game.jp,azby.fmworld.net,adult-machiko.com,newsoku.blog,nikkan-gendai.com,ceron.jp,kids.gakken.co.jp,5chan.jp,toyokeizai.net,twpf.jp,chunichi.co.jp,tokyo-np.co.jp,db.msin.jp,minpo.jp##.pr
 e-mansion.co.jp,baby-calendar.jp,npn.co.jp,afpbb.com,hamakei.com,keizai.biz,minkei.net,shibukei.com##.bnr
 city.mikasa.hokkaido.jp,virgintriumph.com,h2ch.com,pref.hokkaido.lg.jp,booksprivilege.com,repsoku.net,atrain3d.com,dq5clear.com,wpclear.com,city.shinagawa.tokyo.jp,html-css-javascript.com,pref.nagasaki.jp,okinawaokuyami.com,illust-ai.com,ntv.co.jp,my-terrace.com,travel.rakuten.co.jp,conciergedesk.jp,anal-love.net###ad
 kanjitisiki.com,city.imizu.toyama.jp,research-er.jp,city.kakegawa.shizuoka.jp,yuuu-nii.com,kachimai.jp,atwiki.jp###ads
@@ -1270,6 +1270,9 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+||pathee.com/mapi/jobs?
+osusume.mynavi.jp##.OSN_container
+osusume.mynavi.jp##.content_widget
 kahoku.news##.kahoku_pc_top_footeroverlay
 kahoku.news##.vr2_pr-main
 game-chan.net##.sidebar_content > div.custom-classic-textwidget:has(> div > .adwidget)
@@ -1824,6 +1827,7 @@ mwed.jp##div[style="min-height: 100px; margin: 20px auto; text-align: center;"]
 mwed.jp##.ad-bg-1
 mwed.jp##.categories-advertisements
 mwed.jp##.news-articles-show-footer > div.-h3:has(+ div[id^="logly-"])
+yamagata-np.jp##div[id$="_kj_movie"]
 yamagata-np.jp##.ad_sp_rectangle
 shueisha.co.jp##.list-basic-a:has(> li > div.c-ad)
 kumanichi.com###block-top-content-banner2
@@ -4707,6 +4711,10 @@ twpro.jp##.ads-banner-box
 soccerdigestweb.com##.right_ad_c
 soccerdigestweb.com###pc_all_right_1st
 soccerdigestweb.com##.towcolumnBan_area
+||ibarakinews.jp/attach_image/qji.png
+ibarakinews.jp##.post-body > div[style="border:solid"]
+ibarakinews.jp##div[id^="ibaraki_pc_article_underarticle_"]
+ibarakinews.jp#?#.post-image:has(> section.clear + figcaption:contains(【AD】))
 ibarakinews.jp##.textad_box
 ibarakinews.jp##.l-ad3
 jomo-news.co.jp##.m-ad-double
