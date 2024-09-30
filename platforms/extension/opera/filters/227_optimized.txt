@@ -1,9 +1,9 @@
-! Checksum: +h78WgXTCMPlRI+KsYV1wA
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1727424665-14400.patch
+! Checksum: on//mTu877xyX5K+vpJLfQ
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1727687234-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.19.10
-! TimeUpdated: 2024-09-27T08:07:01+00:00
+! Version: 2.0.19.11
+! TimeUpdated: 2024-09-30T09:01:43+00:00
 ! Expires: 10 days (update frequency)
 ||centaurs-rest.coupang.com^
 ||ad.cashdoc.io^
@@ -3133,6 +3133,8 @@ algumon.com#$?#.nav-mobile:matches-css(display: none) ~ .base > .main { width: c
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
 zzzz.lol#$?#.ent_wrapper.slide-vertical-effect .ent_news:not(:has(.ent_prefix:contains(ZZAPFLIX))) { remove: true; }
+m.bunjang.co.kr#?#div[class^="sc-"] > div[class*=" "]:has(> a[href^="/products/"]):contains(AD)
+m.bunjang.co.kr#?#div[class^="sc-"] > div[class*=" "]:has(> a[href^="https://"]):contains(광고)
 search.tmon.co.kr#?#.deallist_wrap li[data-d].item:has(span[role="presentation"] > button:contains(AD))
 namu.wiki#?#aside > div[class*=" "]:has(> img[class] ~ div[class]:contains(광고))
 m.pay.naver.com#?##content > .recommend_section:has(> div[style^="padding:"] > #m_pay_deliverytracking):contains(/^[ \\n]+$/)
