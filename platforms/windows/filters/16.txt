@@ -1,9 +1,9 @@
-! Checksum: zmERI6BKc4+u5wN1Pwvszg
-! Diff-Path: ../patches/16/16-s-1727538280-3600.patch
+! Checksum: l3IRYSsCseh9HDqWaeZcSg
+! Diff-Path: ../patches/16/16-s-1727694967-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.47.5
-! TimeUpdated: 2024-09-28T15:40:54+00:00
+! Version: 2.0.47.6
+! TimeUpdated: 2024-09-30T10:48:25+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -221,7 +221,7 @@ monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementB
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147842
 japscan.lol#%#//scriptlet('prevent-element-src-loading', 'script', 'acscdn.com')
-japscan.lol#%#//scriptlet('remove-node-text', 'script', 'https://cdn.')
+japscan.lol#%#//scriptlet('remove-node-text', 'script', '/\);\}\}\}$|\)\]\(\'div\'\)\,|^\(function\([A-Z].{6200\,6300}|catch\(.{20}=window;\}const /')
 japscan.lol#$#.navbar-nav > li#navpromo2.nav-item > a[href^="https://www.origoclick.com"] { text-indent: -5000px !important; }
 japscan.lol#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', '/^[-$0-9A-Z_a-z]+=>\{const .+\)\( \);\}catch\(/')
 $script,xmlhttprequest,redirect-rule=noopjs,domain=japscan.lol
@@ -921,6 +921,8 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 !
 !
+orange.fr##div[class^="media-advert"]
+orange.fr##.tag-rm
 cuisineaz.com##.banniere-haute-wrapper
 cuisineaz.com###bottomArticle
 nicematin.com##aside > .desktop-right-col-sticky > .sticky-multi-level-container:has(> .sticky-content > .ad-slot-container)

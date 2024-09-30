@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.94.18",
-			"timeUpdated": "2024-09-27T18:30:56+0000",
+			"version": "2.0.94.19",
+			"timeUpdated": "2024-09-30T10:46:02+0000",
 			"deprecated": false,
 			"languages": [
 				"ru"
@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.54.41",
-			"timeUpdated": "2024-09-28T17:31:13+0000",
+			"version": "2.3.54.42",
+			"timeUpdated": "2024-09-30T10:46:18+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.75.10",
-			"timeUpdated": "2024-09-28T15:40:18+0000",
+			"version": "2.0.75.11",
+			"timeUpdated": "2024-09-30T10:47:46+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.6.24",
-			"timeUpdated": "2024-09-27T14:34:12+0000",
+			"version": "2.1.6.25",
+			"timeUpdated": "2024-09-30T10:47:50+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -444,8 +444,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/6.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.61",
-			"timeUpdated": "2024-09-27T14:34:20+0000",
+			"version": "2.0.43.62",
+			"timeUpdated": "2024-09-30T10:47:58+0000",
 			"deprecated": false,
 			"languages": [
 				"de"
@@ -469,8 +469,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.57.21",
-			"timeUpdated": "2024-09-28T15:40:32+0000",
+			"version": "2.0.57.22",
+			"timeUpdated": "2024-09-30T10:48:01+0000",
 			"deprecated": false,
 			"languages": [
 				"ja"
@@ -519,8 +519,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.26.71",
-			"timeUpdated": "2024-09-27T12:33:02+0000",
+			"version": "2.0.26.72",
+			"timeUpdated": "2024-09-30T10:48:06+0000",
 			"deprecated": false,
 			"languages": [
 				"es",
@@ -563,8 +563,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.95",
-			"timeUpdated": "2024-09-28T15:40:39+0000",
+			"version": "2.0.54.96",
+			"timeUpdated": "2024-09-30T10:48:09+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -587,8 +587,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.58",
-			"timeUpdated": "2024-09-27T16:33:07+0000",
+			"version": "2.0.53.59",
+			"timeUpdated": "2024-09-30T10:48:11+0000",
 			"deprecated": false,
 			"languages": [
 				"tr"
@@ -612,8 +612,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.47.5",
-			"timeUpdated": "2024-09-28T15:40:54+0000",
+			"version": "2.0.47.6",
+			"timeUpdated": "2024-09-30T10:48:25+0000",
 			"deprecated": false,
 			"languages": [
 				"fr"
@@ -663,8 +663,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.48.51",
-			"timeUpdated": "2024-09-28T15:40:56+0000",
+			"version": "2.0.48.52",
+			"timeUpdated": "2024-09-30T10:48:26+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -685,8 +685,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.75",
-			"timeUpdated": "2024-09-27T13:33:56+0000",
+			"version": "2.0.43.76",
+			"timeUpdated": "2024-09-30T10:48:27+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -729,8 +729,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.26.57",
-			"timeUpdated": "2024-09-28T15:40:58+0000",
+			"version": "2.0.26.58",
+			"timeUpdated": "2024-09-30T10:48:28+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -773,8 +773,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/23.txt",
 			"trustLevel": "full",
-			"version": "2.0.5.28",
-			"timeUpdated": "2024-09-27T14:34:51+0000",
+			"version": "2.0.5.29",
+			"timeUpdated": "2024-09-30T10:48:30+0000",
 			"deprecated": false,
 			"languages": [
 				"uk"
@@ -801,8 +801,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.0.19",
-			"timeUpdated": "2024-09-28T15:40:59+0000",
+			"version": "2.0.0.20",
+			"timeUpdated": "2024-09-30T10:48:30+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1130,6 +1130,27 @@
 			"downloadUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/216.txt"
 		},
 		{
+			"filterId": 217,
+			"name": "Polish GDPR-Cookies Filters",
+			"description": "Polish filter list for cookies blocking.",
+			"timeAdded": "2014-06-30T07:56:55+0000",
+			"homepage": "https://github.com/MajkiIT/polish-ads-filter#polish-filters-for-adblock-ublock-origin--adguard",
+			"expires": 864000,
+			"displayNumber": 2,
+			"groupId": 7,
+			"subscriptionUrl": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/cookies_filters/adblock_cookies.txt",
+			"trustLevel": "high",
+			"version": "2.0.5.15",
+			"timeUpdated": "2024-08-24T17:01:32+0000",
+			"deprecated": false,
+			"languages": [],
+			"tags": [
+				6,
+				41
+			],
+			"downloadUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/217.txt"
+		},
+		{
 			"filterId": 218,
 			"name": "Estonian List",
 			"description": "Filter for ad blocking on Estonian sites.",
@@ -1164,8 +1185,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.22.83",
-			"timeUpdated": "2024-09-29T00:33:25+0000",
+			"version": "2.1.22.84",
+			"timeUpdated": "2024-09-30T10:48:34+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
