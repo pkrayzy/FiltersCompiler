@@ -1,9 +1,9 @@
-! Checksum: CyEoyHTjURpVNozP4Onobg
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1727782672-3600.patch
+! Checksum: XGK+kNLRgQDEJsIg8+Gm8Q
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1727786256-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.57.29
-! TimeUpdated: 2024-10-01T11:33:33+00:00
+! Version: 2.0.57.30
+! TimeUpdated: 2024-10-01T12:33:03+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -17,6 +17,7 @@
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_setConstant=function(e,a){if("undefined"===a)a=void 0;else if("false"===a)a=!1;else if("true"===a)a=!0;else if("noopFunc"===a)a=function(){};else if("trueFunc"===a)a=function(){return!0};else if("falseFunc"===a)a=function(){return!1};else if(/^\d+$/.test(a)){if(a=parseFloat(a),isNaN(a)||32767<Math.abs(a))return}else return;var b=!1;AG_defineProperty(e,{get:function(){return a},set:function(c){if(b)var d=!0;else void 0!==c&&void 0!==a&&typeof c!==typeof a&&(b=!0),d=b;d&&(a=c)}})};
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
+||indexad.net^
 ||recruitbox.media.iid.jp^
 ||creative-klepon-3f0ecb.netlify.app^
 ||effulgent-stroopwafel-efb9ce.netlify.app^
@@ -1279,6 +1280,9 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+||mxmkitchen.com/ooi_rss/bottom.js
+dorosoku.com###pcArticleAds
+hanshintigers1.blog.jp##iframe[src="http://hanshintigers1.blog.jp/rss.html"]
 getnews.jp##div[style="min-height:215px;margin:20px;"]
 matomecup.com#?##left > div.plugin1_outline:has(> div.plugin1_title:contains(ＰＲ))
 youravhost.net##div[id^="im-"]
@@ -5387,10 +5391,16 @@ excite.co.jp###ad300x250
 excite.co.jp###timesale
 excite.co.jp##.ec-ranking-article
 excite.co.jp##div[id^="exad"]
-newsoku.blog##.content_fixed_addsspot_300_600_pc
+newsoku.blog##a[href^="//ck.jp.ap.valuecommerce.com/servlet/referral"]
+newsoku.blog##div[class$="addsspot_300_600_pc"]
+newsoku.blog###simplicityclassictextwidget-29
 newsoku.blog###simplicityclassictextwidget-35
 newsoku.blog###simplicityclassictextwidget-36
 newsoku.blog###simplicityclassictextwidget-37
+newsoku.blog###simplicityclassictextwidget-38
+newsoku.blog###simplicityclassictextwidget-39
+newsoku.blog###simplicityclassictextwidget-40
+newsoku.blog###simplicityclassictextwidget-41
 newsoku.blog##div[style*="height:280px"][style*="text-align:center"]
 newsoku.blog##div[style^="width:300px;height:600px;"]
 at-s.com##.detailMainBannerGA01
@@ -10091,6 +10101,8 @@ youpouch.com###header-main > div.ad
 youpouch.com##.widget_text:first-child
 !+ NOT_PLATFORM(ios, ext_android_cb, ext_safari)
 /^https?:\/\/[0-9a-z]{5,10}\.duckdns/$document,domain=duckdns.org
+blog.livedoor.jp##div[class^="article-body"] > div[style="border-top:1px dashed #c0c0c0; margin-top:30px; padding:10px;"] ~ a[href^="http://www.amazon.co.jp/exec/"][target="_blank"][rel="nofollow"]
+blog.livedoor.jp##.plugin-memo:has(> div.side > p > a[href^="http://www.amazon.co.jp/exec/"][target="_blank"][rel="nofollow"] > img)
 blog.livedoor.jp##.kiji > .article_main > div.krb-amzlt-box
 blog.livedoor.jp##.kiji .menu_cont3[style="text-align:center"] > table[width="100%"][border=""]
 blog.livedoor.jp##.kiji .menu_title3:has(+  .menu_cont3[style="text-align:center"] > table[width="100%"][border=""])
