@@ -1,8 +1,8 @@
-! Checksum: bD0vDKxXoWQ1IRgtDqgVtA
+! Checksum: /HnBBRk4qOLDYD+rFLsBLg
 ! Title: AdGuard Quick Fixes filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.0.25
-! TimeUpdated: 2024-10-01T05:33:21+00:00
+! Version: 2.0.0.26
+! TimeUpdated: 2024-10-01T06:34:43+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -31,6 +31,18 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100000 01-01-2024
 ! example.com#@#body
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/189975 01-10-2024
+sport1.de#%#//scriptlet("abort-on-property-read", "Object.prototype.autoRecov")
+! https://github.com/AdguardTeam/AdguardFilters/issues/189989 01-10-2024
+razer.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/190004 01-10-2024
+neosatsu.com#$#body { overflow: auto !important; }
+neosatsu.com#$#.ignielAdBlock { display: none !important; }
+neosatsu.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'ignielAdBlock')
+! https://github.com/AdguardTeam/AdguardFilters/issues/189980 01-10-2024
+! linkjust.com
+loiz.store#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+loiz.store#%#//scriptlet('prevent-eval-if', '/fairAdblock|chp_?adblock|adsbygoogle\.js/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189993 01-10-2024
 @@||gunb.gov.pl/sites/all/modules/eu_cookie_compliance/js/jquery.cookie-*.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190012 01-10-2024
@@ -57,6 +69,7 @@ tver.jp#%#//scriptlet('json-prune', 'data.adData')
 tver.jp#%#//scriptlet('adjust-setTimeout', '/nrWrapper\(\)|n\.setTimeoutIds_\.has\(i\)/', '10000')
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=tver.jp,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/119573 28-09-2024
+! voe.sx
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=susanhavekeep.com
 susanhavekeep.com#%#//scriptlet("abort-current-inline-script", "$", "/\.fadeIn|\.show\(.?\)/")
 susanhavekeep.com#%#//scriptlet("abort-current-inline-script", "globalThis", "break;case")
