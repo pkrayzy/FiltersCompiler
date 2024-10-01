@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/1_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.94.21",
-			"timeUpdated": "2024-09-30T17:31:09+0000",
+			"version": "2.0.94.22",
+			"timeUpdated": "2024-10-01T01:31:03+0000",
 			"deprecated": false,
 			"languages": [
 				"ru"
@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.6.28",
-			"timeUpdated": "2024-09-30T18:32:03+0000",
+			"version": "2.1.6.29",
+			"timeUpdated": "2024-10-01T01:32:47+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -615,8 +615,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.9.71",
-			"timeUpdated": "2024-09-30T21:33:07+0000",
+			"version": "2.2.9.72",
+			"timeUpdated": "2024-10-01T01:33:14+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -696,8 +696,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.48.57",
-			"timeUpdated": "2024-09-30T20:33:05+0000",
+			"version": "2.0.48.58",
+			"timeUpdated": "2024-10-01T01:33:19+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -718,8 +718,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/19_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.79",
-			"timeUpdated": "2024-09-30T16:33:59+0000",
+			"version": "2.0.43.80",
+			"timeUpdated": "2024-10-01T01:33:20+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -806,8 +806,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/23_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.5.29",
-			"timeUpdated": "2024-09-30T10:48:30+0000",
+			"version": "2.0.5.30",
+			"timeUpdated": "2024-10-01T01:33:22+0000",
 			"deprecated": false,
 			"languages": [
 				"uk"
