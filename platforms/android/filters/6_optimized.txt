@@ -1,9 +1,9 @@
-! Checksum: lgZ533wzAZs12aRITT/obA
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1727764693-3600.patch
+! Checksum: mw9svsYYJoxsJ/cv5lxcjQ
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1727771819-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.43.64
-! TimeUpdated: 2024-10-01T06:34:12+00:00
+! Version: 2.0.43.65
+! TimeUpdated: 2024-10-01T08:33:14+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -557,6 +557,10 @@ kicker.de,desired.de,pcgames.de,t-online.de,vox.de,spieletipps.de,wetter.de,gole
 plus.rtl.de#%#//scriptlet('trusted-replace-xhr-response', 'true', 'false', 'homadClientConfig-plusrtlde.json')
 brigitte.de#%#//scriptlet('trusted-replace-xhr-response', 'true', 'false', 'global_config.json')
 plus.rtl.de#%#//scriptlet('abort-on-stack-trace', 'Object.prototype.adReinsertion', 'createSdk')
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service', 'emptyObj')
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service.destroy', 'noopFunc')
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service.request', 'noopFunc')
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service.destroyPageType', 'noopFunc')
 t-online.de#%#//scriptlet('json-prune', 'props.pageProps.page.thirdParty.homad')
 focus.de#%#//scriptlet('trusted-replace-node-text', 'script', 'galleryv2Init', '/adsEnabled:true/', 'adsEnabled:false')
 tvspielfilm.de,tvtoday.de,chip.de,focus.de#%#//scriptlet('set-constant', 'DL8_GLOBALS.enableAdSupport', 'false')
@@ -685,6 +689,13 @@ mainfranken24.de,jetzt.de,derwesten.de,eurosport.de,ingenieur.de,heise.de,ww-kur
 monopol-magazin.de,krone.at,cleverdialer.de,sueddeutsche.de,geo.de,northdata.de,losungencodycross.com,spieletipps.de,heise.de,netdoktor.de,aachener-zeitung.de,wissen.de##.ad-container
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
 formel1.de,krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
+promiflash.de##footer > nav.my-0:only-child:empty
+promiflash.de##aside .hidden.flex > .hidden.ml-2:has(+ .adContainer)
+promiflash.de##.flex-wrap > div:not([class], [id]):has(> .hidden > .adContainer)
+promiflash.de##.flex-wrap > .hidden:has(> .my-0:only-child > .hidden > .adContainer)
+netmoms.de##div[class^="Ad"]
+babelli.de##div[id^="traffective-ad-"]
+babelli.de##.entry-content .wp-block-column > .w-element-container:has(> script[src="//syndication.target-video.com/native-player.js"])
 pff.de##.messageList > li:not([id^="post"])
 infranken.de##article:has( a[href^="/ratgeber/pi"])
 hessentoday.de##.advertBorder
@@ -916,6 +927,7 @@ macgadget.de###block-anzeige2
 ||macgadget.de/themes/*/images/bg_header.jpg
 infranken.de##.w4_desk
 serienjunkies.de,op-online.de,in-muenchen.de,echo24.de,dasgelbeblatt.de,wa.de##.id-TBeepSlot
+||syndication.target-video.com^$domain=forum.frag-mutti.de|babelli.de
 notebooksbilliger.de###dy-hero-banners-slider
 spiegel.de##nav li.bg-shade-lightest
 macwelt.de##.wp-block-price-comparison
@@ -1651,7 +1663,7 @@ winfuture.de#?#[class^="news"]:has(> .picture_head > .anz)
 winfuture.de#?#.newsTicker > li:has( > .anz)
 german-porno-deutsch.info,reifporn.de,sexvideos-hd.com,tube8-pornos.com,meinyouporn.com,hd-sexfilme.com,beeg-pornos.com,deinesexfilme.com,einfachtitten.com,gutesexfilme.com,halloporno.com,hd-pornos.net,hdpornos.net,herzporno.com,lesbenhd.com,milffabrik.com,nursexfilme.com,porn-monkey.com,porndrake.com,pornoaffe.com,pornodavid.com,pornoente.tv,pornofelix.com,pornofisch.com,pornohammer.com,pornohans.com,pornohelm.com,pornohirsch.net,pornoklinge.com,pornoschlange.com,pornotom.com,pornotom.com,pornotommy.com,pornovideos-hd.com,pornozebra.com,xhamster-sexvideos.com,xhamsterdeutsch.xyz#?#.grid_box:has(div.special_preview)
 netzwelt.de#?##article > div[class] > div[class]:not([class*="pos-"]):has(>.ad-trigger)
-chip.de,vergleich.focus.de,praxistipps.focus.de#$?##CR > div[id^="G3"]:matches-css(grid-template-rows: /^\d+px/) { grid-template-rows: auto !important; }
+netmoms.de,chip.de,vergleich.focus.de,praxistipps.focus.de#$?##CR > div[id^="G3"]:matches-css(grid-template-rows: /^\d+px/) { grid-template-rows: auto !important; }
 chip.de#?#.Article > div[class^="fb-col-md-"]:has(> .Article__Ad)
 hd-pornos.net,pornotom.com,pornoente.tv,hd-pornos.com,pornojenny.com,pornohirsch.net#?#.grid_box:has(div.img_box > div.special_preview:contains(Anzeige))
 ladies.de#?#.card-list > div.col-xs-12 > div.text-left:has(> div.sol-content)

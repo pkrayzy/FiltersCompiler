@@ -1,9 +1,9 @@
-! Checksum: 8jr4egvepYcdQQuwnl+jAw
-! Diff-Path: ../patches/6/6-s-1727764730-3600.patch
+! Checksum: Gmmf+GoIyDkcUue8yQ4NBg
+! Diff-Path: ../patches/6/6-s-1727771848-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.43.64
-! TimeUpdated: 2024-10-01T06:34:12+00:00
+! Version: 2.0.43.65
+! TimeUpdated: 2024-10-01T08:33:14+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1158,6 +1158,11 @@ plus.rtl.de#%#//scriptlet('trusted-replace-xhr-response', 'true', 'false', 'homa
 brigitte.de#%#//scriptlet('trusted-replace-xhr-response', 'true', 'false', 'global_config.json')
 plus.rtl.de#%#//scriptlet('abort-on-stack-trace', 'Object.prototype.adReinsertion', 'createSdk')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190034
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service', 'emptyObj')
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service.destroy', 'noopFunc')
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service.request', 'noopFunc')
+promiflash.de#%#//scriptlet('set-constant', 'adHandler.service.destroyPageType', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189789
 t-online.de#%#//scriptlet('json-prune', 'props.pageProps.page.thirdParty.homad')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183745
@@ -1659,6 +1664,13 @@ formel1.de,krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborj
 !
 !
 !
+promiflash.de##footer > nav.my-0:only-child:empty
+promiflash.de##aside .hidden.flex > .hidden.ml-2:has(+ .adContainer)
+promiflash.de##.flex-wrap > div:not([class], [id]):has(> .hidden > .adContainer)
+promiflash.de##.flex-wrap > .hidden:has(> .my-0:only-child > .hidden > .adContainer)
+netmoms.de##div[class^="Ad"]
+babelli.de##div[id^="traffective-ad-"]
+babelli.de##.entry-content .wp-block-column > .w-element-container:has(> script[src="//syndication.target-video.com/native-player.js"])
 pff.de##.messageList > li:not([id^="post"])
 infranken.de##article:has( a[href^="/ratgeber/pi"])
 hessentoday.de##.advertBorder
@@ -2066,7 +2078,7 @@ gmx.net,gmx.at,web.de##.list-programmatic-ad-item--multi-line
 btc-echo.de##div[data-btcee-trackbid]
 gesundheitsstadt-berlin.de##div[class="uk-visible@m"]
 serienjunkies.de,op-online.de,in-muenchen.de,echo24.de,dasgelbeblatt.de,wa.de##.id-TBeepSlot
-||syndication.target-video.com^$domain=forum.frag-mutti.de
+||syndication.target-video.com^$domain=forum.frag-mutti.de|babelli.de
 ||notebooksbilliger.de/api/cherry-handler/
 notebooksbilliger.de###dy-hero-banners-slider
 computerbild.de##.steam.universalTeaser
@@ -5289,7 +5301,7 @@ t-online.de#?##Tcontboxi > .Tgbox:has(> div[class]:first-child > .sa-container)
 t-online.de#?##Tall > .Tgboxf:has(> style + script:contains(taboola-below-homepage-feed))
 t-online.de#?#.Tart__articleBody > .oEmbed_container:has(> p + .toiafl-container > .toiafl-anzeige)
 ekiwi-blog.de#?#.sidebar > aside:has(> div.widget-header > h3:contains(Werbung))
-chip.de,vergleich.focus.de,praxistipps.focus.de#$?##CR > div[id^="G3"]:matches-css(grid-template-rows: /^\d+px/) { grid-template-rows: auto !important; }
+netmoms.de,chip.de,vergleich.focus.de,praxistipps.focus.de#$?##CR > div[id^="G3"]:matches-css(grid-template-rows: /^\d+px/) { grid-template-rows: auto !important; }
 chip.de#?#.Article > div[class^="fb-col-md-"]:has(> .Article__Ad)
 ntower.de#?#.section > .messageList > li:not([class]):not([id]) > .wcfAdLocation:upward(1)
 survivethis.news#?#.vc_widget_sidebar > aside.widget_custom_html > .textwidget:contains(Advertisement):upward(1)
@@ -5684,6 +5696,7 @@ homad-global-configs-eu-fra.schneevonmorgen.com.s3.amazonaws.com/*/config.json$r
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190034
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188340
 @@||storage.googleapis.com/prebid/qm_prebid8.js$domain=kicker.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185805
