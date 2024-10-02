@@ -1,8 +1,8 @@
-! Checksum: CjBTWd1QoBbJxQdDKNaV8g
+! Checksum: lYHqdvC0ZvSfyFlu5pJZYQ
 ! Title: AdGuard Quick Fixes filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.0.31
-! TimeUpdated: 2024-10-01T14:33:24+00:00
+! Version: 2.0.0.32
+! TimeUpdated: 2024-10-02T06:33:29+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -31,6 +31,13 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100000 01-01-2024
 ! example.com#@#body
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190130 02-10-2024
+sonixgvn.net#%#//scriptlet('prevent-eval-if', '-blackout')
+sonixgvn.net#$#body[class*="blur"] > * { filter: none !important; }
+sonixgvn.net#$#body > div[class*="-blackout"] { display: none !important; }
+sonixgvn.net#$#body > div[class*="-blackout"] + div[class*="-wrapper"] { display: none !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/190124 02-10-2024
+wir.wody.gov.pl#@#.accept-cookies
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190058 01-10-2024
 ! anitube.us
 @@||ads.anitube.vip^$xmlhttprequest,domain=coempregos.com.br
@@ -136,7 +143,5 @@ playzone.cz#%#//scriptlet('abort-on-stack-trace', 'Element.prototype.appendChild
 nsw2u.com#%#//scriptlet('set-attr', 'img[data-src]', 'src', '[data-src]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189373 24-09-2024
 irishradiolive.com,myonlineradio.at,myonlineradio.de,myonlineradio.hu,myonlineradio.nl,myonlineradio.sk,myradioendirect.fr,myradioenvivo.ar,myradioenvivo.mx,myradioonline.cl,myradioonline.es,myradioonline.it,myradioonline.pl,myradioonline.ro,ukradiolive.com#%#//scriptlet('prevent-element-src-loading', 'script', 'doubleclick.net')
-! https://github.com/AdguardTeam/AdguardFilters/issues/186942 23-09-2024
-sonixgvn.net#%#//scriptlet('prevent-xhr', 'cdn.vlitag.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187875#issuecomment-2361917970 20-09-2024
 @@||twitch.tv^$websocket,permissions
