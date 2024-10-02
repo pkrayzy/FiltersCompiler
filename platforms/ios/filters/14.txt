@@ -1,9 +1,9 @@
-! Checksum: 7ua8iWmhO+ng+ImwC+TeAw
-! Diff-Path: ../patches/14/14-s-1727869023-3600.patch
+! Checksum: 5W5tFBI5YW/ExuGpufBMEw
+! Diff-Path: ../patches/14/14-s-1727872899-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.93
-! TimeUpdated: 2024-10-02T11:33:14+00:00
+! Version: 2.2.9.94
+! TimeUpdated: 2024-10-02T12:36:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2487,6 +2487,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+bibleproject.visiomedia.org#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="2"]')
+order.apexhotels.co.uk#%#//scriptlet('trusted-click-element', '.cookie-button > button.btn-primary')
 ||github.githubassets.com/assets/chunk-ui_packages_ghcc-consent-element_ghcc-consent-element_ts-*.js
 go.satfilm.pl##div[class^="toast___"]
 lebenslauf.com#%#//scriptlet('trusted-click-element', '#consent-settings-button, #checkbox-accept-button')
@@ -4397,9 +4399,9 @@ pasivka.com.ua#$#.backdrop { display: none !important; }
 pasivka.com.ua#$#.modal-opened body { overflow: auto !important; }
 chessly.com#?##__next > div[class^="NotificationPanel_"]:has(> div[class^="CookieConsentForm_"])
 qr.nspk.ru###app > section.fixed.duration-1000
-quellocheconta.gov.it#$#body #cookieModal { display: none !important; }
-quellocheconta.gov.it#$#.modal-backdrop { display: none !important; }
-quellocheconta.gov.it#$#body { overflow: auto !important; padding-right: 0 !important; }
+legalteam.hu,quellocheconta.gov.it#$#body #cookieModal { display: none !important; }
+legalteam.hu,quellocheconta.gov.it#$#.modal-backdrop { display: none !important; }
+legalteam.hu,quellocheconta.gov.it#$#body { overflow: auto !important; padding-right: 0 !important; }
 shahid.mbc.net##div[data-testid="cookie-popup"]
 tome.app#$##__next > div[aria-live="polite"][role="dialog"].bottom-0 { position: absolute !important; left: -3000px !important; }
 tuhlteim.de#%#//scriptlet('trusted-click-element', 'dialog div > a + div + div a[style="order: 0;"]')
@@ -16202,6 +16204,11 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/189748
+legalteam.hu#@##cookieModal
+! order.apexhotels.co.uk - broken page
+order.apexhotels.co.uk#@#.cookie-container
+order.apexhotels.co.uk#@#.cookie-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190110
 hiperpharm.pl#@#.cookies-popup
 hiperpharm.pl#@#.cookies-info:not(html):not(body)
@@ -20650,8 +20657,7 @@ drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asResolved')
 mail.ru##div[slot="main-column"] > div.stripe-wrapper
 ! e.mail.ru
-e.mail.ru,octavius.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hasAdBlock', 'undefined')
-e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
+e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', 'clearPendingRender')
 ! dzen.ru
 ! Under the search
 dzen.ru##div:matches-attr("data-*"="ad-banner")
@@ -33392,6 +33398,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+hellomagazine.com##div[class^="HelloNewsletter_"]
 baseball-reference.com###newsletter_cta
 profil.at###newsletterSignUp
 robinwieruch.de###gatsby-focus-wrapper div[class^="withBorder-module"]:has(> label[for="newsletter"])

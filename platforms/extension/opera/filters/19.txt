@@ -1,9 +1,9 @@
-! Checksum: ENarYl/DW5vKrQYF6qLqYQ
-! Diff-Path: ../patches/19/19-s-1727861802-3600.patch
+! Checksum: FDOXtc/W/eDuQzX+nFBdDQ
+! Diff-Path: ../patches/19/19-s-1727872881-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.43.90
-! TimeUpdated: 2024-10-02T09:33:22+00:00
+! Version: 2.0.43.91
+! TimeUpdated: 2024-10-02T12:36:33+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -237,8 +237,7 @@ drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asResolved')
 mail.ru##div[slot="main-column"] > div.stripe-wrapper
 ! e.mail.ru
-e.mail.ru,octavius.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hasAdBlock', 'undefined')
-e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', '/\(\)=>[a-z]{1}\(\)$/')
+e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', 'clearPendingRender')
 ! dzen.ru
 ! Under the search
 dzen.ru##div:matches-attr("data-*"="ad-banner")
@@ -12682,6 +12681,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+hellomagazine.com##div[class^="HelloNewsletter_"]
 baseball-reference.com###newsletter_cta
 profil.at###newsletterSignUp
 robinwieruch.de###gatsby-focus-wrapper div[class^="withBorder-module"]:has(> label[for="newsletter"])
