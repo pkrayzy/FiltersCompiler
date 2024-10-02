@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: i4iV2n68kCa/33qSDJXzbw
-! Diff-Path: ../patches/243_optimized/243_optimized-s-1727773551-14400.patch
+! Checksum: t2YoCCvfJVXdZbjP/TZ9IQ
+! Diff-Path: ../patches/243_optimized/243_optimized-s-1727859984-14400.patch
 ! Title: Frellwit's Swedish Filter (Optimized)
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.19.61
-! TimeUpdated: 2024-10-01T09:01:49+00:00
+! Version: 2.0.19.62
+! TimeUpdated: 2024-10-02T09:02:02+00:00
 ! Expires: 5 days (update frequency)
 .ads-gdprlock
 .ax/ad/
@@ -339,6 +339,7 @@ casino$domain=pirkt.se
 casino-utan-$image
 cfosvepet.se##.recent-post-item:has(a[href="#"]:not(.w-condition-invisible))
 chefstidningen.se##[id^="block-views-ad"], .modal-container
+chef.se##+js(cookie-remover, ca_public_page_views)
 chef.se##.Cookie-notice, .Product-modal, .Offer-popup, .Toaster
 chef.se,fokus.se##.Blurb--native
 cineasten.se###text-6, .theiaStickySidebar .category-uncategorized
@@ -420,7 +421,6 @@ discoveringtheplanet.com#$#html { user-select:unset!important; -moz-user-select:
 discoveringtheplanet.com##+js(abort-current-script, disableEnterKey)
 discoveringtheplanet.com##+js(abort-current-script, document.ondragstart)
 discoveringtheplanet.com##.widget-title:has-text(/annons/i) + .textwidget
-di.se##+js(abort-current-script, Di, initAds)
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article, .listing-box-native
 di.se##.market-start-top + div:not(.market-container__wrapper)
 djungeltrumman.se#$?#strong:has-text(/samarbete|sponsrat/i):upward(li) { remove: true; }
@@ -1539,6 +1539,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.Container--ad
 ##div.External-ad
 ##div.I-artiklar-annonser
+##div.Takeover-ad
 ##div.adform-container
 ##div.adnuntius-ad
 ##div.ads-sticky-container
@@ -1770,6 +1771,7 @@ zeromagazine.nu##div[id^="ads"]
 /add-ads.js$domain=fria.nu|stockholmsfria.se
 /add-page-view$domain=cykla.se
 /adform.js$domain=bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se
+/admin-ajax$domain=chef.se
 /adnami/macro$script
 /adnuntius_top_scroll
 /adn/adn-setup.$script
