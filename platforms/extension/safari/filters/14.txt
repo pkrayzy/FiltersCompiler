@@ -1,9 +1,9 @@
-! Checksum: 30sGR3//el/GV2+IYThd4A
-! Diff-Path: ../patches/14/14-s-1727879778-3600.patch
+! Checksum: 1l4Lb3I7wlrWNBlr7DIkWw
+! Diff-Path: ../patches/14/14-s-1727883437-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.9.96
-! TimeUpdated: 2024-10-02T14:32:47+00:00
+! Version: 2.2.9.97
+! TimeUpdated: 2024-10-02T15:33:29+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2486,6 +2486,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+mash.ru#%#//scriptlet('set-cookie', '_mash_privacy_accepted', 'true')
 bibleproject.visiomedia.org#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="2"]')
 order.apexhotels.co.uk#%#//scriptlet('trusted-click-element', '.cookie-button > button.btn-primary')
 ||github.githubassets.com/assets/chunk-ui_packages_ghcc-consent-element_ghcc-consent-element_ts-*.js
@@ -24796,6 +24797,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+hola.com##div[class^="HolaNewsletter_"]
 baseball-reference.com###social_cta
 toronto.citynews.ca##.vjs-pip-active
 uaserials.com###ask_modal_overlay
@@ -33137,6 +33139,9 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tele1.com.tr##.whatsappkanali
+tele1.com.tr##.googlenewsbar
+mash.ru###article > div[class^="sc-"]:has(> a[href^="https://dzen.ru/breakingmash?"])
 ||df-training-consulting.ck.page^$domain=dariusforoux.com
 hellomagazine.com##div[class^="HelloNewsletter_"]
 baseball-reference.com###newsletter_cta
@@ -49051,6 +49056,8 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 !
 ! SECTION: Self-promo - Regular rules
 !
+||hubspotusercontent-na1.net/hubfs/*/banners/tax-haven-banner-*.gif
+northdata.*##.segments > div.ui[style="padding-bottom: 1.5em !important; padding-top: 1.5em !important"]
 hexlet.io##main > section[class^="container-"]:has(> div.row > div[class^="col-"] div.card > div.card-body > div[class] > a[href^="/programs/"])
 ru.hexlet.io##.hexlet-blog-banner-wrapper
 millipiyangoonline.com##.freetext:has(div.bs-wrapper.play a[href="https://www.millipiyangoonline.com/account/register"])
@@ -56014,6 +56021,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+tele1.com.tr##.patweb
 itc.ua##.about-noa
 itc.ua##.popup-bottom
 zona.media##.mz-top-header-banner
