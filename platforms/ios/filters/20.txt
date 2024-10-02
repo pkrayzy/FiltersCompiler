@@ -1,9 +1,9 @@
-! Checksum: rgqKxJY+t0gUyNsOuXwV/w
-! Diff-Path: ../patches/20/20-s-1727869025-3600.patch
+! Checksum: WscF9AXG9nDMZhji70h6PQ
+! Diff-Path: ../patches/20/20-s-1727876276-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.16.88
-! TimeUpdated: 2024-10-02T11:33:21+00:00
+! Version: 2.0.16.89
+! TimeUpdated: 2024-10-02T13:34:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3554,7 +3554,9 @@ ganganonline.com##.Base_banner__UbMI_
 mail.yahoo.com#%#//scriptlet('trusted-click-element', '.landshark > a.close-button')
 sp.live.nicovideo.jp##.ga-ns-app-alert-dialog
 sp.live.nicovideo.jp##div[class^="___overlay_"][data-overlay-role="cover"]
-wear.jp##dialog:has(> .fixed > div[class] > div[class] > div[class] > button:contains(アプリで開く))
+! both remove rules required - else the dialogue is shown as #top-layer
+wear.jp#$?#dialog:has(> .fixed > div[class] > div[class] > div[class] > a[href^="https://app.adjust.com"]) { remove: true; }
+wear.jp#$?#dialog:has(> .fixed > div[class] > div[class] > div[class] > button:contains(アプリで開く)) { remove: true; }
 wear.jp##div[class]:has(> section > div[class] > a[href^="https://app.adjust.com"])
 wear.jp###newwearAppBanner
 wear.jp##a[href="/sp/app/download.html"]
