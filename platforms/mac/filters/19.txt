@@ -1,8 +1,8 @@
-! Checksum: 3FaTHThiq3bOa1U59fuIkw
+! Checksum: DuYmD/EMRK5H+06UPuHRJw
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.44.2
-! TimeUpdated: 2024-10-03T11:33:38+00:00
+! Version: 2.0.44.3
+! TimeUpdated: 2024-10-03T18:01:39+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4350,6 +4350,10 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+www.tumblr.com##div[data-testid=scroll-container][style*=blog-title-color] div[style^="background-color:"]:has(footer[role="contentinfo"])
+logrocket.com##.post-popup
+dmoose.com#$#html, body { overflow: auto !important; }
+dmoose.com#$#div[id^="om-holder-campaign-"] {display: none !important; }
 opencorporates.com##.oc-footer-notification
 bbs.colg.cn###reg-popup-content
 hola.com##div[class^="HolaNewsletter_"]
@@ -11832,6 +11836,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||smocca.jp/assets/api/ask_notification_permission
 sdccollege.com##.ribbon-pop
 business-standard.com##.ampnotification
 kingbolentool.com###uppush-notification
@@ -12686,6 +12691,10 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+nikkei.com#$?#.tp-modal:has(iframe[src^="https://buy-ap.piano.io/checkout/template/cacheableShow?"]) { display: none !important; }
+nikkei.com#$#.tp-backdrop { display: none !important; }
+nikkei.com#%#//scriptlet('remove-class', 'tp-modal-open', 'body')
+||buy.tinypass.com/checkout/template/cacheableShow?*offerId=fakeOfferId$domain=thelogic.co
 insider-gaming.com###ig-newsletter-holder
 insider-gaming.com##main > div.flex > div.hidden > div:has(> a[href^="https://www.youtube.com/@insider_gaming?"])
 brasilparalelo.com.br###body-content > div._w-100

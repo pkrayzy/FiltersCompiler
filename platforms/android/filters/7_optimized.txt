@@ -1,9 +1,9 @@
-! Checksum: HWdyScYjO4+Rxli6/98A6A
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1727958999-3600.patch
+! Checksum: pJdwL02A4F0V4mShY+NglQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1727978711-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.57.37
-! TimeUpdated: 2024-10-03T12:32:30+00:00
+! Version: 2.0.57.38
+! TimeUpdated: 2024-10-03T18:01:12+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -393,6 +393,8 @@
 ||kok.eroterest.net^
 ||ad-hatena.com^
 ||advert.punyu.com^
+mytry.jp#@#.ad_box
+mytry.jp#$#body > #container { display: block !important; }
 wiki.yjsnpi.nu#$#.ad { height: 0 !important; }
 @@||wiki.yjsnpi.nu/plugins/betube-ads/$xmlhttprequest,domain=wiki.yjsnpi.nu
 @@||wiki.yjsnpi.nu^$generichide
@@ -1101,6 +1103,7 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/plugins/amazonjs/*
 /wp-content/themes/CashLINESystem/js/modal.$script
 /wp-content/uploads/2024/09/fanza_ad$image
+://s3.*.amazonaws.com/*.*.*.*.*.*.*/index.html$document
 ://web-mbservice.*.*.top/login^$document
 ||b-cdn.net/admin%20pop/$document
 .cn/member/login.php?aid=net-service$document
@@ -1286,6 +1289,12 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+adacomi.com##body > div[style^="text-align:center;"]
+||static.rtrp.jp/static/js/retrip-adspace-targeting.*.js
+||images.j-baseball.club/banner/*.jpg
+h178.com##div[class^="substitute-area-"]
+h178.com##div[style]:has(> div[id] > script[src^="//ads.themoneytizer.com/"])
+h178.com##div[class^="col-"] > h1 ~ div[style]:has(> a[href^="https://j-"])
 okurin.bitpark.co.jp##.cap
 okurin.bitpark.co.jp##.h_cap
 okurin.bitpark.co.jp##.contents_banner_area
