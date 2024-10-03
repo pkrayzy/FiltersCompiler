@@ -1,4 +1,5 @@
-! Checksum: O6Ka/2eSW5RLpKV6rgbUbw
+! Checksum: kDvuFC68hTU9LaiX61AaQw
+! Diff-Path: ../patches/201_optimized/201_optimized-s-1727989911-14400.patch
 ! Title: (Obsolete) Web Annoyances Ultralist (Optimized)
 ! Description: Blocks annoying web elements and reclaims lost screen real estate.
 ! Version: 1.0.8.71
@@ -227,6 +228,8 @@ yahoo.com###YDC-MainCanvasLeadAd-Composite, #danafarberpromo, #defaultdestLREC, 
 yahoo.com###viewer-LDRB-iframe, #viewer-LREC-iframe:upward(2)
 yt5s.com##.is-rolledUp.js-extension.extension
 ||menshealth.com/*/advagg_js$script,domain=menshealth.com
+###CybotCookiebotDialog
+###CybotCookiebotDialogBodyUnderlay
 ###acceptCookies
 ###cadre_alert_cookies
 ###catapult-cookie-bar
@@ -235,6 +238,7 @@ yt5s.com##.is-rolledUp.js-extension.extension
 ###cookie-bar
 ###cookie-consent
 ###cookie-consent-banner
+###cookie-disclosure
 ###cookie-info
 ###cookie-law
 ###cookie-law-info-bar
@@ -248,6 +252,7 @@ yt5s.com##.is-rolledUp.js-extension.extension
 ###cookieChoiceInfo
 ###cookieConsent
 ###cookieContainer
+###cookieFrame
 ###cookieInfo
 ###cookieMessage
 ###cookieNotice
@@ -302,8 +307,10 @@ yt5s.com##.is-rolledUp.js-extension.extension
 ##.cookie-law
 ##.cookie-modal
 ##.cookie-notice-container
+##.cookie-notice-wrapper
 ##.cookie-warning
 ##.cookieBox
+##.cookieSettings
 ##.cookie_message
 ##.cookie_notice
 ##.cookiealert
@@ -3158,10 +3165,13 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ###backtoTop:not(html):not(body)
 ###backtop:not(html):not(body)
 ###backtotop:not(html):not(body)
+###button-share
 ###crestashareicon
 ###crestashareiconincontent
 ###dfp_leaderboard
 ###dialog-message
+###dpsp-content-top
+###dpsp-floating-sidebar
 ###elGuestTerms
 ###facebookShare
 ###fb_like_bottom
@@ -3177,10 +3187,12 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ###gototop:not(html):not(body)
 ###gp-to-top:not(html):not(body)
 ###header-social
+###header-social-icons
 ###indicator-north
 ###indicator-south
 ###intercom-container
 ###iubenda-cs-banner
+###js-SocialWidget-Container
 ###js-page-to-top:not(html):not(body)
 ###mc-embedded-subscribe-form
 ###mc_embed_signup
@@ -3200,6 +3212,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ###scroll-top:not(html):not(body)
 ###scroll-up:not(html):not(body)
 ###scrollToTop:not(html):not(body)
+###scrollToTopBtn:not(html):not(body)
 ###scrollTop:not(html):not(body)
 ###scrollTopBtn:not(html):not(body)
 ###scrollUp:not(html):not(body)
@@ -3219,7 +3232,10 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ###share_container
 ###sharebar
 ###sharebuttons
+###simple-social-icons-2
 ###site-share
+###smartbanner
+###social-bar
 ###social-buttons
 ###social-connect
 ###social-follow
@@ -3255,6 +3271,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ###topcontrol
 ###totop
 ###twitter-share
+###whatsapp-share
 ###wpfront-scroll-top-container
 ##.BackToTop
 ##.Share
@@ -3308,6 +3325,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.button-share
 ##.buttonbar
 ##.buttons-social
+##.c-global-header__social
 ##.c-social
 ##.cd-top
 ##.compliance
@@ -3323,6 +3341,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.et-social-icons
 ##.et_pb_scroll_top
 ##.et_pb_social_media_follow
+##.et_social_icons_container
 ##.et_social_networks
 ##.et_social_sidebar_networks
 ##.eupopup-container
@@ -3405,6 +3424,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.header-social
 ##.header-social-icons
 ##.header-social-links
+##.header-social-wrap
 ##.header_social
 ##.heateor_sss_sharing_container
 ##.highlight-menu
@@ -3433,6 +3453,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.jssocials-share-facebook
 ##.jssocials-share-twitter
 ##.jw-sharing-dock-btn
+##.linkedIn
 ##.linkedin
 ##.linkedin-share
 ##.lx-share-tools__items
@@ -3456,6 +3477,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.nc_socialPanel
 ##.nc_tweetContainer
 ##.nc_wrapper
+##.newsletter-subscribe
 ##.o-share
 ##.outbrain
 ##.panel-share
@@ -3474,8 +3496,10 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.post-social
 ##.postActions
 ##.post_share
+##.pw-widget
 ##.return-top
 ##.rrssb-buttons
+##.scroll-back-to-top-wrapper:not(html):not(body)
 ##.scroll-indicator
 ##.scroll-to-bottom:not(html):not(body)
 ##.scroll-to-top-btn:not(html):not(body)
@@ -3489,6 +3513,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.scrollup:not(html):not(body)
 ##.sd-sharing
 ##.sd-social-icon
+##.share-additional
 ##.share-article
 ##.share-bar
 ##.share-block
@@ -3516,6 +3541,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.share-linkedin
 ##.share-links
 ##.share-list
+##.share-media
 ##.share-module
 ##.share-open-button
 ##.share-options
@@ -3596,6 +3622,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.social-container
 ##.social-content
 ##.social-count
+##.social-dropdown
 ##.social-facebook
 ##.social-follow
 ##.social-footer
@@ -3686,6 +3713,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.socialbuttons
 ##.socialfooter
 ##.socialicons
+##.socialinks
 ##.socialite
 ##.socialite-widget
 ##.socialite-widget-item
@@ -3704,6 +3732,7 @@ zmescience.com#$#.jeg_stickybar { position: absolute !important; transform: tran
 ##.sticky-share
 ##.story-share
 ##.stumbleupon
+##.synved-social-button
 ##.taboola
 ##.taboola-container
 ##.td-header-sp-top-widget
