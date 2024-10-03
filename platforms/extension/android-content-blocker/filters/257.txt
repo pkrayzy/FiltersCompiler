@@ -1,8 +1,8 @@
-! Checksum: REg2nn9vVWGMk3dVYuI4RQ
+! Checksum: gHZ+0L/xQ2g1XlZfQuO6sQ
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.3.81
-! TimeUpdated: 2024-10-02T13:02:00+00:00
+! Version: 2.0.3.82
+! TimeUpdated: 2024-10-03T13:01:54+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -6090,3 +6090,11 @@ app##center#yangchen > iframe#external-frame[src="https://im136.mom/"]:not([clas
 ! https://www.proofpoint.com/us/blog/threat-insight/security-brief-actor-uses-compromised-accounts-customized-social-engineering
 ! malware spam
 ! https://github.com/uBlockOrigin/uAssets/issues/25470
+! https://sansec.io/research/cosmicsting-fallout
+! https://sansec.io/research/cosmicsting
+!+ NOT_OPTIMIZED
+/^https:\/\/[a-z]{7,}\.[a-z]{3,}\/get\/\?s=[a-zA-Z0-9]+=*$/$script,third-party,to=~edu|~gov,header=speculation-rules:"/cdn-cgi/speculation"
+!+ NOT_OPTIMIZED
+/^https:\/\/[a-z]{7,}\.[a-z]{3,}\/img\/$/$script,third-party,to=~edu|~gov,header=speculation-rules:"/cdn-cgi/speculation"
+!+ NOT_OPTIMIZED
+! [excluded by ##+js] energiasolare100.it,lundracing.com,red17.co.uk,workplace-products.co.uk##+js(trusted-replace-argument, String.prototype.includes, 0, undefined, condition, /^checkout$/)
