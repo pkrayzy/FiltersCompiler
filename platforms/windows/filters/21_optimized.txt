@@ -1,9 +1,9 @@
-! Checksum: 6q1s8fbWiX0GkayMrgH8sA
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1728023837-3600.patch
+! Checksum: wRownJXvNv0Yvz4uYOW7/Q
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1728031005-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.26.80
-! TimeUpdated: 2024-10-04T06:33:31+00:00
+! Version: 2.0.26.81
+! TimeUpdated: 2024-10-04T08:33:25+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1180,6 +1180,10 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.banki.ru/products/"]
 ##a[href^="https://apay-up-banner.com?merchantId="] > img
 ||apay-up-banner.com^$image,third-party
+ibarakinews.jp##.l-column-sub > div.headline-list:has(> a[href="hp/list.php?elem=qjb"])
+||ibarakinews.jp/attach_image/cplanbigbanner.png
+||ibarakinews.jp/attach_image/qjiB.png
+ibarakinews.jp##a[href="https://ibarakinews.jp/hp/ibaraki-np-denshiban.html#cplan"]
 ghacks.net##main > div.post-subtitle-meta:has(a[href^="https://deals.ghacks.net/sales/"])
 techspot.com##.related-query
 smocca.jp##header ~ div[class] > div[class]:has(> .container > .t_center > a[href][class] > img.v_top)
@@ -2204,6 +2208,8 @@ softpedia.com#$#iframe.swipebox-rightxd[id="relcontent"] { top: 60px!important; 
 !##############################
 !######### JS tweaks ##########
 !##############################
+thehindu.com#%#//scriptlet('abort-on-stack-trace', 'Promise', 'CheckIncognito')
+||thehindu.com^$cookie=_pc_private
 zippyshare.day#%#//scriptlet('adjust-setInterval', '.html(Number', '*', '0.001')
 veev.to#%#//scriptlet('adjust-setInterval', 'download', '*', '0.001')
 bcvc.ink#%#//scriptlet('adjust-setInterval', 'bcvcCountDown', '*', '0.001')

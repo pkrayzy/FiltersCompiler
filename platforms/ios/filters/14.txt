@@ -1,9 +1,9 @@
-! Checksum: vqodEGTPnv/Yni/lF4QDVg
-! Diff-Path: ../patches/14/14-s-1728027436-3600.patch
+! Checksum: 1sz+3zJYjAblCNJZl7QM5w
+! Diff-Path: ../patches/14/14-s-1728030999-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.10.15
-! TimeUpdated: 2024-10-04T07:33:32+00:00
+! Version: 2.2.10.16
+! TimeUpdated: 2024-10-04T08:33:17+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -33426,6 +33426,9 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+holod.media##.a-our-social
+thehindu.com###left-bottom-sticky-container iframe[id^="offer-"]
+thehindu.com##.articlebodycontent > #artmeterpv iframe[id^="offer-"]
 yonder.fr##.block-block-newsletter3
 nikkei.com#$?#.tp-modal:has(iframe[src^="https://buy-ap.piano.io/checkout/template/cacheableShow?"]) { display: none !important; }
 nikkei.com#$#.tp-backdrop { display: none !important; }
@@ -41086,7 +41089,7 @@ quotidiano.net#%#//scriptlet('set-local-storage-item', 'pwa_show', 'true')
 savett.cc##body > section.container:has(> div.card > div.row > div[class] > a[href="https://play.google.com/store/apps/details?id=com.savett"])
 news10.com###custom_html-22
 news10.com##a[href="https://www.news10.com/news/say-hello-to-the-new-news10-abc-mobile-app/"]
-meteored.mx,meteored.com.ar##.descarga-app
+meteored.do,meteored.pe,meteored.cl,meteored.mx,tempo.com,tiempo.com,meteored.com.ar##.descarga-app
 pokebattler.com##.container > div.row:has(> div[class^="col-"] > a[href^="https://play.google.com/store/apps/details?id=com.pokebattler.raidParty"])
 news.tvbs.com.tw##.guangxuan > a[rel="nofollow"][href^="https://bit.ly/"]
 genius.com#$?#.android_interstitial { remove: true; }
@@ -49995,6 +49998,10 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 !
 ! SECTION: Self-promo - Regular rules
 !
+ibarakinews.jp##.l-column-sub > div.headline-list:has(> a[href="hp/list.php?elem=qjb"])
+||ibarakinews.jp/attach_image/cplanbigbanner.png
+||ibarakinews.jp/attach_image/qjiB.png
+ibarakinews.jp##a[href="https://ibarakinews.jp/hp/ibaraki-np-denshiban.html#cplan"]
 ghacks.net##main > div.post-subtitle-meta:has(a[href^="https://deals.ghacks.net/sales/"])
 techspot.com##.related-query
 smocca.jp##header ~ div[class] > div[class]:has(> .container > .t_center > a[href][class] > img.v_top)
@@ -52776,6 +52783,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190219
+! Fixes detecting incognito mode
+thehindu.com#%#//scriptlet('abort-on-stack-trace', 'Promise', 'CheckIncognito')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190077
 zippyshare.day#%#//scriptlet('adjust-setInterval', '.html(Number', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188477

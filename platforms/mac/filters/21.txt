@@ -1,8 +1,8 @@
-! Checksum: BaWAxUKqLzTP0rmWV5JfhQ
+! Checksum: XBXcA65gAslNTQgjP5ESQg
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.26.80
-! TimeUpdated: 2024-10-04T06:33:31+00:00
+! Version: 2.0.26.81
+! TimeUpdated: 2024-10-04T08:33:25+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5325,6 +5325,10 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 !
 ! SECTION: Self-promo - Regular rules
 !
+ibarakinews.jp##.l-column-sub > div.headline-list:has(> a[href="hp/list.php?elem=qjb"])
+||ibarakinews.jp/attach_image/cplanbigbanner.png
+||ibarakinews.jp/attach_image/qjiB.png
+ibarakinews.jp##a[href="https://ibarakinews.jp/hp/ibaraki-np-denshiban.html#cplan"]
 ghacks.net##main > div.post-subtitle-meta:has(a[href^="https://deals.ghacks.net/sales/"])
 techspot.com##.related-query
 smocca.jp##header ~ div[class] > div[class]:has(> .container > .t_center > a[href][class] > img.v_top)
@@ -8109,6 +8113,10 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190219
+! Fixes detecting incognito mode
+thehindu.com#%#//scriptlet('abort-on-stack-trace', 'Promise', 'CheckIncognito')
+||thehindu.com^$cookie=_pc_private
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190077
 zippyshare.day#%#//scriptlet('adjust-setInterval', '.html(Number', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188477
