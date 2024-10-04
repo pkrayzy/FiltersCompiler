@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: C9oEVx0PGPmCvE2a+cAIJQ
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1728009422-3600.patch
+! Checksum: E1sAp8XXWIKBKh+PlxwKTw
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1728020196-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
 ! Version: 2.0.16.93
@@ -197,6 +197,7 @@ snapsave.app###snapapp-top
 tiktokio.com#?#section:has(> div.section-content div[id^="image_"] > a[href^="https://play.google.com/"])
 steampowered.com##.game .block > .open_in_steam_container
 mega.nz###mainlayout > .banner-rack
+colnect.com##.popup_holder
 qload.info##main > section:has(> div.row > div.col > a#pm-badge)
 quotidiano.net##+js(set-local-storage-item, pwa_show, true)
 savett.cc##body > section.container:has(> div.card > div.row > div[class] > a[href="https://play.google.com/store/apps/details?id=com.savett"])
@@ -212,6 +213,7 @@ japantravel.navitime.com,uniqlo.com.hk##.app-modal
 japantravel.navitime.com##.p__aside__app
 youla.ru##+js(set-cookie, youla_fullscreenbanner, disabled)
 aliexpress.com###mobile-download
+shop.menz-style.com###coupon-container
 foodora.*##+js(set-cookie, hideSmartphoneBanner, 1)
 lazada.com.ph,lazada.vn##.card-platform-campaign-banner-container
 agar.io###mainui-promo
@@ -299,6 +301,7 @@ bt.cn##.wechat-customer
 3bmeteo.com###favDialog
 temu.com#?#div[id] div[class^="root-"] > div > div:has(+ div[class^="wrap-"][style^="height:"]):has(> div[style] div[js-selector="mobile-download-ui"])
 temu.com#?##OverviewRef > div > div:has(+ div[class^="wrap-"][style^="height:"]):has(> div[style] div[js-selector="mobile-download-ui"])
+temu.com#$#div[class^="sticky-"][id^="sticky_"][style] { transform: translate(-50%) !important; }
 komoot.com,komoot.de###banner_portal_container
 shufoo.net###info-top-bnr
 shufoo.net###sectionAppInfo
@@ -324,6 +327,7 @@ trip.com###app-download-component
 wiki.mbalib.com###box-app-tip
 wiki.mbalib.com###down-app-pop
 wiki.mbalib.com##.unfold-field-download
+yahoo.co.jp###bosaiapp
 uteka.ru##.app-discount-banner
 testbook.com#$#body.modal-open { overflow: auto !important; }
 dream.ai##+js(set-local-storage-item, hasViewedInitialInputImages, true)
@@ -463,7 +467,6 @@ lingvanex.com##.modal-app-overlay
 thuisbezorgd.nl,takeaway.com,just-eat.ch,lieferando.at,lieferando.de,just-eat.fr,pyszne.pl,just-eat.dk,just-eat.no##div[data-selector-id="app-banner"]
 hesaplama.net##aside > div > a[href^="https://play.google.com/store/apps/"]
 pikabu.ru#$#body { overflow: auto !important; }
-dzen.ru##div[class^="web2app-advert-qr-banner__"]
 topperlearning.com,xiaohongshu.com##.open-app-btn
 rakuten.com.tw##.appBnFooter
 youdao.com##+js(set-cookie, _yd_banner_day, 1)
@@ -632,11 +635,6 @@ m.guancha.cn##.g_swiper_container
 whowatch.tv,curazy.com,ebay.*,locari.jp##.app-download-banner
 m.shein.com#$#body { margin-top: 0px !important; }
 ||scdn.line-apps.com/stf/line-news/js/thirdparty/
-banggood.com#$#.drainage-pop { display: none !important; }
-banggood.com#$#.global-no-scroll { position: static !important; }
-banggood.com##.bottom-app-contain
-banggood.com#$#.header.show-app-bar { top: 0 !important; }
-banggood.com#$##appTopBar { display: none !important; }
 dev.to###runtime-banner-container
 konest.com##div[style$="width:128px; height:240px;"]
 storm.mg##+js(set-cookie, app_download_banner, true)
@@ -678,6 +676,7 @@ oceans-nadia.com#$#header { margin-top: 0px !important;}
 point.md##+js(set-cookie, visited, true)
 giga.de,chatgptdemo.info,chat.chatgptdemo.net,mega4upload.com,rarefivem.com,baby-calendar.jp##a[href^="https://play.google.com/store/apps"]
 baby-calendar.jp##.box-side-bana
+s.kakaku.com##.homebtnbnr
 windy.com###open-in-app
 hk01.com##div[id^="ig-"][data-title$="app download"]
 tanoshiiosake.jp##+js(remove-class, app-appBannerOpen, body)
@@ -722,7 +721,6 @@ wealthadvisor.co.jp,gos-oplata.ru,bushikaku.net##.banner
 nbblog.jp###App
 radiokp.ru##.dummy-app-store-radio-block
 radiokp.ru##.dummy-google-play-radio-block
-costadelmar-radio.com###apps
 rudaw.net##.smallMobileImage
 myoji-yurai.net###app_ad
 boomplay.com,speedtest.vn##.appStore
@@ -799,7 +797,6 @@ www-hindustantimes-com.cdn.ampproject.org,hindustantimes.com##.openAppButton
 m.gamer.com.tw,noin.shop,india.com##.open-app
 bhaskar.com,divyabhaskar.co.in#?#div[class][style^="position:"] > div[class]:has(> a[href^="https://play.google.com/store/apps/details?id=com.ak.ta."])
 /images/playstore-$domain=bhaskar.com|divyabhaskar.co.in
-kelimeler.net##.idea
 ||ssl.pstatic.net/static/m/comic/im/app_banner_
 nur.kz##.js-page-top
 nperf.com##.mobilePromoLogos
@@ -965,6 +962,7 @@ bing.com#$#.b_hphb { display:block!important; }
 fandom.com#$#.global-navigation-mobile-wrapper { top: 0!important; }
 fandom.com#$#body { margin-top: 0!important; }
 linkedin.com#$#.no-scroll { overflow:visible!important; }
+m.webtoons.com#$#body { overflow: visible !important; position: relative !important; }
 tieba.baidu.com#$#.navbar-box { top: 44px!important; }
 tieba.baidu.com#$#body .tb-index-navbar .navbar-view { top: 24px!important;}
 hdrezka1dhpkk.org,hdrezka9bsbhq.org,hdrezka720dhh.org,hdrezka320ypq.org,hdrezka180map.org,hdrezka320hjh.org,hdrezka9fmskj.org,hdrezka2vmmty.org,hdrezka8dgquu.org,hdrezkayyh5pq.org,hdrezka2tepnm.org,standby-rezka.tv,flymaterez.net,hdrezka320fkk.org,hdrezka.vip,rezka.space,hdrezka8bdhtq.org,hdrezka1tqbbd.org,hdrezka1qkpbx.org,hdrezka320rtq.org,rezka-ua.tv,hdrezkabmmshq.org,hdrezkafh28d9.org,hdrezkasmakyy.org,hdrezkafhs83u.org,hdrezkahs920s.org,hdrezka.in,hdrezkat5ee2w.org,hdrezka66yhfg.net,hdrezka.rest,hdrezkahf22hh.net,hdrezkahdg24s.net,hdrezkabbdh4d.net,hdrezkajjfhr5.net,27p6qp79zyr1.net,hdrezka19139.org,hdrezkap3g.org,hdrezkapez.org,hdrezkarty.org,hdrezkacvb.org,hdrezka.ag,upivi.com,hdrezka.me,ikinopoisk.com,kinopub.me,3ivi.com,rezkify.com,bestofkinopoisk.com,rezkery.com,rezkily.com,hdrezkaonline.com,mrhdrezka.com,hdrezka.sh,livekinopoisk.com,cokinopoisk.com,hdrezka-ag.com,hdrezka.club,hdrezka.cm,hdrezka.co,hdrezka.name,hdrezka.site,hdrezka.today,hdrezka.tv,hdrezka.website,hdrezkaag.net,hdrezkayou.com,instahdrezka.com,freehdrezka.com,rezka.ag##.b-dwnapp
