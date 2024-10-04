@@ -898,8 +898,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.4",
-			"timeUpdated": "2024-10-04T01:01:07+0000",
+			"version": "2.1.57.5",
+			"timeUpdated": "2024-10-04T05:01:07+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -973,8 +973,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.3",
-			"timeUpdated": "2024-10-04T01:01:08+0000",
+			"version": "2.1.57.4",
+			"timeUpdated": "2024-10-04T05:01:07+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1395,8 +1395,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.50.35",
-			"timeUpdated": "2024-10-04T01:01:51+0000",
+			"version": "2.0.50.36",
+			"timeUpdated": "2024-10-04T05:01:50+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"
@@ -1463,8 +1463,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
-			"version": "2.0.1.83",
-			"timeUpdated": "2024-10-03T09:02:05+0000",
+			"version": "2.0.1.84",
+			"timeUpdated": "2024-10-04T05:01:51+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1483,8 +1483,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.3.83",
-			"timeUpdated": "2024-10-03T21:02:08+0000",
+			"version": "2.0.3.84",
+			"timeUpdated": "2024-10-04T05:01:52+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
