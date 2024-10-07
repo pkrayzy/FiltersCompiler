@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Ffj+IzZTrdLc+x3r8yL4sQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1728293836-3600.patch
+! Checksum: pMlOg/MN97/hhmFA8oJWZw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1728297717-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.55.37
-! TimeUpdated: 2024-10-07T09:31:22+00:00
+! Version: 2.3.55.38
+! TimeUpdated: 2024-10-07T10:32:17+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -17068,10 +17068,15 @@ technoarabi.com#@#.ad-slot
 technoarabi.com#@#.Ad-Container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175443
 lesite24.com##div[id^="pum-"][data-popmake*="ads"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/190365
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177741
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173657
 $script,third-party,domain=faselhd.cafe|faselhd-watch.shop,badfilter
 $third-party,xmlhttprequest,domain=faselhd.cafe|faselhd-watch.shop,badfilter
+! According to https://github.com/AdguardTeam/tsurlfilter/tree/epic/tswebextension/packages/tsurlfilter/src/rules/declarative-converter#badfilter
+! $badfilter works only within the scope of one static filter or within the scope of all dynamic rules (custom filters with user rules).
+! Problematic rules comes from Liste AR, and it looks like that $badfilter does not work in this case in MV3 extension when it's loaded from Base filter (works fine in user rules),
+! so we need to use exception rules for MV3 extension.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172834
 nabd.com##div[id^="nb-ad-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171153
