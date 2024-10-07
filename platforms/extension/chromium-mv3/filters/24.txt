@@ -1,8 +1,8 @@
-! Checksum: SRuWmMF0ctgF35SlYmH+KQ
+! Checksum: BGU1cO4pVYM48r3TdGYlHw
 ! Title: AdGuard Quick Fixes filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.0.54
-! TimeUpdated: 2024-10-07T07:33:28+00:00
+! Version: 2.0.0.55
+! TimeUpdated: 2024-10-07T08:33:02+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -31,6 +31,25 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100000 01-01-2024
 ! example.com#@#body
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190065 07-10-2024
+@@||gecmisi.com.tr^$cookie=_ga
+gecmisi.com.tr#%#//scriptlet('trusted-set-cookie', '_ga', 'GA1.1.1908932164.2839771695')
+gecmisi.com.tr#%#//scriptlet('prevent-setInterval', 'showAdBlockMessage')
+gecmisi.com.tr#%#//scriptlet('prevent-setTimeout', 'adElement.innerHTML', '1000')
+! https://github.com/AdguardTeam/AdguardFilters/issues/190405 07-10-2024
+inteh.biz##div[id^="downpart"] > #block
+! https://github.com/AdguardTeam/AdguardFilters/issues/190359 07-10-2024
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=homeleisuredirect.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/190355 07-10-2024
+lasexta.com##div[id^="taboola-container-"]
+lasexta.com#@##didomi-notice
+@@||sdk.privacy-center.org^$domain=lasexta.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/190330 07-10-2024
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=kibagames.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/190343 07-10-2024
+lulu.st#%#//scriptlet('abort-current-inline-script', 'document.querySelectorAll', 'popMagic')
+lulu.st#%#//scriptlet("abort-current-inline-script", "document.createElement", "break;case $.")
+lulu.st#%#//scriptlet('abort-current-inline-script', 'atob', '/popundersPerIP[\s\S]*?Date[\s\S]*?getElementsByTagName[\s\S]*?insertBefore|w47DisKcw5g/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190320 07-10-2024
 navernovel.com#%#//scriptlet('prevent-eval-if', '/fairAdblock|chp_?adblock|adsbygoogle\.js/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190310 07-10-2024
@@ -109,10 +128,6 @@ empire-streaming.*#%#//scriptlet('set-constant', 'empire.mediaData.advisorDirect
 empire-streaming.*#%#//scriptlet('set-constant', 'empire.mediaData.advisorMovie', '1')
 empire-streaming.*#%#//scriptlet('set-constant', 'empire.mediaData.advisorSerie', '1')
 empire-streaming.*#$#body > iframe:not([src]) { position: absolute !important; left: -3000px !important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/190065 03-10-2024
-@@||gecmisi.com.tr^$cookie=_ga
-gecmisi.com.tr#%#//scriptlet('trusted-set-cookie', '_ga', 'GA1.1.1')
-gecmisi.com.tr#%#//scriptlet('prevent-setTimeout', 'adElement.innerHTML', '1000')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190068 03-10-2024
 link.codevn.net#%#//scriptlet('prevent-fetch', 'hoanoola.net')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190173 03-10-2024
