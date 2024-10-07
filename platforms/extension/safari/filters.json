@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.6.54",
-			"timeUpdated": "2024-10-07T15:32:01+0000",
+			"version": "2.1.6.55",
+			"timeUpdated": "2024-10-07T19:32:19+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
