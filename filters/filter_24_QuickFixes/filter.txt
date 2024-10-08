@@ -25,8 +25,13 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100000 01-01-2024
 ! example.com#@#body
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/137570 08-10-2024
+@@yandex.*/user-id?$stealth=referrer|searchqueries
 ! dzen 08-10-2024
 dzen.ru##div[class^="dzen-desktop--top-micro-app__"]:matches-attr("data-*"="ad-banner")
+! https://github.com/AdguardTeam/AdguardFilters/issues/190395 08-10-2024
+streamingcommunity.*#%#//scriptlet('abort-on-property-read', 'blockAdBlock')
+streamingcommunity.*#%#//scriptlet('remove-node-text', 'script', '/blockAdBlock|_cqjduonc|\/blockadblock\.min\.js/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190304 08-10-2024
 kkbox.com#@%#//scriptlet('set-constant', 'document.body.oncontextmenu', 'true')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190460 08-10-2024
@@ -46,11 +51,11 @@ giga.de##aside .alice-teaser-list > .alice-teaser-list-item:has(> .alice-teaser 
 @@||ssl.p.jwpcdn.com/player/v/*/*.js$domain=faselhd.cafe
 @@||cdnjs.cloudflare.com/ajax/libs/*/*.js$domain=faselhd.cafe
 ||ssl.p.jwpcdn.com/player/v/*/vast.js$important,domain=faselhd.cafe
-! https://github.com/AdguardTeam/AdguardFilters/issues/190065 07-10-2024
+! https://github.com/AdguardTeam/AdguardFilters/issues/190065 08-10-2024
 @@||gecmisi.com.tr^$cookie=_ga
 gecmisi.com.tr#%#//scriptlet('trusted-set-cookie', '_ga', 'GA1.1.1908932164.2839771695')
 gecmisi.com.tr#%#//scriptlet('prevent-setInterval', 'showAdBlockMessage')
-gecmisi.com.tr#%#//scriptlet('prevent-setTimeout', 'adElement.innerHTML', '1000')
+gecmisi.com.tr#%#//scriptlet('prevent-setTimeout', '/adElement\.innerHTML|=document\[_0x/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190405 07-10-2024
 inteh.biz##div[id^="downpart"] > #block
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190359 07-10-2024
@@ -91,8 +96,6 @@ reviewpalace.net,techplanet.cam,techland.live,gameplanet.cam,topgames.cam,techso
 tvhay.*##.banner-ads
 tvhay.*#$#body > #wrapper + center { height: 2px !important; }
 ||tvhay.*/ads/popup-tt.js$~third-party,script
-! https://github.com/AdguardTeam/AdguardFilters/issues/190395 07-10-2024
-streamingcommunity.*#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/119573 05-10-2024
 ! voe.sx
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=thomasalthoughhear.com
@@ -247,11 +250,11 @@ $script,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com|fastly.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188771 27-09-2024
 1337x.to#%#//scriptlet('abort-on-property-read', 'Adcash')
 1337x.to#%#//scriptlet('abort-on-stack-trace', 'Element.prototype.hasAttribute', 'isActionAllowedOnElement')
-! https://github.com/AdguardTeam/AdguardFilters/issues/189567 07-10-2024
-japscan.lol#%#//scriptlet('remove-node-text', 'script', '=document[\'createElement\'](\'img\');')
+! https://github.com/AdguardTeam/AdguardFilters/issues/189567 08-10-2024
+japscan.lol#%#//scriptlet('remove-node-text', 'script', 'un\'+\'de')
+japscan.lol#%#//scriptlet('abort-current-inline-script', 'document.querySelectorAll', '(\'img')
 japscan.lol#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', '(e)=>')
 japscan.lol#%#//scriptlet('prevent-element-src-loading', 'script', 'acscdn.com')
-japscan.lol#%#//scriptlet('remove-node-text', 'script', '/^\s*(?:var [-$0-9A-Z_a-z]{1,20}=[-$0-9A-Z_a-z]{1,20};)?\s*\(function\([-$0-9A-Z_a-z]{1,20},.{5000,7000}\s*$/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189504 26-09-2024
 watchadsontape.com,advertisertape.com#@#.google-ad
 watchadsontape.com,advertisertape.com#@#.skyscraper.ad
