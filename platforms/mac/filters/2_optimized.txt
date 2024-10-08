@@ -1,8 +1,8 @@
-! Checksum: OEJXbNv2AUcGxcRw46AEiw
+! Checksum: OK0MDPvIkyrqPOgAo2Neaw
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.55.50
-! TimeUpdated: 2024-10-08T08:31:25+00:00
+! Version: 2.3.55.51
+! TimeUpdated: 2024-10-08T09:31:28+00:00
 ! Expires: 5 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -14566,6 +14566,7 @@ terashare.co#%#(()=>{const e={apply:(e,t,n)=>{try{const[e,r]=n,a=r?.toString();i
 /i/api/graphql/*/HomeLatestTimeline$jsonprune=\$.data.home.home_timeline_urt.instructions..entries..[?(key-substr 'entryId' 'promoted-tweet-')],domain=twitter.com|x.com
 /i/api/graphql/*/HomeTimeline$jsonprune=\$.data.home.home_timeline_urt.instructions..entries..[?(key-substr 'entryId' 'promoted-tweet-')],domain=twitter.com|x.com
 /i/api/graphql/*/TweetDetail$jsonprune=\$.data.threaded_conversation_with_injections_v2.instructions..entries.[?(has "\$.content.items..item.itemContent.promotedMetadata.advertiser_results")],domain=twitter.com|x.com
+/i/api/graphql/*/ImmersiveMedia$jsonprune=\$.data.immersiveMedia.timeline.instructions..entries..[?(key-substr 'entryId' 'promoted-tweet-')],domain=twitter.com|x.com
 !+ NOT_OPTIMIZED
 lite.qwant.com#?#.content > article.result:has(> p > span.ad)
 !+ NOT_PLATFORM(ios, ext_safari)
