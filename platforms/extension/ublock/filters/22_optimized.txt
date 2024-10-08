@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: 2kzUnJHkdh4htxpHGLaeIA
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1728304580-3600.patch
+! Checksum: DdkcNhwBOeRXO2vQrWYQZw
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1728365768-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.9.77
@@ -17,6 +17,7 @@
 ||rcm.shinobi.jp^
 ||nullpoantenna.com/scripts/parts/blog/
 ||matomeantena.com/scripts/parts/blog/
+||rss.tc^$third-party
 /rss/rss.html$subdocument,~third-party
 .com/rss.htm$subdocument,~third-party
 .com/rss2.htm$subdocument,~third-party
@@ -134,6 +135,8 @@ korewaeroi.com##div[class^="divider"] > aside.widget-main
 ||ryusoku.com/assets/html/headline.html
 aaieba.livedoor.biz##.left-container
 blog.tinect.jp##p + .g.g-46 > .g-single
+jiwasoku.com###pcpc-rss
+jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
 sindoi.com##div[class^="sougo-rss"]
 h-ken.net###footer-rssLinkListHtml
@@ -288,6 +291,9 @@ akb48matomemory.com#?#span[style="font-size: 125%;"]:has(> a[target="_blank"])
 akb48matomemory.com##.antenna-text-list
 squallchannel.com##iframe[src^="http://squallchannel.doorblog.jp"]
 squallchannel.com##.article-body-more > dd
+matomecup.com#?##center > div.plugin3_outline:has(> div[class$="_body"] p > a[href^="http://newmofu.doorblog.jp/"])
+matomecup.com#?##center > div.plugin3_outline:has(> div[class] script[src="https://blogroll.livedoor.net/js/blogroll.js"])
+matomecup.com##.ently_text > div[style="background-color: #ffffff;margin: 10px 0px 25px 0px;padding: 14px 8px 20px;"]
 vipsister23.com#?#.entry-body > blockquote:has(> div[align="center"] > a[href][target="_blank"])
 zch-vip.com##.column-inner > div[class*="eadline"]
 ||fesoku.net^$subdocument,~third-party
@@ -441,6 +447,7 @@ gfoodd.com##.box_group ~ br
 gfoodd.com#?#.code-block > div.sponserdrink:contains(RSS)
 marasoku.info##.rss_ninja_title
 news4wide.net##.box-antenna
+vipnews.jp##.custom-rss-container
 stocktwits.com##div[class^="UserPage_primis"]
 /rss_$subdocument,domain=eegg.fun
 ||eegg.fun/rssline.html
@@ -487,6 +494,7 @@ _rss.html$domain=blog.livedoor.jp
 _rss2.html$domain=blog.livedoor.jp
 _rss3.html$domain=blog.livedoor.jp
 calciomatome.net##.blogroll-wrapper_wide
+jumpsokuhou.com##.headline_out
 vipsister23.com###share3
 eromazofu.com###left_sidebar
 bi-girl.net##.top_link
@@ -704,6 +712,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||easyliao.com^$third-party
 ||edialog24.com^$third-party
 ||embed.doorbell.io^$third-party
+||acobot.ai^$third-party
 ||api.autopilothq.com^$third-party
 ||api.cloudleadia.com^$third-party
 ||api.pozvonim.com^$third-party
@@ -754,6 +763,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||widget.profeat.team^$third-party
 ||web.redhelper.ru^$third-party
 ||webim.ru^$third-party
+||whatya.solairo-api.com^$third-party
 ||whisbi.com^$third-party
 ||whitesaas.com^$third-party
 ||widget-v*.tidiochat.com^$third-party
@@ -881,6 +891,7 @@ tech.hindustantimes.com#?#.article div[class]:has(> section.ProductAffilateWrapp
 ||geoapteka.ua/geowidget/loader/geowidget.min.js$domain=pharmencyclopedia.com.ua
 ixbt.com##div[id^="marketWidget"]
 ||go.pardot.com^$third-party
+3dnews.ru,irecommend.ru##.ymarket-affiliate-widget
 ||aflt.market.yandex.ru/widget$domain=~tehno-rating.ru
 ||dl.metabar.ru^$third-party
 ||plista.com^$third-party
@@ -895,6 +906,7 @@ newsee-media.com,saitama-np.co.jp,htb.co.jp,oricon.co.jp,maidonanews.jp##.uz-ny
 ||gacraft.jp^$third-party
 houyhnhnm.jp##.section-similer-post
 tss-tv.co.jp##.hns_bottomadbox
+yamakei-online.com##.ad-pop-nw3-nw4
 ryukyushimpo.jp#?#article ~ .flex-col:has(.items-center > #_popIn_recommend)
 mbs.jp##.common-wrap--recommend
 getnews.jp,front-row.jp##._popIn_recommend
@@ -953,6 +965,7 @@ freestreams-live.my###custom_html-9
 litres.ru###call_support
 ||k-pilot.kariyer.net^
 ||assistant.watson.appdomain.cloud^$domain=smartmetertexas.com
+||chester-tax.com/wp-chester-tax/wp-content/plugins/chester-chatbot/
 ||chatdealer.jp^$domain=zeirisi.co.jp
 sofmap.com###voc_ec_button
 ||bot.leadoo.com^$domain=bobsbusiness.co.uk
@@ -1067,6 +1080,7 @@ t-online.de,welt.de##iframe[src^="https://widget.civey.com"]
 ||civey.com^$third-party
 ||compass.pressekompass.net/compasses^$third-party
 ||widgets.opinary.com^$third-party
+||app.mycountrytalks.org^$third-party
 ||js-seeker.newjobs.com^$domain=monster.com
 ||js.jebbit.com/companion/*/widget.js$third-party
 nextpit.de##.jobbioapp
@@ -1129,6 +1143,7 @@ hrw.org##.donation-block__content
 hrw.org###block-donationfooterblock
 thejournal.ie##+js(set-local-storage-item, total_page_views, 2)
 thejournal.ie##.contribution-prompt-wrapper-redesign
+echofm.online##main > article.wp-embed-responsive ~ div[class^="sc-"]:has(> div[style="visibility: visible;"] > div[class] > div[class] > label > input[name="paymentMethod"])
 gigazine.net###donation_wrapper
 getcomics.org##.wpfront-notification-bar-spacer
 agents.media##.single-post__donate-block
@@ -1179,6 +1194,7 @@ zona.media##.tools__support_container
 ||static.theprint.in/wp-content/uploads/*/subscribe_*.png
 bitcoin.org##.donation-container
 gellerreport.com#?#.widget-area > section.widget h2.donate-title:upward(section.widget)
+firstthings.com##.leaderboard
 cpuid.com###downloading > div.advert
 worldhistory.org##.ahe-ad
 ||cdnjs.buymeacoffee.com^$third-party
