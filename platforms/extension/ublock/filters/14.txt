@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: XBhmJbhflhgo+2Y8eA6sZA
-! Diff-Path: ../patches/14/14-s-1728380202-3600.patch
+! Checksum: 6TJx/UnO9Xap23IF7memVA
+! Diff-Path: ../patches/14/14-s-1728383762-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.10.41
-! TimeUpdated: 2024-10-08T09:33:09+00:00
+! Version: 2.2.10.42
+! TimeUpdated: 2024-10-08T10:32:40+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -19668,6 +19668,7 @@ mail.ru##+js(set-constant, Object.prototype.hideTgbAd, '')
 mail.ru##div[slot="main-column"] > div.stripe-wrapper
 ! e.mail.ru
 e.mail.ru,octavius.mail.ru##+js(set-constant, Object.prototype.clearRequests, undefined)
+mail.ru#?#body > div > style + div:has(> div > div.description:contains(Добавьте Mail в исключения))
 ! dzen.ru
 ! Under the search
 dzen.ru##div:matches-attr("data-*"="ad-banner")
@@ -23700,6 +23701,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+jp.msi.com#$##feedback_monitor { display: none !important; }
+jp.msi.com#$#.modal-backdrop { display: none !important; }
+jp.msi.com#$#body { overflow: auto !important; padding-right: 0 !important; }
 playground.ru###steamPollSuggestion
 pinterest.com###credential_picker_container
 pinterest.com###credential_picker_iframe
@@ -42669,6 +42673,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+epark.jp##.header_app_banner
 mamanoko.jp##+js(set-cookie, hide_app_banner, true)
 yourweather.co.uk,theweather.net,meteored.*##.descarga_home
 jp.stanby.com##div[class*="app-download-banner-"]
