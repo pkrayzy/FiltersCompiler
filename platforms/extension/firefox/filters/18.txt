@@ -1,9 +1,9 @@
-! Checksum: gXqbu0LdTq+lvqXdeZIIZQ
-! Diff-Path: ../patches/18/18-s-1728477408-3600.patch
+! Checksum: sp4/pKYWdYZjvchUctfCjg
+! Diff-Path: ../patches/18/18-s-1728484604-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.49.13
-! TimeUpdated: 2024-10-09T12:33:11+00:00
+! Version: 2.0.49.14
+! TimeUpdated: 2024-10-09T14:33:03+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2486,6 +2486,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+bueromoebel-experte.de#$##klaro { display: none !important; }
+bueromoebel-experte.de#$#body { overflow: auto !important; }
 museum.seiko.co.jp##.js-about-cookie
 tippsling.de#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="0"][id]', '!real_cookie_banner-v:3_blog:1_path:c82d723')
 docs.blackbox.chat##div[aria-label="Cookies"]
@@ -16213,6 +16215,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190554
+bueromoebel-experte.de#@#.cookie-notice:not(body):not(html)
+bueromoebel-experte.de#@#.cookie-overlay:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190495
 liveabout.com#@##onetrust-consent-sdk
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=liveabout.com

@@ -1,9 +1,9 @@
-! Checksum: iqXuIo/bhQycPrrVQyNsaw
-! Diff-Path: ../patches/14/14-s-1728481039-3600.patch
+! Checksum: gakTUsjmKu7smIVQxZW1gA
+! Diff-Path: ../patches/14/14-s-1728484624-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.10.59
-! TimeUpdated: 2024-10-09T13:33:12+00:00
+! Version: 2.2.10.60
+! TimeUpdated: 2024-10-09T14:32:57+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2486,6 +2486,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+bueromoebel-experte.de#$##klaro { display: none !important; }
+bueromoebel-experte.de#$#body { overflow: auto !important; }
 museum.seiko.co.jp##.js-about-cookie
 tippsling.de#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="0"][id]', '!real_cookie_banner-v:3_blog:1_path:c82d723')
 docs.blackbox.chat##div[aria-label="Cookies"]
@@ -16246,6 +16248,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190554
+bueromoebel-experte.de#@#.cookie-notice:not(body):not(html)
+bueromoebel-experte.de#@#.cookie-overlay:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190495
 liveabout.com#@##onetrust-consent-sdk
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=liveabout.com
