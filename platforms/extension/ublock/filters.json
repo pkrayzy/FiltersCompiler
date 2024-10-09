@@ -1682,8 +1682,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.23.58",
-			"timeUpdated": "2024-10-09T15:33:03+0000",
+			"version": "2.1.23.59",
+			"timeUpdated": "2024-10-09T23:32:55+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
