@@ -1,5 +1,5 @@
-! Checksum: Riz+NvlEk5IVF9sXVLkIXQ
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1728409005-3600.patch
+! Checksum: ftJfZ93HNyu1rSULp8AehA
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1728441371-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.9.80
@@ -36,6 +36,7 @@
 .net/rss2.htm$subdocument,~third-party
 .com/rss/$subdocument,~third-party
 ||adlt18antenna.xyz/blogparts/blog_parts_js.php
+||rssfetcher.blogsys.jp^
 ||blog.livedoor.jp/plugin/ldblog_rss_plugin.js
 ||tanganrss.com^$third-party
 ||fukugan.com^$third-party
@@ -311,6 +312,7 @@ matomecup.com#?##center > div.plugin3_outline:has(> div[class$="_body"] p > a[hr
 matomecup.com#?##center > div.plugin3_outline:has(> div[class] script[src="https://blogroll.livedoor.net/js/blogroll.js"])
 matomecup.com##.ently_text > div[style="background-color: #ffffff;margin: 10px 0px 25px 0px;padding: 14px 8px 20px;"]
 vipsister23.com#?#.entry-body > blockquote:has(> div[align="center"] > a[href][target="_blank"])
+majimanjisokuhou.com###RSS001
 zch-vip.com##.column-inner > div[class*="eadline"]
 ||fesoku.net^$subdocument,~third-party
 fesoku.net##.titlehl
@@ -461,6 +463,7 @@ gfoodd.com##.box_group ~ div.singleh4
 gfoodd.com##.box_group ~ br
 gfoodd.com#?#.code-block > div.sponserdrink:contains(RSS)
 marasoku.info##.rss_ninja_title
+toychan.blog.jp,shouginews.blog.jp,hinomoto99.com,fireflyframer.blog.jp##.message-board-outer
 news4wide.net##.box-antenna
 vipnews.jp##.custom-rss-container
 stocktwits.com##div[class^="UserPage_primis"]
@@ -585,6 +588,8 @@ inazumanews2.com#$##rsshead { display: none!important; }
 inazumanews2.com#$##sub { margin-top: 0!important; }
 ironsaga-msoku.xyz#$##content { margin-top: 180px!important; }
 ironsaga-msoku.xyz#$##rss_wrap { display: none!important; }
+||monhan-mhw.com^$subdocument,~third-party
+monhan-mhw.com###main div.column-inner-2 > div[style$="background: #FFFFFF;"]
 ||toushichannel.net^$subdocument,~third-party
 coolpan.net##.pickupList
 coolpan.net###rss_link3
@@ -728,6 +733,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||edialog24.com^$third-party
 ||embed.doorbell.io^$third-party
 ||acobot.ai^$third-party
+||api-pravoved.s3.amazonaws.com^$third-party
 ||api.autopilothq.com^$third-party
 ||api.cloudleadia.com^$third-party
 ||api.pozvonim.com^$third-party
@@ -743,6 +749,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||app.chatplus.jp^$third-party
 ||artibot.ai^$third-party
 ||avaamo.com^$third-party
+||bazzaro.ru^$third-party
 ||blinger.io^$third-party
 ||cdn.freshbots.ai^$third-party
 ||cdn.reamaze.com^$third-party
@@ -847,6 +854,7 @@ esputnik.com##.intercom-lightweight-app
 f.ua##.callback_buttons
 hdfcbank.com###chatTogglerDiv
 justanswer.com##.th-chat-window
+kasla.ru##.callback-button
 klaster.ua##.sonar_effect
 network.mobile.rakuten.co.jp###rexSurveyEmbedded
 ozon.ru##div[data-widget="webFeedbackForm"]
@@ -889,7 +897,6 @@ vinmec.com##.global-thread-create-cta
 ||static.olark.com/jsclient/$third-party,domain=~fooda.com
 ||support-widget.nakanohito.jp^$domain=jre-travel.com
 ||tars-file-upload.s*.amazonaws.com/bulb/js/widget.js$domain=healthians.com
-||tforms.fcc-online.pl/public/widget.js
 ||tocplus*.com/chatLoader.do?
 ||turimm.com/_*.php$script
 ||unpkg.com/blip-chat-widget$domain=apppay.com.br
@@ -972,7 +979,6 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 ||widget.installchatbot.com^$third-party
 ||widget.moin.ai^$third-party
 ||widget.replain.cc^$third-party
-||widget.chatbullet.com^$third-party
 ||showtalk.jp^$third-party
 ||uhchat.net^$third-party
 shirainime.com,daemon-hentai.com,seirsanduk.us,sedsports.com,139.99.120.222,indoxxi.show,aniwatcher.com,mylivecricket.info,debrid-file.com,streamonsport.info,freestreams-live.my##iframe[src*="chatango.com"]
@@ -1004,8 +1010,6 @@ sexuria.net,buhgalter.com.ua##.chat
 daemon-hentai.com###secondary > div.widget:last-child
 howdyho.net##.hollow
 javbangers.com,javtasty.com##.table > .block-chat
-lenov.ru##.lc_area
-lenov.ru##a[onclick^="window.open('/chat.php'"]
 mega.ru##.chatButton
 moluch.ru##.ask_out
 wiseeconomist.ru,zakon.today##.pravoved-ru-widget
@@ -1014,7 +1018,6 @@ wiseeconomist.ru,zakon.today##.pravoved-ru-widget
 ||collectcdn.com/launcher.js$domain=dila.ua
 ||csportal.directstar.ru^$domain=store.sony.ru
 ||hospitaloswaldocruz.my.salesforce.com^$domain=hospitaloswaldocruz.org.br
-||lenov.ru/engine/modules/light_chat/
 ||liquidweb.my.salesforce.com^$domain=nexcess.net
 ||procdncache.com/chat.php
 ||reactive.factor.ua/buhgalter911_chat/$domain=buhgalter.com.ua
@@ -1038,6 +1041,7 @@ journal.sovcombank.ru#?#article > div[class^="sc-"] > div:not([class]):has(div:c
 ||betting-widget.s3.eu-west-2.amazonaws.com/app.js$domain=joe.co.uk
 ||static-cdn.spot.im/production/reactions/tags/*/reactions-bundle.js$domain=fandom.com
 officelife.media##.betera-widget
+smartpress.by##.vidjet-template
 ||motor-cdn.prensaiberica.es/widget?$domain=informacion.es
 ||widget-am.misteraladin.com^$domain=inews.id
 eiga.com##.area-unext
