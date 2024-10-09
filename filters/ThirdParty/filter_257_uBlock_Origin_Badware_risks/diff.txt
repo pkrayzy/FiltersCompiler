@@ -4496,6 +4496,14 @@ tech4yougadgets.com##+js(aopr, Notification)
 /^https:\/\/[a-z0-9]{3,}\.[a-z0-9]{4,11}\.ru\/[a-zA-Z0-9]{30,}\?[a-zA-Z0-9]{25,}$/$doc,to=ru
 ! Rule "/^https:\/\/[a-z0-9]{3,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{30,}\?[a-zA-Z0-9]{25,}$/$doc,to=su" converted to: "/^https:\/\/[a-z0-9]{3,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{30,}\?[a-zA-Z0-9]{25,}$/$document,to=su"
 /^https:\/\/[a-z0-9]{3,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{30,}\?[a-zA-Z0-9]{25,}$/$doc,to=su
+! Rule "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.com\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=com|~google.com|~microsoft.com,from=com|ru|su" converted to: "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.com\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=com|~google.com|~microsoft.com,from=com|ru|su"
+/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.com\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=com|~google.com|~microsoft.com,from=com|ru|su
+! Rule "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.ru\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=ru,from=com|ru|su" converted to: "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.ru\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=ru,from=com|ru|su"
+/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.ru\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=ru,from=com|ru|su
+! Rule "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=su,from=com|ru|su" converted to: "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=su,from=com|ru|su"
+/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=su,from=com|ru|su
+! Rule "/^https:\/\/[^.]+\.favoripirlanta\.com\//$doc,to=favoripirlanta.com" converted to: "/^https:\/\/[^.]+\.favoripirlanta\.com\//$document,to=favoripirlanta.com"
+/^https:\/\/[^.]+\.favoripirlanta\.com\//$doc,to=favoripirlanta.com
 ! Rule "||marketplace-item-*.000.pe^$doc" converted to: "||marketplace-item-*.000.pe^$document"
 ||marketplace-item-*.000.pe^$doc
 ! Rule "/^https:\/\/(?:ai|art|get)-?midjourney[^\/]+\//$doc,to=~midjourney.com|~edu|~gov" converted to: "/^https:\/\/(?:ai|art|get)-?midjourney[^\/]+\//$document,to=~midjourney.com|~edu|~gov"
@@ -4718,6 +4726,12 @@ adrissa.com.co,americansoda.co.uk,casteloforte.com.br,centerfabril.com.br,forque
 /^https:\/\/[a-z0-9]{5,15}\.shop\/lead$/$document,~third-party,strict1p,match-case,method=post,to=shop
 ! Error: "Unknown modifier:  X-Requested-With" in the rule: "/api/webapi/login|$xmlhttprequest,third-party,to=online|vip,method=post,header=access-control-allow-headers:Origin, X-Requested-With, Content-Type, Accept, Authorization"
 /api/webapi/login|$xmlhttprequest,third-party,to=online|vip,method=post,header=access-control-allow-headers:Origin, X-Requested-With, Content-Type, Accept, Authorization
+! Error: "Unknown modifier: from=com|ru|su" in the rule: "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.com\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=com|~google.com|~microsoft.com,from=com|ru|su"
+/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.com\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=com|~google.com|~microsoft.com,from=com|ru|su
+! Error: "Unknown modifier: from=com|ru|su" in the rule: "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.ru\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=ru,from=com|ru|su"
+/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.ru\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=ru,from=com|ru|su
+! Error: "Unknown modifier: from=com|ru|su" in the rule: "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=su,from=com|ru|su"
+/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=su,from=com|ru|su
 ! Error: "Unknown modifier: strict3p" in the rule: "/^https:\/\/[a-z]{6,19}\.(?:com|net)\/js\?t=[_a-z0-9]+&ns=[a-z]{2}$/$script,third-party,strict3p,match-case,to=com|net"
 /^https:\/\/[a-z]{6,19}\.(?:com|net)\/js\?t=[_a-z0-9]+&ns=[a-z]{2}$/$script,third-party,strict3p,match-case,to=com|net
 ! Error: "Unknown modifier: strict3p" in the rule: "/^https:\/\/[a-z]{6,19}\.(?:com|net)\/(?:static_)?file\/\?t=[_a-z0-9]+&ns=[a-z]{2}$/$subdocument,popup,third-party,strict3p,match-case,to=com|net"
