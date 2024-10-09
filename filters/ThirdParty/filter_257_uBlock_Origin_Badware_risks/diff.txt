@@ -4502,8 +4502,8 @@ tech4yougadgets.com##+js(aopr, Notification)
 /^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.ru\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=ru,from=com|ru|su
 ! Rule "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=su,from=com|ru|su" converted to: "/^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xmlhttprequest,third-party,method=get,to=su,from=com|ru|su"
 /^https:\/\/[a-z0-9]{50,}\.[a-z0-9]{4,11}\.su\/[a-zA-Z0-9]{50,}$/$xhr,3p,method=get,to=su,from=com|ru|su
-! Rule "/^https:\/\/[^.]+\.favoripirlanta\.com\//$doc,to=favoripirlanta.com" converted to: "/^https:\/\/[^.]+\.favoripirlanta\.com\//$document,to=favoripirlanta.com"
-/^https:\/\/[^.]+\.favoripirlanta\.com\//$doc,to=favoripirlanta.com
+! Rule "|https://*.favoripirlanta.com^$doc" converted to: "|https://*.favoripirlanta.com^$document"
+|https://*.favoripirlanta.com^$doc
 ! Rule "||marketplace-item-*.000.pe^$doc" converted to: "||marketplace-item-*.000.pe^$document"
 ||marketplace-item-*.000.pe^$doc
 ! Rule "/^https:\/\/(?:ai|art|get)-?midjourney[^\/]+\//$doc,to=~midjourney.com|~edu|~gov" converted to: "/^https:\/\/(?:ai|art|get)-?midjourney[^\/]+\//$document,to=~midjourney.com|~edu|~gov"
@@ -4702,6 +4702,12 @@ energiasolare100.it,lundracing.com,red17.co.uk,workplace-products.co.uk##^div[on
 adrissa.com.co,americansoda.co.uk,casteloforte.com.br,centerfabril.com.br,forqueen.cz,joinusonline.net,jollibee.com.vn,kitapsan.com.tr,mebelinovdom.com,ojworld.it,qualityrental.com,szaszmotorshop.hu,tvojstyl.sk,up-shop.org,yairalon.com.br##+js(acs, WebSocket, event.data)
 ! Rule "||orcaslicer.net^$doc" converted to: "||orcaslicer.net^$document"
 ||orcaslicer.net^$doc
+! Rule "/\/m\/js(?:drive|nom|sp|v)\.js\b/$script,1p,strict1p" converted to: "/\/m\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p"
+/\/m\/js(?:drive|nom|sp|v)\.js\b/$script,1p,strict1p
+! Rule "/\/n\/js(?:drive|nom|sp|v)\.js\b/$script,1p,strict1p" converted to: "/\/n\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p"
+/\/n\/js(?:drive|nom|sp|v)\.js\b/$script,1p,strict1p
+! Rule "/\/o\/js(?:drive|nom|sp|v)\.js\b/$script,1p,strict1p" converted to: "/\/o\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p"
+/\/o\/js(?:drive|nom|sp|v)\.js\b/$script,1p,strict1p
 ! ~support.ublock.org,ublock.org#$#main::before { content: 'uBlock is unrelated to the well-known uBlock Origin.' !important; font-size: 32px !important; color: red !important; font-weight: bold !important; } is excluded by "#$#" in exclusions-low.txt
 ~support.ublock.org,ublock.org#$#main::before { content: 'uBlock is unrelated to the well-known uBlock Origin.' !important; font-size: 32px !important; color: red !important; font-weight: bold !important; }
 ! support.ublock.org#$#div.hero-unit > div.search-box--hero-unit::before { content: 'uBlock is unrelated to the well-known uBlock Origin.' !important; font-size: var(--font-size-h2) !important; color: red !important; font-weight: bold !important; } is excluded by "#$#" in exclusions-low.txt
@@ -4740,3 +4746,9 @@ adrissa.com.co,americansoda.co.uk,casteloforte.com.br,centerfabril.com.br,forque
 /^https:\/\/(?:www\.)?[-a-z0-9]+\.com\.[-a-z0-9]+\.com\//$document,to=com,ipaddress=148.251.54.196
 ! Error: "Unknown modifier: ipaddress=148.251.54.196" in the rule: "/^https:\/\/(?:www\.)?[-a-z0-9]+\.xyz\.[-a-z0-9]+\.com\//$document,to=com,ipaddress=148.251.54.196"
 /^https:\/\/(?:www\.)?[-a-z0-9]+\.xyz\.[-a-z0-9]+\.com\//$document,to=com,ipaddress=148.251.54.196
+! Error: "Unknown modifier: strict1p" in the rule: "/\/m\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p"
+/\/m\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p
+! Error: "Unknown modifier: strict1p" in the rule: "/\/n\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p"
+/\/n\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p
+! Error: "Unknown modifier: strict1p" in the rule: "/\/o\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p"
+/\/o\/js(?:drive|nom|sp|v)\.js\b/$script,~third-party,strict1p
