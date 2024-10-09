@@ -1,9 +1,9 @@
-! Checksum: 5/VDOgL5G0TOJ1VFN7WhsA
-! Diff-Path: ../patches/14/14-s-1728484617-3600.patch
+! Checksum: SP/MbhD11FQlS1L2Yw0vsw
+! Diff-Path: ../patches/14/14-s-1728488189-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.10.60
-! TimeUpdated: 2024-10-09T14:32:57+00:00
+! Version: 2.2.10.61
+! TimeUpdated: 2024-10-09T15:32:50+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -89,6 +89,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.cookie-popup-overlay
 ###consent-banner-main
 ##.luxar_disclaimer_container
 ##.cookiePolicy-Modal
@@ -2577,7 +2578,6 @@ kosik.cz#$#.cmp-modal { display: none !important; }
 kosik.cz#$#html.is-scroll-hidden { overflow: auto !important; }
 kosik.cz#$#body[style*="padding-right:"] { padding-right: 0 !important; }
 unihobby.cz##.cookies-confirm
-omv.cz##.cookie-popup-overlay
 usaco.co.jp###consent_container
 ||rb.cz/attachments/applications/scripts/apps/cookie-wall.js
 palladiumpraha.cz#$#body { overflow: auto !important; }
@@ -25011,6 +25011,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+hangikredi.com##.hellobar
 fileplanet.com#%#//scriptlet('trusted-set-cookie-reload', 'viewedOuibounceModal', 'true')
 jp.msi.com#$##feedback_monitor { display: none !important; }
 jp.msi.com#$#.modal-backdrop { display: none !important; }
@@ -33453,6 +33454,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+rapidseedbox.com###newsletter-widget
 ya.zerocoder.ru##.subscribe-section
 delfi.lv##body .ig-yt-message
 react.libhunt.com##.text-strong-invite
@@ -50016,8 +50018,8 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 !
 ! SECTION: Self-promo - Regular rules
 !
-movies123.video##a[href="/user/profile/premium-membership"] > img
-movies123.video##._axPzSiVEAB
+rapidseedbox.com##.entry-content > h4.wp-block-heading[style="background-color:#b0f2b6"]
+rapidseedbox.com##.entry-content > div.wp-block-buttons:has(> div.wp-block-button > a[href^="https://www.rapidseedbox.com/"][href*="/proxy/?blog=shadowrocket-ultimate-guide"])
 tproger.ru##.tp-layout-default__aside-right-widget--jobs
 tproger.ru##.tp-ui-infinite-scroll > div.tp-widget-card:has(div.tp-widget-jobs-wrapper)
 ya.zerocoder.ru##.layout-sidebar > div.banner
@@ -52225,6 +52227,9 @@ nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work
 !+ NOT_PLATFORM(ext_ublock)
 nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe#%#//scriptlet('json-prune', 'ads.[].imageUrl')
 !
+! Clones like movies123.video, primewire.pics
+##html[data-lt-installed="true"] > body[style=""] a[href="/user/profile/premium-membership"] > img
+##html[data-lt-installed="true"] > body[style=""] > main + script ~ div[class^="_"]
 ! 2gis
 2gis.*#?#div[style="justify-content:flex-end"] button:has(> div:contains(Ваши друзья на карте))
 2gis.com,2gis.ru,2gis.io,2gis.by,2gis.ua,2gis.it,2gis.kz,2gis.biz,2gis.app,2gis.pro,2gis.cl,2gis.site,2gis.ae,2gis.cz,2gis.az,2gis.uz,2gis.tech,2gis.my,2gis.com.bd,2gis.dev,2gis.com.np,2gis.gov.bd,2gis.one,2gis.kg,2gis.gov.np##div[class^="_im"]
