@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 1SQYJEOrVszgBtpya5ZLrA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1728423373-3600.patch
+! Checksum: UnBhPqVn3HdjNp3Ul20RtQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1728455785-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.55.61
-! TimeUpdated: 2024-10-08T21:31:21+00:00
+! Version: 2.3.55.62
+! TimeUpdated: 2024-10-09T06:31:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7924,7 +7924,7 @@ vectorx.top,boltx.stream##+js(no-fetch-if, pagead2.googlesyndication.com)
 @@/https?:\/\/(www\.)?sonixgvn\.net\/.{1,15}\.js$/$script,~third-party,domain=sonixgvn.net
 sonixgvn.net##body > div[class][style*="position:"][style*="visibility:"]
 sonixgvn.net##body > div[class][style*="position:"][style*="z-index:"]
-sonixgvn.net#$#.sonix > .boton { display: block !important; }
+sonixgvn.net#$#.sonix > div[class^="bot"][class*="on"] { display: block !important; }
 sonixgvn.net#$#body[class*="blur"] > * { filter: none !important; }
 sonixgvn.net#$#body > div[class*="-blackout"] { display: none !important; }
 sonixgvn.net#$#body > div[class*="-blackout"] + div[class*="-wrapper"] { display: none !important; }
@@ -16527,6 +16527,9 @@ gjirafa.com##div[id^="an-holder-"]
 !---------------------------------------------------------------------
 ! NOTE: Arabian
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190502
+egyfalcons.com##.popSc
+egyfalcons.com##+js(abort-on-property-write, checkAdsStatus)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190373
 wecima.click##a[href*="&utm_medium=banner"] > img
 ||wecima.click/static/js/adBlock.js
