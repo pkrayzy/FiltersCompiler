@@ -1,5 +1,5 @@
-! Checksum: RM9x+5xuKY+lyFiXF7lkCw
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1728470182-3600.patch
+! Checksum: M6gOvJzpKRhExnojSgujjQ
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1728527759-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.9.81
@@ -35,6 +35,7 @@
 .net/rss2.htm$subdocument,~third-party
 .com/rss/$subdocument,~third-party
 ||adlt18antenna.xyz/blogparts/blog_parts_js.php
+||blog-rss.com^$third-party
 ||rssfetcher.blogsys.jp^
 ||blog.livedoor.jp/plugin/ldblog_rss_plugin.js
 ||tanganrss.com^$third-party
@@ -133,12 +134,16 @@ you1news.com##h2.caption-title:has(+ div[class*="-rss"])
 netouyonews.net##.rss-entry-cards
 aqua2ch.net##.menu_outline3
 ||aqua2ch.net/yuve1
+kinsoku.blog.jp##header.article-header > br:has(~ .pager)
+kinsoku.blog.jp###more > div[style^="width:"] > a[href*="//amzn.to/"] + br + span
 ichinuke.com##.w-beforeRelated
 ichinuke.com###custom_html-56
 ichinuke.com###custom_html-59
 pachinkopachisro.com#?#.plugin-memo:contains(オススメ記事（他サイト様）)
 ||adaman-ero.com/wp-content/plugins/rss-antenna/
 adaman-ero.com###custom_html-14
+ddd-smart.net##.video-card
+ddd-smart.net##.video-play
 syakouba.com##div[style]:has(> table > tbody > tr > td > div.rank_deck1)
 newmatosoku.com##.waku-zentai:has(> span.waku-left)
 h-ken.net##.mainColumn > div > .sidebarList
@@ -192,6 +197,8 @@ nandemoiiyoch.com###custom_html-11
 incident-wo.com,nandemoiiyoch.com###custom_html-13
 ||tokimeki-s.com/kansha.html
 chomanga.org#?#.widget:has(div[class^="rss-box"])
+genshin-matomech.umadacchi.net###block-8
+genshin-matomech.umadacchi.net##.rss-flex
 geektushin.com##.widget-above-related-entries
 geektushin.com##.widget-below-related-entries
 nintendoevery.com,geektushin.com##.widget_rss
@@ -252,6 +259,7 @@ pokemon-goh.doorblog.jp##.article-body-inner > div.t_b + div[style="padding: 10p
 re-file.com#?#.frame:has(> script[src$="/blogroll.js"]) + br
 re-file.com#?#.frame > script[src$="/blogroll.js"]:upward(1)
 re-file.com#?#.page-title:contains(/話題の|ピックアップ/)
+re-file.com#?#.topWrap1Frame > div.frame > script[src$="/blogroll.js"]:upward(2)
 you1news.com##div[class^="article-bottom-rss"]
 ||matomeantena.com/scripts/parts/category/vip.js
 inutomo11.com##.main-column-inner > br
@@ -405,6 +413,7 @@ squallchannel.com,2chnewsblog.blog.jp##.article-body-more > a[target="_blank"]
 squallchannel.com,2chnewsblog.blog.jp##.article-body-more > a[target="_blank"] + br
 m4ex.com#?##the-content > center > b:has(> div.inmaincmframe)
 ||dameparts.com/pbanner/
+||nijitoraware.com/wp-content/uploads/*/niji_header_
 blog-news.doorblog.jp##.column-inner-2 > .rss
 squallchannel.com##div[class^="rss02"]
 2ch-matomenews.com##.postTopRss
@@ -449,6 +458,7 @@ nadarenews.com##.check
 himanatokiniyaruo.com###plugin1
 mutyun.com###chuukan
 crx7601.com###main > div.column-inner > div.column-inner-2 > div[align="center"] + table
+||moez-m.com/top-rssnews1.html
 jumpmatome2ch.biz##div[class^="sprss"]
 jumpmatome2ch.biz#?#.rss-hd:contains(/(?:おすすめ|人気)記事$/)
 pokemonbbs.com###rss_pc
@@ -475,6 +485,7 @@ meshinews.blog.jp##div[class^="mainrss"]
 suresuta.jp,basketballbbs.com,kamenrider2.net,kyuukaiou.ldblog.jp##.rssbox
 gundamlog.com###urss
 gundamlog.com###top_rss
+||norisoku.com/rss-
 mona-news.com##div[id^="rss_"]
 gamestlike.com,vtubersokuhou.com##.maintop-widget
 revuestarlightre.com,scienceplus2ch.com###rss-roll-01
@@ -558,6 +569,7 @@ kidan-m.com,otakumix.doorblog.jp###rss1
 otakumix.doorblog.jp##iframe[src="http://otakumix.doorblog.jp/testrss.html"]
 pokemon-matome.net###header_rssbox
 pokemon-matome.net##div[class^="rss_inner"]
+eromanga-castle.com##div[style^="overflow:auto;height:500px;"]
 ||onecall2ch.com^$subdocument,~third-party
 onecall2ch.com##.spmode2
 bipblog.com##iframe[src^="http://bipblog.com/"]
@@ -752,6 +764,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||bazzaro.ru^$third-party
 ||blinger.io^$third-party
 ||cdn.freshbots.ai^$third-party
+||cdn.krible.com^$third-party
 ||cdn.reamaze.com^$third-party
 ||chaser.ru^$third-party
 ||chat.autofaq.ai^$third-party
@@ -855,12 +868,12 @@ f.ua##.callback_buttons
 hdfcbank.com###chatTogglerDiv
 justanswer.com##.th-chat-window
 kasla.ru##.callback-button
-klaster.ua##.sonar_effect
 network.mobile.rakuten.co.jp###rexSurveyEmbedded
 ozon.ru##div[data-widget="webFeedbackForm"]
 pravoved.ru##.ver_2.city
 rakuten.co.jp###rexSurveyRoot
 cq.ru,samsungstore.ru##.feedback
+sddhelp.ru##.hi_help
 shiksha.com###chat-container
 vinmec.com##.global-thread-create-cta
 ||static.quiq-cdn.com/webchat/$third-party
@@ -996,6 +1009,7 @@ sofmap.com###voc_ec_button
 ||library.telefonica.de/*/components/contact-link/bundle.js
 ||v*.zopim.com^$domain=ltbjeans.com
 ||accdn.lpsnmedia.net/api/account/*/configuration/le-campaigns/$domain=homedepot.com
+sevenbank.co.jp##.fn-followingMenu
 ing.com.tr###chat
 ||webpage.qidian.qq.com/qidian/chatv3/$third-party
 diskgenius.cn##.class_qidian_wpa
@@ -1144,6 +1158,7 @@ spokesman.com##article > aside[class]:has(div.give-butter iframe[title="Give But
 medyascope.tv##.elementor-330147
 novayagazeta.ru###asideBlock_0 > aside > div[style="height:100%"] > div[style^="padding-top:"]
 apnews.com###desktop-entitlements
+istories.media##div[class^="BeltsGrid-module-"] > div[class^="BeltOfThree-module-"]:has(> div[class^="BeltOfThree-module-"] > div[class^="DonationCard-module"])
 euromaidanpress.com###pa_banner_code
 roskomsvoboda.org##.donate
 roskomsvoboda.org###donate
@@ -1162,6 +1177,8 @@ suntimes.com##.piano-after-body
 suntimes.com##.piano_article_sidebar
 efsyn.gr##.donation
 hejto.pl##main > .bg-primary-main:has(> .items-center > p > a[href="https://patronite.pl/hejto"])
+hejto.pl##img[alt="Zostań patronem Hejto"]
+hejto.pl##img[alt="Zostań patronem Hejto"] + div.rounded-lg
 hrw.org##.donation-block__content
 hrw.org###block-donationfooterblock
 thejournal.ie#%#//scriptlet('set-local-storage-item', 'total_page_views', '2')
@@ -1175,7 +1192,6 @@ nonciclopedia.org,miraheze.org###siteNotice
 winstall.app##div[class^="donateCard_container__"]
 openstreetmap.org###banner
 wbur.org##.section--takeover
-www.wikipedia.org##div[id^="portalBanner_"].banner-bottom
 ||wisepops.net/loader.js$domain=civileats.com
 ||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net|tgrthaber.com.tr
 cavalierdaily.com#$#.modal-backdrop { display: none !important; }
