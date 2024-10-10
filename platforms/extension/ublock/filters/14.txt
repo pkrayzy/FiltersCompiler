@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: BzdQ3GesIZjymulGjYFBKw
-! Diff-Path: ../patches/14/14-s-1728542209-3600.patch
+! Checksum: D2bG1CX0kX1jJLlMr7X6gw
+! Diff-Path: ../patches/14/14-s-1728545802-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.10.64
-! TimeUpdated: 2024-10-10T06:32:56+00:00
+! Version: 2.2.10.65
+! TimeUpdated: 2024-10-10T07:33:09+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2449,6 +2449,8 @@ docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[
 !
 ! NOTE: Regular rules
 !
+se.pl#$#div[id^="consent-modal-"] { display: none !important; }
+se.pl#$#body[style*="overflow:"] { overflow: auto !important; }
 goodknight.in##.coustomcookiepop
 nttpc.co.jp##.l_cookieAgree
 polrail.com###cookiestext
@@ -25563,7 +25565,7 @@ komandacard.ru#$#.pop-up-startup-banner { display: none!important; }
 thestreet.com,qa.opensooq.com,komandacard.ru#$#.fancybox-overlay-fixed { display: none!important; }
 thestreet.com,qa.opensooq.com,komandacard.ru##+js(remove-class, fancybox-lock, html)
 podnikatel.cz,mesec.cz##.js-push-notifications-modal-dialog--active
-bbc.co.uk#$#div[data-testid="test-overlay"][class*="-Overlay"] { display: none !important; }
+bbc.co.uk#$#div[data-testid="test-overlay"][class*="-Overlay"]:has(> div[role="dialog"] > div[class*="-Content"] > div[class*="-SubHeadingSpacingContainer"][data-testid="sub-heading"]) { display: none !important; }
 bbc.co.uk##+js(addEventListener-defuser, scroll, documentElement.scrollTop)
 expert.ru##.floating-bar
 croxy.org,croxyproxy.net,croxyproxy.com###infoBarContainer
@@ -39364,6 +39366,9 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 !
 !
 !
+web.whatsapp.com#?#.landing-main > aside:has(> div div > button > div > div:contains(pp))
+web.whatsapp.com#?##app > .app-wrapper-web > div[tabindex] > header ~ div[class]:has(> div[class]:only-child div > button:only-child > div:only-child > div:only-child:contains(Store))
+web.whatsapp.com###side > div[role="button"]:has(> div:only-child div[class] > span[data-icon="wa-square-icon"] + span)
 dietplus.jp##aside > a[href="/s/service_dietplus"]
 hindustantimes.com##div[class^="OpenAppCTA_openAppButton_"]
 patreon.com##nav div[class^="sc-"]:has(> button[type="button"] div[class^="sc-"] > span[class^="sc-"] > svg[data-tag="IconPhone"])
