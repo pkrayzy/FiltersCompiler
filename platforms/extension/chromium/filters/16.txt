@@ -1,9 +1,9 @@
-! Checksum: PS57ySR+qHZ5Ci/UqOODAw
-! Diff-Path: ../patches/16/16-s-1728538544-3600.patch
+! Checksum: Fx/AF3vFt6TTtz43/GV1Ag
+! Diff-Path: ../patches/16/16-s-1728560162-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.47.20
-! TimeUpdated: 2024-10-10T05:32:47+00:00
+! Version: 2.0.47.21
+! TimeUpdated: 2024-10-10T11:32:47+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -105,6 +105,7 @@
 ! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
 !
 !
+||adserve.lasentinelle.mu^
 ||adserver.icimedias.ca^
 !---------------------------------------------------------------------------!
 !-------------- Anti-adblock rules -----------------------------------------!
@@ -913,6 +914,9 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 !
 !
+lexpress.mu#?#p.text-right:contains(/^Publicité$/)
+lexpress.mu#?#.place-items-center:has(> div:only-child:not([class],[id]) > p.text-right:contains(/^Publicité$/))
+lexpress.mu##.place-items-center:has(> div:only-child:not([class], [id]) > p.text-right ~ script[src^="https://adserve."])
 orange.fr##div[class^="media-advert"]
 orange.fr##.tag-rm
 cuisineaz.com##.banniere-haute-wrapper
