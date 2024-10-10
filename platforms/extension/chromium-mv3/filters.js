@@ -1185,8 +1185,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.23.59",
-			"timeUpdated": "2024-10-09T23:32:55+0000",
+			"version": "2.1.23.60",
+			"timeUpdated": "2024-10-10T00:33:08+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
