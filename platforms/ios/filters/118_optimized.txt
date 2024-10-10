@@ -1,5 +1,5 @@
-! Checksum: tzT9wezkfdqNdDvzff4gLA
-! Diff-Path: ../patches/118_optimized/118_optimized-s-1728450323-14400.patch
+! Checksum: F3jBjrPcm9ACjvEe/r/T8A
+! Diff-Path: ../patches/118_optimized/118_optimized-s-1728536725-14400.patch
 ! Title: EasyPrivacy (Optimized)
 ! Description: Privacy protection supplement for EasyList.
 ! Version: 2.1.32.88
@@ -20,6 +20,7 @@
 .com/_.gif?
 .com/count?
 .com/g.gif?
+.com/log/?
 .com/track?v=
 .content_tracking.js
 .jp/static/js/track.js
@@ -87,7 +88,6 @@
 /amp-story-auto-analytics-
 /analysis-logger/*
 /analytics-client-identification/*
-/analytics-collector
 /analytics-data-collector.js
 /analytics-data-collector.min.js
 /analytics-dotcom/*
@@ -141,6 +141,7 @@
 /ard.png?
 /aria-web-telemetry-
 /article/count?
+/ASPixel.js
 /astrack.js
 /atrk.gif?
 /atrk.js
@@ -170,6 +171,7 @@
 /beacon/metrics
 /beacon/perf
 /beacon/stats
+/beacon/v1/batch?
 /beacons?data=
 /bf.gif?ac=
 /bi/doop/*$ping
@@ -187,6 +189,7 @@
 /brightTag-min.js
 /browserinfo?f.sid=
 /bsp-analytics.min.
+/bundle/analytics.
 /bunsen/events/*
 /bv-analytics.js
 /c.gif?
@@ -209,6 +212,7 @@
 /clickstream.js
 /clicktag.js
 /clicktale.js
+/clicktracker.js
 /clicktracking.js
 /client-metrics/?target
 /clientele/reports/*
@@ -323,7 +327,6 @@
 /fingerprint.min.js
 /fingerprint2.js
 /fingerprint2.min.js
-/firebase-performance-compat.js
 /firebase-performance-standalone.js
 /flipptag.js
 /flushimpressions?
@@ -460,6 +463,7 @@
 /log/event?
 /log/init?
 /log/metrics?
+/log/page-view
 /log/report/*
 /log/server?
 /log/track/*
@@ -478,8 +482,10 @@
 /log_h.jsp
 /logAjaxErr_h.jsp
 /logcount.php?
+/logEvent?
 /logExecutionStats?
 /logging/ClientEvent
+/logging/log.do
 /logging/pageView
 /LogImpression?
 /logImpressions?
@@ -520,6 +526,7 @@
 /nativendo.js
 /new-client/trackers.
 /new-relic.js
+/new-relic.min.js
 /newrelic.js
 /newrelic.min.js
 /nielsen.js
@@ -541,6 +548,7 @@
 /OtAutoBlock.js
 /ouibounce.min.js
 /outbrain.js
+/outbrainAd.
 /owa.tracker-combined-min.js
 /p.gif?
 /page_perf_log?
@@ -558,6 +566,7 @@
 /perfmatters/js/analytics.js
 /performance/metrics
 /permutiveIdGenerator.js
+/ph-tracking-1.2.js
 /PhoenixGoogleAnalytics.min.js
 /piano-analytics.js
 /piNctTracking.js
@@ -579,6 +588,7 @@
 /pixel2.gif?
 /pixel_tracking?
 /pixelcounter.$domain=~pixelcounter.co.uk|~pixelcounter.com|~pixelcounter.dev|~pixelcounter.org|~pixelcounters.co.uk|~pixelcounters.uk
+/pixeltag.js
 /pixelyoursite/dist/scripts/public.js
 /plausible.js$domain=~plausible.io
 /plausible.manual.js
@@ -662,7 +672,6 @@
 /sentry-browser.min.js
 /sentry-browser.tracing.es5.min.js
 /sentry/bundle.min.js
-/service/track?
 /session/update-beacon
 /set_tracking.js
 /sfdc/networktracking.js
@@ -692,7 +701,6 @@
 /stat/rt/js?
 /stat?event=
 /statblog/pws.php?
-/statistic/pixel?
 /statistics.js?$third-party
 /StatRecorder.asp?
 /stats-collect
@@ -701,7 +709,6 @@
 /stats.php?*http
 /stats.wp.com/*
 /stats/api/event
-/stats/collect/*
 /stats/events$xmlhttprequest
 /stats/footer.js
 /stats/impression
@@ -774,6 +781,7 @@
 /tracking/universalJSRequest.php
 /tracking_pixel
 /TrackingPixel/*
+/trackingTools.
 /trackIt.js
 /trackjs.$domain=~trackjs.com
 /tracklib.min.js
@@ -822,7 +830,6 @@
 /visitor.min.js
 /visitor_info.js
 /VisitorAPI.js
-/visitorcountry.svc/*
 /VisitorIdentification.js
 /visits?aff_
 /w.gif?
@@ -833,6 +840,7 @@
 /webdig.js
 /webdig_test.js
 /weblog.js?
+/webstat.js
 /webtrack.js
 /webtracking/*$~document,~subdocument,domain=~wwwapps.ups.com
 /webtrekk_mediaTracking.min.js
@@ -964,7 +972,9 @@ _webanalytics.
 .facebook.com/tr/$image
 .facebook.com/tr?$image
 .google-analytics.com/
+.intercom-mail.com/via/$image
 .klclick.com/$image
+.maillist-manage.com/click/$image
 .microsoft.com/m/v2/d?$image
 .mjt.lu/oo/$image
 .na1.hs-sales-engage.com/$image
@@ -997,7 +1007,6 @@ _webanalytics.
 /eventing.coursera.org/img/*
 /global-cdm.net:443/sap/public/cuan/*/pixel.gif
 /gp/r.html?$image
-/lzdmailer.letter.open?
 /notifications.google.com/g/img/*$image
 /notifications.googleapis.com/email/t/*
 /notifications/beacon/*
@@ -1099,6 +1108,7 @@ img.promio-connect.com$image
 ||geotargetly-api-*.com^
 ||getdeviceinf.com^
 ||getjan.io^
+||glamipixel.com^
 ||glimr.io^
 ||go-mpulse.net^
 ||googleoptimize.com^
@@ -1131,6 +1141,7 @@ img.promio-connect.com$image
 ||lltrck.com^
 ||lmepbq.com^
 ||log.dance^
+||lsdm.co^
 ||lyfnh.io^
 ||matheranalytics.com^
 ||mdhv.io^
@@ -1141,6 +1152,7 @@ img.promio-connect.com$image
 ||mobildev.in^
 ||monu.delivery^
 ||motu-teamblue.services^
+||mt48.net^
 ||native-track.com^
 ||nmgassets.com^
 ||notifpush.com^
@@ -1192,6 +1204,7 @@ img.promio-connect.com$image
 ||trkn.us^
 ||tru.am^
 ||truffle.bid^
+||trx-hub.com^$image
 ||tryzens-analytics.com^
 ||turbolion.io^
 ||tvpixel.com^
@@ -1295,6 +1308,7 @@ img.promio-connect.com$image
 ||agilesrv.com^$third-party
 ||agilone.com^$third-party
 ||agrvt.com^$third-party
+||aimediagroup.com^$third-party
 ||air2s.com^$third-party
 ||airbrake.io^$third-party
 ||airpr.com^$third-party
@@ -1320,6 +1334,7 @@ img.promio-connect.com$image
 ||appboycdn.com^$third-party
 ||appcast.io^$third-party
 ||appdynamics.com^$third-party
+||aprtn.com^$third-party
 ||aprtx.com^$third-party
 ||aptrinsic.com^$third-party
 ||aqtracker.com^$third-party
@@ -1333,6 +1348,7 @@ img.promio-connect.com$image
 ||audienceplay.com^$third-party
 ||audiens.com^$third-party
 ||audrte.com^$third-party
+||auto-ping.com^$third-party
 ||autoaudience.com^$third-party
 ||autoid.com^$third-party
 ||automizely-analytics.com^$third-party
@@ -1351,6 +1367,7 @@ img.promio-connect.com$image
 ||baynote.net^$third-party
 ||bbthat.com^$script,third-party
 ||bdash-cloud.com^$third-party
+||beanstalkdata.com^$third-party
 ||beemrdwn.com^$third-party
 ||behavioralengine.com^$third-party
 ||belstat.be^$third-party
@@ -1416,6 +1433,7 @@ img.promio-connect.com$image
 ||clearbit.com^$third-party
 ||clearbitjs.com^$third-party
 ||click4assistance.co.uk^$third-party
+||clickable.net^$third-party
 ||clickbrainiacs.com^$third-party
 ||clickcease.com^$third-party
 ||clickclick.net^$third-party
@@ -1464,6 +1482,7 @@ img.promio-connect.com$image
 ||counter.gd^$third-party
 ||countercentral.com^$third-party
 ||counters4u.com^$third-party
+||counting4free.com^$third-party
 ||countomat.com^$third-party
 ||cpcmanager.com^$third-party
 ||cpmstar.com^$third-party
@@ -1481,6 +1500,7 @@ img.promio-connect.com$image
 ||databrain.com^$third-party
 ||databreakers.com^$third-party
 ||datacaciques.com^$third-party
+||datacygnal.io^$third-party
 ||datadoghq-browser-agent.com^$third-party
 ||datadoghq.eu^$third-party
 ||datafeedfile.com^$third-party
@@ -1505,6 +1525,7 @@ img.promio-connect.com$image
 ||digitaltarget.ru^$third-party
 ||digitru.st^$third-party
 ||dimml.io^$third-party
+||discovertrail.net^$third-party
 ||displaymarketplace.com^$third-party
 ||dmanalytics1.com^$third-party
 ||dmpprof.com^$third-party
@@ -1545,6 +1566,7 @@ img.promio-connect.com$image
 ||estat.com^$third-party
 ||etahub.com^$third-party
 ||ethn.io^$third-party
+||ethnio.com^$third-party
 ||ethyca.com^$third-party
 ||etp-prod.com^$third-party
 ||etracker.com^$third-party
@@ -1681,8 +1703,10 @@ img.promio-connect.com$image
 ||hif.to^$third-party
 ||histats.com^$third-party
 ||hit-360.com^$third-party
+||hit-counter.info^$third-party
 ||hitbox.com^$third-party
 ||hitslink.com^$third-party
+||hitsniffer.com^$third-party
 ||hitsprocessor.com^$third-party
 ||hittail.com^$third-party
 ||hitwebcounter.com^$third-party
@@ -1692,6 +1716,7 @@ img.promio-connect.com$image
 ||hotlog.ru^$third-party
 ||hscta.net^$third-party
 ||hubvisor.io^$third-party
+||hum.works^$third-party
 ||humanclick.com^$third-party
 ||hurra.com^$third-party
 ||hwpub.com^$third-party
@@ -1724,6 +1749,7 @@ img.promio-connect.com$image
 ||instana.io^$third-party
 ||instant.page^$third-party
 ||instapagemetrics.com^$third-party
+||instore.biz^$third-party
 ||intake-lr.com^$third-party
 ||intelli-direct.com^$third-party
 ||intellimize.co^$third-party
@@ -1747,6 +1773,7 @@ img.promio-connect.com$image
 ||ipgeolocation.io^$third-party
 ||ipinfo.info^$third-party
 ||ipinfodb.com^$third-party
+||ipinyou.com.cn^$third-party
 ||iplocationtools.com^$third-party
 ||ipmeta.io^$third-party
 ||ipro.com^$third-party
@@ -1802,6 +1829,7 @@ img.promio-connect.com$image
 ||linksynergy.com^$third-party
 ||linkxchanger.com^$third-party
 ||litix.io^$third-party
+||livesession.io^$third-party
 ||livetrafficfeed.com^$third-party
 ||lloogg.com^$third-party
 ||lngtd.com^$third-party
@@ -1901,6 +1929,7 @@ img.promio-connect.com$image
 ||netmng.com^$third-party
 ||newrelic.com^$third-party
 ||newrrb.bid^$third-party
+||nextstat.com^$third-party
 ||nexx360.io^$third-party
 ||nicequest.com^$third-party
 ||nmrodam.com^$third-party
@@ -1994,6 +2023,7 @@ img.promio-connect.com$image
 ||pntrs.com^$third-party
 ||poeticmetric.com^$third-party
 ||pointmediatracker.com^$third-party
+||polaranalytics.com^$third-party
 ||polarbyte.com^$third-party
 ||popt.in^$third-party,domain=~poptin.com
 ||popupmaker.com^$third-party
@@ -2040,6 +2070,7 @@ img.promio-connect.com$image
 ||qubitproducts.com^$third-party
 ||questionpro.com^$third-party,domain=~questionpro.com.au|~questionpro.eu
 ||qzlog.com^$third-party
+||rampanel.com^$third-party
 ||rampmetrics.com^$third-party
 ||rapidcounter.com^$third-party
 ||ravelin.click^$third-party
@@ -2081,6 +2112,7 @@ img.promio-connect.com$image
 ||rlets.com^$third-party
 ||rmtag.com^$third-party
 ||rnengage.com^$third-party
+||roeyecdn.com^$third-party
 ||roiservice.com^$third-party
 ||rollbar.com^$third-party
 ||rs6.net^$image,script,third-party
@@ -2093,6 +2125,7 @@ img.promio-connect.com$image
 ||sailthru.com^$third-party
 ||salecycle.com^$third-party
 ||say.ac^$third-party
+||sayutracking.co.uk^$third-party
 ||scarf.sh^$third-party
 ||scorecardresearch.com^$third-party
 ||scripts21.com^$third-party
@@ -2242,6 +2275,7 @@ img.promio-connect.com$image
 ||tns-counter.ru^$third-party
 ||tns-cs.net^$third-party
 ||top10sportsites.com^$third-party
+||topblogarea.com^$third-party
 ||toplist.cz^$third-party
 ||toplist.eu^$third-party
 ||topmalaysia.com^$third-party
@@ -2342,6 +2376,7 @@ img.promio-connect.com$image
 ||weborama.com^$third-party
 ||weborama.design^$third-party
 ||website-hit-counters.com^$third-party
+||websiteceo.com^$third-party
 ||webspectator.com^$third-party
 ||webstat.com^$third-party
 ||webstat.net^$third-party
@@ -2375,6 +2410,7 @@ img.promio-connect.com$image
 ||xiti.com^$third-party
 ||xlisting.jp^$third-party
 ||xxxcounter.com^$third-party
+||xyztraffic.com^$third-party
 ||y-track.com^$third-party
 ||yaudience.com^$third-party
 ||yext-pixel.com^$third-party
@@ -2406,6 +2442,7 @@ img.promio-connect.com$image
 ||browsermine.com^$third-party
 ||cashbeet.com^
 ||cloudflareinsights.com^$third-party
+||cnhv.co^$third-party
 ||coin-have.com^$third-party
 ||coinpot.co^$third-party
 ||coinzillatag.com^$third-party
@@ -2446,6 +2483,7 @@ img.promio-connect.com$image
 ||cleanhaircut.com^
 ||cloisteredcord.com^
 ||cloudjumbo.com^
+||cobaltoverture.com^
 ||creatorpassenger.com^
 ||damageddistance.com^
 ||debonairdust.com^
@@ -2460,12 +2498,15 @@ img.promio-connect.com$image
 ||extralocker.com^
 ||fadedsnow.com^
 ||fairfeeling.com^
+||falseframe.com^
 ||fixedfold.com^
 ||flourishingcollaboration.com^
 ||frugalfiestas.com^
 ||functionalfeather.com^
 ||honeybulb.com^
 ||hospitablehall.com^
+||iotapool.com^
+||kindhush.com^
 ||lonelybulb.com^
 ||majesticwilderness.com^
 ||marrowleaves.com^
@@ -2473,6 +2514,7 @@ img.promio-connect.com$image
 ||meddleplant.com^
 ||memorizematch.com^
 ||merequartz.com^
+||merryvault.com^
 ||monacobeatles.com^
 ||muteknife.com^
 ||opulentsylvan.com^
@@ -2613,6 +2655,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||fastcounter.de^$third-party
 ||generaltracking.de^$third-party
 ||gft2.de^$third-party
+||gratis-besucherzaehler.de^$third-party
 ||greatviews.de^$third-party
 ||hung.ch^$third-party
 ||iivt.com^$third-party
@@ -2643,6 +2686,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||seitwert.de^$third-party
 ||selfcampaign.com^$third-party
 ||sensic.net^$third-party
+||speedcounter.net^$third-party
 ||spring-tns.net^$third-party
 ||stats4free.de^$third-party
 ||technical-service.net^$third-party
@@ -2663,6 +2707,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||123compteur.com^$third-party
 ||7x4.fr^$third-party
 ||abcompteur.com^$third-party
+||admo.tv^$third-party
 ||air360tracker.net^$third-party
 ||carts.guru^$third-party
 ||cshield.io^$third-party
@@ -2781,6 +2826,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||caprofitx.com^$third-party
 ||catsys.jp^$third-party
 ||cheqzone.com^$third-party
+||cosmi.io^$third-party
 ||d-markets.net^$third-party
 ||d2-apps.net^$third-party
 ||d2c.ne.jp^$third-party
@@ -2839,6 +2885,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ziyu.net^$third-party
 ||acrosspf.com^$third-party
 ||adpick.co.kr^$third-party
+||adtive.com^$third-party
 ||contentsfeed.com^$third-party
 ||logger.co.kr^$third-party
 ||rainbownine.net^$third-party
@@ -2918,6 +2965,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||kmindex.ru^$third-party
 ||lentainform.com^$third-party
 ||lookmy.info^$third-party
+||mediaplan.ru^$third-party
 ||mediatoday.ru^$third-party
 ||metrika-informer.com^$third-party
 ||mobtop.com^$third-party
@@ -2945,6 +2993,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||upravel.com^$third-party
 ||uptolike.com^$third-party,domain=~uptolike.ru
 ||utraff.com^$third-party
+||uzrating.com^$third-party
 ||warlog.ru^$third-party
 ||web-visor.com^$third-party
 ||webest.info^$third-party
@@ -2955,6 +3004,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||pocitadlo.sk^$third-party
 ||toplist.sk^$third-party
 ||agency360.io^$third-party
+||contadordevisitas.es^$third-party
 ||contadorgratis.com^$third-party
 ||contadorgratis.es^$third-party
 ||contadorvisitasgratis.com^$third-party
@@ -3021,6 +3071,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||algolia.io/1/events?
 ||alibaba.com/ts?
 ||alipay.com/service/clear.png?
+||alpharank.io/api/pixel/
 ||amazonaws.com/appmonitors/
 ||amazonaws.com/beacon^
 ||amazonaws.com/jsstore/*/ge.js
@@ -3287,6 +3338,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||cc.swiftype.com^
 ||ccexperimentsstatic.oracleoutsourcing.com^
 ||cdn-channels-pixel.ex.co^
+||cdn-ds.com/analytics/
 ||cdn.usefathom.com^
 ||cdnjs.work/metrics.js
 ||ceros.com/a?data
@@ -3605,6 +3657,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||gstatic.com/wcm/loader.js
 ||gtmfsstatic.getgoogletagmanager.com^
 ||gtrk.s3.amazonaws.com^
+||gubagoo.io/c/$image
 ||happen.spkt.io^
 ||harvest.graindata.com^
 ||hb.vhsrv.com^
@@ -3864,6 +3917,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||paypal.com^*/pixel.gif$third-party
 ||paypalobjects.com^*/pixel.gif
 ||pbjs-stream.bydata.com^
+||pc161021.com/scripts/noui/StatProvider.js
 ||pcrl.co/js/jstracker.min.js
 ||pega.com/logserver
 ||pegasus.unifygroup.com^
@@ -4367,6 +4421,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||tracking1.brandmentions.com^
 ||tracking2.channeladvisor.com^
 ||trackjs.com/agent/$script,third-party
+||trackjs.com/releases/current/tracker.js
 ||trackla.stackla.com^
 ||tradablebits.com/pixels/
 ||traffic.acwebconnecting.com^
@@ -4404,6 +4459,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||unifyintent.com/analytics/
 ||units.knotch.it^
 ||unpkg.com/web-vitals?
+||uptime.com/static/rum/$third-party
 ||us-central1-markuphero.cloudfunctions.net^
 ||usaoptimizedby.increasingly.co^
 ||user.userguiding.com^
@@ -4707,6 +4763,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ctr-iwb.nmg.de^
 ||ctr-opc.nmg.de^
 ||d.adlpo.com^
+||d.nativendo.de^
 ||d.omsnative.de^
 ||data.econa.com^
 ||data.kameleoon.io^
@@ -5040,6 +5097,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||cdn.ad-platform.jmty.jp^
 ||client-log.karte.io^
 ||clipkit.co/clipkit_assets/beacon-
+||codemarketing.cloud/rest/
 ||cookie.sync.usonar.jp^
 ||counter2.blog.livedoor.com^
 ||crossees.com^
@@ -5538,6 +5596,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||datadome.maisonsdumonde.com^
 ||datum.jsdelivr.com^
 ||dc.banggood.com^
+||dcf.espn.com/privacy/
 ||dd.auspost.com.au^
 ||dd.nytimes.com^
 ||ddome-tag.blablacar.com^
@@ -5636,6 +5695,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||flow.1passwordservices.com/api/v1/event
 ||fp.measure.office.com^
 ||fpa-cdn.adweek.com^
+||fpa-cdn.arstechnica.com^
 ||fpt.microsoft.com^
 ||freedownloadmanager.org/ajax/th_view.php
 ||freepik.*/download.gif?
@@ -5669,6 +5729,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||gianteagle.com/webevents/
 ||girlsofdesire.org/images/girlsofdesire.org/analytics.js
 ||github.com/_private/browser/stats
+||github.dev/diagnostic?
 ||glassdoor.*/geb/events/
 ||glassmoni.researchgate.net^
 ||global.ssl.fastly.net^$domain=allmodern.com|argos.co.uk|basspro.com|birchlane.com|courier-journal.com|courierpress.com|desertsun.com|detroitnews.com|eddiebauer.com|freep.com|glassesusa.com|greenbaypressgazette.com|harborfreight.com|indystar.com|jsonline.com|kurtgeiger.com|legacy.com|lenovo.com|lohud.com|lowes.com|naplesnews.com|news-journalonline.com|northjersey.com|perigold.com|quickship.com|quikshiptoner.com|radiotimes.com|sainsburys.co.uk|sanuk.com|sheboyganpress.com|tallahassee.com|theadvertiser.com|thisweek.com|ugg.com|usatoday.com|wayfair.co.uk|wayfair.com|wwe.com
@@ -5699,6 +5760,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||hlogger.heraldcorp.com^
 ||hltv.org/scripts/hltv-tracking.js
 ||hn-ping*.hashnode.com^
+||hoo.be/api/hoobe/analytics
 ||hotels.com/api/bucketing/v1/evaluateExperimentsAndLog
 ||hotels.com/cl/data/omgpixel.json?
 ||hqq.ac/cdn-cgi/trace
@@ -5736,6 +5798,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||jav4tv.com/player/analytics
 ||javedit.com/e/public/ViewClick/
 ||javhd.com/ascripts/gcu.js
+||jfapiprod.optimonk.com^
 ||jumbo.zomato.com^
 ||justdial.com/jd-trkr
 ||k.p-n.io/event-stream
@@ -5751,6 +5814,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||lastpass.com/m.php/proxy_tracker
 ||lego.com/api/dl-event-ingest
 ||lendingtree.com/analytics/
+||libhunt.com/api/ahoy/event
 ||librato-collector.genius.com^
 ||linkedin.com/collect/
 ||linkedin.com/li/track$xmlhttprequest
@@ -5949,6 +6013,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||sapphire-api.target.com^
 ||search.aol.com/beacon/
 ||search.brave.com/api/feedback$~third-party
+||searchenginejournal.com/xcs0MhRsfxHG.js
 ||secure.checkout.visa.com/logging/
 ||servo-report.dvdfab.
 ||sexu.com/api/ttrack
@@ -6281,6 +6346,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||bloomberg.com/8FCGYgk4/init.js
 ||bm.paypal.com/spd3TxHV/init.js
 ||cookpad.com/FqtAw5et/init.js
+||drupal.org/VnPBBfwe/init.js
 ||flixcart.com/px/gNtTli3A/init.js
 ||kickstarter.com/Uy3R669N/init.js
 ||realtor.com/rdc_user_check/init.js
@@ -6341,6 +6407,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||stats.elementary.io^
 ||stats.emailrep.io^
 ||stats.gslc.utah.edu^
+||stats.napaconnect.ca^
 ||stats.pendleratlas.de^
 ||stats.reisemobil.pro^
 ||a.20minutes.fr^
@@ -6451,6 +6518,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||adobeanalytics.teksystems.com^
 ||adobeedge.morganstanley.com^
 ||adobeedge.my.gov.au^
+||adobemetrics.yellohvillage.fr^
 ||adobes.pmi.org^
 ||adtarget.barcainnovationhub.com^
 ||adtarget.fcbarcelona.cat^
@@ -6490,6 +6558,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ainu.intel.fr^
 ||ainu.intel.in^
 ||ainu.intel.la^
+||ainu.intel.pl^
 ||al-smetrics.vizio.com^
 ||ametrics.lumen.com^
 ||ametrics.mheducation.com^
@@ -6542,12 +6611,14 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||analytics.underarmour.com^
 ||analytics.unive.nl^
 ||analytics.wienerberger.be^
+||analytics.wienerberger.de^
 ||analytics.wienerberger.pl^
 ||analytics.wienerberger.si^
 ||analytics.xoomenergy.com^
 ||analytics1.dillards.com^
 ||analyticsbusiness.ing.ro^
 ||analyticsresults.datev.de^
+||analyticsssl.forcepoint.com^
 ||ans.milb.com^
 ||ans.mlb.com^
 ||as.autobild.de^
@@ -6726,6 +6797,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||data-ssl.stepstone.at^
 ||data-ssl.stepstone.de^
 ||data.abc.es^
+||data.accountsamericas.coca-cola.com^
 ||data.campaigns.cineplex.com^
 ||data.clientemais.paodeacucar.com^
 ||data.comunicaciones.bancosantafe.net^
@@ -6750,10 +6822,12 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||data.info.avianca.com^
 ||data.info.consumercellular.com^
 ||data.member.aware.com.au^
+||data.myhealth.riteaid.com^
 ||data.news.eurobet.it^
 ||data.newsletter.avianca.com^
 ||data.noreply.timhortons.ca^
 ||data.northeast.aaa.com^
+||data.partner-offers.airmiles.ca^
 ||data.promo.timhortons.ca^
 ||data.promo.timhortons.com^
 ||data.securemetrics-apple.com^
@@ -6865,11 +6939,13 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||maling.dn.no^
 ||mcdmetrics.aaa.com^
 ||mcdmetrics2.aaa.com^
+||mdws.ekccu.com^
 ||met1.hp.com^
 ||met2.hp.com^
 ||metric.armstrongceilings.com^
 ||metric.timewarnercable.com^
 ||metric.vodacom.co.za^
+||metrics-ieeexplore.ieee.org^
 ||metrics-target.siriusxm.com^
 ||metrics.aa.com^
 ||metrics.adelaidenow.com.au^
@@ -6985,6 +7061,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||metrics.rewe.de^
 ||metrics.royalmail.com^
 ||metrics.samsclub.com^
+||metrics.sasktel.com^
 ||metrics.sfr.fr^
 ||metrics.sgproof.com^
 ||metrics.skynews.com.au^
@@ -7109,7 +7186,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||pdmsmrt.gmccanada.ca^
 ||private.roche.com^
 ||purpose.fressnapf.at^
-||purpose.fressnapf.ch^
 ||purpose.fressnapf.de^
 ||purpose.maxizoo.be^
 ||purpose.maxizoo.fr^
@@ -7130,6 +7206,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||s.guelphmercury.com^
 ||s.hdsupplysolutions.com^
 ||s.insidehalton.com^
+||s.insideottawavalley.com^
 ||s.justblinds.com^
 ||s.lenovo.com^
 ||s.lexusfinancial.com^
@@ -7273,6 +7350,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||sanalytics.verizonenterprise.com^
 ||sanalytics.verizonwireless.com^
 ||sanalytics.visible.com^
+||sanalytics.wideroe.no^
 ||sanl.champssports.ca^
 ||sanl.champssports.com^
 ||sanl.footlocker.at^
@@ -7297,6 +7375,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||sc.hm.com^
 ||sc.metrics-shell.com^
 ||sc.natwest.com^
+||sc.natwestgroup.com^
 ||sc.natwestinternational.com^
 ||sc.rbs.co.uk^
 ||sc.ulsterbank.co.uk^
@@ -7378,6 +7457,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||sig.ig.com^
 ||sinfo.dtcidev.co^
 ||sinmo.chasecenter.com^
+||sitecat.troweprice.com^
 ||sitecats.troweprice.com^
 ||sjourney.aarp.org^
 ||sjourney.penfed.org^
@@ -7389,6 +7469,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetric.4imprint.com^
 ||smetric.ads.microsoft.com^
 ||smetric.bahamabreeze.com^
+||smetric.biogen.com^
 ||smetric.cheddars.com^
 ||smetric.darden.com^
 ||smetric.gconlineplus.de^
@@ -7413,6 +7494,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetricas.fgv.br^
 ||smetrics-cns.panasonic.com^
 ||smetrics-ieeexplore.ieee.org^
+||smetrics.1031freshradio.ca^
 ||smetrics.10play.com.au^
 ||smetrics.1800contacts.com^
 ||smetrics.24hourfitness.com^
@@ -7427,6 +7509,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.aainsurance.co.nz^
 ||smetrics.aarp.org^
 ||smetrics.abanca.com^
+||smetrics.abbott.com^
 ||smetrics.abbott^
 ||smetrics.abbvie.com^
 ||smetrics.abercrombie.com^
@@ -7528,6 +7611,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.bbvaseguros.mx^
 ||smetrics.bcbsm.com^
 ||smetrics.bcbsnc.com^
+||smetrics.bcbsnd.com^
 ||smetrics.beachbody.com^
 ||smetrics.beatsbydre.com.cn^
 ||smetrics.beatsbydre.com^
@@ -7670,6 +7754,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.dandh.ca^
 ||smetrics.dandh.com^
 ||smetrics.darty.com^
+||smetrics.dashandstars.com^
 ||smetrics.dcu.org^
 ||smetrics.deakin.edu.au^
 ||smetrics.delta.com^
@@ -7717,6 +7802,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.enterprisersproject.com^
 ||smetrics.entrykeyid.com^
 ||smetrics.equitable.com^
+||smetrics.esignal.com^
 ||smetrics.etihad.com^
 ||smetrics.etihadcargo.com^
 ||smetrics.ets.org^
@@ -7776,6 +7862,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.gatesnotes.com^
 ||smetrics.gcimetrics.com^
 ||smetrics.gehealthcare.com^
+||smetrics.gemfinance.co.nz^
 ||smetrics.generac.com^
 ||smetrics.genomeweb.com^
 ||smetrics.global.jcb^
@@ -7795,7 +7882,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.grundfos.com^
 ||smetrics.gs1us.org^
 ||smetrics.gsghukuk.com^
-||smetrics.gvb.ch^
 ||smetrics.ha.com^
 ||smetrics.hagerty.co.uk^
 ||smetrics.handelsbanken.com^
@@ -7886,6 +7972,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.keysight.com^
 ||smetrics.kioxia.com.cn^
 ||smetrics.kioxia.com^
+||smetrics.kmshair.com^
 ||smetrics.kone.com^
 ||smetrics.kone.vn^
 ||smetrics.kpmg.com^
@@ -7919,6 +8006,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.lpl.com^
 ||smetrics.lululemon.co.jp^
 ||smetrics.lululemon.co.kr^
+||smetrics.lululemon.co.nz^
 ||smetrics.lululemon.co.uk^
 ||smetrics.lululemon.com.au^
 ||smetrics.lululemon.com.hk^
@@ -7969,6 +8057,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.mfs.com^
 ||smetrics.mgmresorts.com^
 ||smetrics.mhsindiana.com^
+||smetrics.mhswi.com^
 ||smetrics.michaelkors.com^
 ||smetrics.michaelkors.de^
 ||smetrics.michaelkors.es^
@@ -8063,6 +8152,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.optimum.com^
 ||smetrics.optimum.net^
 ||smetrics.optum.com^
+||smetrics.otsuka-us.com^
 ||smetrics.packersproshop.com^
 ||smetrics.pacsun.com^
 ||smetrics.pahealthwellness.com^
@@ -8073,6 +8163,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.partssource.com^
 ||smetrics.payback.de^
 ||smetrics.payback.it^
+||smetrics.payback.net^
 ||smetrics.payback.pl^
 ||smetrics.pbteen.ca^
 ||smetrics.pbteen.com^
@@ -8114,6 +8205,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.pudahuel.cl^
 ||smetrics.pulte.com^
 ||smetrics.purchasingpower.com^
+||smetrics.purolatornow.com^
 ||smetrics.pwc.ch^
 ||smetrics.pwc.co.nz^
 ||smetrics.pwc.co.uk^
@@ -8130,6 +8222,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.pwc.pl^
 ||smetrics.pwc.tw^
 ||smetrics.pwccn.com^
+||smetrics.pwcconsulting.co.kr^
 ||smetrics.pwchk.com^
 ||smetrics.pwcmaroc.pwc.fr^
 ||smetrics.q107.com^
@@ -8204,6 +8297,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.scandichotels.com^
 ||smetrics.scandichotels.dk^
 ||smetrics.scandichotels.fi^
+||smetrics.scandichotels.no^
 ||smetrics.scandichotels.se^
 ||smetrics.sce.com^
 ||smetrics.schindler.com^
@@ -8223,6 +8317,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.seat.fr^
 ||smetrics.seat.mx^
 ||smetrics.seat.pl^
+||smetrics.seb.ee^
 ||smetrics.seguro.mediaset.es^
 ||smetrics.sensai-cosmetics.com^
 ||smetrics.sephora.com^
@@ -8304,6 +8399,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||smetrics.t-mobile.com^
 ||smetrics.tab.com.au^
 ||smetrics.tackntogs.com^
+||smetrics.takami-labo.com^
 ||smetrics.talbots.com^
 ||smetrics.tarrantcounty.com^
 ||smetrics.tataaia.com^
@@ -8564,11 +8660,13 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ssc.ekhokavkaza.com^
 ||ssc.europalibera.org^
 ||ssc.evropaelire.org^
+||ssc.glasamerike.net^
 ||ssc.golosameriki.com^
 ||ssc.hl.co.uk^
 ||ssc.holosameryky.com^
 ||ssc.idelreal.org^
 ||ssc.insidevoa.com^
+||ssc.irfaasawtak.com^
 ||ssc.kavkazr.com^
 ||ssc.kcamexico.com^
 ||ssc.krymr.com^
@@ -8839,6 +8937,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||sw88.nationalgeographic.de^
 ||sw88.shopdisney.asia^
 ||swa.asnbank.nl^
+||swa.blgwonen.nl^
 ||swa.bol.com^
 ||swa.consumentenbond.nl^
 ||swa.energiedirect.nl^
@@ -9052,6 +9151,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||xps.huk24.de^
 ||absinfo.eagle.org^
 ||act-on.up.edu.pe^
+||act.raceforward.org^
 ||acton.trefis.com^
 ||advisers.kingstonsmith.co.uk^
 ||bcanl.bca-autoveiling.nl^
@@ -9120,15 +9220,20 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||marketing.bayhealth.org^
 ||marketing.blastone.com^
 ||marketing.centra.org^
+||marketing.chemometec.com^
 ||marketing.choosechicago.com^
 ||marketing.cisco-eagle.com^
 ||marketing.construsoft.com^
 ||marketing.deltechomes.com^
 ||marketing.discovernewport.org^
 ||marketing.discoverphl.com^
+||marketing.dmcplc.co.uk^
 ||marketing.dnacenter.com^
 ||marketing.elastoproxy.com^
+||marketing.eurofinsus.com^
+||marketing.explorecharleston.com^
 ||marketing.fedsched.com^
+||marketing.first-insight.com^
 ||marketing.foxrehab.org^
 ||marketing.gotolouisville.com^
 ||marketing.gulfshores.com^
@@ -9136,6 +9241,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||marketing.industrialspec.com^
 ||marketing.kingsiii.com^
 ||marketing.latourism.org^
+||marketing.leegov.com^
 ||marketing.luxurylink.com^
 ||marketing.meetac.com^
 ||marketing.mimakiusa.com^
@@ -9146,8 +9252,10 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||marketing.omnifymarketing.com^
 ||marketing.petsit.com^
 ||marketing.pronaca.com^
+||marketing.recarroll.com^
 ||marketing.scenicsedona.com^
 ||marketing.sedgwick.com^
+||marketing.seemonterey.com^
 ||marketing.sentinelgroup.com^
 ||marketing.stamen.com^
 ||marketing.stellarmls.com^
@@ -9182,6 +9290,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||promo.skf.com^
 ||promos.sanmarcanada.com^
 ||promos.trustedtours.com^
+||promotions.stationcasinos.com^
 ||resources.linengineering.com^
 ||retirementliving.actsretirement.org^
 ||seahorseinfo.agilent.com^
@@ -9223,6 +9332,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||tr.communication.b2b-actualites.com^
 ||tr.contact.stof.fr^
 ||tr.courrier.sudouest.fr^
+||tr.e.trouver-un-logement-neuf.com^
 ||tr.emailing.canalplus.fr^
 ||tr.emailing.grassavoye.com^
 ||tr.gestion.cetelem.fr^
@@ -9266,6 +9376,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||app.fightingirish.com^
 ||app.godeacs.com^
 ||app.gopack.com^
+||app.gopsusports.com^
 ||app.gseagles.com^
 ||app.hokiesports.com^
 ||app.iuhoosiers.com^
@@ -9282,7 +9393,9 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||b2binfo.canon-europe.com^
 ||b2bmarketing.swisscom.ch^
 ||business.samsungusa.com^
+||campaign.amadeus.com^
 ||campaignresources.motorolasolutions.com^
+||campaigns.panasonic.eu^
 ||clicks.tableau.com^
 ||connect.zebra.com^
 ||consulting.guidehouse.com^
@@ -9302,6 +9415,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||eloqua.pearsonvue.com^
 ||elq.macu.com^
 ||elq.redhat.com^
+||elqact.gartner.com^
 ||elqapp.spectrum.com^
 ||elqtrk.intel.cn^
 ||elqtrk.intel.co.jp^
@@ -9313,6 +9427,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||elqtrk.intel.fr^
 ||elqtrk.intel.in^
 ||elqtrk.intel.la^
+||elqtrk.intel.pl^
 ||elqtrk.morningstar.com^
 ||elqtrk.thailand.intel.com^
 ||em.thermofisher.com^
@@ -9325,7 +9440,9 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||future.uwindsor.ca^
 ||go-stage.oracle.com^
 ||go.comcastspectacor.com^
+||go.e.mailchimp.com^
 ||go.emersonautomation.com^
+||go.labcorp.com^
 ||go.mwe.com^
 ||go.tuv.com^
 ||images.aepinfo.com^
@@ -9336,6 +9453,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||images.go.fastweb.it^
 ||images.go.mathworks.com^
 ||images.i.mesosphere.com^
+||images.images.compagniedesalpes.fr^
 ||images.ita.ice.it^
 ||images.mail.dolce-gusto.com^
 ||images.mail.tena.de^
@@ -9361,10 +9479,12 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||oci.dyn.com^
 ||pages.intelligence.informa.com^
 ||partenaireslld.temsys.fr^
+||preference.motorolasolutions.com^
 ||preferences.deloitte.ca^
 ||publicidad.davivienda.com.pa^
 ||pubstr.acs.org^
 ||reg.techweb.com^
+||resources.opentext.com^
 ||s.sick.com^
 ||secure-eugo.arrow.com^
 ||secure.medtronicinteract.com^
@@ -9441,7 +9561,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||lsv5.belambra.fr^
 ||mi.miliboo.be^
 ||mi.miliboo.com^
-||mi.miliboo.de^
 ||mva1.maeva.com^
 ||ncx2.voyage-prive.it^
 ||netc.sfr.fr^
@@ -9548,12 +9667,15 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||w7.berlin.de^
 ||wbtrkk.deutschlandcard.de^
 ||wbtrkk.teufel.de^
+||wbtrkk.teufelaudio.at^
 ||wbtrkk.teufelaudio.es^
 ||wbtrkk.teufelaudio.fr^
 ||wbtrkk.teufelaudio.nl^
 ||wbtrkk.teufelaudio.pl^
 ||web.communications.amouage.com^
 ||web.email.topfarmacia.it^
+||web.info.teamwarrior.com^
+||web.mapp.ilgiardinodeilibri.it^
 ||web.mapp.skousen.dk^
 ||web.news.dixiefashion.com^
 ||web.news.piquadro.com^
@@ -9563,6 +9685,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||web.web.tomasiauto.com^
 ||web.x.ilpost.it^
 ||webanalytics.also.com^
+||webmet.creditreform.de^
 ||wt.envivas.de^
 ||wt.generali.de^
 ||wt.vhb.de^
@@ -9920,6 +10043,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||analytics.ikyu.com^
 ||analytics.tver.jp^
 ||anyelse.com/stat^
+||askdoctors.jp/assets/packs/js/impression_tracker-
 ||astat.nikkei.com^
 ||astral.nicovideo.jp^
 ||baitoru.com/pu/js/2017/adobe_send_tracking.js
@@ -10143,10 +10267,13 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||tracker.azet.sk^
 ||analytics.emol.com^
 ||data.acierto.com^
+||emol.com/bt/ping
 ||estadisticas.lanacion.com.ar^
+||geo.emol.cl^
 ||horizon-track.globo.com^
 ||logs.openbank.com^
 ||matt.mercadolibre.
+||mediaserver.emol.cl/rtracker/
 ||mega.promodescuentos.com^
 ||mercadolibre.com/tracks^
 ||ocular.promodescuentos.com^
@@ -10208,7 +10335,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 @@||check.ddos-guard.net/check.js$script
 @@||cleverpush.com/channel/$script,domain=bsdex.de|heise.de
 @@||cleverpush.com/sdk/$script,domain=heise.de
-@@||cloudflare.com/cdn-cgi/trace$domain=infyspringboard.onwingspan.com|injora.com|kiichin.com|myair.resmed.com
 @@||cnet.com/a/video-player/uvpjs-rv/$script,~third-party
 @@||cohesionapps.com/cohesion/$domain=bankrate.com|frontier.com
 @@||cohesionapps.com/preamp/$subdocument,xmlhttprequest,domain=frontier.com
@@ -10263,6 +10389,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 @@||sephora-track.inside-graph.com/ig.js$domain=sephora.com
 @@||sephora.com/js/ufe/isomorphic/thirdparty/fp.min.js$script,~third-party
 @@||sephora.com/js/ufe/isomorphic/thirdparty/VisitorAPI.js$~third-party
+@@||src.litix.io/videojs/*/videojs-mux.js
 @@||static.amazon.jobs/assets/analytics-$script,domain=amazon.jobs
 @@||static.foxnews.com^*/VisitorAPI.js$domain=foxbusiness.com|foxnews.com
 @@||steamstatic.com/steam/apps/$image,domain=store.steampowered.com
@@ -10326,8 +10453,10 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 @@||track.adform.net/serving/scripts/trackpoint$script,domain=sky.it
 @@||bdash-cloud.com/recommend-script/$script,domain=junonline.jp
 @@||bdash-cloud.com/tracking-script/*/tracking.js$domain=junonline.jp
+@@||cdn.treasuredata.com/sdk/$script,domain=retty.me
 @@||cmn.gyro-n.com/js/gyr.min.js$domain=benesse-style-care.co.jp
 @@||ev.tpocdm.com^$xmlhttprequest,domain=wowma.jp
+@@||in.treasuredata.com/js/*api_key$script,domain=retty.me
 @@||js.appboycdn.com/web-sdk/$domain=kfc.co.jp
 @@||k-img.com/script/analytics/s_code.js$script,domain=kakaku.com
 @@||l.logly.co.jp/lift$script,domain=sponichi.co.jp
