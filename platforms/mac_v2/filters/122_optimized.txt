@@ -1,9 +1,9 @@
-! Checksum: LDuGsiQn5ijvU3VZWcpvOg
-! Diff-Path: ../patches/122_optimized/122_optimized-s-1728608749-14400.patch
+! Checksum: FajNuW1y5bwHwAaW9g68EA
+! Diff-Path: ../patches/122_optimized/122_optimized-s-1728623133-14400.patch
 ! Title: Fanboy's Annoyances (Optimized)
 ! Description: Removes in-page pop-ups and other annoyances. Includes Fanboy's Social Blocking & EasyList Cookie Lists.
-! Version: 2.1.34.74
-! TimeUpdated: 2024-10-11T01:01:20+00:00
+! Version: 2.1.34.75
+! TimeUpdated: 2024-10-11T05:01:22+00:00
 ! Expires: 12 hours (update frequency)
 /arscode-ninja-popups/*$~stylesheet
 /copy_text.js
@@ -117,11 +117,13 @@ _backToTop.
 -sharebar-
 -sharebar.
 -social-sidebar.
+-sprite-social-
 /accesspress-social-counter/*
 /addthis_widget.js
 /addtoany.min.js
 /common/sns/*
 /common/sns_
+/facebook-pagelike-widget/fb.js
 /facebook-popup-
 /facebook_footer.png
 /facebook_footer.svg
@@ -129,6 +131,7 @@ _backToTop.
 /fb-like-pop.js
 /fb-pixel.js
 /fbfooter.svg
+/follow-twitter.
 /follow-us.$~stylesheet
 /follow_instagram.png
 /followusontwitter.jpg
@@ -209,6 +212,7 @@ _backToTop.
 /ya-share.js
 _footer_twitter.
 _social-bar/
+_social_footer_
 /jquery.bpopup.$script,domain=telechargerunevideo.com
 -consent-banner-
 -consent-banner.
@@ -321,6 +325,7 @@ _social-bar/
 /cookies_gdpr.js
 /cookies_policy.js
 /cookiesConsent.js
+/cookieSettings.js
 /cookiesplus-front.js
 /cookiesPopup.min.js
 /cookieWidget.js
@@ -336,6 +341,7 @@ _social-bar/
 /dp_cookieconsent.js
 /dywc.js
 /eu_cookie_compliance.min.js
+/eu_privacy.js
 /euc_cookie.js
 /eucookies.
 /evidon-sitenotice-tag.js
@@ -593,7 +599,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###ui-to-top
 ###uix_jumpToFixed
 ###up-to-top
-###w2b-StoTop
 ###wpfront-scroll-top-container
 ##.BackToTop
 ##.ButtonBackToTop
@@ -641,6 +646,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.btn.gotop
 ##.button--toTop
 ##.button-go-up
+##.button-scroll-to-top
 ##.button-to-top
 ##.c-back-to-top
 ##.c-back-top
@@ -704,6 +710,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.material-scrolltop
 ##.mh-back-to-top
 ##.mk-go-top
+##.mnmd-go-top
 ##.mypresta_scrollup
 ##.navigate-to-top
 ##.on--totop
@@ -775,6 +782,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.w-gotop
 ##.w-toplink
 ##[aria-label="Back to top"]
+##[data-trackname="page-top"]
 ##[title="Back to Top"]
 ##[title="Go to Top"]
 ##a[data-webtrekk="button.scroll_to_top"]
@@ -871,7 +879,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###crestashareicon
 ###crestashareiconincontent
 ###desktop-share-wrapper
-###details-share-icon-link
 ###divSideShare
 ###embed-share
 ###et-post-share
@@ -1137,6 +1144,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###social-media-header
 ###social-media-icons
 ###social-media-icons-container
+###social-media-links
 ###social-media-menu
 ###social-media-share
 ###social-nav
@@ -1159,6 +1167,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###social-slider
 ###social-tools-panel
 ###social-widget
+###social-wrap
 ###social-wrapper
 ###social-youtube
 ###social-yt
@@ -1167,7 +1176,9 @@ dashboard.razorpay.com#@##credential_picker_container
 ###socialBar
 ###socialButtons
 ###socialContainer
+###socialFacebook
 ###socialFooter
+###socialGoogle
 ###socialHeader
 ###socialHolder
 ###socialIcons
@@ -1525,8 +1536,8 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.c-footer__social-links
 ##.c-footer__social-list
 ##.c-footer__social-list-item
-##.c-footer__social-media
 ##.c-footer__socials-list
+##.c-header__social
 ##.c-icon--whatsapp
 ##.c-main-footer__social
 ##.c-share
@@ -1691,6 +1702,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.facebook-share-btn
 ##.facebook-share-button
 ##.facebook-share-link
+##.facebook-sharer
 ##.facebook-sidebar
 ##.facebook-social
 ##.facebookShareButton
@@ -1719,6 +1731,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.fb-like-container
 ##.fb-msg
 ##.fb-outer
+##.fb-page-like
 ##.fb-recommend
 ##.fb-share
 ##.fb-share-button
@@ -1743,6 +1756,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.fi-social-facebook
 ##.fi-social-google-plus
 ##.fi-social-instagram
+##.fi-social-linkedin
 ##.fi-social-pinterest
 ##.fi-social-twitter
 ##.fi-social-youtube
@@ -1838,7 +1852,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.footer-twitter-icon
 ##.footerFacebook
 ##.footerFollow
-##.footerSeguici
 ##.footerSocial
 ##.footerSocialIcons
 ##.footerSocialShares
@@ -1881,6 +1894,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.footer_sprite_facebook
 ##.footersocial
 ##.footsocial
+##.forum-share
 ##.frame-social
 ##.fshare
 ##.ftr-social
@@ -2063,6 +2077,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.iconochive-share
 ##.icons_social
 ##.iconsocial
+##.idc-share
 ##.ig-share-button
 ##.ikonz-social
 ##.image-share
@@ -2118,6 +2133,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.jeg_share_button
 ##.jeg_share_top_container
 ##.jeg_sharelist
+##.jeg_socialcounter
 ##.jetpack-social-navigation
 ##.jetpack-social-widget-item
 ##.jetpack_widget_social_icons
@@ -2159,6 +2175,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.jssocials-share-logo
 ##.jssocials-share-pinterest
 ##.jssocials-shares
+##.juiz_sps_item
 ##.jw-settings-sharing
 ##.jw-sharing-dock-btn
 ##.keystone-social-author
@@ -2269,6 +2286,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.messageShareButtons
 ##.meta-share
 ##.meta-share-wrapper
+##.meta__social
 ##.mh-share-button
 ##.mh-share-buttons
 ##.mh-social-icons
@@ -2309,8 +2327,10 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.nav-footer-social
 ##.nav-share
 ##.nav-share-btn
+##.nav-soc-but
 ##.nav-social
 ##.nav-social-links
+##.nav-social-wrap
 ##.navSocial
 ##.nav__social
 ##.nav_social
@@ -2349,6 +2369,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.p-post-shareItem
 ##.p-post-shareList
 ##.page-controls--share
+##.page-controls-share
 ##.page-footer-social
 ##.page-footer__social
 ##.page-footer__social-link
@@ -2522,6 +2543,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.share-article
 ##.share-article-loop
 ##.share-article-social
+##.share-article-tools
 ##.share-article-vertical
 ##.share-b
 ##.share-bar
@@ -2647,6 +2669,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.share-toggle-button
 ##.share-tool
 ##.share-toolbar
+##.share-toolbar__container
 ##.share-tools
 ##.share-tools--secondary
 ##.share-tools-buttons-top
@@ -2659,6 +2682,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.share-viber
 ##.share-video
 ##.share-wa
+##.share-wb
 ##.share-weibo
 ##.share-whatsapp
 ##.share-widget
@@ -2703,7 +2727,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.sharePost
 ##.shareSide
 ##.shareSocial
-##.shareSprite
 ##.shareSticky
 ##.shareText
 ##.shareThis
@@ -2752,6 +2775,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.share_entry
 ##.share_facebook
 ##.share_fb
+##.share_group
 ##.share_horizontal
 ##.share_icon
 ##.share_icons
@@ -2860,6 +2884,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.sharing-item
 ##.sharing-link
 ##.sharing-links
+##.sharing-links--body__item
 ##.sharing-option
 ##.sharing-options
 ##.sharing-tools
@@ -2907,6 +2932,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.single-social-wrap
 ##.singleSocialShares
 ##.single__floating-share
+##.single__share
 ##.single__social
 ##.single_share
 ##.site-footer__social
@@ -2935,6 +2961,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.snsBox
 ##.snsWrapper
 ##.sns_box
+##.sns_comm
 ##.sns_share
 ##.sns_sub
 ##.snsb-balloon
@@ -2966,10 +2993,12 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.social-badges
 ##.social-banner
 ##.social-bar-sticky
+##.social-bar-widget
 ##.social-bar-wrapper
 ##.social-blocks
 ##.social-bookmark
 ##.social-bookmarks
+##.social-box-footer
 ##.social-btn-container
 ##.social-btn-facebook
 ##.social-btn-list
@@ -2988,6 +3017,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.social-controls
 ##.social-count
 ##.social-counter
+##.social-counter-widget
 ##.social-counters
 ##.social-cta
 ##.social-ext
@@ -3012,6 +3042,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.social-icon-link
 ##.social-icon-linkedin
 ##.social-icon-list
+##.social-icon-table
 ##.social-icon-twitter
 ##.social-icon-wrap
 ##.social-icon-wrapper
@@ -3106,6 +3137,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.social-share-custom
 ##.social-share-facebook
 ##.social-share-footer
+##.social-share-google
 ##.social-share-icons
 ##.social-share-left
 ##.social-share-link
@@ -3125,7 +3157,9 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.social-share__list
 ##.social-share__wrapper
 ##.social-share_compact
+##.social-sharer
 ##.social-shares
+##.social-sharing-bot
 ##.social-sharing-btn
 ##.social-sharing-button
 ##.social-sharing-buttons
@@ -3159,6 +3193,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.socialBar
 ##.socialBottom
 ##.socialBtnList
+##.socialButtonArea
 ##.socialButtons
 ##.socialCnt
 ##.socialColumn
@@ -3168,6 +3203,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.socialFacebook
 ##.socialFeed
 ##.socialFixed
+##.socialFollow
 ##.socialFooter
 ##.socialGroup
 ##.socialHeader
@@ -3199,7 +3235,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.socialMenu
 ##.socialNav
 ##.socialNetworks
-##.socialNew
 ##.socialPanel
 ##.socialShare
 ##.socialShareIcon
@@ -3359,6 +3394,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.thim-author-social
 ##.thirdShareBox
 ##.thread-share
+##.tipsy-social-icon-container
 ##.tk-footer-social-icons
 ##.tool-share
 ##.toolbar-share
@@ -3382,6 +3418,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.tve__info__share
 ##.tve_social_items
 ##.tw-share
+##.twd-footer-social-stripe
 ##.tweet-btn
 ##.tweet-link-button
 ##.tweet_button
@@ -3433,6 +3470,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.twitterlink
 ##.twittershare
 ##.twshare
+##.twt-icon
 ##.twtr
 ##.ty-social-link
 ##.ty-social-link-block
@@ -3503,6 +3541,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.whatsapp_share
 ##.widget-follow
 ##.widget-share
+##.widget-sharebar-container
 ##.widget-social
 ##.widget-social-facebook
 ##.widget-social-icons
@@ -3702,6 +3741,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###RRZELegalBanner
 ###SgCookieOptin
 ###ShowCookie
+###WCPcookieBannerId
 ###WP-cookie-info
 ###_evidon_banner
 ###ab-cookie-advice
@@ -3723,7 +3763,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###acceptance_of_cookies
 ###acceptcookie
 ###acceptcookies
-###acmp-opt-in
 ###acookie
 ###acris--cookie-permission--modal-overlay
 ###acris--page-wrap--cookie-permission
@@ -3804,6 +3843,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###consent-banner
 ###consent-banner-container
 ###consent-bump
+###consent-cookies
 ###consent-management-alert
 ###consent-manager
 ###consent-popup
@@ -3812,6 +3852,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###consent.consent
 ###consentDialog
 ###consent_blackbar
+###consentfriend
 ###container-cookies
 ###coocie
 ###coockie-warning
@@ -3832,6 +3873,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie-bar-main
 ###cookie-bg
 ###cookie-block
+###cookie-bottom
 ###cookie-box
 ###cookie-box-info
 ###cookie-btn
@@ -4000,6 +4042,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookieNoticePopup
 ###cookieNoticePro
 ###cookieNotification
+###cookieOptionsFooter
 ###cookieOverlay
 ###cookiePanel
 ###cookiePlaceholder
@@ -4043,6 +4086,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie_alert
 ###cookie_alert_container
 ###cookie_assistant_container
+###cookie_auth
 ###cookie_b
 ###cookie_banner_container
 ###cookie_bar
@@ -4090,7 +4134,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookie_warn
 ###cookie_warning
 ###cookie_wrapper
-###cookieabfrage
 ###cookieaccept
 ###cookiealert
 ###cookiebanner
@@ -4236,6 +4279,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###cookiescript_wrapper
 ###cookieseal-banner
 ###cookiesettings
+###cookieshit
 ###cookiesjsr
 ###cookieslaw
 ###cookieslider
@@ -4320,6 +4364,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###gdpr-cookie-notice
 ###gdpr-cookies
 ###gdpr-footer
+###gdpr-header
 ###gdpr-iesLxz-cookie-canvas
 ###gdpr-iesLxz-cookie-message
 ###gdpr-modal-bottom
@@ -4442,8 +4487,11 @@ dashboard.razorpay.com#@##credential_picker_container
 ###piano-infobar-container
 ###pjAcceptCookieBar
 ###policy-accept
+###policy-cookies-banner
 ###policy-popup
 ###politicaCookies
+###politicaPrivacidade
+###politica_cookies
 ###polityka_cookies
 ###popin_tc_privacy
 ###popup-cookie
@@ -4498,6 +4546,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ###shopify-section-cookies_law
 ###simplecookienotification_v01
 ###site-cookie-notice
+###skv-cookie-banner
 ###snippet--cookies
 ###sp-cookie-consent
 ###stm_gdpr_popup-main
@@ -4510,7 +4559,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ###top-cookie-wrapper
 ###top_cookiePopUp
 ###trackingCookie
-###truste-button
 ###truste-consent-track
 ###tx_cookies
 ###uc-banner-modal
@@ -4554,6 +4602,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.CookieWarning
 ##.CookiesAccept-Body
 ##.CookiesBanner-root
+##.CookiesBanner-show
 ##.CookiesConsent
 ##.EuCookiesNotificationView
 ##.GlobalCookie
@@ -4563,6 +4612,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.SCK_Banner
 ##.SLNotificationBar
 ##.Section-Cookie
+##.TOSBanner
 ##._cookie
 ##._gdpr-notify-header
 ##.accept-cookie-container
@@ -4593,6 +4643,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.amgdprcookie-bar-template
 ##.anonymous-consent-banner
 ##.app-wrapper-cookies
+##.app__misc-cookie__consent
 ##.as-oil[data-qa="oil-Layer"]
 ##.atvi-banner-cmp
 ##.atvi-privacy-policy-module
@@ -4615,9 +4666,11 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.banner-consent-all
 ##.banner-cookies
 ##.banner-lgpd-consent
+##.banner-lgpd-consent-container
 ##.banner_cookie
 ##.barCookie
 ##.basel-cookies-popup
+##.be-gdpr-cookie-notice-bar
 ##.bk-cookie-alert-snackbar
 ##.blocknav-gestion-cookies
 ##.bottom-cookie-info
@@ -4652,7 +4705,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cc-bottom.cc-banner
 ##.cc-bottom.cc-floating.cc-window
 ##.cc-cookies
-##.cc-customdialog
 ##.cc-individual-cookie-settings
 ##.cc-nb-main-container
 ##.cc-notification
@@ -4767,6 +4819,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie-footer
 ##.cookie-footer--wrapper
 ##.cookie-footer-container
+##.cookie-full-bleed
 ##.cookie-holder
 ##.cookie-img
 ##.cookie-info-header
@@ -4833,6 +4886,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie-pop
 ##.cookie-pop-main
 ##.cookie-popup-container
+##.cookie-popup-overlay
 ##.cookie-popup-wrapper
 ##.cookie-popup__content
 ##.cookie-popup__heading
@@ -4861,7 +4915,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookie-warning-content
 ##.cookie-wrap
 ##.cookie-wrapper-popup
-##.cookie.alert
 ##.cookie.jquery-notify-bar
 ##.cookie.popup
 ##.cookieAccept
@@ -4870,6 +4923,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookieAlert
 ##.cookieAlertBox
 ##.cookieBannerContainer
+##.cookieBannerOverlay
 ##.cookieBannerText
 ##.cookieBanner__wrapper
 ##.cookieBarInner
@@ -4977,6 +5031,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookiediv
 ##.cookiefooter
 ##.cookieinfo:not(body)
+##.cookieinformation
 ##.cookielaw-bottom
 ##.cookielaw:not(body):not(html)
 ##.cookieman-show
@@ -5028,6 +5083,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookies-reminder-v2
 ##.cookies-row
 ##.cookies-save
+##.cookies-scrollbar
 ##.cookies-settings
 ##.cookies-text
 ##.cookies-tip
@@ -5047,6 +5103,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookiesBox
 ##.cookiesContainer
 ##.cookiesContent
+##.cookiesCorreios
 ##.cookiesDisclaimer
 ##.cookiesHeader
 ##.cookiesInfo
@@ -5054,6 +5111,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookiesNotification
 ##.cookiesPanel
 ##.cookiesPolicy
+##.cookiesTxt
 ##.cookiesWarning
 ##.cookies__block
 ##.cookies__box
@@ -5092,8 +5150,8 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.cookietool-message
 ##.cookietxt
 ##.cookiewarning:not(body):not(html)
+##.cp-curtain-container
 ##.cp-info-bar-container
-##.cp-module-info_bar
 ##.cp-popup-overlay
 ##.ctl_CookieWarning
 ##.cv2-wrapper
@@ -5107,7 +5165,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.divascookies
 ##.dpdpa--popup
 ##.dsgvo-overlay
-##.eboxCookieBar
 ##.ec-notices__wrap
 ##.eds-notification-bar
 ##.ensModalBackdrop
@@ -5201,6 +5258,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.headerCookies
 ##.header__cookie
 ##.hwcookiebanner
+##.i-layout__cookie-notification
 ##.iCookie
 ##.icms-cookiealert
 ##.info-block.cookies
@@ -5244,6 +5302,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.js-cookiemodal
 ##.js-cookies
 ##.js-cookies-agreement
+##.js-cookies-box
 ##.js-cookies-eu
 ##.js-cookies-popup
 ##.js-gdpr
@@ -5254,6 +5313,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.js-notification-cookie-banner
 ##.js-terms-of-use-disclaimer
 ##.js-tracking-popup
+##.js.tc-banner
 ##.js_cookies_container
 ##.kvkkpop
 ##.l-cookie
@@ -5318,6 +5378,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.ot-sdk-show-settings
 ##.otCookiesNotification
 ##.overlay-cookie
+##.p-cookies
 ##.page > .cookies
 ##.page-wrap--cookie-permission
 ##.panel-cookies
@@ -5394,6 +5455,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.show[class*="cookie-notice"]
 ##.show_cookie:not(body):not(html)
 ##.site-cookies
+##.site-notice-wrapper
 ##.sp-dsgvo-popup-overlay
 ##.st_notification_wrap
 ##.sticky_cookie
@@ -5416,9 +5478,9 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.tplis-cl-cookies
 ##.tracking-banner
 ##.tracking-consent
-##.truste_box_overlay
-##.truste_overlay:not(body):not(html)
 ##.u-cookies-consent
+##.ub-emb-bar-frame
+##.uk-notification-bottom-left
 ##.ukCookiePolicy
 ##.use-cookie
 ##.useCookiesInfo
@@ -5458,6 +5520,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##[data-cookie-popup]
 ##[data-cvent-id="cookie-banner"]
 ##[data-cy="cookie-notice"]
+##[data-notification="CookiePolicyAgreement"]
 ##[data-testid="consent-banner"]
 ##[data-testid="cookie-policy"]
 ##[data-view-name="privacy-updated-notice"]
@@ -5482,11 +5545,13 @@ dashboard.razorpay.com#@##credential_picker_container
 ##cookie-banner
 ##cookie-bar
 ##cookie-consent
+##cookie-drawer-policy
 ##cookie-info
 ##cookie-policy
 ##cookie-popup
 ##cookies-consent
 ##cookies-notification
+##div[data-banner="cookies"]
 ##div[data-cookie-path]
 ##div[data-gdpr-consent-prompt]
 ##div[data-privacy-consent]
@@ -5494,7 +5559,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##footer > #cookies
 ##footer > .cookie
 ##iframe[name="googlefcPresent"]
-##kuma-cookie-bar
 ##lgpd-cookie-terms
 ##onl-cookie
 ##section > .cookie
@@ -5585,7 +5649,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##div.cookiebanner
 ##div.cookiebar
 ##div.cookiebox
-##div.cookieconsent
 ##div.cookies-banner
 ##div.cookies-body
 ##div.cookies-consent
@@ -5597,6 +5660,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##div.cookies__alert
 ##div.cookies_banner
 ##div.cookieswindow
+##div.edu-modal-cookie
 ##div.eu-cookie
 ##div.eupopup
 ##div.ezmob-footer
@@ -5617,7 +5681,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##div.sqs-cookie-banner-v2
 ##section.Cookie-notice
 ##section.cookie-bar
-##section.cookie-consent
 ##div.ammodals-overlay
 ##.js-notice.notice--cookie
 ##.notice--cookieAdvanced
@@ -5660,10 +5723,12 @@ dashboard.razorpay.com#@##credential_picker_container
 ###newsletter-signup-footer
 ###newsletter-signup-short-form
 ###newsletter_popup
+###newsletter_signup_footer
 ###newsletter_widget-2
 ###newsletters-signup-sidebar
 ###popup-newsletter
 ###popupNewsletter
+###pp-subscribe
 ###sidebar-newsletter
 ###slice-container-newsletterForm-exitIntent
 ###subscribePopup
@@ -5716,7 +5781,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.footer-newsletter-social
 ##.footer-newsletter-wrapper
 ##.footer-newsletters
-##.footer-sign-up
 ##.footer-signup
 ##.footer__newsletter
 ##.footer__newsletter-form
@@ -5824,6 +5888,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ##.smartmag-widget-newsletter
 ##.smile-prompt-frame-container
 ##.subscribePopup
+##.subscribeShortcodeContainer
 ##.subscription-promo
 ##.tds-newsletter
 ##.teaser-newsletter
@@ -5925,7 +5990,6 @@ dashboard.razorpay.com#@##credential_picker_container
 ||linkwithin.com^$third-party
 ||list-manage.com/subscribe/
 ||lpages.co/serve-leadbox/$third-party
-||mailjet.com/statics/js/widget.modal.js$third-party
 ||manychat.com^$third-party
 ||mixi.media^$third-party
 ||news.google.com/swg/_/api/v1/publication/
@@ -5993,6 +6057,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||worldgravity.com^$third-party
 ||youtube.com/v/*autoplay$third-party,domain=7chan.org|boards.4chan.org
 ||zdassets.com/ekr/snippet.js
+||zeddit.com^$third-party
 ||zergnet.com^$third-party
 ||zoomanalytics.co^$third-party
 ||zotabox.com^*/widgets.js$third-party
@@ -6008,6 +6073,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||jivo.ru/sounds/
 ||js.intercomcdn.com/audio/
 ||live2support.com/uploads/sound/
+||lpsnmedia.net/le_unified_window/$media
 ||static.widget.trengo.eu/assets/$media
 ||tawk.to/*/audio/
 ||tidiochat.com^$media
@@ -6051,6 +6117,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||pushprofit.ru^$third-party
 ||pushpushgo.com^$third-party
 ||pushtide.com^$third-party
+||pushy.ai^$third-party
 ||quaruzon.com^$third-party
 ||realpush.media^$third-party
 ||snrcdn.net^$third-party
@@ -6157,6 +6224,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||sharethis.com^$third-party
 ||sharpay.io^$third-party
 ||shpg.org^$third-party
+||storeya.com/externalscript/$third-party
 ||trendemon.com^$third-party
 ||twitter.com/js/timeline.$script,third-party
 ||usocial.pro^$third-party
@@ -6227,6 +6295,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||gatekeeperconsent.com^$third-party
 ||gdpr-legal-cookie.beeclever.app^$third-party
 ||gdpr-legal-cookie.com^$third-party
+||gdpr.es^$third-party
 ||gdpr.studybreakmedia.com^
 ||getsitecontrol.com^$third-party
 ||goadopt.io^$third-party
@@ -6306,6 +6375,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||filmaffinity.com/images/arrow-up2.png
 /firebase-messaging.js$script,domain=tribunnews.com
 ||9to5terminal.com/push.js
+||abendpoint.com/dist/js/push.js
 ||alerts.ndtv.com^
 ||bdstatic.com/linksubmit/push.js
 ||dailymail.co.uk/api/web-push-notification/
@@ -6319,6 +6389,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||ndtv.com/js/breaking_pushalert_revised.js
 ||phys.org/push-sw.js
 ||push.cnnindonesia.com^
+||rt.com/homescreen-sw.js
 ||scmp.com/sw.js
 ||seattletimes.com/wp-content/plugins/st-user-messaging/$script
 ||sportskeeda.com/js/production/web-notifications/
@@ -6467,6 +6538,7 @@ pastebin.com##.popup-container
 weebly.com##.powered-by
 reddit.com##.premium-banner
 reddit.com##.premium-banner-outer
+theguardian.com##.site-message
 mrskin.com##.so-parallax
 engadget.com,thehollywoodgossip.com##.sticky
 space.com##.sticky-player-background
@@ -6503,6 +6575,7 @@ euromaidanpress.com###pa_banner_code
 amazon.com###percolate-ui-ilm_div
 triblive.com###promo-ad-free-story-bottom
 fflogs.com,warcraftlogs.com###right-ad-box
+fflogs.com###right-vertical-banner
 tunein.com###sidebarUpsell
 leawo.org###single_top
 pocketgamer.com###site-background
@@ -6550,7 +6623,6 @@ euromaidanpress.com,kyivpost.com##.correction
 bitdegree.org##.countdown-container
 whosampled.com##.crates-banner
 carsauce.com##.cta46_card
-theguardian.com##.dcr-nv35qx
 972mag.com,electronicintifada.net,fullfact.org,opendemocracy.net##.donate
 rabble.ca,sciencenews.org,thedp.com##.donate-box
 wltreport.com##.dotted-widget
@@ -6569,6 +6641,7 @@ bonappetit.com,wired.com##.journey-unit
 github.com##.js-notice-dismiss[data-analytics-visible]
 soundcloud.com##.l-product-banners
 notesfrompoland.com##.latacz
+tedium.co##.md-adbox
 daily.jstor.org##.membership-incontent-banner
 bakusai.com##.menuTopAds
 motherjones.com##.mj-adblock-widget
@@ -6619,6 +6692,7 @@ themarshallproject.org##.welcome-mat
 startpage.com##.widget-install-legacy
 grist.org##.wp-block-article-donation
 youtube.com##.ytd-statement-banner-renderer
+worthrises.org##.yui-popup-container-node
 dailyhodl.com##[href="https://dailyhodl.com/alerts/"]
 theguardian.com##[name="SlotBodyEnd"]
 theguardian.com##[name="StickyBottomBanner"]
@@ -6670,6 +6744,7 @@ asahi.com###ToTop
 gayboystube.com###action-up
 news.tvbs.com.tw,whtop.com###back
 accessnow.org,al-watan.com,appdate.lk,brevzin.github.io,coinedcuisine.com,duhuliye.com,krdb.com,leakedzone.com,neue-impulse-verlag.de,qatar-tribune.com,sandordargo.com,sfu.ca,slocounty.ca.gov,tfn.scot###back-to-top
+bigislandnow.com,mmoga.co.uk,mmoga.com,mmoga.de,mmoga.es,mmoga.fr,mmoga.se,toplegal.it,tsc.ca,vov.vn###backToTop
 medicinenet.com,mega4upload.com###backTop
 circuitbasics.com,foodstuffsa.co.za,hardwarezone.com.sg,holidayswithkids.com.au,milwaukeeindependent.com,panoramapolitico.co,vgleaks.com###back_to_top
 adl.org,coreight.com,cosedicasa.com,gamepro.de,gamestar.de,lleida.com,news.ki.se,oantagonista.com,philstar.com,soundonsound.com,theepochtimes.com###backtotop
@@ -6737,6 +6812,7 @@ cwtv.com###user_optin_banner
 docs.github.com##[aria-label="Scroll to top"]
 splashlearn.com,linuxbabe.com##.pum-active
 splashlearn.com,linuxbabe.com#$#html { overflow: auto !important }
+fastcompany.com#$#body,html { height: auto !important; overflow: auto !important }
 semrush.com#%#//scriptlet('ubo-set-session-storage-item.js', 'sem30_popup_shown', '1')
 clarin.com#%#//scriptlet('ubo-nostif.js', '_waitingAuth0Counter')
 bestrecipes.com.au#%#//scriptlet('ubo-cookie-remover.js', 'br_mc')
@@ -6865,7 +6941,6 @@ kurashiru.com###header_app
 web.quizknock.com###header_iosapp_link
 zillow.com###local-app-upsell
 adspecials.us,ajanlatok.hu,akcniletak.cz,catalogosofertas.cl,catalogosofertas.com.ar,catalogosofertas.com.br,catalogosofertas.com.co,catalogosofertas.com.ec,catalogosofertas.com.mx,catalogosofertas.com.pe,catalogueoffers.co.uk,catalogueoffers.com.au,flugblattangebote.at,flyerdeals.ca,folderz.nl,folhetospromocionais.com,folletosofertas.es,gazetki.pl,kundeavisogtilbud.no,ofertelecatalog.ro,offertevolantini.it,promocatalogues.fr,promotiez.be,promotions.ae,prospektangebote.de,reklambladerbjudanden.se,tilbudsaviseronline.dk###mobile-app-popup
-cryptorank.io###mobile-popup
 consumerreports.org###mtRoundupPaywallPopup
 windy.com###open-in-app
 geeksforgeeks.org###openInApp-modal
@@ -6878,6 +6953,7 @@ autoscout24.it,m.calciomercato.com,mygwork.com,prioritypass.com,similarweb.com,s
 coinmarketcap.com##.app-banner-new
 atlasobscura.com##.app-store-heading
 atlasobscura.com##.apple-store-icon
+banglanews24.com##.apps
 qatarairways.com##.appstore
 atptour.com##.atp_apps
 bing.com##.b_bnp_bopc
@@ -6980,6 +7056,7 @@ osxdaily.com###subscribe_box
 thenewstack.io###tns-footer-bar
 thenewstack.io###tns-post-body-sidebar-share
 tennis.com##.-sharebar
+nhl.com,petri.com##.-social
 newscientist.com##.ArticleHeader__SocialWrapper
 nordvpn.com##.BlogPost__social-block
 cnbc.com##.CNBCFooter-social
@@ -7024,9 +7101,7 @@ businessinsider.com##.brands-social
 captimes.com,psu.edu##.btn-link
 androidpolice.com,backyardboss.net,cbr.com,collider.com,dualshockers.com,gamerant.com,givemesport.com,howtogeek.com,makeuseof.com,movieweb.com,pocketnow.com,thegamer.com,thethings.com,thetravel.com,xda-developers.com##.btn-mail
 esportesdp.com.br,f1-news.eu,mainichi.jp##.btn-share
-femalefirst.co.uk,revistaencontro.com.br,thenewamerican.com##.btn-social
 koimoi.com##.btn-whatsup
-notateslaapp.com##.button-follow
 unz.com##.button-holder
 healthline.com##.button-wrapper
 livescience.com##.buttons-social
@@ -7106,6 +7181,7 @@ myanimelist.net##.js-sns-icon-container
 airlive.net,echonewshub.com,jugomobile.com,thartribune.com,townflex.com##.l-shared-sec
 mymodernmet.com##.lets-connect
 mymodernmet.com##.like-it-share-it
+mmoga.co.uk,mmoga.com,mmoga.de,mmoga.es,mmoga.fr,mmoga.se##.likeBtn
 cybernews.com##.links-bar
 exchangerates.org.uk,idownloadblog.com,kyivpost.com,thedrinksbusiness.com##.list-inline
 soundcloud.com##.listenDetails__login
@@ -7155,6 +7231,7 @@ gizmodo.com,nymag.com,thisismoney.co.uk,zapimoveis.com.br##.share-link
 ig.com.br,rebelnews.com##.share-page
 advocate.com,comicsands.com,commondreams.org,gbnews.com,spectrum.ieee.org,theblaze.com,thefulcrum.us,upworthy.com##.share-panel
 alarabiya.net,timeextension.com##.share-this
+apkpure.net##.share-toolbox
 windowsreport.com##.shareMobile
 drexel.edu##.share__body
 silive.com##.sharebarBetaWrapper
@@ -7315,6 +7392,7 @@ finance.yahoo.com#$#html { overflow: auto !important; position: initial !importa
 audiot.co.uk###CookieRequester
 lttstore.com###Cookies-wrapper
 cardmarket.com###CookiesConsent
+epdf.tips###EPDFTIPS_cookie_box
 pdfcoffee.com###PDFCOFFEECOM_cookie_box
 warnerbros.com###WB-floating-notice
 ups.com###__tealiumImplicitmodal
@@ -7332,7 +7410,6 @@ dagbladet.no,elbil24.no,kk.no,seher.no,sol.no###am-branding
 ao.com###aoMessageHolder
 thecaterer.com,thestage.co.uk###aos-CookiePolicy
 ancestry.co.uk###bannerOverlay
-marketplace.china-crunch.com###bls_cookie
 neilpatel.com###bottom-bar
 freemake.com###bottombar
 agar.io###btn-privacy-settings
@@ -7406,8 +7483,10 @@ search.brave.com###usage-metrics-notice
 iboysoft.com###user_popup
 vive.com###vive-cookie-notice
 groners.com###wrapper_cookiebanner
+wyze.com###wyze-cookie-banner
 tesco.com##.BannerContainer__Container-mfe-header__sc-1aw43yw-0
 nordpass.com,support.nordvpn.com##.ConsentWidget__container
+accounts.ucas.com,nngroup.com##.CybotEdge
 basspro.com,cabelas.com##.DisclosurePopupContainer
 venngage.com##.GDPR_main__fxmFf
 airasia.com##.Gdpr__GdprParentWrapper-sc-z30mcl-0
@@ -7448,6 +7527,7 @@ shadowserver.org##.c--gdpr-message
 audiotag.info##.c-agree
 ada.com##.cDLTkj
 pornone.com##.cbann
+tax.service.gov.uk##.cbanner-govuk-cookie-banner
 jadlonomia.com##.cbar-container
 baldursgate3.game##.ciastko
 corporate.monro.com,expediagroup.com,ppg.com##.cm
@@ -7552,7 +7632,6 @@ process.st##.pookie
 vesselfinder.com##.pprem
 easyeda.com##.priv-tips
 businessinsider.com##.privacy-link
-naukri.com##.privacy-policy-container
 hotdeals.com##.privacy-policy-pop
 petalmaps.com##.privacy-setting
 data.worldbank.org##.privacy-widget
@@ -7568,6 +7647,8 @@ beerwulf.com,islamicfinder.org##.reveal-overlay
 allenai.org,merlin.foyer.work,solanamobile.com##.rhc-banner
 aviasales.com##.s__y2gjNiIS0o1RA_5Ebnkw
 bangbros.com,brazzers.com,rk.com##.sc-1ldgmug-0.cKplIS
+colormango.com##.setprivacy
+nikkei.com##.show_s1oy9cxe
 decider.com,nypost.com,pagesix.com##.sitewide-notice
 grover.com##.snackbar-enter-done
 sonic.com##.snc-consent-banner
@@ -7575,6 +7656,7 @@ hyundaicanada.com##.sticky-cookie-policy-container
 grafana.com,scoresaber.com,staterbros.com##.sticky-footer
 savills.co.uk##.sv-cookie-management
 china-airlines.com,flyscoot.com##.top-bar
+player.fm##.top-promo
 globalsources.com##.top-wrapper-box
 dahuasecurity.com##.top_tip_wrap
 whitepages.com##.tos-modal-wrapper
@@ -7588,6 +7670,7 @@ liveagent.com##.urlslab-skip-all
 cnn.com,liveuamap.com##.user-msg
 timhortons.co.uk##.user-permission
 singtel.com##.ux-consent-banner
+player.amperwave.net##.v7-us-privacy-explicit-notice
 vcita.com##.vc-gdpr-banner
 visme.co##.vismecookie
 wizards.com##.wizardCookieBanner
@@ -7612,7 +7695,6 @@ access.login.nhs.uk##core-cookie-banner
 medium.com##div > .branch-journeys-top
 figma.com##div[aria-label="Cookie Consent"]
 gaming.amazon.com##div[aria-label="Cookies usage disclaimer banner"]
-easyoffices.com##div[class*="CookiesBar_"]
 architecturaldigest.com,bonappetit.com,cntraveler.com,gq.com,newyorker.com,pitchfork.com,self.com,teenvogue.com,them.us,vanityfair.com,vogue.com,wired.com##div[class^="MessageBannerWrapper-"]
 similarsites.com##div[class^="PrivacyNotification_"]
 7news.com.au,atlasvpn.com,sortter.com,stylewe.com##div[class^="cookie-consent"]
@@ -7717,6 +7799,7 @@ amazon.ca,amazon.co.uk,amazon.com,amazon.com.au,amazon.com.be,amazon.com.tr,amaz
 primevideo.com##.DVWebNode-conditional-site-wide-wrapper:has([data-testid="consent-reject-all-endpoint"])
 unsplash.com##[open]:has(a[href="/cookies"])
 blog.smithsecurity.biz#?#.fixed:-abp-contains(cookies)
+sonarhome.pl#?#.fixed:-abp-has(.cookies-scrollbar)
 twitch.tv#?#.hLgTAv:-abp-contains(Terms of Sale)
 x.com#?#.css-175oi2r.r-12vffkv[style^="position: absolute; bottom: 0px; width: 100%;"]:-abp-contains(data protection)
 ##div[style*="box-shadow: rgb(136, 136, 136) 0px 0px 12px; color: "]
@@ -9099,6 +9182,7 @@ tredy-fashion.de#%#//scriptlet('ubo-acis.js', 'jQuery', 'synchronizeCookieNoteCo
 hildegardis-krankenhaus.de,st-agatha-krankenhaus.de#%#//scriptlet('ubo-acis.js', 'document.createElement', 'consent.cookiebot.com')
 connect.de#%#//scriptlet('ubo-acis.js', 'document.createElement', 'delivery/cmp')
 archiveofourown.org#%#//scriptlet('ubo-acis.js', '$j', 'acceptTOS')
+xe.com##button:has-text(Accept):upward(section)
 titantv.com,musicfeeds.com.au,minecraftalpha.net,worldpopulationreview.com,boston.com,britannica.com,download.mokeedev.com,freep.com,ijr.com,inquirer.net,legacy.com,nationalreview.com,nofilmschool.com,order-order.com,savvytime.com,techlicious.com,technicpack.net,thedraftnetwork.com,wrestlezone.com#%#//scriptlet('ubo-acis.js', 'document.createElement', 'admiral')
 nature.com#$?#.cc-banner { remove: true; }
 link.springer.com#$?#.cc-banner { remove: true; }
@@ -9127,6 +9211,7 @@ dw.com#$#body[style="overflow: hidden;"] { overflow: auto !important; }
 dw.com#%#//scriptlet('ubo-set.js', 'Object.prototype.hasConsent', 'trueFunc')
 bauhaus.no,bauhaus.se,parex.gr,lotto.it,paulandshark.com,taf.ba,dare2tri.com,t3micro.fr,t3micro.de,t3micro.it,t3micro.dk,t3micro.pl,t3micro.es,t3micro.pt,t3micro.se,t3micro.co.uk,t3micro.nl,t3micro.at,t3micro.be##.modals-overlay
 bauhaus.no,bauhaus.se,parex.gr,lotto.it,paulandshark.com,taf.ba,dare2tri.com,t3micro.fr,t3micro.de,t3micro.it,t3micro.dk,t3micro.pl,t3micro.es,t3micro.pt,t3micro.se,t3micro.co.uk,t3micro.nl,t3micro.at,t3micro.be#$#html { height: auto !important; overflow: auto !important }
+authentic-plaza.com,kikka-activechair.com,bolerojunior.gr,szappan.hu,sanel.lv,zivara.ro,thegreenegg.ch,allegrigirarrosti.com,deco-in.ro,beboo.ro,sinopiarestauro.it,casabottega.net,shandhigson.co.uk,roscomponents.com,laboutiquemajorpigalle.com,armeriavarona.com,design-floral.ro,climahosteleria.es,svaposhop.fr,kalkito.gr,tuttopasticceria.it,markoshop.si,aminoprohealthcare.com#$#body,html { height: auto !important; overflow: auto !important }
 doka.com#%#//scriptlet('ubo-set-cookie.js', 'hide_cookieoverlay_v2', '1', '', 'reload', '1')
 doka.com#%#//scriptlet('ubo-set-cookie.js', 'socialmedia-cookies_allowed_v2', '0')
 doka.com#%#//scriptlet('ubo-set-cookie.js', 'performance-cookies_allowed_v2', '0')
@@ -9269,8 +9354,6 @@ gamestar.de#%#//scriptlet('ubo-rmnt.js', 'script', 'Didomi')
 greatist.com,healthline.com,medicalnewstoday.com,psychcentral.com###modal-host
 greatist.com,healthline.com,medicalnewstoday.com,psychcentral.com#$#body { overflow: auto !important; position: initial !important; }
 nebo.app#%#//scriptlet('ubo-rc.js', 'fixed', '', 'stay')
-la-becanerie.com###body-overlay
-la-becanerie.com#$#body,html { overflow: auto !important; position: initial !important; }
 gemeinsam-klasse-sein.de,tk.de#$#body,html { overflow: auto !important; position: initial !important; }
 engeldirekt.de,fz-juelich.de,etransport.pl,skandia.se#$#body,html { overflow: auto !important; position: initial !important; }
 groupeonepoint.com#%#//scriptlet('ubo-rc.js', 'noScroll', '', 'stay')
@@ -9281,10 +9364,12 @@ bemmaisseguro.com#%#//scriptlet('ubo-rc.js', 'blocked-body', 'body', 'stay')
 salvagny.org#%#//scriptlet('ubo-rc.js', 'no-scroll', 'body', 'stay')
 johnlewis.com#$#html { overflow: auto !important; position: initial !important; }
 scheidegger.nl#%#//scriptlet('ubo-rc.js', 'has-no-scroll', '', 'stay')
+takko.com#$#body,html { overflow: auto !important; position: initial !important; }
 jugend-praesentiert.de#%#//scriptlet('ubo-rc.js', 'messages-active', '', 'stay')
 allegro.cz,allegro.pl,allegrolokalnie.pl###opbox-gdpr-consents-modal
 transparency.fb.com#%#//scriptlet('ubo-rc.js', '_31e', 'div', 'stay')
 transparency.fb.com#%#//scriptlet('ubo-rc.js', 'hasCookieBanner', 'body', 'stay')
+empfohlen.de,postbank.de#$#body,html { overflow: auto !important; position: initial !important; }
 21vek.by#$#body,html { position: static !important; overflow: auto !important; width: auto !important; }
 leslipfrancais.fr#%#//scriptlet('ubo-rc.js', 'no-scroll', 'body', 'stay')
 phoenix.de#%#//scriptlet('ubo-rc.js', 'blured', '', 'stay')
@@ -9302,6 +9387,7 @@ bbva.es,bbvauk.com,bbva.be,bbva.fr,bbva.it,bbva.pt#%#//scriptlet('ubo-rc.js', 'c
 bbva.es,bbvauk.com,bbva.be,bbva.fr,bbva.it,bbva.pt#%#//scriptlet('ubo-nosiif.js', 'scroll')
 sparbankenikarlshamn.se,olandsbank.se,atvidabergsspb.se,avsparbank.se,alemssparbank.se,virserumssparbank.se,vimmerbysparbank.se,varbergssparbank.se,wwsparbank.se,vadstenasparbank.se,valdemarsvikssparbank.se,ulricehamnssparbank.se,tjorns-sparbank.se,tidaholms-sparbank.se,tjustbanken.se,sodrahestrasparbank.se,sodradalarnassparbank.se,sormlandssparbank.se,sparbankenvm.se,sparbankensjuharad.se,sparbankengoinge.se,sparbankengotland.se,sparbankeneken.se,sparbankenalingsas.se,sparbankenboken.se,snapphanebygdenssparbank.se,skurupssparbank.se,sidensjosparbank.se,salasparbank.se,roslagenssparbank.se,orustsparbank.se,norrbarke-sparbank.se,mjobackssparbank.se,markarydssparbank.se,ltvsparbank.se,leksandssparbank.se,lekebergssparbank.se,laholmssparbank.se,kindaydresparbank.se,ivetoftasparbank.se,sparbankennord.se,sparbankentanum.se,sparbankentranemo.se,sparbankenskane.se,sparbankenskaraborg.se,sparbankenrekarne.se,sparbankenlidkoping.se,sparbankenenkoping.se,hogsbysparbank.se,sparbanken.se,swedbank.lv,swedbank.cn,swedbank.fi,swedbank.se,swedbank.no,swedbank.dk,haradssparbanken.se,halsinglandssparbank.se,fryksdalenssparbank.se,ekebysparbank.se,dalsbank.se,bjursassparbank.se,tidaholms-sparbank.se,smsparbank.se,sparbankenvm.se,falkenbergssparbank.se#$#body,html { overflow: auto !important; position: initial !important; }
 tomshw.it,brutkasten.com,rockol.it#$#body,html { overflow: auto !important; position: initial !important; }
+amara.org#$#body,html { overflow: auto !important; position: initial !important; }
 arbeitsagentur.de##.modal-backdrop
 suntech.cz#%#//scriptlet('ubo-rc.js', 'modal-show', '', 'stay')
 uvex-group.com,uvex-safety.rs,uvex-safety.com.au,uvex-safety.be,uvex-safety.hr,uvex-safety.ee,uvex-safety.com,uvex-safety.co.id,uvex-safety.lv,uvex-safety.jp,uvex-safety.nl,uvex-safety.pt,uvex-safety.si,uvex-safety.at,uvex-safety.bg,uvex-safety.cz,uvex-safety.hu,uvex-safety.it,uvex-safety.lt,uvex-safety.com.my,uvex-safety.ro,uvex-safety.com.sg,uvex.co.za,uvex-safety.ch,uvex-safety.by,uvex-safety.se,uvex-heckel.fr,uvex-safety.in,uvex-safety.kz,uvex-safety.lu,uvex-safety.ae,uvex-safety.pl,uvex-safety.sk,uvex-safety.es,uvex-safety.com.tr,uvex-safety.uz#$#body,html { overflow: auto !important; position: initial !important; }
@@ -9321,6 +9407,7 @@ gewerbegebiete.de#%#//scriptlet('ubo-rc.js', 'modal-overlay', '', 'stay')
 erli.pl##.IaWRa1h
 erli.pl#$#body,html { overflow: auto !important; position: initial !important; }
 paradoxwikis.com#$#body { position: static !important; overflow: auto !important; width: auto !important; }
+catawiki.com#$#body,html { height: auto !important; overflow: auto !important }
 backmarket.co.uk,backmarket.es,backmarket.de,backmarket.be,backmarket.at,backmarket.fr,backmarket.gr,backmarket.fi,backmarket.ie,backmarket.it,thebackmarket.nl,backmarket.pt,backmarket.se,backmarket.sk,backmarket.com##.fixed.z-50
 backmarket.de##.bottom-0
 n26.com#$#body,html { overflow: auto !important; position: initial !important; }
@@ -9360,6 +9447,7 @@ elespanol.com#$#body,html { overflow: auto !important; position: initial !import
 airfrance.ae,airfrance.am,airfrance.at,airfrance.be,airfrance.bf,airfrance.bg,airfrance.bj,airfrance.ca,airfrance.cd,airfrance.cg,airfrance.ch,airfrance.cl,airfrance.cm,airfrance.co.ao,airfrance.co.il,airfrance.co.jp,airfrance.co.kr,airfrance.co.th,airfrance.co.uk,airfrance.co.za,airfrance.com.ar,airfrance.com.au,airfrance.com.br,airfrance.com.cn,airfrance.com.co,airfrance.com.do,airfrance.com.eg,airfrance.com.hk,airfrance.com.jo,airfrance.com.kh,airfrance.com.lb,airfrance.com.mx,airfrance.com.tr,airfrance.com.tw,airfrance.com.uy,airfrance.cz,airfrance.de,airfrance.dj,airfrance.dk,airfrance.dz,airfrance.es,airfrance.fi,airfrance.fr,airfrance.ga,airfrance.gf,airfrance.gp,airfrance.hr,airfrance.ht,airfrance.hu,airfrance.id,airfrance.ie,airfrance.in,airfrance.it,airfrance.lu,airfrance.ma,airfrance.mg,airfrance.ml,airfrance.mq,airfrance.mu,airfrance.my,airfrance.ne,airfrance.ng,airfrance.nl,airfrance.no,airfrance.pa,airfrance.pe,airfrance.pf,airfrance.pl,airfrance.pt,airfrance.re,airfrance.ro,airfrance.rs,airfrance.ru,airfrance.sa,airfrance.se,airfrance.sg,airfrance.si,airfrance.sk,airfrance.sn,airfrance.tg,airfrance.tn,airfrance.ua,airfrance.us,airfrance.vn#$#body,html { overflow: auto !important; position: initial !important; }
 waitrose.com#%#//scriptlet('ubo-rc.js', 'modalOpen___gZykv', 'body')
 storyhouseegmont.dk,storyhouseegmont.no,storyhouseegmont.se,egmont.com,nordiskfilm.com#%#//scriptlet('ubo-rc.js', 'cookie-bar', '', 'stay')
+tallink.com#$#.cws-modal-open { overflow: auto !important; pointer-events: auto !important; }
 faq.whatsapp.com,blog.whatsapp.com,www.whatsapp.com#%#//scriptlet('ubo-rc.js', 'hasCookieBanner', 'body', 'stay')
 akaanseutu.fi,alueviesti.fi,kiuruvesilehti.fi,lempaala.ideapark.fi,lvs.fi,olutposti.fi,orivedensanomat.fi,pirmediat.fi,radiosun.fi,shl.fi,urjalansanomat.fi,ylojarvenuutiset.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')
 anna.fi#%#//scriptlet('ubo-set.js', 'tcfAllowUseCookies', 'true')
@@ -9429,6 +9517,7 @@ law.justia.com###newsletter-subscription-aside-widget
 usafacts.org###newsletter__sticky
 cyclinguptodate.com,dartsnieuws.com###newsletters
 lapresse.ca###newsletters-subscription-box-root
+thenextweb.com###newslettersignup
 newsmax.com###nmsbma__container
 irishpost.com###overlay-form-container
 moneyweb.co.za###overlayPromo
@@ -9438,7 +9527,6 @@ nerdist.com###pr-sidebar-subscribe
 jpost.com###premium-link
 houseofnasheats.com,justataste.com,lilluna.com,littlespoonfarm.com###savetherecipe
 12tomatoes.com###sg_email
-aserto.com,film-news.co.uk,game-news.co.uk,music-news.com,theatre-news.com###sign-up
 tomklingenstein.com###sign-up-form
 peanutbutterrunner.com###signup-container
 history.com###sticky-email-updates
@@ -9486,6 +9574,7 @@ brownstone.org##.astra-advanced-hook-7207
 digitaltrends.com##.b-in-content-shortcode
 peanutbutterrunner.com##.b-modal
 executivegov.com##.banner-mh
+royalsocietypublishing.org##.banner-wrapper
 bringatrailer.com##.bat-theme-widget-constant-contact
 knowyourmeme.com##.beehiiv-newsletter-signup-container
 allaboutcircuits.com##.bg-newsletter
@@ -9570,6 +9659,7 @@ aircargonext.com,baltimoremagazine.com,cargofacts.com,deseret.com,govtech.com,gv
 iflscience.com##.header-secondary
 a-z-animals.com##.hello-bar-container
 press.asimov.com##.hero-signup-wrap
+vinepair.com##.home-email-cta
 guidingtech.com##.home-form
 inc42.com,thechunkychef.com,yesmagazine.org##.home-subscribe
 democracynow.org##.home_daily_digest
@@ -9589,7 +9679,6 @@ outkick.com##.item-newsletter
 guidingtech.com##.join-newsletter
 atlasobscura.com##.js-email-ask-form
 duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##.js-footer-card
-usafacts.org##.js-newsletter--expand
 gamespot.com##.js-nlsub
 qz.com##.js_qz_newsletter_signup_placeholder
 e-flux.com##.landing-subscribe
@@ -9607,10 +9696,10 @@ decrypt.co##.max-w-prose
 elespanol.com##.md-suscription
 metro.co.uk##.metro-email-signup
 metro.co.uk##.metro-email-signup-mpu
-misinforeview.hks.harvard.edu##.misinfo-banner
 lung.org##.modaal-overlay
 cracked.com##.module-newsletter
 msnbc.com##.msnbcDaily__footer
+cloudflare.com##.mt6.ph2.bg-blue4
 visualcapitalist.com##.mvp-widget-home-head
 beaumontenterprise.com,ctpost.com,expressnews.com,greenwichtime.com,houstonchronicle.com,lmtonline.com,manisteenews.com,michigansthumb.com,middletownpress.com,mrt.com,myjournalcourier.com,myplainview.com,nhregister.com,ourmidland.com,registercitizen.com,sfchronicle.com,stamfordadvocate.com,theintelligencer.com##.mw1200px.rel
 mayoclinic.org##.myc-subscription-form
@@ -9638,9 +9727,7 @@ csoonline.com##.newsletter-subscription-small
 eatthis.com##.newsletter-window
 forward.com,gadgets-africa.com,ijnet.org,jam-news.net,webmd.com##.newsletter-wrapper
 livemint.com##.newsletterRHS
-usafacts.org##.newsletter__bg
 designmynight.com,soaps.sheknows.com,theblaze.com##.newsletter__container
-usafacts.org##.newsletter__header
 cnn.com##.newsletter_deals
 themoscowtimes.com##.newsletterbanner
 flatpanelshd.com##.newslettercontainer
@@ -9661,6 +9748,7 @@ hbr.org##.persistent-banner
 washingtontimes.com##.piano-fixed-footer-two
 thecooldown.com,wanderlust.co.uk##.popup-box
 dmarge.com##.popup-subscribe
+venturebeat.com##.post-boilerplate
 themarshallproject.org##.post-footer-subscribe-promo
 earthsky.org,kitchentreaty.com##.post-subscribe
 bittmanproject.com##.pp-modal-wrap
@@ -9778,7 +9866,7 @@ chron.com,sfgate.com#?#.col1span3:-abp-contains(Newsletters)
 politicalwire.com#?##custom_html-12:-abp-contains(newsletters)
 entrepreneur.com#?#.p-6.justify-center:-abp-contains(Daily newsletter)
 ew.com#?#.comp > strong:-abp-contains(newsletter)
-notateslaapp.com#?#.mobile-only-on-col-ab:-abp-contains(Subscribe)
+fastcompany.com#?#.pb-6:-abp-contains(Newsletter)
 officialcharts.com#?#.border-brand-pink:-abp-contains(inbox)
 pcmag.com#?#.md\:decorative-horizontal-lines:-abp-contains(subscribe)
 people.com#?#strong:-abp-contains(daily newsletter)
@@ -9854,9 +9942,6 @@ alexandracooks.com,australiangolfdigest.com.au,matomo.org,coloradotimesrecorder.
 lowpass.cc,readergrev.com,objectivebayesian.com,monopoly.marketecture.tv,jointhefollowup.com#%#//scriptlet('ubo-set-cookie.js', 'popup_closed', 'true')
 insider.fitt.co##.fitt-subscribe-pop-up-window
 insider.fitt.co#%#//scriptlet('ubo-rc.js', 'subscribe-pop-active', 'body', 'stay')
-bucketlistly.blog##.footer-newsletter-wrapper
-bucketlistly.blog##.modal-overlay
-bucketlistly.blog#$#body,html { overflow: auto !important; position: initial !important; }
 restofworld.org#%#//scriptlet('ubo-rc.js', 'blocking-signup', 'html', 'stay')
 history.com#$#body,html { overflow: auto !important; position: initial !important; }
 theepochtimes.com#$#body,html { overflow: auto !important; position: initial !important; }
@@ -9946,7 +10031,6 @@ olhardigital.com.br##.newsV2-assinar
 noticiasaominuto.com##.newsletter-form-block
 correiobraziliense.com.br##.revue-embed
 tecnoblog.net##.tb-newsletter
-gkpb.com.br##.tdi_143
 interfax.ru##.bss_show_subscribe
 tonkosti.ru##.journal-subscribe
 aif.ru##.overlay
@@ -9963,10 +10047,10 @@ fingerhut.com###subscribe-app
 browserling.com###web-subscribe2
 takealot.com##.Toastify
 dicksmith.co.nz,dicksmith.com.au,kogan.com,mattblatt.com.au##._1iiWS
-guitarcenter.com##.bg-borderMoreLightColor
 anthropologie.com,freepeople.com,urbanoutfitters.com##.c-pwa-email-signup--footer
 logitechg.com##.email-subscription
 iherb.com##.email-subscription-container
+edmfast.com,joelinksstore.com,priceblaze.com,rosmancomputers.com.au,t-shirt.ca,theonlinedrugstore.com,youritdelivered.com##.emthemesModez-footer-topColumns-wrapper
 crutchfield.com##.footer-card-email
 keychron.com##.footer-col--newsletter
 walgreens.com##.footer__email-sign-up
@@ -9977,7 +10061,6 @@ chaussures.fr,eapavi.lv,ecipele.hr,ecipo.hu,eobuv.cz,eobuv.sk,eobuwie.com.pl,epa
 bhphotovideo.com##.newsletter_PK8HvolxQy
 officeworks.com.au##.ow-signup
 anacondastores.com,harrisscarfe.com.au,spotlightstores.com##.promo-banner
-theroyaloakmarylebone.com##.pum
 samsclub.com##.sc-footer-desktop-sect01
 epomaker.com##.sf__newsletter-section
 geekbuying.com##.sub_bg
@@ -9994,6 +10077,7 @@ ilgiardinodeilibri.it###footer-nl-form
 qvc.it###splioNewsFooter
 refurbed.at,refurbed.de,refurbed.dk,refurbed.fr,refurbed.ie,refurbed.it,refurbed.nl,refurbed.se##.bg-refurbed-blue
 ditano.com##.container-box-email
+mmoga.co.uk,mmoga.com,mmoga.de,mmoga.es,mmoga.fr,mmoga.se##.footNewsletter
 downace.com#%#//scriptlet('ubo-acis.js', 'requestPermission')
 news18.com#%#//scriptlet('ubo-acis.js', 'serviceworker.register')
 autoevolution.com#$#body,html { height: auto !important; overflow: auto !important }
@@ -10021,6 +10105,8 @@ themonthly.com.au#%#//scriptlet('ubo-set-local-storage-item.js', 'rn', '$remove$
 tunein.com#%#//scriptlet('ubo-set-cookie.js', 'navBasedDialogManager', 'true')
 tunein.com#%#//scriptlet('ubo-set-cookie.js', 'hideMacDesktopDialog', 'true')
 trip.com#$#body { overflow: auto !important; position: initial !important; }
+player.fm##.bottom-promo-overlay
+player.fm#$#body,html { overflow: auto !important; position: initial !important; }
 wunderground.com#%#//scriptlet('ubo-rc.js', 'enable-sda', 'body', 'stay')
 linkedin.com#$#body { overflow: auto !important; position: initial !important; }
 coinpaprika.com#$#body { overflow: auto !important; position: initial !important; }
@@ -10073,6 +10159,7 @@ finance.yahoo.com##.YDC-Overlay
 finance.yahoo.com#$#html { overflow: auto !important; position: initial !important; }
 splashlearn.com,linuxbabe.com##.pum-active
 splashlearn.com,linuxbabe.com#$#html { overflow: auto !important }
+fastcompany.com#$#body,html { height: auto !important; overflow: auto !important }
 semrush.com#%#//scriptlet('ubo-set-session-storage-item.js', 'sem30_popup_shown', '1')
 clarin.com#%#//scriptlet('ubo-nostif.js', '_waitingAuth0Counter')
 bestrecipes.com.au#%#//scriptlet('ubo-cookie-remover.js', 'br_mc')
@@ -11530,6 +11617,7 @@ tredy-fashion.de#%#//scriptlet('ubo-acis.js', 'jQuery', 'synchronizeCookieNoteCo
 hildegardis-krankenhaus.de,st-agatha-krankenhaus.de#%#//scriptlet('ubo-acis.js', 'document.createElement', 'consent.cookiebot.com')
 connect.de#%#//scriptlet('ubo-acis.js', 'document.createElement', 'delivery/cmp')
 archiveofourown.org#%#//scriptlet('ubo-acis.js', '$j', 'acceptTOS')
+xe.com##button:has-text(Accept):upward(section)
 titantv.com,musicfeeds.com.au,minecraftalpha.net,worldpopulationreview.com,boston.com,britannica.com,download.mokeedev.com,freep.com,ijr.com,inquirer.net,legacy.com,nationalreview.com,nofilmschool.com,order-order.com,savvytime.com,techlicious.com,technicpack.net,thedraftnetwork.com,wrestlezone.com#%#//scriptlet('ubo-acis.js', 'document.createElement', 'admiral')
 nature.com#$?#.cc-banner { remove: true; }
 link.springer.com#$?#.cc-banner { remove: true; }
@@ -11558,6 +11646,7 @@ dw.com#$#body[style="overflow: hidden;"] { overflow: auto !important; }
 dw.com#%#//scriptlet('ubo-set.js', 'Object.prototype.hasConsent', 'trueFunc')
 bauhaus.no,bauhaus.se,parex.gr,lotto.it,paulandshark.com,taf.ba,dare2tri.com,t3micro.fr,t3micro.de,t3micro.it,t3micro.dk,t3micro.pl,t3micro.es,t3micro.pt,t3micro.se,t3micro.co.uk,t3micro.nl,t3micro.at,t3micro.be##.modals-overlay
 bauhaus.no,bauhaus.se,parex.gr,lotto.it,paulandshark.com,taf.ba,dare2tri.com,t3micro.fr,t3micro.de,t3micro.it,t3micro.dk,t3micro.pl,t3micro.es,t3micro.pt,t3micro.se,t3micro.co.uk,t3micro.nl,t3micro.at,t3micro.be#$#html { height: auto !important; overflow: auto !important }
+authentic-plaza.com,kikka-activechair.com,bolerojunior.gr,szappan.hu,sanel.lv,zivara.ro,thegreenegg.ch,allegrigirarrosti.com,deco-in.ro,beboo.ro,sinopiarestauro.it,casabottega.net,shandhigson.co.uk,roscomponents.com,laboutiquemajorpigalle.com,armeriavarona.com,design-floral.ro,climahosteleria.es,svaposhop.fr,kalkito.gr,tuttopasticceria.it,markoshop.si,aminoprohealthcare.com#$#body,html { height: auto !important; overflow: auto !important }
 doka.com#%#//scriptlet('ubo-set-cookie.js', 'hide_cookieoverlay_v2', '1', '', 'reload', '1')
 doka.com#%#//scriptlet('ubo-set-cookie.js', 'socialmedia-cookies_allowed_v2', '0')
 doka.com#%#//scriptlet('ubo-set-cookie.js', 'performance-cookies_allowed_v2', '0')
@@ -11700,8 +11789,6 @@ gamestar.de#%#//scriptlet('ubo-rmnt.js', 'script', 'Didomi')
 greatist.com,healthline.com,medicalnewstoday.com,psychcentral.com###modal-host
 greatist.com,healthline.com,medicalnewstoday.com,psychcentral.com#$#body { overflow: auto !important; position: initial !important; }
 nebo.app#%#//scriptlet('ubo-rc.js', 'fixed', '', 'stay')
-la-becanerie.com###body-overlay
-la-becanerie.com#$#body,html { overflow: auto !important; position: initial !important; }
 gemeinsam-klasse-sein.de,tk.de#$#body,html { overflow: auto !important; position: initial !important; }
 engeldirekt.de,fz-juelich.de,etransport.pl,skandia.se#$#body,html { overflow: auto !important; position: initial !important; }
 groupeonepoint.com#%#//scriptlet('ubo-rc.js', 'noScroll', '', 'stay')
@@ -11712,10 +11799,12 @@ bemmaisseguro.com#%#//scriptlet('ubo-rc.js', 'blocked-body', 'body', 'stay')
 salvagny.org#%#//scriptlet('ubo-rc.js', 'no-scroll', 'body', 'stay')
 johnlewis.com#$#html { overflow: auto !important; position: initial !important; }
 scheidegger.nl#%#//scriptlet('ubo-rc.js', 'has-no-scroll', '', 'stay')
+takko.com#$#body,html { overflow: auto !important; position: initial !important; }
 jugend-praesentiert.de#%#//scriptlet('ubo-rc.js', 'messages-active', '', 'stay')
 allegro.cz,allegro.pl,allegrolokalnie.pl###opbox-gdpr-consents-modal
 transparency.fb.com#%#//scriptlet('ubo-rc.js', '_31e', 'div', 'stay')
 transparency.fb.com#%#//scriptlet('ubo-rc.js', 'hasCookieBanner', 'body', 'stay')
+empfohlen.de,postbank.de#$#body,html { overflow: auto !important; position: initial !important; }
 21vek.by#$#body,html { position: static !important; overflow: auto !important; width: auto !important; }
 leslipfrancais.fr#%#//scriptlet('ubo-rc.js', 'no-scroll', 'body', 'stay')
 phoenix.de#%#//scriptlet('ubo-rc.js', 'blured', '', 'stay')
@@ -11733,6 +11822,7 @@ bbva.es,bbvauk.com,bbva.be,bbva.fr,bbva.it,bbva.pt#%#//scriptlet('ubo-rc.js', 'c
 bbva.es,bbvauk.com,bbva.be,bbva.fr,bbva.it,bbva.pt#%#//scriptlet('ubo-nosiif.js', 'scroll')
 sparbankenikarlshamn.se,olandsbank.se,atvidabergsspb.se,avsparbank.se,alemssparbank.se,virserumssparbank.se,vimmerbysparbank.se,varbergssparbank.se,wwsparbank.se,vadstenasparbank.se,valdemarsvikssparbank.se,ulricehamnssparbank.se,tjorns-sparbank.se,tidaholms-sparbank.se,tjustbanken.se,sodrahestrasparbank.se,sodradalarnassparbank.se,sormlandssparbank.se,sparbankenvm.se,sparbankensjuharad.se,sparbankengoinge.se,sparbankengotland.se,sparbankeneken.se,sparbankenalingsas.se,sparbankenboken.se,snapphanebygdenssparbank.se,skurupssparbank.se,sidensjosparbank.se,salasparbank.se,roslagenssparbank.se,orustsparbank.se,norrbarke-sparbank.se,mjobackssparbank.se,markarydssparbank.se,ltvsparbank.se,leksandssparbank.se,lekebergssparbank.se,laholmssparbank.se,kindaydresparbank.se,ivetoftasparbank.se,sparbankennord.se,sparbankentanum.se,sparbankentranemo.se,sparbankenskane.se,sparbankenskaraborg.se,sparbankenrekarne.se,sparbankenlidkoping.se,sparbankenenkoping.se,hogsbysparbank.se,sparbanken.se,swedbank.lv,swedbank.cn,swedbank.fi,swedbank.se,swedbank.no,swedbank.dk,haradssparbanken.se,halsinglandssparbank.se,fryksdalenssparbank.se,ekebysparbank.se,dalsbank.se,bjursassparbank.se,tidaholms-sparbank.se,smsparbank.se,sparbankenvm.se,falkenbergssparbank.se#$#body,html { overflow: auto !important; position: initial !important; }
 tomshw.it,brutkasten.com,rockol.it#$#body,html { overflow: auto !important; position: initial !important; }
+amara.org#$#body,html { overflow: auto !important; position: initial !important; }
 arbeitsagentur.de##.modal-backdrop
 suntech.cz#%#//scriptlet('ubo-rc.js', 'modal-show', '', 'stay')
 uvex-group.com,uvex-safety.rs,uvex-safety.com.au,uvex-safety.be,uvex-safety.hr,uvex-safety.ee,uvex-safety.com,uvex-safety.co.id,uvex-safety.lv,uvex-safety.jp,uvex-safety.nl,uvex-safety.pt,uvex-safety.si,uvex-safety.at,uvex-safety.bg,uvex-safety.cz,uvex-safety.hu,uvex-safety.it,uvex-safety.lt,uvex-safety.com.my,uvex-safety.ro,uvex-safety.com.sg,uvex.co.za,uvex-safety.ch,uvex-safety.by,uvex-safety.se,uvex-heckel.fr,uvex-safety.in,uvex-safety.kz,uvex-safety.lu,uvex-safety.ae,uvex-safety.pl,uvex-safety.sk,uvex-safety.es,uvex-safety.com.tr,uvex-safety.uz#$#body,html { overflow: auto !important; position: initial !important; }
@@ -11752,6 +11842,7 @@ gewerbegebiete.de#%#//scriptlet('ubo-rc.js', 'modal-overlay', '', 'stay')
 erli.pl##.IaWRa1h
 erli.pl#$#body,html { overflow: auto !important; position: initial !important; }
 paradoxwikis.com#$#body { position: static !important; overflow: auto !important; width: auto !important; }
+catawiki.com#$#body,html { height: auto !important; overflow: auto !important }
 backmarket.co.uk,backmarket.es,backmarket.de,backmarket.be,backmarket.at,backmarket.fr,backmarket.gr,backmarket.fi,backmarket.ie,backmarket.it,thebackmarket.nl,backmarket.pt,backmarket.se,backmarket.sk,backmarket.com##.fixed.z-50
 backmarket.de##.bottom-0
 n26.com#$#body,html { overflow: auto !important; position: initial !important; }
@@ -11791,6 +11882,7 @@ elespanol.com#$#body,html { overflow: auto !important; position: initial !import
 airfrance.ae,airfrance.am,airfrance.at,airfrance.be,airfrance.bf,airfrance.bg,airfrance.bj,airfrance.ca,airfrance.cd,airfrance.cg,airfrance.ch,airfrance.cl,airfrance.cm,airfrance.co.ao,airfrance.co.il,airfrance.co.jp,airfrance.co.kr,airfrance.co.th,airfrance.co.uk,airfrance.co.za,airfrance.com.ar,airfrance.com.au,airfrance.com.br,airfrance.com.cn,airfrance.com.co,airfrance.com.do,airfrance.com.eg,airfrance.com.hk,airfrance.com.jo,airfrance.com.kh,airfrance.com.lb,airfrance.com.mx,airfrance.com.tr,airfrance.com.tw,airfrance.com.uy,airfrance.cz,airfrance.de,airfrance.dj,airfrance.dk,airfrance.dz,airfrance.es,airfrance.fi,airfrance.fr,airfrance.ga,airfrance.gf,airfrance.gp,airfrance.hr,airfrance.ht,airfrance.hu,airfrance.id,airfrance.ie,airfrance.in,airfrance.it,airfrance.lu,airfrance.ma,airfrance.mg,airfrance.ml,airfrance.mq,airfrance.mu,airfrance.my,airfrance.ne,airfrance.ng,airfrance.nl,airfrance.no,airfrance.pa,airfrance.pe,airfrance.pf,airfrance.pl,airfrance.pt,airfrance.re,airfrance.ro,airfrance.rs,airfrance.ru,airfrance.sa,airfrance.se,airfrance.sg,airfrance.si,airfrance.sk,airfrance.sn,airfrance.tg,airfrance.tn,airfrance.ua,airfrance.us,airfrance.vn#$#body,html { overflow: auto !important; position: initial !important; }
 waitrose.com#%#//scriptlet('ubo-rc.js', 'modalOpen___gZykv', 'body')
 storyhouseegmont.dk,storyhouseegmont.no,storyhouseegmont.se,egmont.com,nordiskfilm.com#%#//scriptlet('ubo-rc.js', 'cookie-bar', '', 'stay')
+tallink.com#$#.cws-modal-open { overflow: auto !important; pointer-events: auto !important; }
 faq.whatsapp.com,blog.whatsapp.com,www.whatsapp.com#%#//scriptlet('ubo-rc.js', 'hasCookieBanner', 'body', 'stay')
 akaanseutu.fi,alueviesti.fi,kiuruvesilehti.fi,lempaala.ideapark.fi,lvs.fi,olutposti.fi,orivedensanomat.fi,pirmediat.fi,radiosun.fi,shl.fi,urjalansanomat.fi,ylojarvenuutiset.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')
 anna.fi#%#//scriptlet('ubo-set.js', 'tcfAllowUseCookies', 'true')
@@ -11872,9 +11964,6 @@ alexandracooks.com,australiangolfdigest.com.au,matomo.org,coloradotimesrecorder.
 lowpass.cc,readergrev.com,objectivebayesian.com,monopoly.marketecture.tv,jointhefollowup.com#%#//scriptlet('ubo-set-cookie.js', 'popup_closed', 'true')
 insider.fitt.co##.fitt-subscribe-pop-up-window
 insider.fitt.co#%#//scriptlet('ubo-rc.js', 'subscribe-pop-active', 'body', 'stay')
-bucketlistly.blog##.footer-newsletter-wrapper
-bucketlistly.blog##.modal-overlay
-bucketlistly.blog#$#body,html { overflow: auto !important; position: initial !important; }
 restofworld.org#%#//scriptlet('ubo-rc.js', 'blocking-signup', 'html', 'stay')
 history.com#$#body,html { overflow: auto !important; position: initial !important; }
 theepochtimes.com#$#body,html { overflow: auto !important; position: initial !important; }
@@ -11926,6 +12015,9 @@ shojiwax.com,skepticalraptor.com#%#//scriptlet('ubo-set-cookie.js', 'jetpack_pos
 atlasobscura.com#$#body { overflow: auto !important; position: initial !important; }
 statista.com#$#body,html { overflow: auto !important; position: initial !important; }
 logicool.co.jp#$#body[style="overflow: hidden;"] { overflow: auto !important; }
+trutone.ca,frontrunners.ca,fruugo.co.uk,lull.com,otterbox.com,pulseuniform.com,saksfifthavenue.com,shop.pbs.org,szucstermekek.com,zumub.com##.modal
+trutone.ca,frontrunners.ca,fruugo.co.uk,lull.com,otterbox.com,pulseuniform.com,saksfifthavenue.com,shop.pbs.org,szucstermekek.com,zumub.com##.modal-backdrop
+trutone.ca,frontrunners.ca,fruugo.co.uk,lull.com,otterbox.com,pulseuniform.com,saksfifthavenue.com,shop.pbs.org,szucstermekek.com,zumub.com#$#body { overflow: auto !important; position: initial !important; }
 urbanoutfitters.com#%#//scriptlet('ubo-set-local-storage-item.js', 'modalViewed', '1')
 wahaca.co.uk#%#//scriptlet('ubo-rc.js', 'oxy-modal-active', 'body', 'stay')
 girlscoutshop.com#%#//scriptlet('ubo-set-cookie.js', 'newsletterLightboxDisplayed', 'true')
@@ -11948,7 +12040,6 @@ columbiasportswear.fr#%#//scriptlet('ubo-set-cookie.js', 'Columbia_FR_emailPopup
 columbiasportswear.es#%#//scriptlet('ubo-set-cookie.js', 'Columbia_ES_emailPopup', '1')
 columbiasportswear.co.uk#%#//scriptlet('ubo-set-cookie.js', 'Columbia_UK_emailPopup', '1')
 logitech.com#$#body,html { overflow: auto !important; position: initial !important; }
-www.razer.com##.modal-newsletter
 www.razer.com#$#body { overflow: auto !important; position: initial !important; }
 sears.com#%#//scriptlet('ubo-set-session-storage-item.js', 'banner_session', 'true')
 sharperimage.com#%#//scriptlet('ubo-set-cookie.js', 'mystery_popup', 'true')
@@ -11974,6 +12065,7 @@ kicker.de##.kick__scroll-top-ic
 ||sibforms.com^$domain=logiciels.pro
 ||societe-des-avis-garantis.fr/wp-content/*/widgets/$third-party
 sncf-connect.com###block-patchonboardinginvictus
+cio-online.com###dialogueBox
 comment-economiser.fr###goup
 comment-economiser.fr###simplemodal-container
 lemondeinformatique.fr##.box-question
@@ -11992,6 +12084,7 @@ baidu.com##.app-side-banner
 mail.qq.com##.app_qrcode
 bilibili.com##.backup
 oschina.net##.codeBlock
+qidian.com##.focus-img
 qidian.com##.jsDownloadLink
 699pic.com##.recharge
 pan.baidu.com##.rights-section
@@ -12085,10 +12178,8 @@ allocine.fr##.button-sign-social
 boursedirect.fr##.content-social
 lefigaro.fr##.fig-share-mobile-layer
 lefigaro.fr##.fig-sharebar
-clubic.com##.list-footer-rs
 lesnumeriques.com##.ln__m-shr
 quechoisir.org##.qc-footer_social-media-links
-phonandroid.com##.social-networks
 francetvinfo.fr##.social-zone__wrapper
 arcinfo.ch,lacote.ch,lenouvelliste.ch##button[aria-label^="Partager"]
 jutarnji.hr##.item_social_share
@@ -12117,6 +12208,7 @@ metropol.hu##.header-right-socials
 index.hu,totalcar.hu,velvet.hu##.megoszt
 magyarnemzet.hu##.share-container
 centrometeoitaliano.it,leggo.it###box-social
+ilmeteo.it###condividi_news
 ilfattoalimentare.it###custom_html-8
 ilfattoalimentare.it###custom_html-9
 ilfattoquotidiano.it###glfb
@@ -12159,6 +12251,7 @@ ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.n
 ||imyfone.com/assets/js/media_share/
 ||ministop.co.jp/site_common/js/sns_
 ||plugins.mixi.jp/favorite.pl?$third-party
+srad.jp###article-bottom
 news.j-wave.co.jp###snsLink
 asahi.com##.SnsUtilityArea
 oricon.co.jp##.block-sub-sns
@@ -12171,13 +12264,11 @@ srad.jp##.synd
 superesportes.com.br###shareitens
 tecnoblog.net###tb-banner-whatsapp
 xvideossexo.com###whatsapp
-uai.com.br##.bar-redes-sociais
 maisfutebol.iol.pt##.barrawhatsappDesktop
 estadao.com.br##.button-share-icon
 folha.uol.com.br##.c-follow-social-media
 globo.com##.container-card-follow-me
 poder360.com.br##.fixed-list
-agazeta.com.br##.flex.flex-row.list-none.m-0.p-0.bg-transparent
 folha.uol.com.br##.gallery-widget-carousel__info-share
 tviplayer.iol.pt##.icon-share
 uol.com.br##.jupiter-share
@@ -12187,10 +12278,7 @@ cmjornal.pt##.partilhas
 jcconcursos.com.br##.pl-1
 olhardigital.com.br##.share-header
 sicnoticias.pt##.share-toggle-wrapper
-diarioaveiro.pt,diariocoimbra.pt,diarioleiria.pt,diarioviseu.pt##.sociais_div
-iol.pt##.social-top
 cnnbrasil.com.br##.social__footer
-tvi.iol.pt##.social_media_links
 meiobit.com##.socialfloating
 uol.com.br##.solar-header-columnist-socialmedia-content
 cmjornal.pt##.subscrever_whatsapp
@@ -12218,6 +12306,7 @@ milenio.com###share-icons-container
 excelsior.com.mx###social-bottom-node
 europapress.es###subnavegacionFixed
 elespectador.com##.Button_googleAlert
+adn40.mx##.ListSiguenos-SocialStrip
 elpais.com.uy##.Page-actions-wrapper
 rpp.pe##.article__follow
 elespanol.com##.article__footer-nav
@@ -12506,6 +12595,7 @@ olx.ua##div[data-testid="cookies-overlay__container"]
 ||remixshop.com/bg/site/ajaxCheckCookiePolicy
 ||posta.sk/cookies-consents/v1/cookies-consents.js
 ||amazonaws.com/sc-tagmanager/nox-formulatv.js$domain=formulatv.com
+||karaca.com/3p/bundles.efilli.com/
 ||tmgrup.com.tr^*/tmdconsent-
 ||quechoisir.org/push/
 ||sibforms.com/serve/$domain=leptidigital.fr
@@ -13041,6 +13131,7 @@ concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.b
 concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.be,sap.com,tmz.com,tripit.com#@##truste-consent-track
 concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.be,sap.com,tmz.com,tripit.com#@#.truste_box_overlay
 concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.be,sap.com,tmz.com,tripit.com#@#.truste_overlay:not(body):not(html)
+@@||connect.nosto.com^$domain=merkur.si|muji.us
 @@||loader.wisepops.com/get-loader.js$domain=bluecinema.ch
 @@||zdassets.com/ekr/snippet.js$domain=app.buidlbox.io|bitsacard.com|consumercellular.com|creative.com|help.textnow.com|investopedia.com|jeedoo.com|meundies.com|myurbanjungle.com|nvidia.eu|pionex.com|portal.afterpay.com|skroutz.gr|streamelements.com|superbet.pl|support.zonealarm.com|xjuggler.de
 @@||assure.ameli.fr^*/smart-app-banner.js$~third-party
@@ -13122,6 +13213,7 @@ concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.b
 @@||moneyweb.co.za^*/social-shares.min.js?
 @@||ncsoft.jp/js/common/jws/socialBar.js$~third-party
 @@||nhk.or.jp/common/sns/nol_share.js$script,~third-party
+@@||player.fm^*/social-icons/$image
 @@||svgrepo.com/show/$image,~third-party
 @@||wettercomassets.com/wcomv5/images/footer/$domain=wetter.com
 @@||yaplakal.com/html/static/$image,~third-party
