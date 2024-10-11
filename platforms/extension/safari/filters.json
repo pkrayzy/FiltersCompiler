@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.55.87",
-			"timeUpdated": "2024-10-11T06:31:25+0000",
+			"version": "2.3.55.88",
+			"timeUpdated": "2024-10-11T08:31:27+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -519,8 +519,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/9_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.26.82",
-			"timeUpdated": "2024-10-11T07:32:50+0000",
+			"version": "2.0.26.83",
+			"timeUpdated": "2024-10-11T08:32:45+0000",
 			"deprecated": false,
 			"languages": [
 				"es",
@@ -615,8 +615,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.10.75",
-			"timeUpdated": "2024-10-11T06:33:05+0000",
+			"version": "2.2.10.76",
+			"timeUpdated": "2024-10-11T08:32:59+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -696,8 +696,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.49.21",
-			"timeUpdated": "2024-10-11T06:33:11+0000",
+			"version": "2.0.49.22",
+			"timeUpdated": "2024-10-11T08:33:05+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -740,8 +740,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/20_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.17.5",
-			"timeUpdated": "2024-10-10T11:32:51+0000",
+			"version": "2.0.17.6",
+			"timeUpdated": "2024-10-11T08:33:06+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1657,8 +1657,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.23.66",
-			"timeUpdated": "2024-10-11T05:32:45+0000",
+			"version": "2.1.23.67",
+			"timeUpdated": "2024-10-11T08:33:12+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
