@@ -1,9 +1,9 @@
-! Checksum: 1ZwpYAtSRl8b5nzivRWlfw
-! Diff-Path: ../patches/14/14-s-1728624977-3600.patch
+! Checksum: fsfw8Cq6lSebfOIlbSBR0A
+! Diff-Path: ../patches/14/14-s-1728628633-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.10.74
-! TimeUpdated: 2024-10-11T05:32:32+00:00
+! Version: 2.2.10.75
+! TimeUpdated: 2024-10-11T06:33:05+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2487,6 +2487,7 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+augsburger-allgemeine.de#%#//scriptlet('trusted-click-element', '.pgwl_purGatewayLayer-body-action > button[onclick*="acceptAll"]')
 se.pl#$#div[id^="consent-modal-"] { display: none !important; }
 se.pl#$#body[style*="overflow:"] { overflow: auto !important; }
 multitronic.fi#%#//scriptlet('trusted-set-cookie-reload', 'consentCookie', '{"consentAnalytics":false,"consentAds":false}')
@@ -4799,8 +4800,8 @@ plus-plus.tv#%#//scriptlet('remove-class', 'show-cookies', 'body#page-plusplus')
 smartthingsfind.samsung.com##footer + div.fixed.bottom-0
 archive.org##app-footer
 premium.mts.ru#%#//scriptlet('set-local-storage-item', 'cookiesAllowed', 'true')
-eltrox.pl,modregohogar.com###cookiesplus-overlay
-eltrox.pl,modregohogar.com###cookiesplus-modal
+lamaxshop.pl,eltrox.pl,modregohogar.com###cookiesplus-overlay
+lamaxshop.pl,eltrox.pl,modregohogar.com###cookiesplus-modal
 zumub.com###bottom_cookie
 sabina.com#$?#.fancybox-overlay-fixed:has(> div.cookiesplus-modal) { display: none !important; }
 sabina.com#$#.fancybox-lock body { overflow: auto !important; }
@@ -15133,7 +15134,7 @@ grland.info,flash.pt,wackojaco.com,gpblog.com#%#//scriptlet('trusted-click-eleme
 !       will be done and products with new Scriptlets lib will be released
 kupi.cz#%#(()=>{let t;const e=new MutationObserver(((e,o)=>{const n=t?.querySelector('button[data-testid="button-agree"]');n&&(setTimeout((()=>{n.click()}),500),o.disconnect())})),o={apply:(o,n,c)=>{const a=Reflect.apply(o,n,c);return n.matches(".szn-cmp-dialog-container")&&(t=a),e.observe(a,{subtree:!0,childList:!0}),a}};window.Element.prototype.attachShadow=new Proxy(window.Element.prototype.attachShadow,o)})();
 !
-cmp.seznam.cz#%#//scriptlet('trusted-click-element', '.szn-cmp-dialog-container >>> button[data-testid="cw-button-non-targeted-ad"]', '', '500')
+cmp.seznam.cz#%#//scriptlet('trusted-click-element', '.szn-cmp-dialog-container >>> button[data-testid="cw-button-agree-with-ads"]', '', '500')
 speedtest.vodafone.de#%#//scriptlet('trusted-click-element', 'div[data-cy="modal-dialog"] .css-1kjdcue > .css-s9m06g > div[role="button"][style="cursor: pointer; display: inline;"]', '', '500')
 bergans.com#%#//scriptlet('trusted-set-cookie-reload', 'cc', '2:f')
 seventeen-web.jp##.cookie-consent-footer
