@@ -1,9 +1,9 @@
-! Checksum: 4sS8Zf+K5Hlw33vI1la3bw
-! Diff-Path: ../patches/235/235-s-1728464899-14400.patch
+! Checksum: xnGC7AL2PsgvYIMtxfGsLg
+! Diff-Path: ../patches/235/235-s-1728651982-14400.patch
 ! Title: Persian Blocker
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.4.93
-! TimeUpdated: 2024-10-09T09:01:46+00:00
+! Version: 2.0.4.94
+! TimeUpdated: 2024-10-11T13:01:46+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: PersianBlocker
@@ -279,6 +279,7 @@ niloblog.com##bloglinksblock
 ||rozblog.com/code/popup^$script,~third-party
 ||rzb.ir/code/popup^
 ! >> S <<
+||spellpop.ir^
 ||spellads.com^
 ||offers.sapra.ir^
 ! Example: gapfilm.ir
@@ -1567,6 +1568,8 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+||spotyfile.com/ip-jf.js^$script,third-party
+||skmusic.ir^$media,third-party,domain=music-irani.com
 mastertest.ir##div.post-content > div.fusion-builder-row-1 > div.fusion-row:has(> div.fusion-layout-column a[data-wpel-link="external"])
 ! https://github.com/MasterKia/PersianBlocker/pull/243
 ||mihantrader.com/media/images/ad^$image,~third-party
@@ -2140,7 +2143,7 @@ searchline.ir#$#* { -webkit-touch-callout: default !important; -webkit-user-sele
 ||api.snapp.doctor/tweety/api/v1/journey^$xmlhttprequest,~third-party,method=post
 snapp.doctor#@#.ads-banner
 ||ingest-data-afra.snappfood.dev^$third-party,domain=snappfood.ir
-||snappfood.ir/mobile/v2/user/load^$xmlhttprequest,~third-party,method=post
+! ||snappfood.ir/mobile/v2/user/load^$xhr,1p,method=post -- https://github.com/MasterKia/PersianBlocker/issues/261
 ! ||snappfood.ir^$xhr,1p,method=get,removeparam=optionalClient
 ! ||snappfood.ir^$xhr,1p,method=get,removeparam=client
 ! Snapp Taxi
@@ -2714,6 +2717,7 @@ zohur12.ir##.sideads
 ! https://github.com/MasterKia/PersianBlocker/issues/4
 ! https://github.com/MasterKia/PersianBlocker/issues/99
 ! https://github.com/MasterKia/PersianBlocker/issues/195
+! https://github.com/AdguardTeam/AdguardFilters/issues/190567
 ! zoomg.ir
 ! https://github.com/AdguardTeam/AdguardFilters/issues/28759
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78626
@@ -2724,7 +2728,7 @@ zohur12.ir##.sideads
 ||theforge.ir/intake/v2/rum/events^$xmlhttprequest,third-party,domain=zoomit.ir|zoomg.ir
 /ads^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
 /editorial/api/articles/*/visit^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
-zoomit.ir,zoomg.ir##div[class][width="100%"][height="100%"][style]:empty:matches-css-after(animation: 1.6s linear 0.5s infinite waveKeyframe):upward(3)
+zoomit.ir,zoomg.ir##div[class][width="100%"][height="100%"][style]:empty:upward(3)
 zoomtech.org##div.zoomtech-banner
 !-------------------------^ Site-Specific Filters ^-----------------------!
 !-------------------------v WebAmooz Warning List v-----------------------!
