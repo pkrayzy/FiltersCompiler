@@ -250,8 +250,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.0.70.83",
-			"timeUpdated": "2024-10-12T03:16:06+0000",
+			"version": "2.0.70.84",
+			"timeUpdated": "2024-10-12T10:58:29+0000",
 			"languages": []
 		},
 		{
@@ -379,8 +379,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.33.31",
-			"timeUpdated": "2024-10-12T03:24:03+0000",
+			"version": "2.1.33.32",
+			"timeUpdated": "2024-10-12T11:06:47+0000",
 			"languages": []
 		},
 		{
@@ -645,8 +645,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.32.46",
-			"timeUpdated": "2024-10-12T03:47:09+0000",
+			"version": "2.1.32.47",
+			"timeUpdated": "2024-10-12T11:29:53+0000",
 			"languages": []
 		},
 		{
