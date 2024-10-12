@@ -1,5 +1,5 @@
-! Checksum: hh1eLmoQzeF4abnxeAPi+g
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1728614181-3600.patch
+! Checksum: YCWdglu57Gfof6cEHIPrfA
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1728700539-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.9.82
@@ -38,6 +38,7 @@
 ||blog-rss.com^$third-party
 ||rssfetcher.blogsys.jp^
 ||blog.livedoor.jp/plugin/ldblog_rss_plugin.js
+||rssrank.net^$third-party
 ||tanganrss.com^$third-party
 ||fukugan.com^$third-party
 ||3site-rss.s3-ap-northeast-1.amazonaws.com^
@@ -506,7 +507,10 @@ anige-sokuhouvip.com##div[style^="border : 2px solid gray;height:245px; width:82
 2chblog.jp##.rss-pickup
 2chblog.jp##.rss-pickup-title
 animalch.net,usi32.com,gahalog.2chblog.jp##.rss-outer
+shuraba-matome.com###rss-area
 erogematome.com,syurabahazard.com,shuraba-matome.com,rebosoku.com##.toprss
+shuraba-matome.com##p[style="margin:0;"]
+shuraba-matome.com##.matome_roll
 anige-sokuhouvip.com##div[id^="top_center"]
 jumpmatome2ch.net###rss-top
 jumpmatome2ch.biz##.d-contents
@@ -679,6 +683,7 @@ blog.livedoor.jp##.rsstop
 blog.livedoor.jp##.tabmoji
 blog.livedoor.jp##.tabmoji2
 blog.livedoor.jp###rss3
+blog.livedoor.jp###container > div[style$="scrollbar-track-color:#ffffff;"]
 blog.livedoor.jp##.rss-sub
 blog.livedoor.jp###RSSbox
 blog.livedoor.jp###touter > div#rt-outer
@@ -890,6 +895,7 @@ vinmec.com##.global-thread-create-cta
 ||app.carnow.com/dealers/carnow_plugin.js$domain=hondacarsrockhill.com
 ||app.yellowmessenger.com/widget/main.js
 ||assets.kayako.com/messenger/
+||assets.livecall.io/accounts/*/widget.js
 ||assets.zendesk.com/embeddable_framework/main.js$domain=zarplata.ru
 ||autofaq.ai/widget/$third-party
 ||az601263.vo.msecnd.net/webview/*/embed.js
@@ -985,6 +991,7 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 ||widget.solvemate.com^
 ||cdn.legistco.ru^$third-party
 ||webchat.birdeye.com^$third-party
+||limetalk.com^$third-party
 ||tracker.tolvnow.com^$third-party
 ||synalio.com^$third-party
 ||chatbot.com^$third-party
@@ -1033,6 +1040,8 @@ sexuria.net,buhgalter.com.ua##.chat
 daemon-hentai.com###secondary > div.widget:last-child
 howdyho.net##.hollow
 javbangers.com,javtasty.com##.table > .block-chat
+lenov.ru##.lc_area
+lenov.ru##a[onclick^="window.open('/chat.php'"]
 mega.ru##.chatButton
 moluch.ru##.ask_out
 wiseeconomist.ru,zakon.today##.pravoved-ru-widget
@@ -1042,6 +1051,7 @@ wiseeconomist.ru,zakon.today##.pravoved-ru-widget
 ||collectcdn.com/launcher.js$domain=dila.ua
 ||csportal.directstar.ru^$domain=store.sony.ru
 ||hospitaloswaldocruz.my.salesforce.com^$domain=hospitaloswaldocruz.org.br
+||lenov.ru/engine/modules/light_chat/
 ||liquidweb.my.salesforce.com^$domain=nexcess.net
 ||procdncache.com/chat.php
 ||reactive.factor.ua/buhgalter911_chat/$domain=buhgalter.com.ua
@@ -1230,6 +1240,7 @@ inmediahk.net##section[role="main"] a[href="https://www.inmediahk.net/supportus"
 inmediahk.net##.banner-wrapper
 inmediahk.net##.donate-form
 novayagazeta.eu#?#main > header ~ div[class]:not([id]):has(> svg + div[class] a[href^="/donate?"])
+damninteresting.com##.plea
 grist.org##.wp-block-article-donation
 ||helpukrainewinwidget.org/cdn/widget.js
 scroll.in##.floating-contribute-block
