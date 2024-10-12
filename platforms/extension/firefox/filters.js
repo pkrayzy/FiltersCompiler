@@ -444,8 +444,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/6.txt",
 			"trustLevel": "full",
-			"version": "2.0.43.85",
-			"timeUpdated": "2024-10-12T17:32:27+0000",
+			"version": "2.0.43.86",
+			"timeUpdated": "2024-10-12T18:32:29+0000",
 			"deprecated": false,
 			"languages": [
 				"de"
@@ -639,8 +639,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.71.58",
-			"timeUpdated": "2024-10-12T12:32:53+0000",
+			"version": "2.0.71.59",
+			"timeUpdated": "2024-10-12T18:32:50+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
