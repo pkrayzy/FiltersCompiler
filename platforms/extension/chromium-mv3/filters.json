@@ -898,8 +898,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.60",
-			"timeUpdated": "2024-10-13T09:01:18+0000",
+			"version": "2.1.57.61",
+			"timeUpdated": "2024-10-13T13:01:06+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -973,8 +973,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.59",
-			"timeUpdated": "2024-10-13T09:01:19+0000",
+			"version": "2.1.57.60",
+			"timeUpdated": "2024-10-13T13:01:07+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1071,8 +1071,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.98.40",
-			"timeUpdated": "2024-10-13T01:01:25+0000",
+			"version": "2.0.98.41",
+			"timeUpdated": "2024-10-13T13:01:22+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1092,8 +1092,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.32.55",
-			"timeUpdated": "2024-10-11T17:01:28+0000",
+			"version": "2.0.32.56",
+			"timeUpdated": "2024-10-13T13:01:23+0000",
 			"deprecated": false,
 			"languages": [
 				"vi"
@@ -1395,8 +1395,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.50.91",
-			"timeUpdated": "2024-10-13T09:02:04+0000",
+			"version": "2.0.50.92",
+			"timeUpdated": "2024-10-13T13:01:51+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"
@@ -1483,8 +1483,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
-			"version": "2.0.3.92",
-			"timeUpdated": "2024-10-12T13:01:52+0000",
+			"version": "2.0.3.93",
+			"timeUpdated": "2024-10-13T13:01:53+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
