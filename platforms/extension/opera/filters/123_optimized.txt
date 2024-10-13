@@ -1,9 +1,9 @@
-! Checksum: ki9g6mC/3cOdKCTL5wuIsw
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1728781520-14400.patch
+! Checksum: bO0ndecQdkb1KdfZaWabWQ
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1728795911-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.30.39
-! TimeUpdated: 2024-10-13T01:01:22+00:00
+! Version: 2.1.30.40
+! TimeUpdated: 2024-10-13T05:01:16+00:00
 ! Expires: 10 days (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -22,7 +22,6 @@
 /common/sns/*
 /common/sns_
 /facebook-pagelike-widget/fb.js
-/facebook-popup-
 /facebook_footer.png
 /facebook_footer.svg
 /facebook_social.png
@@ -68,16 +67,19 @@
 /shareaholic.js
 /sharebar.js
 /shareBar/*
+/shareBtn_
 /sharebutton?
 /sharecount/*
 /shared/btn_
 /shared/social/*
 /sharedaddy/sharing.min.js
+/Sharefb.png
 /shareicon-branding-
 /shareon.min.css
 /sharer.js
 /sharethis.js
 /shareTT.js
+/Sharetw.png
 /shariff.complete.js
 /shariff.min.js
 /simple-share-$~stylesheet
@@ -189,7 +191,6 @@ _social_footer_
 ###float_fb_plugin
 ###floatingSocialShare
 ###follow-us-widget
-###followIcons
 ###followUs
 ###follow_buttons
 ###follow_us
@@ -295,6 +296,7 @@ _social_footer_
 ###share-menu
 ###share-menu-btn
 ###share-module
+###share-nav
 ###share-pinterest
 ###share-post
 ###share-project-button
@@ -567,6 +569,7 @@ _social_footer_
 ##.Share-item
 ##.ShareBar
 ##.ShareBlock-isReact
+##.ShareBox
 ##.ShareButton
 ##.ShareButtons
 ##.ShareIcons
@@ -748,6 +751,7 @@ _social_footer_
 ##.better-social-counter
 ##.bg-share
 ##.bi-share
+##.big-share-buttons
 ##.bimber-microshare-item-share
 ##.bio-social
 ##.bloc-social
@@ -770,7 +774,6 @@ _social_footer_
 ##.blog-social-item
 ##.bloque-social
 ##.bookmark-share
-##.bottom-footer__social
 ##.bottom-share
 ##.bottom-share-buttons
 ##.bottom-social
@@ -822,6 +825,7 @@ _social_footer_
 ##.c-social-share
 ##.c-social-sharetool
 ##.c-social-sharing
+##.c-social-wrap
 ##.c-socialSharebar_container
 ##.c-social__list
 ##.c-socials
@@ -986,7 +990,6 @@ _social_footer_
 ##.facebook_follow
 ##.facebook_icn
 ##.facebook_icon
-##.facebook_left
 ##.facebook_like
 ##.facebook_like_box
 ##.facebook_logo
@@ -1213,7 +1216,6 @@ _social_footer_
 ##.gtm-clipboard-share-button
 ##.gtm-email-share-button
 ##.gtm-facebook-share-button
-##.gtm-social
 ##.gtm_footer_facebook
 ##.gtm_footer_instagram
 ##.gtm_footer_twitter
@@ -1228,7 +1230,6 @@ _social_footer_
 ##.head-fb
 ##.header-facebook
 ##.header-follow-us
-##.header-google-plus
 ##.header-icon-instagram
 ##.header-nav-social
 ##.header-share
@@ -1374,7 +1375,6 @@ _social_footer_
 ##.inline-social
 ##.inline_socials
 ##.inner-header-social
-##.inner-social
 ##.instagram-follow
 ##.instagram-follow-button
 ##.instagram-hover
@@ -1520,6 +1520,7 @@ _social_footer_
 ##.m-header--social-nav
 ##.m-share
 ##.m-share-bar__link
+##.m-sharing
 ##.m-sns
 ##.m-social-bar
 ##.m-social-share
@@ -1548,7 +1549,6 @@ _social_footer_
 ##.menu--footer-social
 ##.menu--social-media
 ##.menu--social-media-links
-##.menu-article-share
 ##.menu-facebook
 ##.menu-footer-social
 ##.menu-footer-social-container
@@ -2106,6 +2106,7 @@ _social_footer_
 ##.sharebg
 ##.sharebox
 ##.sharebtn
+##.sharebtns
 ##.sharebutt
 ##.sharebutton
 ##.sharebuttons
@@ -2143,6 +2144,7 @@ _social_footer_
 ##.sharethis-container
 ##.sharethis-inline-reaction-buttons
 ##.sharethis-inline-share-buttons
+##.sharethis-link
 ##.sharethis-wrapper
 ##.shareto
 ##.sharetools
@@ -2523,6 +2525,7 @@ _social_footer_
 ##.socialNav
 ##.socialNetworks
 ##.socialPanel
+##.socialSection
 ##.socialShare
 ##.socialShareIcon
 ##.socialSharing
@@ -2687,12 +2690,12 @@ _social_footer_
 ##.tool-share
 ##.toolbar-share
 ##.tools-share
-##.top-bar__social
 ##.top-nav-social
 ##.top-share
 ##.top-sharebar
 ##.top-social
 ##.top-social-icons
+##.top-social-item
 ##.top-social-links
 ##.top_share
 ##.top_social
@@ -2827,6 +2830,7 @@ _social_footer_
 ##.whatsapp-share-button
 ##.whatsapp.icon
 ##.whatsapp_share
+##.widget-altervista-social
 ##.widget-follow
 ##.widget-share
 ##.widget-sharebar-container
@@ -2899,6 +2903,7 @@ _social_footer_
 ##TWITTER-SHARE-BUTTON
 ##[data-target="share-review"]
 ##[data-testid="prism-share"]
+##a[data-share="popup"]
 ##a[href^="fb-messenger://share/?"]
 ##a[href^="fb-messenger://share?link="]
 ##a[href^="http://pinterest.com/pin/create/"]
@@ -2970,6 +2975,7 @@ _social_footer_
 ##img[alt="Connect with us on LinkedIn"]
 ##img[alt="Connect with us on Twitter"]
 ##share-action
+##span[title="Condividi"]
 ##div.c-socialShare
 ##div.sticky-shares
 ##.social.footer-links
@@ -2989,6 +2995,7 @@ _social_footer_
 ||buttons.github.io/buttons.js$third-party
 ||connect.ok.ru^$third-party
 ||facebook.com/plugins/facepile.php?$third-party
+||facebook.com/plugins/follow.php$third-party
 ||facebook.com/plugins/like.php?$third-party
 ||facebook.com/plugins/like_box.php$third-party
 ||facebook.com/plugins/page.php?$third-party
@@ -3004,6 +3011,7 @@ _social_footer_
 ||flipboard.com/web/buttons/$third-party
 ||friends2follow.com^$subdocument,third-party
 ||fwcdn3.com^$third-party
+||getbutton.io/widget-send-button/$third-party
 ||getsocial.io/widget/$third-party
 ||google.com^*/fastbutton?$third-party
 ||gotchosen.com^$third-party
@@ -3015,7 +3023,6 @@ _social_footer_
 ||line-apps.com^*/thirdparty/$third-party
 ||line.me/js/line-button.js?$third-party
 ||linksalpha.com^$third-party
-||messengerpeople.com^$third-party
 ||milotree.com^$third-party
 ||patreon.com/becomePatronButton.bundle.js$third-party
 ||pepper.com^$third-party
@@ -3368,6 +3375,7 @@ gmx.net##ui-social
 dailymail.co.uk,thisismoney.co.uk##ul[class^="linksHolder-"]
 openculture.com#?#.execphpwidget:-abp-contains(FREE UPDATES!)
 byjus.com,commentpicker.com,hakaimagazine.com,hollywoodlife.com,homemark.co.za,ilgiornale.it,malaymail.com,maxabout.com,ncbi.nlm.nih.gov,news24.com,nu.nl,politico.eu,thepostmillennial.com##.social-sharing
+goldderby.com,revistaforum.com.br##.share-group
 alwatanvoice.com,atlantablackstar.com,binnews.com,blog.phylum.io,finurah.com,gulf-times.com,iheart.com,jessekellyshow.com,jfrog.com,news12.com,noticiasaominuto.com,noticiasaominuto.com.br,pressdemocrat.com,sciencefocus.com,steveharveyfm.com,supermarketnews.com,theshadowleague.com,thewildest.com##.share-icons
 accessonline.com,adressa.no,alwatanvoice.com,animecenterbr.com,apk4free.org,arenaev.com,assafirarabi.com,auto-moto.com,bank.gov.ua,canadaradiostations.com,canli-radyo-dinle.com,criminaljusticedegreehub.com,datingscammer.info,deseret.com,design-milk.com,diariolasamericas.com,diariouno.com.ar,emisoras-puertorico.com,emisorascolombianas.co,exputer.com,ff-bz.com,fmradiofree.com,formule1.nl,gamosaurus.com,globalconstructionreview.com,hardwaretimes.com,houstoniamag.com,informe360.com,internetradio-horen.de,internetradio-schweiz.ch,investigativepost.org,letrap.com.ar,mediaplaynews.com,metro.co.uk,nbcbayarea.com,nbcboston.com,nbcchicago.com,nbcconnecticut.com,nbcdfw.com,nbclosangeles.com,nbcmiami.com,nbcnewyork.com,nbcphiladelphia.com,nbcsandiego.com,nbcwashington.com,necn.com,olhardigital.com.br,pastebin.pl,psychologies.com,psychologytoday.com,radio-ao-vivo.com,radio-australia.org,radio-belgie.be,radio-danmark.dk,radio-dominicana.com,radio-ecuador.org,radio-en-ligne.fr,radio-en-vivo.mx,radio-espana.es,radio-hk.com,radio-hrvatska.com,radio-italiane.it,radio-korea.com,radio-maroc.org,radio-nederland.nl,radio-norge.org,radio-osterreich.at,radio-philippines.com,radio-polska.pl,radio-singapore.com,radio-south-africa.co.za,radio-stations.co.nz,radio-suomi.com,radio-sveriges.se,radio-thai.com,radio-ua.com,radio-uk.co.uk,radioindia.in,radioindonesia.org,radiojapan.org,radiomalaysia.org,radios-argentinas.org,radios-bolivia.com,radios-chilenas.com,radios-guatemala.com,radios-online.pt,radios-uruguay.com,radios-venezuela.com,radiosdelperu.pe,radiotaiwan.tw,robbreport.com,spy.com,techzine.nl,telemundo20.com,telemundo31.com,telemundo33.com,telemundo40.com,telemundo47.com,telemundo48elpaso.com,telemundo49.com,telemundo51.com,telemundo52.com,telemundo62.com,telemundoareadelabahia.com,telemundoarizona.com,telemundochicago.com,telemundodallas.com,telemundodenver.com,telemundofresno.com,telemundohouston.com,telemundolasvegas.com,telemundonuevainglaterra.com,telemundonuevomexico.com,telemundopr.com,telemundosanantonio.com,telemundoutah.com,telemundowashingtondc.com,tenor.com,thecradle.co,vlaamskijken.nl,wn.com##.share-buttons
 10news.com,aboutamazon.co.uk,aboutamazon.com,aboutamazon.de,aboutamazon.it,adn40.mx,chronicle.com,deseret.com,iowapublicradio.org,kcur.org,ktvq.com,laist.com,nepm.org,suntimes.com,tvazteca.com,vanidades.com,washingtonexaminer.com,wgbh.org##.ActionBar
@@ -3482,6 +3490,7 @@ navigaweb.net###like
 navigaweb.net###social3
 leganerd.com##._share_wrapper
 raiplaysound.it##.banner-buttons
+calciomercato.com##.cm-share
 donnamoderna.com##.dm20-lory-share-panel
 iodonna.it##.eltdf-woo-social-share-holder
 spaziogames.it##.flex.gap-x-2.mx-auto.my-4
@@ -3502,6 +3511,7 @@ raiplay.it##.prefooter__social__list
 rainews.it##.share-toggler
 tuttotek.it##.soc-media-sharing
 tusciaweb.eu##.sociable
+ad-italia.it,gqitalia.it,lacucinaitaliana.it,vanityfair.it,vogue.it,www.wired.it##.social-icons__list
 blunote.it,brindisimagazine.it,fiorentinanews.com,fiorentinauno.com,monza-news.it,pianetalecce.it,salernogranata.it,tuttosporttaranto.com##.social-sharers
 la7.it##.socialBtn
 mangaforever.net##.socialComponent
@@ -3532,6 +3542,7 @@ superesportes.com.br###shareitens
 tecnoblog.net###tb-banner-whatsapp
 xvideossexo.com###whatsapp
 maisfutebol.iol.pt##.barrawhatsappDesktop
+revistaforum.com.br##.btn-seguinos-gnews
 estadao.com.br##.button-share-icon
 folha.uol.com.br##.c-follow-social-media
 econodata.com.br##.compartilhar-button
@@ -3714,6 +3725,7 @@ petsmart.com#@#a[href^="https://www.facebook.com/sharer/sharer.php"]
 @@/wp-content/plugins/share-this-image/*$~third-party
 @@/wp-content/plugins/wordpress-social-login/*$~third-party
 @@/wp-content/plugins/wp-rocket/*$image,~third-party
+@@||answers.ros.org/m/default/media/images/socialsprite.png$~third-party
 @@||assets.msn.com/bundles/*/social-bar-$~third-party
 @@||cdn.flowplayer.com^*/share.min.js
 @@||gen.jut.su/jcdn/minify?charset=*/videojs-share.$script,stylesheet,domain=jut.su
