@@ -898,8 +898,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.57",
-			"timeUpdated": "2024-10-12T21:01:28+0000",
+			"version": "2.1.57.58",
+			"timeUpdated": "2024-10-13T01:01:09+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -923,8 +923,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt",
 			"trustLevel": "high",
-			"version": "2.0.2.86",
-			"timeUpdated": "2024-08-29T21:01:12+0000",
+			"version": "2.0.2.87",
+			"timeUpdated": "2024-10-13T01:01:09+0000",
 			"deprecated": false,
 			"languages": [
 				"lt"
@@ -973,8 +973,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.56",
-			"timeUpdated": "2024-10-12T21:01:29+0000",
+			"version": "2.1.57.57",
+			"timeUpdated": "2024-10-13T01:01:10+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1071,8 +1071,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
-			"version": "2.0.98.39",
-			"timeUpdated": "2024-10-12T13:01:22+0000",
+			"version": "2.0.98.40",
+			"timeUpdated": "2024-10-13T01:01:25+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1395,8 +1395,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.50.88",
-			"timeUpdated": "2024-10-12T21:02:13+0000",
+			"version": "2.0.50.89",
+			"timeUpdated": "2024-10-13T01:01:53+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"
