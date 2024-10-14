@@ -1,15 +1,16 @@
 ![Adblock Plus 2.0]
-! Checksum: 8q/H07xh3u/f4HXEtxOyNg
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1728873359-3600.patch
+! Checksum: rrCfYpNiK0GdSMv0RGAElg
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1728932381-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.27.2
-! TimeUpdated: 2024-10-13T06:33:01+00:00
+! Version: 2.0.27.3
+! TimeUpdated: 2024-10-14T18:02:11+00:00
 ! Expires: 5 days (update frequency)
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[style] > div[style] > div[aria-labelledby] > div[class]:last-child > button)
 instagram.com##._aagw:empty
+thehindu.com##+js(abort-on-stack-trace, Promise, CheckIncognito)
 no-one-no.net##iframe[width="560"][height="315"][src^="https://www.youtube.com/embed/"]
 opennet.ru,opennet.me##body > div[style$="width:100%; height: 62px;"]
 thenewstack.io##.tns-trending-stories-block.inline
@@ -1237,6 +1238,8 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.banki.ru/products/"]
 ##a[href^="https://apay-up-banner.com?merchantId="] > img
 ||apay-up-banner.com^$image,third-party
+trendyol.com###new-user-banner
+avito.ru##div[data-marker="standard-banner"]
 x.com,twitter.com##aside[role="complementary"]:has(> a[href="/i/premium_sign_up"])
 hokende.com##.bottom_campaign_link
 cyber.sports.ru##.news-item__content a[href^="https://cyber.sports.ru/fantasy/"] > img
@@ -2432,7 +2435,8 @@ softpedia.com#$#iframe.swipebox-rightxd[id="relcontent"] { top: 60px!important; 
 !##############################
 !######### JS tweaks ##########
 !##############################
-thehindu.com##+js(abort-on-stack-trace, Promise, CheckIncognito)
+arabtalking.com##+js(adjust-setTimeout, secondsWait, *, 0.001)
+arabtalking.com##+js(nano-setInterval-booster, secondsWait, *, 0.001)
 zippyshare.day##+js(nano-setInterval-booster, .html(Number, *, 0.001)
 veev.to##+js(nano-setInterval-booster, download, *, 0.001)
 bcvc.ink##+js(nano-setInterval-booster, bcvcCountDown, *, 0.001)
