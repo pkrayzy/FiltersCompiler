@@ -1,8 +1,8 @@
-! Checksum: eGNiMlJKVHq70EqelqU5rw
+! Checksum: bOUb9t7EdKCzBsTsNe4thA
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.15.34
-! TimeUpdated: 2024-10-15T01:01:44+00:00
+! Version: 2.0.15.35
+! TimeUpdated: 2024-10-15T13:01:57+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
@@ -30182,7 +30182,7 @@ play.max.com##div[class*=Gradient-Beam-]:empty
 !!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
 !+ NOT_OPTIMIZED
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 08September2024v1-Beta
+! OriginalVersion: 15October2024v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -30280,15 +30280,15 @@ amazon.*##span.av-badge-text:has(.av-imdb-logo)
 amazon.*##a[href="#customer-review-section"] + span
 !!!google.*##:xpath(//*[text()[contains(., 'IMDb')]]/parent::*/parent::div/parent::div//*[contains(@class, 'slp') and contains(@class, 'f')])
 !!!google.*##div[data-hveid]:has(> div > div > a[href*="imdb.com"]) div:has(> div[class] > span)
-www.google.*##.g .r:has(a[href*=".imdb.com"]) + .s > div > div:first-of-type
-www.google.*##div[data-async-context^="query:"] > .g > div:has(a[href*=".imdb.com"]) g-review-stars:upward(1)
-www.google.*##div[data-async-context^="query:"] > .g:has(a[href*=".imdb.com/"]) div:has(> g-review-stars)
-www.google.*##.g:has(a[href*="imdb.com"]) g-review-stars:upward(1)
-www.google.*##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
-www.google.*#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
-www.google.*##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
+www.google.*,ipv6.google.com##.g .r:has(a[href*=".imdb.com"]) + .s > div > div:first-of-type
+www.google.*,ipv6.google.com##div[data-async-context^="query:"] > .g > div:has(a[href*=".imdb.com"]) g-review-stars:upward(1)
+www.google.*,ipv6.google.com##div[data-async-context^="query:"] > .g:has(a[href*=".imdb.com/"]) div:has(> g-review-stars)
+www.google.*,ipv6.google.com##.g:has(a[href*="imdb.com"]) g-review-stars:upward(1)
+www.google.*,ipv6.google.com##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
+www.google.*,ipv6.google.com#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
+www.google.*,ipv6.google.com##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/148512)
-www.google.*##.g div[jscontroller]:has(a[href*=imdb]) div + div + div[class*=" "]:has(span[role=img])
+www.google.*,ipv6.google.com##.g div[jscontroller]:has(a[href*=imdb]) div + div + div[class*=" "]:has(span[role=img])
 viaplay.*##.Imdb-link-slSbv
 viaplay.*##.ImdbExtended-container-_sA0e
 viaplay.*#?#div.CarouselHeader-carousel-1rPGh:has-text(IMDB)
@@ -30356,7 +30356,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 watchseries.*##.imdb
 justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 13October2024v1
+! OriginalVersion: 15October2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -32133,16 +32133,19 @@ $removeparam=ogbl
 ! https://www.google.com/webhp?client=firefox-b-m&channel=ts (06/05/2021)
 ||google.*/webhp$removeparam=channel
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
-||www.google.$removeparam=aqs
+$removeparam=aqs,domain=www.google.*|ipv6.google.com
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
-||www.google.$removeparam=btnG
-||www.google.$removeparam=iflsig
+$removeparam=btnG,domain=www.google.*|ipv6.google.com
+$removeparam=iflsig,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1093666
-||www.google.$removeparam=uact
+$removeparam=uact,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1127765
 ://www.google.*/search^$removeparam=kgs
 ://www.google.*/search^$removeparam=shndl
 ://www.google.*/search^$removeparam=entrypoint
+://ipv6.google.com*/search^$removeparam=kgs
+://ipv6.google.com*/search^$removeparam=shndl
+://ipv6.google.com*/search^$removeparam=entrypoint
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1299693
 ||google.*/search$removeparam=sqi
 ! https://www.google.com/search?gs_ssp=eJzj4tTP1TcwSssoSVZgNGB0YPASS0otKUktUkgqLc7MSy0uBjKKUhNLAeDcDI4&q=better+business+bureau&oq=better&sourceid=chrome&ie=UTF-8
@@ -32159,6 +32162,7 @@ $removeparam=ogbl
 ||googleadservices.com^$removeparam=ohost
 ! https://github.com/DandelionSprout/adfilt/issues/834#issuecomment-1510431981
 ||www.google.*/search?$document,removeparam=sclient
+||ipv6.google.com*/search?$document,removeparam=sclient
 ! Should not be removed: dpr (Determines image search results' box sizes)
 ! https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
 ||accounts.google.com^$removeparam=dsh,document
@@ -32172,16 +32176,17 @@ $removeparam=_x_tr_pto
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6196774
 ||support.google.com^$document,removeparam=sjid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6525587
-||www.google.$document,removeparam=gs_lp
+$document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||www.google.*/search$removeparam=oq,document
+||ipv6.google.com*/search$removeparam=oq,document
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6714455
 ||google.$document,removeparam=sca_esv
 ! https://www.google.com/search?q=winget+vsdc&newwindow=1&udm= (15/03/2024)
-||www.google.$removeparam=/^udm=$/
+$removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ! https://www-nrk-no.translate.goog/norge/regjeringen-vil-endre-russetiden-_-her-er-planen-1.16812907?_x_tr_sl=no&_x_tr_tl=en&_x_tr_hl=no&_x_tr_pto=wapp (20/03/2024)
 ||translate.goog^$removeparam=_x_tr_pto
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10267561
-||www.google.$document,removeparam=sca_upv
+$document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
 ||tiktok.com^$removeparam=_r

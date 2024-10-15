@@ -1,9 +1,9 @@
-! Checksum: f3Xe1TynreoLNr+1jt/ozw
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1728867945-14400.patch
+! Checksum: cWjdA6U4/GZL7FvkfQqqTg
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1728997555-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.24
-! TimeUpdated: 2024-10-14T01:01:54+00:00
+! Version: 2.0.8.25
+! TimeUpdated: 2024-10-15T13:01:57+00:00
 ! Expires: 12 hours (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -1222,13 +1222,16 @@ $removeparam=fir
 @@||google.*&tbm=isch&*#imgrc=$removeparam=usg
 $removeparam=ogbl
 ||google.*/webhp$removeparam=channel
-||www.google.$removeparam=aqs
-||www.google.$removeparam=btnG
-||www.google.$removeparam=iflsig
-||www.google.$removeparam=uact
+$removeparam=aqs,domain=www.google.*|ipv6.google.com
+$removeparam=btnG,domain=www.google.*|ipv6.google.com
+$removeparam=iflsig,domain=www.google.*|ipv6.google.com
+$removeparam=uact,domain=www.google.*|ipv6.google.com
 ://www.google.*/search^$removeparam=kgs
 ://www.google.*/search^$removeparam=shndl
 ://www.google.*/search^$removeparam=entrypoint
+://ipv6.google.com*/search^$removeparam=kgs
+://ipv6.google.com*/search^$removeparam=shndl
+://ipv6.google.com*/search^$removeparam=entrypoint
 ||google.*/search$removeparam=sqi
 ||google.$removeparam=gs_ssp
 ||google.$removeparam=prds
@@ -1240,18 +1243,20 @@ $removeparam=ogbl
 ||googleadservices.com^$removeparam=ms
 ||googleadservices.com^$removeparam=ohost
 ||www.google.*/search?$document,removeparam=sclient
+||ipv6.google.com*/search?$document,removeparam=sclient
 ||accounts.google.com^$removeparam=dsh,document
 ||support.google.com^$removeparam=ref_topic
 $removeparam=_x_tr_pto
 ||google.$removeparam=/^sa=X$/
 ||google.$removeparam=/^sa=N$/
 ||support.google.com^$document,removeparam=sjid
-||www.google.$document,removeparam=gs_lp
+$document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||www.google.*/search$removeparam=oq,document
+||ipv6.google.com*/search$removeparam=oq,document
 ||google.$document,removeparam=sca_esv
-||www.google.$removeparam=/^udm=$/
+$removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||translate.goog^$removeparam=_x_tr_pto
-||www.google.$document,removeparam=sca_upv
+$document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||tiktok.com^$removeparam=_r
 $removeparam=share_ab_group
 $removeparam=u_code
