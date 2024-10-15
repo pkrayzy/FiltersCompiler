@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.56.48",
-			"timeUpdated": "2024-10-15T14:31:32+0000",
+			"version": "2.3.56.49",
+			"timeUpdated": "2024-10-15T15:31:21+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.75.50",
-			"timeUpdated": "2024-10-15T14:33:31+0000",
+			"version": "2.0.75.51",
+			"timeUpdated": "2024-10-15T15:32:45+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.6.73",
-			"timeUpdated": "2024-10-15T10:32:39+0000",
+			"version": "2.1.6.74",
+			"timeUpdated": "2024-10-15T15:32:48+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -615,8 +615,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.11.1",
-			"timeUpdated": "2024-10-15T14:34:03+0000",
+			"version": "2.2.11.2",
+			"timeUpdated": "2024-10-15T15:33:17+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -721,8 +721,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.49.38",
-			"timeUpdated": "2024-10-15T14:34:09+0000",
+			"version": "2.0.49.39",
+			"timeUpdated": "2024-10-15T15:33:23+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1682,8 +1682,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.23.85",
-			"timeUpdated": "2024-10-15T14:34:16+0000",
+			"version": "2.1.23.86",
+			"timeUpdated": "2024-10-15T15:33:30+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
