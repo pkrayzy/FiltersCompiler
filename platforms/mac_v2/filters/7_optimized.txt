@@ -1,9 +1,9 @@
-! Checksum: sO9feJcEoiO5zWxTDnqo/g
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1728999507-3600.patch
+! Checksum: 9yINr+LNWkyyOYMswItZEA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1729010248-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.57.85
-! TimeUpdated: 2024-10-15T13:34:09+00:00
+! Version: 2.0.57.86
+! TimeUpdated: 2024-10-15T16:33:18+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -399,7 +399,8 @@ yourfones.net#%#//scriptlet('spoof-css', 'ins.adsbygoogle', 'display', 'block')
 mytry.jp#@#.ad_box
 mytry.jp#$#body > #container { display: block !important; }
 $subdocument,redirect-rule=noopframe,domain=wiki.yjsnpi.nu
-wiki.yjsnpi.nu#%#//scriptlet('trusted-create-element', 'body', 'div', 'name="noad"')
+||wiki.yjsnpi.nu^$script,replace=/\[_0x[0-9a-z]{6}\(0x[0-9a-z]{3}\)\]\(\);//
+wiki.yjsnpi.nu#%#//scriptlet('remove-attr', 'id', '#bodyContent')
 wiki.yjsnpi.nu#$#body span:has(>img), body a:has(>img), body img { height: auto !important; opacity: 1 !important; visibility: visible !important; display: block !important; }
 @@||wiki.yjsnpi.nu^$image,xmlhttprequest,~third-party
 @@||wiki.yjsnpi.nu^$generichide
