@@ -1,9 +1,9 @@
-! Checksum: qdyzFlALji+EqUyhVOYM2w
-! Diff-Path: ../patches/14/14-s-1728974205-3600.patch
+! Checksum: YnMyXeVs28MT5l0G3cDGMw
+! Diff-Path: ../patches/14/14-s-1728977817-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.10.93
-! TimeUpdated: 2024-10-15T06:33:24+00:00
+! Version: 2.2.10.94
+! TimeUpdated: 2024-10-15T07:33:38+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.CookiePolicyBar
 ###oemaceptacion
 ##.cookie-popup-overlay
 ###consent-banner-main
@@ -2488,6 +2489,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+rotenburg.de##.cookie-consent-form
+tv.sbt.com.br##div[class^="cookies-banner_cookiesBanner"]
 hoster.by##.m-cookies-informer
 iq.com##div[class^="sc-"]:has(> div.popup-container > p.cookie-desc)
 die-bewerbungsschreiber.de###super-gtag-cookie-consent
@@ -52348,6 +52351,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/190843
+atomohd.ink#%#//scriptlet('adjust-setTimeout', '#counter', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190788
 arabtalking.com#%#//scriptlet('adjust-setTimeout', 'secondsWait', '*', '0.001')
 arabtalking.com#%#//scriptlet('adjust-setInterval', 'secondsWait', '*', '0.001')
