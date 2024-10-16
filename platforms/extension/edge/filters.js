@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.56.64",
-			"timeUpdated": "2024-10-16T13:31:17+0000",
+			"version": "2.3.56.65",
+			"timeUpdated": "2024-10-16T14:31:17+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.75.55",
-			"timeUpdated": "2024-10-16T13:32:50+0000",
+			"version": "2.0.75.56",
+			"timeUpdated": "2024-10-16T14:32:44+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -469,8 +469,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.57.90",
-			"timeUpdated": "2024-10-16T13:33:04+0000",
+			"version": "2.0.57.91",
+			"timeUpdated": "2024-10-16T14:33:00+0000",
 			"deprecated": false,
 			"languages": [
 				"ja"
@@ -587,8 +587,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.78",
-			"timeUpdated": "2024-10-15T11:33:33+0000",
+			"version": "2.0.53.79",
+			"timeUpdated": "2024-10-16T14:33:11+0000",
 			"deprecated": false,
 			"languages": [
 				"tr"
@@ -615,8 +615,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.11.10",
-			"timeUpdated": "2024-10-16T13:33:22+0000",
+			"version": "2.2.11.11",
+			"timeUpdated": "2024-10-16T14:33:20+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -670,8 +670,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.47.32",
-			"timeUpdated": "2024-10-16T04:33:22+0000",
+			"version": "2.0.47.33",
+			"timeUpdated": "2024-10-16T14:33:24+0000",
 			"deprecated": false,
 			"languages": [
 				"fr"
@@ -701,8 +701,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.9.63",
-			"timeUpdated": "2024-10-16T11:33:19+0000",
+			"version": "2.0.9.64",
+			"timeUpdated": "2024-10-16T14:33:25+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -743,8 +743,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.44.57",
-			"timeUpdated": "2024-10-16T13:33:30+0000",
+			"version": "2.0.44.58",
+			"timeUpdated": "2024-10-16T14:33:27+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
