@@ -1,9 +1,9 @@
-! Checksum: 6oa3TiKjjWH0w7nslYaRtA
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1729078601-3600.patch
+! Checksum: LK/GEHNCxU9sC03VOE8WsQ
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1729093108-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.27.11
-! TimeUpdated: 2024-10-16T11:33:22+00:00
+! Version: 2.0.27.12
+! TimeUpdated: 2024-10-16T15:34:47+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -20,6 +20,8 @@
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[style] > div[style] > div[aria-labelledby] > div[class]:last-child > button)
 instagram.com##._aagw:empty
+store.steampowered.com##div[data-featuretarget="broadcast-embed"]
+||store.cloudflare.steamstatic.com/public/javascript/applications/store/broadcast.js
 kod.ru##div[class^="Share_wrapper"]
 thehindu.com#%#//scriptlet('abort-on-stack-trace', 'Promise', 'CheckIncognito')
 ||thehindu.com^$cookie=_pc_private
@@ -850,6 +852,7 @@ habr.com##.tm-stories-block
 habr.com##.tm-project-block
 habr.com##.tm-feature
 habr.com##.tm-promo-post-link
+habr.com##.tm-article-card-list > div.tm-bordered-card:empty
 habr.com##.tm-top-link
 habr.com##.tm-company-widgets
 habr.com###companies_rating
@@ -1312,6 +1315,9 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.banki.ru/products/"]
 ##a[href^="https://apay-up-banner.com?merchantId="] > img
 ||apay-up-banner.com^$image,third-party
+infoq.com###infoq section.promo
+infoq.com##.notice
+infoq.com###infoq .event__container
 infoq.com##.header__bottom__events
 myanimelist.net##.widget-container:has(> div.widget a[href="https://mxj.myanimelist.net/"])
 myanimelist.net##table > tbody > tr:has(> td > div.widget-content > h2 > div.floatRightHeader > a[href="https://mxj.myanimelist.net/"])
