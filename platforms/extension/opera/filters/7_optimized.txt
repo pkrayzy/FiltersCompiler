@@ -1,9 +1,9 @@
-! Checksum: AJ9FR/rsaf8gYhBtxLx7MA
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1729010233-3600.patch
+! Checksum: LS5y8FxOpbQg8f00cD28dA
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1729056984-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.57.86
-! TimeUpdated: 2024-10-15T16:33:18+00:00
+! Version: 2.0.57.87
+! TimeUpdated: 2024-10-16T05:32:55+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -397,7 +397,7 @@ yourfones.net#%#//scriptlet('spoof-css', 'ins.adsbygoogle', 'display', 'block')
 mytry.jp#@#.ad_box
 mytry.jp#$#body > #container { display: block !important; }
 $subdocument,redirect-rule=noopframe,domain=wiki.yjsnpi.nu
-wiki.yjsnpi.nu#%#//scriptlet('remove-attr', 'id', '#bodyContent')
+wiki.yjsnpi.nu#%#//scriptlet('set-constant', 'HTMLElement.prototype.remove', 'noopFunc')
 wiki.yjsnpi.nu#$#body span:has(>img), body a:has(>img), body img { height: auto !important; opacity: 1 !important; visibility: visible !important; display: block !important; }
 @@||wiki.yjsnpi.nu^$image,xmlhttprequest,~third-party
 @@||wiki.yjsnpi.nu^$generichide
@@ -6505,6 +6505,7 @@ connpass.com##.side_ads_area
 doujin-rpgfan.com##.AdsArea
 doujin-rpgfan.com##.AdsArea + table + table
 doujin-rpgfan.com##.right-column-inner > div.plugin-memo
+wiki.yjsnpi.nu###mw-content-text > div[style*="min-height:"]:has(> a[rel*="sponsored"][target="_blank"] > img)
 wiki.yjsnpi.nu###mw-content-text > div[style*="min-height:"]:has(> div[id^="im-"] > script)
 wiki.yjsnpi.nu###mw-content-text > div[style*="min-height:"]:has(> div[style] > div[id^="im-"] > script)
 wiki.yjsnpi.nu##iframe[src*="?affid="]
