@@ -1,8 +1,8 @@
-! Checksum: yupaSXX6W7FwZHI++AkEFg
+! Checksum: 681pZOjb8Wn9t+6NDF2qPw
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.94.64
-! TimeUpdated: 2024-10-17T13:31:03+00:00
+! Version: 2.0.94.65
+! TimeUpdated: 2024-10-17T15:31:05+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4426,8 +4426,6 @@ leingpt.ru#@#div[id^="yandex_rtb"]
 @@||yandex.ru/ads/system/context.js$domain=trychatgpt.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173207
 volley.ru#%#//scriptlet('prevent-fetch', 'exchange.buzzoola.com')
-! https://github.com/AdguardTeam/AdguardFilters/issues/172368
-@@||ads.vk.com^$~image,domain=ads.vk.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172229
 @@||yandex.ru/ads/system/context.js$domain=tvzvezda.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171998
@@ -18363,6 +18361,8 @@ vk.com,vk.ru##._ads_promoted_post_data_w
 vk.com,vk.ru##.ads_ads_news_wrap
 vk.com,vk.ru##.wall_marked_as_ads
 vk.com,vk.ru##.wall_marked_as_ads + div.published_sec_quote
+vk.com,vk.ru##._ads_block_data_w
+@@||ads.vk.com^|$xmlhttprequest,~third-party
 !
 ! END: mail.ru
 !
@@ -18869,6 +18869,8 @@ player.ex.co#@##ad-container
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/172368
+@@||ads.vk.com^$~image,domain=ads.vk.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189493
 @@||ssp.rambler.ru/capirs_async.js$domain=championat.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187103

@@ -1,9 +1,9 @@
-! Checksum: gAMeMr6cp8mmOdhkxWzUrQ
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1729172251-3600.patch
+! Checksum: RNIM/HIgnsl58JnLHAOn8Q
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1729179464-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.94.64
-! TimeUpdated: 2024-10-17T13:31:03+00:00
+! Version: 2.0.94.65
+! TimeUpdated: 2024-10-17T15:31:05+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -1866,7 +1866,6 @@ howdyho.net#%#//scriptlet('remove-attr', 'style', '#download div.dwrapper')
 leingpt.ru#@#div[id^="yandex_rtb"]
 @@||yandex.ru/ads/system/context.js$domain=trychatgpt.ru
 volley.ru#%#//scriptlet('prevent-fetch', 'exchange.buzzoola.com')
-@@||ads.vk.com^$~image,domain=ads.vk.com
 @@||yandex.ru/ads/system/context.js$domain=tvzvezda.ru
 tragtorr.in#%#//scriptlet("trusted-replace-node-text", "script", "function getCookie", "/html: \$\('#yandex_rtb_R-A-.*?'\)\.html\(\)/", "html: '<div></div>'")
 tragtorr.in#%#//scriptlet('adjust-setTimeout', 'antyadb', '5000', '0.001')
@@ -6551,6 +6550,8 @@ vk.com,vk.ru##.post[data-ad]
 vk.com,vk.ru##.ads_ads_news_wrap
 vk.com,vk.ru##.wall_marked_as_ads
 vk.com,vk.ru##.wall_marked_as_ads + div.published_sec_quote
+vk.com,vk.ru##._ads_block_data_w
+@@||ads.vk.com^|$xmlhttprequest,~third-party
 ||region.dfs.ivi.ru^$media,domain=ivi.ru
 otzovik.com##.produkt-cobtent div.product-nav-wrap + div[class] ~ div[class]:not([style]):not([class="bottom-row"])
 otzovik.com##.produkt-cobtent div.review-contents + [class]
@@ -6788,6 +6789,7 @@ thestreet.com#@##ad-container
 si.com#@##ad-container
 lib.seu.edu.cn#@#.one-search
 player.ex.co#@##ad-container
+@@||ads.vk.com^$~image,domain=ads.vk.com
 @@||ssp.rambler.ru/capirs_async.js$domain=championat.com
 @@||yandex.ru/ads/system/adsdk.js$domain=kino.tricolor.tv
 @@||yastatic.net/vas-bundles/*/loader.bundle.js$domain=rutube.ru
