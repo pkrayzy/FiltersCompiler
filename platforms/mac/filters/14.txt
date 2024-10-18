@@ -1,8 +1,8 @@
-! Checksum: ostQIHJroodwIoh2XwliZQ
+! Checksum: JEJg2WEtOrDij6bAGilptA
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.11.29
-! TimeUpdated: 2024-10-18T08:33:27+00:00
+! Version: 2.2.11.30
+! TimeUpdated: 2024-10-18T09:34:03+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2488,6 +2488,8 @@ stern.de#%#//scriptlet('trusted-click-element', '#decline-nid-consent')
 !
 ! NOTE: Regular rules
 !
+flysurf.com#%#//scriptlet('trusted-set-cookie', 'tarteaucitron', '!googletagmanager=false')
+berger.mitarbeiter-werden.com##.block-interaction__overlay
 scaleway.com#%#//scriptlet('trusted-set-cookie', '_scw_rgpd_hash', '1813808441')
 dropbox.com###ccpa_consent_banner
 billetterie.auditorium-lyon.com#%#//scriptlet('set-constant', 'ob_audience.consent.required', 'false')
@@ -16276,6 +16278,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/191089
+flysurf.com#@##tarteaucitronRoot
+flysurf.com#@##tarteaucitronAlertBig
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190709
 billetterie.auditorium-lyon.com#@##cookie-banner
 billetterie.auditorium-lyon.com#@#.cookie-container
@@ -51833,6 +51838,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/191090
+meawfy.com#%#//scriptlet('adjust-setInterval', 'counter--', '*', '0.001')
+meawfy.com#%#//scriptlet('prevent-addEventListener', 'blur', 'stopCounter')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190843
 atomohd.ink#%#//scriptlet('adjust-setTimeout', '#counter', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190788
