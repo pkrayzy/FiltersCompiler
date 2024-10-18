@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: dhC5oWY6wnld6abqdSzMgw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1729251470-3600.patch
+! Checksum: C1/AMCIFypIpUO44KLNXgw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1729255045-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.56.91
-! TimeUpdated: 2024-10-18T11:31:23+00:00
+! Version: 2.3.56.92
+! TimeUpdated: 2024-10-18T12:31:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7848,6 +7848,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/191105
+digminecraft.com##+js(set-constant, pbg.a, undefined)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190993
 ||0gomovies-official.site/jss/dectector-2025.js
 fmovies24.watch##+js(set-constant, AB_Detector, noopFunc)
@@ -29501,8 +29503,6 @@ hentai2read.com##+js(abort-current-script, document.createElement, adsbyexoclick
 1l1l.to##+js(abort-on-property-read, adcash)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156751
 showboxmovies.net##+js(abort-on-property-read, CTABPu)
-! https://github.com/AdguardTeam/AdguardFilters/issues/156696
-digminecraft.com##+js(abort-on-property-read, pbg)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156602
 iporntoo.com##+js(set-cookie, customscript0, 1)
 ! https://github.com/uBlockOrigin/uAssets/issues/16317
@@ -33733,7 +33733,6 @@ _ad_content.
 !
 /dynamic-pop-comb.min.js
 /cuid/?f=https%$xmlhttprequest,third-party
-.xyz/fl1hrrg/$popup
 /submit.min.js?abvar=$all
 /dupa.gif?z=
 ?ab=*&rl=1|$all
@@ -34128,6 +34127,7 @@ $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com
 !
 ! NOTE: Specific rules
 !
+digminecraft.com#?#div[class]:has(> p:contains(Advertisement))
 hdmovieshub.life##aside:has(> script[src*="topcreativeformat.com"])
 hdmovieshub.life##a[class][rel*="noopener"]:not([href*="download.php"])
 meawfy.com##.info-section > a[target="_blank"]
