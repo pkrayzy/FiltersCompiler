@@ -1,8 +1,8 @@
-! Checksum: tfIX+WEC5F4e391ssfZA0w
+! Checksum: gmFYSQ8gZv57ZNP0HDloQg
 ! Title: AdGuard Quick Fixes filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.1.32
-! TimeUpdated: 2024-10-18T16:33:28+00:00
+! Version: 2.0.1.33
+! TimeUpdated: 2024-10-18T17:33:27+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -120,7 +120,6 @@ facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion#%#!f
 fmovies24.watch#%#//scriptlet('set-constant', 'AB_Detector', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190943 19-10-2024
 ||wiki.yjsnpi.nu^$csp=require-trusted-types-for 'script'
-wiki.yjsnpi.nu#%#//scriptlet('abort-on-property-read', 'HTMLElement.prototype.innerText')
 wiki.yjsnpi.nu#%#(()=>{window.DOMParser.prototype.parseFromString=new Proxy(window.DOMParser.prototype.parseFromString,{apply:(e,t,r)=>{const c=trustedTypes.createPolicy("myEscapePolicy",{createHTML:e=>e}).createHTML(r[0]);r[0]=c;return Reflect.apply(e,t,r)}});const e=Object.getOwnPropertyDescriptor(Element.prototype,"innerHTML").set;Object.defineProperty(Element.prototype,"innerHTML",{set(t){const r=trustedTypes.createPolicy("myEscapePolicy",{createHTML:e=>e}).createHTML(t);if(!this.matches(":is(html,head,body)")&&""!==t)return this.matches('[class*="comment"]')||this.matches("a")?e.call(this,r):e.call(this,t)}});const t=Object.getOwnPropertyDescriptor(HTMLElement.prototype,"innerText").set;Object.defineProperty(HTMLElement.prototype,"innerText",{set(e){const r=trustedTypes.createPolicy("myEscapePolicy",{createHTML:e=>e}).createHTML(e);if(!this.matches(":is(html,head,body)")&&""!==e)return this.matches('[class*="comment"]')||this.matches("a")?t.call(this,r):t.call(this,e)}})})(),Document.prototype.adoptNode=function(e){};
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190699 16-10-2024
 ||vidlink.pro/api/adcash
@@ -577,7 +576,8 @@ $script,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com|fastly.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189567 18-10-2024
 japscan.lol##body > style + .container > .row > #main + #sidebar.col-md-3 > .card.mt-1 > .card[style="margin: 0px auto; display: block;"] > a.aikoi.donate[href^="http"][target="_blank"][rel="noopener noreferrer nofollow"]:not([href^="http://japscan.lol"]) > img
 japscan.lol##body > style + .container > .row > #main.col-md-9 > .card > #chapters.tab-content > .row.justify-content-center.align-items-center > a.image-box.donate[href^="http"][target="_blank"][rel="noopener noreferrer nofollow"]:not([href^="http://japscan.lol"]) > img
-japscan.lol#%#//scriptlet('remove-node-text', 'script', '/nApC|lpZ=/')
+japscan.lol##body > .container.text-center > .mb-2.mt-2[style="margin: 0px auto; display: block;"] > .text-center > a.donate[href^="http"][target="_blank"][rel="noopener noreferrer nofollow"]:not([href^="http://japscan.lol"]) > img
+japscan.lol#%#//scriptlet('remove-node-text', 'script', '/nAp[A-z]\(\)/')
 japscan.lol#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', '(e)=>')
 japscan.lol#%#//scriptlet('prevent-element-src-loading', 'script', 'acscdn.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189504 26-09-2024

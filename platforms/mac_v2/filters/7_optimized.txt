@@ -1,9 +1,9 @@
-! Checksum: yIR3DQzio1wlrrdYaQGnXQ
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1729262270-3600.patch
+! Checksum: 66edR4c3vNFL8/G/seObFw
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1729273032-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.58.2
-! TimeUpdated: 2024-10-18T14:33:22+00:00
+! Version: 2.0.58.3
+! TimeUpdated: 2024-10-18T17:33:00+00:00
 ! Expires: 12 hours (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -398,8 +398,11 @@ in-jpn.com##.sk-popup-window
 yourfones.net#%#//scriptlet('spoof-css', 'ins.adsbygoogle', 'display', 'block')
 mytry.jp#@#.ad_box
 mytry.jp#$#body > #container { display: block !important; }
+||wiki.yjsnpi.nu^$script,replace=/try \{ const [0-9a-z]+ = new Date.+\} catch \{ [0-9a-z]+\(\); \}//
+!+ NOT_PLATFORM(ext_ublock)
+||wiki.yjsnpi.nu^$csp=require-trusted-types-for 'script'
+wiki.yjsnpi.nu#%#(()=>{window.DOMParser.prototype.parseFromString=new Proxy(window.DOMParser.prototype.parseFromString,{apply:(e,t,r)=>{const c=trustedTypes.createPolicy("myEscapePolicy",{createHTML:e=>e}).createHTML(r[0]);r[0]=c;return Reflect.apply(e,t,r)}});const e=Object.getOwnPropertyDescriptor(Element.prototype,"innerHTML").set;Object.defineProperty(Element.prototype,"innerHTML",{set(t){const r=trustedTypes.createPolicy("myEscapePolicy",{createHTML:e=>e}).createHTML(t);if(!this.matches(":is(html,head,body)")&&""!==t)return this.matches('[class*="comment"]')||this.matches("a")?e.call(this,r):e.call(this,t)}});const t=Object.getOwnPropertyDescriptor(HTMLElement.prototype,"innerText").set;Object.defineProperty(HTMLElement.prototype,"innerText",{set(e){const r=trustedTypes.createPolicy("myEscapePolicy",{createHTML:e=>e}).createHTML(e);if(!this.matches(":is(html,head,body)")&&""!==e)return this.matches('[class*="comment"]')||this.matches("a")?t.call(this,r):t.call(this,e)}})})(),Document.prototype.adoptNode=function(e){};
 $subdocument,redirect-rule=noopframe,domain=wiki.yjsnpi.nu
-wiki.yjsnpi.nu#%#//scriptlet('abort-on-stack-trace', 'document.querySelectorAll', 'MutationObserver')
 wiki.yjsnpi.nu#%#//scriptlet('set-constant', 'DOMTokenList.prototype.remove', 'noopFunc')
 wiki.yjsnpi.nu#%#//scriptlet('set-constant', 'HTMLElement.prototype.remove', 'noopFunc')
 wiki.yjsnpi.nu#$#body img, body .Inmbox, body .lazy-image-placeholder { width: auto !important; height: auto !important; opacity: 1 !important; visibility: visible !important; display: block !important; color: unset !important; background: none !important; }
