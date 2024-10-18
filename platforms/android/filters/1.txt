@@ -1,9 +1,9 @@
-! Checksum: hUU52kArMM/eEDs3w8CZ+Q
-! Diff-Path: ../patches/1/1-s-1729247808-3600.patch
+! Checksum: T0V9scLLnv8zF00YNCzcHA
+! Diff-Path: ../patches/1/1-s-1729251433-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.94.66
-! TimeUpdated: 2024-10-18T10:31:07+00:00
+! Version: 2.0.94.67
+! TimeUpdated: 2024-10-18T11:31:08+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1494,6 +1494,10 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||mediapays.info^
+||dotofverse.com^
+||trutheyesstab.com^
+||myroledance.com^
 ||tifsuc.com^
 ||dyaconiconelino.com^
 ||damgurwdblf.xyz^
@@ -5581,6 +5585,7 @@ otzovik.com$$script[wildcard="*function*blockId*"][min-length="1000"][max-length
 ! START: Yandex
 !
 !
+||yandex.$script,xmlhttprequest,jsonprune=\$..[direct\, "rtbAuctionInfo"\, "settings"]
 yandex.*#%#//scriptlet('remove-cookie', '/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/')
 $cookie=/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/,domain=yandex.*
 ||static-mon.yandex.net/static/main.js$script,xmlhttprequest,replace=/"cookieName":.?"\w+"\,/"cookieName": "nonexisting"\,/
