@@ -898,8 +898,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.87",
-			"timeUpdated": "2024-10-18T13:01:05+0000",
+			"version": "2.1.57.88",
+			"timeUpdated": "2024-10-18T17:01:02+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -973,8 +973,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.57.86",
-			"timeUpdated": "2024-10-18T13:01:06+0000",
+			"version": "2.1.57.87",
+			"timeUpdated": "2024-10-18T17:01:03+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1395,8 +1395,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.51.18",
-			"timeUpdated": "2024-10-18T13:01:52+0000",
+			"version": "2.0.51.19",
+			"timeUpdated": "2024-10-18T17:01:47+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"
@@ -1419,8 +1419,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/RandomAdversary/Macedonian-adBlock-Filters/master/Filters",
 			"trustLevel": "low",
-			"version": "2.0.0.9",
-			"timeUpdated": "2024-04-13T11:23:42+0000",
+			"version": "2.0.0.10",
+			"timeUpdated": "2024-10-18T17:01:47+0000",
 			"deprecated": false,
 			"languages": [
 				"mk"
