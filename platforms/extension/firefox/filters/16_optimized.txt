@@ -1,9 +1,9 @@
-! Checksum: Co8sMe0MFzAUmkrK/ZwX5g
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1729219000-3600.patch
+! Checksum: w8R4qMB70/TDp6r0BARrew
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1729233418-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.47.38
-! TimeUpdated: 2024-10-17T17:33:18+00:00
+! Version: 2.0.47.39
+! TimeUpdated: 2024-10-18T06:33:37+00:00
 ! Expires: 10 days (update frequency)
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -31,6 +31,11 @@ bilan.ch#%#!function(){function b(){}function a(a){return{get:function(){return 
 capital.fr#@#.plainAd
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari)
 @@||bilan.ch^$generichide
+marieclaire.fr#@#.AdsBox
+marieclaire.fr#$#body { overflow: auto !important; }
+marieclaire.fr#$##overlay { display: none !important; }
+marieclaire.fr#$?#.qiota_onboard:has(> div.AdBlockModal) { display: none !important; }
+||static.qiota.com/assets/getQiota.js$domain=marieclaire.fr
 larvf.com#@#.AdsBox
 sekai.one###adblock-modal
 ||statics.liberation.fr/newsite/js/cmp/gtm.js
@@ -259,6 +264,7 @@ $script,redirect-rule=noopjs,domain=tf1info.fr
 !+ NOT_OPTIMIZED
 @@||ads.stickyadstv.com^|$xmlhttprequest,domain=tf1.fr|tf1info.fr
 !#safari_cb_affinity
+marieclaire.fr#%#//scriptlet('adjust-setTimeout', '/userConsentProcess|this===/', '*', '0.001')
 1jour1film.cyou#%#//scriptlet('remove-attr', 'href', 'a[href]#clickfakeplayer')
 sudouest.fr#%#//scriptlet('adjust-setTimeout', 'return t()', '*', '0.001')
 japscan.lol#%#//scriptlet('prevent-setTimeout', 'sessionStorage')
@@ -378,6 +384,7 @@ igen.fr#$##motherboard { top: 30px!important; }
 /propads.$domain=~propads.gg
 $script,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=extreme-down.moe|dl-protect.link|tirexo.ink
 $xmlhttprequest,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=zone-telechargement.*
+marieclaire.fr##.External:has(> .googleAd:only-child)
 larvf.com##.External.is-empty
 lexpress.mu#?#p.text-right:contains(/^Publicité$/)
 lexpress.mu#?#.place-items-center:has(> div:only-child:not([class],[id]) > p.text-right:contains(/^Publicité$/))
