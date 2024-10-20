@@ -250,13 +250,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-<<<<<<< HEAD
-			"version": "2.0.70.97",
-			"timeUpdated": "2024-10-20T03:23:46+0000",
-=======
-			"version": "2.0.71.76",
-			"timeUpdated": "2024-10-20T18:33:16+0000",
->>>>>>> 65cf7e1a665977886dc609540483066a1ae13103
+			"version": "2.0.70.98",
+			"timeUpdated": "2024-10-20T20:57:54+0000",
 			"languages": []
 		},
 		{
@@ -384,13 +379,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-<<<<<<< HEAD
-			"version": "2.1.33.45",
-			"timeUpdated": "2024-10-20T03:31:54+0000",
-=======
-			"version": "2.1.35.1",
-			"timeUpdated": "2024-10-20T17:00:57+0000",
->>>>>>> 65cf7e1a665977886dc609540483066a1ae13103
+			"version": "2.1.33.46",
+			"timeUpdated": "2024-10-20T21:06:17+0000",
 			"languages": []
 		},
 		{
@@ -655,13 +645,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-<<<<<<< HEAD
-			"version": "2.1.32.60",
-			"timeUpdated": "2024-10-20T03:54:03+0000",
-=======
-			"version": "2.1.33.43",
-			"timeUpdated": "2024-10-20T17:01:08+0000",
->>>>>>> 65cf7e1a665977886dc609540483066a1ae13103
+			"version": "2.1.32.61",
+			"timeUpdated": "2024-10-20T21:30:41+0000",
 			"languages": []
 		},
 		{
