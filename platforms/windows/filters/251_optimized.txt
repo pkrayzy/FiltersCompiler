@@ -1,9 +1,9 @@
-! Checksum: inZ73lIel16MAnCENkU76Q
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1727312728-14400.patch
+! Checksum: cWjdA6U4/GZL7FvkfQqqTg
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1728997555-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.21
-! TimeUpdated: 2024-09-26T01:01:49+00:00
+! Version: 2.0.8.25
+! TimeUpdated: 2024-10-15T13:01:57+00:00
 ! Expires: 12 hours (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -1008,7 +1008,7 @@ $document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|about.gitl
 $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|marketwatch.com|penews.com
 @@^mod=djemalertNEWS^$removeparam=mod
 $removeparam=sid,domain=anrdoezrs.net|dpbolvw.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com|gamereactor.*
-$removeparam=from,document,domain=apkpure.com|bandcamp.com|browserling.com|duckduckgo.com|ettoday.net|landevei.no|luisaviaroma.com|sogou.com|store.hbr.org|app.snyk.io|onlinepngtools.com|indiatimes.com|jetbrains.com|nextdns.io|tvtropes.org|yandex.com
+$removeparam=from,document,domain=apkpure.com|bandcamp.com|browserling.com|duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion|ettoday.net|landevei.no|luisaviaroma.com|sogou.com|store.hbr.org|app.snyk.io|onlinepngtools.com|indiatimes.com|jetbrains.com|nextdns.io|tvtropes.org|yandex.com
 $removeparam=keyword,domain=bindright.com|lendgo.com|reddit.app.link
 $removeparam=id,domain=go.redirectingat.com|go.skimlinks.com|go.skimresources.com|karkkainen.com
 $removeparam=offer_id,domain=catch.com.au|surfshark.com
@@ -1222,13 +1222,16 @@ $removeparam=fir
 @@||google.*&tbm=isch&*#imgrc=$removeparam=usg
 $removeparam=ogbl
 ||google.*/webhp$removeparam=channel
-||www.google.$removeparam=aqs
-||www.google.$removeparam=btnG
-||www.google.$removeparam=iflsig
-||www.google.$removeparam=uact
+$removeparam=aqs,domain=www.google.*|ipv6.google.com
+$removeparam=btnG,domain=www.google.*|ipv6.google.com
+$removeparam=iflsig,domain=www.google.*|ipv6.google.com
+$removeparam=uact,domain=www.google.*|ipv6.google.com
 ://www.google.*/search^$removeparam=kgs
 ://www.google.*/search^$removeparam=shndl
 ://www.google.*/search^$removeparam=entrypoint
+://ipv6.google.com*/search^$removeparam=kgs
+://ipv6.google.com*/search^$removeparam=shndl
+://ipv6.google.com*/search^$removeparam=entrypoint
 ||google.*/search$removeparam=sqi
 ||google.$removeparam=gs_ssp
 ||google.$removeparam=prds
@@ -1240,18 +1243,20 @@ $removeparam=ogbl
 ||googleadservices.com^$removeparam=ms
 ||googleadservices.com^$removeparam=ohost
 ||www.google.*/search?$document,removeparam=sclient
+||ipv6.google.com*/search?$document,removeparam=sclient
 ||accounts.google.com^$removeparam=dsh,document
 ||support.google.com^$removeparam=ref_topic
 $removeparam=_x_tr_pto
 ||google.$removeparam=/^sa=X$/
 ||google.$removeparam=/^sa=N$/
 ||support.google.com^$document,removeparam=sjid
-||www.google.$document,removeparam=gs_lp
+$document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||www.google.*/search$removeparam=oq,document
+||ipv6.google.com*/search$removeparam=oq,document
 ||google.$document,removeparam=sca_esv
-||www.google.$removeparam=/^udm=$/
+$removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||translate.goog^$removeparam=_x_tr_pto
-||www.google.$document,removeparam=sca_upv
+$document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||tiktok.com^$removeparam=_r
 $removeparam=share_ab_group
 $removeparam=u_code
@@ -1700,7 +1705,7 @@ $removeparam=aid,domain=adguard-dns.com|adguard-vpn.com|adguard.com|brownells.*|
 $removeparam=camp,domain=amazon.*|calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com
 $removeparam=channelref,domain=asos.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com|bestbuy.com
-$removeparam=cp,domain=converse.com|nike.com|nextdoor.com|duckduckgo.com
+$removeparam=cp,domain=converse.com|nike.com|nextdoor.com|duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion
 $removeparam=ecmp,domain=4wheelparts.com
 $removeparam=kc,domain=autoanything.com
 $removeparam=/^linkshareid=.*$/i,domain=bloomingdales.com|macys.com
@@ -1902,7 +1907,7 @@ $removeparam=referer,document,domain=bodykind.com|clink2.com|dlink2.com|nitter.n
 ||target.com^$removeparam=lnk
 $removeparam=marketing_id
 $removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com
-$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
+$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
 $removeparam=visit_id,document,domain=bilibili.com|google.*
@@ -2313,7 +2318,7 @@ $removeparam=pk_vid,document
 ||login.afreecatv.com^$removeparam=szFrom
 ||typeform.com^$removeparam=typeform-source
 $removeparam=clickedFromCategory,domain=objectci.com|pieces.com|selected.com|vila.com
-$removeparam=natb,domain=duckduckgo.com
+$removeparam=natb,domain=duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion
 ||cdc.gov^$removeparam=ACSTrackingID
 ||cdc.gov^$removeparam=ACSTrackingLabel
 ||cdc.gov^$removeparam=deliveryName
@@ -2638,6 +2643,11 @@ $document,removeparam=maltcode,domain=gamestop.com|ubisoft.com|steampowered.com
 ||walmart.com/ip/$document,removeparam=from
 $document,domain=youtube.com,removeparam=embeds_referring_origin
 ref=internet.exchangepoint.tech$document,removeparam=ref
+$document,removeparam=ebisOther1
+$document,removeparam=ebisOther2
+$document,removeparam=ebisOther3
+$document,removeparam=ebisOther4
+$document,removeparam=ebisOther5
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
 $removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
 $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
@@ -2651,6 +2661,7 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ||hotels.com^$removeparam=pwa_ts
 !+ NOT_OPTIMIZED
 ||hotels.com^$removeparam=latLong
+||everyplay.live^$removeparam=_gl
 @@mailinglist$removeparam=/^utm_.*$/i
 @@||web.archive.org/*_/http$removeparam
 @@||img*.nga$removeparam=cmpid

@@ -1,9 +1,9 @@
-! Checksum: PkzoBZadj64M9oljHOHm9w
-! Diff-Path: ../patches/17/17-s-1727156202-3600.patch
+! Checksum: VRSr2DKisARSv7qLRPCFFw
+! Diff-Path: ../patches/17/17-s-1729273030-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.9.53
-! TimeUpdated: 2024-09-24T05:33:06+00:00
+! Version: 2.0.9.66
+! TimeUpdated: 2024-10-18T17:33:23+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21,6 +21,12 @@
 ! Bad:  $removeparam=utm_id,domain=example.org (for instance, should be in specific.txt)
 !
 !
+! https://support.ebis.ne.jp/s/article/23146
+$removeparam=ebisOther1
+$removeparam=ebisOther2
+$removeparam=ebisOther3
+$removeparam=ebisOther4
+$removeparam=ebisOther5
 ! https://docs.bemob.com/en/bemob-click-urls
 $removeparam=bemobdata
 ! Unidentified email subscription system
@@ -375,6 +381,40 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/191029
+||reddit.com^$removeparam=%24deep_link
+||reddit.com^$removeparam=%243p
+||reddit.com^$removeparam=rdt
+||reddit.com^$removeparam=post_index
+! https://github.com/AdguardTeam/AdguardFilters/issues/190916
+||boosty.to^$removeparam=_1ld
+||boosty.to^$removeparam=_1lp
+||boosty.to^$removeparam=from
+! https://github.com/AdguardTeam/AdguardFilters/issues/190931
+||avansas.com^$removeparam=sc_src
+||avansas.com^$removeparam=sc_llid
+||avansas.com^$removeparam=sc_lid
+||avansas.com^$removeparam=sc_uid
+||avansas.com^$removeparam=sc_customer
+! https://github.com/AdguardTeam/AdguardFilters/issues/190963
+||keepstreams.jp/thanks-for-using-$removeparam
+! kickstarter.com
+||kickstarter.com$removeparam=ref
+||kickstarter.com/projects$removeparam=event
+||kickstarter.com/projects$removeparam=term
+||kickstarter.com/projects$removeparam=total_hits
+! https://github.com/brave/adblock-lists/pull/2073
+||washingtonpost.com^$removeparam=itid
+! https://github.com/AdguardTeam/AdguardFilters/issues/189858
+||tezfiles.com$removeparam=site
+! https://github.com/AdguardTeam/AdguardFilters/issues/190134
+||calciomatome.net$removeparam=seesaa_related
+! https://github.com/AdguardTeam/AdguardFilters/issues/189843
+||smocca.jp^$removeparam=cb_ref_code
+! https://github.com/AdguardTeam/AdguardFilters/issues/189871
+||rtrp.jp^$removeparam=p_s
+! https://lidea.today/campaign/kireikirei_wchance_eraberupaycp2409/index?from=top_promotion02_kireikirei_wchance_eraberupaycp2409
+||lidea.today^$removeparam=from
 ! change.org
 ||change.org^$removeparam=source_location
 ||change.org^$removeparam=user_flow
@@ -773,6 +813,14 @@ $removeparam=from,domain=doujinnomori.com|shinshi-manga.net|echiman.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167273
 ||game-i.daa.jp/?cmd=ad_mode$removeparam=cmd
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167051
+||slickdeals.net^$removeparam=attr_track
+||slickdeals.net^$removeparam=trd
+||slickdeals.net^$removeparam=pv
+||slickdeals.net^$removeparam=au
+||slickdeals.net^$removeparam=prop
+||slickdeals.net^$removeparam=sdtrk
+||slickdeals.net^$removeparam=attrsrc
+||slickdeals.net^$removeparam=src
 ||slickdeals.net/?adobeRef=$removeparam=adobeRef
 ||slickdeals.net/*&sdtid=$removeparam=sdtid
 ||slickdeals.net/*&sdpid=$removeparam=sdpid
@@ -1285,10 +1333,11 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ||glami.cz^$removeparam=/ga[ct]id/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143625
 ||open.spotify.com^$removeparam=referral
+||open.spotify.com^$removeparam=si
 ! SK Telecom (skt.sh domain used as their own URL shortening service )
 ||skt.sh/common/share/bridge?$removeparam=referer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4966523
-||login.afreecatv.com^$removeparam=szFrom
+||login.sooplive.co.kr^$removeparam=szFrom
 ! moffme.com?source=gl&medium=moffme&campaign=article_2699
 ||moffme.com^$removeparam=source
 ||moffme.com^$removeparam=medium
@@ -1433,10 +1482,14 @@ $removeparam=afid,domain=123chat.jp|kanochat.jp|live.fc2.com
 ||vercel.com^$removeparam=sfmc_asset_id
 ||vercel.com^$removeparam=sfmc_activityid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133961
+! https://github.com/AdguardTeam/AdguardFilters/issues/190214
 ||getir.com^$removeparam=is_retargeting
 ||getir.com^$removeparam=shortlink
 ||getir.com^$removeparam=deep_link_value
 ||getir.com^$removeparam=c
+||getir.com^$removeparam=source_caller
+||getir.com^$removeparam=pid
+||getir.com^$removeparam=af_reengagement_window
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134281
 ||imdb.com^$removeparam=pf_rd_m
 ||imdb.com^$removeparam=pf_rd_p
@@ -2124,6 +2177,8 @@ $removeparam=from,domain=anime.nicovideo.jp|dic.nicovideo.jp
 ||google.*/search$removeparam=ei
 ||google.*/search$removeparam=gs_lcp
 ||google.*/search$removeparam=gs_lcrp
+! https://github.com/AdguardTeam/AdguardFilters/issues/191127
+||google.$removeparam=subid
 !
 ! eBay tracking parameters
 ||www.ebay.$removeparam=ssspo
@@ -2247,7 +2302,8 @@ $removeparam=asc_source,domain=aboutamazon.com|amazon.*|amzn.to
 ||cam4.com^$removeparam=suid
 ||cam4.com^$removeparam=showSignupPopup
 ! Tracks source site
-$removeparam=ocid,domain=bbc.com|bbc.co.uk|msn.com
+$removeparam=ocid,document,domain=msn.com
+$removeparam=ocid,domain=bbc.com|bbc.co.uk
 $removeparam=ns_mchannel,domain=bbc.com|bbc.co.uk
 $removeparam=ns_source,domain=bbc.com|bbc.co.uk
 $removeparam=ns_campaign,domain=bbc.com|bbc.co.uk

@@ -1,12 +1,12 @@
-! Checksum: UXqJ53sC5PT6coYL1aGF/Q
+! Checksum: IRlcykk9lm8CY8cW8bdFlg
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.15.13
-! TimeUpdated: 2024-09-26T01:01:48+00:00
+! Version: 2.0.15.36
+! TimeUpdated: 2024-10-18T05:01:46+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 10September2024v3-Compilation
+! OriginalVersion: 06October2024v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -35,7 +35,7 @@
 ! • Unnecessary login prompts.
 ! • URL parameters believed to be unnecessary or trackers.
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
-! OriginalVersion: 20September2024v1
+! OriginalVersion: 14October2024v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -399,7 +399,6 @@ bfmtv.com###android_banner
 valdemarsro.dk##.promobar-container
 republicworld.com,republicbharat.com###hellobar-bar
 /jquery.smartbanner/*
-.smartbanner.js
 /js/smartbanner.
 /smart-app-banner.
 /smartbanner/appbanner.js
@@ -426,6 +425,8 @@ kundeavisogtilbud.no##.corner-popup-container
 ||weather.gc.ca/banner/images/App_*.gif$image
 ! https://github.com/DandelionSprout/adfilt/issues/1047
 @@/jquery.smartbanner.js^
+! (https://github.com/DandelionSprout/adfilt/issues/1065)
+.smartbanner.js$domain=~mcpedl.com
 ! Pinterest
 ##div[data-test-id$=InterstitialUpsell]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105227
@@ -438,11 +439,11 @@ kundeavisogtilbud.no##.corner-popup-container
 ###___ndtvpushdiv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126511
 ###app-store-modal
-! nidaros.no (on Android)
+! nidarosNO (on Android)
 no#$#html.smartbanner-show[data-paywall] { margin-top: 0 !important }
 ! https://github.com/DandelionSprout/adfilt/issues/882
 ##link[href*=bet] ~ * .header-download.mob_view
-! trondheimkino.no (02/07/23)
+! trondheimkinoNO (02/07/23)
 ###journeyBanner
 ! https://github.com/DandelionSprout/adfilt/pull/956 / https://www.valdemarsro.dk/
 ~applink.dk##a[href*="/applink.dk/"]
@@ -461,11 +462,10 @@ accuweather.com###app-store-links
 .SmartMessage.$script,domain=weather.com
 quora.com##.modal_bg
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 21September2024v1
-! Expires: 2 days
+! OriginalVersion: 07October2024v2
+! Expires: 1 day
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
-! (Note to self, only applicable to uBO: When 1.59.1 goes stable, implement "*$ipaddress=(...),all" for the IP addresses, alongside the previous syntaxing as the case is for AdGuard Browser Extension.)
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! ——— Bad top-level domains ———
 ! You can expect these domains to have an overwhelming majority of malware domains that have nothing to do with the countries in question. Nevertheless, if you are in a situation where you have to do active business in any of the countries in question, then this list may not be ideal for you.
@@ -481,7 +481,7 @@ quora.com##.modal_bg
 ! Palau (Put on break due to too many whitelistings being needed)
 !!!||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~buttercup.pw|~rezka.pw|~darkcrystal.pw|~xor.pw|~fullhdfilmizlesene.pw|~gopass.pw|~vost.pw|~core.pw|~bittor.pw|~plutonium.pw|~nitter.pw|~kge.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
-||top^$document,domain=~caitlin.top|~callmebymygender.top|~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top|~chillx.top|~strims.top|~thedesk.top|~audioforyou.top|~pegelinux.top|~awavenue.top|~reyhub.top|~iboxs.top
+||top^$document,domain=~caitlin.top|~callmebymygender.top|~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top|~chillx.top|~strims.top|~thedesk.top|~audioforyou.top|~pegelinux.top|~awavenue.top|~reyhub.top|~iboxs.top|~adrules.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 !!!||agency^$document,domain=~battlefield.agency|~baam.agency|~robotzebra.agency|~uphotel.agency|~ws.agency (Can't remember the last time I saw it used in a redirection train.)
@@ -490,7 +490,7 @@ quora.com##.modal_bg
 !!!||ooo^$document,domain=~toast.ooo
 ! (https://github.com/DandelionSprout/adfilt/issues/999)
 !!!@@://oo*.ooo/$document
-! https://bgp.he•net/AS202492#_prefixes (17/07/2022)
+! https://bgp•he•net/AS202492#_prefixes (17/07/2022)
 !!!||monster^$document,domain=~egybest.monster|~yts.monster|~cloudcdn.monster|~fedi.monster|~rollenspiel.monster|~tts.monster|~geometry.monster
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131156
 !!!||sbs^$document,domain=~ecopulse.sbs
@@ -510,6 +510,7 @@ quora.com##.modal_bg
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
 ||spam404bl.com^$document
+||109.201.135.46^$document
 ||fredfiber.no^$document
 ||securemecca.com^$document
 ||everythingisnt.com^$document
@@ -521,6 +522,7 @@ quora.com##.modal_bg
 ||ssl.bblck.me^$document
 ||allblock.net^$document
 ||microsoftedge.microsoft.com/addons/detail/allblock/nkllnmjaaifdphkfbmedklkimjmnjeen^$document
+||bromite.org^$document
 ! Malicious or purchaseable domains found in videogame manuals, title screens, or game driver/patch sites
 ||acclaimsports.com^$document
 ||acclaimmaxsports.com^$document
@@ -546,6 +548,7 @@ quora.com##.modal_bg
 ||mandriva.com^$document
 ! Fraudulent browser extensions
 ||ublock.org^$document
+||138.68.252.54^$document
 ||block-ads-now.com^$document,popup
 ! Presumed to be fraudulent antivirus extensions on app/extension sites where it's perfectly probable that everyday people could install them.
 ! Other
@@ -684,25 +687,6 @@ msn.com##.irisbanner
 ||roms-download.com^$document
 ||gamesgx.net^$document
 coolrom.com.au,coolrom.com##.download_link
-! ——— Entries from «abuse.ch ZeuS Blocklist», which was discontinued on the 8th of July 2019. ———
-||afobal.cl^$document
-||alvoportas.com.br^$document
-||bright.su^$document
-||domnicpeter.in.net^$document
-||dzitech.net^$document
-||fadzulani.com^$document
-||hruner.com^$document
-||interlogistics.com.vn^$document
-||ivansaru.418.com1.ru^$document
-||jangasm.org^$document
-||ns511849.ip-192-99-19.net^$document
-||ns513726.ip-192-99-148.net^$document
-||servmill.com^$document
-||ssl.sinergycosmetics.com^$document
-||telefonfiyatlari.org^$document
-||update.rifugiopontese.it^$document
-||vodahelp.sytes.net^$document
-||witkey.com^$document
 ! ——— Browser extension store entries for notoriously poor or malicious adblocker forks ———
 ! Note: Currently the Chrome Web Store entries only work properly for Chrome users on AdGuard for Windows/Mac, due to limitations placed on browser extensions; see https://github.com/gorhill/uBlock/wiki/Privileged-Pages
 ! Chrome Web Store
@@ -719,10 +703,12 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||apps.apple.com/*/app/*/id1564900435^$document
 ! ——— Typo squatting, misspellings, and honest TLD address bar mistakes ———
 ||ubuntu.org^$document,domain=~you-were-likely-looking-for-ubuntu.com
+||103.224.212.249^$document
 ||speedtest.com^$document,domain=~you-were-likely-looking-for-speedtest.net
 ||snapchat.cm^$document,domain=~malware-typo-squatter-of-snapchat.com
 ||facebook.cm^$document,domain=~malware-typo-squatter-of-facebook.com
 ||wix.cm^$document,domain=~malware-typo-squatter-of-wix.com
+||199.59.243.222^$document
 |http://ww01.$document,domain=~very-very-extremely-frequently-used-in-malware-redirections.*
 ! https://github.com/DevSpen/links/blob/master/src/links.txt
 ||steamcommin*$document,domain=~likely-a-fake-malware-version-of-steamcommunity.com
@@ -743,9 +729,16 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||jessica.*.net^$document
 ||katie.*.net^$document
 ||emily.*.net^$document
+||54.174.156.141^$document
 ||lordagty.com^$document
 ||madagty.com^$document
 ||zeroredirect5.com^$document,domain=~malware-redirection-trains.*
+||54.209.22.226^$document
+||54.91.125.197^$document
+||52.202.53.245^$document
+||34.230.160.215^$document
+||3.226.8.132^$document
+||3.216.243.46^$document
 ! Source: desidert•no
 ! Source: vn-zoom•com
 ||amanda.*.com^$document
@@ -753,11 +746,18 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||briana.*.com^$document
 ||sarah.*.com^$document
 ||pamela.*.com^$document
+||54.152.245.247^$document
+||3.90.125.85^$document
 ! Various ex-affiliate links at www•zombooru•com
 ||lasvegas-vacations.net^$document
 ||ndsplitter.com^$document
 ||satcom1.co.uk^$document
 ||splitter.microxml.net^$document
+||94.130.185.237^$document
+||94.130.186.231^$document
+||144.76.0.242^$document
+||144.76.1.130^$document
+||195.201.92.254^$document
 zombooru.com##a[href$="ttp://www.boorufurry.com/"]
 zombooru.com##a[href$="ttp://www.analbooru.com/"]
 zombooru.com##a[href$="ttp://www.hard55.com"]
@@ -774,6 +774,10 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||couponbybox.com^$document
 ||newpage.in^$document
 /mcaf04/*=$document
+||34.204.214.165^$document
+||54.85.113.62^$document
+||54.205.83.61^$document
+||54.210.193.115^$document
 ||adblockerapp.com^$document,popup
 /^.*\.(xyz|pics)/[a-zA-Z0-9]{130,}\$/$document,script,subdocument,image
 /^.*\.(cloudfront\.net|xyz|pics)/[a-zA-Z0-9]{20,}/[a-zA-Z0-9]{25,}\+[a-zA-Z0-9+]{90,}\$/$document,script,subdocument,image
@@ -786,7 +790,15 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||videoadblockers.$document,popup
 ||videoadblockertou.$document,popup
 ||videoadblockextension.$document,popup
+://142.91.159.$document
 ! https://github.com/DandelionSprout/adfilt/issues/942
+/^172\.255\.6\.(\d{1,2}|[12][0-689]\d|17[0-689])\$/
+://23.109.150.$document
+://23.109.248.$document
+://173.233.137.$document
+://173.233.139.$document
+://192.243.59.$document
+://192.243.61.$document
 ! https://twitter•com/SUNgoddessOKAMI/status/1221295265195405315
 ||deviuser.com^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61838
@@ -795,8 +807,14 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61743
 /^(https?://)?(www\.)?cunt[a-z]{3,8}\.com(/|$)/$document,popup
 ! https://github.com/easylist/easylist/issues/6111
+||178.128.142.109^$document
 /^http://\d{1,2}\.[a-z0-9-]{1,}\.(club|me)(/|$)/$document
 /^https://\d{1,2}\.[a-z0-9-]{1,}\.(club|me)(/|$)/$document
+||134.209.136.174^$document
+||62.210.6.153^$document
+||62.210.7.209^$document
+||62.210.9.92^$document
+||62.210.11.203^$document
 ! https://maldita•es/malditobulo/2020/12/04/concurso-mercadona-ganar-tarjeta-regalo-100-euros-phishing/
 ||notified-today.com^
 ||antivirus-update.com^$document
@@ -808,6 +826,7 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||notified-today.xyz^$document
 ||stay-notified.com^$document
 ||stay-notified.xyz^$document
+||167.99.249.47^$document
 ! https://maldita•es/malditobulo/2020/12/02/lidl-regala-robot-cocina-silvercrest-monsieur-cuisine-encuesta/
 ! https://maldita•es/malditobulo/2020/11/25/jordi-evole-el-hormiguero-bitcoin-revolution-timo-twitter/
 ||moderncomputer.net^
@@ -832,16 +851,36 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://github.com/DandelionSprout/adfilt/issues/188
 ||best-prizes-202*.com^$document,domain=~malware-site.*
 ||all-best-prize-202*.com^$document,domain=~malware-site.*
+||5.8.34.26^$document
+||5.8.47.3^$document
+||103.224.182.251^$document
 ! https://github.com/DandelionSprout/adfilt/issues/193
+||5.79.71.205^$document
+||5.79.71.225^$document
+||85.17.31.82^$document
+||85.17.31.122^$document
+||178.162.203.202^$document
+||178.162.203.211^$document
+||178.162.203.226^$document
+||178.162.217.107^$document
 ! https://github.com/DandelionSprout/adfilt/issues/195
 ! https://github.com/DandelionSprout/adfilt/issues/196
+||66.85.156.85^$document
+||66.85.156.86^$document
+||108.170.31.123^$document
+||108.170.52.156^$document
 ! https://github.com/DandelionSprout/adfilt/issues/198
 ! https://www•bleepingcomputer•com/virus-removal/ (18/06/2021)
 ! https://www•bleepingcomputer•com/virus-removal/remove-please-allow-to-watch-the-video
+||95.168.170.165^$document
+||213.227.145.147^$document
+||213.227.149.216^$document
 ! https://twitter•com/adamziaja/status/1252234957679808513
 ! https://blog•sucuri•net/2021/05/woocommerce-credit-card-skimmer•html
+||5.188.62.36^$document
 ! https://github.com/DandelionSprout/adfilt/issues/223
 ! https://github.com/DandelionSprout/adfilt/issues/224
+||69.49.231.244^$document
 ! https://movsb•0x0•st/users/mia
 ||vid.me^$third-party
 ||5starhdporn.com^$subdocument,third-party
@@ -853,8 +892,11 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||microsoftedge.microsoft.com/addons/detail/image-find/oallgpknmoodlcklmhgfpgjkdencmnfd^$document
 ||microsoftedge.microsoft.com/addons/detail/kpckgoaeejpoghdglooeibkoedpkgock^$document
 ! https://github.com/DandelionSprout/adfilt/issues/251#issue-974102211
+||37.34.176.37^$document
 ||auslogics.com^$document
 ! https://github.com/DandelionSprout/adfilt/issues/253
+||23.111.31.137^$document
+||23.111.88.207^$document
 ! https://github.com/DandelionSprout/adfilt/issues/254
 ||onesafesoftware.com^$document
 ! https://github.com/DandelionSprout/adfilt/issues/257
@@ -896,6 +938,7 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://www•virustotal•com/gui/url/fbbc8a671bff32539bd829a76f6df9f364a21ac2279922e64e3ec494a1669dd3/detection
 ! https://www•virustotal•com/gui/domain/kiff•tech/relations
 ! https://www•virustotal•com/gui/url/dc038496b1b5358b97f89440135ec91258b406c40859a2cd95983dc7a81e0cfa/detection
+||45.90.58.90^$document
 ! https://www•virustotal•com/gui/file/e565ba89d034418fd26a5f642f6eeee4d72ee3b8dc69523419b7ca8dfd452730/community
 ! https://www•virustotal•com/gui/url/e3a9189a1e1256beba8e0fc3abfeab6acb09f7f8cabfd973e22be9f77bb6886f/detection
 ! https://github.com/DandelionSprout/adfilt/issues/267
@@ -1055,29 +1098,31 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://www•huorong.cn/info/1526627586130.html
 ! https://www•huorong.cn/info/1577158839403.html
 ! https://www•huorong.cn/info/1598957552515.html
-! https://www•huorong.cn/info/1617368984641.html
+! https://www•huorong•cn/info/1617368984641.html
 ! https://github.com/uBlockOrigin/uAssets/pull/10017
 ! https://www•nrk.no/vestfoldogtelemark/1.15750360
+!+ NOT_OPTIMIZED
+||132.148.220.142^$document
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-986306768
 ||chess-progress.ru^$document
-! https://scammer.info/t/there-are-things-in-the-game-that-will-interest-you-trojan/84908
+! https://scammer•info/t/there-are-things-in-the-game-that-will-interest-you-trojan/84908
 ||discord.com/invite/askara^$document
-! https://scammer.info/t/fake-facebook-login-page/84939
+! https://scammer•info/t/fake-facebook-login-page/84939
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
 ! https://www•tek.no/i/lVeQAe/
 ! https://www•nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
 ! https://github.com/iam-py-test/investigations/blob/main/2021/12/13/1.md
-! https://scammer.info/t/crypto-scammers-onceagain/85354
+! https://scammer•info/t/crypto-scammers-onceagain/85354
 ! https://www•virustotal•com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
 ! https://github.com/iam-py-test/investigations/blob/main/2021/12/14/1.md
 ! https://github.com/DevSpen/links/pull/3
-! https://bazaar.abuse.ch/sample/357226dff2f3309f8271b5a7c2cc816aa8fb779275357dce9b98b30357951210/
+! https://bazaar•abuse•ch/sample/357226dff2f3309f8271b5a7c2cc816aa8fb779275357dce9b98b30357951210/
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/1774#issuecomment-1000722777
 ||landing.marketstm.com^$document
 ! fake MediaFire scam domains
 ||songlos.com^$document
 ||findes.co^$document
-! https://bazaar.abuse.ch/sample/84d93b2fd2597da5d611165cbad0b252569a837c56a94a42849f2bedc8af033a/
+! https://bazaar•abuse•ch/sample/84d93b2fd2597da5d611165cbad0b252569a837c56a94a42849f2bedc8af033a/
 ! fake Flash Player
 ||lekms.com^$document
 ||microsoftedge.microsoft.com/addons/detail/ecosia-the-search-engin/fhfidmlnclkepgapcephbaciajegheco^$document
@@ -1099,16 +1144,18 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://twitter•com/iam_py_test/status/1496259425493225472
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111970
 /(^|\.|://)[a-z0-9-]{2,}trk\.xyz(/|$)/$document,popup,domain=~malware-redirection-trains.*
-! https://bazaar.abuse.ch/sample/d7308dab0110ae3bc79fd15024f5ccfcbd6e676b7c42b27a0112506e8357a6dc/ → https://app.any.run/tasks/bc53e7a9-5fd7-4682-894d-11e48e9ea89a#
+! https://bazaar•abuse•ch/sample/d7308dab0110ae3bc79fd15024f5ccfcbd6e676b7c42b27a0112506e8357a6dc/ → https://app•any•run/tasks/bc53e7a9-5fd7-4682-894d-11e48e9ea89a#
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1074966240
 ||melding.link^$document
 ! https://twitter•com/MBThreatIntel/status/1509956416311742464
-! https://bazaar.abuse.ch/sample/b959fb160dac2a15b8e65c15e2b1738d356c03e13623588bc70aab825c57660a/
+! https://bazaar•abuse•ch/sample/b959fb160dac2a15b8e65c15e2b1738d356c03e13623588bc70aab825c57660a/
 ||freeversioncrack.com^$document
-! https://www•telia.no/kundeservice/mobil/malware-flubot-android/
+! https://www•telia•no/kundeservice/mobil/malware-flubot-android/
 !+ NOT_OPTIMIZED
 /^https?://(www\.)?[a-z0-9-]{1,}\.[a-z]{2,17}/[a-z0-9]/\?[a-z0-9.-]{8,}\$/$document
 ! A Discord conversation I had about Throneful
+||195.201.253.130^$document
+||195.201.253.131^$document
 ! The bottom download button on https://www•sushichop•com/
 /trk2/*?lddomain=$document,domain=~very-likely-a-malware-redirection.*
 ||cpmrevdirect.com^$document,domain=~malware-redirection-trains.*
@@ -1120,10 +1167,19 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||rtbrevdirect.com^$document,domain=~malware-redirection-trains.*
 ||rtbvrdirect.com^$document,domain=~malware-redirection-trains.*
 ||cpmverdirect.com^$document,domain=~malware-redirection-trains.*
+||15.197.244.48^$document
+||96.47.230.67^$document
+||96.47.230.68^$document
+||96.47.230.69^$document
+||96.47.230.70^$document
 ! https://securitytrails•com/list/ns/ns1•fastthinkingdns•com
+://46.161.27.$document
+://78.128.112.$document
+://179.60.146.$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121544
 ||com/landers/iphone*_spin$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121772
+||31.220.27.134^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122757
 ://adbrbk.$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123544
@@ -1131,11 +1187,23 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://twitter•com/iam_py_test/status/1545164642346930176
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123968
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124620
-! https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
-! https://www•reddit.com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
-! https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
+/^178\.253\.[0-7]\.\d{1,3}\$/
+://178.253.14.$document
+://178.253.15.$document
+/^178\.253\.2[0145]\\d{1,3}\$/
+/^178\.253\.3[04-7]\.\d{1,3}\$/
+://178.253.46.$document
+://178.253.47.$document
+://178.253.54.$document
+! https://kommunikasjon•ntb•no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
+||158.247.212.220^$document
+||165.227.168.212^$document
+! https://new•reddit•com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
+://162.241.115.$document
+! https://dinside•dagbladet•no/mobil/ikke-la-deg-friste/76730599
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125285
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125300
+||139.45.197.236^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128029
 ||shopfirststop.com^$document,popup
 ||thecanem.net^$document,popup
@@ -1161,6 +1229,9 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||optimusquaero.com^$document,popup
 ||frescopartito.com^$document,popup
 ||motherpipe.net^$document
+||51.91.66.125^$document
+||51.178.76.105^$document
+||147.135.253.55^$document
 ! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www•virustotal•com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app•any•run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129414
 !+ NOT_OPTIMIZED
@@ -1168,12 +1239,15 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 !+ NOT_OPTIMIZED
 /^http://imgblaze.net/[a-z0-9]{6}\$/$third-party,subdocument
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131156
+||146.19.169.98^$document
+||146.19.169.99^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132079
 /pushredirect/?$document,domain=~malware-redirection-trains.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134355
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134903
 ! Random Discord servers
 ||newntflix-$document,popup
+||162.241.124.200^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135815
 ||adsstar.in^$document,popup
 ||clickcafe.in^$document,popup
@@ -1189,20 +1263,38 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||tnvalue.in^$document,popup
 ||usanewstoday.club^$document,popup
 ||webhostingtips.club^$document,popup
+||157.90.71.190^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135924
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136390
 ||glthub.$document,popup
-! https://app.any.run/tasks/67907c11-6877-4c38-932f-2cf09ee4e434
+! https://app•any•run/tasks/67907c11-6877-4c38-932f-2cf09ee4e434
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137635
+||44.228.230.225^$document
+||50.112.124.170^$document
+||100.20.104.229^$document
 ! Spambots who posted malware shortener links in the Legitimate URL Shortener discussion thread
 ||link.sv^$document,popup
 ||4.fo^$document,popup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139106
+||44.236.213.34^$document
+||52.24.156.12^$document
+||52.25.6.134^$document
+||100.20.13.49^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139667
 ! https://github.com/DandelionSprout/adfilt/issues/747
+://104.160.10.$document
+://165.231.154.$document
 ! https://github.com/DandelionSprout/adfilt/issues/748
 *norgesalg.com^$document,popup
 *salgnorge.com^$document,popup
+://165.231.10.$document
+://165.231.152.$document
+://196.196.52.$document
+://196.196.155.$document
+://196.240.121.$document
+://196.242.179.$document
+://196.245.52.$document
+://196.245.56.$document
 ! https://www•bleepingcomputer•com/news/security/hackers-push-malware-via-google-search-ads-for-vlc-7-zip-ccleaner/
 ://rufus.download.$document,popup
 ://virtualbox.download.$document,popup
@@ -1210,13 +1302,17 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ://gimp.download.$document,popup
 ://sublimetext.download.$document,popup
 ://java.download.$document
+||185.106.94.139^$document
+||45.90.109.196^$document
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1401711872
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144514
-! https://new.reddit.com/r/engrish/comments/10zs6f6/low_budget_scam/
-! https://new.reddit.com/r/engrish/comments/10z8r2u/well_you_tried/
-! https://www•adressa.no/nyheter/trondheim/i/BWkdkw/trodde-hun-skulle-faa-en-pakke-i-posten-ble-lurt-for-titusener
+! https://new•reddit•com/r/engrish/comments/10zs6f6/low_budget_scam/
+||54.219.218.169^$document
+! https://new•reddit•com/r/engrish/comments/10z8r2u/well_you_tried/
+! https://www•adressa•no/nyheter/trondheim/i/BWkdkw/trodde-hun-skulle-faa-en-pakke-i-posten-ble-lurt-for-titusener
 ||elimef.link^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142955
+://139.45.197.$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143281
 ! Unsuited for wildcarding
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144823
@@ -1226,7 +1322,7 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||redirect.newprogrammatic.click^$document,domain=~likely-a-malware-redirection.*
 /zcvisitor/*?campaignid$document
 ! https://github.com/DandelionSprout/adfilt/issues/808
-! https://www•mandiant.com/resources/blog/tracking-evolution-gootloader-operations (26/01/2023)
+! https://www•mandiant•com/resources/blog/tracking-evolution-gootloader-operations (26/01/2023)
 ||i-likefood.co^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/148560
 /land/*&afftrack=$document,domain=~likely-a-malware-redirection.*
@@ -1237,13 +1333,15 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152407
 ! https://github.com/AdguardTeam/AdguardFilters/issues/152945
 &trafficsource=Kadam&$document
+://5.61.60.$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/154701
 ! Slack comments
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155298
 /^.*&[a-z]{1,2}=[a-zA-Z0-9]{0,}%[a-zA-Z0-9%]{1000,}\$/$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155936
+://103.224.182.$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156487
-! https://new.reddit.com/r/engrish/comments/15080hg/a_message_i_just_got_from_a_scammer/
+! https://new•reddit•com/r/engrish/comments/15080hg/a_message_i_just_got_from_a_scammer/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156573
 ||go.redirected*/click?^$document,popup,domain=~malware-redirection-trains.*
 ://||192.243.58.$document
@@ -1255,8 +1353,8 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161364
 ! (https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2497)
 /(//|\.|^)github\.[a-z]{2,20}(/|$)/$document,match-case,~third-party,domain=github.*|~com|~org|~net|~co|~blog|~community|~host|~io|~microsoft|~office|~uk|~us|~xn--fiqs8s|~dev|~archive.*
-! https://www•tv2.no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
-! https://new.reddit.com/r/engrish/comments/16lg4i1/seems_legit/
+! https://www•tv2•no/nyheter/innenriks/advarer-ikke-klikk-pa-lenken/16040614/
+! https://new•reddit•com/r/engrish/comments/16lg4i1/seems_legit/
 ||reschedule-delivery.ups.com.$document
 ! https://github.com/libre-tube/LibreTube/issues/4409
 ! https://github.com/RPiList/specials/issues/1353
@@ -1281,6 +1379,7 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172569
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173925
 ! Based on a tip from my secretary
+://45.141.59.$document
 ! https://github•com/AdguardTeam/AdguardFilters/issues/176214
 ! https://github.com/AdguardTeam/FiltersRegistry/issues/925
 ! https://github.com/AdguardTeam/FiltersRegistry/pull/927
@@ -1290,6 +1389,8 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184671
 ! https://sol•no/81812194/ / https://github.com/DandelionSprout/adfilt/discussions/932#discussioncomment-10360231
 ://193.143.1.*$document
+! https://github.com/AdguardTeam/AdguardFilters/issues/189905
+/?nw=1&tb=false&cw=$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www•toorgle•net/results•php?q=fetishkitsch&security=666
 ##a[href*=".downloadprovider.me/"]
@@ -1298,7 +1399,7 @@ toorgle.net##.join
 ! Various ex-affiliate links at www•zombooru•com
 ! Spam comments at https://www•accountkiller•com/en/delete-htcdev-account
 ! The Jerma985 Discord server
-! https://flclever.weebly•com/pixie-hollow-mini-games•html (06/05/2021)
+! https://flclever•weebly•com/pixie-hollow-mini-games•html (06/05/2021)
 ! Various Google searches
 ://hullcitytigers.com^$document
 ! Various search results for 'kelloggs tresor' in Norwegian (30/05/2021)
@@ -1317,15 +1418,40 @@ toorgle.net##.join
 ! Search results for "olimpica tv italia"
 ! (https://github.com/DandelionSprout/adfilt/issues/1049)
 .advancedhosters.com^$document,domain=~mirror.advancedhosters.com|~www.advancedhosters.com
+||192.243.59.12^$document
+||192.243.59.13^$document
+||192.243.59.20^$document
 /^(https?://)?192\.243\.59\.\d{1,3}($|/)/$document
-! rule34hentai.net when uBlock Filters and AdGuard Base are turned off
+! rule34hentaiNET when uBlock Filters and AdGuard Base are turned off
 ! Googling Aksel Hennie (Results for prior week) in late July 2021
 ! Other
 ||redirectme.net^$document,domain=~malware-redirection-trains.*
 ||anthargo.com^$document
 ! Domains on IPs known to host Discord Nitro spambots
+://194.226.139.$document
 ! AS209813 (https://github.com/AdguardTeam/AdguardFilters/issues/114618#issuecomment-1100702530; currently specific to tools that support CIDR blocking)
+://5.8.67.$document
+://5.101.45.$document
+://5.188.178.$document
+://5.188.200.$document
+://5.188.203.$document
+://5.189.217.$document
+://5.189.252.$document
+://46.148.113.$document
+://46.148.114.$document
+://46.161.31.$document
+://91.243.41.$document
+://91.243.42.$document
+/^5\.8\.4[4-7]\.\d{1,3}\$/
+/^5\.101\.4[67]\.\d{1,3}\$/
+/^5\.188\.5[01]\.\d{1,3}\$/
+/^5\.188\.17[67]\.\d{1,3}\$/
+/^5\.188\.19[45]\.\d{1,3}\$/
+/^5\.189\.21[89]\.\d{1,3}\$/
+/^31\.184\.20[0-3]\.\d{1,3}\$/
+/^185\.238\.15[2-5]\.\d{1,3}\$/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120349
+||192.243.61.225^$document
 ! https://twitter•com/medicinehelp/status/1550250932394409985
 ! https://securitytrails•com/list/ip/147•135•16•27
 ||2spendless.$document
@@ -1381,14 +1507,17 @@ toorgle.net##.join
 ||medicinecoupons.space^$document
 ||medicinecoupons.xyz^$document
 ||medicinehelp.news^$document
-! https://www•google.no/search?q=mlp+g5&newwindow=1&tbm=isch&oq=mlp+g5&sclient=img
+||147.135.16.27^$document
+! https://www•google•no/search?q=mlp+g5&newwindow=1&tbm=isch&oq=mlp+g5&sclient=img
 ||ingeniovirtual.com^$document
 ! Spambot posts on Tumblr (19/09/2022)
-! https://scambiofigu.forumcommunity•net/?t=57482915
+! https://scambiofigu•forumcommunity•net/?t=57482915
 ! Only links to another site's (APKPure) APKs, yet tries to promote its own browser extension on the alleged download pages, which comes across as suspicious
 apkfab.com##.tip-extension
 ! Google results for 'Katy and Bob: Cake Café powerpc' (04/11/2022)
+||185.87.148.199^$document
 ! Google results for 'horse tales: emerald valley ranch mobygames' (05/11/2022)
+||45.136.49.35^$document
 ! Browsing around for Tajik newssites
 ! Work put into https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GDPR%20451%20List.txt
 ! Other
@@ -1401,17 +1530,31 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||thotsbay-leaked.com^$document
 ||cbox.ws^$domain=chicks.cam
 ! https://github.com/blocklistproject/Lists/issues/933
-! https://app.any.run/tasks/679e9afa-eb19-4414-a086-e280a779a448 and https://tria.ge/230217-xd8nksgc9x/behavioral2
+! https://app•any•run/tasks/679e9afa-eb19-4414-a086-e280a779a448 and https://tria•ge/230217-xd8nksgc9x/behavioral2
 ! https://forums•malwarebytes•com/topic/295588-support-scam-supportclientexe-and-screenconnectwindowsclientexe/ (account required)
 ! https://forums•malwarebytes•com/topic/295605-techsupport-scam/ (account required)
-! https://app.any.run/tasks/0f8b5786-177a-45c0-a1de-32e0d68beff2
+! https://app•any•run/tasks/0f8b5786-177a-45c0-a1de-32e0d68beff2
 ! https://github.com/RPiList/specials/issues/948#issuecomment-1458739160
-! Commonly set as a proxy on hacked devices (https://www.virustotal.com/gui/url/e610e7d09c614529cb8c64185717769946f5c86044ac5c31c6608e604995f577/detection)
+! Commonly set as a proxy on hacked devices (https://www•virustotal•com/gui/url/e610e7d09c614529cb8c64185717769946f5c86044ac5c31c6608e604995f577/detection)
 ! Various domains on https://securitytrails•com/list/ip/72•14•178•174
 |http://www6.$document,domain=~often-used-in-malware-redirections.*
 |http://www1.*&kw$document,domain=~often-used-in-malware-redirections.*
+||45.33.2.79^$document
+||45.33.18.44^$document
+||45.33.20.235^$document
+||45.33.23.183^$document
+||45.33.30.197^$document
+||45.56.79.23^$document
+||45.79.19.196^$document
+||72.14.178.174^$document
+||72.14.185.43^$document
+||96.126.123.244^$document
+||173.255.194.134^$document
+||198.58.118.167^$document
 ! https://hutudole•com/za-mu-%c9%93ullo-da-matakan-da-za-su-hana-al%c6%99alai-kwa%c9%97ayin-cin-hanci-ba-tinubu/
 ! https://dnpedia•com/tlds/topm•php bizarrely listing "anahitagirted•uno" as the 622th most visited domain worldwide
+://188.42.84.$document
+://203.195.121.$document
 ! Fake Gymshark webshops
 -norgesalg.com^$document
 *danmarks.com^$document
@@ -1427,6 +1570,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ! A scam SMS I got
 ! Overly dedicated E-mail spammers
 ! Tumblr spambots
+||172.67.158.57^$document,popup
 ! Google results for «SodaStream site:no cranberry»
 /^https?://[a-z0-9.-]{1,}\.([a-z]{3,}|[a-z][a-tv-z]|[a-qs-z][a-z])/.*(go\.php|redirect|url=|\?re=).*\.(xn--p1ai|рф|%D1%80%D1%84)\$/$document,domain=~malware-redirection-results.*
 ||adservice.google.*/ddm/clk/$document,domain=~malware-redirection-results.*
@@ -1853,6 +1997,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ||amazonaws.com^$document,popup,badfilter
 ||amazonaws.com^$document,badfilter
 ||amazonaws.com^$badfilter
+! Inspired by various reports in the early hours of 5 January 2024
 ! Yet more Google searches
 ! Domains stolen by casino SEO spammers
 ||aussie-gamer.com^$document,domain=the-site-was-stolen-by-casino-link-spammers.*
@@ -1866,7 +2011,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ! For when one really doesn't want to have a harder time with uBO's log error checker.
 ! Very experimental entry; see https://github.com/DandelionSprout/adfilt/issues/950 and https://www.techspot.com/news/77949-ccleaner-could-install-avast-anti-virus-without-permission.html
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! OriginalVersion: 11September2024v1-Beta
+! OriginalVersion: 15September2024v1-Beta
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -2348,6 +2493,8 @@ condoblues.com###milotree_box_wrap
 ~linkedin.com###article-share-linkedIn
 ###article-share-twitter
 ##.uSocial-Share:not(body,html,:empty)
+~line.me,~linecorp.com##a.js-share-line
+~line.me,~linecorp.com##a[href^="line://msg/text/"]:is([class*=share i],[aria-label*=share i])
 !!!~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html) (Can't be generic due to www.nrk.no, mewe.com, stylecaster.com)
 !!!~tidssonen.no,~mmoculture.com##div[class*=share-container] (Entry needs to be rewritten at some point)
 !!!~twitter.com,~feedly.com,~chaturbate.com##.follow (Too many exceptions needed)
@@ -2455,12 +2602,12 @@ fileinfo.com##.fv
 ! ——— Prompts about outdated browsers... within reasonable limits ———
 ! nettavisenNO (24/05/2023)
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 24September2024v1
+! OriginalVersion: 05October2024v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! This is an extension file, not an independent list.
-! Extension file's version: 24September2024v1-Extension
+! Extension file's version: 05October2024v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -2562,6 +2709,9 @@ reddit.com#$#div[role=presentation][style*=filter] { filter: none !important }
 ! https://www.the-inquisitor-magazine.com/swedish-noc-on-dubious-2030-winter-games-decisions/
 the-inquisitor-magazine.com#$#.c-content--has-shadow { mask-image: none !important; -webkit-mask-image: none !important }
 ! https://github.com/DandelionSprout/adfilt/issues/1055
+! Substack (https://github.com/DandelionSprout/adfilt/issues/1056)
+substack.com,microsoftsecurityinsights.com,chipstrat.com#$#body { cursor:initial!important }
+substack.com,microsoftsecurityinsights.com,chipstrat.com#$#body #main { visibility:visible!important }
 ! ——————————————————————————————————————————————————————————————————————
 ! Entries below are fixed in other lists that are included in uBO as of the 2nd of March 2019, but are also in this list to serve minimal-setup users.
 !! Removing the blurring of random Pinterest images ↪️📛 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
@@ -2744,8 +2894,16 @@ douyin.com##script[src*=websdk] + div:not([class], [id])
 !! https://github.com/DandelionSprout/adfilt/issues/811
 /tncms/api/access.js|$script,domain=westernstandard.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171530
-! https://github.com/DandelionSprout/adfilt/issues/1055
+! https://github.com/DandelionSprout/adfilt/issues/1053
+magma.com##modals-box
+! VKontakte (https://github.com/DandelionSprout/adfilt/issues/1055)
 vk.com###page_bottom_banners_root
+! Substack (https://github.com/DandelionSprout/adfilt/issues/1056)
+substack.com,microsoftsecurityinsights.com,chipstrat.com##.intro-popup
+substack.com,microsoftsecurityinsights.com,chipstrat.com##div[class^=subscribe-]
+substack.com,microsoftsecurityinsights.com,chipstrat.com##.subscription-widget-wrap > .show-subscribe
+substack.com,microsoftsecurityinsights.com,chipstrat.com##.subscription-widget
+substack.com,microsoftsecurityinsights.com,chipstrat.com##.subscribe-widget
 ! ——————————————————————————————————————————————————————————————————————
 ! Below are entries that I borrowed from «Strappazzon's Annoyances filter list», which is maintained by https://github.com/Strappazzon at https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Annoyances.txt, and which is licenced under MIT.
 ! Amazon
@@ -3497,7 +3655,7 @@ betso89.com###snow
 /christmas-snow.js
 ##foxfield-xmas
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 24May2024v1-Beta
+! OriginalVersion: 18October2024v2-Beta
 ! Expires: 10 days
 ! Description: Originally created as an unbreak list because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! Description 🇹🇼: 一些中國大陸的廣告過濾名單製作者顯然決定封鎖法輪功網站，儘管這與廣告、追蹤或惡意程式完全無關，而且這些網站在他們的國家已經被大規模封鎖。所以，如果你在國外居住並使用下面提到的任何名單，這個名單就是為你而設的。
@@ -3627,11 +3785,21 @@ betso89.com###snow
 @@||wireless.ntnu.no^
 ! HTTPS certificate verifiers
 @@||lencr.org^
+! https://github.com/DandelionSprout/adfilt/issues/1062
 ! PlayPilot.com links (Caused by EasyList, allowed through since Disney+ titles are often hard to search for on Google)
 @@||disneyplus.bn5x.net^$~third-party
 @@||doubleclick.net/*?https://www.disneyplus.com/$~third-party
 ! Hoping to discourage antivirus softwares from mistakenly thinking any of my lists are dangerous (I'm looking at you, Bitdefender)
 @@|https://raw.githubusercontent.com/DandelionSprout/adfilt/*
+! 🇩🇰 "TV2 Nord"
+@@||kaltura.com^
+@@||kaltura.map.fastly.net^
+! 🇸🇪 "Expressen TV"
+@@.dna.ip-only.net^
+! Note that "ip6.arpa" does not need to also be whitelisted
+@@.in-addr.arpa|
+! Seemingly used by "AdGuard for Android" for DNS server connection ping-tests
+@@|ipv4only.arpa|
 ! To avoid very longshot cases of lists or whomever trying to block other raw adblock lists (Has only happened once or twice in history)
 @@||raw.githubusercontent.com/*/master/*$~third-party
 @@||raw.githubusercontent.com/*/main/*$~third-party
@@ -3649,7 +3817,6 @@ betso89.com###snow
 @@||stanev.org/abp^
 @@||pgl.yoyo.org/adservers/serverlist.
 @@||someonewhocares.org/hosts/
-@@||ublockorigin.pages.dev^
 @@||fanboy.co.nz/*.txt^
 ! Title: ⏰ Anti-'Prayer times' List
 ! Translated title: 🇮🇷: لیست ضد اوقات شرعی
@@ -3825,28 +3992,30 @@ nettavisen.no###topover
 ! 🇫🇴 Elding•fo checkout
 ##.loading-mask:not(html,body)
 ! Title: 🕳 Empty Padding Remover
-! OriginalVersion: 08September2024v1-Beta
+! OriginalVersion: 14October2024v1-Beta
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? Or perhaps you're tired ot very large shadows on video sites when moving the mouse? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! ——— Generic ———
 ##.skille:not(html, body)
-! change•org, indiegogo•com, thejc•com, icelandreview•com, bir•no, medier24•no, knr•gl, nutiminn•is
-! (https://github•com/DandelionSprout/adfilt/issues/923)
+! changeORG, indiegogoCOM, thejcCOM, icelandreviewCOM, birNO, medier24NO, knrGL, nutiminnIS
+! (https://github.com/DandelionSprout/adfilt/issues/923)
 ! https://zh•cn•nikkei•com/politicsaeconomy/stockforex/39110-2020-01-21-09-55-57•html
 ! (Exception: https://www•pixiv•net/bookmark•php)
 ! As per https://developer•mozilla•org/en-US/docs/Web/CSS/:-moz-only-whitespace
-! (Exception: https://github•com/AdguardTeam/AdguardFilters/issues/119108; https://github.com/DandelionSprout/adfilt/issues/1052)
+! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/119108; https://github.com/DandelionSprout/adfilt/issues/1052)
 ~fandom.com,~sahibinden.com##p:empty:not([class],[id])
-! lyricsmania•com,songtextemania•com
+! lyricsmaniaCOM, songtextemaniaCOM
 ##.spacer-20:not(html, body)
-! alrai•com
+! alraiCOM
 ##.space20:not(html, body)
-! talkmore•no
-! (Exceptions: Various US local newspaper sites, https://github•com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
+! talkmoreNO
+! (Exceptions: Various US local newspaper sites, https://github.com/DandelionSprout/adfilt/issues/63/#issuecomment-1086956813)
 !!!trakt.tv#@#.spacer
 !!!mousechief.com#@#.spacer
-! icelandreview•com
+! Suffixing ":empty" to it seems to work well…? (https://www•webnots•com/how-to-enable-smb-server-in-windows-pc/; 13/10/2024)
+##div[class=spacer]:empty
+! icelandreviewCOM
 ##.mk-padding-divider:not(html, body)
 ! https://www•sat24•com/foreloop•aspx?type=0&continent=europa
 ###horizontalspace
@@ -3855,17 +4024,21 @@ nettavisen.no###topover
 ! https://mobilabonnement•dk/mobiltesten
 ~simplenote.com##.wp-block-spacer:not(html, body)
 ! https://www•thetravelinspector•no/news/dobler-prisen-for-nye-pass-bestill-naa
-##.spacer-block:not(html, body)
+##.spacer-block:not(html,body)
 ! doktor•frettabladid•is
 ~gog.com##.footer-spacer:not(html, body)
 ! https://thedroidguy•com/htc-u11-troubleshooting (25/10/2020)
 ##.elementor-spacer:not(html, body)
-! allers•no
+! allersNO
 ~schengenvisainfo.com##.vc_empty_space:not(html, body)
 ! https://byggebolig•no/luft-luft-varmepumpe/erfaringer-med-mitsubishi-kirigamine-6-6/msg445542 (12/11/2020)
 ##.body-spacer:not(html, body)
 ! https://academickids•com/encyclopedia/index•php/Cream_the_Rabbit (Though the source page is unsalvageable, the general spirit of the entry remains applicable•)
 ##.spacer150px:not(html,body)
+! https://travservice•dk/kriterium-og-mesterskab-for-danmark/ (01/10/2024)
+##.et_pb_divider:not(html,body)
+! https://companieshousecyprus•com/company/C189321/ (14/10/2024)
+##div.dfd-spacer-module:empty
 ! ——— Site-specific ———
 kentonline.co.uk##.clearfix + .clearfix
 kentonline.co.uk##.line + .clearfix
@@ -3878,6 +4051,8 @@ tnt-tv.no,tnt-tv.dk##.tabs_placeholder
 dyrevennene.no##.td-footer-wrapper
 transfermarkt.com##.clearer
 sat24.com###headermenu
+! https://www•feltet•dk/nyheder/dansker_enig_i_kritik_svaert_ved_at_se_hvad_de_har_at_goere_her/
+feltet.dk#$#iframe + div[style*="height: 80vh"] { height: unset !important }
 ! For listings with 2 or more related/size notices
 rule34.xxx###status-notices > br:empty
 ! Disqualified entries due to breakage of regular content (Example given)
@@ -3916,7 +4091,7 @@ play.max.com##div[class*=Gradient-Beam-]:empty
 !!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
 !+ NOT_OPTIMIZED
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 08September2024v1-Beta
+! OriginalVersion: 15October2024v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -4005,7 +4180,7 @@ playpilot.com##.ratings
 sfanytime.com##a[href*="?imdb="]
 ! International (uBlock Origin or AdGuard only)
 amazon.*##a[href="#customer-review-section"] + span
-www.google.*##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
+www.google.*,ipv6.google.com##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/148512)
 viaplay.*##.Imdb-link-slSbv
 viaplay.*##.ImdbExtended-container-_sA0e
@@ -4046,7 +4221,7 @@ m4uhd.net##.quality
 hdfilmcehennemi.film##.poster-imdb
 watchseries.*##.imdb
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 25September2024v1
+! OriginalVersion: 15October2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -5308,12 +5483,14 @@ watchseries.*##.imdb
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10369341
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186997
 ! https://dfrlab.org/2024/06/24/user-in-the-middle-an-interoperability-and-security-guide-for-policymakers/?ref=internet.exchangepoint.tech
+! https://github.com/AdguardTeam/AdguardFilters/commit/4d2231d874bac30346d098034f7b7318e07ce03c
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 ! https://i-viaplay-com.akamaized.net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d.jpg?width=400&height=600 (02/03/2021)
 ! https://www.ikea.com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5.jpg?f=xl
 ! https://www•smartasaker•no/no/sportstromper-mot-gnagsar?dema_id=6299778080439
 ! https://no•hotels•com/ho548198/tropical-islands-krausnick-gross-wasserburg-tyskland/?chkin=2024-11-09&chkout=2024-11-10&x_pwa=1&rfrr=HSR&pwa_ts=1726867399106&referrerUrl=aHR0cHM6Ly9uby5ob3RlbHMuY29tL0hvdGVsLVNlYXJjaA%3D%3D&useRewards=false&rm1=a1&regionId=6349111&destination=Krausnick-Gross+Wasserburg%2C+Brandenburg+Region%2C+Tyskland&destType=MARKET&selected=12064742&latLong=52•040134%2C13•81408&sort=RECOMMENDED&top_dp=1558&top_cur=NOK&userIntent=&selectedRoomType=202442481&selectedRatePlan=212420506&expediaPropertyId=12064742&searchId=b3ed9457-a7b5-4191-998a-1c3cd8e802f0
+! https://www•everyplay•live/pages/GSDTz9Nea?_gl=1*1gpvlcv*_up*MQ••*_ga*MTkwOTc5MDgwNS4xNzI3NjYxMzY3*_ga_M39TLB0M4G*MTcyNzY2MTM2Ny4xLjAuMTcyNzY2MTM2Ny4wLjAuMA••
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
 ! https://buffalonews.com/news/#tracking-source=main-nav
@@ -5345,7 +5522,7 @@ watchseries.*##.imdb
 ! For when one really doesn't want to have a harder time with uBO's log error checker
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
 ! Title: 🈺 Japanese Text Softener
-! OriginalVersion: 23September2024v1-Beta
+! OriginalVersion: 06October2024v1-Beta
 ! Expires: 6 days
 ! Description: The font situation on many Japanese websites is kind-of absolutely atrocious on Windows (Other OSs are much less affected). They use super-stiff janky fonts resemblant of Windows 95 or Amiga. And even worse, many of the sites also default to the stiff Japanese fonts' atrocious Latin letter types. Here's how to use the sites in a way that is compatible with the 3rd decade of the 21st century.
 ! 🇯🇵: Windows における多くの日本語サイトのフォント状況はまったくもってゾッとします（他のOSでは遥かにマシです）。Windows 95 か Amiga を思わせるギッザギザのクズフォントが使用されており、さらに悪いことにそういったサイトの多くは、欧文書体に至ってもこのゾッとするギザギザ日本語フォントをデフォルトとして採用しているのです。令和の時代に相応しくサイトを利用する方法は次のとおりです。
@@ -5353,21 +5530,21 @@ watchseries.*##.imdb
 ! Note 2: Many more sites can be fixed by installing "Optional features → Show features → Extra Japanese fonts" in Windows 10/11 to get the Meiryu font (but whose kana are ugly); or by uninstalling "MS PGothic" from your system entirely. But even then, Latin letters can look slightly strange.
 ! Note 3: Starting 10 April 2024, South Korean Hangul sites can also become softened in extraordinarily bad cases, e.g. https://www•nintendo•co•kr/news?idx=164
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-1000mg.jp,1geki.jp,2nn.jp,4travel.jp,account.nicovideo.jp,altema.jp,amiami.jp,amy.tokyo,ark-pc.co.jp,ascii.jp,athome.co.jp,atpress.ne.jp,auone.jp,automaton-media.com,biccamera.com,blog.esuteru.com,bloomberg.co.jp,books-sanseido.jp,cdjapan.co.jp,cero.gr.jp,ch.nicovideo.jp,cinematoday.jp,coat.co.jp,cookpad.com,dengekionline.com,diamond.jp,direct.sanwa.co.jp,dmkt-sp.jp,dmm.co.jp,dmm.com,doope.jp,doorblog.jp,dto.jp,eagate.573.jp,entabe.jp,entamepost.jp,eonet.jp,epark.jp,eposcard.co.jp,expresscard.jp,expy.jp,familio-folkloro.com,famitsu.com,faq.radiko.jp,fgomatomeplus.com,g123.jp,gamefactory.jp,gamepedia.jp,gameranbu.jp,gamewith.jp,geekjob.jp,getchu.com,gigazine.net,goguynet.jp,granbluefantasy.jp,gta5.jp,h1g.jp,hentai-image.com,hentai-img.com,hosyusokuhou.jp,hotpepper.jp,huffingtonpost.jp,hulu.jp,ib-game.jp,impress.co.jp,innervision.co.jp,insightnow.jp,iphone-mania.jp,itmedia.co.jp,japan-animemusic.com,jgrants-portal.go.jp,jmty.jp,joshinweb.jp,jp.ign.com,jp.nexon.com,jp.wsj.com,k-manga.jp,kabutan.jp,kakaku.com,kamigame.jp,kinokuniya.co.jp,kitimama-matome.net,kojima.net,konoyubitomare.jp,livedoor.com,logroid.blogspot.com,maidonanews.jp,mainichi.jp,mapion.co.jp,matu.cocolog-nifty.com,mechacomic.jp,melonbooks.co.jp,mgjshop.co.jp,mineo.jp,mixi.jp,mora.jp,nazonazo.jp,nec.co.jp,neowing.co.jp,news.infoseek.co.jp,newsweekjapan.jp,nicenature.top,nicoco.net,nijie.info,nikkan.co.jp,nojima.co.jp,ntj.jac.go.jp,nttxstore.jp,ocn.ne.jp,odakyu.jp,omni7.jp,onojibi.jp,originalnews.nico,osawa-inc.co.jp,otakomu.jp,otanew.jp,pex.jp,platinedispositif.net,point.recruit.co.jp,poptapbeat.taiko-ch.net,qa.nicovideo.jp,qoo10.jp,rakuten.co.jp,rank-king.jp,recipe-blog.jp,research-panel.jp,sankei.com,sanwa-d.co.jp,security-next.com,seesaa.jp,seiga.nicovideo.jp,sengokuixa.jp,shogakukan.co.jp,store-tsutaya.tsite.jp,suruga-ya.jp,suumo.jp,takarazuka-an.co.jp,taking-a-stand.jp,tenki.jp,tinami.com,tokubai.co.jp,tokyo-np.co.jp,tsukumo.co.jp,tv-tokyo.co.jp,vector.co.jp,vippers.jp,vita.taiko-ch.net,weathernews.jp,web-ace.jp,webcomics.jp,weblio.jp,westjr.co.jp,wowkorea.jp,wowma.jp,www.gpoint.co.jp,www.homes.co.jp,www.infoseek.co.jp,www.jorudan.co.jp,www.meti.go.jp,www.nikkei.com,www.nintendo.co.kr,www.swiki.jp,yahoo.co.jp,yamanashirei.blog.fc2.com,yodobashi.com,yomiuri.co.jp,yugioh-card.com,~justpass.epark.jp,~mall.epark.jp,bookmeter.com,mottainaihonpo.com,netoff.co.jp,tokyodisneyresort.jp,nijimen.kusuguru.co.jp,applion.jp#$#:is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
+1000mg.jp,1geki.jp,2nn.jp,4travel.jp,account.nicovideo.jp,altema.jp,amiami.jp,amy.tokyo,ark-pc.co.jp,ascii.jp,athome.co.jp,atpress.ne.jp,auone.jp,automaton-media.com,biccamera.com,blog.esuteru.com,bloomberg.co.jp,books-sanseido.jp,cdjapan.co.jp,cero.gr.jp,ch.nicovideo.jp,cinematoday.jp,coat.co.jp,cookpad.com,dengekionline.com,diamond.jp,direct.sanwa.co.jp,dmkt-sp.jp,dmm.co.jp,dmm.com,doope.jp,doorblog.jp,dto.jp,eagate.573.jp,entabe.jp,entamepost.jp,eonet.jp,epark.jp,eposcard.co.jp,expresscard.jp,expy.jp,familio-folkloro.com,famitsu.com,faq.radiko.jp,fgomatomeplus.com,g123.jp,gamefactory.jp,gamepedia.jp,gameranbu.jp,gamewith.jp,geekjob.jp,getchu.com,gigazine.net,goguynet.jp,granbluefantasy.jp,gta5.jp,h1g.jp,hentai-image.com,hentai-img.com,hosyusokuhou.jp,hotpepper.jp,huffingtonpost.jp,hulu.jp,ib-game.jp,impress.co.jp,innervision.co.jp,insightnow.jp,iphone-mania.jp,itmedia.co.jp,japan-animemusic.com,jgrants-portal.go.jp,jmty.jp,joshinweb.jp,jp.ign.com,jp.nexon.com,jp.wsj.com,k-manga.jp,kabutan.jp,kakaku.com,kamigame.jp,kinokuniya.co.jp,kitimama-matome.net,kojima.net,konoyubitomare.jp,livedoor.com,logroid.blogspot.com,maidonanews.jp,mainichi.jp,mapion.co.jp,matu.cocolog-nifty.com,mechacomic.jp,melonbooks.co.jp,mgjshop.co.jp,mineo.jp,mixi.jp,mora.jp,nazonazo.jp,nec.co.jp,neowing.co.jp,news.infoseek.co.jp,newsweekjapan.jp,nicenature.top,nicoco.net,nijie.info,nikkan.co.jp,nojima.co.jp,ntj.jac.go.jp,nttxstore.jp,ocn.ne.jp,odakyu.jp,omni7.jp,onojibi.jp,originalnews.nico,osawa-inc.co.jp,otakomu.jp,otanew.jp,pex.jp,platinedispositif.net,point.recruit.co.jp,poptapbeat.taiko-ch.net,qa.nicovideo.jp,qoo10.jp,rakuten.co.jp,rank-king.jp,recipe-blog.jp,research-panel.jp,sankei.com,sanwa-d.co.jp,security-next.com,seesaa.jp,seiga.nicovideo.jp,sengokuixa.jp,shogakukan.co.jp,store-tsutaya.tsite.jp,suruga-ya.jp,suumo.jp,takarazuka-an.co.jp,taking-a-stand.jp,tenki.jp,tinami.com,tokubai.co.jp,tokyo-np.co.jp,tsukumo.co.jp,tv-tokyo.co.jp,vector.co.jp,vippers.jp,vita.taiko-ch.net,weathernews.jp,web-ace.jp,webcomics.jp,weblio.jp,westjr.co.jp,wowkorea.jp,wowma.jp,www.gpoint.co.jp,www.homes.co.jp,www.infoseek.co.jp,www.jorudan.co.jp,www.meti.go.jp,www.nikkei.com,www.nintendo.co.kr,www.swiki.jp,yahoo.co.jp,yamanashirei.blog.fc2.com,yodobashi.com,yomiuri.co.jp,yugioh-card.com,~justpass.epark.jp,~mall.epark.jp,bookmeter.com,mottainaihonpo.com,netoff.co.jp,tokyodisneyresort.jp,nijimen.kusuguru.co.jp,applion.jp,mayla.jp,kawade.co.jp,koupenchan-store.jp,asunaro.shop-pro.jp,st-c.co.jp,eikoh-prize.jp,cocreco.kodansha.co.jp,kenko-tokina.co.jp,ganguoroshi.jp,shop.hanshintigers.jp,loft.co.jp,universal-music.co.jp,animate-onlineshop.jp,takaratomymall.jp,shop.adidas.jp,ftnews.jp,rtrp.jp#$#:is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
 store.playstation.com,1999.co.jp#$#html[lang=ja] :is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana" !important }
-! https://www.nicovideo.jp/watch/sm28685290 (20/08/2024)
+! https://www•nicovideo•jp/watch/sm28685290 (20/08/2024)
 www.nicovideo.jp#$##CommonHeader * { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
-! https://www.nintendo.co.jp/ds/dsiware/kuwj/index.html
+! https://www•nintendo•co•jp/ds/dsiware/kuwj/index.html
 ! Their site had managed to tie their icons to a font called "Material Icons" for unclear reasons
 search.yurindo.bscentral.jp#$#:is(body,div,li,a,strong,dd,span:not([class*=material-icon]),p,h4) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
 ! I've had a beef with alleged teletext fonts for a significant amount of time, even ones in Europe
-! https://www.svt.se/text-tv/webb/100
+! https://www•svt•se/text-tv/webb/100
 www.svt.se#$#div[class*=TextContent_textContent__] { font-family: "Segoe UI Bold", "Segoe UI", "Calibri", "Verdana", "Ubuntu", sans-serif !important }
 ! Title: ↖ Anti-'Custom cursors' List
-! OriginalVersion: 09September2024v1-Beta
+! OriginalVersion: 06October2024v2-Beta
 ! Expires: 14 days
 ! Description: This list aims to replace websites' custom cursors with the default OS cursor.
-! Note that any Wikia-related entries currently do not work in ABP or AdBlock, due to EasyList having a whitelisting for the nocookie.net domain that can only be circumvented with "$badfilter" or "$important", neither of which are supported by those two extensions.
+! Note that any Wikia-related entries currently do not work in ABP or AdBlock, due to EasyList having a whitelisting for the nocookieNET domain that can only be circumvented with "$badfilter" or "$important", neither of which are supported by those two extensions.
 ! If you encounter non-covered custom-cursor-using sites, or serious site functionality breakage, do not hesitate to tell me about it on GitHub.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! ——— Wikia (I still don't accept their attempt at stealing the word "Fandom") ———
@@ -5393,7 +5570,7 @@ cursor_hover.$image
 ! https://bindingofisaac•fandom•com/wiki/The_Binding_of_Isaac_Wiki
 ||imgur.com/eQ15Dp8.png^$third-party
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-628026235
-! bindingofisaac.fandom.com/pl/wiki/The_Nail
+! bindingofisaac•fandom•com/pl/wiki/The_Nail
 ||nocookie.net/*/bindingofisaac/*Knife_Icon.png|
 ! https://melanie-martinez•fandom•com/wiki/Melanie_Martinez_Wiki
 ||rw-designer.com/cursor-view^$image,third-party
@@ -5508,7 +5685,7 @@ www.youtube.com##ytd-shelf-renderer[thumbnail-style]
 ! Requested by https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-903333579
 tv2.no##.banner
 ! Makes real estate classifieds on FinnNO uniformly sized again, and reverses the effects of the site's large price increase for estate brokers to get large thumbnails
-! https://www.nettavisen.no/okonomi/raser-over-nye-priser-for-boligsalg-pa-finn-no-forbrukerne-er-fratatt-ethvert-valg/s/12-95-3424235759
+! https://www•nettavisen•no/okonomi/raser-over-nye-priser-for-boligsalg-pa-finn-no-forbrukerne-er-fratatt-ethvert-valg/s/12-95-3424235759
 ! https://github.com/DandelionSprout/adfilt/issues/466
 ! Miniplayers that scroll down alongside articles
 ! https://github.com/DandelionSprout/adfilt/issues/587#issuecomment-1116114213
@@ -5526,7 +5703,7 @@ fandom.com##.notifications-box
 ! SEO textwalls
 flipkart.com##div[style^=flex-grow] div:first-of-type + div.col
 flipkart.com##footer section + div:last-of-type
-! For unclear reasons (e.g. on peertube.devol.it), the loading spinner simply would not go away despite the stream clearly loading correctly.
+! For unclear reasons (e.g. on peertube•devol•it), the loading spinner simply would not go away despite the stream clearly loading correctly.
 ###custom-css .vjs-loading-spinner
 ! https://github.com/DandelionSprout/adfilt/pull/956
 valdemarsro.dk###after-recipe .content
@@ -5536,3 +5713,5 @@ valdemarsro.dk##.banner-vertical-1
 valdemarsro.dk##.kogebog-side
 valdemarsro.dk###recipe-intro p:last-of-type
 ! Just in case, since almost every SVG file on the internet has W3's URLs listed with "http"
+! If Bandcamp wishes to enforce a limit on online track plays, surely they could at least have dropped the comically obvious dark pattern
+.bcbits.com/img/heartbreak.png^

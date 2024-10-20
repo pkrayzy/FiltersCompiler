@@ -1,13 +1,13 @@
-! Checksum: 56K74RM3m+iguJiYu/HMIQ
-! Diff-Path: ../patches/251/251-s-1727312724-14400.patch
+! Checksum: J4GXoYVKhi29mMombkJT5Q
+! Diff-Path: ../patches/251/251-s-1728997550-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.21
-! TimeUpdated: 2024-09-26T01:01:49+00:00
+! Version: 2.0.8.25
+! TimeUpdated: 2024-10-15T13:01:57+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 25September2024v1
+! OriginalVersion: 15October2024v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1428,7 +1428,7 @@ $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|
 ! (Exceptions: mail.qq.com, high.fi, phpBB forums, flipkart.com various other sites)
 $removeparam=sid,domain=anrdoezrs.net|dpbolvw.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com|gamereactor.*
 ! No particular example (Zoom can't be added; see https://github.com/DandelionSprout/adfilt/issues/665)
-$removeparam=from,document,domain=apkpure.com|bandcamp.com|browserling.com|duckduckgo.com|ettoday.net|landevei.no|luisaviaroma.com|sogou.com|store.hbr.org|app.snyk.io|onlinepngtools.com|indiatimes.com|jetbrains.com|nextdns.io|tvtropes.org|yandex.com
+$removeparam=from,document,domain=apkpure.com|bandcamp.com|browserling.com|duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion|ettoday.net|landevei.no|luisaviaroma.com|sogou.com|store.hbr.org|app.snyk.io|onlinepngtools.com|indiatimes.com|jetbrains.com|nextdns.io|tvtropes.org|yandex.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559915 and https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1559864 (eBay can't be added; see https://github.com/DandelionSprout/adfilt/pull/514)
 $removeparam=keyword,domain=bindright.com|lendgo.com|reddit.app.link
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1707764
@@ -1784,16 +1784,19 @@ $removeparam=ogbl
 ! https://www.google.com/webhp?client=firefox-b-m&channel=ts (06/05/2021)
 ||google.*/webhp$removeparam=channel
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
-||www.google.$removeparam=aqs
+$removeparam=aqs,domain=www.google.*|ipv6.google.com
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
-||www.google.$removeparam=btnG
-||www.google.$removeparam=iflsig
+$removeparam=btnG,domain=www.google.*|ipv6.google.com
+$removeparam=iflsig,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1093666
-||www.google.$removeparam=uact
+$removeparam=uact,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1127765
 ://www.google.*/search^$removeparam=kgs
 ://www.google.*/search^$removeparam=shndl
 ://www.google.*/search^$removeparam=entrypoint
+://ipv6.google.com*/search^$removeparam=kgs
+://ipv6.google.com*/search^$removeparam=shndl
+://ipv6.google.com*/search^$removeparam=entrypoint
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1299693
 ||google.*/search$removeparam=sqi
 ! https://www.google.com/search?gs_ssp=eJzj4tTP1TcwSssoSVZgNGB0YPASS0otKUktUkgqLc7MSy0uBjKKUhNLAeDcDI4&q=better+business+bureau&oq=better&sourceid=chrome&ie=UTF-8
@@ -1810,6 +1813,7 @@ $removeparam=ogbl
 ||googleadservices.com^$removeparam=ohost
 ! https://github.com/DandelionSprout/adfilt/issues/834#issuecomment-1510431981
 ||www.google.*/search?$document,removeparam=sclient
+||ipv6.google.com*/search?$document,removeparam=sclient
 ! Should not be removed: dpr (Determines image search results' box sizes)
 ! https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
 ||accounts.google.com^$removeparam=dsh,document
@@ -1823,16 +1827,17 @@ $removeparam=_x_tr_pto
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6196774
 ||support.google.com^$document,removeparam=sjid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6525587
-||www.google.$document,removeparam=gs_lp
+$document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||www.google.*/search$removeparam=oq,document
+||ipv6.google.com*/search$removeparam=oq,document
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6714455
 ||google.$document,removeparam=sca_esv
 ! https://www.google.com/search?q=winget+vsdc&newwindow=1&udm= (15/03/2024)
-||www.google.$removeparam=/^udm=$/
+$removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ! https://www-nrk-no.translate.goog/norge/regjeringen-vil-endre-russetiden-_-her-er-planen-1.16812907?_x_tr_sl=no&_x_tr_tl=en&_x_tr_hl=no&_x_tr_pto=wapp (20/03/2024)
 ||translate.goog^$removeparam=_x_tr_pto
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10267561
-||www.google.$document,removeparam=sca_upv
+$document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
 ||tiktok.com^$removeparam=_r
@@ -2506,7 +2511,7 @@ $removeparam=aid,domain=adguard-dns.com|adguard-vpn.com|adguard.com|brownells.*|
 $removeparam=camp,domain=amazon.*|calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com
 $removeparam=channelref,domain=asos.com
 $removeparam=cmp,domain=agentprovocateur.com|brooksbrothers.com|cbc.ca|hulu.com|bestbuy.com
-$removeparam=cp,domain=converse.com|nike.com|nextdoor.com|duckduckgo.com
+$removeparam=cp,domain=converse.com|nike.com|nextdoor.com|duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion
 $removeparam=ecmp,domain=4wheelparts.com
 $removeparam=kc,domain=autoanything.com
 $removeparam=/^linkshareid=.*$/i,domain=bloomingdales.com|macys.com
@@ -2801,7 +2806,7 @@ $removeparam=marketing_id
 $removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2580104
 ! breaks some websites, ie twitter redirect links: https://gitlab.com/ClearURLs/rules/-/merge_requests/21, https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9599956
-$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
+$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
 ! https://market.yandex.ru/promo/hasbro_special?clid=602&cpa-perf=1#c
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
@@ -3432,7 +3437,7 @@ $removeparam=pk_vid,document
 ! https://www.selected.com/en-gb/homme/trousers/slim-fit-trousers-16086553_Grey_966031.html?clickedFromCategory=sl-homme-collection-trousers
 $removeparam=clickedFromCategory,domain=objectci.com|pieces.com|selected.com|vila.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5116401
-$removeparam=natb,domain=duckduckgo.com
+$removeparam=natb,domain=duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5116953
 ||cdc.gov^$removeparam=ACSTrackingID
 ||cdc.gov^$removeparam=ACSTrackingLabel
@@ -3944,6 +3949,12 @@ $document,removeparam=maltcode,domain=gamestop.com|ubisoft.com|steampowered.com
 $document,domain=youtube.com,removeparam=embeds_referring_origin
 ! https://dfrlab.org/2024/06/24/user-in-the-middle-an-interoperability-and-security-guide-for-policymakers/?ref=internet.exchangepoint.tech
 ref=internet.exchangepoint.tech$document,removeparam=ref
+! https://github.com/AdguardTeam/AdguardFilters/commit/4d2231d874bac30346d098034f7b7318e07ce03c
+$document,removeparam=ebisOther1
+$document,removeparam=ebisOther2
+$document,removeparam=ebisOther3
+$document,removeparam=ebisOther4
+$document,removeparam=ebisOther5
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
@@ -3963,6 +3974,8 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ||hotels.com^$removeparam=pwa_ts
 !+ NOT_OPTIMIZED
 ||hotels.com^$removeparam=latLong
+! https://www•everyplay•live/pages/GSDTz9Nea?_gl=1*1gpvlcv*_up*MQ••*_ga*MTkwOTc5MDgwNS4xNzI3NjYxMzY3*_ga_M39TLB0M4G*MTcyNzY2MTM2Ny4xLjAuMTcyNzY2MTM2Ny4wLjAuMA••
+||everyplay.live^$removeparam=_gl
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
 ! https://buffalonews.com/news/#tracking-source=main-nav
