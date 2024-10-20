@@ -1,9 +1,9 @@
-! Checksum: 6paYhRpntuY/NI2AQr14eA
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1729371944-14400.patch
+! Checksum: eQSBOzsSIGTMo226MsUa+A
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1729400718-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.30.74
-! TimeUpdated: 2024-10-19T21:01:36+00:00
+! Version: 2.1.30.75
+! TimeUpdated: 2024-10-20T05:01:18+00:00
 ! Expires: 5 days (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -452,6 +452,7 @@ _social_footer_
 ###social-sidebar
 ###social-slideout
 ###social-slider
+###social-text
 ###social-tools-panel
 ###social-widget
 ###social-wrap
@@ -529,6 +530,7 @@ _social_footer_
 ###sticky-social
 ###sticky_sharing
 ###subFooterSocial
+###subscribe-facebook
 ###t-sns
 ###tab-share
 ###top-bar-social
@@ -572,7 +574,6 @@ _social_footer_
 ##.-socialsharing
 ##.ActionButton--share
 ##.ArticleView-shares
-##.BoxSocial
 ##.BtnShareGroup
 ##.EntryShareButton
 ##.FacebookLike
@@ -922,6 +923,7 @@ _social_footer_
 ##.custom-sharing
 ##.custom-social
 ##.custom-social-share
+##.custom-tweet-button
 ##.cxf-column-social
 ##.d-share
 ##.d3-o-share-bar
@@ -985,6 +987,7 @@ _social_footer_
 ##.entry__share
 ##.entypo-share
 ##.entypo-social
+##.epaddthis
 ##.epcl-share-container
 ##.esocial
 ##.ess-share-text
@@ -1227,11 +1230,11 @@ _social_footer_
 ##.footer_share
 ##.footer_social
 ##.footer_social-icon
+##.footer_social_button
 ##.footer_social_icons
 ##.footer_social_links
 ##.footer_social_wrapper
 ##.footer_socials
-##.footer_sprite_facebook
 ##.footersocial
 ##.footersociallinks
 ##.footsocial
@@ -1247,6 +1250,7 @@ _social_footer_
 ##.fv-social
 ##.g1-socials-item
 ##.g1-socials-section
+##.g_share
 ##.gallery-share
 ##.gallery__share
 ##.gb-share
@@ -1334,6 +1338,7 @@ _social_footer_
 ##.hola_share_player_btn
 ##.hola_share_player_btn_wrapper
 ##.horizontal-share
+##.hover_share
 ##.hp-social
 ##.hp-tab-share
 ##.icomoon-facebook
@@ -1603,7 +1608,10 @@ _social_footer_
 ##.main-header__social
 ##.main-nav-social
 ##.main__share
+##.mashicon-facebook
+##.mashicon-google
 ##.mashicon-reddit
+##.mashicon-twitter
 ##.mashsb-box
 ##.mashsb-container
 ##.masterSocialbutton
@@ -1677,7 +1685,6 @@ _social_footer_
 ##.mvp-soc-mob-list
 ##.mvp-soc-mob-pin
 ##.mvp_facebook_widget
-##.mvp_social_widget
 ##.native-share
 ##.nav--social
 ##.nav-bar__social-links__link
@@ -1742,11 +1749,10 @@ _social_footer_
 ##.page_share
 ##.pane-social-links
 ##.panel-share-networks
-##.par-footer-social
-##.par-sharepad
 ##.parent-shareBox
 ##.pathSocialIcons
 ##.pbtsharethisbutt
+##.penci-social-share-footer
 ##.penci-social__content
 ##.penci-social__item
 ##.penci-social_counter
@@ -1839,6 +1845,7 @@ _social_footer_
 ##.redes_sociales
 ##.region-social
 ##.reseaux-sociaux
+##.reseaux-sociaux-list
 ##.resp-sharing-button
 ##.right-social
 ##.rmp-sharing
@@ -1953,6 +1960,7 @@ _social_footer_
 ##.share-dropdown
 ##.share-elements
 ##.share-email
+##.share-entry
 ##.share-entry-meta
 ##.share-facebook
 ##.share-facebook-long
@@ -1970,6 +1978,7 @@ _social_footer_
 ##.share-hover
 ##.share-icon-container
 ##.share-icon-list
+##.share-icon-small
 ##.share-icons-box
 ##.share-icons-list
 ##.share-icons-wrapper
@@ -2091,6 +2100,7 @@ _social_footer_
 ##.shareFacebook
 ##.shareForm
 ##.shareIcons
+##.shareItemLikeBox
 ##.shareLeft
 ##.shareLink
 ##.shareLinks
@@ -2408,6 +2418,7 @@ _social_footer_
 ##.social-buttons__list
 ##.social-col
 ##.social-color
+##.social-container-bottom
 ##.social-controls
 ##.social-count
 ##.social-counter
@@ -2689,11 +2700,9 @@ _social_footer_
 ##.socialbtns
 ##.socialbutton
 ##.socialbuttons
-##.socialcont
 ##.socialcontainer
 ##.socialcount
 ##.socialfooter
-##.socialheader
 ##.socialicon
 ##.socialicons
 ##.socialinks
@@ -2963,6 +2972,7 @@ _social_footer_
 ##.whoShare
 ##.widget-altervista-social
 ##.widget-follow
+##.widget-follow-us
 ##.widget-share
 ##.widget-sharebar-container
 ##.widget-social
@@ -3028,6 +3038,7 @@ _social_footer_
 ##.zmdi-instagram
 ##.zmdi-twitter
 ##.zmdi-youtube-play
+##.zone-reseaux-sociaux
 ##.zoom-social-icons-widget
 ##.zox-post-soc-list
 ##.zox-post-soc-stat-list
@@ -3259,6 +3270,7 @@ cbn.com##.analytics-cta
 asiaone.com##.ao-share-buttons
 telex.hu##.article-bottom
 chosun.com##.article-control-bar
+gfinityesports.com,stealthoptional.com##.article-float-buttons
 investmentexecutive.com,just-food.com##.article-footer
 seattletimes.com##.article-share
 cosmosmagazine.com,forbes.com,heise.de,phillyvoice.com##.article-sharing
@@ -3449,6 +3461,7 @@ macrumors.com##.social--159R8SRB
 getpocket.com##.social-actions
 rte.ie##.social-btn-container
 thereader.mitpress.mit.edu##.social-cont
+gfinityesports.com,stealthoptional.com##.social-follow-unit
 digitimes.com##.social-frame
 estadao.com.br,india.com,news18.com,wionews.com##.social-icon
 tmz.com##.social-item
@@ -3478,6 +3491,7 @@ ringsidenews.com##.social_label
 lithub.com##.social_links
 abplive.com,businesstoday.in,gamesindustry.biz,ilmeteo.it##.social_share
 outlookindia.com##.social_sharing_article
+businesstoday.in##.social_tracking
 cryptonews.com##.ssk
 bbc.co.uk##.ssrcss-11faxz6-TagShareWrapper
 barrons.com##.sticky-header__sharetoolsContainer
@@ -3511,6 +3525,7 @@ videogameschronicle.com##.vgc-socialshare
 dailymail.co.uk##.vjs-social-controls
 androidpolice.com##.w-social-follow-button
 ctrl.blog##.webshare
+businesstoday.in##.whatsAppChannel
 business-standard.com##.whtsclick
 indiatoday.in##.whtspp_share
 chipsandcheese.com##.widget_block
@@ -3626,6 +3641,7 @@ boursedirect.fr##.content-social
 lefigaro.fr##.fig-share-mobile-layer
 lefigaro.fr##.fig-sharebar
 bfmtv.com##.footer_social_media
+allocine.fr##.icon-share
 lesnumeriques.com##.ln__m-shr
 autoplus.fr##.nl-social
 quechoisir.org##.qc-footer_social-media-links
@@ -3689,6 +3705,7 @@ limesonline.com##.lms-socialbar
 everyeye.it##.p-gnewsBanner
 everyeye.it##.p-telBut
 raiplay.it##.prefooter__social__list
+ohga.it##.share-item
 rainews.it##.share-toggler
 tuttotek.it##.soc-media-sharing
 ad-italia.it,gqitalia.it,lacucinaitaliana.it,vanityfair.it,vogue.it,www.wired.it##.social-icons__list
@@ -3766,7 +3783,6 @@ kinoland.biz##.page__share
 aif.ru##.sharing_item
 academic.ru##.smm
 gtrk.tv##.soc-links-hor
-ta3.com##.detail_text_socials
 sme.sk##.social-dialog-wrapper
 bandaancha.eu###shBt
 milenio.com###share-icons-container
@@ -3775,6 +3791,7 @@ europapress.es###subnavegacionFixed
 elespectador.com##.Button_googleAlert
 adn40.mx##.ListSiguenos-SocialStrip
 elpais.com.uy##.Page-actions-wrapper
+la-razon.com##.action-buttons
 rpp.pe##.article__follow
 elespanol.com##.article__footer-nav
 estadiodeportivo.com##.boton-share
