@@ -1,16 +1,16 @@
-! Checksum: ZZq5fzACQv8A5nJG7b+0xQ
-! Diff-Path: ../patches/235_optimized/235_optimized-s-1739725565-14400.patch
+! Checksum: kD+pEc5YAWEY68+vpJ8qFw
+! Diff-Path: ../patches/235_optimized/235_optimized-s-1741684042-14400.patch
 ! Title: Persian Blocker (Optimized)
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.5.38
-! TimeUpdated: 2025-02-16T17:01:36+00:00
+! Version: 2.0.5.46
+! TimeUpdated: 2025-03-11T09:02:20+00:00
 ! Expires: 12 hours (update frequency)
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.site/"]
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
 artmusics.top,musicpars3.ir,musicguitars.ir,subf2m.ir,zeemusic.ir,najiremix.ir,musichi.ir,likeemusic.ir,appiroid.ir,androidtime.com#%#//scriptlet('ubo-nowoif.js')
 /files/fa/adv^$image,~third-party,domain=ir|asriran.com|parsine.com|ana.press|niniban.com|vananews.com|barghnews.com|niniban.com|eghtesadonline.com|borna.news|seratnews.com|nabzebourse.com
 /files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news
-/wp-content/uploads/*.gif^$image,~third-party,domain=ir|~ifixit.ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com|takskin.com|avapedia.com|honarfardi.com|graphiran.com|tasvirezendegi.com|par30dl.net|par30games.net|elmefarda.com|asbe-bokhar.com|binaopt.com|farachart.com|farsiro.com|techtik.com|androidtime.com|baarzesh.net|p30world.com|shahrebours.com|kamapress.com|kaliboys.com|fontchi.com|namnak.com
+/wp-content/uploads/*.gif^$image,~third-party,domain=ir|~ifixit.ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com|takskin.com|avapedia.com|honarfardi.com|graphiran.com|tasvirezendegi.com|par30dl.net|par30games.net|elmefarda.com|asbe-bokhar.com|binaopt.com|farachart.com|farsiro.com|techtik.com|androidtime.com|baarzesh.net|p30world.com|shahrebours.com|kamapress.com|kaliboys.com|fontchi.com|namnak.com|tejaratnews.com
 /images/advertise^$image,~third-party,domain=ir|bazimag.com|jahannews.com
 /wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest,~third-party
 ##.zxc
@@ -407,7 +407,6 @@ androidgozar.com##.ag-agah
 ||aparat.com^$xmlhttprequest,removeparam=referer
 aparat.com##div.video-list:has(> div > div:has(span.ad:has-text(AD)))
 aparat.com##.announce
-aparat.com#$#header { position: absolute !important; }
 aparat.com##div[type="aparat"]:has(> .link)
 aparat.com##.dsp-ad
 aparat.com##.side-ads
@@ -750,7 +749,7 @@ digikala.com##div.py-2:has(> div.items-center > div.swiper-container > div.swipe
 ||divarcdn.com/ssp/ads^$image,third-party,domain=divar.ir
 ||api.divar.ir/v8/ad-auction^$xmlhttprequest,~third-party
 divar.ir#$#div.kt-modal__contents > div.kt-modal__body a.button-row-item[href^="https://open-platform-redirect.divar.ir?app_slug=karnameh_price_evaluation"] > div.kt-button > span.kt-text-truncate::after { content: ' (۱۰ هزار تومان)' !important; }
-divar.ir##div#post-list-container-id a[href^="https://a-banners.divar.ir/auction/?ext_link_data="]:has(> div.kt-inset-banner > picture.kt-image-block > source[data-srcset^="https://a-banners.divarcdn.com/ssp/ads/media/image"])
+divar.ir##div.kt-inset-banner
 divar.ir##main > div[class^="item"]:has(img[src*="divarcdn.com/ssp/ads/"])
 divar.ir##div[class^="post-list__items-container"] > div[class^="full-width"] > a[class=""][href^="https://a-banners.divar.ir/auction/"]
 doostihaa.com##div.adsfix_box
@@ -841,7 +840,6 @@ estekhtam.com#@#.ads-bottom
 ||api.enama.ir/demo//vast.js^$script
 enama.ir##div.avdDiv
 fontchi.com#%#//scriptlet('ubo-href-sanitizer.js', 'a[href^="/goto/"]', '?url -base64')
-fontchi.com#%#//scriptlet('ubo-rmnt.js', 'script', 'document.body.oncopy')
 filmekade.ir##div.banner-ads
 ||analytics.fam.ir^$~third-party
 ||fam.ir/ngx_pagespeed_beacon^$xmlhttprequest,~third-party,method=post
@@ -1009,6 +1007,7 @@ gadgetnews.net##.ad-cell
 gadgetnews.net##.widget_text
 gadgetnews.net##.ads-post
 gadgetnews.net###ad14
+hellodigi.ir##div#sp-right > div.sp-column > div.sp-module:has(> h3.sp-module-title:has-text(حامیان ما))
 hadese24.ir##div.full-ad-box
 honarfardi.com##aside.sidebar .widget:has(a.external)
 harmonydl.us###ads
@@ -1099,9 +1098,7 @@ iranjib.ir##div[id^="pos-article-display-"][style="min-height:400px"]
 iranjib.ir##div#column3 > table.sidea > tbody > tr:has(> td > div.mybox > h4:has-text(تبلیغات متنی))
 ||irannaz.com/ax/*.gif^$image,~third-party
 irannaz.com##div.CenterBlock:has(> div.Tadsb2)
-||itresan.com/wp-content/cache/busting^
-itresan.com###NR-Ads
-itresan.com##.listing-item-blog:has(a[href*="/author/ads/"])
+itresan.com##div.tabligh
 ||cdn.ilna.ir/servev2/*.gif^$image,~third-party
 ilna.ir##div.zxc_mb
 ilna.ir##div.text_adv
@@ -1266,6 +1263,7 @@ k2cod.com##table#table9.bgtable:nth-of-type(13)
 k2cod.com###table10 > tbody > tr > .textBoldColor
 k2cod.com##.bgleftmenu > div > div
 k2cod.com###table10
+lennamusic.ir##div.btn-app
 lenz.ir#%#//scriptlet('ubo-aeld.js', 'contextmenu', 'preventDefault', 'elements', 'div#rmpPlayer')
 ||lenz.ir/api/v3/frequents/playrecord^$xmlhttprequest,~third-party,method=post
 ||lenz.ir/api/v3/frequents/playheartbit^$xmlhttprequest,~third-party,method=post
@@ -1336,7 +1334,6 @@ magbazi.com##div.text_ads_box
 ||maxstars.ir/ajax/chat.codes^$xmlhttprequest,~third-party
 maxstars.ir##a[href="https://www.tarhpardaz.ir"]
 maxstars.ir##a[href="http://www.asalchat.skin"]
-||mehtikahrizi.ir^$badfilter
 musickhone.com#%#//scriptlet('ubo-nowoif.js')
 my.mci.ir,pwa.mci.ir#%#//scriptlet('ubo-set.js', 'window.screen.width', '0')
 my.mci.ir,pwa.mci.ir#%#//scriptlet('ubo-set.js', 'window.screen.height', '0')
@@ -1647,6 +1644,7 @@ forum.p30world.com##div#ad_global_above_footer
 ||qnama.ir/ipop.js^$script,~third-party
 qnama.ir##div#ads1
 ||sentry.querastaff.ir^
+play.radiojavan.com#%#//scriptlet('ubo-set.js', 'appConfig.skips_limit', '60000')
 rebec.ir#%#//scriptlet('ubo-aeld.js', '/contextmenu|keydown|dragstart|mousemove/', 'return"undefined"')
 rasmio.com##div[class*="company_company__ads--ab"]
 ||rasaneh3.ir/popup.js^$script,~third-party
@@ -1696,6 +1694,8 @@ rond.ir##section.ads-section
 rastannews.ir##.all_ads
 ||rajanews.com/sites/default/files/superadmin/*.gif
 rajanews.com###block-block-22.ads
+safheeghtesad.ir##div.vw_d
+safheeghtesad.ir##div.home_middle4
 ||solahangs.com/popup.js^$script,~third-party
 shahrebours.com##div.shortcode-wrapper > p > a.backlink-into
 shahrebours.com#@#.box_ads
@@ -1708,13 +1708,10 @@ soorban.com##div.ecbox2:has(> div.ec_body2 > div.adswrapper)
 soorban.com##div.ecbox:has(div.ads_text, div.text-ads)
 ||static.shahrekhabar.com/banner/*.gif^$image,~third-party
 shahrekhabar.com##a[target="_blank"][href*="utm_content=shahrekhabar"] > img[style="margin-top: 0px;margin-bottom: 0px;margin-left: auto;margin-right: auto;"]
-subkade.ir#%#//scriptlet('ubo-aeld.js', 'click', 'return"undefined"', 'elements', 'a.indirect[data-get]')
-subkade.ir#%#//scriptlet('ubo-set-attr.js', 'a.indirect[data-get]', 'href', '[data-get]')
-subkade.ir#%#//scriptlet('ubo-ra.js', 'oncontextmenu', 'a.indirect[data-get]')
+subkade.ir#%#//scriptlet('ubo-nano-sib.js', 'countdown')
+subkade.ir##div.sk-side:has(> div.sk-side-title:has-text(/لینک‌های پیشنهادی|منتخب پیشنهاد امروز|روز/))
+subkade.ir##div.sk-section:has(> div[class*="sponsor-"])
 subkade.ir#$#html { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
-subkade.ir##div.sk-side:has(> div.sk-side-body ul > li > a[href]:is([href="https://49tinymovie.site/"], [href="https://zarfilm.com/"], [href="https://anime-list.net/"]))
-subkade.ir##aside.widget-area > div > div.sk-side:has(> div.sk-side-title > h2:has-text(دانلود فیلم و سریال جدید))
-subkade.ir##aside.widget-area > div > div.sk-side:has(> div.sk-side-title > h2:has-text(لوازم جانبی کامپیوتر و موبایل))
 7sobh.com##div.container-ads
 7sobh.com##div.left-ads
 ||analytics.eirib.ir^
@@ -1747,8 +1744,8 @@ sclinic.ir#$?#style:has-text(@media print) { remove: true; }
 shanbemag.com##.qxsbniv
 ||cdn.sargarme.com/uploads/*.gif$image,~third-party
 sargarme.com##.ads2
-sariasan.com##.ush_image_2
-sariasan.com##.widget > h3:has-text(مطالب مفید):upward(.widget)
+||sariasan.com/upload/*.gif^$image,~third-party
+sariasan.com##div.top-banner
 ||sobhtazeh.news/rss-file.php^$xmlhttprequest
 ||sobhtazeh.news/player/vast.js^$script
 ||sobhtazeh.news/player/vastlink.js^$script
@@ -2104,11 +2101,7 @@ tgju.org#%#//scriptlet('ubo-rmnt.js', 'script', 'ad.setAttribute')
 tgju.org##ul.advertise
 tgju.org##div.bottom-left-ad
 tgju.org##div.bottom-right-ad
-tejaratnews.com##.tj-ad-box
-tejaratnews.com##.home-web-surfing
-tejaratnews.com##.full-width-tabligh
-tejaratnews.com##.tj-ad-wrapper
-tejaratnews.com##div.widget.aside-widget:nth-of-type(5) > .section-title--dotted.section-title > .section-title__h
+tejaratnews.com##div.tjads
 ||tebyan.net/Base/UserLog^
 ||tebyan.net/Home/UserLog^
 ||tebyan.net/home/Visit^
@@ -2144,7 +2137,6 @@ tamin.ir#@#.ads2
 @@||tamin.ir/content/ads/
 upsara.com##img[alt="ads"]
 upsara.com##div.ads
-||uploadkon.ir^$badfilter
 uploadkon.ir##div.ads
 uploadkon.ir##li.ad-link
 uploadgoogle.ir#%#//scriptlet('ubo-nowoif.js')
@@ -2308,10 +2300,9 @@ zibamoon.com##.LeftSide > .TableOfContent > div[style="text-align:center;"]:has-
 zohur12.ir##.sideads
 ||analytics.zoomit.ir^
 ||theforge.ir/intake/v2/rum/events^$xmlhttprequest,third-party,domain=zoomit.ir|zoomg.ir
-/ads^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
+/ads^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir|kojaro.com
 /editorial/api/articles/*/visit^$xmlhttprequest,~third-party,domain=zoomit.ir|zoomg.ir
-zoomit.ir,zoomg.ir##div[class][width="100%"][height="100%"][style]:empty:upward(3)
-zoomit.ir,zoomg.ir##div[class][width="100%"][height="100%"][style]:empty:matches-css-after(animation: 1.6s linear 0.5s infinite normal none running waveKeyframe):upward(3)
+zoomit.ir,zoomg.ir,kojaro.com##div[class^="sc-"]:has(> div[class^="sc-"][rowcount][columncount] > div[class^="sc-"][maxwidth][maxheight])
 zoomtech.org##div.zoomtech-banner
 ||excoino.com^$all
 ||irancloudmining.com^$all
@@ -2372,6 +2363,8 @@ zoomtech.org##div.zoomtech-banner
 ||rubika.ir^$domain=~web.rubika.ir|~m.rubika.ir
 ||mat-pnu.ir^$all
 ||androidupdate.download^$all
+||159.100.22.89^$all
+||ewpb.site^$all
 www.google.com#$#.g a[href*="filmr.ir"]> h3::after { content: ' [دارای حذفیات] ' !important; color: #E6000D !important; }
 www.google.com#$#.g a[href*="doostihaa.com"]> h3::after { content: ' [دارای حذفیات] ' !important; color: #E6000D !important; }
 www.google.com#$#.g a[href*="uptvs.com"]> h3::after { content: ' [دارای حذفیات] ' !important; color: #E6000D !important; }

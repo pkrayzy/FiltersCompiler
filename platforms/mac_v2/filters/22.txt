@@ -1,9 +1,9 @@
-! Checksum: dTi+lIw9sN566mMY5/4lxg
-! Diff-Path: ../patches/22/22-s-1739965593-3600.patch
+! Checksum: iD9g1T235U2MdwMp9Ze5ag
+! Diff-Path: ../patches/22/22-s-1741870357-3600.patch
 ! Title: AdGuard Widgets filter
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.11.14
-! TimeUpdated: 2025-02-19T11:41:06+00:00
+! Version: 2.0.11.30
+! TimeUpdated: 2025-03-13T12:46:46+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -26,6 +26,7 @@
 ! SECTION: Widgets (sougo RSS) - Blogroll
 !
 ! NOTE: Blogroll generic
+||re.trigs-sockets.com^
 ||feedgrabbr.com^$third-party
 ||rss.solty.biz^
 ||yameyou.com^$third-party
@@ -88,6 +89,14 @@ ityouchannel.livedoor.blog,nanjei-baseball.blog.jp,baynews.blog.jp,xresolutionx.
 !
 ! NOTE: Blogroll specific rules
 !
+||karukantimes.com/rss_top3.html
+karukantimes.com##iframe[src^="https://karukantimes.com/rss_top3.html"]
+yoi.shueisha.co.jp##main >section.section:has(> div.section-container > div#sp_sockets_recommend)
+squallchannel.com###hg78d
+||alfalfalfa.com/js/rss/
+||alfalfalfa.com/js/blogparts/otakamu_articles.js
+alfalfalfa.com##[class$="-related"][id="mainmore"]
+alfalfalfa.com###related-title
 ||bakufu.jp/wp-content/uploads/2023/09/rss7d.html
 tyoieronews.blog.jp##div[class^="article-body"] > blockquote:last-child
 tyoieronews.blog.jp##table[summary="画像RSS"]
@@ -405,7 +414,7 @@ yokohama-sports.com##.antenna-midashi
 yokohama-sports.com##.text-rss-list
 hmangamatome.net##.rssbox_midashi
 hmangamatome.net,sexytvcap.com,erodoujinjohoukan.com###toprss
-/wp-content/plugins/chaty/*$domain=canadaglobalinfo.com
+/wp-content/plugins/chaty/*$domain=krx18.com|canadaglobalinfo.com
 ||vippers.jp/2ch-c_iframe_
 netouyonews.net,gameinn.jp##.wp-rss-template-container
 gameinn.jp#?#.article-under-box > p.sidetop_p:has(+ .wp-rss-template-container)
@@ -1353,6 +1362,8 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ~sinoptik.ua###SinoptikInformer
 ##a[title="WhatsApp Newsletter Marketing"]
 !
+||affilizz.com^$third-party
+||mbp-japan.com/information/$script,third-party
 ||chat*-ce.chatdealer.jp^
 .az/livechat/
 /crm/site_button/loader_*.js$domain=~tvoe.live
@@ -1523,7 +1534,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 !   SECTION: Widgets - Marketing (specific)
 !
-||asus-brand-assistant.asus.com/brand-assistant.js
+asus.com#%#//scriptlet('hide-in-shadow-dom', '#brandAssistant-root')
 theporndude.vip,theporndude.com##.chat-widget
 pw.live##.sticky-call
 sanevv.com.ua###animate_btn_4
@@ -1955,6 +1966,8 @@ freestreams-live.my###custom_html-9
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com
 litres.ru###call_support
 !
+softwarekeep.com##iframe[title="Opens a widget where you can find more information"]
+justanswer.com##.chatMainWrapper
 ||chatbot.akbank.com^
 vuzopedia.ru##.fullChatBlock
 ||amazonaws.com/cdn.ma-site.com/common/chatbots.js$domain=mastory.jp
@@ -2388,6 +2401,13 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+nashaniva.com##iframe[name="donorbox"]
+videogameschronicle.com##.vgc-patreon-promo
+videogameschronicle.com##.vgc-layout div[class^="house--"]
+svtv.org##.sidebars__block--footer
+svtv.org##.post-fullpage-support
+dailymaverick.co.za###ribbon-container
+huffpost.com##div[class*="-support-huffpost"]
 unian.ua##.support-post__btn
 agents.media##.single-post__donate-block
 istories.media##section[class^="MaterialDonationBanner-"]
@@ -2398,7 +2418,6 @@ matrix.org##.post-content > div.callout
 vox.com#?##zephr-anchor > aside:has(> form > div[class] div[class] > .duet--cta--button > span:contains(Monthly))
 rsf.org###block-rsf-bandeaux-alerte-block
 holod.media##.a-donate-block
-montanafreepress.org##.newspack-popup-container
 ghostery.com##.ds-notification-donate-container
 ipauniverse.com###splash-screen:has(.donate-button)
 echofm.online##.wp-embed-responsive > a[href="/p/raise?ver=solid"]
@@ -2481,7 +2500,6 @@ echofm.online##main > article.wp-embed-responsive ~ div[class^="sc-"]:has(> div[
 proekt.media##proekt-blocks > proekt-block:has(span#donateButton)
 verstka.media##.verstka-post-content > p.has-background:has(> em + a[href="https://boosty.to/verstkamedia/donate"])
 gigazine.net###donation_wrapper
-montanafreepress.org##.newspack-popup-container:has(a[href^="https://montanafreepress.org/donate?"])
 vsquare.org##.section-blocks div.elements > a[href="https://vsquare.org/support-us/"]
 getcomics.org##.wpfront-notification-bar-spacer
 insideclimatenews.org##.icn-donate-block
@@ -2496,7 +2514,6 @@ openstreetmap.org###banner
 wbur.org##.section--takeover
 www.wikipedia.org##div[id^="portalBanner_"].banner-bottom
 ||wisepops.net/loader.js$domain=civileats.com
-||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net
 misskey.io##div[class="_panel _shadow xmiJR"][style="--1ab2fbc0: 1000100;"]
 kids-in-mind.com###main-content > .page > .entry-content > .et-l--post > .et_builder_inner_content > .et_pb_section > .et_pb_row_fullwidth.et_clickable
 verstka.media##.verstka-post-content > p.has-background:has(> em > a[href="https://t.me/svobodnieslova/2734"])
@@ -2607,6 +2624,8 @@ fosshub.com##.download-dl-boxDN
 samlab.ws##iframe[src^="https://yoomoney.ru/"]
 ||yoomoney.ru/quickpay/shop-widget$domain=ovgorskiy.ru|blog.themarfa.name
 ||funding.webmoney.ru/widgets/$domain=ovgorskiy.ru|demek.ru|скачатьофис.рф
+! Google Revenue Manager
+||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net|premierguitar.com|svetandroida.cz
 ! The Moscow Times
 themoscowtimes.com##.preheader_advert
 themoscowtimes.com##.contribute-article
@@ -2622,6 +2641,10 @@ hromadske.ua#$#body { overflow: visible !important; }
 ! NOTE: Widgets - Another end ⬆️
 ! !SECTION: Widgets - Another
 !
+!+ NOT_OPTIMIZED
+montanafreepress.org##.newspack-popup-container
+!+ NOT_OPTIMIZED
+montanafreepress.org##.newspack-popup-container:has(a[href^="https://montanafreepress.org/donate?"])
 !+ NOT_OPTIMIZED
 bi-girl.net##.top_link_text_sp
 !+ NOT_OPTIMIZED

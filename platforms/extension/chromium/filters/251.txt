@@ -1,13 +1,13 @@
-! Checksum: Frr0d1mU04Eij6brBwg2Vg
-! Diff-Path: ../patches/251/251-s-1739293543-14400.patch
+! Checksum: eR00MvRHQuhKLXQpzVkMdA
+! Diff-Path: ../patches/251/251-s-1741698391-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.46
-! TimeUpdated: 2025-02-11T17:02:09+00:00
+! Version: 2.0.8.51
+! TimeUpdated: 2025-03-11T13:02:17+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 11February2025v1
+! OriginalVersion: 11March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1790,7 +1790,6 @@ $removeparam=ogbl
 ||google.*/webhp$removeparam=channel
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
 $removeparam=aqs,domain=www.google.*|ipv6.google.com
-! ||www.google•$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 $removeparam=btnG,domain=www.google.*|ipv6.google.com
 $removeparam=iflsig,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1093666
@@ -1819,7 +1818,6 @@ $removeparam=uact,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/issues/834#issuecomment-1510431981
 ||www.google.*/search?$document,removeparam=sclient
 ||ipv6.google.com*/search?$document,removeparam=sclient
-! Should not be removed: dpr (Determines image search results' box sizes)
 ! https://accounts•google•com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts•google•com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
 ||accounts.google.com^$removeparam=dsh,document
 ! https://support•google•com/contributionpolicy/answer/7400114?ref_topic=7422769
@@ -1844,7 +1842,7 @@ $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10267561
 $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ! Removing a Google search parameter, based on extensive research to determine that search terms with Google will always use UTF-8 no matter what and will under no known circumstances actually treat text as Shift_JIS even when using "&ie=Shift_JIS"
-! https://support•google•com/adsense/answer/9055049 imply that "Shift_JIS" was supposed to be accepted by Google, but while https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC works correctly (マーメイドラグーンのラニー, the Japanese name of a book), https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC&ie=Shift_JIS clearly doesn't, no matter which combinations of online converters or halfwidth/fullwidth I tested with•
+! https://support•google•com/adsense/answer/9055049 imply that "Shift_JIS" was supposed to be accepted by Google, but while https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC works correctly (マーメイドラグーンのラニー, the Japanese name of a book), https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC&ie=Shift_JIS clearly doesn't, no matter which combinations of online converters or halfwidth/fullwidth I tested with.
 ://www.google.$document,removeparam=ie,domain=www.google.*|ipv6.google.com
 ://ipv6.google.com^$document,removeparam=ie,domain=www.google.*|ipv6.google.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-11391406
@@ -1852,8 +1850,13 @@ $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=ictx
 ||www.google.$document,removeparam=dpr
 ||www.google.$document,removeparam=tfu
+! https://www.google.com/finance/?output=search&source=lnms (11/03/2025)
+||www.google.com/finance/?$removeparam=output
+||www.google.com/finance/?$removeparam=source
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.com/maps?entry=$removeparam=utm_campaign
+! Should not be removed: dpr (Determines image search results' box sizes)
+! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
 ||tiktok.com^$removeparam=_r
@@ -1941,7 +1944,8 @@ $removeparam=aff_trace_key
 ||aliexpress.$removeparam=cv
 ! https://www•alibaba•com/toprankedsellers/index•html?spm=a2700•8293689•0•0•2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 ! For more information, see - https://open•taobao•com/doc•htm?docId=959&docType=1 (in Chinese)
-$removeparam=spm
+! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12359848)
+$removeparam=spm,domain=~twitcasting.tv
 $removeparam=tracelog
 $removeparam=cardId,document,domain=alibaba.com
 ! http://m•aliexpress•com/item/32475192128•html?aff_click_id=()
@@ -1986,7 +1990,6 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=params_ssrt
 ||baidu.com^$removeparam=t_kt
 ! https://m•baidu•com/?from=844b&vit=fps# (25/10/2021)
-||m.baidu.com^$removeparam=from
 ||baidu.com^$removeparam=vit
 ! https://github.com/DandelionSprout/adfilt/pull/317
 ! https://wenku•baidu•com/search?lm=0&od=0&ie=utf-8&dyTabStr=MCwxLDYsNCw1LDMsMiw3LDgsOQ%3D%3D&word=test&ie=utf-8 (29/10/2021)
@@ -2062,7 +2065,6 @@ $removeparam=aff_click_id
 ||wenku.baidu.com^$removeparam=aggId
 ! https://github.com/DandelionSprout/adfilt/issues/831
 ||baidu.com^$removeparam=fenlei
-!!! ||baidu.com^$removeparam=ie - https://github.com/DandelionSprout/adfilt/issues/831#issuecomment-1614339807
 ||baidu.com^$document,removeparam=/^rsv_.*$/
 ||baidu.com^$document,removeparam=rn
 ||baidu.com^$removeparam=bsst
@@ -2083,6 +2085,10 @@ $removeparam=aff_click_id
 ||baidu.com^$document,removeparam=/^from.*$/
 ! causes issues: https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10554103
 ||baidu.com^$document,removeparam=tpl_from,domain=~graph.baidu.com
+! (https://github.com/DandelionSprout/adfilt/issues/831#issuecomment-1614339807)
+!!!||baidu.com^$removeparam=ie
+! (https://github.com/AdguardTeam/AdguardFilters/issues/200279)
+!!!||m.baidu.com^$removeparam=from
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ||bilibili.com^$removeparam=/^current.*$/
@@ -3987,15 +3993,6 @@ $document,removeparam=fpChannelSig,domain=tmall.com|taobao.com
 $document,removeparam=u_channel,domain=tmall.com|taobao.com
 $document,removeparam=umpChannel,domain=tmall.com|taobao.com
 $document,removeparam=maskChannel,domain=tmall.com|taobao.com
-! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
-! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
-$removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
-$removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
-! https://i-viaplay-com•akamaized•net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d•jpg?width=400&height=600 (02/03/2021)
-$removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
-$removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
-! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
-||ikea.com/*/images/products^$removeparam=f
 ! https://www•smartasaker•no/no/sportstromper-mot-gnagsar?dema_id=6299778080439
 ||smartasaker.$removeparam=dema_id
 ! https://no•hotels•com/ho548198/tropical-islands-krausnick-gross-wasserburg-tyskland/?chkin=2024-11-09&chkout=2024-11-10&x_pwa=1&rfrr=HSR&pwa_ts=1726867399106&referrerUrl=aHR0cHM6Ly9uby5ob3RlbHMuY29tL0hvdGVsLVNlYXJjaA%3D%3D&useRewards=false&rm1=a1&regionId=6349111&destination=Krausnick-Gross+Wasserburg%2C+Brandenburg+Region%2C+Tyskland&destType=MARKET&selected=12064742&latLong=52•040134%2C13•81408&sort=RECOMMENDED&top_dp=1558&top_cur=NOK&userIntent=&selectedRoomType=202442481&selectedRatePlan=212420506&expediaPropertyId=12064742&searchId=b3ed9457-a7b5-4191-998a-1c3cd8e802f0
@@ -4020,6 +4017,28 @@ ref=dtf.ru$document,removeparam=ref
 ||forms.office.com^$removeparam=route
 ! https://benchmarks•ul•com/3dmark?redirected=true (21/01/2025)
 ||ul.com^$removeparam=redirected
+! https://www•pond5•com/stock-footage/item/116362981-video-distortion-horizontal-bar-vhs-old-tv-effect?dd_referrer=https%3A%2F%2Fwww.google.com%2F
+||pond5.com^$removeparam=dd_referrer
+! https://www•roblox•com/users/1/profile?friendshipSourceType=PlayerSearch
+||roblox.$removeparam=friendshipSourceType
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12363046
+||detail.chiebukuro.yahoo.co.jp^$document,removeparam=__ysp
+||detail.chiebukuro.yahoo.co.jp^$document,removeparam=fr
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12371760
+! note: *needs to be specific to the /status path or will cause problems*
+.com/*/status/$document,removeparam=t,domain=twitter.com|x.com
+! https://www•qwant•com/?hti=0&s=0&q=john+madden&t=web (When using Qwant's Firefox extension as the default search engine; 09/03/2025)
+||qwant.com^$removeparam=hti
+||qwant.com^$removeparam=s
+! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
+! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
+$removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
+$removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
+! https://i-viaplay-com•akamaized•net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d•jpg?width=400&height=600 (02/03/2021)
+$removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
+$removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
+! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
+||ikea.com/*/images/products^$removeparam=f
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
 ! https://buffalonews•com/news/#tracking-source=main-nav

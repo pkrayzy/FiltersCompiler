@@ -1,12 +1,12 @@
-! Checksum: OkDTYMKuGuLnvTm/q560BA
+! Checksum: aaNiC7x+gmlX0CLK9kggHA
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.16.21
-! TimeUpdated: 2025-02-16T17:01:52+00:00
+! Version: 2.0.16.37
+! TimeUpdated: 2025-03-14T09:03:05+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 18December2024v2-Compilation
+! OriginalVersion: 27February2025v2-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -35,7 +35,7 @@
 ! • Unnecessary login prompts.
 ! • URL parameters believed to be unnecessary or trackers.
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
-! OriginalVersion: 07February2025v1
+! OriginalVersion: 14March2025v2
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -429,6 +429,8 @@ www.wikipedia.org##.app-badges
 www.tumblr.com##.PH0PQ
 kikkoman.*##.assist-homecook-banner
 flashscore.*##.selfPromo__box--apps
+prisjakt.*,prisjagt.dk,hintaopas.fi,pricespy.co.uk,pricespy.co.nz,ledenicheur.fr##div[class^=Download-] > :is(h4,[class^=DownloadI])
+qwant.com##a[role=listitem]:is([href*="/apps/"],[href*="/app/"])
 ! https://github.com/DandelionSprout/adfilt/issues/1047
 @@/jquery.smartbanner.js^
 ! (https://github.com/DandelionSprout/adfilt/issues/1065)
@@ -457,6 +459,7 @@ no#$#html.smartbanner-show[data-paywall] { margin-top: 0 !important }
 ##div[class^=Web2AppBannerstyles__Container]
 ! For sites that have $generichide
 media.tumblr.com###app-download-links-container
+! Google Maps
 ! Below are entries that I borrowed from "I Don't Want Your App", which was maintained by https://github.com/lassekongo83 at https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt, and which was licenced as GPLv3
 ! Generic
 ##a[href*=".app.link/"]
@@ -470,7 +473,7 @@ accuweather.com###app-store-links
 .SmartMessage.$script,domain=weather.com
 quora.com##.modal_bg
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 15February2025v1
+! OriginalVersion: 23February2025v1
 ! Expires: 1 day
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks blocks domains and domain patterns used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! Note: When asking us to whitelist a site: Make sure the site has some sort of public content. Non-public sites and alias sites are usually not whitelisted.
@@ -1602,6 +1605,8 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ! R34US
 ! https://github.com/AdguardTeam/FiltersRegistry/issues/654#issuecomment-2629098471
 ! A hĳacked link that had previously been on https://sims•fandom•com/wiki/Game_guide:Fog_emitter
+! Extreme amounts of PUP to a comical extent
+||driverpack.io^$document,domain=~has_extreme_amounts_of_pup_in_it.*
 ! ——— Horrendously bad copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
 ||unofficialtwrp.com^$document,domain=~had_not_updated_their_root_guides_to_reflect_a_b_partition_phones_as_of_2021.*
@@ -2027,7 +2032,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ! For when one really doesn't want to have a harder time with uBO's log error checker.
 ! Very experimental entry; see https://github.com/DandelionSprout/adfilt/issues/950 and https://www.techspot.com/news/77949-ccleaner-could-install-avast-anti-virus-without-permission.html
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! OriginalVersion: 22December2024v1-Beta
+! OriginalVersion: 09March2025v1-Beta
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -2515,6 +2520,10 @@ condoblues.com###milotree_box_wrap
 ~pinterest.*##.b-share-bar__pinterest:not(body,html,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.b-share-bar__facebook:not(body,html,:empty)
 ~linkedin.com##.b-share-bar__linkedin:not(body,html,:empty)
+~linkedin.com##.sp_article_share_linkedin:not(body,html,:empty)
+##.sp_article_share_x:not(body,html,:empty)
+! reutersCOM
+##button[aria-label^="Share article on "]
 !!!~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html) (Can't be generic due to www.nrk.no, mewe.com, stylecaster.com)
 !!!~tidssonen.no,~mmoculture.com##div[class*=share-container] (Entry needs to be rewritten at some point)
 !!!~twitter.com,~feedly.com,~chaturbate.com##.follow (Too many exceptions needed)
@@ -2624,12 +2633,12 @@ fileinfo.com##.fv
 ! ——— Prompts about outdated browsers... within reasonable limits ———
 ! nettavisenNO (24/05/2023)
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 07February2025v1
+! OriginalVersion: 09March2025v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! This is an extension file, not an independent list.
-! Extension file's version: 07February2025v1-Extension
+! Extension file's version: 09March2025v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -2700,9 +2709,10 @@ chronicle.com#$#html { overflow: auto !important; height: 100% !important }
 chronicle.com#$#.Page-body { overflow: auto !important; height: 100% !important }
 ! Twitter support was removed in early October 2023, due to its owner becoming a white supremacist and a Tucker Carlson terrorism collaborator; see https://new.reddit.com/r/insanepeoplefacebook/comments/170jdls/it_is_to_early_in_the_morning_for_this/
 ! Facebook
+! Note 9th of March 2025: Various changes to Facebook's login systems, video pages, etc., means that all Facebook entries should/must be rewritten from scratch.
 !! Reduces the background opacity of the login overlay
-www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com#$#div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type { min-height: 0 !important; height: 0 !important }
-www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com#$#div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type > div[class]:first-of-type { height: 0 !important }
+!!!www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com##div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type:style(min-height: 0 !important; height: 0 !important)
+!!!www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com##div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type > div[class]:first-of-type:style(height: 0 !important)
 !! Aims to prevent the bottom bar
 ! SegmentFault
 !! https://github.com/DandelionSprout/adfilt/issues/581
@@ -2799,17 +2809,18 @@ context.reverso.net###blocked-results-banner
 ! https://www•kommunal-rapport•no/miljoe/157019!/ (10/02/2024)
 ##.paywall-fade-out::after
 ! Facebook 🌇
+! Note 9th of March 2025: Various changes to Facebook's login systems, video pages, etc., means that all Facebook entries should/must be rewritten from scratch.
 ! https://touch•facebook•com/Sonic/
 !! Removes the login bars (In order to log in with this list turned on, use the pages' "Share" or "Become [group] member" buttons)
-touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,m.facebook.com,b-m.facebook.com,touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###mobile_login_bar,div[style="background: none; height: 214px;"]
+!!!touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,m.facebook.com,b-m.facebook.com,touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###mobile_login_bar,div[style="background: none; height: 214px;"]
 ! Removes the remnants of a login banner
-touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,m.facebook.com,b-m.facebook.com,touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###msite-pages-header-contents > div[id]
+!!!touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,m.facebook.com,b-m.facebook.com,touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###msite-pages-header-contents > div[id]
 ! Tier 1 login banners and overlays as of January 2022
-facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role=main] + div[data-nosnippet] > div
-facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[class*=" "]:first-of-type + div[data-nosnippet]:not([class])
+!!!facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role=main] + div[data-nosnippet] > div
+!!!facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[class*=" "]:first-of-type + div[data-nosnippet]:not([class])
 ! https://www•facebook•com/groups/952915405105778 (05/08/2023)
-facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[class^=download] ~ div[class^=x][class*=" "]
-facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[class^=AdBox i] ~ div[class^=x][class*=" "]
+!!!facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[class^=download] ~ div[class^=x][class*=" "]
+!!!facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[class^=AdBox i] ~ div[class^=x][class*=" "]
 !!! https://github.com/AdguardTeam/AdguardFilters/issues/158604 - facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~touch.facebook.com,~mtouch.facebook.com,~x.facebook.com,~iphone.facebook.com,~m.facebook.com,~touch.beta.facebook.com,~mtouch.beta.facebook.com,~x.beta.facebook.com,~iphone.beta.facebook.com,~m.beta.facebook.com,~b-m.facebook.com,~touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~mbasic.facebook.com,~d.facebook.com,~free.facebook.com,~0.facebook.com,~mbasic.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~d.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~free.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~0.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###scrollview + div:not([class],[id])
 ! Nĳie ↪️📛📠
 !! Removes the login prompt above the images
@@ -2973,11 +2984,6 @@ cdn.membershipworks.com*
 ||findlaycourier-oh-pw.newsmemory.com/?meter
 ! ——————————————————————————————————————————————————————————————————————
 ! Entries below are fixed in «uBlock Filters - Annoyances» as of the 12th of July 2019, but are also in this list to serve minimal-setup and ABP users.
-! Facebook
-!! Removes the main login prompt when browsing an account's timeline
-facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##._5hn6
-!! Attempts to remove the "Not logged in" dialog window that shows up further down on the timelinw
-facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.generic_dialog_modal.pop_dialog
 ! Pinterest ↪️📛🌇 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
 ! For very important notes about Pinterest, see https://github.com/DandelionSprout/adfilt/issues/26.
 !! Removes the login prompt when browsing down on a page
@@ -3138,7 +3144,7 @@ arstechnica.com##.comment-count
 /commentsbutton.js$domain=nettavisen.no
 ! Title: 🎬 Stop Autoplay On Video Sites
 ! Expires: 7 days
-! OriginalVersion: 07February2025v1
+! OriginalVersion: 13March2025v1
 ! Description: Are you tired of having to turn oﬀ autoplay on YouTube, Vimeo, and other video sites every time you e.g. go to incognito mode? Do you work in classrooms/courserooms and don't want to accidentally show unfitting videos to your students/coursetakers? Are you worried of having to use specific extensions just for that purpose? Then this list is for you.
 ! Special thanks to https://github.com/llacb47 for waterproofing large parts of this list.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -3156,6 +3162,7 @@ vimeo.com##.iris_progress-container
 vimeo.com##.pagination_holder
 vimeo.com##._16rrx
 ! (Has some problems due to https://github.com/AdguardTeam/FiltersCompiler/blob/master/src/main/utils/trust-levels/exclusions-high.txt)
+! (Also breaks Vimeo's upload page entirely.)
 ! ——— Rumble ———
 ||rumble.com/embedJS/u3/?request=related$xmlhttprequest
 ! ——— TED ———
@@ -3174,6 +3181,8 @@ vimeo.com##._16rrx
 ! Gfycat
 ! YouTube Kids
 ! ——— Vimeo ———
+! (Breaks Vimeo's upload page entirely.)
+!!!vimeo.com##+js(set, vimeo.clip_page_config.continuous_play_enabled, false)
 ! ——— TED ———
 ! Title: 🎫 Ad Removal List for Unusual Ads
 ! OriginalVersion: 07April2024v1-Alpha
@@ -4268,7 +4277,7 @@ m4uhd.net##.quality
 hdfilmcehennemi.film##.poster-imdb
 watchseries.*##.imdb
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 11February2025v1
+! OriginalVersion: 11March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -4810,7 +4819,6 @@ watchseries.*##.imdb
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
 ! https://github.com/DandelionSprout/adfilt/issues/618
 ! https://github.com/DandelionSprout/adfilt/issues/834#issuecomment-1510431981
-! Should not be removed: dpr (Determines image search results' box sizes)
 ! https://accounts•google•com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts•google•com%2FManageAccount%3Fnc%3D1&dsh=S-1476216186%3A1641712437682727&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp (09/01/2022)
 ! https://support•google•com/contributionpolicy/answer/7400114?ref_topic=7422769
 ! https://egon-no•translate•goog/ledige-stillinger/204bd5b2-6f9b-45bf-893d-1c0b21f9dc8a?_x_tr_sl=no&_x_tr_tl=en&_x_tr_hl=no&_x_tr_pto=wapp
@@ -4822,9 +4830,11 @@ watchseries.*##.imdb
 ! https://www-nrk-no•translate•goog/norge/regjeringen-vil-endre-russetiden-_-her-er-planen-1•16812907?_x_tr_sl=no&_x_tr_tl=en&_x_tr_hl=no&_x_tr_pto=wapp (20/03/2024)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10267561
 ! Removing a Google search parameter, based on extensive research to determine that search terms with Google will always use UTF-8 no matter what and will under no known circumstances actually treat text as Shift_JIS even when using "&ie=Shift_JIS"
-! https://support•google•com/adsense/answer/9055049 imply that "Shift_JIS" was supposed to be accepted by Google, but while https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC works correctly (マーメイドラグーンのラニー, the Japanese name of a book), https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC&ie=Shift_JIS clearly doesn't, no matter which combinations of online converters or halfwidth/fullwidth I tested with•
+! https://support•google•com/adsense/answer/9055049 imply that "Shift_JIS" was supposed to be accepted by Google, but while https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC works correctly (マーメイドラグーンのラニー, the Japanese name of a book), https://www•google•co•jp/search?q=%E3%83%9E%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%83%A9%E3%82%B0%E3%83%BC%E3%83%B3%E3%81%AE%E3%83%A9%E3%83%8B%E3%83%BC&ie=Shift_JIS clearly doesn't, no matter which combinations of online converters or halfwidth/fullwidth I tested with.
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-11391406
+! https://www.google.com/finance/?output=search&source=lnms (11/03/2025)
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
+! Should not be removed: dpr (Determines image search results' box sizes)
 !!! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750307
@@ -4855,6 +4865,7 @@ watchseries.*##.imdb
 ! https://s•click•aliexpress•com/e/_pQN242z?dp=p12840043004615122514&cv=21876
 ! https://www•alibaba•com/toprankedsellers/index•html?spm=a2700•8293689•0•0•2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 ! For more information, see - https://open•taobao•com/doc•htm?docId=959&docType=1 (in Chinese)
+! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12359848)
 ! http://m•aliexpress•com/item/32475192128•html?aff_click_id=()
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2232447
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3286863
@@ -4900,6 +4911,8 @@ watchseries.*##.imdb
 ! https://wenku•baidu•com/view/8228b0e3f342336c1eb91a37f111f18583d00cc0?aggId=(...) (26/01/2023)
 ! https://github.com/DandelionSprout/adfilt/issues/831
 ! causes issues: https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10554103
+! (https://github.com/DandelionSprout/adfilt/issues/831#issuecomment-1614339807)
+! (https://github.com/AdguardTeam/AdguardFilters/issues/200279)
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ! https://github.com/the1812/Bilibili-Evolved/commit/e859b988c5a28ebd1acdedd2df037f23ab27637d
@@ -5543,10 +5556,6 @@ watchseries.*##.imdb
 ! https://github.com/AdguardTeam/AdguardFilters/commit/c5b780b82a10279aa8ebad187a2b1500278415ad
 ! credit: rule copied from Yuki2718
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12073661
-! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
-! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
-! https://i-viaplay-com•akamaized•net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d•jpg?width=400&height=600 (02/03/2021)
-! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
 ! https://www•smartasaker•no/no/sportstromper-mot-gnagsar?dema_id=6299778080439
 ! https://no•hotels•com/ho548198/tropical-islands-krausnick-gross-wasserburg-tyskland/?chkin=2024-11-09&chkout=2024-11-10&x_pwa=1&rfrr=HSR&pwa_ts=1726867399106&referrerUrl=aHR0cHM6Ly9uby5ob3RlbHMuY29tL0hvdGVsLVNlYXJjaA%3D%3D&useRewards=false&rm1=a1&regionId=6349111&destination=Krausnick-Gross+Wasserburg%2C+Brandenburg+Region%2C+Tyskland&destType=MARKET&selected=12064742&latLong=52•040134%2C13•81408&sort=RECOMMENDED&top_dp=1558&top_cur=NOK&userIntent=&selectedRoomType=202442481&selectedRatePlan=212420506&expediaPropertyId=12064742&searchId=b3ed9457-a7b5-4191-998a-1c3cd8e802f0
 ! https://www•everyplay•live/pages/GSDTz9Nea?_gl=1*1gpvlcv*_up*MQ••*_ga*MTkwOTc5MDgwNS4xNzI3NjYxMzY3*_ga_M39TLB0M4G*MTcyNzY2MTM2Ny4xLjAuMTcyNzY2MTM2Ny4wLjAuMA••
@@ -5557,6 +5566,16 @@ watchseries.*##.imdb
 ! i.e. https://www•rentio•jp/products/nw-fc10-zjrcp?click_from=top_order_recommend
 ! https://forms•office•com/pages/responsepage•aspx?id=(...)&route=shorturl
 ! https://benchmarks•ul•com/3dmark?redirected=true (21/01/2025)
+! https://www•pond5•com/stock-footage/item/116362981-video-distortion-horizontal-bar-vhs-old-tv-effect?dd_referrer=https%3A%2F%2Fwww.google.com%2F
+! https://www•roblox•com/users/1/profile?friendshipSourceType=PlayerSearch
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12363046
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12371760
+! note: *needs to be specific to the /status path or will cause problems*
+! https://www•qwant•com/?hti=0&s=0&q=john+madden&t=web (When using Qwant's Firefox extension as the default search engine; 09/03/2025)
+! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
+! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
+! https://i-viaplay-com•akamaized•net/viaplay-prod/64/412/1566206933-67aca1cbde0e0edf7ee8d3d2a79748af3e64ba8d•jpg?width=400&height=600 (02/03/2021)
+! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
 ! https://buffalonews•com/news/#tracking-source=main-nav
@@ -5793,3 +5812,6 @@ valdemarsro.dk###recipe-intro p:last-of-type
 ! So that people who uninstall Chrome can complete the "Why did you uninstall Chrome?" survey (Caused by AdGuard Popups Filter)
 @@||gstatic.com/uservoice/surveys/resources/prod/js/survey/survey_binary$script
 google.*#@##google-hats-survey
+! https://www•independent•co•uk/news/world/americas/us-politics/nsa-inappropriate-chat-fired-gabbard-b2705027.html notification prompt (For list users with neither AdGuard Tracking Protection or EasyPrivacy; 27/02/2025)
+||appboycdn.com^$third-party
+independent.co.uk,indy100.com##.notification-prompt
