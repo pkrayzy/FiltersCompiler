@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: /XXgqD50tJGK7NYYud/9RQ
-! Diff-Path: ../patches/9/9-s-1741977743-3600.patch
+! Checksum: lK1QKvALgsfV/SR1V1Mwwg
+! Diff-Path: ../patches/9/9-s-1742549804-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.29.23
-! TimeUpdated: 2025-03-14T18:37:22+00:00
+! Version: 2.0.29.31
+! TimeUpdated: 2025-03-21T09:32:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1645,7 +1645,10 @@ suaurl.com##+js(abort-current-script, open, document.getElementById)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139603
 estacio.br##+js(set-cookie, modal_promo, 1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190685
+multipaste.org##+js(abort-current-script, document.addEventListener, excludeDomains)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191026
+! https://github.com/AdguardTeam/AdguardFilters/issues/200997
+pelismart.tv##+js(href-sanitizer, .download-links a[href^="https://unlock.uberxviral.com/#"], [href], base64decode)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198257
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196297
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178968
@@ -1653,7 +1656,7 @@ estacio.br##+js(set-cookie, modal_promo, 1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171873
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167657
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159461
-eldiario24hrs.com,constanteonline.com,acortaz.es,myfirstdollar.org,gourlpro.com,adclic.es,adclic.org,mundopolo.net,adclicker.io##+js(set-constant, global.noobMaxTry, 0)
+payad.lat,uberxviral.com,eldiario24hrs.com,constanteonline.com,acortaz.es,myfirstdollar.org,gourlpro.com,adclic.es,adclic.org,mundopolo.net,adclicker.io##+js(set-constant, global.noobMaxTry, 0)
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183355
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159665
@@ -2186,6 +2189,11 @@ c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,me
 !
 ! NOTE: Specific rules
 !
+tabelafipebrasil.com##div:has(> ins.adsbygoogle)
+olx.com.br##div[class^="Advertising"]
+hentaijl.com##+js(window.open-defuser)
+hentaijl.com##+js(abort-current-script, EventTarget.prototype.addEventListener, window.open)
+vepelis.com##div[class^="adsbutt_wrapper_"]
 capitalist.com.br###megapulse-destaque-box
 capitalist.com.br##.ads-conteudo-responsivo
 hardware.com.br##div[class]:has(> #ramar_top_banner:only-child)
@@ -2382,7 +2390,7 @@ portalbsd.com.br##div.col-md-9 > div.row:has(> div > div.text-left > a > img[src
 laiguana.tv###tdi_154
 laiguana.tv###tdi_139
 laiguana.tv###tdi_341
-laiguana.tv##.wpb_wrapper > aside:has(center > div > span:contains(Publicidad))
+laiguana.tv#?#.wpb_wrapper > aside:has(center > div > span:contains(Publicidad))
 futuro.cl##.taboola-single
 futuro.cl##.banner-cms
 futuro.cl##hotmusic
@@ -2575,9 +2583,9 @@ hobbyconsolas.com###megaad-wrapper
 hobbyconsolas.com##.lazyload-wrapper:has(> div[class^="embed-card"] > a.product-button)
 hobbyconsolas.com##div[data-piano-position^="recomendado-ada-"]
 otakustv.com##div[id^="public_"]
-pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com##+js(set-cookie, player, 1)
-pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##playx { display: none !important; }
-pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##plays { display: block !important; }
+pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com##+js(set-cookie, player, 1)
+pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##playx { display: none !important; }
+pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##plays { display: block !important; }
 guiadasemana.com.br#$#main#site-main { margin-top: 0px !important; }
 guiadasemana.com.br###content-column div[class].placement
 bajalogratis.com##a[href*="/redirect?tid="]
@@ -3865,7 +3873,7 @@ lapoliticaonline.*###header-banner-wrapper
 onepieceex.net##.banner-resposivo
 tecmundo.com.br##p > a[href^="https://bit.ly/"][target="_blank"] > span > img
 ||img.ibxk.com.br/*/banner-*.png$domain=tecmundo.com.br
-redgol.cl,lapaginamillonaria.com,e-noticies.cat,econodata.com.br,edatv.news,tomatazos.com,wapa.pe,sicnoticias.pt,g24.gal,levelup.com,eldiario.es,tuasaude.com,globo.com,eltiempo.com,gauchazh.clicrbs.com.br,hobbyconsolas.com,larepublica.pe,vozpopuli.com##.ad-container
+contaspoupanca.pt,redgol.cl,lapaginamillonaria.com,e-noticies.cat,econodata.com.br,edatv.news,tomatazos.com,wapa.pe,sicnoticias.pt,g24.gal,levelup.com,eldiario.es,tuasaude.com,globo.com,eltiempo.com,gauchazh.clicrbs.com.br,hobbyconsolas.com,larepublica.pe,vozpopuli.com##.ad-container
 hobbyconsolas.com##div[class^="ad-slot_"]
 hobbyconsolas.com##div[class^="placeholder_placeholder"]
 vozpopuli.com##.home_1_ad

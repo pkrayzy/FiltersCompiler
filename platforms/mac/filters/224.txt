@@ -1,8 +1,8 @@
-! Checksum: 6gLR5xEhGMP9WqLKMnMJRQ
+! Checksum: cV/SMDJiI5T3IsYyooVtVg
 ! Title: AdGuard Chinese filter
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.33.4
-! TimeUpdated: 2025-03-14T13:41:44+00:00
+! Version: 2.1.33.41
+! TimeUpdated: 2025-03-21T09:32:29+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -298,6 +298,11 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201354
+!+ NOT_PLATFORM(ios, ext_android_cb, ext_safari)
+@@||yeeach.com^$generichide,badfilter
+! https://github.com/AdguardTeam/AdguardFilters/issues/200668
+@@.php?id=$script,domain=surirt.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200773
 @@||520click.com/ad.php?id=$script,domain=surirt.com
 @@||surirt.com/ad/ads.php?id=$script,domain=surirt.com
@@ -732,6 +737,7 @@ popbee.com##.adblocker
 ! Bad: example.org##.adv (should be in specific.txt)
 !
 !
+##body > div#inplayer[align="center"]
 ##.Zi_ad_a_H
 ##a[href^="https://adm.beimg.com/"]
 ! 91porny
@@ -784,8 +790,6 @@ yfsp.tv,aiyifan.tv,iyf.tv#%#//scriptlet('abort-on-stack-trace', 'Object.prototyp
 m.91zww.com#%#//scriptlet('abort-on-property-write', 'delCookie')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150387
 pornbest.org#%#//scriptlet('abort-current-inline-script', 'jQuery', 'injectPops')
-! https://github.com/AdguardTeam/AdguardFilters/issues/141657
-axutongxue.vip,axutongxue.com,axutongxue.net#%#//scriptlet('prevent-setTimeout', '/getCookie|checkCK|checkCookie/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135612
 hamivideo.hinet.net#%#//scriptlet("set-constant", "myPlayer.adDisplay", "undefined")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134441
@@ -1130,6 +1134,8 @@ $script,third-party,denyallow=fastlycdn.com|doodcdn.co|intensedebate.com|vixclou
 !
 ! NOTE: Specific rules
 !
+blog.sina.com.cn##.top-ad-info
+3dmgame.com#$#body > div.content { margin-top: 0 !important; }
 finance.eastmoney.com###ContentBody > p[style="text-align:center;"]:has(> a[href^="https://acttg.eastmoney.com/pub/"])
 xn--p3tv7h.com###floating-image-container
 ||xn--p3tv7h.com/imgs/Uxuan2.jpg
@@ -1769,8 +1775,9 @@ wnflb2023.com##.GzList
 bdys03.com##.artplayer-plugin-ads
 ||u10*.com/*.gif$domain=bhuai.top
 ||ll.ibiqiuge.com/m.js
-axutongxue.vip,axutongxue.com,axutongxue.net##body > :is(div, aside)[id]:has(> ul[class] > li > img.icon + a[href])
-axutongxue.vip,axutongxue.com,axutongxue.net#%#//scriptlet('trusted-suppress-native-method', 'document.write', '/ul class.*icon.*href/', 'prevent')
+axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net#%#//scriptlet('prevent-setTimeout', '/getCookie|checkCK|checkCookie/')
+axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net##body > :is(div, aside)[id]:has(> ul[class] > li > img.icon + a[href])
+axutongxue.cn,axu.pages.dev,axutongxue.vip,axutongxue.com,axutongxue.net#%#//scriptlet('trusted-suppress-native-method', 'document.write', '/ul class.*icon.*href/', 'prevent')
 sstv.pw##.container > a > img[style="width: 100%;"]
 cupfox.app##.t-img-box > a[target="_blank"] > img
 olevod.com##div[class^="ad"][style="margin-top: 0.05rem;"]
@@ -3040,6 +3047,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 ! ! temporary
 ! https://github.com/AdguardTeam/AdguardBrowserExtension/issues/3031
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/200865
+video4k.cc#@#a[href*="/?aff="][target="_blank"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197816
 linovelib.com#@#.ads_box
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194197
@@ -3280,6 +3289,7 @@ bmvc2020-conference.com#@#div[id][style="width: 100%;"] > iframe[scrolling="no"]
 .xyz:*?c=$script,third-party
 -*-*-*-*.panda^$script,third-party
 .tv/gg/
+.top/api.php?mod=ad&
 /webAdvert.php?ad_name=
 /js/adv-slide-toggle.
 -1316632262.cos.
@@ -4992,8 +5002,65 @@ newduba.cn###jq_youxi
 ||51tongji.trafficmanager.net^
 ||trafficmanager.net/o.js
 ||67.21.92.*.gif
+.z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||feernhuhe.com^
+||vhje.cn^
+||bptnzp.top^
+||ajoxxit.top^
+||spkh.cn^
+||sodenneyg.com^
+||zqntbc.top^
+||lcidauv.top^
+||bekd.cn^
+||uhityllhn.com^
+||xunqrutsl.com^
+||jslxzx.icu^
+||xeccotftw.com^
+||ledfjl.icu^
+||xrlzhk.top^
+||nogogey.top^
+||otfy.cn^
+||iyof.cn^
+||vinoinqih.com^
+||fbhkxt.icu^
+||lppfnf.icu^
+||shedranfd.com^
+||quyr.cn^
+||vljkjx.top^
+||yaaumqa.top^
+||ancelsqpv.com^
+||bxhm.cn^
+||vnbbrx.top^
+||hylplj.icu^
+||naukreatn.com^
+||nmtkbv.icu^
+||tmdqlk.top^
+||bkox.cn^
+||amyapad.top^
+||political-effort.com^
+||tubingacater.com^
+||chorninsm.com^
+||phuustikd.com^
+||togmoxwnw.com^
+||rdoq.cn^
+||srootshare.com^
+||uoqc.cn^
+||xaiqrania.com^
+||jipxzz.icu^
+||mstmsbz.com^
+||hwxprd.icu^
+||nrqrbwi.top^
+||cfwlvmg.top^
+||kodwaqepr.com^
+||ajua.cn^
+||mvxh.cn^
+||lftcph.icu^
+||ak03150hou.com^
+||guqransoq.com^
+||ghegaintp.com^
+||vmjr.cn^
 ||lmeurbnjs.com^
 ||xielloltv.com^
 ||lqfctb.icu^
@@ -8850,7 +8917,7 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||51ztzj.com/res/web/img/pic/inshow.jpg
 ||520call.me/ad/ad_
 ||520cc.tw/AD/
-||520click.com/ad.$domain=~video.520cc.cc
+||520click.com/ad.$domain=~video.520cc.cc|~surirt.com
 ||520xingyun.com/images/188*.gif
 ||520xs.la/js/dianrui-
 ||520z-2.com/uploadfile/sucai/
@@ -12796,6 +12863,9 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||csgola.com/Public/img/lala/1.jpg
 ||adasset.flixfiend.top^
 ||2345.com/guess/v1/adList
+||ttdm.me/upload/files/sss/
+ttdm.me##.dds_w
+fhxy-a.top##.sd_recpic
 2345.com##.search-right-swiper-news
 2345.com##._isFirstAd
 2345.com##.part-banner > .part-ppt
@@ -18903,6 +18973,7 @@ android-doc.com,apk.tw,chaojizhibo.net,chtoen.com,dizhishengcheng.com,doitwell.t
 @@||monnsutogatya.com^$elemhide
 @@||morosedog.gitlab.io^$generichide
 @@||moyens.net^$generichide
+@@||yeeach.com^$generichide
 @@||ms332.com^$generichide
 @@||muzlan.top/ads/banner.png
 @@||muzlan.top^$generichide
@@ -18932,7 +19003,7 @@ android-doc.com,apk.tw,chaojizhibo.net,chtoen.com,dizhishengcheng.com,doitwell.t
 @@||blog.6ziz.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl$domain=ff14angler.com|logi.im
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=doitwell.tw
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=blog.6ziz.com|docsmall.com|uiadmin.net|4horlover.com|23qb.net|4spaces.org|aboluowang.com|assbbs.com|chaojizhibo.net|chtoen.com|daxiaamu.com|demo.ama.pub|dizhishengcheng.com|doitwell.tw|ekamus.info|eu4cn.com|ff14angler.com|freedidi.com|fsbot.xyz|haoweichi.com|it365.abctool.info|linovelib.com|logi.im|mens1069.com|monnsutogatya.com|mpyit.com|myqqjd.com|numberempire.com|ozabc.com|pansearch.me|patch.ali213.net|pc3mag.com|reh.tw|shenfendaquan.com|sistersbedroom.com|sto520.com|vaptcha.com|wandhi.com|wenxuecity.com|wuyong.fun|xbeibeix.com|xiebruce.top|xugaoxiang.com|xxxxx520.com|yodu.org|yummy.best|zaixianjisuan.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=yeeach.com|blog.6ziz.com|docsmall.com|uiadmin.net|4horlover.com|23qb.net|4spaces.org|aboluowang.com|assbbs.com|chaojizhibo.net|chtoen.com|daxiaamu.com|demo.ama.pub|dizhishengcheng.com|doitwell.tw|ekamus.info|eu4cn.com|ff14angler.com|freedidi.com|fsbot.xyz|haoweichi.com|it365.abctool.info|linovelib.com|logi.im|mens1069.com|monnsutogatya.com|mpyit.com|myqqjd.com|numberempire.com|ozabc.com|pansearch.me|patch.ali213.net|pc3mag.com|reh.tw|shenfendaquan.com|sistersbedroom.com|sto520.com|vaptcha.com|wandhi.com|wenxuecity.com|wuyong.fun|xbeibeix.com|xiebruce.top|xugaoxiang.com|xxxxx520.com|yodu.org|yummy.best|zaixianjisuan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=duelmeta.com|linetv.tw|liout.com|moneysave.info|raenonx.cc|zxmee.com
 @@||pagead2.googlesyndication.com/pagead/js/google_top_exp.js$domain=ebb.io
 @@||pagead2.googlesyndication.com/pagead/show_ads.js$domain=knowlet3389.blogspot.com|knowlet3389.blogspot.hk|knowlet3389.blogspot.jp|knowlet3389.blogspot.tw|mnighthk.net|weithenn.org

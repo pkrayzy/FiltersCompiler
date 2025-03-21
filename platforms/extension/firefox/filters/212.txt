@@ -1,15 +1,15 @@
-! Checksum: YB6iO9U7aDU5VCplCE/e0Q
-! Diff-Path: ../patches/212/212-s-1741971961-14400.patch
+! Checksum: uCmkdyTg0tzv/3AHnJOKjQ
+! Diff-Path: ../patches/212/212-s-1742562434-14400.patch
 ! Title: RU AdList: Counters
 ! Description: RU AdList supplement for trackers blocking.
-! Version: 2.1.65.68
-! TimeUpdated: 2025-03-14T17:01:30+00:00
+! Version: 2.1.66.6
+! TimeUpdated: 2025-03-21T13:01:44+00:00
 ! Expires: 10 days (update frequency)
 !
-! Checksum: eAUFmBAFxHUy8SqvdG1K8w
-! OriginalVersion: 202503141651
+! Checksum: 419/AXuMstapyu/tbbp4qw
+! OriginalVersion: 202503211251
 ! Title: RU AdList: Counters
-! Last modified: 14 Mar 2025 16:51 UTC
+! Last modified: 21 Mar 2025 12:51 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1221,8 +1221,9 @@ avtorambler.com,rambler.ru#?#section > nav ~ div div:-abp-has(> div > [id^="rcmw
 @@://yandex.*/news|$generichide
 disk.yandex.*,docs.yandex.*##[data-test-id^="ps-header-logo-"] svg ~ svg
 disk.yandex.*,docs.yandex.*,mail.yandex.*##[data-test-id="ps-header-logo-free-badge-link"]
+[$path=articles]dzen.*#$?#div[id]:has(> article[id]) { display: none !important }
 dzen.*#$?#[aria-label*="Лент"] article:has(> div:matches-css(display: none)) { display: none !important }
-dzen.*#$?#div[class*="__col"]:has(> div[class*="-feed__"][class*="_type_"] > div[class*="loader"]) { display: none !important }
+dzen.*#$?#div:matches-attr(/[a-z0-9]/=/media-banner/) { display: none !important }
 mail.yandex.*###js-mail-layout-content-header > .message-list-banner-portal + div[id]:empty
 mail.yandex.*##.mail-Page-Body .Popup2 > .Tooltip-Content:has-text(2001—202)
 ya.*,yandex.*#$?#.content__right div:has(> div > button:matches-attr(/[a-z0-9]/=/advertiser/)) { display: none !important }
@@ -1236,6 +1237,7 @@ ya.*,yandex.*#$?#[id][aria-label] > [class]:has(> div > button:matches-attr(/[a-
 ||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$redirect=nooptext
 !
 ! мобильная версия
+ya.*#$?##search-result > [class*="__card"]:has(> div > span:has-text(Реклама)) { display: none !important }
 yandex.*#$?#.touch-feed > div > .feed-item[id^="zen-row-"]:has([class^="zen-ui-channel-info"][class$="subtitle-text"]:has-text(промо)) { display: none !important }
 !
 ! Альтернативное решение для старых браузеров
@@ -1464,6 +1466,7 @@ utm_$document,removeparam=ig_rid,domain=instagram.com
 ||www.google.*/search?$removeparam=cshid
 ||www.google.*/search?$removeparam=dpr
 ||www.google.*/search?$removeparam=ei
+||www.google.*/search?$removeparam=fbs
 ||www.google.*/search?$removeparam=gs_lcp
 ||www.google.*/search?$removeparam=gs_lcrp
 ||www.google.*/search?$removeparam=gs_lp
