@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: QMflaQlI3HppxLfxtGfsCw
-! Diff-Path: ../patches/17/17-s-1742560628-3600.patch
+! Checksum: HO6af5+62FgMpuyz+7mAJQ
+! Diff-Path: ../patches/17/17-s-1742683004-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.74
-! TimeUpdated: 2025-03-21T12:32:27+00:00
+! Version: 2.0.10.76
+! TimeUpdated: 2025-03-22T22:32:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -390,6 +390,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201324
+||read.amazon.$removeparam=ref
 ! bluestacks.com
 ||support.bluestacks.com^$removeparam=email
 ||support.bluestacks.com^$removeparam=guid
@@ -667,7 +669,8 @@ $removeparam=cid,domain=nhk.jp|nhk.or.jp
 ||puma.com^$removeparam=sc_eh
 ! reddit.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191029
-||reddit.com^$removeparam=/deep_link|3p/
+||reddit.com^$removeparam=%243p
+||reddit.com^$removeparam=%24deep_link
 ||reddit.com^$removeparam=post_index
 ! reddit.com - email tracking
 ||reddit.com^$removeparam=post_fullname
