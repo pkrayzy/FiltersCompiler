@@ -3,9 +3,16 @@ name: Build Third-party filters
 on:
   # For manual run builds
   workflow_dispatch:
-  # Runs every 4 hours.
   schedule:
-    - cron: "0 */4 * * *"
+    # Run every 4 hours at minute 30 (to avoid overlap with build-adguard)
+    # This runs at 00:30, 04:30, 08:30, 12:30, 16:30, 20:30
+    - cron: '30 */4 * * *'
+  pull_request:
+    paths-ignore:
+      # Do not trigger build on changes to the following files.
+      # It is needed to avoid pull request merge blocking
+      # as compiler does not use the updated config during the build.
+      - "optimization_config.json"
 
 env:
   BUILD_MODE: 3p
@@ -36,7 +43,7 @@ jobs:
 
       - name: Commit & Push changes
         uses: actions-js/push@v1.5
-        if: github.ref == 'refs/heads/master' && github.repository == 'AdguardTeam/FiltersRegistry'
+        if: github.ref == 'refs/heads/master' && github.repository == 'AdguardTeam/FiltersRegistry' && github.event_name != 'pull_request'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: "master"
