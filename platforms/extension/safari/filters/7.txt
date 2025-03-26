@@ -1,9 +1,9 @@
-! Checksum: TtcTI8MjvsJQ1ByvzyyYXw
-! Diff-Path: ../patches/7/7-s-1742920653-3600.patch
+! Checksum: jq71adsXXlnYiqQl9mh+LQ
+! Diff-Path: ../patches/7/7-s-1742967414-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.16
-! TimeUpdated: 2025-03-25T16:32:11+00:00
+! Version: 2.0.63.18
+! TimeUpdated: 2025-03-26T05:31:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -438,6 +438,10 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/200905
+qrcodemonkey.net#%#//scriptlet('prevent-setTimeout', '#ad_blocker_detector')
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=qrcodemonkey.net,xmlhttprequest
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199758
 chobirich.com#$#.Enquete { display: block !important; }
 chobirich.com#@#.ad_image
@@ -1763,6 +1767,9 @@ gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 !
 ! NOTE: Specific rules
 !
+appget.com###side_right > div[style="margin: 0 0 20px 25px;"]
+ejje.weblio.jp##.mainBlock[style="min-height: 270px;"]
+weblio.jp##.firstDictVideoAd
 ||skygate.co.jp/kokunai/tour/search.html?affCode=$third-party
 life.saisoncard.co.jp##.entry-content > .cta-red
 life.saisoncard.co.jp##.overlay-area:has(> figure[data-interlock="#sideCvBanner"])

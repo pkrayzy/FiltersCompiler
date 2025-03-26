@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: QFdkq2nAjvZlOizwi64heA
-! Diff-Path: ../patches/21/21-s-1742920656-3600.patch
+! Checksum: MOxwyUGbJ5R3TKGTtSitAQ
+! Diff-Path: ../patches/21/21-s-1742978259-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.31.78
-! TimeUpdated: 2025-03-25T16:32:41+00:00
+! Version: 2.0.31.81
+! TimeUpdated: 2025-03-26T08:32:40+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -997,9 +997,6 @@ event.rakuten.co.jp##.Permission
 oxu.az##article.news + h2.news-share-title
 oxu.az##article.news ~ div.news-share-container
 ! Video recommendations
-appget.com###side_right > div[style="margin: 0 0 20px 25px;"]
-ejje.weblio.jp##.mainBlock[style="min-height: 270px;"]
-weblio.jp##.firstDictVideoAd
 gendai.media##div[data-testid="firework-storyblock-ad"]
 maquia.hpplus.jp##.section-fireworkTag
 fudge.jp##.ratio-wrapper
@@ -3441,6 +3438,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+music.amazon.*##music-barker
+music.amazon.*##music-notification-ribbon:has(> music-button[href*="SignIn"])
 deeplearning.ai##div[data-sentry-component="Advertisement"]
 expressen.se##.site-body a[href^="https://prenumerera.expressen.se/"]
 axsam.az##.h-banner
@@ -8390,6 +8389,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201682
+foodtechnos.in##+js(nano-setInterval-booster, [_0x, *, 0.001)
+foodtechnos.in##+js(adjust-setTimeout, /createLinkButton|buttonGroup/, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201278
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200962
 jestful.net##+js(nano-setInterval-booster, countDownSeconds, *, 0.001)
