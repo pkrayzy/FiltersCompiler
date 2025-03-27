@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: om4MFBnh5rE7gWpbVpqKmA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1742978260-3600.patch
+! Checksum: AWHV6HyqeNwKw8fBLBaQUw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743006707-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.76.72
-! TimeUpdated: 2025-03-26T08:31:39+00:00
+! Version: 2.3.76.73
+! TimeUpdated: 2025-03-26T16:27:32+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23,6 +23,8 @@
 !
 !
 !
+||zqvee2re50mr.com^
+||bits.avcdn.net^$all
 ||player.gliacloud.com^$third-party
 ||st-n.ads*-adnow.com^$third-party
 ||newmedia.az^$third-party
@@ -18353,6 +18355,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201713
+proboxtv.com##body > div[style^="position: fixed; top:"][style*="z-index:"][style*="display: flex;"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201682
 foodtechnos.in###adblock-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201162
@@ -18436,7 +18440,7 @@ ghbrisk.com###adbd
 crazygames.com#$#.adsbox.advertisement.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201327
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199124
-pvpoke-re.com##+js(addEventListener-defuser, , /\(\s*\)\s*=>.*_0x/)
+pvpoke-re.com##+js(addEventListener-defuser, /click|key|mouse|scroll|touch/, /\(\s*\)\s*=>.+_0x|function\s*\(\s*\)\s*\{\s*function.+_0x/)
 ! LinksFlame
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199153
 finance240.com##+js(no-fetch-if, googleads.g.doubleclick.net)
@@ -18671,6 +18675,12 @@ animedb.in##+js(no-setInterval-if, window.getComputedStyle)
 edumail.icu##+js(remove-node-text, script, enable_ad_block_detector)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190738
 ||g.doubleclick.net/pagead/ads?gdpr=$subdocument,redirect=noop.html,domain=decrypt.day
+||googleads.g.doubleclick.net/pagead/html/*.html$subdocument,redirect-rule=noop.html,domain=decrypt.day
+@@||googletagmanager.com/gtag/js?id=$domain=decrypt.day
+||pagead2.googlesyndication.com/getconfig/sodar?$xmlhttprequest,important,domain=decrypt.day
+@@||googleads.g.doubleclick.net/pagead/ads?gdpr=$subdocument,domain=decrypt.day
+decrypt.day#$#iframe[id^="aswift_"] { transform: matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1); }
+@@||g.doubleclick.net/pagead/ads?gdpr=$subdocument,domain=decrypt.day
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=decrypt.day
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_*.js$domain=decrypt.day
 @@||decrypt.day^$generichide
@@ -18884,7 +18894,7 @@ win7simu.visnalize.com##+js(no-fetch-if, adsbygoogle)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183985
 ||snigelweb.com^$domain=editpad.org,redirect=noop.txt,important,image,media,subdocument,stylesheet,script,xmlhttprequest,other
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183599
-! #protection.protection message
+! #protection.protection / div.protection message
 javbee.me,fikfok.net,javsunday.com,kin8-av.com,555fap.com##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183925
 computerpedia.in###adb
@@ -27935,6 +27945,8 @@ auto.am##.azd-top
 ##.ainsyndication
 az##.makerekframe
 !
+modern.az##.bnr_col
+bizimyol.info##.col-left > a[href="https://www.bizimyol.info/az/reklam"]
 qaynarinfo.az##.br_300_250
 qaynarinfo.az##.nw_video
 xeberle.com##.momizat-ads
@@ -29277,6 +29289,15 @@ antiyoutuber.cz##+js(abort-on-property-read, Object.prototype.Branding)
 antiyoutuber.cz##+js(abort-on-stack-trace, String, /uniqueId[\s\S]*?Iframe/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/165900
 expres.cz#@#+js(addEventListener-defuser, beforeunload, ())
+! https://github.com/AdguardTeam/AdguardFilters/issues/201583
+idnes.cz##body .r-main.s_branding_fotogalerie
+idnes.cz###space-c-add > div[id][class*=" "]
+idnes.cz###content > #space-c > div[style^="height:"]
+idnes.cz###main > .counters + table[id][class*=" "]
+idnes.cz###main > .counters + script + table[id][class*=" "]
+idnes.cz#?##art-text > div:matches-attr("data-*"="ad")
+idnes.cz##+js(abort-on-property-read, Object.prototype.BrandingLayer)
+||1gr.cz/*/js/uni/paticka.js$domain=idnes.cz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190520
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188077
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186794#issuecomment-2317024916
@@ -40315,8 +40336,8 @@ lulustream.com##+js(abort-current-script, String.prototype.concat, popup)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190044
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174871
 ! filemoon, often changed
-0hn75.icu,5gxno.info,2d6ux.info,mee-cccdoz45.com,my4w.com,fu-4u3omzw0.nl,0deh.com,5mgz1.com,6jlvu.com,uthr5j7t.com,2aozkkm.sbs,z4h4.com,qa2h.com,s3qf2.fun,nslhm80.cfd,3ixcf45.cfd,76078rb.sbs,be43473e.fun,semprefi-hdm6l8jq.fun,iq9jhehu.fun,hi0ti780.fun,vqjhqcfk.fun,huzi6or1.fun,5rr03ujky5me3sjzvfosr6p89hk6wd34qamf.fun,279kzq8a4lqa0ddt7sfp825b0epdl922oqu6.fun,z1ekv717.fun,222i8x.lol,l1afav.net,bf0skv.org,ulike-filter-sowe-canplay-rightlets-generate-themrandomlyl89u8.fun,gorro-chfzoaas.fun,stephenking-c8bxyhnp.fun,mee-x63tvple.com,0cbcq8mu.com,brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,filemoon.*##+js(abort-on-property-read, Huba)
-0hn75.icu,5gxno.info,2d6ux.info,mee-cccdoz45.com,my4w.com,fu-4u3omzw0.nl,0deh.com,5mgz1.com,6jlvu.com,uthr5j7t.com,2aozkkm.sbs,z4h4.com,qa2h.com,s3qf2.fun,nslhm80.cfd,3ixcf45.cfd,76078rb.sbs,be43473e.fun,semprefi-hdm6l8jq.fun,iq9jhehu.fun,hi0ti780.fun,vqjhqcfk.fun,huzi6or1.fun,5rr03ujky5me3sjzvfosr6p89hk6wd34qamf.fun,279kzq8a4lqa0ddt7sfp825b0epdl922oqu6.fun,z1ekv717.fun,222i8x.lol,l1afav.net,bf0skv.org,ulike-filter-sowe-canplay-rightlets-generate-themrandomlyl89u8.fun,gorro-chfzoaas.fun,stephenking-c8bxyhnp.fun,mee-x63tvple.com,0cbcq8mu.com,brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,fmembed.cc,rgeyyddl.skin,kerapoxy.cc,fmoonembed.*,defienietlynotme.com,embedme.*,filemoon.*,finfang.*,hellnaw.*,moonembed.*,sulleiman.com,vpcxz19p.xyz,z12z0vla.*##+js(window.open-defuser)
+fdvzg.world,0hn75.icu,5gxno.info,2d6ux.info,mee-cccdoz45.com,my4w.com,fu-4u3omzw0.nl,0deh.com,5mgz1.com,6jlvu.com,uthr5j7t.com,2aozkkm.sbs,z4h4.com,qa2h.com,s3qf2.fun,nslhm80.cfd,3ixcf45.cfd,76078rb.sbs,be43473e.fun,semprefi-hdm6l8jq.fun,iq9jhehu.fun,hi0ti780.fun,vqjhqcfk.fun,huzi6or1.fun,5rr03ujky5me3sjzvfosr6p89hk6wd34qamf.fun,279kzq8a4lqa0ddt7sfp825b0epdl922oqu6.fun,z1ekv717.fun,222i8x.lol,l1afav.net,bf0skv.org,ulike-filter-sowe-canplay-rightlets-generate-themrandomlyl89u8.fun,gorro-chfzoaas.fun,stephenking-c8bxyhnp.fun,mee-x63tvple.com,0cbcq8mu.com,brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,filemoon.*##+js(abort-on-property-read, Huba)
+fdvzg.world,0hn75.icu,5gxno.info,2d6ux.info,mee-cccdoz45.com,my4w.com,fu-4u3omzw0.nl,0deh.com,5mgz1.com,6jlvu.com,uthr5j7t.com,2aozkkm.sbs,z4h4.com,qa2h.com,s3qf2.fun,nslhm80.cfd,3ixcf45.cfd,76078rb.sbs,be43473e.fun,semprefi-hdm6l8jq.fun,iq9jhehu.fun,hi0ti780.fun,vqjhqcfk.fun,huzi6or1.fun,5rr03ujky5me3sjzvfosr6p89hk6wd34qamf.fun,279kzq8a4lqa0ddt7sfp825b0epdl922oqu6.fun,z1ekv717.fun,222i8x.lol,l1afav.net,bf0skv.org,ulike-filter-sowe-canplay-rightlets-generate-themrandomlyl89u8.fun,gorro-chfzoaas.fun,stephenking-c8bxyhnp.fun,mee-x63tvple.com,0cbcq8mu.com,brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,fmembed.cc,rgeyyddl.skin,kerapoxy.cc,fmoonembed.*,defienietlynotme.com,embedme.*,filemoon.*,finfang.*,hellnaw.*,moonembed.*,sulleiman.com,vpcxz19p.xyz,z12z0vla.*##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174521
 xmateur.com##+js(set-constant, t8660acdc24.adv_pre_html, undefined)
 xmateur.com##+js(set-constant, t8660acdc24.protect_block, undefined)
@@ -45063,6 +45084,11 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+pixai.art##.content-start > .row-start-1:has(> a[href="https://go.getmogu.chat"])
+pixai.art##+js(json-prune, data.publicDynamicConfig.campaign.feed.*.[-].isAd.[=].true)
+prosettings.net##.placement
+op.gg##tr.ad
+engadget.com##div[class]:has(> div[id*="TF"][id*="-"]:empty)
 pornsexer.*,m.peb5r.me##.bottom-adv1
 getrssfeed.com##.hero-section ~ br
 godlikeproductions.com##.rightpanel_ipad > div:has(> center > [data-type="_mgwidget"])
@@ -45102,6 +45128,7 @@ game-maps.com##.ga-bot-map-on
 game-maps.com##.adshide
 netmovies.to##.advertising-link
 netmovies.to##+js(remove-attr, onclick, #play)
+netmovies.to##+js(remove-attr, onclick, a[href][id^="post-"][onclick])
 ||1337x.*/ma.js^
 ||x1337x.*/ma.js^
 plotaroute.com###AdPanelRight
@@ -46447,7 +46474,8 @@ f95zone.to##.block-body > div.node:has(> div.node-body a[href="/link-forums/ai-s
 edition.cnn.com##.featured-product
 gotoquiz.com##.chespin
 time.com##.h-sidebar-sticky-container:has(> div > div.ad)
-zenporn.com##.bnrs
+erothots.co##.bnr
+erothots.co,zenporn.com##.bnrs
 ||comdotgame.com/static/ads/ads.js
 roshy.tv##.roshy-widget
 roshy.tv##.menu-items-lyt > li > a[target="_blank"]
