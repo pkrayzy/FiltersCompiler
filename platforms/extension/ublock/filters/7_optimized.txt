@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: xNtFCpeLxl/PPZNOC2lXpQ
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1743006709-3600.patch
+! Checksum: XHXVjwKsKp7LKV095e9LdQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1743160211-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.19
-! TimeUpdated: 2025-03-26T16:27:59+00:00
+! Version: 2.0.63.22
+! TimeUpdated: 2025-03-28T11:06:22+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||adandhub.com^
@@ -391,7 +391,8 @@
 ||kok.eroterest.net^
 ||ad-hatena.com^
 ||advert.punyu.com^
-qrcodemonkey.net##+js(no-setTimeout-if, #ad_blocker_detector)
+video.tv-tokyo.co.jp#$##detect.ad-container { display: block !important; }
+video.tv-tokyo.co.jp##+js(no-fetch-if, pagead2.googlesyndication.com)
 chobirich.com#$#.Enquete { display: block !important; }
 chobirich.com#@#.ad_image
 chobirich.com#@#.img_ad
@@ -1112,6 +1113,8 @@ jikayosha.jp#$#.wym-v2022__header.is-scroll-up ~ .wym-v2022__footer-fixed.is-pc-
 /blogparts/?w=$script
 /clog_ad.js
 /g_ad.js?
+/images/caribian.jpg|$image,~third-party,domain=~jp
+/inc/aJ5N7n.js
 /js/dlvRequest_
 /js/fix_ad.js?
 /js/fixed_ad.js
@@ -1330,6 +1333,15 @@ city.inazawa.aichi.jp,city.kawasaki.jp,city.nagoya.jp,city.yao.osaka.jp,city.iko
 city.motomiya.lg.jp,city.sanyo-onoda.lg.jp,pref.hiroshima.lg.jp,city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+||2219.net/js/adbata_
+||2219.net/js/index_adbata_
+||hdouga.com/wordpress/wp-content/uploads/side2_01.gif
+hdouga.com##.ad_main
+hdouga.com##.w-frontTop
+hdouga.com##.w-header__inner
+asg.to###ad_cvlb + div.box160
+asg.to###ad_cvlb + div.box160 + div.boxbottom160
+financial-field.com###side > div.mb10:has(> a[href^="https://financial-field.com/pr_post/"] > img)
 formula1-data.com##.articleLists > article:has(> a.mdlListing--resp > p.listing__adMedia)
 game-0.net##.adw
 appget.com###side_right > div[style="margin: 0 0 20px 25px;"]
@@ -1788,7 +1800,6 @@ geitopi.com##.rankbanner
 lucky318b.com###g_floating_area2
 lucky318b.com###content > center > a[href^="https://www.dlsite.com/maniax/dlaf/"]
 koe-koe.com##.rss_c
-||pixel-vault.com^$domain=wiki.yjsnpi.nu
 ||gallerieshub.com^$subdocument,third-party
 j-cast.com##.entry_under_adunit
 j-cast.com##.entry-header__ad-bottom
@@ -3511,7 +3522,6 @@ backsi.com,berotuber.com##.custom-html-widget > p > small
 berotuber.com##.custom-html-widget a[href^="https://www.sokmil.com"]
 h-sextaiken.org##.widget-above-single-content-title
 shicony.com,h-sextaiken.org###sidebar > aside.widget_text
-||pixel-vault.com/image/$domain=adultangel.com
 ||adultangel.com/image/pickup.gif
 ||adultangel.com/image/recommend.gif
 adultangel.com##.d-lg-inline.col-lg-3 > iframe[src$="/new.php"] ~ br
@@ -3810,7 +3820,7 @@ buttobi.net##div[style="position: relative; z-index:255;"]
 b.ibbs.info###carousel-banner
 b.ibbs.info##.main-box > div[align="center"] > a[target="_blank"] > img
 b.ibbs.info##a[href="http://adulttoys.jp/info/"][target="_blank"]
-fc2ppv.mhx.jp,news2019.biz,kagoshima-gourmet.jp,fpsjp.net##.w-singleTop
+hdouga.com,fc2ppv.mhx.jp,news2019.biz,kagoshima-gourmet.jp,fpsjp.net##.w-singleTop
 kiwi-english.net##.adsensearea
 bsj-k.com##.adsense-table
 game-pc-bu.com,i486.mods.jp###block-4
@@ -4450,8 +4460,6 @@ russianbeauties.jp##.recommended-giko
 jiwachan.net###ad884-div-id
 jiwachan.net###links > div.sidetitle:last-of-type
 ||fc2.com/b/i/k/bikyakudaimaou/ad-$subdocument
-hdouga.com##.fmrect
-hdouga.com##div[class^="d_"][style^="display: flex"]
 hadasirori.blog.jp###container > table
 hadasirori.blog.jp##.article-body-more > a[href*="dmm.co.jp/"]
 hadasirori.blog.jp##.article-body-more > a[href*="dmm.co.jp/"] + br
@@ -6478,7 +6486,6 @@ watch.impress.co.jp,news.denfaminicogamer.jp##.amazon-ranking
 news.denfaminicogamer.jp###pc_article_billboard
 record-now.com##.my_ads
 fukafuka295.jp##.link-unit-adjust
-/caribian.jpg$image,domain=erry.one|hikaritube.com|iqoo.me|nukistream.com|poyopara.com|sugirl.info|animember.net
 erry.one,hikaritube.com,iqoo.me,nukistream.com,poyopara.com,sugirl.info##.atop
 ||ero-video.net/advert/
 matomeblade.com,gundamlog.com,ge-sewa-news.blog.jp,sunri2525.blog.jp##.plugin-memo:last-of-type
