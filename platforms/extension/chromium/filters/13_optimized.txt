@@ -1,9 +1,9 @@
-! Checksum: UyOP8maytlYgmpTMU7mm7A
-! Diff-Path: ../patches/13_optimized/13_optimized-s-1743160187-3600.patch
+! Checksum: 2xf9ICixIcyVyHYCKssv4w
+! Diff-Path: ../patches/13_optimized/13_optimized-s-1743192683-3600.patch
 ! Title: AdGuard Turkish filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.55.48
-! TimeUpdated: 2025-03-28T11:06:28+00:00
+! Version: 2.0.55.51
+! TimeUpdated: 2025-03-28T20:07:47+00:00
 ! Expires: 10 days (update frequency)
 ||dontmakethem.club^
 ||subaxe.xyz^
@@ -1053,12 +1053,11 @@ $xmlhttprequest,third-party,denyallow=fastlycdn.com|doodcdn.co|intensedebate.com
 /service/advertchannels?$domain=kocaelifikir.com|anayurtgazetesi.com|medyaankara.com|ozgunkocaeli.com.tr|urfanatik.com|dirilispostasi.com|turkuazgazetesi.net|yenialanya.com|bugunkocaeli.com.tr|cagdaskocaeli.com.tr|mansetaydin.com|enkocaeli.com|kocaelikoz.com|kocaelibarisgazetesi.com|seskocaeli.com|sigortahaber.com
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
-sozcu.com.tr##.row div.sozcu-ramazan-imsakiye
+sozcu.com.tr##.row div.sozcu-ramazan-imsakiye > a[target="_blank"]
 parselsorgu.tkgm.gov.tr###custom-popup
 onedio.com##div[id^="before-infinite-scroll-thumbnails"]
 selcukflix.com##.player > .flex:has(> div > img[alt="ad image"])
 dizifon.com##[data-mayd="moon_ayd"]
-naxcivanxeberleri.com##header > a[href^="https://"][target="_blank"]
 emlakjet.com##div[class^="styles_ad"]
 fanatik.com.tr##.article-ads-container
 t24.com.tr##div[style]:has(> div[id^="div-gpt-ad"]:only-child)
@@ -4932,6 +4931,8 @@ dizilla.nl,dizilla10.nl,dizilla11.nl,dizilla12.nl,dizilla13.nl,dizilla14.nl,dizi
 dizilla.nl##.player > .flex:has(> div:only-child > img[alt*="ad"])
 dizilla.nl###router-view > div > div > div[class]:has(> div:only-child > ad)
 ||googleusercontent.com/img/*/crt$domain=/selcuksportshd\d+\.xyz/
+!+ NOT_VALIDATE
+[$url=/^https?:\/\/(?:cinque|due|tre)\.(?=.*[0-9])[a-z0-9]{16}\.click\/.*\/player\.html/]#%#//scriptlet('set-constant', 'config.advertisement.enabled', 'false')
 [$domain=/^i\[a-z\]*\.strmrdr\[a-z0-9\]+\..*/]#%#//scriptlet('set-constant', 'adscfg.enabled', 'false')
 cinque.668a396e58bcbc27.click#%#//scriptlet('set-constant', 'config.advertisement.enabled', 'false')
 [$domain=/selcuksportshd\d+\.xyz/]##.banner

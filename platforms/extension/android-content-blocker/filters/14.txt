@@ -1,8 +1,8 @@
-! Checksum: +H1Os7oV3QLerYCAOBrHMg
+! Checksum: F9wZKZwuAMhN18tS5ZAeIw
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.25.81
-! TimeUpdated: 2025-03-28T11:06:33+00:00
+! Version: 2.2.25.92
+! TimeUpdated: 2025-03-30T08:07:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2448,6 +2448,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+truckstop.com###bottom-message
+delo.ua##.c-cookies-modal
 altibox.dk,altibox.no#$#.CybotCookiebotDialogContentWrapper { display: none !important; }
 usatoday.com##.gnt_pu
 pepper.pl#$#body.overflow--hidden { overflow-y: auto !important; }
@@ -11793,7 +11795,7 @@ storyfire.com,s7.ru##.cookie-usage
 checkiant.com,belcantofund.com,obywatel.gov.pl##.cookie_agree
 gamers.co.jp,melonbooks.co.jp,animate-onlineshop.jp,historiapojazdu.gov.pl###cookie_agree
 numberly.com##.cookie_banner.show_banner
-urm.lt,m.emsc.eu,eto-razvod.ru,everylang.net,memeburn.com,supplementler.com,vitaminler.com##.cookie_container
+cheese-cake.ru,urm.lt,m.emsc.eu,eto-razvod.ru,everylang.net,memeburn.com,supplementler.com,vitaminler.com##.cookie_container
 m.emsc.eu##.cookie_container ~ #splashscreen
 ferrari.com##.cookie_law_info
 honor.ru##.cookie_notices
@@ -12098,7 +12100,7 @@ isbank.co.uk,maximiles.com.tr,isbank.com.tr###cokieCover
 stadtfeste-in-deutschland.de###cono
 youtube.com###consent-bump
 revouninstaller.com###consentAccepted
-shopwelt.de,kleinanzeigen.de,mobile.de,nordic.businessinsider.com###consentBanner
+shopwelt.de,mobile.de,nordic.businessinsider.com###consentBanner
 moomoo.io,krunker.io###consentBlock
 thehindu.com,sandisk.com,support-en.wd.com,westerndigital.com,infowarsstore.com,reebok.pl,origin.com,philips.hu,marriott.com,marriott.com.ru###consent_blackbar
 travelplanet.pl###cookie--info-wrapper
@@ -14466,6 +14468,11 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201886
+kleinanzeigen.de#@##gdpr-banner
+! shop.apotal.de - unable to checkout
+shop.apotal.de#@##cookie-message
+shop.apotal.de#@#.cookie-message-overlay
 ! https://github.com/uBlockOrigin/uAssets/issues/27748
 @@||consent.cookiebot.com/uc.js^$domain=altibox.dk|altibox.no
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201418
@@ -20647,6 +20654,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+swedroid.se###hish
 staging-hoichoitv.viewlift.com##body > div[style^="position: fixed;"][style*="z-index: 9999;"]
 morosedog.gitlab.io##.navbar-interceptor
 vertopal.com###vertonotif-container__bottom-right > .vertonotif-type-warning
@@ -21745,6 +21753,11 @@ uwaterloo.ca##div[aria-label="Ad Blocker Detected"]
 ! SECTION[id=general]: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
+facebook.com#@#.post-ads
+facebook.com#@#.AdBox
+facebook.com#@#.sponsorPost
+facebook.com#@#.advertising_widget
+facebook.com#@#.widgetSponsors
 dasoertliche.de#@#.AdBox
 autoplenum.de,12gebrauchtwagen.de#@#.content-ad
 autoplenum.de,12gebrauchtwagen.de#@#.advert1
@@ -23047,6 +23060,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+tranio.ru##.tranio-presentation
 pro-golfacademy.com##.float-area[style^="bottom:"]
 sp-jp.fujifilm.com##.float-banner
 playground.ru###onetap_google_intermediate_iframe
@@ -30974,6 +30988,10 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tranio.ru##.tranio-telegram-channels
+azvision.az###news-content a[href="https://t.me/azvisionaz"]
+vedomosti.ru##.article__tools-bottom
+lewdgames.to###block-12
 education.yandex.ru##div[class^="styles_bot-block-wrapper__"]
 rnk.ru##.StatBlockWidget
 re-russia.net##.plate
@@ -30993,7 +31011,7 @@ businessinsider.com##.homepage-newsletter
 mathrubhumi.com##.whatsapp_follow
 mathrubhumi.com##.mpp-story-bottom-updates
 myglo.com.ua###telegram_button
-sonxeber.az##.telegram_klas
+big.az,sonxeber.az##.telegram_klas
 sourceforge.net###get-updates
 dramago.in##.wp-block-wptelegram-widget-join-channel
 theatlantic.com##div[class^="HomepageMiddle_newsletters"]
@@ -31667,6 +31685,7 @@ siliconluxembourg.lu,political.gr##.pk-subscribe-form-wrap
 smithsonianmag.com##.in-article-newsletter
 naftemporiki.gr##.google-news-wrap
 forbes.com###subscribeToNewsLetters
+medicalxpress.com###subscribeToNewsLetter
 estadao.com.br##div[class^="styles__ContainerNewsletter-"]
 livemint.com##.btmStrip
 gamedeveloper.com##div[data-module="newsletter-signup-promo"]
@@ -36018,7 +36037,7 @@ robbreport.com,parasut.com##.signup-newsletter
 thebell.io##app-subscription-header-form
 change.org##.bottom-bar-interrupt
 searchengines.guru##.article-blue-block
-a2hosting.com,entrepreneur.com##.article-subscribe
+marieclaire.ru,greatergood.berkeley.edu,tranio.ru,a2hosting.com,entrepreneur.com##.article-subscribe
 entrepreneur.com##.mobile-article-subscribe
 zerohedge.com##div[class^="SidebarNewsletter"]
 zerohedge.com##div[class^="MidArticleNewsletter"]
@@ -36371,7 +36390,6 @@ meduza.io##.BriefSubscription-root
 meduza.io##.Material-subscribe
 androidride.com##li[id^="custom_html-"]
 thinkmobiles.com##.subscribeEmailForm
-greatergood.berkeley.edu##.article-subscribe
 greatergood.berkeley.edu##.section-subscribe-secondary
 iphone-gps.ru##.post_subscribe
 survivalsullivan.com###nonSubscriberDiv
@@ -36783,7 +36801,6 @@ profgalloway.com,the-steppe.com,soar-world.com,gothamist.com,mybroadband.co.za,t
 mansionglobal.com,vice.com,nybooks.com,galesburg.com,mobilesyrup.com,news-journalonline.com##.article-newsletter-signup
 noz.de##.article-page-newsletter-teaser
 mic.com##.article-page__mobile-newsletter
-marieclaire.ru##.article-subscribe
 psychologies.ru##.article-subscript-fixed
 1plus1.ua##.article__content > .subscribe
 insider.pro##.articles--recommended__subscribe
@@ -37530,6 +37547,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 !
 !
 !
+bestbuy.com###smartbannerContainer
 newsmax.com###dtnmapp
 calendar.yandex.ru###CalendarBanner
 antalya.bel.tr##.mobile-info
@@ -41225,6 +41243,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201878
+psychologies.ru##.magazine__advertiser-mark-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194845
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201291
 myglo.com.ua##.main-disclaimer
@@ -44318,6 +44338,9 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+truckstop.com##.truckpop__header-banner
+truckstop.com##.blog-detail-page__schedule-demo
+truckstop.com###schedule-demo
 similarweb.com##.app-solution-banner
 ||column.valx.jp/wp-content/themes/jin/img/bnr_wpc.png
 ru.hexlet.io##.hexlet-frontend-open-day-banner
@@ -48232,8 +48255,9 @@ eiga.com##.header-pure-banner
 ! SECTION: Tweaks - CSS
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198152
-iseekgames.com#$#.wfl_pretimer { display: none !important; }
-iseekgames.com#$#.wfl_active-timer { display: block !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/201810
+lzmods.com,iseekgames.com#$#.wfl_pretimer { display: none !important; }
+lzmods.com,iseekgames.com#$#.wfl_active-timer { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199020
 megafire.net#$#.show_download_links { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196638

@@ -1,9 +1,9 @@
-! Checksum: EAPwgmknZIKkYJLuto4i2g
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1743160206-3600.patch
+! Checksum: t77BEo0cUl3gI+vlKaCHug
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1743257441-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.22
-! TimeUpdated: 2025-03-28T11:06:22+00:00
+! Version: 2.0.63.26
+! TimeUpdated: 2025-03-29T14:07:01+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||adandhub.com^
@@ -390,6 +390,8 @@
 ||kok.eroterest.net^
 ||ad-hatena.com^
 ||advert.punyu.com^
+pokegonews.net#%#//scriptlet('prevent-eval-if', '広告')
+pokegonews.net##body > [id][style^="display: block; width: 99"]
 video.tv-tokyo.co.jp#$##detect.ad-container { display: block !important; }
 video.tv-tokyo.co.jp#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -1160,6 +1162,7 @@ hostlove.com#$##index_nav > h1 { padding-top: 30px!important; }
 /wp-content/plugins/amazonjs/*
 /wp-content/themes/CashLINESystem/js/modal.$script
 /wp-content/uploads/2024/09/fanza_ad$image
+.com/ETGate/accountData?redirectToken=$document
 ://apple-*.cn/account_int/
 .top/aple/$document
 ://eki-net.*/co.jp/$document

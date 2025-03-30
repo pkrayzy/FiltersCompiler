@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: NklYQb4K5oNJw16O5EWZIw
-! Diff-Path: ../patches/14/14-s-1743160207-3600.patch
+! Checksum: xjK2P+kEqG/naLr2NppPlQ
+! Diff-Path: ../patches/14/14-s-1743322289-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.25.81
-! TimeUpdated: 2025-03-28T11:06:33+00:00
+! Version: 2.2.25.92
+! TimeUpdated: 2025-03-30T08:07:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2460,6 +2460,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+truckstop.com###bottom-message
+delo.ua##.c-cookies-modal
 altibox.dk,altibox.no#$#.CybotCookiebotDialogContentWrapper { display: none !important; }
 menshealth.com##+js(set-cookie, privacy_disclosure_bucket, 1)
 usatoday.com##.gnt_pu
@@ -12548,7 +12550,7 @@ storyfire.com,s7.ru##.cookie-usage
 checkiant.com,belcantofund.com,obywatel.gov.pl##.cookie_agree
 gamers.co.jp,melonbooks.co.jp,animate-onlineshop.jp,historiapojazdu.gov.pl###cookie_agree
 numberly.com##.cookie_banner.show_banner
-urm.lt,m.emsc.eu,eto-razvod.ru,everylang.net,memeburn.com,supplementler.com,vitaminler.com##.cookie_container
+cheese-cake.ru,urm.lt,m.emsc.eu,eto-razvod.ru,everylang.net,memeburn.com,supplementler.com,vitaminler.com##.cookie_container
 m.emsc.eu##.cookie_container ~ #splashscreen
 ferrari.com##.cookie_law_info
 honor.ru##.cookie_notices
@@ -12853,7 +12855,7 @@ isbank.co.uk,maximiles.com.tr,isbank.com.tr###cokieCover
 stadtfeste-in-deutschland.de###cono
 youtube.com###consent-bump
 revouninstaller.com###consentAccepted
-shopwelt.de,kleinanzeigen.de,mobile.de,nordic.businessinsider.com###consentBanner
+shopwelt.de,mobile.de,nordic.businessinsider.com###consentBanner
 moomoo.io,krunker.io###consentBlock
 thehindu.com,sandisk.com,support-en.wd.com,westerndigital.com,infowarsstore.com,reebok.pl,origin.com,philips.hu,marriott.com,marriott.com.ru###consent_blackbar
 travelplanet.pl###cookie--info-wrapper
@@ -15927,6 +15929,11 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201886
+kleinanzeigen.de#@##gdpr-banner
+! shop.apotal.de - unable to checkout
+shop.apotal.de#@##cookie-message
+shop.apotal.de#@#.cookie-message-overlay
 ! https://github.com/uBlockOrigin/uAssets/issues/27748
 @@||consent.cookiebot.com/uc.js^$domain=altibox.dk|altibox.no
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201418
@@ -21920,6 +21927,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+swedroid.se###hish
 hwbusters.com##+js(set-constant, advanced_ads_check_adblocker, noopFunc)
 voiceofdenton.com##+js(set-constant, advanced_ads_check_adblocker, noopFunc)
 staging-hoichoitv.viewlift.com##body > div[style^="position: fixed;"][style*="z-index: 9999;"]
@@ -23401,6 +23409,11 @@ uwaterloo.ca##div[aria-label="Ad Blocker Detected"]
 ! SECTION[id=general]: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
+facebook.com#@#.post-ads
+facebook.com#@#.AdBox
+facebook.com#@#.sponsorPost
+facebook.com#@#.advertising_widget
+facebook.com#@#.widgetSponsors
 dasoertliche.de#@#.AdBox
 autoplenum.de,12gebrauchtwagen.de#@#.content-ad
 autoplenum.de,12gebrauchtwagen.de#@#.advert1
@@ -24563,6 +24576,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+tranio.ru##.tranio-presentation
 perplexity.ai##.backdrop-blur-sm + div.flex.justify-center.items-center > div.duration-250.fill-mode-both.fixed.bottom-0.left-0.right-0:not(.ease-in):has(div[data-testid="login-modal"]):not(:has(button[data-testid="close-modal"]))
 player.smotrim.ru##+js(json-prune-fetch-response, data.template.disable_registration)
 pro-golfacademy.com##.float-area[style^="bottom:"]
@@ -33184,6 +33198,10 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tranio.ru##.tranio-telegram-channels
+azvision.az###news-content a[href="https://t.me/azvisionaz"]
+vedomosti.ru##.article__tools-bottom
+lewdgames.to###block-12
 education.yandex.ru##div[class^="styles_bot-block-wrapper__"]
 rnk.ru##.StatBlockWidget
 re-russia.net##.plate
@@ -33208,7 +33226,7 @@ businessinsider.com##.homepage-newsletter
 mathrubhumi.com##.whatsapp_follow
 mathrubhumi.com##.mpp-story-bottom-updates
 myglo.com.ua###telegram_button
-sonxeber.az##.telegram_klas
+big.az,sonxeber.az##.telegram_klas
 sourceforge.net###get-updates
 skillbox.ru##.stk-post > div.stk-grid:has(> .stk-grid-col > div[data-ce-tag="grid"] a[data-container-name="Telegram"])
 uu.se##.card-move-margin:has(> .card-body > .sv-skip-spacer > .sv-linked-portlet > form[action^="https://ui.ungpd.com/Api/Subscriptions/"])
@@ -34155,6 +34173,7 @@ political.gr#?#h5:has(> span > span:contains(NEWSLETTER ΜΑΣ))
 smithsonianmag.com##.in-article-newsletter
 naftemporiki.gr##.google-news-wrap
 forbes.com###subscribeToNewsLetters
+medicalxpress.com###subscribeToNewsLetter
 estadao.com.br##div[class^="styles__ContainerNewsletter-"]
 livemint.com##.btmStrip
 gamedeveloper.com#?#div[data-module="newsletter-signup-promo"]
@@ -39372,7 +39391,7 @@ robbreport.com,parasut.com##.signup-newsletter
 thebell.io##app-subscription-header-form
 change.org##.bottom-bar-interrupt
 searchengines.guru##.article-blue-block
-a2hosting.com,entrepreneur.com##.article-subscribe
+marieclaire.ru,greatergood.berkeley.edu,tranio.ru,a2hosting.com,entrepreneur.com##.article-subscribe
 entrepreneur.com##.mobile-article-subscribe
 80.lv#?#footer:has(> div[class] > form#subscribe-form)
 zerohedge.com##div[class^="SidebarNewsletter"]
@@ -39766,7 +39785,6 @@ meduza.io##.Material-subscribe
 winitpro.ru#?#aside > div.block-search:has(> div.subscription + form[action] > input[name="email"])
 androidride.com##li[id^="custom_html-"]
 thinkmobiles.com##.subscribeEmailForm
-greatergood.berkeley.edu##.article-subscribe
 greatergood.berkeley.edu##.section-subscribe-secondary
 iphone-gps.ru##.post_subscribe
 incredibox.com#?#.content > section.bloc:has(> #newsletter)
@@ -40221,7 +40239,6 @@ profgalloway.com,the-steppe.com,soar-world.com,gothamist.com,mybroadband.co.za,t
 mansionglobal.com,vice.com,nybooks.com,galesburg.com,mobilesyrup.com,news-journalonline.com##.article-newsletter-signup
 noz.de##.article-page-newsletter-teaser
 mic.com##.article-page__mobile-newsletter
-marieclaire.ru##.article-subscribe
 psychologies.ru##.article-subscript-fixed
 1plus1.ua##.article__content > .subscribe
 insider.pro##.articles--recommended__subscribe
@@ -40996,6 +41013,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 !
 !
 !
+bestbuy.com###smartbannerContainer
 education.yandex.ru##body > section[class*="styles_prompt__"]:has(> div[class] > div[class] + button)
 newsmax.com###dtnmapp
 calendar.yandex.ru###CalendarBanner
@@ -45219,6 +45237,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201878
+psychologies.ru##.magazine__advertiser-mark-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194845
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201291
 myglo.com.ua##.main-disclaimer
@@ -48614,6 +48634,10 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+truckstop.com##.truckpop__header-banner
+truckstop.com##.blog-detail-page__schedule-demo
+truckstop.com###schedule-demo
+truckstop.com##.blog-detail-page__blog-content > figure:has(> a[href="/demo/"] > img)
 similarweb.com##.app-solution-banner
 ||column.valx.jp/wp-content/themes/jin/img/bnr_wpc.png
 ru.hexlet.io##.hexlet-frontend-open-day-banner
@@ -53082,8 +53106,9 @@ eiga.com##.header-pure-banner
 ! SECTION: Tweaks - CSS
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198152
-iseekgames.com#$#.wfl_pretimer { display: none !important; }
-iseekgames.com#$#.wfl_active-timer { display: block !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/201810
+lzmods.com,iseekgames.com#$#.wfl_pretimer { display: none !important; }
+lzmods.com,iseekgames.com#$#.wfl_active-timer { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199020
 megafire.net#$#.show_download_links { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196638
@@ -54892,7 +54917,7 @@ firmwarefile.com,m.rtl.be,procrackerz.org,chapterupdates.com,babelnovel.com,katz
 ! NOTE: Context menu - JS
 !
 seriesperu.com,peliculas8k.com,mbs.jp,unofficialtwrp.com,mostrodifirenze.com,rightrasta.com,daotranslate.com,habuteru.com,ufchgu.ru,mangahentai.me,themodellingnews.com,descopera.ro,amantecod.it,volt-index.ru,universaladbdriver.com,firmwarefile.com,bg-gledai.co,victorytale.com,clujust.ro,mi-faq.ru,mathbang.net,seriesgratis.biz,mangacrab.com,metalnaveia66.com,bollywoodhindi.in,legionscans.com,footy.to,osomatsusan.hatenablog.com,flinsetyadi.com,bingotingo.com,carfixer.co.kr,urbanbrush.net,now.rememberapp.co.kr,untitle.org,tecnoprogramas.com,animeactua.com,creativestudio.kr,onna.kr,info-beihilfe.de,audiobookcup.com,funfunhan.com,blofinder.com,bookpost.kr,ex-nihil0.com,donghun.kr,zoommastory.com,deutschaj.com,kokone.co.kr,stevenh.net,ideas0419.com,raycat.net,hosii.info,blahblah.pe.kr,geniusjw.com,blog.esherloon.com,centrair.kr,softwarebits.net,tunovelaligera.com,krtopic.com,healthfeed.co.kr,my-expert.ru,bimiacg.net,solidfile.net,promocode99.in,downloadtutorials.net,nawalakarsa.id,jpopsingles.eu,wartaterkini.news,pcprogramasymas.net,tistory.com,ghostspectre.the-ninja.jp,eduardo-monica.com,foxaholic.com,koreanaddict.net,gamegame.kr,eoreuni.com,jstranslations1.com,animeuniverse.it,aihristdreamtranslations.com,tipslab.info,indcit.com,audio-sound-premium.com,filmboxoffice.web.id,kakpishem.ru,teepr.com,texte.work,sysnettechsolutions.com,reinodekovel.com,elektrikmen.com,world4.eu,activationkeys.co,secondlifetranslations.com,samuraiscan.com,globaledu.jp,lazytranslations.com##+js(abort-current-script, document.oncontextmenu)
-do7go.com,heatherwholeinvolve.com,alejandrocenturyoil.com,maxfinishseveral.com,robertordercharacter.com,dooodster.com,dood.work,sandratableother.com,brittneystandardwestern.com,jamessoundcost.com,toddpartneranimal.com,kimberlyonlocal.com,richardstorehalf.com,zacharycollectionmight.com,thomasalthoughhear.com,susanhavekeep.com,mbs.jp,lorimuchbenefit.com,ntv.co.jp,evelynthankregion.com,jessicaglassauthor.com,lisatrialidea.com,bethshouldercan.com,donaldlineelse.com,josephseveralconcern.com,alleneconomicmatter.com,robertplacespace.com,heatherdiscussionwhen.com,jasminetesttry.com,erikcoldperson.com,roberteachfinal.com,loriwithinfamily.com,rebeccaneverbase.com,brucevotewithin.com,sethniceletter.com,michaelapplysome.com,cindyeyefinal.com,nikkatsu.com,shannonpersonalcost.com,graceaddresscommunity.com,jasonresponsemeasure.com,ryanagoinvolve.com,jamesstartstudent.com,brookethoughi.com,vincentincludesuccessful.com,sharonwhiledemocratic.com,jayservicestuff.com,sandrataxeight.com,markstyleall.com,d0000d.com,morganoperationface.com,johntryopen.com,do0od.com,edwardarriveoften.com,paulkitchendark.com,stevenimaginelittle.com,ds2play.com,doods.pro,dooood.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws,guiasaude.info,gaz.com.br,relevantmagazine.com,camcaps.*,fakazaduo.com,gimy.app,ruyashoujo.com,nhk.or.jp,mangabtt.com,careet.net,contents.premium.naver.com,r114.com,app.kartra.com,box-manga.com,leouve.com.br,comico.jp,tappytoon.com,toonnbook.nate.com,tapas.io,kakaowebtoon.com,lapandilladelarejilla.es,lezhinus.com,lezhin.com,grafolio.naver.com,webtoon.kakao.com,page.kakao.com##+js(addEventListener-defuser, contextmenu)
+kristiesoundsimply.com,do7go.com,heatherwholeinvolve.com,alejandrocenturyoil.com,maxfinishseveral.com,robertordercharacter.com,dooodster.com,dood.work,sandratableother.com,brittneystandardwestern.com,jamessoundcost.com,toddpartneranimal.com,kimberlyonlocal.com,richardstorehalf.com,zacharycollectionmight.com,thomasalthoughhear.com,susanhavekeep.com,mbs.jp,lorimuchbenefit.com,ntv.co.jp,evelynthankregion.com,jessicaglassauthor.com,lisatrialidea.com,bethshouldercan.com,donaldlineelse.com,josephseveralconcern.com,alleneconomicmatter.com,robertplacespace.com,heatherdiscussionwhen.com,jasminetesttry.com,erikcoldperson.com,roberteachfinal.com,loriwithinfamily.com,rebeccaneverbase.com,brucevotewithin.com,sethniceletter.com,michaelapplysome.com,cindyeyefinal.com,nikkatsu.com,shannonpersonalcost.com,graceaddresscommunity.com,jasonresponsemeasure.com,ryanagoinvolve.com,jamesstartstudent.com,brookethoughi.com,vincentincludesuccessful.com,sharonwhiledemocratic.com,jayservicestuff.com,sandrataxeight.com,markstyleall.com,d0000d.com,morganoperationface.com,johntryopen.com,do0od.com,edwardarriveoften.com,paulkitchendark.com,stevenimaginelittle.com,ds2play.com,doods.pro,dooood.com,dood.yt,dood.re,dood.wf,dood.la,dood.pm,dood.so,dood.to,dood.watch,dood.ws,guiasaude.info,gaz.com.br,relevantmagazine.com,camcaps.*,fakazaduo.com,gimy.app,ruyashoujo.com,nhk.or.jp,mangabtt.com,careet.net,contents.premium.naver.com,r114.com,app.kartra.com,box-manga.com,leouve.com.br,comico.jp,tappytoon.com,toonnbook.nate.com,tapas.io,kakaowebtoon.com,lapandilladelarejilla.es,lezhinus.com,lezhin.com,grafolio.naver.com,webtoon.kakao.com,page.kakao.com##+js(addEventListener-defuser, contextmenu)
 dinvemitoloji.com,teachios.com,hulu.jp,filmzone.com,interface31.ru,ktv.jp,releasewitch.com,news.ntv.co.jp,novatoscans.top,7days2die.info,flying-lines.com,fssp.gov.ru,ilife97.com,rdsong.com,lubedk.com,itempage3.auction.co.kr,cdramalove.com,10000recipe.com,nike.com,a2zapk.com,fully-fundedscholarships.com,shoneekapoor.com,cda-hd.cc,animeindia.in,bufftoon.plaync.com,studyguideindia.com,codedosa.com,newslibrary.naver.com,insight.co.kr,gamefinity.id,cafe.naver.com##+js(set-constant, document.oncontextmenu, null)
 dinvemitoloji.com,teachios.com,filmzone.com,interface31.ru,flying-lines.com,fssp.gov.ru,half-musiq.blogspot.com,rdsong.com,lubedk.com,nike.com,cda-hd.cc,tistory.com,insight.co.kr,cafe.naver.com##+js(set-constant, document.onselectstart, null)
 dinvemitoloji.com,teachios.com,7days2die.info,ilife97.com,a2zapk.com,fully-fundedscholarships.com,animeindia.in,codedosa.com,gradium.co.kr,insight.co.kr,gamefinity.id,cafe.naver.com##+js(set-constant, document.ondragstart, null)

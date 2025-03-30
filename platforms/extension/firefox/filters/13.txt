@@ -1,9 +1,9 @@
-! Checksum: r7U+De9WbDY77dUxyiW4iQ
-! Diff-Path: ../patches/13/13-s-1743160195-3600.patch
+! Checksum: qtjdkkVyCOscpgISE0g+hg
+! Diff-Path: ../patches/13/13-s-1743192686-3600.patch
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.55.48
-! TimeUpdated: 2025-03-28T11:06:28+00:00
+! Version: 2.0.55.51
+! TimeUpdated: 2025-03-28T20:07:47+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1613,12 +1613,11 @@ dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdas
 !
 ! NOTE: Specific rules
 !
-sozcu.com.tr##.row div.sozcu-ramazan-imsakiye
+sozcu.com.tr##.row div.sozcu-ramazan-imsakiye > a[target="_blank"]
 parselsorgu.tkgm.gov.tr###custom-popup
 onedio.com##div[id^="before-infinite-scroll-thumbnails"]
 selcukflix.com##.player > .flex:has(> div > img[alt="ad image"])
 dizifon.com##[data-mayd="moon_ayd"]
-naxcivanxeberleri.com##header > a[href^="https://"][target="_blank"]
 emlakjet.com##div[class^="styles_ad"]
 fanatik.com.tr##.article-ads-container
 t24.com.tr##div[style]:has(> div[id^="div-gpt-ad"]:only-child)
@@ -5503,8 +5502,12 @@ dizilla.nl###router-view > div > div > div[class]:has(> div:only-child > ad)
 !
 ! selcuksportshd*.xyz - frequently changed domains
 ! aglint-disable-next-line invalid-modifiers
-! aglint-disable-next-line invalid-modifiers
 ||googleusercontent.com/img/*/crt$domain=/selcuksportshd\d+\.xyz/
+! TODO: remove "NOT_VALIDATE" hint when this issue is fixed - https://github.com/AdguardTeam/FiltersCompiler/issues/237
+! aglint-disable unknown-hints-and-platforms
+!+ NOT_VALIDATE
+[$url=/^https?:\/\/(?:cinque|due|tre)\.(?=.*[0-9])[a-z0-9]{16}\.click\/.*\/player\.html/]#%#//scriptlet('set-constant', 'config.advertisement.enabled', 'false')
+! aglint-enable unknown-hints-and-platforms
 [$domain=/^i\[a-z\]*\.strmrdr\[a-z0-9\]+\..*/]#%#//scriptlet('set-constant', 'adscfg.enabled', 'false')
 cinque.668a396e58bcbc27.click#%#//scriptlet('set-constant', 'config.advertisement.enabled', 'false')
 [$domain=/selcuksportshd\d+\.xyz/]##.banner
