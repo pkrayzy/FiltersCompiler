@@ -1,8 +1,8 @@
-! Checksum: dBkbdFBs0Gng8rC5CXHVjg
+! Checksum: 7NUvgzAzTdbGfCqi4yhAXw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.29.38
-! TimeUpdated: 2025-03-27T17:06:56+00:00
+! Version: 2.0.29.47
+! TimeUpdated: 2025-04-04T07:07:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23,6 +23,7 @@
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
 !
+||adspublicidades.agency^
 ||t.babelmedia.global^
 ||butlercdn.com^$third-party
 ||classic-bonus.com^
@@ -214,9 +215,14 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/200089
+elcorreogallego.es###_an_cmp
+elcorreogallego.es#%#//scriptlet('set-constant', '_an.ABMode', 'undefined')
+! https://github.com/uBlockOrigin/uAssets/issues/27759
 ! https://github.com/uBlockOrigin/uAssets/issues/27744
-.com/tag.min.js$script,domain=redecanaistv.ps,redirect=noopjs
-redecanaistv.ps#%#//scriptlet('abort-on-property-read', 'close')
+! https://github.com/AdguardTeam/AdguardFilters/issues/201768
+redecanaistv.ps,redecanais.*#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'loadAdScript')
+redecanaistv.ps,redecanais.*#%#//scriptlet('abort-on-property-read', 'close')
 ! https://github.com/uBlockOrigin/uAssets/issues/27651
 sport.es###_an_cmp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199215
@@ -1516,7 +1522,7 @@ beautyskincarebrasil.com#%#//scriptlet('prevent-window-open')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177537
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177524
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161356
-investimentosfacil.online,fomedereceitas.online,blog.whatsappgb.top,infoinvest.org,receitastop.click,receitasvegana.com,megacurioso.online,gastroponto.com,nossoprato.online,receitasdafazenda.com#%#//scriptlet('set-local-storage-item', 'last_ads', 'yes')
+meufinanceiro.org,investimentosfacil.online,fomedereceitas.online,blog.whatsappgb.top,infoinvest.org,receitastop.click,receitasvegana.com,megacurioso.online,gastroponto.com,nossoprato.online,receitasdafazenda.com#%#//scriptlet('set-local-storage-item', 'last_ads', 'yes')
 receitasnatural.com,financastop.online,cryptobr.biz,modsimuladores.com,assistirfilmesdaluna.com,vejaideias.com.br,jogoscompleto.xyz#%#//scriptlet('adjust-setTimeout', '/atualizar|hided/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161249
 fazercurriculo.online,usandoapp.com#%#//scriptlet('adjust-setTimeout', '.delay', '*', '0.001')
@@ -1816,7 +1822,7 @@ pulzo.com#$##pulzo-header { position: static !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186165
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185949
 ! TODO: consider to add generic rule, something like #$##colunas #framed > #player.hided { display: block !important; } or similar
-investimentosfacil.online,receitasnatural.com,fomedereceitas.online,financastop.online,blog.whatsappgb.top,cryptobr.biz,infoinvest.org,receitastop.click#$#.hided { display: block !important; }
+meufinanceiro.org,investimentosfacil.online,receitasnatural.com,fomedereceitas.online,financastop.online,blog.whatsappgb.top,cryptobr.biz,infoinvest.org,receitastop.click#$#.hided { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177517
 elmueble.com#$#header { top: 0 !important; }
 elmueble.com#$#.admobile { display: none !important; }
@@ -2140,12 +2146,20 @@ $script,third-party,denyallow=ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|i
 ! ##body .ad
 xataka.com.br,solowrestling.com,europapress.es,trendencias.com,futuro.cl,solowrestling.mundodeportivo.com,meneame.net,3djuegos.com,meteoconsult.es,meuguia.tv,territoriosamsung.com,conjur.com.br,meups.com.br,elcorreogallego.es,3djuegos.lat,xatakandroid.com,nsctotal.com.br,noticiasdenavarra.com,informacion.es,applesfera.com,xatakamovil.com,espinof.com,mundoxiaomi.com,vidaextra.com,mediotiempo.com,elpais.com,olhardigital.com.br,atribuna.com.br,jovemnerd.com.br,laopiniondemurcia.es,larazon.es,dicio.com.br,band.uol.com.br,xataka.com,onyxplay.com,genbeta.com,vagalume.com.br,xatakandroid.com,abril.com.br##body .ad
 ! ##.ads
-solvetic.com,gamesfull.app,agazeta.com.br,lasexta.com,extra.ec,globo.com,amomeupet.org,cifras.com.br,gaz.com.br,placar.com.br,futebolinterior.com.br,tvhistoria.com.br,tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.com.br,link.estadao.com.br,atomixhq.*,jc.ne10.uol.com.br,internetpasoapaso.com,acidadeon.com,leouve.com.br,larazon.es,infoescola.com,cbn.globoradio.globo.com,maxitorrent.com,abril.com.br,odia.ig.com.br,especiais.g1.globo.com,tribunapr.com.br,novelasd.com,anime-tube.tv##.ads
+serviporno.com,solvetic.com,gamesfull.app,agazeta.com.br,lasexta.com,extra.ec,globo.com,amomeupet.org,cifras.com.br,gaz.com.br,placar.com.br,futebolinterior.com.br,tvhistoria.com.br,tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.com.br,link.estadao.com.br,atomixhq.*,jc.ne10.uol.com.br,internetpasoapaso.com,acidadeon.com,leouve.com.br,larazon.es,infoescola.com,cbn.globoradio.globo.com,maxitorrent.com,abril.com.br,odia.ig.com.br,especiais.g1.globo.com,tribunapr.com.br,novelasd.com,anime-tube.tv##.ads
 ! ##body .banner
 c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,meiobit.com,brasilparalelo.com.br,tvonline.fan,laprensagrafica.com,ahoragranada.com,correio24horas.com.br,cnnespanol.cnn.com,motociclismo.es,sub100.com.br,theenemy.com.br,manhwas.net,rpp.pe,ambito.com,economipedia.com,informador.mx,elinformador.com.co,cronista.com,rionegro.com.ar,diariodecuyo.com.ar,voydeviaje.com.ar,guarda14.com,viapais.com.ar,agazeta.com.br,eleconomista.com.mx,metropolitanafm.com.br,tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.*,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##body .banner
 !
 ! NOTE: Specific rules
 !
+americatv.com.pe##div[class^="AdsSlot_"]
+viapais.com.ar##.int-banner
+nationalgeographic.com.es##.ad-item:not(.add990x90)
+nationalgeographic.com.es#$#.add990x90 { min-height: 0 !important; }
+aa.com.br#$##aa-hero-ad-frame { height: 350px !important; visibility: hidden !important; }
+serviporno.com##.ads__block
+serviporno.com##.banner-frame
+boraflix.com##div[id^="AADIV"]
 olx.com.br##div[width="300px"][height="250px"]
 olx.com.br##div[width="970px"][height="250px"]
 ||mundohentaioficial.com/banner/
@@ -2852,7 +2866,7 @@ maisesports.com.br##a[href*="&offer="][target="_blank"] img
 poder360.com.br##div[class*="box-skeleton--banner"]
 clarin.com##.bannerTopHeader
 clarin.com##.dbshwl
-clarin.com##.sticky-banner
+serviporno.com,clarin.com##.sticky-banner
 anroll.net###GGBetContent
 ||dj91.hostingnuclear.com/8014/stream$domain=animegafirex.com
 ||images.lun.com/luncontents/Banners/
@@ -3315,7 +3329,7 @@ eltiempo.es##div[style="min-height:600px;"]
 elpais.com##div[id^="ad-"]
 ||static.elpais.com/dist/resources/js/*/ENP-outbrain.js
 elmundo.es##.ue-c-subscription-ad
-mhscans.com,listas.pro###orquidea-slideup
+meufinanceiro.org,mhscans.com,listas.pro###orquidea-slideup
 ouniversodatv.com,animerikosuper.blogspot.com###HTML1
 animerikosuper.blogspot.com###HTML260
 tecnoscann.com,mhscans.com,animerikosuper.blogspot.com##div[class^="fixed-"][class$="Sd"]
@@ -4020,7 +4034,7 @@ folhadoslagos.com##.container_16 > .billboardBanner + .clear + .spacer60
 ||cdn.folhadoslagos.com/upload/dn_banner/
 boadiversao.com.br##.publicidade-bd
 ofuxico.com.br###sidebar > .rel-news
-nationalgeographic.com.es,cuerpomente.com,clara.es##.add990x90
+cuerpomente.com,clara.es##.add990x90
 globo.com##.container-adv
 psicologiaymente.com##body .banner-module
 psicologiaymente.com##.facebook-ads-square
@@ -5836,6 +5850,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202097
+nationalgeographic.com.es#@#.ad-item
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198804
 @@||amazonaws.com/*uol.com.br/publicidade-legal/json/ultimas.json$domain=uol.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199029

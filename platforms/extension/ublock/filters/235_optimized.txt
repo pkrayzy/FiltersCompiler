@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: O30mlZiyfyU2QxuAWI6mag
-! Diff-Path: ../patches/235_optimized/235_optimized-s-1743107936-14400.patch
+! Checksum: tAVJTlbBWd+jhptAucG56w
+! Diff-Path: ../patches/235_optimized/235_optimized-s-1743756119-14400.patch
 ! Title: Persian Blocker (Optimized)
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.5.51
-! TimeUpdated: 2025-03-27T20:35:02+00:00
+! Version: 2.0.5.53
+! TimeUpdated: 2025-04-04T08:38:00+00:00
 ! Expires: 5 days (update frequency)
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.site/"]
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
@@ -294,6 +294,10 @@ anaj.ir,salamatnews.com##+js(set-constant, document.referrer, undefined)
 ||uptrendsdata.com^$third-party
 ||webpu.sh^$third-party
 ||web.webpushs.com^
+anesthesianotes.ir#$#body { cursor: revert !important; -webkit-touch-callout: default !important; -webkit-user-select: text !important; -khtml-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; -webkit-tap-highlight-color: revert !important; }
+anesthesianotes.ir##+js(abort-on-property-read, nocontext)
+anesthesianotes.ir##+js(abort-current-script, disableSelection, reEnable)
+anesthesianotes.ir#$?#style:has-text(@media print) { remove: true; }
 autosafkar.com##+js(addEventListener-defuser, scroll, return"undefined")
 ||autosafkar.com/app/uploads/*.gif^$image,~third-party
 appnab.ir##div#ZAD
@@ -836,8 +840,8 @@ estekhtam.com#@#.ads-bottom
 enama.ir##div.avdDiv
 fontchi.com##+js(href-sanitizer, a[href^="/goto/"], ?url -base64)
 filmekade.ir##div.banner-ads
+fam.ir##+js(json-prune, props.children.[].props.children.[].props.children.props.advertisment)
 ||analytics.fam.ir^$~third-party
-||fam.ir/ngx_pagespeed_beacon^$xmlhttprequest,~third-party,method=post
 fileboro.com##+js(abort-current-script, document.onselectstart, killCopy)
 fileboro.com##+js(abort-on-property-write, document.oncopy)
 fileboro.com##div.ads-content

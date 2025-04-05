@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: /c5m8UlPx3hLkfK4OZ6EfQ
-! Diff-Path: ../patches/105_optimized/105_optimized-s-1743266493-14400.patch
+! Checksum: Lv9Cban60OXDO/dtGjc7fw
+! Diff-Path: ../patches/105_optimized/105_optimized-s-1743857320-14400.patch
 ! Title: EasyList Czech and Slovak (Optimized)
 ! Description: Additional filter list for websites in Czech and Slovak.
-! Version: 2.0.2.98
-! TimeUpdated: 2025-03-29T16:37:12+00:00
+! Version: 2.0.3.5
+! TimeUpdated: 2025-04-05T12:43:52+00:00
 ! Expires: 5 days (update frequency)
 .com/bannery/
 .cz/ads/
@@ -87,7 +87,7 @@ kurzy.cz##+js(abort-on-property-write, s_back)
 ||stat.novinky.cz^
 ||stat.super.cz^
 ||stobklub.cz/images/banners/maintop.jpg
-titulky.com/banaltr/
+titulky.com/mybanaltrea/
 titulky.com/ajaxlogon.php
 ||tracker.cncenter.cz^
 ||uschovna.cz/branding
@@ -233,7 +233,6 @@ programujte.com/img/pozadi_2024.jpg
 @@||www.top-reklama.sk^$~third-party
 @@||api.youradio.cz/v2/ads/preroll$xmlhttprequest
 @@||zdopravy.cz^$generichide
-@@||titulky.com/ads/titulky-ad-sidebar.js
 @@||titulky.com^$generichide
 denik.cz#@#.ads-box
 denik.cz#@#.reklama-box
@@ -489,7 +488,7 @@ super.cz##a[data-dot="c_pozadi"]
 telekomunikace.cz##.Flagrow-Ads-under-header
 tipcars.com##.amalker
 tiscali.cz##.bbtitle
-titulky.com###bnn_nu300x300
+titulky.com##iframe[src$=html i]
 titulky.com###fairuser
 topzine.cz###vyjizdeciBoxikDiv
 tryhard.cz##[class*="sda-"]
@@ -641,7 +640,9 @@ search.seznam.cz,clanky.seznam.cz##div[data-e-b-n*="advert"]
 sreality.cz##+js(no-setInterval-if, checkRods)
 super.cz##+js(remove-attr, style, body)
 svetandroida.cz##+js(abort-on-property-read, detectAdBlocker)
-titulky.com#$?#a[href*='pedikura-brno' i]:upward(3) { opacity:0;pointer-events:none }
+titulky.com##*:matches-css(position:/fixed/i):has(+ * *:matches-css(float:/left/i):matches-css(background:/url.*/i))
+titulky.com##*:matches-css(position:/fixed/i) + * *:matches-css(float:/left/i):matches-css(background:/url.*/i):upward(5)
+titulky.com##a:matches-css(background:/rtevax.cz/i):upward(3)
 titulky.com##+js(addEventListener-defuser, load, document.cookie)
 titulky.com##+js(set-constant, xmxalr, )
 titulky.com#$##head_c { margin-top: 0 !important; }
