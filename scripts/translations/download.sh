@@ -1,6 +1,8 @@
 #!/bin/bash
 SERVICE_URL="https://twosky.int.agrd.dev/api/v1/"
 workDir=../..
+
+# keep the list alphabetically sorted
 locales=(
     "ar"
     "be"
