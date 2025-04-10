@@ -1,9 +1,9 @@
-! Checksum: tt49dodFNebP3Z1qWSpC3A
-! Diff-Path: ../patches/105/105-s-1743266481-14400.patch
+! Checksum: UkReemSZ1D6aAZPZuTMUSA
+! Diff-Path: ../patches/105/105-s-1743957644-14400.patch
 ! Title: EasyList Czech and Slovak
 ! Description: Additional filter list for websites in Czech and Slovak.
-! Version: 2.0.2.98
-! TimeUpdated: 2025-03-29T16:37:12+00:00
+! Version: 2.0.3.6
+! TimeUpdated: 2025-04-06T16:36:33+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Homepage: http://adblock.sk
@@ -67,7 +67,7 @@
 ||hd-forum.cz/images/banner/
 ||hd-forum.cz/images/sberbank.jpg
 ||heureka.cz/direct/bannery/
-horoskopy.cz/*/static/js/ssp.js?szn_loader=1
+||horoskopy.cz/js/
 ||im9.cz/*aukro
 ||img.cdnprg.webtea.cz/web/pozadi_webu_mc.jpg
 ||jiskra-benesov.cz/images/branding/
@@ -103,8 +103,7 @@ kurzy.cz#%#//scriptlet('abp-abort-on-property-write', 's_back')
 ||stat.novinky.cz^
 ||stat.super.cz^
 ||stobklub.cz/images/banners/maintop.jpg
-titulky.com/banaltr/
-titulky.com/ajaxlogon.php
+titulky.com/mybanaltreas/
 ||tracker.cncenter.cz^
 ||uschovna.cz/branding
 ||vascak.cz/data/img/adblock.png$image
@@ -261,7 +260,6 @@ programujte.com/img/pozadi_2024.jpg
 @@||www.top-reklama.sk^$~third-party
 @@||api.youradio.cz/v2/ads/preroll$xmlhttprequest
 @@||zdopravy.cz^$generichide
-@@||titulky.com/ads/titulky-ad-sidebar.js
 @@||titulky.com^$generichide
 !
 ! ---------- Czech Whitelisted hiding rules ---------- !
@@ -423,6 +421,7 @@ hlavnespravy.sk##.block.block3>.sidebar
 hlavnespravy.sk##.block.block4>.sidebar
 hlavnespravy.sk##.subscribe-overlay
 hlavnespravy.sk##.subscribe-overlay-desktop
+horoskopy.cz##szn-cwl
 hrej.cz##[class*="sda-"]
 hybrid.cz##.TopFullBanner
 idnes.cz##div[id^="hyper"]
@@ -475,6 +474,8 @@ motorkari.cz##.banner,.left-side-banner,.right-side-banner
 mrk.cz###pozadistranky
 mrk.cz##.oznaceno
 mrk.cz###kolotoc1
+mrk.cz##div:has(>a[href^='/g.php'])
+mrk.cz##div:has(>.scroll-x)
 nasepenize.cz##.box-offer
 nasepraha.cz##.npab
 navratdoreality.cz##.box-responsive
@@ -532,8 +533,8 @@ super.cz##a[data-dot="c_pozadi"]
 telekomunikace.cz##.Flagrow-Ads-under-header
 tipcars.com##.amalker
 tiscali.cz##.bbtitle
-titulky.com###bnn_nu300x300
-titulky.com###fairuser
+titulky.com##iframe[src$=html i]
+titulky.com##iframe[src$=php i]
 topzine.cz###vyjizdeciBoxikDiv
 tryhard.cz##[class*="sda-"]
 tv.seznam.cz##div[class^="branding-ad"]
@@ -693,7 +694,9 @@ search.seznam.cz,clanky.seznam.cz##div[data-e-b-n*="advert"]
 sreality.cz#%#//scriptlet('ubo-nosiif.js', 'checkRods')
 super.cz#%#//scriptlet('ubo-ra.js', 'style', 'body')
 svetandroida.cz#%#//scriptlet('ubo-aopr.js', 'detectAdBlocker')
-titulky.com#$?#a[href*='pedikura-brno' i]:upward(3) { opacity:0;pointer-events:none }
+titulky.com##*:matches-css(position:/fixed/i):has(+ * img:matches-css(float:/left/i))
+titulky.com##*:matches-css(position:/fixed/i) + *:has(img:matches-css(float:/left/i))
+titulky.com##a:matches-css(background:/marteva.cz/i):upward(3)
 titulky.com#%#//scriptlet('ubo-aeld.js', 'load', 'document.cookie')
 titulky.com#%#//scriptlet('ubo-set.js', 'xmxalr', '')
 titulky.com#$##head_c { margin-top: 0 !important; }

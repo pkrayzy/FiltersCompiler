@@ -1,9 +1,9 @@
-! Checksum: 1pb+nbwncTMNPcYhxYIX9Q
-! Diff-Path: ../patches/17/17-s-1743221507-3600.patch
+! Checksum: snM6QFhmhYPzaF8tGxzprw
+! Diff-Path: ../patches/17/17-s-1744020676-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.81
-! TimeUpdated: 2025-03-29T04:08:34+00:00
+! Version: 2.0.10.86
+! TimeUpdated: 2025-04-07T10:08:08+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21,6 +21,10 @@
 ! Bad:  $removeparam=utm_id,domain=example.org (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201868
+$removeparam=uzcid
+$removeparam=beyond_uzcvid
+$removeparam=beyond_uzmcvid
 ! https://www.weblio.jp/ranking/?from=glia player.gliacloud.com anywhere
 ?from=glia^$removeparam=from
 ! Google Merchant Center tracking
@@ -390,6 +394,13 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202484
+||threads.net^$removeparam=xmt
+! https://github.com/AdguardTeam/AdguardFilters/issues/202252
+||nintendo.com^$removeparam=nt_redirect_referrer
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12682755
+||code-wallets.com^$removeparam=tw_adid
+||code-wallets.com^$removeparam=tw_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201849
 ||autodaily.ru^$removeparam=from
 ! Yandex.Practicum
@@ -2845,6 +2856,10 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201922
+! https://github.com/AdguardTeam/AdguardFilters/issues/201424
+@@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
+@@||portal-portm.meituan.com/horn$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
 ! https://github.com/uBlockOrigin/uAssets/issues/27751
 @@||tix.axs.com^$removeparam=irclickid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199306#issuecomment-2678167845

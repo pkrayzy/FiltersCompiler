@@ -1,8 +1,8 @@
 !
-! Checksum: X8sRqsPoGNF5GzAFR93M6Q
-! OriginalVersion: 202503300821
+! Checksum: HfvCpgg2kBY0C4rZKT4cgQ
+! OriginalVersion: 202504100831
 ! Title: RU AdList: Counters
-! Last modified: 30 Mar 2025 08:21 UTC
+! Last modified: 10 Apr 2025 08:31 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -145,7 +145,7 @@
 /readcounter.
 /sbtracking/pageview2?
 /services/counter.gif
-/sourcebuster.min.js
+/sourcebuster.min.js$domain=~smclinic-sol.ru
 /stat.htm$subdocument
 /stat/dspixel.js?
 /stat_date.js?token$third-party,script
@@ -1231,9 +1231,12 @@ ya.*,yandex.*#$?#[id][aria-label] > [class]:has(> div > button:matches-attr(/[a-
 ||ya.ru/portal/proxy?blocks=feed_banner
 ||yandex-sport.naydex.net/$script,redirect=empty
 ||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$redirect=nooptext
+!#if env_mv3
+!#endif
 !
 ! мобильная версия
 ya.*#$?##search-result > [class*="__card"]:has(> div > span:has-text(Реклама)) { display: none !important }
+yandex.*#$?##search-result > [class*="__card"]:has(> div .AdvLabel) { display: none !important }
 yandex.*#$?#.touch-feed > div > .feed-item[id^="zen-row-"]:has([class^="zen-ui-channel-info"][class$="subtitle-text"]:has-text(промо)) { display: none !important }
 !
 ! Альтернативное решение для старых браузеров
@@ -1248,6 +1251,7 @@ yandex.*#$?#.touch-feed > div > .feed-item[id^="zen-row-"]:has([class^="zen-ui-c
 @@||static-mon.yandex.net/static/main.js?pid=$xmlhttprequest,domain=dzen.ru|ya.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yandex.ru/ads/page/*target-ref=*afisha.yandex.$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yandex.ru/ads/page/*target-ref=*pogoda$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||yandex.ru/ads/system/context.js?|$script,domain=dzen.ru
 @@||yandex.ru/ads/system/context.js|$domain=dzen.ru|ya.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yandex.ru/ads/system/header-bidding.js|$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yastatic.net/daas/atom.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
@@ -1381,7 +1385,7 @@ $removeparam=persistent_id,domain=dzen.ru|sportsdzen.ru
 $removeparam=pulse_traffic
 $removeparam=rank,domain=kufar.by
 $removeparam=redirect_ts,domain=ya.ru
-$removeparam=ref,domain=dtf.ru|mail.ru|sportmail.ru|vc.ru
+$removeparam=ref,domain=dtf.ru|mail.ru|sportmail.ru|sports.ru|vc.ru
 $removeparam=ref_src
 $removeparam=ref_url
 $removeparam=referrer_clid

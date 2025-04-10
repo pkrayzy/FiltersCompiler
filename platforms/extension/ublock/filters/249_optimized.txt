@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: k9xInQEDq+ReWyVBNH297Q
-! Diff-Path: ../patches/249_optimized/249_optimized-s-1743324018-14400.patch
+! Checksum: STlBr95nL7MAfJRWAbjDOw
+! Diff-Path: ../patches/249_optimized/249_optimized-s-1744144834-14400.patch
 ! Title: Dandelion Sprout's Nordic Filters (Optimized)
 ! Description: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population.
-! Version: 2.0.7.96
-! TimeUpdated: 2025-03-30T08:36:32+00:00
+! Version: 2.0.7.98
+! TimeUpdated: 2025-04-08T20:36:38+00:00
 ! Expires: 5 days (update frequency)
 ###ad_superboard:not(html,body,:empty)
 ###ad_topp:not(html,body,:empty)
@@ -594,6 +594,10 @@ bold.dk##._adr_abp_container
 studvest.no##div.studv-widget.widget
 nordjyske.dk##div[class^=jubii-]
 fjellforum.no##.ipsWidget:has([style*="width:300px;height:90px"])
+tv2.no##.feed-ad
+itavisen.no##p:has(~ .wp-block-buttons [data-lasso-name]):has-text(/^Annonse$/)
+itavisen.no##.wp-block-buttons:has([data-lasso-name])
+jyllands-posten.dk##.hidden.relative:has(ins[id*=noconsent])
 nhi.no##div.MuiContainer-root div[class^=mui-style-]:has(div[data-ad-unit-id])
 thainytt.no##.blog-entry > .stacks_out
 vb.is##.big_spons
@@ -1801,8 +1805,6 @@ vafo.dk##.adform-flexblock
 ##.am-page-ad:not(html,body,:empty)
 ##.adnuntius-ad:not(html,body,:empty)
 ##.intersect-ads-load:not(html,body,:empty)
-||via.placeholder.com^$image
-@@||via.placeholder.com/1|
 ##.mobile-banner-widget:not(html,body,:empty)
 ##.widgerFullWidth:not(html,body,:empty)
 ##.desktop-banner-widget:not(html,body,:empty)
@@ -2836,7 +2838,7 @@ gamereactor.*##+js(abort-current-script, AdsReloadConfig)
 ||googletagmanager.com/gtm.js^$domain=dk|bornholm.nu
 ##div[style^="bottom: 0px;"][style*="width: 10"][style*="z-index: 2147"]
 connery.dk##+js(set-constant, adblockerAlert, noopFunc)
-no##+js(remove-attr, class, .dfp-loaded)
+no,~bankid.com,~3dsecure.no##+js(remove-attr, class, .dfp-loaded)
 findroommate.dk###frm-ablo-message
 bold.dk##+js(abort-current-script, EventTarget.prototype.addEventListener, window.TextDecoder)
 bold.dk##+js(nofab)

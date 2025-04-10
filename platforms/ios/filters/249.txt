@@ -1,14 +1,14 @@
-! Checksum: O1zjxL6UCMFUJu2OgOcJoQ
-! Diff-Path: ../patches/249/249-s-1743324022-14400.patch
+! Checksum: bMCP+EhuHwBMS2j9E6YybQ
+! Diff-Path: ../patches/249/249-s-1744144838-14400.patch
 ! Title: Dandelion Sprout's Nordic Filters
 ! Description: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population.
-! Version: 2.0.7.96
-! TimeUpdated: 2025-03-30T08:36:32+00:00
+! Version: 2.0.7.98
+! TimeUpdated: 2025-04-08T20:36:38+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Title 🇬🇧: Dandelion Sprout's Nordic filters for tidier websites
-! Last modified: 29March2025v1
+! Last modified: 08April2025v1
 ! Expires: 18 hours
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -609,6 +609,10 @@ bold.dk##._adr_abp_container
 studvest.no##div.studv-widget.widget
 nordjyske.dk##div[class^=jubii-]
 fjellforum.no##.ipsWidget:has([style*="width:300px;height:90px"])
+tv2.no##.feed-ad
+itavisen.no##p:has(~ .wp-block-buttons [data-lasso-name]):has-text(/^Annonse$/)
+itavisen.no##.wp-block-buttons:has([data-lasso-name])
+jyllands-posten.dk##.hidden.relative:has(ins[id*=noconsent])
 nhi.no##div.MuiContainer-root div[class^=mui-style-]:has(div[data-ad-unit-id])
 thainytt.no##.blog-entry > .stacks_out
 vb.is##.big_spons
@@ -1976,9 +1980,6 @@ vafo.dk##.adform-flexblock
 ##.adnuntius-ad:not(html,body,:empty)
 ! kimbinoNO, kimbinoDK (13/09/2020)
 ##.intersect-ads-load:not(html,body,:empty)
-! fasteignir.frettabladid•is (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/111644)
-||via.placeholder.com^$image
-@@||via.placeholder.com/1|
 ! lokal-avisaNO, ringsakernNO (19/09/2020)
 ##.mobile-banner-widget:not(html,body,:empty)
 ##.widgerFullWidth:not(html,body,:empty)
@@ -3163,7 +3164,7 @@ fla.de##.index-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179354
 @@||finn.no/bap/forsale/ad.html^$~third-party
 ! Other entries that are «AdGuard syntax»-specific
-! Last updated: 31October2024v2-Extension
+! Last updated: 05April2025v1-Extension
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -3252,7 +3253,7 @@ gamereactor.*#%#//scriptlet('ubo-acis.js', 'AdsReloadConfig')
 ! https://github.com/uBlockOrigin/uAssets/issues/8648
 connery.dk#%#//scriptlet('ubo-set.js', 'adblockerAlert', 'noopFunc')
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
-no#%#//scriptlet('ubo-ra.js', 'class', '.dfp-loaded')
+no,~bankid.com,~3dsecure.no#%#//scriptlet('ubo-remove-attr.js', 'class', '.dfp-loaded')
 ! https://www•findroommate•dk/vaerelser/302142/stort-lyst-vaerelse-taet-paa-aarhus-i-viby-centrum (17/12/2021)
 findroommate.dk###frm-ablo-message
 ! The green "Abonner" button in the upper right appears to work perfectly even with this entry, and the entry does not cause the Plus article bodies to appear either, so I feel I'm on safe enough grounds on this one.
