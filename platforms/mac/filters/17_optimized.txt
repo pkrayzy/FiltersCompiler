@@ -1,8 +1,8 @@
-! Checksum: Yr7MGMez637nTQHl531cuQ
+! Checksum: xi0FvkLLlk/W5o521EJZ4A
 ! Title: AdGuard URL Tracking filter (Optimized)
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.86
-! TimeUpdated: 2025-04-07T10:08:08+00:00
+! Version: 2.0.10.91
+! TimeUpdated: 2025-04-18T11:06:52+00:00
 ! Expires: 5 days (update frequency)
 $removeparam=uzcid
 $removeparam=beyond_uzcvid
@@ -253,6 +253,9 @@ $removeparam=fb_action_types
 $removeparam=fb_comment_id
 $removeparam=fb_ref
 $removeparam=fb_source
+||d.ghostery.com^$removeparam
+||deepl.com^$removeparam=share
+||netflix.com^$removeparam=source
 ||threads.net^$removeparam=xmt
 ||nintendo.com^$removeparam=nt_redirect_referrer
 ||code-wallets.com^$removeparam=tw_adid
@@ -903,7 +906,6 @@ $removeparam=source_ve_path,domain=youtubekids.com|youtube-nocookie.com|youtube.
 ||etsy.com^$removeparam=ref
 ||etsy.com^$removeparam=click_sum
 ||myprotein.jp^$removeparam=affil
-||myprotein.jp^$removeparam=a8
 ||email.nationalgeographic.com^$removeparam=__F__
 ||email.nationalgeographic.com^$removeparam=__dU__
 ||pixiv.net^$removeparam=from
@@ -1660,7 +1662,9 @@ $removeparam=igshid,domain=instagram.com|threads.net
 ||linkedin.com/authwall?$removeparam=originalReferer
 ||linkedin.com^$removeparam=/^trk/
 ||digikey.com^$removeparam=/^utm_cid/
-$removeparam=from,domain=anime.nicovideo.jp|dic.nicovideo.jp
+||nicovideo.jp^$removeparam=via
+||nicovideo.jp^$removeparam=at
+||nicovideo.jp^$removeparam=state
 ||nicovideo.jp^$removeparam=transition_id
 ||nicovideo.jp^$removeparam=transition_type
 ||nicovideo.jp^$removeparam=rf
@@ -1681,6 +1685,7 @@ $removeparam=from,domain=anime.nicovideo.jp|dic.nicovideo.jp
 ||nicovideo.jp^$removeparam=ref
 ||nicoft.io^$removeparam=cmnhd_ref
 ||nicoebook.jp^$removeparam=track
+$removeparam=from,domain=anime.nicovideo.jp|dic.nicovideo.jp
 ||search.naver.com/search.naver$removeparam=tqi
 ||cc.naver.com/cc?a$removeparam=bw
 ||cc.naver.com/cc?a$removeparam=px
@@ -1979,6 +1984,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !+ PLATFORM(windows, mac, android) NOT_OPTIMIZED
 ||https-filtering-check.adtidy.org^
+@@||a8cv.amiami.jp/click/$removeparam=a8
 @@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
 @@||portal-portm.meituan.com/horn$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
 @@||tix.axs.com^$removeparam=irclickid

@@ -1,9 +1,9 @@
-! Checksum: jOasNxDUDUHpdk7hOG4Vlw
-! Diff-Path: ../patches/9/9-s-1744265549-3600.patch
+! Checksum: wLl3mH9OaZykJ8vJG1nISQ
+! Diff-Path: ../patches/9/9-s-1744971058-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.29.50
-! TimeUpdated: 2025-04-10T06:08:58+00:00
+! Version: 2.0.29.60
+! TimeUpdated: 2025-04-18T10:07:18+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -24,6 +24,8 @@
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
 !
+||upeex.com.br^
+||upeex.com^
 ||adspublicidades.agency^
 ||t.babelmedia.global^
 ||butlercdn.com^$third-party
@@ -197,6 +199,7 @@
 ! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
 !
 !
+||ads-redis.ecn.cl^
 ||bs_*.diariobitcoin.care^
 ||publi.elliberal.com.ar^
 ||xad.dnoticias.pt^
@@ -216,17 +219,14 @@
 !
 !
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/202441
-redecanais.gs#@#.AdsBox
-redecanais.gs##body > #overlay
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200089
 elcorreogallego.es###_an_cmp
 elcorreogallego.es#%#//scriptlet('set-constant', '_an.ABMode', 'undefined')
-! https://github.com/uBlockOrigin/uAssets/issues/27759
-! https://github.com/uBlockOrigin/uAssets/issues/27744
-! https://github.com/AdguardTeam/AdguardFilters/issues/201768
-redecanaistv.ps,redecanais.*#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'loadAdScript')
-redecanaistv.ps,redecanais.*#%#//scriptlet('abort-on-property-read', 'close')
+! https://github.com/uBlockOrigin/uAssets/issues/27939
+redecanaistv.*,redecanais.*#%#//scriptlet('prevent-fetch', 'mode:no-cors')
+redecanaistv.*,redecanais.*#%#//scriptlet('set-constant', 'adClickCount', '0')
+redecanaistv.*,redecanais.*#%#//scriptlet('set-constant', 'close', 'undefined')
+redecanaistv.*,redecanais.*#$##player { display: block !important; }
 ! https://github.com/uBlockOrigin/uAssets/issues/27651
 sport.es###_an_cmp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199215
@@ -2281,7 +2281,7 @@ http://adw.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
 /^(?!.*(ilfcdn.li|bytecdntp.com|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,_____,domain=thepiratefilmestorrent.biz|serieslatinoamerica.tv|pelispoptv.com|superflix.net|mangatigre.net|darkmahou.org|brjogostorrents.com
 ! Similar to regexp above, but using the denyallow modifier
-$script,third-party,denyallow=ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|cloudflare.net|x.com,_____,domain=anroll.net|monoschinos2.com|animeyt.es|leercapitulo.com|pelisflix2.green|darkmahou.org|comandotorrents.to|comandoplay.com|pelismax.one|seriesgod.cc|anime-jl.net|zonatmo.com|recipesalba.com|ratiomotor.com|retiontech.com|ferromotor.com|motoratrium.com|recitma.com|flavourecipes.com|motorworten.com|techitan.com|loveteching.com|animefire.plus
+$script,third-party,denyallow=ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|cloudflare.net|x.com,_____,domain=anroll.net|monoschinos2.com|animeyt.es|leercapitulo.com|pelisflix2.green|darkmahou.org|comandotorrents.to|comandoplay.com|pelismax.one|seriesgod.cc|anime-jl.net|zonatmo.com|recipesalba.com|ratiomotor.com|retiontech.com|ferromotor.com|motoratrium.com|recitma.com|flavourecipes.com|motorworten.com|techitan.com|loveteching.com|animefire.plus|animeflv.net
 !
 ! ##body .ad
 xataka.com.br,solowrestling.com,europapress.es,trendencias.com,futuro.cl,solowrestling.mundodeportivo.com,meneame.net,3djuegos.com,meteoconsult.es,meuguia.tv,territoriosamsung.com,conjur.com.br,meups.com.br,elcorreogallego.es,3djuegos.lat,xatakandroid.com,nsctotal.com.br,noticiasdenavarra.com,informacion.es,applesfera.com,xatakamovil.com,espinof.com,mundoxiaomi.com,vidaextra.com,mediotiempo.com,elpais.com,olhardigital.com.br,atribuna.com.br,jovemnerd.com.br,laopiniondemurcia.es,larazon.es,dicio.com.br,band.uol.com.br,xataka.com,onyxplay.com,genbeta.com,vagalume.com.br,xatakandroid.com,abril.com.br##body .ad
@@ -2292,6 +2292,12 @@ c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,me
 !
 ! NOTE: Specific rules
 !
+||mediaserver.emol.cl/zones/zones.js
+||mediaserver.emol.cl/other/lleison/pbli_vw.js
+||emol.com/Detalle/*_ADX.html
+||static.emol.cl/*/publicidadNAC.min.js
+blog.desdelinux.net###special-sidebar-template
+portaldohost.com.br##.ipsResponsive_inlineBlock > a[target="_blank"] > img
 teknofilo.com##.it-ad-wrapper
 kippel01.com##.topBillboard
 kippel01.com##.aside-ad-container
@@ -2805,7 +2811,7 @@ razaoautomovel.com##body .s-incontent-ads
 canaltech.com.br##div[class^="flex h-[100px]"][class*="items-center"][class*=":h-[250px]"]
 periodicocorreo.com.mx##div[style*="bottom: 0px !important; width: 100% !important; max-height: 100px !important;"]
 abola.pt#?#.content-box:has(> div.news-item > div.info:contains(/Notícia Patrocinada/i))
-startups.com.br,sempreupdate.com.br,canalrural.com.br##.spaa-container
+folhabv.com.br,startups.com.br,sempreupdate.com.br,canalrural.com.br##.spaa-container
 fdr.com.br##.code-block[data-amp-original-style^="margin: 8px auto; text-align: center;"]
 abril.com.br##.ads-infinite-list
 ||azscore.com.br/rating/bk-widget/$third-party
@@ -3031,7 +3037,7 @@ elmundo.es##div[class*="ue-c-main-header__subscription"]
 derechadiario.com.ar##a[href="https://www.zbl-legal.com/"] > img
 netflu.com.br,revistaoeste.com,diariodorio.com##.autozep-outer
 ahnegao.com.br###global_topo
-megacanais.com,terrabrasilnoticias.com,psxbrasil.com.br,elrincondecabra.com,atelevisao.com,ahnegao.com.br##.code-block
+blog.desdelinux.net,megacanais.com,terrabrasilnoticias.com,psxbrasil.com.br,elrincondecabra.com,atelevisao.com,ahnegao.com.br##.code-block
 ahnegao.com.br##.sidebar-main > aside.ai_widget
 midiamax.uol.com.br###fixed-banner
 pelismx.lat,coleccionmovie.com##a[href*="?key="][target="_blank"]
@@ -3472,7 +3478,7 @@ eltiempo.es##div[style="min-height:600px;"]
 elpais.com##div[id^="ad-"]
 ||static.elpais.com/dist/resources/js/*/ENP-outbrain.js
 elmundo.es##.ue-c-subscription-ad
-meufinanceiro.org,mhscans.com,listas.pro###orquidea-slideup
+crystalcomics.com,meufinanceiro.org,mhscans.com,listas.pro###orquidea-slideup
 ouniversodatv.com,animerikosuper.blogspot.com###HTML1
 animerikosuper.blogspot.com###HTML260
 tecnoscann.com,mhscans.com,animerikosuper.blogspot.com##div[class^="fixed-"][class$="Sd"]
@@ -3662,7 +3668,7 @@ uai.com.br,elchapuzasinformatico.com##.bg-ad
 ||elchapuzasinformatico.com/wp-content/uploads/*/Sk1n-*.jpg
 ||elchapuzasinformatico.com/wp-content/uploads/*/B4nner-*.jpg
 caracoltv.com,bluradio.com##.GoogleDfpAd-Float-Content
-animesonehd.xyz###block-7
+soploslinux.com,animesonehd.xyz###block-7
 dicionarioinformal.com.br##div[style="height:322px;"]
 somosche.com,dicionarioinformal.com.br##div[style="height:90px;"]
 jovemnerd.com.br###Position_TopFixed
@@ -3881,7 +3887,7 @@ ahount.com##.inside-right-sidebar > aside[id^="custom_html-"]
 ||plantaomaringa.com/fotos/anuncios
 elpais.com###paywallOfferSmall
 elpais.com###cta-button-container
-juegosdepcfull.com,pizzafria.ig.com.br,paraveronline.org,sayrodigital.net,cineplus123.org,cinemitas.org,androidayuda.com,sport.es,comandoplay.com,comandotorrents.to,adrenaline.com.br,ncultura.pt,animesdigital.org,wwwhatsnew.com,descargaseriestv.com,lifeder.com,elrellano.com,elintransigente.com,comando.la,remender.pe,noticiasautomotivas.com.br,idinheiro.com.br,diariodocomercio.com.br##body .code-block
+linuxadictos.com,juegosdepcfull.com,pizzafria.ig.com.br,paraveronline.org,sayrodigital.net,cineplus123.org,cinemitas.org,androidayuda.com,sport.es,comandoplay.com,comandotorrents.to,adrenaline.com.br,ncultura.pt,animesdigital.org,wwwhatsnew.com,descargaseriestv.com,lifeder.com,elrellano.com,elintransigente.com,comando.la,remender.pe,noticiasautomotivas.com.br,idinheiro.com.br,diariodocomercio.com.br##body .code-block
 g37.com.br,anitube.biz,otvfoco.com.br##div[class^="code-block code-block-"][style^="margin: 8px"]
 bracontece.com.br##.testad
 noticiast.com##div[style="margin: 8px 0; clear: both;"]
@@ -4554,8 +4560,6 @@ trendenciashombre.com,bebesymas.com##div[class^="ad ad-lat"]
 dn.pt##div[class^="t-modsys-pub"]
 dvdgayonline.com##.content > .load_modules
 yoututosjeff.es###HTML3
-redecanais.info###yb_mm
-redecanais.info###yb_bb
 tvsinpagar.com##.pub300x250
 torrentrapid.com,tvsinpagar.com##.gray[style="width:100%;height:98px;"]
 tvsinpagar.com##div[style="float:left;width:100%;height:90px;"]

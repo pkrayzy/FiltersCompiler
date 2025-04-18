@@ -48,10 +48,10 @@ const converter = (() => {
     /**
      * Converts file from crowdin format
      *
-     * @param locale
-     * @param file
-     * @param outFile
-     * @param mask
+     * @param locale Locale code.
+     * @param file File path.
+     * @param outFile Output file path.
+     * @param mask Mask to identify the object — 'filter' or 'group' or 'tag'.
      */
     const importFile = (locale, file, outFile, mask) => {
         // eslint-disable-next-line no-console

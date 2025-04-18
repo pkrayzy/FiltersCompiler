@@ -1,8 +1,8 @@
-! Checksum: nW+wnHh+JVdOjU+YZZi6MA
+! Checksum: zQX2iamfa+LiMjDgk6gCsw
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.86
-! TimeUpdated: 2025-04-07T10:08:08+00:00
+! Version: 2.0.10.91
+! TimeUpdated: 2025-04-18T11:06:52+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -393,6 +393,13 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202756
+! Install/uninstall tracking
+||d.ghostery.com^$removeparam
+! https://github.com/AdguardTeam/AdguardFilters/issues/203377
+||deepl.com^$removeparam=share
+! https://github.com/AdguardTeam/AdguardFilters/issues/203046
+||netflix.com^$removeparam=source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202484
 ||threads.net^$removeparam=xmt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202252
@@ -1325,7 +1332,6 @@ $removeparam=source_ve_path,domain=youtubekids.com|youtube-nocookie.com|youtube.
 ||etsy.com^$removeparam=click_sum
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160495
 ||myprotein.jp^$removeparam=affil
-||myprotein.jp^$removeparam=a8
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159733
 ||email.nationalgeographic.com^$removeparam=__F__
 ||email.nationalgeographic.com^$removeparam=__dU__
@@ -2432,8 +2438,9 @@ $removeparam=igshid,domain=instagram.com|threads.net
 ||digikey.com^$removeparam=/^utm_cid/
 !
 ! NicoNico (nicovideo.jp)
-! Keep subdomain
-$removeparam=from,domain=anime.nicovideo.jp|dic.nicovideo.jp
+||nicovideo.jp^$removeparam=via
+||nicovideo.jp^$removeparam=at
+||nicovideo.jp^$removeparam=state
 ||nicovideo.jp^$removeparam=transition_id
 ||nicovideo.jp^$removeparam=transition_type
 ||nicovideo.jp^$removeparam=rf
@@ -2454,6 +2461,9 @@ $removeparam=from,domain=anime.nicovideo.jp|dic.nicovideo.jp
 ||nicovideo.jp^$removeparam=ref
 ||nicoft.io^$removeparam=cmnhd_ref
 ||nicoebook.jp^$removeparam=track
+! Keep subdomain
+$removeparam=from,domain=anime.nicovideo.jp|dic.nicovideo.jp
+!
 ! Naver (naver.com) - tracking parameter
 ! https://github.com/AdguardTeam/AdguardFilters/pull/89838
 ||search.naver.com/search.naver$removeparam=tqi
@@ -2856,6 +2866,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !
 !
 !
+! Some a8 links on https://figure-times.com/
+@@||a8cv.amiami.jp/click/$removeparam=a8
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201922
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201424
 @@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com

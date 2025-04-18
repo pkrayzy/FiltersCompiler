@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: vp4qvffobaJ4dKwO4TcqGQ
-! Diff-Path: ../patches/10_optimized/10_optimized-s-1743185548-3600.patch
+! Checksum: FXFSLONdugVbfMTlX5wOog
+! Diff-Path: ../patches/10_optimized/10_optimized-s-1744373656-3600.patch
 ! Title: Filter unblocking search ads and self-promotion (Optimized)
 ! Description: Filter that unblocks search ads in Google, DuckDuckGo, Bing, or Yahoo and self-promotion on websites.
-! Version: 2.0.3.62
-! TimeUpdated: 2025-03-28T18:08:42+00:00
+! Version: 2.0.3.63
+! TimeUpdated: 2025-04-11T12:10:17+00:00
 ! Expires: 5 days (update frequency)
 !#safari_cb_affinity(general)
 bing.com#@#li[class="b_ans"][data-partnertag]:has(> div[class^="b_bza_"])
@@ -205,6 +205,11 @@ comss.ru#@##main > .flat td[style*="260px"] > .av:nth-child(2)
 comss.ru#@##main > .flat td[style*="260px"] > .top:first-child
 @@/gb.php?idb_=$domain=ek.ua|m.ua
 @@||info.price.nadavi.*/*.php?p4g_api_type_=iframe$third-party
+royalroad.com#@#.portlet:has(> .bold + a[target="_blank"])
+royalroad.com#@#.portlet:has(> :is(span, div[style]) > a[target="_blank"])
+royalroad.com#@#:is(.text-center, .wide):has(> div[id^="Content_Top_"]:first-child + div[id^="Content_Top_"]:last-child)
+royalroad.com#@#a[href^="https://www.royalroad.com/"][href*="?campaign="][href*="&source="] > img
+royalroad.com#@#+js(set-constant, AdblockPlus.detect, noopFunc)
 atresplayer.com#@#.mod_blanco
 @@||adwolf.ru^$domain=retrofm.ru|radio7.ru|europaplus.ru
 consultant.ru#@#img[width="468"][height="60"]

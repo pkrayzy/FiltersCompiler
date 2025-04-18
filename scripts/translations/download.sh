@@ -1,7 +1,48 @@
 #!/bin/bash
 SERVICE_URL="https://twosky.int.agrd.dev/api/v1/"
 workDir=../..
-locales=("en" "ru" "ar" "bg" "ca" "zh_CN" "zh_TW" "hr" "da" "nl" "fi" "fr" "de" "he" "hu" "id" "it" "ja" "ko" "no" "fa" "pl" "pt" "pt_BR" "pt_PT" "sr" "sk" "es" "sv" "tr" "uk" "vi" "be" "sl" "el" "ro" "cs" "mk")
+
+# keep the list alphabetically sorted
+locales=(
+    "ar"
+    "be"
+    "bg"
+    "ca"
+    "cs"
+    "da"
+    "de"
+    "el"
+    "en"
+    "es"
+    "fa"
+    "fi"
+    "fr"
+    "he"
+    "hr"
+    "hu"
+    "id"
+    "it"
+    "ja"
+    "ko"
+    "mk"
+    "nl"
+    "no"
+    "pl"
+    "pt"
+    "pt_BR"
+    "pt_PT"
+    "ro"
+    "ru"
+    "sk"
+    "sl"
+    "sr"
+    "sv"
+    "tr"
+    "uk"
+    "vi"
+    "zh_CN"
+    "zh_TW"
+)
 
 for locale in "${locales[@]}"
 do
