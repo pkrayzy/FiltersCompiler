@@ -70,7 +70,8 @@ const main = async () => {
                 return false;
             }
 
-            // currently supported mac platform is 'mac_v2' so no patch needed for old 'mac' platform
+            // patches are supported by `mac_v2` (or later)
+            // but not by `mac` (v1)
             const isOldMac = file.includes('/mac/') || file.includes('\\mac\\');
             if (isOldMac) {
                 console.log('Skipped generating patch for old mac');
