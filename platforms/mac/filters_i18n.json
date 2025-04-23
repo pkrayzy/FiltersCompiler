@@ -2,1108 +2,835 @@
 	"groups": {
 		"1": {
 			"ar": {
-				"name": "مانع الاعلانات",
-				"description": "حظر الإعلانات"
+				"name": "مانع الاعلانات"
 			},
 			"be": {
-				"name": "Блакаваць рэкламу і ўсплывальныя банары",
-				"description": "Блакаваць рэкламу"
+				"name": "Блакаваць рэкламу і ўсплывальныя банары"
 			},
 			"bg": {
-				"name": "Блокиране на реклами",
-				"description": "Блокиране на реклами"
+				"name": "Блокиране на реклами"
 			},
 			"ca": {
-				"name": "Bloqueig d'anuncis",
-				"description": "Bloquejar anuncis"
+				"name": "Bloqueig d'anuncis"
 			},
 			"cs": {
-				"name": "Blokování reklam",
-				"description": "Blokování reklam"
+				"name": "Blokování reklam"
 			},
 			"da": {
-				"name": "Adblocking",
-				"description": "Blokér annoncer"
+				"name": "Adblocking"
 			},
 			"de": {
-				"name": "Werbeblockierung",
-				"description": "Werbung sperren"
+				"name": "Werbeblockierung"
 			},
 			"el": {
-				"name": "Αποκλεισμός διαφημίσεων",
-				"description": "Αποκλεισμός διαφημίσεων"
+				"name": "Αποκλεισμός διαφημίσεων"
 			},
 			"en": {
-				"name": "Ad blocking",
-				"description": "Block ads"
+				"name": "Ad blocking"
 			},
 			"es": {
-				"name": "Bloqueo de anuncios",
-				"description": "Bloquear anuncios"
+				"name": "Bloqueo de anuncios"
 			},
 			"es_ES": {
-				"name": "Bloqueo de anuncios",
-				"description": "Bloquear anuncios"
+				"name": "Bloqueo de anuncios"
 			},
 			"fa": {
-				"name": "مسدودسازی تبلیغ",
-				"description": "جلوگیری از تبلیغات"
+				"name": "مسدودسازی تبلیغ"
 			},
 			"fi": {
-				"name": "Mainosesto",
-				"description": "Estä mainokset"
+				"name": "Mainosesto"
 			},
 			"fr": {
-				"name": "Blocage de pub",
-				"description": "Bloquer les publicités"
+				"name": "Blocage de pub"
 			},
 			"he": {
-				"name": "חסימת פרסומות ",
-				"description": "חסום פרסומות"
+				"name": "חסימת פרסומות "
 			},
 			"hr": {
-				"name": "Blokiranje oglasa",
-				"description": "Blokira oglase"
+				"name": "Blokiranje oglasa"
 			},
 			"hu": {
-				"name": "Hirdetésblokkolás",
-				"description": "Hírdetések blokkolása"
+				"name": "Hirdetésblokkolás"
 			},
 			"id": {
-				"name": "Pemblokiran iklan",
-				"description": "Blokir iklan"
+				"name": "Pemblokiran iklan"
 			},
 			"it": {
-				"name": "Blocco degli annunci",
-				"description": "Blocca inserzioni"
+				"name": "Blocco degli annunci"
 			},
 			"ja": {
-				"name": "広告やポップアップをブロック",
-				"description": "広告をブロックします。"
+				"name": "広告やポップアップをブロック"
 			},
 			"ko": {
-				"name": "광고와 팝업 차단",
-				"description": "광고 차단"
+				"name": "광고와 팝업 차단"
 			},
 			"mk": {
-				"name": "Блокирање на реклами",
-				"description": "Блокирајте реклами"
+				"name": "Блокирање на реклами"
 			},
 			"nl": {
-				"name": "Advertentieblokkering",
-				"description": "Advertenties blokkeren"
+				"name": "Advertentieblokkering"
 			},
 			"no": {
-				"name": "Annonseblokkering",
-				"description": "Blokker reklamer"
+				"name": "Annonseblokkering"
 			},
 			"pl": {
-				"name": "Blokowanie reklam",
-				"description": "Blokuj reklamy"
+				"name": "Blokowanie reklam"
 			},
 			"pt": {
-				"name": "Bloqueador de publicidade",
-				"description": "Bloqueia anúncios"
+				"name": "Bloqueador de publicidade"
 			},
 			"pt_BR": {
-				"name": "Bloqueio de anúncios",
-				"description": "Bloqueia anúncios"
+				"name": "Bloqueio de anúncios"
 			},
 			"pt_PT": {
-				"name": "Bloqueador de publicidade",
-				"description": "Bloqueia anúncios"
+				"name": "Bloqueador de publicidade"
 			},
 			"ro": {
-				"name": "Blocare reclame",
-				"description": "Blocați reclamele"
+				"name": "Blocare reclame"
 			},
 			"ru": {
-				"name": "Блокировка рекламы",
-				"description": "Блокировать рекламу"
+				"name": "Блокировка рекламы"
 			},
 			"sk": {
-				"name": "Blokovať reklám",
-				"description": "Blokovanie reklám"
+				"name": "Blokovať reklám"
 			},
 			"sl": {
-				"name": "Zaviranje oglasov",
-				"description": "Onemogočite oglase"
+				"name": "Zaviranje oglasov"
 			},
 			"sr": {
-				"name": "Blokator reklama",
-				"description": "Blokiraj reklame"
+				"name": "Blokator reklama"
 			},
 			"sv": {
-				"name": "Annonsblockering",
-				"description": "Blockera annonser"
+				"name": "Annonsblockering"
 			},
 			"tr": {
-				"name": "Reklam engelleme",
-				"description": "Reklamları engelle"
+				"name": "Reklam engelleme"
 			},
 			"uk": {
-				"name": "Блокування реклами",
-				"description": "Блокувати рекламу"
+				"name": "Блокування реклами"
 			},
 			"vi": {
-				"name": "Chặn quảng cáo và popup",
-				"description": "Chặn quảng cáo"
+				"name": "Chặn quảng cáo và popup"
 			},
 			"zh": {
-				"name": "广告拦截",
-				"description": "拦截广告"
+				"name": "广告拦截"
 			},
 			"zh_TW": {
-				"name": "廣告封鎖",
-				"description": "封鎖廣告"
+				"name": "廣告封鎖"
 			}
 		},
 		"2": {
 			"ar": {
-				"name": "الخصوصية",
-				"description": "حظر أدوات التتبع"
+				"name": "الخصوصية"
 			},
 			"be": {
-				"name": "Антытрэкінг",
-				"description": "Блакіраваць трэкеры"
+				"name": "Антытрэкінг"
 			},
 			"bg": {
-				"name": "Поверителност",
-				"description": "Блокиране на тракери"
+				"name": "Поверителност"
 			},
 			"ca": {
-				"name": "Privacitat",
-				"description": "Bloquejar rastrejadors"
+				"name": "Privacitat"
 			},
 			"cs": {
-				"name": "Soukromí",
-				"description": "Blokovat slídiče"
+				"name": "Soukromí"
 			},
 			"da": {
-				"name": "Fortrolighed",
-				"description": "Blokér trackere"
+				"name": "Fortrolighed"
 			},
 			"de": {
-				"name": "Datenschutz",
-				"description": "Tracker sperren"
+				"name": "Datenschutz"
 			},
 			"el": {
-				"name": "Ιδιωτικότητα",
-				"description": "Αποκλεισμός γνωστών ιχνηλατών"
+				"name": "Ιδιωτικότητα"
 			},
 			"en": {
-				"name": "Privacy",
-				"description": "Block trackers"
+				"name": "Privacy"
 			},
 			"es": {
-				"name": "Privacidad",
-				"description": "Bloquear rastreadores"
+				"name": "Privacidad"
 			},
 			"es_ES": {
-				"name": "Privacidad",
-				"description": "Bloquear rastreadores"
+				"name": "Privacidad"
 			},
 			"fa": {
-				"name": "حریم خصوصی",
-				"description": "مسدودسازی ردیاب های شناخته شده"
+				"name": "حریم خصوصی"
 			},
 			"fi": {
-				"name": "Tietosuoja",
-				"description": "Estä seurannat"
+				"name": "Tietosuoja"
 			},
 			"fr": {
-				"name": "Vie privée",
-				"description": "Bloquez les traqueurs"
+				"name": "Vie privée"
 			},
 			"he": {
-				"name": "פרטיות",
-				"description": "חסום עוקבנים"
+				"name": "פרטיות"
 			},
 			"hr": {
-				"name": "Privatnost",
-				"description": "Blokiranje poznatih alata za praćenje"
+				"name": "Privatnost"
 			},
 			"hu": {
-				"name": "Adatvédelem",
-				"description": "Nyomkövetők blokkolása"
+				"name": "Adatvédelem"
 			},
 			"id": {
-				"name": "Privasi",
-				"description": "Blokir pelacak"
+				"name": "Privasi"
 			},
 			"it": {
-				"name": "Privacy",
-				"description": "Blocca tracciatori"
+				"name": "Privacy"
 			},
 			"ja": {
-				"name": "追跡防止",
-				"description": "トラッカー（個人情報追跡）をブロックします。"
+				"name": "追跡防止"
 			},
 			"ko": {
-				"name": "프라이버시",
-				"description": "추적기 차단"
+				"name": "프라이버시"
 			},
 			"mk": {
-				"name": "Приватност",
-				"description": "Блокирајте тракери"
+				"name": "Приватност"
 			},
 			"nl": {
-				"name": "Privacy",
-				"description": "Volgers blokkeren"
+				"name": "Privacy"
 			},
 			"no": {
-				"name": "Personvern",
-				"description": "Blokker sporere"
+				"name": "Personvern"
 			},
 			"pl": {
-				"name": "Prywatność",
-				"description": "Blokuj moduły śledzące"
+				"name": "Prywatność"
 			},
 			"pt": {
-				"name": "Privacidade",
-				"description": "Bloquear monitorizadores"
+				"name": "Privacidade"
 			},
 			"pt_BR": {
-				"name": "Privacidade",
-				"description": "Bloquear rastreadores"
+				"name": "Privacidade"
 			},
 			"pt_PT": {
-				"name": "Privacidade",
-				"description": "Bloquear monitorizadores"
+				"name": "Privacidade"
 			},
 			"ro": {
-				"name": "Viața privată",
-				"description": "Blocați trackerele"
+				"name": "Viața privată"
 			},
 			"ru": {
-				"name": "Антитрекинг",
-				"description": "Блокировать трекеры"
+				"name": "Антитрекинг"
 			},
 			"sk": {
-				"name": "Súkromie",
-				"description": "Blokuje známe sledovače"
+				"name": "Súkromie"
 			},
 			"sl": {
-				"name": "Zasebnost",
-				"description": "Onemogoči sledilce"
+				"name": "Zasebnost"
 			},
 			"sr": {
-				"name": "Privatnost",
-				"description": "Blokiraj praćenja"
+				"name": "Privatnost"
 			},
 			"sv": {
-				"name": "Sekretess",
-				"description": "Blockera spårare"
+				"name": "Sekretess"
 			},
 			"tr": {
-				"name": "Gizlilik",
-				"description": "İzleyicileri engelle"
+				"name": "Gizlilik"
 			},
 			"uk": {
-				"name": "Приватність",
-				"description": "Блокувати елементи стеження"
+				"name": "Приватність"
 			},
 			"vi": {
-				"name": "Riêng tư",
-				"description": "Chặn trình theo dõi"
+				"name": "Riêng tư"
 			},
 			"zh": {
-				"name": "隐私",
-				"description": "拦截跟踪器"
+				"name": "隐私"
 			},
 			"zh_TW": {
-				"name": "隱私",
-				"description": "封鎖追蹤器"
+				"name": "隱私"
 			}
 		},
 		"3": {
 			"ar": {
-				"name": "وسائل التواصل الاجتماعية",
-				"description": "حظر عناصر وسائل التواصل الاجتماعي مثل زر الإعجاب والمشاركة"
+				"name": "وسائل التواصل الاجتماعية"
 			},
 			"be": {
-				"name": "Віджэты сацыяльных сетак",
-				"description": "Блакаваць такія элементы сацыяльных сетак, як кнопкі \"Падабаецца\" і \"Падзяліцца\""
+				"name": "Віджэты сацыяльных сетак"
 			},
 			"bg": {
-				"name": "Социални уиджети",
-				"description": "Блокиране на елементи в социалните медии, като бутоните \"Харесвам\" и \"Сподели\""
+				"name": "Социални уиджети"
 			},
 			"ca": {
-				"name": "Ginys socials",
-				"description": "Bloqueja els elements de xarxes socials com ara els botons M'agrada i Compartir"
+				"name": "Ginys socials"
 			},
 			"cs": {
-				"name": "Sociální widgety",
-				"description": "Blokování prvků sociálních médií, jako jsou tlačítka To se mi líbí a Sdílet"
+				"name": "Sociální widgety"
 			},
 			"da": {
-				"name": "Sociale widgets",
-				"description": "Blokér sociale medieelementer såsom Like- og Del-knapper"
+				"name": "Sociale widgets"
 			},
 			"de": {
-				"name": "Soziale Widgets",
-				"description": "Sperren von Elementen sozialer Medien wie „Gefällt mir”- und „Teilen”-Schaltflächen"
+				"name": "Soziale Widgets"
 			},
 			"el": {
-				"name": "Widgets κοινωνικών δικτύων",
-				"description": "Αποκλείστε στοιχεία κοινωνικών μέσων, όπως τα κουμπιά «Μου αρέσει» και «Κοινοποίηση»"
+				"name": "Widgets κοινωνικών δικτύων"
 			},
 			"en": {
-				"name": "Social widgets",
-				"description": "Block social media elements such as Like and Share buttons"
+				"name": "Social widgets"
 			},
 			"es": {
-				"name": "Widgets de redes sociales",
-				"description": "Bloquear elementos de redes sociales como los botones \"Me gusta\" y \"Compartir\""
+				"name": "Widgets de redes sociales"
 			},
 			"es_ES": {
-				"name": "Widgets de redes sociales",
-				"description": "Bloquear elementos de redes sociales como los botones \"Me gusta\" y \"Compartir\""
+				"name": "Widgets de redes sociales"
 			},
 			"fa": {
-				"name": "ویدجت اجتماعی",
-				"description": "عناصر رسانه های اجتماعی مانند دکمه های لایک و اشتراک گذاری را مسدود کنید"
+				"name": "ویدجت اجتماعی"
 			},
 			"fi": {
-				"name": "Sosiaaliset widgetit",
-				"description": "Estä tykkäys- ja jakopainikkeiden kaltaisia sosiaalisen median elementtejä."
+				"name": "Sosiaaliset widgetit"
 			},
 			"fr": {
-				"name": "Widgets sociaux",
-				"description": "Bloque les éléments de médias sociaux tels que les boutons \"J'aime\" et \"Partager\""
+				"name": "Widgets sociaux"
 			},
 			"he": {
-				"name": "יישומונים חברתיים",
-				"description": "חסום אלמנטים של מדיה חברתית כגון לחצני 'אהבתי' ו'שתף'"
+				"name": "יישומונים חברתיים"
 			},
 			"hr": {
-				"name": "Widgeti društvenih mreža",
-				"description": "Blokiranje elemenata društvenih medija kao što su gumbi Sviđanje i Zajedničko korištenje"
+				"name": "Widgeti društvenih mreža"
 			},
 			"hu": {
-				"name": "Közösségi widgetek",
-				"description": "Blokkolja a közösségi média elemeket, például a Tetszik és a Megosztás gombokat"
+				"name": "Közösségi widgetek"
 			},
 			"id": {
-				"name": "Widget sosial",
-				"description": "Blokir elemen media sosial seperti tombol Suka dan Bagikan"
+				"name": "Widget sosial"
 			},
 			"it": {
-				"name": "Widget delle reti social",
-				"description": "Blocca gli elementi dei social media come i pulsanti Mi piace e Condividi"
+				"name": "Widget delle reti social"
 			},
 			"ja": {
-				"name": "SNSウィジェット",
-				"description": "「いいね！」や「シェア」ボタンなどSNS要素をブロックします。"
+				"name": "SNSウィジェット"
 			},
 			"ko": {
-				"name": "소셜 위젯",
-				"description": "좋아요 및 공유 버튼과 같은 소셜 미디어 요소를 차단합니다."
+				"name": "소셜 위젯"
 			},
 			"mk": {
-				"name": "Социјални додатоци",
-				"description": "Блокирајте ги елементите на социјалните мрежи како што се копчињата „Ми се допаѓа“ и „Сподели“"
+				"name": "Социјални додатоци"
 			},
 			"nl": {
-				"name": "Sociale widgets",
-				"description": "Sociale media-elementen blokkeren, zoals de knoppen Vind ik leuk en Deel"
+				"name": "Sociale widgets"
 			},
 			"no": {
-				"name": "Sosiale widgets",
-				"description": "Blokker sosiale medieelementer som Liker- og Del-knapper"
+				"name": "Sosiale widgets"
 			},
 			"pl": {
-				"name": "Widżety społecznościowe",
-				"description": "Blokuj elementy mediów społecznościowych, takie jak przyciski Lubię to i Udostępnij"
+				"name": "Widżety społecznościowe"
 			},
 			"pt": {
-				"name": "Widgets sociais",
-				"description": "Bloqueie elementos de mídia social, como botões Gostar e Partilhar"
+				"name": "Widgets sociais"
 			},
 			"pt_BR": {
-				"name": "Widgets sociais",
-				"description": "Bloqueie elementos de mídia social, como botões Curtir e Compartilhar"
+				"name": "Widgets sociais"
 			},
 			"pt_PT": {
-				"name": "Widgets sociais",
-				"description": "Bloqueie elementos de mídia social, como botões Gostar e Partilhar"
+				"name": "Widgets sociais"
 			},
 			"ro": {
-				"name": "Widget-uri sociale",
-				"description": "Blocați elementele de social media, cum ar fi butoanele Îmi place și Partajare"
+				"name": "Widget-uri sociale"
 			},
 			"ru": {
-				"name": "Виджеты социальных сетей",
-				"description": "Блокировать кнопки социальных сетей — например, «Мне нравится» и «Поделиться»"
+				"name": "Виджеты социальных сетей"
 			},
 			"sk": {
-				"name": "Sociálne widgety",
-				"description": "Blokujte prvky sociálnych médií, ako sú tlačidlá Páči sa mi a Zdieľať"
+				"name": "Sociálne widgety"
 			},
 			"sl": {
-				"name": "Družbeni dodatki",
-				"description": "Onemogočite elemente družbenih medijev, kot sta gumba 'Všečkaj' in 'Deli'"
+				"name": "Družbeni dodatki"
 			},
 			"sr": {
-				"name": "Vidžeti društvenih mreža",
-				"description": "Blokiranje elemenata društvenih medija kao što su dugmad \"Like\" i \"Deljenje\""
+				"name": "Vidžeti društvenih mreža"
 			},
 			"sv": {
-				"name": "Sociala widgetar",
-				"description": "Blockera element i sociala medier som Gilla- och Dela-knappar"
+				"name": "Sociala widgetar"
 			},
 			"tr": {
-				"name": "Sosyal araçları",
-				"description": "Beğen ve Paylaş düğmeleri gibi sosyal medya öğelerini engelleyin"
+				"name": "Sosyal araçları"
 			},
 			"uk": {
-				"name": "Віджети соціальних мереж",
-				"description": "Блокувати елементи соціальних мереж, зокрема кнопки «Подобається» та «Поділитися»"
+				"name": "Віджети соціальних мереж"
 			},
 			"vi": {
-				"name": "Tiện ích xã hội",
-				"description": "Chặn các yếu tố truyền thông xã hội như nút Thích và Chia sẻ"
+				"name": "Tiện ích xã hội"
 			},
 			"zh": {
-				"name": "社交小工具",
-				"description": "屏蔽社交媒体元素，如「赞」和「转发」等等"
+				"name": "社交小工具"
 			},
 			"zh_TW": {
-				"name": "社群小工具",
-				"description": "封鎖社群媒體元件，例如「讚」和「共用」按鈕"
+				"name": "社群小工具"
 			}
 		},
 		"4": {
 			"ar": {
-				"name": "المضايقات",
-				"description": "حظر العناصر المزعجة، مثل إشعارات ملفات تعريف الارتباط أو النوافذ المنبثقة"
+				"name": "المضايقات"
 			},
 			"be": {
-				"name": "Раздражняльнікі",
-				"description": "Блакаваць раздражняльныя вэб-элементы, такія як апавяшчэнні аб файлах cookie або ўсплывальныя вокны на старонцы"
+				"name": "Раздражняльнікі"
 			},
 			"bg": {
-				"name": "Дразнещи",
-				"description": "Блокиране на досадни уеб елементи, като уведомления за бисквитки или изскачащи прозорци на страницата"
+				"name": "Дразнещи"
 			},
 			"ca": {
-				"name": "Molèsties",
-				"description": "Bloqueja elements web molestos, com ara notificacions de galetes o finestres emergents dins de la pàgina"
+				"name": "Molèsties"
 			},
 			"cs": {
-				"name": "Obtěžování",
-				"description": "Blokování obtěžujících webových prvků, jako jsou oznámení o souborech cookies nebo vyskakovací okna na stránce"
+				"name": "Obtěžování"
 			},
 			"da": {
-				"name": "Irritationer",
-				"description": "Blokér elementer såsom cookie-meddelelser eller popup-vinduer på siden"
+				"name": "Irritationer"
 			},
 			"de": {
-				"name": "Belästigungen",
-				"description": "Sperren von störenden Web-Elementen, wie Cookie-Hinweisen oder In-Page-Popups"
+				"name": "Belästigungen"
 			},
 			"el": {
-				"name": "Ενοχλητικά",
-				"description": "Αποκλείστε ενοχλητικά διαδικτυακά στοιχεία, όπως ειδοποιήσεις cookie ή αναδυόμενα παράθυρα στη σελίδα"
+				"name": "Ενοχλητικά"
 			},
 			"en": {
-				"name": "Annoyances",
-				"description": "Block annoying web elements, such as cookie notices or in-page popups"
+				"name": "Annoyances"
 			},
 			"es": {
-				"name": "Elementos molestos",
-				"description": "Bloquear elementos web molestos, como avisos de cookies o ventanas emergentes dentro de la página"
+				"name": "Elementos molestos"
 			},
 			"es_ES": {
-				"name": "Elementos molestos",
-				"description": "Bloquear elementos web molestos, como avisos de cookies o ventanas emergentes dentro de la página"
+				"name": "Elementos molestos"
 			},
 			"fa": {
-				"name": "مزاحمت ها",
-				"description": "عناصر مزاحم وب مانند اعلامیه های کوکی یا پنجره های بازشو داخل صفحه را مسدود کنید"
+				"name": "مزاحمت ها"
 			},
 			"fi": {
-				"name": "Ärsykkeet",
-				"description": "Estä evästeilmoitusten ja sivun sisäisäisten ponnahdusten kaltaisia ärsyttäviä verkkoelementtejä."
+				"name": "Ärsykkeet"
 			},
 			"fr": {
-				"name": "Nuisances",
-				"description": "Bloquez les éléments web gênants, tels que les avis de cookies ou les fenêtres contextuelles sur la page"
+				"name": "Nuisances"
 			},
 			"he": {
-				"name": "מטרדים",
-				"description": "חסום רכיבי אינטרנט מעצבנים, כגון הודעות על קובצי Cookie או חלונות קופצים בדף"
+				"name": "מטרדים"
 			},
 			"hr": {
-				"name": "Smetnje",
-				"description": "Blokiranje dosadnih web elemenata, kao što su obavijesti o kolačićima ili skočni prozori na stranici"
+				"name": "Smetnje"
 			},
 			"hu": {
-				"name": "Kellemetlenségek",
-				"description": "Blokkolja a bosszantó webes elemeket, például a cookie-kra vonatkozó értesítéseket vagy az oldalon belüli felugró ablakokat"
+				"name": "Kellemetlenségek"
 			},
 			"id": {
-				"name": "Gangguan",
-				"description": "Blokir elemen web mengganggu, seperti pemberitahuan cookie atau pop-up dalam halaman web"
+				"name": "Gangguan"
 			},
 			"it": {
-				"name": "Anti-Fastidio",
-				"description": "Blocca gli elementi fastidiosi nel web, come i messaggi dei cookie o le apparizioni all'interno delle pagine"
+				"name": "Anti-Fastidio"
 			},
 			"ja": {
-				"name": "迷惑要素",
-				"description": "クッキー（Cookie）使用同意通知やページ内ポップアップなどの迷惑なWeb要素をブロックします。"
+				"name": "迷惑要素"
 			},
 			"ko": {
-				"name": "방해 요소",
-				"description": "쿠키 알림 또는 페이지 내 팝업과 같은 성가신 웹 요소를 차단합니다."
+				"name": "방해 요소"
 			},
 			"mk": {
-				"name": "Вознемирувања",
-				"description": "Блокирајте досадни веб-елементи, како што се известувања за колачиња или скокачки прозорци"
+				"name": "Вознемирувања"
 			},
 			"nl": {
-				"name": "Ergernissen",
-				"description": "Vervelende webelementen blokkeren, zoals cookiemeldingen of pop-ups op de pagina"
+				"name": "Ergernissen"
 			},
 			"no": {
-				"name": "Irritasjoner",
-				"description": "Blokker irriterende nettelementer, for eksempel infokapselvarsler eller nettsiders egne popup-vinduer"
+				"name": "Irritasjoner"
 			},
 			"pl": {
-				"name": "Elementy irytujące",
-				"description": "Blokuj irytujące elementy internetowe, takie jak powiadomienia o plikach cookie lub wyskakujące okienka na stronie"
+				"name": "Elementy irytujące"
 			},
 			"pt": {
-				"name": "Aborrecimentos",
-				"description": "Bloquear elementos da Web irritantes, como avisos de cookies ou pop-ups na página"
+				"name": "Aborrecimentos"
 			},
 			"pt_BR": {
-				"name": "Aborrecimentos",
-				"description": "Bloqueie elementos irritantes da web, como avisos de cookies ou pop-ups na página"
+				"name": "Aborrecimentos"
 			},
 			"pt_PT": {
-				"name": "Aborrecimentos",
-				"description": "Bloquear elementos da Web irritantes, como avisos de cookies ou pop-ups na página"
+				"name": "Aborrecimentos"
 			},
 			"ro": {
-				"name": "Perturbări",
-				"description": "Blocați elementele web enervante, cum ar fi notificările privind cookie-urile sau pop-up-urile din pagină"
+				"name": "Perturbări"
 			},
 			"ru": {
-				"name": "Раздражители",
-				"description": "Блокировать уведомления о куки и всплывающие окна"
+				"name": "Раздражители"
 			},
 			"sk": {
-				"name": "Obťažujúce reklamy",
-				"description": "Blokovanie otravných webových prvkov, ako sú napríklad oznámenia o súboroch cookie alebo vyskakovacie okná na stránke"
+				"name": "Obťažujúce reklamy"
 			},
 			"sl": {
-				"name": "Nadlegovanje",
-				"description": "Onemogočite nadležne spletne elemente, kot so obvestila o piškotkih ali pojavna okna na strani"
+				"name": "Nadlegovanje"
 			},
 			"sr": {
-				"name": "Uznemiravanja",
-				"description": "Blokiranje dosadnih Veb elemenata, kao što su obaveštenja o kolačićima ili iskačući prozori na stranici"
+				"name": "Uznemiravanja"
 			},
 			"sv": {
-				"name": "Irritationsmoment",
-				"description": "Blockera irriterande webbelement, till exempel meddelanden om cookies eller popup-fönster på sidan"
+				"name": "Irritationsmoment"
 			},
 			"tr": {
-				"name": "Can Sıkıcı Öğeler",
-				"description": "Çerez bildirimleri veya sayfa içi açılır pencereler gibi can sıkıcı web öğelerini engelleyin"
+				"name": "Can Sıkıcı Öğeler"
 			},
 			"uk": {
-				"name": "Подразники",
-				"description": "Блокувати дратівливі вебелементи, наприклад, повідомлення про кукі або спливні вікна на сторінці"
+				"name": "Подразники"
 			},
 			"vi": {
-				"name": "Làm phiền",
-				"description": "Chặn các yếu tố web gây phiền nhiễu, chẳng hạn như thông báo cookie hoặc cửa sổ bật lên trong trang"
+				"name": "Làm phiền"
 			},
 			"zh": {
-				"name": "扰人的",
-				"description": "屏蔽恼人的网络元素，如 Cookie 通知或网页上弹出式窗口"
+				"name": "扰人的"
 			},
 			"zh_TW": {
-				"name": "惱人的事物",
-				"description": "封鎖諸如 cookie 通知或在頁的彈出式視窗之惱人的網路元件"
+				"name": "惱人的事物"
 			}
 		},
 		"5": {
 			"ar": {
-				"name": "الأمن",
-				"description": "حظر الطلبات الموجهة إلى مواقع التصيد الاحتيالي والضارة"
+				"name": "الأمن"
 			},
 			"be": {
-				"name": "Бяспека",
-				"description": "Блакаваць запыты да фішынгавых і шкоднасных сайтаў"
+				"name": "Бяспека"
 			},
 			"bg": {
-				"name": "Безопасност",
-				"description": "Блокиране на заявки към фишинг и злонамерени сайтове"
+				"name": "Безопасност"
 			},
 			"ca": {
-				"name": "Seguretat",
-				"description": "Bloqueja les sol·licituds a llocs web de phishing i maliciosos"
+				"name": "Seguretat"
 			},
 			"cs": {
-				"name": "Bezpečnost",
-				"description": "Blokování požadavků na krádež identity a nebezpečné weby"
+				"name": "Bezpečnost"
 			},
 			"da": {
-				"name": "Sikkerhed",
-				"description": "Blokér phishing og ondsindede websteder"
+				"name": "Sikkerhed"
 			},
 			"de": {
-				"name": "Sicherheit",
-				"description": "Sperren von Anfragen an Phishing- und bösartige Websites"
+				"name": "Sicherheit"
 			},
 			"el": {
-				"name": "Ασφάλεια",
-				"description": "Αποκλείστε αιτήματα προς ιστοτόπους phishing και κακόβουλους ιστότοπους"
+				"name": "Ασφάλεια"
 			},
 			"en": {
-				"name": "Security",
-				"description": "Block requests to phishing and malicious websites"
+				"name": "Security"
 			},
 			"es": {
-				"name": "Seguridad",
-				"description": "Bloquear solicitudes a sitios web maliciosos y de phishing"
+				"name": "Seguridad"
 			},
 			"es_ES": {
-				"name": "Seguridad",
-				"description": "Bloquear solicitudes a sitios web maliciosos y de phishing"
+				"name": "Seguridad"
 			},
 			"fa": {
-				"name": "امنیتی",
-				"description": "مسدود کردن درخواست های فیشینگ و وب سایت های مخرب"
+				"name": "امنیتی"
 			},
 			"fi": {
-				"name": "Tietoturva",
-				"description": "Estä pyynnöt tietojenkalastelu- ja muille haitallisille sivustoille."
+				"name": "Tietoturva"
 			},
 			"fr": {
-				"name": "Sécurité",
-				"description": "Bloque les requêtes adressées à des sites web malveillants et ceux d'hameçonnage"
+				"name": "Sécurité"
 			},
 			"he": {
-				"name": "אבטחה",
-				"description": "חסימת בקשות לדיוג ולאתרי אינטרנט זדוניים"
+				"name": "אבטחה"
 			},
 			"hr": {
-				"name": "Sigurnost",
-				"description": "Blokiranje zahtjeva za krađu identiteta i zlonamjernih web-mjesta"
+				"name": "Sigurnost"
 			},
 			"hu": {
-				"name": "Biztonság",
-				"description": "Az adathalász és rosszindulatú webhelyekre irányuló kérések blokkolása"
+				"name": "Biztonság"
 			},
 			"id": {
-				"name": "Keamanan",
-				"description": "Blokir permintaan ke situs web phishing dan berbahaya"
+				"name": "Keamanan"
 			},
 			"it": {
-				"name": "Sicurezza",
-				"description": "Blocca le richieste verso siti di phishing e malevoli"
+				"name": "Sicurezza"
 			},
 			"ja": {
-				"name": "セキュリティ",
-				"description": "フィッシング・悪質・危険ウェブサイトへのリクエストをブロックします。"
+				"name": "セキュリティ"
 			},
 			"ko": {
-				"name": "보안",
-				"description": "피싱 및 악성 웹사이트에 대한 요청을 차단합니다."
+				"name": "보안"
 			},
 			"mk": {
-				"name": "Безбедност",
-				"description": "Блокирајте барања за фишинг и злонамерни веб-локации"
+				"name": "Безбедност"
 			},
 			"nl": {
-				"name": "Beveiliging",
-				"description": "Verzoeken aan phishing en kwaadaardige websites blokkeren"
+				"name": "Beveiliging"
 			},
 			"no": {
-				"name": "Sikkerhet",
-				"description": "Blokker forespørsler til phishing-sider og skadelige nettsteder"
+				"name": "Sikkerhet"
 			},
 			"pl": {
-				"name": "Bezpieczeństwo",
-				"description": "Blokuj żądania do phishingowych i złośliwych stron internetowych"
+				"name": "Bezpieczeństwo"
 			},
 			"pt": {
-				"name": "Segurança",
-				"description": "Bloquear solicitações de phishing e sites mal-intencionados"
+				"name": "Segurança"
 			},
 			"pt_BR": {
-				"name": "Segurança",
-				"description": "Bloquear solicitações de phishing e sites maliciosos"
+				"name": "Segurança"
 			},
 			"pt_PT": {
-				"name": "Segurança",
-				"description": "Bloquear solicitações de phishing e sites mal-intencionados"
+				"name": "Segurança"
 			},
 			"ro": {
-				"name": "Securitate",
-				"description": "Blocați solicitările către site-uri web de phishing și site-uri web malițioase"
+				"name": "Securitate"
 			},
 			"ru": {
-				"name": "Безопасность",
-				"description": "Блокировать запросы к фишинговым и вредоносным сайтам"
+				"name": "Безопасность"
 			},
 			"sk": {
-				"name": "Bezpečnosť",
-				"description": "Blokovanie požiadaviek na phishingové a škodlivé webové stránky"
+				"name": "Bezpečnosť"
 			},
 			"sl": {
-				"name": "Varnost",
-				"description": "Onemogočite zahteve za lažno predstavljanje in zlonamerne spletne strani"
+				"name": "Varnost"
 			},
 			"sr": {
-				"name": "Bezbednost",
-				"description": "Blokiranje zahteva za phishing i zlonamerne Web lokacije"
+				"name": "Bezbednost"
 			},
 			"sv": {
-				"name": "Säkerhet",
-				"description": "Blockera förfrågningar till phishing- och skadliga webbplatser"
+				"name": "Säkerhet"
 			},
 			"tr": {
-				"name": "Güvenlik",
-				"description": "Kimlik avı ve kötü amaçlı sitelere yönelik istekleri engelleyin"
+				"name": "Güvenlik"
 			},
 			"uk": {
-				"name": "Безпека",
-				"description": "Блокувати запити до фішингових та шкідливих вебсайтів"
+				"name": "Безпека"
 			},
 			"vi": {
-				"name": "Bảo mật",
-				"description": "Chặn yêu cầu đến các trang web lừa đảo và độc hại"
+				"name": "Bảo mật"
 			},
 			"zh": {
-				"name": "安全",
-				"description": "屏蔽钓鱼和恶意网站的请求"
+				"name": "安全"
 			},
 			"zh_TW": {
-				"name": "安全性",
-				"description": "封鎖網路釣魚和惡意網站的請求"
+				"name": "安全性"
 			}
 		},
 		"6": {
 			"ar": {
-				"name": "أخرى",
-				"description": "تحتوي هذه المجموعة على تصفيات مختلفة لا تتناسب مع الفئات الأخرى"
+				"name": "أخرى"
 			},
 			"be": {
-				"name": "Іншыя",
-				"description": "Гэтая група змяшчае розныя фільтры, якія не ўпісваюцца ў іншыя катэгорыі"
+				"name": "Іншыя"
 			},
 			"bg": {
-				"name": "Други",
-				"description": "Тази група съдържа различни филтри, които не попадат в други категории"
+				"name": "Други"
 			},
 			"ca": {
-				"name": "Altres",
-				"description": "Aquest grup conté diversos filtres que no encaixen en altres categories"
+				"name": "Altres"
 			},
 			"cs": {
-				"name": "Ostatní",
-				"description": "Tato skupina obsahuje různé filtry, které se nespadají do jiných kategorií"
+				"name": "Ostatní"
 			},
 			"da": {
-				"name": "Andre",
-				"description": "Denne gruppe indeholder div. filtre, som ikke passer ind i andre kategorier"
+				"name": "Andre"
 			},
 			"de": {
-				"name": "Sonstiges",
-				"description": "Diese Gruppe enthält verschiedene Filter, die nicht in andere Kategorien passen"
+				"name": "Sonstiges"
 			},
 			"el": {
-				"name": "Άλλα",
-				"description": "Αυτή η ομάδα περιέχει διάφορα φίλτρα που δεν ανήκουν σε άλλες κατηγορίες"
+				"name": "Άλλα"
 			},
 			"en": {
-				"name": "Other",
-				"description": "This group contains various filters that don't fit into other categories"
+				"name": "Other"
 			},
 			"es": {
-				"name": "Otros",
-				"description": "Este grupo contiene varios filtros que no encajan en otras categorías"
+				"name": "Otros"
 			},
 			"es_ES": {
-				"name": "Otros",
-				"description": "Este grupo contiene varios filtros que no encajan en otras categorías"
+				"name": "Otros"
 			},
 			"fa": {
-				"name": "سایرین",
-				"description": "این گروه حاوی فیلترهای مختلفی است که در دسته بندی های دیگر قرار نمی گیرند"
+				"name": "سایرین"
 			},
 			"fi": {
-				"name": "Muut",
-				"description": "Tämä ryhmä sisältää erilaisia suodattimia, jotka eivät sovi muihin kategorioihin."
+				"name": "Muut"
 			},
 			"fr": {
-				"name": "Autres",
-				"description": "Ce groupe contient des filtres de toute sorte qui ne rentrent pas dans d'autres catégories"
+				"name": "Autres"
 			},
 			"he": {
-				"name": "אחרים",
-				"description": "קבוצה זו מכילה מסננים שונים שאינם מתאימים לקטגוריות אחרות"
+				"name": "אחרים"
 			},
 			"hr": {
-				"name": "Ostalo",
-				"description": "Ova grupa sadrži različite filtre koji se ne uklapaju u druge kategorije"
+				"name": "Ostalo"
 			},
 			"hu": {
-				"name": "Egyéb",
-				"description": "Ez a csoport különféle szűrőket tartalmaz, amelyek nem illenek más kategóriákba"
+				"name": "Egyéb"
 			},
 			"id": {
-				"name": "Lainnya",
-				"description": "Grup ini berisi berbagai filter yang tidak sesuai dengan kategori lainnya"
+				"name": "Lainnya"
 			},
 			"it": {
-				"name": "Altro",
-				"description": "Questo gruppo contiene vari filtri che non rientrano in altre categorie"
+				"name": "Altro"
 			},
 			"ja": {
-				"name": "その他",
-				"description": "他のカテゴリに当てはまらないさまざまなフィルタです。"
+				"name": "その他"
 			},
 			"ko": {
-				"name": "기타",
-				"description": "이 그룹에는 다른 카테고리에 맞지 않는 다양한 필터가 포함되어 있습니다."
+				"name": "기타"
 			},
 			"mk": {
-				"name": "Друго/и",
-				"description": "Оваа група содржи различни филтри кои не се вклопуваат во други категории"
+				"name": "Друго/и"
 			},
 			"nl": {
-				"name": "Anders",
-				"description": "Deze groep bevat verschillende filters die niet in andere categorieën passen"
+				"name": "Anders"
 			},
 			"no": {
-				"name": "Annet",
-				"description": "Denne gruppen inneholder ulike filtre som ikke passer inn i andre kategorier"
+				"name": "Annet"
 			},
 			"pl": {
-				"name": "Inne",
-				"description": "Ta grupa zawiera różne filtry, które nie pasują do innych kategorii"
+				"name": "Inne"
 			},
 			"pt": {
-				"name": "Noutro",
-				"description": "Este grupo contém vários filtros que não se encaixam em outras categorias"
+				"name": "Noutro"
 			},
 			"pt_BR": {
-				"name": "Outros",
-				"description": "Este grupo contém vários filtros que não se enquadram em outras categorias"
+				"name": "Outros"
 			},
 			"pt_PT": {
-				"name": "Noutro",
-				"description": "Este grupo contém vários filtros que não se encaixam em outras categorias"
+				"name": "Noutro"
 			},
 			"ro": {
-				"name": "Altele",
-				"description": "Acest grup conține diverse filtre care nu se încadrează în alte categorii"
+				"name": "Altele"
 			},
 			"ru": {
-				"name": "Другие",
-				"description": "Фильтры, которые не вошли в другие категории"
+				"name": "Другие"
 			},
 			"sk": {
-				"name": "Iné",
-				"description": "Táto skupina obsahuje rôzne filtre, ktoré nepatria do iných kategórií"
+				"name": "Iné"
 			},
 			"sl": {
-				"name": "Drugo",
-				"description": "Ta skupina vsebuje različne filtre, ki ne sodijo v druge kategorije"
+				"name": "Drugo"
 			},
 			"sr": {
-				"name": "Ostalo",
-				"description": "Ova grupa sadrži razne filtere koji se ne uklapaju u druge kategorije"
+				"name": "Ostalo"
 			},
 			"sv": {
-				"name": "Övriga",
-				"description": "Denna grupp innehåller olika filter som inte passar in i andra kategorier"
+				"name": "Övriga"
 			},
 			"tr": {
-				"name": "Diğer",
-				"description": "Bu grup, diğer kategorilere uymayan çeşitli filtreler içerir"
+				"name": "Diğer"
 			},
 			"uk": {
-				"name": "Інше",
-				"description": "Ця група містить різні фільтри, які не підходять до інших категорій"
+				"name": "Інше"
 			},
 			"vi": {
-				"name": "Khác",
-				"description": "Nhóm này chứa nhiều bộ lọc khác nhau không phù hợp với các danh mục khác"
+				"name": "Khác"
 			},
 			"zh": {
-				"name": "其他",
-				"description": "不符合其他过滤器类别的过滤器"
+				"name": "其他"
 			},
 			"zh_TW": {
-				"name": "其它的",
-				"description": "不符合其他過濾器分類的過濾器"
+				"name": "其它的"
 			}
 		},
 		"7": {
 			"ar": {
-				"name": "حسب اللغة",
-				"description": "حظر الإعلانات على مواقع الويب بلغات المختلفة"
+				"name": "حسب اللغة"
 			},
 			"be": {
-				"name": "Моўныя",
-				"description": "Блакаваць рэкламу для вэб-сайтаў на вызначаных мовах"
+				"name": "Моўныя"
 			},
 			"bg": {
-				"name": "Специфични за езика",
-				"description": "Блокиране на реклами на уебсайтове на определени езици"
+				"name": "Специфични за езика"
 			},
 			"ca": {
-				"name": "Específics d'idioma",
-				"description": "Bloqueja anuncis en llocs web en idiomes específics"
+				"name": "Específics d'idioma"
 			},
 			"cs": {
-				"name": "Jazykově specifické",
-				"description": "Blokování reklam na webech ve vybraných jazycích"
+				"name": "Jazykově specifické"
 			},
 			"da": {
-				"name": "Sprogspecifik",
-				"description": "Blokér annoncer på websteder på bestemte sprog"
+				"name": "Sprogspecifik"
 			},
 			"de": {
-				"name": "Sprachspezifisch",
-				"description": "Sperren von Werbung auf Websites in bestimmten Sprachen"
+				"name": "Sprachspezifisch"
 			},
 			"el": {
-				"name": "Ειδικά γλώσσας",
-				"description": "Αποκλείστε διαφημίσεις σε ιστοσελίδες σε καθορισμένες γλώσσες"
+				"name": "Ειδικά γλώσσας"
 			},
 			"en": {
-				"name": "Language-specific",
-				"description": "Block ads on websites in specified languages"
+				"name": "Language-specific"
 			},
 			"es": {
-				"name": "Idioma específico",
-				"description": "Bloquear anuncios en sitios web en idiomas específicos"
+				"name": "Idioma específico"
 			},
 			"es_ES": {
-				"name": "Idioma específico",
-				"description": "Bloquear anuncios en sitios web en idiomas específicos"
+				"name": "Idioma específico"
 			},
 			"fa": {
-				"name": "زبان-محور",
-				"description": "مسدود کردن تبلیغات در وب سایت ها به زبان های مشخص"
+				"name": "زبان-محور"
 			},
 			"fi": {
-				"name": "Kielikohtaiset",
-				"description": "Estä mainoksia tietynkielisillä verkkosivustoilla."
+				"name": "Kielikohtaiset"
 			},
 			"fr": {
-				"name": "Spécifique à une langue",
-				"description": "Bloquez les publicités sur les sites web dans les langues spécifiées"
+				"name": "Spécifique à une langue"
 			},
 			"he": {
-				"name": "מוכוון שפה",
-				"description": "חסום מודעות באתרי אינטרנט בשפות מסוימות"
+				"name": "מוכוון שפה"
 			},
 			"hr": {
-				"name": "Na temelju jezika",
-				"description": "Blokiranje oglasa na web-lokacijama na određenim jezicima"
+				"name": "Na temelju jezika"
 			},
 			"hu": {
-				"name": "Nyelvspecifikus",
-				"description": "Hirdetések letiltása meghatározott nyelvű webhelyeken"
+				"name": "Nyelvspecifikus"
 			},
 			"id": {
-				"name": "Bahasa-spesifik",
-				"description": "Blokir iklan di situs web dalam bahasa tertentu"
+				"name": "Bahasa-spesifik"
 			},
 			"it": {
-				"name": "Specifico della lingua",
-				"description": "Blocca le inserzioni nei siti web in lingue specifiche"
+				"name": "Specifico della lingua"
 			},
 			"ja": {
-				"name": "言語特化フィルタ",
-				"description": "特定の言語のWebサイトで広告をブロックします。"
+				"name": "言語特化フィルタ"
 			},
 			"ko": {
-				"name": "특정 언어",
-				"description": "선택한 언어로 된 웹 사이트의 광고를 차단합니다."
+				"name": "특정 언어"
 			},
 			"mk": {
-				"name": "Специфични за јазикот",
-				"description": "Блокирајте реклами на веб-локации на одредени јазици"
+				"name": "Специфични за јазикот"
 			},
 			"nl": {
-				"name": "Taal-specifieke",
-				"description": "Advertenties op websites in bepaalde talen blokkeren"
+				"name": "Taal-specifieke"
 			},
 			"no": {
-				"name": "Språkspesifikke",
-				"description": "Blokker reklamer på nettsteder på spesifiserte språk"
+				"name": "Språkspesifikke"
 			},
 			"pl": {
-				"name": "Specyficzne językowe",
-				"description": "Blokuj reklamy na stronach internetowych w określonych językach"
+				"name": "Specyficzne językowe"
 			},
 			"pt": {
-				"name": "De um idioma específico",
-				"description": "Bloquear anúncios em sites em idiomas específicos"
+				"name": "De um idioma específico"
 			},
 			"pt_BR": {
-				"name": "Específico por idioma",
-				"description": "Bloquear anúncios em sites em idiomas específicos"
+				"name": "Específico por idioma"
 			},
 			"pt_PT": {
-				"name": "De um idioma específico",
-				"description": "Bloquear anúncios em sites em idiomas específicos"
+				"name": "De um idioma específico"
 			},
 			"ro": {
-				"name": "Limba specifică",
-				"description": "Blocați reclamele de pe site-urile web în limbile specificate"
+				"name": "Limba specifică"
 			},
 			"ru": {
-				"name": "Языковые",
-				"description": "Блокировать рекламу на сайтах на нужных языках"
+				"name": "Языковые"
 			},
 			"sk": {
-				"name": "Jazykovo špecifické",
-				"description": "Blokovanie reklám na webových stránkach v určených jazykoch"
+				"name": "Jazykovo špecifické"
 			},
 			"sl": {
-				"name": "Specifično za jezik",
-				"description": "Onemogočite oglase na spletnih straneh v določenih jezikih"
+				"name": "Specifično za jezik"
 			},
 			"sr": {
-				"name": "Poseban jezički",
-				"description": "Blokiranje oglasa na Veb lokacijama na navedenim jezicima"
+				"name": "Poseban jezički"
 			},
 			"sv": {
-				"name": "Språkspecifika",
-				"description": "Blockera annonser på webbplatser på specifika språk"
+				"name": "Språkspecifika"
 			},
 			"tr": {
-				"name": "Dile Özgü",
-				"description": "Belirli dillerdeki sitelerde reklamları engelleyin"
+				"name": "Dile Özgü"
 			},
 			"uk": {
-				"name": "Для певної мови",
-				"description": "Блокувати рекламу на вебсайтах певними мовами"
+				"name": "Для певної мови"
 			},
 			"vi": {
-				"name": "Ngôn ngữ cụ thể",
-				"description": "Chặn quảng cáo trên các trang web bằng các ngôn ngữ được chỉ định"
+				"name": "Ngôn ngữ cụ thể"
 			},
 			"zh": {
-				"name": "特定语言",
-				"description": "屏蔽指定语言网站上的广告"
+				"name": "特定语言"
 			},
 			"zh_TW": {
-				"name": "特定語言的",
-				"description": "阻擋使用特定語言的網站廣告"
+				"name": "特定語言的"
 			}
 		}
 	},
