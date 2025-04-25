@@ -366,8 +366,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.80.86",
-			"timeUpdated": "2025-04-25T14:06:50+0000",
+			"version": "2.3.80.87",
+			"timeUpdated": "2025-04-25T16:07:48+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -476,8 +476,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.63.99",
-			"timeUpdated": "2025-04-25T12:10:32+0000",
+			"version": "2.0.64.0",
+			"timeUpdated": "2025-04-25T15:06:59+0000",
 			"deprecated": false,
 			"languages": [
 				"ja"
@@ -594,8 +594,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/13_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.55.97",
-			"timeUpdated": "2025-04-25T12:10:37+0000",
+			"version": "2.0.55.98",
+			"timeUpdated": "2025-04-25T15:07:05+0000",
 			"deprecated": false,
 			"languages": [
 				"tr"
@@ -623,8 +623,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.28.44",
-			"timeUpdated": "2025-04-25T13:13:34+0000",
+			"version": "2.2.28.46",
+			"timeUpdated": "2025-04-25T16:08:23+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -728,8 +728,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.60.57",
-			"timeUpdated": "2025-04-25T13:13:38+0000",
+			"version": "2.0.60.59",
+			"timeUpdated": "2025-04-25T16:08:28+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -750,8 +750,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/19_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.31",
-			"timeUpdated": "2025-04-25T12:10:49+0000",
+			"version": "2.0.54.33",
+			"timeUpdated": "2025-04-25T16:08:29+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -772,8 +772,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/20_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.20.32",
-			"timeUpdated": "2025-04-25T13:13:40+0000",
+			"version": "2.0.20.33",
+			"timeUpdated": "2025-04-25T15:07:17+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1689,8 +1689,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.35.63",
-			"timeUpdated": "2025-04-25T10:08:21+0000",
+			"version": "2.1.35.64",
+			"timeUpdated": "2025-04-25T15:07:21+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
@@ -2337,6 +2337,29 @@
 				4
 			],
 			"downloadUrl": "https://filters.adtidy.org/android/filters/257_optimized.txt"
+		},
+		{
+			"filterId": 258,
+			"name": "uBlock Origin – Block Outsider Intrusion into LAN",
+			"description": "Prevents public Internet sites from digging into your LAN files.",
+			"timeAdded": "2025-04-23T11:43:28+0000",
+			"homepage": "https://github.com/uBlockOrigin/uAssets",
+			"expires": 432000,
+			"displayNumber": 2,
+			"groupId": 7,
+			"subscriptionUrl": "https://ublockorigin.github.io/uAssetsCDN/filters/lan-block.txt",
+			"platformsExcluded": [
+				"ext_chromium_mv3"
+			],
+			"trustLevel": "low",
+			"version": "2.0.0.0",
+			"timeUpdated": "2025-04-23T11:43:28+0000",
+			"deprecated": false,
+			"languages": [],
+			"tags": [
+				2
+			],
+			"downloadUrl": "https://filters.adtidy.org/android/filters/258_optimized.txt"
 		}
 	]
 }
