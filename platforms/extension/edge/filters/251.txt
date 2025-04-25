@@ -1,13 +1,13 @@
-! Checksum: NanBso8Hhd8GCDFLi1m4vQ
-! Diff-Path: ../patches/251/251-s-1745239737-14400.patch
+! Checksum: Zutf2TbMInczpOO7xcBhSA
+! Diff-Path: ../patches/251/251-s-1745570568-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.64
-! TimeUpdated: 2025-04-21T12:45:08+00:00
+! Version: 2.0.8.65
+! TimeUpdated: 2025-04-25T08:39:14+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 21April2025v2
+! OriginalVersion: 25April2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1872,7 +1872,8 @@ $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
-@@://www.google.com/maps?entry=$removeparam=utm_campaign
+@@://www.google.*/maps^$removeparam=utm_campaign
+@@://ipv6.google.com/maps^$removeparam=utm_campaign
 ! Should not be removed: dpr (Determines image search results' box sizes)
 ! ||www.google.$removeparam=stick (Breaks boxart feeds on the top of movie-related searches)
 !!! ——— TikTok ———

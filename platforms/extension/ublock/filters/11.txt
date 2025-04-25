@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: q7StpffSYK0u1qLpz3Iybw
-! Diff-Path: ../patches/11/11-s-1745500730-3600.patch
+! Checksum: HuFLai3j2YuopfqYInfsaw
+! Diff-Path: ../patches/11/11-s-1745587032-3600.patch
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.60.7
-! TimeUpdated: 2025-04-24T13:14:52+00:00
+! Version: 2.0.60.13
+! TimeUpdated: 2025-04-25T13:13:27+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -112,10 +112,12 @@
 !
 ! Appodeal
 ||appodeal.com^
-! ||a.320981a9244924ef86ebdbb9eb877e9f21ce83f1e3cc89b2c5e7c3ff.com^
-/^https:\/\/a\.[0-9a-f]{56}\.com$/
+||appbaqend.com^
+! https://a.320981a9244924ef86ebdbb9eb877e9f21ce83f1e3cc89b2c5e7c3ff.com
+! https://c.e68eaebc30768a673848927c2b8c8e38c38fd42312e367bca04fc622.com
+/^https:\/\/(a|c)\.[0-9a-f]{56}\.com$/
 ! For DNS filtering
-/^a\.[0-9a-f]{56}\.com$/
+/^(a|c)\.[0-9a-f]{56}\.com$/
 !
 ||ad.buzzvil.com^
 ||screen.buzzvil.com^
@@ -159,6 +161,7 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||ad*.zonaplus.tv^
 ||apishow.babybus.com^
 ||apppromoteapi.babybus.com^
 ||tiktokpangle.us^
@@ -2372,6 +2375,14 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+nau.ch##div[data-sticky-height="1px"]
+rakukan.net##+js(addEventListener-defuser, DOMContentLoaded, interstitialAdDiv)
+rakukan.net##.free-area:has(> div > div > ul.link__list)
+tupaki.com##div[id^="right_level_"]:empty:not(#style_important)
+ntvtelugu.com##.top-news-wrapper div.slider-left
+thegirl.ru##.in-content-recomendations-adv
+hindustantimes.com##div[class^="m_headBanner"]
+telugu.hindustantimes.com##.minHeightMobileAdd
 telugu360.com##.HomeMobile_ads
 tenki.jp##.ikoyo-pickup-wrap
 porndoe.com##.-iau-wrap

@@ -1,9 +1,9 @@
-! Checksum: Nn3Ca38xLXUUKMUIj6Qv0A
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1745469676-14400.patch
+! Checksum: QFHu0KahTCSLuwC55fBfzQ
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1745570575-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.16.77
-! TimeUpdated: 2025-04-21T12:45:07+00:00
+! Version: 2.0.16.78
+! TimeUpdated: 2025-04-25T08:39:14+00:00
 ! Expires: 10 days (update frequency)
 ###app-download
 ###app-modal
@@ -25,6 +25,7 @@
 ##.mobile_apps:not(html,body,:empty)
 ##.open-in-app:not(html,body,:empty)
 ##.OpenInAppButton:not(html,body,:empty)
+##.smart-app-banner:not(html,body,:empty)
 ##.smart-banner:not(html,body,:empty)
 ##.smartbanner:not(html,body,:empty)
 ##amp-app-banner
@@ -108,9 +109,11 @@ howtoremove.guide##[id*="newage"]
 windowsreport.com##div[class^=restoro-download] + section
 appuals.com##.wptp
 appuals.com##p + div > div:first-of-type
+||driver-soft.com^$document
 windll.com##.download-block
 windll.com##.dll > p
 softwaretested.com##.st-alternative
+||outbyte.com^$document
 ||solvusoft.com^$document
 coolrom.com.au,coolrom.com##.download_link
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
@@ -1303,6 +1306,7 @@ context.reverso.net#$#.blocked { filter: none !important; }
 linustechtips.com,forum.malwarebytes.com,community.ccleaner.com##.cTopicPostArea:has(.cGuestTeaser):not(:has(.ipsComposeArea_editor))
 ||subs.youmaker.com^$third-party
 ##.paywall-gradient:not(html, body)
+zapytaj.onet.pl##.know-better-answer
 instagram.com#?#div[class^=" _"][style^="width: "]:only-of-type:has(a[href^="/accounts/emailsignup/"])
 www.instagram.com##div[data-visualcompletion=ignore] + div[class*=" "]
 community.spiceworks.com#%#//scriptlet('ubo-cookie-remover.js', 'visit_count')
@@ -1469,6 +1473,7 @@ reports.adguard.com$badfilter
 @@||gitlab.com/*/raw/main/*$~third-party
 @@||cdn.jsdelivr.net/gh/*@master$~third-party
 @@||easylist.to/*.txt^
+@@||pgl.yoyo.org/adservers/serverlist.
 @@||someonewhocares.org/hosts/
 @@||fanboy.co.nz/*.txt^
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
@@ -1496,6 +1501,7 @@ autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
 ##.spacer-20:not(html, body)
 ##.space20:not(html, body)
 ##div[class=spacer]:empty
+##.mk-padding-divider:not(html, body)
 ##.section-break:not(html, body)
 ~simplenote.com##.wp-block-spacer:not(html, body)
 ##.spacer-block:not(html,body)
@@ -1939,6 +1945,7 @@ $removeparam=nosto
 $document,removeparam=af_id,domain=~dmm.co.jp|~dmm.com
 $removeparam=trafficSource
 $removeparam=gps_adid
+$removeparam=app_clickref
 $removeparam=as_campaign
 $removeparam=as_camptype
 $removeparam=as_channel
@@ -2221,6 +2228,7 @@ $document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||google.$document,removeparam=sca_esv
 $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||translate.goog^$removeparam=_x_tr_pto
+$document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ://www.google.$document,removeparam=ie,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=fbs
 ||www.google.$document,removeparam=ictx
@@ -2228,6 +2236,8 @@ $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=tfu
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
+@@://www.google.*/maps^$removeparam=utm_campaign
+@@://ipv6.google.com/maps^$removeparam=utm_campaign
 ||tiktok.com^$removeparam=_r
 $removeparam=u_code
 $removeparam=is_copy_url
@@ -2926,6 +2936,7 @@ _Cursor1.png^
 tumblr.com#$#.custom-cursor { cursor: unset !important }
 tumblr.com#$#.custom-cursor a { cursor: pointer !important }
 tumblr.com,strategix.dk#$#body { cursor: unset !important }
+||cursors-4u.net^$third-party
 /images/pointer.
 ###cursor
 /images/Cursor.

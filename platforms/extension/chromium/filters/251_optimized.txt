@@ -1,9 +1,9 @@
-! Checksum: J1+rYjKljah1Cay/ixpfEQ
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1745239733-14400.patch
+! Checksum: 3p8voPSlhuAWzZSjZVlhLQ
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1745570565-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.64
-! TimeUpdated: 2025-04-21T12:45:08+00:00
+! Version: 2.0.8.65
+! TimeUpdated: 2025-04-25T08:39:14+00:00
 ! Expires: 10 days (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -1274,7 +1274,8 @@ $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=tfu
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
-@@://www.google.com/maps?entry=$removeparam=utm_campaign
+@@://www.google.*/maps^$removeparam=utm_campaign
+@@://ipv6.google.com/maps^$removeparam=utm_campaign
 ||tiktok.com^$removeparam=_r
 $removeparam=share_ab_group
 $removeparam=u_code
