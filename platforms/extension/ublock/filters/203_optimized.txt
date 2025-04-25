@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 77pVa+nnw4A3SMELKuFdpg
-! Diff-Path: ../patches/203_optimized/203_optimized-s-1743007301-14400.patch
+! Checksum: 5n21OpwUKjwLbsdNyLBw6Q
+! Diff-Path: ../patches/203_optimized/203_optimized-s-1745513056-14400.patch
 ! Title: Hungarian filter (Optimized)
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.3.58
-! TimeUpdated: 2025-03-26T16:37:30+00:00
+! Version: 2.0.3.60
+! TimeUpdated: 2025-04-24T16:38:58+00:00
 ! Expires: 5 days (update frequency)
 ##.ad__main
 ##.adblokk
@@ -191,6 +191,7 @@ bkv.hu##.modal-backdrop
 bkv.hu##.modal-dialog
 bkv.hu###karrier
 blikk.hu##[id*="-ad-"][data-x="1"]
+blikk.hu##[id^="div-gpt-ad-"]
 blikk.hu##[id^="div-gpt-ad-"] + [class$="widget"]
 blikk.hu##[style="width:100%;text-align: center; margin-bottom:15px;"]
 blikk.hu###footerLogos
@@ -565,6 +566,7 @@ index.hu###ad_null_position
 index.hu###also_bannerek
 index.hu###index_shopline
 index.hu##[id*="banner"]
+index.hu##.welovedogzajanlo_wrapper
 infomovar.hu,infoajka.hu,infoszigetkoz.hu,infosopron.hu,infopapa.hu,infocelldomolk.hu,infodebrecen.hu,infobekescsaba.hu,infosarvar.hu,infoszombathely.hu,infozalaegerszeg.hu,infokeszthely.hu,infoszentendre.hu,infocegled.hu,infokarcag.hu,infofehervar.hu,infotatabanya.hu,infogyor.hu,infoesztergom.hu,infokiskunfelegyhaza.hu,inforabakoz.hu,infodunaujvaros.hu,infodombovar.hu,infoveszprem.hu,infomiskolc.hu,infohodmezovasarhely.hu,infonograd.hu,infotamasi.hu###main div[class*="banner"]
 infomovar.hu,infoajka.hu,infoszigetkoz.hu,infosopron.hu,infopapa.hu,infocelldomolk.hu,infodebrecen.hu,infobekescsaba.hu,infosarvar.hu,infoszombathely.hu,infozalaegerszeg.hu,infokeszthely.hu,infoszentendre.hu,infocegled.hu,infokarcag.hu,infofehervar.hu,infotatabanya.hu,infogyor.hu,infoesztergom.hu,infokiskunfelegyhaza.hu,inforabakoz.hu,infodunaujvaros.hu,infodombovar.hu,infoveszprem.hu,infomiskolc.hu,infohodmezovasarhely.hu,infonograd.hu,infotamasi.hu###sidebar > div[class*="banner"]
 infomovar.hu,infoajka.hu,infoszigetkoz.hu,infosopron.hu,infopapa.hu,infocelldomolk.hu,infodebrecen.hu,infobekescsaba.hu,infosarvar.hu,infoszombathely.hu,infozalaegerszeg.hu,infokeszthely.hu,infoszentendre.hu,infocegled.hu,infokarcag.hu,infofehervar.hu,infotatabanya.hu,infogyor.hu,infoesztergom.hu,infokiskunfelegyhaza.hu,inforabakoz.hu,infodunaujvaros.hu,infodombovar.hu,infoveszprem.hu,infomiskolc.hu,infohodmezovasarhely.hu,infonograd.hu,infotamasi.hu##div.read div[class*="banner"]
@@ -583,6 +585,7 @@ itmania.hu##.rckaexclude
 itmania.hu##[class*="hirdetes"]
 ize.hu##.banner
 jofogas.hu###roadblock-adcum-zone
+jofogas.hu##.r_above-placeholder
 jogiforum.hu##[class*="banner"]
 joy.hu##[class*="Adverticum"]
 joy.hu##[class^="ad-"]
@@ -814,8 +817,8 @@ napiszar.hu##[class*="banner"]
 napiszex.hu##.banner
 napiszex.hu##.banner-bottom
 napiszex.hu##.list-item.has-banner
-napiuzlet.com##[class*="advertisement"]
 ncore.pro##.banner
+ncore.pro##:has(> .banner) + .hr_stuff, .hr_stuff:has(+ * > .banner)
 nemkutya.com##[class^="ad-"]
 nemkutya.com###text-3
 nemzetisport.hu##.bet365_connect
@@ -958,8 +961,6 @@ sielok.hu##[id*="AdWrap"]
 sonline.hu##[class*="hirdetes"]
 sonline.hu##[id*="ctnet_ad_"]
 sonline.hu##div[class*="ad "]
-sorozataddict.hu###cboxOverlay
-sorozataddict.hu###colorbox
 sorozatwiki.hu##[class*="-ad-"]
 sorozatwiki.hu###fragment
 sporthirado.hu##[class*="banner"]
@@ -1033,6 +1034,7 @@ telex.hu##.banner-bottom
 telex.hu##.recommendation.recommendation--out
 telex.hu##.recommendation.recommendation--pr
 telex.hu##.title-section__sponsored
+telex.hu##.gpt-ad-container
 teltlanyok.com##[id^="adchange"]
 terhesferfi.hu##div.banner
 termalfurdo.hu##.kiemelttartalombox_feher
@@ -1315,7 +1317,6 @@ ugytudjuk.hu#?#.row:-abp-has(.mainTopBnr)
 ||pcwplus.hu/bannerek/$image
 ||performax.cz^$third-party
 ||piacesprofit.hu/files/skin/$image
-||pornolize.com/*?clickTAG=
 ||port-network.com/sponsoration_elements/
 ||portfolio.hu/img/partner/$image
 ||preissuchmaschine.de/banner/$image
@@ -1491,9 +1492,11 @@ bankmonitor.hu##main + .ok-prerender
 baon.hu,bama.hu,beol.hu,boon.hu,delmagyar.hu,duol.hu,feol.hu,kisalfold.hu,haon.hu,heol.hu,szoljon.hu,kemma.hu,nool.hu,sonline.hu,szon.hu,teol.hu,vaol.hu,veol.hu,zaol.hu##app-article-subscription-box
 baon.hu,bama.hu,beol.hu,boon.hu,delmagyar.hu,duol.hu,feol.hu,kisalfold.hu,haon.hu,heol.hu,szoljon.hu,kemma.hu,nool.hu,sonline.hu,szon.hu,teol.hu,vaol.hu,veol.hu,zaol.hu##app-newsletter-modal
 bebiztositva.hu##.pea_cook_wrapper
+bkk.hu##.szechenyi2020-wrapper
 blikk.hu###articleOfferFlag
 blikk.hu###pe_confirm
 blikk.hu###pe_confirm_optin_6
+blikk.hu##.leavingPopupLayer
 blikkruzs.blikk.hu###pe_confirm_optin_1
 blog.hu##[id*="cp_popup"]
 bonuszbrigad.hu###newASZFLayer
@@ -1532,6 +1535,7 @@ esport1.hu###article-recommend-popup
 f1vilag.hu###catapult-cookie-bar
 f1vilag.hu##div[id*="elementor-popup-modal-"]
 femina.hu###femina-shop-ajanlo-slider
+fermentor.hu###elementor-popup-modal-384
 forbes.hu##.crp_related
 forbes.hu###catapult-cookie-bar
 fressnapf.hu##.grey-popup-layer
@@ -1579,6 +1583,7 @@ itthonrolhaza.hu###cookie-law-info-bar
 kalohirek.hu###cookie_container
 kapu.hu###cookieSpan
 karpathir.com##[app="tibrr-cookie-consent"]
+kaveverzum.hu###overlay_cookie_alert, #overlay_cookie_alert[style*="display: flex"] ~ #exposeMaskOverlay
 kecskemet365.hu###check-also-box
 keol.hu###social
 keol.hu##div.subscribe_module
@@ -1691,6 +1696,7 @@ tarhely.eu###sutik
 telekom.hu###app-cookie-policy
 telex.hu###modal--umbrella
 telex.hu###modal--you
+textilbongesz.hu###consentModal
 thaimatrac.hu##.border-top.p-4.bg-8.cookie-alert__inner
 titkokszigete.hu##.spu-bg
 titkokszigete.hu##.spu-box
@@ -1785,6 +1791,7 @@ fizz.hu##+js(set-cookie, cookie.consent.finished, 1)
 fizz.hu##+js(set-cookie, gdpr_level, 1)
 hetek.hu##+js(remove-class, modal-open, body)
 hosszupuskasub.com##+js(window.open-defuser)
+kaveverzum.hu#$#body { position: static !important; }
 laptophardware.hu##+js(set-constant, cookie_alert_overlay, noopFunc)
 lifestory.hu##+js(remove-attr, oncontextmenu)
 magyarorszag.hu##+js(set-cookie, cookies_ok, 1)
@@ -1814,7 +1821,6 @@ otpportalok.hu###pop_1:has(> .suti)
 24.hu##+js(abort-current-script, window._ceCTSData, hirdetések)
 angol-magyar-szotar.hu##+js(set-constant, adblock, false)
 calculat.org##+js(no-setTimeout-if, adstest, 4000)
-cinemo.hu##+js(abort-on-property-read, adsBlocked)
 divany.hu,totalcar.hu,totalbike.hu##+js(abort-on-property-write, document.head, currentScript.remove)
 egeszsegkalauz.hu##+js(set-cookie, isLeavingPopUpReady, 1)
 embed.indavideo.hu##+js(set-constant, AdHandler.adblocked, 0)
@@ -1831,8 +1837,6 @@ port.hu##+js(addEventListener-defuser, DOMContentLoaded, window.ado.blocked)
 online-filmek.ac##+js(no-fetch-if, api)
 rubyvidhub.com##+js(remove-node-text, script, undefined)
 karpathir.com##[class^="k"][class*="-container"][class*="-2"][class$="-hide"]
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,redirect=noop.txt,domain=cinemo.hu
-||sovrn.com$xmlhttprequest,redirect=noop.txt,domain=cinemo.hu
 player.rtl.hu##+js(set-constant, gemiusStream, {})
 player.rtl.hu##+js(set-constant, gemiusStream.event, noopFunc)
 player.rtl.hu##+js(set-constant, gemiusStream.init, noopFunc)

@@ -1,9 +1,9 @@
-! Checksum: OngsybakRG7CgnjuwGkAjA
-! Diff-Path: ../patches/16/16-s-1745395967-3600.patch
+! Checksum: 2IVomO7MlYHw2KimQ0zkcQ
+! Diff-Path: ../patches/16/16-s-1745518354-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.51.99
-! TimeUpdated: 2025-04-23T08:09:17+00:00
+! Version: 2.0.52.3
+! TimeUpdated: 2025-04-24T18:08:59+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -199,7 +199,7 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
-japscan.lol#%#//scriptlet("remove-node-text", "script", "/Y(oka|uuki)/")
+japscan.lol#%#//scriptlet("remove-node-text", "script", "/Y[a-z][a-z]?k[a-z]\d/")
 /^https:\/\/acscdn\.com\/script\/(?:aclib|atg|compatibility|ippg|suv4|ut)\.js(\?cb=\d{13})?$/$script,third-party,match-case,important,domain=japscan.lol
 @@||acscdn.com^$script,third-party,domain=japscan.lol
 @@.shop/*/invoke.js$script,third-party,domain=japscan.lol,important
@@ -1705,6 +1705,8 @@ app.molotov.tv#%#//scriptlet('prevent-xhr', '/ping?token=')
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/203869
+$popup,domain=richardsignfish.com,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203826
 ||porndoe.com^$csp=media-src 'none' http: https:,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203824
@@ -1726,7 +1728,10 @@ $popup,domain=krakenfiles.com,badfilter
 $popup,domain=oii.la,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182538
 $popup,third-party,domain=empire-anime.com,badfilter
+! https://github.com/AdguardTeam/AdguardFilters/issues/203920
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200952
+$subdocument,third-party,domain=luluvdo.com,badfilter
+$popup,third-party,domain=luluvdo.com,badfilter
 $popup,domain=luluvdo.com,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200191
 $popup,domain=vidply.com,badfilter
@@ -8741,6 +8746,7 @@ _build=iclick-$popup
 ||vrfupfyu.com^
 ||vukksmubicecx.com^
 ||vws4brkfst.com^
+||vzbl.eu^
 ||w2ev32h7.cfd^
 ||wabenofazenda.com^
 ||waefufloaty.shop^
@@ -15900,6 +15906,7 @@ buzzporn.net##.privacylinks
 boulanger.com##.product-list__item-sponsored-products
 sport-equipements.fr##.product-photo
 lanutrition.fr##.product-shop
+leroymerlin.fr##.product-thumbnail[data-vzbl-id]
 nitrotype.com##.profile-ad
 codeur.com##.project-option-premium
 heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##.promSB
