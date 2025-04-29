@@ -46,11 +46,17 @@
 			"he": {
 				"name": "חסימת פרסומות "
 			},
+			"hi": {
+				"name": "विज्ञापन अवरुद्ध"
+			},
 			"hr": {
 				"name": "Blokiranje oglasa"
 			},
 			"hu": {
 				"name": "Hirdetésblokkolás"
+			},
+			"hy": {
+				"name": "Գովազդի արգելափակում"
 			},
 			"id": {
 				"name": "Pemblokiran iklan"
@@ -64,8 +70,14 @@
 			"ko": {
 				"name": "광고와 팝업 차단"
 			},
+			"lt": {
+				"name": "Reklamos blokavimas"
+			},
 			"mk": {
 				"name": "Блокирање на реклами"
+			},
+			"ms": {
+				"name": "Penyekatan iklan"
 			},
 			"nl": {
 				"name": "Advertentieblokkering"
@@ -102,6 +114,9 @@
 			},
 			"sv": {
 				"name": "Annonsblockering"
+			},
+			"th": {
+				"name": "การปิดกั้นโฆษณา"
 			},
 			"tr": {
 				"name": "Reklam engelleme"
@@ -165,11 +180,17 @@
 			"he": {
 				"name": "פרטיות"
 			},
+			"hi": {
+				"name": "गोपनीयता"
+			},
 			"hr": {
 				"name": "Privatnost"
 			},
 			"hu": {
 				"name": "Adatvédelem"
+			},
+			"hy": {
+				"name": "Գաղտնիություն"
 			},
 			"id": {
 				"name": "Privasi"
@@ -183,8 +204,14 @@
 			"ko": {
 				"name": "프라이버시"
 			},
+			"lt": {
+				"name": "Privatumas"
+			},
 			"mk": {
 				"name": "Приватност"
+			},
+			"ms": {
+				"name": "Privasi"
 			},
 			"nl": {
 				"name": "Privacy"
@@ -221,6 +248,9 @@
 			},
 			"sv": {
 				"name": "Sekretess"
+			},
+			"th": {
+				"name": "ความเป็นส่วนตัว"
 			},
 			"tr": {
 				"name": "Gizlilik"
@@ -284,11 +314,17 @@
 			"he": {
 				"name": "יישומונים חברתיים"
 			},
+			"hi": {
+				"name": "सोशल विजेट"
+			},
 			"hr": {
 				"name": "Widgeti društvenih mreža"
 			},
 			"hu": {
 				"name": "Közösségi widgetek"
+			},
+			"hy": {
+				"name": "Սոցիալական վիջեթներ"
 			},
 			"id": {
 				"name": "Widget sosial"
@@ -302,8 +338,14 @@
 			"ko": {
 				"name": "소셜 위젯"
 			},
+			"lt": {
+				"name": "Socialiniai valdikliai"
+			},
 			"mk": {
 				"name": "Социјални додатоци"
+			},
+			"ms": {
+				"name": "Widget sosial"
 			},
 			"nl": {
 				"name": "Sociale widgets"
@@ -340,6 +382,9 @@
 			},
 			"sv": {
 				"name": "Sociala widgetar"
+			},
+			"th": {
+				"name": "วิดเจ็ตโซเชี่ยล"
 			},
 			"tr": {
 				"name": "Sosyal araçları"
@@ -403,11 +448,17 @@
 			"he": {
 				"name": "מטרדים"
 			},
+			"hi": {
+				"name": "खीज"
+			},
 			"hr": {
 				"name": "Smetnje"
 			},
 			"hu": {
 				"name": "Kellemetlenségek"
+			},
+			"hy": {
+				"name": "Տհաճություններ"
 			},
 			"id": {
 				"name": "Gangguan"
@@ -421,8 +472,14 @@
 			"ko": {
 				"name": "방해 요소"
 			},
+			"lt": {
+				"name": "Dirgikliai"
+			},
 			"mk": {
 				"name": "Вознемирувања"
+			},
+			"ms": {
+				"name": "Kegusaran"
 			},
 			"nl": {
 				"name": "Ergernissen"
@@ -459,6 +516,9 @@
 			},
 			"sv": {
 				"name": "Irritationsmoment"
+			},
+			"th": {
+				"name": "ความน่ารำคาญ"
 			},
 			"tr": {
 				"name": "Can Sıkıcı Öğeler"
@@ -522,11 +582,17 @@
 			"he": {
 				"name": "אבטחה"
 			},
+			"hi": {
+				"name": "सुरक्षा"
+			},
 			"hr": {
 				"name": "Sigurnost"
 			},
 			"hu": {
 				"name": "Biztonság"
+			},
+			"hy": {
+				"name": "Անվտանգություն"
 			},
 			"id": {
 				"name": "Keamanan"
@@ -540,8 +606,14 @@
 			"ko": {
 				"name": "보안"
 			},
+			"lt": {
+				"name": "Saugumas"
+			},
 			"mk": {
 				"name": "Безбедност"
+			},
+			"ms": {
+				"name": "Keselamatan"
 			},
 			"nl": {
 				"name": "Beveiliging"
@@ -578,6 +650,9 @@
 			},
 			"sv": {
 				"name": "Säkerhet"
+			},
+			"th": {
+				"name": "ความปลอดภัย"
 			},
 			"tr": {
 				"name": "Güvenlik"
@@ -641,11 +716,17 @@
 			"he": {
 				"name": "אחרים"
 			},
+			"hi": {
+				"name": "अन्य"
+			},
 			"hr": {
 				"name": "Ostalo"
 			},
 			"hu": {
 				"name": "Egyéb"
+			},
+			"hy": {
+				"name": "Այլ"
 			},
 			"id": {
 				"name": "Lainnya"
@@ -659,8 +740,14 @@
 			"ko": {
 				"name": "기타"
 			},
+			"lt": {
+				"name": "Kiti"
+			},
 			"mk": {
 				"name": "Друго/и"
+			},
+			"ms": {
+				"name": "Lain-lain"
 			},
 			"nl": {
 				"name": "Anders"
@@ -697,6 +784,9 @@
 			},
 			"sv": {
 				"name": "Övriga"
+			},
+			"th": {
+				"name": "อื่น ๆ"
 			},
 			"tr": {
 				"name": "Diğer"
@@ -760,11 +850,17 @@
 			"he": {
 				"name": "מוכוון שפה"
 			},
+			"hi": {
+				"name": "भाषा-विशिष्ट"
+			},
 			"hr": {
 				"name": "Na temelju jezika"
 			},
 			"hu": {
 				"name": "Nyelvspecifikus"
+			},
+			"hy": {
+				"name": "Լեզվասնցված"
 			},
 			"id": {
 				"name": "Bahasa-spesifik"
@@ -778,8 +874,14 @@
 			"ko": {
 				"name": "특정 언어"
 			},
+			"lt": {
+				"name": "Kalbos specifinis"
+			},
 			"mk": {
 				"name": "Специфични за јазикот"
+			},
+			"ms": {
+				"name": "Bahasa khusus"
 			},
 			"nl": {
 				"name": "Taal-specifieke"
@@ -816,6 +918,9 @@
 			},
 			"sv": {
 				"name": "Språkspecifika"
+			},
+			"th": {
+				"name": "ภาษาเฉพาะ"
 			},
 			"tr": {
 				"name": "Dile Özgü"
@@ -896,6 +1001,10 @@
 				"name": "מסנן רוסי של AdGuard",
 				"description": "מסנן שמאפשר חסימת פרסומות באתרים בשפה הרוסית"
 			},
+			"hi": {
+				"name": "AdGuard रूसी फ़िल्टर",
+				"description": "वह फ़िल्टर जो रूसी भाषा में वेबसाइटों पर विज्ञापनों को ब्लॉक करने की अनुमति देता है।"
+			},
 			"hr": {
 				"name": "AdGuard Ruski filtar",
 				"description": "Filtar za blokiranje oglasa na ruskom jeziku."
@@ -903,6 +1012,10 @@
 			"hu": {
 				"name": "AdGuard Orosz szűrő",
 				"description": "Szűrő, amely lehetővé teszi a hirdetések blokkolását az orosz nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard ռուսական զտիչ",
+				"description": "Զտիչ, որը հնարավորություն է տալիս արգելափակել գովազդները ռուսերեն լեզվով կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard Rusia",
@@ -920,9 +1033,17 @@
 				"name": "AdGuard 러시아 필터",
 				"description": "러시아 사이트의 광고를 차단하는 필터"
 			},
+			"lt": {
+				"name": "AdGuard rusiškas filtras",
+				"description": "Filtras, leidžiantis skelbimų blokavimą rusų kalba."
+			},
 			"mk": {
 				"name": "Руски филтер",
 				"description": "Филтер што овозможува блокирање реклами на веб-локации на руски јазик."
+			},
+			"ms": {
+				"name": "Penapis Rusia AdGuard",
+				"description": "Penapis yang membolehkan sekatan iklan di laman web dalam bahasa Rusia."
 			},
 			"nl": {
 				"name": "Russisch filter",
@@ -971,6 +1092,10 @@
 			"sv": {
 				"name": "AdGuards ryskspråksfilter",
 				"description": "Filter som tillämpar reklamblockering på ryskspråkiga webbplatser."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษารัสเซีย",
+				"description": "ตัวกรองที่เปิดใช้งานการปิดกั้นโฆษณาบนเว็บไซต์ในภาษารัสเซีย"
 			},
 			"tr": {
 				"name": "AdGuard Rusça filtresi",
@@ -1054,6 +1179,10 @@
 				"name": "מסנן בסיס של AdGuard",
 				"description": "EasyList + מסנן בסיס של AdGuard. מסנן זה הכרחי עבור חסימת פרסומות איכותית"
 			},
+			"hi": {
+				"name": "AdGuard बेस फ़िल्टर",
+				"description": "EasyList + AdGuard बेस फ़िल्टर। यह फ़िल्टर गुणवत्ता विज्ञापन ब्लॉकिंग के लिए आवश्यक है।"
+			},
 			"hr": {
 				"name": "AdGuard Osnovni filtar",
 				"description": "EasyList + AdGuard Osnovni filtar. Ovaj filtar je potreban za kvalitetno blokiranje oglasa."
@@ -1061,6 +1190,10 @@
 			"hu": {
 				"name": "AdGuard Alap szűrő",
 				"description": "EasyList + AdGuard Alap szűrő. Ez a szűrő szükséges a minőségi hirdetésblokkoláshoz."
+			},
+			"hy": {
+				"name": "AdGuard հիմնական զտիչ",
+				"description": "EasyList + AdGuard հիմնական զտիչ: Այս զտիչը անհրաժեշտ է բարձր որակի գովազդների արգելափակման համար։"
 			},
 			"id": {
 				"name": "Penyaring dasar AdGuard",
@@ -1078,9 +1211,17 @@
 				"name": "AdGuard 베이스 필터",
 				"description": "EasyList + AdGuard 베이스 필터. 이 필터는 수준높은 광고 차단을 위해 필요합니다."
 			},
+			"lt": {
+				"name": "AdGuard bazinis filtras",
+				"description": "EasyList + AdGuard bazinis filtras. Šis filtras būtinas kokybiškam reklamos blokavimui."
+			},
 			"mk": {
 				"name": "Основен филтер",
 				"description": "EasyList + Основен филтер на AdGuard. Овој филтер е неопходен за квалитетно блокирање реклами."
+			},
+			"ms": {
+				"name": "Penapis AdGuard Base",
+				"description": "EasyList + Penapis AdGuard Base. Penapis ini diperlukan untuk sekatan iklan yang berkualiti."
 			},
 			"nl": {
 				"name": "AdGuard-basisfilter",
@@ -1129,6 +1270,10 @@
 			"sv": {
 				"name": "AdGuards grundfilter",
 				"description": "EasyList + AdGuards grundfilter. Filtret krävs för effektiv annonsblockering."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองพื้นฐาน",
+				"description": "ตัวกรอง EasyList + AdGuard ตัวกรองพื้นฐานนี้จำเป็นสำหรับการปิดกั้นโฆษณาที่มีคุณภาพ"
 			},
 			"tr": {
 				"name": "AdGuard Temel filtresi",
@@ -1212,6 +1357,10 @@
 				"name": "מסנן הגנה מפני מעקב של AdGuard",
 				"description": "הרשימה המקיפה ביותר של מונים מקוונים שונים וכליי אנליטיקת רשת. השתמש במסנן זה אם אינך רוצה שהפעולות שלך על האינטרנט יהיו תחת מעקב"
 			},
+			"hi": {
+				"name": "AdGuard ट्रैकिंग प्रोटेक्शन फ़िल्टर",
+				"description": "विभिन्न ऑनलाइन काउंटर और वेब एनालिटिक्स उपकरणों की सबसे व्यापक सूची। यदि आप नहीं चाहते कि आपके इंटरनेट पर क्रियाकलापों को ट्रैक किया जाए, तो इस फ़िल्टर का उपयोग करें।"
+			},
 			"hr": {
 				"name": "AdGuard Filtar zaštite protiv praćenja",
 				"description": "Najopsežniji popis različitih internetskih brojača i alata za web analizu. Upotrijebite ovaj filtar ako ne želite da se vaše internetske aktivnosti prate."
@@ -1219,6 +1368,10 @@
 			"hu": {
 				"name": "AdGuard Követés Elleni szűrő",
 				"description": "A legátfogóbb lista a különféle online számlálókról és a webes analitikai eszközökről. Használja ezt a szűrőt, ha nem szeretné, hogy nyomon kövessék az interneten végzett tevékenységeit."
+			},
+			"hy": {
+				"name": "AdGuard հետևելու պաշտպանության ֆիլտր",
+				"description": "Անհամեմատ առավել լայնածավալ հաճախակի հաշվիչների և վեբ վերլուծության գործիքների ցանկ: Օգտագործեք այս զտիչը, եթե չեք ցանկանում, որ Ձեր գործողությունները այդ առցանց հետևվեն։"
 			},
 			"id": {
 				"name": "Penyaring Spyware AdGuard",
@@ -1236,9 +1389,17 @@
 				"name": "AdGuard 추적 보호 필터",
 				"description": "온라인 트래커와 웹 분석 툴의 가장 종합적인 목록입니다. 당신이 인터넷에서 추적당하지 않고자 한다면, 이 필터를 사용하세요."
 			},
+			"lt": {
+				"name": "AdGuard apsaugos nuo stebėjimo filtras",
+				"description": "Išsamiausias įvairių interneto skaitiklių ir žiniatinklio analizės įrankių sąrašas. Naudokite šį filtrą, jei nenorite, kad jūsų veiksmai būtų stebimi internete."
+			},
 			"mk": {
 				"name": "Филтер за заштита од следење",
 				"description": "Најсеопфатна листа на различни онлајн шалтери и алатки за веб-аналитика. Користете го овој филтер, ако не сакате да се следат вашите постапки на интернет."
+			},
+			"ms": {
+				"name": "Penapis Perlindungan Penjejakan AdGuard",
+				"description": "Senarai paling komprehensif bagi pelbagai kaunter dalam talian dan alat analitik web. Gunakan penapis ini jika anda tidak mahu tindakan anda di Internet dijejaki."
 			},
 			"nl": {
 				"name": "Traceerbeschermingsfilter",
@@ -1287,6 +1448,10 @@
 			"sv": {
 				"name": "AdGuard spårningsfilter",
 				"description": "Den mest omfattande förteckningen över olika onlineräknare och webbanalysverktyg. Om du inte vill att dina aktiviteter på Internet ska spåras, använd det här filtret."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองการป้องกันการติดตาม",
+				"description": "รายการที่ครอบคลุมมากที่สุดของเคาน์เตอร์ออนไลน์และเครื่องมือวิเคราะห์เว็บต่าง ๆ ใช้ตัวกรองนี้หากคุณไม่ต้องการให้ติดตามการกระทำของคุณบนอินเทอร์เน็ต"
 			},
 			"tr": {
 				"name": "AdGuard İzleme Koruması filtresi",
@@ -1370,6 +1535,10 @@
 				"name": "מסנן מדיה חברתית של AdGuard",
 				"description": "מסנן עבור יישומוני מדיה חברתית (כפתורי \"אהבתי\" וכדומה)"
 			},
+			"hi": {
+				"name": "AdGuard सोशल मीडिया फ़िल्टर",
+				"description": "सोशल मीडिया विजेट (\"पसंद\" बटन और इसी तरह) के लिए फ़िल्टर।"
+			},
 			"hr": {
 				"name": "AdGuard Filtar društvenih mreža",
 				"description": "Filtar za widgete društvenih mreža (\"Sviđa mi se\" dugme itd.)."
@@ -1377,6 +1546,10 @@
 			"hu": {
 				"name": "AdGuard Közösségi Média szűrő",
 				"description": "Szűrő a közösségi média widgetekhez (\"Lájk\" gombok és hasonlók)."
+			},
+			"hy": {
+				"name": "AdGuard սոցիալական միջոցների զտիչ",
+				"description": "Զտիչ սոցիալական ցանցերի վիդջեթների համար (\"Հավանել\" կոճակներ և այլն)։"
 			},
 			"id": {
 				"name": "Penyaring Media Sosial AdGuard",
@@ -1394,9 +1567,17 @@
 				"name": "AdGuard 소셜미디어 필터",
 				"description": "웹 사이트의 소셜 미디어 위젯을 차단합니다. (\"좋아요\" 버튼 등)"
 			},
+			"lt": {
+				"name": "AdGuard Socialinių medijų filtras",
+				"description": "Socialinių žiniasklaidos valdiklių (mygtuko „Patinka“ ir pan.) filtras."
+			},
 			"mk": {
 				"name": "Филтер за социјални медиуми",
 				"description": "Филтер за графичките контроли за социјалните медиуми (копчиња „Ми се допаѓа“ и слично)."
+			},
+			"ms": {
+				"name": "Penapis Media Sosial AdGuard",
+				"description": "Penapis untuk widget media sosial (butang \"Suka\" dan sebagainya)."
 			},
 			"nl": {
 				"name": "Sociale media filter",
@@ -1445,6 +1626,10 @@
 			"sv": {
 				"name": "AdGuards filter för sociala medier",
 				"description": "Filter för socialmediawidgets (Gilla-knappar och liknande)"
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองสื่อสังคมออนไลน์",
+				"description": "กรองสำหรับวิดเจ็ตโซเชียลมีเดีย (ปุ่ม \"ไลค์\" และอื่น ๆ)"
 			},
 			"tr": {
 				"name": "AdGuard Sosyal Medya filtresi",
@@ -1528,6 +1713,10 @@
 				"name": "מסנן ניסיוני של AdGuard",
 				"description": "מסנן שנועד לבחון כללי סינון בלתי בטוחים מסוימים לפני שהם מתווספים אל המסננים היסודיים"
 			},
+			"hi": {
+				"name": "AdGuard प्रायोगिक फ़िल्टर",
+				"description": "कुछ खतरनाक फ़िल्टरिंग नियमों का परीक्षण करने के लिए डिज़ाइन किया गया फ़िल्टर जो मूल फ़िल्टर में जोड़े जाने से पहले होता है।"
+			},
 			"hr": {
 				"name": "AdGuard Eksperimentalni filtar",
 				"description": "Filtar dizajniran za testiranje određenih opasnih pravila filtriranja prije nego se dodaju u opće filtre."
@@ -1535,6 +1724,10 @@
 			"hu": {
 				"name": "AdGuard Kísérleti szűrő",
 				"description": "Szűrő, amelynek célja a kockázatosabb szűrési szabályok tesztelése, mielőtt azok bekerülnének az alap szűrőkbe."
+			},
+			"hy": {
+				"name": "AdGuard փորձարարական ֆիլտր",
+				"description": "Զտիչ, որը նախատեսված է փորձելու որոշ վտանգավոր ֆիլտրային կանոններ, նախքան դրանք հիմնական ֆիլտրերին ավելացնելը։"
 			},
 			"id": {
 				"name": "Penyaring eksperimental AdGuard",
@@ -1552,9 +1745,17 @@
 				"name": "AdGuard 실험 필터",
 				"description": "위험할 수 있는 필터링 규칙을 기본 필터에 추가하기 전 실험하기 위한 필터입니다."
 			},
+			"lt": {
+				"name": "AdGuard eksperimentinis filtras",
+				"description": "Filtras skirtas tam tikroms pavojingoms filtravimo taisyklėms išbandyti prieš pridedant jas prie pagrindinių filtrų."
+			},
 			"mk": {
 				"name": "Експериментален филтер",
 				"description": "Филтер дизајниран да тестира одредени правила за опасно филтрирање пред да се додадат во основните филтри."
+			},
+			"ms": {
+				"name": "Penapis Eksperimental AdGuard",
+				"description": "Ini adalah penapis percubaan yang sedang dalam pembangunan."
 			},
 			"nl": {
 				"name": "Experimenteel filter",
@@ -1603,6 +1804,10 @@
 			"sv": {
 				"name": "AdGuards experimentella filter",
 				"description": "Filter för att testa vissa riskfyllda filtreringsregler innan de läggs till de grundfiltren."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองทดลอง",
+				"description": "ตัวกรองออกแบบมาเพื่อทดสอบกฎการกรองที่เป็นอันตรายก่อนที่จะถูกเพิ่มลงในตัวกรองพื้นฐาน"
 			},
 			"tr": {
 				"name": "AdGuard Deneysel filtresi",
@@ -1686,6 +1891,10 @@
 				"name": "מסנן גרמני של AdGuard",
 				"description": "EasyList Germany + מסנן גרמני של AdGuard. רשימת מסננים שמסירה במפורש פרסומות באתרים בשפה הגרמנית"
 			},
+			"hi": {
+				"name": "एडगार्ड जर्मन फ़िल्टर",
+				"description": "EasyList Germany + एडगार्ड जर्मन फ़िल्टर। फ़िल्टर सूची जो विशेष रूप से जर्मन भाषा में वेबसाइटों पर विज्ञापनों को हटा देती है।"
+			},
 			"hr": {
 				"name": "AdGuard Njemački filtar",
 				"description": "EasyList Njemačka + AdGuard Njemački filtar. Popis filtara posebno dizajniranih za blokiranje oglasa na njemačkom jeziku."
@@ -1693,6 +1902,10 @@
 			"hu": {
 				"name": "AdGuard Német szűrő",
 				"description": "EasyList Germany + AdGuard Német szűrő. Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a német nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard գերմաներեն զտիչ",
+				"description": "EasyList Germany + AdGuard գերմաներեն զտիչ: Զտիչ պարունակող ցանկ, որը հատուկ հեռացնում է գովազդները գերմանական լեզվով կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard Jerman",
@@ -1710,9 +1923,17 @@
 				"name": "AdGuard 독일 필터",
 				"description": "EasyList Germany + AdGuard 독일 필터. 특히 독일 웹사이트에서 광고를 제거하기 위한 필터 목록입니다."
 			},
+			"lt": {
+				"name": "AdGuard vokiškas filtras",
+				"description": "EasyList Vokietija + AdGuard vokiečių filtras. Filtrų sąrašas, kuris specialiai pašalina reklamas iš svetainių vokiečių kalba."
+			},
 			"mk": {
 				"name": "Германски филтер",
 				"description": "EasyList Германија + Германски филтер на AdGuard. Список со филтри што конкретно ги отстранува рекламите на веб-локациите на германски јазик."
+			},
+			"ms": {
+				"name": "Penapis Jerman AdGuard",
+				"description": "EasyList Jerman + Penapis Jerman AdGuard. Senarai penapis yang secara khusus menghapus iklan di laman web dalam bahasa Jerman."
 			},
 			"nl": {
 				"name": "Duits filter",
@@ -1761,6 +1982,10 @@
 			"sv": {
 				"name": "AdGuards tyska filter",
 				"description": "EasyList Germany + AdGuards tyska filter. Filterlista som specifikt avlägsnar reklam på tyskspråkiga webbplatser."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษาเยอรมัน",
+				"description": "ตัวกรอง EasyList Germany + AdGuard ภาษาเยอรมัน รายการตัวกรองที่ลบโฆษณาบนเว็บไซต์ในภาษาเยอรมันโดยเฉพาะ"
 			},
 			"tr": {
 				"name": "AdGuard Almanca filtresi",
@@ -1844,6 +2069,10 @@
 				"name": "מסנן יפני של AdGuard",
 				"description": "מסנן שמאפשר חסימת פרסומות באתרים בשפה היפנית"
 			},
+			"hi": {
+				"name": "एडगार्ड जापानी फ़िल्टर",
+				"description": "वेबसाइटों पर जापानी भाषा में विज्ञापन अवरुद्ध करने की अनुमति देने वाला फ़िल्टर।"
+			},
 			"hr": {
 				"name": "AdGuard Japanski filtar",
 				"description": "Filtar za blokiranje oglasa na japanskom jeziku."
@@ -1851,6 +2080,10 @@
 			"hu": {
 				"name": "AdGuard Japán szűrő",
 				"description": "Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a japán nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard ճապոներեն զտիչ",
+				"description": "Զտիչ, որը թույլ է տալիս մերժել գովազդները ճապոներեն կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard Jepang",
@@ -1868,9 +2101,17 @@
 				"name": "AdGuard 일본어 필터",
 				"description": "일본어 사이트의 광고를 차단하는 필터입니다."
 			},
+			"lt": {
+				"name": "AdGuard japoniškas filtras",
+				"description": "Filtras, leidžiantis skelbimų blokavimą japonų kalba."
+			},
 			"mk": {
 				"name": "Јапонски филтер",
 				"description": "Филтер што овозможува блокирање реклами на веб-локации на јапонски јазик."
+			},
+			"ms": {
+				"name": "Penapis Jepun AdGuard",
+				"description": "Penapis yang membolehkan pemblokiran iklan di laman web dalam bahasa Jepun."
 			},
 			"nl": {
 				"name": "Japans filter",
@@ -1919,6 +2160,10 @@
 			"sv": {
 				"name": "AdGuards japanska filter",
 				"description": "Filter som blockerar reklam på japanskspråkiga webbplatser."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษาญี่ปุ่น",
+				"description": "ตัวกรองที่เปิดใช้งานการปิดกั้นโฆษณาบนเว็บไซต์ในภาษาญี่ปุ่น"
 			},
 			"tr": {
 				"name": "AdGuard Japonca filtresi",
@@ -2002,6 +2247,10 @@
 				"name": "מסנן הולנדי של AdGuard",
 				"description": "EasyList Dutch + מסנן הולנדי של AdGuard. רשימת מסננים שמסירה במפורש פרסומות באתרים בשפה ההולנדית"
 			},
+			"hi": {
+				"name": "एडगार्ड डच फ़िल्टर",
+				"description": "EasyList Dutch + एडगार्ड डच फ़िल्टर। फ़िल्टर सूची जो विशेष रूप से डच भाषा में वेबसाइटों पर विज्ञापनों को हटा देती है।"
+			},
 			"hr": {
 				"name": "AdGuard Nizozemski filtar",
 				"description": "EasyList Danska + AdGuard Danski filtar. Popis filtara posebno dizajniranih za blokiranje oglasa na danskom jeziku."
@@ -2009,6 +2258,10 @@
 			"hu": {
 				"name": "AdGuard Holland szűrő",
 				"description": "EasyList Dutch + AdGuard Holland szűrő. Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a holland nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard հոլանդերեն զտիչ",
+				"description": "EasyList Dutch + AdGuard հոլանդերեն զտիչ: Զտիչներ, որոնք հատուկ հեռացնում են գովազդները հոլանդերեն լեզվով կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard Belanda",
@@ -2026,9 +2279,17 @@
 				"name": "AdGuard 네덜란드 필터",
 				"description": "EasyList Dutch + AdGuard 네덜란드 필터. 특히 네덜란드 웹사이트에서 광고를 제거하기 위한 필터 목록입니다."
 			},
+			"lt": {
+				"name": "AdGuard olandiškas filtras",
+				"description": "Olandijos EasyList + AdGuard filtras. Filtrų sąrašas, kuris specialiai pašalina reklamas iš svetainių olandų kalba."
+			},
 			"mk": {
 				"name": "Холандски филтер",
 				"description": "Холандски EasyList + AdGuard холандски филтер. Список со филтри што директно ги отстрануваат рекламите на веб-локациите на холандски јазик."
+			},
+			"ms": {
+				"name": "Penapis Belanda AdGuard",
+				"description": "EasyList Belanda + Penapis Belanda AdGuard. Senarai penapis yang secara khusus menghapus iklan di laman web dalam bahasa Belanda."
 			},
 			"nl": {
 				"name": "Nederlands filter",
@@ -2077,6 +2338,10 @@
 			"sv": {
 				"name": "AdGuards nederländska filter",
 				"description": "EasyList Dutch + AdGuards holländska filter. Filterlista som specifikt avlägsnar reklam på holländskspråkiga webbplatser."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษาดัตช์",
+				"description": "ตัวกรอง EasyList Dutch + AdGuard Dutch รายการตัวกรองที่ลบโฆษณาบนเว็บไซต์ในภาษาดัตช์โดยเฉพาะ"
 			},
 			"tr": {
 				"name": "AdGuard Felemenkçe filtresi",
@@ -2160,6 +2425,10 @@
 				"name": "מסנן ספרדי/פורטוגלי של AdGuard",
 				"description": "רשימת מסננים המסירה באופן ספציפי מודעות באתרים בשפות ספרדית, פורטוגזית ופורטוגזית ברזילאית."
 			},
+			"hi": {
+				"name": "एडगार्ड स्पेनिश/पुर्तगाली फ़िल्टर",
+				"description": "स्पेनिश, पुर्तगाली, और ब्राज़ीलियन पुर्तगाली भाषाओं में वेबसाइटों पर विज्ञापनों को विशेष रूप से हटाने वाली फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "AdGuard Španjolski/Portugalski filtar",
 				"description": "Popis filtara koji posebno uklanja oglase na web-lokacijama na španjolskom, portugalskom i brazilskom portugalskom jeziku."
@@ -2167,6 +2436,10 @@
 			"hu": {
 				"name": "AdGuard Spanyol/Portugál szűrő",
 				"description": "Szűrőlista, amely kifejezetten eltávolítja a hirdetéseket a spanyol, portugál és brazil portugál nyelvű webhelyekről."
+			},
+			"hy": {
+				"name": "AdGuard իսպաներեն/պորտուգալերեն զտիչ",
+				"description": "Զտիչների ցանկ, որը հատուկ հեռացնում է գովազդները իսպաներեն, պորտուգալերեն և բրազիլական պորտուգալերեն լեզուներով կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard Spanyol/Portugis",
@@ -2184,9 +2457,17 @@
 				"name": "AdGuard 스페인어/포르투갈어 필터",
 				"description": "스페인어 및 포르투갈어로 된 웹사이트의 광고를 특별히 제거하는 필터 목록입니다."
 			},
+			"lt": {
+				"name": "AdGuard ispanų/portugalų filtras",
+				"description": "Filtrų sąrašas, kuris specialiai pašalina skelbimus iš svetainių ispanų ir portugalų kalbomis."
+			},
 			"mk": {
 				"name": "Шпанско - португалски филтер",
 				"description": "Список со филтри што конкретно ги отстранува рекламите на веб-локациите на шпански, португалски и бразилски јазици."
+			},
+			"ms": {
+				"name": "Penapis Sepanyol/Portugis AdGuard",
+				"description": "Senarai penapis yang secara khusus menghapus iklan di laman web dalam bahasa Sepanyol, Portugis, dan Portugis Brazil."
 			},
 			"nl": {
 				"name": "Spaans/Portugees filter",
@@ -2235,6 +2516,10 @@
 			"sv": {
 				"name": "AdGuards spansk/portugisiska filter",
 				"description": "Filterlista som specifikt tar bort annonser på webbplatser på spanska, portugisiska och brasiliansk portugisiska."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษาสเปน/โปรตุเกส",
+				"description": "รายการตัวกรองที่ลบโฆษณาบนเว็บไซต์ในภาษาสเปนและโปรตุเกสโดยเฉพาะ"
 			},
 			"tr": {
 				"name": "AdGuard İspanyolca/Portekizce filtresi",
@@ -2318,6 +2603,10 @@
 				"name": "מסנן עבור אי־חסימה של פרסומות חיפוש וקידום עצמי",
 				"description": "מסנן שמבטל חסימות של מודעות חיפוש בגוגל, DuckDuckGo, בינג או יאהו וקידום עצמי באתרים."
 			},
+			"hi": {
+				"name": "खोज विज्ञापनों और स्व-प्रचार को अवरुद्ध न करें",
+				"description": "Google, DuckDuckGo, Bing, या Yahoo में खोज विज्ञापनों और वेबसाइटों पर स्व-प्रचार को अनब्लॉक करने वाला फ़िल्टर।"
+			},
 			"hr": {
 				"name": "Filtar za odblokiranje oglasa pretraživača i samopromocije",
 				"description": "Filtar koji deblokira oglase za pretraživanje na Google, DuckDuckGo, Bing ili Yahoo i samopromociju na web stranicama."
@@ -2325,6 +2614,10 @@
 			"hu": {
 				"name": "Szűrő a keresési hirdetések és az önpromóciók feloldásához",
 				"description": "Szűrő, amely feloldja a Google, DuckDuckGo, Bing vagy Yahoo keresőhirdetéseket és a weboldalakon megjelenő önreklámokat."
+			},
+			"hy": {
+				"name": "Զտիչ, որը թույլ է տալիս որոնման գովազդը և ինքնագովազդը։",
+				"description": "Զտիչ, որը հնարավորություն է տալիս Google-ում, DuckDuckGo-ում, Bing-ում կամ Yahoo-ում որոնման գովազդներին և ինքնագովազդերին կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring iklan berguna",
@@ -2342,9 +2635,17 @@
 				"name": "유용한 광고 필터",
 				"description": "Google, DuckDuckGo, Bing 또는 Yahoo의 검색 광고와 웹사이트의 자체 홍보를 차단 해제하는 필터입니다."
 			},
+			"lt": {
+				"name": "Filtras naudingos reklamos",
+				"description": "Filtras, išblokuojantis paieškų (Duckduckgo, Google, Bing, Yahoo) ir savireklamos skelbimus. Savireklamos apibrėžimas: kai tinklalapio skelbimas reklamuoja tą pačią svetainę ar kitas svetaines/ socialinę žiniasklaidą/ ir pan. glaudžiai su ja susijęs, toks skelbimas laikomas savaime reklamuojamu."
+			},
 			"mk": {
 				"name": "Филтрирај деблокирање на реклами за пребарување и самопромоција",
 				"description": "Филтер што ги деблокира рекламите за пребарување во Google, DuckDuckGo, Bing или Yahoo и самопромоција на веб-локациите."
+			},
+			"ms": {
+				"name": "Penapis yang membatalkan sekatan iklan carian dan promosi sendiri",
+				"description": "Penapis yang membatalkan sekatan iklan carian dalam Google, DuckDuckGo, Bing, atau Yahoo dan promosi sendiri di laman web."
 			},
 			"nl": {
 				"name": "Filter voor zinvolle advertenties",
@@ -2393,6 +2694,10 @@
 			"sv": {
 				"name": "Filter för att avblockera användbara annonser",
 				"description": "Filter som avblockerar sökannonser i Google, DuckDuckGo, Bing eller Yahoo och egenreklam på webbplatser."
+			},
+			"th": {
+				"name": "ตัวกรองยกเลิกการปิดกั้นโฆษณาบนการค้นหาและการโปรโมตตนเอง",
+				"description": "ตัวกรองที่ยกเลิกการปิดกั้นการค้นหา (Duckduckgo, Google, Bing, Yahoo) และโฆษณาแบบส่งเสริมการขายด้วยตนเอง คำจำกัดความการโปรโมตตนเอง: เมื่อโฆษณาบนเว็บไซต์กำลังโปรโมตเว็บไซต์นี้หรือเว็บไซต์/โซเชียลมีเดีย/อื่น ๆ ที่เกี่ยวข้องอย่างใกล้ชิดกับมันโฆษณาดังกล่าวถือเป็นการส่งเสริมตนเอง"
 			},
 			"tr": {
 				"name": "Arama motoru reklamları ve öz tanıtıma izin veren filtre",
@@ -2476,6 +2781,10 @@
 				"name": "מסנן פרסומות למכשירים ניידים",
 				"description": "מסנן עבור כל הרשתות הידועות של פרסומות. שימושי עבור מכשירים ניידים"
 			},
+			"hi": {
+				"name": "AdGuard मोबाइल विज्ञापन फ़िल्टर",
+				"description": "सभी ज्ञात मोबाइल विज्ञापन नेटवर्क के लिए फ़िल्टर। मोबाइल उपकरणों के लिए उपयोगी।"
+			},
 			"hr": {
 				"name": "AdGuard Filtar mobilnih oglasa",
 				"description": "Filtar za sve poznate mobilne oglašavačke mreže. Koristan na mobilnim uređajima."
@@ -2483,6 +2792,10 @@
 			"hu": {
 				"name": "AdGuard Mobil Reklám szűrő",
 				"description": "Szűrő az összes ismert mobil hirdetési hálózathoz. Hasznos mobil eszközökhöz."
+			},
+			"hy": {
+				"name": "AdGuard շարժական գովազդների զտիչ",
+				"description": "Զտիչ բոլոր հայտնի շարժական գովազդային ցանցերի համար։ Պիտանի է շարժական սարքերի համար։"
 			},
 			"id": {
 				"name": "Penyaring Iklan Seluler AdGuard",
@@ -2500,9 +2813,17 @@
 				"name": "AdGuard 모바일 광고 필터",
 				"description": "알려진 모든 모바일 광고 네트워크를 차단하는 필터입니다. 모바일 기기에 유용합니다."
 			},
+			"lt": {
+				"name": "AdGuard Mobile Ads filtras",
+				"description": "Filtruokite visas žinomas mobilių tinklų reklamas. Naudinga mobiliesiems įrenginiams."
+			},
 			"mk": {
 				"name": "Филтер за мобилни реклами на AdGuard",
 				"description": "Филтер за сите познати мобилни рекламни мрежи. Корисен за мобилни уреди."
+			},
+			"ms": {
+				"name": "Penapis Iklan Mudah Alih AdGuard",
+				"description": "Penapis untuk semua rangkaian iklan mudah alih yang diketahui. Berguna untuk peranti mudah alih."
 			},
 			"nl": {
 				"name": "Filter voor mobiele advertenties",
@@ -2551,6 +2872,10 @@
 			"sv": {
 				"name": "AdGuards filter för mobilannonser",
 				"description": "Filter för alla kända nätverk för mobilreklam. Användbar för mobila enheter."
+			},
+			"th": {
+				"name": "ตัวกรองโฆษณาบนมือถือ AdGuard",
+				"description": "กรองเครือข่ายโฆษณาบนมือถือที่รู้จักทั้งหมด มีประโยชน์สำหรับอุปกรณ์พกพา"
 			},
 			"tr": {
 				"name": "AdGuard Mobil Reklam filtresi",
@@ -2634,6 +2959,10 @@
 				"name": "מסנן Safari של AdGuard",
 				"description": "מסנן מיוחד עבור Safari 9+ על iOS ועל macOS. יש מסנן נפרד עבור דפדפן Safari מאחר שהוא אינו תומך במלואו בתחביר הכללים"
 			},
+			"hi": {
+				"name": "AdGuard सफारी फ़िल्टर",
+				"description": "iOS और macOS पर Safari 9+ के लिए विशेष फ़िल्टर। हमें Safari ब्राउज़र के लिए एक अलग फ़िल्टर की आवश्यकता है क्योंकि यह हमारी नियमों की वाक्य रचना का पूर्ण समर्थन नहीं करता है।"
+			},
 			"hr": {
 				"name": "AdGuard Safari filtar",
 				"description": "Poseban filtar za Safari 9+ na iOS-u i Mac OS-u. Za Safari preglednik, potreban nam je poseban filtar jer u potpunosti ne podržava sintaksu naših pravila."
@@ -2641,6 +2970,10 @@
 			"hu": {
 				"name": "AdGuard Safari szűrő",
 				"description": "Speciális szűrő a Safari 9+ alkalmazáshoz iOS és macOS rendszereken. Szükségünk van egy külön szűrőre a Safari böngészőhöz, mivel az nem támogatja teljes mértékben a szabályok szintaxisát."
+			},
+			"hy": {
+				"name": "AdGuard Safari զտիչ",
+				"description": "Հատուկ զտիչ Safari 9+-ի համար iOS և macOS-ում։ Մենք առանձնահատուկ զտիչի կարիք ունենք Safari բրաուզերի համար, քանի որ այն լիովին չի աջակցում մեր կանոնների սինթաքսին։"
 			},
 			"id": {
 				"name": "Penyaring Safari AdGuard",
@@ -2658,9 +2991,17 @@
 				"name": "AdGuard Safari 필터",
 				"description": "iOS 및 macOS용 Safari 9 이상 버전용 특수 필터. Safari 브라우저는 규칙 신텍스를 완전히 지원하지 않기 때문에 별도의 필터가 필요합니다."
 			},
+			"lt": {
+				"name": "AdGuard Safari filtras",
+				"description": "Specialus Safari 9+ filtras skirtas iOS ir Mac OS. Mums reikia atskiro Safari naršyklės filtro, nes jis nevisiškai palaiko mūsų taisyklių sintaksę."
+			},
 			"mk": {
 				"name": "Филтер за Safari",
 				"description": "Специјален филтер за Safari 9+ на iOS и macOS. Потребен ни е посебен филтер за прелистувачот Safari бидејќи не ја поддржува целосно синтаксата на нашите правила."
+			},
+			"ms": {
+				"name": "Penapis Safari AdGuard",
+				"description": "Penapis khas untuk Safari 9+ pada iOS dan macOS. Kami memerlukan penapis yang berasingan untuk pelayar Safari kerana ia tidak menyokong sepenuhnya sintaks peraturan kami."
 			},
 			"nl": {
 				"name": "Safari filter",
@@ -2709,6 +3050,10 @@
 			"sv": {
 				"name": "AdGuards Safarifilter",
 				"description": "Specialfilter för Safari 9+ på iOS och OS X. Vi behöver ett separat filter för Safari eftersom den inte fullt ut stöder våra filterregelssyntaxer."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรอง Safari",
+				"description": "ตัวกรองพิเศษสำหรับ Safari 9+ บน iOS และ Mac OS เราต้องการตัวกรองแยกต่างหากสำหรับเบราว์เซอร์ Safari เพราะไม่รองรับไวยากรณ์กฎของเราอย่างสมบูรณ์"
 			},
 			"tr": {
 				"name": "AdGuard Safari filtresi",
@@ -2792,6 +3137,10 @@
 				"name": "מסנן טורקי של AdGuard",
 				"description": "רשימת מסננים שמסירה במפורש פרסומות באתרים בשפה הטורקית"
 			},
+			"hi": {
+				"name": "एडगार्ड तुर्की फ़िल्टर",
+				"description": "विशेष रूप से तुर्की भाषा में वेबसाइटों पर विज्ञापनों को हटाने वाली फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "AdGuard Turski filtar",
 				"description": "Popis filtara posebno dizajniranih za blokiranje oglasa na turskom jeziku."
@@ -2799,6 +3148,10 @@
 			"hu": {
 				"name": "AdGuard Török szűrő",
 				"description": "Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a török nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard Թուրքական զտիչ",
+				"description": "Ֆիլտրերի ցանկ, որը հատուկ հեռացնում է գովազդները թուրքալեզու կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard Turki",
@@ -2816,9 +3169,17 @@
 				"name": "AdGuard 터키어 필터",
 				"description": "특히 터키어 웹 사이트에서의 광고 차단을 위한 필터 리스트입니다."
 			},
+			"lt": {
+				"name": "AdGuard turkiškas filtras",
+				"description": "Filtrų sąrašas, kuris specialiai pašalina reklamas iš svetainių turkų kalba."
+			},
 			"mk": {
 				"name": "Турски филтер",
 				"description": "Список со филтри што конкретно ги отстранува рекламите на веб-локациите на турски јазик."
+			},
+			"ms": {
+				"name": "Penapis Turki AdGuard",
+				"description": "Senarai penapis yang khusus menghapus iklan di laman web dalam bahasa Turki."
 			},
 			"nl": {
 				"name": "Turks filter",
@@ -2867,6 +3228,10 @@
 			"sv": {
 				"name": "AdGuards turkiska filter",
 				"description": "Filterlista som specifikt avlägsnar reklam på turkspråkiga webbplatser."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษาตุรกี",
+				"description": "รายการตัวกรองที่ลบโฆษณาบนเว็บไซต์ในภาษาตุรกีโดยเฉพาะ"
 			},
 			"tr": {
 				"name": "AdGuard Türkçe filtresi",
@@ -2950,6 +3315,10 @@
 				"name": "מסנן מטרדים של AdGuard",
 				"description": "חוסם אלמנטים מעצבנים בדפי אינטרנט כולל הודעות על קובצי Cookie, ווידג'טים של צד שלישי וחלונות קופצים בתוך הדף. מכיל את מסנני ה-AdGuard הבאים: הודעות עוגיות, חלונות קופצים, באנרים של אפליקציות לנייד, מטרדים אחרים ווידג'טים."
 			},
+			"hi": {
+				"name": "एडगार्ड खीज फ़िल्टर",
+				"description": "वेब पृष्ठों पर परेशान करने वाले तत्वों को अवरुद्ध करता है जैसे कि कुकी नोटिस, तृतीय-पक्ष विजेट और इन-पेज पॉप-अप। इसमें निम्नलिखित एडगार्ड फ़िल्टर शामिल हैं: कुकी नोटिस, पॉपअप, मोबाइल ऐप बैनर, अन्य परेशानियाँ और विजेट।"
+			},
 			"hr": {
 				"name": "AdGuard Filtar smetnji",
 				"description": "Blokira iritantne elemente na web stranicama, uključujući obavijesti o kolačićima, widgete drugih proizvođača i skočne prozore na stranici."
@@ -2957,6 +3326,10 @@
 			"hu": {
 				"name": "AdGuard Kellemetlenségek elleni szűrő",
 				"description": "Blokkolja a weboldalak irritáló elemeit, beleértve a cookie-értesítéseket, a harmadik féltől származó widgeteket és az oldalon belüli felugró ablakokat. A következő AdGuard szűrőket tartalmazza: Cookie-értesítések, felugró ablakok, mobilalkalmazás-bannerek, egyéb zavaró tényezők és widgetek."
+			},
+			"hy": {
+				"name": "AdGuard-ի անհանգստացնողների ֆիլտր",
+				"description": "Բլոկավորում է գրգռիչ տարրեր վեբ էջերում, ներառյալ է կուքի ծանուցումները, երրորդ կողմի վիդջեթները և էջի ներսում հայտնվող պոպ-ափները։ Ունի հետևյալ AdGuard ֆիլտրերը՝ Կուքի ծանուցումներ, Պոպ-ափներ, Մոբայլ հավելվածների բանշեր, Գլխավոր խանգարողներ և Վիդջեթներ։"
 			},
 			"id": {
 				"name": "Filter Gangguan AdGuard",
@@ -2974,9 +3347,17 @@
 				"name": "AdGuard 방해 요소 필터",
 				"description": "쿠키 알림, 타사 위젯 및 페이지 내 팝업을 포함하여 웹 페이지에서 자극적인 요소를 차단합니다. 쿠키 알림, 팝업, 모바일 앱 배너, 기타 성가심 및 위젯과 같은 AdGuard 필터가 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "AdGuard Annoyances filtras",
+				"description": "Blokuoja erzinančius elementus tinklalapiuose, įskaitant įspėjimus apie slapukus, trečiųjų šalių valdiklius ir puslapio iššokančiuosius langus. Yra šie AdGuard filtrai: slapukų pranešimai, iššokantys langai, mobiliųjų programų reklamjuostės, kiti nemalonumai ir valdikliai."
+			},
 			"mk": {
 				"name": "Филтер за досадни реклами",
 				"description": "Ги блокира иритирачките елементи на веб-страниците, вклучувајќи известувања за колачиња, графички контроли од трети страни и скокачки прозорци на страницата. Ги содржи следните филтри AdGuard: Известувања за колачиња, скокачки прозорци, банери за мобилни апликации, други досадни и виџети."
+			},
+			"ms": {
+				"name": "Penapis Gangguan AdGuard",
+				"description": "Menghalang elemen yang mengganggu di laman web termasuk pemberitahuan kuki, widget pihak ketiga dan pop-up dalam halaman. Mengandungi penapis AdGuard berikut: Pemberitahuan Kuki, Pop-up, Banner Aplikasi Mudah Alih, Gangguan Lain dan Widget."
 			},
 			"nl": {
 				"name": "Filter tegen irritante elementen",
@@ -3025,6 +3406,10 @@
 			"sv": {
 				"name": "AdGuards Irritationsfilter",
 				"description": "Blockerar irriterande element på webbsidor, t.ex. meddelanden om cookies, widgetar från tredje part och popup-fönster på sidan. Innehåller följande AdGuard-filter: Cookie Notices, Popups, Mobile App Banners, Other Annoyances och Widgets."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองสัญญาณรบกวน",
+				"description": "ปิดกั้นองค์ประกอบที่น่ารำคาญในหน้าเว็บรวมถึงประกาศคุกกี้, เครื่องมือบุคคลที่สามและป๊อปอัปในหน้า"
 			},
 			"tr": {
 				"name": "AdGuard Can Sıkıcı Öğeler filtresi",
@@ -3108,6 +3493,10 @@
 				"name": "מסנן שמות תחום מופשטים של AdGuard",
 				"description": "מסנן שמורכב מכמה מסננים אחרים (מסנן הבסיס של AdGuard, מסנן מדיה חברתית, מסנן הגנה מפני מעקב, מסנן פרסומות לניידים, EasyList ו־EasyPrivacy) ומופשט במיוחד כדי להיות תואם עם חסימת פרסומות ברמת DNS."
 			},
+			"hi": {
+				"name": "एडगार्ड DNS फ़िल्टर",
+				"description": "कई अन्य फ़िल्टर (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList और EasyPrivacy) से बना फ़िल्टर और DNS-स्तर विज्ञापन ब्लॉकिंग के साथ बेहतर संगत होने के लिए विशेष रूप से सरलीकृत किया गया है।"
+			},
 			"hr": {
 				"name": "AdGuard DNS filtar",
 				"description": "Filtar je sastavljen od nekoliko drugih filtara (AdGuard Osnovni filtar, Filtar za društvene mreže, Filtar zaštite od praćenja, Filtar za mobilne oglase, EasyList i EasyPrivacy) i uz topojednostavljen da bi bio bolje kompatibilan sa blokiranjem oglasa na DNS razini."
@@ -3115,6 +3504,10 @@
 			"hu": {
 				"name": "AdGuard DNS szűrő",
 				"description": "Szűrő, amely több más szűrő (AdGuard Alap szűrő, Közösségi Média szűrő, Követés Elleni szűrő, Mobil Reklám szűrő, EasyList és EasyPrivacy) egyesítéséből áll, kifejezetten leegyszerűsítve, hogy minél inkább kompatibilis legyen a DNS szintű hirdetésblokkolással."
+			},
+			"hy": {
+				"name": "AdGuard DNS ֆիլտր",
+				"description": "Ֆիլտր, որը բաղկացած է մի քանի այլ ֆիլտրերից (AdGuard-ի հիմնարար ֆիլտր, սոցիալական մեդիայի ֆիլտր, հետևողականության պաշտպանության ֆիլտր, շարժական գովազդների ֆիլտր, EasyList և EasyPrivacy) և պարզեցված է, որպեսզի ավելի լավ համատեղելի լինի DNS մակարդակի գովազդների արգելափակման հետ։"
 			},
 			"id": {
 				"name": "Penyaring nama domain yang disederhanakan AdGuard",
@@ -3132,9 +3525,17 @@
 				"name": "AdGuard DNS 필터",
 				"description": "여러 필터 (AdGuard 베이스 필터, 소셜 미디어 필터, 추적 보호 필터, 모바일 광고 필터, EasyList, EasyPrivacy)를 포함하며, 더 나은 DNS 레벨의 필터링을 위해 간소화 된 필터입니다."
 			},
+			"lt": {
+				"name": "AdGuard DNS filtras",
+				"description": "Filtras, sudarytas iš kelių filtrų (AdGuard Base, socialinės medijos, stebėjimo apsaugos, mobiliųjų skelbimų, EasyList ir EasyPrivacy filtrų) ir specialiai supaprastintas, kad būtų geriau suderinamas su DNS lygio reklamų blokavimu."
+			},
 			"mk": {
 				"name": "AdGuard DNS филтер",
 				"description": "Филтер составен од неколку други филтри (основниот филтер, филтер за социјални медиуми, филтер за заштита од следење, филтер за мобилни реклами, EasyList и EasyPrivacy) и специјално поедноставен за да биде подобро компатибилен со блокирање реклами на ниво на DNS."
+			},
+			"ms": {
+				"name": "Penapis DNS AdGuard",
+				"description": "Penapis yang terdiri daripada beberapa penapis lain (AdGuard Base, Penapis Media Sosial, Penapis Perlindungan Penjejakan, Penapis Iklan Mudah Alih, EasyList dan EasyPrivacy) dan dipermudahkan secara khusus untuk menjadi lebih serasi dengan penghalang iklan pada tahap DNS."
 			},
 			"nl": {
 				"name": "AdGuard DNS filter",
@@ -3183,6 +3584,10 @@
 			"sv": {
 				"name": "AdGuard DNS-filter",
 				"description": "Filter som kombinerar flera andra filter (AdGuards grundfilter, filter för sociala medier , spårningsfilter, filter för mobilannonser, EasyList och EasyPrivacy) och förenklade,  specifikt för förbättrad kompatibilitet med annonsblockering på DNS-nivå."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองชื่อโดเมนแบบย่อ",
+				"description": "ตัวกรองประกอบด้วยตัวกรองอื่น ๆ (ตัวกรอง AdGuard Base, ตัวกรองสื่อสังคมออนไลน์, ตัวกรองการป้องกันการติดตาม, ตัวกรองโฆษณาบนมือถือ, EasyList และ EasyPrivacy) และเรียบง่ายโดยเฉพาะเพื่อให้เข้ากันได้ดีขึ้นกับการปิดกั้นโฆษณาระดับ DNS"
 			},
 			"tr": {
 				"name": "AdGuard DNS filtresi",
@@ -3266,6 +3671,10 @@
 				"name": "מסנן צרפתי של AdGuard",
 				"description": "Liste FR + מסנן צרפתי של AdGuard. רשימת מסננים שמסירה במפורש פרסומות באתרים בשפה הצרפתית"
 			},
+			"hi": {
+				"name": "एडगार्ड फ्रेंच फ़िल्टर",
+				"description": "Liste FR + एडगार्ड फ्रेंच फ़िल्टर। यह फ़िल्टर विशेष रूप से फ्रेंच भाषा में वेबसाइटों पर विज्ञापनों को हटाने के लिए है।"
+			},
 			"hr": {
 				"name": "AdGuard Francuski filtar",
 				"description": "Liste FR + AdGuard Francuski filtar. Popis filtara posebno dizajniranih za blokiranje oglasa na francuskom jeziku."
@@ -3273,6 +3682,10 @@
 			"hu": {
 				"name": "AdGuard Francia szűrő",
 				"description": "Liste FR + AdGuard Francia szűrő. Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a francia nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard ֆրանսիական ֆիլտր",
+				"description": "Liste FR + AdGuard ֆրանսիական ֆիլտր: Ֆիլտրերի ցուցակ, որը հատուկ հեռացնում է գովազդները ֆրանսերեն լեզվով կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard Prancis",
@@ -3290,9 +3703,17 @@
 				"name": "AdGuard 프랑스 필터",
 				"description": "Liste FR + AdGuard 프랑스 필터. 특히 프랑스 웹사이트에서 광고를 제거하기 위한 필터 목록입니다."
 			},
+			"lt": {
+				"name": "AdGuard prancūziškas filtras",
+				"description": "Liste FR + AdGuard prancūziškas filtras. Filtrų sąrašas, kuris specialiai pašalina reklamas iš svetainių prancūzų kalba."
+			},
 			"mk": {
 				"name": "Француски филтер",
 				"description": "Liste FR + француски филтер. Список со филтри што директно ги отстранува рекламите на веб-локцаиите на француски јазик."
+			},
+			"ms": {
+				"name": "Penapis Perancis AdGuard",
+				"description": "Liste FR + penapis Perancis AdGuard. Senarai penapis yang secara khusus mengeluarkan iklan di laman web dalam Bahasa Perancis."
 			},
 			"nl": {
 				"name": "Frans filter",
@@ -3341,6 +3762,10 @@
 			"sv": {
 				"name": "AdGuards franska filter",
 				"description": "Lista FR + AdGuards franskfilter. Filterlista inriktat på att avlägsna reklam på franskspråkiga webbplatser."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษาฝรั่งเศษ",
+				"description": "Liste FR + AdGuard ตัวกรองภาษาฝรั่งเศส รายการตัวกรองที่ลบโฆษณาบนเว็บไซต์ในภาษาฝรั่งเศสโดยเฉพาะ"
 			},
 			"tr": {
 				"name": "AdGuard Fransızca filtresi",
@@ -3424,6 +3849,10 @@
 				"name": "מסנן מעקב מענים של AdGuard",
 				"description": "מסנן שמטייב פרטיות ע״י הסרת פרמטרי מעקב ממענים."
 			},
+			"hi": {
+				"name": "एडगार्ड URL ट्रैकिंग फ़िल्टर",
+				"description": "URL से ट्रैकिंग पैरामीटर हटाकर गोपनीयता को बढ़ाने वाला फ़िल्टर।"
+			},
 			"hr": {
 				"name": "AdGuard URL filtar za praćenje",
 				"description": "Filtar koji poboljšava privatnost tako da uklanja parametre praćenja iz URL-ova."
@@ -3431,6 +3860,10 @@
 			"hu": {
 				"name": "AdGuard URL Követés szűrő",
 				"description": "Ez a szűrő fokozza az adatvédelmet azáltal, hogy eltávolítja a követésre használt paramétereket az oldalak URL-jeiből."
+			},
+			"hy": {
+				"name": "AdGuard URL Tracking filter",
+				"description": "Ֆիլտր, որը բարձրացնում է գաղտնիությունը, հեռացնելով հետագծման պարամետրերը URL-ներից։"
 			},
 			"id": {
 				"name": "Filter Pelacakan URL AdGuard",
@@ -3448,9 +3881,17 @@
 				"name": "AdGuard URL 추적 필터",
 				"description": "추적에 쓰이는 URL 매개 변수를 제거하여 개인정보 보호를 강화하는 필터입니다."
 			},
+			"lt": {
+				"name": "AdGuard URL sekimo filtras",
+				"description": "Filtras, kuris didina privatumo lygį, pašalindamas sekimo parametrus iš URL."
+			},
 			"mk": {
 				"name": "Филтер за следење URL на AdGuard",
 				"description": "Филтер што ја подобрува приватноста со отстранување на параметрите за следење од URL-адреси."
+			},
+			"ms": {
+				"name": "Penapis Penjejakan URL AdGuard",
+				"description": "Penapis yang meningkatkan privasi dengan menghapus parameter penjejakan dari URL."
 			},
 			"nl": {
 				"name": "AdGuard URL Tracking filter",
@@ -3499,6 +3940,10 @@
 			"sv": {
 				"name": "AdGuard URL-spårningsfilter",
 				"description": "Filter som förbättrar integriteten genom att ta bort spårningsparametrar från webbadresser."
+			},
+			"th": {
+				"name": "ตัวกรองการติดตาม URL ของ AdGuard",
+				"description": "ตัวกรองที่เพิ่มความเป็นส่วนตัวโดยการลบพารามิเตอร์การติดตามออกจาก URL"
 			},
 			"tr": {
 				"name": "AdGuard URL İzleme filtresi",
@@ -3582,6 +4027,10 @@
 				"name": "מסנן הודעות קובצי Cookie של AdGuard",
 				"description": "חוסם הודעות על עוגיות בדפי אינטרנט."
 			},
+			"hi": {
+				"name": "AdGuard कुकी नोटिस फ़िल्टर",
+				"description": "वेब पृष्ठों पर कुकी सूचना को ब्लॉक करता है।"
+			},
 			"hr": {
 				"name": "Filtar obavijesti o kolačićima AdGuard",
 				"description": "Blokira obavijesti o kolačićima na web stranicama."
@@ -3589,6 +4038,10 @@
 			"hu": {
 				"name": "AdGuard Cookie értesítések szűrő",
 				"description": "Blokkolja a weboldalakon megjelenő cookie-értesítéseket."
+			},
+			"hy": {
+				"name": "AdGuard կուքի ծանուցումների ֆիլտր",
+				"description": "Բլոկավորում է կուքի ծանուցումները վեբ էջերում։"
 			},
 			"id": {
 				"name": "Filter Pemberitahuan Cookie AdGuard",
@@ -3606,9 +4059,17 @@
 				"name": "AdGuard 쿠키 알림 필터",
 				"description": "웹 페이지의 쿠키 알림을 차단합니다. AdGuard 방해 요소 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "AdGuard slapukų pranešimų filtras",
+				"description": "Blokuoja slapukų pranešimus tinklalapiuose."
+			},
 			"mk": {
 				"name": "Филтер за известувања за колачиња",
 				"description": "Ги блокира известувањата за колачиња на веб-страниците."
+			},
+			"ms": {
+				"name": "Penapis Pemberitahuan Kuki AdGuard",
+				"description": "Menyekat pemberitahuan kuki pada halaman web."
 			},
 			"nl": {
 				"name": "AdGuard-filter voor cookiemeldingen",
@@ -3657,6 +4118,10 @@
 			"sv": {
 				"name": "AdGuard Cookie Notices-filter",
 				"description": "Blockerar meddelanden om cookies på webbsidor."
+			},
+			"th": {
+				"name": "ตัวกรองการแจ้งเตือนคุกกี้ AdGuard",
+				"description": "บล็อกการแจ้งเตือนคุกกี้ในหน้าเว็บ."
 			},
 			"tr": {
 				"name": "AdGuard Çerez Bildirimleri filtresi",
@@ -3740,6 +4205,10 @@
 				"name": "מסנן חלונות קופצים של AdGuard",
 				"description": "חוסם כל מיני חלונות קופצים שאינם נחוצים לתפעול אתרים בהתאם למדיניות הסינון שלנו."
 			},
+			"hi": {
+				"name": "AdGuard पॉपअप फ़िल्टर",
+				"description": "वेबसाइटों के संचालन के लिए आवश्यक नहीं होने वाले सभी प्रकार के पॉप-अप को ब्लॉक करता है।"
+			},
 			"hr": {
 				"name": "Filtar AdGuard skočnih prozora",
 				"description": "Blokira sve vrste skočnih prozora koji nisu potrebni za rad web stranica u skladu s našim Pravilima filtriranja."
@@ -3747,6 +4216,10 @@
 			"hu": {
 				"name": "AdGuard Popups szűrő",
 				"description": "Blokkolja az összes olyan felugró ablakot, amely nem szükséges a webhelyek működéséhez a Szűrő irányelvünk szerint."
+			},
+			"hy": {
+				"name": "AdGuard թուլացող պատուհանների ֆիլտր",
+				"description": "Ավելի բոլոր տեսակի պատուհանների անարգելումը, որոնք անհրաժեշտ չեն կայքերի գործունեության համար ըստ մեր Զտիչի քաղաքականության։"
 			},
 			"id": {
 				"name": "Filter Munculan AdGuard",
@@ -3764,9 +4237,17 @@
 				"name": "AdGuard 팝업 필터",
 				"description": "필터 정책에 따라 웹사이트 운영에 필요하지 않은 모든 종류의 팝업을 차단합니다."
 			},
+			"lt": {
+				"name": "AdGuard iškylančių langų filtras",
+				"description": "Blokuoja visų rūšių iššokančius langus, kurie nėra būtini svetainių veikimui pagal mūsų filtravimo politiką."
+			},
 			"mk": {
 				"name": "Филтер за скокачки прозорци",
 				"description": "Ги блокира сите видови скокачки прозорци кои не се неопходни за работа на веб-локациите."
+			},
+			"ms": {
+				"name": "Penapis Pop-up AdGuard",
+				"description": "Menyekat semua jenis pop-up yang tidak diperlukan untuk operasi laman web mengikut dasar Penapisan kami."
 			},
 			"nl": {
 				"name": "AdGuard Popups-filter",
@@ -3815,6 +4296,10 @@
 			"sv": {
 				"name": "AdGuard Popups-filter",
 				"description": "Blockerar alla typer av popup-fönster som inte är nödvändiga för att webbplatserna ska fungera enligt vår Filterpolicy."
+			},
+			"th": {
+				"name": "ตัวกรองป๊อปอัพ AdGuard",
+				"description": "บล็อกหน้าต่างป๊อปอัพทุกประเภทที่ไม่จำเป็นสำหรับการทำงานของเว็บไซต์ตามนโยบายการกรองของเรา."
 			},
 			"tr": {
 				"name": "AdGuard Açılır Pencereler filtresi",
@@ -3898,6 +4383,10 @@
 				"name": "מסנן באנרים לאפליקציה לנייד של AdGuard",
 				"description": "חוסם באנרים מעצבנים שמקדמים אפליקציות לנייד של אתרים."
 			},
+			"hi": {
+				"name": "AdGuard मोबाइल एप्लिकेशन बैनर्स फ़िल्टर",
+				"description": "वेबसाइटों के मोबाइल ऐप का प्रचार करने वाले परेशान करने वाले बैनर्स को ब्लॉक करता है।"
+			},
 			"hr": {
 				"name": "AdGuard filtar mobilnih bannera",
 				"description": "Blokira iritantne bannere koji promoviraju mobilne aplikacije web stranica."
@@ -3905,6 +4394,10 @@
 			"hu": {
 				"name": "AdGuard Mobile App Banners szűrő",
 				"description": "Blokkolja az irritáló bannereket, amelyek a webhelyek mobilalkalmazásait népszerűsítik."
+			},
+			"hy": {
+				"name": "AdGuard Մոբայլ հավելվածի բաներների զտիչ",
+				"description": "Արգելում է առցանց հավելվածների վճռական լինելու և կենդանի աջակցություն ունեցող զրույցների առաջացումը։"
 			},
 			"id": {
 				"name": "Filter Spanduk Aplikasi Seluler AdGuard",
@@ -3922,9 +4415,17 @@
 				"name": "AdGuard 모바일 앱 배너 필터",
 				"description": "웹 사이트의 모바일 앱을 광고하는 배너를 차단합니다. AdGuard 방해 요소 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "AdGuard mobiliojo aplikacijų reklamjuosčių filtras",
+				"description": "Blokuoja erzinančias reklamjuostes, kurios skelbia svetainių mobiliąsias programas."
+			},
 			"mk": {
 				"name": "Филтер за банери за мобилни апликации",
 				"description": "Блокира иритирачки банери кои промовираат мобилни апликации на веб-локации."
+			},
+			"ms": {
+				"name": "Penapis Sepanduk Aplikasi Mudah Alih AdGuard",
+				"description": "Menyekat sepanduk yang mengganggu yang mempromosikan aplikasi mudah alih laman web."
 			},
 			"nl": {
 				"name": "AdGuard Mobiele apps bannerfilter",
@@ -3973,6 +4474,10 @@
 			"sv": {
 				"name": "AdGuard Banners för mobilappar filtreras",
 				"description": "Blockerar irriterande banners som marknadsför mobilappar på webbplatser."
+			},
+			"th": {
+				"name": "ตัวกรองแบนเนอร์แอพมือถือ AdGuard",
+				"description": "บล็อกจากแบนเนอร์ที่น่ารำคาญที่โปรโมตแอพมือถือของเว็บไซต์."
 			},
 			"tr": {
 				"name": "AdGuard Mobil Uygulama Afişleri filtresi",
@@ -4056,6 +4561,10 @@
 				"name": "מסנן הטרדות אחרות של AdGuard",
 				"description": "חוסם אלמנטים מעצבנים בדפי אינטרנט שאינם נכנסים לקטגוריות הפופולריות של מטרדים."
 			},
+			"hi": {
+				"name": "AdGuard अन्य परेशानियाँ फ़िल्टर",
+				"description": "वेब पृष्ठों पर ऐसे परेशान करने वाले तत्वों को ब्लॉक करता है जो सामान्य परेशानियों की लोकप्रिय श्रेणियों में नहीं आते।"
+			},
 			"hr": {
 				"name": "Filtar koji filtrira ostale iritirajuće elemente AdGuarda",
 				"description": "Blokira iritantne elemente na web stranicama koji ne spadaju u popularne kategorije smetnji."
@@ -4063,6 +4572,10 @@
 			"hu": {
 				"name": "AdGuard Egyéb Kellemetlenségek elleni szűrő",
 				"description": "Blokkolja a weboldalak olyan zavaró elemeit, amelyek nem tartoznak a népszerű zavaró kategóriákba."
+			},
+			"hy": {
+				"name": "AdGuard Այլ անհանգստացնողները",
+				"description": "Արգելում է անհանգստացնող տարրերը վեբ էջերում, որոնք չեն դասվում հանրաճանաչ անհանգստացնող կատեգորիաների մեջ։"
 			},
 			"id": {
 				"name": "Filter Gangguan Lainnya AdGuard",
@@ -4080,9 +4593,17 @@
 				"name": "AdGuard 기타 방해 요소 필터",
 				"description": "사용자가 자주 찾지 않는 웹 페이지의 성가신 요소를 차단합니다. AdGuard 방해 요소 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "AdGuard kitų trukdžių filtras",
+				"description": "Blokuoja erzinančius elementus svetainėse, kurie nepriklauso populiarioms trukdžių kategorijoms."
+			},
 			"mk": {
 				"name": "Филтер за досадни реклами",
 				"description": "Блокира иритирачки елементи на веб-страници кои не спаѓаат во популарните категории на вознемирувања."
+			},
+			"ms": {
+				"name": "Penapis Gangguan Lain AdGuard",
+				"description": "Menyekat elemen yang mengganggu di laman web yang tidak tergolong dalam kategori gangguan yang popular."
 			},
 			"nl": {
 				"name": "AdGuard Andere ergernissen filter",
@@ -4131,6 +4652,10 @@
 			"sv": {
 				"name": "AdGuard filter för andra störningar",
 				"description": "Blockerar irriterande element på webbsidor som inte hör till de populära kategorierna av irriterande element."
+			},
+			"th": {
+				"name": "ตัวกรองสิ่งรบกวนอื่นๆของ AdGuard",
+				"description": "ปิดกั้นองค์ประกอบที่น่ารำคาญในหน้าเว็บที่ไม่อยู่ในหมวดหมู่ที่เป็นที่นิยมของสิ่งรบกวน"
 			},
 			"tr": {
 				"name": "AdGuard Diğer Can Sıkıcı Öğeler filtresi",
@@ -4214,6 +4739,10 @@
 				"name": "מסנן ווידג'טים של AdGuard",
 				"description": "חוסם ווידג'טים מעצבנים של צד שלישי: עוזרים מקוונים, צ'אטי תמיכה חיים וכו'."
 			},
+			"hi": {
+				"name": "AdGuard विजेट फ़िल्टर",
+				"description": "परेशान करने वाले तीसरे पक्ष के विजेट: ऑनलाइन सहायकों, लाइव समर्थन चैट आदि को ब्लॉक करता है।"
+			},
 			"hr": {
 				"name": "Filtar Widgeta AdGuard",
 				"description": "Blokira dosadne widgete trećih strana: mrežni asistente, chatove za podršku uživo itd."
@@ -4221,6 +4750,10 @@
 			"hu": {
 				"name": "AdGuard Widgets szűrő",
 				"description": "Blokkolja a bosszantó harmadik féltől származó widgeteket: online asszisztensek, élő támogatási csevegések stb."
+			},
+			"hy": {
+				"name": "AdGuard Վիդջեթների զտիչ",
+				"description": "Արգելում է անհանգստացնող երրորդ կողմի վիդջեթները՝ առցանց օգնականներ, կենդանի աջակցություն զրույցներ և այլն։"
 			},
 			"id": {
 				"name": "Filter Widget AdGuard",
@@ -4238,9 +4771,17 @@
 				"name": "AdGuard 위젯 필터",
 				"description": "성가신 제3자 위젯을 차단합니다. 온라인 도우미, 실시간 지원 채팅 등. AdGuard 방해 요소 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "AdGuard valdiklių filtras",
+				"description": "Užblokuoja erzinančius trečiųjų šalių valdiklius: internetinius asistentus, gyvo palaikymo pokalbius ir kt."
+			},
 			"mk": {
 				"name": "Филтер за додатоци (виџети)",
 				"description": "Блокира досадни графички контроли од трета страна: онлајн асистенти, разговори за поддршка во живо итн."
+			},
+			"ms": {
+				"name": "Penapis Widget AdGuard",
+				"description": "Menyekat widget pihak ketiga yang mengganggu: pembantu dalam talian, sokongan langsung, dan sebagainya."
 			},
 			"nl": {
 				"name": "AdGuard Widgets-filter",
@@ -4289,6 +4830,10 @@
 			"sv": {
 				"name": "AdGuard Widgets filter",
 				"description": "Blockerar irriterande widgetar från tredje part: onlineassistenter, chattar för direktsupport osv."
+			},
+			"th": {
+				"name": "ตัวกรองวิดเจ็ตของ AdGuard",
+				"description": "ปิดกั้นวิดเจตที่น่ารำคาญจากบุคคลที่สาม: ผู้ช่วยออนไลน์, แชทสนับสนุนสด, เป็นต้น"
 			},
 			"tr": {
 				"name": "AdGuard Araçlar filtresi",
@@ -4372,6 +4917,10 @@
 				"name": "מסנן אוקראיני של AdGuard",
 				"description": "מסנן המאפשר חסימת מודעות באתרים בשפה האוקראינית."
 			},
+			"hi": {
+				"name": "AdGuard यूक्रेनी फ़िल्टर",
+				"description": "यूक्रेनी भाषा में वेबसाइटों पर विज्ञापन अवरुद्ध करने के लिए फ़िल्टर।"
+			},
 			"hr": {
 				"name": "AdGuard Ukrajinski filter",
 				"description": "Filter koji omogućuje blokiranje oglasa na web stranicama na ukrajinskom jeziku."
@@ -4379,6 +4928,10 @@
 			"hu": {
 				"name": "AdGuard ukrán szűrő",
 				"description": "Szűrő, amely lehetővé teszi a hirdetések blokkolását az ukrán nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard Ուկրաինական զտիչ",
+				"description": "Զտիչ, որը թույլ է տալիս փակել գովազդները ուկրաիներեն կայքերում։"
 			},
 			"id": {
 				"name": "Filter Ukraina AdGuard",
@@ -4396,9 +4949,17 @@
 				"name": "AdGuard 우크라이나어 필터",
 				"description": "우크라이나어 사이트의 광고를 차단하는 필터입니다."
 			},
+			"lt": {
+				"name": "AdGuard Ukrainos filtras",
+				"description": "Filtras, leidžiantis skelbimų blokavimą svetainėse ukrainiečių kalba."
+			},
 			"mk": {
 				"name": "Украински филтер",
 				"description": "Филтер што овозможува блокирање реклами на веб-локации на украински јазик."
+			},
+			"ms": {
+				"name": "Penapis Ukraine AdGuard",
+				"description": "Penapis yang membolehkan sekatan iklan pada laman web dalam bahasa Ukraine."
 			},
 			"nl": {
 				"name": "AdGuard Oekraïens filter",
@@ -4447,6 +5008,10 @@
 			"sv": {
 				"name": "AdGuard Ukrainska filter",
 				"description": "Filter som gör det möjligt att blockera annonser på webbplatser på ukrainska."
+			},
+			"th": {
+				"name": "ตัวกรอง AdGuard ภาษาอูเครน",
+				"description": "ตัวกรองที่เปิดใช้งานการปิดกั้นโฆษณาบนเว็บไซต์ในภาษาอูเครน"
 			},
 			"tr": {
 				"name": "AdGuard Ukraynaca filtresi",
@@ -4530,6 +5095,10 @@
 				"name": "EasyList",
 				"description": "EasyList הוא המינוי העיקרי אשר מסיר פרסומות מדפי רשת בשפה האנגלית. כלול כבר במסנן הבסיס של AdGuard."
 			},
+			"hi": {
+				"name": "EasyList",
+				"description": "EasyList मुख्य सदस्यता है जो अंग्रेजी में वेब पृष्ठों से विज्ञापनों को हटाती है। पहले से ही एडगार्ड बेस फ़िल्टर में शामिल है।"
+			},
 			"hr": {
 				"name": "EasyList",
 				"description": "EasyList je primarna pretplata koja uklanja oglase s web stranica na engleskom jeziku. Već uključeno u AdGuard Osnovni filtar."
@@ -4537,6 +5106,10 @@
 			"hu": {
 				"name": "EasyList",
 				"description": "Az EasyList egy elsődleges szűrőlista, amely eltávolítja a hirdetéseket az angol nyelvű webhelyekről. Az AdGuard Alap szűrő már tartalmazza."
+			},
+			"hy": {
+				"name": "EasyList",
+				"description": "EasyList-ը հիմնական բաժն է, որը հեռացնում է գովազդները անգլերեն վեբ էջերից։ Already included in AdGuard Base filter."
 			},
 			"id": {
 				"name": "EasyList",
@@ -4554,9 +5127,17 @@
 				"name": "EasyList",
 				"description": "EasyList은 영어로 된 웹 페이지에서 광고를 제거하는 기본 구독입니다. AdGuard Base 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "EasyList",
+				"description": "EasyList yra pagrindinė prenumerata, kuri pašalina skelbimus iš anglų kalbos tinklalapių. Jau įtraukta į AdGuard Bazo filtrą."
+			},
 			"mk": {
 				"name": "EasyList",
 				"description": "EasyList е примарна претплата што ги отстранува рекламите од веб-страниците на англиски јазик. Веќе вклучен во основниот филтер на AdGuard."
+			},
+			"ms": {
+				"name": "EasyList",
+				"description": "EasyList adalah langganan utama yang menghapus iklan dari laman web dalam bahasa Inggeris. Sudah termasuk dalam penapis AdGuard Base."
 			},
 			"nl": {
 				"name": "EasyList",
@@ -4605,6 +5186,10 @@
 			"sv": {
 				"name": "EasyList",
 				"description": "EasyList är den primära prenumerationen som tar bort annonser från webbsidor på engelska. Ingår redan i AdGuard Grundfiltret."
+			},
+			"th": {
+				"name": "EasyList",
+				"description": "EasyList คือการสมัครสมาชิกหลักที่ลบโฆษณาออกจากหน้าเว็บเป็นภาษาอังกฤษ รวมอยู่ในตัวกรอง AdGuard Base แล้ว"
 			},
 			"tr": {
 				"name": "EasyList",
@@ -4688,6 +5273,10 @@
 				"name": "ABPindo",
 				"description": "רשימת מסננים נוספת עבור אתרים באינדונזית."
 			},
+			"hi": {
+				"name": "ABPindo",
+				"description": "इंडोनेशियाई वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "ABPindo",
 				"description": "Indonezijski dodatak za EasyList."
@@ -4695,6 +5284,10 @@
 			"hu": {
 				"name": "ABPindo",
 				"description": "Indonéz kiegészítő az EasyList-hez."
+			},
+			"hy": {
+				"name": "ABPindo",
+				"description": "Լրացուցիչ զտիչների ցանկ, որը նախատեսված է ինդոնեզերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "ABPindo",
@@ -4712,9 +5305,17 @@
 				"name": "ABPindo",
 				"description": "인도네시아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "ABPindo",
+				"description": "Papildomas filtrų sąrašas tinklalapiams indoneziečių kalba."
+			},
 			"mk": {
 				"name": "ABPindo",
 				"description": "Дополнителен список со филтри за веб-локации на индонезиски јазик."
+			},
+			"ms": {
+				"name": "ABPindo",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Indonesia."
 			},
 			"nl": {
 				"name": "ABPindo",
@@ -4763,6 +5364,10 @@
 			"sv": {
 				"name": "ABPindo",
 				"description": "Extra filterlista för indonesiska webbplatser."
+			},
+			"th": {
+				"name": "ABPindo",
+				"description": "ภาคผนวกภาษาอินโดนีเซียสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "ABPindo",
@@ -4846,6 +5451,10 @@
 				"name": "רשימה בולגרית",
 				"description": "רשימת מסננים נוספת עבור אתרים בבולגרית."
 			},
+			"hi": {
+				"name": "Bulgarian list",
+				"description": "बुल्गारियाई भाषा की वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Bugarska lista",
 				"description": "Bugarski dodatak za EasyList."
@@ -4853,6 +5462,10 @@
 			"hu": {
 				"name": "Bulgarian list",
 				"description": "További szűrőlista bolgár nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "Bulgarian list",
+				"description": "Լրացուցիչ զտիչների ցանկ, որը նախատեսված է բուլղարերեն լեզվով կայքերի համար։"
 			},
 			"id": {
 				"name": "Bulgarian list",
@@ -4870,9 +5483,17 @@
 				"name": "Bulgarian list",
 				"description": "불가리아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Bulgarian list",
+				"description": "Papildomas filtrų sąrašas tinklalapiams bulgarų kalba."
+			},
 			"mk": {
 				"name": "Бугарска листа",
 				"description": "Дополнителна листа на филтри за веб-страници на бугарски јазик."
+			},
+			"ms": {
+				"name": "Bulgarian list",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Bulgaria."
 			},
 			"nl": {
 				"name": "Bulgaarse lijst",
@@ -4921,6 +5542,10 @@
 			"sv": {
 				"name": "Bulgarian list",
 				"description": "Extra filterlista för webbplatser på bulgariska."
+			},
+			"th": {
+				"name": "Bulgarian list",
+				"description": "ภาคผนวกภาษาบัลแกเรียสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "Bulgarian list",
@@ -5004,6 +5629,10 @@
 				"name": "EasyList סין",
 				"description": "רשימת מסננים נוספת עבור אתרים בסינית. כלולה כבר במסנן הסיני של AdGuard."
 			},
+			"hi": {
+				"name": "EasyList China",
+				"description": "चीनी भाषी वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची। पहले से ही एडगार्ड चीनी फ़िल्टर में शामिल है।"
+			},
 			"hr": {
 				"name": "EasyList Kina",
 				"description": "Kineski dodatak za EasyList."
@@ -5011,6 +5640,10 @@
 			"hu": {
 				"name": "EasyList China",
 				"description": "Kínai kiegészítő az EasyList-hez. Az AdGuard Kínai szűrő már tartalmazza."
+			},
+			"hy": {
+				"name": "EasyList China",
+				"description": "Ավելացուցիչ զտիչների ցանկ չինական կայքերի համար։ Already included in AdGuard Chinese filter."
 			},
 			"id": {
 				"name": "EasyList China",
@@ -5028,9 +5661,17 @@
 				"name": "EasyList China",
 				"description": "중국어 웹사이트를 위한 추가 필터 목록입니다. AdGuard 중국 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "EasyList China",
+				"description": "Papildomas filtrų sąrašas tinklalapiams kinų kalba. Jau įtrauktas į AdGuard kinišką filtrą."
+			},
 			"mk": {
 				"name": "EasyList Кина",
 				"description": "Дополнителен список со филтри за веб-локации на кинески. Веќе вклучен во кинескиот филтер на AdGuard."
+			},
+			"ms": {
+				"name": "EasyList China",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Cina. Sudah termasuk dalam penapis Cina AdGuard."
 			},
 			"nl": {
 				"name": "Chinese EasyList",
@@ -5079,6 +5720,10 @@
 			"sv": {
 				"name": "EasyList China",
 				"description": "Extra filterlista för webbplatser på kinesiska. Ingår redan i AdGuard Chinese-filter."
+			},
+			"th": {
+				"name": "EasyList China",
+				"description": "ภาคผนวกภาษาจีนสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "EasyList China",
@@ -5162,6 +5807,10 @@
 				"name": "EasyList צ'כית וסלובקית",
 				"description": "רשימת מסננים נוספת עבור אתרים בצ'כית ובסלובקית."
 			},
+			"hi": {
+				"name": "EasyList Czech and Slovak",
+				"description": "चेक और स्लोवाक वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "EasyList Češka i Slovačka",
 				"description": "Češki i slovački dodatak za EasyList."
@@ -5169,6 +5818,10 @@
 			"hu": {
 				"name": "EasyList Czech and Slovak",
 				"description": "Kiegészítő szűrőlista cseh és szlovák nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "EasyList Czech and Slovak",
+				"description": "Լրացուցիչ զտիչերի ցանկ, որը նախատեսված է ճեխերեն և սլովակերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "EasyList Czech and Slovak",
@@ -5186,9 +5839,17 @@
 				"name": "EasyList Czech and Slovak",
 				"description": "체코어 및 슬로바키아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "EasyList Czech and Slovak",
+				"description": "Papildomas filtrų sąrašas tinklalapiams čekų ir slovakų kalba."
+			},
 			"mk": {
 				"name": "EasyList чешки и словачки",
 				"description": "Дополнителна листа на филтри за веб-локации на чешки и словачки јазик."
+			},
+			"ms": {
+				"name": "EasyList Czech and Slovak",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Czech dan Slovak."
 			},
 			"nl": {
 				"name": "Tsjechische en Slovaakse EasyList",
@@ -5237,6 +5898,10 @@
 			"sv": {
 				"name": "EasyList Czech and Slovak",
 				"description": "Extra filterlista för webbplatser på tjeckiska och slovakiska."
+			},
+			"th": {
+				"name": "EasyList Czech and Slovak",
+				"description": "ภาคผนวกภาษาเช็กและสโลวักสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "EasyList Czech and Slovak",
@@ -5320,6 +5985,10 @@
 				"name": "EasyList הולנדית",
 				"description": "רשימת מסננים נוספת עבור אתרים בהולנדית. כלולה כבר במסנן ההולנדי של AdGuard."
 			},
+			"hi": {
+				"name": "EasyList Dutch",
+				"description": "डच में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची। पहले से ही एडगार्ड डच फ़िल्टर में शामिल है।"
+			},
 			"hr": {
 				"name": "EasyList Nizozemska",
 				"description": "Nizozemski dodatak za EasyList. Već uključeno u AdGuard nizozemski filtar."
@@ -5327,6 +5996,10 @@
 			"hu": {
 				"name": "EasyList Dutch",
 				"description": "További szűrőlista holland nyelvű weboldalakhoz. Már szerepel az AdGuard holland szűrőjében."
+			},
+			"hy": {
+				"name": "EasyList Dutch",
+				"description": "Լրացուցիչ զտիչների ցանկ հոլանդերեն կայքերի համար։ Already included in AdGuard Dutch filter."
 			},
 			"id": {
 				"name": "EasyList Dutch",
@@ -5344,9 +6017,17 @@
 				"name": "EasyList Dutch",
 				"description": "네덜란드어 웹사이트를 위한 추가 필터 목록입니다. AdGuard 네덜란드 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "EasyList Dutch",
+				"description": "Papildomas filtrų sąrašas tinklalapiams olandų kalba. Jau įtraukta į AdGuard Olandų filtrą."
+			},
 			"mk": {
 				"name": "EasyList холандски",
 				"description": "Дополнителен список со филтри за веб-локации на холандски јазик. Веќе вклучен во холандскиот филтер на AdGuard."
+			},
+			"ms": {
+				"name": "EasyList Dutch",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Belanda. Sudah termasuk dalam penapis Dutch AdGuard."
 			},
 			"nl": {
 				"name": "Nederlandse EasyList",
@@ -5395,6 +6076,10 @@
 			"sv": {
 				"name": "EasyList Dutch",
 				"description": "Extra filterlista för webbplatser på nederländska. Ingår redan i AdGuard Dutch-filter."
+			},
+			"th": {
+				"name": "EasyList Dutch",
+				"description": "ภาคผนวกภาษาดัตช์สำหรับ EasyList รวมอยู่ในตัวกรอง AdGuard Dutch แล้ว"
 			},
 			"tr": {
 				"name": "EasyList Dutch",
@@ -5478,6 +6163,10 @@
 				"name": "EasyList גרמנית",
 				"description": "רשימת מסננים נוספת עבור אתרים בגרמנית. כלולה כבר במסנן הגרמני של AdGuard."
 			},
+			"hi": {
+				"name": "EasyList Germany",
+				"description": "जर्मन में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची। पहले से ही एडगार्ड जर्मन फ़िल्टर में शामिल है।"
+			},
 			"hr": {
 				"name": "EasyList Njemačka",
 				"description": "Njemački dodatak za EasyList. Već uključeno u AdGuard njemački filtar."
@@ -5485,6 +6174,10 @@
 			"hu": {
 				"name": "EasyList Germany",
 				"description": "További szűrőlista német nyelvű weboldalakhoz. Már szerepel az AdGuard német nyelvű szűrőjében."
+			},
+			"hy": {
+				"name": "EasyList Germany",
+				"description": "Լրացուցիչ զտիչների ցանկ գերմաներեն լեզվի կայքերից։"
 			},
 			"id": {
 				"name": "EasyList Germany",
@@ -5502,9 +6195,17 @@
 				"name": "EasyList Germany",
 				"description": "독일어 웹사이트를 위한 추가 필터 목록입니다. AdGuard 독일 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "EasyList Germany",
+				"description": "Papildomas filtrų sąrašas tinklalapiams vokiečių kalba. Jau įtraukta į AdGuard Vokiečių filtrą."
+			},
 			"mk": {
 				"name": "EasyList Германија",
 				"description": "Дополнителен список на филтри за веб-страници на германски јазик. Веќе вклучен во германскиот филтер на AdGuard."
+			},
+			"ms": {
+				"name": "EasyList Germany",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Jerman. Sudah termasuk dalam penapis Jerman AdGuard."
 			},
 			"nl": {
 				"name": "Duitse EasyList",
@@ -5553,6 +6254,10 @@
 			"sv": {
 				"name": "EasyList Germany",
 				"description": "Ytterligare filterlista för webbplatser på tyska. Ingår redan i AdGuard German-filter."
+			},
+			"th": {
+				"name": "EasyList Germany",
+				"description": "ภาคผนวกภาษาเยอรมันสำหรับ EasyList รวมอยู่ในตัวกรอง AdGuard German แล้ว"
 			},
 			"tr": {
 				"name": "EasyList Germany",
@@ -5636,6 +6341,10 @@
 				"name": "EasyList עברית",
 				"description": "רשימת מסננים נוספת עבור אתרים בעברית."
 			},
+			"hi": {
+				"name": "EasyList Hebrew",
+				"description": "हिब्रू में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "EasyList Hebrejski",
 				"description": "Hebrejski dodatak za EasyList."
@@ -5643,6 +6352,10 @@
 			"hu": {
 				"name": "EasyList Hebrew",
 				"description": "További szűrőlista a héber nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "EasyList Hebrew",
+				"description": "Հեբրայերեն լեզվի համար լրացուցիչ զտիչների ցանկ։"
 			},
 			"id": {
 				"name": "EasyList Hebrew",
@@ -5660,9 +6373,17 @@
 				"name": "EasyList Hebrew",
 				"description": "히브리어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "EasyList Hebrew",
+				"description": "Papildomas filtrų sąrašas hebrajų kalbos svetainėms."
+			},
 			"mk": {
 				"name": "EasyList хебрејски",
 				"description": "Дополнителен список со филтри за веб-локации на хебрејски."
+			},
+			"ms": {
+				"name": "EasyList Hebrew",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Ibrani."
 			},
 			"nl": {
 				"name": "Hebreeuwse EasyList",
@@ -5711,6 +6432,10 @@
 			"sv": {
 				"name": "EasyList Hebrew",
 				"description": "Extra filterlista för webbplatser på hebreiska."
+			},
+			"th": {
+				"name": "EasyList Hebrew",
+				"description": "ภาคผนวกภาษาฮีบรูสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "EasyList Hebrew",
@@ -5794,6 +6519,10 @@
 				"name": "EasyList איטלקית",
 				"description": "רשימת מסננים נוספת עבור אתרים באיטלקית."
 			},
+			"hi": {
+				"name": "EasyList Italy",
+				"description": "इतालवी में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "EasyList Italija",
 				"description": "Talijanski dodatak za EasyList."
@@ -5801,6 +6530,10 @@
 			"hu": {
 				"name": "EasyList Italy",
 				"description": "További szűrőlista olasz nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "EasyList Italy",
+				"description": "Իտալերեն լեզվի վեբ կայքերի համար լրացուցիչ զտիչների ցանկ։"
 			},
 			"id": {
 				"name": "EasyList Italy",
@@ -5818,9 +6551,17 @@
 				"name": "EasyList Italy",
 				"description": "이탈리아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "EasyList Italy",
+				"description": "Papildomas filtrų sąrašas italų kalbos svetainėms."
+			},
 			"mk": {
 				"name": "EasyList Италија",
 				"description": "Дополнителен список на филтри за веб-локации на италијански јазик."
+			},
+			"ms": {
+				"name": "EasyList Italy",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Itali."
 			},
 			"nl": {
 				"name": "Italiaanse EasyList",
@@ -5869,6 +6610,10 @@
 			"sv": {
 				"name": "EasyList Italy",
 				"description": "Extra filterlista för webbplatser på italienska."
+			},
+			"th": {
+				"name": "EasyList Italy",
+				"description": "ภาคผนวกภาษาอิตาลีสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "EasyList Italy",
@@ -5952,6 +6697,10 @@
 				"name": "EasyList ליטאית",
 				"description": "רשימת מסננים נוספת עבור אתרים בליטאית."
 			},
+			"hi": {
+				"name": "EasyList Lithuania",
+				"description": "लिथुआनियाई में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "EasyList Litva",
 				"description": "Litvanski dodatak za EasyList."
@@ -5959,6 +6708,10 @@
 			"hu": {
 				"name": "EasyList Lithuania",
 				"description": "Kiegészítő szűrőlista litván nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "EasyList Lithuania",
+				"description": "Լիտվաներեն լեզվով կայքերի համար լրացուցիչ զտիչների ցանկ։"
 			},
 			"id": {
 				"name": "EasyList Lithuania",
@@ -5976,9 +6729,17 @@
 				"name": "EasyList Lithuania",
 				"description": "리투아니아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "EasyList Lithuania",
+				"description": "Papildomas filtrų sąrašas lietuvių kalbos svetainėms."
+			},
 			"mk": {
 				"name": "EasyList Литванија",
 				"description": "Дополнителен список со филтри за веб-локации на литвански."
+			},
+			"ms": {
+				"name": "EasyList Lithuania",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Lithuania."
 			},
 			"nl": {
 				"name": "Lithouwse EasyList",
@@ -6027,6 +6788,10 @@
 			"sv": {
 				"name": "EasyList Lithuania",
 				"description": "Extra filterlista för webbplatser på litauiska."
+			},
+			"th": {
+				"name": "EasyList Lithuania",
+				"description": "ภาคผนวกภาษาลิทัวเนียสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "EasyList Lithuania",
@@ -6110,6 +6875,10 @@
 				"name": "רשימה לטבית",
 				"description": "רשימת מסננים נוספת עבור אתרים בלטבית."
 			},
+			"hi": {
+				"name": "Latvian List",
+				"description": "लेटवियाई में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Latvijska lista",
 				"description": "Latvijski dodatak za EasyList."
@@ -6117,6 +6886,10 @@
 			"hu": {
 				"name": "Latvian List",
 				"description": "Kiegészítő szűrőlista lett nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "Latvian List",
+				"description": "Լատվերեն լեզվով կայքերի համար լրացուցիչ զտիչների ցանկ։"
 			},
 			"id": {
 				"name": "Latvian List",
@@ -6134,9 +6907,17 @@
 				"name": "Latvian List",
 				"description": "라트비아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Latvian List",
+				"description": "Papildomas filtrų sąrašas latvių kalbos svetainėms."
+			},
 			"mk": {
 				"name": "Летонска листа",
 				"description": "Дополнителна листа на филтри за веб-локации на латвиски."
+			},
+			"ms": {
+				"name": "Latvian List",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Latvia."
 			},
 			"nl": {
 				"name": "Letse List",
@@ -6185,6 +6966,10 @@
 			"sv": {
 				"name": "Latvian List",
 				"description": "Extra filterlista för webbplatser på lettiska."
+			},
+			"th": {
+				"name": "Latvian List",
+				"description": "ภาคผนวกภาษาลัตเวียสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "Latvian List",
@@ -6268,6 +7053,10 @@
 				"name": "Liste AR",
 				"description": "רשימת מסננים נוספת עבור אתרים בערבית."
 			},
+			"hi": {
+				"name": "Liste AR",
+				"description": "अरबी में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Liste AR",
 				"description": "Arapski dodatak za EasyList."
@@ -6275,6 +7064,10 @@
 			"hu": {
 				"name": "Liste AR",
 				"description": "További szűrőlista arab nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "Liste AR",
+				"description": "Արաբերեն լեզվով կայքերի համար լրացուցիչ զտիչների ցանկ։"
 			},
 			"id": {
 				"name": "Liste AR",
@@ -6292,9 +7085,17 @@
 				"name": "Liste AR",
 				"description": "아랍어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Liste AR",
+				"description": "Papildomas filtrų sąrašas arabų kalbos svetainėms."
+			},
 			"mk": {
 				"name": "Liste AR",
 				"description": "Дополнителен список со филтри за веб-локации на арапски."
+			},
+			"ms": {
+				"name": "Liste AR",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Arab."
 			},
 			"nl": {
 				"name": "AR List",
@@ -6343,6 +7144,10 @@
 			"sv": {
 				"name": "Liste AR",
 				"description": "Extra filterlista för webbplatser på arabiska."
+			},
+			"th": {
+				"name": "Liste AR",
+				"description": "ภาคผนวกภาษาอาหรับสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "Liste AR",
@@ -6426,6 +7231,10 @@
 				"name": "Liste FR",
 				"description": "רשימת מסננים נוספת עבור אתרים בצרפתית. כלולה כבר במסנן הצרפתי של AdGuard."
 			},
+			"hi": {
+				"name": "Liste FR",
+				"description": "फ्रेंच में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची। पहले से एडगार्ड फ्रेंच फ़िल्टर में शामिल।"
+			},
 			"hr": {
 				"name": "Liste FR",
 				"description": "Francuski dodatak za EasyList. Već uključeno u AdGuard francuski filtar."
@@ -6433,6 +7242,10 @@
 			"hu": {
 				"name": "Liste FR",
 				"description": "Kiegészítő szűrőlista a francia nyelvű weboldalakhoz. Már szerepel az AdGuard francia nyelvű szűrőjében."
+			},
+			"hy": {
+				"name": "Liste FR",
+				"description": "Ֆրանսերեն լեզվի կայքերի համար լրացուցիչ զտիչների ցանկ։ Այս уже ներառված է AdGuard-ի ֆրանսերեն մաքրիչում։"
 			},
 			"id": {
 				"name": "Liste AR",
@@ -6450,9 +7263,17 @@
 				"name": "Liste FR",
 				"description": "프랑스어 웹사이트를 위한 추가 필터 목록입니다. AdGuard 프랑스 필터에 이미 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "Liste FR",
+				"description": "Papildomas filtrų sąrašas prancūzų kalbos svetainėms. Jau įtrauktas į AdGuard prancūzų filtrą."
+			},
 			"mk": {
 				"name": "Liste FR",
 				"description": "Дополнителен список на филтри за веб-локации на француски јазик. Веќе вклучен во францускиот филтер на AdGuard."
+			},
+			"ms": {
+				"name": "Liste FR",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Perancis. Sudah termasuk dalam penapis Perancis AdGuard."
 			},
 			"nl": {
 				"name": "FR List",
@@ -6501,6 +7322,10 @@
 			"sv": {
 				"name": "Liste FR",
 				"description": "Extra filterlista för webbplatser på franska. Ingår redan i AdGuard French-filter."
+			},
+			"th": {
+				"name": "Liste FR",
+				"description": "รายการตัวกรองเพิ่มเติมสำหรับเว็บไซต์ในภาษาฝรั่งเศส รวมอยู่ในตัวกรอง AdGuard ภาษาฝรั่งเศสแล้ว"
 			},
 			"tr": {
 				"name": "Liste FR",
@@ -6584,6 +7409,10 @@
 				"name": "ROList",
 				"description": "רשימת מסננים נוספת עבור אתרים ברומנית."
 			},
+			"hi": {
+				"name": "ROList",
+				"description": "रोमानियन में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "ROList",
 				"description": "Rumunjski dodatak za EasyList."
@@ -6591,6 +7420,10 @@
 			"hu": {
 				"name": "ROList",
 				"description": "További szűrőlista román nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "ROList",
+				"description": "Լրացուցիչ զտիչների ցանկ ռումիներեն լեզվով կայքերի համար։"
 			},
 			"id": {
 				"name": "ROList",
@@ -6608,9 +7441,17 @@
 				"name": "ROList",
 				"description": "루마니아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "ROList",
+				"description": "Papildomas filtrų sąrašas rumunų kalbos svetainėms."
+			},
 			"mk": {
 				"name": "ROLlist",
 				"description": "Дополнителен список со филтри за веб-локации на романски јазик."
+			},
+			"ms": {
+				"name": "ROList",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Romania."
 			},
 			"nl": {
 				"name": "RO List",
@@ -6659,6 +7500,10 @@
 			"sv": {
 				"name": "ROList",
 				"description": "Extra filterlista för webbplatser på rumänska."
+			},
+			"th": {
+				"name": "ROList",
+				"description": "ภาคผนวกภาษาโรมาเนียสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "ROList",
@@ -6742,6 +7587,10 @@
 				"name": "RU Adlist",
 				"description": "רשימת מסננים נוספת עבור אתרים ברוסית."
 			},
+			"hi": {
+				"name": "RU AdList",
+				"description": "रूसी में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "RU AdList",
 				"description": "Ruski dodatak za EasyList."
@@ -6749,6 +7598,10 @@
 			"hu": {
 				"name": "RU AdList",
 				"description": "Orosz kiegészítő az EasyList-hez."
+			},
+			"hy": {
+				"name": "RU AdList",
+				"description": "Լրացուցիչ զտիչների ցանկ ռուսերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "RU AdList",
@@ -6766,9 +7619,17 @@
 				"name": "RU AdList",
 				"description": "러시아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "RU AdList",
+				"description": "Papildomas filtrų sąrašas rusų kalbos svetainėms."
+			},
 			"mk": {
 				"name": "RU AdList",
 				"description": "Дополнителен список на филтри за веб-страници на руски јазик."
+			},
+			"ms": {
+				"name": "RU AdList",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Rusia."
 			},
 			"nl": {
 				"name": "RU Adlist",
@@ -6817,6 +7678,10 @@
 			"sv": {
 				"name": "RU AdList",
 				"description": "Extra filterlista för webbplatser på ryska."
+			},
+			"th": {
+				"name": "RU AdList",
+				"description": "ภาคผนวกภาษารัสเซียสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "RU Adlist",
@@ -6900,6 +7765,10 @@
 				"name": "EasyPrivacy",
 				"description": "תוספת של הגנה על פרטיות עבור EasyList."
 			},
+			"hi": {
+				"name": "EasyPrivacy",
+				"description": "EasyList के लिए गोपनीयता सुरक्षा पूरक।"
+			},
 			"hr": {
 				"name": "EasyPrivacy",
 				"description": "Dodatak za zaštitu privatnosti za EasyList."
@@ -6907,6 +7776,10 @@
 			"hu": {
 				"name": "EasyPrivacy",
 				"description": "Adatvédelmi kiegészítő az EasyList-hez."
+			},
+			"hy": {
+				"name": "EasyPrivacy",
+				"description": "EasyList-ի համար գաղտնիության պաշտպանություն։"
 			},
 			"id": {
 				"name": "EasyPrivacy",
@@ -6924,9 +7797,17 @@
 				"name": "EasyPrivacy",
 				"description": "EasyList 개인 정보 보호 추가 필터."
 			},
+			"lt": {
+				"name": "EasyPrivacy",
+				"description": "Privatumo apsaugos papildinys EasyList."
+			},
 			"mk": {
 				"name": "EasyPrivacy",
 				"description": "Додаток за заштита на приватноста за EasyList."
+			},
+			"ms": {
+				"name": "EasyPrivacy",
+				"description": "Tambahan perlindungan privasi untuk EasyList."
 			},
 			"nl": {
 				"name": "EasyPrivacy",
@@ -6975,6 +7856,10 @@
 			"sv": {
 				"name": "EasyPrivacy",
 				"description": "Integritetsskyddstillägg för EasyList."
+			},
+			"th": {
+				"name": "EasyPrivacy",
+				"description": "ส่วนเสริมการป้องกันความเป็นส่วนตัวสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "EasyPrivacy",
@@ -7058,6 +7943,10 @@
 				"name": "רשימת ABP איסלנדית",
 				"description": "רשימת מסננים נוספת עבור אתרים באיסלנדית."
 			},
+			"hi": {
+				"name": "Icelandic ABP List",
+				"description": "आइसलैंडिक में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Islandska ABP lista",
 				"description": "Islandski dodatak za EasyList."
@@ -7065,6 +7954,10 @@
 			"hu": {
 				"name": "Icelandic ABP List",
 				"description": "További szűrőlista izlandi nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "Icelandic ABP List",
+				"description": "Լրացուցիչ զտիչների ցանկ իսլանդերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "Icelandic ABP List",
@@ -7082,9 +7975,17 @@
 				"name": "Icelandic ABP List",
 				"description": "아이슬란드어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Icelandic ABP List",
+				"description": "Papildomas filtrų sąrašas svetainėms islandų kalba."
+			},
 			"mk": {
 				"name": "Исландска ABP листа",
 				"description": "Дополнителен список со филтри за веб-локации на исландски."
+			},
+			"ms": {
+				"name": "Icelandic ABP List",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Iceland."
 			},
 			"nl": {
 				"name": "Ijslandse ABP List",
@@ -7133,6 +8034,10 @@
 			"sv": {
 				"name": "Icelandic ABP List",
 				"description": "Extra filterlista för webbplatser på isländska."
+			},
+			"th": {
+				"name": "Icelandic ABP List",
+				"description": "ภาคผนวกภาษาไอซ์แลนด์สำหรับ EasyList"
 			},
 			"tr": {
 				"name": "Icelandic ABP List",
@@ -7216,6 +8121,10 @@
 				"name": "AdBlockID",
 				"description": "רשימת מסננים נוספת עבור אתרים באינדונזית."
 			},
+			"hi": {
+				"name": "AdBlockID",
+				"description": "इंडोनेशियाई वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "AdBlockID",
 				"description": "Indonezijski dodatak za EasyList i AdGuard Osnovni filtar."
@@ -7223,6 +8132,10 @@
 			"hu": {
 				"name": "AdBlockID",
 				"description": "Indonéz kiegészítő az EasyList-hez és az AdGuard Alap szűrőhöz."
+			},
+			"hy": {
+				"name": "AdBlockID",
+				"description": "Լրացուցիչ զտիչների ցանկ, որը նախատեսված է ինդոնեզերեն լեզվով կայքերի համար։"
 			},
 			"id": {
 				"name": "AdBlockID",
@@ -7240,9 +8153,17 @@
 				"name": "AdBlockID",
 				"description": "인도네시아어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "AdBlockID",
+				"description": "Papildomas filtrų sąrašas tinklalapiams indoneziečių kalba."
+			},
 			"mk": {
 				"name": "AdBlockID",
 				"description": "Дополнителен список со филтри за веб-локации на индонезиски јазик."
+			},
+			"ms": {
+				"name": "AdBlockID",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Indonesia."
 			},
 			"nl": {
 				"name": "AdBlockID",
@@ -7291,6 +8212,10 @@
 			"sv": {
 				"name": "AdBlockID",
 				"description": "Extra filterlista för indonesiska webbplatser."
+			},
+			"th": {
+				"name": "AdBlockID",
+				"description": "ภาคผนวกภาษาอินโดนีเซียสำหรับ EasyList และตัวกรองฐาน AdGuard"
 			},
 			"tr": {
 				"name": "AdBlockID",
@@ -7374,6 +8299,10 @@
 				"name": "מסנן AdBlock יווני",
 				"description": "רשימת מסננים נוספת עבור אתרים ביוונית."
 			},
+			"hi": {
+				"name": "Greek AdBlock Filter",
+				"description": "ग्रीक में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Grčki AdBlock filtar",
 				"description": "Grčki dodatak za EasyList."
@@ -7381,6 +8310,10 @@
 			"hu": {
 				"name": "Greek AdBlock Filter",
 				"description": "További szűrőlista görög nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "Greek AdBlock Filter",
+				"description": "Լրացուցիչ զտիչների ցանկ հունարեն կայքերի համար։"
 			},
 			"id": {
 				"name": "Greek AdBlock Filter",
@@ -7398,9 +8331,17 @@
 				"name": "Greek AdBlock Filter",
 				"description": "그리스어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Greek AdBlock Filter",
+				"description": "Papildomas filtrų sąrašas svetainėms graikų kalba."
+			},
 			"mk": {
 				"name": "Грчки филтер за AdBlock",
 				"description": "Дополнителна листа на филтри за веб-локации на грчки јазик."
+			},
+			"ms": {
+				"name": "Greek AdBlock Filter",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Yunani."
 			},
 			"nl": {
 				"name": "Griekse AdBlock Filter",
@@ -7449,6 +8390,10 @@
 			"sv": {
 				"name": "Greek AdBlock Filter",
 				"description": "Extra filterlista för webbplatser på grekiska."
+			},
+			"th": {
+				"name": "Greek AdBlock Filter",
+				"description": "ภาคผนวกภาษากรีกสำหรับ EasyList"
 			},
 			"tr": {
 				"name": "Greek AdBlock Filter",
@@ -7532,6 +8477,10 @@
 				"name": "Fanboy's Annoyances",
 				"description": "מסיר חלונות קופצים בתוך־עמוד ומטרדים אחרים. כולל את הרשימה חסימה חברתית של Fanboy ואת רשימת העוגיות של EasyList."
 			},
+			"hi": {
+				"name": "Fanboy's Annoyances",
+				"description": "पृष्ठ के अंदर पॉप-अप और अन्य अव्यवस्थाओं को हटा देता है। इसमें Fanboy's Social Blocking और EasyList Cookie Lists शामिल हैं।"
+			},
 			"hr": {
 				"name": "Fanboy's Annoyances",
 				"description": "Uklanja skočne prozore na stranicama i druge smetnje. Uključuje Fanboy's Social Blocking i EasyList Cookie Lists."
@@ -7539,6 +8488,10 @@
 			"hu": {
 				"name": "Fanboy's Annoyances",
 				"description": "Eltávolítja az oldalakon belüli felugró ablakokat és az egyéb kellemetlenségeket. Tartalmazza Fanboy's Social Blocking és az EasyList Süti listát."
+			},
+			"hy": {
+				"name": "Fanboy's Annoyances",
+				"description": "Հեռացնում է էջի ներսում պոպ-ափները և ուրիշ խանգարող իրեր։ Վรวมված է Fanboy's Social Blocking & EasyList Cookie Lists։"
 			},
 			"id": {
 				"name": "Fanboy's Annoyances",
@@ -7556,9 +8509,17 @@
 				"name": "Fanboy's Annoyances",
 				"description": "팝업 및 기타 방해 요소가 제거됩니다. Fanboy's Social Blocking List 및 EasyList 쿠키 목록이 포함됩니다."
 			},
+			"lt": {
+				"name": "Fanboy's Annoyances",
+				"description": "Pašalina iššokančius langus ir kitus trikdžius. Įeina Fanboy's Social Blocking ir EasyList Cookies sąrašai."
+			},
 			"mk": {
 				"name": "Fanboy's Annoyances",
 				"description": "Ги отстранува скокачките прозорци на страницата и другите досадни. Вклучува списоци на EasyList и Fanboy."
+			},
+			"ms": {
+				"name": "Fanboy's Annoyances",
+				"description": "Menghapus pop timbul dalam halaman dan gangguan lain. Termasuk Fanboy's Social Blocking & Senarai Kuki EasyList."
 			},
 			"nl": {
 				"name": "Fanboy's Annoyances",
@@ -7607,6 +8568,10 @@
 			"sv": {
 				"name": "Fanboy's Annoyances",
 				"description": "Tar bort popup-fönster på sidan och störningar. Inkluderar Fanboy's Social Blocking & EasyList Cookie Lists."
+			},
+			"th": {
+				"name": "Fanboy's Annoyances",
+				"description": "ลบป๊อปอัปในหน้าและสิ่งรบกวนอื่น ๆ รวมถึงการปิดกั้นโซเชียลของ Fanboy และรายการ EasyList Cookie"
 			},
 			"tr": {
 				"name": "Fanboy's Annoyances",
@@ -7690,6 +8655,10 @@
 				"name": "Fanboy's Social Blocking List",
 				"description": "מסתיר וחוסם תוכן חברתי, יישומונים חברתיים, תסריטים חברתיים ואיקונים חברתיים. כלול כבר ברשימה Fanboy's Annoyances."
 			},
+			"hi": {
+				"name": "Fanboy's Social Blocking List",
+				"description": "सामाजिक सामग्री, सामाजिक विजेट, सामाजिक स्क्रिप्ट और सामाजिक आइकन छिपाते और ब्लॉक करते हैं। पहले से ही Fanboy's Annoyances सूची में शामिल है।"
+			},
 			"hr": {
 				"name": "Fanboy's Social Blocking List",
 				"description": "Skriva i blokira društveni sadržaj, društvene widgete, društvene skripte i društvene ikone. Već uvršten na Fanboy's Annoyances list."
@@ -7697,6 +8666,10 @@
 			"hu": {
 				"name": "Fanboy's Social Blocking List",
 				"description": "Elrejti és blokkolja a közösségi média tartalmakat, a közösségi modulokat, a közösségi médiához köthető szkripteket és ikonokat. A Fanboy's Annoyances lista is tartalmazza."
+			},
+			"hy": {
+				"name": "Fanboy's Social Blocking List",
+				"description": "Հանում է և արգելափակում սոցիալական բովանդակություն, սոցիալական վիդջեթներ, սոցիալական սցենարներ և սոցիալական խորհրդանիշներ։"
 			},
 			"id": {
 				"name": "Fanboy's Social Blocking List",
@@ -7714,9 +8687,17 @@
 				"name": "Fanboy's Social Blocking List",
 				"description": "소셜 콘텐츠, 소셜 위젯, 소셜 스크립트 및 소셜 아이콘을 숨기고 차단합니다. 이미 Fanboy's Annoyances 목록에 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "Fanboy's Social Blocking List",
+				"description": "Slėpia ir blokuoja socialinį turinį, socialinius valdiklius, socialinius skriptus ir socialines piktogramas. Jau įtraukta į Fanboy's Annoyances sąrašą."
+			},
 			"mk": {
 				"name": "Fanboy's Social Blocking List",
 				"description": "Сокрива и блокира социјални содржини, социјални графички контроли, социјални скрипти и социјални икони. Веќе вклучен во списокот на Fanboy's Annoyances."
+			},
+			"ms": {
+				"name": "Fanboy's Social Blocking List",
+				"description": "Menyembunyikan dan menghalang kandungan sosial, widget sosial, skrip sosial dan ikon sosial. Sudah termasuk dalam senarai Gangguan Fanboy."
 			},
 			"nl": {
 				"name": "Fanboy's Social Blocking List",
@@ -7765,6 +8746,10 @@
 			"sv": {
 				"name": "Fanboy's Social Blocking List",
 				"description": "Döljer och blockerar sociala widgets, skript, ikoner och innehåll. Ingår redan i Fanboy's Annoyances-listan."
+			},
+			"th": {
+				"name": "Fanboy's Social Blocking List",
+				"description": "ซ่อนและปิดกั้นเนื้อหาโซเชียลวิดเจ็ตโซเชียลสคริปต์โซเชียลและไอคอนโซเชียล รวมอยู่ในรายการ Fanboy's Annoyances แล้ว"
 			},
 			"tr": {
 				"name": "Fanboy's Social Blocking List",
@@ -7848,6 +8833,10 @@
 				"name": "EasyList Portuguese",
 				"description": "רשימת מסננים נוספת עבור אתרים בספרדית ובפורטוגזית."
 			},
+			"hi": {
+				"name": "EasyList Portuguese",
+				"description": "स्पेनिश और पुर्तगाली में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "EasyList Portuguese",
 				"description": "Dodatan popis filtera za web-mjesta na španjolskom i portugalskom."
@@ -7855,6 +8844,10 @@
 			"hu": {
 				"name": "EasyList Portuguese",
 				"description": "További szűrőlista spanyol és portugál nyelvű webhelyekhez."
+			},
+			"hy": {
+				"name": "EasyList Portuguese",
+				"description": "Լրացուցիչ զտիչների ցանկ իսպաներեն և պորտուգալերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "EasyList Portuguese",
@@ -7872,9 +8865,17 @@
 				"name": "EasyList Portuguese",
 				"description": "스페인어 및 포르투갈어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "EasyList Portuguese",
+				"description": "Papildomas filtrų sąrašas svetainėms ispanų ir portugalų kalbomis."
+			},
 			"mk": {
 				"name": "EasyList португалски",
 				"description": "Дополнителна листа на филтри за веб-страници на шпански и португалски."
+			},
+			"ms": {
+				"name": "EasyList Portuguese",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Sepanyol dan Portugis."
 			},
 			"nl": {
 				"name": "EasyList Portugees",
@@ -7923,6 +8924,10 @@
 			"sv": {
 				"name": "EasyList Portuguese",
 				"description": "Ytterligare filterlista för webbplatser på spanska och portugisiska."
+			},
+			"th": {
+				"name": "EasyList Portuguese",
+				"description": "รายการกรองเพิ่มเติมสำหรับเว็บไซต์ในภาษาสเปนและโปรตุเกส"
 			},
 			"tr": {
 				"name": "EasyList Portuguese",
@@ -8006,6 +9011,10 @@
 				"name": "EasyList תאילנד",
 				"description": "מסנן שחוסם פרסומות באתרים תאילנדיים."
 			},
+			"hi": {
+				"name": "EasyList Thailand",
+				"description": "यह फ़िल्टर थाई साइटों पर विज्ञापनों को ब्लॉक करता है।"
+			},
 			"hr": {
 				"name": "EasyList Tajland",
 				"description": "Filtar koji blokira oglase na tajlandskim web stranicama."
@@ -8013,6 +9022,10 @@
 			"hu": {
 				"name": "EasyList Thailand",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket a thai nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "EasyList Thailand",
+				"description": "Ֆիլտր, որը փակեցնում է գովազդները թաիլանդյան կայքերում։"
 			},
 			"id": {
 				"name": "EasyList Thailand",
@@ -8030,9 +9043,17 @@
 				"name": "EasyList Thailand",
 				"description": "태국 사이트 광고 차단 필터."
 			},
+			"lt": {
+				"name": "EasyList Thailand",
+				"description": "Filtras, kuris blokuoja reklamas tailandietiškose svetainėse."
+			},
 			"mk": {
 				"name": "EasyList Тајланд",
 				"description": "Филтер што блокира реклами на тајландски сајтови."
+			},
+			"ms": {
+				"name": "EasyList Thailand",
+				"description": "Penapis yang menyekat iklan di laman web Thai."
 			},
 			"nl": {
 				"name": "EasyList Thailand",
@@ -8081,6 +9102,10 @@
 			"sv": {
 				"name": "EasyList Thailand",
 				"description": "Filter som blockerar annonser på thailändska webbplatser."
+			},
+			"th": {
+				"name": "EasyList Thailand",
+				"description": "ตัวกรองที่ปิดกั้นโฆษณาบนไซต์ภาษาไทย"
 			},
 			"tr": {
 				"name": "EasyList Thailand",
@@ -8164,6 +9189,10 @@
 				"name": "מסנן הונגרי",
 				"description": "Hufilter. רשימת מסננים שמסירה במפורש פרסומות באתרים בשפה ההונגרית."
 			},
+			"hi": {
+				"name": "Hungarian filter",
+				"description": "Hufilter। यह फ़िल्टर विशेष रूप से हंगेरियन भाषा में वेबसाइटों पर विज्ञापनों को हटाता है।"
+			},
 			"hr": {
 				"name": "Mađarski filtar",
 				"description": "Popis filtara posebno dizajniranih za blokiranje oglasa na mađarskom jeziku."
@@ -8171,6 +9200,10 @@
 			"hu": {
 				"name": "Hungarian filter",
 				"description": "Hufilter. Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a magyar nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "Hungarian filter",
+				"description": "Hufilter: Զտիչների ցանկ, որն ըստ հատուկ փակեցնում է գովազդները հունգարերեն կայքերում։"
 			},
 			"id": {
 				"name": "Hungarian filter",
@@ -8188,9 +9221,17 @@
 				"name": "Hungarian filter",
 				"description": "Hufilter는 특별히 헝가리어로 되어 있는 사이트의 광고를 제거하는 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filtrų sąrašas, kuris specialiai pašalina reklamas iš svetainių vengrų kalba."
+			},
 			"mk": {
 				"name": "Унгарски филтер",
 				"description": "Hufilter. Список со филтри што директно ги отстранува рекламите на веб-локациите на унгарски јазик."
+			},
+			"ms": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Senarai penapis yang secara khusus menghapus iklan pada laman web dalam bahasa Hungari."
 			},
 			"nl": {
 				"name": "Hongaarse filter",
@@ -8239,6 +9280,10 @@
 			"sv": {
 				"name": "Hungarian filter",
 				"description": "Hufilter. Filterlista som specifikt tar bort annonser på webbplatser på ungerska."
+			},
+			"th": {
+				"name": "Hungarian filter",
+				"description": "Hufilter รายการตัวกรองที่ลบโฆษณาบนเว็บไซต์ในภาษาฮังการีโดยเฉพาะ"
 			},
 			"tr": {
 				"name": "Hungarian filter",
@@ -8322,6 +9367,10 @@
 				"name": "Peter Lowe's Blocklist",
 				"description": "מסנן שחוסם פרסומות, עוקבנים ודברים נבזיים אחרים."
 			},
+			"hi": {
+				"name": "Peter Lowe's Blocklist",
+				"description": "यह फ़िल्टर विज्ञापनों, ट्रैकरों और अन्य अत्याचारों को ब्लॉक करता है।"
+			},
 			"hr": {
 				"name": "Peter Lowe's Blocklist",
 				"description": "Filtar koji blokira oglase, pratitelje i druge gadne stvari."
@@ -8329,6 +9378,10 @@
 			"hu": {
 				"name": "Peter Lowe's Blocklist",
 				"description": "Szűrő, amely blokkolja a hirdetéseket, a nyomkövetőket és az egyéb zavaró tényezőket."
+			},
+			"hy": {
+				"name": "Peter Lowe's Blocklist",
+				"description": "Ֆիլտր, որը փակեցնում է գովազդները, հետապնդիչները և այլ վատ բաներ։"
 			},
 			"id": {
 				"name": "Peter Lowe's Blocklist",
@@ -8346,9 +9399,17 @@
 				"name": "Peter Lowe's Blocklist",
 				"description": "광고, 추적기 등을 차단하는 필터."
 			},
+			"lt": {
+				"name": "Peter Lowe's Blocklist",
+				"description": "Filtras, blokuojantis reklamas, seklius ir kitas nemalonias dalis."
+			},
 			"mk": {
 				"name": "Блок листа на Peter Lowe",
 				"description": "Филтер што блокира реклами, тракери и други непријатни работи."
+			},
+			"ms": {
+				"name": "Peter Lowe's Blocklist",
+				"description": "Penapis yang menyekat iklan, pengesan dan perkara-perkara menjengkelkan yang lain."
 			},
 			"nl": {
 				"name": "Peter Lowe's Blocklist",
@@ -8397,6 +9458,10 @@
 			"sv": {
 				"name": "Peter Lowe's Blocklist",
 				"description": "Filter som blockerar annonser, spårare och andra otrevliga saker."
+			},
+			"th": {
+				"name": "Peter Lowe's Blocklist",
+				"description": "กรองที่ปิดกั้นโฆษณาและตัวติดตามอื่น ๆ"
 			},
 			"tr": {
 				"name": "Peter Lowe's Blocklist",
@@ -8480,6 +9545,10 @@
 				"name": "Xfiles",
 				"description": "רשימת מסננים של חסימת פרסומות בשפה האיטלקית."
 			},
+			"hi": {
+				"name": "Xfiles",
+				"description": "इतालवी विज्ञापन ब्लॉक फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Xfiles",
 				"description": "Italian adblock filter list."
@@ -8487,6 +9556,10 @@
 			"hu": {
 				"name": "Xfiles",
 				"description": "Olasz hirdetésblokkoló lista."
+			},
+			"hy": {
+				"name": "Xfiles",
+				"description": "Իտալական գովազդների փակող զտիչների ցանկ։"
 			},
 			"id": {
 				"name": "Xfiles",
@@ -8504,9 +9577,17 @@
 				"name": "Xfiles",
 				"description": "이탈리아 광고 차단 필터 목록."
 			},
+			"lt": {
+				"name": "Xfiles",
+				"description": "Italijos reklamos blokavimo filtrų sąrašas."
+			},
 			"mk": {
 				"name": "Xfiles",
 				"description": "Италијански adblock список со филтри."
+			},
+			"ms": {
+				"name": "Xfiles",
+				"description": "Senarai penapis adblock Itali."
 			},
 			"nl": {
 				"name": "Xfiles",
@@ -8555,6 +9636,10 @@
 			"sv": {
 				"name": "Xfiles",
 				"description": "Italiensk filterlista för annonsblockering."
+			},
+			"th": {
+				"name": "Xfiles",
+				"description": "รายการตัวกรองปิดกั้นโฆษณาของภาษาอิตาลี"
 			},
 			"tr": {
 				"name": "Xfiles",
@@ -8638,6 +9723,10 @@
 				"name": "Adblock Warning Removal List",
 				"description": "מסיר אזהרות נגד חסימת פרסומות והודעות פולשניות אחרות."
 			},
+			"hi": {
+				"name": "Adblock Warning Removal List",
+				"description": "यह एंटी-ऐडब्लॉक चेतावनियों और अन्य आक्रामक संदेशों को हटाता है।"
+			},
 			"hr": {
 				"name": "Adblock Warning Removal List",
 				"description": "Uklanja upozorenja protiv blokiranja oglasa i druge nametljive poruke."
@@ -8645,6 +9734,10 @@
 			"hu": {
 				"name": "Adblock Warning Removal List",
 				"description": "Eltávolítja a hirdetésblokkolók elleni figyelmeztetéseket és más zavaró üzeneteket."
+			},
+			"hy": {
+				"name": "Adblock Warning Removal List",
+				"description": "Հանում է հակագովազդային արգելափակման նախազգուշացումները և այլ ներխուժողական հաղորդագրությունները։"
 			},
 			"id": {
 				"name": "Adblock Warning Removal List",
@@ -8662,9 +9755,17 @@
 				"name": "Adblock Warning Removal List",
 				"description": "광고 차단 경고 및 기타 메시지를 제거합니다."
 			},
+			"lt": {
+				"name": "Adblock Warning Removal List",
+				"description": "Pašalina anti-adblock įspėjimus ir kitas įkyrias žinutes."
+			},
 			"mk": {
 				"name": "Список за отстранување предупредување за adblock",
 				"description": "Ги отстранува предупредувањата против блокадата на реклами и другите наметливи пораки."
+			},
+			"ms": {
+				"name": "Adblock Warning Removal List",
+				"description": "Menghapus amaran anti-adblock dan mesej-mesej yang mengganggu yang lain."
 			},
 			"nl": {
 				"name": "Adblock Warning Removal List",
@@ -8713,6 +9814,10 @@
 			"sv": {
 				"name": "Adblock Warning Removal List",
 				"description": "Tar bort anti-annons-varningar och andra påträngande meddelanden."
+			},
+			"th": {
+				"name": "Adblock Warning Removal List",
+				"description": "ลบคำเตือนต่อต้านปิดกั้นโฆษณาและข้อความที่น่ารำคาญ"
 			},
 			"tr": {
 				"name": "Adblock Warning Removal List",
@@ -8796,6 +9901,10 @@
 				"name": "רשימת חסימה של כתובות זדוניות מקוונות",
 				"description": "חוסם תחומים אשר ידועים שהם בשימוש כדי להפיץ נוזקה ותוכנת ריגול."
 			},
+			"hi": {
+				"name": "Online Malicious URL Blocklist",
+				"description": "मैलवेयर और स्पाइवेयर के प्रचार के लिए उपयोग किए जाने वाले डोमेन को ब्लॉक करें।"
+			},
 			"hr": {
 				"name": "Online Malicious URL Blocklist",
 				"description": "Blokira domene za koje se zna da se koriste za širenje zlonamjernog i špijunskog softvera."
@@ -8803,6 +9912,10 @@
 			"hu": {
 				"name": "Online Malicious URL Blocklist",
 				"description": "Blokkolja azokat a domaineket, amelyeket köztudottan rosszindulatú programok és kémprogramok terjesztésére használnak."
+			},
+			"hy": {
+				"name": "Online Malicious URL Blocklist",
+				"description": "Պակեցնում է այն դոմեները, որոնք հայտնի են որպես վնասակար ծրագրեր և spyware տարածելու համար։"
 			},
 			"id": {
 				"name": "Online Malicious URL Blocklist",
@@ -8820,9 +9933,17 @@
 				"name": "Online Malicious URL Blocklist",
 				"description": "멀웨어 및 스파이웨어를 전파하는 데 사용되는 것으로 알려진 도메인을 차단합니다."
 			},
+			"lt": {
+				"name": "Online Malicious URL Blocklist",
+				"description": "Blokuoja domenus, kurie žinomi kaip naudojami platinant kenkėjišką programinę įrangą ir šnipinėjimo programas."
+			},
 			"mk": {
 				"name": "Онлајн блок листа на злонамерни URL-адреси",
 				"description": "Блокира домени за кои е познато дека се користат за ширење на злонамерен софтвер и шпионски софтвер."
+			},
+			"ms": {
+				"name": "Online Malicious URL Blocklist",
+				"description": "Menyekat nama induk yang diketahui digunakan untuk menyebarkan perisian jahat dan perisian pengintip."
 			},
 			"nl": {
 				"name": "Online Malicious URL Blocklist",
@@ -8871,6 +9992,10 @@
 			"sv": {
 				"name": "Online Malicious URL Blocklist",
 				"description": "Blockerar domäner som är kända för att användas för att sprida skadlig programvara och spionprogram."
+			},
+			"th": {
+				"name": "Online Malicious URL Blocklist",
+				"description": "ปิดกั้นโดเมนที่ทราบว่าใช้เพื่อเผยแพร่มัลแวร์และสปายแวร์"
 			},
 			"tr": {
 				"name": "Online Malicious URL Blocklist",
@@ -8954,6 +10079,10 @@
 				"name": "ADgk Mobile China list",
 				"description": "סינון עבור אתרי סלולר סיניים."
 			},
+			"hi": {
+				"name": "ADgk Mobile China list",
+				"description": "चीनी मोबाइल साइटों के लिए फ़िल्टर।"
+			},
 			"hr": {
 				"name": "Popis ADgk Mobile China",
 				"description": "Filtar za kineske mobilne stranice."
@@ -8961,6 +10090,10 @@
 			"hu": {
 				"name": "Online Malicious URL Blocklist",
 				"description": "Szűrő kínai mobil webhelyekhez."
+			},
+			"hy": {
+				"name": "ADgk Mobile China list",
+				"description": "Չինական շարժական կայքերի զտիչ։"
 			},
 			"id": {
 				"name": "ADgk Mobile China list",
@@ -8978,9 +10111,17 @@
 				"name": "ADgk Mobile China list",
 				"description": "모바일 중국어 사이트를 위한 필터입니다."
 			},
+			"lt": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtras Kinijos mobiliems svetainėms."
+			},
 			"mk": {
 				"name": "Список на ADgk Mobile China",
 				"description": "Филтер за кинески мобилни сајтови."
+			},
+			"ms": {
+				"name": "ADgk Mobile China list",
+				"description": "Penapis untuk laman mudah alih Cina."
 			},
 			"nl": {
 				"name": "ADgk Mobile China-lijst",
@@ -9029,6 +10170,10 @@
 			"sv": {
 				"name": "ADgk Mobile China list",
 				"description": "Filter för kinesiska mobilwebbplatser."
+			},
+			"th": {
+				"name": "ADgk Mobile China list",
+				"description": "ตัวกรองสำหรับเว็บไซต์มือถือจีน"
 			},
 			"tr": {
 				"name": "ADgk Mobile China list",
@@ -9112,6 +10257,10 @@
 				"name": "Spam404",
 				"description": "מסנן זה מגן עלייך מפני הונאות מקוונות."
 			},
+			"hi": {
+				"name": "Spam404",
+				"description": "यह फ़िल्टर आपको ऑनलाइन धोखाधड़ी से बचाता है।"
+			},
 			"hr": {
 				"name": "Spam404",
 				"description": "Ovaj vas filtar štiti od mrežnih prijevara."
@@ -9119,6 +10268,10 @@
 			"hu": {
 				"name": "Spam404",
 				"description": "Ez a szűrő megvédi az online csalásoktól."
+			},
+			"hy": {
+				"name": "Spam404",
+				"description": "Այս զտիչը պաշտպանում է ձեզ առցանց խաբեություններից։"
 			},
 			"id": {
 				"name": "Spam404",
@@ -9136,9 +10289,17 @@
 				"name": "Spam404",
 				"description": "온라인 사기로부터 사용자를 보호하는 필터."
 			},
+			"lt": {
+				"name": "Spam404",
+				"description": "Šis filtras apsaugo jus nuo internetinių sukčių."
+			},
 			"mk": {
 				"name": "Spam404",
 				"description": "Овој филтер ве штити од онлајн измами."
+			},
+			"ms": {
+				"name": "Spam404",
+				"description": "Penapis ini melindungi anda daripada penipuan dalam talian."
 			},
 			"nl": {
 				"name": "Spam404",
@@ -9187,6 +10348,10 @@
 			"sv": {
 				"name": "Spam404",
 				"description": "Detta filter skyddar dig från onlinebedrägerier."
+			},
+			"th": {
+				"name": "Spam404",
+				"description": "ตัวกรองนี้ช่วยปกป้องคุณจากการหลอกลวงทางออนไลน์"
 			},
 			"tr": {
 				"name": "Spam404",
@@ -9270,6 +10435,10 @@
 				"name": "RU Adlist: מונים",
 				"description": "תוספת RU Adlist עבור חסימת עוקבנים."
 			},
+			"hi": {
+				"name": "RU AdList: Counters",
+				"description": "ट्रैकर्स को ब्लॉक करने के लिए RU AdList पूरक।"
+			},
 			"hr": {
 				"name": "RU AdList: Counters",
 				"description": "RU AdList dodatak za blokiranje pratitelja."
@@ -9277,6 +10446,10 @@
 			"hu": {
 				"name": "RU AdList: Counters",
 				"description": "Kiegészítés a RU AdList-hez, amely blokkolja a nyomkövetőket."
+			},
+			"hy": {
+				"name": "RU AdList: Counters",
+				"description": "RU AdList հավելում պահիչների արգելափակման համար։"
 			},
 			"id": {
 				"name": "RU AdList: Counters",
@@ -9294,9 +10467,17 @@
 				"name": "RU AdList: Counters",
 				"description": "추적기 차단을 위한 추가 RU AdList."
 			},
+			"lt": {
+				"name": "RU AdList: Counters",
+				"description": "RU AdList papildymas seklių blokavimui."
+			},
 			"mk": {
 				"name": "RU AdList: Counters",
 				"description": "Додаток на RU AdList за блокирање на тракери."
+			},
+			"ms": {
+				"name": "RU AdList: Counters",
+				"description": "Suplemen RU AdList untuk pemblokiran pengesanan."
 			},
 			"nl": {
 				"name": "RU AdList: Counters",
@@ -9345,6 +10526,10 @@
 			"sv": {
 				"name": "RU AdList: Counters",
 				"description": "RU AdList-tillägg för blockering av spårare."
+			},
+			"th": {
+				"name": "RU AdList: Counters",
+				"description": "RU AdList ภาคผนวกสำหรับการปิดกั้นตัวติดตาม"
 			},
 			"tr": {
 				"name": "RU AdList: Counters",
@@ -9428,6 +10613,10 @@
 				"name": "RU AdList: BitBlock",
 				"description": "תוסף RU Adlist עבור מטרדים וחברתיות."
 			},
+			"hi": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList के लिए परेशानियों और सामाजिक तत्वों का पूरक।"
+			},
 			"hr": {
 				"name": "RU AdList: BitBlock",
 				"description": "Dodatak za RU AdList za smetnje i društvene mreže."
@@ -9435,6 +10624,10 @@
 			"hu": {
 				"name": "RU AdList: BitBlock",
 				"description": "Kiegészítés a RU AdList-hez, amely blokkolja a kellemetlenségeket és a közösségi média elemeket."
+			},
+			"hy": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList հավելում անհանգստություններ և սոցիալականացման համար։"
 			},
 			"id": {
 				"name": "RU AdList: BitBlock",
@@ -9452,9 +10645,17 @@
 				"name": "RU AdList: BitBlock",
 				"description": "방해 요소와 SNS를 위한 추가 RU AdList."
 			},
+			"lt": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList papildymas trukdžiams ir socialiniams tinklams."
+			},
 			"mk": {
 				"name": "RU AdList: BitBlock",
 				"description": "Додаток на RU AdList против замарања и социјални додатоци."
+			},
+			"ms": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemen RU AdList untuk gangguan dan sosial."
 			},
 			"nl": {
 				"name": "RU AdList: BitBlock",
@@ -9503,6 +10704,10 @@
 			"sv": {
 				"name": "RU AdList: BitBlock",
 				"description": "RU AdList-tillägg för irritationsmoment och social media."
+			},
+			"th": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList ภาคผนวกสำหรับความรำคาญและสังคม"
 			},
 			"tr": {
 				"name": "RU AdList: BitBlock",
@@ -9586,6 +10791,10 @@
 				"name": "רשימת ABPVN",
 				"description": "רשימת מסננים של חסימת פרסומות בשפה הוייטנאמית."
 			},
+			"hi": {
+				"name": "ABPVN List",
+				"description": "वियतनामी विज्ञापन ब्लॉक फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "ABPVN List",
 				"description": "Vietnamese adblock filter list."
@@ -9593,6 +10802,10 @@
 			"hu": {
 				"name": "ABPVN List",
 				"description": "Vietnamese adblock filter list."
+			},
+			"hy": {
+				"name": "ABPVN List",
+				"description": "Վիետնամական գովազդ զտիչների ցուցակ։"
 			},
 			"id": {
 				"name": "ABPVN List",
@@ -9610,9 +10823,17 @@
 				"name": "ABPVN List",
 				"description": "Vietnamese adblock filter list."
 			},
+			"lt": {
+				"name": "ABPVN List",
+				"description": "Vietnamo reklamos blokavimo filtrų sąrašas."
+			},
 			"mk": {
 				"name": "ABPVN List",
 				"description": "Виетнамски список со филтри за блокови за реклами."
+			},
+			"ms": {
+				"name": "ABPVN List",
+				"description": "Senarai penapis adblock Vietnam."
 			},
 			"nl": {
 				"name": "ABPVN List",
@@ -9661,6 +10882,10 @@
 			"sv": {
 				"name": "ABPVN List",
 				"description": "Vietnamesisk filterlista för annonsblockering."
+			},
+			"th": {
+				"name": "ABPVN List",
+				"description": "รายการตัวกรองปิดกั้นโฆษณาของภาษาเวียดนาม"
 			},
 			"tr": {
 				"name": "ABPVN List",
@@ -9744,6 +10969,10 @@
 				"name": "מסננים פולניים רשמיים עבור AdBlock, uBlock Origin & AdGuard",
 				"description": "רשימת מסננים נוספת עבור אתרים בפולנית."
 			},
+			"hi": {
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
+				"description": "पोलिश में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
 				"description": "Poljski dodatak za EasyList."
@@ -9751,6 +10980,10 @@
 			"hu": {
 				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
 				"description": "További szűrőlista lengyel nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
+				"description": "Լրացուցիչ զտիչների ցուցակ պոլոնական կայքերի համար։"
 			},
 			"id": {
 				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
@@ -9768,9 +11001,17 @@
 				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
 				"description": "폴란드어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
+				"description": "Papildomas filtrų sąrašas svetainėms lenkų kalba."
+			},
 			"mk": {
 				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
 				"description": "Дополнителна листа на филтри за веб-локации на полски."
+			},
+			"ms": {
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
+				"description": "Senarai penapis tambahan untuk laman web dalam Bahasa Poland."
 			},
 			"nl": {
 				"name": "Officiële Poolse filters voor AdBlock, uBlock Origin & AdGuard",
@@ -9819,6 +11060,10 @@
 			"sv": {
 				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
 				"description": "Extra filterlista för webbplatser på polska."
+			},
+			"th": {
+				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
+				"description": "ภาคผนวกภาษาโปแลนด์สำหรับ EasyList"
 			},
 			"tr": {
 				"name": "Official Polish filters for AdBlock, uBlock Origin & AdGuard",
@@ -9902,6 +11147,10 @@
 				"name": "Polskie Filtry Ciasteczkowe",
 				"description": "רשימת מסננים פולניים עבור חסימת עוגיות."
 			},
+			"hi": {
+				"name": "Polish GDPR-Cookies Filters",
+				"description": "कुकीज़ को ब्लॉक करने के लिए पोलिश फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Polish GDPR-Cookies Filters",
 				"description": "Poljski popis filtara za blokiranje kolačića."
@@ -9909,6 +11158,10 @@
 			"hu": {
 				"name": "Polish GDPR-Cookies Filters",
 				"description": "Lengyel szűrőlista a sütik blokkolásához."
+			},
+			"hy": {
+				"name": "Polish GDPR-Cookies Filters",
+				"description": "Պոլոնական զտիչների ցուցակ քոքիների արգելափակման համար։"
 			},
 			"id": {
 				"name": "Polish GDPR-Cookies Filters",
@@ -9926,9 +11179,17 @@
 				"name": "Polish GDPR-Cookies Filters",
 				"description": "쿠키 차단을 위한 폴란드 필터 목록."
 			},
+			"lt": {
+				"name": "Polish GDPR-Cookies Filters",
+				"description": "Lenkų filtrų sąrašas slapukams blokuoti."
+			},
 			"mk": {
 				"name": "Polish GDPR-Cookies Filters",
 				"description": "Список на полски филтри за блокирање колачиња."
+			},
+			"ms": {
+				"name": "Polish GDPR-Cookies Filters",
+				"description": "Senarai penapis Poland untuk pemblokiran kuki."
 			},
 			"nl": {
 				"name": "Poolse GDPR-cookies Filters",
@@ -9977,6 +11238,10 @@
 			"sv": {
 				"name": "Polish GDPR-Cookies Filters",
 				"description": "Polsk filterlista för blockering av cookies."
+			},
+			"th": {
+				"name": "Polish GDPR-Cookies Filters",
+				"description": "รายการตัวกรองภาษาโปแลนด์สำหรับการปิดกั้นคุกกี้"
 			},
 			"tr": {
 				"name": "Polish GDPR-Cookies Filters",
@@ -10060,6 +11325,10 @@
 				"name": "רשימה אסטונית",
 				"description": "מסנן עבור חסימת פרסומות באתרים אסטוניים."
 			},
+			"hi": {
+				"name": "Estonian List",
+				"description": "एस्टोनियन साइटों पर विज्ञापन अवरोधन के लिए फ़िल्टर।"
+			},
 			"hr": {
 				"name": "Estonian List",
 				"description": "Filtar za blokiranje oglasa na estonskim web stranicama."
@@ -10067,6 +11336,10 @@
 			"hu": {
 				"name": "Estonian List",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket az észt nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "Estonian List",
+				"description": "Էստոնական կայքերում գովազդի արգելափակման զտիչ։"
 			},
 			"id": {
 				"name": "Estonian List",
@@ -10084,9 +11357,17 @@
 				"name": "Estonian List",
 				"description": "에스토니아 사이트 광고 차단 필터."
 			},
+			"lt": {
+				"name": "Estonian List",
+				"description": "Filtras reklamai blokuoti Estijos svetainėse."
+			},
 			"mk": {
 				"name": "Estonian List",
 				"description": "Филтер за блокирање реклами на естонски сајтови."
+			},
+			"ms": {
+				"name": "Estonian List",
+				"description": "Penapis untuk pemblokiran iklan di laman web Estonia."
 			},
 			"nl": {
 				"name": "Estse Lijst",
@@ -10135,6 +11416,10 @@
 			"sv": {
 				"name": "Estonian List",
 				"description": "Filter för annonsblockering på estniska webbplatser."
+			},
+			"th": {
+				"name": "Estonian List",
+				"description": "กรองการปิดกั้นโฆษณาบนไซต์ภาษาเอสโตเนีย"
 			},
 			"tr": {
 				"name": "Estonian List",
@@ -10218,6 +11503,10 @@
 				"name": "ChinaList+EasyList",
 				"description": "רשימת חסימת פרסומות עבור סין. המסנן אינו כולל את EasyList."
 			},
+			"hi": {
+				"name": "ChinaList+EasyList",
+				"description": "चीन के लिए विज्ञापन अवरोधन सूची। ध्यान दें कि इसमें वास्तव में ईज़ी लिस्ट शामिल नहीं है।"
+			},
 			"hr": {
 				"name": "ChinaList+EasyList",
 				"description": "Popis za blokiranje oglasa za Kinu. Imajte na umu da ne uključuje EasyList."
@@ -10225,6 +11514,10 @@
 			"hu": {
 				"name": "ChinaList+EasyList",
 				"description": "Kínai hirdetésblokkoló lista. Vegye figyelembe, hogy nem tartalmazza az EasyList-et."
+			},
+			"hy": {
+				"name": "ChinaList+EasyList",
+				"description": "Գովազդի արգելափակման ցուցակ Չինաստանի համար։ Նշեք, որ այն իրականում ներառում է EasyList։"
 			},
 			"id": {
 				"name": "ChinaList+EasyList",
@@ -10242,9 +11535,17 @@
 				"name": "ChinaList+EasyList",
 				"description": "중국 광고 차단 목록입니다. EasyList는 포함되어 있지 않습니다."
 			},
+			"lt": {
+				"name": "ChinaList+EasyList",
+				"description": "Reklamos blokavimo sąrašas Kinijoje. Atkreipkite dėmesį, kad jis iš tikrųjų neapima EasyList."
+			},
 			"mk": {
 				"name": "ChinaList+EasyList",
 				"description": "Список за блокирање реклами за Кина. Забележете дека всушност не вклучува EasyList."
+			},
+			"ms": {
+				"name": "ChinaList+EasyList",
+				"description": "Senarai adblocking untuk China. Perhatikan bahawa ia tidak termasuk EasyList."
 			},
 			"nl": {
 				"name": "ChinaList+EasyList",
@@ -10293,6 +11594,10 @@
 			"sv": {
 				"name": "ChinaList+EasyList",
 				"description": "Annonsblockeringslista för Kina. Observera att den faktiskt inte inkluderar EasyList."
+			},
+			"th": {
+				"name": "ChinaList+EasyList",
+				"description": "รายการ Adblocking สำหรับประเทศจีน โปรดทราบว่าจริงๆแล้วมันไม่ได้รวม EasyList ไว้ด้วย"
 			},
 			"tr": {
 				"name": "ChinaList+EasyList",
@@ -10376,6 +11681,10 @@
 				"name": "רשימת מטרדים של CJX",
 				"description": "תוספת עבור EasyList סינית+EasyList ו־EasyPrivacy."
 			},
+			"hi": {
+				"name": "CJX's Annoyances List",
+				"description": "ईज़ी लिस्ट चीन + ईज़ी लिस्ट और ईज़ी प्राइवेसी के लिए अनुपूरक।"
+			},
 			"hr": {
 				"name": "CJX's Annoyance List",
 				"description": "Dodatak za EasyList China+EasyList i EasyPrivacy."
@@ -10383,6 +11692,10 @@
 			"hu": {
 				"name": "CJX's Annoyance List",
 				"description": "Kiegészítő az EasyList Kína+EasyList és az EasyPrivacy szűrőkhöz."
+			},
+			"hy": {
+				"name": "CJX's Annoyances List",
+				"description": "EasyList China + EasyList և EasyPrivacy-ի լրացում։"
 			},
 			"id": {
 				"name": "CJX's Annoyances List",
@@ -10400,9 +11713,17 @@
 				"name": "CJX의 방해 요소 목록",
 				"description": "EasyList China + EasyList 및 EasyPrivacy에 대한 추가 필터."
 			},
+			"lt": {
+				"name": "CJX's Annoyances List",
+				"description": "Papildymas EasyList China+EasyList ir EasyPrivacy."
+			},
 			"mk": {
 				"name": "Список против вознемирувања на CJX",
 				"description": "Додаток за EasyList China+EasyList и EasyPrivacy."
+			},
+			"ms": {
+				"name": "CJX's Annoyances List",
+				"description": "Suplemen untuk EasyList China+EasyList dan EasyPrivacy."
 			},
 			"nl": {
 				"name": "CJX's Annoyances List",
@@ -10451,6 +11772,10 @@
 			"sv": {
 				"name": "CJX's Annoyances List",
 				"description": "Tillägg för EasyList China+EasyList och EasyPrivacy."
+			},
+			"th": {
+				"name": "CJX's Annoyances List",
+				"description": "ภาคผนวกสำหรับ EasyList China + EasyList และ EasyPrivacy"
 			},
 			"tr": {
 				"name": "CJX's Annoyance List",
@@ -10534,6 +11859,10 @@
 				"name": "Polskie Filtry Społecznościowe",
 				"description": "רשימת מסננים חברתיים פולניים."
 			},
+			"hi": {
+				"name": "Polish Social Filters",
+				"description": "सामाजिक विजेट, पॉपअप आदि के लिए पोलिश फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Polish Social Filters",
 				"description": "Lista poljskih socijalnih filtara."
@@ -10541,6 +11870,10 @@
 			"hu": {
 				"name": "Polish Social Filters",
 				"description": "Lengyel szűrőlista a közösségi kisalkalmazásokhoz, felugró ablakokhoz, stb."
+			},
+			"hy": {
+				"name": "Polish Social Filters",
+				"description": "Լեհական զտիչների ցուցակ սոցիալական վիջիթների, պոպ-ափների և այլնի համար։"
 			},
 			"id": {
 				"name": "Polish Social Filters",
@@ -10558,9 +11891,17 @@
 				"name": "Polish Social Filters",
 				"description": "소셜 위젯, 팝업용 폴란드어 필터 목록."
 			},
+			"lt": {
+				"name": "Polish Social Filters",
+				"description": "Lenkų filtrų sąrašas socialiniams valdikliams, iškylantiems langams ir pan."
+			},
 			"mk": {
 				"name": "Polish Social Filters",
 				"description": "Список на полски филтри за социјални виџети, скокачки прозорци итн."
+			},
+			"ms": {
+				"name": "Polish Social Filters",
+				"description": "Senarai penapis Poland untuk widget sosial, pop-up, dan lain-lain."
 			},
 			"nl": {
 				"name": "Poolse Sociale Filters",
@@ -10609,6 +11950,10 @@
 			"sv": {
 				"name": "Polish Social Filters",
 				"description": "Polsk filterlista för sociala widgets, popup-fönster, etc."
+			},
+			"th": {
+				"name": "Polish Social Filters",
+				"description": "รายการตัวกรองภาษาโปแลนด์สำหรับวิดเจ็ต โซเชียล ป๊อปอัป ฯลฯ"
 			},
 			"tr": {
 				"name": "Polish Social Filters",
@@ -10692,6 +12037,10 @@
 				"name": "רשימת Adblock פרסית",
 				"description": "רשימת מסננים של חסימת פרסומות בשפה הפרסית."
 			},
+			"hi": {
+				"name": "Adblock-Persian list",
+				"description": "फारसी विज्ञापन अवरोधन फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Adblock-Persian list",
 				"description": "Persian ad blocking filter list."
@@ -10699,6 +12048,10 @@
 			"hu": {
 				"name": "Adblock-Persian list",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket a perzsa nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "Adblock-Persian list",
+				"description": "Պարսկական գովազդի զտման ցանկ։"
 			},
 			"id": {
 				"name": "Adblock-Persian list",
@@ -10716,9 +12069,17 @@
 				"name": "Adblock-Persian list",
 				"description": "페르시아 광고 차단 목록."
 			},
+			"lt": {
+				"name": "Adblock-Persian list",
+				"description": "Persų reklamos blokavimo filtrų sąrašas."
+			},
 			"mk": {
 				"name": "Adblock-Persian list",
 				"description": "Список на филтри за блокирање на персиски реклами."
+			},
+			"ms": {
+				"name": "Adblock-Persian list",
+				"description": "Senarai penapis yang menghalang iklan Parsi."
 			},
 			"nl": {
 				"name": "Adblock-Persian List",
@@ -10767,6 +12128,10 @@
 			"sv": {
 				"name": "Adblock-Persian list",
 				"description": "Persisk filterlista för annonsblockering."
+			},
+			"th": {
+				"name": "Adblock-Persian list",
+				"description": "รายการตัวกรองการปิดกั้นโฆษณาของเปอร์เซีย"
 			},
 			"tr": {
 				"name": "Adblock-Persian list",
@@ -10850,6 +12215,10 @@
 				"name": "Fanboy's Swedish",
 				"description": "רשימת מסננים עבור אתרים בשוודית."
 			},
+			"hi": {
+				"name": "Fanboy's Swedish",
+				"description": "स्वीडिश वेबसाइटों के लिए फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Fanboy's Swedish",
 				"description": "Popis filtara za web stranice na švedskom."
@@ -10857,6 +12226,10 @@
 			"hu": {
 				"name": "Fanboy's Swedish",
 				"description": "Szűrőlista a svéd webhelyekhez."
+			},
+			"hy": {
+				"name": "Fanboy's Swedish",
+				"description": "Ֆիլտրի ցուցակը շվեդերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "Fanboy's Swedish",
@@ -10874,9 +12247,17 @@
 				"name": "Fanboy's Swedish",
 				"description": "스웨덴 웹사이트를 위한 필터 리스트"
 			},
+			"lt": {
+				"name": "Fanboy's Swedish",
+				"description": "Filtrų sąrašas svetainėms švedų kalba."
+			},
 			"mk": {
 				"name": "Fanboy's Swedish",
 				"description": "Список на филтри за веб-локации на шведски."
+			},
+			"ms": {
+				"name": "Fanboy's Swedish",
+				"description": "Senarai penapis untuk laman web dalam bahasa Sweden."
 			},
 			"nl": {
 				"name": "Fanboy's Zweeds",
@@ -10925,6 +12306,10 @@
 			"sv": {
 				"name": "Fanboy's Swedish",
 				"description": "Filterlista för webbplatser på svenska."
+			},
+			"th": {
+				"name": "Fanboy's Swedish",
+				"description": "กรองรายการเว็บไซต์เป็นภาษาสวีเดน"
 			},
 			"tr": {
 				"name": "Fanboy's Swedish",
@@ -11008,6 +12393,10 @@
 				"name": "מסנן סיני של AdGuard",
 				"description": "EasyList סין + מסנן סיני של AdGuard. רשימת מסננים שמסירה במפורש פרסומות באתרים בשפה הסינית"
 			},
+			"hi": {
+				"name": "एडगार्ड चीनी फ़िल्टर",
+				"description": "EasyList China + एडगार्ड चीनी फ़िल्टर। यह फ़िल्टर विशेष रूप से चीनी भाषा की वेबसाइटों पर विज्ञापनों को हटाता है।"
+			},
 			"hr": {
 				"name": "AdGuard Kineski filtar",
 				"description": "EasyList China + AdGuard Kineski filtar. Popis filtara posebno dizajniranih za blokiranje oglasa na kineskom jeziku."
@@ -11015,6 +12404,10 @@
 			"hu": {
 				"name": "AdGuard Kínai szűrő",
 				"description": "EasyList China + AdGuard Kínai szűrő. Szűrőlista, amely lehetővé teszi a hirdetések blokkolását a kínai nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "AdGuard չինական ֆիլտր",
+				"description": "EasyList China + AdGuard չինական ֆիլտր: Ֆիլտրերի ցուցակ, որը հատուկ հեռացնում է գովազդները չինական լեզվով կայքերում։"
 			},
 			"id": {
 				"name": "Penyaring AdGuard China",
@@ -11032,9 +12425,17 @@
 				"name": "AdGuard 중국어 필터",
 				"description": "EasyList China + AdGuard 중국 필터. 중국 웹사이트에서 광고를 차단하기 위한 필터 목록입니다."
 			},
+			"lt": {
+				"name": "AdGuard kiniškas filtras",
+				"description": "EasyList Kinija + AdGuard kiniškas filtras. Filtrų sąrašas, kuris specialiai pašalina reklamas iš svetainių kinų kalba."
+			},
 			"mk": {
 				"name": "Кинески филтер",
 				"description": "EasyList Кина + Кинески филтер на AdGuard. Список со филтри што конкретно ги отстранува рекламите на веб-локациите на кинески јазик."
+			},
+			"ms": {
+				"name": "Penapis Cina AdGuard",
+				"description": "EasyList China + Penapis Cina AdGuard. Senarai penapis yang secara khusus mengeluarkan iklan di laman web dalam Bahasa Cina."
 			},
 			"nl": {
 				"name": "AdGuard Chinees filter",
@@ -11083,6 +12484,10 @@
 			"sv": {
 				"name": "AdGuard Kinesiskt filter",
 				"description": "EasyList China + AdGuard Kinesiskt filter. Filterlista som specifikt tar bort annonser på webbplatser på kinesiska."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองภาษาจีน",
+				"description": "ตัวกรอง EasyList China + AdGuard China รายการตัวกรองที่ลบโฆษณาบนเว็บไซต์ในภาษาจีนโดยเฉพาะ"
 			},
 			"tr": {
 				"name": "AdGuard Çince filtresi",
@@ -11166,6 +12571,10 @@
 				"name": "Fanboy's Anti-Facebook List",
 				"description": "אזהרה: המסנן ישבור הערות מבוססות פייסבוק באתרים ועשוי גם לשבור מספר יישומים או משחקים של פייסבוק."
 			},
+			"hi": {
+				"name": "Fanboy's Anti-Facebook List",
+				"description": "चेतावनी, यह कुछ वेबसाइटों पर फेसबुक-आधारित टिप्पणियों को तोड़ देगा और कुछ फेसबुक ऐप्स या खेलों को भी तोड़ सकता है।"
+			},
 			"hr": {
 				"name": "Fanboy's Anti-Facebook List",
 				"description": "Upozorenje, stranicama s Facebook komentarima neće raditi ispravno, a može se pokrenuti i na nekim Facebook aplikacijama ili igrama."
@@ -11173,6 +12582,10 @@
 			"hu": {
 				"name": "Fanboy's Anti-Facebook List",
 				"description": "Figyelem, hibákat okozhat az olyan webhelyeken, ahol Facebook segítségével lehet kommentelni, illetve néhány Facebook alkalmazásban és játékban is előidézhet problémákat."
+			},
+			"hy": {
+				"name": "Fanboy's Anti-Facebook List",
+				"description": "Զգուշացում. Սա կարող է խափանել Facebook-ի վրա հիմնված մեկնաբանությունները որոշ կայքերում և կարող է նաև խափանել որոշ Facebook հավելվածներ կամ խաղեր։"
 			},
 			"id": {
 				"name": "Fanboy's Anti-Facebook List",
@@ -11190,9 +12603,17 @@
 				"name": "Fanboy's Anti-Facebook List",
 				"description": "경고: 일부 웹사이트에서 Facebook 기반 댓글이 깨질 수 있으며 일부 Facebook 앱이나 게임도 손상될 수 있습니다."
 			},
+			"lt": {
+				"name": "Fanboy's Anti-Facebook List",
+				"description": "Įspėjimas, jis sugadins Facebook komentarus kai kuriose svetainėse ir gali taip pat sugadinti kai kurias Facebook programas ar žaidimus."
+			},
 			"mk": {
 				"name": "Fanboy's Anti-Facebook List",
 				"description": "Предупредување, ќе ги прекине коментарите засновани на Facebook на некои веб-локации, а исто така може да прекине и некои апликации или игри на Facebook."
+			},
+			"ms": {
+				"name": "Fanboy's Anti-Facebook List",
+				"description": "Amaran, ia akan merosakkan komen yang berasaskan Facebook di beberapa laman web dan mungkin juga merosakkan beberapa aplikasi atau permainan Facebook."
 			},
 			"nl": {
 				"name": "Fanboy's Anti-Facebook List",
@@ -11241,6 +12662,10 @@
 			"sv": {
 				"name": "Fanboy's Anti-Facebook List",
 				"description": "Varning för att Facebook-baserade kommentarer på vissa webbplatser och vissa Facebook-appar och -spel kan påverkas."
+			},
+			"th": {
+				"name": "Fanboy's Anti-Facebook List",
+				"description": "คำเตือนมันจะทำลายความคิดเห็นบน Facebook ในบางเว็บไซต์และอาจทำให้แอปหรือเกมของ Facebook บางส่วนเสียหายด้วย"
 			},
 			"tr": {
 				"name": "Fanboy's Anti-Facebook List",
@@ -11324,6 +12749,10 @@
 				"name": "Fanboy's Vietnamese",
 				"description": "רשימת מסננים עבור אתרים בוייטנאמית."
 			},
+			"hi": {
+				"name": "Fanboy's Vietnamese",
+				"description": "वियतनामी वेबसाइटों के लिए फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Fanboy's Vietnamese",
 				"description": "Popis filtara za web stranice na vijetnamskom."
@@ -11331,6 +12760,10 @@
 			"hu": {
 				"name": "Fanboy's Vietnamese",
 				"description": "Szűrőlista a vietnámi webhelyekhez."
+			},
+			"hy": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Ֆիլտրի ցուցակը վիետնամերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "Fanboy's Vietnamese",
@@ -11348,9 +12781,17 @@
 				"name": "Fanboy's Vietnamese",
 				"description": "베트남 웹사이트를 위한 필터 리스트"
 			},
+			"lt": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filtrų sąrašas tinklalapiams vietnamiečių kalba."
+			},
 			"mk": {
 				"name": "Fanboy's Vietnamese",
 				"description": "Список на филтри за веб-локации на виетнамски."
+			},
+			"ms": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Senarai penapis untuk laman web dalam bahasa Vietnam."
 			},
 			"nl": {
 				"name": "Fanboy's Vietnamees",
@@ -11399,6 +12840,10 @@
 			"sv": {
 				"name": "Fanboy's Vietnamese",
 				"description": "Filterlista för webbplatser på vietnamesiska."
+			},
+			"th": {
+				"name": "Fanboy's Vietnamese",
+				"description": "กรองรายการเว็บไซต์ในภาษาเวียดนาม"
 			},
 			"tr": {
 				"name": "Fanboy's Vietnamese",
@@ -11482,6 +12927,10 @@
 				"name": "List-KR",
 				"description": "מסנן אשר מסיר פרסומות ותסריטים שונים מאתרים עם תוכן קוריאני. משולב ומרובד עם כלליי AdGuard מסוימים עבור סינון מועצם. מסנן זה מצופה להיות בשימוש לצד מסנן הבסיס של AdGuard."
 			},
+			"hi": {
+				"name": "List-KR",
+				"description": "फ़िल्टर जो कोरियाई सामग्री वाली वेबसाइटों से विज्ञापनों और विभिन्न स्क्रिप्ट्स को निकालता है। विशेष रूप से AdGuard के लिए सुधारित नियमों से संयुक्त। इस फ़िल्टर को AdGuard बेस फ़िल्टर के साथ उपयोग करने की उम्मीद है।"
+			},
 			"hr": {
 				"name": "List-KR",
 				"description": "Filtar koji uklanja oglase i razne skripte na web stranicama s korejskim sadržajem. Kombinirano i prošireno s pravilima specifičnim za AdGuard za poboljšano filtriranje. Očekuje se da će se ovaj filtar koristiti zajedno s AdGuard Osnovnim filtrom."
@@ -11489,6 +12938,10 @@
 			"hu": {
 				"name": "List-KR",
 				"description": "Szűrő, amely eltávolítja a hirdetéseket és a különféle szkripteket a koreai tartalmi webhelyekről. Ezen felül ki lett egészítve AdGuard-specifikus szabályokkal a továbbfejlesztett szűrés érdekében. Ezt a szűrőt az AdGuard Alap szűrővel együtt kell használni."
+			},
+			"hy": {
+				"name": "List-KR",
+				"description": "Ֆիլտր, որը հեռացնում է գովազդները և տարբեր սկրիպտեր Կորեական խորույթի կայքերից։ Միավորելով և հավելելով AdGuard-ին հատուկ կանոններին կատարելագործված հյուսումը։ Այս ֆիլտրը ակնկալվում է, որ կիրառվի AdGuard-ի բազային ֆիլտրի հետ միասին։"
 			},
 			"id": {
 				"name": "List-KR",
@@ -11506,9 +12959,17 @@
 				"name": "List-KR",
 				"description": "한국어 콘텐츠가 포함된 웹 사이트에서 광고와 다양한 스크립트를 제거하는 필터입니다. 필터링 향상을 위해 AdGuard 관련 규칙과 결합 및 보강되었습니다. 이 필터는 AdGuard 베이스 필터와 함께 사용하는 것이 좋습니다."
 			},
+			"lt": {
+				"name": "List-KR",
+				"description": "Filtras, kuris pašalina reklamas ir įvairius skriptus iš svetainių su korėjiečių turiniu. Sujungtas ir praturtintas AdGuard specifiniais taisyklėmis geresniam filtravimui. Tikimasi, kad šis filtras bus naudojamas kartu su AdGuard baziniu filtrų sąrašu."
+			},
 			"mk": {
 				"name": "List-KR",
 				"description": "Филтер што отстранува реклами и разни скрипти од веб-локации со корејска содржина. Комбинирани и надополнети со правилата специфични за AdGuard за подобрено филтрирање. Овој филтер се очекува да се користи заедно со филтерот Основниот филтер на AdGuard."
+			},
+			"ms": {
+				"name": "List-KR",
+				"description": "Penapis yang menghapus iklan dan pelbagai skrip dari laman web dengan kandungan Korea. Digabungkan dan ditambah dengan peraturan khusus AdGuard untuk penapisan yang lebih baik. Penapis ini dijangka digunakan bersama penapis AdGuard Base."
 			},
 			"nl": {
 				"name": "List-KR",
@@ -11557,6 +13018,10 @@
 			"sv": {
 				"name": "List-KR",
 				"description": "Filter som tar bort annonser och olika skript från webbplatser med koreanskt innehåll. Kombineras och kompletteras med AdGuard-specifika regler för förbättrad filtrering. Detta filter förväntas användas tillsammans med AdGuard Base-filter."
+			},
+			"th": {
+				"name": "List-KR",
+				"description": "ตัวกรองที่ลบโฆษณาตัวติดตามและสคริปต์ต่างๆจากเว็บไซต์ที่มีเนื้อหาภาษาเกาหลี ขึ้นอยู่กับ Corset, ตัวกรองปิดกั้นโฆษณาของเกาหลี, Youslist รวมและเสริมด้วยกฎเฉพาะ AdGuard สำหรับการกรองขั้นสูง คาดว่าตัวกรองนี้จะใช้ร่วมกับพื้นฐานตัวกรอง AdGuard"
 			},
 			"tr": {
 				"name": "List-KR",
@@ -11640,6 +13105,10 @@
 				"name": "xinggsf",
 				"description": "חוסם פרסומות בפלטפורמות וידאו סיניות (MangoTV, DouYu ואחרות)."
 			},
+			"hi": {
+				"name": "xinggsf",
+				"description": "चीनी वीडियो प्लेटफॉर्म पर विज्ञापनों को ब्लॉक करता है (MangoTV, DouYu और अन्य)।"
+			},
 			"hr": {
 				"name": "xinggsf",
 				"description": "Blokira oglase na kineskim video platformama (MangoTV, DouYu i ostali)."
@@ -11647,6 +13116,10 @@
 			"hu": {
 				"name": "xinggsf",
 				"description": "Letiltja a hirdetéseket a kínai videómegosztó platformokon (MangoTV, DouYu és továbbiak)."
+			},
+			"hy": {
+				"name": "xinggsf",
+				"description": "Արգելափակում է հայտարարությունները չինական տեսանյութերի հարթակներում (MangoTV, DouYu և այլն):"
 			},
 			"id": {
 				"name": "xinggsf",
@@ -11664,9 +13137,17 @@
 				"name": "xinggsf",
 				"description": "중국 동영상 플랫폼의 광고를 차단합니다 (MangoTV, DouYu 등)."
 			},
+			"lt": {
+				"name": "xinggsf",
+				"description": "Blokuoja reklamas kinų vaizdo platformose (MangoTV, DouYu ir kt.)."
+			},
 			"mk": {
 				"name": "xinggsf",
 				"description": "Ги блокира рекламите на кинеските видео платформи (MangoTV, DouYu и други)."
+			},
+			"ms": {
+				"name": "xinggsf",
+				"description": "Menyekat iklan pada platform video Cina (MangoTV, DouYu dan lainnya)."
 			},
 			"nl": {
 				"name": "xinggsf",
@@ -11715,6 +13196,10 @@
 			"sv": {
 				"name": "xinggsf",
 				"description": "Blockerar annonser på kinesiska videoplattformar (MangoTV, DouYu m.fl.)."
+			},
+			"th": {
+				"name": "xinggsf",
+				"description": "ปิดกั้นโฆษณาบนแพลตฟอร์มวิดีโอของจีน (MangoTV, DouYu และอื่น ๆ)"
 			},
 			"tr": {
 				"name": "xinggsf",
@@ -11798,6 +13283,10 @@
 				"name": "I don't care about cookies",
 				"description": "מסתיר אזהרות מטרידות לגבי עוגיות מכל האתרים כמעט וחוסך לך לחיצות בלתי נחוצות."
 			},
+			"hi": {
+				"name": "I don't care about cookies",
+				"description": "यह लगभग सभी वेबसाइटों से परेशान करने वाले कुकी चेतावनियों को छिपाता है और आपको अनावश्यक क्लिक से बचाता है।"
+			},
 			"hr": {
 				"name": "I don't care about cookies",
 				"description": "Skriva dosadna upozorenja o kolačićima sa gotovo svih web stranica i štedi vas od nepotrebnih klikova."
@@ -11805,6 +13294,10 @@
 			"hu": {
 				"name": "I don't care about cookies",
 				"description": "Szinte az összes webhelyen elrejti a bosszantó sütikre vonatkozó figyelmeztetéseket, és megmenti a felesleges kattintásoktól."
+			},
+			"hy": {
+				"name": "I don't care about cookies",
+				"description": "Թաքցնում է կոկոսի զգուշացումները գրեթե բոլոր կայքերում և ազատում է ձեզ անպիտան սեղմումներից։"
 			},
 			"id": {
 				"name": "I don't care about cookies",
@@ -11822,9 +13315,17 @@
 				"name": "쿠키를 신경 쓰지 않습니다",
 				"description": "웹사이트에서 쿠키 경고를 숨기고 불필요한 클릭을 방지합니다."
 			},
+			"lt": {
+				"name": "I don't care about cookies",
+				"description": "Slėpia erzinančius slapukų įspėjimus iš beveik visų svetainių ir apsaugo nuo nereikalingų paspaudimų."
+			},
 			"mk": {
 				"name": "I don't care about cookies",
 				"description": "Ги крие досадните предупредувања за колачиња од речиси сите веб-локации и ве спасува од непотребни кликови."
+			},
+			"ms": {
+				"name": "I don't care about cookies",
+				"description": "Menyembunyikan amaran kuki yang mengganggu daripada hampir semua laman web dan menyelamatkan anda daripada klik yang tidak perlu."
 			},
 			"nl": {
 				"name": "I don't care about cookies",
@@ -11873,6 +13374,10 @@
 			"sv": {
 				"name": "I don't care about cookies",
 				"description": "Döljer störande cookie-varningar från nästan alla webbplatser och sparar dig från onödiga klick."
+			},
+			"th": {
+				"name": "I don't care about cookies",
+				"description": "ซ่อนคำเตือนคุกกี้ที่น่ารำคาญจากเว็บไซต์เกือบทั้งหมดและช่วยให้คุณไม่ต้องคลิกโดยไม่จำเป็น"
 			},
 			"tr": {
 				"name": "I don't care about cookies",
@@ -11956,6 +13461,10 @@
 				"name": "Fanboy's Spanish/Portuguese",
 				"description": "רשימת מסננים עבור אתרים בספרדית ובפורטוגזית."
 			},
+			"hi": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "स्पेनिश और पुर्तगाली वेबसाइटों के लिए फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Fanboy's Spanish/Portuguese",
 				"description": "Popis filtara za web stranice na španjolskom i portugalskom."
@@ -11963,6 +13472,10 @@
 			"hu": {
 				"name": "Fanboy's Spanish/Portuguese",
 				"description": "Szűrőlista a spanyol és portugál webhelyekhez."
+			},
+			"hy": {
+				"name": "Fanboy’s Spanish/Portuguese",
+				"description": "Ֆիլտրի ցուցակը իսպաներեն և պորտուգալերեն կայքերի համար։"
 			},
 			"id": {
 				"name": "Fanboy's Spanish/Portuguese",
@@ -11980,9 +13493,17 @@
 				"name": "Fanboy's Spanish/Portuguese",
 				"description": "스페인, 포르투갈 웹사이트를 위한 필터 리스트"
 			},
+			"lt": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filtrų sąrašas tinklalapiams ispanų ir portugalų kalbomis."
+			},
 			"mk": {
 				"name": "Fanboy's Spanish/Portuguese",
 				"description": "Список на филтри за веб-страници на шпански и португалски."
+			},
+			"ms": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Senarai penapis untuk laman web dalam bahasa Sepanyol dan Portugis."
 			},
 			"nl": {
 				"name": "Fanboy's Spaans/Portugees",
@@ -12031,6 +13552,10 @@
 			"sv": {
 				"name": "Fanboy's Spanish/Portuguese",
 				"description": "Filterlista för webbplatser på spanska och portugisiska."
+			},
+			"th": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "กรองรายการเว็บไซต์ในภาษาสเปนและโปรตุเกส"
 			},
 			"tr": {
 				"name": "Fanboy's Spanish/Portuguese",
@@ -12114,6 +13639,10 @@
 				"name": "EasyList Spanish",
 				"description": "רשימת מסננים נוספת עבור אתרים בספרדית."
 			},
+			"hi": {
+				"name": "EasyList Spanish",
+				"description": "स्पेनिश में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "EasyList Spanish",
 				"description": "Španjolski dodatak za EasyList."
@@ -12121,6 +13650,10 @@
 			"hu": {
 				"name": "EasyList Spanish",
 				"description": "További szűrőlista spanyol nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "EasyList Spanish",
+				"description": "Լրացուցիչ զտիչներ իսպաներեն լեզվով կայքերի համար։"
 			},
 			"id": {
 				"name": "EasyList Spanish",
@@ -12138,9 +13671,17 @@
 				"name": "EasyList Spanish",
 				"description": "스페인어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "EasyList Spanish",
+				"description": "Papildomas filtrų sąrašas ispanų kalbos svetainėms."
+			},
 			"mk": {
 				"name": "EasyList Spanish",
 				"description": "Дополнителен список на филтри за веб-страници на шпански."
+			},
+			"ms": {
+				"name": "EasyList Spanish",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Sepanyol."
 			},
 			"nl": {
 				"name": "Spaanse EasyList",
@@ -12189,6 +13730,10 @@
 			"sv": {
 				"name": "EasyList Spanish",
 				"description": "Extra filterlista för webbplatser på spanska."
+			},
+			"th": {
+				"name": "EasyList Spanish",
+				"description": "ภาคผนวกรายการตัวกรองสำหรับเว็บไซต์ในภาษาสเปน."
 			},
 			"tr": {
 				"name": "EasyList Spanish",
@@ -12272,6 +13817,10 @@
 				"name": "KAD - Anti-Scam",
 				"description": "מסנן שמגן מפני סוגים שונים של הונאות ברשת הפולנית, כמו תכתובות טקסט המוניות, חנויות מקוונות מזויפות, וכדומה."
 			},
+			"hi": {
+				"name": "KAD - Anti-Scam",
+				"description": "पोलिश नेटवर्क में विभिन्न प्रकार के स्कैम के खिलाफ सुरक्षा करने वाला फ़िल्टर, जैसे कि सामूहिक टेक्स्ट मैसेजिंग, फ़र्ज़ी ऑनलाइन स्टोर, आदि।"
+			},
 			"hr": {
 				"name": "KAD - Anti-Scam",
 				"description": "Filtar koji štiti od raznih vrsta prijevara, kao što su masovne razmjene tekstualnih poruka, lažne internetske trgovine itd."
@@ -12279,6 +13828,10 @@
 			"hu": {
 				"name": "KAD - Anti-Scam",
 				"description": "Szűrő, amely megvédi a különböző típusú csalásoktól, például tömeges üzenetküldéstől, hamis online áruházaktól, stb."
+			},
+			"hy": {
+				"name": "KAD - Anti-Scam",
+				"description": "Ֆիլտրը, որը պաշտպանում է պոլոնական ցանցում տարբեր տեսակի մոլորություններից, ինչպես զանգվածային հաղորդագրություններ, կեղծ առցանց խանութներ և այլն։"
 			},
 			"id": {
 				"name": "KAD - Anti-Scam",
@@ -12296,9 +13849,17 @@
 				"name": "KAD - Anti-Scam",
 				"description": "자동 문자 메시지, 가짜 온라인 상점 등과 같은 폴란드 네트워크의 다양한 유형의 사기로부터 보호하는 필터입니다."
 			},
+			"lt": {
+				"name": "KAD - Anti-Scam",
+				"description": "Filtras, apsaugantis nuo įvairių sukčiavimo rūšių Lenkijos tinkluose, tokių kaip masiniai tekstiniai pranešimai, melagingos internetinės parduotuvės ir pan."
+			},
 			"mk": {
 				"name": "KAD - Anti-Scam",
 				"description": "Филтер кој штити од разни видови измами во полската мрежа, како што се масовни текстуални пораки, лажни онлајн продавници итн."
+			},
+			"ms": {
+				"name": "KAD - Anti-Scam",
+				"description": "Penapis yang melindungi daripada pelbagai jenis penipuan dalam rangkaian Poland, seperti pesanan teks pukal, kedai dalam talian palsu, dan lain-lain."
 			},
 			"nl": {
 				"name": "KAD - Anti-Scam",
@@ -12347,6 +13908,10 @@
 			"sv": {
 				"name": "KAD - Anti-Scam",
 				"description": "Filter som skyddar mot olika bedrägerier i det polska nätverket, inklusive mass-sms och falska nätbutiker."
+			},
+			"th": {
+				"name": "KAD - Anti-Scam",
+				"description": "ตัวกรองที่ป้องกันการหลอกลวงประเภทต่าง ๆ เช่นการส่งข้อความจำนวนมากร้านค้าออนไลน์ปลอมเป็นต้น"
 			},
 			"tr": {
 				"name": "KAD - Anti-Scam",
@@ -12430,6 +13995,10 @@
 				"name": "Adblock List for Finland",
 				"description": "רשימת מסננים של חסימת פרסומות בשפה הפינית."
 			},
+			"hi": {
+				"name": "Adblock List for Finland",
+				"description": "फिनिश विज्ञापन ब्लॉकिंग फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Finska AdBlock lista",
 				"description": "Finnish ad blocking filter list."
@@ -12437,6 +14006,10 @@
 			"hu": {
 				"name": "Adblock List for Finland",
 				"description": "Finn hirdetésblokkoló lista."
+			},
+			"hy": {
+				"name": "Adblock List for Finland",
+				"description": "Ֆիննական գովազդի զտման ցանկը։"
 			},
 			"id": {
 				"name": "Adblock List for Finland",
@@ -12454,9 +14027,17 @@
 				"name": "Adblock List for Finland",
 				"description": "핀란드 광고 차단 필터 목록."
 			},
+			"lt": {
+				"name": "Adblock List for Finland",
+				"description": "Fininis reklamos blokavimo filtrų sąrašas."
+			},
 			"mk": {
 				"name": "Adblock листа за Финска",
 				"description": "Финска листа на филтри за блокирање реклами."
+			},
+			"ms": {
+				"name": "Adblock List for Finland",
+				"description": "Senarai penapis iklan yang menghalang iklan di laman web berbahasa Finland."
 			},
 			"nl": {
 				"name": "Adblock Lijst voor Finland",
@@ -12505,6 +14086,10 @@
 			"sv": {
 				"name": "Adblock List for Finland",
 				"description": "Finsk filterlista för annonsblockering."
+			},
+			"th": {
+				"name": "Adblock List for Finland",
+				"description": "รายการตัวกรองการปิดกั้นโฆษณาของฟินแลนด์"
 			},
 			"tr": {
 				"name": "Adblock List for Finland",
@@ -12588,6 +14173,10 @@
 				"name": "ROLIST2",
 				"description": "זוהי רשימה משלימה עבור ROList עם מטרדים שאינם בהכרח מודעות. זוהי רשימה תוקפנית מאוד ואינה מומלצת למתחילים."
 			},
+			"hi": {
+				"name": "ROLIST2",
+				"description": "यह ROList के लिए एक समर्पण सूची है जिसमें परेशानियाँ हैं जो अनिवार्य रूप से बैनर नहीं हैं। यह एक बहुत ही आक्रामक सूची है और शुरुआती लोगों के लिए अनुशंसित नहीं है।"
+			},
 			"hr": {
 				"name": "ROLIST2",
 				"description": "Ovo je dopunski popis za ROList s smetnjama koje nisu nužno banneri. To je vrlo agresivan popis i ne preporučuje se početnicima."
@@ -12595,6 +14184,10 @@
 			"hu": {
 				"name": "ROLIST2",
 				"description": "Ez egy kiegészítő lista a ROList számára olyan kellemetlenségek ellen, amelyek nem feltétlenül bannerek. Ez egy nagyon szigorú lista, és nem ajánlott kezdőknek."
+			},
+			"hy": {
+				"name": "ROLIST2",
+				"description": "Այս ծրագիրը լրացուցիչ ցանկ է ROList-ի համար, որտեղ կան անհանգստություններ, որոնք պարտադիր չեն լինել գովազդները։ Դա շատ ուժեղ ցանկ է և չի խորհուրդ տալիս սկսնակներին։"
 			},
 			"id": {
 				"name": "ROLIST2",
@@ -12612,9 +14205,17 @@
 				"name": "ROLIST2",
 				"description": "배너뿐만 아니라 방해 요소 ROList에 대한 보완 목록입니다. 매우 강경한 목록이므로 초보자에게는 권장되지 않습니다."
 			},
+			"lt": {
+				"name": "ROLIST2",
+				"description": "Tai papildomas sąrašas ROList su trukdžiais, kurie nebūtinai yra reklamos. Tai labai agresyvus sąrašas ir nerekomenduojamas pradedantiesiems."
+			},
 			"mk": {
 				"name": "ROLIST2",
 				"description": "Ова е комплементарна листа за ROLlist со вознемирувања што можеби не се банери. Тоа е многу агресивна листа и не се препорачува за почетници."
+			},
+			"ms": {
+				"name": "ROLIST2",
+				"description": "Ini adalah senarai pelengkap untuk ROList yang mengandungi gangguan yang tidak semestinya adalah sepanduk. Ia adalah senarai yang sangat agresif dan tidak disyorkan untuk pemula."
 			},
 			"nl": {
 				"name": "ROLIST2",
@@ -12663,6 +14264,10 @@
 			"sv": {
 				"name": "ROLIST2",
 				"description": "Detta är en kompletterande lista för ROList med irritationsmoment som inte nödvändigtvis är banners. Det är en mycket aggressiv lista och rekommenderas inte för nybörjare."
+			},
+			"th": {
+				"name": "ROLIST2",
+				"description": "นี่คือรายการเสริมสำหรับ ROList ที่มีการรบกวนซึ่งไม่จำเป็นต้องมีแบนเนอร์ เป็นรายการที่ก้าวร้าวมากและไม่แนะนำสำหรับผู้เริ่มต้น"
 			},
 			"tr": {
 				"name": "ROLIST2",
@@ -12746,6 +14351,10 @@
 				"name": "Persian Blocker",
 				"description": "רשימת מסננים עבור חסימה של פרסומות ועוקבנים באתרים בפרסית."
 			},
+			"hi": {
+				"name": "Persian Blocker",
+				"description": "पर्सियन वेबसाइटों पर विज्ञापनों और ट्रैकर्स को अवरुद्ध करने के लिए फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Perzijski blokator",
 				"description": "Popis filtara za blokiranje oglasa i praćenja na web-lokacijama na perzijskom jeziku."
@@ -12753,6 +14362,10 @@
 			"hu": {
 				"name": "Persian Blocker",
 				"description": "Szűrőlista a hirdetések és nyomkövetők blokkolásához a perzsa nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "Persian Blocker",
+				"description": "Զտման ցանկ գովազդների և հետևիչների համար՝ պարսկերենի կայքերում։"
 			},
 			"id": {
 				"name": "Persian Blocker",
@@ -12770,9 +14383,17 @@
 				"name": "Persian Blocker",
 				"description": "페르시아어 웹 사이트에서 광고 및 추적기를 차단하기 위한 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Persian Blocker",
+				"description": "Filtrų sąrašas reklamos ir sekiklių blokavimui svetainėse persų kalba."
+			},
 			"mk": {
 				"name": "Persian Blocker",
 				"description": "Список со филтри за блокирање реклами и тракери на веб-локации на персиски јазик."
+			},
+			"ms": {
+				"name": "Persian Blocker",
+				"description": "Senarai penapis untuk menyekat iklan dan pengesan di laman web dalam bahasa Parsi."
 			},
 			"nl": {
 				"name": "Persian Blocker",
@@ -12821,6 +14442,10 @@
 			"sv": {
 				"name": "Persian Blocker",
 				"description": "Filterlista för att blockera annonser och spårare på persiska webbplatser."
+			},
+			"th": {
+				"name": "Persian Blocker",
+				"description": "รายการกรองเพื่อบล็อกโฆษณาและตัวติดตามบนเว็บไซต์ในภาษาเปอร์เซีย"
 			},
 			"tr": {
 				"name": "Persian Blocker",
@@ -12904,6 +14529,10 @@
 				"name": "road-block",
 				"description": "רשימת מסננים של חסימת פרסומות בשפה הרומנית."
 			},
+			"hi": {
+				"name": "road-block",
+				"description": "रोमानियाई विज्ञापन ब्लॉकिंग फ़िल्टर सदस्यता।"
+			},
 			"hr": {
 				"name": "road-block",
 				"description": "Pretplata na rumunjski filtar za blokiranje oglasa."
@@ -12911,6 +14540,10 @@
 			"hu": {
 				"name": "road-block",
 				"description": "Román hirdetésblokkoló szűrő feliratkozás."
+			},
+			"hy": {
+				"name": "road-block",
+				"description": "Ռումինական գովազդների արգելափակման զտիչի բաժանորդություն։"
 			},
 			"id": {
 				"name": "road-block",
@@ -12928,9 +14561,17 @@
 				"name": "road-block",
 				"description": "루마니아어 광고 차단 필터 구독."
 			},
+			"lt": {
+				"name": "road-block",
+				"description": "Rumunų reklamos blokavimo filtrų prenumerata."
+			},
 			"mk": {
 				"name": "road-block",
 				"description": "Претплата на романски филтер за блокирање реклами."
+			},
+			"ms": {
+				"name": "road-block",
+				"description": "Langganan penapis iklan Romania."
 			},
 			"nl": {
 				"name": "Road-block",
@@ -12979,6 +14620,10 @@
 			"sv": {
 				"name": "road-block",
 				"description": "Rumänsk prenumeration på filter för annonsblockering."
+			},
+			"th": {
+				"name": "road-block",
+				"description": "การสมัครตัวกรองการปิดกั้นโฆษณาของโรมาเนีย"
 			},
 			"tr": {
 				"name": "road-block",
@@ -13062,6 +14707,10 @@
 				"name": "Polish Annoyances Filters",
 				"description": "רשימת מסננים אשר מסתירה וחוסמת חלונות קופצים, יישומונים, עלונים, התראות דחיפה, חצים, קישורים פנימיים מתוייגים אשר מחוץ לנושא, ואלמנטים מעצבנים אחרים. מסננים פולניים של עוגיות GDPR כבר ברשימה."
 			},
+			"hi": {
+				"name": "Polish Annoyances Filters",
+				"description": "एक फ़िल्टर सूची जो पॉप-अप, विजेट, न्यूज़लेटर, पुश सूचनाएँ, तीर, ऑफ़-टॉपिक टैग किए गए आंतरिक लिंक और अन्य परेशान करने वाले तत्वों को छुपाता और ब्लॉक करता है। पॉलिश GDPR-कुकीज़ फ़िल्टर पहले ही इसमें शामिल है।"
+			},
 			"hr": {
 				"name": "Polish Annoyances Filters",
 				"description": "Popis filtara koji skriva i blokira skočne prozore, widgete, biltene, push obavijesti, strelice, označene interne poveznice koje su izvan teme i druge iritantne elemente. Polskie GDPR-Cookies Filters već je u njemu."
@@ -13069,6 +14718,10 @@
 			"hu": {
 				"name": "Polish Annoyances Filters",
 				"description": "Szűrőlista, amely elrejti és blokkolja a felugró ablakokat, widgeteket, hírleveleket, push értesítéseket, nyilakat, a témán kívüli címkézett belső linkeket és az egyéb irritáló elemeket. A Lengyel GDPR Süti Szűrő is benne van."
+			},
+			"hy": {
+				"name": "Polish Annoyances Filters",
+				"description": "Զտիչների ցանկ, որը թաքցնում է և արգելափակում նետողներ, վիդջեթներ, տեղեկագրեր, պուլսային ծանուցումներ, դեպի չնչին թեմաների ներքին հղումներ, և այլանման խանգարող տարրեր։ Polish GDPR-Cookies Filters արդեն գտնվել է դրա մեջ։"
 			},
 			"id": {
 				"name": "Polish Annoyances Filters",
@@ -13086,9 +14739,17 @@
 				"name": "Polish Annoyances Filters",
 				"description": "팝업, 위젯, 뉴스 레터, 푸시 알림, 화살표, 주제에서 벗어난 태그가 지정된 내부 링크 및 기타 자극적인 요소를 숨기고 차단하는 필터 목록입니다. 폴란드 GDPR- 쿠키 필터가 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "Polish Annoyances Filters",
+				"description": "Filtrų sąrašas, kuris paslepia ir blokuoja iškylančius langus, valdiklius, naujienlaiškius, stumdomuosius pranešimus, rodykles, pažymėtas vidines nuorodas, kurios neatitinka temos, ir kitus erzinančius elementus. Lenkijos GDPR-Cookies filtrai jau jame."
+			},
 			"mk": {
 				"name": "Polish Annoyances Filters",
 				"description": "Список со филтри што крие и блокира скокачки прозорци, виџети, билтени, притисни известувања, стрелки, означени внатрешни врски што се надвор од темата и други иритирачки елементи. Полските GDPR-Cookies Filters веќе се во него."
+			},
+			"ms": {
+				"name": "Polish Annoyances Filters",
+				"description": "Senarai penapis yang menyembunyikan dan menyekat pop timbul, widget, buletin, pemberitahuan push, anak panah, pautan dalaman yang ditandakan yang tidak berkaitan, dan elemen yang mengganggu lain. Penapis GDPR-Kuki Poland telah pun ada dalamnya."
 			},
 			"nl": {
 				"name": "Poolse Ergernissen Filters",
@@ -13137,6 +14798,10 @@
 			"sv": {
 				"name": "Polish Annoyances Filters",
 				"description": "Filterlista som döljer och blockerar popup-fönster, widgets, nyhetsbrev, push-notiser, pilar, taggade interna länkar som är off-topic och andra irriterande element. Polska GDPR-Cookies-filter finns redan i den."
+			},
+			"th": {
+				"name": "Polish Annoyances Filters",
+				"description": "รายการตัวกรองที่ซ่อนและปิดกั้นป๊อปอัปวิดเจ็ตจดหมายข่าวการแจ้งเตือนแบบพุชลูกศรลิงก์ภายในที่ติดแท็กที่ไม่เกี่ยวข้องกับหัวข้อและองค์ประกอบอื่น ๆ ที่น่ารำคาญ ตัวกรองคุกกี้ GDPR ของโปแลนด์มีอยู่แล้ว"
 			},
 			"tr": {
 				"name": "Polish Annoyances Filters",
@@ -13220,6 +14885,10 @@
 				"name": "Polish Anti Adblock Filters",
 				"description": "מסננים פולניים רשמיים נגד אזהרות לגבי חסימת פרסומות."
 			},
+			"hi": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "एडब्लॉक अलर्ट के खिलाफ आधिकारिक पोलिश फ़िल्टर।"
+			},
 			"hr": {
 				"name": "Polish Anti Adblock Filters",
 				"description": "Službeni poljski filtri protiv AdBlock upozorenja."
@@ -13227,6 +14896,10 @@
 			"hu": {
 				"name": "Polish Anti Adblock Filters",
 				"description": "Hivatalos lengyel szűrők, amelyek a hirdetésblokkolók elleni figyelmeztetéseket tiltják."
+			},
+			"hy": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Պաշտոնական փոլանդական զտիչներ Adblock կատեգորիաների առաջացման դեմ։"
 			},
 			"id": {
 				"name": "Polish Anti Adblock Filters",
@@ -13244,9 +14917,17 @@
 				"name": "Polish Anti Adblock Filters",
 				"description": "애드블록 경고에 대한 공식 폴란드어 필터."
 			},
+			"lt": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Oficialūs Lenkijos filtrai prieš Adblock įspėjimus."
+			},
 			"mk": {
 				"name": "Polish Anti Adblock Filters",
 				"description": "Официјални полски филтри против предупредувањата за користење Adblock."
+			},
+			"ms": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Penapis rasmi Poland menentang amaran Adblock."
 			},
 			"nl": {
 				"name": "Poolse Anti Adblock Filters",
@@ -13295,6 +14976,10 @@
 			"sv": {
 				"name": "Polish Anti Adblock Filters",
 				"description": "Officiella polska filter mot annonsblockerings-varningar."
+			},
+			"th": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "ตัวกรองภาษาโปแลนด์อย่างเป็นทางการกับการแจ้งเตือนปิดกั้นโฆษณา"
 			},
 			"tr": {
 				"name": "Polish Anti Adblock Filters",
@@ -13378,6 +15063,10 @@
 				"name": "Fanboy's Anti-thirdparty Fonts",
 				"description": "מסנן אשר חוסם גופני צד־שלישי. הוא עשוי לשבור את המראה והעיצוב של אתרים מסוימים."
 			},
+			"hi": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "एक फ़िल्टर जो थर्ड-पार्टी फॉन्ट्स को ब्लॉक करता है। यह कुछ वेबसाइटों का रूप और डिज़ाइन बिगाड़ सकता है।"
+			},
 			"hr": {
 				"name": "Fanboy's Anti-thirdparty Fonts",
 				"description": "Filtar koji blokira fontove treće strane. To može pokvariti izgled i dizajn nekih web stranica."
@@ -13385,6 +15074,10 @@
 			"hu": {
 				"name": "Fanboy's Anti-thirdparty Fonts",
 				"description": "Szűrő, amely blokkolja a harmadik féltől származó betűtípusokat. Elronthatja egyes webhelyek megjelenését és kialakítását."
+			},
+			"hy": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Ֆիլտր, որը արգելափակում է երրորդ կողմի ֆոնտերը։ Դա կարող է վնասել որոշ կայքերի տեսքը և ձևավորումը։"
 			},
 			"id": {
 				"name": "Fanboy's Anti-thirdparty Fonts",
@@ -13402,9 +15095,17 @@
 				"name": "Fanboy's Anti-thirdparty Fonts",
 				"description": "타사 글꼴을 차단하는 필터입니다. 일부 웹사이트의 모양과 디자인이 깨질 수 있습니다."
 			},
+			"lt": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filtras, blokuojantis trečiųjų šalių šriftus. Tai gali sugadinti kai kurių svetainių išvaizdą ir dizainą."
+			},
 			"mk": {
 				"name": "Fanboy's Anti-thirdparty Fonts",
 				"description": "Филтер што блокира фонтови од трети страни. Може да го скрши изгледот и дизајнот на некои веб-локации."
+			},
+			"ms": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Penapis yang menyekat font pihak ketiga. Ia mungkin merosakkan penampilan dan reka bentuk beberapa laman web."
 			},
 			"nl": {
 				"name": "Fanboy's Anti-thirdparty Fonts",
@@ -13453,6 +15154,10 @@
 			"sv": {
 				"name": "Fanboy's Anti-thirdparty Fonts",
 				"description": "Ett filter som blockerar teckensnitt från tredje part. Det kan förstöra utseendet och designen på vissa webbplatser."
+			},
+			"th": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "ตัวกรองที่ปิดกั้นฟอนต์ของบุคคลที่สาม ซึ่งอาจทำลายการออกแบบและรูปลักษณ์ของเว็บไซต์บางแห่ง."
 			},
 			"tr": {
 				"name": "Fanboy's Anti-thirdparty Fonts",
@@ -13536,6 +15241,10 @@
 				"name": "BarbBlock",
 				"description": "BarbBlock הוא רשימה של חסימת תוכן עם הרחבות דפדפן עצמאיות עבור Chrome ו־Firefox. הוא מוסיף אל רשימה שחורה אתרים שהשתמשו בהפלות DMCA כדי לאלץ הסרה מרשימות אחרות של חסימת תוכן. הפלות כאלו בלתי תקפות בעליל, אבל הן יכולות להיות יעילות בהפחדת מיזמי קוד פתוח קטנים לצורך היענות."
 			},
+			"hi": {
+				"name": "BarbBlock",
+				"description": "बारबब्लॉक एक कंटेंट ब्लॉकिंग सूची है जो क्रोम और फ़ायरफ़ॉक्स के लिए स्टैंडअलोन ब्राउज़र एक्सटेंशंस के साथ है। यह उन साइटों को ब्लैकलिस्ट करता है जिन्होंने अन्य कंटेंट ब्लॉकिंग सूचियों से हटाने के लिए DMCA टेकडाउन का उपयोग किया है। ऐसे टेकडाउन स्पष्ट रूप से अमान्य हैं, लेकिन वे छोटे ओपन-सोर्स प्रोजेक्टों को अनुपालन के लिए डराने में प्रभावी हो सकते हैं।"
+			},
 			"hr": {
 				"name": "BarbBlock",
 				"description": "BarbBlock je popis za blokiranje sadržaja sa samostalnim proširenjima preglednika za Chrome i Firefox. Ono stavlja web stranica na popis neželjenih, koje su koristile DMCA uklanjanje kako bi prisilile uklanjanje s drugih popisa za blokiranje sadržaja. Takva uklanjanja kategorički su nevaljana, ali mogu biti učinkovita u zastrašivanju malih projekata otvorenog koda."
@@ -13543,6 +15252,10 @@
 			"hu": {
 				"name": "BarbBlock",
 				"description": "A BarbBlock egy tartalomblokkoló lista, önálló Chrome és a Firefox böngészőbővítményekkel. Tiltólistára teszi azokat a webhelyeket, amelyek a DMCA segítségével távolíttatták el magukat az egyéb tartalomblokkoló listákról. Az ilyen eltávolítások kategorikusan érvénytelenek, de hatékonyan képesek megfélemlíteni a nyílt forráskódú kis projekteket."
+			},
+			"hy": {
+				"name": "BarbBlock",
+				"description": "BarbBlock-ն բովանդակության հավաքման ցանկ է ինքնուրույն զետեղված բրաուզերային ընդլայնումներով Chrome և Firefox-ի համար։ Այն սև ցուցակում է դնում այն կայքերը, որոնք օգտագործել են DMCA-ի փոխանցումներ՝ ստիպելու այլ բովանդակության հավաքման ցանկերից հանելու։ Այդպիսի փոխանցումները գեթ քվոտաբառային են, սակայն կարող են արդյունավետ լինել փոքր օփեն-սորզ ծրագրերի վրա ճնշում գործադրելու համար։"
 			},
 			"id": {
 				"name": "BarbBlock",
@@ -13560,9 +15273,17 @@
 				"name": "BarbBlock",
 				"description": "BarbBlock은 Chrome 및 Firefox용 브라우저 확장 프로그램을 위한 콘텐츠 차단 목록입니다. 콘텐츠 차단 목록에서 강제 삭제를 위해 DMCA 게시 중단을 이용하는 사이트를 블랙리스트에 추가합니다. 해당 게시 중단이 절대적으로 유효한 것은 아니나, 소규모 오픈 소스 프로젝트로 하여금 규정을 준수시키는 데 효과적일 수 있습니다."
 			},
+			"lt": {
+				"name": "BarbBlock",
+				"description": "BarbBlock yra turinio blokavimo sąrašas su nepriklausomais naršyklės plėtiniais, skirtais Chrome ir Firefox. Jis juodajame sąraše turi svetaines, kurios naudojasi DMCA pašalinimo prašymais, kad priverstų išimti iš kitų turinio blokavimo sąrašų. Tokie pašalinimo prašymai yra kategoriškai neteisingi, tačiau gali būti veiksmingi, norint bauginti mažus atvirojo kodo projektus, kad jie laikytųsi reikalavimų."
+			},
 			"mk": {
 				"name": "BarbBlock",
 				"description": "BarbBlock е листа за блокирање содржини со самостојни екстензии на прелистувачот за Chrome и Firefox. Ги става на црните листи сајтови кои користеле отстранување DMCA за принудно отстранување од други списоци за блокирање содржини. Ваквите симнувања се категорично невалидни, но можат да бидат ефективни во заплашувањето на малите проекти со отворен код да се усогласат."
+			},
+			"ms": {
+				"name": "BarbBlock",
+				"description": "BarbBlock adalah senarai penyekat kandungan dengan penyambung pelayar berdiri sendiri untuk Chrome dan Firefox. Ia menyekat laman yang telah menggunakan penghapusan DMCA untuk memaksa pemindahan dari senarai penyekat kandungan lain. Penghapusan seperti ini adalah tidak sah secara kategorik, tetapi ia boleh berkesan dalam menakut-nakutkan projek-projek sumber terbuka yang kecil untuk mematuhi."
 			},
 			"nl": {
 				"name": "BarbBlock",
@@ -13611,6 +15332,10 @@
 			"sv": {
 				"name": "BarbBlock",
 				"description": "BarbBlock är en innehållsblockeringslista med fristående webbläsartillägg för Chrome och Firefox. Den svartlistar webbplatser som har använt DMCA-takedowns för att tvinga bort dem från andra innehållsblockeringslistor. Sådana nedtagningar är kategoriskt ogiltiga, men de kan vara effektiva för att skrämma små projekt med öppen källkod till efterlevnad."
+			},
+			"th": {
+				"name": "BarbBlock",
+				"description": "BarbBlock เป็นรายการปิดกั้นเนื้อหาที่มีส่วนขยายเบราว์เซอร์แบบสแตนด์อโลนสำหรับ Chrome และ Firefox ขึ้นบัญชีดำไซต์ที่ใช้การลบ DMCA เพื่อบังคับให้ลบออกจากรายการปิดกั้นเนื้อหาอื่น ๆ การลบออกดังกล่าวไม่ถูกต้องโดยเด็ดขาด แต่อาจมีผลในการข่มขู่โครงการโอเพ่นซอร์สขนาดเล็กให้ปฏิบัติตาม"
 			},
 			"tr": {
 				"name": "BarbBlock",
@@ -13694,6 +15419,10 @@
 				"name": "EasyList Cookie List",
 				"description": "מסיר אזהרות לגבי עוגיות ופרטיות. כלול כבר ברשימה Fanboy's Annoyances."
 			},
+			"hi": {
+				"name": "EasyList Cookie List",
+				"description": "कुकी और गोपनीयता चेतावनियों को हटाता है। पहले से ही फैनबॉय के निंदा सूची में शामिल है।"
+			},
 			"hr": {
 				"name": "EasyList Cookie List",
 				"description": "Uklanja upozorenja o kolačićima i privatnosti. Već uvršten na Fanboy's Annoyances list."
@@ -13701,6 +15430,10 @@
 			"hu": {
 				"name": "EasyList Cookie List",
 				"description": "Eltávolítja a sütikkel és az adatvédelemmel kapcsolatos figyelmeztetéseket. Már szerepel a Fanboy Annoyances listában."
+			},
+			"hy": {
+				"name": "EasyList Cookie List",
+				"description": "Վերացնում է կուքիների և գաղտնիության նախազգուշացումներն։ Այն արդեն ներառված է Fanboy's Annoyances list-ում։"
 			},
 			"id": {
 				"name": "EasyList Cookie List",
@@ -13718,9 +15451,17 @@
 				"name": "EasyList Cookie List",
 				"description": "쿠키 및 개인 정보 경고가 제거됩니다. 이미 Fanboy's Annoyances 목록에 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "EasyList Cookie List",
+				"description": "Pašalina slapukų ir privatumo įspėjimus. Jau įtrauktas į Fanboy's Annoyances sąrašą."
+			},
 			"mk": {
 				"name": "EasyList Cookie List",
 				"description": "Ги отстранува предупредувањата за колачиња и приватност. Веќе вклучен во списокот на Fanboy's Annoyances."
+			},
+			"ms": {
+				"name": "EasyList Cookie List",
+				"description": "Mengeluarkan amaran cookie dan privasi. Sudah termasuk dalam senarai gangguan Fanboy."
 			},
 			"nl": {
 				"name": "EasyList Cookie List",
@@ -13769,6 +15510,10 @@
 			"sv": {
 				"name": "EasyList Cookie List",
 				"description": "Tar bort cookie- och integritetsvarningar. Finns redan med på Fanboy's Annoyances list."
+			},
+			"th": {
+				"name": "EasyList Cookie List",
+				"description": "ลบคำเตือนคุกกี้และความเป็นส่วนตัว รวมอยู่ในรายการ Annoyances ของ Fanboy แล้ว"
 			},
 			"tr": {
 				"name": "EasyList Cookie List",
@@ -13852,6 +15597,10 @@
 				"name": "NoCoin Filter List",
 				"description": "מסנן זה משבית כורים מבוססי דפדפן כגון כוורת מטבעות."
 			},
+			"hi": {
+				"name": "NoCoin Filter List",
+				"description": "यह फ़िल्टर ब्राउज़र-आधारित खनन उपकरणों जैसे कि कॉइन-हाइव को निष्क्रिय करता है।"
+			},
 			"hr": {
 				"name": "NoCoin Filter List",
 				"description": "Ovaj filtar onemogućava rudare temeljene na pregledniku, kao što je coin-hive."
@@ -13859,6 +15608,10 @@
 			"hu": {
 				"name": "NoCoin Filter List",
 				"description": "Ez a szűrő letiltja a böngészőalapú bányászokat, például coin-hive."
+			},
+			"hy": {
+				"name": "NoCoin Filter List",
+				"description": "Այս զտիչը անջատում է բրաուզերի հիման վրա ցուցակագրվող միներները, ինչպիսին է coin-hive-ը։"
 			},
 			"id": {
 				"name": "NoCoin Filter List",
@@ -13876,9 +15629,17 @@
 				"name": "NoCoin Filter List",
 				"description": "이 필터는 코인 하이브와 같은 브라우저 기반 채굴 프로그램을 비활성화합니다."
 			},
+			"lt": {
+				"name": "NoCoin Filter List",
+				"description": "Šis filtras išjungia naršyklės pagrindu veikiančius kalnakasius, tokius kaip coin-hive."
+			},
 			"mk": {
 				"name": "NoCoin Filter List",
 				"description": "Овој филтер ги оневозможува ископувањата базирани на прелистувачи како што е coin-hive."
+			},
+			"ms": {
+				"name": "NoCoin Filter List",
+				"description": "Penapis ini mematikan penambang berdasarkan pelayar seperti coin-hive."
 			},
 			"nl": {
 				"name": "NoCoin Filter List",
@@ -13927,6 +15688,10 @@
 			"sv": {
 				"name": "NoCoin Filter List",
 				"description": "Detta filter inaktiverar webbläsarbaserade krypto-grävare som Coinhive."
+			},
+			"th": {
+				"name": "NoCoin Filter List",
+				"description": "ตัวกรองนี้ปิดใช้งานคนงานเหมืองที่ใช้เบราว์เซอร์เช่นเหรียญรัง"
 			},
 			"tr": {
 				"name": "NoCoin Filter List",
@@ -14010,6 +15775,10 @@
 				"name": "Frellwit's Swedish Filter",
 				"description": "מסנן עבור השפה השוודית שמכוון להסיר פרסומות אזוריות, מעקב, מדיה חברתית, מטרדים, מאמרים ממומנים וכו'."
 			},
+			"hi": {
+				"name": "Frellwit's Swedish Filter",
+				"description": "एक फ़िल्टर जो क्षेत्रीय स्वीडिश विज्ञापनों, ट्रैकिंग, सोशल मीडिया, खिज़, प्रायोजित लेख आदि को हटाने का प्रयास करता है।"
+			},
 			"hr": {
 				"name": "Frellwit's Swedish Filter",
 				"description": "Filtar za uBlock Origin čiji je cilj ukloniti regionalne švedske oglase, pratitelje, društvene mreže, smetnje, sponzorirane članke itd."
@@ -14017,6 +15786,10 @@
 			"hu": {
 				"name": "Frellwit's Swedish Filter",
 				"description": "Szűrő, amely eltávolítja a regionális svéd hirdetéseket, a nyomkövetőket, a közösségi médiát, a kellemetlenségeket, a szponzorált cikkeket stb."
+			},
+			"hy": {
+				"name": "Frellwit's Swedish Filter",
+				"description": "Ֆիլտր, որը նպատակ ունի հեռացնել տարածաշրջանային Շվեդական գովազդները, հետեւումը, սոցիալական մեդիան, նյարդայնացնող տարրերը, հովանավորված հոդվածները և այլն։"
 			},
 			"id": {
 				"name": "Frellwit's Swedish Filter",
@@ -14034,9 +15807,17 @@
 				"name": "Frellwit's Swedish Filter",
 				"description": "스웨덴 광고, 추적, 소셜 미디어 요소, 방해 요소, 후원 기사 등을 제거하는 필터입니다."
 			},
+			"lt": {
+				"name": "Frellwit's Swedish Filter",
+				"description": "Filtras, kuris skirtas pašalinti regionines švedų reklamas, seklius, socialinius tinklus, erzindamas elementus, rėmėjus straipsnius ir kt."
+			},
 			"mk": {
 				"name": "Frellwit's Swedish Filter",
 				"description": "Филтер кој има за цел да ги отстрани регионалните шведски реклами, следењето, социјалните медиуми, досадите, спонзорираните статии итн."
+			},
+			"ms": {
+				"name": "Frellwit's Swedish Filter",
+				"description": "Penapis yang bertujuan untuk menghapus iklan berkaitan Sweden, penjejakan, media sosial, elemen yang mengganggu, artikel tajaan, dan sebagainya."
 			},
 			"nl": {
 				"name": "Frellwit's Swedish Filter",
@@ -14085,6 +15866,10 @@
 			"sv": {
 				"name": "Frellwit's Swedish Filter",
 				"description": "Filter som syftar till att ta bort regionala svenska annonser, spårning, sociala medier, irritationsmoment, sponsrade artiklar etc."
+			},
+			"th": {
+				"name": "Frellwit's Swedish Filter",
+				"description": "ตัวกรองสำหรับ uBlock Origin ที่มีจุดมุ่งหมายเพื่อลบโฆษณาในภูมิภาคสวีเดนการติดตามโซเชียลมีเดียความน่ารำคาญบทความที่ได้รับการสนับสนุนเป็นต้น"
 			},
 			"tr": {
 				"name": "Frellwit's Swedish Filter",
@@ -14168,6 +15953,10 @@
 				"name": "YousList",
 				"description": "מסנן שחוסם פרסומות באתרים קוריאניים."
 			},
+			"hi": {
+				"name": "YousList",
+				"description": "एक फ़िल्टर जो कोरियन साइटों पर विज्ञापनों को ब्लॉक करता है।"
+			},
 			"hr": {
 				"name": "YousList",
 				"description": "Filtar koji blokira oglase na korejskim web stranicama."
@@ -14175,6 +15964,10 @@
 			"hu": {
 				"name": "YousList",
 				"description": "Szűrőlista, amely blokkolja a hirdetéseket a koreai nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "YousList",
+				"description": "Ֆիլտր, որը արգելափակում է գովազդները կորեական կայքերում։"
 			},
 			"id": {
 				"name": "YousList",
@@ -14192,9 +15985,17 @@
 				"name": "YousList",
 				"description": "한국 사이트 광고 차단 필터."
 			},
+			"lt": {
+				"name": "YousList",
+				"description": "Filtras, blokuojantis reklamą korėjiečių svetainėse."
+			},
 			"mk": {
 				"name": "YousList",
 				"description": "Филтер што блокира реклами на корејски сајтови."
+			},
+			"ms": {
+				"name": "YousList",
+				"description": "Penapis yang menyekat iklan di laman web Korea."
 			},
 			"nl": {
 				"name": "YousList",
@@ -14243,6 +16044,10 @@
 			"sv": {
 				"name": "YousList",
 				"description": "Filter som blockerar annonser på koreanska webbplatser."
+			},
+			"th": {
+				"name": "YousList",
+				"description": "ตัวกรองที่ปิดกั้นโฆษณาบนไซต์ภาษาเกาหลี"
 			},
 			"tr": {
 				"name": "YousList",
@@ -14326,6 +16131,10 @@
 				"name": "AlleBlock",
 				"description": "מסנן שמסיר אלמנטים מטרידים מאתרים מסחר פולניים."
 			},
+			"hi": {
+				"name": "AlleBlock",
+				"description": "एक फ़िल्टर जो पोलिश ई-कॉमर्स साइटों से परेशान करने वाले तत्वों को हटाता है।"
+			},
 			"hr": {
 				"name": "AlleBlock",
 				"description": "Filtar koji uklanja dosadne elemente s web stranica poljskih e-trgovina."
@@ -14333,6 +16142,10 @@
 			"hu": {
 				"name": "AlleBlock",
 				"description": "Szűrő, amely eltávolítja a bosszantó elemeket a lengyel e-kereskedelmi webhelyekről."
+			},
+			"hy": {
+				"name": "AlleBlock",
+				"description": "Ֆիլտր, որը հեռացնում է նյարդայնացնող տարրերը պոլոնական էլեկտրոնային առևտրի կայքերից։"
 			},
 			"id": {
 				"name": "AlleBlock",
@@ -14350,9 +16163,17 @@
 				"name": "AlleBlock",
 				"description": "폴란드 전자 상거래 사이트에서 방해 요소를 제거하는 필터입니다."
 			},
+			"lt": {
+				"name": "AlleBlock",
+				"description": "Filtras, kuris pašalina erzinančias elementus iš Lenkijos el. prekybos svetainių."
+			},
 			"mk": {
 				"name": "AlleBlock",
 				"description": "Филтер што ги отстранува досадните елементи од полските страници за е-трговија."
+			},
+			"ms": {
+				"name": "AlleBlock",
+				"description": "Penapis yang menghapus elemen yang mengganggu dari laman web e-dagang Poland."
 			},
 			"nl": {
 				"name": "AlleBlock",
@@ -14401,6 +16222,10 @@
 			"sv": {
 				"name": "AlleBlock",
 				"description": "Filter som tar bort irriterande element från polska e-handelssajter."
+			},
+			"th": {
+				"name": "AlleBlock",
+				"description": "ตัวกรองที่ลบองค์ประกอบที่น่ารำคาญออกจากไซต์อีคอมเมิร์ซของโปแลนด์"
 			},
 			"tr": {
 				"name": "AlleBlock",
@@ -14484,6 +16309,10 @@
 				"name": "EasyList Polish",
 				"description": "רשימת מסננים נוספת עבור אתרים בפולנית."
 			},
+			"hi": {
+				"name": "EasyList Polish",
+				"description": "पोलिश में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "EasyList Poljska",
 				"description": "Poljski dodatak za EasyList."
@@ -14491,6 +16320,10 @@
 			"hu": {
 				"name": "EasyList Polish",
 				"description": "További szűrőlista lengyel nyelvű weboldalakhoz."
+			},
+			"hy": {
+				"name": "EasyList Polish",
+				"description": "Լրացուցիչ զտիչների ցուցակ պոլոնական կայքերի համար։"
 			},
 			"id": {
 				"name": "EasyList Polish",
@@ -14508,9 +16341,17 @@
 				"name": "EasyList Polish",
 				"description": "폴란드어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "EasyList Polish",
+				"description": "Papildomas filtrų sąrašas svetainėms lenkų kalba."
+			},
 			"mk": {
 				"name": "EasyList Polish",
 				"description": "Дополнителна листа на филтри за веб-локации на полски."
+			},
+			"ms": {
+				"name": "EasyList Polish",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Poland."
 			},
 			"nl": {
 				"name": "EasyList Polish",
@@ -14559,6 +16400,10 @@
 			"sv": {
 				"name": "EasyList Polish",
 				"description": "Extra filterlista för webbplatser på polska."
+			},
+			"th": {
+				"name": "EasyList Polish",
+				"description": "ภาคผนวกภาษาโปแลนด์สำหรับ EasyList"
 			},
 			"tr": {
 				"name": "EasyList Polish",
@@ -14642,6 +16487,10 @@
 				"name": "Polish Anti-Annoying Special Supplement",
 				"description": "מסננים שחוסמים ומסתירים אלמנטי אר־אס־אס ושאריות של עלונים מוסתרים שמשולבים עם אלמנטים חברתיים באתרים פולניים."
 			},
+			"hi": {
+				"name": "Polish Anti-Annoying Special Supplement",
+				"description": "फिल्टर जो पोलिश वेबसाइटों पर RSS तत्वों और छिपे हुए न्यूज़लेटर्स के अवशेषों को ब्लॉक और छिपाता है।"
+			},
 			"hr": {
 				"name": "Polish Anti-Annoying Special Supplement",
 				"description": "Filtri koji blokiraju i skrivaju RSS elemente i ostatke skrivenih biltena u kombinaciji s društvenim elementima na poljskim web stranicama."
@@ -14649,6 +16498,10 @@
 			"hu": {
 				"name": "Polish Anti-Annoying Special Supplement",
 				"description": "Szűrők, amelyek blokkolják és elrejtik a lengyel weboldalakon az RSS elemeket és a rejtett hírlevelek maradványait, valamint a közösségi média elemeket."
+			},
+			"hy": {
+				"name": "Polish Anti-Annoying Special Supplement",
+				"description": "Ֆիլտրեր, որոնք արգելափակում և թաքցնում են RSS տարրերը և թաքցված տեղեկագրերի մնացորդները, որոնք համակցված են սոցիալական տարրերի հետ պոլոնական կայքերում։"
 			},
 			"id": {
 				"name": "Polish Anti-Annoying Special Supplement",
@@ -14666,9 +16519,17 @@
 				"name": "Polish Anti-Annoying Special Supplement",
 				"description": "폴란드 웹사이트에서 소셜 미디어 요소와 결합된 RSS 요소 및 숨겨진 메일링을 차단하고 숨기는 필터입니다."
 			},
+			"lt": {
+				"name": "Polish Anti-Annoying Special Supplement",
+				"description": "Filtrai, kurie blokuoja ir slepia RSS elementus ir paslėptų naujienlaiškių likučius, kurie derinami su socialiniais elementais Lenkijos svetainėse."
+			},
 			"mk": {
 				"name": "Polish Anti-Annoying Special Supplement",
 				"description": "Филтри кои блокираат и кријат RSS елементи и остатоци од скриени билтени во комбинација со социјални елементи на полските веб-страници."
+			},
+			"ms": {
+				"name": "Polish Anti-Annoying Special Supplement",
+				"description": "Penapis yang menyekat dan menyembunyikan elemen RSS dan sisa-sisa buletin tersembunyi yang digabungkan dengan elemen sosial di laman web Poland."
 			},
 			"nl": {
 				"name": "Polish Anti-Annoying Special Supplement",
@@ -14717,6 +16578,10 @@
 			"sv": {
 				"name": "Polish Anti-Annoying Special Supplement",
 				"description": "Filter som blockerar och döljer RSS-element och rester av dolda nyhetsbrev i kombination med sociala element på polska webbplatser."
+			},
+			"th": {
+				"name": "Polish Anti-Annoying Special Supplement",
+				"description": "ตัวกรองที่ปิดกั้นและซ่อนองค์ประกอบ RSS และส่วนที่เหลือของจดหมายข่าวที่ซ่อนอยู่รวมกับองค์ประกอบทางสังคมบนเว็บไซต์ของโปแลนด์"
 			},
 			"tr": {
 				"name": "Polish Anti-Annoying Special Supplement",
@@ -14800,6 +16665,10 @@
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "רשימה זו מכסה אתרים עבור נורווגיה, דנמרק, איסלנד, טריטוריות דניות, ואוכלוסיית הילידים הסאמים."
 			},
+			"hi": {
+				"name": "Dandelion Sprout's Nordic Filters",
+				"description": "यह सूची नॉर्वे, डेनमार्क, आइसलैंड, डेनिश क्षेत्रों और सामी जनजाति के लिए वेबसाइटों को कवर करती है।"
+			},
 			"hr": {
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "Ovaj popis obuhvaća web stranice za Norvešku, Dansku, Island, danske teritorije i autohtono stanovništvo Sama."
@@ -14807,6 +16676,10 @@
 			"hu": {
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "Ez a lista lefedi a Norvég, Dán, Izlandi, a különböző dán területekhez, valamint a Számi őslakosokhoz köthető webhelyeket."
+			},
+			"hy": {
+				"name": "Dandelion Sprout's Nordic Filters",
+				"description": "Այս ցուցակը ընդգրկում է Նորվեգիայի, Դանիայի, Իսլանդիայի, Դանիական տարածքների և սամի բնիկ ժողովրդի կայքերը։"
 			},
 			"id": {
 				"name": "Dandelion Sprout's Nordic Filters",
@@ -14824,9 +16697,17 @@
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "이 목록은 노르웨이, 덴마크, 아이슬란드, 덴마크 영토 및 사미 원주민 인구를위한 웹사이트를 다룹니다."
 			},
+			"lt": {
+				"name": "Dandelion Sprout's Nordic Filters",
+				"description": "Šis sąrašas apima svetaines Norvegijoje, Danijoje, Islandijoje, Danijos teritorijose ir Sami vietiniame gyventojų."
+			},
 			"mk": {
 				"name": "Нордиски филтри на Dandelion Sprout",
 				"description": "Оваа листа опфаќа веб-страници за Норвешка, Данска, Исланд, данските територии и домородното население Сами."
+			},
+			"ms": {
+				"name": "Dandelion Sprout's Nordic Filters",
+				"description": "Senarai ini merangkumi laman web untuk Norway, Denmark, Iceland, wilayah Denmark dan penduduk asal Sami."
 			},
 			"nl": {
 				"name": "Dandelion Sprout's Nordic Filters",
@@ -14875,6 +16756,10 @@
 			"sv": {
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "Denna lista omfattar webbplatser för Norge, Danmark, Island, danska territorier och den samiska ursprungsbefolkningen."
+			},
+			"th": {
+				"name": "Dandelion Sprout's Nordic Filters",
+				"description": "รายการนี้ครอบคลุมเว็บไซต์สำหรับนอร์เวย์เดนมาร์กไอซ์แลนด์ดินแดนของเดนมาร์กและประชากรพื้นเมืองซามิ"
 			},
 			"tr": {
 				"name": "Dandelion Sprout's Nordic Filters",
@@ -14958,6 +16843,10 @@
 				"name": "Dandelion Sprout's Annoyances List",
 				"description": "רשימה זאת נעשתה בסגנון של רשימות AdGuard ושל Fanboy's Annoyances. היא משלבת הרבה מהרשימות הבין־לאומיות הגאות ביותר והמתוחזקות באופן תדיר, כאוסף תפור עבור טובת פשטות."
 			},
+			"hi": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "यह सूची AdGuard और Fanboy की खीज़ों की सूचनाओं की शैली में बनाई गई है। इसमें Dandelion Sprout की कई गर्वित और अक्सर देखी जाने वाली अंतरराष्ट्रीय सूचियाँ एकत्रित की गई हैं, ताकि सादगी की खातिर एक चयनित संग्रह के रूप में प्रस्तुत किया जा सके।"
+			},
 			"hr": {
 				"name": "Dandelion Sprout's Annoyances List",
 				"description": "Ovaj je popis napravljen u stilu AdGuardovih i Fanboyevih popisa iritirajućih elemenata. Isti kombinira više Dandelion Sprout's poznatih i često obnavljanih popisa, kao pročišćeni popis zarad jednostavnosti."
@@ -14965,6 +16854,10 @@
 			"hu": {
 				"name": "Dandelion Sprout's Annoyances List",
 				"description": "Ez a lista az AdGuard és a Fanboy kellemetlenségek elleni listák stílusában készült. Egyesíti Dandelion Sprout legjobb és leggyakrabban karbantartott nemzetközi listáit, az egyszerűség kedvéért válogatott összeállításként."
+			},
+			"hy": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Այս ցանկը ստեղծված է AdGuard-ի և Fanboy-ի նյարդայնության ցանկերի ոճով։ Այն համադրում է Dandelion Sprout-ի բազմաթիվ հպարտ և հաճախ պահպանվող միջազգային ցանկերը, որպես քաղվածք՝ հեշտության համար։"
 			},
 			"id": {
 				"name": "Dandelion Sprout's Annoyances List",
@@ -14982,9 +16875,17 @@
 				"name": "Dandelion Sprout's Annoyances List",
 				"description": "이 목록은 AdGuard 및 Fanboy's Annoyances list 스타일로 만들어졌습니다. Dandelion Sprout의 많은 특장점과 빈번하게 유지보수되는 국제적인 차단 목록들을 포함하며 간단함을 목적으로 엄선된 필터 모음집입니다."
 			},
+			"lt": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Šis sąrašas sukurtas pagal AdGuard ir Fanboy įkyrybių sąrašų stilių. Jis sujungia daugelį Dandelion Sprout tarptautinių sąrašų, kurie dažnai atnaujinami siekiant paprastumo."
+			},
 			"mk": {
 				"name": "Dandelion Sprout's Annoyances List",
 				"description": "Оваа листа е направена во стилот на списоците против вознемирувања на AdGuard и Fanboy. Комбинира многу од најгордите и најчесто одржуваните меѓународни листи на Dandelion Sprout, како курирана компилација заради едноставност."
+			},
+			"ms": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Senarai ini dibuat dalam gaya senarai gangguan AdGuard dan Fanboy. Ia menggabungkan banyak senarai antarabangsa Dandelion Sprout yang paling dibanggakan dan paling kerap dipelihara, sebagai satu kompilasi terkurasi bagi tujuan kesederhanaan."
 			},
 			"nl": {
 				"name": "Dandelion Sprout's Annoyances List",
@@ -15033,6 +16934,10 @@
 			"sv": {
 				"name": "Dandelion Sprout's Annoyances List",
 				"description": "Den här listan är gjord i stil med AdGuards och Fanboys irritationslistor. Den kombinerar många av Dandelion Sprouts stoltaste och mest upprätthållna internationella listor, som en kurerad sammanställning för enkelhetens skull."
+			},
+			"th": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "รายการนี้จัดทำขึ้นในรูปแบบของรายการของ AdGuard และ Fanboy's annoyances เป็นการรวมรายการระดับนานาชาติที่น่าภาคภูมิใจที่สุดและได้รับการดูแลบ่อยที่สุดหลายรายการของ Dandelion Sprout ให้เป็นการรวบรวมที่รวบรวมไว้เพื่อความเรียบง่าย"
 			},
 			"tr": {
 				"name": "Dandelion Sprout's Annoyances List",
@@ -15116,6 +17021,10 @@
 				"name": "Legitimate URL Shortener",
 				"description": "מסיר באופן אוטומטי ערכים של '$' וכן '&' ממענים, הופך אותם לקלים יותר להעתקה משורת הכתובת ולהדבקה בכל מקום אחר כקישורים. כבר כלול ברשימת ההפרעות של Dandelion Sprout."
 			},
+			"hi": {
+				"name": "Legitimate URL Shortener",
+				"description": "URL से अनावश्यक '$' और '&' मानों को स्वचालित रूप से हटा देता है, जिससे उन्हें URL बार से कॉपी करना और अन्य जगहों पर लिंक के रूप में पेस्ट करना आसान होता है। पहले से ही Dandelion Sprout की खीझ सूची में शामिल किया गया है।"
+			},
 			"hr": {
 				"name": "Legitimni URL Shortener",
 				"description": "Automatski uklanja nepotrebne znakove '$' i '&' iz URL-ova, čineći ih tako lakšim za kopiranje iz adresne trake i ljepljenje bilo gdje kao poveznice. Već uključeno u Dandelion Sprout's Annoyances List."
@@ -15123,6 +17032,10 @@
 			"hu": {
 				"name": "Legitimate URL Shortener",
 				"description": "Automatikusan eltávolítja a felesleges '$' és '&' értékeket az URL-ekből, így azok könnyebben másolhatók az URL-sávból, és máshová beilleszthetők linkként. Már szerepel a Dandelion Sprout kártevők elleni listáján."
+			},
+			"hy": {
+				"name": "Legitimate URL Shortener",
+				"description": "Ավտոմատ կերպով հեռացնում է անպետք '$' և '&' արժեքները URL-ներից, مما նրանց հեշտությամբ կարելի է պատճենել URL վահանակից և տեղադրել այլուր որպես հղումներ։ Already included է Dandelion Sprout's Annoyances List-ում։"
 			},
 			"id": {
 				"name": "Legitimate URL Shortener",
@@ -15140,9 +17053,17 @@
 				"name": "Legitimate URL Shortener",
 				"description": "URL에서 불필요한 '$' 및 '&' 값을 자동으로 제거하여 URL 표시줄에서 쉽게 복사하고 다른 곳에 링크로 붙여넣을 수 있도록 합니다. 이미 Dandelion Sprout's Annoyances List에 포함되어 있습니다."
 			},
+			"lt": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automatiškai pašalina nereikalingas „$“ ir „&“ reikšmes iš URL, kad jas būtų lengviau kopijuoti iš URL juostos ir įklijuoti kitur kaip nuorodas. Jau įtrauktas į Dandelion Sprout's Annoyances List."
+			},
 			"mk": {
 				"name": "Legitimate URL Shortener",
 				"description": "Автоматски ги отстранува непотребните вредности на \"$\" и \"&\" од URL-адресите, што го олеснува нивното копирање од лентата за URL и нивното залепување на друго место како линкови. Веќе вклучен во Dandelion Sprout's Annoyances List."
+			},
+			"ms": {
+				"name": "Legitimate URL Shortener",
+				"description": "Secara automatik menghapus nilai '$' dan '&' yang tidak diperlukan daripada URL, menjadikannya lebih mudah untuk disalin daripada bar URL dan tampal di tempat lain sebagai pautan. Sudah termasuk dalam Senarai Gangguan Dandelion Sprout."
 			},
 			"nl": {
 				"name": "Legitieme URL-verkorter",
@@ -15191,6 +17112,10 @@
 			"sv": {
 				"name": "Legitimate URL Shortener",
 				"description": "Tar automatiskt bort onödiga \"$\"- och \"&\"-värden från URL: er, vilket gör dem lättare att kopiera från URL-fältet och klistra in på andra ställen som länkar. Redan inkluderad i Dandelion Sprout's Annoyances List."
+			},
+			"th": {
+				"name": "Legitimate URL Shortener",
+				"description": "ลบค่า '$' และ '&' ที่ไม่จำเป็นออกจาก URL โดยอัตโนมัติ ทำให้ง่ายต่อการคัดลอกจากแถบ URL และวางที่อื่นเป็นลิ้งค์ อยู่ในรายการ Dandelion Sprout's Annoyances List แล้ว"
 			},
 			"tr": {
 				"name": "Legitimate URL Shortener",
@@ -15274,6 +17199,10 @@
 				"name": "רשימה סרבו-קרואטית של Dandelion Sprout",
 				"description": "רשימת מסננים עבור אתרים בסרבית, מונטנגרית, קרואטית ובוסנית."
 			},
+			"hi": {
+				"name": "Dandelion Sprout's Serbo-Croatian List",
+				"description": "सर्बियाई, मोंटेनेग्रो, क्रोएशियाई और बोस्नियाई भाषाओं में वेबसाइटों के लिए फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Srpsko-hrvatski popis maslačka Sprout",
 				"description": "Popis filtara za web stranice na srpskom, crnogorskom, hrvatskom i bosanskom jeziku."
@@ -15281,6 +17210,10 @@
 			"hu": {
 				"name": "Dandelion Sprout's Serbo-Croatian List",
 				"description": "Szűrőlista szerb, montenegrói, horvát és bosnyák nyelvű webhelyekhez."
+			},
+			"hy": {
+				"name": "Dandelion Sprout's Serbo-Croatian List",
+				"description": "Փիլտրերի ցանկ Սերբերեն, Մոնտենեգրյան, Խորվաթական և Բոսնիական կայքերի համար։"
 			},
 			"id": {
 				"name": "Dandelion Sprout's Serbo-Croatian List",
@@ -15298,9 +17231,17 @@
 				"name": "Dandelion Sprout's Serbo-Croatian List",
 				"description": "세르비아어, 몬테네그로어, 크로아티아어 및 보스니아어로 된 웹사이트의 필터 목록입니다."
 			},
+			"lt": {
+				"name": "Dandelion Sprout's Serbo-Croatian List",
+				"description": "Filtrų sąrašas svetainėms serbų, juodkalniečių, kroatų ir bosniakų kalbomis."
+			},
 			"mk": {
 				"name": "Српско-хрватски список на Dandelion Sprout",
 				"description": "Филтер листа за веб-страници на српски, црногорски, хрватски и босански јазик."
+			},
+			"ms": {
+				"name": "Dandelion Sprout's Serbo-Croatian List",
+				"description": "Senarai penapis untuk laman web dalam bahasa Serbia, Montenegrin, Kroatia, dan Bosnia."
 			},
 			"nl": {
 				"name": "Servo-Kroatische lijst van Dandelion Sprout",
@@ -15349,6 +17290,10 @@
 			"sv": {
 				"name": "Dandelion Sprout's Serbo-Croatian List",
 				"description": "En filterlista för webbplatser på serbiska, montenegrinska, kroatiska och bosniska."
+			},
+			"th": {
+				"name": "Dandelion Sprout's Serbo-Croatian List",
+				"description": "รายการตัวกรองสำหรับเว็บไซต์ในภาษาที่เป็นเซอร์เบีย, มอนเตเนโกร, โครเอเชีย, และบอสเนีย."
 			},
 			"tr": {
 				"name": "Dandelion Sprout's Serbo-Croatian List",
@@ -15432,6 +17377,10 @@
 				"name": "IndianList",
 				"description": "רשימת מסננים נוספת עבור אתרים בהינדית, טמילית ושפות דראווידיות והודו־אריות אחרות."
 			},
+			"hi": {
+				"name": "IndianList",
+				"description": "हिंदी, तमिल और अन्य द्रविड़ और हिंदी भाषाओं में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
 			"hr": {
 				"name": "Indijski popis",
 				"description": "Dodatni popis filtara za web stranice na hindskom, tamilskom i drugim dravidijskim i indijskim jezicima."
@@ -15439,6 +17388,10 @@
 			"hu": {
 				"name": "IndianList",
 				"description": "További szűrőlista hindi, tamil és más dravid és indián nyelveken készült weboldalakhoz."
+			},
+			"hy": {
+				"name": "IndianList",
+				"description": "Ավելացված ֆիլտրի ցանկ կայքերի համար, որտեղ օգտագործվում են հինդի, թաման և այլ դրավիդյան և ինդիկ լեզուներ։"
 			},
 			"id": {
 				"name": "IndianList",
@@ -15456,9 +17409,17 @@
 				"name": "IndianList",
 				"description": "힌디어, 타밀어 등과 같은 인도어 및 드라비다어 웹사이트를 위한 추가 필터 목록입니다."
 			},
+			"lt": {
+				"name": "IndianList",
+				"description": "Papildomas filtrų sąrašas svetainėms hindi, tamilų ir kitomis dravidų bei indų kalbomis."
+			},
 			"mk": {
 				"name": "Индиска листа",
 				"description": "Дополнителен список со филтри за веб-локации на хинди, тамилски и други дравидски и индиски јазици."
+			},
+			"ms": {
+				"name": "IndianList",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Hindi, Tamil dan bahasa Dravida serta bahasa India lain."
 			},
 			"nl": {
 				"name": "IndianList",
@@ -15507,6 +17468,10 @@
 			"sv": {
 				"name": "IndianList",
 				"description": "Ytterligare filterlista för webbplatser på hindi, tamil och andra dravidiska och indiska språk."
+			},
+			"th": {
+				"name": "IndianList",
+				"description": "รายการตัวกรองเพิ่มเติมสำหรับเว็บไซต์ในภาษาฮินดี, ทมิฬ และภาษาแดรวิทและอินเดียอื่น ๆ."
 			},
 			"tr": {
 				"name": "IndianList",
@@ -15590,6 +17555,10 @@
 				"name": "Macedonian adBlock Filters",
 				"description": "חוסם פרסומות ועוקבנים באתרים מקדוניים שונים."
 			},
+			"hi": {
+				"name": "Macedonian adBlock Filters",
+				"description": "विभिन्न मैकेडोनियन वेबसाइटों पर विज्ञापनों और ट्रैकर्स को अवरुद्ध करता है।"
+			},
 			"hr": {
 				"name": "Makedonski AdBlock Filteri",
 				"description": "Blokira reklame i trackere na raznim makedonskim web stranicama."
@@ -15597,6 +17566,10 @@
 			"hu": {
 				"name": "Macedonian adBlock Filters",
 				"description": "Blokkolja a hirdetéseket és a nyomkövetőket a különböző macedón webhelyeken."
+			},
+			"hy": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Փակեցնում է գովազդները և հետևող սարքերը տարբեր մակեդոնական կայքերում։"
 			},
 			"id": {
 				"name": "Macedonian adBlock Filters",
@@ -15614,9 +17587,17 @@
 				"name": "Macedonian adBlock Filters",
 				"description": "여러 마케도니아어 웹사이트의 광고와 추적기를 차단합니다."
 			},
+			"lt": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Blokuoja reklamas ir seklius įvairiose Makedonijos svetainėse."
+			},
 			"mk": {
 				"name": "Македонски филтри",
 				"description": "Блокира реклами и тракери на различни македонски веб-страници."
+			},
+			"ms": {
+				"name": "Macedonian adBlock Filters",
+				"description": "Menyekat iklan dan pengesan di pelbagai laman web Macedonia."
 			},
 			"nl": {
 				"name": "Macedonische adBlock Filters",
@@ -15665,6 +17646,10 @@
 			"sv": {
 				"name": "Macedonian adBlock Filters",
 				"description": "Blockerar annonser och spårare på olika makedonska webbplatser."
+			},
+			"th": {
+				"name": "Macedonian adBlock Filters",
+				"description": "ปิดกั้นโฆษณาและติดตามจากเว็บไซต์ภาษาแมคโดเนีย"
 			},
 			"tr": {
 				"name": "Macedonian adBlock Filters",
@@ -15748,6 +17733,10 @@
 				"name": "Phishing URL Blocklist",
 				"description": "רשימת חסימה של כתובות דיוג עבור uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, קובץ מארחים, Dnsmasq, BIND, Unbound, Snort ו-Suricata."
 			},
+			"hi": {
+				"name": "Phishing URL Blocklist",
+				"description": "uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts फ़ाइल, Dnsmasq, BIND, Unbound, Snort और Suricata के लिए फ़िशिंग URL ब्लॉकलिस्ट।"
+			},
 			"hr": {
 				"name": "Phishing URL Blocklist",
 				"description": "Popis neželjenih URL-ova za uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts datoteku, Dnsmasq, BIND, Unbound, Snort i Suricata."
@@ -15755,6 +17744,10 @@
 			"hu": {
 				"name": "Phishing URL Blocklist",
 				"description": "Adathalász URL blokklista az uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort és Suricata számára."
+			},
+			"hy": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL-ի փակման ցանկ uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort և Suricata-ի համար։"
 			},
 			"id": {
 				"name": "Phishing URL Blocklist",
@@ -15772,9 +17765,17 @@
 				"name": "피싱 URL 차단 목록",
 				"description": "uBlock Origin(uBO), AdGuard, Vivaldi, Pi-hole, 호스트 파일, Dnsmasq, BIND, Unbound, Snort 및 Suricata에 대한 피싱 URL 차단 목록입니다."
 			},
+			"lt": {
+				"name": "Phishing URL Blocklist",
+				"description": "Sukčiavimo URL blokavimo sąrašas, skirtas „uBlock Origin“ (uBO), „AdGuard“, „Vivaldi“, „Pi-hole“, pagrindiniui kompiuterio failui, „Dnsmasq“, BIND, „Unbound“, „Snort“ ir „Suricata“."
+			},
 			"mk": {
 				"name": "Блок листа на URL-адреси за фишинг",
 				"description": "Блок листа за фишинг URL за uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort и Suricata."
+			},
+			"ms": {
+				"name": "Phishing URL Blocklist",
+				"description": "Senarai blok URL pancingan data untuk uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, fail Hosts, Dnsmasq, BIND, Unbound, Snort dan Suricata."
 			},
 			"nl": {
 				"name": "Phishing-URL blokkeerlijst",
@@ -15823,6 +17824,10 @@
 			"sv": {
 				"name": "Phishing URL Blocklist",
 				"description": "Nätfiske URL blocklista för uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, hosts-fil, Dnsmasq, BIND, Unbound, Snort och Suricata."
+			},
+			"th": {
+				"name": "Phishing URL Blocklist",
+				"description": "Phishing URL blocklist สำหรับ uBlock Origin (uBO), AdGuard, Vivaldi, Pi-hole, Hosts file, Dnsmasq, BIND, Unbound, Snort และ Suricata."
 			},
 			"tr": {
 				"name": "Phishing URL Blocklist",
@@ -15906,6 +17911,10 @@
 				"name": "רשימת חסימה של הונאה מאת DurableNapkin",
 				"description": "רשימת חסימה כדי להגן על משתמשים מפני אתרים בלתי מהימנים."
 			},
+			"hi": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "अविश्वसनीय वेबसाइटों को अवरुद्ध करने के लिए सूची।"
+			},
 			"hr": {
 				"name": "Scam Blocklist by DurableNapkin",
 				"description": "Popis blokova za zaštitu korisnika od nepouzdanih web-mjesta."
@@ -15913,6 +17922,10 @@
 			"hu": {
 				"name": "Scam Blocklist by DurableNapkin",
 				"description": "A megbízhatatlan webhelyek blokkolásának listája."
+			},
+			"hy": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Չավարտված կայքերի զտիչների ցանկ։"
 			},
 			"id": {
 				"name": "Scam Blocklist by DurableNapkin",
@@ -15930,9 +17943,17 @@
 				"name": "Scam Blocklist by DurableNapkin",
 				"description": "신뢰할 수 없는 웹사이트를 차단하는 목록입니다."
 			},
+			"lt": {
+				"name": "DurableNapkin sudarytas sukčių blokavimo sąrašas",
+				"description": "Sąrašas, skirtas blokuoti nepatikimas svetaines."
+			},
 			"mk": {
 				"name": "Список за блокирање измами од DurableNapkin",
 				"description": "Список за блокирање недоверливи веб-страници."
+			},
+			"ms": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "Senarai untuk menyekat laman web yang tidak dipercayai."
 			},
 			"nl": {
 				"name": "Scam blokkeerlijst van DurableNapkin",
@@ -15981,6 +18002,10 @@
 			"sv": {
 				"name": "Scam Blocklist by DurableNapkin",
 				"description": "Lista för att blockera opålitliga webbplatser."
+			},
+			"th": {
+				"name": "Scam Blocklist by DurableNapkin",
+				"description": "รายการสำหรับบล็อกเว็บไซต์ที่ไม่น่าเชื่อถือ"
 			},
 			"tr": {
 				"name": "Scam Blocklist by DurableNapkin",
@@ -16064,6 +18089,10 @@
 				"name": "uBlock Origin – Badware risks",
 				"description": "סנן אתרים מסוכנים, והזהיר משתמשים מפני איומים פוטנציאליים."
 			},
+			"hi": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "खतरनाक साइटों के लिए फ़िल्टर, संभावित खतरों के बारे में उपयोगकर्ताओं को चेतावनी देता है।"
+			},
 			"hr": {
 				"name": "uBlock Origin – Badware risks",
 				"description": "Filtar za rizična web-mjesta, upozoravajući korisnike na potencijalne prijetnje."
@@ -16071,6 +18100,10 @@
 			"hu": {
 				"name": "uBlock Origin – Badware risks",
 				"description": "Rizikós webhelyek szűrése, figyelmeztetés a felhasználók számára a lehetséges veszélyekről."
+			},
+			"hy": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Ռիսկային կայքերի համար զտիչ, նախազգուշացնելով օգտվողներին հնարավոր սպառնալիքներից։"
 			},
 			"id": {
 				"name": "uBlock Origin – Badware risks",
@@ -16088,9 +18121,17 @@
 				"name": "uBlock Origin – Badware risks",
 				"description": "위험한 사이트를 필터링하며, 사용자에게 잠재적인 위협을 경고합니다."
 			},
+			"lt": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Rizikingų svetainių filtras, įspėjantis naudotojus apie galimas grėsmes."
+			},
 			"mk": {
 				"name": "uBlock Origin – Badware risks",
 				"description": "Филтер за ризични страници, предупредувајќи ги корисниците за потенцијалните претпазливости."
+			},
+			"ms": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "Penapis untuk laman web berisiko, memberi amaran kepada pengguna tentang potensi ancaman."
 			},
 			"nl": {
 				"name": "uBlock Origin – Badwarerisico's",
@@ -16140,6 +18181,10 @@
 				"name": "uBlock Origin – Badware risks",
 				"description": "Filtrera för riskabla webbplatser, varnar användare för potentiella hot."
 			},
+			"th": {
+				"name": "uBlock Origin – Badware risks",
+				"description": "ตัวกรองสำหรับเว็บไซต์ที่มีความเสี่ยง โดยมีการเตือนผู้ใช้เกี่ยวกับภัยคุกคามที่อาจเกิดขึ้น"
+			},
 			"tr": {
 				"name": "uBlock Origin – Badware risks",
 				"description": "Riskli siteleri filtreleyerek kullanıcıları potansiyel tehditlere karşı uyarır."
@@ -16162,6 +18207,10 @@
 			}
 		},
 		"258": {
+			"ar": {
+				"name": "Block Outsider Intrusion into LAN",
+				"description": "يمنع المواقع العامة على الشبكة العنكبوتية من التطفل على ملفات الشبكة المحلية الخاصة بك."
+			},
 			"be": {
 				"name": "Block Outsider Intrusion into LAN",
 				"description": "Забароніць грамадскім сайтам дзеяць у вашых файлах LAN."
@@ -16218,6 +18267,10 @@
 				"name": "Block Outsider Intrusion into LAN",
 				"description": "מונע מאתרי אינטרנט ציבוריים לחפור לתוך הקבצים של ה-LAN שלך."
 			},
+			"hi": {
+				"name": "Block Outsider Intrusion into LAN",
+				"description": "सार्वजनिक इंटरनेट साइटों को आपकी LAN फ़ाइलों में सेंध लगाने से रोकता है।"
+			},
 			"hr": {
 				"name": "Block Outsider Intrusion into LAN",
 				"description": "Sprječava javnim Internet stranicama da kopaju u vaše LAN datoteke."
@@ -16225,6 +18278,10 @@
 			"hu": {
 				"name": "Block Outsider Intrusion into LAN",
 				"description": "Megakadályozza, hogy a nyilvános Internet oldalakról betekintsenek a LAN fájljaidba."
+			},
+			"hy": {
+				"name": "Block Outsider Intrusion into LAN",
+				"description": "Կանխում է հանրային ինտերնետային կայքերի փորփրումը ձեր LAN ֆայլերի մեջ:"
 			},
 			"id": {
 				"name": "Block Outsider Intrusion into LAN",
@@ -16242,9 +18299,17 @@
 				"name": "Block Outsider Intrusion into LAN",
 				"description": "사이트가 로컬 네트워크에서 파일에 액세스하는 것을 방지합니다."
 			},
+			"lt": {
+				"name": "Block Outsider Intrusion into LAN",
+				"description": "Neleidžia viešosioms interneto svetainėms įsigilinti į jūsų LAN failus."
+			},
 			"mk": {
 				"name": "Block Outsider Intrusion into LAN",
 				"description": "Спречува јавните интернет страници да копаат во вашите LAN датотеки."
+			},
+			"ms": {
+				"name": "Block Outsider Intrusion into LAN",
+				"description": "Menghalang tapak Internet awam daripada menggali fail LAN anda."
 			},
 			"nl": {
 				"name": "Indringing van buitenstaanders in LAN blokkeren",
@@ -16293,6 +18358,10 @@
 			"sv": {
 				"name": "Block Outsider Intrusion into LAN",
 				"description": "Förhindrar offentliga webbplatser från att gräva i dina LAN-filer."
+			},
+			"th": {
+				"name": "Block Outsider Intrusion into LAN",
+				"description": "ป้องกันไม่ให้เว็บไซต์สาธารณะบนอินเทอร์เน็ตเข้าถึงไฟล์ใน LAN ของคุณ."
 			},
 			"tr": {
 				"name": "Block Outsider Intrusion into LAN",

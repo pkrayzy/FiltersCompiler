@@ -585,6 +585,19 @@ module.exports = {
             'adguard_app_mac': true,
         },
     },
+    'CLI': {
+        'platform': 'cli',
+        'path': 'cli',
+        'expires': '12 hours',
+        'configuration': {
+            'ignoreRuleHints': false,
+            'replacements': null,
+        },
+        'defines': {
+            'adguard': true,
+            'adguard_app_cli': true,
+        },
+    },
     'ANDROID': {
         'platform': 'android',
         'path': 'android',
