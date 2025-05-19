@@ -1,13 +1,13 @@
-! Checksum: 9spd+2nZ2AhL3N1bu9F+2w
-! Diff-Path: ../patches/251/251-s-1745916216-14400.patch
+! Checksum: LWNh2pwnA4QkIUUhZdApXA
+! Diff-Path: ../patches/251/251-s-1747270326-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.66
-! TimeUpdated: 2025-04-29T08:40:00+00:00
+! Version: 2.0.8.72
+! TimeUpdated: 2025-05-15T00:48:26+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 29April2025v1
+! OriginalVersion: 15May2025v3
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -47,6 +47,54 @@ $removeparam=ysclid
 /?r=dir&zoneid=$document,removeparam
 /?rb=*&zoneid=$document,removeparam
 /?uclick=*;uclickhash=$document,removeparam
+$removeparam=__io_lv
+$removeparam=_bdadid
+$removeparam=_bhlid
+$removeparam=_io_session_id
+$removeparam=_sgm_action
+$removeparam=_sgm_campaign
+$removeparam=_sgm_pinned
+$removeparam=_sgm_source
+$removeparam=_sgm_term
+$removeparam=action_object_map
+$removeparam=action_ref_map
+$removeparam=action_type_map
+$removeparam=adjust_adgroup
+$removeparam=adjust_campaign
+$removeparam=adjust_creative
+$removeparam=adjust_referrer
+$removeparam=adjust_tracker
+$removeparam=adjust_tracker_limit
+$removeparam=adobe_mc_ref
+$removeparam=adobe_mc_sdid
+$removeparam=bemobdata
+$removeparam=beyond_uzcvid
+$removeparam=beyond_uzmcvid
+$removeparam=btag
+$removeparam=cjevent
+$removeparam=cm_cr
+$removeparam=cm_me
+$removeparam=cx_click
+$removeparam=cx_recsOrder
+$removeparam=cx_recsWidget
+$removeparam=emcs_t
+$removeparam=ems_dl
+$removeparam=external_click_id
+$removeparam=famad_xuid
+$removeparam=iclid
+$removeparam=ir_adid
+$removeparam=ir_campaignid
+$removeparam=ir_partnerid
+$removeparam=irgwc
+$removeparam=mt_link_id
+$removeparam=personaclick_input_query
+$removeparam=personaclick_search_query
+$removeparam=rtkcid
+$removeparam=spot_im_redirect_source
+$removeparam=uzcid
+$removeparam=vero_conv
+$removeparam=vero_id
+$removeparam=wickedid
 ! https://www•elkjop•no/product/data/kabler-og-tilkobling-pc-og-nettverk/APPLEMD463ZA/thunderbolt-til-gigabit-ethernet-adapter?utm_id=Pricecomparison2989_5_False&utm_medium=Pricecomparison (14/11/2020)
 ! https://www•ikea•com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
 ! https://www•infoq•com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
@@ -57,6 +105,7 @@ $removeparam=ysclid
 $document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp|~uploadnow.io
 $document,removeparam=/^itm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_.*$/,domain=~redir.tradedoubler.com
+$document,removeparam=/^mtm_.*$/,domain=~redir.tradedoubler.com
 ! https://www•lovense•com/super-powerful-••••••••?_utm_pro=2404022833&utm_ap=remote&_utm_av=11121019
 $document,removeparam=/^_utm_.*$/i
 ! https://www•ixigua•com/6888869154099629319?logTag=Y8JlCALntSDuDesMiPno8 (31/10/2020)
@@ -337,7 +386,7 @@ $removeparam=ad_medium
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 $document,removeparam=/^adgroup=.*$/i
 $removeparam=ads_name
-$removeparam=ad_type
+$removeparam=ad_type,domain=~leboncoin.fr|~2dehands.be|~agriaffaires.com|~avendrealouer.fr|~donedeal.ie|~jofogas.hu|~kijiji.ca|~machineryzone.fr|~marktplaats.nl|~milanuncios.com|~mobile.de|~olx.com.br|~subito.it|~truckscorner.fr|~willhaben.at
 $removeparam=CAWELAID
 $removeparam=partition_id
 $removeparam=adgroup_id
@@ -732,7 +781,7 @@ $document,removeparam=/^aff_sub\d?=.*$/
 $removeparam=afftrack
 $removeparam=atid
 $document,removeparam=/^clickref\d?=.*$/
-$removeparam=cuid
+$removeparam=cuid,domain=~dynamicyield.com
 $removeparam=data1,domain=~web3.cmvm.pt
 $removeparam=data2
 $removeparam=data3
@@ -1182,6 +1231,9 @@ $removeparam=b_medium
 $removeparam=b_campaign
 ! https://www•elkjop•no/product/hvitevarer/vask-og-tork/torketrommel-og-torkeskap/torketrommel/gram-torketrommel-de5731050/DE5731050?gad_source=1 (23/11/2023)
 $removeparam=gad_source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13015578
+$removeparam=tw_medium
+$removeparam=tw_profile_id
 ! https://github.com/purl-sanitizer/purl/blob/main/data/tracking_link_decorations.txt (Parameters that were present in at least 10 rows there as of 7th of October 2023, and which didn't look overly broad)
 $removeparam=_gid
 $removeparam=ga_vid
@@ -1201,7 +1253,7 @@ $removeparam=vxii_pdid
 $removeparam=bsw_user_id
 $removeparam=bsw_custom_parameter
 $removeparam=partnerUserId
-$removeparam=taboola_hm
+$document,removeparam=taboola_hm
 $removeparam=anx_uId
 $removeparam=d_uuid
 $removeparam=_utma
@@ -1413,6 +1465,8 @@ $removeparam=tw_source
 $removeparam=tw_adid
 ! https://www•instacart•com/products/201659-superpretzel-soft-pretzel-bites-12-oz?retailerSlug=meijer
 $removeparam=retailerSlug
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13139838
+$removeparam=uls_trackid
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1498,7 +1552,7 @@ $removeparam=geniuslink
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-944078
 ||amazon.$removeparam=twitchToken
 ||amazon.$removeparam=sigts
-||amazon.$removeparam=sig
+!!!||amazon.$removeparam=sig (Breaks chat functions; see https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13026342)
 ||amazon.$removeparam=ref-refURL
 ||amazon.$removeparam=imprToken
 ! https://www•amazon•es/stores/page/592C024E-4E49-421A-8F46-E0D751082704?store_ref=SB_A05201253TLBE81101JJ5&lp_asins=B07L8XGM53%2CB07L8Y3YFP%2CB07L8N2T51&lp_slot=desktop-arbies&lp_page_asin=B0777WPMPH
@@ -1573,7 +1627,7 @@ $removeparam=returnFromLogin,domain=amazon.*
 ||amazon.$removeparam=content-id
 ||amazon.$removeparam=colid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4229388
-||amazon.*/dp/$removeparam=s,document
+!!!||amazon.*/dp/$removeparam=s,doc (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13095461)
 ! https://gaming•amazon•com/?ref_=sm_w_tup_ntp_t_c&ingress=twch&redirectRoute=b2FsYWJzbGl2ZS9zY2hlZHVsZQ==&twitchReferral=065774263bd9f5904d1ae1586a52e87e
 ||gaming.amazon.com^$removeparam=redirectRoute
 ! https://www•amazon•in/Sony-WI-XB400-Wireless-Bluetooth-Headphones/dp/B07WNXS613/ref=sr_1_4_mod_primary_new?sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D
@@ -1726,6 +1780,8 @@ $removeparam=rpp_cid
 ||ebay.$removeparam=segname
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9792568
 ://www.ebay.$document,removeparam=/^itm[a-zA-Z0-9].*$/
+! https://www•ebay•co•uk/itm/355113317598?_skw=doulton+rani (15/05/2025)
+||ebay.$removeparam=_skw
 !!! ——— Facebook ———
 ! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/157
 $removeparam=hc_ref
@@ -1868,9 +1924,18 @@ $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=ictx
 ||www.google.$document,removeparam=dpr
 ||www.google.$document,removeparam=tfu
-! https://www.google.com/finance/?output=search&source=lnms (11/03/2025)
+||ipv6.google.com^$document,removeparam=fbs
+||ipv6.google.com^$document,removeparam=ictx
+||ipv6.google.com^$document,removeparam=dpr
+||ipv6.google.com^$document,removeparam=tfu
+! https://www•google•com/finance/?output=search&source=lnms (11/03/2025)
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
+! https://www.google.com/search?q=john%20madden&hl=no&udm=2&no_sw_cr=1&zx=1746611130163 (07/05/2025)
+||www.google.$document,removeparam=no_sw_cr
+||www.google.$document,removeparam=zx
+||ipv6.google.com^$document,removeparam=no_sw_cr
+||ipv6.google.com^$document,removeparam=zx
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.*/maps^$removeparam=utm_campaign
 @@://ipv6.google.com/maps^$removeparam=utm_campaign
@@ -3849,7 +3914,7 @@ ref=upstract.com$document,removeparam=ref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8463132
 ||koreaherald.com^$document,removeparam=ACE_SEARCH
 ! https://www•abcnyheter•no/?nr=1
-!+NOT_OPTIMIZED
+!+ NOT_OPTIMIZED
 ||abcnyheter.no^$removeparam=nr
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-8480036
 ||windscribe.com^$document,removeparam=pcpid
@@ -4074,6 +4139,13 @@ ref=dtf.ru$document,removeparam=ref
 ||cbc.ca^$removeparam=appname
 ||cbc.ca^$removeparam=/^didomi.*$/
 ||cbc.ca^$removeparam=udid
+! https://www-simsnieuws-nl•translate•goog/2010/07/30/simgurus-over-wonen-in-appartementen-in-de-sims-3-na-middernacht/?gltr_redir=http://translate•google•com/translate?hl%3Den%26sl%3Dnl%26tl%3Den%26u%3Dhttp%253A%252F%252Fwww•sims3nieuws•nl%252F2010%252F07%252F30%252Fsimgurus-over-wonen-in-appartementen-in-de-sims-3-na-middernacht%252F&_x_tr_sl=nl&_x_tr_tl=en&_x_tr_hl=en
+||translate.goog^$removeparam=gltr_redir
+! https://www•rawstory•com/raw-investigates/trump-treason/?rsplus= (10/05/2025)
+!+ NOT_OPTIMIZED
+||www.rawstory.com^$removeparam=rsplus
+! https://em•dynamicyield•com/v1/email/dc/click/8788930/1141527/1141526?&cuid=558415&cuid_type=id&locale=default&version=030425&tag_ids=1141526
+||em.dynamicyield.com^$removeparam=tag_ids
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au

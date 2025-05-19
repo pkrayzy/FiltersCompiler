@@ -1,8 +1,9 @@
-! Checksum: Ba0Ts4s4co3PUzLgD3G2Vg
+! Checksum: hpZwqvqNvYdK5bqUi6Xh5Q
+! Diff-Path: ../patches/228_optimized/228_optimized-s-1747313390-14400.patch
 ! Title: xinggsf (Optimized)
 ! Description: Blocks ads on the Chinese video platforms (MangoTV, DouYu and others).
-! Version: 2.0.3.17
-! TimeUpdated: 2025-04-07T08:38:52+00:00
+! Version: 2.0.3.20
+! TimeUpdated: 2025-05-15T12:45:04+00:00
 ! Expires: 12 hours (update frequency)
 @@||bdstatic.com/static/common/widget/ui/admanager/$script,domain=image.baidu.com
 ||cpro.$domain=~baidu.com
@@ -95,6 +96,7 @@ wwads.cn
 ##[id$="-ad"]
 *##div.a_mu,div.a_h,div.ad_pic,div.wp.a_f,div.wp.a_t,div.a_pb,div.a_pt,div.a_pr,div.a_cn,#ggPar,#preAdContent
 ~google.com,~mediafire.com##.ads
+www.google.com.*,www.google.*##.VEELad
 ||com/ads
 *_350_330.$image
 */html/click/
@@ -325,6 +327,7 @@ qidian.com###tr-banner,div.banner-wrap,div.focus-img.cf,#j_bodyRecWrap,#j-topHea
 qidian.com#$#.crumbs-nav.top-op { margin: auto!important }
 ||qidian.com/upload/gamesy/20$image
 ||qidian.qpic.cn/qidian_common/$image
+||file.myqcloud.com/yuewen/game/images/$image,domain=qidian.com
 zongheng.com###zh_ab_rb,#sumcard_flag,#gameFTip
 ||static.zongheng.com/*/ad$script
 ||static.zongheng.com/upload/*ds/column/$script,image
@@ -1167,6 +1170,7 @@ cad.youku.com
 ||alicdn.com/*yksdk/*sdk.js$script,domain=youku.com
 ||alicdn.com/awsc/et/$script
 ||g.alicdn.com/htmlVodP2P/$script
+www.iqiyi.com##div[class^="film-feed_filmFeed_"]:has(>div>a[href^="https://wy.668wan.com"])
 iqiyi.com##a[href^="https://ads."]
 iqiyi.com##.black-screen[data-cupid=adblock-blackscreen], .qy-plist-ad
 iqiyi.com##.cupid-panel + div, div[data-adzone],#block-V
@@ -1251,7 +1255,7 @@ banana.le.com
 ipinyou.com
 ||yoyi.com.cn^3p
 le.com##.min_pause_img
-cctv.com,www.douyu.com#%#//scriptlet('ubo-aeld.js', '/visibilitychange|pagehide/')
+cctv.com,douyin.com,douyu.com#%#//scriptlet('ubo-aeld.js', '/visibilitychange|pagehide/')
 ||douyucdn.cn/adxdsp/$image,media
 ||shark2.douyucdn.cn/front-publish/live-master/js/player_first/qvbp2p_douyu$script
 wan.douyu.com
@@ -1263,8 +1267,7 @@ wan.douyu.com
 douyu.com##.Title-ad, .DropMenuList-ad, .DropPane-ad
 douyu.com,huya.com##a[href^="https://g.wan."]
 huya.com##a[href^="https://wan."]
-huya.com###hy-ad,#hy-ab,#huya-ab
-www.huya.com##.huya-ab
+huya.com##.huya-ab,#hy-ad,#hy-ab,#huya-ab
 www.huya.com##.sidebar-banner, a.J_g_resource
 www.huya.com###public-screen-ab
 ||business.msstatic.com/advertiser/$image
@@ -1285,9 +1288,8 @@ litix.io
 jads.co
 |https://tellme.pw/go/jav$popup
 btsow.motorcycles##a[href^="https://tellme.pw/go/jav"]
-age.tv,agedm.org#%#//scriptlet('ubo-noeval-if.js', 'devtoolsDetector')
 ||cdn.aiqingyu1314.com/age/statics/js/notice.js^$script
-||toutiaoimg.com/origin/$image,domain=agedm.org
+||toutiaoimg.com/origin/$image,domain=agefans.la
 ||dd-static.jd.com^$image,domain=subaibaiys.com
 dandanzan.*,nnyy.in,nunuyy5.com#$#video { max-height:100%!important }
 yatu.tv##.dplayer-web-fullscreen-fix #tburl,#loadtop,[id^=myas],#myds1,#daohang

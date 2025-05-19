@@ -1,9 +1,9 @@
-! Checksum: GUxr8Lt04mEo7XQ3M4zZOw
-! Diff-Path: ../patches/11/11-s-1745928999-3600.patch
+! Checksum: DUIcfPtosnay/7q1YJSYPw
+! Diff-Path: ../patches/11/11-s-1747646003-3600.patch
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.60.25
-! TimeUpdated: 2025-04-29T12:12:04+00:00
+! Version: 2.0.60.85
+! TimeUpdated: 2025-05-19T09:08:58+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -160,6 +160,14 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||sheilaqeb.com^
+||api.adaether.com^
+||cvt-s2.agl005.tech^
+||rainmaker.production-public.tubi.io^
+||configure.rayjump.com^
+||v.kidoz.net^
+||sdk-api.kidoz.net^
+||gadsme.com^
 ||maticooads.com^
 ||ad*.zonaplus.tv^
 ||apishow.babybus.com^
@@ -1030,6 +1038,8 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204413#issuecomment-2854199428
+@@||aj1907.online^$app=mobi.zona
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202334
 @@||d.applovin.com^$app=ac.hush.app
 @@||a.applovin.com^$app=ac.hush.app
@@ -2117,9 +2127,6 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 @@||api.championat.com/*/?tag_id=$app=ru.ideast.championat
 ! http://4pda.ru/forum/index.php?showtopic=601691&st=8140#entry57313153
 @@||mc.yandex.ru^$app=ru.yandex.weatherplugin
-!@@||an.yandex.ru$app=ru.yandex.weatherplugin
-!@@||awaps.yandex.ru$app=ru.yandex.weatherplugin
-!@@||appmetrica.yandex.net$app=ru.yandex.weatherplugin
 ! ru.rostel - fixing app
 @@||mc.yandex.ru^$app=ru.rostel
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20405
@@ -2611,6 +2618,62 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+autoevolution.com###swipebox-slider > div.slide.slide-nospin
+magadanmedia.ru##.reklama-carousel
+nuipogoda.ru##div:has(> div[data-adtype]:only-child)
+nuipogoda.ru#$#div[id][style^="left:"][style*="height:"] { height: auto !important; }
+porndroids.com##.links-out__disclaimer
+porndroids.com##.wrapper > aside[class]:has(> header.aan__header)
+porndroids.com##.sticky-banner
+camwhores.ru.com##iframe[src^="https://a.adtng.com/"]
+ap7am.com##.first-ad-adp
+hentailib.net##center > div[style^="width:300px;height:"]
+vnexpress.net##section[class*="section_ads"]
+5wip-file.ru##a[target="_blank"][class="blue_btn"]
+babesource.tv#$#.block-player { padding-top: 0 !important; }
+op.gg##div[style^="display:"]:has(> div[data-id="mobile_banner"])
+op.gg##div[style^="display:"]:has(> div[data-id="mpu"])
+lifunas.com##aside.ad.pb20
+tupaki.com##.navbar-right:has(> div#header_ad_1)
+wap.xuanyge.org###strl > b
+sponichi.co.jp#$#.article_footer > div[style^="margin-top:-30px"] { margin-bottom: 30px !important; }
+ksta.de###__nuxt > .fixed.bottom-0
+r10.net##.container > div[class^="r"]:has(> div[class] > a[href][target="_blank"])
+r10.net##.postList > div[class^="r"]:has(> a[href][target="_blank"])
+serial.everyeye.it#$#.adv-spacer { padding-top: 0 !important; }
+asianetnews.com##.mob-ad
+koimoi.com###after_featured_image
+augsburger-allgemeine.de##.pt_onlinestory
+augsburger-allgemeine.de##div[data-ad-slot-native-mobile]
+alfalfalfa.com##aside.section-box:has(> div.plugin-extra > script)
+gunes.com##.orjHeaderBottom
+wco.tv###sidebar_today > div[style^="float:right;"]
+free-codecs.com##.mobile-header-ad
+naughtymachinima.com##.content-recom
+||naughtymachinima.com/images/banners/
+novelba.com##footer div[style^="padding:"]
+||ig-store.ru/publications/get-banners
+news18.com##article > div.lazyload-wrapper:has(> div[data-lazy="ads"])
+snapedit.app##.hero-ads
+liquipedia.net#$#.mobile-sticky-ad { display: none !important; }
+liquipedia.net#$#.mobile-sticky-ad ~ #main-nav { top: 0 !important; }
+liquipedia.net#$#.mobile-sticky-ad ~ #wiki-nav { top: 3.125rem !important; }
+liquipedia.net#$#body:has(> .mobile-sticky-ad) { padding-top: 5.375rem !important; }
+navitime.co.jp##.japan-travel-banner
+gqjapan.jp##.ad-stickyhero
+thecourier.co.uk###leaderboard-mobile-only
+hepsiburada.com###hyd-adx
+bestbuy.com##.widget-container > .container > .row.contained-row:has(.shop-display-ad)
+aajtak.in##.itgdAdsPlaceholder
+nationalheraldindia.com##div[class^="styles-m__mobile-ad__"]
+nationalheraldindia.com##div[class^="header-m__ad-"]
+nationalheraldindia.com##div[class^="styles-m__dfp__"]
+nextdoordolls.com##.channel-adx-mobile
+homo.xxx,hello.porn##.top_spot
+xfree.com##.mobile-wall-prbn
+||czechcash.com^$domain=xfree.com
+hentaihere.com#$#.text-center:has(> a[href="/directory/staff-pick"]) { position: unset !important; }
+txxxporn.tube##.hlmffrrzdrmfrzhzhddm
 indianexpress.com##.body-part > .mobile:has(> .top-ads-mobile)
 jjgirls.me##div[class]:has(> ins[data-zoneid])
 m.666biquge.com##body > div[style^="height:"]
@@ -2619,7 +2682,6 @@ republicworld.com##section.w-full:has(.adWidget) + div[style^="margin-bottom:"]
 vistanet.it##.row-mobile-top
 tecnoblog.net###ad-single-bottom
 firstpost.com##.mnvid-wrp > div.mn-rhs:has(> div.text-center > div[style] > div.myad)
-koreatimes.co.kr##div[class^="wrap DetailTaboola_only-"]
 koreatimes.co.kr##div[class^="Detail_ad-container"]
 nau.ch##div[data-sticky-height="1px"]
 rakukan.net#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'interstitialAdDiv')
@@ -2886,7 +2948,6 @@ bunshun.jp##.ats_custom_inarticle_wrapper
 bunshun.jp##div[id^="taboola-mid-article-thumbnails-"]
 pornhub.com##.watchpageAd
 h178.com###StickyAd
-f95zone.to##.sidePanel__tabPanels ul.offCanvasMenu-list > li:has(> div.offCanvasMenu-linkHolder > a.offCanvasMenu-link[target="_blank"])
 gamewith.jp##.overlay-creative-ad
 trailrunner.jp##.side_banner_sm_box
 plaza.rakuten.co.jp##.blogBody > table[border="0"]:has(a[href^="https://hb.afl.rakuten.co.jp/ichiba/"][rel^="nofollow sponsored"] > img)
@@ -2981,7 +3042,7 @@ uploady.io###dlnk1
 schizophonic9-2.com##body > a[href^="https://"][href*="linksynergy.com/"]
 schizophonic9-2.com##body > a[href="https://amzn.to/3UQkNZ0"]
 schizophonic9-2.com##body > div.ad_footer ~ br
-king5.com##.universal-ad
+wzzm13.com,king5.com##.universal-ad
 pulzo.com##.connatix-spacer
 bloomberg.com##.adWrapper
 wired.com##.ad--footer
@@ -3465,7 +3526,7 @@ famitsu.com##.banner-header-video-container
 famitsu.com##.banner-window-jack-wrapper
 famitsu.com##div[class^="BasicLayout_movieBanner_"]
 syakouba.com##div[style^="width:320px;height:100px"]
-seasonvar.one##.content > div.pgs-nearcarusel-wrap:has(div.groove)
+seasonvar.*##.content > div.pgs-nearcarusel-wrap:has(div.groove)
 vogue.it##.ad-height-hold
 vogue.it##div[class^="TwoColumnsWithHorizontalAdMosaicWrapper-"]
 octavius.mail.ru##.application-mail__layout div.letter-list__react div[role="rowgroup"] > div[style^="height:"][style*="position:"][style*="top:"][style$="width: 100%;"]:not([class]):not([id])
@@ -4741,7 +4802,6 @@ m.hellporno.com##.tabs
 eporner.com,news.jorudan.co.jp###ad-top-2
 news.jorudan.co.jp##div[id^="ad-bottom-"]
 paroles.net##div[style="min-height:250px;"]
-milffox.com##.mobile_top_ads
 redhdtube.xxx##.kelsey_top
 bestfreetube.xxx,hqtube.xxx,hdxnxx.xxx,redhdtube.xxx##h2[style^="font-size:"][style*="font-weight: bold;"]
 bestfreetube.xxx,hqtube.xxx,hdxnxx.xxx,redhdtube.xxx###native_code
@@ -4776,7 +4836,7 @@ news.milli.az##.quiz-holder > div[style^="margin: 15px"] > .hidden-lg
 carview.yahoo.co.jp##.posNM
 glosbe.com###tb__cont__2
 wz.de##aside[data-portal-id="banner"]
-hentaizap.com,hentairox.com,imhentai.xxx,hentaifox.com,hentaiera.com##.bblocktop
+hentaienvy.com,hentaizap.com,hentairox.com,imhentai.xxx,hentaifox.com,hentaiera.com##.bblocktop
 topics.smt.docomo.ne.jp##.ad_middle05
 fc1adult.com##div[style="height: 500px; overflow: hidden; margin-bottom: 20px;"]
 cojicaji.jp##.dfp-cci-rectangle-wrapper
@@ -4819,7 +4879,7 @@ m.iamcook.ru##.block4
 applion.jp##div[style^="display: block; height: 250px"]
 applion.jp##div[style="display: block; height: 50px; text-align: center; margin: 5px 0px;"]
 swiki.jp##.container > span > a[href^="https://hb.afl.rakuten.co.jp"]
-swiki.jp##.adsense
+otakuma.net,swiki.jp##.adsense
 alphacoders.com##.scroller-ad-container
 unian.net##div[style="height: 335px"]
 unian.net##iframe[src="/content/redtram-mob-post.html"]
@@ -5797,7 +5857,7 @@ mtb-news.de##.mtbnews-forum__centered
 mtb-news.de##.mtbnews-mobile-sticky
 mtb-news.de##div[class*="incontent__container"]
 yamareco.com##div[style^="position: fixed; bottom: 0; width: 100%; height: 50px; z-index: 9999"]
-yamareco.com##div[style="min-height: 280px;"]
+sumaholife-plus.jp,yamareco.com##div[style="min-height: 280px;"]
 animego.org##div[class^="mb-"][style="min-height: 210px"]
 thedailybeast.com###view-offer
 abplive.com##.article div.uk-background-muted[style^="min-height:"]
@@ -7749,6 +7809,11 @@ contexto.me#$#.top-ad-padding { padding-top: 15px !important; }
 ! NOTE: Regular rules end ⬆️
 ! !SECTION: Regular rules
 !
+! m.yelp.com
+m.yelp.com##div[data-testid="suggested-search-bar"] ~ div[class*="border-color-"] > ol > li:has(> div[class*="sponsored-icon_"])
+m.yelp.com##div[data-testid="suggested-search-bar"] ~ div[class*="border-color-"] > ol > li:has(> div[class*="sponsored-icon_"]) + li[class]
+m.yelp.com##div[data-testid="suggested-search-bar"] ~ div[class*="border-color-"] > ol > li:has(> div[data-testid^="themed-ad-"])
+!
 ! Avito
 m.avito.ru#?#div[data-marker="new-item-wrapper"] ~ div[class]:has(> div[data-code] > div[id^="ads_"])
 m.avito.ru#?#div[data-marker="new-section/list"] > div[class^="_"] > div:not([data-marker="new-item-wrapper"]):not([itemtype]):has(> div.lazyloaded div[id^="ads_"])
@@ -7805,7 +7870,7 @@ clickhole.com,lifehacker.com,splinternews.com,avclub.com,deadspin.com,gizmodo.co
 clickhole.com,lifehacker.com,splinternews.com,avclub.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,qz.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#?#.js_post-content > div[class] > div[class]:has(> div[data-inset-category="CommerceInsetMobile"])
 !
 ! dizipal*.cloud - frequently changed domains
-dizipal1017.com,dizipal1.cloud,dizipal2.cloud,dizipal3.cloud,dizipal4.cloud,dizipal5.cloud,dizipal6.cloud,dizipal7.cloud,dizipal8.cloud,dizipal9.cloud,dizipal10.cloud,dizipal11.cloud,dizipal12.cloud,dizipal13.cloud,dizipal14.cloud,dizipal15.cloud,dizipal16.cloud,dizipal17.cloud,dizipal18.cloud,dizipal19.cloud,dizipal20.cloud,dizipal21.cloud,dizipal22.cloud,dizipal23.cloud,dizipal24.cloud,dizipal25.cloud,dizipal26.cloud,dizipal27.cloud,dizipal28.cloud,dizipal29.cloud,dizipal30.cloud,dizipal31.cloud,dizipal32.cloud,dizipal33.cloud,dizipal34.cloud,dizipal35.cloud,dizipal36.cloud,dizipal37.cloud,dizipal38.cloud,dizipal39.cloud,dizipal40.cloud,dizipal41.cloud,dizipal42.cloud,dizipal43.cloud,dizipal44.cloud,dizipal45.cloud,dizipal46.cloud,dizipal47.cloud,dizipal48.cloud,dizipal49.cloud,dizipal50.cloud,dizipal51.cloud,dizipal52.cloud,dizipal53.cloud,dizipal54.cloud,dizipal55.cloud,dizipal56.cloud,dizipal57.cloud,dizipal58.cloud,dizipal59.cloud,dizipal60.cloud,dizipal61.cloud,dizipal62.cloud,dizipal63.cloud,dizipal64.cloud,dizipal65.cloud,dizipal66.cloud,dizipal67.cloud,dizipal68.cloud,dizipal69.cloud,dizipal70.cloud,dizipal71.cloud,dizipal72.cloud,dizipal73.cloud,dizipal74.cloud,dizipal75.cloud,dizipal76.cloud,dizipal77.cloud,dizipal78.cloud,dizipal79.cloud,dizipal80.cloud,dizipal81.cloud,dizipal82.cloud,dizipal83.cloud,dizipal84.cloud,dizipal85.cloud,dizipal86.cloud,dizipal87.cloud,dizipal88.cloud,dizipal89.cloud,dizipal90.cloud,dizipal91.cloud,dizipal92.cloud,dizipal93.cloud,dizipal94.cloud,dizipal95.cloud,dizipal96.cloud,dizipal97.cloud,dizipal98.cloud,dizipal99.cloud,dizipal100.cloud,dizipal101.cloud,dizipal102.cloud,dizipal103.cloud,dizipal104.cloud,dizipal105.cloud,dizipal106.cloud,dizipal107.cloud,dizipal108.cloud,dizipal109.cloud,dizipal110.cloud,dizipal111.cloud,dizipal112.cloud,dizipal113.cloud,dizipal114.cloud,dizipal115.cloud,dizipal116.cloud,dizipal117.cloud,dizipal118.cloud,dizipal119.cloud,dizipal120.cloud,dizipal121.cloud,dizipal122.cloud,dizipal123.cloud,dizipal124.cloud,dizipal125.cloud,dizipal126.cloud,dizipal127.cloud,dizipal128.cloud,dizipal129.cloud,dizipal130.cloud,dizipal131.cloud,dizipal132.cloud,dizipal133.cloud,dizipal134.cloud,dizipal135.cloud,dizipal136.cloud,dizipal137.cloud,dizipal138.cloud,dizipal139.cloud,dizipal140.cloud,dizipal141.cloud,dizipal142.cloud,dizipal143.cloud,dizipal144.cloud,dizipal145.cloud,dizipal146.cloud,dizipal147.cloud,dizipal148.cloud,dizipal149.cloud,dizipal150.cloud,dizipal151.cloud,dizipal152.cloud,dizipal153.cloud,dizipal154.cloud,dizipal155.cloud,dizipal156.cloud,dizipal157.cloud,dizipal158.cloud,dizipal159.cloud,dizipal160.cloud,dizipal161.cloud,dizipal162.cloud,dizipal163.cloud,dizipal164.cloud,dizipal165.cloud,dizipal166.cloud,dizipal167.cloud,dizipal168.cloud,dizipal169.cloud,dizipal170.cloud,dizipal171.cloud,dizipal172.cloud,dizipal173.cloud,dizipal174.cloud,dizipal175.cloud,dizipal176.cloud,dizipal177.cloud,dizipal178.cloud,dizipal179.cloud,dizipal180.cloud,dizipal181.cloud,dizipal182.cloud,dizipal183.cloud,dizipal184.cloud,dizipal185.cloud,dizipal186.cloud,dizipal187.cloud,dizipal188.cloud,dizipal189.cloud,dizipal190.cloud,dizipal191.cloud,dizipal192.cloud,dizipal193.cloud,dizipal194.cloud,dizipal195.cloud,dizipal196.cloud,dizipal197.cloud,dizipal198.cloud,dizipal199.cloud,dizipal200.cloud##div[data-org^="MENU_BOTTOM_GENERAL"] > a[href][target="_blank"]
+dizipal1.cloud,dizipal2.cloud,dizipal3.cloud,dizipal4.cloud,dizipal5.cloud,dizipal6.cloud,dizipal7.cloud,dizipal8.cloud,dizipal9.cloud,dizipal10.cloud,dizipal11.cloud,dizipal12.cloud,dizipal13.cloud,dizipal14.cloud,dizipal15.cloud,dizipal16.cloud,dizipal17.cloud,dizipal18.cloud,dizipal19.cloud,dizipal20.cloud,dizipal21.cloud,dizipal22.cloud,dizipal23.cloud,dizipal24.cloud,dizipal25.cloud,dizipal26.cloud,dizipal27.cloud,dizipal28.cloud,dizipal29.cloud,dizipal30.cloud,dizipal31.cloud,dizipal32.cloud,dizipal33.cloud,dizipal34.cloud,dizipal35.cloud,dizipal36.cloud,dizipal37.cloud,dizipal38.cloud,dizipal39.cloud,dizipal40.cloud,dizipal41.cloud,dizipal42.cloud,dizipal43.cloud,dizipal44.cloud,dizipal45.cloud,dizipal46.cloud,dizipal47.cloud,dizipal48.cloud,dizipal49.cloud,dizipal50.cloud,dizipal51.cloud,dizipal52.cloud,dizipal53.cloud,dizipal54.cloud,dizipal55.cloud,dizipal56.cloud,dizipal57.cloud,dizipal58.cloud,dizipal59.cloud,dizipal60.cloud,dizipal61.cloud,dizipal62.cloud,dizipal63.cloud,dizipal64.cloud,dizipal65.cloud,dizipal66.cloud,dizipal67.cloud,dizipal68.cloud,dizipal69.cloud,dizipal70.cloud,dizipal71.cloud,dizipal72.cloud,dizipal73.cloud,dizipal74.cloud,dizipal75.cloud,dizipal76.cloud,dizipal77.cloud,dizipal78.cloud,dizipal79.cloud,dizipal80.cloud,dizipal81.cloud,dizipal82.cloud,dizipal83.cloud,dizipal84.cloud,dizipal85.cloud,dizipal86.cloud,dizipal87.cloud,dizipal88.cloud,dizipal89.cloud,dizipal90.cloud,dizipal91.cloud,dizipal92.cloud,dizipal93.cloud,dizipal94.cloud,dizipal95.cloud,dizipal96.cloud,dizipal97.cloud,dizipal98.cloud,dizipal99.cloud,dizipal100.cloud,dizipal101.cloud,dizipal102.cloud,dizipal103.cloud,dizipal104.cloud,dizipal105.cloud,dizipal106.cloud,dizipal107.cloud,dizipal108.cloud,dizipal109.cloud,dizipal110.cloud,dizipal111.cloud,dizipal112.cloud,dizipal113.cloud,dizipal114.cloud,dizipal115.cloud,dizipal116.cloud,dizipal117.cloud,dizipal118.cloud,dizipal119.cloud,dizipal120.cloud,dizipal121.cloud,dizipal122.cloud,dizipal123.cloud,dizipal124.cloud,dizipal125.cloud,dizipal126.cloud,dizipal127.cloud,dizipal128.cloud,dizipal129.cloud,dizipal130.cloud,dizipal131.cloud,dizipal132.cloud,dizipal133.cloud,dizipal134.cloud,dizipal135.cloud,dizipal136.cloud,dizipal137.cloud,dizipal138.cloud,dizipal139.cloud,dizipal140.cloud,dizipal141.cloud,dizipal142.cloud,dizipal143.cloud,dizipal144.cloud,dizipal145.cloud,dizipal146.cloud,dizipal147.cloud,dizipal148.cloud,dizipal149.cloud,dizipal150.cloud,dizipal151.cloud,dizipal152.cloud,dizipal153.cloud,dizipal154.cloud,dizipal155.cloud,dizipal156.cloud,dizipal157.cloud,dizipal158.cloud,dizipal159.cloud,dizipal160.cloud,dizipal161.cloud,dizipal162.cloud,dizipal163.cloud,dizipal164.cloud,dizipal165.cloud,dizipal166.cloud,dizipal167.cloud,dizipal168.cloud,dizipal169.cloud,dizipal170.cloud,dizipal171.cloud,dizipal172.cloud,dizipal173.cloud,dizipal174.cloud,dizipal175.cloud,dizipal176.cloud,dizipal177.cloud,dizipal178.cloud,dizipal179.cloud,dizipal180.cloud,dizipal181.cloud,dizipal182.cloud,dizipal183.cloud,dizipal184.cloud,dizipal185.cloud,dizipal186.cloud,dizipal187.cloud,dizipal188.cloud,dizipal189.cloud,dizipal190.cloud,dizipal191.cloud,dizipal192.cloud,dizipal193.cloud,dizipal194.cloud,dizipal195.cloud,dizipal196.cloud,dizipal197.cloud,dizipal198.cloud,dizipal199.cloud,dizipal200.cloud##div[data-org^="MENU_BOTTOM_GENERAL"] > a[href][target="_blank"]
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121631
 ! citysites.ua
@@ -7828,9 +7893,10 @@ ya.ru,yandex.*##.DirectInline-Wrapper
 yandex.*##body > div.serp_js_inited.main .serp-list > .serp-item:has(span.organic__advLabel)
 yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~avia.yandex.by,~avia.yandex.kz,~travel.yandex.ru,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.com,~mail.yandex.com.tr,~music.yandex.ru,~music.yandex.by,~music.yandex.kz,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~yadi.sk,~docviewer.yandex.by,~docviewer.yandex.com,~docviewer.yandex.com.tr,~docviewer.yandex.fr,~docviewer.yandex.kz,~docviewer.yandex.ru,~rasp.yandex.by,~rasp.yandex.kz,~rasp.yandex.ru#$?#body > div.serp_js_inited.main .serp-list > .serp-item:has(a[href^="http://yabs.yandex."] > div > div[class*="organic__path"]) { remove: true; }
 yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~avia.yandex.by,~avia.yandex.kz,~travel.yandex.ru,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.com,~mail.yandex.com.tr,~music.yandex.ru,~music.yandex.by,~music.yandex.kz,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~yadi.sk,~docviewer.yandex.by,~docviewer.yandex.com,~docviewer.yandex.com.tr,~docviewer.yandex.fr,~docviewer.yandex.kz,~docviewer.yandex.ru,~rasp.yandex.by,~rasp.yandex.kz,~rasp.yandex.ru#$?#body > div.serp_js_inited.main .serp-list > .serp-item:has(a[href^="http://yabs.yandex."] > div > div.label_theme_direct) { remove: true; }
+! Yandex.Metro
+[$path=/metro]yandex.*##div[data-chunk="promo-chunk"]
 ! Yandex.News
 yandex.ru#?#body[class*="news_phone"] div.news-container > span > div > div.unit:has(> div.turbo-advert__item)
-! Yandex.Market
 !
 ! END: Yandex
 !
@@ -7872,9 +7938,9 @@ finance.rambler.ru#?#div[data-blocks="content_info"] ~ div[itemid] div[id="summa
 rambler.ru#?#main > div[class] ~ div[class] > div[class] div[class] > a[href^="https://prime.rambler.ru/promo"][data-cerber*="mobile"]:upward(2)
 !
 ! m.vk.com
-m.vk.com#?#.upanel > div.wall_item:has(> div.wi_body:contains(/Реклама.*erid:/i))
-m.vk.com#?#.wall_item > div.wi_head > div[class^="PostHeader"] span[class^="PostHeader"] > span:contains(/^Реклама( в сообществе)?/):upward(.wall_item)
-m.vk.com##.wall_item[data-ad-view]
+m.vk.com,m.vk.ru#?#.upanel > div.wall_item:has(> div.wi_body:contains(/Реклама.*erid:/i))
+m.vk.com,m.vk.ru#?#.wall_item > div.wi_head > div[class^="PostHeader"] span[class^="PostHeader"] > span:contains(/^Реклама( в сообществе)?/):upward(.wall_item)
+m.vk.com,m.vk.ru##.wall_item[data-ad-view]
 !
 ! xhamster.com
 interxh.site,xhspot.com,xhwide5.com,xhchannel.com,xhtotal.com,xhtree.com,xhwide2.com,xhlease.world,xhamsterporno.mx,valuexh.life,xhdate.world,xhbranch5.com,galleryxh.site,xhbig.com,xhaccess.com,xhofficial.com,seexh.com,xhamster42.desi,xhvid.com,xhamster20.desi,xhamster19.desi,xhwebsite2.com,xhamster18.desi,xhadult3.com,xhadult2.com,xhmoon5.com,xhwide1.com,xhamster3.com,xhplanet2.com,megaxh.com,xhamster16.*,xhamster.com,xhamster2.com,xhamster7.com,xhamster8.com,xhamster9.com,xhamster10.com,xhamster12.com,xhamster13.*,xhamster14.com,xhamster15.com,xhamster17.*,xhamster18.*,xhamster19.com,xhamster1.desi,xhamster2.desi,xhamster3.*,xhamster4.desi,xhamster20.com,xhamster22.com,xhamster23.com,xhamster25.com,xhamster26.com,xhamster27.com,openxh.com,xhamster31.com,xhamster32.com,xhamster34.com,xhamster36.com,xhamster37.com,xhamster38.com,xhamster5.desi,xhopen.com,openxh1.com,xhamster39.com,xhamster40.com,xhamster.one,xhamster.desi,stripchat.com#%#//scriptlet('set-cookie-reload', 'pShowMob', 'true')
@@ -8407,11 +8473,11 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 ! BUG: https://github.com/AdguardTeam/CoreLibs/issues/1951
 ! Don't add more than 200 apps per rule
 ! TODO: merge app lists of the same rules after fixing
-://yandex.ru^$app=com.pomogalka.fiveplus|software.clover.mathformulas|software.clover.physicsformulas|kz.kundelik.mobile|com.strict.mkenin.agf.cardgames2|com.Andrey.ElementsofNature|com.strict.mkenin.redball.spikeball2|com.strict.mkenin.spaceattack|com.strict.mkenin.spikeball|com.kaptan.blockpuzzlegame|com.strict.mkenin.angryfarm|com.strict.mkenin.redball.runnerball3|com.AlekseySudakov.LamberMilIdle|com.strict.mkenin.redball.runnerball|com.asmr.relaxing.anti.stress.games|com.GardenofDreams.SpeciesEvolution|com.strict.mkenin.redball.runnerball2|park.car.parking.games.master.mania|com.nektome.chatruletka.voice|com.mobilefootie.wc2010|com.gallery.photosgallery.videogallery.galaxy|com.apkpure.aegon|uz.avtoelon|kz.kolesa|com.byril.alchemy|com.byril.alchemyanimals|com.byril.doodlebasket|com.byril.doodlebasket2|com.byril.doodlejewels|com.byril.dots|com.byril.drawingmaster|com.byril.planes|com.byril.seabattle|com.byril.seabattle2|com.byril.stickmanarcher|com.byril.tictactoe2|ru.babyk.android|ru.full.khd.app|com.droid27.transparentclockweather|com.candygrill.coinboom|com.electricfoal.buildingsformcpe|com.ilyin.alchemy|com.ilyin.foody|com.ilyin.geomi|com.ilyin.horoscope|com.ilyin.materialspacewallpaper|com.ilyin.reflectdefend|com.ilyin.secret_crate2|com.ilyin.solitaire|ru.subprogram.guitarsongs|dimonvideo.beep|ru.thousandcardgame.android|com.transportspb.app|ru.kraist.tvlist|com.fgcos.scanwords|com.BARSinteractive.CodeZDayChronicles|com.BARSinteractive.Crusado|com.BARSinteractive.DeadEvil|com.BARSinteractive.FantasyHeroes|com.BARSinteractive.HungryZombies|com.BARSinteractive.IdleHeroRider|com.HardcoreGamesStudio.DoomZDay|com.HardcoreGamesStudio.Kongardion|com.HardcoreGamesStudio.LineRacer|com.HardcoreGamesStudio.Serious_Game|ru.mangalib.lite|one.belousov.wordgame|one.track.app|ru.photostrana.mobile|com.appsteka.traceroute|ru.cardsmobile.mw3|ab.exchangerate|altergames.intellect_battle|altergames.carlauncher|altergames.strong_link|altergames.recreverse|altergames.recreverse_fortwo|altergames.neurodraw|com.anoshenko.android.solitaires|com.anoshenko.android.fav_solitaires|com.anoshenko.android.mahjong|su.solovey.app|com.maxxt.pcradio|com.vvf.fmcube|com.sneig.livedrama|com.kursx.booze|photo.editor.ai.photoeditor|filemanager.files.fileexplorer|com.applock.applocker.lockapps.password.locker|recovermessages.restoredeleteddata.recoverdata.notifyme|com.shadowbiz.semechki|ru.livelib.client|ru.etalon.mediafootball|ru.yandex.metro|com.adme.android|com.grif.vmp|com.miui.cleaner|com.oxothuk.bridges|com.oxothuk.dominosa|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.eruditeng|com.oxothuk.infection|com.oxothuk.onetwo|com.oxothuk.qgame|com.oxothuk.qgame|com.oxothuk.sudoku|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzlefull|com.oxothuk.worldpuzzlefull|com.oxothukscan|com.oxothukscan|com.dafftin.android.moon_phase|ru.libappc|com.escape.adventure.amnesia|com.edadeal.android|yo.app.free|rm.news.app|com.mastobaev.snooker|com.kindzasoft.durak|com.kindzasoft.poker.android|com.mastobaev.poolandroid|com.mastobaev.pyramid|com.yandex.shedevrus
+://yandex.ru^$app=com.pomogalka.fiveplus|software.clover.mathformulas|software.clover.physicsformulas|kz.kundelik.mobile|com.strict.mkenin.agf.cardgames2|com.Andrey.ElementsofNature|com.strict.mkenin.redball.spikeball2|com.strict.mkenin.spaceattack|com.strict.mkenin.spikeball|com.kaptan.blockpuzzlegame|com.strict.mkenin.angryfarm|com.strict.mkenin.redball.runnerball3|com.AlekseySudakov.LamberMilIdle|com.strict.mkenin.redball.runnerball|com.asmr.relaxing.anti.stress.games|com.GardenofDreams.SpeciesEvolution|com.strict.mkenin.redball.runnerball2|park.car.parking.games.master.mania|com.nektome.chatruletka.voice|com.mobilefootie.wc2010|com.gallery.photosgallery.videogallery.galaxy|com.apkpure.aegon|uz.avtoelon|kz.kolesa|com.byril.alchemy|com.byril.alchemyanimals|com.byril.doodlebasket|com.byril.doodlebasket2|com.byril.doodlejewels|com.byril.dots|com.byril.drawingmaster|com.byril.planes|com.byril.seabattle|com.byril.seabattle2|com.byril.stickmanarcher|com.byril.tictactoe2|ru.babyk.android|ru.full.khd.app|com.droid27.transparentclockweather|com.candygrill.coinboom|com.electricfoal.buildingsformcpe|com.ilyin.alchemy|com.ilyin.foody|com.ilyin.geomi|com.ilyin.horoscope|com.ilyin.materialspacewallpaper|com.ilyin.reflectdefend|com.ilyin.secret_crate2|com.ilyin.solitaire|ru.subprogram.guitarsongs|dimonvideo.beep|ru.thousandcardgame.android|com.transportspb.app|ru.kraist.tvlist|com.fgcos.scanwords|com.BARSinteractive.CodeZDayChronicles|com.BARSinteractive.Crusado|com.BARSinteractive.DeadEvil|com.BARSinteractive.FantasyHeroes|com.BARSinteractive.HungryZombies|com.BARSinteractive.IdleHeroRider|com.HardcoreGamesStudio.DoomZDay|com.HardcoreGamesStudio.Kongardion|com.HardcoreGamesStudio.LineRacer|com.HardcoreGamesStudio.Serious_Game|ru.mangalib.lite|one.belousov.wordgame|one.track.app|ru.photostrana.mobile|com.appsteka.traceroute|ru.cardsmobile.mw3|ab.exchangerate|altergames.intellect_battle|altergames.carlauncher|altergames.strong_link|altergames.recreverse|altergames.recreverse_fortwo|altergames.neurodraw|com.anoshenko.android.solitaires|com.anoshenko.android.fav_solitaires|com.anoshenko.android.mahjong|su.solovey.app|com.maxxt.pcradio|com.vvf.fmcube|com.sneig.livedrama|com.kursx.booze|photo.editor.ai.photoeditor|filemanager.files.fileexplorer|com.applock.applocker.lockapps.password.locker|recovermessages.restoredeleteddata.recoverdata.notifyme|com.shadowbiz.semechki|ru.livelib.client|ru.etalon.mediafootball|ru.yandex.metro|com.adme.android|com.grif.vmp|com.miui.cleaner|com.oxothuk.bridges|com.oxothuk.dominosa|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.eruditeng|com.oxothuk.infection|com.oxothuk.onetwo|com.oxothuk.qgame|com.oxothuk.qgame|com.oxothuk.sudoku|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzlefull|com.oxothuk.worldpuzzlefull|com.oxothukscan|com.oxothukscan|com.dafftin.android.moon_phase|ru.libappc|com.escape.adventure.amnesia|com.edadeal.android|yo.app.free|rm.news.app|com.mastobaev.snooker|com.kindzasoft.durak|com.kindzasoft.poker.android|com.mastobaev.poolandroid|com.mastobaev.pyramid|com.yandex.shedevrus|ru.sd.chord|ru.sd.eccentric|ru.sd.geometrycalculator|ru.sd.gost28919|ru.sd.pipewelding|ru.sd.prop|ru.sd.slingloadcalculator|ru.sd.volumeofexcavation|ru.sotnik.areacalc|ru.sotnik.metallCalck|ru.sotnik.metallPainting|ru.sotnik.taper|ru.sotnik.taperP|ru.sotnik.timbercalc2|ru.sotnik.workpiecediameter|com.octopod.russianpost.client.android
 ://yandex.ru^$app=com.hb.dialer.free|com.onecwireless.mahjong|com.kostosha.poliglot16.pro|armworkout.armworkoutformen.armexercises|bloodpressuremonitor.bloodpressureapp.bpmonitor|bloodsugartracker.bloodsugartracking.diabetesapp|bmicalculator.bmi.calculator.weightlosstracker|bodyfast.zero.fastingtracker.weightloss|coach.leap.fitness.home.workout.training|com.eyefilter.nightmode.bluelightfilter|com.eyefilter.nightmode.bluelightfilterpro|com.northpark.drinkwater|com.popularapp.thirtydayfitnesschallenge|com.popularapp.thirtydayfitnesschallengepro|downloader.vitmate.downloaderapp|dumbbellworkout.dumbbellapp.homeworkout|fat.burnning.plank.fitness.loseweight|fitnesscoach.workoutplanner.weightloss|gymworkout.gym.gymlog.gymtrainer|habittracker.todolist.tickit.daily.planner|hd.video.downloader.app.hdvideodownloaderapp|heartrate.heartratemonitor.heartrateapp.heartratetracker|homeworkout.homeworkouts.noequipment|increaseheightworkout.heightincreaseexercise.tallerexercise|losebellyfat.flatstomach.absworkout.fatburning|loseweightapp.loseweightappforwomen.womenworkoutathome|menloseweight.loseweightappformen.weightlossformen|nightfilter.bluelightfilter.nightshift|pedometer.steptracker.calorieburner.stepcounter|periodtracker.pregnancy.ovulationtracker|qrcode.reader.qrscanner.barcode.scanner.qrcodereader|running.tracker.gps.map|runningforweightloss.runningapp.runningtracker|sixpack.sixpackabs.absworkout|sleepsounds.relaxandsleep.whitenoise|sleeptrakcer.sleeprecorder.sleepapp.sleep|splits.splitstraining.dothesplits.splitsin30days|steptracker.healthandfitness.walkingtracker.pedometer|stretching.stretch.exercises.back|walking.weightloss.walk.tracker|women.workout.female.fitness|workoutforwomen.femalefitness.womenworkout.loseweight|yogaworkout.dailyyoga.go.weightloss.loseweight|ru.learnwordswithmuttt.multiplicationtable|com.oxothukscan|ru.zen.android|ru.sports.f1|ru.tabor.search|com.balley|flipboard.app|black.wall7Fon|ru.mamba.client|se.scmv.belarus|ru.rp5.rp5weatherhorizontal|com.jagplay.client.android.app.thousand.hd|com.alex_ip.coins|an.osintsev.allcoinrus|an.osintsev.caesar|an.osintsev.flake|an.osintsev.ruscollector|an.osintsev.usaeurocoins|an.osintsev.worldbons|an.osintsev.germany|an.osintsev.bonrus|an.osintsev.sngcoins|an.osintsev.collection|an.osintsev.region|kz.tengrinews|com.DL.war.planes.inc.torpedo.bomber.fighter.aircraft.ww2|com.anyreads.patephone|com.jewels.gems.android|com.petrik.shifshedule|com.droid27.d3flipclockweather|com.infoshell.recradio|ru.topradio|ru.wall7Fon|com.narde.backgammon.game|org.aastudio.games.longnards|com.gazstation|kz.krisha|com.swiftsoft.anixartd|com.sshex.sberometr|com.region|com.metalsoft.trackchecker_mobile|com.indie.bustime|com.WildDrewGames.Galaganoid|com.WildDrewGames.BlockPuzzleClayWorld|com.WildDrewGames.SweetPopIt|ru.innim.my_finance|ru.idaprikol|com.olvic.gigiprikol|ru.yandex.mail|jabi.pdd2|ru.ria.ria|limehd.ru.ctv|ru.swc.yaplakalcom|ru.sports|com.nektome.talk|com.avito.android|ru.gdeposylka.delta|ru.alexeydubinin.holidays|ru.pikabu.android|molokov.TVGuide|com.zigzag_mobile.skorolek|ru.mail.love|ru.sports.primera|ru.sports.spartak|ru.sports.epl|ru.sports.barcelona|ru.sports.real|ru.sports.zenit|ru.sports.manutd|ru.sports.chelsea|ru.hh.android|bubble.shooter.pop.games.pet.rescue|bubble.shooter.pop.puzzle.game|color.sorting.games.ball.sort.puzzle|com.battle.deskmate|conquer.the.city.takeover.battle|sortpuz.water.sort.puzzle.game|tic.tac.toe.xoxo.xo.two.player|two.player.online.games.finger.tap.battle|two.three.four.player.game.mini.games|water.sorting.games.liquid.color.sort.puzzle|com.fingerlab.word.blockpuzzles|com.crypto.currency|com.fusionmedia.investing|com.holden.radio|com.memeglish.learn.english.language.words.by.memes|com.openmygame.games.android.jigsawpuzzle|drug.vokrug|monitor.kmv.multinotes|ru.tutu.etrains|ru.yandex.rasp|by.denchik.assyst|ru.profmedia.avtoradio|com.didenko.and.partners.durak|com.vertaler.rues|net.sit30.calories|ferp.android|ru.ideer.android|ru.centerion.fiesta_images|ru.centerion.beloved_man|ru.centerion.favorite_girl|ru.centerion.funny_greetings|org.aastudio.games.backgammon|video.player.videoplayer|su.stations.record|com.swiftsoft.anixartlt|com.tadiuzzz.tadius.mysalary|com.mobile_infographics_tools.mydrive|com.mobile_infographics_tools.patternmaker|com.mobile_infographics_tools.mydrive_ext|ru.sports.serie_a|com.merigotech.fillwords|com.linkdesks.jewellegend|com.linkdesks.slotking|com.linkdeskstudio.popcat|jewelblast.puzzlegame.toycrush.gem|linkdesks.bubblegames.bubbleshooter.run|linkdesks.classic.solitaire.klondike|linkdesks.pop.bubblegames.bubbleshooter|linkdesks.solitaire.ocean.fish|merged.jewels.jewelgames|com.lunappstudio.orderofwords|com.lunappstudio.wordomaze|com.merigotech.fillwordsthemes|com.lunappstudio.crossroyal|com.lunappstudio.squiz|com.lunappstudio.photoelephant|com.merigotech.chestofwords|com.quizuapp.history|com.lunappstudio.shift|com.lunappstudio.partybomb|com.indiez.amaze|com.indiez.monsters.puzzles|com.indiez.nonogram|com.indiez.pet.run|com.indiez.tile.connect|com.nostel.color.page|com.nostel.dot.line.puzzle|com.nostel.parking.car|com.nostel.pikachu|com.nostel.taxi.run|ru.fontanka.client|ru.ngs.app|ru.ngs.news|ru.ngs.news.e1|ru.ngs.news.ngs24|ru.ngs.news.ngs42|ru.ngs.news.ngs55|ru.ngs.news.nn|ru.sgp.news.chita|com.arpaplus.adminhands|com.arpaplus.kontakt|com.lovehoroscope.compatibility|com.temolder.calculator|ru.knnv.geometrycalcfree|ru.knnv.pilomaterial
-/^77\.88\./$network,app=com.pomogalka.fiveplus|software.clover.physicsformulas|kz.kundelik.mobile|com.strict.mkenin.agf.cardgames2|com.Andrey.ElementsofNature|com.strict.mkenin.redball.spikeball2|com.strict.mkenin.spaceattack|com.strict.mkenin.spikeball|com.kaptan.blockpuzzlegame|com.strict.mkenin.angryfarm|com.strict.mkenin.redball.runnerball3|com.AlekseySudakov.LamberMilIdle|com.strict.mkenin.redball.runnerball|com.asmr.relaxing.anti.stress.games|com.GardenofDreams.SpeciesEvolution|com.strict.mkenin.redball.runnerball2|park.car.parking.games.master.mania|com.nektome.chatruletka.voice|com.mobilefootie.wc2010|com.gallery.photosgallery.videogallery.galaxy|com.apkpure.aegon|uz.avtoelon|kz.kolesa|com.byril.alchemy|com.byril.alchemyanimals|com.byril.doodlebasket|com.byril.doodlebasket2|com.byril.doodlejewels|com.byril.dots|com.byril.drawingmaster|com.byril.planes|com.byril.seabattle|com.byril.seabattle2|com.byril.stickmanarcher|com.byril.tictactoe2|ru.babyk.android|ru.full.khd.app|com.droid27.transparentclockweather|com.candygrill.coinboom|com.electricfoal.buildingsformcpe|ru.mangalib.lite|one.belousov.wordgame|one.track.app|ru.photostrana.mobile|ru.cardsmobile.mw3|altergames.intellect_battle|altergames.carlauncher|altergames.strong_link|altergames.recreverse|altergames.recreverse_fortwo|altergames.neurodraw|com.anoshenko.android.solitaires|com.anoshenko.android.fav_solitaires|com.anoshenko.android.mahjong|su.solovey.app|com.maxxt.pcradio|com.vvf.fmcube|com.sneig.livedrama|com.kursx.booze|photo.editor.ai.photoeditor|filemanager.files.fileexplorer|com.applock.applocker.lockapps.password.locker|recovermessages.restoredeleteddata.recoverdata.notifyme|com.shadowbiz.semechki|ru.livelib.client|ru.etalon.mediafootball|ru.yandex.metro|com.adme.android|com.grif.vmp|com.miui.cleaner|com.oxothuk.bridges|com.oxothuk.dominosa|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.eruditeng|com.oxothuk.infection|com.oxothuk.onetwo|com.oxothuk.qgame|com.oxothuk.qgame|com.oxothuk.sudoku|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzlefull|com.oxothuk.worldpuzzlefull|com.oxothukscan|com.oxothukscan|com.dafftin.android.moon_phase|ru.libappc|com.escape.adventure.amnesia|com.edadeal.android|yo.app.free|com.mastobaev.snooker|com.kindzasoft.durak|com.kindzasoft.poker.android|com.mastobaev.poolandroid|com.mastobaev.pyramid
+/^77\.88\./$network,app=com.pomogalka.fiveplus|software.clover.physicsformulas|kz.kundelik.mobile|com.strict.mkenin.agf.cardgames2|com.Andrey.ElementsofNature|com.strict.mkenin.redball.spikeball2|com.strict.mkenin.spaceattack|com.strict.mkenin.spikeball|com.kaptan.blockpuzzlegame|com.strict.mkenin.angryfarm|com.strict.mkenin.redball.runnerball3|com.AlekseySudakov.LamberMilIdle|com.strict.mkenin.redball.runnerball|com.asmr.relaxing.anti.stress.games|com.GardenofDreams.SpeciesEvolution|com.strict.mkenin.redball.runnerball2|park.car.parking.games.master.mania|com.nektome.chatruletka.voice|com.mobilefootie.wc2010|com.gallery.photosgallery.videogallery.galaxy|com.apkpure.aegon|uz.avtoelon|kz.kolesa|com.byril.alchemy|com.byril.alchemyanimals|com.byril.doodlebasket|com.byril.doodlebasket2|com.byril.doodlejewels|com.byril.dots|com.byril.drawingmaster|com.byril.planes|com.byril.seabattle|com.byril.seabattle2|com.byril.stickmanarcher|com.byril.tictactoe2|ru.babyk.android|ru.full.khd.app|com.droid27.transparentclockweather|com.candygrill.coinboom|com.electricfoal.buildingsformcpe|ru.mangalib.lite|one.belousov.wordgame|one.track.app|ru.photostrana.mobile|ru.cardsmobile.mw3|altergames.intellect_battle|altergames.carlauncher|altergames.strong_link|altergames.recreverse|altergames.recreverse_fortwo|altergames.neurodraw|com.anoshenko.android.solitaires|com.anoshenko.android.fav_solitaires|com.anoshenko.android.mahjong|su.solovey.app|com.maxxt.pcradio|com.vvf.fmcube|com.sneig.livedrama|com.kursx.booze|photo.editor.ai.photoeditor|filemanager.files.fileexplorer|com.applock.applocker.lockapps.password.locker|recovermessages.restoredeleteddata.recoverdata.notifyme|com.shadowbiz.semechki|ru.livelib.client|ru.etalon.mediafootball|ru.yandex.metro|com.adme.android|com.grif.vmp|com.miui.cleaner|com.oxothuk.bridges|com.oxothuk.dominosa|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.eruditeng|com.oxothuk.infection|com.oxothuk.onetwo|com.oxothuk.qgame|com.oxothuk.qgame|com.oxothuk.sudoku|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzlefull|com.oxothuk.worldpuzzlefull|com.oxothukscan|com.oxothukscan|com.dafftin.android.moon_phase|ru.libappc|com.escape.adventure.amnesia|com.edadeal.android|yo.app.free|com.mastobaev.snooker|com.kindzasoft.durak|com.kindzasoft.poker.android|com.mastobaev.poolandroid|com.mastobaev.pyramid|ru.sd.chord|ru.sd.eccentric|ru.sd.geometrycalculator|ru.sd.gost28919|ru.sd.pipewelding|ru.sd.prop|ru.sd.slingloadcalculator|ru.sd.volumeofexcavation|ru.sotnik.areacalc|ru.sotnik.metallCalck|ru.sotnik.metallPainting|ru.sotnik.taper|ru.sotnik.taperP|ru.sotnik.timbercalc2|ru.sotnik.workpiecediameter
 /^77\.88\./$network,app=com.hb.dialer.free|com.onecwireless.mahjong|com.kostosha.poliglot16.pro|armworkout.armworkoutformen.armexercises|bloodpressuremonitor.bloodpressureapp.bpmonitor|bloodsugartracker.bloodsugartracking.diabetesapp|bmicalculator.bmi.calculator.weightlosstracker|bodyfast.zero.fastingtracker.weightloss|coach.leap.fitness.home.workout.training|com.eyefilter.nightmode.bluelightfilter|com.eyefilter.nightmode.bluelightfilterpro|com.northpark.drinkwater|com.popularapp.thirtydayfitnesschallenge|com.popularapp.thirtydayfitnesschallengepro|downloader.vitmate.downloaderapp|dumbbellworkout.dumbbellapp.homeworkout|fat.burnning.plank.fitness.loseweight|fitnesscoach.workoutplanner.weightloss|gymworkout.gym.gymlog.gymtrainer|habittracker.todolist.tickit.daily.planner|hd.video.downloader.app.hdvideodownloaderapp|heartrate.heartratemonitor.heartrateapp.heartratetracker|homeworkout.homeworkouts.noequipment|increaseheightworkout.heightincreaseexercise.tallerexercise|losebellyfat.flatstomach.absworkout.fatburning|loseweightapp.loseweightappforwomen.womenworkoutathome|menloseweight.loseweightappformen.weightlossformen|nightfilter.bluelightfilter.nightshift|pedometer.steptracker.calorieburner.stepcounter|periodtracker.pregnancy.ovulationtracker|qrcode.reader.qrscanner.barcode.scanner.qrcodereader|running.tracker.gps.map|runningforweightloss.runningapp.runningtracker|sixpack.sixpackabs.absworkout|sleepsounds.relaxandsleep.whitenoise|sleeptrakcer.sleeprecorder.sleepapp.sleep|splits.splitstraining.dothesplits.splitsin30days|steptracker.healthandfitness.walkingtracker.pedometer|stretching.stretch.exercises.back|walking.weightloss.walk.tracker|women.workout.female.fitness|workoutforwomen.femalefitness.womenworkout.loseweight|yogaworkout.dailyyoga.go.weightloss.loseweight|ru.learnwordswithmuttt.multiplicationtable|com.oxothukscan|ru.zen.android|ru.sports.f1|ru.tabor.search|com.balley|flipboard.app|black.wall7Fon|ru.mamba.client|se.scmv.belarus|ru.rp5.rp5weatherhorizontal|com.jagplay.client.android.app.thousand.hd|com.alex_ip.coins|an.osintsev.allcoinrus|an.osintsev.caesar|an.osintsev.flake|an.osintsev.ruscollector|an.osintsev.usaeurocoins|an.osintsev.worldbons|an.osintsev.germany|an.osintsev.bonrus|an.osintsev.sngcoins|an.osintsev.collection|an.osintsev.region|kz.tengrinews|com.DL.war.planes.inc.torpedo.bomber.fighter.aircraft.ww2|com.anyreads.patephone|com.jewels.gems.android|com.petrik.shifshedule|com.droid27.d3flipclockweather|com.infoshell.recradio|ru.topradio|ru.wall7Fon|com.narde.backgammon.game|org.aastudio.games.longnards|com.gazstation|kz.krisha|com.swiftsoft.anixartd|com.sshex.sberometr|com.region|com.metalsoft.trackchecker_mobile|com.indie.bustime|com.WildDrewGames.Galaganoid|com.WildDrewGames.BlockPuzzleClayWorld|com.WildDrewGames.SweetPopIt|ru.innim.my_finance|ru.idaprikol|com.olvic.gigiprikol|jabi.pdd2|ru.ria.ria|limehd.ru.ctv|ru.swc.yaplakalcom|ru.sports|com.nektome.talk|com.avito.android|ru.gdeposylka.delta|ru.alexeydubinin.holidays|ru.pikabu.android|molokov.TVGuide|com.zigzag_mobile.skorolek|ru.mail.love|ru.sports.primera|ru.sports.spartak|ru.sports.epl|ru.sports.barcelona|ru.sports.real|ru.sports.zenit|ru.sports.manutd|ru.sports.chelsea|ru.hh.android|bubble.shooter.pop.games.pet.rescue|bubble.shooter.pop.puzzle.game|color.sorting.games.ball.sort.puzzle|com.battle.deskmate|conquer.the.city.takeover.battle|sortpuz.water.sort.puzzle.game|tic.tac.toe.xoxo.xo.two.player|two.player.online.games.finger.tap.battle|two.three.four.player.game.mini.games|water.sorting.games.liquid.color.sort.puzzle|com.fingerlab.word.blockpuzzles|com.crypto.currency|com.fusionmedia.investing|com.holden.radio|com.memeglish.learn.english.language.words.by.memes|com.openmygame.games.android.jigsawpuzzle|drug.vokrug|monitor.kmv.multinotes|ru.tutu.etrains|ru.yandex.rasp|by.denchik.assyst|ru.profmedia.avtoradio|com.didenko.and.partners.durak|com.vertaler.rues|net.sit30.calories|ferp.android|ru.ideer.android|ru.centerion.fiesta_images|ru.centerion.beloved_man|ru.centerion.favorite_girl|ru.centerion.funny_greetings|org.aastudio.games.backgammon|video.player.videoplayer|su.stations.record|com.swiftsoft.anixartlt|com.tadiuzzz.tadius.mysalary|com.mobile_infographics_tools.mydrive|com.mobile_infographics_tools.patternmaker|com.mobile_infographics_tools.mydrive_ext|ru.sports.serie_a|com.merigotech.fillwords|com.linkdesks.jewellegend|com.linkdesks.slotking|com.linkdeskstudio.popcat|jewelblast.puzzlegame.toycrush.gem|linkdesks.bubblegames.bubbleshooter.run|linkdesks.classic.solitaire.klondike|linkdesks.pop.bubblegames.bubbleshooter|linkdesks.solitaire.ocean.fish|merged.jewels.jewelgames|com.lunappstudio.orderofwords|com.lunappstudio.wordomaze|com.merigotech.fillwordsthemes|com.lunappstudio.crossroyal|com.lunappstudio.squiz|com.lunappstudio.photoelephant|com.merigotech.chestofwords|com.quizuapp.history|com.lunappstudio.shift|com.lunappstudio.partybomb|com.indiez.amaze|com.indiez.monsters.puzzles|com.indiez.nonogram|com.indiez.pet.run|com.indiez.tile.connect|com.nostel.color.page|com.nostel.dot.line.puzzle|com.nostel.parking.car|com.nostel.pikachu|com.nostel.taxi.run|ru.fontanka.client|ru.ngs.app|ru.ngs.news|ru.ngs.news.e1|ru.ngs.news.ngs24|ru.ngs.news.ngs42|ru.ngs.news.ngs55|ru.ngs.news.nn|ru.sgp.news.chita|com.arpaplus.adminhands|com.arpaplus.kontakt|com.lovehoroscope.compatibility|com.temolder.calculator|ru.knnv.geometrycalcfree|ru.knnv.pilomaterial|software.clover.mathformulas
-/^5\.255\.255\.77/$network,app=com.pomogalka.fiveplus|com.hb.dialer.free|com.onecwireless.mahjong|com.kostosha.poliglot16.pro|com.apkpure.aegon|kz.krisha|uz.avtoelon|kz.kolesa|com.byril.alchemy|com.byril.alchemyanimals|com.byril.doodlebasket|com.byril.doodlebasket2|com.byril.doodlejewels|com.byril.dots|com.byril.drawingmaster|com.byril.planes|com.byril.seabattle|com.byril.seabattle2|com.byril.stickmanarcher|com.byril.tictactoe2|com.BARSinteractive.CodeZDayChronicles|com.BARSinteractive.Crusado|com.BARSinteractive.DeadEvil|com.BARSinteractive.FantasyHeroes|com.BARSinteractive.HungryZombies|com.BARSinteractive.IdleHeroRider|com.HardcoreGamesStudio.DoomZDay|com.HardcoreGamesStudio.Kongardion|com.HardcoreGamesStudio.LineRacer|com.HardcoreGamesStudio.Serious_Game|ru.pikabu.android|altergames.intellect_battle|altergames.carlauncher|altergames.strong_link|altergames.recreverse|altergames.recreverse_fortwo|altergames.neurodraw|com.anoshenko.android.solitaires|com.anoshenko.android.fav_solitaires|com.anoshenko.android.mahjong|com.maxxt.pcradio|com.vvf.fmcube|com.sneig.livedrama|photo.editor.ai.photoeditor|filemanager.files.fileexplorer|com.applock.applocker.lockapps.password.locker|recovermessages.restoredeleteddata.recoverdata.notifyme|com.shadowbiz.semechki|ru.livelib.client|ru.etalon.mediafootball|ru.yandex.metro|com.adme.android|com.infoshell.recradio|com.grif.vmp|com.miui.cleaner|com.oxothuk.bridges|com.oxothuk.dominosa|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.eruditeng|com.oxothuk.infection|com.oxothuk.onetwo|com.oxothuk.qgame|com.oxothuk.qgame|com.oxothuk.sudoku|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzlefull|com.oxothuk.worldpuzzlefull|com.oxothukscan|com.oxothukscan|ru.mangalib.lite|ru.libappc|com.edadeal.android|yo.app.free|com.mastobaev.snooker|com.kindzasoft.durak|com.kindzasoft.poker.android|com.mastobaev.poolandroid|com.mastobaev.pyramid
+/^5\.255\.255\.77/$network,app=com.pomogalka.fiveplus|com.hb.dialer.free|com.onecwireless.mahjong|com.kostosha.poliglot16.pro|com.apkpure.aegon|kz.krisha|uz.avtoelon|kz.kolesa|com.byril.alchemy|com.byril.alchemyanimals|com.byril.doodlebasket|com.byril.doodlebasket2|com.byril.doodlejewels|com.byril.dots|com.byril.drawingmaster|com.byril.planes|com.byril.seabattle|com.byril.seabattle2|com.byril.stickmanarcher|com.byril.tictactoe2|com.BARSinteractive.CodeZDayChronicles|com.BARSinteractive.Crusado|com.BARSinteractive.DeadEvil|com.BARSinteractive.FantasyHeroes|com.BARSinteractive.HungryZombies|com.BARSinteractive.IdleHeroRider|com.HardcoreGamesStudio.DoomZDay|com.HardcoreGamesStudio.Kongardion|com.HardcoreGamesStudio.LineRacer|com.HardcoreGamesStudio.Serious_Game|ru.pikabu.android|altergames.intellect_battle|altergames.carlauncher|altergames.strong_link|altergames.recreverse|altergames.recreverse_fortwo|altergames.neurodraw|com.anoshenko.android.solitaires|com.anoshenko.android.fav_solitaires|com.anoshenko.android.mahjong|com.maxxt.pcradio|com.vvf.fmcube|com.sneig.livedrama|photo.editor.ai.photoeditor|filemanager.files.fileexplorer|com.applock.applocker.lockapps.password.locker|recovermessages.restoredeleteddata.recoverdata.notifyme|com.shadowbiz.semechki|ru.livelib.client|ru.etalon.mediafootball|ru.yandex.metro|com.adme.android|com.infoshell.recradio|com.grif.vmp|com.miui.cleaner|com.oxothuk.bridges|com.oxothuk.dominosa|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.erudit|com.oxothuk.eruditeng|com.oxothuk.infection|com.oxothuk.onetwo|com.oxothuk.qgame|com.oxothuk.qgame|com.oxothuk.sudoku|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzle|com.oxothuk.worldpuzzlefull|com.oxothuk.worldpuzzlefull|com.oxothukscan|com.oxothukscan|ru.mangalib.lite|ru.libappc|com.edadeal.android|yo.app.free|com.mastobaev.snooker|com.kindzasoft.durak|com.kindzasoft.poker.android|com.mastobaev.poolandroid|com.mastobaev.pyramid|ru.sd.chord|ru.sd.eccentric|ru.sd.geometrycalculator|ru.sd.gost28919|ru.sd.pipewelding|ru.sd.prop|ru.sd.slingloadcalculator|ru.sd.volumeofexcavation|ru.sotnik.areacalc|ru.sotnik.metallCalck|ru.sotnik.metallPainting|ru.sotnik.taper|ru.sotnik.taperP|ru.sotnik.timbercalc2|ru.sotnik.workpiecediameter
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198022
 ||apps.sascdn.com^$app=com.dubox.drive
@@ -8501,6 +8567,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 ||xpig-dev.directservices.it^$app=com.make.it.fly|com.slingshot.basketball|com.slingshot.biker|com.slingshot.car|com.slingshot.train
 ||xpig.cdn.boombit.cloud^$app=com.make.it.fly|com.slingshot.basketball|com.slingshot.biker|com.slingshot.car|com.slingshot.train
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117330
+||legy-jp.line-apps.com^$app=jp.naver.line.android
 ||a.line.me^$app=jp.naver.line.android
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116014
 ||hicloud.com^$app=free.tube.premium.advanced.tuber
