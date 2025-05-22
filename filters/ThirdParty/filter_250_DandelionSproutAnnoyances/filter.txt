@@ -260,7 +260,7 @@ jkanime.site##body > div[style="padding:5px; background-color:yellow; text-align
 kaktam.ru##.wrapper--banner
 kicker.de#$?##ovContentScroller { padding-top: 0 !important }
 kicker.de#$?##ovHeader { top: 0 !important }
-klavyer.com#$?#a[href="https://www.klavyer.com/android-uygulamamiz"] { display: none!important }
+klavyer.com#$?#a[href$="ttps://www.klavyer.com/android-uygulamamiz"] { display: none!important }
 klavyer.com#$?#body .container .sidebar_last { margin-top: -5px!important }
 kurashiru.com##.footer-image-wrapper
 lefigaro.fr#$?#html.smartBanner header#fig-header { height: 50px!important }
@@ -49481,7 +49481,7 @@ vimeo.com##._16rrx
 ted.com#%#//scriptlet('ubo-sid.js', 'd.period', '1000')
 ted.com##.css-1dg07lz:has-text(Up next)
 ! Title: 🎫 Ad Removal List for Unusual Ads
-! OriginalVersion: 15May2025v1-Beta
+! OriginalVersion: 22May2025v1-Beta
 ! Expires: 4 days
 ! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -49632,7 +49632,7 @@ smzdm.com##.qr-buy-container
 1hai.cn##.mobile-bannericon
 58.com##.app.rightbtn
 58.com##.wx-xcx-qrcode
-airchina.com.cn##[href="http://www.airchina.com.cn/cn/client_download.shtml"]
+airchina.com.cn##[href$="ttp://www.airchina.com.cn/cn/client_download.shtml"]
 alipay.com##.container__1JFhD
 amap.com###amap-result-banner
 amap.com###amapAppDownload
@@ -49764,6 +49764,10 @@ news.sohu.com##.area.footer
 !+ NOT_OPTIMIZED
 ||aomeisoftware.com/ini/recommend/pa/rec.html^$app=PartAssist.exe
 !#endif
+! MyTuner's ancient UWP Microsoft Store app on Windows 11; tracking and some (presumably futile) handling of the app's pretty old non-HTTPS resources.
+||google-analytics.com/collect^$app=MyTuner.Windows.exe
+||api.mytuner.mobi^$csp=upgrade-insecure-requests
+$csp=upgrade-insecure-requests,app=MyTuner.Windows.exe
 ! Title: 🦁 Dandelion Sprout's African Languages List
 ! OriginalVersion: 05May2023v6-Alpha
 ! Expires: 4 days
@@ -50902,7 +50906,7 @@ justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 15May2025v3
+! OriginalVersion: 21May2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -55105,6 +55109,13 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@||email-link.$removeparam
 !! https://manage•kmail-lists•com/subscriptions/unsubscribe?a=(...)&c=(...)&k=(...)&m=(...)&r=(...)
 @@||manage.kmail-lists.com/subscriptions^$removeparam
+! Account login pages are likely also a place where you generally don't want error messages from false positive parameter removals
+! https://github.com/DandelionSprout/adfilt/issues/1051
+@@/login-redirect/*$removeparam
+@@/login?$removeparam=referrer
+! Post-payment processing pages are also places where you generally wouldn't want error messages from false positive parameter removals
+@@||secure.kps-payment.de^$removeparam
+@@/Netaxept.jsp?$removeparam
 ! Fix driver download section
 @@||canon.*/supportproduct/gettabcontent$removeparam=referrer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89618
@@ -55114,10 +55125,6 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@||startpage.com/sp/qi$removeparam=sc
 ! Strangely prevents placeholders on flagpedia•net/index (24/11/2023)
 @@||flagpedia.net^$ping,xmlhttprequest,removeparam=gtm
-! Account login pages are likely also a place where you generally don't want error messages from false positive parameter removals
-! https://github.com/DandelionSprout/adfilt/issues/1051
-@@/login-redirect/*$removeparam
-@@/login?$removeparam=referrer
 !#if adguard
 !#if adguard_ext_firefox
 ! https://github.com/DandelionSprout/adfilt/issues/376
