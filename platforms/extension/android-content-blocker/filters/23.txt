@@ -1,8 +1,8 @@
-! Checksum: Fr/p+JBr8XrLYt1xFSsM2w
+! Checksum: SAKbPCgWn+VXRYeapgPCLw
 ! Title: AdGuard Ukrainian filter
 ! Description: Filter that enables ad blocking on websites in Ukrainian language.
-! Version: 2.0.6.62
-! TimeUpdated: 2025-05-13T11:07:09+00:00
+! Version: 2.0.6.69
+! TimeUpdated: 2025-05-26T16:08:18+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -17,6 +17,8 @@
 ! Good: .org/ads/
 ! Bad: .org/ads/$domain=example.org (for instance, should be in speficic.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/205747
+/code/video-steam/?id=*&vast=
 ! Nadavi ads
 /nadavi-api/?p4g3=js/api/widget.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198009
@@ -346,6 +348,8 @@ http://*.ru/leftunit.pl?
 ! Kadam ads
 /kadam.base.min.js?
 !
+||vst.*/*?subid=
+/vast.php?partner_id=
 .php?vast=
 ?sid=*&t=*&jsD=$xmlhttprequest,third-party
 .ru/vast/$xmlhttprequest
@@ -1420,6 +1424,8 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||alloviewroll.com^
+||adstag0102.xyz^
 ||w.rulive.ru^$third-party
 ||thagrechulo.com^
 ||vvdrhe.win^
@@ -4498,6 +4504,7 @@ mmo13.ru,altapress.ru,gastronom.ru,eg.ru,newsmaker.md,delo-vcusa.ru,tolknews.ru,
 !
 !
 !
+1plus1.ua##.bannerPremium
 grad.ua###banner-top-page
 grad.ua##.radio_banner
 grad.ua##div[class^="dle_b_ps_"]
@@ -4644,16 +4651,19 @@ devby.io,dev.ua##div[style="padding: 2rem 0;"]
 devby.io,dev.ua##.section-aside_sticky
 mag.103.by,mag.103.ua##.google
 apteka.103.by,apteka.103.ua##.verticalBanner
-meta-ratings.com.ua,metaratings.ru##.feed-box.fb-comm
-meta-ratings.com.ua,metaratings.ru##div[data-banner-type]
-meta-ratings.com.ua,metaratings.ru##.seo-link
-meta-ratings.com.ua,metaratings.ru##.reward-slider
-meta-ratings.com.ua,metaratings.ru##.rating-bo
-meta-ratings.com.ua,metaratings.ru##.workarea-sidebar > div.user-preference
-meta-ratings.com.ua,metaratings.ru##.main-top-bookmakers
 sinoptik.ua###adsZone
 sinoptik.ua###adsZone3
 ||sinst.fwdcdn.com/img/partners/$domain=sinoptik.ua
+!
+! metaratings
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##.jsMainTopBk
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class^="MatchCarousel_"]
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class*="Announce_announceBanner__"]
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class^="BookmakersRatingAside_"]
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class^="DefaultType_banner__"]
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz###__next > div[class^="Catfish_catfish__"]
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class^="RatingBK_"]
+!
 ! HDVB players ('vb'+'digits'+'word.tld')
 ||cdn-t.*.com/content/stream/*.mp4
 !

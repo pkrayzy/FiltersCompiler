@@ -1,9 +1,9 @@
-! Checksum: eguMCeY87mPc2hfHLy01rw
-! Diff-Path: ../patches/22/22-s-1747408284-3600.patch
+! Checksum: KVKcO2ZExBCfyKHqtSwyMw
+! Diff-Path: ../patches/22/22-s-1748938412-3600.patch
 ! Title: AdGuard Widgets filter
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.11.76
-! TimeUpdated: 2025-05-16T15:07:55+00:00
+! Version: 2.0.11.82
+! TimeUpdated: 2025-06-03T08:10:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -89,6 +89,7 @@ ityouchannel.livedoor.blog,nanjei-baseball.blog.jp,baynews.blog.jp,xresolutionx.
 !
 ! NOTE: Blogroll specific rules
 !
+firestorage.jp###news_box > div.row > div:not(#ad_foot_rec)
 dot.asahi.com##.article-pr-under
 alfalfalfa.com##aside.section-box:has(> div.plugin-blogroll)
 ||lovekoala.com/rss-$subdocument
@@ -1400,6 +1401,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 !   SECTION: Widgets - Marketing (third-party services)
 !
+||webchat-ui.citibot.net^
 ||webchat.bebot.io^$third-party
 ||kwizbot.io^$third-party
 ||milionymonet.onet.pl/js/omm/widget/euroloterie.js
@@ -1776,6 +1778,9 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 !
 !   SECTION: Widgets - Marketing - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/205808
+||widgets.trustedshops.com/reviews/tsSticker/*.gif?$important
+@@||widgets.trustedshops.com/reviews/tsSticker/$domain=sportnahrung-engel.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202762
 @@||marquiz.ru^$domain=logiccontact.space
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191742
@@ -2418,6 +2423,8 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+holod.media##.a-donate
+istories.media##div[class^="DonationsModalTimer-"]
 ncronline.org##.region-main-top
 stlpr.org###nonintrusive-donate-ask
 stlpr.org##.alleg-donate-embed
@@ -2481,7 +2488,7 @@ zona.media##.mz-top-header-banner
 ||s3.zona.media/banner/0199289a5a560dda3b2813d477cf6788
 ovd.info##.content div.popmechanic-js-form
 ||frontend.poool.fr/engage/
-kyivindependent.com##iframe[src^="https://frontend.poool.fr/"]
+la-croix.com,kyivindependent.com##iframe[src^="https://frontend.poool.fr/"]
 verstka.media##.vm-single-post-content > p[class="has-background"][style="background-color:#47d4ff"]
 birdlife.org##iframe[title="Donation Activity Popup"]
 novayagazeta.ru###article-body div[class]:has(> div[class] > p[class]:contains(Поддержите))

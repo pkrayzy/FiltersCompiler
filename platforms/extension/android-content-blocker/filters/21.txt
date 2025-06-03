@@ -1,8 +1,8 @@
-! Checksum: 5nKx9ACaHfihxejAN3y0jA
+! Checksum: C+/DsIwJ6He0a8MsqtYV2g
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.33.45
-! TimeUpdated: 2025-05-19T06:10:05+00:00
+! Version: 2.0.34.3
+! TimeUpdated: 2025-06-03T06:09:49+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -37,6 +37,12 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/206140
+||elements.video/player.js$domain=forbes.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/206453
+pinion.jp##.wiki-style-right-side > div.poll-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/206304
+heise.de##.article-content > .inread-cls-reduc
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205414
 travelandleisure.com##.mm-video-medianet-bytes
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204920
@@ -75,6 +81,7 @@ forbes.com#$##forbes-dv { display: none !important; }
 ctvnews.ca##.b-alert-bar-wrapper-custom
 ! Google Search - AI Overview
 ://www.google.*/async/folsrch?*&async=_basejs:*,_basecomb:*&q=$xmlhttprequest
+google.*##script + div[data-mcpr][class="YzCcne"]
 google.*##div[data-q][data-al]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197075
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196753
@@ -3110,6 +3117,7 @@ yandex.*##.meteum-promo
 [$path=/maps]yandex.*##.business-card-title-view__actions .button._view_advertisement
 !
 ! Yandex.Music
+music.yandex.*##div[class*="NavbarDesktopAnimatedPlusBar_root___"]
 music.yandex.*##section[aria-label="Баннер"]
 music.yandex.*##div[class^="player-bar_miniBrickContainer"] > div[data-name="MINI_BRICK"]
 music.yandex.*#$#html > body.no-scroll { overflow: auto !important; }
@@ -3147,6 +3155,9 @@ eda.yandex.ru##.TrackingBanner_root
 ! Yandex.360
 360.yandex.ru##div[data-test-id="promotopline"]
 !
+! Yandex.Apteki
+apteki.yandex.ru##div[data-qa="BannerSlider"]
+!
 ! Kinopoisk
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div > img { display: none !important; }
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div.header-navigation { margin-top: 0 !important; }
@@ -3156,6 +3167,52 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+lz.de###fb_werbeform
+visualcapitalist.com###block-8
+saechsische.de###piano-home-inline-saez
+ln-online.de,solinger-tageblatt.de,ostsee-zeitung.de,siegener-zeitung.de,dnn.de,landeszeitung.de#$#div[class^="PianoBanner"] { display: none !important }
+petapixel.com##.memberpress-prompt
+||hellointerior.jp/note/wp-content/themes/stinger5_201904/images/reception_banners/
+animeworld.*##.alert-premium
+nifty.com##div[data-testid="head-information"]
+nifty.com##div[class^="RightClmPointBanner_banner_area_"]
+nifty.com###nojimaArea
+draculatheme.com##.card-promo-banner
+sky.pro##div[class^="prof-test"]
+any.run##.slot-banner
+lol-times.com###pickup_banner
+derstandard.de,derstandard.at##.article-body > #piano-supporter-inline-container
+sueddeutsche.de##div[id^="end-of-article-joboffers"]
+jicoo.com##.css-y0rq08
+jicoo.com##.css-1bwd1ol
+jicoo.com##.css-mmowx0
+shoebacca.com##.yotpo-widget-loyalty-floater-widget
+paulaschoice.com##.ju_overlay
+paulaschoice.com##.ju_Con[data-title*="Anniversary%20Sale%20Message"]
+puntodebreak.com##div[id^="block-faldon"]
+chigai.fromation.co.jp##.kcontainer
+cybernews.com##.partner-content-block
+corp.faq.rakuten.net#$#c-mobilebanner { display: none !important; }
+corp.faq.rakuten.net#$#.siteforceThemeLayoutStarter { padding-top: 0 !important; }
+k2s.cc##.section-question
+afisha.ru###root > div[style^="width: 100%; height: 120px; display: flex;"]
+kimbino.*#$#.brochure-secret-modal { display: none !important; }
+kimbino.*#$#html.modal-open { overflow: auto !important; }
+lsj.gr###siteNotice
+tanstack.com##aside[class="mx-auto w-full max-w-\[1200px\] p-8 -mt-32 flex justify-between items-center"]
+controld.com##.css-9hjcxa
+veja.abril.com.br###sector-advertising-widget-wrapper
+folha.uol.com.br##aside > .c-estudio-folha
+folha.uol.com.br##aside .c-responsive-rotate-estudio-folha
+vook.vc##.note-main-spnsr
+investors.com##.market-banner-container
+investors.com##.market-promo
+forbesindia.com##.subscribe_now
+whosampled.com##.inline-banner
+moz.de###ms-headerbar[data-products]
+||news.google.com/swg^$domain=behindmlm.com|manapedia.jp
+eikaiwa.dmm.com##main div[style^="filter:"] > a[href^="https://eikaiwa.dmm.com/"]
+crunchyroll.com##section[class^="lowerBannerPanel_"]
 carparts.com##section[data-testid="membership-notif-bar"]
 rusi.org##section div[class*="MemberPromoCtaBlockParagraph"]
 andina.nasuacasa.coca-cola.com.br#$#.wheel-modal { display: none !important; }
@@ -3543,8 +3600,6 @@ rb.ru#$##globalHeader { top: 0 !important; }
 realtor.com##.product-specific-widget
 englishdom.com##.container-banner-teacher
 jaomix.ru##.adblock-service
-metaratings.ru#$##main-header > div.mainHeaderSubs { display: none !important; }
-metaratings.ru#$#aside[class^="Announce_announceBar"] { --announce-top-indent: 0 !important; }
 rawkuma.com##.kln > a > img
 skillbox.ru##.js-article-banner
 infoq.com###infoq section.promo
@@ -3594,7 +3649,7 @@ skysmart.ru##.form > cis-main-form
 skysmart.ru##.form > ssm-cms-general-lead-form
 p-game.jp##a[href="https://www.p-game.jp/present/result/27"] > img
 sports.ru##.write-post
-ip.me##.cta-container
+ip.me##div.cta-container
 forums.redflagdeals.com##.insurance_banner
 nikkei.com##div[data-optimizely-selector="paywall-container"] div[data-optimizely-selector="locked-message"] ~ *
 nikkei.com##div[data-optimizely-selector="paywall-container"] div[data-optimizely-selector="main-paywall"] ~ *
@@ -3709,7 +3764,6 @@ gq.com.tw###main-content > div[class^="EventBannerWrapper"]
 goo-net.com##.custom-html-widget > div[class*="_bnr_"]
 eikaiwa.dmm.com##.banner-default
 eikaiwa.dmm.com##.banner-single-top
-vook.vc##[class*="-spnsr"]
 ||camonster.io/streams/streams_live.php$domain=nsfwmonster.com
 ||creative.cams.gifsauce.com/widgets/
 faselhds.*##.alert-danger
@@ -3752,7 +3806,7 @@ videogameschronicle.com##.vgc-products
 kinoart.ru###issue_banner
 baseconnect.in###side_banner
 baseconnect.in##.add__wrapper
-wco.tv,wcofun.net,wcofun.org##.saklasanabunu
+wcoanimesub.tv,wcoanimedub.tv,wco.tv,wcofun.net,wcofun.org##.saklasanabunu
 qjweb.jp##.l-aside_ad
 ||kamigame.jp/wp-content/uploads/recruit.png
 ||blogparts.bookwalker.jp^$domain=ddnavi.com
@@ -4081,7 +4135,6 @@ translate.com##.tsl_hero__buttons + div.tsl_hero__features
 cocokara-next.com##.shopping
 music.tower.jp##div[class^="promotion"]
 fakedetail.com##.ads_us
-deviantart.com##div[role="complementary"] > div[class] > iframe[src*="/?realEstateId="]
 boards.4channel.org##.middlead.center
 ||deviantart.com/*/?realEstateId=
 eltiempo.com##.banner-club-vivamos
@@ -5453,6 +5506,9 @@ jorudan.co.jp##.com_lp_frame
 ! !SECTION: Self-promo - Regular rules
 !
 !
+! metaratings
+metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class*="SportHome_bonusesCarousel__"]
+telecomasia.net,meta.reviews##.main-bonuses
 ! IObit
 iobit.com##div[class*="-mask"]
 iobit.com##div[class*="bottom"][class~="on"]
@@ -5915,9 +5971,11 @@ maruyanagi.co.jp##.side-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123268
 ||gamewith.jp/ad/
 gamewith.jp##.walkthrough-hikari
+! https://github.com/AdguardTeam/AdguardFilters/issues/206773
+! https://github.com/AdguardTeam/AdguardFilters/issues/206774
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170088
-lvz.de#$#.tp-backdrop.tp-active { display: none !important; }
-lvz.de#$#body.tp-modal-open { overflow: auto !important; position: static !important; touch-action: unset !important; background: unset !important; }
+ln-online.de,solinger-tageblatt.de,ostsee-zeitung.de,siegener-zeitung.de,dnn.de,landeszeitung.de,lvz.de#$#.tp-backdrop.tp-active { display: none !important; }
+ln-online.de,solinger-tageblatt.de,ostsee-zeitung.de,siegener-zeitung.de,dnn.de,landeszeitung.de,lvz.de#$#body.tp-modal-open { overflow: auto !important; position: static !important; touch-action: unset !important; background: unset !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123102#issuecomment-1171069566
 thelocal.*#$#.tp-backdrop.tp-active { display: none !important; }
 ! https://github.com/Yuki2718/adblock/issues/60
@@ -7331,9 +7389,6 @@ mtb-news.de###cb-outer-container > div[id][style*="height"][style*="background"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132763
 ||ecogolik.ru/upload/iblock/628/Sentio_Adv.jpg
 ecogolik.ru#$#.main-page-wrap__wrapper { padding-top: 0 !important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/131962
-kinemaster.cc#$##ad-top #timer { display: none !important; }
-kinemaster.cc#$##ad-top #getlink { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130861
 fakty.com.ua#$#.footer-wrapper { margin-bottom: 0px !important;}
 ! https://github.com/uBlockOrigin/uAssets/issues/14790
@@ -7656,6 +7711,10 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !######### JS tweaks ##########
 !##############################
 ! SECTION: Tweaks - JS
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/206610
+! https://github.com/AdguardTeam/AdguardFilters/issues/206196
+! https://github.com/AdguardTeam/AdguardFilters/issues/205886
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205718
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205512
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205047
@@ -7879,7 +7938,6 @@ fontshub.pro#$#.download-share-box { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133857
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132625
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132493
-! https://github.com/AdguardTeam/AdguardFilters/issues/131962
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131082
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131116
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130155
@@ -7909,6 +7967,7 @@ xatakamovil.com#$#.close-corner { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122844
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122833
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122674
+! https://github.com/AdguardTeam/AdguardFilters/issues/206724
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122461
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122250
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122294

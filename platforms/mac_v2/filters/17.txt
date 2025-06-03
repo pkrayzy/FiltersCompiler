@@ -1,9 +1,9 @@
-! Checksum: qvcAePIMzDH5TDr7bTsonA
-! Diff-Path: ../patches/17/17-s-1747315156-3600.patch
+! Checksum: KoA9YtN24UCN/Uh72pTbjQ
+! Diff-Path: ../patches/17/17-s-1748794305-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.11.7
-! TimeUpdated: 2025-05-15T13:15:04+00:00
+! Version: 2.0.11.14
+! TimeUpdated: 2025-06-01T16:07:40+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -399,6 +399,21 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/206757
+||stanby.com^$removeparam=sr_fr
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13326533
+://youtube.com/@*?si=$removeparam=si
+||youtu.be^$removeparam=si
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13286375
+||myaccount.google.com^$removeparam=source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13286430
+||www.hcaptcha.com^$removeparam=ref
+! https://github.com/AdguardTeam/AdguardFilters/issues/206004
+||korona.ru^$removeparam=pr-source
+||korona.ru^$removeparam=pr-medium
+||korona.ru^$removeparam=pr-campaign
+! https://github.com/AdguardTeam/AdguardFilters/issues/206072
+||k2s.cc^$removeparam=site
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205038
 ||skyeng.ru^$removeparam=source_type
 ||skyeng.ru^$removeparam=manager
@@ -413,9 +428,11 @@ $removeparam=fb_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204894
 ||ebikes.ca^$removeparam=___store
 ||ebikes.ca^$removeparam=___from_store
+! https://github.com/AdguardTeam/AdguardFilters/issues/206358
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205132
 /viewforum.php?$removeparam=sid
 /viewtopic.php?$removeparam=sid
+.php?$removeparam=PHPSESSID
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204732
 ||html5.gamedistribution.com^$removeparam=mp_site_url
 ||html5.gamedistribution.com^$removeparam=mp_site_name

@@ -1,13 +1,13 @@
-! Checksum: xMjSO0kM1BnxGG6fMZEpcQ
-! Diff-Path: ../patches/251/251-s-1747270318-14400.patch
+! Checksum: gEkGcZSsBsapigcUPI9RRw
+! Diff-Path: ../patches/251/251-s-1748896843-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.72
-! TimeUpdated: 2025-05-15T00:48:26+00:00
+! Version: 2.0.8.77
+! TimeUpdated: 2025-06-02T20:36:56+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 15May2025v3
+! OriginalVersion: 02June2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -304,7 +304,7 @@ $removeparam=tduid,domain=~tradedoubler.com
 $document,removeparam=irclickid,domain=~axs.com
 $removeparam=irclicid
 $removeparam=intcmp
-$removeparam=sourceid,domain=~google.*
+$removeparam=sourceid,domain=~google.*|~youtube.com
 $document,removeparam=/^sharedid=.*$/i
 $removeparam=affiliates_ad_id
 $removeparam=campaign_id,domain=~kochava.com|~unisportstore.*
@@ -420,7 +420,7 @@ $removeparam=track_campaignid
 $removeparam=track_adgroupid
 $removeparam=track_keyword
 ! https://www•coolblue•nl/nokia?cmt=c_b%2Ccp_386708701%2Caid_1235851292258762%2Ct_kwd-77240886961109%3Aloc-129%2Cn_s%2Cd_c%2Clp_2488
-$removeparam=cmt
+$document,removeparam=cmt
 ! https://www•ellos•no/?extcmp=05_NO_Aff_Imp
 $removeparam=extcmp
 ! https://www•staypro•no/?at_gd=2B9E397233E3B6D5EF466E3BC0AC42F1885D8A50
@@ -1467,6 +1467,8 @@ $removeparam=tw_adid
 $removeparam=retailerSlug
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13139838
 $removeparam=uls_trackid
+! https://www•superkul•no/taste-them-all-dr-pepper-bokser-usa-import-seks-smake-pakketilbud-bundle-234239?gad_campaignid=15598895886
+$removeparam=gad_campaignid
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1480,7 +1482,7 @@ $document,removeparam=cid,domain=8days.sg|abcnews.go.com|adguard.com|adshares.ne
 ! https://www•amazon•com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
 ! https://github.com/AdguardTeam/AdguardFilters/commit/4ac959b7ffdcc75698a8c608fb8a3d243f2741fa
-$removeparam=ref,document,domain=404media.co|abebooks.com|accounts.binance.com|adobe.com|akuankka.fi|albiononline.com|altcustoms.com|app.blockfi.com|arvopaperi.fi|audible.*|baidu.com|bestbuy.com|bing.com|bitlox.com|bitwarden.com|blinkforhome.com|blogit.fi|bookdepository.com|brave.com|browserstack.com|business.twitter.com|buzzfeed.com|buzzfeednews.com|bybit.com|catch.com.au|cmjornal.pt|codehs.com|comixology.*|coop.no|daily.dev|deal.no|dell.com|depot.dev|digidip.net|domains.ch|droix.net|eset.com|etsy.com|ettoday.net|eventbrite.*|emsisoft.com|expo.io|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|fairphone.com|fig.io|foreca.*|freebies.indiegala.com|gallery.so|geeksforgeeks.org|github.io|goodreads.com|greenhouse.io|hintaopas.fi|hintaseuranta.fi|hs.fi|idenati.com|ikea.com|iltapulu.fi|imdb.com|is.fi|jasonsavard.com|kauppalehti.fi|kesaduuni.org|kickstarter.com|ku.fi|lex.page|mastermind.ac|mediuutiset.fi|megapornfreehd.com|merrell.com|mikrobitti.fi|motouutiset.fi|nebula.tv|oikotie.fi|omataloyhtio.fi|proton.me|protonvpn.com|puutarha.net|rakentaja.fi|record.pt|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|remppatori.fi|sahkovertailu.fi|sanoma.fi|scandinavianphoto.fi|schibsted.fi|semrush.com|shein.com|shodan.io|shopping.google.*|sketch.com|spiegel.de|sportskeeda.com|snapchat.com|storyhouseegmont.fi|suomi24.fi|talouselama.fi|target.com|tekniikkatalous.fi|telsu.fi|thedailybeast.com|theregister.com|tivi.fi|tokenmetrics.com|twitch.tv|udemy.com|uusisuomi.fi|umami.is|vultr.com|webhallen.no|woot.com|wormhole.app|yle.fi|zappos.com|zulily.com|emag.ro|account.microsoft.com|tierlist.com|lastampa.it|repubblica.it|ilsecoloxix.it|gelocal.it|limesonline.com|huffingtonpost.*
+$removeparam=ref,document,domain=404media.co|abebooks.com|accounts.binance.com|adobe.com|akuankka.fi|albiononline.com|altcustoms.com|app.blockfi.com|arvopaperi.fi|audible.*|baidu.com|bestbuy.com|bing.com|bitlox.com|bitwarden.com|blinkforhome.com|blogit.fi|bookdepository.com|brave.com|browserstack.com|business.twitter.com|buzzfeed.com|buzzfeednews.com|bybit.com|catch.com.au|cmjornal.pt|codehs.com|comixology.*|coop.no|daily.dev|deal.no|dell.com|depot.dev|digidip.net|domains.ch|droix.net|eset.com|etsy.com|ettoday.net|eventbrite.*|emsisoft.com|expo.io|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|fairphone.com|fig.io|foreca.*|freebies.indiegala.com|gallery.so|geeksforgeeks.org|github.io|goodreads.com|greenhouse.io|hintaopas.fi|hintaseuranta.fi|hs.fi|idenati.com|ikea.com|iltapulu.fi|imdb.com|is.fi|jasonsavard.com|kauppalehti.fi|kesaduuni.org|kickstarter.com|ku.fi|lex.page|mastermind.ac|mediuutiset.fi|megapornfreehd.com|merrell.com|mikrobitti.fi|motouutiset.fi|nebula.tv|oikotie.fi|omataloyhtio.fi|proton.me|protonvpn.com|puutarha.net|rakentaja.fi|record.pt|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|remppatori.fi|sahkovertailu.fi|sanoma.fi|scandinavianphoto.fi|schibsted.fi|semrush.com|shein.com|shodan.io|shopping.google.*|sketch.com|spiegel.de|sportskeeda.com|snapchat.com|storyhouseegmont.fi|suomi24.fi|talouselama.fi|target.com|tekniikkatalous.fi|telsu.fi|thedailybeast.com|theregister.com|tivi.fi|tokenmetrics.com|twitch.tv|udemy.com|uusisuomi.fi|umami.is|vultr.com|webhallen.no|woot.com|wormhole.app|yle.fi|zappos.com|zulily.com|emag.ro|account.microsoft.com|tierlist.com|lastampa.it|repubblica.it|ilsecoloxix.it|gelocal.it|limesonline.com|huffingtonpost.*|hcaptcha.com
 ! https://www•comixology•com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirroredTO, tunnistautuminen•suomi•fi)
 $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobile.com|nhl.com|zulily.com
@@ -1660,6 +1662,9 @@ $removeparam=/^asc_.*$/,document,domain=amazon.*|aboutamazon.com|amzn.to
 ||amazon.$document,removeparam=ccs_id
 ! https://www•amazon•com/Tinker-Bell-Enchanters-Tale/dp/1368089771?source=ps-sl-shoppingads-lpcontext&psc=1&smid=ATVPDKIKX0DER (31/12/2024)
 ||amazon.$document,removeparam=source
+! https://www•amazon•com/All-My-Friends-Are-Dead/dp/0811874559/ref=asc_df_0811874559?hvocijid=4601981859126236945-0811874559-&hvexpln=73&psc=1 (01/06/2025)
+||amazon.$removeparam=hvocijid
+||amazon.$removeparam=hvexpln
 !!! ——— Bing ———
 ! https://www•bing•com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
 ! https://cn•bing•com/?FORM=Z9FD1 (16/11/2023)
@@ -1936,6 +1941,8 @@ $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=zx
 ||ipv6.google.com^$document,removeparam=no_sw_cr
 ||ipv6.google.com^$document,removeparam=zx
+! https://myaccount•google•com/signinoptions/passkeys?source=marketing (27/05/2025)
+||myaccount.google.com^$removeparam=source
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.*/maps^$removeparam=utm_campaign
 @@://ipv6.google.com/maps^$removeparam=utm_campaign
@@ -4146,6 +4153,8 @@ ref=dtf.ru$document,removeparam=ref
 ||www.rawstory.com^$removeparam=rsplus
 ! https://em•dynamicyield•com/v1/email/dc/click/8788930/1141527/1141526?&cuid=558415&cuid_type=id&locale=default&version=030425&tag_ids=1141526
 ||em.dynamicyield.com^$removeparam=tag_ids
+! https://str-03•filestore•app/(...) (24/05/2025)
+||filestore.app^$document,removeparam=/^client_ip=$/
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
@@ -4189,6 +4198,13 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@||email-link.$removeparam
 !! https://manage•kmail-lists•com/subscriptions/unsubscribe?a=(...)&c=(...)&k=(...)&m=(...)&r=(...)
 @@||manage.kmail-lists.com/subscriptions^$removeparam
+! Account login pages are likely also a place where you generally don't want error messages from false positive parameter removals
+! https://github.com/DandelionSprout/adfilt/issues/1051
+@@/login-redirect/*$removeparam
+@@/login?$removeparam=referrer
+! Post-payment processing pages are also places where you generally wouldn't want error messages from false positive parameter removals
+@@||secure.kps-payment.de^$removeparam
+@@/Netaxept.jsp?$removeparam
 ! Fix driver download section
 @@||canon.*/supportproduct/gettabcontent$removeparam=referrer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89618
@@ -4198,10 +4214,6 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@||startpage.com/sp/qi$removeparam=sc
 ! Strangely prevents placeholders on flagpedia•net/index (24/11/2023)
 @@||flagpedia.net^$ping,xmlhttprequest,removeparam=gtm
-! Account login pages are likely also a place where you generally don't want error messages from false positive parameter removals
-! https://github.com/DandelionSprout/adfilt/issues/1051
-@@/login-redirect/*$removeparam
-@@/login?$removeparam=referrer
 ! https://new•reddit•com/r/uBlockOrigin/comments/1h1aaj7/ubo_on_firefox_android_is_causing_a_refresh_loop/ (thanks to stephhawk, who provided this rule)
 ! For when one really doesn't want to have a harder time with uBO's log error checker
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
