@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.73",
-			"timeUpdated": "2025-06-06T09:07:03+0000",
+			"version": "2.0.99.74",
+			"timeUpdated": "2025-06-06T16:08:04+0000",
 			"deprecated": false,
 			"languages": [
 				"ru"
@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.87.57",
-			"timeUpdated": "2025-06-06T12:10:46+0000",
+			"version": "2.3.87.61",
+			"timeUpdated": "2025-06-06T17:06:33+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.85.97",
-			"timeUpdated": "2025-06-06T12:10:57+0000",
+			"version": "2.0.85.99",
+			"timeUpdated": "2025-06-06T16:08:28+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.15.49",
-			"timeUpdated": "2025-06-06T12:10:58+0000",
+			"version": "2.1.15.50",
+			"timeUpdated": "2025-06-06T16:08:30+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -469,8 +469,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.65.16",
-			"timeUpdated": "2025-06-06T12:11:03+0000",
+			"version": "2.0.65.17",
+			"timeUpdated": "2025-06-06T14:07:39+0000",
 			"deprecated": false,
 			"languages": [
 				"ja"
@@ -577,35 +577,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/11.txt"
 		},
 		{
-			"filterId": 12,
-			"name": "(Obsolete) AdGuard Safari filter",
-			"description": "Special filter for Safari 9+ on iOS and Mac OS. We need a separate filter for Safari browser because it does not fully support our rules syntax. Already included in AdGuard Base filter.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://github.com/AdguardTeam/AdguardFilters/blob/master/SafariFilter/sections/README.md",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 6,
-			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/12.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "full",
-			"version": "2.0.2.92",
-			"timeUpdated": "2022-09-15T15:30:24+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				20,
-				11,
-				21,
-				22,
-				23,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/12.txt"
-		},
-		{
 			"filterId": 13,
 			"name": "AdGuard Turkish filter",
 			"description": "Filter list that specifically removes ads on websites in Turkish language.",
@@ -616,8 +587,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.57.11",
-			"timeUpdated": "2025-06-05T15:07:36+0000",
+			"version": "2.0.57.12",
+			"timeUpdated": "2025-06-06T14:07:46+0000",
 			"deprecated": false,
 			"languages": [
 				"tr"
@@ -645,8 +616,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.32.70",
-			"timeUpdated": "2025-06-06T12:11:12+0000",
+			"version": "2.2.32.73",
+			"timeUpdated": "2025-06-06T16:08:52+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -669,8 +640,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.81.71",
-			"timeUpdated": "2025-06-06T12:11:14+0000",
+			"version": "2.0.81.73",
+			"timeUpdated": "2025-06-06T16:08:53+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -730,8 +701,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.11.14",
-			"timeUpdated": "2025-06-01T16:07:40+0000",
+			"version": "2.0.11.15",
+			"timeUpdated": "2025-06-06T15:06:42+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -750,8 +721,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.63.42",
-			"timeUpdated": "2025-06-06T12:11:17+0000",
+			"version": "2.0.63.44",
+			"timeUpdated": "2025-06-06T15:06:43+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -772,8 +743,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.56.52",
-			"timeUpdated": "2025-06-06T12:11:18+0000",
+			"version": "2.0.56.54",
+			"timeUpdated": "2025-06-06T16:08:59+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -816,8 +787,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.34.21",
-			"timeUpdated": "2025-06-06T12:11:19+0000",
+			"version": "2.0.34.23",
+			"timeUpdated": "2025-06-06T16:09:00+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -888,8 +859,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.48.17",
-			"timeUpdated": "2025-06-06T12:44:47+0000",
+			"version": "2.1.48.18",
+			"timeUpdated": "2025-06-06T16:39:28+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -961,8 +932,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.51.99",
-			"timeUpdated": "2025-06-06T12:44:50+0000",
+			"version": "2.1.52.0",
+			"timeUpdated": "2025-06-06T16:39:31+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1013,8 +984,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.71.14",
-			"timeUpdated": "2025-06-06T12:44:50+0000",
+			"version": "2.1.71.15",
+			"timeUpdated": "2025-06-06T16:39:32+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1085,8 +1056,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.71.16",
-			"timeUpdated": "2025-06-06T12:44:52+0000",
+			"version": "2.1.71.17",
+			"timeUpdated": "2025-06-06T16:39:34+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -1160,8 +1131,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.71.15",
-			"timeUpdated": "2025-06-06T12:44:53+0000",
+			"version": "2.1.71.16",
+			"timeUpdated": "2025-06-06T16:39:35+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1188,8 +1159,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.71.14",
-			"timeUpdated": "2025-06-06T12:44:54+0000",
+			"version": "2.1.71.15",
+			"timeUpdated": "2025-06-06T16:39:37+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1225,84 +1196,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/114.txt"
 		},
 		{
-			"filterId": 115,
-			"name": "(Obsolete) RU AdList",
-			"description": "Additional filter list for websites in Russian.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://forums.lanik.us/viewforum.php?f=102",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 7,
-			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/advblock+cssfixes.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "high",
-			"version": "2.0.91.54",
-			"timeUpdated": "2021-07-26T05:00:44+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				8,
-				9,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/115.txt"
-		},
-		{
-			"filterId": 116,
-			"name": "(Obsolete) Wiltteri",
-			"description": "Finnish supplement list for EasyList",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://github.com/wiltteri/",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 7,
-			"subscriptionUrl": "https://raw.githubusercontent.com/wiltteri/wiltteri.txt/master/wiltteri.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "1.0.1.71",
-			"timeUpdated": "2017-12-04T11:19:37+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				9,
-				40,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/116.txt"
-		},
-		{
-			"filterId": 117,
-			"name": "(Obsolete) Polskie Filtry Wewnętrzne",
-			"description": "Polskie Filtry Wewnętrzne.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://github.com/KonoromiHimaries/PolishSubFilters",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 7,
-			"subscriptionUrl": "https://raw.githubusercontent.com/KonoromiHimaries/PolishSubFilters/master/internal-filters/wewnetrzne.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "high",
-			"version": "1.0.5.22",
-			"timeUpdated": "2020-07-26T17:00:44+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				5,
-				9,
-				41,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/117.txt"
-		},
-		{
 			"filterId": 118,
 			"name": "EasyPrivacy",
 			"description": "Privacy protection supplement for EasyList.",
@@ -1316,8 +1209,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.45.26",
-			"timeUpdated": "2025-06-06T12:44:57+0000",
+			"version": "2.1.45.27",
+			"timeUpdated": "2025-06-06T16:39:40+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1413,8 +1306,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.48.45",
-			"timeUpdated": "2025-06-06T12:45:05+0000",
+			"version": "2.1.48.46",
+			"timeUpdated": "2025-06-06T16:39:47+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1437,8 +1330,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.42.60",
-			"timeUpdated": "2025-06-06T12:45:06+0000",
+			"version": "2.1.42.61",
+			"timeUpdated": "2025-06-06T16:39:48+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1461,8 +1354,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.42.89",
-			"timeUpdated": "2025-06-06T12:45:06+0000",
+			"version": "2.0.42.90",
+			"timeUpdated": "2025-06-06T16:39:49+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1472,57 +1365,6 @@
 				18
 			],
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/124.txt"
-		},
-		{
-			"filterId": 200,
-			"name": "(Obsolete) ABP Japanese Filters",
-			"description": "日本語",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://code.google.com/p/adblock-plus-japanese-filter/",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 7,
-			"subscriptionUrl": "https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.0.96",
-			"timeUpdated": "2021-05-26T13:01:22+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				2,
-				14,
-				45,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/200.txt"
-		},
-		{
-			"filterId": 201,
-			"name": "(Obsolete) Web Annoyances Ultralist",
-			"description": "Blocks annoying web elements and reclaims lost screen real estate.",
-			"timeAdded": "2019-06-11T10:27:09+0000",
-			"homepage": "https://github.com/yourduskquibbles/webannoyances/",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 4,
-			"subscriptionUrl": "https://raw.githubusercontent.com/yourduskquibbles/webannoyances/master/ultralist.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "high",
-			"version": "1.0.8.71",
-			"timeUpdated": "2023-06-16T21:01:02+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				5,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/201.txt"
 		},
 		{
 			"filterId": 202,
@@ -1597,31 +1439,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/204.txt"
 		},
 		{
-			"filterId": 205,
-			"name": "(Obsolete) Schacks Adblock Plus liste",
-			"description": "dansk",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://henrik.schack.dk/adblock/",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 7,
-			"subscriptionUrl": "https://adblock.dk/block.csv",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.0.31",
-			"timeUpdated": "2020-10-13T12:44:48+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				49,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/205.txt"
-		},
-		{
 			"filterId": 206,
 			"name": "Xfiles",
 			"description": "Italian adblock filter list.",
@@ -1659,8 +1476,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.71.15",
-			"timeUpdated": "2025-06-06T12:45:13+0000",
+			"version": "2.1.71.16",
+			"timeUpdated": "2025-06-06T16:39:52+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1690,77 +1507,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/208.txt"
 		},
 		{
-			"filterId": 209,
-			"name": "(Obsolete) ADgk Mobile China list",
-			"description": "Filter for Chinese mobile sites.",
-			"timeAdded": "2022-07-21T07:17:05+0000",
-			"homepage": "https://github.com/banbendalao/ADgk",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 7,
-			"subscriptionUrl": "https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.0.18",
-			"timeUpdated": "2023-05-17T13:01:06+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				31,
-				19,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/209.txt"
-		},
-		{
-			"filterId": 210,
-			"name": "(Obsolete) Spam404",
-			"description": "This filter protects you from online scams.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://www.spam404.com/",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 5,
-			"subscriptionUrl": "https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt",
-			"trustLevel": "low",
-			"version": "2.0.2.44",
-			"timeUpdated": "2021-05-26T21:01:50+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				4,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/210.txt"
-		},
-		{
-			"filterId": 211,
-			"name": "(Obsolete) Anti-Adblock Killer | Reek",
-			"description": "Anti-Adblock Killer | Filters for Adblockers",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://github.com/reek/anti-adblock-killer",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 4,
-			"subscriptionUrl": "https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "1.0.1.69",
-			"timeUpdated": "2017-12-04T11:19:37+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				46,
-				50
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/211.txt"
-		},
-		{
 			"filterId": 212,
 			"name": "RU AdList: Counters",
 			"description": "RU AdList supplement for trackers blocking.",
@@ -1774,8 +1520,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.70.40",
-			"timeUpdated": "2025-06-06T12:45:15+0000",
+			"version": "2.1.70.41",
+			"timeUpdated": "2025-06-06T16:39:53+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1783,32 +1529,6 @@
 				8
 			],
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/212.txt"
-		},
-		{
-			"filterId": 213,
-			"name": "(Obsolete) RU AdList: BitBlock",
-			"description": "RU AdList supplement for annoyances and socials.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://forums.lanik.us/viewforum.php?f=102",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 7,
-			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/bitblock.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.91.52",
-			"timeUpdated": "2021-07-26T05:01:17+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				5,
-				8,
-				3,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/213.txt"
 		},
 		{
 			"filterId": 214,
@@ -1833,30 +1553,6 @@
 				10
 			],
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/214.txt"
-		},
-		{
-			"filterId": 215,
-			"name": "(Obsolete) Fanboy's Enhanced Tracking List",
-			"description": "Blocks common tracking scripts such as Omniture, Webtrends, Foresee, Coremetrics, Google Analytics, Touch Clarity and Channel Intelligence.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://secure.fanboy.co.nz/",
-			"expires": 43200,
-			"displayNumber": 3,
-			"groupId": 2,
-			"subscriptionUrl": "https://secure.fanboy.co.nz/enhancedstats.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.4.70",
-			"timeUpdated": "2023-11-06T13:01:09+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				2,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/215.txt"
 		},
 		{
 			"filterId": 216,
@@ -1928,32 +1624,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/218.txt"
 		},
 		{
-			"filterId": 219,
-			"name": "(Obsolete) ChinaList+EasyList",
-			"description": "Adblocking list for China. Note that it does not actually include EasyList.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://www.adtchrome.com/",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 7,
-			"subscriptionUrl": "http://sub.adtchrome.com/adt-chinalist-easylist.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.22.16",
-			"timeUpdated": "2022-07-06T13:01:54+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				9,
-				31,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/219.txt"
-		},
-		{
 			"filterId": 220,
 			"name": "CJX's Annoyances List",
 			"description": "Supplement for EasyList China+EasyList and EasyPrivacy.",
@@ -2002,53 +1672,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/221.txt"
 		},
 		{
-			"filterId": 222,
-			"name": "(Obsolete) Adblock-Persian list",
-			"description": "Persian ad blocking filter list.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://ideone.com/K452p",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 7,
-			"subscriptionUrl": "https://ideone.com/plain/K452p",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.0.34",
-			"timeUpdated": "2021-08-13T17:01:22+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				54,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/222.txt"
-		},
-		{
-			"filterId": 223,
-			"name": "(Obsolete) Fanboy's Swedish",
-			"description": "Filter list for websites in Swedish.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://www.fanboy.co.nz/",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 7,
-			"subscriptionUrl": "https://www.fanboy.co.nz/fanboy-swedish.txt",
-			"trustLevel": "low",
-			"version": "2.0.0.25",
-			"timeUpdated": "2020-10-13T12:45:24+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				55,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/223.txt"
-		},
-		{
 			"filterId": 224,
 			"name": "AdGuard Chinese filter",
 			"description": "EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.",
@@ -2059,8 +1682,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac_v2/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.38.44",
-			"timeUpdated": "2025-06-06T12:11:23+0000",
+			"version": "2.1.38.46",
+			"timeUpdated": "2025-06-06T15:06:48+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
@@ -2087,8 +1710,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.11.80",
-			"timeUpdated": "2025-06-06T12:45:21+0000",
+			"version": "2.0.11.81",
+			"timeUpdated": "2025-06-06T16:39:59+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2096,31 +1719,6 @@
 				45
 			],
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/225.txt"
-		},
-		{
-			"filterId": 226,
-			"name": "(Obsolete) Fanboy's Vietnamese",
-			"description": "Filter list for websites in Vietnamese.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://www.fanboy.co.nz/",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 7,
-			"subscriptionUrl": "https://www.fanboy.co.nz/fanboy-vietnam.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.0.25",
-			"timeUpdated": "2020-04-03T01:01:55+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				52,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/226.txt"
 		},
 		{
 			"filterId": 227,
@@ -2173,53 +1771,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/228.txt"
 		},
 		{
-			"filterId": 229,
-			"name": "(Obsolete) I don't care about cookies",
-			"description": "Hides annoying cookie warnings from almost all websites and saves you from unnecessary clicks.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://www.i-dont-care-about-cookies.eu/",
-			"expires": 43200,
-			"displayNumber": 100,
-			"groupId": 4,
-			"subscriptionUrl": "https://www.i-dont-care-about-cookies.eu/abp/",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.4.88",
-			"timeUpdated": "2023-12-14T09:01:36+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				6,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/229.txt"
-		},
-		{
-			"filterId": 230,
-			"name": "(Obsolete) Fanboy's Spanish/Portuguese",
-			"description": "Filter list for websites in Spanish and Portuguese",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://www.fanboy.co.nz/",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 7,
-			"subscriptionUrl": "https://fanboy.co.nz/fanboy-espanol.txt",
-			"trustLevel": "low",
-			"version": "2.0.0.27",
-			"timeUpdated": "2020-10-13T12:45:38+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				1,
-				17,
-				18,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/230.txt"
-		},
-		{
 			"filterId": 231,
 			"name": "EasyList Spanish",
 			"description": "Additional filter list for websites in Spanish.",
@@ -2233,8 +1784,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.71.16",
-			"timeUpdated": "2025-06-06T12:45:23+0000",
+			"version": "2.1.71.17",
+			"timeUpdated": "2025-06-06T16:40:01+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2258,8 +1809,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.71.34",
-			"timeUpdated": "2025-06-06T08:39:13+0000",
+			"version": "2.0.71.35",
+			"timeUpdated": "2025-06-06T16:40:05+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2432,8 +1983,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.8.28",
-			"timeUpdated": "2025-06-06T12:45:32+0000",
+			"version": "2.0.8.29",
+			"timeUpdated": "2025-06-06T16:40:09+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2441,29 +1992,6 @@
 				45
 			],
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/239.txt"
-		},
-		{
-			"filterId": 240,
-			"name": "(Obsolete) BarbBlock",
-			"description": "BarbBlock is a content blocking list with standalone browser extensions for Chrome and Firefox. It blacklists sites that have used DMCA takedowns to force removal from other content blocking lists. Such takedowns are categorically invalid, but they can be effective at intimidating small open-source projects into compliance.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://paulgb.github.io/BarbBlock/",
-			"expires": 43200,
-			"displayNumber": 5,
-			"groupId": 6,
-			"subscriptionUrl": "https://paulgb.github.io/BarbBlock/blacklists/adblock-plus.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.0.26",
-			"timeUpdated": "2020-04-03T01:02:19+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/240.txt"
 		},
 		{
 			"filterId": 241,
@@ -2479,35 +2007,14 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.54.17",
-			"timeUpdated": "2025-06-06T12:45:34+0000",
+			"version": "2.1.54.18",
+			"timeUpdated": "2025-06-06T16:40:12+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
 				6
 			],
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/241.txt"
-		},
-		{
-			"filterId": 242,
-			"name": "(Obsolete) NoCoin Filter List",
-			"description": "This filter disables browser-based miners such as coin-hive.",
-			"timeAdded": "2018-02-14T17:15:11+0000",
-			"homepage": "https://github.com/hoshsadiq/adblock-nocoin-list/",
-			"expires": 43200,
-			"displayNumber": 3,
-			"groupId": 5,
-			"subscriptionUrl": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
-			"trustLevel": "low",
-			"version": "1.0.2.44",
-			"timeUpdated": "2023-09-13T21:01:54+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				4,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/242.txt"
 		},
 		{
 			"filterId": 243,
@@ -2561,31 +2068,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/244.txt"
 		},
 		{
-			"filterId": 245,
-			"name": "(Obsolete) AlleBlock",
-			"description": "Filter that removes annoying elements from Polish e-commerce sites.",
-			"timeAdded": "2018-02-15T19:09:58+0000",
-			"homepage": "https://github.com/maciejtarmas/AlleBlock",
-			"expires": 43200,
-			"displayNumber": 2,
-			"groupId": 7,
-			"subscriptionUrl": "https://alleblock.pl/alleblock/alleblock.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3"
-			],
-			"trustLevel": "low",
-			"version": "2.0.1.35",
-			"timeUpdated": "2021-08-18T21:01:55+0000",
-			"deprecated": false,
-			"languages": [],
-			"tags": [
-				41,
-				5,
-				46
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v2/filters/245.txt"
-		},
-		{
 			"filterId": 246,
 			"name": "EasyList Polish",
 			"description": "Additional filter list for websites in Polish.",
@@ -2599,8 +2081,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.67.22",
-			"timeUpdated": "2025-06-06T12:45:35+0000",
+			"version": "2.1.67.23",
+			"timeUpdated": "2025-06-06T16:40:14+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2680,8 +2162,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.0.17.12",
-			"timeUpdated": "2025-06-05T16:48:17+0000",
+			"version": "2.0.17.13",
+			"timeUpdated": "2025-06-06T16:40:21+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2753,8 +2235,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.64.47",
-			"timeUpdated": "2025-06-06T12:45:44+0000",
+			"version": "2.0.64.48",
+			"timeUpdated": "2025-06-06T16:40:24+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"
