@@ -1,8 +1,8 @@
-! Checksum: C+/DsIwJ6He0a8MsqtYV2g
+! Checksum: IjTwXTrfQgCXcNsilGjdEw
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.34.3
-! TimeUpdated: 2025-06-03T06:09:49+00:00
+! Version: 2.0.34.21
+! TimeUpdated: 2025-06-06T12:11:19+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -37,6 +37,9 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/206855
+[$path=/my/orderlist]ozon.ru##div[data-widget="skuShelfGoods"]
+[$path=/my/orderlist]ozon.ru##div[data-widget="skuShelfGoods"] ~ div[data-widget="skuGrid"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206140
 ||elements.video/player.js$domain=forbes.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206453
@@ -271,6 +274,7 @@ agar.io#$#div[id^="agar-io_"] { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174014
 hwupgrade.it###live-player
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173398
+! https://github.com/AdguardTeam/AdguardFilters/issues/206735
 ! https://ga.de/bonn/stadt-bonn/palaestinenser-fordern-absage-von-bonner-veranstaltung_aid-107495383
 ||player.glomex.com^$domain=ga.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172949
@@ -3139,6 +3143,7 @@ market.yandex.*##div[data-apiary-widget-id^="/content/cms/CmsPageLayout-"] div[d
 !
 !
 ! Yandex.Mail
+mail.yandex.*##div[data-test-id="promopopup"]
 mail.yandex.*##div[class^="DisableAdsButton"]
 ! Yandex.Practicum
 practicum.yandex.*###frontend-developer
@@ -3167,6 +3172,21 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+avtocod.ru##div[id^="mntg-banner"]
+avtocod.ru###free-book-form
+mirf.ru##.right-stub-price
+4travel.jp##.u_bottomFixedBanner
+play.esea.net##a[href="https://fce.gg/S53ESEAtakeover"]
+||play.esea.net/images/takeover.png
+xnxx-ru.com,xnxx.com###header + div[style^="display"]:not(#content)
+avrebo.com##body > div.MuiModal-root
+||senoval.cdn.sports.ru/star/*-teaser.*.js$domain=cyber.sports.ru
+cyber.sports.ru##.page-teaser
+lootbar.gg##.recommend
+cs.money##.single__article a[href^="https://cs.money/ru/csgo/trade/"]
+cs.money##a[href^="https://pickem.cs.money/"]
+jayco.com###banner
+ryuugames.com###block-5
 lz.de###fb_werbeform
 visualcapitalist.com###block-8
 saechsische.de###piano-home-inline-saez
@@ -3280,7 +3300,7 @@ ficbook.net##.primary-box-with-button
 crxsoso.com##.right > div.hover-animate
 ||mirtvpc.cdnvideo.ru/mirtv/%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0%20%20%20.mp4
 gaming.amazon.com##div[data-a-target="prime-main"] div[data-a-target="MarketingPromotionBannerSectionRoot"]
-ilsole24ore.com###zephr-zone-footer
+leaddev.com,ilsole24ore.com###zephr-zone-footer
 ||membernotifications.aol.com/offers/aolHomepage/stickyFooter
 renderhub.com##.annLnk
 mu-navi.com,travel.co.jp##.pr-area
@@ -3486,7 +3506,7 @@ detmir.ru##header > div[data-testid="advContainer"]
 book24.ru##div[data-b24-banner-slot="top-banner"]
 klerk.ru##.advertising-text-block
 dzen.ru##div[class^="dzen-desktop--banner-"]
-dzen.ru##div[class^="dzen-desktop--corner-banner__"]
+dzen.ru##div[class*="-corner-banner__"]
 vegasslotsonline.com#$#footer + dialog[data-dialog-type="showModal"] { display: none !important; }
 vegasslotsonline.com#$#body.overflow-hidden { overflow: auto !important; }
 purexbox.com##iframe[src^="https://images.purexbox.com/888f524f3e38a/"]
@@ -5510,6 +5530,9 @@ jorudan.co.jp##.com_lp_frame
 metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class*="SportHome_bonusesCarousel__"]
 telecomasia.net,meta.reviews##.main-bonuses
 ! IObit
+||iobit.com/tpl/images/summer/anniversary/
+||iobit.com/*/summer/*banner-home*.jpg
+iobit.com##.rabbit-banner
 iobit.com##div[class*="-mask"]
 iobit.com##div[class*="bottom"][class~="on"]
 iobit.com##div[class*="pop"][class*="bg"]
@@ -7279,9 +7302,9 @@ beinsports.com,hobbyconsolas.com###dailymotion-pip-large-viewport
 ! https://go.tinys.click/jzEDHsQHbNTokEJrRorG timer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183825
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201607
-worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$##wpsafe-link { display: block !important; }
-worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$##wpsafe-generate { display: block !important; }
-worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$#div[id^="wpsafe-wait"] { display: none !important; }
+ryuugames.com,worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$##wpsafe-link { display: block !important; }
+ryuugames.com,worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$##wpsafe-generate { display: block !important; }
+ryuugames.com,worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$#div[id^="wpsafe-wait"] { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167083
 novelas-brasilieras.ru#$#.header { margin-bottom: 0px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166077
@@ -7326,10 +7349,6 @@ time.com,nypost.com#$#.jw-wrapper.jw-reset { transform: unset !important; width:
 gamingbible.com#$#.reddit-embed-bq { height: calc(100%) !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155360
 la.lv#$#.article-embed-video-iframe iframe { position: absolute !important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/153596
-infotamizhan.xyz#$##wpsafe-wait1 { display: none !important; }
-infotamizhan.xyz#$##wpsafe-link { display: block !important; }
-infotamizhan.xyz#$##wpsafe-generate { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/153669
 smartpress.by#$##header.fixed .header-bottom { position: static !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/153148
@@ -7914,7 +7933,6 @@ tech5s.co,yoshare.net#$##tp-snp1 { display: none !important; }
 ! https://github.com/uBlockOrigin/uAssets/issues/16373
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140037
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139845
-! https://github.com/AdguardTeam/AdguardFilters/issues/139812
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139670
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139739
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139256
@@ -7936,7 +7954,6 @@ tech5s.co,yoshare.net#$##tp-snp1 { display: none !important; }
 fontshub.pro#$#.download-share-box { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134283
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133857
-! https://github.com/AdguardTeam/AdguardFilters/issues/132625
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132493
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131082
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131116
