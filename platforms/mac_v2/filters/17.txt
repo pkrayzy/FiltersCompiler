@@ -1,9 +1,9 @@
-! Checksum: TSkTEbR4tBQlJBaQtTGqUw
-! Diff-Path: ../patches/17/17-s-1749222639-3600.patch
+! Checksum: A2hIAjfPrsXHbGpY/di3zg
+! Diff-Path: ../patches/17/17-s-1749809540-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.11.15
-! TimeUpdated: 2025-06-06T15:06:42+00:00
+! Version: 2.0.11.25
+! TimeUpdated: 2025-06-13T10:08:13+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -399,6 +399,20 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/207414#issuecomment-2969009233
+||provereno.media^$removeparam=tg_rhash
+! https://weathernews.jp/?fm=header
+||weathernews.jp^$removeparam=fm
+! https://github.com/AdguardTeam/AdguardFilters/issues/207330
+||grok.com^$removeparam=referrer
+! https://github.com/AdguardTeam/AdguardFilters/issues/207242
+||nikke-jp.com^$removeparam=pid
+||nikke.onelink.me^$removeparam=pid
+! https://github.com/AdguardTeam/AdguardFilters/issues/206165
+*$removeparam=siteNo,domain=m-emart.ssg.com|emart.ssg.com
+*$removeparam=ckwhere,domain=m-emart.ssg.com|emart.ssg.com
+*$removeparam=appPopYn,domain=m-emart.ssg.com|emart.ssg.com
+*$removeparam=service_id,domain=m-emart.ssg.com|emart.ssg.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206718
 ||gettranny.com^$removeparam=campaign
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206757
@@ -434,7 +448,6 @@ $removeparam=fb_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205132
 /viewforum.php?$removeparam=sid
 /viewtopic.php?$removeparam=sid
-.php?$removeparam=PHPSESSID
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204732
 ||html5.gamedistribution.com^$removeparam=mp_site_url
 ||html5.gamedistribution.com^$removeparam=mp_site_name
@@ -877,14 +890,10 @@ $removeparam=sub_rt,domain=comemo.nikkei.com|diehardtales.com|greenplanet.kaneka
 ||gptgirlfriend.online^$removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187852
 ||fantasygf.ai^$removeparam=linkId
-! https://github.com/AdguardTeam/AdguardFilters/issues/187859
-||pornjourney.ai^$removeparam=referral
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187861
 ||land.muah.ai^$removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187870
 ||getidol.com^$removeparam=ref
-! https://github.com/AdguardTeam/AdguardFilters/issues/187871
-||pornx.ai^$removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187626
 ||vodafone.com.tr^$removeparam=tracking_cid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187868
@@ -1020,8 +1029,6 @@ $removeparam=from,domain=doujinnomori.com|shinshi-manga.net|echiman.com|dojin-na
 ||m.otenki.com^$removeparam=af
 ! https://www.carseven.co.jp/assess?from=contents_floating
 ||carseven.co.jp^$removeparam=from
-! https://github.com/AdguardTeam/AdguardFilters/issues/181725
-||email1.io^$removeparam=aid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181404
 ||blogmura.com^$removeparam=p_cid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181299
@@ -2986,9 +2993,6 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 @@||glavnoe.life^$removeparam=utm_referrer
 @@||glavnoe.life^$removeparam=utm_source
 @@||glavnoe.life^$removeparam=utm_term
-@@||kortko.cc^$removeparam=utm_campaign
-@@||kortko.cc^$removeparam=utm_content
-@@||kortko.cc^$removeparam=utm_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194309 BookLive link
 @@||booklive.jp/vcentry/landing?$removeparam=vc_lpp
 ! https://www.reddit.com/r/uBlockOrigin/comments/1h1aaj7/ubo_on_firefox_android_is_causing_a_refresh_loop/
@@ -3057,7 +3061,6 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 @@||cdn-fck.tnaflix.com^$removeparam
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/356#issuecomment-314934554
 @@||xe.com^$removeparam
-@@||girafa.com.br^$removeparam
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52925
 @@||ofeminin.pl/*&srcc=ucs$removeparam=utm_source
 @@||auto-swiat.pl/*&srcc=ucs$removeparam=utm_source

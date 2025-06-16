@@ -1,9 +1,9 @@
-! Checksum: jFadKXGLQo6XNp3+yuTXvw
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1749171169-14400.patch
+! Checksum: Jm7MrB4VLPQruYX59+AGrA
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1749775984-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.21.66
-! TimeUpdated: 2025-06-06T00:48:06+00:00
+! Version: 2.0.21.73
+! TimeUpdated: 2025-06-13T00:48:18+00:00
 ! Expires: 12 hours (update frequency)
 ||adgirl.yes24.com^
 ||ad.api.adwiser.kr^
@@ -1548,6 +1548,7 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+qquing.net##.ad-actual
 pedia.watcha.com##a[href*="//cgv.kr/"][href*="?browser_open_type=external"]
 search.naver.com##div[data-slog-container*="_ad"]
 yna.co.kr##aside[class^="aside-box"]:has(yna-ad-script)
@@ -3320,6 +3321,7 @@ booktoki461.com,booktoki462.com,booktoki463.com,booktoki464.com,booktoki465.com,
 manatoki464.net,manatoki465.net,manatoki466.net,manatoki467.net,manatoki468.net,manatoki489.net,manatoki490.net,manatoki491.net,manatoki492.net,manatoki493.net,manatoki494.net,manatoki495.net,manatoki496.net#?#ul[class] > li:has(> a[href^="/guarantee.php"])
 [$domain=/newtoki\[0-9\]+\.com/]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
 [$domain=/^yagong\[0-9\]+\.com$/]##div[class*="border"]:has(> a[href][target*="_blank"])
+m.fmkorea.com#$?#.bd.bd_mobile:not(:has(*)):has(~ #spot form[action][method].search) { remove: true; }
 m.fmkorea.com#$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
 search.daum.net#$?#body.nate aside#mAside > div[disp-attr]:has(> .wing_nate) + div[disp-attr] { margin-top: 0px !important; }
 search.daum.net#$?#aside#mAside > div[disp-attr]:has(> .content_sponsor) + div[disp-attr] { margin-top: 0px !important; }
@@ -3525,7 +3527,7 @@ t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 !#safari_cb_affinity
 t.hi098123.com#$#.tabad { top: -100px !important; }
-checkwhoiam.tistory.com#%#//scriptlet('prevent-setTimeout', 'adblock')
+checkwhoiam.tistory.com#%#//scriptlet('set-constant', 'adblockChecker', 'noopFunc')
 ||shana.pe.kr/shana_check/script.js
 kilho.net###detect-alert
 vod.jtbc.co.kr#@#.ad-unit:not(.textads)
