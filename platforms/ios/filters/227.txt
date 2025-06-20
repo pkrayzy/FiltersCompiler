@@ -1,14 +1,14 @@
-! Checksum: udRq9n+zDOmWMZxObQM3Iw
-! Diff-Path: ../patches/227/227-s-1750251023-14400.patch
+! Checksum: BtyuVq4NuFyRFfVFi/OTsg
+! Diff-Path: ../patches/227/227-s-1750351454-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.21.76
-! TimeUpdated: 2025-06-18T12:45:32+00:00
+! Version: 2.0.21.80
+! TimeUpdated: 2025-06-19T16:39:38+00:00
 ! Expires: 1 day (update frequency)
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2025.0618.1
+! OriginalVersion: 2025.0619.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -555,6 +555,7 @@ m.fmkorea.com##iframe[src*="//loader.fmkorea.com/"][src*="_loader/"]
 /data/banner.json?$domain=~nintendo.app|~nintendo.at|~nintendo.be|~nintendo.biz|~nintendo.ca|~nintendo.ch|~nintendo.cl|~nintendo.cloud|~nintendo.cn|~nintendo.co|~nintendo.co.il|~nintendo.co.jp|~nintendo.co.kr|~nintendo.co.nz|~nintendo.co.uk|~nintendo.co.za|~nintendo.com|~nintendo.com.ar|~nintendo.com.au|~nintendo.com.bd|~nintendo.com.br|~nintendo.com.hk|~nintendo.com.mx|~nintendo.com.np|~nintendo.com.pe|~nintendo.cz|~nintendo.de|~nintendo.dk|~nintendo.es|~nintendo.eu|~nintendo.fi|~nintendo.fr|~nintendo.gr|~nintendo.hk|~nintendo.hu|~nintendo.ie|~nintendo.it|~nintendo.jp|~nintendo.kz|~nintendo.lt|~nintendo.mx|~nintendo.net|~nintendo.nl|~nintendo.no|~nintendo.online|~nintendo.org.il|~nintendo.pe|~nintendo.pl|~nintendo.pt|~nintendo.ro|~nintendo.ru|~nintendo.sa|~nintendo.se|~nintendo.shop|~nintendo.sk|~nintendo.store|~nintendo.tv|~nintendo.tw
 /ad-manager.min.js
 !
+||issuetory.co.kr/wp-content/boost-cache/static/4f167c936d.min.js
 ||pedia.watcha.com/api/contents/*/venus|
 ||betanews.net/data/beta/upload/save/banner/
 ||newsis.com/h_www/advertise/
@@ -1371,6 +1372,10 @@ m.fmkorea.com##iframe[src*="//loader.fmkorea.com/"][src*="_loader/"]
 !
 ! DOMAIN-REFRESHER: START
 !
+||img.mingk.xyz/data/file/passfree/
+||yasyadong.*/?_Action=adv&_Method$domain=yasyadong.*
+/^https:\/\/(www\.)?aniya24\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[a-z]+[0-9]+x[0-9]+\./$domain=aniya24.com
+||aniya24.com/wp-content/uploads/*.gif
 ||sutom.org/wp-content/uploads/*.webp
 ||blogger.googleusercontent.com/img/$domain=yasyadong.*
 .gif^$image,domain=itrulli.com
@@ -1423,8 +1428,7 @@ m.fmkorea.com##iframe[src*="//loader.fmkorea.com/"][src*="_loader/"]
 /^https:\/\/jusoyo[0-9]+\.(net|com)\/data\/apms\/background\//
 /^https:\/\/jusoyo[0-9]+\.(net|com)\/.+\.webp$/
 /^https:\/\/yadong[0-9]+\.net\/Uploads\/images\/\d{4}-\d{2}-\d{2}/
-||blogger.googleusercontent.com^$domain=yasyadong.com
-||i.imgur.com^$domain=yasyadong.com
+||i.imgur.com^$domain=yasyadong.*
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z]+[0-9]+x[0-9]+\//
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z0-9_-]+\.gif$/
 ||agitnovel.*/data/file/novel/banner/$domain=agitnovel.com.bd|agitnovel.com.np|agitnovel.xyz
@@ -1592,6 +1596,8 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+issuetory.co.kr##.code-block-6
+issuetory.co.kr##.entry-content.read-details > .code-block
 damoang.net###sidebar-site-menu > h3:has(> a[href="https://damoang.net/promotion"])
 damoang.net###sidebar-site-menu > h3:has(> a[href="https://damoang.net/promotion"]) + .line-top.mb-4
 qquing.net##.ad-actual
@@ -2828,6 +2834,7 @@ kio.ac##main > div:has(> div > div > a > img)
 !
 ! DOMAIN-REFRESHER: START
 !
+aniya24.com##.popup-container
 sutom.org##div[data-id="9429d5d"]
 sutom.org###sutom-pro
 blacktoon1.info##div[data-mesh-id="comp-m8jy31rninlineContent"]
@@ -3361,6 +3368,7 @@ banhub.xyz#$#html{ overflow: visible !important; }
 ! DOMAIN-REFRESHER: START
 !
 zzzz.lol#$?#.ent_wrapper.slide-vertical-effect .ent_news:not(:has(.ent_prefix:contains(ZZAPFLIX))) { remove: true; }
+aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^="beeteam"][class*="-player-sub-element"] { remove: true; }
 !
 ! DOMAIN-REFRESHER: END
 pedia.watcha.com#?#div[class] > section[class*=" "]:has(> section > a h3 > p:contains( · AD))
