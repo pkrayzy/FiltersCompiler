@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 5KipTs310xCY9UlR4ZDA0g
-! Diff-Path: ../patches/203_optimized/203_optimized-s-1750121543-14400.patch
+! Checksum: 52wQY+U2UfCDlp3I2146lA
+! Diff-Path: ../patches/203_optimized/203_optimized-s-1750783489-14400.patch
 ! Title: Hungarian filter (Optimized)
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.4.7
-! TimeUpdated: 2025-06-17T00:47:42+00:00
+! Version: 2.0.4.10
+! TimeUpdated: 2025-06-24T16:39:57+00:00
 ! Expires: 5 days (update frequency)
 ##.ad__main
 ##.adblokk
@@ -831,7 +831,7 @@ offline.hu##.ads
 olcsobbat.hu##[class*="Advert"]
 olcsobbat.hu##[id*="hirdetes"]
 olcsobbat.hu###datasheetNavHelp
-online-filmek.ac,online-filmek.me###azidodpazarlod, #azidodpazarlod2
+online-filmek.ac,online-filmek.me##[id^="azidodpazarlod"]
 online-filmek.ac,online-filmek.me##.ad_mrg
 online-filmek.ac,online-filmek.me##.details-main-panel + span
 onlinecegjegyzek.hu##[class*="hirdetes"]
@@ -1451,6 +1451,8 @@ hu###szechenyi2020-wrapper
 hu###szechenyi
 hu###szechenyi-toggle
 hu###szechenyi_2020_logo
+hu###szechenyi-banner
+hu##.szechenyi2020-top-infoblokk
 hu##.sz2020-logo
 112press.hu###cookie-law
 24.hu##.a-hirstartRecommender
@@ -1501,6 +1503,7 @@ bpiautosok.hu###onesignal-slidedown-container
 bpiautosok.hu##.extpp-container
 budapestikozmuvek.hu###banner
 budapestpark.hu###cooker_container
+budapest.hu###cc--main
 calculat.org##.cookies
 cartourmagazin.hu###cadre_alert_cookies
 cartourmagazin.hu###pa-push-notification-subscription
@@ -1571,6 +1574,7 @@ hellovidek.hu##.fbcont2
 iho.hu##.social-icon
 iho.hu##.newsletter-box
 iho.hu##.article-text > p
+index.hu###partner-site-popup
 infostart.hu##.am_targetvideo_container
 infostart.hu##.flyout
 infostart.hu##.notification-popup
@@ -1931,9 +1935,7 @@ magyarhang.org,hang.hu##+js(abort-current-script, document.getElementById, ai_ru
 myonlineradio.hu##+js(set-constant, ENABLE_PAGE_LEVEL_ADS, true)
 pcworld.hu##+js(remove-class, have-ad, body)
 port.hu##+js(addEventListener-defuser, DOMContentLoaded, window.ado.blocked)
-online-filmek.ac##+js(no-fetch-if, api)
-online-filmek.ac##+js(no-fetch-if, ads)
-online-filmek.ac##+js(no-fetch-if, mode:cors)
+online-filmek.ac##+js(no-fetch-if, .js)
 rubyvidhub.com##+js(remove-node-text, script, undefined)
 karpathir.com##[class^="k"][class*="-container"][class*="-2"][class$="-hide"]
 ||galaxypush.com/css/styles.min.css^$redirect=noop.css,domain=online-filmek.ac|online-filmek.me,important,stylesheet

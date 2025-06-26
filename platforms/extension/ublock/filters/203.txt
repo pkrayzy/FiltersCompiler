@@ -1,16 +1,16 @@
 ![Adblock Plus 2.0]
-! Checksum: wx/3x0kz+S/s1Uq5KZEWwQ
-! Diff-Path: ../patches/203/203-s-1750121543-14400.patch
+! Checksum: 1sOlLoE0MUhe/pfCUlCx7g
+! Diff-Path: ../patches/203/203-s-1750783489-14400.patch
 ! Title: Hungarian filter
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.4.7
-! TimeUpdated: 2025-06-17T00:47:42+00:00
+! Version: 2.0.4.10
+! TimeUpdated: 2025-06-24T16:39:57+00:00
 ! Expires: 5 days (update frequency)
 !
-! Checksum: N5ha6GOWY8RogVi2bL7CdQ
-! OriginalVersion: 202506160907
+! Checksum: fEQRiBT/WER+HZ1FmHdAOw
+! OriginalVersion: 202506241131
 ! Title: Hufilter for AdGuard
-! Last modified: 16 Jun 2025 09:07 UTC
+! Last modified: 24 Jun 2025 11:31 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://hufilter.hu
 ! Licence: CC-BY, see https://creativecommons.org/licenses/by/4.0/
@@ -875,7 +875,7 @@ offline.hu##.ads
 olcsobbat.hu##[class*="Advert"]
 olcsobbat.hu##[id*="hirdetes"]
 olcsobbat.hu###datasheetNavHelp
-online-filmek.ac,online-filmek.me###azidodpazarlod, #azidodpazarlod2
+online-filmek.ac,online-filmek.me##[id^="azidodpazarlod"]
 online-filmek.ac,online-filmek.me##.ad_mrg
 online-filmek.ac,online-filmek.me##.details-main-panel + span
 onlinecegjegyzek.hu##[class*="hirdetes"]
@@ -1519,6 +1519,8 @@ hu###szechenyi2020-wrapper
 hu###szechenyi
 hu###szechenyi-toggle
 hu###szechenyi_2020_logo
+hu###szechenyi-banner
+hu##.szechenyi2020-top-infoblokk
 hu##.sz2020-logo
 ! hu###qc-cmp2-container
 !-------------------------------------------------------------------------------!
@@ -1574,6 +1576,7 @@ bpiautosok.hu###onesignal-slidedown-container
 bpiautosok.hu##.extpp-container
 budapestikozmuvek.hu###banner
 budapestpark.hu###cooker_container
+budapest.hu###cc--main
 calculat.org##.cookies
 cartourmagazin.hu###cadre_alert_cookies
 cartourmagazin.hu###pa-push-notification-subscription
@@ -1648,6 +1651,7 @@ iho.hu##.social-icon
 iho.hu##.newsletter-box
 ! adbook nagger
 iho.hu##.article-text > p
+index.hu###partner-site-popup
 infostart.hu##.am_targetvideo_container
 infostart.hu##.flyout
 infostart.hu##.notification-popup
@@ -2103,10 +2107,9 @@ pcworld.hu##+js(remove-class, have-ad, body)
 ! https://github.com/hufilter/hufilter/issues/15
 port.hu##+js(addEventListener-defuser, DOMContentLoaded, window.ado.blocked)
 ! https://github.com/uBlockOrigin/uAssets/issues/25482
-online-filmek.ac##+js(no-fetch-if, api)
-online-filmek.ac##+js(no-fetch-if, ads)
 ! https://github.com/uBlockOrigin/uAssets/issues/28850
-online-filmek.ac##+js(no-fetch-if, mode:cors)
+! https://github.com/uBlockOrigin/uAssets/issues/28850#issuecomment-2995469159
+online-filmek.ac##+js(no-fetch-if, .js)
 ! https://github.com/uBlockOrigin/uAssets/issues/27256#issuecomment-2670818969
 rubyvidhub.com##+js(remove-node-text, script, undefined)
 karpathir.com##[class^="k"][class*="-container"][class*="-2"][class$="-hide"]

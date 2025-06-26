@@ -1,9 +1,9 @@
-! Checksum: QxPgzoSTAzKbgR9iRT6qJg
-! Diff-Path: ../patches/17/17-s-1750339205-3600.patch
+! Checksum: EfOlot+rTLSh6dv4mZvumg
+! Diff-Path: ../patches/17/17-s-1750788799-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.11.26
-! TimeUpdated: 2025-06-19T13:16:12+00:00
+! Version: 2.0.11.28
+! TimeUpdated: 2025-06-24T18:09:41+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -399,6 +399,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208058
+||olybet.lv^$removeparam=ref
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207414#issuecomment-2969009233
 ||provereno.media^$removeparam=tg_rhash
 ! https://weathernews.jp/?fm=header
@@ -2668,6 +2670,7 @@ $removeparam=search_domain,domain=ya.ru|yandex.*
 ||ebay.*/itm$removeparam=customid
 ||ebay.*/itm$removeparam=toolid
 ||ebay.*/itm$removeparam=var
+||ebay.*/itm$removeparam=_skw
 ||ebay.*/str$removeparam=_trksid
 ! https://github.com/uBlockOrigin/uAssets/issues/25247
 ! ||www.ebay.$removeparam=_trksid

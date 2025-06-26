@@ -1,8 +1,8 @@
-! Checksum: dhqz89kEGB5fXyQS075QkA
+! Checksum: P60pZ7k2mNzoG9dfEXUbsA
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.65.55
-! TimeUpdated: 2025-06-20T19:06:20+00:00
+! Version: 2.0.65.66
+! TimeUpdated: 2025-06-25T18:09:04+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -420,6 +420,8 @@
 !
 !
 !
+! anti-adb
+@@||koken.nicovideo.jp^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206406
 ||2ch.logpo.jp/Scripts/bab.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206330
@@ -532,9 +534,6 @@ best-hit.tv,h178.com,j-baseball.club,j-basketball.club,jukenbbs.com###gStickyAd
 @@||jukenbbs.com^$generichide
 ! https://github.com/uBlockOrigin/uAssets/issues/20629
 @@||shindanmaker.com^$generichide
-! https://github.com/AdguardTeam/AdguardFilters/issues/160241
-! https://github.com/AdguardTeam/AdguardFilters/issues/159769
-@@||freepdfcomic.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156135
 !+ PLATFORM(ios, ext_android_cb)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=qa.crefan.jp
@@ -1451,7 +1450,7 @@ iup.jp,name-power.net,arty-matome.com,entertainer-media.net,aikru.com,baseball-m
 ! ##.dfad
 minnano-casino.com,cavemanerg.com,volx.jp,news.sukupara.jp,bugbug.news,camp-house.com,tipstour.net,ani-chat.net,angry-mhm.com,ladybaba.net,iine-kunitachi.net,2d-erocafe.com,acueducto.jp,akashi-journal.com,analsexgay.net,biru-mall.com,dspt.net,go-naminori.com,happyrose.city,kabutie.co.jp,libertaction.co.jp,matsuiakinori.com,nerima-kosodate.net,optronics-media.com,ovninavi.com,slender-model.com,toyo-2.jp,we-love.shizuoka.jp##.dfad
 ! ##.ad-banner
-360life.shinyusha.co.jp,wealthadvisor.co.jp,might-co.com,retty.me,hentai-covers.site,109cinemas.net,4545.to,bunshun.jp,eikaiwa.dmm.com,gizmodo.jp,hanakomama.jp,jetstar.com,techno-edge.net##.ad-banner
+live.nicovideo.jp,360life.shinyusha.co.jp,wealthadvisor.co.jp,might-co.com,retty.me,hentai-covers.site,109cinemas.net,4545.to,bunshun.jp,eikaiwa.dmm.com,gizmodo.jp,hanakomama.jp,jetstar.com,techno-edge.net##.ad-banner
 ! ##.main-container-ads - can cause FP, use FQDN
 akege.blog.jp,badminton.doorblog.jp,buybuykorea.doorblog.jp,dondonwork.com,egm.doorblog.jp,idolgekijyo.doorblog.jp,ikuji-news.com,j02r.blog.jp,kagekidan.net,kijobibouroku.com,kimagure-kijyo.com,kusainews.com,mankai-zakura.doorblog.jp,maromeru.com,momoclomatomex.com,mon-st.blog.jp,nandemomatomedan.com,nijimoemoe.com,pachinkolist.com,rare-channel.com,mashlife.doorblog.jp,ringofred53.com,shingekikyojin.doorblog.jp,shuraba.net,shurabanote.com,taorun.xyz,toralucky.fun,uwasakijo.net,wiiups.com,zootennis.fun,genshin.blog.jp,takegon.jp,moemoeanime.blog.jp##.main-container-ads
 ! ###sad
@@ -1467,13 +1466,19 @@ gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
 !
 ! NOTE: Specific rules
 !
+h1g.jp###menubar > div[style^="width:330px; height:2"][style$="auto;"][align="center"]
+h1g.jp##div[style*="width:336px; height:280px"]
+h1g.jp##div[style*="width:728px; height:90px"]
+h1g.jp##div[style="witdh:728px; height:90px;"]
+h1g.jp##div[style$="width:728px; height:400px; margin:auto;"]
+cartune.me##.text-center.min-h-\[250px\]
+auctions.yahoo.co.jp###auction_spn
 roboin.io##._169wog0
 metyayaba.com##.fixed_widget
 metyayaba.com##.left-side-widget_area
 ||kamikouryaku.*/files/hybrid-adsense-loader.js
 kamikouryaku.net,kamikouryaku.com##.adsense2
 play.ponta.jp##.bnr-header
-freepdfcomic.com###myIframe
 japannewsnavi.com##.douga-ads
 ske48matoeme.com##.article-body-more b > span[style="font-size: x-small;"]
 ske48matoeme.com##div[class^="article-body"] > a[href="https://akbgorilla.antenam.info/"] ~ br
@@ -7205,7 +7210,7 @@ appbank.net##.entry-list-item-native-ad
 server-navi.info##.box_s
 server-navi.info##.boxp
 server-navi.info##table[width="180"]:nth-last-of-type(-n+2)
-dokuo666.blog98.fc2.com,newssokuhou666.blog.fc2.com##div[style*="width:300px; height:250px"]
+h1g.jp,dokuo666.blog98.fc2.com,newssokuhou666.blog.fc2.com##div[style*="width:300px; height:250px"]
 ||smashop.jp/img/sml/sml-dp.jpg
 smashop.jp###r1_advertisement
 smashop.jp##.ad_navigation_300_250
@@ -9302,6 +9307,13 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208209
+mobilegadget.jp#@#.header-ad
+! https://github.com/AdguardTeam/AdguardFilters/issues/208191
+! bad design by the site
+! QR code in the sidebar blocked
+@@||edayo.ad-drop.jp/yie/ld/jsk$script,domain=h1g.jp
+@@||js.ad-drop.jp/t/$script,domain=h1g.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202622
 ! Website is broken when blocked scripts are removed from the page,
 ! so as a workaround, "redirect-rule" is used.
