@@ -1,9 +1,9 @@
-! Checksum: QMwWtR5UdGg4omWhwa1N6A
-! Diff-Path: ../patches/17/17-s-1751105487-3600.patch
+! Checksum: jKIK9PhrdkNJ4aDH8MiNNA
+! Diff-Path: ../patches/17/17-s-1751443981-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.11.30
-! TimeUpdated: 2025-06-28T10:07:41+00:00
+! Version: 2.0.11.33
+! TimeUpdated: 2025-07-02T08:09:26+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -399,6 +399,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208654
+||domclick.ru^$removeparam=from
 ! buydomains.com
 ||buydomains.com/lander/*?domain=$removeparam
 ! DuckDuckGo ads/shopping
@@ -910,8 +912,6 @@ $removeparam=sub_rt,domain=comemo.nikkei.com|diehardtales.com|greenplanet.kaneka
 ||vodafone.com.tr^$removeparam=tracking_cid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187868
 ||juicy-ai.com^$removeparam=ref
-! https://github.com/AdguardTeam/AdguardFilters/issues/187873
-||angelgf.com^$removeparam=via
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187865
 ||slushy.com^$removeparam=af
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187853
@@ -978,8 +978,6 @@ ref=producthunt^$removeparam=ref
 ||news.yahoo.co.jp^$removeparam=date
 ||news.yahoo.co.jp^$removeparam=ctg
 ||news.yahoo.co.jp^$removeparam=bt
-! lumosvpn.com promo
-||lumosvpn.com/?cep=$removeparam
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184386
 ||shop.adidas.jp^$removeparam=source_caller
 ||shop.adidas.jp^$removeparam=shortlink
@@ -2091,9 +2089,6 @@ $removeparam=oref,domain=defenseone.com|govexec.com|nextgov.com|route-fifty.com
 ||toomics.com^$removeparam=subpid
 ||toomics.com^$removeparam=channel
 ||toomics.com^$removeparam=gen
-! get-express-vpns.com
-||get-express-vpns.com^$removeparam=sxid
-||get-express-vpns.com^$removeparam=ttorigin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123349
 ||zavvi.com^$removeparam=affil
 ||zavvi.com^$removeparam=sv_campaign_id
@@ -2679,9 +2674,10 @@ $removeparam=search_domain,domain=ya.ru|yandex.*
 ||www.ebay.$removeparam=campid
 ||ebay.*/itm$removeparam=customid
 ||ebay.*/itm$removeparam=toolid
-||ebay.*/itm$removeparam=var
 ||ebay.*/itm$removeparam=_skw
 ||ebay.*/str$removeparam=_trksid
+! https://github.com/AdguardTeam/AdguardFilters/issues/208605
+! ||ebay.*/itm$removeparam=var
 ! https://github.com/uBlockOrigin/uAssets/issues/25247
 ! ||www.ebay.$removeparam=_trksid
 !

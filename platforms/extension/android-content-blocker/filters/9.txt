@@ -1,8 +1,8 @@
-! Checksum: K3NaQh/pC/puHYPTbM/VLQ
+! Checksum: Fkzz96pSjWnV7BXxlauipQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.30.60
-! TimeUpdated: 2025-06-28T18:08:12+00:00
+! Version: 2.0.30.66
+! TimeUpdated: 2025-07-02T07:08:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23,6 +23,7 @@
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
 !
+||cibersexo.net^$third-party
 ||ceremonyjogglecling.com^
 ||simpleads.com.br^$third-party
 ||upeex.com.br^
@@ -188,6 +189,16 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208565
+||guiavidaesaude.com/wp-settings/ads_anuncio.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/208564
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||popads.net/js/adblock.js$xmlhttprequest,domain=fgtd.online
+! https://github.com/AdguardTeam/AdguardFilters/issues/208581
+||eshentai.tv/app/eshentai/themes/assets/js/4dguard.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/208409
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=disneycdn.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208339
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||cinemastervip.com/wp-content/plugins/azo-ads/assets/js/ab-detector.min.js$domain=cinemastervip.com
@@ -1700,6 +1711,11 @@ c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,me
 !
 ! NOTE: Specific rules
 !
+pornogratisdiario.com,videosdemadurasx.com##div[style*="inset:"][style*="z-index:"][style*="overflow:"]
+pornogratisdiario.com##a[rel^="sponsored"]
+comidaefamilia.food##.content > .box > div[data-placement-id]
+anroll.net##img[alt="gg-bet-anroll"]
+||static.anroll.net/app-images/banner*
 cnnbrasil.com.br##div[id^="sidebar_ads"]
 cnnbrasil.com.br###ads-banner-header
 cxtvenvivo.com##.ad-titulo
@@ -1747,7 +1763,7 @@ yelitzonpc.com##center > a[target="_blank"]
 misprogramaspc.com##.vn-green > a[target="_blank"]
 tecmundo.com.br##div[class^="styles_ads_"]
 gamestorrents.app##img[onclick*="click.ggpickaff"]
-muyinteresante.com##.banner
+guiavidaesaude.com,muyinteresante.com##.banner
 macmagazine.com.br###bannertopoWrapper
 dragonball.sullca.com###stickyBanner
 dragonball.sullca.com##body > a.fixed[target="_blank"]
@@ -3856,9 +3872,6 @@ infojobs.com.br##.advisor-banner-container
 sussytoons.*,aovivo.gratis###anuncio
 extremotv.info##iframe[src^="http://extremotv"][src*=".php"]:not([src*="lateral.php"])
 eusouandroid.co##body .td-header-style-10 .td-g-rec-id-header .adsbygoogle
-animesorion.tv##body > center
-animesorion.tv###sidebarGeral > .sidebar:first-child
-animesorion.tv###content > .contentBox + center
 voxel.com.br##.widget-taboola
 voxel.com.br##.ad-leaderboard-wrapper
 deportes.televisa.com##.prime-banner
