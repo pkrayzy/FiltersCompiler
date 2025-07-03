@@ -557,6 +557,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||ecommerce-events.adscale.com^
+||adbeacon.com^$third-party
 ||transaction-watcher-2.littledata.io^
 ||mirabelanalytics.com^
 ||dashboard.heatmap.com^$third-party
@@ -54632,6 +54634,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||cdn.instant.one^
 ||m.techpump.com^
 ||d1vg5xiq7qffdj.cloudfront.net^
 ||inbound-analytics.pixlee.co^
@@ -55447,7 +55450,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||tracking.epicgames.com^
 ||tracking.fortnite.com^
 ||log.znews.vn^
-||aem-kakao-collector.onkakao.net^
 ||cellar-analytics.mapion.co.jp^
 ||event.hackle.io^
 ||r.aachener-zeitung.de^
@@ -161578,6 +161580,15 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||shopify.com/*/assets/instant-pixel.js
+||shopify.com/*/assets/script_tag.js
+fintables.com#%#//scriptlet('set-local-storage-item', '/_mpq|_mixpanel/', '$remove$')
+||picsman.ai/jrnl/
+||firebaselogging-pa.googleapis.com^$domain=picsman.ai
+||google.com/ccm/collect$domain=picsman.ai
+||images.hepsiburada.net/storefront/storefront/www/assets/scripts/webtrekk/
+||images.hepsiburada.net/storefront/storefront/www/assets/scripts/onetrust/onetrust-autoblock-head
+||aem-kakao-collector.onkakao.net^$domain=~kakaotv.daum.net
 ||koreatimes.co.kr/initlib/ktet.js
 ||assets.pixlee.com/shopify/pixlee.shopify.v2.prod.js
 ||knockaround.com/cdn/s/trekkie.storefront.
@@ -161609,7 +161620,7 @@ okko.tv#%#//scriptlet('set-local-storage-item', 'sbid_logUid', '$remove$')
 ||edith.xiaohongshu.com/api/sns/web/v1/note/metrics_report
 ||tvspix.com/t.png?
 cyber.sports.ru#%#//scriptlet('set-local-storage-item', '/^sports:/', '$remove$')
-||kamp.daum.net^$xmlhttprequest
+||kamp.daum.net^$xmlhttprequest,domain=~kakaotv.daum.net
 ntvspor.net##.taboola-class-check
 ||bootbarn.com/on/demandware.store/Sites-bootbarn_us-Site/default/GoogleTagManagerServer-GetDataLayer
 ||cdn.fugu-it.com/web/script.js
@@ -162918,7 +162929,6 @@ device4game.ru##.tg-first-footer-widget
 ||st.mngbcn.com/scripts/tagmanager.js
 ||e1.ru/api/metrics/
 ||urldefense.proofpoint.com^*analytics_insight.min.js
-||cdn.livechatinc.com/tracking.js$domain=~kinguin.net
 ||uq.force.com/auraAnalytics^
 ||hurriyet.com.tr/banalytics.js
 president.jp##.recommend
@@ -167706,6 +167716,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! 4gamers.com.tw
+||4gamers.com.tw^$cookie=_pkc
 ! sravni.ru
 ||sravni.ru^$cookie=_FP_
 ! youdo.com
@@ -168544,6 +168556,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||eats-ads-event-capture.coupang.com^
 ||trackchecker.ru/stat/
 ||tracking.trackchecker.net^
 ||googletagmanager.com^$app=app.shinagawa.listentonovels.androidApp
@@ -169605,6 +169618,12 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208529#issuecomment-3029146039
+trendyol.com#%#//scriptlet('set-constant', 'process', 'emptyObj')
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||cdn.dsmcdn.com/sfx/mergen/*/index.js$domain=trendyol.com
+@@||cdn.dsmcdn.com/sfx/mergen/*/errors.$domain=trendyol.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207789
 !#if (!adguard_app_ios && !adguard_ext_android_cb && !adguard_ext_safari)
 bilibili.com#%#//scriptlet('set-constant', '__MIRROR_REPORT__', 'emptyObj')
@@ -169951,8 +169970,6 @@ larocheposay.co.kr#%#//scriptlet('set-constant', 'wptg_tagscript.exec', 'noopFun
 ! Rule $referrerpolicy is required for apps, because source of "cdn.clerk.io/clerk.js" is not detected
 !+ PLATFORM(windows, mac, android)
 ||industrivarer.no^$referrerpolicy=origin
-! https://github.com/AdguardTeam/AdguardFilters/issues/187569
-@@||cdn.livechatinc.com/tracking.js$domain=bitdefender.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187827
 @@||cdn.clerk.io/clerk.js$domain=garmont.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187278
@@ -170070,8 +170087,6 @@ kgm-actyon.co.kr#%#//scriptlet('set-constant', 'kakaoPixel', 'noopFunc')
 @@||api.cxense.com/segment/lookup?callback=$domain=tvaplus.ca
 ! https://x.com/namaedayo/status/1808059096412967251
 @@||pv.sohu.com/cityjson$domain=ems.com.cn
-! https://github.com/uBlockOrigin/uAssets/issues/24331
-@@||cdn.livechatinc.com/tracking.js$domain=freedompop.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182633
 jooble.org#%#//scriptlet('google-analytics')
 !+ PLATFORM(ios, ext_safari, ext_android_cb)

@@ -1,9 +1,9 @@
-! Checksum: KTQQj2GasWUMph2F+QhqWw
-! Diff-Path: ../patches/21/21-s-1751443998-3600.patch
+! Checksum: 3HW2Yh42gpnts0vHJFrgDQ
+! Diff-Path: ../patches/21/21-s-1751544963-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.35.16
-! TimeUpdated: 2025-07-02T08:09:28+00:00
+! Version: 2.0.35.19
+! TimeUpdated: 2025-07-03T12:12:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3485,6 +3485,10 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+jitenon.jp##.side_shop_bnr
+jitenon.jp##.shop_bnr
+fintables.com#%#//scriptlet('prevent-setTimeout', 'Plan_Promotion_Modal')
+||api.fintables.com/ads?
 domclick.ru##div[class^="tpln-RateReduction-"]
 domclick.ru##div[class^="tpln-OneRequestBanner-"]
 123684.com#$#.svip-body { background-image: none !important; }
@@ -8625,6 +8629,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208730
+asiaon.top#%#//scriptlet('href-sanitizer', 'a[href^="https://link.asiaon.top/full?api="][href*="&url=aHR0c"]', '?url', 'base64decode')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208570
 uploadcloud.pro#%#//scriptlet("adjust-setTimeout", ".show('drop')", "*", "0.001")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208461
