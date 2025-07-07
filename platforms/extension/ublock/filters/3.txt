@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: BgyOS53Payl6qniGfL0PIg
-! Diff-Path: ../patches/3/3-s-1751541076-3600.patch
+! Checksum: XL0ttRnAIVY7D93Q0SdzrA
+! Diff-Path: ../patches/3/3-s-1751886665-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.87.47
-! TimeUpdated: 2025-07-03T11:06:57+00:00
+! Version: 2.0.87.60
+! TimeUpdated: 2025-07-07T11:06:51+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -492,6 +492,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||jollyoutdoorjogger.com^
+||ob.esnlocco.com^
 ||ecommerce-events.adscale.com^
 ||adbeacon.com^$third-party
 ||transaction-watcher-2.littledata.io^
@@ -2775,7 +2777,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||dapxl.com^$third-party
 ||dashboard.io^$third-party
 ||databrain.com^$third-party
-||datacaciques.com^$third-party
+||pv.datacaciques.com^
+||gate.datacaciques.com^
 ||datafeedfile.com^$third-party
 ||datam.com^$third-party
 ||datamaster.com.cn^$third-party
@@ -54569,6 +54572,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||connect.blockboardtech.com^
 ||analytics.macpaw.com^
 ||mtg.macpaw.com^
+||collect.trendyol.com^
+||en-collect.trendyol.com^
 ||demeter-tr-core-collect.trendyol.com^
 ||lc-event.pixiv.net^
 ||count.ing.de^
@@ -160773,6 +160778,8 @@ zmail.ubilab.me$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+.com/hit$ping
+/click.php?lp=data_upd&
 /cdn/shopifycloud/consent-tracking-api/*
 /.netlify/scripts/rum
 /stattag.js
@@ -161495,12 +161502,15 @@ _tracking.php?b=
 !
 ! NOTE: Specific rules
 !
+||app.kulgacdn.com/js/script.js
+||consent.trustarc.com/log?
+||consent.trustarc.com/analytics?
+||scripts.stay22.com/letmeallez.js
 ||shopify.com/*/assets/instant-pixel.js
 ||shopify.com/*/assets/script_tag.js
 fintables.com##+js(set-local-storage-item, /_mpq|_mixpanel/, $remove$)
 ||picsman.ai/jrnl/
 ||firebaselogging-pa.googleapis.com^$domain=picsman.ai
-||google.com/ccm/collect$domain=picsman.ai
 ||images.hepsiburada.net/storefront/storefront/www/assets/scripts/webtrekk/
 ||images.hepsiburada.net/storefront/storefront/www/assets/scripts/onetrust/onetrust-autoblock-head
 ||aem-kakao-collector.onkakao.net^$domain=~kakaotv.daum.net
@@ -161535,7 +161545,7 @@ okko.tv##+js(set-local-storage-item, sbid_logUid, $remove$)
 ||edith.xiaohongshu.com/api/sns/web/v1/note/metrics_report
 ||tvspix.com/t.png?
 cyber.sports.ru##+js(set-local-storage-item, /^sports:/, $remove$)
-||kamp.daum.net^$xmlhttprequest,domain=~kakaotv.daum.net
+||kamp.daum.net^$xmlhttprequest,domain=~kakaotv.daum.net|~video.daum.net
 ntvspor.net##.taboola-class-check
 ||bootbarn.com/on/demandware.store/Sites-bootbarn_us-Site/default/GoogleTagManagerServer-GetDataLayer
 ||cdn.fugu-it.com/web/script.js
@@ -163658,7 +163668,7 @@ weekly-economist.mainichi.jp##iframe[id^="cxWidget_"]
 ||s-cdn.phonearena.com/js/ops/taina.js
 ||static.narrativ.com/tags/narrativ-pub.
 ||widgets.entireweb.com/pixel-track/
-/access.html$domain=2jigiri.net|pig109.net
+/access.html$domain=2jigiri.net
 ||apis.naver.com/livecloud/livecloud/quantum/p2p/*/client/stat
 ||redditmedia.com/gtm?id=
 ||search-api.joongna.com/v*/ga/log|
@@ -168528,6 +168538,7 @@ d4?appid*type*
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208529#issuecomment-3029146039
 trendyol.com##+js(set-constant, process, {})
+trendyol.com##+js(set-constant, process.env, {})
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207789
 bilibili.com##+js(set-constant, __MIRROR_REPORT__, {})
 bilibili.com##+js(set-constant, __MIRROR_REPORT__.techReportPb, noopFunc)
@@ -168535,8 +168546,10 @@ bilibili.com##+js(set-constant, __MIRROR_REPORT__.customReportPb, noopFunc)
 bilibili.com##+js(set-constant, __MIRROR_REPORT__.customPerformanceQuota, noopFunc)
 ! Fixing the last step of signing a document on acrobat.adobe.com
 @@||prod.adobeccstatic.com/unav/*/AnalyticsProvider.*.bundle.js$domain=acrobat.adobe.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/208857
+! https://github.com/AdguardTeam/AdguardFilters/issues/208739
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207423
-@@||s.yimg.com/ss/analytics3.js$domain=tw.news.yahoo.com
+@@||s.yimg.com/ss/analytics3.js$domain=tw.news.yahoo.com|tw.yahoo.com|tw.stock.yahoo.com
 ! https://www.wired.com/auth/initiate?redirectURL=%2F&source=VERSO_NAVIGATION - sign-in breakage
 id.condenast.com##+js(set-constant, appInfo.snowplow.trackSelfDescribingEvent, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207915
@@ -169732,8 +169745,6 @@ goodwillfinds.com##+js(set-constant, _etmc, [])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127213
 @@||track.nzz.ch/*/api/auth_v*/
 @@||track.nzz.ch/*/api/oauth/
-! https://github.com/uBlockOrigin/uAssets/issues/13630
-@@||googletagmanager.com/gtm.js$domain=hepsiburada.com
 ! fix navigation
 @@||d.line-scdn.net^*/torimochi.js$script,domain=demae-can.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125647
@@ -171544,8 +171555,6 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 @@||webstat.channel4.com/b/ss/channel4dotcom/$domain=channel4.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5150
 @@||ticketmaster.sc.omtrdc.net/b/ss/
-! Fixing links on Yandex Search and News
-@@||yabs.yandex.ru$domain=yandex.by|yandex.com.tr|yandex.kz|yandex.ru
 ! https://forum.adguard.com/index.php?threads/verdi-de.21922/
 @@||analytics.edgekey.net/js/csma.js^$domain=verdi.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5056 https://github.com/AdguardTeam/AdguardFilters/issues/8110

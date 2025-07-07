@@ -447,7 +447,7 @@
         },
         {
             "domains": "open.fm,deliciousmagazine.pl,poczta.wp.pl,pilot.wp.pl,polygamia.pl,abczdrowie.pl,money.pl,www.dobreprogramy.pl,o2.pl,gadzetomania.pl,komorkomania.pl,autocentrum.pl,pudelek.pl,vpolshchi.pl,parenting.pl,autokult.pl,fotoblogia.pl,dom.wp.pl,pogoda.wp.pl,gry.wp.pl,wroclaw.wp.pl,moto.wp.pl,wideo.wp.pl,kuchnia.wp.pl,facet.wp.pl,sportowefakty.wp.pl,turystyka.wp.pl,magazyn.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,tech.wp.pl,opinie.wp.pl,teleshow.wp.pl,gwiazdy.wp.pl,film.wp.pl,wiadomosci.wp.pl,finanse.wp.pl",
-            "script": "(()=>{Object.defineProperty=new Proxy(Object.defineProperty,{apply:(e,t,n)=>{const r=new Set([\"VP\",\"w3\",\"JW\"]),o=n[1],c=n[2]?.get;return o&&r.has(o)&&\"function\"==typeof c&&c.toString().includes(\"()=>i\")&&(n[2].get=function(){return function(){return!1}}),Reflect.apply(e,t,n)}});})();"
+            "script": "(()=>{Object.defineProperty=new Proxy(Object.defineProperty,{apply:(e,t,n)=>{const r=new Set([\"VP\",\"w3\",\"JW\"]),i=n[1],o=n[2]?.get;return i&&r.has(i)&&\"function\"==typeof o&&(o.toString().includes(\"()=>i\")||o.toString().includes(\"()=>a\"))&&(n[2].get=function(){return function(){return!1}}),Reflect.apply(e,t,n)}});})();"
         },
         {
             "domains": "kitsune-subs.anime-odcinki.pl",
@@ -536,6 +536,10 @@
         {
             "domains": "p-api.c19.space,databasegdriveplayer.xyz,vidsrc.*,vido.*,sendvid.com,uptostream.com,mcloud.to,uploadrar.com,gogoplay2.com,goload.*",
             "script": "(()=>{if(window.self!==window.top)try{if(\"object\"==typeof localStorage)return}catch(a){delete window.localStorage,window.localStorage={setItem(){},getItem(){},removeItem(){},clear(){}}}})();"
+        },
+        {
+            "domains": "minefun.io,poki.com",
+            "script": "(()=>{let e=!1;const l={apply:async(e,l,o)=>{const r=o[0];return!1===r?.rewardAllowed&&(o[0].rewardAllowed=!0),Reflect.apply(e,l,o)}},o={apply:(o,r,t)=>{const n=t[0]?.pokiAdsCompleted;return!e&&n&&n[0]?.toString()?.includes(\"rewardAllowed\")&&(n[0]=new Proxy(n[0],l),e=!0),Reflect.apply(o,r,t)}};window.Object.keys=new Proxy(window.Object.keys,o)})();"
         },
         {
             "domains": "ign.com",
@@ -1088,10 +1092,6 @@
         {
             "domains": "chip.de",
             "script": "var originalUserAgent = navigator.userAgent; Object.defineProperty(navigator, 'userAgent', { get: function() { return originalUserAgent + ' Edge'; } });"
-        },
-        {
-            "domains": "winfuture.de",
-            "script": "setTimeout(function(){var el = document.querySelector(\".showitxt\"); if(el) { el.innerHTML = el.innerHTML.replace(\"(Anzeige)\",\"\"); }},3000);"
         },
         {
             "domains": "exploader.net",

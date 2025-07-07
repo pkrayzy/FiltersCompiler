@@ -1,8 +1,8 @@
-! Checksum: hGlvk2vOmCGU40aTaoR6xA
+! Checksum: 3/CbYvE1rDw2AAvft6cfog
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.87.47
-! TimeUpdated: 2025-07-03T11:06:57+00:00
+! Version: 2.0.87.60
+! TimeUpdated: 2025-07-07T11:06:51+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -330,6 +330,8 @@
 !
 !
 !
+||jollyoutdoorjogger.com^
+||ob.esnlocco.com^
 ||ecommerce-events.adscale.com^
 ||adbeacon.com^$third-party
 ||transaction-watcher-2.littledata.io^
@@ -2611,7 +2613,8 @@
 ||dapxl.com^$third-party
 ||dashboard.io^$third-party
 ||databrain.com^$third-party
-||datacaciques.com^$third-party
+||pv.datacaciques.com^
+||gate.datacaciques.com^
 ||datafeedfile.com^$third-party
 ||datam.com^$third-party
 ||datamaster.com.cn^$third-party
@@ -54363,6 +54366,8 @@
 ||connect.blockboardtech.com^
 ||analytics.macpaw.com^
 ||mtg.macpaw.com^
+||collect.trendyol.com^
+||en-collect.trendyol.com^
 ||demeter-tr-core-collect.trendyol.com^
 ||lc-event.pixiv.net^
 ||count.ing.de^
@@ -57384,6 +57389,8 @@ charlestownwyllie.oaklawnnonantum.com^
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+.com/hit$ping
+/click.php?lp=data_upd&
 /cdn/shopifycloud/consent-tracking-api/*
 /.netlify/scripts/rum
 /stattag.js
@@ -58087,11 +58094,14 @@ _tracking.php?b=
 !
 ! NOTE: Specific rules
 !
+||app.kulgacdn.com/js/script.js
+||consent.trustarc.com/log?
+||consent.trustarc.com/analytics?
+||scripts.stay22.com/letmeallez.js
 ||shopify.com/*/assets/instant-pixel.js
 ||shopify.com/*/assets/script_tag.js
 ||picsman.ai/jrnl/
 ||firebaselogging-pa.googleapis.com^$domain=picsman.ai
-||google.com/ccm/collect$domain=picsman.ai
 ||images.hepsiburada.net/storefront/storefront/www/assets/scripts/webtrekk/
 ||images.hepsiburada.net/storefront/storefront/www/assets/scripts/onetrust/onetrust-autoblock-head
 ||aem-kakao-collector.onkakao.net^$domain=~kakaotv.daum.net
@@ -58121,7 +58131,7 @@ _tracking.php?b=
 ||faz.net/pr/me/
 ||edith.xiaohongshu.com/api/sns/web/v1/note/metrics_report
 ||tvspix.com/t.png?
-||kamp.daum.net^$xmlhttprequest,domain=~kakaotv.daum.net
+||kamp.daum.net^$xmlhttprequest,domain=~kakaotv.daum.net|~video.daum.net
 ntvspor.net##.taboola-class-check
 ||bootbarn.com/on/demandware.store/Sites-bootbarn_us-Site/default/GoogleTagManagerServer-GetDataLayer
 ||cdn.fugu-it.com/web/script.js
@@ -60171,7 +60181,7 @@ weekly-economist.mainichi.jp##iframe[id^="cxWidget_"]
 ||s-cdn.phonearena.com/js/ops/taina.js
 ||static.narrativ.com/tags/narrativ-pub.
 ||widgets.entireweb.com/pixel-track/
-/access.html$domain=2jigiri.net|pig109.net
+/access.html$domain=2jigiri.net
 ||apis.naver.com/livecloud/livecloud/quantum/p2p/*/client/stat
 ||redditmedia.com/gtm?id=
 ||search-api.joongna.com/v*/ga/log|
@@ -64981,8 +64991,10 @@ d4?appid*type*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207789
 ! Fixing the last step of signing a document on acrobat.adobe.com
 @@||prod.adobeccstatic.com/unav/*/AnalyticsProvider.*.bundle.js$domain=acrobat.adobe.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/208857
+! https://github.com/AdguardTeam/AdguardFilters/issues/208739
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207423
-@@||s.yimg.com/ss/analytics3.js$domain=tw.news.yahoo.com
+@@||s.yimg.com/ss/analytics3.js$domain=tw.news.yahoo.com|tw.yahoo.com|tw.stock.yahoo.com
 ! https://www.wired.com/auth/initiate?redirectURL=%2F&source=VERSO_NAVIGATION - sign-in breakage
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||id.condenast.com/static/js/analytics/snowplow/snowplowTracking.$domain=id.condenast.com
@@ -66312,8 +66324,6 @@ elahmad.com##body > div[id^="ads"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127213
 @@||track.nzz.ch/*/api/auth_v*/
 @@||track.nzz.ch/*/api/oauth/
-! https://github.com/uBlockOrigin/uAssets/issues/13630
-@@||googletagmanager.com/gtm.js$domain=hepsiburada.com
 ! fix navigation
 @@||d.line-scdn.net^*/torimochi.js$script,domain=demae-can.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125647
@@ -68257,8 +68267,6 @@ jolie.de/sites/default/files/google_tag/google_tag_manager/google_tag.script.js
 @@||webstat.channel4.com/b/ss/channel4dotcom/$domain=channel4.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5150
 @@||ticketmaster.sc.omtrdc.net/b/ss/
-! Fixing links on Yandex Search and News
-@@||yabs.yandex.ru$domain=yandex.by|yandex.com.tr|yandex.kz|yandex.ru
 ! https://forum.adguard.com/index.php?threads/verdi-de.21922/
 @@||analytics.edgekey.net/js/csma.js^$domain=verdi.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5056 https://github.com/AdguardTeam/AdguardFilters/issues/8110
