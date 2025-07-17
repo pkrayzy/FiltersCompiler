@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: W5qMELj6mJTgND+Tzg8CFA
-! Diff-Path: ../patches/9/9-s-1751883139-3600.patch
+! Checksum: T7/ym054sHuSV6cq0g1ZZQ
+! Diff-Path: ../patches/9/9-s-1752732846-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.30.76
-! TimeUpdated: 2025-07-07T10:08:04+00:00
+! Version: 2.0.30.88
+! TimeUpdated: 2025-07-17T06:09:58+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -465,9 +465,9 @@ megacanaisonline.me##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206376
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196297
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159034
-tulink.org,acortados.com,notipostingt.com##+js(no-fetch-if, pagead2.googlesyndication.com)
-tulink.org,acortados.com,acortalink.me##+js(no-fetch-if, /ads-twitter\.com|pagead|googleads|doubleclick/, , opaque)
-tulink.org,acortados.com,todoandroid.live,gadgetzona.net,qwanturankpro.com##+js(no-fetch-if, method:HEAD)
+neworldtravel.com,financialtrust.info,tulink.org,acortados.com,notipostingt.com##+js(no-fetch-if, pagead2.googlesyndication.com)
+neworldtravel.com,financialtrust.info,tulink.org,acortados.com,acortalink.me##+js(no-fetch-if, /ads-twitter\.com|pagead|googleads|doubleclick/, , opaque)
+neworldtravel.com,financialtrust.info,tulink.org,acortados.com,todoandroid.live,gadgetzona.net,qwanturankpro.com##+js(no-fetch-if, method:HEAD)
 ! https://github.com/uBlockOrigin/uAssets/issues/19312
 softwareany.net##+js(addEventListener-defuser, load, detect-modal)
 softwareany.net#@#ins.adsbygoogle[data-ad-client]
@@ -545,7 +545,6 @@ tipsdesalud.tips,saludmasya.com#@#.ad_main
 tipsdesalud.tips,saludmasya.com#@#.ad_title
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144188
 independentespanol.com##+js(no-fetch-if, securepubads.g.doubleclick.net/pagead/ppub_config)
-@@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$domain=independentespanol.com
 @@||static.adsafeprotected.com/iasPET.1.js$domain=independentespanol.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144328
 @@||mantrazscan.com/wp-content/plugins/dh-anti-adblocker/
@@ -1517,7 +1516,9 @@ pelismart.tv##+js(href-sanitizer, .download-links a[href^="https://unlock.uberxv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171873
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167657
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159461
-payad.lat,uberxviral.com,eldiario24hrs.com,constanteonline.com,acortaz.es,myfirstdollar.org,gourlpro.com,mundopolo.net,adclicker.io##+js(set-constant, global.noobMaxTry, 0)
+safez.es,payad.lat,uberxviral.com,eldiario24hrs.com,constanteonline.com,acortaz.es,myfirstdollar.org,gourlpro.com,mundopolo.net,adclicker.io##+js(set-constant, global.noobMaxTry, 0)
+! https://github.com/AdguardTeam/AdguardFilters/issues/209154
+! Similar to rule below but for updated script
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206376
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183355
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159665
@@ -1991,6 +1992,23 @@ c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,me
 !
 ! NOTE: Specific rules
 !
+videoskaseros.com##.bntop
+videos.mrvideospornogratis.xxx##.shaka-player-toolbar
+videos.mrvideospornogratis.xxx##+js(window.open-defuser)
+mrvideospornogratis.xxx##+js(no-setTimeout-if, adpreload)
+||mrvideospornogratis.xxx/sw.js
+playdede.*##div[style="text-align:center"] > a[target="_blank"] > img
+playdede.*##+js(set-constant, vastPlayer.completed, true)
+leitura.com.br###content > div:has(> div[style] > a[href^="https://cashbackleitura.com.br/"])
+threedaos.zdrz.xyz##.mainholder + div[id][class]
+||hentaitokyo.net/banner/
+hentaitokyo.net##.anuncios
+||hentaitokyo.net/popfh/
+hentaitokyo.net##.thumb-conteudo > a[target="_blank"]
+hentaitokyo.net##.btn-previa
+hentaitokyo.net##+js(addEventListener-defuser, DOMContentLoaded, sourceAd)
+ondacero.es##atres-widget[data-type="ads-no-lazy"]
+ondacero.es##atres-widget[data-type="ads"]
 zonatmo.com##.pbn_l_top
 pelisxporno.net##+js(window.open-defuser)
 incesto.me##.pst-cls > .dfl
@@ -2211,7 +2229,7 @@ europapress.es###sc-mpu-top
 kns.cookni.net,twobluescans.com##a[href^="https://www.polybuzz.ai/"]
 kns.cookni.net,twobluescans.com##.c-sidebar:has(> div.container a[href^="https://www.polybuzz.ai/"])
 kns.cookni.net,twobluescans.com##.row > div.widget:has(> div.c-widget-wrap iframe[id^="google_ads"])
-mewingzone.com,samuraiscan.cookni.net,kns.cookni.net,twobluescans.com##div[id^="ad-container"]
+threedaos.zdrz.xyz,mewingzone.com,samuraiscan.cookni.net,kns.cookni.net,twobluescans.com##div[id^="ad-container"]
 elsiglodedurango.com.mx##.col-4 > .h-900:has(> .pub)
 estadiodeportes.mx###__next > div.grid:has(> div.content > div.module > header + div.bannercover)
 estadiodeportes.mx##.bannercover
@@ -2494,14 +2512,16 @@ hobbyconsolas.com###megaad-wrapper
 hobbyconsolas.com##.lazyload-wrapper:has(> div[class^="embed-card"] > a.product-button)
 hobbyconsolas.com##div[data-piano-position^="recomendado-ada-"]
 otakustv.com##div[id^="public_"]
-papayaseries.net,pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com##+js(set-cookie, player, 1)
-papayaseries.net,pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##playx { display: none !important; }
-papayaseries.net,pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##plays { display: block !important; }
+iputitas.net,pelispedia.is,papayaseries.net,pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com##+js(set-cookie, player, 1)
+iputitas.net,pelispedia.is,papayaseries.net,pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##playx { display: none !important; }
+iputitas.net,pelispedia.is,papayaseries.net,pelismart.tv,pelis1.com,homecine.cc,seriesmetro.net,flixseries.org,homecine.tv,homecine.to,metroseries.net,smartpelis.tv,seriesbanana.com#$##plays { display: block !important; }
 guiadasemana.com.br#$#main#site-main { margin-top: 0px !important; }
 guiadasemana.com.br###content-column div[class].placement
 bajalogratis.com##a[href*="/redirect?tid="]
 bajalogratis.com##.separator > a[target="_blank"] > img
 bajalogratis.com##.cols-9 > .iconb-movi:has(+ .separator > a[target="_blank"] > img)
+tubeonline.net##+js(abort-current-script, fetch, anuncios)
+tubeonline.net##:is(aside, .sheader) > center > div[id^="imagen-"]
 tubeonline.net##.content > center> span:has(> a[target="_blank"])
 tubeonline.net##.widget:has(center > a[target="_blank"]:not([href*="tubeonline.net"],[href^="/"]))
 verpelis.gratis##.content > div[style] > a[href]
@@ -3470,7 +3490,6 @@ boainformacao.com.br##div[class*="sidebar"] .textwidget > p > a[href]:not([href*
 boainformacao.com.br##div[class*="sidebar"] .textwidget > p ~ a[href]:not([href*="boainformacao.com.br"]) > img
 eldesmarque.com,jornaldeitapetininga.com.br##div[id^="banner_"]
 eldiariodelapampa.com.ar,futemax.mx,minutouno.com,yapo.cl,ratingcero.com,ambito.com##.banner-container
-tupornogratis.xxx##.lst_ft_bn
 globo.com##div[id^="banner_home"]
 globo.com###banner_vitrine_container
 ge.globo.com###banner_vitrine
@@ -5696,7 +5715,6 @@ cozinhandofitness.com#@##ads2
 @@||permutive.app/*web.js$domain=independentespanol.com
 @@||cdn.permutive.com^$xmlhttprequest,domain=independentespanol.com
 @@||api.permutive.com^$xmlhttprequest,domain=independentespanol.com
-@@||pub.pixels.ai/wrap-independent-no-prebid-lib.js$domain=independentespanol.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135573
 nebrija.com#@##publicidad
 @@||nebrija.com/images/cabeceras/titulaciones/fast/*-publicidad-*.webp

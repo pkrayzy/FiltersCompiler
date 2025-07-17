@@ -1,9 +1,9 @@
-! Checksum: tTN7C/G9gWGswBo/JovBLw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1751863655-14400.patch
+! Checksum: vh+z1L5ttlvW7+Q5ILxE7Q
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1752727743-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.17.40
-! TimeUpdated: 2025-07-07T00:48:32+00:00
+! Version: 2.0.17.51
+! TimeUpdated: 2025-07-16T12:45:55+00:00
 ! Expires: 5 days (update frequency)
 ###app-download
 ###app-modal
@@ -26,7 +26,6 @@
 ##.download-app:not(html,body,:empty)
 ##.download_app:not(html,body,:empty)
 ##.downloadapp:not(html,body,:empty)
-##.getapp:not(html,body,:empty)
 ##.go-to-app:not(html,body,:empty)
 ##.installAppPopup:not(html,body,:empty)
 ##.mobile-app-links:not(html,body,:empty)
@@ -34,7 +33,6 @@
 ##.mobileApp:not(html,body,:empty)
 ##.open-in-app:not(html,body,:empty)
 ##.OpenInAppButton:not(html,body,:empty)
-##.popup-app:not(html,body,:empty)
 ##.smart-banner:not(html,body,:empty)
 ##.smartbanner:not(html,body,:empty)
 ##amp-app-banner
@@ -47,6 +45,7 @@
 ##div[class^=AppBanner__]
 ##div[id*=smart-banner i]
 ##div[id*=smartbanner i]
+##smart-banner
 ~macgamestore.com##.get-the-app:not(html,body,:empty)
 bilibili.com##.nav-link-item a[href$="app.bilibili.com"]
 ifeng.com##.openApp[onclick^="loadOpen.init(download"]
@@ -69,6 +68,7 @@ zargan.com###app-menu
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##span.hidden[class$="m:block"]
 bfmtv.com###android_banner
 bfmtv.com#$?#.fixed_title { top: 0 !important }
+/^.*/jquery\.smartbanner/.*$/$match-case
 /^.*/js/smartbanner\..*$/$match-case
 /^.*/smart-app-banner\..*$/$match-case
 /^.*/smartbanner/appbanner\.js.*$/$match-case
@@ -86,7 +86,6 @@ tvtropes.org##.announcement-banner-wrapper:has(> a[href*="36710300&"])
 rawstory.com###mobile-inline-rs-signup-offer
 @@/jquery.smartbanner.js^
 .smartbanner.js$domain=~mcpedl.com
-###___ndtvpushdiv
 no#$#html.smartbanner-show[data-paywall] { margin-top: 0 !important }
 ##div[class^=Web2AppBannerstyles__Container]
 media.tumblr.com###app-download-links-container
@@ -108,11 +107,12 @@ linkedin.com#$?#body { overflow: auto !important; }
 .xyz/*/?*=*&*=*&*=*&*=*&*=$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||109.201.135.46^$document
-||ps2hd.com^$document
 ||ublock.org^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||138.68.252.54^$document
 ||fileplanet.com^$document,popup
+||inputmapper.com^$document,domain=~stolen_by_casino_spammers.*
+||henrypp.org^$document,domain=~stolen_by_casino_spammers.*
 windowsreport.com##.code-block
 ugetfix.com,sauguspc.lt,wyleczpc.pl,sichernpc.de,pcseguro.es##div.attention-button-box-green
 ugetfix.com,sauguspc.lt,wyleczpc.pl,sichernpc.de,pcseguro.es##.primary_download
@@ -127,8 +127,11 @@ ugetfix.com,sauguspc.lt,wyleczpc.pl,sichernpc.de,pcseguro.es#?#h2:has-text(/^Rep
 2-spyware.com,novirus.uk,faravirus.ro,uirusu.jp,virusi.hr,wubingdu.cn,avirus.hu,ioys.gr,odstranitvirus.cz,tanpavirus.web.id,utanvirus.se,virukset.fi,losvirus.es,virusler.info.tr,semvirus.pt,lesvirus.fr,senzavirus.it,dieviren.de,viruset.no,usunwirusa.pl,zondervirus.nl,bedynet.ru,virusai.lt,virusi.bg,viirused.ee,udenvirus.dk##.primary_download
 2-spyware.com,novirus.uk,faravirus.ro,uirusu.jp,virusi.hr,wubingdu.cn,avirus.hu,ioys.gr,odstranitvirus.cz,tanpavirus.web.id,utanvirus.se,virukset.fi,losvirus.es,virusler.info.tr,semvirus.pt,lesvirus.fr,senzavirus.it,dieviren.de,viruset.no,usunwirusa.pl,zondervirus.nl,bedynet.ru,virusai.lt,virusi.bg,viirused.ee,udenvirus.dk##.quick-download-button-text
 drivereasy.com#?#.pakb-content p:has-text(Driver Easy)
+drivereasy.com##.pakb-content img[sizes^="(max-width: 80"]
 drivereasy.com#?#.pakb-content p:has-text(the Pro version)
 howtoremove.guide##[id*="newage"]
+cfoc.org##a[href$="ttps://cfoc.org/spyhunter-download-and-install-instructions/"]:upward(2)
+cfoc.org##.su-button[href^="https://link.safecart.com/"]:upward(3)
 windowsreport.com##div[class^=restoro-download] + section
 appuals.com##.wptp
 appuals.com##p + div > div:first-of-type
@@ -136,9 +139,10 @@ windll.com##.download-block
 windll.com##.dll > p
 softwaretested.com##.st-alternative
 ||outbyte.com^$document
-||testedforyou.net^$all
 ||solvusoft.com^$document
+exefiles.com##.row:has(a[href*="/recommended/"])
 ||yopcgames.com^$document
+||gamesgx.net^$document
 coolrom.com.au,coolrom.com##.download_link
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
@@ -148,20 +152,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||speedtest.com^$document,domain=~you-were-likely-looking-for-speedtest.net
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||199.59.243.222^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||173.208.96.42^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||173.208.96.43^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||173.208.96.44^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||173.208.96.45^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||173.208.96.46^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||213.227.149.208^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||213.227.149.211^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||54.209.22.226^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -184,7 +174,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||144.76.1.130^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||195.201.92.254^$document
-?bemobdata=$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||34.204.214.165^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -193,43 +182,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||54.205.83.61^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||54.210.193.115^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.255.6.107^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.255.6.147^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.255.6.219^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.255.6.225^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||188.42.129.108^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||188.42.129.116^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||188.42.141.100^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||188.42.141.92^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.82.144^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.82.41^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.82.43^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.82.65^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.82.66^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.87.169^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.87.207^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.109.87.208^$all
-||bowlingunauthorized.com^$all
-||connatedresspint.com^$all
-||essentiallyitemoutrageous.com^$all
-||forcefulpacehauled.com^$all
-||nitrogenindustrynobleman.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||178.128.142.109^$document
 /^https?://\d\d?\.[a-z0-9-]{1,}\.(club|me)(/.*)?$/$document
@@ -289,328 +241,15 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||37.34.176.37^$document
 ||auslogics.com^$document
 ||in-automate.brevo.com^
-||mediaget.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||23.111.31.137^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||23.111.88.207^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||185.158.250.239^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.169.69.25^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||212.192.241.72^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||37.0.10.83^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.3.110.170^$all
-||totalwebshield.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||91.241.19.38^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
 ||45.90.58.90^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||95.85.89.98^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||139.28.37.49^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||91.243.121.19^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||103.169.90.205^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||125.44.43.45^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.121.8.240^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||42.235.183.74^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||78.36.32.242^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.50.2.119^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.50.110.163^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||119.179.84.145^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||188.120.50.98^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||190.238.183.5^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.220.253.78^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.3.194.242^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.94.26.138^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||205.185.126.200^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.243.56.167^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||123.10.224.135^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||59.47.187.147^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||39.68.172.210^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||122.192.177.176^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||112.27.124.108^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||123.110.176.246^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||219.155.105.98^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||171.35.161.209^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||60.16.255.36^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||112.30.4.52^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.121.191.201^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||121.61.48.170^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||39.81.68.45^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.222.220.164^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||113.233.215.135^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||151.77.100.133^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||125.120.13.184^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||120.12.138.133^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.194.115.185^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||183.92.123.145^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||110.89.8.126^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||125.43.211.184^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||1.0.218.230^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||221.208.4.56^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||60.13.60.19^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||171.37.29.87^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||124.91.237.188^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.56.137.49^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.52.240.69^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||112.252.132.185^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||117.198.240.157^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||42.53.240.249^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||116.179.138.68^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||110.241.119.159^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.56.31.133^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||103.19.128.222^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||202.12.80.74^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||61.52.8.62^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.122.252.69^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||219.155.26.50^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||120.4.141.185^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||119.102.7.115^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||72.51.127.213^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||111.224.199.91^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||119.250.236.122^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||112.30.110.58^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||117.196.49.21^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.55.54.234^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.52.17.123^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.59.69.21^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||160.202.163.100^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||45.95.169.115^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||45.148.120.80^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||85.239.33.9^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||107.173.176.183^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||45.148.120.171^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||159.148.186.228^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||39.83.80.247^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||68.197.33.124^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||219.157.21.37^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.123.141.17^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||125.47.243.187^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.122.196.203^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.117.231.182^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||112.31.211.135^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||125.106.63.93^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.59.197.46^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||122.159.29.192^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||171.40.0.127^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||171.80.219.160^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||123.10.65.201^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||168.90.205.46^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||125.47.205.109^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||39.80.147.239^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||45.224.171.130^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||45.5.209.75^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||116.17.210.157^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.45.103.240^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||110.167.64.171^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||39.81.117.73^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||183.15.90.156^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||119.113.248.74^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||175.0.95.85^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||61.52.99.109^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||222.142.183.194^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||106.86.172.194^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||103.233.216.77^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||183.188.192.55^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||198.23.255.14^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||91.121.67.60^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.67.186.189^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||39.65.72.211^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||42.238.151.197^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.213.60.53^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.56.169.134^$all
-||yasir252.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||194.87.138.20^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||103.167.92.73^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||58.249.74.79^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.45.14.109^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.40.101.191^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.45.119.22^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.47.73.159^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.204.119.237^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||163.125.31.46^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||163.179.168.44^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||110.89.59.135^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||113.116.89.1^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||119.183.146.191^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||153.3.3.226^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||182.116.104.6^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||60.7.133.200^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||122.6.254.201^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||110.89.11.167^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||171.112.177.90^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||115.194.38.143^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||61.52.79.32^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
 ||132.148.220.142^$document
-||haxpc.net^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||52.53.243.52^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||34.201.22.10^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||123.10.225.196^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||122.192.106.84^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.88.199.9^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||114.38.176.185^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||61.52.97.35^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||27.206.181.208^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||124.163.130.175^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||118.75.87.102^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||134.122.115.190^$all
-||ru.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||141.8.226.34^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||91.240.118.172^$all
 ||upload-4ever.com^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||198.199.120.251^$all
 !+ NOT_OPTIMIZED
 /^https?://(www\.)?[a-z0-9-]{1,}\.[a-z]{2,17}/[a-z0-9]/\?[a-z0-9.-]{8,}\$/$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -627,19 +266,12 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||96.47.230.69^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||96.47.230.70^$document
-||kdmttk.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||31.220.27.134^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||85.17.31.152^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||95.211.26.202^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||158.247.212.220^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||165.227.168.212^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||23.81.64.183^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||139.45.197.236^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -657,20 +289,15 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||146.19.169.99^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||69.162.80.56^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
 ||162.241.124.200^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||157.90.71.190^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||139.45.197.239^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||44.228.230.225^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||50.112.124.170^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||100.20.104.229^$document
-||pressizer.net^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||44.236.213.34^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -680,107 +307,14 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||100.20.13.49^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||51.68.87.229^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
 ||185.106.94.139^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||45.90.109.196^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||91.229.23.200^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.155.184.98^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||194.110.247.242^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
 ||54.219.218.169^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||64.132.201.92^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||209.141.51.49^$all
-||semygruja.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||208.88.225.116^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||208.88.225.117^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||208.88.225.119^$all
 !+ NOT_OPTIMIZED
 ://landings.*_slots/?partner=$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||3.231.116.86^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||54.237.193.255^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||3.231.137.120^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||54.204.83.105^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||108.61.242.65^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||146.70.78.43^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||87.120.254.39^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||45.150.108.213^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||92.204.160.240^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||34.200.46.148^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||85.17.80.16^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.246.188.124^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.246.188.125^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||194.63.140.103^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||194.63.143.61^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||194.63.143.96^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||37.48.80.112^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||109.206.168.16^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||109.206.168.17^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||57.128.71.215^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||37.1.223.231^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||139.45.197.167^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||139.45.197.245^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||159.223.137.164^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.56.234.205^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.58.97^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.58.98^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.58.123^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.58.124^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.58.125^$all
-||inquirygrid.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||5.45.123.44^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||69.16.230.226^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||208.91.196.46^$all
-/page/bouncy.php?$all
-||banquetunarmedgrater.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||93.93.51.223^$all
 ||livejasmin.com/*&origin=$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||103.174.102.240^$all
-||exs7oilq14cz6.click^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||38.180.96.244^$all
 ||aysesuretobea.com^$all
@@ -788,47 +322,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||34.195.224.242^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||54.225.185.110^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||91.202.233.143^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||108.62.157.10^$all
 .avito.www.booking.$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.240.108.68^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.240.108.76^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.240.108.84^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.240.127.234^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||172.240.253.132^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.59.12^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.59.13^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.59.20^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.61.225^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||192.243.61.227^$all
-||bosselinorrummage.com^$all
-||chalkleash.com^$all
-||commonwealthproficient.com^$all
-||crueltyvogue.com^$all
-||desiredhighest.com^$all
-||generousenjoyed.com^$all
-||marinadelifestyle.com^$all
-||movementshereafter.com^$all
-||paddlemoscowsplit.com^$all
-||slippersprimeexaltation.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.149.120.161^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.149.120.163^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.149.120.175^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||45.202.32.3^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -871,32 +365,34 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||grievetube.com^$all
 ||impulsiveappraise.com^$all
 ||migrationoctavian.com^$all
-||highnessdemon.com^$all
 ||arkharmonious.com^$all
 ||delicioustightbronze.com^$all
 ||entertainlavish.com^$all
-||excludegusteight.com^$all
+||esteemcountryside.com^$all
 ||inscribemutenessforced.com^$all
 ||felllilyforegoing.com^$all
 ||hitchprivilege.com^$all
 ||apologiesoccursdepressed.com^$all
 ||delayeddisputecommotion.com^$all
-||adulateprofessnorth.com^$all
-||cautiouslyanalysecrystal.com^$all
+||governmentlevityintroduction.com^$all
 ||kenmaybepublisher.com^$all
 ||daytimereductionactually.com^$all
 ||heartburnsurroundingcourtroom.com^$all
 ||juvenilesoftlysoda.com^$all
 ||nimbleboilerdived.com^$all
 ||antonyexpected.com^$all
+||franzredheadline.com^$all
 ||mailboxboynutrition.com^$all
 ||highcpmrevenue*.com^$all
+||portentjonasfewer.com^$all
 ||profitablecpm*.com^$all
 ||rashcolonizeexpand.com^$all
 ||scarcehepatitis.com^$all
 ||seenwage.com^$all
 ||sneakyadministration.com^$all
 ||sourelevationregion.com^$all
+||sultrymomentarily.com^$all
+||verbassistance.com^$all
 ||wretchedclearance.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||103.155.214.207^$document
@@ -904,10 +400,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||185.196.9.214^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||185.196.9.222^$all
-||redirect12.com^$all
-||dealshik.com^$all
-||dealslandz.com^$all
-||x2lt.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||3.220.51.12^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -924,8 +416,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||usheebainaut.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||139.45.197.106^$all
-http://secured21.*.com/|$all
-||docssa.online^$all
 ||aaa-telegram.com^$all
 ||as-safety.org^$all
 ||as-safetys.org^$all
@@ -1285,7 +775,6 @@ http://secured21.*.com/|$all
 ||46.101.81.149^$all
 ||accommodateyours.com^$all
 ||accomplishedpersuadedprinter.com^$all
-||accountantflowerrespiration.com^$all
 ||adaptationfirework.com^$all
 ||alarmenvious.com^$all
 ||antagonizedetour.com^$all
@@ -1297,7 +786,6 @@ http://secured21.*.com/|$all
 ||asthmanotchcave.com^$all
 ||audiblemidsummerasia.com^$all
 ||backgroundrunway.com^$all
-||beetlestaircaselobster.com^$all
 ||billboardwring.com^$all
 ||bodilysubtractoversight.com^$all
 ||borrowbrutewarfare.com^$all
@@ -1316,6 +804,7 @@ http://secured21.*.com/|$all
 ||contactunpackaffliction.com^$all
 ||contemplatewaryheadquarter.com^$all
 ||contingentsolemnlykettle.com^$all
+||cpmrevenuegate.com^$all
 ||crawlinglandnameless.com^$all
 ||dandyleapt.com^$all
 ||densubmarinesubdued.com^$all
@@ -1415,16 +904,6 @@ http://secured21.*.com/|$all
 ||winemeaslesnab.com^$all
 ||yummyadvertiseexploded.com^$all
 ||howtofix.guide^$document
-||disturbedaccruesurfaces.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||194.226.139.121^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||194.226.139.7^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||95.181.157.36^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||95.181.172.204^$all
-||steamabundanceslope.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||147.135.16.27^$document
 apkfab.com##.tip-extension
@@ -1432,23 +911,8 @@ apkfab.com##.tip-extension
 ||185.87.148.199^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||45.136.49.35^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||51.91.211.94^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||162.19.71.16^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||146.59.240.191^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||54.37.5.34^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||54.36.118.105^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||159.89.10.102^$all
 cdburnerxp.se##[href*="/downloadsetup.exe"]
-||erothots.co^$all
 ||only2leaked.co^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||34.80.59.191^$all
 |http://www6.$document,domain=~often_used_in_malware_redirections.*
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||45.33.2.79^$document
@@ -1474,46 +938,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||173.255.194.134^$document
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||198.58.118.167^$document
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||34.117.199.78^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||94.237.103.119^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||94.237.84.54^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||94.237.93.242^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||94.237.99.118^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||139.45.197.249^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||196.196.153.151^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||158.222.7.116^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||196.245.152.139^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||165.231.251.197^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||196.242.16.29^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||165.231.4.90^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||158.222.7.83^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||95.214.26.78^$all
-.aspx?cname=*&cid=$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.155.184.57^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.155.186.24^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||209.74.107.131^$all
-||mb1-cdn.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||69.172.200.185^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||77.220.214.153^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||172.67.158.57^$document,popup
 !+ NOT_PLATFORM(windows, mac, android, cli)
@@ -1714,160 +1138,13 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||amt3.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||139.45.195.9^$all
-||animeplaynow.com^$document,popup
 ||playanimenow.com^$document,popup
-||datedate.today^$all
-||go.dealslandz.com^$all
-|http://*/munin/a/$xmlhttprequest,~third-party
-||astarsbuilding.com^$all
-||1800sweepstakes.com^$all
-||2soft.com^$all
-||4gateway.net^$all
-||accountantsutherland.com.au^$all
-||agora.com.vc^$all
-||aictuae.com^$all
-||aisecurityusa.com^$all
-||akp.com.au^$all
-||akrostis.com^$all
-||applianceoutlet.com.au^$all
-||artevista.com^$all
-||badbadger.com^$all
-||bagin.com^$all
-||beautylifestyle.com.au^$all
-||bgs.net^$all
-||bhagavan.com^$all
-||bomberfield.com^$all
-||brandcore.com.au^$all
-||byronbayflorist.com.au^$all
-||calabrianproperty.com^$all
-||calon.fm^$all
-||carbonclean.com.au^$all
-||centralcoastrealtors.com.au^$all
-||ceoservices.net^$all
-||cloze.net^$all
-||cmo.ar^$all
-||coldcreams.com^$all
-||completecover.com^$all
-||costaricaiswaitingforyou.com^$all
-||coverlimited.com^$all
-||createnetwork.com.au^$all
-||dailydeal.us^$all
-||demandify.com^$all
-||draftbug.com^$all
-||dragracingmagazine.com^$all
-||dula-gold.com^$all
-||e-scopes.com^$all
-||easyskincare.com.au^$all
-||educationglobal.com.au^$all
-||elion.com^$all
-||enginepolicy.com^$all
-||englishcoach.com.au^$all
-||entdocs.net^$all
-||expresscare.com.au^$all
-||familycover.com^$all
-||fbb.org^$all
-||ficus-ltd.com^$all
-||florida.net^$all
-||forests.net^$all
-||foursquarejamaica.com^$all
-||friel.net^$all
-||fritidsbolig.no^$all
-||frugalfriends.com^$all
-||gameexpert.com.au^$all
-||geelongwellness.com.au^$all
-||geologyaustralia.com.au^$all
-||getjob.com.au^$all
-||gicup.com^$all
-||gulvlegger.no^$all
-||gyetvai.com^$all
-||handcare.net^$all
-||hirecarcover.com^$all
-||holisticwellbeing.com.au^$all
-||huntersthompson.com^$all
-||iau-iraq.org^$all
-||inktomi.net^$all
-||insurance.cc^$all
-||ipgames.net^$all
-||iprnet.org^$all
-||iqk.com^$all
-||japaneseanime.org^$all
-||kitchen-news.com^$all
-||ladykingdom.com^$all
-||lalamove2u.com^$all
-||lally.net^$all
-||launchright.com.au^$all
-||leadershipinstitute.com.au^$all
-||list32.com^$all
-||localdelivery.com.au^$all
-||maliit.org^$all
-||manlymotel.com.au^$all
-||marly-le-roi.com^$all
-||maxcreative.com.au^$all
-||meditation.net^$all
-||middleeasterners.com^$all
-||musiclawyer.net^$all
-||muttwear.com^$all
-||onlineacademy.com.au^$all
-||onlinelease.com^$all
-||orrington.com^$all
-||parabrisa.com^$all
-||pennwood.com^$all
-||prensip.org^$all
-||prepaids.co.uk^$all
-||pressmicro.com^$all
-||productengineer.com.au^$all
-||ratso.net^$all
-||readytravel.com.au^$all
-||recruitingsolutions.com.au^$all
-||reddingjetboattours.com^$all
-||removalexperts.com.au^$all
-||reno-1.com^$all
-||richardarobbins.com^$all
-||rj-c.com^$all
-||safehire.com.au^$all
-||salesrentalsservice.com^$all
-||salmos.fm^$all
-||sarahdoll.com^$all
-||sca-clan.com^$all
-||skiholiday.com.au^$all
-||smartproject.com.au^$all
-||smartschool.com.au^$all
-||smsaar.com^$all
-||softshoppe.com^$all
-||southsixtyfive.com^$all
-||spicynights.com^$all
-||ssl-store.com^$all
-||starinsurance.com.au^$all
-||superiorrv.com^$all
-||supertour.com.au^$all
-||sz.cm^$all
-||talentforce.com.au^$all
-||tapetree.com^$all
-||targetedtv.org^$all
-||teamshare.com.au^$all
-||teenpussy4free.com^$all
-||thanglong.com^$all
-||thefinancialadvisor.com^$all
-||tropeavillas.com^$all
-||tyrecover.com^$all
-||videotherapy.com^$all
-||vvxa.com^$all
-||vwh1.com^$all
-||wellwritten.net^$all
-||wjh.com^$all
-||wollongonglandscaping.com.au^$all
-||woodburn.com.au^$all
-||xyz.cm^$all
-||yellowdragon.com^$all
-!+ NOT_PLATFORM(windows, mac, android, cli)
-||185.53.177.54^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||172.240.41.32^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||172.240.41.64^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||172.240.41.96^$all
-||24hdeepnude.com^$document
 ||debateobsoletesimply.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||172.240.41.33^$all
@@ -2350,54 +1627,679 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||unripereading.com^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
 ||188.72.219.35^$all
-||7roundprince.com^$all
-||andstarsbuilding.com^$all
-||astarsbuilding.com^$all
-||bizseasky.com^$all
-||bringmethehats.com^$all
-||byroundprince.com^$all
-||bzcclandlord.com^$all
-||ediemidnightzombies.com^$all
-||esnchocco.com^$all
-||fishrobotflower.com^$all
-||forroundprince.com^$all
-||forseasky.com^$all
-||herbgreencolumn.com^$all
-||hideousplay.com^$all
-||iseaskies.com^$all
-||joshuarms.com^$all
-||krankenwagenmotor.com^$all
-||maggieeatstheangel.com^$all
-||mcangelus.com^$all
-||michiganrobotflower.com^$all
-||monicaatron.com^$all
-||mysingleromance.com^$all
-||netgreencolumn.com^$all
-||delivery.no^$all
-||powerrobotflower.com^$all
-||protoroundprince.com^$all
-||roundprinceforest.com^$all
-||roundprinceweb.com^$all
-||seaskydvd.com^$all
-||seaskylink.com^$all
-||segreencolumn.com^$all
-||seroundprince.com^$all
-||superpointlesshamsters.com^$all
-||testrobotflower.com^$all
-||thatmonkeybites3.com^$all
-||thesmilingelbows.com^$all
-||thesmilingpencils.com^$all
-||thisgreencolumn.com^$all
-||togreencolumn.com^$all
-||tostarsbuilding.com^$all
-||travelrobotflower.com^$all
-||withflowersea.com^$all
-||yougreencolumn.com^$all
-||youseasky.com^$all
+||236956.today^$all
+||432987.today^$all
+||adresdoreczenie.today^$all
+||al-posta.cfd^$all
+||al-posta.xyz^$all
+||alb-post.cfd^$all
+||alb-posts.cfd^$all
+||albania-post.cfd^$all
+||albaniapost.cfd^$all
+||albaniapost.xyz^$all
+||albaniaposts.cfd^$all
+||albaniaposts.xyz^$all
+||albpost.xyz^$all
+||albposta.cfd^$all
+||albposti.cfd^$all
+||albpostl.cfd^$all
+||albposts.cfd^$all
+||alnpost.cfd^$all
+||alnpost.xyz^$all
+||alpost.cfd^$all
+||alpost.xyz^$all
+||alposta.cfd^$all
+||alposte.cfd^$all
+||alposti.cfd^$all
+||alpostl.cfd^$all
+||alposts.cfd^$all
+||anpostie.help^$all
+||assistauspost.today^$all
+||at-posts.cfd^$all
+||at-posts.help^$all
+||at-posts.xyz^$all
+||atpost.sbs^$all
+||atposts.asia^$all
+||atposts.lat^$all
+||atposts.mom^$all
+||atposts.quest^$all
+||au-eparcels.icu^$all
+||au-eparcels.live^$all
+||au-eparcelsan.$all
+||au-eparcelse.$all
+||au-postag.today^$all
+||au-postaga.$all
+||au-postage.today^$all
+||au-postags.$all
+||au-postalert.today^$all
+||auauspiost.today^$all
+||auauspost.today^$all
+||aueparcelstrack.$all
+||aueparcelstrack.live^$all
+||aunswgov.xyz^$all
+||aupost-adam.$all
+||aupost-adam1.today^$all
+||aupost-adams.today^$all
+||aupost-alerts.today^$all
+||aupost-alter.$all
+||aupost-assistant.today^$all
+||aupost-awaits.$all
+||aupost-collection.today^$all
+||aupost-delivered.$all
+||aupost-delivery.today^$all
+||aupost-eparcel.live^$all
+||aupost-eparcel.today^$all
+||aupost-eparcels.$all
+||aupost-issue.today^$all
+||aupost-issues.today^$all
+||aupost-myeparcel.$all
+||aupost-notice.today^$all
+||aupost-parcel.today^$all
+||aupost-parceled.$all
+||aupost-parceled.today^$all
+||aupost-parcels.today^$all
+||aupost-personal.today^$all
+||aupost-postage.today^$all
+||aupost-redirection.today^$all
+||aupost-redirects.today^$all
+||aupost-send.today^$all
+||aupost-support.today^$all
+||aupost-tacks.$all
+||aupost-tags.today^$all
+||aupost-tools.today^$all
+||aupost-track.$all
+||aupost-tracking.today^$all
+||aupost-trackme.$all
+||aupost-trackme.today^$all
+||aupost-tracknow.$all
+||aupost-tracks.$all
+||aupost-tracks.today^$all
+||aupost-tracksa.$all
+||aupost-tracksz.$all
+||aupost-tracksz.today^$all
+||aupost-updates.today^$all
+||aupostaccess.today^$all
+||aupostadam.today^$all
+||aupostadams.today^$all
+||aupostaddress.today^$all
+||aupostadmin.today^$all
+||aupostadmins.today^$all
+||aupostag.today^$all
+||aupostagent.live^$all
+||aupostagent.today^$all
+||aupostags.today^$all
+||aupostalert.today^$all
+||aupostall.today^$all
+||aupostassist.today^$all
+||aupostcenter.services^$all
+||aupostcenter.today^$all
+||aupostcentre.today^$all
+||aupostchange.$all
+||aupostdatas.today^$all
+||aupostdelivered.$all
+||aupostdelivery.today^$all
+||aupostguide.today^$all
+||auposthandle.$all
+||auposthelp.today^$all
+||auposthelps.live^$all
+||auposthub.today^$all
+||aupostidx.today^$all
+||aupostinfo.today^$all
+||aupostissue.today^$all
+||aupostmaid.today^$all
+||aupostmaids.today^$all
+||aupostmanage.$all
+||aupostme.today^$all
+||aupostmes.today^$all
+||aupostmings.$all
+||aupostnews.today^$all
+||aupostnotices.today^$all
+||aupostonline.today^$all
+||aupostools.$all
+||aupostparcel.today^$all
+||aupostrack.live^$all
+||aupostracked.live^$all
+||aupostracks.$all
+||aupostrackse.*$all
+||aupostreceive.today^$all
+||aupostredelivery.$all
+||aupostsend.today^$all
+||aupostsent.$all
+||aupostservice.today^$all
+||aupostsnow.$all
+||aupostsuport.today^$all
+||aupostsuportos.$all
+||aupostsuports.live^$all
+||auposttools.today^$all
+||auposttrack.live^$all
+||auposttrack.today^$all
+||auposttracked.live^$all
+||auposttracking.$all
+||auposttracks.live^$all
+||aupostupdate.today^$all
+||aupostupdates.today^$all
+||aupostworld.live^$all
+||aus-parcels.icu^$all
+||aus-parcels.live^$all
+||aus-posts.cfd^$all
+||ausapost.today^$all
+||ausauapost.$all
+||ausaupost.today^$all
+||auseparcel.icu^$all
+||auseparcelme.$all
+||auseparcels.icu^$all
+||auseparcelso.live^$all
+||ausepost.today^$all
+||ausepostrack.$all
+||ausipost.today^$all
+||ausopost.today^$all
+||ausparcelnow.icu^$all
+||ausparcels.icu^$all
+||ausparcels.live^$all
+||ausposa.sbs^$all
+||auspose.help^$all
+||ausposehelp.$all
+||ausposhelp.cfd^$all
+||ausposhelp.sbs^$all
+||auspost-alter.today^$all
+||auspost-awaits.today^$all
+||auspost-collection.today^$all
+||auspost-delivered.$all
+||auspost-delivery.today^$all
+||auspost-parcel.today^$all
+||auspost-parcels.live^$all
+||auspost-personal.$all
+||auspost-redirection.$all
+||auspost-send.today^$all
+||auspost-support.today^$all
+||auspost-tools.today^$all
+||auspost-track.live^$all
+||auspost-track.today^$all
+||auspost-tracking.$all
+||auspost-trackme.icu^$all
+||auspost-updates.today^$all
+||auspostaddress.today^$all
+||auspostassist.today^$all
+||auspostchange.today^$all
+||auspostdeliver1.$all
+||auspostdeliver2.$all
+||auspostdelivered.$all
+||auspostdeliveries.$all
+||auspostdelivery.today^$all
+||auspostdelivery1.$all
+||auspostdelivery2.$all
+||auspostenquiries.$all
+||auspostguide.today^$all
+||ausposthandle.today^$all
+||auspostl.cfd^$all
+||auspostmanage.today^$all
+||auspostnow.today^$all
+||auspostoffices.$all
+||auspostonline.live^$all
+||auspostparcel.today^$all
+||auspostrack.icu^$all
+||auspostrack.live^$all
+||auspostracks.live^$all
+||auspostreceive.today^$all
+||auspostreceiving.$all
+||auspostredelivery.today^$all
+||auspostredirecting.$all
+||auspostsend.today^$all
+||auspostsending.$all
+||auspostservice.today^$all
+||auspoststatus.today^$all
+||auspostsupport.today^$all
+||ausposttools.today^$all
+||ausposttrack.today^$all
+||ausposttracking.today^$all
+||ausposttransit.today^$all
+||auspostupdate.today^$all
+||auspostupdates.today^$all
+||ausservice.today^$all
+||ausservices.today^$all
+||ausspost.today^$all
+||australia-post.cfd^$all
+||australia-service.today^$all
+||australiaaupost.today^$all
+||australiaauservices.today^$all
+||australiaauspost.today^$all
+||australiagovernment.today^$all
+||australiaserve.today^$all
+||australiaserves.guru^$all
+||australiaserves.run^$all
+||australiaserves.today^$all
+||australiaservice.guru^$all
+||australiaservice.today^$all
+||australiaservices.guru^$all
+||australiaserving.today^$all
+||ausupoiste.com^$all
+||ausupoisteoline.$all
+||ausupost.today^$all
+||ausvpost.today^$all
+||auszpost.today^$all
+||aut-postlat.lat^$all
+||aut-postlat.lol^$all
+||autposta.asia^$all
+||autposta.click^$all
+||autpostae.asia^$all
+||autpostae.help^$all
+||autpostae.pics^$all
+||autpostat.asia^$all
+||autpostat.cyou^$all
+||autpostat.help^$all
+||autpostat.pics^$all
+||autpostl.pics^$all
+||azposta.cfd^$all
+||bg-posta.cfd^$all
+||bg-postl.cfd^$all
+||bg-posts.cfd^$all
+||bg-posts.xyz^$all
+||bgpostl.cfd^$all
+||bgpostl.xyz^$all
+||bgr-postl.cfd^$all
+||botswanapostt.$all
+||ctcposte.click^$all
+||ctt-post-prt.$all
+||ctt-postal.asia^$all
+||ctt-postal.buzz^$all
+||ctt-postal.cfd^$all
+||ctt-postal.help^$all
+||ctt-poste.cfd^$all
+||ctt-poste.click^$all
+||ctt-poste.hair^$all
+||ctt-poste.help^$all
+||ctt-poste.lat^$all
+||ctt-poste.pics^$all
+||ctt-poste.sbs^$all
+||ctt-prtpost.$all
+||cttpostal.asia^$all
+||cttpostal.buzz^$all
+||cttpostal.cfd^$all
+||cttpostal.cyou^$all
+||cttpostal.help^$all
+||cttpostal.mom^$all
+||cttpostal.sbs^$all
+||cttposte.help^$all
+||cttposte.mom^$all
+||cttposte.sbs^$all
+||cttposteprt.$all
+||cttpostprt.$all
+||cttprt.pics^$all
+||cttprtpost.lat^$all
+||cttprtpost.pics^$all
+||cttprtpost.sbs^$all
+||deliverieshelp.today^$all
+||deliveriesjobs.today^$all
+||deliveriessupport.today^$all
+||deliveriestrack.today^$all
+||deliveriestracking.today^$all
+||deliveryaupost.today^$all
+||deliveryauspost.today^$all
+||deliverypost.today^$all
+||deliveryupdates.today^$all
+||dhl-bs.cfd^$all
+||dhlexpres.xyz^$all
+||dhltrackse.live^$all
+||dlglpost.$all
+||do-fedex.cfd^$all
+||doreczenieadres.today^$all
+||doreczeniepocztex.today^$all
+||dpd-track24.site^$all
+||egtpostal.lat^$all
+||egyptpostl.lol^$all
+||egytposte.$all
+||egytpostl.$all
+||eparcelau.live^$all
+||eparcelsau.icu^$all
+||eparcelsau.live^$all
+||eparcelstrack.icu^$all
+||eparcelstrack.live^$all
+||eparceltrack.icu^$all
+||eparceltracked.live^$all
+||espcorreo.sbs^$all
+||evri-tracknumber.live^$all
+||fedex-bb.cfd^$all
+||gb-service.xin^$all
+||gb-tool.xin^$all
+||ge-post.cfd^$all
+||ge-post.xyz^$all
+||ge-postal.cfd^$all
+||go-correos.cfd^$all
+||governmentaustralia.today^$all
+||governmentservice.today^$all
+||guy-post.cfd^$all
+||guy-post.xyz^$all
+||guy-postl.cfd^$all
+||guypostl.cfd^$all
+||gy-post.cfd^$all
+||gy-post.xyz^$all
+||gypost.cfd^$all
+||gypost.xyz^$all
+||hayposta.cfd^$all
+||hpostmk.cfd^$all
+||inpoost-pl.$all
+||inposst-pl.$all
+||inpost-pl.fun^$all
+||inpost-pl.info^$all
+||inpost.today^$all
+||inpostdom.cfd^$all
+||inpostdom.xyz^$all
+||inposto.site^$all
+||inpostpl.pics^$all
+||invoiceassist.services^$all
+||invoiceissue.services^$all
+||invoicetaxe.link^$all
+||libypost.xyz^$all
+||maupost.xyz^$all
+||mauritiupost.$all
+||mauritiuspost.xyz^$all
+||mk-post.cfd^$all
+||mk-posta.cfd^$all
+||mk-posti.cfd^$all
+||mk-postl.cfd^$all
+||mkpost.cfd^$all
+||mkpostl.cfd^$all
+||mkpostl.xyz^$all
+||mkposts.cfd^$all
+||mu-postl.xyz^$all
+||mupost.cfd^$all
+||myparceltrack.live^$all
+||nampost.xyz^$all
+||nlpostco.help^$all
+||nomura-co-jp.today^$all
+||norgeposten.today^$all
+||norwayposten.today^$all
+||nz-post-co.help^$all
+||nz-post-co.xyz^$all
+||nzpostl.cfd^$all
+||pakkeposten.today^$all
+||parcelagaine.live^$all
+||parcelaupost.today^$all
+||parcelauspost.today^$all
+||parceldeliveries.today^$all
+||parcelredirection.today^$all
+||poatall.cfd^$all
+||poboxdeliveries.today^$all
+||poboxjobs.today^$all
+||poczta.com-lv.site^$all
+||pocztexdoreczenie.today^$all
+||post-alter.today^$all
+||post-arm.cfd^$all
+||post-arm.xyz^$all
+||post-delivered.today^$all
+||post-dk.cfd^$all
+||post-ge.cfd^$all
+||post-mk.cfd^$all
+||post-mkd.cfd^$all
+||post-mks.cfd^$all
+||post-mks.xyz^$all
+||post-nld.cfd^$all
+||post-nord-levering.$all
+||post-nord-receiving.$all
+||post-personal.today^$all
+||post-redirection.today^$all
+||post-support.today^$all
+||post-tools.today^$all
+||post-track.today^$all
+||post-tracking.today^$all
+||posta-al.cfd^$all
+||posta-aut.asia^$all
+||posta-aut.click^$all
+||posta-aut.mom^$all
+||posta-aut.pics^$all
+||posta-mdk.cfd^$all
+||posta-mdk.xyz^$all
+||posta-mk.cfd^$all
+||postaa-ba.$all
+||postaaut.cfd^$all
+||postaaut.cyou^$all
+||postaaut.help^$all
+||postaaut.lat^$all
+||postabaa.xyz^$all
+||postacg.cfd^$all
+||postag-at.$all
+||postal-at.asia^$all
+||postal-at.cyou^$all
+||postal-at.lol^$all
+||postalat.help^$all
+||postalb.cfd^$all
+||postalctt.cfd^$all
+||postalmk.cfd^$all
+||postals.cfd^$all
+||postamk.xyz^$all
+||postanl.cfd^$all
+||postanl.xyz^$all
+||postasi.cfd^$all
+||postasl.cfd^$all
+||postasl.xyz^$all
+||postautt.sbs^$all
+||postdelivered.today^$all
+||postdelivery.today^$all
+||poste-dz.cfd^$all
+||posteaut.help^$all
+||posten-nno.$all
+||posten-track.today^$all
+||posten-tracker.today^$all
+||posten-tracks.$all
+||postendk.lol^$all
+||postendsk.lat^$all
+||postenn-no.$all
+||postennorge.today^$all
+||postennorway.today^$all
+||postenpakke.today^$all
+||postenserve.today^$all
+||postenserves.today^$all
+||postenspor.today^$all
+||postentrack.today^$all
+||postentracks.today^$all
+||postge.xyz^$all
+||posti-al.cfd^$all
+||posti-al.xyz^$all
+||posti-ffi.$all
+||postimk.cfd^$all
+||postl-al.cfd^$all
+||postl-al.xyz^$all
+||postl-bg.cfd^$all
+||postl-ge.cfd^$all
+||postl-guy.cfd^$all
+||postl-guy.xyz^$all
+||postl-mk.cfd^$all
+||postla-mk.cfd^$all
+||postlat-aut.$all
+||postlataut.lat^$all
+||postlataut.pics^$all
+||postlfo.cfd^$all
+||postlmk.cfd^$all
+||postlmk.xyz^$all
+||postlmks.cfd^$all
+||postlmks.xyz^$all
+||postme.cfd^$all
+||postmk.cfd^$all
+||postmk.xyz^$all
+||postmkd.cfd^$all
+||postmkl.cfd^$all
+||postmkl.xyz^$all
+||postmks.cfd^$all
+||postnal.xyz^$all
+||postnlpostal.lat^$all
+||postnord-24.site^$all
+||postnord-all.$all
+||postnord-confirmation.$all
+||postnord-delay.$all
+||postnord-eco.buzz^$all
+||postnord-eco.cfd^$all
+||postnord-eco.sbs^$all
+||postnord-eco.xyz^$all
+||postnord-order-$all
+||postnord-paket.$all
+||postnord-pay.$all
+||postnord-post.$all
+||postnord-se-delivery.$all
+||postnord-step.$all
+||postnord-step1.$all
+||postnord-tk.$all
+||postnord-tracks.$all
+||postnord-update.help^$all
+||postnorde-swe.$all
+||postnordexpress.$all
+||postnordexpressdelivery-$all
+||postnordse.asia^$all
+||postnordspara.$all
+||postnorg-dk*
+||postomk.cfd^$all
+||postomk.xyz^$all
+||postprtctt.help^$all
+||posts-al.cfd^$all
+||posts-al.xyz^$all
+||posts-at.cfd^$all
+||posts-bg.cfd^$all
+||posts-bg.xyz^$all
+||posts-mk.cfd^$all
+||posts-mk.xyz^$all
+||postsal.cfd^$all
+||postsal.xyz^$all
+||postsat.cfd^$all
+||postsat.mom^$all
+||postsat.sbs^$all
+||postsaut.cfd^$all
+||postsend.today^$all
+||postsi.cfd^$all
+||postsmk.cfd^$all
+||poststatus.today^$all
+||postsud-se.cfd^$all
+||postsud-se.mom^$all
+||postten-no.$all
+||posttii-fi.$all
+||postupdates.today^$all
+||posturin-is.cfd^$all
+||prl-post.cfd^$all
+||prl-post.xyz^$all
+||prt-post-ctt.$all
+||ptt-govtur.cfd^$all
+||ptt-govtur.help^$all
+||ptt-turs.buzz^$all
+||pttgov-tur.lat^$all
+||pttgovtur.pics^$all
+||pttgovtur.skin^$all
+||pttgovtur.yachts^$all
+||pttposta.lat^$all
+||pttposta.xyz^$all
+||pttpostl.ink^$all
+||ptttur.click^$all
+||receiveaupost.today^$all
+||receiveauspost.today^$all
+||receivingaupost.today^$all
+||receivingauspost.$all
+||receivingdelivery.today^$all
+||receivingservice.today^$all
+||receivingtracking.$all
+||redelivery.digital^$all
+||redirect-auspost.today^$all
+||redirectingaupost.$all
+||redirectingauspost.$all
+||redirectingpost.today^$all
+||redirectionaupost.$all
+||redirectionparcel.today^$all
+||send-aupost.today^$all
+||send-aupost1.today^$all
+||sendaupost.today^$all
+||sendauspost.today^$all
+||sendingauspost.today^$all
+||sendpost.today^$all
+||serveaustralia.today^$all
+||service-gb.xin^$all
+||serviceaustralia.today^$all
+||services-australia.today^$all
+||servicesaus.today^$all
+||servicesaustralia.today^$all
+||serviciopost.cfd^$all
+||serviciopostals.cfd^$all
+||servingaustralia.today^$all
+||si-posta.xyz^$all
+||skpost.pics^$all
+||skpostl-sk.$all
+||skpostl.lol^$all
+||skposts.help^$all
+||skpostsk.cfd^$all
+||sporposten.today^$all
+||tolinotice.services^$all
+||track-aupost.today^$all
+||track-auspost.today^$all
+||track-updates.today^$all
+||trackapost.today^$all
+||trackaupost.today^$all
+||trackaupost2.today^$all
+||trackaupost3.today^$all
+||trackaupost4.today^$all
+||trackaupost5.today^$all
+||trackaupost6.today^$all
+||trackaupost7.today^$all
+||trackaupost8.today^$all
+||trackaupost9.today^$all
+||trackauspost.today^$all
+||trackcollect.today^$all
+||trackdeliveries.today^$all
+||trackdelivery.today^$all
+||trackdetailsa.today^$all
+||trackdetailsaa.$all
+||trackdisruptions.today^$all
+||trackhelp.today^$all
+||tracking-aupost.today^$all
+||tracking-auspost.today^$all
+||tracking-post.today^$all
+||tracking-service.today^$all
+||trackingaupost.today^$all
+||trackingauspost.today^$all
+||trackingcollect.today^$all
+||trackingdeliveries.today^$all
+||trackingdelivery.today^$all
+||trackingoffice.today^$all
+||trackingparcel.today^$all
+||trackingpost.today^$all
+||trackingredirecting.today^$all
+||trackingstatus.today^$all
+||trackingupdates.today^$all
+||trackjobs.today^$all
+||trackmypost.today^$all
+||tracknow.today^$all
+||trackoffice.today^$all
+||trackparcel.today^$all
+||trackparcels.today^$all
+||trackpersonal.today^$all
+||trackpobox.today^$all
+||trackpost.today^$all
+||trackreceiving.today^$all
+||trackredirecting.today^$all
+||trackservice.today^$all
+||trackstate.today^$all
+||trackstatus.today^$all
+||tracksupport.today^$all
+||trackupdates.today^$all
+||tur-ptt-posen.$all
+||tuspttes.lat^$all
+||ukpayment.xin^$all
+||uspsprl.cfd^$all
+||yawdwda.net^$all
+||zaepost.cfd^$all
+||zhjdauigh.xyz^$all
+||znauihdak.run^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||185.53.177.54^$all
+||43.100.125.58^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||54.75.69.192^$all
+||43.159.140.215^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||43.162.119.45^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||47.76.132.29^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||109.230.237.116^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||147.93.63.211^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||154.223.16.232^$all
+/adx_iframe_$third-party
+||az-partners.net^
+drvhub.net##.driver-item__install
 ||admozartxml.com^$all
 ||bidmyadz.com^$all
 ||explorads.com^$all
@@ -2412,6 +2314,16 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||driverpack.io^$document,domain=~has_extreme_amounts_of_pup_in_it.*
 ||androidweblog.com^$document,domain=~had_not_updated_their_root_guides_to_reflect_a_b_partition_phones_as_of_2021.*
 ||ytechb.com^$document,domain=~had_not_updated_their_root_guides_to_reflect_a_b_partition_phones_as_of_2021.*
+www.microsoft.com##.card[data-bi-cn*=block i][data-bi-cn*=survival i]
+www.microsoft.com##.card[data-bi-cn*="jail break" i]
+www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
+||s.free.fr^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||212.27.60.108^$all
+||amazonaws.com^$all,badfilter
+||amazonaws.com^$document,popup,badfilter
+||amazonaws.com^$document,badfilter
+||amazonaws.com^$badfilter
 ://ww4.$document,domain=~ww4.ikea.com|~ww4.sig-ge.ch|~ww4.autotask.net|~ww4.pornhoarder.org
 ://ww5.$document,domain=~ww5.ikea.com|~ww5.msu.ac.zw|~ww5.autotask.net|~ww5.pornhoarder.tv
 ://ww6.$document,domain=~ww6.generali.pt|~ww6.autotask.net|~ww6.pornhoarder.org
@@ -2427,17 +2339,28 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ://ww26.$document,domain=~ww26.autotask.net|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww38.$document,domain=~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww44.$document,domain=~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
-www.microsoft.com##.card[data-bi-cn*=block i][data-bi-cn*=survival i]
-www.microsoft.com##.card[data-bi-cn*="jail break" i]
-www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
-||s.free.fr^$all
 !+ NOT_PLATFORM(windows, mac, android, cli)
-||212.27.60.108^$all
-||amazonaws.com^$all,badfilter
-||amazonaws.com^$document,popup,badfilter
-||amazonaws.com^$document,badfilter
-||amazonaws.com^$badfilter
-||xiaobaixitong.com^$all
+||13.248.148.254^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.177.50^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.177.51^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.177.52^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.177.53^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.177.54^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.178.50^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.178.51^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.178.52^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.178.53^$all
+!+ NOT_PLATFORM(windows, mac, android, cli)
+||185.53.178.54^$all
 ||dabaicai.com^$all
 ||flash.cn^$all
 ||crentgate.com^$all
@@ -2445,6 +2368,7 @@ www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
 ||redirekted.com^$all
 ||spiderhannahresidential.com^$all
 ||tplinkextender.net^$all
+||youutube.com^$all
 ###contents > yt-share-target-renderer:nth-of-type(1n+2)
 ###divShare
 ###rail-share-bar
@@ -2545,6 +2469,7 @@ www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
 ##a[class*=BtnShare]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##a[class*=share__button]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##a[class^=share_btn]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
+##a[data-ga-event-action^="share:"]
 ##a[data-ss-ss-type]
 ##a[href*=".cmd=addShare"]
 ##a[href*="/social_plugins/share"]
@@ -2564,11 +2489,11 @@ www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
 ##a[title="Share on Telegram" i]
 ##a[title="Share on WhatsApp" i]
 ##a[title^="Share to "]
+##amedia-share
 ##amp-social-share
 ##button[aria-controls=ShareContainer]
 ##button[data-a-target^=share]
 ~chess.com##button[data-share-url]
-##button[title^="Del på "]
 ##button[title^="Share this "]
 ##div[button=share]
 ##div[class$=-sticky-share]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=post-with-stick])
@@ -2620,6 +2545,7 @@ www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
 ||social-plugins.line.me/widget/share?url=$subdocument
 ||static.addtoany.com/buttons^$image
 ||static.addtoany.com/menu^$script
+||static.mixi.jp/share_button.html^$subdocument,domain=~mixi.jp
 ||tumblr.com/share/$third-party
 ||twitter.com/share$third-party
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
@@ -2632,6 +2558,7 @@ www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###fb_share
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion###share-facebook
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.btn[href*="facebook.com/sharer/"]
+~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.facebook-like-box:not(html,body,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.facebook-page-plugin:not(html,body,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.facebook-share:not(html,body,:empty)
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##.facebook[href*="/sharer/"]:not(html,body,:empty)
@@ -2712,6 +2639,7 @@ www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
 ##.twitter[href*="/share?"]:not(html,body,:empty)
 ##.twitter_share:not(html,body,:empty)
 ##a[class$=share-twitter]
+##a[class=twitter i][title=Tweet]
 ##a[data-js=twitter-share]
 ##a[data-sharer=twitter]
 ##a[href*="twitter.com/home?source="]
@@ -2721,7 +2649,6 @@ www.microsoft.com##.card[data-bi-cn*=zombie i][data-bi-cn*=shoot i]
 ##a[href*="twitter.com/share?url="]
 ##a[onclick*="twitter.com/share?"]
 ##a[title="Share on Twitter" i]
-##a[title="Tweet this post"]
 ##li[data-share=twitter]
 ~viber.com##a[href^="viber://forward?text"]
 ~vk.com##.share-vk:not(html,body,:empty)
@@ -2783,8 +2710,6 @@ rapid-cloud.co#%#//scriptlet('ubo-aopw.js', 'navigator.brave')
 gigabyte.com#?#div.target-container.desc:has-text(PDF files with Acrobat )
 /get_adobe_reader.$image
 @@||supermicro.com$elemhide,badfilter
-/images/acrobat.gif|
-fileinfo.com##.fv
 experts-exchange.com#$#.accepted.answer { display: block !important }
 nijie.info#$#.ngtag.mozamoza { -webkit-filter: none !important }
 study.com#$##articleMain > div[class=hidden] { visibility: visible !important; display: block !important }
@@ -2858,6 +2783,7 @@ pinterest.*##div[id$=unauth-container] div[data-test-id=pin-closeup-image] > div
 www.deviantart.com##body > header[role=banner]:not([class*=" "]) ~ div[class^=_][class*=" "]:has(a[href*="/login"])
 magma.com##modals-box
 vk.com###page_bottom_banners_root
+substack.com,microsoftsecurityinsights.com,chipstrat.com##.intro-popup
 substack.com,microsoftsecurityinsights.com,chipstrat.com##div[class^=subscribe-]
 substack.com,microsoftsecurityinsights.com,chipstrat.com##.subscription-widget-wrap > .show-subscribe
 instacart.com##.AuthModal__Overlay:has(a[href$="/business"])
@@ -2873,6 +2799,7 @@ investing.com###PromoteSignUpPopUp
 context.reverso.net###register-popup-bottom
 ||comment.youmaker.com^$domain=theepochtimes.com
 ||viafoura.co^$domain=nottinghampost.com|liverpoolecho.co.uk
+thejournal.ie,city-countyobserver.com###comments
 indiatimes.com##div[class$="cmtwrapper "]
 ghacks.net###comments
 color-hex.com##.txtgray
@@ -2881,6 +2808,8 @@ rule34.paheal.net###comment-list-recent
 rule34.xxx###comment-list
 e621.net,e926.net###comments
 ###hot-network-questions
+/api/amediacomments/*
+/commentsbutton.js$domain=nettavisen.no
 www.pixiv.net##div[data-ga4-label*=comment i]
 /endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com|35.190.94.206
 vimeo.com##.pagination_holder
@@ -2895,7 +2824,6 @@ pixiv.net##div > div + section:has(a[href^="/premium/lead/"])
 cda.pl##.video-baner
 cda.pl##.row-video-clip-wrapper
 cda.pl###tVC
-artstation.com#?#projects-list-item:has-text(/^.*v\ideo\sslot.*$/i)
 fandom.com##.ad-slot-placeholder
 amap.com##.dir_qr
 ctrip.com##.set-wechat.set-list > .nav-myctrip.person-text
@@ -2917,6 +2845,7 @@ ctrip.com##.service-notice-right
 ctrip.com##.set-phone.set-list > .nav-myctrip.person-text
 jd.com###J_mobile
 lianjia.com,zu.ke.com,csair.com##.qr-code
+map.baidu.com##.message-panel-open
 map.baidu.com##.poi-ads
 map.baidu.com###leadDownloadCard
 mi.com##.item-image.item
@@ -2947,7 +2876,6 @@ knowyourmeme.com###trending-bar
 knowyourmeme.com###leaderboard
 knowyourmeme.com###top-entries-sidebar
 knowyourmeme.com###spp-gallery
-knowyourmeme.com###trending_photos
 knowyourmeme.com##.fb-page-like
 knowyourmeme.com##.cbox-smedia
 wikia.org,fandom.com###WikiaBarWrapper
@@ -2979,7 +2907,6 @@ fandom.com##div:not([class],[id],[style]):has(> [data-testid^=QuizBanner i])
 spleis.no#%#//scriptlet('ubo-set.js', '__INITIAL_STATE__.features.should-show-snow', 'false')
 /particles.min.js^
 /pureSnow.js^
-##.snowflakes:not(html, body)
 /frosmo.easy.js^
 /snowplow$script,domain=casamundo.se|hemnet.se
 /snowplow-tracker$script
@@ -2999,8 +2926,10 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /snowstorm.js
 /wp-snow-effect^
 /christmas-snow.js
+##foxfield-xmas
 @@||dongtaiwang.com^
 @@||epochtimes.com^
+@@||ntdtv.com^
 @@||soundofhope.org^
 @@||lemondeinformatique.fr^
 @@||accounts.google.com/gsi^$domain=www.deviantart.com
@@ -3059,6 +2988,7 @@ reports.adguard.com$badfilter
 @@||github.githubassets.com/assets/vendors-node_modules_github_turbo_$script,xmlhttprequest
 @@||github.githubassets.com/assets/app_assets_modules_github_ref-$script,xmlhttprequest
 @@||github.githubassets.com/assets/vendors-node_modules_braintree_browser-detection_$script,xmlhttprequest
+yeniakit.com.tr##.info-bar > li:not([class], [title])
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
 bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 delfi.lt#%#//scriptlet('ubo-aeld.js', 'copy')
@@ -3184,6 +3114,7 @@ foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 #@#.ad-banners
 ##.ad-banners:not(html,body,:empty)
 #@#.ad-below
+##.ad-below:not(html,body,:empty)
 #@#.ad-display
 ##.ad-display:not(html,body,:empty)
 #@#.ad-displayed
@@ -3223,16 +3154,20 @@ youtube.com##ytd-miniplayer[has-playlist-data][active]
 youtube.com##ytd-miniplayer[has-playlist-data][closed] ~ * .ytp-miniplayer-button
 @@://googleadservices.com^|$badfilter
 $third-party,denyallow=microsoft.com,domain=store.rg-adguard.net
+||h5data.talkingdata.net^$third-party
 fandom.com##.notifications-box
 flipkart.com##div[style^=flex-grow] div:first-of-type + div.col
 flipkart.com##footer section + div:last-of-type
+###custom-css .vjs-loading-spinner
 @@||gstatic.com/uservoice/surveys/resources/prod/js/survey/survey_binary$script
 google.*#@##google-hats-survey
 ||appboycdn.com^$third-party
 independent.co.uk,indy100.com##.notification-prompt
-qwant.com##main > div:last-of-type:has(>div>a:is([href*="://chromewebstore."],[href*="://addons.mozilla."]):not([data-testid]))
 /fakepage.html|$important
 /ads.js^$domain=tracksong.github.io|adblock.turtleneck.com,important
-/pagead.js^$domain=adblock.turtleneck.com,important
 ##[id$=-exit-modal-bg]
 www.google.*,ipv6.google.com###m-x-content div[class]:first-of-type:not([class*=" "]):has(> [data-rl])
+://discord.com/api/v*/bogo-promotions^
+://discord.com/api/v*/premium-marketing^
+discord.com##div[data-list-item-id*=skill-trees] + div[class*=" unreadImportant"]
+discord.com##div[data-list-item-id*=skill-trees] ~ div path[d^="M12 23a11 11 0 "]

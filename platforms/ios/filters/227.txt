@@ -1,14 +1,14 @@
-! Checksum: q7Oo6a1LBNFAL+WIql1MYg
-! Diff-Path: ../patches/227/227-s-1751834448-14400.patch
+! Checksum: tOzORhPFQ2I1cgJy0SrRUQ
+! Diff-Path: ../patches/227/227-s-1752583818-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.21.95
-! TimeUpdated: 2025-07-06T20:36:01+00:00
+! Version: 2.0.22.5
+! TimeUpdated: 2025-07-15T12:45:29+00:00
 ! Expires: 1 day (update frequency)
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2025.0707.1
+! OriginalVersion: 2025.0715.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -555,6 +555,8 @@ m.fmkorea.com##iframe[src*="//loader.fmkorea.com/"][src*="_loader/"]
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
 !
+||t1.daumcdn.net/top/daum/op/chanel/
+||t1.daumcdn.net/top/daum/op/smartfarm/
 ||cdn.lol.ps/static/prod/*/_app/immutable/assets/banner-
 ||platformgreat.kr/coupang_1.jpg
 ||maplescouter.com/ads/
@@ -1600,6 +1602,9 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+m.daum.net##div[style*="/top/daum/op/chanel/"].imgdeco_below
+www.daum.net##div[aria-hidden="true"].imgdeco_below
+ppomppu.co.kr##div[align="center"] > #header_box ~ div[style*="min-height:100px;"]
 lol.ps##main[style^="cursor: default;"][class="desktop:min-w-[1280px]"] > div[class^="modal-"]
 lol.ps##.overflow-x-hidden > div[class*="inset-x-0 top-[80px]"]
 lol.ps###banner-container
@@ -3351,8 +3356,6 @@ opworlds18.com,opworlds19.com,opworlds20.com,opworlds21.com,opworlds22.com,opwor
 spochak.com#?#table .basic-info-alert:has(a[href="/marble/"])
 avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 zzzz.lol#?#.widget-side .widget-title:has(+ div a[href^="/bbs/link.php?bo_table="][target="_blank"])
-booktoki461.com,booktoki462.com,booktoki463.com,booktoki464.com,booktoki465.com,booktoki466.com,booktoki467.com,booktoki468.com,booktoki469.com,booktoki470.com,booktoki471.com,booktoki472.com,booktoki473.com,booktoki474.com,booktoki475.com,booktoki476.com#?#ul[class] > li:has(> a[href*="tokkiweb.com"])
-manatoki464.net,manatoki465.net,manatoki466.net,manatoki467.net,manatoki468.net,manatoki489.net,manatoki490.net,manatoki491.net,manatoki492.net,manatoki493.net,manatoki494.net,manatoki495.net,manatoki496.net#?#ul[class] > li:has(> a[href^="/guarantee.php"])
 ! aglint-disable-next-line
 !
 ! DOMAIN-REFRESHER: END
@@ -3730,6 +3733,10 @@ lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lo
 manatoki468.net,manatoki489.net,manatoki490.net,manatoki491.net,manatoki492.net,manatoki493.net,manatoki494.net,manatoki495.net,manatoki496.net##[style="margin-bottom: 20px;"].row.row-15
 manatoki468.net,manatoki489.net,manatoki490.net,manatoki491.net,manatoki492.net,manatoki493.net,manatoki494.net,manatoki495.net,manatoki496.net##.basic-banner.row.row-10
 manatoki468.net,manatoki489.net,manatoki490.net,manatoki491.net,manatoki492.net,manatoki493.net,manatoki494.net,manatoki495.net,manatoki496.net##.board-tail-banner
+tvwiki22.com,tvwiki23.com,tvwiki24.com,tvwiki25.com,tvwiki26.com,tvwiki27.com,tvwiki28.com,tvwiki29.com,tvwiki30.com,tvwiki31.com,tvwiki32.com,tvwiki33.com,tvwiki34.com##div[id] > ul:has(a[href] > img[src^="/AD/"])
+tvwiki22.com,tvwiki23.com,tvwiki24.com,tvwiki25.com,tvwiki26.com,tvwiki27.com,tvwiki28.com,tvwiki29.com,tvwiki30.com,tvwiki31.com,tvwiki32.com,tvwiki33.com,tvwiki34.com##ul[class^="banner"]
+/https:\/\/tvwiki[0-9]+\.com\/AD\//$domain=tvwiki22.com|tvwiki23.com|tvwiki24.com|tvwiki25.com|tvwiki26.com|tvwiki27.com|tvwiki28.com|tvwiki29.com|tvwiki30.com|tvwiki31.com|tvwiki32.com|tvwiki33.com|tvwiki34.com
+/https:\/\/tvwiki[0-9]+\.com\/data\/banner\//$domain=tvwiki22.com|tvwiki23.com|tvwiki24.com|tvwiki25.com|tvwiki26.com|tvwiki27.com|tvwiki28.com|tvwiki29.com|tvwiki30.com|tvwiki31.com|tvwiki32.com|tvwiki33.com|tvwiki34.com
 ! This file contains the trusted rules
 ! chzzk.naver.com#%#//scriptlet('trusted-replace-xhr-response', ',"adFree":false', ',"adFree":true', 'my-info')
 tv.nate.com#%#//scriptlet('trusted-dispatch-event', 'adended', '.nate-player.ntv-ad-playing')

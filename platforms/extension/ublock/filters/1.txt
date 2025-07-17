@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: KRAkVuw6vmSHchfoCJH/qg
-! Diff-Path: ../patches/1/1-s-1751872373-3600.patch
+! Checksum: KUs1arhIjjug+Yd2yLSfFg
+! Diff-Path: ../patches/1/1-s-1752716418-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.1.0.42
-! TimeUpdated: 2025-07-07T07:08:19+00:00
+! Version: 2.1.0.66
+! TimeUpdated: 2025-07-17T01:35:29+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1439,6 +1439,8 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||cenoobi.run^
+||adtec.ru^
 ||x-app639-cc.tod99shi.com^
 ||timing-js-menu.xyz^
 ||simplejsmenu.com^
@@ -2920,7 +2922,7 @@ http://w7.ru^$third-party
 ||n.adonweb.ru/
 ||n1307adserv.xyz^
 ||n161adserv.com^$third-party
-||nadavi.net^$third-party,domain=~torg-ua.mail.ru|~torg.mail.ru
+||nadavi.net^$third-party
 ||nanofantiki.edigest.ru^$third-party
 ||nasimke.ru^$third-party
 ||nativeroll.tv^$third-party
@@ -3826,7 +3828,7 @@ positiverecords.ru#@#.ad-google
 ! pikabu.ru
 pikabu.ru##+js(abort-on-property-read, Object.prototype.shouldShowStickyAd)
 pikabu.ru##+js(abort-on-property-write, Ya)
-pikabu.ru##+js(remove-node-text, script, /xhr\.setRequestHeader\(he?\d?ader/)
+pikabu.ru##+js(remove-node-text, script, /xhr\.setRequestHeader\(h[a-zA-Z0-9]?a?[a-zA-Z0-9]{1\,3}[a-zA-Z0-9]?[a-zA-Z0-9]?[rp]/)
 ! sports.ru
 sports.ru##+js(json-prune, direct rtbAuctionInfo)
 sports.ru##+js(set-constant, Ya.adfoxCode.create, noopFunc)
@@ -4905,6 +4907,7 @@ yandex.*##:matches-path(/maps).promo-button
 ! Yandex.Pogoda
 !
 ! Yandex.Market
+market.yandex.*###\/content\/page\/fancyPage\/heroBannerCarousel
 market.yandex.*###\/content\/header\/madvHeaderPromo
 market.yandex.*###banner-streamer
 market.yandex.*##div[data-apiary-widget-name*="@marketfront/HeroBanner"]
@@ -6510,7 +6513,7 @@ www.kinopoisk.ru##div[class*="styles_height250__"]
 ! ##.ad
 ru.citaty.net,liga.net,appstorrent.ru,graniru.org,3dnews.ru,zaks.ru,ukranews.com,mr-7.ru,ferra.ru,cont.ws,riavrn.ru,maanimo.com,begaem.com,passion.ru,gq.ru,agravery.com,appsgames.ru,buhgalteria.ru,dumskaya.net,hotcharts.xyz,klops.ru,mmovote.ru,molnet.ru,news.pn,newsru.co.il##.ad
 ! ##.adv
-posylka.net,progroshi.news,thepage.ua,newsru.co.il,freetone.org,infox.ru,internet-technologies.ru,xcadr.tv,dota2.ru,newkaliningrad.ru,reestr.rublacklist.net,ringon.site,glavcom.ua,qna.center,afanasy.biz,happymonday.ua,xcadr.org,dugtor.ru,trud.ru,amic.ru,dugtor.org,kinoafisha.info,niknews.mk.ua,sovety.net,vesti.uz,wotsite.net##.adv
+news.novyny.live,posylka.net,progroshi.news,thepage.ua,newsru.co.il,freetone.org,infox.ru,internet-technologies.ru,xcadr.tv,dota2.ru,newkaliningrad.ru,reestr.rublacklist.net,ringon.site,glavcom.ua,qna.center,afanasy.biz,happymonday.ua,xcadr.org,dugtor.ru,trud.ru,amic.ru,dugtor.org,kinoafisha.info,niknews.mk.ua,sovety.net,vesti.uz,wotsite.net##.adv
 ! ##center > a[rel="nofollow"] > img
 faptime.ru,kremlinmedia.ru,cyberpedia.su,megaobuchalka.ru,rsload.net,gig-games.net,only-soft.org,freetp.org,7themes.su,babestar.ru,biblprog.org.ua,cwer.me,cwer.ru,dc-marvel.ru,dom-filmov.net,fast-torrent.co,frogik.ru,gighub.net,goldenshara.org,hd-bit.net,kingdia.com,kino-live2.org,kinocok.com,mskd-ru.net,nashynogi.ru,openssource.biz,pornotor.org,ru-zerkalo.org,rutorgames.org,seasontor.com,torentor.co,torentor.net,torrent2games.net,torrentik.co,vectornews.net,wotpack.ru,xatab-repack.net##center > a[rel="nofollow"] > img
 ! ##center > a[target="_blank"] > img
@@ -6841,13 +6844,22 @@ glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita
 !
 !
 !
+||xbox-360.org/knopki/bub2.png
+xbox-360.org##a[href="/gomed.php"]
+fost.ws##a[href^="https://sdertjnbv.xyz/"][target="_blank"]
+||fost.ws/soft/wp-content/uploads/2024/05/468.png
+fontanka.ru##div[class^="topicsInlineAdv_"]
+aniliberty.top##.commercial-banner
+kodik.info##+js(json-prune, vast reserve_vast)
+fastpic.org###x9f8e2b
+fastpic.org##iframe[srcdoc*="https://jsc.adskeeper.com/"]
 ||xv-on.com/popunder.js
 ||cdn.minval.az/new_banners/top_ban.gif
 minval.az##.top-banner
 kadastrme.ru##.addmar
 kiska.tv##.video-list__items > div:has(> noindex)
 ibmedia.by##.ad
-nnmclub.to##td[align="center"] > a[style="color: green; font-size: 16px; font-weight: bold"]
+nnmclub.to##a[href="https://nnmclub.to/forum/viewtopic.php?t=1799676"][style="color: green; font-size: 16px; font-weight: bold"]
 stratege.ru###content-top
 stratege.ru##.alelt_el_info
 stratege.ru##.ftpage_list_one_el:has(> .ftpage_list_one_el_outer)
@@ -7707,11 +7719,6 @@ wikigrowth.com##.wgr
 f1news.ru###b2-container
 apteka.ru##.OrderCreatedPopup__banner
 ||rutor.org.ru/download*.png
-4pda.to#?#[id][class*=" "][style*="height:"] > div[style]:has(a[target="_blank"] > img[title])
-4pda.to#?#[id][class*=" "][style*="height:"] > div[style]:has(> ul.slider-list + div > script)
-4pda.to#?#[id][class*=" "][style*="height:"] > div[style]:has(> h2[data-revive-zoneid][data-revive-id]) + div[class][style]
-4pda.to#?#[class] > div[class][id][style] + [id][class]:has(a[target="_blank"] > img[title])
-4pda.to#?#[class] > [id][class][style^="min-height:"]:has(a[target="_blank"] > img[title])
 kino-teatr.ru#?#.all_content > div[align="center"]:has(> div[align="center"] > advertronic-slot)
 kino-teatr.ru###top_line
 sundukporno.video###fluid-player-e2e-case_fluid_html_on_pause
@@ -12692,7 +12699,7 @@ newkaliningrad.ru##.banner-w100
 androidinsider.ru##.banner-zone
 androidinsider.ru##.banner-zone-parent
 koskomp.ru##.banner.block
-eaomedia.ru,minsknews.by,zoom.cnews.ru,depositfiles.com,dfiles.ru##.banner1
+odintap.ru,eaomedia.ru,minsknews.by,zoom.cnews.ru,depositfiles.com,dfiles.ru##.banner1
 newsomsk.ru##.banner1200x90
 news-kmv.ru##.banner2 > a[href="#"] > img
 woman.ru##.banner220-wrap
@@ -17519,6 +17526,7 @@ gorodrabot.ru##.vacancy.premium
 !
 ! START: Livejournal.com
 !
+livejournal.com#?#div[class^="floating-box-sticky"] + div[class]:has(> div[class]:matches-attr(/[a-z0-9]{5,10}hide\d?cookie/=/banner/))
 livejournal.com##.s-header-extra + div[class]:has(>  div.ng-scope > div[class$="__inner"] > div[class] > div[id^="common_fullscreen_"])
 livejournal.com##div[id^="billboard_"]
 livejournal.com##a[href$="tired=ads"]
@@ -18333,7 +18341,6 @@ ozon.ru#@#.ad7
 @@||nativerent.ru/*/advertiser/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42805
 @@||bt.mta.info/css/branding.css
-! https://forum.adguard.com/index.php?threads/35452/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41999
 @@||autoreview.ru/images/gallery/*/web/reklama/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41257
@@ -18757,7 +18764,6 @@ lenta.ru#@#iframe[width="600"][height="90"]
 @@||ph4.ru/includes/menu/reklama.js
 ! http://forum.adguard.com/showthread.php?5835
 @@||select.by/templates/branding/
-! http://fotostrana.ru/app/epicbubble/?from=trafficExchange.apps&fromUid=51761&toUid=1573070&tetoken=18341539&eAppsTraffExchg=1
 ! http://forum.adguard.com/showthread.php?5745
 @@/imgs_1/banner/*$domain=roe.ru
 ! http://forum.adguard.com/showthread.php?5740
@@ -18798,7 +18804,6 @@ guzei.com#@#object[width="300"][height="60"]
 @@||ads.adfox.ru/*/goLink$domain=sports.ru
 ! Fixing mail.ru games  (mail.ru API loader)
 @@||connect.mail.ru/js/loader.js
-! не инжектим javascript внутрь iframe-приложений вк, чтобы не поломать их
 ! вот так приходится блокировать рекламу в приложениях ВК
 ! На всякий случай логин-страницы вконтакта в исключения
 @@.queue*.vk.com/$document
@@ -18867,8 +18872,6 @@ gulli.ru#@#img[width="240"][height="400"]
 @@||nuzhnyrabochie.ru/themes/1/css/adv.css
 ! Fixing blocked images on http://www.comss.ru/screenshots/2191.html
 @@||cdn.comss.net/img/
-! Fixing broken left-sidebar menu
-@@||doubleclick.net^$domain=torg.mail.ru
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/356
 starbounder.org#@#.topbanner
 ! http://forum.adguard.com/showthread.php?4244
@@ -18946,7 +18949,6 @@ developer.android.com#@##adt
 rosreserv.ru#@#.b-banner
 ! http://forum.adguard.com/showthread.php?2707
 dni.ru#@#.banner240
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/63
 ! Always allow oauth
 @@||connect.mail.ru/oauth/
 ! Fixing oauth

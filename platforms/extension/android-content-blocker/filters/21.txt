@@ -1,8 +1,8 @@
-! Checksum: mbWH0Wl5dKaQBhu9vO/Lrg
+! Checksum: euaPsMdLCTeB7BtKDnXqBQ
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.35.24
-! TimeUpdated: 2025-07-07T09:09:41+00:00
+! Version: 2.0.35.61
+! TimeUpdated: 2025-07-16T17:09:25+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -37,6 +37,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/209464
+filmibeat.com##.fb-article-content-widget
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208343
 gamekult.com##.viously-ui-container.viously-sticked
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208253
@@ -1675,8 +1677,6 @@ shutterstock.com##div[class][style^="transition-duration:"] > div[class] > div[c
 naver.com###whale_promotion_banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42258
 ceneo.pl##.js_widget.widget-mobile.js_analytics-smallWidget[style]
-! https://github.com/AdguardTeam/AdguardFilters/issues/42202
-85tube.com##.images > .private + .message
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41998
 dobreprogramy.pl##.wppwidget > #Player0.FloatingPlayer.floating
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52501#issuecomment-606636283
@@ -1744,8 +1744,6 @@ focus.ua##.banner-wrap
 !
 ligainsider.de###popup_extra
 ccleaner.com##.top-banner
-! https://github.com/AdguardTeam/AdguardFilters/issues/36088
-piratedhub.com###blog_subscription-3
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36137
 ||ferra.media.eagleplatform.com^$domain=ferra.ru
 ferra.ru##amp-iframe[src^="https://ferra.media.eagleplatform.com/"]
@@ -2893,6 +2891,8 @@ ya.ru##.content__bottom
 ya.ru##.market-feed
 ya.ru##.message-promo
 ya.ru##.search3__inner > div.link-bro
+! Own services promo above the search
+ya.ru,yandex.*##.reasoning-section
 ! Alice promo under the search bar
 ya.ru##.promo-gallery
 ! Yandex Browser promo
@@ -2909,7 +2909,8 @@ yandex.*##main[class="body__wrapper"] form ~ div > div[style^="--height-ratio:"]
 [$path=/search]ya.ru,yandex.*##.EContent.SearchPage-RMG
 [$path=/search]ya.ru,yandex.*##.serp-item[data-fast-subtype="product_tiles_adv"]
 ! popup
-[$path=/search]ya.ru,yandex.*##.Distribution-Popup
+ya.ru,yandex.*##.DistributionLinkBro
+ya.ru,yandex.*##.Distribution-Popup
 !
 [$path=/search]ya.ru,yandex.*##.HeaderDesktopActions-Distribution
 ya.ru,yandex.*##.AliceFabPromo
@@ -2983,6 +2984,35 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+fishingjapan.jp##.common__adv_full
+dhbr.diamond.jp##.g-article-header-ad
+dhbr.diamond.jp##.g-article-subcolumn-ad
+||cds.thecontentserver.com/*/player.js$domain=food52.com
+itsfoss.com##.kg-cta-card
+internetaddictsanonymous.org##a.wp-block-button__link[href="https://internetaddictsanonymous.org/online-meetings/"]
+fshare.vn##.header_notice
+recorder.easeus.com##div[class^="button_box"]
+recorder.easeus.com##.silder_box_right > div[class^="right_silder_"]
+lego.com##div[class^="HeaderMobilestyles__GlobalBannerWrapper-"]
+lego.com##div[data-test="global-banner"]
+git-tower.com##.download-tower-framed
+git-tower.com##.sidebar-cta
+fshare.vn###month_promp_voucher_pp
+qitano.com###post_top > div.textwidget > p[style] > img[alt="LEGOOL logo"]
+qitano.com###post_top > div.textwidget > div.su-row
+qitano.com##.FixedWidget__fixed_widget
+qitano.com##.textwidget > p > video.video
+||qitano.com/wp-content/uploads/2023/01/%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AC%E3%82%B0%E3%83%BC%E3%83%AB%E3%81%A7%E9%AA%A8%E7%9B%A4%E3%82%92%E5%BC%95%E3%81%8D%E7%B7%A0%E3%82%81%E3%82%8B.gif
+||qitano.com/wp-content/uploads/LEGOOLmovie/
+similarweb.com##.extensions-promo
+migalhas.com.br##.patrocinador
+timesofindia.indiatimes.com##.aboundfloatingMain
+duckduckgo.com##section[class^="homepage-cta-section_"]
+rikeilabo.com##.cta-wrap
+qitano.com,rikeilabo.com##div[id^="xeory-fixed-banner"]
+thewrap.com##.entry-content > div.wp-block-spacer
+thewrap.com##.entry-content > div.wp-block-spacer + div.wp-block-group.has-global-padding
+||creatives-promo.telegraaf.nl^
 polyhaven.com##div[class^="Grid_"] > div[class^="NewsCard_wrapper_"]
 colegialasdeverdad.com##.vv-vip
 jitenon.jp##.side_shop_bnr
@@ -3004,7 +3034,6 @@ porn4fans.com##.premium-banner_holder
 urban-media.ru##.desk-show > img[src*="article-banner"]
 urban-media.ru##.mob-show > img[src*="article-banner"]
 samoletplus.ru##div[qa-data="bannerAgentCall"]
-blog.domclick.ru##div[class^="tpln-MyHomePromo-"]
 search.brave.com##.premium-cta
 profi.ru##.article__narrow > aside.productSlider
 newyorker.com##.consumer-marketing-unit
@@ -4853,7 +4882,7 @@ timesofindia.indiatimes.com##.article_content br ~ a[href^="https://timesofindia
 analytics.twitter.com##.home-columns div[data-type="advertiser"]
 blog.ipleaders.in##.td-ss-main-sidebar
 xv-ru.com,xvideos.com###content > div.mobile-hide + div[class]:not([id*="video"])
-natuyuki.com,umamusume-umapyoi.com,uzurea.net##.yyi-rinker-contents
+qitano.com,natuyuki.com,umamusume-umapyoi.com,uzurea.net##.yyi-rinker-contents
 kotyanlife.info##.kattene
 content.techgig.com##.tg-clients-banners
 scanwp.net,gochyu.com##.headmsg
@@ -5212,7 +5241,7 @@ office.com##.m-alert.f-information
 music.youtube.com##ytmusic-mealbar-promo-renderer
 youtube.com###ticker-content
 ||banner.consultant.ru^
-curseforge.com,toto.rakuten.co.jp,themeforest.net##.banner
+incehesap.com,curseforge.com,toto.rakuten.co.jp,themeforest.net##.banner
 alba.co.kr###MainBanner
 albamon.com##.stickyBestalba
 thinkster.io###carbonhold
@@ -5278,14 +5307,12 @@ jorudan.co.jp##.com_lp_frame
 metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class*="SportHome_bonusesCarousel__"]
 telecomasia.net,meta.reviews##.main-bonuses
 ! IObit
+iobit.com##.anvy__index
 ||iobit.com/tpl/images/summer/anniversary/
-||iobit.com/*/summer/*banner-home*.jpg
+||iobit.com/tpl/images/20*/*banner
 iobit.com##.rabbit-banner
 iobit.com##div[class*="-mask"]
-iobit.com##div[class*="bottom"][class~="on"]
 iobit.com##div[class*="pop"][class*="bg"]
-iobit.com##.comm_popup
-iobit.com##.comm_bottom
 iobit.com##div[class*="float-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188009
 @@||googletagmanager.com/gtm.js?id=GTM-WMQ82P6$domain=excite.co.jp,badfilter
@@ -5331,6 +5358,7 @@ persona3.jp##.remaster-modal
 op.gg##a[href="https://tft.op.gg/meta-trends/comps"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188045
 topics.smt.docomo.ne.jp##.dmenu_modal_hide
+! https://github.com/AdguardTeam/AdguardFilters/issues/208837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187600
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184333
 kakuchopurei.com##.layout-sidebar > div.widget_media_image
@@ -6901,6 +6929,7 @@ eiga.com##.header-pure-banner
 !##############################
 ! SECTION: Tweaks - CSS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/209271
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207601
 @@||starfilx.in/wp-content/plugins/wccp-pro/$domain=starfilx.in
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198152
@@ -7105,6 +7134,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208985
+! https://github.com/AdguardTeam/AdguardFilters/issues/209099
+! https://github.com/AdguardTeam/AdguardFilters/issues/208960
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208730
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208570
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208461
@@ -7528,7 +7560,6 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69481
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69223
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69105
-! https://github.com/AdguardTeam/AdguardFilters/issues/68272
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67719
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67516
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66868

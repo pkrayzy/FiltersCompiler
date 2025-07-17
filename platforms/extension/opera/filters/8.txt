@@ -1,9 +1,9 @@
-! Checksum: a+VGBoZSHxs5PqcW3NKXsA
-! Diff-Path: ../patches/8/8-s-1751569797-3600.patch
+! Checksum: iPkbBY5Ur5R5Y7I3m3ci2g
+! Diff-Path: ../patches/8/8-s-1752588711-3600.patch
 ! Title: AdGuard Dutch filter
 ! Description: EasyList Dutch + AdGuard Dutch filter. Filter list that specifically removes ads on websites in Dutch language.
-! Version: 2.0.8.37
-! TimeUpdated: 2025-07-03T19:06:10+00:00
+! Version: 2.0.8.43
+! TimeUpdated: 2025-07-15T14:07:52+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1565,6 +1565,8 @@ vakantieplaats.nl#@#.topAds
 @@||content.hwigroup.net/images^$domain=hardware.info
 hardware.info,tweakers.net#@#.AdBar
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/209339
+radio10.nl#%#//scriptlet('prevent-setTimeout', 'throw i(r+"err",[o,a,e],d,c),e}finally{i(', '50')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203606
 forum.fok.nl#%#//scriptlet('prevent-setTimeout', 'ckad')
 forum.fok.nl#@##advertentie
@@ -1573,6 +1575,7 @@ autotrader.nl#%#//scriptlet('abort-on-property-read', 'Object.prototype.autoReco
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208455
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201966
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197442
+kijk.nl,hartvannederland.nl,538.nl,vandaaginside.nl#%#//scriptlet('prevent-xhr', 'assets.prod.webx.talpa.digital/ad/view/')
 !+ NOT_OPTIMIZED
 vandaaginside.nl,538.nl,hartvannederland.nl#@##topbanner_ad
 !+ NOT_OPTIMIZED
@@ -1750,6 +1753,9 @@ omroepwest.nl#$#.adcontainer-Rectangle { position: absolute!important; left: -40
 ! Good: example.org###rek; ||example.com/ads/
 ! Bad: example.org#@##banner_ad (for instance, should be in allowlist.txt or in antiadblock.txt)
 !
+pepper.com##div[id$="AdSlotPortal"]
+funda.nl##div[role="complementary"]:has(> div > div[id^="div-gpt-ad-"])
+telegraaf.nl###ad_10
 geenstijl.nl#%#//scriptlet('google-ima3')
 geenstijl.nl#%#//scriptlet('prevent-element-src-loading', 'script', 'instream/html5/ima3.js')
 geenstijl.nl#%#//scriptlet('adjust-setTimeout', 'function () { [native code] }', '6000', '0.001')
