@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: +qVvfwia4ExhSpfAxeSTLA
-! Diff-Path: ../patches/6/6-s-1752750664-3600.patch
+! Checksum: /5Vd2ePqGcpHmmpQsj6Rhg
+! Diff-Path: ../patches/6/6-s-1752948760-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.48.48
-! TimeUpdated: 2025-07-17T11:07:02+00:00
+! Version: 2.0.48.51
+! TimeUpdated: 2025-07-19T18:08:19+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -443,7 +443,7 @@ schnittmuster-datenbank.de##+js(abort-on-property-read, adsBlocked)
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209484
-tarnkappe.info##+js(abort-current-script, document.createElement, adblock-check-overlay)
+tarnkappe.info##+js(abort-current-script, document.createElement, checkingOverlay)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201926
 karoqforum.de##+js(noeval-if, adsbygoogle.js)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199400
@@ -1517,6 +1517,7 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+computerbild.de##div[data-component-name="SingleDeal"]
 hartware.de##+js(abort-on-property-read, wpsite_clickable_data)
 hartware.de##+js(remove-class, bgtakeover)
 hartware.de##.container[onclick^="window.open('https://ads.jinkads.com/"]
@@ -2936,7 +2937,7 @@ allround-pc.com##.singlePostAd
 allround-pc.com##.wrapper > .infoHeadWrap1
 giga.de##.u-shape-top
 watson.ch##.watson-ad
-m.winfuture.de,winfuture.de##a[href^="/news"][href*="123690"]
+winfuture.de##a[href^="/news"][href*="123690"]
 winfuture.de##.hp_latest > div[style="display: none !important;"] + .clearfix
 windowsarea.de##.windo-widget
 windowsarea.de###mgm-middle-ad
@@ -5679,6 +5680,12 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !
 !
 !
+! eurogamer.de - video not playing
+@@||live.primis.tech/live$domain=eurogamer.de
+@@||live.primis.tech/content/video/$domain=eurogamer.de
+@@||live.primis.tech/content/omid/$domain=eurogamer.de
+@@||live.primis.tech/content/pal/pal.js$domain=eurogamer.de
+@@||live.primis.tech/main/js/deflate.min.js$domain=eurogamer.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208792
 ksta.de,express.de#@#.sticky-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208737
