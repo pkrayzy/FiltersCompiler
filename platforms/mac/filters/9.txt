@@ -1,8 +1,8 @@
-! Checksum: tl2ATzF4W1DthRenbUdqQQ
+! Checksum: /l1h/OxtUntjPt/Vuerh8g
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.30.95
-! TimeUpdated: 2025-07-23T07:10:27+00:00
+! Version: 2.0.31.13
+! TimeUpdated: 2025-07-31T06:10:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -189,6 +189,11 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210330
+||cdn.jsdelivr.net/npm/sweetalert$domain=jjjx.lol
+! https://github.com/AdguardTeam/AdguardFilters/issues/210313
+askflix.biz###adblock-overlay
+askflix.biz#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype.addEventListener', '.offsetParent===')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208565
 ||guiavidaesaude.com/wp-settings/ads_anuncio.js
 guiavidaesaude.com#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', '/window\.getComputedStyle|adblock-/')
@@ -209,7 +214,7 @@ mediasetinfinity.es#%#//scriptlet('prevent-element-src-loading', 'script', 'stat
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=mediasetinfinity.es
 @@||static-cloud.mediaset.net/misc/ad/adanalytics.js$domain=mediasetinfinity.es
 ! https://github.com/uBlockOrigin/uAssets/issues/28879
-jornaldacidadeonline.com.br#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jornaldacidadeonline.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207002
 cuitonline.com#%#//scriptlet('prevent-fetch', 'method:HEAD')
 cuitonline.com###adBlockModalOverlay
@@ -226,6 +231,8 @@ mitele.es#$#div[class^="adsInfo__fullOpacity-"] { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200089
 elcorreogallego.es###_an_cmp
 elcorreogallego.es#%#//scriptlet('set-constant', '_an.ABMode', 'undefined')
+! https://github.com/AdguardTeam/AdguardFilters/issues/210312
+redecanaistv.*,redecanais.*##.pm-section-highlighted > div[style]:not([class])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202441
 ! https://github.com/uBlockOrigin/uAssets/issues/27939
 redecanaistv.*,redecanais.*##.swal2-popup
@@ -1387,12 +1394,6 @@ embedder.net#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype
 embedder.net#%#//scriptlet('abort-on-property-read', 'initPu')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164868
 forodecostarica.com#%#//scriptlet('prevent-setTimeout', 'adJsView')
-! https://github.com/AdguardTeam/AdguardFilters/issues/185949
-! https://github.com/AdguardTeam/AdguardFilters/issues/177537
-! https://github.com/AdguardTeam/AdguardFilters/issues/177524
-! https://github.com/AdguardTeam/AdguardFilters/issues/161356
-guiavidaesaude.com,saudeecomida.com,comidaefamilia.food,meufinanceiro.org,investimentosfacil.online,fomedereceitas.online,blog.whatsappgb.top,infoinvest.org,receitastop.click,gastroponto.com#%#//scriptlet('set-local-storage-item', 'last_ads', 'yes')
-modsimuladores.com,vejaideias.com.br,jogoscompleto.xyz#%#//scriptlet('adjust-setTimeout', '/atualizar|hided/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161246
 1i1.in#%#//scriptlet('set-cookie', 'clicked_ads', '2')
 ! animesbr.cc - popup in player
@@ -1633,14 +1634,19 @@ olhardigital.com.br#$#.sn-header-bar { top: 0 !important; }
 olhardigital.com.br#$#body { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/193605
 pulzo.com#$##pulzo-header { position: static !important; }
+!
+! Player opens in a new tab with another domain by click
+! "Click on the ads below to unlock the player" / "Clique em um dos anuncios abaixo para liberar o player"
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186354
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185944
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186159
-! https://github.com/AdguardTeam/AdguardFilters/issues/186163
-! https://github.com/AdguardTeam/AdguardFilters/issues/186165
-! https://github.com/AdguardTeam/AdguardFilters/issues/185949
-! TODO: consider to add generic rule, something like #$##colunas #framed > #player.hided { display: block !important; } or similar
-guiavidaesaude.com,saudeecomida.com,comidaefamilia.food,meufinanceiro.org,investimentosfacil.online,fomedereceitas.online,blog.whatsappgb.top,infoinvest.org,receitastop.click#$#.hided { display: block !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/177524
+! https://github.com/AdguardTeam/AdguardFilters/issues/161356
+maxvip.site,guiavidaesaude.com,saudeecomida.com,comidaefamilia.food,meufinanceiro.org,investimentosfacil.online,fomedereceitas.online,blog.whatsappgb.top,infoinvest.org,receitastop.click,gastroponto.com#%#//scriptlet('set-local-storage-item', 'last_ads', 'yes')
+modsimuladores.com,vejaideias.com.br,jogoscompleto.xyz#%#//scriptlet('adjust-setTimeout', '/atualizar|hided/', '*', '0.001')
+! Generic, because they are using short living domains
+#$##colunas #framed > #player.hided { display: block !important; }
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177517
 elmueble.com#$#header { top: 0 !important; }
 elmueble.com#$#.admobile { display: none !important; }
@@ -1940,6 +1946,32 @@ c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,me
 !
 ! NOTE: Specific rules
 !
+zonared.com##.pub_300x600
+zonared.com##.pub_interior_top
+losreplicantes.com###pub-top
+postal.pt##ad-placement
+postal.pt##.sidebar-mrec
+postal.pt##.recomendados-outbrain
+futbolred.com##.pauta-push-down:has(> .pauta-module > .module-ads)
+ecartelera.com.mx##.apwrap
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=ecartelera.com.mx
+losreplicantes.com##.pub-box-intext
+clickjogos.com.br##div[class^="styles_sideAds_"]
+||d.jornaldocomercio.com/includes/paginas/inove/api_banners.php
+jornaldocomercio.com##.bg-banner
+jornaldocomercio.com##.adunitjc
+||videos.sisfolha.com.br/?v=$subdocument
+folhabv.com.br##div[data-insertion-position="prepend"]
+folhabv.com.br##.single-content > div[class="grid"]
+folhabv.com.br#?#.single-content > .text-center:contains(PUBLICIDADE)
+atarde.com.br##.atr-article-full-ads
+atarde.com.br##.ad-article-desk
+metrocptm.com.br###block-3
+metrocptm.com.br##.stpd-wp-block
+||cdn.jsdelivr.net/npm/sweetalert$domain=netcine.lat
+gazetadopovo.com.br##.ads-banner-header
+jb.com.br##.propaganda-geral
+correiobraziliense.com.br##.rasgado-materia
 mega.cl###container-itt
 mega.cl###stickyunit_dsk
 andro4all.com,alfabetajuega.com,urbantecno.com##.ad-div
@@ -2558,7 +2590,7 @@ hosteltur.com##div[class^="bp"][class*="hole-"]
 testdevelocidad.es##.banner-module
 dicasgostosas.com##.pub-text
 dicasgostosas.com##.ad-dicasg
-dicasgostosas.com###block-2
+metrocptm.com.br,dicasgostosas.com###block-2
 darkmahou.org##.kln
 insideevs.uol.com.br###container_3rd_party_service
 insideevs.uol.com.br##.apb
@@ -2682,7 +2714,7 @@ clickpb.com.br#?#body > div[style]:has(> a[href^="https://record.nsxafiliados.co
 clickpb.com.br##.adsHorizontal
 depor.com##div[class^="showTds"]
 gartic.com.br###shopIntUm
-noataque.com.br,vrum.com.br##.ad-banner
+embedplay.icu,noataque.com.br,vrum.com.br##.ad-banner
 vrum.com.br#?#.category-list-post:has(> .ad-banner)
 cnnbrasil.com.br##.ads__list__item
 poder360.com.br##.box-carousel-sponsor__banner
@@ -3394,7 +3426,7 @@ jovemnerd.com.br###Position_TopFixed
 elpais.com.uy##.ads-under-header
 autobild.es,computerhoy.com##div[class^="wrapper_roba_"]
 observatoriodatv.uol.com.br##.LinguetaApple
-formulatv.com##.pub-top
+ecartelera.com,formulatv.com##.pub-top
 formulatv.com##.pub-mid
 formulatv.com##.pub-btfm
 universoformulas.com##span[style="font-size: 6pt"]
@@ -4439,7 +4471,7 @@ holadoctor.com##.banner_cubo_space
 mundoconectado.com.br,canaldopet.ig.com.br,tempo.pt,lasestrellas.tv,auto10.com,abril.com.br##div[id^="ad_"]
 abril.com.br##.ad-sense
 abril.com.br##.widget-superbanner
-programaswebfull.net##.topad
+pisapapeles.net,programaswebfull.net##.topad
 marca.com##.content > iframe[src^="http://91.116.142.114"]
 ||91.116.142.114/iframe$domain=marca.com
 tabletsesmartphones.org##.banner-336x280

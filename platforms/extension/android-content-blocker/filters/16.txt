@@ -1,8 +1,8 @@
-! Checksum: az1WCVp6ZIr8p8Ttnzdw7w
+! Checksum: yt7tnsb1JCMneEcGRtWm1w
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.53.54
-! TimeUpdated: 2025-07-21T23:07:29+00:00
+! Version: 2.0.53.65
+! TimeUpdated: 2025-07-31T15:08:38+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -19,6 +19,7 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||lopfly.com^
 ||heliumads.com^
 ||proxy.ads.canalplus-bo.net^
 ||7bd92.v.fwmrm.net^
@@ -198,26 +199,26 @@ ebookdz.com#@#.ad-placeholder:not(#filter_ads_by_classname):not(#detect_ad_empir
 @@||monumentum.fr/template/front/js/bigbangads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
-/^https:\/\/acscdn\.com\/script\/(?:aclib|atg|compatibility|ippg|suv4|ut)\.js(\?cb=\d{13})?$/$script,third-party,match-case,important,domain=japscan.lol
-@@||platform.pubadx.one/pubadx-ad.js$xmlhttprequest,domain=japscan.lol
-@@||static.cloudflareinsights.com/beacon.min.js$xmlhttprequest,domain=japscan.lol
-@@||acscdn.com^$script,third-party,domain=japscan.lol
-@@.shop/*/invoke.js$script,third-party,domain=japscan.lol,important
-japscan.lol#@#div.container > [href]
-@@$image,domain=japscan.lol
-@@||japscan.lol^$image,xmlhttprequest,script,~third-party
-japscan.lol#@#.tangoai
-japscan.lol#@#[class^="copine"]
-@@||japscan.lol^$generichide
-@@||googletagmanager.com/gtag/js$domain=japscan.lol
-@@||githack.com^$script,domain=japscan.lol
-@@||statically.io^$script,domain=japscan.lol
-@@||netlify.app^$script,domain=japscan.lol
-@@||iili.io^$xmlhttprequest,domain=japscan.lol
-@@||imageshack.com^$xmlhttprequest,domain=japscan.lol
-@@||drive.google.com^$xmlhttprequest,domain=japscan.lol
-@@||postimg.cc^$xmlhttprequest,domain=japscan.lol
-@@||i.ibb.co^$xmlhttprequest,domain=japscan.lol
+japscan.*#@#div.container > [href]
+@@||japscan.$image,xmlhttprequest,script,~third-party
+japscan.*#@#.tangoai
+japscan.*#@#[class^="copine"]
+@@||japscan.$generichide
+/^https:\/\/acscdn\.com\/script\/(?:aclib|atg|compatibility|ippg|suv4|ut)\.js(\?cb=\d{13})?$/$script,third-party,match-case,important,domain=japscan.*
+@@||platform.pubadx.one/pubadx-ad.js$xmlhttprequest,domain=japscan.*
+@@||static.cloudflareinsights.com/beacon.min.js$xmlhttprequest,domain=japscan.*
+@@||acscdn.com^$script,third-party,domain=japscan.*
+@@.shop/*/invoke.js$script,third-party,domain=japscan.*,important
+@@$image,domain=japscan.*
+@@||googletagmanager.com/gtag/js$domain=japscan.*
+@@||githack.com^$script,domain=japscan.*
+@@||statically.io^$script,domain=japscan.*
+@@||netlify.app^$script,domain=japscan.*
+@@||iili.io^$xmlhttprequest,domain=japscan.*
+@@||imageshack.com^$xmlhttprequest,domain=japscan.*
+@@||drive.google.com^$xmlhttprequest,domain=japscan.*
+@@||postimg.cc^$xmlhttprequest,domain=japscan.*
+@@||i.ibb.co^$xmlhttprequest,domain=japscan.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147701
 trustmyscience.com##.adb-border
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146165
@@ -711,6 +712,12 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+clubic.com##.ad-container:not(#style_important)
+hentaivost.fr##.navbar-nav > li[id^="nav-menu-item-"] > a:not([href^="https://hentaivost.fr/"])
+||hentaivost.fr/detect.js
+||gupload.xyz/data/head/script.php
+||gupload.xyz/vast/
+zone-telechargement.al##.body-clickable
 numerama.com##.is-superb-lungfish
 numerama.com##.opti-kyd[data-gtm-bic]
 dexerto.fr##div[class*="bg-custom-ad-background"]
@@ -1349,6 +1356,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/209653
+@@||127.0.0.1*/jdcheck.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209823
 @@||ecodent.shop/userfiles/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209106
@@ -1475,9 +1484,6 @@ pisos.com#@#div[data-ad-id]
 ||candy.ai^$popup,third-party,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181173
 ||web2.$subdocument,domain=0calc.com|0calc.es|0calc.fr|0calc.in|0calc.ru|0rechner.de,badfilter
-! https://github.com/uBlockOrigin/uAssets/issues/23806
-@@||ko-fi.com/cdn/scripts/overlay-widget.js$domain=japscan.lol
-@@||bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js$domain=japscan.lol
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179457
 @@||redirector.googlevideo.com/videoplayback*dclk_video_ads$xmlhttprequest,domain=vix.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179466
@@ -1488,7 +1494,7 @@ $script,third-party,domain=igg-games.com,badfilter
 $script,third-party,domain=vidsrc.in|vidsrc.me|vidsrc.net|vidsrc.pm|vidsrc.xyz,badfilter
 $subdocument,third-party,domain=vidsrc.in|vidsrc.me|vidsrc.net|vidsrc.pm|vidsrc.xyz,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178483
-japscan.lol#@##dlinkc
+japscan.*#@##dlinkc
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177714
 intheblackmedia.com#@#a[href^="https://plarium.com/"]
 ! vtbe.to - incorrect blocking, video player is broken
@@ -2254,10 +2260,6 @@ youzik.com#@#a[style]
 @@||bitchute.com/static/*/js/monetization.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23439
 @@||zone-telechargement1.org^$popup,domain=zone-telechargement1.org
-! https://github.com/AdguardTeam/AdguardFilters/issues/23428
-@@||cse.google.com/cse.js^$domain=clubic.com
-@@||cse.google.com/cse/element/$domain=clubic.com
-@@||googleapis.com/customsearch/$domain=clubic.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23372
 akademikpersonel.org#@##ad_global_below_navbar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22721
