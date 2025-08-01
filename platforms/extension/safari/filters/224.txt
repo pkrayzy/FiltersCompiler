@@ -1,9 +1,9 @@
-! Checksum: 5jJbcqPJTvV7RJpxmg7f0A
-! Diff-Path: ../patches/224/224-s-1753269121-3600.patch
+! Checksum: GuJHY39us5QuUH9Exs1dCQ
+! Diff-Path: ../patches/224/224-s-1754008535-3600.patch
 ! Title: AdGuard Chinese filter
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.40.87
-! TimeUpdated: 2025-07-23T11:07:52+00:00
+! Version: 2.1.41.32
+! TimeUpdated: 2025-08-01T00:32:15+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -352,11 +352,13 @@ xbgame.net#@#.google-ads
 xbgame.net#@##google-ads
 xbgame.net#$#.download .content-area > div[class] { background-image: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167332
-18comic.vip#%#//scriptlet('prevent-setTimeout', 'float_right > div')
-18comic.org,18comic.vip,18-comic.work#@?#:-abp-has(>ins+script)
-18comic.org,18comic.vip,18-comic.work#$?#.col-xs-6 > div[data-type][style]:has(> ins + script) { remove: true; }
-18comic.org,18comic.vip,18-comic.work#?#.col-xs-6 > div[data-show][style]:has(> p:only-child > a[target="_blank"] > img)
-18comic.org,18comic.vip,18-comic.work#%#//scriptlet('abort-current-inline-script', 'document.dispatchEvent', '/getexoloader/')
+jmcomic-zzz.org,18comic.org,18comic.vip##.div-bf-pv
+jmcomic-zzz.org,18comic.org,18comic.vip##div[style="position: absolute;bottom: 0px;z-index: 10;"]
+jmcomic-zzz.org,18comic.org,18comic.vip#%#//scriptlet('prevent-setTimeout', 'float_right > div')
+jmcomic-zzz.org,18comic.org,18comic.vip#@?#:-abp-has(>ins+script)
+jmcomic-zzz.org,18comic.org,18comic.vip#$?#.col-xs-6 > div[data-type][style]:has(> ins + script) { remove: true; }
+jmcomic-zzz.org,18comic.org,18comic.vip#?#.col-xs-6 > div[data-show][style]:has(> p:only-child > a[target="_blank"] > img)
+jmcomic-zzz.org,18comic.org,18comic.vip#%#//scriptlet('abort-current-inline-script', 'document.dispatchEvent', '/getexoloader/')
 ||18comic.*/exads-adblock-*/backend_loader.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166155
 vxetable.cn#%#//scriptlet('abort-current-inline-script', 'decodeURIComponent', 'pagead')
@@ -485,7 +487,8 @@ linovelib.com#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'adB
 linovelib.com#%#//scriptlet('set-constant', 'adblock', '0')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164798
 ! https://github.com/uBlockOrigin/uAssets/issues/10953
-@@/wp-content/themes/radio-hub/static/js/adpro.js$domain=tingfm.com
+@@/wp-content/themes/radio-hub/static/js/*.js$domain=tingfm.com
+tingfm.com#%#//scriptlet('trusted-replace-node-text', 'script', 'wndt.can_run_ads', '/wndt\.can_run_ads.*=.*;/', 'wndt.can_run_ads = !0;')
 tingfm.com#%#//scriptlet('set-constant', 'canRunAds', 'true')
 tingfm.com#%#//scriptlet('set-constant', 'can_run_ads', 'true')
 tingfm.com#%#//scriptlet("prevent-setTimeout", "adblock")
@@ -1082,6 +1085,7 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 ! NOTE: Specific rules
 !
+tw.news.yahoo.com##div[id^="defaultLDRB"]
 youziks.com#%#//scriptlet('prevent-setTimeout', 'ecjkox.com')
 fuliba2025.net##.content > a[href][target="_blank"]
 nekoray.org##main > div[data-elementor-type="single-page"] > div.elementor-element:has(> div.e-con-inner > div.elementor-element > a[href^="https://c.nekoray.org/goto/topbanner/"])
@@ -1113,7 +1117,7 @@ cesu.ai##div[class^="money_"]
 codernav.com##.io-widget-ad-lunbotu
 news.qq.com###content-right div[class][style*='background-image: url("https://inews.gtimg.com/newsapp_bt/']:has(img[alt^="QQ"])
 tw.news.yahoo.com##div[data-google-query-id]
-tw.news.yahoo.com##div[id^="sda-"]
+tw.yahoo.com,news.yahoo.com##div[id^="sda-"]
 tw.news.yahoo.com##.YDC-Lead
 news.qq.com#?##content-right div[class]:has(> h1:contains(热门应用))
 ||isyd.net/images/ad1.jpg
@@ -1277,8 +1281,6 @@ m.mobile01.com##.u-gapNextV--lg.u-height280
 damon624.pixnet.net##.article-content-inner > p:has(> span > a[href] > ins.adsbygoogle)
 ||static.huaren.live/ads/
 huaren.live##.action-ad
-huaren.live#%#//scriptlet('trusted-replace-node-text', 'script', 'ConFig', 'let ConFig', 'var ConFig')
-huaren.live#%#//scriptlet('set-constant', 'ConFig.config.ads', 'emptyObj')
 wiki.mbalib.com###ad-fold
 wiki.mbalib.com##div[id^="p-ad-"]
 wiki.mbalib.com##.tool-bar > a[target="_blank"]
@@ -2848,6 +2850,11 @@ netfly.*,netfly.tv##.player-box > div.player-tt-rmm
 netfly.*,netfly.tv##.module-tg-box
 netfly.*,netfly.tv##div[class*="tt-"] > a[target="_blank"] > img
 netfly.*,netfly.tv##div[class*="tt-"] > a[target="_blank"] + span.tt-icon-close
+! https://github.com/AdguardTeam/AdguardFilters/issues/210237
+huaren.live#%#//scriptlet('set-constant', 'ConFig.config.ads', 'emptyObj')
+! TODO: remove hints when this issue is resolved - https://github.com/AdguardTeam/Scriptlets/issues/517
+!+ NOT_PLATFORM(windows, mac, android)
+huaren.live#%#//scriptlet('trusted-replace-node-text', 'script', 'ConFig', 'let ConFig', 'var ConFig')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177520
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204700
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202922
@@ -3000,6 +3007,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! ! temporary
 ! https://github.com/AdguardTeam/AdguardBrowserExtension/issues/3031
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210278
+#@#.uk-container.uk-container-expand
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208953
 ||cdn77.org^*.mp4|$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200865
@@ -4908,7 +4917,7 @@ newduba.cn###jq_youxi
 ##style + .a-loading
 ##.horizontal-banner + .post-content
 ##style + .need_grid_img
-##.player-rm > a[href*=".umtrack.com"]
+##.rm-two > a[href*=".umtrack.com"]
 ##style + .vdgdo
 ##.tg-m.tg-site
 ##.tg-pc.tg-site
@@ -4924,15 +4933,19 @@ newduba.cn###jq_youxi
 ##.video-ad-item
 ##.ceo_ads
 ##.yalayi_box
-###kp-hid-gb.uk-alert
+##.uk-container.uk-container-expand
 ###side_promo.bc_dp
 ###fucku.col-md-8
+###index_banner[src*=".imgdd.com"]
 ###ad-float.kyty
+##.banner-adv-new
 ##body[ontouchstart] > .wrap > div[id^="content_"][style="display: block;"]
 ##body[ontouchstart] > div[id^="content_"][style="display: block;"]
 ##.relative > div > img[sizes="100vh"][width="0"]
 ##a[href^="/archives/"] > .post-card > .blog-background[style*="gif;base64"]
 ###banner_links.banner-container
+##.a-media.ex-728-90
+##a[clickmode="cpt"]
 ##a[href="https://t.me/bokaiyunwujiankaiyun"]
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 ##td[id^="td_"] > a[href^="/htmm/"]
@@ -4957,6 +4970,101 @@ newduba.cn###jq_youxi
 .z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||b0rz2s5ik.com^
+||nug08010lu.com^
+||ivzaq2irg.com^
+||uiqouw.icu^
+||heavly1.com^
+||oycf.cn^
+||f7ugx6b863.com^
+||q7qhlnyfx.com^
+||sportuay.com^
+||wuyjtew.icu^
+||yopo0hx26.com^
+||nug07310lu.com^
+||stsgus.icu^
+||kibn.cn^
+||nug07311lu.com^
+||tinjsicyt.com^
+||gio07311rp.com^
+||82e9ac3c1.com^
+||dkngfkgbc.com^
+||qhaazaduez.com^
+||4xicd08qs.com^
+||cinemaup.top^
+||udwlki.icu^
+||nug07300lu.com^
+||5fyme6x6uy.com^
+||utve.cn^
+||b82q168jgj.com^
+||gio07300rp.com^
+||34mede82hj.com^
+||nug07301lu.com^
+||gio07301rp.com^
+||oaatyq.icu^
+||sneakersq5.com^
+||xpya.cn^
+||gio07290rp.com^
+||3rre9r4t2.com^
+||aai07291mu.com^
+||wkzvf2658.com^
+||nhy9i8t56f.com^
+||zrzgsdocqm.com^
+||aai07280mu.com^
+||ifoh.cn^
+||dai9146.xyz^
+||gio07280rp.com^
+||qxeymg.icu^
+||sunglasse2.top^
+||pimormebwf.com^
+||y1ma8c054n.com^
+||gio07281rp.com^
+||qlghunil.com^
+||aai07281mu.com^
+||wozlx.cn^
+||r6q4mtfno.com^
+||aai07290mu.com^
+||jxdyk65ay.com^
+||pjcg3864p.com^
+||gio07270rp.com^
+||shigao.icu^
+||pencild4.com^
+||z0ha6abmi.com^
+||qpeq.cn^
+||xh04i9ine.com^
+||gio07271rp.com^
+||gio07260rp.com^
+||valeriesara.com^
+||t1d26dvout.com^
+||w5ftl8bhu3.com^
+||brownnx.top^
+||vtiwz6pgc8.com^
+||gio07261rp.com^
+||umrr.cn^
+||byt73g6rrr.com^
+||orpy.cn^
+||1qa5x1k5v.com^
+||txbgcd1is.com^
+||gio07250rp.com^
+||oogqem.icu^
+||orangevd.top^
+||lrta.cn^
+||awkxf8bbj.com^
+||gio07251rp.com^
+||udxi.cn^
+||fiwf54qahl.com^
+||t0cv7pmo2y.com^
+||qlkysc.icu^
+||mouthop3.com^
+||igtx.cn^
+||wgceetonr.com^
+||auy07240km.com^
+||d9q4aa05g4.com^
+##a[href*="/hs63.cc"]
+||gio07241rp.com^
+||ieiczidqyv.com^
+||dklvhfrnvr.com^
+||sknkggfnm.com^
 ||op9dbh1i0.com^
 ||1kb4atu6x.com^
 ||eiyu7532.xyz^
@@ -13012,6 +13120,7 @@ meijutt.*/js/pcjs/
 ||xc.macd.cn^
 ||xc.mydrivers.com^
 ||xcar.com.cn/dsp/ad
+||xchina.*/scripts/modal/modal.js
 ||xchina.*/ad/
 ||xchina.*/plugins/jquery.modal/
 ||xchina.*/plugins/sweetAlert2/
@@ -13320,9 +13429,15 @@ meijutt.*/js/pcjs/
 ||ibmwclub.com/tophub/assets/js/sponsor.
 ||5dm.link/html5/api_aj.
 ||5dm.link/html/$image
+||hdmoli.pro/a_d/
 ||komiic.com/ads/
 ||v2ex.com/pro/emitter
 zhihu.com##.Pc-word-new
+vmlib.com##.wp-caption
+vmlib.com##.elementor-widget > .elementor-widget-container > a[href^="http"]:not([href*="vmlib."])
+mydrivers.com##div[style="margin: auto;width: 580px;padding: 10px 0;"]
+docin.com##.mini-series-container
+5dm.link###player_pause
 1lou.me,1lou.one,1lou.pro###advert > :not(.card)
 manhuapica.com##a[href^="/ad/"]
 nodeseek.com##.promotation-item
@@ -13391,7 +13506,7 @@ appinn.com##a[href*=".houdeyun.cn"]
 fitacg.com##a[href*="ifift.com"]
 cnys.tv###player_pause
 twkan.com##.txtcenter
-element-plus.org##.doc-content-sidebar
+element-plus.org##.doc-sidebar-content
 hcbbs.com##.wp > div:not([id]):not([class]) > a > img[src*=".imgdb.cn"]
 sehuatang.net##DIV[class^="show-text"]
 ghxi.com##.widget_html_ad + div[style]
@@ -17667,7 +17782,7 @@ ikjzd.com##.wv-right-content > .imgTop-right
 52pk.com##.wxbox
 55188.com##.wz_text
 eyy5.cn##.wzgg
-tmioe.com##.ekssxhn
+tmioe.com##.ekxxhn
 tmioe.com##a[href*=".zps.im"]
 sohu.com##.x-adv-band-panel
 sohu.com##.x-adv-flogo-panel

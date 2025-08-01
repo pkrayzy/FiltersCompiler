@@ -483,7 +483,6 @@ http://*.ru/leftunit.pl?
 /240x350_
 /240x400.gif
 /240x400.jpg
-/336x280
 /468_60_2.gif
 /468_80_6.gif
 /468by60
@@ -603,7 +602,7 @@ http://*.ru/leftunit.pl?
 /code/pops.js
 /codes/*.js|$third-party
 /com_artbannersplus/*
-/commercials/*
+/commercials/*$domain=~livingroomcandidate.org
 /cs/ads/*
 /css/branding_*.css$domain=~citigroup.com
 /ctxtlink/*
@@ -3860,11 +3859,10 @@ positiverecords.ru#@#.ad-google
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167304
 ||tests24.su^$cookie=/^ai/
 ! pikabu.ru
-pikabu.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.shouldShowStickyAd')
 pikabu.ru#%#//scriptlet('abort-on-property-write', 'Ya')
 pikabu.ru$$script:contains(/\.getPropertyPriority.*=requestAnimationFrame/)
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
-pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader\(h[a-zA-Z0-9_]?a?[a-zA-Z0-9]{1,3}[a-zA-Z0-9]?[a-zA-Z0-9_]?[rp]/')
+pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader\([Hh][a-zA-Z0-9_]?a?[a-zA-Z0-9_]{1,3}_?[a-zA-Z0-9]?[a-zA-Z0-9_]?[rp]/')
 !#endif
 ! sports.ru
 sports.ru#%#//scriptlet('json-prune', 'direct rtbAuctionInfo')
@@ -4614,17 +4612,16 @@ dzen.ru,auto.ru,avito.ru,baby.ru,businessman.ru,dni.ru,e1.ru,echo.msk.ru,fb.ru,f
 ! TODO: add domains auto.ru and kinopoisk.ru to the rule below after the next release of AG for macos (current 2.3.2)
 $cookie=/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/,domain=dzen.ru|baby.ru|businessman.ru|dni.ru|e1.ru|echo.msk.ru|fb.ru|forexpf.ru|gismeteo.by|gismeteo.kz|gismeteo.md|gismeteo.ru|gorodrabot.ru|infoniac.ru|it-tehnik.ru|kakprosto.ru|liveinternet.ru|mk.ru|nkj.ru|ohotniki.ru|oko-planet.su|otzovik.com|rambler.ru|razlozhi.ru|sdamgia.ru|syl.ru|vz.ru
 !
-://dzen.ru^$document,replace=/"isAdvertEnabled":true/"isAdvertEnabled":false/
 ://dzen.ru^$document,replace=/Ya.\w+.\w+.render/Ya.render/
-$script,xmlhttprequest,domain=dzen.ru,jsonprune=\$..[direct\, "rtbAuctionInfo"\, "seatbid"]
+$script,xmlhttprequest,domain=dzen.ru|dzeninfra.ru,jsonprune=\$..[direct\, "rtbAuctionInfo"\, "seatbid"]
 dzen.ru#%#//scriptlet('remove-cookie', '/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/')
 !
 ! Dzen main page
+dzen.ru##a[class*="flash-modal__marketing-"]
 dzen.ru#?#div[class^="dzen-desktop--top-micro-app__"]:matches-attr("data-*"="ad-banner")
 dzen.ru###ya-dist-splashscreen
 dzen.ru###ya-dist-popup
 dzen.ru###ya-dist-teaser
-dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.checkBundleIsSSP', 'undefined')
 dzen.ru##div[class*="bannerMain"]
 dzen.ru#?#div[class*="_yandexSearchContainer-"] ~ div[class][id] > div[id] > div:has(> div > a[href^="https://yandex.ru/an/"])
 [$path=/^\/$|\/\?/]dzen.ru###ya-dist
@@ -5127,6 +5124,7 @@ ya.ru,yandex.*##.serp-list > div.incut
 ya.ru,yandex.*##.DirectInline
 !
 ! Yandex.Maps
+yandex.*##.map-controls__additional-button > a.promo-button
 [$path=/maps]yandex.*##.search-business-snippet-view__content > div.search-business-snippet-view__badge:has(span[data-nosnippet="true"] > span[class$="_advert-text"])
 [$path=/web-maps]yandex.*##div[data-chunk="promo-chunk"]
 [$path=/maps]yandex.*##.toponym-card-view__overview > div.toponym-card-view__section:has(> div[aria-live] > div > .toponym-card-view__advert)
@@ -5137,7 +5135,6 @@ yandex.*##.search-list-view__advert-offer-banner
 yandex.*##.search-list-view__list a[href^="https://yabs.yandex.ru/count/"]
 yandex.*##.maillist-form-view
 [$path=/maps]yandex.*##.banner-view
-[$path=/maps]yandex.*##.search-list-view__advert-offer-banner
 [$path=/maps]yandex.*##div[class^="business"][class*="advert-"]
 [$path=/maps]yandex.*##.business-card-view__section:has(> div > .business-advert-offer-banner-view)
 [$path=/maps]yandex.*##.media-gallery > div.media-gallery__frame-wrapper:has(> div.media-gallery__frame > div > div[data-chunk="promo"])
@@ -5248,9 +5245,10 @@ yandex.*##body[data-bem*="turbo"] div.turbo-advert
 yandex.*##body[data-bem*="turbo"] div[data-name="advert"]
 !
 ! Yandex.Games
+||yandex.*/games/app$replace=/"advEnabledByPartner":true/"advEnabledByPartner":false/
 [$path=/games]yandex.*##div[class$="-wrapper_with-disable-ad-button"]
 [$path=/games]yandex.*#$#div[style^="width: calc(100% - "] { width: 100% !important; }
-[$path=/games]yandex.*#%#//scriptlet('trusted-click-element', '.play-yandex-yandex-adaptive + span.close-button_type_adv-fullscreen', '', '5000')
+[$path=/games]yandex.*#%#//scriptlet('trusted-click-element', 'div[data-testid="adv-fullscreen-container"] div[data-testid="adv-fullscreen-closeButton"]', '', '5000')
 ||yandex.*/games/$xmlhttprequest,jsonprune=\$..[direct\, "rtb"]
 yandex.*##div[class*="-R-A-"]
 yandex.*##.stack > div[class^="sticky-"]
@@ -6325,9 +6323,6 @@ zab.ru#$#body { background: #E6E6E6!important; margin-top: 0!important; }
 hdtennis.ru#$##outer-wrap { padding: 40px 30px!important; }
 ! my-hit.org - удаление отступа сверху
 my-hit.org#$#.navbar-default { margin-bottom: 20px!important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/13998
-pikabu.ru#$##branding_ad_comment { position: absolute!important; left: -3000px!important; }
-pikabu.ru#$##branding_ad_footer { position: absolute!important; left: -3000px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57755
 fastpic.ru#$#.justify-content-center > div.col[id] { max-width: max-content !important; }
 fastpic.ru#$##bright { display: none!important; }
@@ -7212,6 +7207,10 @@ glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita
 !
 !
 !
+mel.fm##div[class^="section__banner"]
+videomin.ws#?##sidebar > div.sidebar-content:has(> div.top > div.fix:contains(Реклама))
+riatomsk.ru##div[class*="banner"]
+baby.ru##.comment-row.grid
 ||img.championat.ru/brand/
 malls.ru##.content__leftcol > div[align="center"]:has(> div[id^="yandex_rtb"])
 newtambov.ru##div[class*="contentRightStretchBanner"]
@@ -13830,7 +13829,7 @@ rusvesna.su##.region-sidebar-right > .block.block-block a > img
 horadric.ru##.region-sidebar-second > div#block-block-4
 kv.by##.region-top-banner
 tree.tv##.registr_info
-7daystodie.ru,small-games.info##.rek
+mangabuff.ru,7daystodie.ru,small-games.info##.rek
 audioknigi.club##.rek-b
 file-mods.ru,5play.ru,lenov.ru##.rek-but
 pc-torrent.net##.rek-fs
@@ -17005,25 +17004,10 @@ ozon.ru##div[data-widget="bannerCarousel"]
 2gis.*##._1xza2sg
 !
 ! pikabu.ru
-pikabu.ru##.stories-feed__container > article:has(a.story__sponsor)
-pikabu.ru##.b-page-story__bf-cmments > header.story__header + div.story__user
-pikabu.ru#?#.stories-feed__container > article.story:has(> div.story__main a[href^="/information/specials"])
-pikabu.ru#?#.stories-feed__container > article:has(> div.story__placeholder)
-pikabu.ru#?#aside > div.sidebar-block:has(> :not(div):not(a):not(script)[id])
-pikabu.ru#?#aside > div.sidebar-block:has(> div.button_add)
 pikabu.ru##.comments__adv
 pikabu.ru##.popup_animation
-pikabu.ru##.stories-feed__container > article:not([data-context-actions="duplicate_report"]):not([data-page]):not([data-author-name])
 [$path=/^\/$|\/\?|best/]pikabu.ru##article[data-author-name="specials"]
-pikabu.ru##article[data-ad-type]
-pikabu.ru##.ads-placeholder_centered
-pikabu.ru##a[class="sidebar-menu__item"][href^="http://ads.adfox.ru/"]
-pikabu.ru##.feed_ad_wrapper
-pikabu.ru##.sidebar > aside > div > div.story__gag_relative > div[id] > div[class*=" "][id]
 pikabu.ru##.sidebar-block_placeholder
-pikabu.ru##body #branding_ad_header
-pikabu.ru##div[id^="yandex_ad_"]
-||cs.pikabu.ru/css/ad_branding_*.css
 ! drive2.ru
 drive2.ru##.x-box:has(> div.c-dv-sns)
 drive2.com,drive2.ru##.c-index-alt div[id^="adfox_"]
@@ -17610,6 +17594,7 @@ pornolab-zerkalo.appspot.com,pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net#
 !
 !
 ! START: mail.ru
+mail.ru##div[id$="-branding-top-sticky"]
 mail.ru##div[article-item-type="contentroll"]
 mail.ru##div[data-testid="grid-header"] > div.toolbar
 mail.ru##.skeleton + a[href^="https://r.mail.ru/redir/"]

@@ -1,10 +1,12 @@
-! Checksum: KexFK4I1A9+vvBClOqpMLw
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1753246161-14400.patch
+! Checksum: WQrgOEQx9u2SlwZV08lAlQ
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1753980392-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.22.13
-! TimeUpdated: 2025-07-23T04:44:59+00:00
+! Version: 2.0.22.34
+! TimeUpdated: 2025-07-31T16:41:47+00:00
 ! Expires: 1 day (update frequency)
+||daro.so^
+||adrop.io^
 ||adgirl.yes24.com^
 ||ad.api.adwiser.kr^
 ||recoshopping.naver.com^
@@ -238,6 +240,8 @@
 ||ttse.b-cdn.net^
 ||i.keezip.com^
 ||awd.spochak.com^
+||appmon.shinhan.com^
+||ads.ahnlab.com^
 ||adpacker.net^
 ||ad.yna.co.kr^
 ||veta.naver.com^
@@ -1349,6 +1353,7 @@ m.fmkorea.com##iframe[src*="//loader.fmkorea.com/"][src*="_loader/"]
 ||loader.fmkorea.com/_loader/
 ||ssl.pstatic.net/tveta/libs/
 ||vclock.kr/inf0/hot.php^
+||ddal.xyz/project/mc/js/nuevo.min.js
 ||img.mingk.xyz/data/file/passfree/
 ||yasyadong.*/?_Action=adv&_Method$domain=yasyadong.*
 /^https:\/\/(www\.)?aniya24\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[a-z]+[0-9]+x[0-9]+\./$domain=aniya24.com
@@ -1543,6 +1548,8 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+coupang.com###product-list > li:has(div[class^="AdMark_adMark__"][data-adsplatform])
+dogdrip.net##.ed.list > .webzine:not(.popular-item):has(.baseThumb ~  .overlay-text):has(.list-header a[target="_blank"].text-summary)
 m-sooriya.tistory.com##div[id^="fix_scroll_sidebar_DIV_"]
 m-sooriya.tistory.com##a[href^="https://soz.kr/"]
 m-sooriya.tistory.com##.script_add_ads
@@ -1808,6 +1815,7 @@ app.dcinside.com,m.dcinside.com##*[class^="adv-group"]
 app.dcinside.com,m.dcinside.com##li.adv-inner
 url.kr##form[method="post"] > #maskLayer
 m.tinnews.co.kr##.bn
+dnn.ne.kr##div:has(> ins.adsbygoogle)
 etoland.co.kr###m_main_attendance_wrap ~ a[href^="../../plugin/mobile/board.php?bo_table=market_"]
 m.fmkorea.com##div[id^="fmad_"] + div[style^="height:"][class]
 fmkorea.com##div.fmad_wrapper
@@ -2869,6 +2877,8 @@ toon123.com##main > section[style]:not([class])
 torrentmode.com##a[href^="https://torrentmode.com/bbs/bannerhit.php"]
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
+@@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
+@@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
 @@||d2i2w6ttft7yxi.cloudfront.net/ad_banner/$domain=witchform.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$domain=weather.naver.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/*/gfp-sdk.js$domain=weather.naver.com
@@ -3292,7 +3302,6 @@ kyobobook.co.kr#$?#.banner_control_inner li[data-target="#75"].banner_group_item
 kyobobook.co.kr#$?#.welcome_banner_inner li.swiper-slide:has(img[src*="image.kyobobook.co.kr/newimages/adcenter/"]) { remove: true; }
 enuri.com#$?#.trendpickup__container > .trendtab-cont:has(p.badge--ad) { remove: true; }
 enuri.com#$?#.trendtabs__list > li[data-adv_yn="Y"] { remove: true; }
-coupang.com#$?#li.search-product__ad-badge { remove: true; }
 search.shopping.naver.com#$?##content div[class^="basicList_list_"] div:has(div[class^="adProduct_item_"]):has(~ div) { height: 1px !important; visibility: hidden !important; }
 bbs.ruliweb.com#$?##board_top > div > .top_best.best_list:has(+ .col div[id^="ad_"]) { width: 100% !important; }
 browse.auction.co.kr#$?#div[module-design-id] ~ div > .component:has(div:has(.text--smiledelivery_slogan)) .section--component_title { margin-top: 0px !important; }
@@ -3358,8 +3367,6 @@ img.imimggggg87878.com#?#a[target="_blank"][href^="http://"].menu-a:contains(보
 frtoon220.com,frtoon221.com,frtoon222.com,frtoon223.com,frtoon224.com,frtoon225.com,frtoon226.com,frtoon227.com,frtoon228.com,frtoon229.com,frtoon230.com,frtoon231.com,frtoon232.com,frtoon233.com#?#.alert-danger.container:contains([AD])
 hdhd344.net,hdhd345.net,hdhd346.net,hdhd347.net,hdhd348.net,hdhd349.net,hdhd350.net,hdhd351.net,hdhd352.net,hdhd353.net,hdhd354.net,hdhd355.net,hdhd356.net,hdhd357.net,hdhd358.net#?#.menu-ul > .menu-li:has(> a:contains(보증토토))
 blacktoon302.com,blacktoon303.com,blacktoon304.com,blacktoon305.com,blacktoon306.com,blacktoon307.com,blacktoon308.com,blacktoon309.com,blacktoon310.com,blacktoon311.com,blacktoon312.com,blacktoon313.com#?#.alert.alert-danger:has(> a:contains([AD]))
-m.fmkorea.com#$?#body[class^="mac_os"] > div[id^="bd_"].bd:not([style]):has(> p > a[href]:matches-property(listeners.click) ~ a[href]:matches-property(listeners.click):contians(/^http/)) { remove: true; }
-m.fmkorea.com#$?#body[class="mac_os"] > .bd > div[style]:has(> .bd_mobile > p > a[href]:matches-property(listeners.click) ~ a[href]:matches-property(listeners.click):contians(/^http/)) { remove: true; }
 zum.com#%#//scriptlet('set-constant', '_ads_zum_main_initbanner_750_zum_main_br_widget_336', 'true')
 watchfreejavonline.co#%#//scriptlet('abort-current-inline-script', 'popMagic.init')
 m.humoruniv.com#%#//scriptlet('remove-node-text', 'script', '/run[\s\S]*?data[\s\S]*?OnClick[\s\S]*?ad\d_/')
@@ -3493,9 +3500,10 @@ t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 !#safari_cb_affinity
 t.hi098123.com#$#.tabad { top: -100px !important; }
-shana.pe.kr#%#//scriptlet('set-constant', 'checkShanaBlock', 'noopFunc')
+||shana.pe.kr/shana_check/csb3.js
+remiz.co.kr#%#//scriptlet('spoof-css', '.adsbygoogle', 'display', 'block')
+remiz.co.kr#@#.ad-body
 checkwhoiam.tistory.com#%#//scriptlet('set-constant', 'adblockChecker', 'noopFunc')
-||shana.pe.kr/shana_check/script.js
 kilho.net###detect-alert
 vod.jtbc.co.kr#@#.ad-unit:not(.textads)
 vod.jtbc.co.kr#@#.ad-zone:not(.textads)

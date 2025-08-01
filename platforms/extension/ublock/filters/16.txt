@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: grRLM4nva023fBIs8qBxAA
-! Diff-Path: ../patches/16/16-s-1753139485-3600.patch
+! Checksum: 3fZF0fHDzDP2uTtpjUKMoQ
+! Diff-Path: ../patches/16/16-s-1754028933-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.53.54
-! TimeUpdated: 2025-07-21T23:07:29+00:00
+! Version: 2.0.53.66
+! TimeUpdated: 2025-08-01T06:11:46+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21,6 +21,7 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||lopfly.com^
 ||heliumads.com^
 ||proxy.ads.canalplus-bo.net^
 ||7bd92.v.fwmrm.net^
@@ -208,23 +209,12 @@ ebookdz.com##+js(no-xhr-if, pagead2.googlesyndication.com)
 monumentum.fr##+js(abort-current-script, document.getElementById, Blocking Ads)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
-japscan.lol#@#div.container > [href]
-japscan.lol#@##main > .card:has(a[href*="/manga/?type="][href*="&content="][target="_blank"])
-$script,xmlhttprequest,redirect-rule=noop.js,domain=japscan.lol
-@@$image,domain=japscan.lol
-@@||japscan.lol^$image,xmlhttprequest,script,~third-party
-japscan.lol#@#.tangoai
-japscan.lol#@#[class^="copine"]
-@@||japscan.lol^$generichide
-@@||googletagmanager.com/gtag/js$domain=japscan.lol
-@@||githack.com^$script,domain=japscan.lol
-@@||statically.io^$script,domain=japscan.lol
-@@||netlify.app^$script,domain=japscan.lol
-@@||iili.io^$xmlhttprequest,domain=japscan.lol
-@@||imageshack.com^$xmlhttprequest,domain=japscan.lol
-@@||drive.google.com^$xmlhttprequest,domain=japscan.lol
-@@||postimg.cc^$xmlhttprequest,domain=japscan.lol
-@@||i.ibb.co^$xmlhttprequest,domain=japscan.lol
+japscan.*#@#div.container > [href]
+japscan.*#@##main > .card:has(a[href*="/manga/?type="][href*="&content="][target="_blank"])
+@@||japscan.$image,xmlhttprequest,script,~third-party
+japscan.*#@#.tangoai
+japscan.*#@#[class^="copine"]
+@@||japscan.$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147701
 trustmyscience.com##.adb-border
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146165
@@ -621,7 +611,7 @@ marieclaire.fr##+js(adjust-setTimeout, /userConsentProcess|this===/, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181954
 sudouest.fr##+js(adjust-setTimeout, return t(), *, 0.001)
 ! https://github.com/uBlockOrigin/uAssets/issues/23806
-japscan.lol##+js(no-setTimeout-if, sessionStorage)
+japscan.*##+js(no-setTimeout-if, sessionStorage)
 ! https://github.com/uBlockOrigin/uAssets/issues/23689
 player.melaniezettofrais.online##+js(addEventListener-defuser, click, Popup)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178842
@@ -630,7 +620,7 @@ justarrived.lu##+js(set-constant, advanced_ads_ready, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172432
 magicmaman.com##+js(adjust-setTimeout, userConsentProcessEnded, *, 0.001)
 ! https://github.com/uBlockOrigin/uAssets/issues/22307
-japscan.lol##+js(window.open-defuser)
+japscan.*##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170646
 jeune-gay.fr##+js(no-setTimeout-if, randno, 25)
 jeune-gay.fr##+js(set-cookie, p_view, true)
@@ -824,6 +814,13 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+clubic.com##.ad-container:not(#style_important)
+hentaivost.fr##+js(remove-node-text, script, __ADX_slot_id)
+hentaivost.fr##.navbar-nav > li[id^="nav-menu-item-"] > a:not([href^="https://hentaivost.fr/"])
+||hentaivost.fr/detect.js
+||gupload.xyz/data/head/script.php
+||gupload.xyz/vast/
+zone-telechargement.al##.body-clickable
 qwant.com##+js(json-prune, data.result.items.sidebar.[-].type.[=].advertiser_ads, data.search_id)
 qwant.com##.is-sidebar > div[class*=" "]:has(img[data-testid="advertiserAdsImage"])
 gamekult.com##.gk__sidebar__list  > li:has(> .g2__a-dc)
@@ -943,7 +940,7 @@ cookomix.com##.AdMB
 h2-mobile.fr#?##main-container .blog__content:has(> .title-wrap--pr > h3:contains(Annonces))
 h2-mobile.fr###main-container .blog__content:has(> .col-md-4 > div[id^="optidigital-adslot-"])
 cosmopolitan.fr##.External
-||japscan.lol^$csp=sandbox allow-forms allow-same-origin allow-scripts allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-top-navigation
+||japscan.*$csp=sandbox allow-forms allow-same-origin allow-scripts allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-top-navigation
 femina.fr##.p-aside
 femina.fr##.p-inread
 femina.fr##.p-pave
@@ -1574,6 +1571,8 @@ app.molotov.tv##+js(no-xhr-if, /ping?token=)
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/209653
+@@||127.0.0.1*/jdcheck.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209823
 @@||ecodent.shop/userfiles/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209106
@@ -1704,9 +1703,6 @@ pisos.com#@#div[data-ad-id]
 ||candy.ai^$popup,third-party,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181173
 ||web2.$subdocument,domain=0calc.com|0calc.es|0calc.fr|0calc.in|0calc.ru|0rechner.de,badfilter
-! https://github.com/uBlockOrigin/uAssets/issues/23806
-@@||ko-fi.com/cdn/scripts/overlay-widget.js$domain=japscan.lol
-@@||bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js$domain=japscan.lol
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179457
 @@||redirector.googlevideo.com/videoplayback*dclk_video_ads$xmlhttprequest,domain=vix.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179466
@@ -1717,7 +1713,7 @@ $script,third-party,domain=igg-games.com,badfilter
 $script,third-party,domain=vidsrc.in|vidsrc.me|vidsrc.net|vidsrc.pm|vidsrc.xyz,badfilter
 $subdocument,third-party,domain=vidsrc.in|vidsrc.me|vidsrc.net|vidsrc.pm|vidsrc.xyz,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178483
-japscan.lol#@##dlinkc
+japscan.*#@##dlinkc
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177714
 intheblackmedia.com#@#a[href^="https://plarium.com/"]
 ! vtbe.to - incorrect blocking, video player is broken
@@ -2483,10 +2479,6 @@ youzik.com#@#a[style]
 @@||bitchute.com/static/*/js/monetization.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23439
 @@||zone-telechargement1.org^$popup,domain=zone-telechargement1.org
-! https://github.com/AdguardTeam/AdguardFilters/issues/23428
-@@||cse.google.com/cse.js^$domain=clubic.com
-@@||cse.google.com/cse/element/$domain=clubic.com
-@@||googleapis.com/customsearch/$domain=clubic.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23372
 akademikpersonel.org#@##ad_global_below_navbar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22721
