@@ -1,9 +1,9 @@
-! Checksum: qIokULCu9xrtblx/iAPOQg
-! Diff-Path: ../patches/9/9-s-1754020023-3600.patch
+! Checksum: QzDKhP9QqfjZc7uZcolIcA
+! Diff-Path: ../patches/9/9-s-1754918591-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.31.15
-! TimeUpdated: 2025-08-01T03:43:05+00:00
+! Version: 2.0.31.35
+! TimeUpdated: 2025-08-11T13:18:49+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -24,6 +24,7 @@
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
 !
+||jogoforte.com^
 ||publyads.jstag.space^
 ||crummydevioussucculent.com^$all
 ||cibersexo.net^$third-party
@@ -190,6 +191,11 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210710
+||cdn.bcdn.zip/scripts/desabilitar-botao2.js
+netcinetv.*#%#//scriptlet('prevent-eval-if', 'break;case')
+! https://github.com/AdguardTeam/AdguardFilters/issues/210605
+viciados.net#%#//scriptlet('prevent-fetch', 'googlesyndication')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210330
 ||cdn.jsdelivr.net/npm/sweetalert$domain=jjjx.lol
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210313
@@ -215,6 +221,10 @@ mediasetinfinity.es#%#//scriptlet('prevent-element-src-loading', 'script', 'stat
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=mediasetinfinity.es
 @@||static-cloud.mediaset.net/misc/ad/adanalytics.js$domain=mediasetinfinity.es
 ! https://github.com/uBlockOrigin/uAssets/issues/28879
+jornaldacidadeonline.com.br#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.querySelector', '"body"', 'abort')
+! TODO: remove the condition once scriptlet library v2.2.0 comes to extensions: https://github.com/AdguardTeam/Scriptlets/issues/416
+jornaldacidadeonline.com.br#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,important,domain=jornaldacidadeonline.com.br
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=jornaldacidadeonline.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207002
 cuitonline.com#%#//scriptlet('prevent-fetch', 'method:HEAD')
@@ -238,6 +248,7 @@ redecanaistv.*,redecanais.*##.pm-section-highlighted > div[style]:not([class])
 ! https://github.com/uBlockOrigin/uAssets/issues/27939
 redecanaistv.*,redecanais.*##.swal2-popup
 redecanaistv.*,redecanais.*##div[style*="z-index:2147483647"]
+redecanaistv.*,redecanais.*#%#//scriptlet('remove-attr', 'href', 'a[href]#clickfakeplayer')
 redecanaistv.*,redecanais.*#%#//scriptlet('set-cookie', 'modalVisited', 'true')
 redecanaistv.*,redecanais.*#%#//scriptlet('set-cookie', 'adsCompleted', '1')
 redecanaistv.*,redecanais.*#%#//scriptlet('set-session-storage-item', 'finalReloadDone', '1')
@@ -1343,8 +1354,6 @@ brjogostorrents.com#%#//scriptlet('abort-on-property-read', 'popunder')
 pobreflix.do#%#//scriptlet('remove-attr', 'href', 'a[href]#clickfakeplayer')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186250
 clickjogos.com.br#%#//scriptlet('set-constant', 'ShowRewards', 'noopFunc')
-! https://github.com/AdguardTeam/AdguardFilters/issues/186166
-redecanais.in#%#//scriptlet('remove-attr', 'href', 'a[href]#clickfakeplayer')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187722
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186078
 gamesperu2021.blogspot.com#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', 'window.open')
@@ -1423,6 +1432,8 @@ niusdiario.es#%#//scriptlet('set-constant', 'google.ima.OmidVerificationVendor',
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145476
 superhq.net#%#//scriptlet('abort-on-property-write', 'exopop')
 hentaikai.com,superhq.net#%#//scriptlet('abort-on-property-write', 'protData')
+! https://github.com/AdguardTeam/AdguardFilters/issues/210540
+cuevana.*#%#//scriptlet('prevent-addEventListener', 'load', '_0x')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199625
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183228
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181819
@@ -1647,6 +1658,7 @@ maxvip.site,guiavidaesaude.com,saudeecomida.com,comidaefamilia.food,meufinanceir
 modsimuladores.com,vejaideias.com.br,jogoscompleto.xyz#%#//scriptlet('adjust-setTimeout', '/atualizar|hided/', '*', '0.001')
 ! Generic, because they are using short living domains
 #$##colunas #framed > #player.hided { display: block !important; }
+! uBO specific
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177517
 elmueble.com#$#header { top: 0 !important; }
@@ -1947,6 +1959,29 @@ c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,me
 !
 ! NOTE: Specific rules
 !
+embedcanaistv.com###banner-container
+embedcanaistv.com#$##player-wrapper[style^="height:"] { height: 100% !important; }
+uol.com.br##div[data-m1-ad-label]
+uol.com.br##.outstream_partner
+newsbreakfree.com##.warning
+newsbreakfree.com##.footer
+redecanaistv.llc,redecanaistv.gd##a[href="https://futemax.spa/"]
+||futemax.spa/fa1.png
+abandomoviez.net###videoskin
+abandomoviez.net##.videoBanner
+||abandomoviez.net/skins/weapons/
+||abandomoviez.net/skins/bt_sonido
+rpp.pe##.taboola-news
+rpp.pe##a[data-mrf-recirculation="cintillo_fcc"]
+cooperativa.cl##.publicidad_dfp
+cooperativa.cl##.publicidad-torre
+cooperativa.cl##.contenedor-sticky
+cooperativa.cl,latina.pe##.u-the-banner
+wapa.pe##.recent__wrapper:has(> div[class^="BlockCuponidad_"])
+larepublica.pe##div[class^="BlockCuponidad_wrapper-"]
+lance.com.br##.sticky.z-0:has(> div > div[id^="quadrado"])
+lance.com.br##.quadradoFixo
+lance.com.br###div_rodape
 portalleodias.com##div[id^="div-publicidade-"]
 zonared.com##.pub_300x600
 zonared.com##.pub_interior_top
@@ -2148,8 +2183,8 @@ embed69.org#%#//scriptlet('set-constant', 'VASTVideoPlayer', 'noopFunc')
 embed69.org#%#//scriptlet('set-constant', 'go_to_playerVast', 'noopFunc')
 emisorasunidas.com##.post-body div[style*="position: sticky;"]:has(> div[id^="div-gpt-"])
 emisorasunidas.com##.sidebar > .rail:has(> .sticky-element:only-child > div[id^="div-gpt-"]:only-child)
-jornaldocentro.pt##div[data-element_type="container"] > div.elementor-element:has(> .elementor-widget-container:contains(pub))
-jornaldocentro.pt##.e-con-inner > div.elementor-element:has(> .elementor-widget-container:contains(pub))
+jornaldocentro.pt#?#div[data-element_type="container"] > div.elementor-element:has(> .elementor-widget-container:contains(pub))
+jornaldocentro.pt#?#.e-con-inner > div.elementor-element:has(> .elementor-widget-container:contains(pub))
 jornaldocentro.pt##div[data-elementor-type="wp-page"] > .elementor-element:not([data-settings]):has(> .e-con-inner >[data-element_type="container"] > .elementor-element > .elementor-widget-container > .adsbygoogle)
 concursosnobrasil.com##.concur-categorias-topo
 concursosnobrasil.com##.continua
@@ -2287,7 +2322,7 @@ hola.com##div[class*="variation"]
 gamestorrents.*##img[onclick^="window.open('https://click.ggpickaff.com/"]
 softonic.com##div[data-meta="placeholder-slot"]
 noticiasaominuto.com##.dummyPub
-noticiasaominuto.com##.mb-8 > div:has(> h3:contains(Recomendados para si))
+noticiasaominuto.com#?#.mb-8 > div:has(> h3:contains(Recomendados para si))
 noticiasaominuto.com##div[style]:has(> a[href="/n/2697964"])
 anime-jl.net##.fa-gift
 olympuscomic.com##.flex > div:has(> div[ad-placement]:only-child)
@@ -2356,9 +2391,9 @@ ver-online.info##.movie-xyz
 okpeliz.com,player.malfollado.com,anime-jl.net#%#//scriptlet('prevent-window-open')
 toonscrab.com#%#//scriptlet('abort-on-stack-trace', 'JSON.parse', 'showPopup')
 toonscrab.com#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', 'showPopup')
-allcalidad.pro#%#//scriptlet('prevent-addEventListener', 'click', 'window.open')
+seriesmaxhd.com,allcalidad.pro#%#//scriptlet('prevent-addEventListener', 'click', 'window.open')
 calidadtorrent.com##.justify-center > a[target="_blank"] > img
-estrenosdivx.net##.noticia:has(> div.card-body > p:contains(Promociones))
+estrenosdivx.net#?#.noticia:has(> div.card-body > p:contains(Promociones))
 cinecalidad.*##.item.xfxx
 cine-calidad.biz##div[class*="bannerAds"]
 forocoches.com###notice-wrapper
@@ -2372,7 +2407,7 @@ forocoches.com##[align="center"]:has(div[id^="optidigital-adslot-"])
 forocoches.com##tbody > tr > td[valign="top"]:has(div[id^="optidigital-adslot-"])
 criptonoticias.com##.fixed_ad_container
 cmjornal.pt##.pub_content
-cmjornal.pt#$#.pub { remove: true; }
+cmjornal.pt#$?#.pub { remove: true; }
 lista.mercadolivre.com.br##.last__banner
 diarioconvos.com##.desktop
 extra.ec##div[class^="PUBBANNER"]
@@ -2387,7 +2422,7 @@ todaseries.cc##.pmovie__rbutton > a[target^="_blank"]
 lance.com.br##div[class^="tab-m:bottom-"][class*="min-h-"]
 lance.com.br##.min-w\[336px\].min-h-\[375px\]
 lance.com.br##.items-center:has(> div > #quadrado_1)
-lance.com.br##div[class="w-full mx-auto my-\[60px\]"]:contains(Suplemento baratinho)
+lance.com.br#?#div[class="w-full mx-auto my-\[60px\]"]:contains(Suplemento baratinho)
 gazetasp.com.br##.banner-fixo
 diariodolitoral.com.br,gazetasp.com.br##.coluna-propaganda
 gazetasp.com.br##div.secao:has(> div.container > div.coluna-propaganda)
@@ -2533,7 +2568,7 @@ studio.fm.br###tie-block_3069
 rdnews.com.br##body > .header-mb-full.hidden-xs:has(> div[id^="div-gpt-"])
 swisscows.com##.item-a8r-web
 mirandogratis.com##a[target="_blank"] > img
-cine-tube.com,peliscom.com,pelisxd.com,yaske.org,zpelis.com,locopelis.com##div[class^="adsbutt_"]
+tubepelis.com,cine-tube.com,peliscom.com,pelisxd.com,yaske.org,zpelis.com,locopelis.com##div[class^="adsbutt_"]
 hardwaresfera.com##.widget_aawp_widget_bestseller
 verseriehd.cc##.movie-xpb > a[rel]
 onlinegratis.cc,seriesgratis.cloud,veronline.*##.movie-xyz > a[rel]
@@ -2689,7 +2724,7 @@ mobills.com.br##.adsgpt
 mobills.com.br###ad-rewarded
 donghuas.top#?##sidebar > .section:has(> .releases > h3:only-child:contains(/^Ads$/))
 manhwas.net##aside.principal > .info-episode:has(> .row:only-child > .col-12[style*="height:"]:only-child > .adsbyexoclick)
-eldeber.com.bo##div[class^="publicidad-"]
+peru21.pe,eldeber.com.bo##div[class^="publicidad-"]
 globo.com###taboola-mid-article-saiba-mais
 exame.com##body > section.grid > section.hidden:has(> object[class^="ad-pos"])
 exame.com##body > section.grid > section.relative.col-span-12:not([id]):has(.adsTextBetweenLines)
@@ -5576,6 +5611,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210926
+||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima3,domain=cooperativa.cl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203562
 @@||imasdk.googleapis.com/pal/sdkloader/pal.js$domain=mais.sbt.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202097

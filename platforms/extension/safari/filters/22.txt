@@ -1,9 +1,9 @@
-! Checksum: PrsZA9k7ZjzUmRgr8dAtig
-! Diff-Path: ../patches/22/22-s-1754122338-3600.patch
+! Checksum: UzBeJovd3gFhr7c9R1Getg
+! Diff-Path: ../patches/22/22-s-1754669476-3600.patch
 ! Title: AdGuard Widgets filter
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.12.33
-! TimeUpdated: 2025-08-02T08:08:40+00:00
+! Version: 2.0.12.38
+! TimeUpdated: 2025-08-08T16:07:40+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -88,6 +88,8 @@ netizen-voice.blog.jp,ityouchannel.livedoor.blog,nanjei-baseball.blog.jp,baynews
 !
 ! NOTE: Blogroll specific rules
 !
+7-24blog.com##iframe[src="https://7-24blog.com/1.html"]
+7-24blog.com##.wjp
 jumpmatome2ch.biz###custom_html-6
 jumpmatome2ch.biz##.kotei
 vsnp.net##.free-area:has(> #livedoor)
@@ -794,7 +796,8 @@ nihonjinnanmin.com##.hako3
 nihonjinnanmin.com###text-11
 absurd.blogo.jp##.headlinerss
 oniyomediary.com###footer-rss
-suzusoku.blog.jp###lite_link
+mashlife.doorblog.jp##.article-body-more > span[style]:has(> a[href^="//2ch-c.net/"])
+mashlife.doorblog.jp,suzusoku.blog.jp###lite_link
 moyugenn.com##.main-column-inner > div[align="center"]
 moyugenn.com##.main-column-inner > div[align="center"] ~ br
 ||erologz.com^$subdocument,~third-party
@@ -1518,6 +1521,8 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 !   SECTION: Widgets - Marketing (specific)
 !
+toroslaredas.com.tr,baskentedas.com.tr,ayedas.com.tr###anketButonId
+sedas.com###feedback-form
 techradar.com##.hawk-base[data-widget-type]
 zakzak.co.jp###main-column > .lazyload-wrapper:has(> header + .story-card-feed > span > a[data-gtm-category="contents"][data-gtm-action])
 asus.com#%#//scriptlet('hide-in-shadow-dom', '#brandAssistant-root')
@@ -1900,6 +1905,7 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 /js/chat/edu_chat.js
 /wp-content/plugins/creame-whatsapp-me/public/js/joinchat.
 !
+||web-chat.global.assistant.watson.appdomain.cloud^$third-party
 ||services.exairon.com/assets/widget/index.js
 ||vivocha.com^$third-party
 ||ac-chatbot.freebie-ac.jp^$third-party
@@ -1952,6 +1958,9 @@ freestreams-live.my###custom_html-9
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com
 litres.ru###call_support
 !
+/volti/*$domain=toroslaredas.com.tr|baskentedas.com.tr|ayedas.com.tr
+/img/volti_reveal.gif$domain=toroslaredas.com.tr|baskentedas.com.tr
+toroslaredas.com.tr,baskentedas.com.tr,ayedas.com.tr###voltiOpenId
 vsk.ru###W11Widget
 gib.gov.tr,turktelekom.com.tr##.cbot-animation-holder
 xn--h1alcedd.xn--d1aqf.xn--p1ai###beesenderchat
@@ -2386,6 +2395,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+pbs.org##.inline-invite-type__funding
 asiatimes.com##.above-footer-widgets
 frontieresmedia.fr##.sticky.bottom-0
 torrenting.com###navBarSpace + div[align="center"] > div[align="center"]:has(a[href="/donate.php"] img)
@@ -2460,7 +2470,7 @@ ovd.info##.content div.popmechanic-js-form
 ||frontend.poool.fr/engage/
 la-croix.com,kyivindependent.com##iframe[src^="https://frontend.poool.fr/"]
 verstka.media##.vm-single-post-content > p[class="has-background"][style="background-color:#47d4ff"]
-novayagazeta.ru###article-body div[class]:has(> div[class] > p[class]:contains(Поддержите))
+novayagazeta.ru#?##article-body div[class]:has(> div[class] > p[class]:contains(Поддержите))
 novayagazeta.ru##div[id^="materialBlock"] > div[style="height: 100px;"]
 zona.media##body > a[href^="https://donate.zona.media/"][href$="utm_campaign=donate"]
 annas-archive.org##.js-fundraiser-banner

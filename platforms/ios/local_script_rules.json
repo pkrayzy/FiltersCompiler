@@ -635,7 +635,7 @@
         },
         {
             "domains": "cnn.com",
-            "script": "(()=>{window.FAVE=window.FAVE||{};const s={set:(s,e,n,a)=>{if(s?.settings?.ads?.ssai?.prod?.clips?.enabled&&(s.settings.ads.ssai.prod.clips.enabled=!1),s?.player?.instances)for(var i of Object.keys(s.player.instances))s.player.instances[i]?.configs?.ads?.ssai?.prod?.clips?.enabled&&(s.player.instances[i].configs.ads.ssai.prod.clips.enabled=!1);return Reflect.set(s,e,n,a)}};window.FAVE=new Proxy(window.FAVE,s)})();"
+            "script": "(()=>{window.FAVE=window.FAVE||{};const s={set:(s,e,a,n)=>{if(s?.settings?.ads?.ssai?.prod?.clips?.enabled&&(s.settings.ads.ssai.prod.clips.enabled=!1),s?.settings?.ads?.ssai?.prod?.liveAuth?.enabled&&(s.settings.ads.ssai.prod.liveAuth.enabled=!1),s?.settings?.ads?.ssai?.prod?.liveUnauth?.enabled&&(s.settings.ads.ssai.prod.liveUnauth.enabled=!1),s?.player?.instances)for(var i of Object.keys(s.player.instances))s.player.instances[i]?.configs?.ads?.ssai?.prod?.clips?.enabled&&(s.player.instances[i].configs.ads.ssai.prod.clips.enabled=!1),s.player.instances[i]?.configs?.ads?.ssai?.prod?.liveAuth?.enabled&&(s.player.instances[i].configs.ads.ssai.prod.liveAuth.enabled=!1),s.player.instances[i]?.configs?.ads?.ssai?.prod?.liveUnauth?.enabled&&(s.player.instances[i].configs.ads.ssai.prod.liveUnauth.enabled=!1);return Reflect.set(s,e,a,n)}};window.FAVE=new Proxy(window.FAVE,s)})();"
         },
         {
             "domains": "titantv.com",
@@ -799,6 +799,10 @@
         },
         {
             "domains": "facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion",
+            "script": "(()=>{const e={apply:(e,t,r)=>{try{if(r[2]?.[0]&&r[2][0]?.includes?.(\"MarketplaceFeedAdStory\")){const e=r[2][0],t=e.split(/\\r?\\n|\\r/).map((e=>JSON.parse(e)));t.forEach((e=>{e.data?.viewer?.marketplace_feed_stories?.edges&&(e.data.viewer.marketplace_feed_stories.edges=e.data.viewer.marketplace_feed_stories.edges.filter((e=>!e.node?.__typename?.includes(\"MarketplaceFeedAdStory\"))))}));const a=t.map((e=>JSON.stringify(e))).join(\"\\r\\n\");r[2][0]=a}return Reflect.apply(e,t,r)}catch(a){return console.trace(a),Reflect.apply(e,t,r)}}};window.Function.prototype.call=new Proxy(window.Function.prototype.call,e)})();"
+        },
+        {
+            "domains": "facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion",
             "script": "!function(){if(window.location.href.includes(\"/marketplace/\")){new MutationObserver(function(){document.querySelectorAll('div[data-testid=\"marketplace_home_feed\"] div[class][data-testid^=\"MarketplaceUpsell-\"] > div > div').forEach(function(e){var t=e.outerHTML;t&&void 0!==t&&!0===t.includes(\"/ads/about/\")&&(e.style=\"display:none!important;\")})}).observe(document,{childList:!0,subtree:!0})}}();"
         },
         {
@@ -878,7 +882,7 @@
             "script": "setTimeout(removeOverlayHTML, 2000);"
         },
         {
-            "domains": "etoday.co.kr,sportalkorea.com,slashdot.org,dogdrip.net,smsonline.cloud,infinityfree.com",
+            "domains": "ygosu.com,etoday.co.kr,sportalkorea.com,slashdot.org,dogdrip.net,smsonline.cloud,infinityfree.com",
             "script": "(()=>{const e=\"loader.min.js\",t={includes:String.prototype.includes,filter:Array.prototype.filter},l=()=>(new Error).stack,n={construct:(n,o,r)=>{const c=l();return t.includes.call(c,e)&&o[0]&&t.includes.call(o[0],\"adshield\")&&(o[0]=[\"(function(){})();\"]),Reflect.construct(n,o,r)}};window.Blob=new Proxy(window.Blob,n);const o={apply:(n,o,r)=>{const c=l();return t.includes.call(c,e)&&r[0]&&t.includes.call(r[0],\"new Error\")&&(r[0]=()=>{}),Reflect.apply(n,o,r)}};window.setTimeout=new Proxy(window.setTimeout,o);const r={apply:(n,o,r)=>{const c=l();return t.includes.call(c,e)&&r[0]&&o?.includes?.(\"setTimeout\")&&(o=t.filter.call(o,(e=>!t.includes.call(e,\"setTimeout\")))),Reflect.apply(n,o,r)}};window.Array.prototype.filter=new Proxy(window.Array.prototype.filter,r)})();"
         },
         {
@@ -1026,12 +1030,12 @@
             "script": "twttr={events: { bind: function() {} }};"
         },
         {
-            "domains": "facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion",
-            "script": "(()=>{const e={apply:(e,t,r)=>{try{if(r[2]?.[0]&&r[2][0]?.includes?.(\"MarketplaceFeedAdStory\")){const e=r[2][0],t=e.split(/\\r?\\n|\\r/).map((e=>JSON.parse(e)));t.forEach((e=>{e.data?.viewer?.marketplace_feed_stories?.edges&&(e.data.viewer.marketplace_feed_stories.edges=e.data.viewer.marketplace_feed_stories.edges.filter((e=>!e.node?.__typename?.includes(\"MarketplaceFeedAdStory\"))))}));const a=t.map((e=>JSON.stringify(e))).join(\"\\r\\n\");r[2][0]=a}return Reflect.apply(e,t,r)}catch(a){return console.trace(a),Reflect.apply(e,t,r)}}};window.Function.prototype.call=new Proxy(window.Function.prototype.call,e)})();"
+            "domains": "www.youtube.com",
+            "script": "(()=>{const t={construct:(t,e,c)=>{try{const n=e[0];let r=e[1]?.body;if(!n?.includes(\"youtubei\")||!r)return Reflect.construct(t,e,c);if((r.includes('\"contentPlaybackContext\"')||r.includes('\"adSignalsInfo\"'))&&(!r.includes('\"params\":\"yAEB')||!r.includes('\"clientScreen\":\"ADUNIT\"'))){const n=JSON.parse(r);if(!n.context?.client)return Reflect.construct(t,e,c);n.context.client.clientScreen=\"ADUNIT\",n.playbackContext&&(n.params=`yAEB${n.params?n.params:\"\"}`),r=JSON.stringify(n),e[1].body=r}}catch(t){console.trace(\"Error occurred:\",t)}return Reflect.construct(t,e,c)}};window.Request=new Proxy(window.Request,t)})();"
         },
         {
             "domains": "www.youtube.com",
-            "script": "(()=>{const e={apply:(e,t,c)=>{try{const e=c[0];e&&e.includes('\"clientScreen\"')&&!e.includes('\"clientScreen\":\"ADUNIT\"')&&(c[0]=e.replace('\"clientScreen\":\"WATCH_FULL_SCREEN\"','\"clientScreen\":\"ADUNIT\"'))}catch(e){console.trace(\"Error occurred:\",e)}return Reflect.apply(e,t,c)}};window.XMLHttpRequest.prototype.send=new Proxy(window.XMLHttpRequest.prototype.send,e)})();"
+            "script": "(()=>{const e={apply:(e,t,n)=>{try{let c=n[0];if(!c)return Reflect.apply(e,t,n);const r=Array.isArray(c),a=r?c[0]:c;if((c.includes('\"contentPlaybackContext\"')||c.includes('\"adSignalsInfo\"'))&&(!a.includes('\"params\":\"yAEB')||!a.includes('\"clientScreen\":\"ADUNIT\"'))){const c=JSON.parse(a);if(!c.context?.client)return Reflect.apply(e,t,n);c.context.client.clientScreen=\"ADUNIT\",c.playbackContext&&(c.params=`yAEB${c.params?c.params:\"\"}`);const o=JSON.stringify(c);r?n[0][0]=o:n[0]=o}}catch(e){console.trace(\"Error occurred:\",e)}return Reflect.apply(e,t,n)}};window.XMLHttpRequest.prototype.send=new Proxy(window.XMLHttpRequest.prototype.send,e)})();"
         },
         {
             "domains": "www.youtube.com",
@@ -1294,8 +1298,8 @@
             "script": "setTimeout (\"HideFloatAdBanner()\", 1000);"
         },
         {
-            "domains": "hdfilmsitesi.*",
-            "script": "(()=>{window.addEventListener(\"load\",(()=>{\"function\"==typeof window.ilk_part_getir&&window.ilk_part_getir()}));})();"
+            "domains": "hdfilmsitesi.*,filmizle.*,filmizleplus.*,fullhdfilm.*,fullhdizle.*,filmizlehdfilm.com,filmizletv.*,fullfilmizle.*,fullhdfilmizle.*,fullhdfilmizletv.*,hdfilmcix.*,hdfilmizlesene.*,sinema.*",
+            "script": "(()=>{document.addEventListener(\"DOMContentLoaded\",(()=>{\"function\"==typeof window.ilk_part_getir&&window.ilk_part_getir()}));})();"
         },
         {
             "domains": "patronite.pl",

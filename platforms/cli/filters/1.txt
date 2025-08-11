@@ -1,9 +1,9 @@
-! Checksum: sqN41A9jLylAN2WQ5CZ0Fg
-! Diff-Path: ../patches/1/1-s-1754064742-3600.patch
+! Checksum: qpUiyf0d/IdVQkhW8xjaDw
+! Diff-Path: ../patches/1/1-s-1754921527-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.1.0.96
-! TimeUpdated: 2025-08-01T16:08:05+00:00
+! Version: 2.1.1.5
+! TimeUpdated: 2025-08-11T14:07:47+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -952,7 +952,6 @@ ucoz.ru/informer/
 ###banner3_wraper
 ###banner_2
 ###banner_box
-###banner_carousel
 ###banner_column
 ~airpano.com,~airpano.ru###banner_container
 ###banner_container_bayru
@@ -3828,7 +3827,7 @@ positiverecords.ru#@#.ad-google
 ! pikabu.ru
 pikabu.ru#%#//scriptlet('abort-on-property-write', 'Ya')
 pikabu.ru$$script:contains(/\.getPropertyPriority.*=requestAnimationFrame/)
-pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader\([Hh][a-zA-Z0-9_]?a?[a-zA-Z0-9_]{1,3}_?[a-zA-Z0-9]?[a-zA-Z0-9_]?[rp]/')
+pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader\(_?[Hh][a-zA-Z0-9_]{1,2}[a-zA-Z0-9_]{1,3}_?[a-zA-Z0-9]?[a-zA-Z0-9_]?[rp]/')
 ! sports.ru
 sports.ru#%#//scriptlet('json-prune', 'direct rtbAuctionInfo')
 sports.ru#%#//scriptlet('set-constant', 'Ya.adfoxCode.create', 'noopFunc')
@@ -4455,6 +4454,7 @@ $script,xmlhttprequest,domain=dzen.ru|dzeninfra.ru,jsonprune=\$..[direct\, "rtbA
 dzen.ru#%#//scriptlet('remove-cookie', '/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/')
 !
 ! Dzen main page
+dzen.ru##div[data-testid="trends-entry-desktop"]
 dzen.ru##a[class*="flash-modal__marketing-"]
 dzen.ru#?#div[class^="dzen-desktop--top-micro-app__"]:matches-attr("data-*"="ad-banner")
 dzen.ru###ya-dist-splashscreen
@@ -6683,7 +6683,7 @@ mmo13.ru,altapress.ru,gastronom.ru,eg.ru,newsmaker.md,delo-vcusa.ru,tolknews.ru,
 1plus1.ua##.bannerPremium
 grad.ua###banner-top-page
 grad.ua##.radio_banner
-grad.ua###post-entry > div.blok_header_title:has(> h3:contains(СМИ Украины:))
+grad.ua#?##post-entry > div.blok_header_title:has(> h3:contains(СМИ Украины:))
 grad.ua##aside > div.banner_top_right:has(> ins.adsbygoogle)
 grad.ua##div[class^="dle_b_ps_"]
 ||yandex.ru/ads/system/context.js
@@ -6982,6 +6982,13 @@ glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita
 !
 !
 !
+instapv.com##.w-full > div.items-center:has(> div.w-full > div[data-freestar-ad])
+sports.ru##.layout-branding
+sports.ru##.odds-widget
+sports.ru#?#.online-layout__third-position > h2.widget-heading:contains(Коэффициенты)
+playground.ru###dfpPrerollDelay
+||playground.ru/img/pg-bonus-promo.mp4
+sci.rambler.ru##div[style][class*=" "]:not([id]):has(> div[id^="adfox"])
 mel.fm##div[class^="section__banner"]
 videomin.ws#?##sidebar > div.sidebar-content:has(> div.top > div.fix:contains(Реклама))
 riatomsk.ru##div[class*="banner"]
@@ -7226,7 +7233,7 @@ sport24.ru##header ~ div[class] div.right-scroll-bar-position
 russian.rt.com##.js-setka-media
 ysia.ru##.theme-ads
 ysia.ru##.theme-grid > div.theme-grid-row:has(> div.theme-grid-col > div.theme-ads)
-ysia.ru##.theme-grid > div.theme-grid-row:has(> div.theme-grid-col > script:contains(Sparrow))
+ysia.ru#?#.theme-grid > div.theme-grid-row:has(> div.theme-grid-col > script:contains(Sparrow))
 animego.me##.content-block > div.content:has(> div[id^="yandex_rtb"])
 ||static-api.mediavitrina.ru/*/ad-injections.json^
 ||static-api.mediavitrina.ru/*/ad-injections.json^$redirect=nooptext
@@ -7264,7 +7271,7 @@ pravda.ru##div[style="max-height:360px; overflow:hidden;"]
 klerk.ru##div[data-klad="1"]
 thebell.io##lib-december-banner
 thebell.io##img[width="1200"][height="400"][alt="true"]
-teenochka.xyz##div:has(> span:contains(/^Реклама:$/))
+teenochka.xyz#?#div:has(> span:contains(/^Реклама:$/))
 smallville.fandom.com##.page__right-rail
 chehov-vid.ru##.container-fluid > div#events
 mumuplayer.com##.NIE-art-right > div.pc
@@ -10464,7 +10471,6 @@ filmpro.ru##div[class*="-adv"]
 filmpro.ru##.b-mainmenu-list__item_wink
 filmpro.ru##div[class*="is-wink-"]
 ||enjoy-job.ru/wp-content/themes/simple-chrome/images/bnmini.gif
-playground.ru##.download-player-holder
 bobsoccer.ru##.GiftBanner
 ||besthqwallpapers.com/Styles/Theme/images/bannersfr/
 besthqwallpapers.com##div[class^="social-mss-area"]
@@ -17593,7 +17599,7 @@ mail.rambler.ru##div[class^="Ad-direct-"]
 mail.rambler.ru##.virtualLettersTableWrap
 mail.rambler.ru##div[class^="Direct-root"]
 !
-news.rambler.ru##div[style^="min-height: 600px;"] + div:has(> div:contains(Новости партнеров))
+news.rambler.ru#?#div[style^="min-height: 600px;"] + div:has(> div:contains(Новости партнеров))
 news.rambler.ru##div[style^="min-height: 600px;"] + div:has(div.banner--native-partner_widget)
 news.rambler.ru##div[data-marker-observer]
 news.rambler.ru###desktop_billboard
@@ -17685,6 +17691,7 @@ sports.ru###branding-layout>.page-layout:empty
 ||s5o.ru/storage/simple/ru/edt/ea/bd/3c/ef/rue20c480ea77.jpg
 ||s5o.ru/storage/simple/ru/edt/bd/05/61/db/ruee04afced56.jpg
 ! end of background images
+tribuna.com##div[class$="__main_layout__empty_block"]
 sports.ru##.ovechkin-promo-wrapper
 sports.ru##.columns-layout__main > div > div.carousel-of-cards:has(div[data-link])
 sports.ru#$#body[class] > div[class^="br-lt"] { background: #e5e7e9 !important; margin-top: 0 !important; padding-top: 120px !important; }
@@ -18077,6 +18084,8 @@ player.ex.co#@##ad-container
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210797
+@@/wp-content/themes/*/match-center.php?*.gif$subdocument
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208182
 @@||admin.mdclinica.ru/svelte-static/images/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204905
@@ -18208,8 +18217,6 @@ xpornium.net#@#.affiliate
 @@||source.dot.net/*/Ad.html$domain=source.dot.net
 ! fix holmstaad.ru
 holmstaad.ru#@#.banner-head
-! https://github.com/AdguardTeam/AdguardFilters/issues/104530
-gaana.com#@##banner_carousel
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103756
 partage.lu#@#.bannerTop
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103374
