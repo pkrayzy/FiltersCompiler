@@ -1,9 +1,9 @@
-! Checksum: BVr/nK5Gu6bJmbl8qS+otw
-! Diff-Path: ../patches/16/16-s-1754918546-3600.patch
+! Checksum: 1rJmferifc8uvW+3y2ncRQ
+! Diff-Path: ../patches/16/16-s-1755497679-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.53.84
-! TimeUpdated: 2025-08-11T13:18:59+00:00
+! Version: 2.0.53.94
+! TimeUpdated: 2025-08-18T06:11:12+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -210,9 +210,11 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
-japscan.*#%#//scriptlet('abort-on-property-write', 'LokWos')
-japscan.*#%#//scriptlet("prevent-addEventListener", "load", "/^.+?=>\s*\{.{1000,2000}$|\|\|typeof |\+'m|querySelector'/")
-japscan.*#%#//scriptlet("remove-node-text", "script", "/Y[a-z][a-z]?k[a-z]\d|function Lop|\|\|typeof |^\s*function .{6000,6500}$|innerHTML'\]='|stateObject'|function nawNA/")
+japscan.*#%#//scriptlet('abort-on-property-write', 'QoVWo')
+japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.querySelector', '/^[.#][a-z]{12}$/')
+japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.getElementById', '/^[a-z]{12}$/')
+japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.getElementsByClassName', '/^[a-z]{12}$/')
+japscan.*#%#//scriptlet("remove-node-text", "script", "/Y[a-z][a-z]?k[a-z]\d|(\|\||if\s*\(|const|let|var)\s*[\s($0-9A-Z_a-z]*=?\W*t\W*[\s($0-9A-Z_a-z]*=?\W*y\W*[\s($0-9A-Z_a-z]*=?\W*p\W*[\s($0-9A-Z_a-z]*=?\W*e\W*[\s($0-9A-Z_a-z]*=?\W*o\W*[\s($0-9A-Z_a-z]*=?\W*f|t\W*[\s($0-9A-Z_a-z]*=?\W*y\W*[\s($0-9A-Z_a-z]*=?\W*p\W*[\s($0-9A-Z_a-z]*=?\W*e\W*[\s($0-9A-Z_a-z]*=?\W*o\W*[\s($0-9A-Z_a-z]*=?\W*f\W*if\s*\(|=\"t|if\s*\(eval|function nawNA/")
 japscan.*#%#//scriptlet('trusted-set-constant', 'aclib', '{"isShowingPop": false}')
 japscan.*#%#//scriptlet('set-constant', 'aclib.runInPagePush', 'noopFunc')
 japscan.*#@#div.container > [href]
@@ -858,6 +860,10 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+bebesetmamans.20minutes.fr##.bannerdesktop
+bebesetmamans.20minutes.fr##.custombannerads
+bebesetmamans.20minutes.fr##div[class^="box_ban"]
+||20minutes.fr/js/ads-*.min.js
 lesoir.be##.r-panel--bandeau
 clubic.com##.ad-container:not(#style_important)
 hentaivost.fr#%#//scriptlet('remove-node-text', 'script', '__ADX_slot_id')
@@ -924,7 +930,7 @@ autoplus.fr###text-16
 enigme-facile.fr##div[id^="customhtml-"]:has(> center > .pepsia_player)
 filmoflix.ad,papadustream.*##.g-buttons
 lanouvellerepublique.fr##.dfp
-journaldesseniors.20minutes.fr##.ad
+slate.fr,journaldesseniors.20minutes.fr##.ad
 letribunaldunet.fr##div[class^="code-block code-block-"][style^="margin:"]
 vidal.fr##.content-gam
 1jour1film.*#%#//scriptlet('remove-attr', 'href', '#clickfakeplayer')
@@ -1354,7 +1360,7 @@ developpez.com###colonneDroite > aside > #encart_droite > div[class^="dvpb"][sty
 windsurfjournal.com##.right-pub-zone
 windsurfjournal.com##.megabanner-container
 passeportsante.net##.dynInFeed
-supertoinette.com,trustmyscience.com,peopleauquotidien.com,geo.fr,huffingtonpost.fr,moti.news,passeportsante.net##.ads
+jeuxvideo.com,supertoinette.com,trustmyscience.com,peopleauquotidien.com,geo.fr,huffingtonpost.fr,moti.news,passeportsante.net##.ads
 passeportsante.net##.pstAd
 forumgaming.fr,forumactif.com,forum-airguns.com###page-body a[onclick*="'shift'"][target="_blank"]
 allocine.fr##.main-banner
@@ -1632,6 +1638,8 @@ app.molotov.tv#%#//scriptlet('prevent-xhr', '/ping?token=')
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/211548
+@@||tiktokcdn.com/obj/$domain=streamfree.vip
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210890
 ||goal.com^$subdocument,~third-party,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210793

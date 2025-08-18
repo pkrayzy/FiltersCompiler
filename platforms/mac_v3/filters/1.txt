@@ -1,9 +1,9 @@
-! Checksum: UNGyRIzZ1PHVoEBf8CJ4Lw
-! Diff-Path: ../patches/1/1-s-1754921558-3600.patch
+! Checksum: yc3Jua5xQ/NjVAu4nsUq9g
+! Diff-Path: ../patches/1/1-s-1755277863-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.1.1.5
-! TimeUpdated: 2025-08-11T14:07:47+00:00
+! Version: 2.1.1.20
+! TimeUpdated: 2025-08-15T17:06:10+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -114,13 +114,11 @@
 ||ucoz.*/cgi/uutils.fcg?*&r=
 ! For popups. + scriptlet in 'general_extensions.txt'
 /\.s\/src\/[a-z0-9]*.js/$domain=plasma.3dn.ru
-/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su)\/\?[A-Za-z0-9%]{80,}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|clan.su|igrul-ka.ru|kino-torrent.net|tc-image.3dn.ru|selezen.net|my1.ru|do.am|moy.su|jetvis.ru
-/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su|\.org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\?[A-Za-z0-9%]{70,100}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|clan.su|free-dream.ru|igrul-ka.ru|kino-torrent.net|tc-image.3dn.ru|selezen.net|my1.ru|do.am|moy.su|jetvis.ru|fanofnfs.3dn.ru|kubik3.ru|paravozik.tv|greenflash.su|play-force.ru|megomult.ru|rub.org.ua|pokatushki-pmr.ru|usite.pro
-/(\.com|.at.ua|\.clan\.su|\.ru|narod\.ru|3dn\.ru|\.net|my1\.ru|do\.am|moy\.su|\.info|\.tv|mrcmirgorod\.com\.ua|\.su|\.org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100}$/$script,domain=rezzoclub.ru|comicsgeek.ru|narod.ru|3dn.ru|at.ua|clan.su|free-dream.ru|igrul-ka.ru|selezen.net|my1.ru|do.am|moy.su|jetvis.ru|fanofnfs.3dn.ru|kubik3.ru|paravozik.tv|greenflash.su|play-force.ru|megomult.ru|rub.org.ua|elektronika56.ru|staroetv.su|pro-zakupki.ru|usite.pro
 /ucoz\.(net|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\?[A-Za-z0-9%]{70,100}$/$script,domain=ucoz.net|ucoz.org|ucoz.ru|ucoz.com|ucoz.ua
 /ucoz\.(net|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100}$/$script,domain=ucoz.net|ucoz.org|ucoz.ru|ucoz.com|ucoz.ua
 /usite\.(pro|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100}$/$script,domain=usite.pro
 !
+/^https?:\/\/(?:[A-Za-z0-9-]+\.)*[A-Za-z0-9-]+\.ru\/(?:[A-Za-z0-9_-]{2,12}\/){0,5}[A-Za-z0-9_-]{2,12}\?[A-Za-z0-9!;^%_]{50,}[A-Za-z0-9!;^%_]$/$~third-party,script,domain=ru
 ||ucoz.*/?*%21*%3B$script,~third-party
 .*.ru/bpoint/src/vvpl.js?$third-party
 .ru/bpoint/bnr/blocks/vastvpaid_player.js
@@ -4432,12 +4430,10 @@ dzen.ru#%#//scriptlet('remove-cookie', '/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/
 ! Dzen main page
 dzen.ru##div[data-testid="trends-entry-desktop"]
 dzen.ru##a[class*="flash-modal__marketing-"]
-dzen.ru#?#div[class^="dzen-desktop--top-micro-app__"]:matches-attr("data-*"="ad-banner")
 dzen.ru###ya-dist-splashscreen
 dzen.ru###ya-dist-popup
 dzen.ru###ya-dist-teaser
 dzen.ru##div[class*="bannerMain"]
-dzen.ru#?#div[class*="_yandexSearchContainer-"] ~ div[class][id] > div[id] > div:has(> div > a[href^="https://yandex.ru/an/"])
 [$path=/^\/$|\/\?/]dzen.ru###ya-dist
 dzen.ru##div[class^="dzen-desktop__widgetContainer-"] div[class*=" dzen-desktop__"] > div[style^="padding-top:"]
 ://dzen.ru^$cookie=rec-tech
@@ -4445,7 +4441,6 @@ dzen.ru##div[class^="dzen-desktop__widgetContainer-"] div[class*=" dzen-desktop_
 dzen.ru##div[class*="--top-micro-app__"] > div[style$="position: relative; height: 0;"] > div[style^="margin-top:"] > div:not([style])
 dzen.ru#$#div[class*="--top-micro-app__"] > div[style$="position: relative; height: 0;"] { padding-top: 0 !important; }
 ! Banners in the feed
-dzen.ru#$#article[class*="rtb__zenadCardRtb"] { content-visibility: hidden !important; }
 !
 ! Dzen News
 dzen.ru##div[class^="BrandingAdvert"]
@@ -4629,7 +4624,7 @@ game4you.top,monna2.top,apad2.top,rustorka.com,rustorka.net,rustorkacom.lib,rust
 @@/report_ad.js$~third-party,domain=game4you.top|rustorka.com|rustorka.net|rustorkacom.lib|naylo.top|monna2.top|zannn.top|innal.top|apad2.top
 $cookie=opt_js,domain=game4you.top|rustorka.com|rustorka.net|rustorkacom.lib|rustorka.top|naylo.top
 !
-rustorka.com#%#//scriptlet('prevent-setTimeout', 'tick')
+rustorka.com#%#//scriptlet("prevent-setTimeout", "document['head")
 !$cookie=/^u_count|^st\d+|adblock|gophp/,domain=naylo.top|rustorka.com|rustorka.net|rustorkacom.lib|tapochek.net
 ! tapochek.net - fixing first click
 tapochek.net#%#//scriptlet("set-constant", "window.b0", "null")
@@ -4943,11 +4938,9 @@ yandex.*#?#.business-card-title-view__actions > div.business-card-title-view__ad
 ||yandex-pogoda.static-storage.net/*/*/*$script,replace=/adblock//
 !
 ! Yandex.Market
-market.yandex.*###\/content\/page\/fancyPage\/heroBannerCarousel
-market.yandex.*###\/content\/header\/madvHeaderPromo
+market.yandex.*##div[data-apiary-widget-name="@monetize/HeroBannerCarousel"]
+market.yandex.*##div[data-zone-name="headerPromo"]
 market.yandex.*###banner-streamer
-market.yandex.*##div[data-apiary-widget-name*="@marketfront/HeroBanner"]
-market.yandex.*##div[data-apiary-widget-id*="/headerPromo"]
 !
 ! Yandex.Video
 ||yandex.*/video/*/*/*/*_$script,replace=/Ya.*RtbBidReqID.*//
@@ -5010,6 +5003,9 @@ rasp.yandex.*##.SearchSegmentsDirect
 tv.yandex.*##.grid-chunk > div.grid-chunk__column-box:has(> div.grid-chunk__adv-column)
 tv.yandex.*##div[class*="is-top"] > div[class^="grid"][class*=" "]:has(> div[class*="__"] > div.channel_abcd)
 tv.yandex.*##div[class] > div[class^="grid"][class*=" "]:has(> div.channel_abcd)
+!
+! Yandex.Travel
+travel.yandex.ru##noindex[id^="adfox_"]
 !
 ! Yandex.Realty
 realty.ya.*##div[class*="PostBlocks__ad"]
@@ -6635,7 +6631,7 @@ obozrevatel.com,theblueprint.ru,hellomagrussia.ru,unian.ua,uaportal.com,nebogach
 ! ##.advert
 ufacitynews.ru,sevastopol.su,zn.ua,pravo.ru,lubertsyriamo.ru,kommersant.ru,dvnovosti.ru,kubnews.ru,turbopages.org,chernozem.info,flashgames.ru,footballreview.ru,inforesist.org,msgforum.ru,newsland.com,province.ru,tenews.org.ua,zab.ru##.advert
 ! ##div[id^="unit_"]
-malls.ru,montecarlo.ru,hightech.fm,ngs24.ru,76.ru,msk1.ru,grozny-inform.ru,pnp.ru,ladys.media,pogovorim.by,umteh.com,newsarmenia.am,sib.fm,autoparus.by,ctv.by,hightech.plus,punkt-a.info,1yar.tv,baltnews.*,sm.news,politring.com,ura.news,interfax.by,eadaily.com,golospravdy.eu,tayga.info,neg.by,kriminal.net.ua,rusvesna.su,365news.biz,mir24.tv,newsru.com,finam.info,mixnews.lv,russian.rt.com,steaklovers.menu,teleprogramma.pro,ua-football.com,vesti.uz,warhead.su,zakon.kz##div[id^="unit_"]
+ferra.ru,malls.ru,montecarlo.ru,hightech.fm,ngs24.ru,76.ru,msk1.ru,grozny-inform.ru,pnp.ru,ladys.media,pogovorim.by,umteh.com,newsarmenia.am,sib.fm,autoparus.by,ctv.by,hightech.plus,punkt-a.info,1yar.tv,baltnews.*,sm.news,politring.com,ura.news,interfax.by,eadaily.com,golospravdy.eu,tayga.info,neg.by,kriminal.net.ua,rusvesna.su,365news.biz,mir24.tv,newsru.com,finam.info,mixnews.lv,russian.rt.com,steaklovers.menu,teleprogramma.pro,ua-football.com,vesti.uz,warhead.su,zakon.kz##div[id^="unit_"]
 ! ##div[id^="adfox_"]
 mmo13.ru,altapress.ru,gastronom.ru,eg.ru,newsmaker.md,delo-vcusa.ru,tolknews.ru,gorodche.ru,smartpress.by,raenza.ru,eadaily.com,zakon.kz,svpressa.ru,udf.name,udf.by,baby.ru,pikabu.ru,thequestion.ru##div[id^="adfox_"]
 !
@@ -6955,6 +6951,11 @@ glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita
 !
 !
 !
+loads.ati.su#%#//scriptlet('json-prune', 'params.*.advType params.*.advId params.*.cinn')
+loads.ati.su##div[class*="skeleton"]
+bankrotstvo.info##.side-banner
+||meduza.io/api/w*/banners
+promokodi.net##.cashback-store-leftcol-banner
 instapv.com##.w-full > div.items-center:has(> div.w-full > div[data-freestar-ad])
 sports.ru##.layout-branding
 sports.ru##.odds-widget
@@ -7073,9 +7074,10 @@ radio1.ru##div[data-set]:has(> div[class^="ads"])
 radio1.ru##div[class^="right_blok"]:has(a[href][target="blank"] img[src^="https://multi-admin.ru/media_banner/"])
 ||multi-admin.ru/media_banner/$domain=radio1.ru
 iptvx.one##a[href^="https://go.iptvx.one/"]
-iptvx.one###formatted-banner
 iptvx.one##.widgb
 ||iptvx.one/imgz/cblng1.gif
+iptvx.one,epgx.club###formatted-banner
+.gif|$domain=iptvx.one|epgx.club
 securitylab.ru##.webinar-banner
 petstory.ru##div[onclick*="swapBanners"]
 fishki.net###rutube-block
@@ -9624,7 +9626,7 @@ interfax.ru##.i_desktop_only
 place.ge##div[class^="advertisement"]
 playground.ru###fullscreenContainer
 ||gagauzinfo.md/uploads/promo/
-33-news.ru,news-komi.ru,offside.kz,popcake.tv,holod.media,golos-naroda.kz,horoscopes.rambler.ru##.partner-news
+ko44.ru,33-news.ru,news-komi.ru,offside.kz,popcake.tv,holod.media,golos-naroda.kz,horoscopes.rambler.ru##.partner-news
 rainbowsky.ru##.mad
 kanalukraina.tv##.article_idealmedia
 poncy.ru##.media-ad
@@ -17258,6 +17260,7 @@ pornolab-zerkalo.appspot.com,pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net#
 !
 !
 ! START: mail.ru
+mail.ru##.ph-project + div.balloon-anchor
 mail.ru##div[id$="-branding-top-sticky"]
 mail.ru##div[article-item-type="contentroll"]
 mail.ru##div[data-testid="grid-header"] > div.toolbar
@@ -17295,7 +17298,6 @@ cloud.mail.ru#$?#.w-public__content  > div.b-layout > div.b-layout__col_1_2 { ma
 dom.mail.ru###Rubric-root > div[data-qa="ArticlesList"] > div:not([data-qa])
 !
 ! e.mail.ru / octavius.mail.ru
-e.mail.ru,octavius.mail.ru##.ph-project + div.balloon-anchor
 e.mail.ru,octavius.mail.ru#$#.letter-list-item-adv__container:not([style]) { height: 0 !important; opacity: 0 !important; }
 e.mail.ru,octavius.mail.ru##.js-banner-wrapper-container > div.trg-b-img-wrap
 e.mail.ru,octavius.mail.ru##.js-banner-wrapper-container > div.trg-b-container
@@ -18049,6 +18051,10 @@ player.ex.co#@##ad-container
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/211202
+simpleflying.com,makeuseof.com,movieweb.com,thegamer.com,gamerant.com,androidpolice.com,xda-developers.com#@#.affiliate
+! https://github.com/AdguardTeam/AdguardFilters/issues/211176
+iptvx.one,epgx.club#@#.adver
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210797
 @@/wp-content/themes/*/match-center.php?*.gif$subdocument
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208182

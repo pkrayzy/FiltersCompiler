@@ -1,10 +1,11 @@
-! Checksum: rD3ZWjadSNQUVOqEEu/aLA
+! Checksum: ZD5+oaKtvHYhCLOumtH4aw
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.67.59
-! TimeUpdated: 2025-08-11T14:08:16+00:00
+! Version: 2.0.67.77
+! TimeUpdated: 2025-08-18T06:10:51+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp|~rakuten.ne.jp
+||live-lb.cc^$document
 ||live-lr.cc^$document
 ||live-qj.cc^$document
 ||ademon.net^
@@ -271,7 +272,7 @@
 ||maio.jp^
 ||media-rep.com^
 ||mediad.co.jp^
-||mediba.jp^
+||mediba.jp^$third-party
 ||moba8.net^
 ||static.mopo.jp^$third-party
 ||myiads.com^
@@ -820,6 +821,7 @@ kyukyoku-matome.com##.widget_pc_ad
 /wp-content/plugins/amazonjs/*
 /wp-content/themes/CashLINESystem/js/modal.$script
 /wp-content/uploads/2024/09/fanza_ad$image
+://pocketcard-*.cn/netservice/login/$document
 .shop/*%F0%9D%9A%8C%F0%9D%9A%98.%F0%9D%9A%93%F0%9D%9A%99/$document
 /open/?apiName=$xmlhttprequest,~third-party
 ://mufg-*.cn?token=$document
@@ -829,12 +831,10 @@ kyukyoku-matome.com##.widget_pc_ad
 ://icloud-*.cn/$document
 .icu/*.jp/|$document
 .icu/verify|$document
-/^https:\/\/[a-z]{6,10}\.com\/category\/(?=[0-9a-z]{0,15}[A-Z])[0-9A-Za-z]{16}\?$/$document
-/^https:\/\/[a-z]{6,10}\.com\/detail\/(?=[0-9a-z]{0,19}[A-Z])[0-9A-Za-z]{18,20}\?$/$document
+/^https:\/\/[a-z]{6,10}\.(?:com|top)\/category\/(?=[0-9a-z]{0,15}[A-Z])[0-9A-Za-z]{16}\?$/$document
+/^https:\/\/[a-z]{6,10}\.(?:com|top)\/detail\/(?=[0-9a-z]{0,19}[A-Z])[0-9A-Za-z]{18,20}\?$/$document
 .top/v1/check|$document
 .com/cash/driect/client/anti/3210000^$document
-.com/index/client/ops/ib/3210000^$document
-/wdsoscosmsosmx.jp/*$document
 ://etc-*.cn/Rfuncc1$document
 /landers/*.php?lp_key=$document
 /apk/app-release.apk|$document
@@ -925,7 +925,6 @@ count/login/?=id/log/*/login.asp$document,domain=cc|com
 /ap/sign.php?authenticated=true&openid%2Fgp%2Fsignin%2Fx%26i%3Da%26oauth%3Dm%26i%3Fie%3DUTF8%26ref_%3Drhf_custrec_signin^$document,domain=best|cn|top
 /g?visitorid=*&extra_data2=|$document
 ||amplifyapp.com/*=(0101)-$document
-.xyz/loginone.php?do?$document
 .cfd/*?_t=$document
 &p=*&_mi|$document,domain=top
 .com/ibg/client/*.php|$document
@@ -977,6 +976,7 @@ n.lat/login|$document
 /member/sendMail.php?direct_user_cd=*&direct_password=$document
 |http://*/j/mmenu.php$document
 .com/index/category?category_id=*&coll_id=$document
+.top/index/detail.html?sno=$document
 .com/index/detail.html?sno=$document
 /?phone=(050)-$document
 ^phone=050-$document
@@ -998,6 +998,9 @@ _ap/signin*?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=
 .com/regist.php?*/1|$document
 ://eki*.*.com/Personal/member/Login/index.php?oneTimeAccessID=$document
 .com/ae/login.php?openid.pape.max_auth_age=0&openid.return_to=%$document
+/product_details?id=$document,domain=click
+://smbc.$document,domain=cn|com|top
+://smbccard*.$document,domain=club
 ://smdc-$document,domain=cn|fit|pl
 ://smbc-$document,domain=club|cn|fit|link|shop|top
 /funccode.php|$document,domain=cfd|xyz
@@ -1019,8 +1022,8 @@ _ap/signin*?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=
 .asp?AC=*&IC=$document,domain=com|fun|online|site
 /ap/signin/openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp$document,domain=cn|top|xyz
 /index.php?route=product/product&product_id=$document,domain=cyou|life|live|shop|xyz|~ocam.live
-/index.php?main_page=product_info*&cPath=$document,domain=asia|bar|beauty|best|biz|bond|buzz|cam|casa|cfd|click|cloud|club|cyou|fashion|fit|forum|fun|gay|homes|icu|ink|lat|life|live|ltd|makeup|me|mom|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|run|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|yachts|yoga|za.com
-/index.php?main_page=product_info&products_id=$document,domain=asia|bar|beauty|best|biz|bond|buzz|cam|casa|cfd|click|cloud|club|cyou|fashion|fit|forum|fun|gay|homes|icu|ink|lat|life|live|ltd|makeup|me|mom|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|run|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|yachts|yoga|za.com
+/index.php?main_page=product_info*&cPath=$document,domain=asia|baby|bar|beauty|best|biz|bond|buzz|cam|casa|cfd|click|cloud|club|cyou|fashion|fit|forum|fun|gay|homes|icu|ink|lat|life|live|ltd|makeup|me|mom|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|run|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|yachts|yoga|za.com
+/index.php?main_page=product_info&products_id=$document,domain=asia|baby|bar|beauty|best|biz|bond|buzz|cam|casa|cfd|click|cloud|club|cyou|fashion|fit|forum|fun|gay|homes|icu|ink|lat|life|live|ltd|makeup|me|mom|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|run|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|yachts|yoga|za.com
 /\.(?:club|cn|icu|top|pro|site|work)\/Personal\/member\/Login\/index\.php\?oneTimeAccessID=/$document,domain=club|cn|icu|top|pro|site|work
 /^https?:\/\/[jq][apq][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]?\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]?\.[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?\//$document,domain=agency|art|asia|auction|bar|beauty|beer|best|biz|business|cam|cards|click|cloud|coupons|digital|diy|fashion|food|forum|gay|guru|info|life|live|living|link|ltd|my|property|pw|rocks|run|sbs|shop|store|studio|tattoo|tech|today|top|uno|work,match-case
 /^https:\/\/[a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?\.[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z]?[a-z]?[a-z]?\.shop\/product\/[0-9][0-9][0-9][0-9][0-9]?[0-9]?[0-9]?$/$document,match-case
@@ -1054,6 +1057,17 @@ city.iwakura.aichi.jp,city.gose.nara.jp,city.inazawa.aichi.jp,city.kawasaki.jp,c
 city.shiroishi.miyagi.jp,city.motomiya.lg.jp,city.sanyo-onoda.lg.jp,pref.hiroshima.lg.jp,city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+||seinenbu.tokyo-shoten.or.jp/ad*.php
+seinenbu.tokyo-shoten.or.jp##table[class=".hpb-subh01"] .hpb-subh01-cell1_4 + td[rowspan="4"]
+seinenbu.tokyo-shoten.or.jp###ad_string
+cancam.jp###home-feature
+tuberecipe.com##.amazon-AffiliateBanner
+domani.shogakukan.co.jp##div[style="min-height:225px; margin-bottom:30px;"]
+yomotto.jp##.main-ads-wrap
+altema.jp##.olipa
+goodfreefonts.com##.side-ad-slot
+goodfreefonts.com###titleunder-ads
+2chan.net##iframe[src^="https://dec.2chan.net/bin/"]
 hotdoglab.jp##.adsense336280
 monhan-soku.com##.first-article div > span[style="color: rgb(153, 0, 0);"]
 sorekarano.blog.jp##a[href^="https://amzn.to"] + br
@@ -1781,6 +1795,7 @@ dic.pixiv.net###d_toparticle_flux_ad
 yogajournal.jp##.admarking_label
 otv.co.jp##.list_ad
 otv.co.jp##.o_aside__pure__ad
+otonano-shumatsu.com##.sompo-ad-side-column-section
 otonano-shumatsu.com##.logly-block
 wealthadvisor.co.jp##.bottom_prarea
 go2senkyo.com##.m_left_column_long_banner
@@ -2244,7 +2259,7 @@ koe-voice.jp##article[data-clarity-region="article"] > center
 bossgoo.sakura.ne.jp###ffb_content
 ske48matome.net##.adbox2
 hadakanonude.com##.main-inner > center
-erogazou.gallery,sougomatomechannel.livedoor.blog,hadakanonude.com###onlineBanner
+av-wiki.tokyo,erogazou.gallery,sougomatomechannel.livedoor.blog,hadakanonude.com###onlineBanner
 kintore-style.com##div[id^="kinto-"]
 naitter.hippy.jp###secondary > .widget_sp_image
 btnmaker.me##.ads-banner-fixed
@@ -3062,6 +3077,8 @@ numan.tokyo,news.denfaminicogamer.jp##.rectangle-bn
 city.isehara.kanagawa.jp##div[id^="bnAdvertisement"]
 ||city.isehara.kanagawa.jp/banner/
 city.fukaya.saitama.jp##.bannerRMod
+asahi.com##.contents[style^="--color-ctx-category:var("] > div.border-gray-300 > section.section-container.overflow-scroll
+asahi.com##div[id*="_rect0"]
 asahi.com##.p-ad__container
 asahi.com###ytplayer1-ad
 asahi.com##.p-ad-area
@@ -3668,6 +3685,7 @@ getuploader.com###banner_eye_catch
 ||2nt.com/js/blog/headbar_ad_load.js
 ||fc2.com/js/blog/ad_ref.js
 ||fc2.com/js/blog/headbar_ad_load.js
+enechange.jp##.e__post_body > .internet-cta
 enechange.jp##.e__float_try
 excite.co.jp##.mainSide > div.topics
 excite.co.jp##.ec-ranking
@@ -4032,7 +4050,6 @@ loljp-wiki.jp###bodyFrame > span[style="font-size:small;color:#939393;"]
 [$path=/jp/]goal.com##div[class^="fc-player_fc"]
 lettuceclub.net##.p-information__section > div.e-book + p[style="text-align: center"]
 manbooo.com##.sidebar-right
-newsee-media.com##.s-side[style^="position: fixed"]
 newsee-media.com##.ad-list2
 ||d-rise.jp/images/banner/*_730x88.png
 yomiuri.co.jp##div[id^="dfp_"]
@@ -5024,7 +5041,6 @@ hikak.com,shindans.com##.a11 > div.a21
 100nuki.com##div[style^="margin:20px 0;padding:10px;background-color:#fea;background-image"]
 zebrack-comic.shueisha.co.jp##div[class^="Fluct_shadow"]
 rensai.jp##.amazon_wrap
-cancam.jp##div[id^="div-gpt-ad-"]
 detailtext-aucfan.com,aucfan.com,aucview.com##div[class*="adBnrBox"]
 unityroom.com##.bl_adunit
 unityroom.com##.pg_section_ads_double
@@ -5852,7 +5868,7 @@ mdpr.jp##.c-adBottomOverlay
 sqool.net##.stickyunit
 animatetimes.com##.c-banner-common
 animatetimes.com##.c-banner-lg-site-jack
-onlinegamer.jp,mymo-ibank.com##div[class^="c-ad"]
+medley.life,onlinegamer.jp,mymo-ibank.com##div[class^="c-ad"]
 mag.japaaan.com##.area_a
 mag.japaaan.com##.after_go_next
 dekiru.net##.module-article-list-ad
@@ -8590,7 +8606,7 @@ tvbok.com###right_2nd > .right_box2
 bookbang.jp###footer_ban
 hatena.ne.jp##div[class^="entry-ad-"]
 2ch.logpo.jp,mt-soft.sakura.ne.jp,hiroburo.com,xn--w8jtkjf8c570x.com,cg-method.com##a[href^="https://www.amazon.co.jp/"]
-comic11.hatenablog.com,blog.munieru.jp,anou4649.hatenablog.com,nomolk.hatenablog.com,moognyk.jp,noaboutsnote.hatenablog.com##.hatena-asin-detail
+fireyoshida.com,comic11.hatenablog.com,blog.munieru.jp,anou4649.hatenablog.com,nomolk.hatenablog.com,moognyk.jp,noaboutsnote.hatenablog.com##.hatena-asin-detail
 ogeji.hatenablog.com##.entry-content > .code ~ table[style*="width:300px"]
 wiki.seesaa.jp##.ad-boomapp
 ||weblio.jp/e7/jsad/
