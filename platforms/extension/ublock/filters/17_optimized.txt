@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 3vhvpNJelLnir8abg9AUEw
-! Diff-Path: ../patches/17_optimized/17_optimized-s-1755327061-3600.patch
+! Checksum: T0jQNRrFTyeCBzvIAiFmbQ
+! Diff-Path: ../patches/17_optimized/17_optimized-s-1756725053-3600.patch
 ! Title: AdGuard URL Tracking filter (Optimized)
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.11.64
-! TimeUpdated: 2025-08-16T06:42:03+00:00
+! Version: 2.0.11.78
+! TimeUpdated: 2025-09-01T11:06:57+00:00
 ! Expires: 5 days (update frequency)
 $removeparam=loclid
 $removeparam=line_uid
@@ -171,6 +171,7 @@ $removeparam=itm_medium
 $removeparam=itm_campaign
 $removeparam=itm_content
 $removeparam=itm_term
+$removeparam=utm_tag
 $removeparam=utm_adset
 $removeparam=utm_adgroup
 $removeparam=utm_ad
@@ -208,6 +209,9 @@ $removeparam=utm_term
 $removeparam=utm_umguk
 $removeparam=utm_userid
 $removeparam=utm_viz_id
+$removeparam=utm_source_code
+$removeparam=utm_campaign_name
+$removeparam=utm_journey_id
 $removeparam=gad_source
 $removeparam=gbraid
 $removeparam=wbraid
@@ -276,6 +280,13 @@ $removeparam=fb_action_types
 $removeparam=fb_comment_id
 $removeparam=fb_ref
 $removeparam=fb_source
+||trendyol.com^$removeparam=adjust_t
+||trendyol.com^$removeparam=link_userID
+||trendyol.com^$removeparam=link_contentid
+||qms.ru^$removeparam=src
+||tech.onliner.by^$removeparam=int_source
+||e-himart.co.kr^$removeparam=gtmPos
+||e-himart.co.kr^$removeparam=jsClck
 ||cancam.jp^$removeparam=from
 ||fnnews.com^$removeparam=jd
 ||fnnews.com^$removeparam=dc_data
@@ -319,6 +330,7 @@ $removeparam=fb_source
 ||operanewsapp.com^$removeparam=request_id
 ||operanewsapp.com^$removeparam=share_from
 ||sprinklr.com/api/livechat/event/$removeparam=cursor
+||hepsiburada.com^$removeparam=wt_ds
 ||hepsiburada.com^$removeparam=wt_pc
 ||akakce.com/r/?c=$removeparam=u
 ||domclick.ru^$removeparam=from
@@ -485,6 +497,10 @@ $removeparam=xmt,domain=threads.com|threads.net
 ||gaming.amazon.com^$removeparam=ref_
 ||gaming.amazon.com^$removeparam=twitchReferral
 ||gaming.amazon.com^$removeparam=yTwchPos
+||gaming.amazon.com^$removeparam=ingress
+||luna.amazon.*^$removeparam=ingress
+||luna.amazon.*^$removeparam=ref
+||luna.amazon.*^$removeparam=yTwchPos
 ||allegro.pl^$removeparam=clickId
 ||blog.naver.com^$removeparam=trackingCode
 ||blog.naver.com^$removeparam=proxyReferer
@@ -923,7 +939,7 @@ $removeparam=from,domain=doujinnomori.com|shinshi-manga.net|echiman.com|dojin-na
 ||slickdeals.net/*&sdfid=$removeparam=sdfid
 ||slickdeals.net/*&sdtrk=$removeparam=sdtrk
 ||beacon-recommend.tower.jp^$removeparam=tracking_id
-||hd.kinopoisk.ru^$removeparam=from_block
+||kinopoisk.ru^$removeparam=from_block
 ||bizhint.jp^$removeparam=trcd
 ||teknosa.com^$removeparam=adj_adgroup
 ||teknosa.com^$removeparam=adp_cid
@@ -1414,8 +1430,6 @@ $removeparam=clid,domain=adguard-vpn.*|adguardvpn-help.*
 ||store.udiscovermusic.com^$removeparam=/utm_/
 ||hktvmall.com/yuicombo?$script,removeparam=/_ui\/shared\/common\/js\/analytics\/with-intersection-track.js/
 ||go.xlivrdr.com^$removeparam
-||stripchat.com^$removeparam=affiliateId
-||stripchat.com^$removeparam=referrer
 ||1password.university^$removeparam=utm_ref
 ||blog.twitch.tv^$removeparam=web_only
 ||michaelkors.global^$removeparam=ecid
@@ -1425,6 +1439,16 @@ $removeparam=clid,domain=adguard-vpn.*|adguardvpn-help.*
 ||doctolib.de^$removeparam=utm_button
 ||nationalgeographic.com^$removeparam=utm_rd
 ||ficbook.net^$removeparam=/premiumVisit|utm_compaign/
+||go.tscprts.com^$removeparam
+||stripchat.com^$removeparam=abTest
+||stripchat.com^$removeparam=abTestVariant
+||stripchat.com^$removeparam=action
+||stripchat.com^$removeparam=trafficType
+||stripchat.com^$removeparam=userId
+||stripchat.com^$removeparam=landing
+||stripchat.com^$removeparam=modelId
+||stripchat.com^$removeparam=affiliateId
+||stripchat.com^$removeparam=referrer
 ||stripchat.com^$removeparam=campaignId
 ||stripchat.com^$removeparam=sourceId
 ||stripchat.com^$removeparam=realDomain
@@ -1651,6 +1675,9 @@ $removeparam=scid,domain=rakuten.co.jp|rakuten-wallet.co.jp
 ||dmm.co.jp^$removeparam=i3_ref
 ||imdb.com^$removeparam=ref_
 ||livedoor.biz^$removeparam=ref
+||adj.st^$removeparam=identifier
+||adj.st^$removeparam=web_src
+||adj.st^$removeparam=adj_deep_link
 ||adj.st^$removeparam=CollectionId
 ||adj.st^$removeparam=adjust_deeplink
 ||adj.st^$removeparam=pt
@@ -1961,6 +1988,7 @@ $removeparam=asc_source,domain=aboutamazon.com|amazon.*|amzn.to
 ||amazon.*$removeparam=vtr
 ||amazon.*/aa$removeparam=bitCampaignCode
 ||amazon.*/artists/$removeparam=tag
+||amazon.*/dp/$removeparam=pbs
 ||amazon.*/dp/$removeparam=tag
 ||amazon.*/gp/$removeparam=tag
 ||amazon.*/hz/contact-us/csp$removeparam=/entries/
@@ -2135,6 +2163,7 @@ $removeparam=s,domain=twitter.com|x.com
 ||gamesplanet.com^$removeparam=ref
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
+@@||yandex.go.link^$removeparam=adj_t
 @@||em.dynamicyield.com^$removeparam=cuid
 @@||a8cv.amiami.jp/click/$removeparam=a8
 !+ PLATFORM(ext_ublock)

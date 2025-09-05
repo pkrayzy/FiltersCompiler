@@ -1,9 +1,9 @@
-! Checksum: 2G9Phil55beSUsDRbytlsA
-! Diff-Path: ../patches/17/17-s-1755327049-3600.patch
+! Checksum: PqnAxym4YXk3KNKg0YFdDQ
+! Diff-Path: ../patches/17/17-s-1756725031-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.11.64
-! TimeUpdated: 2025-08-16T06:42:03+00:00
+! Version: 2.0.11.78
+! TimeUpdated: 2025-09-01T11:06:57+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -284,6 +284,7 @@ $removeparam=itm_campaign
 $removeparam=itm_content
 $removeparam=itm_term
 ! UTM
+$removeparam=utm_tag
 $removeparam=utm_adset
 $removeparam=utm_adgroup
 $removeparam=utm_ad
@@ -321,6 +322,9 @@ $removeparam=utm_term
 $removeparam=utm_umguk
 $removeparam=utm_userid
 $removeparam=utm_viz_id
+$removeparam=utm_source_code
+$removeparam=utm_campaign_name
+$removeparam=utm_journey_id
 ! https://support.google.com/google-ads/answer/13327296
 $removeparam=gad_source
 ! Google ads/analytics
@@ -421,6 +425,17 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/212262
+||trendyol.com^$removeparam=adjust_t
+||trendyol.com^$removeparam=link_userID
+||trendyol.com^$removeparam=link_contentid
+! https://github.com/AdguardTeam/AdguardFilters/issues/211947
+||qms.ru^$removeparam=src
+! https://github.com/AdguardTeam/AdguardFilters/issues/211682
+||tech.onliner.by^$removeparam=int_source
+! https://github.com/AdguardTeam/AdguardFilters/issues/211680
+||e-himart.co.kr^$removeparam=gtmPos
+||e-himart.co.kr^$removeparam=jsClck
 ! https://cancam.jp/archives/1637786?from=slide_home2
 ||cancam.jp^$removeparam=from
 ! fnnews.com
@@ -482,6 +497,8 @@ $removeparam=fb_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209002
 ||sprinklr.com/api/livechat/event/$removeparam=cursor
 ! hepsiburada.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/212283
+||hepsiburada.com^$removeparam=wt_ds
 ||hepsiburada.com^$removeparam=wt_pc
 ! akakce.com
 ! u = UTM here
@@ -722,6 +739,10 @@ $removeparam=xmt,domain=threads.com|threads.net
 ||gaming.amazon.com^$removeparam=ref_
 ||gaming.amazon.com^$removeparam=twitchReferral
 ||gaming.amazon.com^$removeparam=yTwchPos
+||gaming.amazon.com^$removeparam=ingress
+||luna.amazon.*^$removeparam=ingress
+||luna.amazon.*^$removeparam=ref
+||luna.amazon.*^$removeparam=yTwchPos
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197733
 ||allegro.pl^$removeparam=clickId
 ! blog.naver.com
@@ -1352,7 +1373,7 @@ $removeparam=from,domain=doujinnomori.com|shinshi-manga.net|echiman.com|dojin-na
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167158
 ||beacon-recommend.tower.jp^$removeparam=tracking_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166502
-||hd.kinopoisk.ru^$removeparam=from_block
+||kinopoisk.ru^$removeparam=from_block
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166917
 ||bizhint.jp^$removeparam=trcd
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166582
@@ -2075,8 +2096,6 @@ $removeparam=clid,domain=adguard-vpn.*|adguardvpn-help.*
 ||hktvmall.com/yuicombo?$script,removeparam=/_ui\/shared\/common\/js\/analytics\/with-intersection-track.js/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128820
 ||go.xlivrdr.com^$removeparam
-||stripchat.com^$removeparam=affiliateId
-||stripchat.com^$removeparam=referrer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128917
 ||1password.university^$removeparam=utm_ref
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128779
@@ -2093,6 +2112,16 @@ $removeparam=clid,domain=adguard-vpn.*|adguardvpn-help.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128339
 ||ficbook.net^$removeparam=/premiumVisit|utm_compaign/
 ! stripchat.com
+||go.tscprts.com^$removeparam
+||stripchat.com^$removeparam=abTest
+||stripchat.com^$removeparam=abTestVariant
+||stripchat.com^$removeparam=action
+||stripchat.com^$removeparam=trafficType
+||stripchat.com^$removeparam=userId
+||stripchat.com^$removeparam=landing
+||stripchat.com^$removeparam=modelId
+||stripchat.com^$removeparam=affiliateId
+||stripchat.com^$removeparam=referrer
 ||stripchat.com^$removeparam=campaignId
 ||stripchat.com^$removeparam=sourceId
 ||stripchat.com^$removeparam=realDomain
@@ -2416,6 +2445,9 @@ $removeparam=scid,domain=rakuten.co.jp|rakuten-wallet.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104987
 ||livedoor.biz^$removeparam=ref
 ! adjust.com tracking
+||adj.st^$removeparam=identifier
+||adj.st^$removeparam=web_src
+||adj.st^$removeparam=adj_deep_link
 ||adj.st^$removeparam=CollectionId
 ||adj.st^$removeparam=adjust_deeplink
 ||adj.st^$removeparam=pt
@@ -2839,6 +2871,7 @@ $removeparam=asc_source,domain=aboutamazon.com|amazon.*|amzn.to
 ||amazon.*$removeparam=vtr
 ||amazon.*/aa$removeparam=bitCampaignCode
 ||amazon.*/artists/$removeparam=tag
+||amazon.*/dp/$removeparam=pbs
 ||amazon.*/dp/$removeparam=tag
 ||amazon.*/gp/$removeparam=tag
 ||amazon.*/hz/contact-us/csp$removeparam=/entries/
@@ -3073,6 +3106,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/211078
+@@||yandex.go.link^$removeparam=adj_t
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13135670
 @@||em.dynamicyield.com^$removeparam=cuid
 ! Some a8 links on https://figure-times.com/

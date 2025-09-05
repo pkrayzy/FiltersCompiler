@@ -1,9 +1,9 @@
-! Checksum: /mGYbxdaLmMyrgjUSiWodw
-! Diff-Path: ../patches/236_optimized/236_optimized-s-1754585161-14400.patch
+! Checksum: sKe9M2rlxwVBVmU3z0MuNg
+! Diff-Path: ../patches/236_optimized/236_optimized-s-1757061758-14400.patch
 ! Title: road-block light (Optimized)
 ! Description: Romanian ad blocking filter subscription.
-! Version: 2.0.3.14
-! TimeUpdated: 2025-08-07T16:41:58+00:00
+! Version: 2.0.3.22
+! TimeUpdated: 2025-09-05T08:38:26+00:00
 ! Expires: 10 days (update frequency)
 /plugins/footer-pop-up-banner/*
 /Reclama/*
@@ -539,6 +539,7 @@ gsp.ro#?#[class^="banner"]:not(*:-abp-has(.related-in-article))
 ||gsp.ro/*superbet
 ||gsp.ro/*maxbet$image
 ||gsp.ro/*/betano$image
+||gsp.ro/*winbet$image
 ||oradesibiu.ro/wp-content/uploads/*/*/banner*.jpg$image
 ||oradesibiu.ro/wp-content/uploads/*/*/*-banner-*.gif$image
 oradesibiu.ro##div[class^="ods"]
@@ -959,6 +960,11 @@ monitoruldevrancea.ro##[class*="_ad_"]
 bursa.ro#?#.clearfix [href][target="_blank"][rel]:-abp-has([alt][title][style])
 bursa.ro##.banner
 gorjonline.ro#?#.container-wrapper > [href="https://www.gorjonline.ro/anunturi/"]:-abp-has([src])
+gorjonline.ro##.stream-item-below-header
+gorjonline.ro##[src^="wp-content/uploads/2024/08/banner-"]
+gorjonline.ro##[href="//www.psgone.ro/"]
+gorjonline.ro##[href="//www.baltacocorenilor.ro/"]
+gorjonline.ro##.widget_media_video:has-text(Publ)
 newmoney.ro#?#.sow-image-container:-abp-has([target="_blank"][rel])
 ||newmoney.ro/*Banner$image
 ||filme-bune.biz^*.gif$image
@@ -1032,6 +1038,7 @@ actualitati.info#?#.widget:-abp-has(.adsbygoogle)
 ||imobiliare.ro^$domain=moise.ro
 moise.ro##[href*="imobiliare.ro"]
 gadget.ro#?#[id^="block"]:-abp-has([src*="pub"])
+gadget.ro##[id].brxe-block:has(script)
 obiectiv-sm.ro##.ottowebAds
 obiectiv-sm.ro##.ads-banner-link
 obiectiv-sm.ro##.bk-sticksb-wrapper
@@ -1408,6 +1415,27 @@ tvonline123.com#@##ads-container
 tvonline123.com##.video-container:has([href*="?key="])
 acasatv.protv.ro##[id]:has(script)
 lovedeco.ro###billboard
+publi24.ro##.article-list > [class]:has([id^="PUB"])
+compari.ro##.admanager-leaderboard
+gorjeanul.ro##[href="https://sni.ro/"]
+||gorjeanul.ro/wp-content/uploads/2018/06/macheta_clinic_life.jpg$image
+asingorj.ro##.widget_custom_html
+asingorj.ro##[href="https://www.allcrisguard.ro/"]
+cvlpress.ro##.bla-container:not(*:has([href*="cvlpress.ro"]))
+||cdn.expressdebanat.ro/*Banner$image
+||cdn.expressdebanat.ro/*.gif$image
+expressdebanat.ro##[rel*="sponsored"]
+expressdebanat.ro##[href="https://admitere.uvvg.ro/"]
+expressdebanat.ro##[href="https://www.banatica.ro/ro/home-ro/"]
+expressdebanat.ro##[href="https://www.hotel-versay.ro/"]
+expressdebanat.ro##[href="https://www.facebook.com/www.racingteamresita.ro"]
+expressdebanat.ro##[href^="https://www.brantner.com/"]
+tion.ro##.et-last-child.et_pb_column_2
+||stiridetimisoara.ro/*banner
+||stiridetimisoara.ro/*.gif$image
+go4it.ro##.single__under:has([style*="padding"])
+go4it.ro##.text-center.hidden-sm.hidden-md
+go4it.ro##.mg-bottom-10:has(.strawberry-ads)
 turdanews.net#%#//scriptlet('ubo-nostif.js', 'ai_')
 turdanews.net#%#//scriptlet('ubo-rmnt.js', 'script', 'adsbygoogle')
 nosteam.ro,nosteamgames.ro#%#//scriptlet('ubo-nowoif.js')
@@ -1459,7 +1487,7 @@ clujust.ro#%#//scriptlet('ubo-rmnt.js', 'script', 'ai_adb')
 lovendal.ro#%#//scriptlet('ubo-noeval-if.js', 'ads')
 ||sapi.emag.*/recommendations/*zones=adss$xmlhttprequest,~third-party
 emag.*##.container:has([data-tracking-alias^="sponsored_products"])
-gsp.ro#%#//scriptlet('ubo-rmnt.js', 'script', 'maxbet')
+gsp.ro#%#//scriptlet('ubo-rmnt.js', 'style', '/@media.*url/gms')
 ||business24.ro/index.php?module=getActiveBlockerContent.ajxinternal
 business24.ro##.banner
 business24.ro##.branding-container
@@ -1469,3 +1497,4 @@ business24.ro##div.banner-container
 canale-tv.com#%#//scriptlet('ubo-nowoif.js', '_blank', '10')
 canale-tv.com#%#//scriptlet('ubo-nostif.js', 'location')
 canale-tv.com#%#//scriptlet('ubo-nosiif.js', 'tool')
+player.desenefaine.net#%#//scriptlet('ubo-acs.js', 'document.write', 'unescape')
