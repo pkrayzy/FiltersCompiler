@@ -1,8 +1,8 @@
-! Checksum: eUYxQJb9rGy0s3aGB7cMsQ
+! Checksum: JEhk2Bx4EBh36/V8i9pdjA
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.23.38
-! TimeUpdated: 2025-09-05T09:07:58+00:00
+! Version: 2.0.23.48
+! TimeUpdated: 2025-09-09T05:07:46+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -35,6 +35,10 @@
 ##head[prefix~="medium-com:"] ~ body .js-postActionsBarContent > .js-readNextInteractions
 !
 ###SmBnLink
+! https://github.com/AdguardTeam/AdguardFilters/issues/212907
+! Used in many mirrors of the Chinese site like in the issue
+###appss
+##[onclick="goAppHtml();"]
 ! https://developer.apple.com/documentation/webkit/promoting_apps_with_smart_app_banners
 !
 ! NOTE: Generic rules end ⬆️
@@ -60,6 +64,8 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+examine.com##body > section.z-1000.sm\:hidden
+sparkasse-hochfranken.de##.s_app_info
 turkcell.com.tr##div[class^="SmartBanner_container"]
 turkcell.com.tr##section[class^="AppsWorld_apps-world"]
 siirthaberci.com##.grid-stack-item > .Reklam_001.numodul
@@ -171,7 +177,7 @@ raycast.com##div[class^="GlobalBanner"]
 imdb.com##.imdb-header__app-button
 doordash.com##a[data-testid="openAppButton"]
 t.shuqi.com##.ReaderFreeFixedGuideBtn
-easy.co.il##.qr-container
+enerjisa.com.tr,easy.co.il##.qr-container
 easy.co.il##.open-app-button
 ntv.com.tr##.article-app-widget
 tv9telugu.com##.tv9_banner
@@ -1972,7 +1978,6 @@ malaysiastock.biz###div_mobileApp_Promotion
 navitime.com###white-space
 10jqka.com.cn###backWashNav
 nur.kz##.js-page-top
-pinterest.com##div[style*="transition: transform 225ms ease-in-out 0s; transform: translateY(0%);"]
 nperf.com##.mobilePromoLogos
 house.goo.ne.jp,kusurinomadoguchi.com,bleacherreport.com,tvbs.com.tw##.smart_banner
 ||m.555duo.net/images/app.gif
@@ -2824,6 +2829,8 @@ tekstilbank.com.tr,icbc.com.tr,212.109.224.91###mobileAppPanel
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+gaitame.com###ad-marketnext
+||m.webaslan.com/_img/banner/wa
 kurashiru.com##.ListsShow-buttonsWrapper
 lamoda.ru##div[class*="_smartBannerMobile"]
 trip.com##div[class^="TravelDetailContainer"] > div[position="position_bottom"]:not([class])
@@ -2893,8 +2900,6 @@ startpage.com,doctoranytime.gr##.mobile-app-promo-banner
 vnexpress.net##.installvneapp
 altema.jp##.link-fixed
 [$path=/pogoda]yandex.*##div[class^="AppLeftPanelLinksClient_"]
-wap.xuanyge.org###appss
-wap.xuanyge.org##[onclick="goAppHtml();"]
 restaurantji.com###mobile_app
 mercari.com##body > div[class^="Overlay-"]
 restaurantguru.com###android_info

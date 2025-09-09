@@ -1,16 +1,16 @@
 ![Adblock Plus 2.0]
-! Checksum: qovKFGcDg85MJMDJdRY3xg
-! Diff-Path: ../patches/212/212-s-1757061774-14400.patch
+! Checksum: DxGwl2gmAttjEobc6g3DkQ
+! Diff-Path: ../patches/212/212-s-1757422226-14400.patch
 ! Title: RU AdList: Counters
 ! Description: RU AdList supplement for trackers blocking.
-! Version: 2.1.75.47
-! TimeUpdated: 2025-09-05T08:38:07+00:00
+! Version: 2.1.75.72
+! TimeUpdated: 2025-09-09T12:45:39+00:00
 ! Expires: 5 days (update frequency)
 !
-! Checksum: 0j7DxQd/4y9xjnsomxY5BQ
-! OriginalVersion: 202509050831
+! Checksum: e3czMQVbwIF8C0ePN4YJTg
+! OriginalVersion: 202509091231
 ! Title: RU AdList: Counters
-! Last modified: 05 Sep 2025 08:31 UTC
+! Last modified: 09 Sep 2025 12:31 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -292,6 +292,7 @@ _pagespeed_beacon?
 ||amc.yandex.ru^
 ||amung.us^$third-party
 ||analysis.fi^$third-party
+||analytics.fkltt.com/script.js
 ||analytics.fontanka.ru^
 ||analytics.getaim.info^$third-party
 ||analytics.goha.info^
@@ -1106,7 +1107,6 @@ _pagespeed_beacon?
 ||www.google.*/imghover?$image
 ||youtube-nocookie.com/gen_204?
 ||youtube-nocookie.com/robots.txt?
-||youtube.com/api/stats/atr?
 ||youtube.com/gen_204?
 ||youtube.com/get_video?
 ||youtube.com/player_204?
@@ -1234,13 +1234,10 @@ avtorambler.com,rambler.ru#?#section > nav ~ div div:-abp-has(> div > [id^="rcmw
 @@://yandex.*/news/$generichide
 @@://yandex.*/news|$generichide
 disk.yandex.*#$?#body:has(.resources-action-bar_visible) .footer__copyright a[href="https://ya.ru"] { pointer-events: none !important }
-disk.yandex.*,docs.yandex.*##[data-test-id^="ps-header-logo-"] svg ~ svg
-disk.yandex.*,docs.yandex.*,mail.yandex.*##[data-test-id="ps-header-logo-free-badge-link"]
 dzen.*#$?#:matches-path(articles)div[id]:has(> article[id]) { display: none !important }
 dzen.*#$?#[aria-label*="Лент"] article:has(> div:matches-css(display: none)) { display: none !important }
 dzen.*#$?#div:matches-attr(/[a-z0-9]/=/media-banner/) { display: none !important }
-mail.yandex.*###js-mail-layout-content-header > .message-list-banner-portal + div[id]:empty
-mail.yandex.*##.mail-Page-Body .Popup2 > .Tooltip-Content:has-text(2001—202)
+mail.yandex.*##.mail-Page-Body .Popup2 > .Tooltip-Content:has-text(2025)
 ya.*,yandex.*#$?#.content__right div:has(> div > button:matches-attr(/[a-z0-9]/=/advertiser/)) { display: none !important }
 ya.*,yandex.*#$?#[id][aria-label] > [class*="_card"]:has(> div > div > [data-event-required]) { display: none !important }
 ya.*,yandex.*#$?#[id][aria-label] > [class*="_card"]:has(> div [data-vnl*="advertiser"]) { display: none !important }
@@ -1257,6 +1254,7 @@ ya.*,yandex.*#$?#[id][aria-label] > [class]:has(> div > button:matches-attr(/[a-
 ||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$redirect=noop.txt,image,media,subdocument,stylesheet,script,xmlhttprequest,other
 !
 ! мобильная версия
+ya.*#$?##search-result > [class*="__card"]:has(> div .AdvLabel) { display: none !important }
 ya.*#$?##search-result > [class*="__card"]:has(> div > span:has-text(/^Промо$|^Реклама$/)) { display: none !important }
 yandex.*#$?##search-result > [class*="__card"]:has(> div .AdvLabel) { display: none !important }
 yandex.*#$?#.touch-feed > div > .feed-item[id^="zen-row-"]:has([class^="zen-ui-channel-info"][class$="subtitle-text"]:has-text(промо)) { display: none !important }
@@ -1479,6 +1477,7 @@ block_click=$removeparam=block_click,domain=rambler.ru
 fbclid=$document,removeparam=fbclid
 utm_$document,removeparam=ig_rid,domain=instagram.com
 ||afisha.yandex.*/$removeparam=source
+||disk.yandex.$document,removeparam=source
 ||market.yandex.$removeparam=mclid
 ||my.mail.ru/apps$document,removeparam=ref,domain=my.mail.ru
 ||rutube.ru/video/$document,removeparam=r
