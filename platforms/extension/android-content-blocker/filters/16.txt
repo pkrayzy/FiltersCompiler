@@ -1,8 +1,8 @@
-! Checksum: F2tCNY8lUKdH/4BQfjMAOQ
+! Checksum: NPAyddp24dbkW3l0uHG1nw
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.54.28
-! TimeUpdated: 2025-09-08T22:07:14+00:00
+! Version: 2.0.54.36
+! TimeUpdated: 2025-09-11T15:07:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -588,6 +588,12 @@ prod-player.tf1.fr,tf1.fr,tf1info.fr#@#.carbon-ads
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/213146
+! Fixes loading video player and delay in video playback start
+! Apps cannot inject script into iframe with "about:blank" src, so a workaround is required
+@@||flashb.id/universal/*.js$domain=supersoluce.com
+@@||flashb.id/assets/js/hbdbrk_*_m.js$domain=supersoluce.com
+@@||srv.flashb.id/cfg/$domain=supersoluce.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191055
 ! Fix video player loading delay
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186121
@@ -714,6 +720,9 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+supersoluce.com##div[data-hbdbrk-parent]
+actugaming.net##.h-content > .placeholder-wrap
+ici.radio-canada.ca##.adbox-cls
 hdnumerique.com###heroPub1
 latribune.fr##div[id*="-ban"]
 bebesetmamans.20minutes.fr##.bannerdesktop
@@ -754,11 +763,11 @@ cnews.fr##.wrapper-ads
 cnews.fr##div[id^="dm_ads_"]
 cnews.fr###block-cnews-pubsidebarsticky300x600
 masculin.com##body div[data-actirise-slot][class$="ads"]
-anime-sama.fr###squBot
-anime-sama.fr###bannBot
-anime-sama.fr###bannLeft
-anime-sama.fr###bannRight
-anime-sama.fr##a[href^="https://www.polybuzz.ai/"]
+anime-sama.org,anime-sama.fr###squBot
+anime-sama.org,anime-sama.fr###bannBot
+anime-sama.org,anime-sama.fr###bannLeft
+anime-sama.org,anime-sama.fr###bannRight
+anime-sama.org,anime-sama.fr##a[href^="https://www.polybuzz.ai/"]
 autoplus.fr###text-65
 autoplus.fr###text-51
 autoplus.fr###text-66
@@ -923,7 +932,7 @@ programme-television.org##.content_right > div.p-sticky
 programme-television.org##div[class*="placeholder"]
 lalibre.be##iframe[src^="//immobox.logic-immo.be/logic_immo_be/widget/"]
 igen.fr,trustmyscience.com##div[data-hbdbrk-parent="true"]
-francoischarron.com,mariefrance.fr,lephoceen.fr,closermag.fr,igen.fr,trustmyscience.com##body .ads:not(#style_important)
+supersoluce.com,francoischarron.com,mariefrance.fr,lephoceen.fr,closermag.fr,igen.fr,trustmyscience.com##body .ads:not(#style_important)
 lcd-compare.com##.page-head-ad
 blog-rct.com##body .code-block
 neko-sama.fr##a[href^="https://buqkrzbrucz.com/"]
@@ -1365,6 +1374,10 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/212996
+@@||lastampa.it/embed/$subdocument,domain=lastampa.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/213146
+@@||sonar.viously.com/*/js$domain=supersoluce.com
 ! listeamed.net - incorrect blocking, video player is broken
 $popup,domain=listeamed.net,badfilter
 $third-party,xmlhttprequest,domain=listeamed.net,badfilter

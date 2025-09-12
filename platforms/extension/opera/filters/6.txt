@@ -1,9 +1,9 @@
-! Checksum: MhmSljKMV7fBGFeRlYuaDg
-! Diff-Path: ../patches/6/6-s-1757385494-3600.patch
+! Checksum: 0NYGU0xwKrhScNQSYjmBYg
+! Diff-Path: ../patches/6/6-s-1757610677-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.49.40
-! TimeUpdated: 2025-09-09T02:34:07+00:00
+! Version: 2.0.49.45
+! TimeUpdated: 2025-09-11T17:06:54+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1605,6 +1605,9 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+eisbaeren.de##.full_column > div#slide_260
+eisbaeren.de##.full_column > div.content_item:has(> div > div.ad_serve > script)
+||media.medikamente-per-klick.de/images/banners/
 tarnkappe.info##.container .is-one-third:has(a[href^="https://"][target="_blank"])
 ||techbook.de/wp-json/gutenberg/v1/html/embed/
 4p.de##.wp-block-column:has(> .wp-block-newspack-blocks-homepage-articles:only-child > div:only-child > article[class*="newspack_spnsrs_tax"]:only-child)
@@ -10320,6 +10323,7 @@ onvista.de##.ov-carousel--table-fixed-cells .bg-premium
 onvista.de##.ov-carousel__inner tr[class*="bg-premium"]
 onvista.de##.ov-interaction
 onvista.de##.ov-interaction-slot
+onvista.de##.ov-table-row--height.bg-primary-detail
 onvista.de##.ov-table-sponsored-row
 onvista.de##.ov-table-sponsored-row-disclaimer
 onvista.de##.ov-table-sponsored-row-disclaimer + .bg-color--cd-blueberry-bright-10
@@ -11017,6 +11021,7 @@ ddl-warez.cc##button[onclick*="/af.php"]
 ibooks.to##button[type="submit"]
 abload.de##center > table > tbody > tr > td[valign="bottom"][align="center"][style="width: 100%;"]
 chefkoch.de##consent-for
+onvista.de##div.lg\:min-w-\[480px\]
 winfuture.de##div[align="center"][style="min-height: 320px;"]
 onvista.de##div[class*="InteractionTypeReference_ov-interaction-slot--fallback"]
 shop.rewe.de##div[class*="Product_productSpecialTile"]
@@ -11024,6 +11029,7 @@ onlinehaendler-news.de##div[class*="adplacement_"]
 chartsurfer.de##div[class*="adszone-"]
 amazona.de##div[class*="fnetbr"]
 biancazapatka.com##div[class="app-banner"]
+onvista.de##div[class="col col--md-3 col--sm-4 col--lg-4 col--xl-4"]
 onvista.de##div[class="col col--sm-4 col--md-3 col--lg-4 col--xl-4"]
 preispirat.ch##div[class="vc_row wpb_row vc_inner vc_row-fluid"]:has(img[src*="/partner-promo/"])
 blick.de,gut-erklaert.de,hifi-forum.de,kino.de,meinestadt.de,news.de,nordbayern.de,t-online.de,teltarif.de##div[class] > img[referrerpolicy="unsafe-url"]
@@ -11710,6 +11716,7 @@ o-sport.de#?#.card-body:-abp-contains(Sponsoren)
 onvista.de#?#.outer-spacing--xxlarge-top:-abp-contains(Werbung von)
 onvista.de#?#.ov-carousel__item:-abp-contains(/Werbung|gnubreW/)
 onvista.de#?#a[class*="ArticleTeaserBox"]:-abp-has(div.ov-subline:-abp-contains(Werbung))
+onvista.de#?#div[class="bg-neutral-2 p-0 shadow-md rounded-2xl border-1 border-neutral-4 mb-4"]:-abp-contains(/Werbung|gnubreW/)
 onvista.de#?#div[class="col col--md-3 col--sm-4 col--lg-4 col--xl-4"]:-abp-contains(Werbung)
 onvista.de#?#div[class="col py-0"]:-abp-contains(/Werbung|gnubreW/)
 onvista.de#?#div[class="flex justify-between mb-4 border-b-1 border-b-grey-100 pb-2 dark:border-b-grey-700"]:-abp-contains(Werbung)
@@ -11781,6 +11788,8 @@ obi.*##[data-ae-slot="pdp_old_banner"]
 @@||bf-ad.net/adengine/onvista/adengine.js$domain=onvista.de
 @@||bf-ad.net/adengine/onvista/chunk-prepareEngine-$script,domain=onvista.de
 @@||bf-ad.net/bcn-id/bcnid.min.js$domain=onvista.de
+@@||cdn.adspirit.de/adasync.min.js$domain=jetzt.de
+@@||cdn.adspirit.de/banner/szdm/$domain=jetzt.de
 @@||ced.sascdn.com/tag/2161/smart.js$domain=metal-hammer.de|rollingstone.de
 @@||commundia.de^*/affilinet/$~third-party
 @@||cpdsrv.de/cpt.js$domain=radiobob.de
@@ -11833,6 +11842,7 @@ obi.*##[data-ae-slot="pdp_old_banner"]
 @@||smartclip.net/ads?$script,domain=spiele.rtl.de
 @@||spotlight.offerista.com^$domain=aktionspreis.de|dasoertliche.de|donau-ries-aktuell.de|infranken.de|meinestadt.de
 @@||symplr.de^$script,domain=ableitungsrechner.net|integralrechner.de
+@@||szdm.adspirit.de/adscript.php?$domain=jetzt.de
 @@||tdn.da-services.ch/current/20min_durable.js$domain=20min.ch
 @@||tpc.googlesyndication.com/simgad/$image,domain=auto-motor-und-sport.de|motorradonline.de
 @@||vcdn.adnxs.com/p/creative-image^$image,domain=stylebook.de

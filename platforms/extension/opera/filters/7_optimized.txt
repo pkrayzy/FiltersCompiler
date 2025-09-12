@@ -1,9 +1,9 @@
-! Checksum: 0tMjH9e89AW1wMkSQpyenA
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1757394689-3600.patch
+! Checksum: SJzrNEKC7PAAfnUG/an9nQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1757520739-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.68.34
-! TimeUpdated: 2025-09-09T05:07:23+00:00
+! Version: 2.0.68.38
+! TimeUpdated: 2025-09-10T16:08:18+00:00
 ! Expires: 10 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp|~rakuten.ne.jp
 ||lucky-website.com^$all
@@ -517,8 +517,8 @@ memo.wiki,addchannel.net,beasoku.com,kakenhi.net,seesaa.net#%#//scriptlet('preve
 lemino.docomo.ne.jp#%#//scriptlet('prevent-xhr', 'doubleclick.net')
 @@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=lemino.docomo.ne.jp
 blog.2nt.com#@#.adspace
-inkbrushpainting.work,bridalgown.work,contents-group.work,heisei-housewarming.work,liquidfoundation.work,nailcolor.work,studioglass.work,tapestry.work,teaceremony.work,weddinghall.work#%#//scriptlet('trusted-set-cookie', 'adset', 'off')
-inkbrushpainting.work,bridalgown.work,contents-group.work,heisei-housewarming.work,liquidfoundation.work,nailcolor.work,studioglass.work,tapestry.work,teaceremony.work,weddinghall.work#%#//scriptlet('trusted-set-cookie', 'adset2', 'off')
+inkbrushpainting.work,bridalgown.work,contents-group.work,heisei-housewarming.work,liquidfoundation.work,nailcolor.work,studioglass.work,tapestry.work,teaceremony.work,weddinghall.work#%#//scriptlet('set-cookie', 'adset', 'off')
+inkbrushpainting.work,bridalgown.work,contents-group.work,heisei-housewarming.work,liquidfoundation.work,nailcolor.work,studioglass.work,tapestry.work,teaceremony.work,weddinghall.work#%#//scriptlet('set-cookie', 'adset2', 'off')
 $script,third-party,redirect-rule=noopjs,domain=inkbrushpainting.work|bridalgown.work|contents-group.work|heisei-housewarming.work|liquidfoundation.work|nailcolor.work|studioglass.work|tapestry.work|teaceremony.work|weddinghall.work
 ||ad-stir.com/js/adstir.js$script,redirect-rule=noopjs
 ||adingo.jp/p.js$script,redirect-rule=noopjs
@@ -1149,6 +1149,7 @@ hostlove.com#$##index_nav > h1 { padding-top: 30px!important; }
 /wp-content/plugins/amazonjs/*
 /wp-content/themes/CashLINESystem/js/modal.$script
 /wp-content/uploads/2024/09/fanza_ad$image
+-co-jp.*.com/Login/$document
 -co-jp.*.com/ETGate/$document
 .cn/RSV_P/smart_index.htm$document
 .icu/v1/check|$document
@@ -1389,6 +1390,8 @@ city.iwakura.aichi.jp,city.gose.nara.jp,city.inazawa.aichi.jp,city.kawasaki.jp,c
 city.shiroishi.miyagi.jp,city.motomiya.lg.jp,city.sanyo-onoda.lg.jp,pref.hiroshima.lg.jp,city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+kaiten-heiten.com##.special_header
+karameter.com##.px-md-4 > aside:has(> a[target="_blank"] > *)
 gaitame.com##.g-h-ads
 gaitame.com##.g-insert-ads
 wikiwiki.jp###adsense-body-top-wrap
@@ -2104,6 +2107,8 @@ gensin.blog.jp###lite_link
 dissoku.net##.v-row:has(> div.v-col > div > a[href="https://favry.app"])
 b.best-hit.tv##.heading:has(+ div[style="text-align:center"] > div[style$="background-color:#F0F0F0; text-align: center;"])
 b.best-hit.tv##div[style$="background-color:#F0F0F0; text-align: center;"]
+contents-group.work##.adSP1 + div[style="background-color:#fff;width:100%;text-align:center;padding:2px 0;margin:10px auto;"]
+contents-group.work###mainContent + script + div.pc:has(+ div.adSP1)
 best-hit.tv##div[style="margin-top:10px; margin-bottom:10px; text-align:center;"]
 contents-group.work#?#div[align="center"][style="margin: 20px 0px;"]:contains(/^- PR -$/)
 contents-group.work###interstitial
@@ -3198,6 +3203,13 @@ seikeidouga.blog.jp##.article-body-inner > center
 seikeidouga.blog.jp##.left-column-inner > div.plugin-categorize + div.plugin-memo
 seikeidouga.blog.jp#?#.plugin-memo > div.side > div[id^="blz_lock"]:upward(2)
 ||square-enix.com/common/templates/js/ad/
+||relay-api.ekitan.com/relay-api/relay/kyujin-box
+ekitan.com###div-transit_bus_result_summary_bottom
+ekitan.com###span-hotel
+ekitan.com###span-job
+ekitan.com##.sidebar-adv-item
+ekitan.com##.sidearea-bnr-wrap > div.contents-tab-wrap:has(> ul > li.ek-estatead-rent)
+ekitan.com##.sidearea-bnr-wrap > h3.outside:has(+ .contents-tab-wrap > ul > li.ek-estatead-rent)
 ekitan.com##.text-center[id^="div-transit_"][id*="_access_result_"][style^="margin: 8px auto"]
 ekitan.com##.bnr-item
 kamikouryaku.com#?#h2.left:has(+ #left_ads)
@@ -6671,9 +6683,9 @@ ebetsunopporo.com,bl-archive.net,anichoice.com,sgamesreview.com,shico.xyz,oretek
 sossy-blog.com,lefty322.com,av-baron.com,ikikatadatabase.com,videogakuen.com,yasasiikurasi.com,mhmatome.com,sundaygamer.net###text-15
 umaumanews.com,ero-gazou.jp,mangagift.com,videogakuen.com,newageinglog.com,imashun-navi.com,jumpmatome2ch.biz,news.sod.co.jp###text-16
 xn--eckl0bk7f7cc4od8az005k0ssb.xyz,nemotohiroyuki.jp,sexyvoice.org###text-17
-himmel-ellipse.com,orenoraresne.com,xn--zckm5bnq2mpa6a1fz490bkx4ayzmvi9g.com,oreteki-design.com,kaiten-heiten.com,inshokuten.com###text-18
+himmel-ellipse.com,orenoraresne.com,xn--zckm5bnq2mpa6a1fz490bkx4ayzmvi9g.com,oreteki-design.com,inshokuten.com###text-18
 himmel-ellipse.com,j-oosk.com###text-19
-vtub0.com,lefty322.com,kaiten-heiten.com###text-20
+vtub0.com,lefty322.com###text-20
 murakichi.net###text-21
 fire-emblem-matome.com,news.railway-pressnet.com,xn--o9j0bk1914a8b2b.com,erokiwami.com,ikikatadatabase.com,japan-hentai.com,neo-blood.co.jp,smhn.info###text-22
 kome3blog.com,xn--o9j0bk1914a8b2b.com,vipcle2.com###text-23

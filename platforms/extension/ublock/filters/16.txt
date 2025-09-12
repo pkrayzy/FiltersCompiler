@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 7qscY0elx5A2pHMoCVcOWw
-! Diff-Path: ../patches/16/16-s-1757369460-3600.patch
+! Checksum: IfPF5UyM8cVnnQYjolSlFQ
+! Diff-Path: ../patches/16/16-s-1757603557-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.54.28
-! TimeUpdated: 2025-09-08T22:07:14+00:00
+! Version: 2.0.54.36
+! TimeUpdated: 2025-09-11T15:07:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -607,6 +607,11 @@ $script,redirect-rule=noop.js,domain=tf1info.fr
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/213146
+! Fixes loading video player and delay in video playback start
+! Apps cannot inject script into iframe with "about:blank" src, so a workaround is required
+!+ NOT_PLATFORM(windows, mac, android)
+supersoluce.com##+js(adjust-setTimeout, event_listener_timeout, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191055
 ! Fix video player loading delay
 marieclaire.fr##+js(adjust-setTimeout, /userConsentProcess|this===/, *, 0.001)
@@ -818,6 +823,9 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+supersoluce.com##div[data-hbdbrk-parent]
+actugaming.net##.h-content > .placeholder-wrap
+ici.radio-canada.ca##.adbox-cls
 hdnumerique.com###heroPub1
 hdnumerique.com##.column:has(> .is-divider[data-content="BON PLAN"])
 hdnumerique.com##article.box > aside:has(> .columns > .column > .hd-horizontal-card)
@@ -880,12 +888,12 @@ cnews.fr###block-cnews-pubsidebarsticky300x600
 masculin.com##body div[data-actirise-slot][class$="ads"]
 magazine-avantages.fr##.External:has(> .googleAd)
 magazine-avantages.fr#$#.BodyContent { margin-top: 0 !important; }
-anime-sama.fr###squBot
-anime-sama.fr###bannBot
-anime-sama.fr###bannLeft
-anime-sama.fr###bannRight
-anime-sama.fr##a[href^="https://www.polybuzz.ai/"]
-anime-sama.fr#?#.items-center > p.text-sm:contains(/^Cliquer sur une pub est le meilleur moyen de nous soutenir.$/)
+anime-sama.org,anime-sama.fr###squBot
+anime-sama.org,anime-sama.fr###bannBot
+anime-sama.org,anime-sama.fr###bannLeft
+anime-sama.org,anime-sama.fr###bannRight
+anime-sama.org,anime-sama.fr##a[href^="https://www.polybuzz.ai/"]
+anime-sama.org,anime-sama.fr#?#.items-center > p.text-sm:contains(/^Cliquer sur une pub est le meilleur moyen de nous soutenir.$/)
 turbo.fr#$##Banniere-Haute { min-height: 0 !important; visibility: hidden !important; }
 autoplus.fr###text-65
 autoplus.fr###text-51
@@ -1143,7 +1151,7 @@ programme-television.org##.content_right > div.p-sticky
 programme-television.org##div[class*="placeholder"]
 lalibre.be##iframe[src^="//immobox.logic-immo.be/logic_immo_be/widget/"]
 igen.fr,trustmyscience.com##div[data-hbdbrk-parent="true"]
-francoischarron.com,mariefrance.fr,lephoceen.fr,closermag.fr,igen.fr,trustmyscience.com##body .ads:not(#style_important)
+supersoluce.com,francoischarron.com,mariefrance.fr,lephoceen.fr,closermag.fr,igen.fr,trustmyscience.com##body .ads:not(#style_important)
 lcd-compare.com##.page-head-ad
 blog-rct.com##body .code-block
 neko-sama.fr##a[href^="https://buqkrzbrucz.com/"]
@@ -1587,6 +1595,10 @@ app.molotov.tv##+js(no-xhr-if, /ping?token=)
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/212996
+@@||lastampa.it/embed/$subdocument,domain=lastampa.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/213146
+@@||sonar.viously.com/*/js$domain=supersoluce.com
 ! listeamed.net - incorrect blocking, video player is broken
 $popup,domain=listeamed.net,badfilter
 $third-party,xmlhttprequest,domain=listeamed.net,badfilter

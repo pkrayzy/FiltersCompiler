@@ -1,9 +1,9 @@
-! Checksum: O6PXf/orJKzNPqRRR+JeQA
-! Diff-Path: ../patches/16/16-s-1757369447-3600.patch
+! Checksum: ceQLkBgjbzlircVEiBOBgg
+! Diff-Path: ../patches/16/16-s-1757603546-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.54.28
-! TimeUpdated: 2025-09-08T22:07:14+00:00
+! Version: 2.0.54.36
+! TimeUpdated: 2025-09-11T15:07:13+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -215,11 +215,11 @@ monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementB
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
 japscan.*#%#//scriptlet("prevent-addEventListener", "load", "/^\s*\(event\)\s*=>\s*\{|jso\$|(_\d{2}){6}\(/")
-japscan.*#%#//scriptlet('set-constant', 'rowlo', 'emptyObj')
+japscan.*#%#//scriptlet('set-constant', 'KoRipoo', 'true')
 japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.getElementsByClassName', '/^[0-9_a-z]{3,}$/')
 japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.getElementById', '/^[0-9a-z]{3,}$/')
-japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.getElementsByClassName', '/^[a-z]{12}$/')
-japscan.*#%#//scriptlet("remove-node-text", "script", "/Y[a-z][a-z]?k[a-z]\d|(\|\||if\s*\(|const|let|var)\s*[\s($0-9A-Z_a-z]*=?\W*t\W*[\s($0-9A-Z_a-z]*=?\W*y\W*[\s($0-9A-Z_a-z]*=?\W*p\W*[\s($0-9A-Z_a-z]*=?\W*e\W*[\s($0-9A-Z_a-z]*=?\W*o\W*[\s($0-9A-Z_a-z]*=?\W*f|t\W*[\s($0-9A-Z_a-z]*=?\W*y\W*[\s($0-9A-Z_a-z]*=?\W*p\W*[\s($0-9A-Z_a-z]*=?\W*e\W*[\s($0-9A-Z_a-z]*=?\W*o?\W*[\s($0-9A-Z_a-z]*=?\W*f?\W*if\s*\(|=\s*['\"]t|String\[_0x|fromCharCode\s*\(\s*116|\)\.toString\(|decodeURIComponent\('%|atob\s*\(|Array\.prototype\.indexOf|if\s*\(eval|\|\|\s*eval|replaceChildren|function nawNA|.join\s*\(\s*'\s*'\s*\)/")
+japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Document.prototype.querySelector', '/^\.[_a-z]{6,14}$/')
+japscan.*#%#//scriptlet("remove-node-text", "script", "/Y[a-z][a-z]?k[a-z]\d|(\|\||if\s*\(|const|let|var)\s*[\s($0-9A-Z_a-z]*=?\W*t\W*[\s($0-9A-Z_a-z]*=?\W*y\W*[\s($0-9A-Z_a-z]*=?\W*p\W*[\s($0-9A-Z_a-z]*=?\W*e\W*[\s($0-9A-Z_a-z]*=?\W*o\W*[\s($0-9A-Z_a-z]*=?\W*f|t\W*[\s($0-9A-Z_a-z]*=?\W*y\W*[\s($0-9A-Z_a-z]*=?\W*p\W*[\s($0-9A-Z_a-z]*=?\W*e\W*[\s($0-9A-Z_a-z]*=?\W*o?\W*[\s($0-9A-Z_a-z]*=?\W*f?\W*if\s*\(|=\s*['\"]t|String\[_0x|fromCharCode\s*\(\s*116|\)\.toString\(|decodeURIComponent\('%|atob\s*\(|Array\.prototype\.indexOf|if\s*\(eval|\|\|\s*eval|replaceChildren|sibling\.|height=|function nawNA|.join\s*\(\s*'\s*'\s*\)/")
 japscan.*#%#//scriptlet('trusted-set-constant', 'aclib', '{"isShowingPop": false}')
 japscan.*#%#//scriptlet('set-constant', 'aclib.runInPagePush', 'noopFunc')
 japscan.*#@#div.container > [href]
@@ -632,6 +632,14 @@ $script,redirect-rule=noopjs,domain=tf1info.fr
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/213146
+! Fixes loading video player and delay in video playback start
+! Apps cannot inject script into iframe with "about:blank" src, so a workaround is required
+!+ NOT_PLATFORM(windows, mac, android)
+supersoluce.com#%#//scriptlet('adjust-setTimeout', 'event_listener_timeout', '*', '0.001')
+@@||flashb.id/universal/*.js$domain=supersoluce.com
+@@||flashb.id/assets/js/hbdbrk_*_m.js$domain=supersoluce.com
+@@||srv.flashb.id/cfg/$domain=supersoluce.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191055
 ! Fix video player loading delay
 marieclaire.fr#%#//scriptlet('adjust-setTimeout', '/userConsentProcess|this===/', '*', '0.001')
@@ -860,6 +868,9 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+supersoluce.com##div[data-hbdbrk-parent]
+actugaming.net##.h-content > .placeholder-wrap
+ici.radio-canada.ca##.adbox-cls
 hdnumerique.com###heroPub1
 hdnumerique.com##.column:has(> .is-divider[data-content="BON PLAN"])
 hdnumerique.com##article.box > aside:has(> .columns > .column > .hd-horizontal-card)
@@ -922,12 +933,12 @@ cnews.fr###block-cnews-pubsidebarsticky300x600
 masculin.com##body div[data-actirise-slot][class$="ads"]
 magazine-avantages.fr##.External:has(> .googleAd)
 magazine-avantages.fr#$#.BodyContent { margin-top: 0 !important; }
-anime-sama.fr###squBot
-anime-sama.fr###bannBot
-anime-sama.fr###bannLeft
-anime-sama.fr###bannRight
-anime-sama.fr##a[href^="https://www.polybuzz.ai/"]
-anime-sama.fr#?#.items-center > p.text-sm:contains(/^Cliquer sur une pub est le meilleur moyen de nous soutenir.$/)
+anime-sama.org,anime-sama.fr###squBot
+anime-sama.org,anime-sama.fr###bannBot
+anime-sama.org,anime-sama.fr###bannLeft
+anime-sama.org,anime-sama.fr###bannRight
+anime-sama.org,anime-sama.fr##a[href^="https://www.polybuzz.ai/"]
+anime-sama.org,anime-sama.fr#?#.items-center > p.text-sm:contains(/^Cliquer sur une pub est le meilleur moyen de nous soutenir.$/)
 turbo.fr#$##Banniere-Haute { min-height: 0 !important; visibility: hidden !important; }
 autoplus.fr###text-65
 autoplus.fr###text-51
@@ -1186,7 +1197,7 @@ programme-television.org##.content_right > div.p-sticky
 programme-television.org##div[class*="placeholder"]
 lalibre.be##iframe[src^="//immobox.logic-immo.be/logic_immo_be/widget/"]
 igen.fr,trustmyscience.com##div[data-hbdbrk-parent="true"]
-francoischarron.com,mariefrance.fr,lephoceen.fr,closermag.fr,igen.fr,trustmyscience.com##body .ads:not(#style_important)
+supersoluce.com,francoischarron.com,mariefrance.fr,lephoceen.fr,closermag.fr,igen.fr,trustmyscience.com##body .ads:not(#style_important)
 lcd-compare.com##.page-head-ad
 blog-rct.com##body .code-block
 neko-sama.fr##a[href^="https://buqkrzbrucz.com/"]
@@ -1632,6 +1643,10 @@ app.molotov.tv#%#//scriptlet('prevent-xhr', '/ping?token=')
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/212996
+@@||lastampa.it/embed/$subdocument,domain=lastampa.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/213146
+@@||sonar.viously.com/*/js$domain=supersoluce.com
 ! listeamed.net - incorrect blocking, video player is broken
 $popup,domain=listeamed.net,badfilter
 $third-party,xmlhttprequest,domain=listeamed.net,badfilter
