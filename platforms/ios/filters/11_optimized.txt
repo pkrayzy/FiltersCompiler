@@ -1,9 +1,9 @@
-! Checksum: MJk8ztTbvY1ts3+y9uC4VA
-! Diff-Path: ../patches/11_optimized/11_optimized-s-1757668318-3600.patch
+! Checksum: 0WgLOyizk86YjzKNvNjgHQ
+! Diff-Path: ../patches/11_optimized/11_optimized-s-1758111357-3600.patch
 ! Title: AdGuard Mobile Ads filter (Optimized)
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.64.25
-! TimeUpdated: 2025-09-12T09:07:52+00:00
+! Version: 2.0.64.38
+! TimeUpdated: 2025-09-17T12:11:37+00:00
 ! Expires: 5 days (update frequency)
 ||*.libaishuo.com^$third-party
 ||adx-open-service.youku.com^
@@ -1076,6 +1076,9 @@ turbopages.org##.page__result > div[class*="type_native"]
 ###ad-300x250_mobile
 !+ NOT_OPTIMIZED
 ##body > style + div[id="ics"]
+dailymotion.com#%#//scriptlet('set-constant', 'DMP_IS_AUTOPLAY_ENABLED', 'false')
+dailymotion.com#%#//scriptlet('trusted-set-constant', '__PLAYER_CONFIG__.player.autostart', '"off"')
+dailymotion.com#%#(()=>{const a={apply:(a,t,r)=>{try{!0===r[0]?.parameters?.[1]?.autoplay&&(r[0].parameters[1].autoplay=!1)}catch(a){console.trace(a)}return Reflect.apply(a,t,r)}};window.JSON.stringify=new Proxy(window.JSON.stringify,a)})();
 wuxianxiaoshuowang.com#%#//scriptlet("abort-on-property-read", "createApp")
 m.7days.ru#%#//scriptlet('remove-class', 'banners-brand', '#page_content')
 momon-ga.com#%#//scriptlet('prevent-addEventListener', 'load', 'document.cookie')
@@ -1105,6 +1108,9 @@ m.proporn.com#%#//scriptlet("set-cookie", "playcnt", "1")
 m.proporn.com#%#//scriptlet("set-cookie", "no_postitial_content", "1")
 timesnownews.com#%#//scriptlet('hide-in-shadow-dom', '.aftAd')
 pornhub.com,pornhub.org,pornhub.net#%#//scriptlet('set-constant', 'abp1', '0')
+pornhub.com#%#//scriptlet('remove-cookie', 'views')
+pornhub.com#%#//scriptlet('adjust-setTimeout', 'continueToVideoUrl', '*', '0.001')
+pornhub.com#%#//scriptlet('abort-current-inline-script', 'JSON.parse', '/interstitial?viewkey=')
 tech.hindustantimes.com#%#//scriptlet('hide-in-shadow-dom', '.ampAds')
 healthshots.com#%#//scriptlet('hide-in-shadow-dom', 'div[class^="storyBlock"]:not(.trackWidget), .storyAd')
 m.viptube.com#%#//scriptlet("set-constant", "player.postitialTimeout", "0")
@@ -1670,6 +1676,15 @@ opinion.cw.com.tw,aidoly.net,celeby-media.net,kyun2-girls.com,hapiee.com,2ch-c.n
 chip.de,gamesworld.de,fnn.jp##.Ad
 medipalette.lotte.co.jp,genxy-net.com,m.price.com.hk,otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.smt.docomo.ne.jp,rank-king.jp,kun.uz,m.lenta.ru,m.aydin24haber.com,m.xcum.com,m.alphaporno.com,m.yourlust.com,m.3movs.com,m.sexu.com##body .banner
 sp.manga.nicovideo.jp##div[style^="--ads-width:"]
+akyazihaber.com##.col-12 > div.list:has(> div.row > div[class] > a[href^="ilanlar/"])
+tabootube.*##.mobile-links
+hyperts.net###amarnk
+avito.ru##div[data-key^="advBannerWidget"]
+ixbt.games##.mobile-c
+phinphanatic.com###body-0 > figure:has(> #mm-player-placeholder-smallAndMedium-screens)
+trendyol.com##.search-banner
+thevoyeurmania.com##.happy-footer-mobile
+kayserigundem.com.tr##header + div.flex.lg\:hidden
 cbsnews.com##.container > carousel[slug="taboola-around-the-web-video-door"]
 asianetnews.com##.HometopAd
 asianetnews.com##.mobiletopad
@@ -5460,7 +5475,6 @@ scmp.com##.article-list__inline-ad
 scmp.com,mobil.nwzonline.de,mobil-nwzonline-de.cdn.ampproject.org##.advert
 scmp.com##.details__topics-ad
 orgazmtv.net##.video-block > div.video + div.mob-300
-m.search.naver.com##li[data-pwr-ad-url]
 dcard.tw##div[style="height: 250px; width: auto;"]
 dcard.tw##div[style="height:250px;width:auto"]
 yan.vn##.AdsAppend

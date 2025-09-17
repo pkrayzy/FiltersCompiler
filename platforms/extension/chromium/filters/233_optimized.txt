@@ -1,9 +1,9 @@
-! Checksum: saTOlAYlqHeGihoQJoSGWQ
-! Diff-Path: ../patches/233_optimized/233_optimized-s-1757436223-14400.patch
+! Checksum: C+e/I41g9c23ANJphhxxAQ
+! Diff-Path: ../patches/233_optimized/233_optimized-s-1758055184-14400.patch
 ! Title: Adblock List for Finland (Optimized)
 ! Description: Finnish ad blocking filter list.
-! Version: 2.0.11.89
-! TimeUpdated: 2025-09-09T16:39:34+00:00
+! Version: 2.0.11.94
+! TimeUpdated: 2025-09-16T20:35:31+00:00
 ! Expires: 10 days (update frequency)
 ampparit.com##.ad-slot
 ap-cdn.sanomagames.com##.banner-slot-preroll
@@ -36,15 +36,14 @@ proshop.fi#$#body { background-image: unset !important }
 puhelinvertailu.com#$#.index-wrap { left: 0px !important }
 seiska.fi#$?#.jwplayer.column:has(.jw-video[src="https://seiska.b-cdn.net/Mainos.mp4"]) { remove: true; }
 talouselama.fi,tekniikkatalous.fi##section hr:matches-css-before(content: /Mainos |Mainoksen /):upward(1)
+telsu.fi##.pb_t
 tiketti.fi###front_big_event
 tiketti.fi#$##tik_fixed.with-ebanner { top: 0 !important }
-www.suomi24.fi#$#div[class^="ThreadGridItemWrapper__CardCol"][width="100%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
-www.suomi24.fi#$#div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] { padding-left: 0px !important }
-www.suomi24.fi#$#div[width="100%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
-www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] > div { border-right: none !important; border-left: 1px solid lightgray !important }
-www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] > div { padding-left: 15px !important }
-www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
-www.suomi24.fi#$?#div[class^="ThreadGridItemWrapper__CardCol"][width="50%"]:has(+ div[class^="ThreadGridItemWrapper__CardCol"][width="100%"]) { width:100% !important }
+www.suomi24.fi#$#[data-gtm-label="threadGridView"] { display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-auto-flow:row!important;column-gap:0!important;row-gap:16px!important;align-items:stretch!important }
+www.suomi24.fi#$#[data-gtm-label="threadGridView"] > [class^="ThreadGridItemWrapper__CardCol"] { grid-column:1/-1!important;width:auto!important;max-width:none!important;min-width:0!important;justify-self:stretch!important;box-sizing:border-box!important }
+www.suomi24.fi#$#[data-gtm-label="threadGridView"] > [class^="ThreadGridItemWrapper__CardCol"] > [class^="ThreadGridItemWrapper__CardWrapper"] { width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;margin:0!important;padding-left:0!important;padding-right:0!important;transform:none!important;left:auto!important;right:auto!important;top:auto!important }
+www.suomi24.fi#$#[data-gtm-label="threadGridView"] > [class^="ThreadGridItemWrapper__CardCol"] > [class^="ThreadGridItemWrapper__CardWrapper"] > * { position:static!important;transform:none!important;left:auto!important;right:auto!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important }
+www.suomi24.fi#$#[data-gtm-label="threadGridView"] > [class^="ThreadGridItemWrapper__CardCol"] > [class^="ThreadGridItemWrapper__CardWrapper"] { border-right: none !important }
 karjalainen.fi#@#.breaking-news-container:has-text(mainos:)
 karjalainen.fi##.breaking-news-container
 karjalainen.fi#$?#.breaking-news-container:not(:has-text(mainos:)) { display: flex !important }
@@ -60,6 +59,7 @@ findit.fi#%#//scriptlet('ubo-acs.js', 'testPrebid')
 happypancake.fi#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 s-kaupat.fi#%#//scriptlet('ubo-json-prune.js', 'props.pageProps.contentfulState.frontPage.sections.[].fields.hasCitrusAdSlot props.pageProps.contentfulState.frontPage.sections.[].fields.isCitrusAdGrid')
 srk.fi#%#//scriptlet('ubo-set-cookie.js', 'cookielaw_accepted', '1', '', 'reload', '1')
+telsu.fi#%#//scriptlet('ubo-spoof-css.js', '#prg', 'x', 'x', '_recty', '300')
 aalto.fi#%#//scriptlet('ubo-set-cookie.js', 'cookiebot-consent--necessary', '1')
 aalto.fi#%#//scriptlet('ubo-set-cookie.js', 'cookiebot-consent--preferences', '1')
 aalto.fi#%#//scriptlet('ubo-set-cookie.js', 'cookiebot-consent--marketing', '0')
@@ -234,8 +234,7 @@ alypaa.com##[class^=banner-slot-preroll]
 alypaa.com,pelikone.fi##.text-link[href*="&utm_medium=banner&utm_campaign="]
 alypaa.com,pelikone.fi##.text-link[href^="https://clk.tradedoubler.com/"]
 ampparit.com##.gtm-bottom-ticker
-ampparit.com##.gtm-navi-ticker:has([href^="https://www.iltalehti.fi/plus"])
-ampparit.com##.gtm-navi-ticker:has(a[href^="https://www.iltalehti.fi/pelit/"])
+ampparit.com##.gtm-navi-ticker:has(> a[href$="tikkeri"])
 ampparit.com##.mobile-leaderboard-container
 ampparit.com##.resize-container
 ampparit.com,keskustelu.suomi24.fi,kirkkojakaupunki.fi,kuntalehti.fi,luukku.com,mtvuutiset.fi,seiska.fi,styleroom.fi,viinilehti.fi##.ad-container
@@ -1046,7 +1045,9 @@ tekniikkatalous.fi#?#.article-body > div[class]:has(> span:has-text(KAUPALLINEN 
 tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:has-text(Kaupallinen yhteistyö)
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:has-text(Kaupallinen yhteistyö)
 tekniikkatalous.fi,tivi.fi##[width]:has(.lazyload-wrapper)
-telsu.fi##.ch:has(em>a)
+telsu.fi##.ch:has(em > a)
+telsu.fi##.dp
+telsu.fi##.pb
 telsu.fi#?#.ch:has-text(/SP(O|0)NSOROITU/)
 telsu.fi#?#.ch:has-text(/SPON|SPONS|SPONSO|SPONSOR|SPONSORO|SPONSOROI|SPONSOROIT|SPONSOROITU/)
 tennis.fi##.ad-blocks
@@ -1419,6 +1420,7 @@ arvopaperi.fi,kauppalehti.fi,mikrobitti.fi,talouselama.fi,tekniikkatalous.fi,tiv
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media
 murha.info#@#.adsbygoogle
 @@||adserve.adcoin.com/display/ad_block/$xmlhttprequest,domain=verkkouutiset.fi
+||adform.net$xmlhttprequest,redirect=noopjs,domain=telsu.fi
 ||freewheel-jitt.sanoma.fi^$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media,redirect=noopmp3-0.1s,domain=ruutu.fi|supla.fi
 ||sanoma-prod.integration-x.com^$media,redirect=noopmp3-0.1s,domain=ruutu.fi

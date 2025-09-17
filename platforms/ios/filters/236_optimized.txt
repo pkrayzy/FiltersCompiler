@@ -1,9 +1,9 @@
-! Checksum: ODvKnnFm0AnmnnAOshsBCw
-! Diff-Path: ../patches/236_optimized/236_optimized-s-1757493816-14400.patch
+! Checksum: 2DJx23ig7/hB258CxN8vXg
+! Diff-Path: ../patches/236_optimized/236_optimized-s-1758113447-14400.patch
 ! Title: road-block light (Optimized)
 ! Description: Romanian ad blocking filter subscription.
-! Version: 2.0.3.29
-! TimeUpdated: 2025-09-10T08:39:05+00:00
+! Version: 2.0.3.33
+! TimeUpdated: 2025-09-17T12:46:02+00:00
 ! Expires: 5 days (update frequency)
 /plugins/footer-pop-up-banner/*
 /Reclama/*
@@ -108,6 +108,8 @@ stiripesurse.ro##[style]:has([id^="adocean"])
 stiripesurse.ro##[style]:has(#PA-Taboola-mid)
 stiripesurse.ro##[href="https://www.stiripesurse.ro/ardereaesteproblema"]
 ||media.stiripesurse.ro/assets/img/ads_$subdocument
+stiripesurse.ro##.banner-sales-soma
+||stiripesurse.ro/images/ads-images/
 trafictube.ro##div[style$="width:520px"]
 transilvaniareporter.ro###flashContent
 urban.ro###home_calendar > a
@@ -704,7 +706,10 @@ onlinesport.ro##[href="https://www.anvelopemag.ro/anvelope-iarna.aspx"]
 aktual24.ro##.sam__branding
 aktual24.ro##[style="min-height: 250px;"]
 ||cdn.aktual24.ro/wp-content/uploads/2022/02/simion4-*.png$image
+aktual24.ro##.min-h-250:has(.strawberry-ads-manager-container)
+aktual24.ro##[class*="min-height-50"]:has(.strawberry-ads-manager-container)
 forum.softpedia.com#?#.post_block:-abp-has([class^="guest"]):-abp-contains(Anunturi)
+forum.softpedia.com##.topic_reply:has-text(Anunturi)
 dirtbike.ro##[class*="banner"]
 ||dirtbike.ro/*banner$image
 autoexpert.ro##.pub
@@ -825,6 +830,10 @@ desteptarea.ro##[href^="https://volvobacau.ro/cere-oferta"]
 desteptarea.ro##[href*="&utm_campaign"]
 desteptarea.ro##[style*="banner"]
 desteptarea.ro##[href*="banner"]
+desteptarea.ro##.tdc-row:has-text(PUBLICITATE)
+desteptarea.ro##.tdc-row:has-text(PUBLICITATE) + .tdc-row
+desteptarea.ro##[href]:not([href*="desteptarea.ro"], [href*="paydemic.com"],[href*="facebook.com"],[href*="instagram.com"],[href*="tiktok.com"], [href*="vk.com"], [href*="paydemic.com"], [href*="facebook.com"], [href*="instagram.com"], [href*="tiktok.com"], [href*="t.me"], [href*="anpc.ro"], [href*="europa.eu"], [href="#"])
+desteptarea.ro##.tdi_119, .tdi_161, .tdi_162, .tdi_163, .tdi_166, .tdi_167, .tdi_168
 ||integr8.digital^$third-party
 csid.ro#?#.centered:-abp-has(.strawberry-ads-manager-container)
 csid.ro#?#.mg-bottom-10:-abp-has(.strawberry-ads-manager-container)
@@ -1121,6 +1130,7 @@ litoraltv.ro#?#.widget:-abp-has(.adsbygoogle)
 ||litoraltv.ro/*banner$image
 vbiz.ro#?#.height-250:-abp-has(.adsbygoogle)
 dailybusiness.ro##[data-banner]
+dailybusiness.ro##.height-250:has([id^="div-gpt-ad-"])
 ||ziaruldinmuscel.ro/*reclama$image
 ziaruldinmuscel.ro#?#.td_block_template_1.vc_column_text:-abp-has([href]):not(*:-abp-has([href*="ziaruldinmuscel.ro"]))
 ziaruldinmuscel.ro##.vc_empty_space
@@ -1476,6 +1486,12 @@ svnews.ro##[style*="980"]:has(.adsbygoogle)
 cotidianulagricol.ro##.ad_fixed
 reviste.ro##.box_orange:has-text(Publicitate)
 marketwatch.ro##.reclama
+||graiul.ro/banners/$image
+||graiul.ro/*banner$image
+graiul.ro##[href="https://www.facebook.com/cruceaalbgalbenaBM"]
+||graiul.ro/*.gif$image
+graiul.ro##[href="https://www.graiul.ro/wp-content/uploads/2025/07/spatiu-vasile-300x238.jpg"]
+||graiul.ro/wp-content/uploads/2025/09/clinica*.jpg$image
 turdanews.net#%#//scriptlet('ubo-nostif.js', 'ai_')
 turdanews.net#%#//scriptlet('ubo-rmnt.js', 'script', 'adsbygoogle')
 nosteam.ro,nosteamgames.ro#%#//scriptlet('ubo-nowoif.js')
