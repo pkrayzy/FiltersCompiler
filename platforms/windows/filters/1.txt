@@ -1,9 +1,9 @@
-! Checksum: LL7x04MfrMWLKz9ykGcpAA
-! Diff-Path: ../patches/1/1-s-1758183157-3600.patch
+! Checksum: TfeeoF08/LKOT4EY0AyeMA
+! Diff-Path: ../patches/1/1-s-1758611575-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.1.1.88
-! TimeUpdated: 2025-09-18T08:08:10+00:00
+! Version: 2.1.1.98
+! TimeUpdated: 2025-09-23T07:07:58+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4386,7 +4386,11 @@ hideip.me#$#a[href="/advertising"] { pointer-events: none!important; }
 @@||knigilub.ru^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4575
 mindspace.ru###rba2
-! https://forum.adguard.com/index.php?threads/19916/
+! forum.ixbt.com
+@@||yandex.ru/ads/system/context.js$domain=forum.ixbt.com
+forum.ixbt.com#$#.vertb { position: absolute !important; top: -9999px !important; height: 100px !important; }
+forum.ixbt.com#$#.mobb { position: absolute !important; top: -9999px !important; height: 100px !important; }
+forum.ixbt.com#$#.deskadv { position: absolute !important; top: -9999px !important; height: 100px !important; }
 @@||forum.ixbt.com/banners/adfox/$xmlhttprequest,domain=forum.ixbt.com
 ! https://forum.adguard.com/index.php?threads/19629/
 @@||cashback.ru/adblock.js
@@ -4978,6 +4982,8 @@ afisha.yandex.*##.adfox_type_branding
 afisha.yandex.*##div[style^="width:100%;height:250px;display:block"]
 afisha.yandex.*##div[style^="width:100%;height:240px;display:block"]
 afisha.yandex.*##.adfox
+afisha.yandex.ru##header + div[class]:has(> div.adfox)
+afisha.yandex.ru##div[data-component="Grid__Page"]:has(> div[class] > div.adfox)
 !
 ! Yandex.Music
 ||content.adfox.ru/*/branding*.html$domain=music.yandex.*
@@ -5475,7 +5481,7 @@ disk.yandex.*#%#//scriptlet('remove-class', 'has-fullscreen-banner','.public__ro
 !-----------------------
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212412
-cnews.ru#$#.cl_tv_section { margin-top: 0px !important; }
+cnews.ru#$#.right_side > .cl_tv_section { margin-top: 0px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204892
 kinogo-net.la#$##wr-bg { top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181297
@@ -6977,6 +6983,13 @@ glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita
 !
 !
 !
+fishki.net#%#//scriptlet('set-constant', 'fishki.branding', 'noopFunc')
+dp.ru##.right-panel > .block-wrapper:has(> .block-content > app-adfox-banner)
+u-tv.ru##.banner-ads
+||u-tv.ru/static/js/rennab.js
+||u-tv.ru/static/js/rennabDetector.js
+bash.news##div[class^="page-article-item"] > .capybara-mini[style]
+47channel.ru##.article__yandex-direct
 /media/banners/*$domain=volynpost.com|volyn24.com|dyvys.info|ko44.ru
 avito.ru##div[class*="index-advRootWidgetNoStories"]
 sex-studentki.*#%#//scriptlet('set-constant', 'biads.isInpageAllowedAfterClosing', 'falseFunc')
@@ -17498,6 +17511,8 @@ youla.ru##.product_item--ad
 vfokuse.mail.ru##a[class^="rb-"][class*="branding"]
 !
 ! VK
+vk.com,vk.ru##div[role="feed"] > article:has(span[class^="AdBlockProtector__noVisible--"])
+vk.com,vk.ru##div[role="feed"] > article:has(div.vkuiRootComponent__host > span.vkuiCaption__sizeYCompact > span)
 vk.com,vk.ru##section[class^="ImageBanner-module_"]
 vk.com,vk.ru#?##feed_rows > div[class="feed_row "]:has(.PostHeaderSubtitle__item:contains(Реклама в сообществе))
 vk.com,vk.ru###feed_rows > div[class="feed_row "]:has(div[class^="PostHeaderTitle "] > div.PostHeaderTitle__authorBlock span.PostHeaderTitle__authorName)
@@ -17830,13 +17845,14 @@ ixbt.com##div[class*="container"]:has(> div[class*="banner"])
 ixbt.com##div[wire\:key^="adv-"]
 ixbt.com##.recommendcontainer
 !
+www.ixbt.com##.deskadv
+www.ixbt.com##.vertb
+www.ixbt.com##.mobb
 ixbt.com##.branding-desktop
 ixbt.com#$##wrapper { margin-top: 0 !important; }
 ixbt.com##.yandex_recommend
 ixbt.games##body .branding-zone
 ixbt.games##body .b-adfox
-ixbt.com##.deskadv
-ixbt.com##.vertb
 ixbt.com##[class^="clickable_zone"]
 ixbt.com##.company-block
 ixbt.com##.recommend_item-container
@@ -17844,7 +17860,6 @@ ixbt.com##.bcontainer
 ixbt.com###yandex_recommend
 ixbt.com##a[data-menuitem="honor"]
 ixbt.com##.horb
-ixbt.com##.mobb
 ixbt.com##.bcontainer
 ixbt.com##.hcont
 ixbt.com##.vcont
