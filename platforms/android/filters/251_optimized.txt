@@ -1,9 +1,9 @@
-! Checksum: YEy0+UNJeHaZVO8s+JQtBw
-! Diff-Path: ../patches/251_optimized/251_optimized-s-1758300144-14400.patch
+! Checksum: b0OPjJa2BBgouRu7c7feKA
+! Diff-Path: ../patches/251_optimized/251_optimized-s-1759725615-14400.patch
 ! Title: Legitimate URL Shortener (Optimized)
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.99
-! TimeUpdated: 2025-09-19T16:38:35+00:00
+! Version: 2.0.9.3
+! TimeUpdated: 2025-10-06T04:36:58+00:00
 ! Expires: 5 days (update frequency)
 $removeparam=yclid
 $removeparam=gclid
@@ -1172,7 +1172,7 @@ $removeparam=/^asc_.*$/,document,domain=amazon.*|aboutamazon.com|amzn.to
 ||amazon.$removeparam=/^_encoding=UTF.*$/
 ||bing.com/?$removeparam=/^form=.*$/i
 ||bing.$removeparam=sp
-$removeparam=sc,document,domain=bing.com|qvc.com|startpage.com
+$removeparam=sc,document,domain=bing.com|qvc.com
 $removeparam=sk,domain=aliexpress.*|bing.com
 ||bing.$removeparam=qs
 ||bing.$removeparam=PC
@@ -2467,7 +2467,6 @@ $removeparam=login_source,document,domain=theathletic.com|nytimes.com
 $removeparam=afSmartRedirect
 ||app.snyk.io^$removeparam=page,document
 $removeparam=repost,domain=nbcnews.com|sacurrent.com
-||wsj.com^$removeparam=st
 ||uslecce.it^$removeparam=et
 $removeparam=adt_ei
 $document,removeparam=af,domain=pnas.org|science.org|scitation.org|wiley.com|worldscientific.com
@@ -2829,11 +2828,14 @@ $removeparam=/^ref=underfl0w\.com$/
 ||blu-ray.com^$removeparam=c
 ||blu-ray.com^$removeparam=retailerid
 ||downloads.sourceforge.net^$removeparam=r
+$document,removeparam=loclid
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
 $removeparam=h,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk
 $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 ||ikea.com/*/images/products^$removeparam=f
+||snapchat.com^$removeparam=share_id
+||snapchat.com^$removeparam=/^timestamp=0$/
 @@mailinglist$removeparam=/^utm_.*$/i
 @@||web.archive.org/*_/http$removeparam
 @@||img*.nga$removeparam=cmpid

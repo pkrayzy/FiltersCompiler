@@ -1,9 +1,9 @@
-! Checksum: 9GwXhUgGjW8zA9z+jocviQ
-! Diff-Path: ../patches/22/22-s-1758625819-3600.patch
+! Checksum: I3cYA75WYatQAt/uDBvN8g
+! Diff-Path: ../patches/22/22-s-1760012112-3600.patch
 ! Title: AdGuard Widgets filter
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.12.67
-! TimeUpdated: 2025-09-23T11:06:55+00:00
+! Version: 2.0.12.78
+! TimeUpdated: 2025-10-09T12:11:37+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -89,6 +89,9 @@ butumori.com,netizen-voice.blog.jp,ityouchannel.livedoor.blog,nanjei-baseball.bl
 !
 ! NOTE: Blogroll specific rules
 !
+vsponews.jp##.article-body-more > .Top_link
+vsponews.jp###main .rss-sub
+vsponews.jp###main .h2-sub
 ||youskbe.com/pkup/
 youskbe.com###pkup
 bakufu.jp##.entry-content > table[width="100%"]
@@ -1524,7 +1527,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||static.me-talk.ru^$third-party
 ||liveexpert.ru^$third-party
 ||livesupporti.com^$third-party
-||embed.tawk.to^$third-party,domain=~roonlabs.com
+||embed.tawk.to^$third-party,domain=~roonlabs.com|~milesweb.co.uk
 ||jivosite.com^$third-party,domain=~jivosite.ru
 ||mod.calltouch.ru^$third-party
 ||netroxsc.ru^$third-party
@@ -1539,6 +1542,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 !   SECTION: Widgets - Marketing (specific)
 !
+||assets.bouyguestelecom.fr/Palpatine_Omnikit/omnikit@1/widget.init.js
 karrierewelt.golem.de###widget-chat-container
 toroslaredas.com.tr,baskentedas.com.tr,ayedas.com.tr###anketButonId
 sedas.com###feedback-form
@@ -1766,6 +1770,8 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 !
 !   SECTION: Widgets - Marketing - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/214100
+@@||secure.livechatinc.com/customer/action/open_chat?$domain=direct.lc.chat
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205808
 ||widgets.trustedshops.com/reviews/tsSticker/*.gif?$important
 @@||widgets.trustedshops.com/reviews/tsSticker/$domain=sportnahrung-engel.de
@@ -1845,12 +1851,12 @@ mhealth.ru##.incut_readmore
 rankingoo.net##div.widget_swell_ad_widget
 ! Uzou recommendation
 webcartop.jp###widget_code_php_in_widget-23
-||speee-ad.akamaized.net^$important,domain=newsee-media.com|saitama-np.co.jp|htb.co.jp|oricon.co.jp|maidonanews.jp|news.tv-aichi.co.jp|lisani.jp|hochi.news|yomuno.jp|webcartop.jp
+||speee-ad.akamaized.net^$important,domain=newsee-media.com|saitama-np.co.jp|htb.co.jp|oricon.co.jp|maidonanews.jp|news.tv-aichi.co.jp|lisani.jp|hochi.news|yomuno.jp|webcartop.jp|kanaloco.jp|financial-field.com
 hochi.news##div[style="min-height: 1000px;"]
 lisani.jp##.widget__uzou
 yomuno.jp#?#.aside_redesign.post > h3.aside_redesign_headline:contains(こちらもどうぞ)
 yomuno.jp###similar_articles
-newsee-media.com,saitama-np.co.jp##.uz-ar
+financial-field.com,newsee-media.com,saitama-np.co.jp##.uz-ar
 webcartop.jp,newsee-media.com,saitama-np.co.jp,htb.co.jp,oricon.co.jp,maidonanews.jp##.uz-ny
 ! gacraft recommendations
 ||gacraft.jp^$third-party
@@ -1925,6 +1931,8 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 /js/chat/edu_chat.js
 /wp-content/plugins/creame-whatsapp-me/public/js/joinchat.
 !
+||salesiq.zohopublic.com^$third-party
+||client.crisp.chat^$third-party
 ||temsa.services.exairon.com/assets/widget/index.js
 ||checker.docandu.com/dscapp/embed.js
 ||assets.salesmartly.com/chat/widget/code/install.js
@@ -1982,6 +1990,8 @@ freestreams-live.my###custom_html-9
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com
 litres.ru###call_support
 !
+||widgetv*.heres.ai/heres.js$domain=pinalli.it
+||n11.com/live-chat
 /volti/*$domain=toroslaredas.com.tr|baskentedas.com.tr|ayedas.com.tr
 /img/volti_reveal.gif$domain=toroslaredas.com.tr|baskentedas.com.tr
 toroslaredas.com.tr,baskentedas.com.tr,ayedas.com.tr###voltiOpenId
@@ -2420,6 +2430,8 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+thepage.ua##.w-full:has(> div.flex > a[href="https://thepage.ua/ua/donation"])
+dailykos.com##.donation-request
 theintercept.com##div[data-module="DirectAsk"]
 pbs.org##.inline-invite-type__funding
 asiatimes.com##.above-footer-widgets

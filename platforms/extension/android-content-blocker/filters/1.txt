@@ -1,8 +1,8 @@
-! Checksum: wWOjgM4RxqN8SY5jzgQIiA
+! Checksum: CrUvozIDYDXe7Be5wsF6HA
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.1.1.98
-! TimeUpdated: 2025-09-23T07:07:58+00:00
+! Version: 2.1.2.30
+! TimeUpdated: 2025-10-13T15:07:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1420,6 +1420,8 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||punchmedia.ru^
+||california1955.nl^
 ||cenoobi.run^
 ||adtec.ru^
 ||x-app639-cc.tod99shi.com^
@@ -1548,7 +1550,6 @@ ucoz.ru/informer/
 ||sofq.site^$document
 ||iceprogs.ru^$document
 ||voidnetwork.cloud^
-||tds.bid^$third-party
 ||streetuptowind.com^
 ||sarafan.fun^
 ||newrotatormarch23.bid^
@@ -3705,14 +3706,18 @@ wss://s.zmctrack.net/
 ! NOTE: UA rules copied to Ukrainian filter
 ! TODO: Remove not multi lang rules with .ua tld after splitting the filter (look at the end of file)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/215200
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pervyi-tv.online^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/214487
+cdntvpotok.com###gamediv
+cdntvpotok.com##.player-button
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213035
 dtf.ru#@#.ad.banner
 ! TODO: remove when this issues will be fixed - https://github.com/AdguardTeam/Scriptlets/issues/514
+@@||s3.wi-fi.ru/mtt/configs/sites/dtf.js$domain=dtf.ru
 @@||yandex.ru/ads/system/context.js$domain=dtf.ru
 @@||ssp.rambler.ru/capirs_async.js$domain=dtf.ru
-dtf.ru#@#.rotator
-dtf.ru#@#.supbar--top
-dtf.ru#@#div[style*="layout-sidebar-banner-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212306
 blitzfoxhub.com#@#.ad-slot
 blitzfoxhub.com#@#.ad-250
@@ -3734,8 +3739,9 @@ volley.ru##pjsdiv[style*="opacity: 1; font-size: 14px; line-height: 1em; pointer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196802
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191632
 cont.ws##div[class^="main-fullwidth-banner-"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/215270
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191926
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||litehd.tv^$generichide
 @@||limehd.tv^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188538
 in-poland.com#@#ins.adsbygoogle[data-ad-slot]
@@ -4791,7 +4797,8 @@ yandex.*##.card-header-media-view__list > div.card-header-media-view__advert-wra
 ! Yandex.Pogoda
 !
 ! Yandex.Market
-market.yandex.*##div[data-apiary-widget-name="@monetize/HeroBannerCarousel"]
+market.yandex.*##div[data-apiary-widget-name="@light/RecomMediaAdv"]
+market.yandex.*##div[data-apiary-widget-name="@monetize/HeroBannerCarouselLazyCreator"]
 market.yandex.*##div[data-zone-name="headerPromo"]
 market.yandex.*###banner-streamer
 !
@@ -5931,6 +5938,17 @@ glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita
 !
 !
 !
+chesnok.media##.reklama_d
+||static.vr.m-31.ru/sticky-stage/*/sticky-ad-player.
+vidal.ru##.products-table > tbody > tr[class] ~ tr:not([class])
+99px.ru##div[role^="advertizing"]
+tass.ru##div[class^="DesktopLayout_top"]
+tass.ru##div[class*="CardsGrid_ad_"]
+||partnerkin.com/uploads/stb/
+povar.ru##h2[style="color: #404040; font-size: 28px; font-weight: normal; line-height: 30px; margin-top: 30px;"]
+||antonovsad.ru/banner/
+antonovsad.ru##.promo-desktop
+auto.ru##.ListingHead__banner
 u-tv.ru##.banner-ads
 ||u-tv.ru/static/js/rennab.js
 ||u-tv.ru/static/js/rennabDetector.js
@@ -5943,6 +5961,7 @@ banki.ru##div[class*="AdfoxBannerWrapper"]
 tvrain.tv##a[href^="https://tvr.ink/banner_"]
 stolicaonego.ru##a[onclick^="clickSlider("]
 e-xecutive.ru##.js-intrusive--wrap
+||russia-tv.online/api/*/ads
 ||russia-tv.online/api/*/ads-banners
 news.sportbox.ru##.ovechkin-record
 ||s-cdn.sportbox.ru/*/scripts/lpdid.js
@@ -6434,7 +6453,7 @@ happycoin.club##div[class*="clickout-banner"]
 happycoin.club##a[href][target="_blank"][rel="noopener"] > img[width][height]
 ||myfanstv.net/uploads/*/baner/
 fanserials.vip##div[data-dlebclicks]
-fb.ru,cian.ru,vseinstrumenti.ru,onliner.by,iz.ru,fantworld.org,myfin.by,animeonline.cc##div[id^="adfox_"]
+asna.ru,fb.ru,cian.ru,vseinstrumenti.ru,onliner.by,iz.ru,fantworld.org,myfin.by,animeonline.cc##div[id^="adfox_"]
 animeonline.cc###rkl-left
 myslo.ru##div[class^="myslo-banner-"]
 kinoafisha.info##.okko2024Btn
@@ -8130,7 +8149,7 @@ eda.ru##.css-1kzbhcl
 torrent-word.com##a[href="/1.php"]
 2shemi.ru##.mh-sidebar > div[id^="text-"]
 thecode.media##.praktikum-b-content-wrp
-onlymult.com,zr.ru##.header_banner
+asna.ru,onlymult.com,zr.ru##.header_banner
 ua.news##.single-sidebar > a[target="_blank"]
 infostart.ru##span[id$="_banner"]
 kinonews.ru##.under_shapka_branding
@@ -8244,7 +8263,7 @@ citydog.io,citydog.by##.messenger-banner
 guzei.com###a160600
 guzei.com###frends
 ||cdn.jsdelivr.net/*/hdzavr/
-dirsalona.ru,rnk.ru,zdrav.ru,gkh.ru##.topAdvertize__wrapper
+kdelo.ru,dirsalona.ru,rnk.ru,zdrav.ru,gkh.ru##.topAdvertize__wrapper
 ||gkh.ru/images/branding/
 genshin-info.ru##.gad
 hotki.ru##a[href^="per/per.php"]
@@ -12632,7 +12651,7 @@ piccash.net##div[class^="blk_"]
 gmt-max.net##div[class^="block_teaser_"]
 libraryno.ru##div[class^="br_goo_"]
 gametech.ru##div[class^="brand_zone"]
-26-2.ru,zdrav.ru##div[class^="branded__"]
+kdelo.ru,26-2.ru,zdrav.ru##div[class^="branded__"]
 prophotos.ru##div[class^="branding"]
 iwantgames.ru##div[class^="brbad"]
 znanija.com##div[class^="brn-ads"]
@@ -15370,9 +15389,9 @@ vk.com,vk.ru##div#left_ads
 vk.com,vk.ru##div[data-ad]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198603#issuecomment-2683352478
 ! Вероятно проблемное
+vk.com,vk.ru##.post_marked_as_ads
 vk.com,vk.ru##._ads_promoted_post
 ! vk.com,vk.ru##[class^="ads_ad_"]
-! vk.com,vk.ru###page_wall_posts > div.post_marked_as_ads
 ! vk.com,vk.ru##div[id^="postadsite_"]
 ! vk.com,vk.ru###ads_special_promo_wrap
 ! vk.com,vk.ru##div[data-ad-view]
@@ -15464,6 +15483,8 @@ woman.rambler.ru##.swiper-wrapper > div.j-gallery__banner
 woman.rambler.ru##.article__read-also
 woman.rambler.ru##div[class*="traffic-blocks"][class*="intresting"]
 !
+||cpa-elements.rambler.ru/promo-gallery/sdk.js
+finance.rambler.ru##div[id^="rambler-promo-gallery-"] ~ div[class]:not([id])
 finance.rambler.ru##.finance__partners
 finance.rambler.ru,auto.rambler.ru,news.rambler.ru,sport.rambler.ru,weekend.rambler.ru##.article__read-also
 finance.rambler.ru,auto.rambler.ru,news.rambler.ru,sport.rambler.ru,weekend.rambler.ru##.traffic-blocks
@@ -15522,8 +15543,11 @@ weekend.rambler.ru##div[id^="ban_240x400"]
 !
 ! leftovers
 rambler.ru##div[class*="xmr"][style^="min-height:"]
+[$path=/\/(dom|pro)/]rambler.ru##div[style^="order:"][style*="-1"]
+[$path=/dom]rambler.ru##rambler-info-banner
+weekend.rambler.ru##rambler-info-banner
+family.rambler.ru,life.rambler.ru,weekend.rambler.ru,auto.rambler.ru,kino.rambler.ru,doctor.rambler.ru,travel.rambler.ru,sport.rambler.ru,woman.rambler.ru,news.rambler.ru,finance.rambler.ru##div[style^="order:"][style*="-1"]
 weekend.rambler.ru,auto.rambler.ru,kino.rambler.ru,weather.rambler.ru,doctor.rambler.ru,travel.rambler.ru,sport.rambler.ru,woman.rambler.ru,news.rambler.ru,finance.rambler.ru##div[class*="banner-"]
-weekend.rambler.ru,auto.rambler.ru,kino.rambler.ru,doctor.rambler.ru,travel.rambler.ru,sport.rambler.ru,woman.rambler.ru,news.rambler.ru,finance.rambler.ru##div[style^="order:"][style*="-1"]
 weather.rambler.ru##div[data-block="seo"]
 r0.ru##div[class^="News__adv"]
 ! https://github.com/AdguardTeam/CoreLibs/issues/1865
@@ -15642,12 +15666,15 @@ forum.ngs.ru##div[id^="div-hb-"]
 !
 ! ixbt.com
 ! new design
+www.ixbt.com##span[id^="tgb"]
 ixbt.games##.sidebar-c
 ixbt.com,ixbt.games,ixbt.pro##.desktop-c
 ixbt.com,ixbt.games,ixbt.pro##.recommend-c
 ixbt.com##div[wire\:key^="adv-"]
 ixbt.com##.recommendcontainer
 !
+www.ixbt.com##.bcontainer
+www.ixbt.com###yandex_recommend
 www.ixbt.com##.deskadv
 www.ixbt.com##.vertb
 www.ixbt.com##.mobb
@@ -15708,12 +15735,13 @@ adme.media##div[data-test-id="article-content"] > div[class*=" "]:not([tabindex]
 ! ads in the recommended feed - articles
 !
 ! Start: vc.ru, dtf.ru, spark.ru
-vc.ru,dtf.ru##div[style*="layout-sidebar-banner-"]
+||api.dtf.ru/*/distribution?place=
+vc.ru##div[style*="layout-sidebar-banner-"]
 vc.ru##.entry-rotator
 vc.ru##.dstr-fl
-vc.ru,dtf.ru##.supbar--top
+vc.ru##.supbar--top
 dtf.ru,vc.ru##.propaganda
-dtf.ru,vc.ru##.rotator
+vc.ru##.rotator
 dtf.ru##div.subsite-header > div.subsite-header__cover > a.subsite-branding
 dtf.ru##.post-branding-top
 dtf.ru##.post-branding-bottom
@@ -15744,6 +15772,10 @@ dtf.ru##.kinopoisk-site-header
 dtf.ru##.daily-promo-unit
 spark.ru##.jobs--layout
 new.dtf.ru##.ALMGcspq
+! baits
+dtf.ru##.supbar--top > div[style] > *
+dtf.ru##.rotator > div[style] > *
+dtf.ru##div[style*="layout-sidebar-banner-"] > div
 ! End: vc.ru, dtf.ru, spark.ru
 !
 ! pb.wtf
@@ -15854,20 +15886,16 @@ consumer.huawei.com#@#div[data-banner-name]
 @@||tds.fandom.com/load.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171080
 oztech.ru#@##bottomBanners
-! thestreet.com - player not showing
-thestreet.com#@##ad-container
-! https://github.com/AdguardTeam/AdguardFilters/issues/161446
-si.com#@##ad-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151923
 lib.seu.edu.cn#@#.one-search
-! https://github.com/AdguardTeam/AdguardFilters/issues/148164
-player.ex.co#@##ad-container
 !
 ! This section contains the list of rules that fix incorrect blocking. Rules must be domain-specific.
 !
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/214373
+yenielan.az#@##advertisement
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211202
 simpleflying.com,makeuseof.com,movieweb.com,thegamer.com,gamerant.com,androidpolice.com,xda-developers.com#@#.affiliate
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211176

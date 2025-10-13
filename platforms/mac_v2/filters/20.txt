@@ -1,9 +1,9 @@
-! Checksum: OeNfzGYxQOUwPJyNUTg94g
-! Diff-Path: ../patches/20/20-s-1758528829-3600.patch
+! Checksum: w6vRs4o7dKYBECOlLA5bEg
+! Diff-Path: ../patches/20/20-s-1760112758-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.23.71
-! TimeUpdated: 2025-09-22T08:10:04+00:00
+! Version: 2.0.24.5
+! TimeUpdated: 2025-10-10T16:08:40+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -29,7 +29,7 @@
 ###app-follow-banner
 ##amp-app-banner
 ##.smartbanner--ios
-##div[class^="smartbanner"][class$="-android"]
+##div[class^="smartbanner"][class*="-android"]
 ###smartbanner.ios
 ###smartbanner.windows
 ##head[prefix~="medium-com:"] ~ body .js-openInAppButton
@@ -59,6 +59,21 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+baitoru.com##li:has(> a[href*="adj.st"]:only-child)
+baitoru.com##li:has(> a[href^="https://spot-baitoru.go.link"]:only-child > img[src*="appdl"])
+baitoru.com##a[href^="https://spot-baitoru.go.link"] > img[src*="appdl"]
+baitoru.com##a[href*="adj.st"]
+milliyet.com.tr##.redirectPopup
+bikemap.net##div[class^="app-qr-code_container"]
+temp-mail.lol#%#//scriptlet('trusted-set-local-storage-item', 'app-install-promotion', '{"hasSeenBefore":true,"alreadyInstalled":true}')
+news.web.nhk##a[style^="--"][style$=":0.4fr 1fr"][href="https://news.web.nhk/news/html/20250801/k10014881751000.html"]
+stay.rakuten.co.jp##.css-eg1at3
+stay.rakuten.co.jp##a[href^="/app/?l-id="]
+news.yahoo.co.jp##li:has(> a[href*="/app.adjust.com"]:only-child)
+animelatinohd.com##div[class^="messageApp_modal_"]
+picrew.me##.sitetop-appDL
+litv.tv##a[title="下載APP"]
+auto.ru##div[data-testid="ListingItemPromoGoToApp"]
 linkedin.com#%#//scriptlet('trusted-set-session-storage-item', 'blocking-upsell', '"DISMISSED"')
 linkedin.com#%#//scriptlet('trusted-set-session-storage-item', 'non-blocking-upsell', '"DISMISSED"')
 linkedin.com##.upsell-bottom > .upsell-content:has(> a[href^="https://www.linkedinmobileapp.com/?appType="])
@@ -68,6 +83,7 @@ vatanbilgisayar.com##.open-app-top
 idealo.de##.push-to-app-banner-wrapper
 idealo.de##section[class^="android-app-banner"]
 mi.com##.top-drainage
+vodafone.com.tr###header--smart-link
 vodafone.com.tr##header > div[class^="Blockstyle__Block"]:has(> div[class^="Blockstyle__ContentWrapper"] a[href^="vfss://app/ESHOP/"])
 ||amazonaws.com/mobligo_smart_banner.js
 tri247.com##.nav--mobile > .gb-container > .progressier-install-button
@@ -843,7 +859,8 @@ genius.com#$?#.android_interstitial { remove: true; }
 u.gg##.builds-page-promo
 kundeavisogtilbud.no##.page-promotion-item
 kundeavisogtilbud.no##.mobile-app-banner-small
-mypolacy.de##div[class*="appBanner"]
+townwork.net,mypolacy.de##div[class*="appBanner"]
+townwork.net##div[class*="bannerWrapper"]:has(> a[href^="https://app.adjust.com"])
 kayak.*##mobile-app-promo-header
 hellobacsi.com##a[href="https://hellobacsivn.page.link/app"]
 clubd.co.jp##.dc-coordinate-slide > a[href="https://yappli.plus/dcollection_your-personal-stylist"]
@@ -2039,7 +2056,6 @@ liggatelecom.com.br##.bl_app
 travel.navitime.com##.l-footer-app
 travel.navitime.com##.app-presents-frame
 natalie.mu##.NA_mynatalie
-laurier.excite.co.jp###exAppInstall
 deepl.com##.lmt_targetToolbar__appPromotion_container
 m.shein.com#$#.journey-contain { display: none !important; }
 m.shein.com#$#body { margin-top: 0px !important; }
@@ -2089,7 +2105,6 @@ lazada.co.th###J_Smart_Banner_Bottom
 lazada.co.th###module_guide_app
 getpocket.com##div[data-cy="reader-flyaway-apps"]
 navitime.co.jp###appli-dl-frame
-ficbook.net##.install-app-container
 translate.google.*##div[class][jsname] > div[class] > c-wiz > div[class][jsname][style^="transform: matrix("]
 budzdorov.ru##.popup-metadata-popup__paranja
 selfmind.ai##.store-bannar-container
@@ -2536,7 +2551,7 @@ geekdashboard.com##a[href^="https://www.geekdashboard.com/app"]
 realmtracker.com,tracker.network,fortnitetracker.com##.trn-site-appbar
 speedtest.net##.mobile-eot-ad
 autodoc.de##.mob_app_link
-takvim.com.tr,ahaber.com.tr##.application-widget
+ahaber.com.tr,takvim.com.tr,ahaber.com.tr##.application-widget
 autodoc.de##.js-app
 9gag.com##a[href="/apps"]
 mercadolivre.com.br##body > div[style^="position: fixed; z-index: 1000; bottom: 0px;"]

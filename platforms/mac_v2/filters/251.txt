@@ -1,13 +1,13 @@
-! Checksum: hS+pDgET+lip0jn0U4cLXA
-! Diff-Path: ../patches/251/251-s-1758300180-14400.patch
+! Checksum: dMiLSXm1rAeckhtosesCtg
+! Diff-Path: ../patches/251/251-s-1759725645-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.99
-! TimeUpdated: 2025-09-19T16:38:35+00:00
+! Version: 2.0.9.3
+! TimeUpdated: 2025-10-06T04:36:58+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 19September2025v2
+! OriginalVersion: 05October2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1686,7 +1686,8 @@ $removeparam=/^asc_.*$/,document,domain=amazon.*|aboutamazon.com|amzn.to
 ||bing.com/?$removeparam=/^form=.*$/i
 ! https://www•bing•com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.$removeparam=sp
-$removeparam=sc,document,domain=bing.com|qvc.com|startpage.com
+! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-14533757)
+$removeparam=sc,document,domain=bing.com|qvc.com
 $removeparam=sk,domain=aliexpress.*|bing.com
 ||bing.$removeparam=qs
 ! https://www•bing•com/search?PC=U531&q=hello&FORM=ANNTA1 (05/03/2021)
@@ -3682,7 +3683,7 @@ $removeparam=afSmartRedirect
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6305974
 $removeparam=repost,domain=nbcnews.com|sacurrent.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6306026
-||wsj.com^$removeparam=st
+!!!||wsj.com^$removeparam=st (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-14492064)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-6306076
 ||uslecce.it^$removeparam=et
 ! https://www•skinnytaste•com/burger-recipes/?adt_ei=*|EMAIL|*
@@ -4223,6 +4224,8 @@ $removeparam=/^ref=underfl0w\.com$/
 ! https://downloads•sourceforge•net/project/gpredict/Gpredict/2•3•37/gpredict-win32-2•3•37•zip?ts=gAAAAABozKvSN0HK_QmMrVq5ScixE4T3EgfSUV9gobgRBkSZgqcCjDkVK_Q0cK92cImRLRna-VoSZ3CWDwgCBArnmMqrdMXcYg%3D%3D&use_mirror=altushost-swe&r=https%3A%2F%2Fsourceforge•net%2Fprojects%2Fgpredict%2Ffiles%2FGpredict%2F (19/09/2025)
 !!! ||downloads.sourceforge.net^$removeparam=ts (https://github.com/DandelionSprout/adfilt/issues/1154#issuecomment-3312737919)
 ||downloads.sourceforge.net^$removeparam=r
+! https://github.com/AdguardTeam/AdguardFilters/commit/6bf3cccabe4516ca895d61f0cd6401a59e2c4683
+$document,removeparam=loclid
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
@@ -4232,6 +4235,9 @@ $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.
 $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 ! https://www•ikea•com/no/no/images/products/friheten-hjornesovesofa-med-oppbevaring-skiftebo-mork-gra__0175610_pe328883_s5•jpg?f=xl
 ||ikea.com/*/images/products^$removeparam=f
+! https://story•snapchat•com/p/a9868981-ac8a-4c7c-bdd3-bbd94c7cd46a/3298970858393600?timestamp=0&share_id=7TRPgdxQm4I&locale=nb-NO (03/10/2025)
+||snapchat.com^$removeparam=share_id
+||snapchat.com^$removeparam=/^timestamp=0$/
 ! 🤖 + ——— + Scriptlets + ——— + 🤖 !
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1352038
 ! https://buffalonews•com/news/#tracking-source=main-nav

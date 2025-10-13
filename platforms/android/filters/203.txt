@@ -1,15 +1,15 @@
-! Checksum: 0mN786YI0I6LEzrpO4CFEg
-! Diff-Path: ../patches/203/203-s-1757047253-14400.patch
+! Checksum: WvZ6sH0cOjo/VQtz+eEREw
+! Diff-Path: ../patches/203/203-s-1759625504-14400.patch
 ! Title: Hungarian filter
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.4.27
-! TimeUpdated: 2025-09-05T04:36:42+00:00
+! Version: 2.0.4.31
+! TimeUpdated: 2025-10-05T00:47:58+00:00
 ! Expires: 5 days (update frequency)
 !
-! Checksum: DNOxOCNMkpaRZ4V1/9o8Gw
-! OriginalVersion: 202509041349
+! Checksum: LBkhsaZZ7V0yNn6R+ig2Ag
+! OriginalVersion: 202510041233
 ! Title: Hufilter for AdGuard
-! Last modified: 04 Sep 2025 13:49 UTC
+! Last modified: 04 Oct 2025 12:33 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://hufilter.hu
 ! Licence: CC-BY, see https://creativecommons.org/licenses/by/4.0/
@@ -1805,6 +1805,7 @@ szeretlekmagyarorszag.hu###cookie-policy-bar
 szeretlekmagyarorszag.hu###rovatpromo
 szeretlekmagyarorszag.hu##iframe[class*="my-fbrecommend"]
 tarhely.eu###sutik
+||telekom.hu/static-tr-frame/json/cookie-consent/cookie-consent-hu.json
 telekom.hu###app-cookie-policy
 telex.hu###modal--umbrella
 telex.hu###modal--you
@@ -1861,6 +1862,7 @@ infostart.hu#?##sitemodal:-abp-has(.fb-button)
 /megacookies.js$script,domain=gabo.hu
 /megacookies.css$stylesheet,domain=gabo.hu
 /yett.min.js$script,domain=mavcsoport.hu
+/cookiesettings.min.js$script,domain=ittjartam.hu
 ||cmp.setupcmp.com^$third-party,domain=erettsegi.com
 ||gvl-dev.setupcmp.com^$third-party,domain=erettsegi.com
 ||cmp.quantcast.com^$script,domain=agrarszektor.hu|autoszektor.hu|bpiautosok.hu|g7.hu|hazipatika.com|hellovidek.hu|hrportal.hu|magyarnarancs.hu|index.hu|pestisracok.hu|portfolio.hu|telex.hu|totalcar.hu|totalbike.hu|szeretlekmagyarorszag.hu|port.hu|player.hu|mandiner.hu|budapestkornyeke.hu|bacsmegye.hu|civishir.hu|baon.hu|bama.hu|beol.hu|boon.hu|delmagyar.hu|duol.hu|feol.hu|kisalfold.hu|haon.hu|heol.hu|szoljon.hu|kemma.hu|nool.hu|sonline.hu|szon.hu|teol.hu|vaol.hu|veol.hu|zaol.hu|twice.hu|sassy.hu|prohardver.hu|mobilarena.hu|itcafe.hu|gamepod.hu|logout.hu|hardverapro.hu|pcwplus.hu|gsplus.hu|myonlineradio.hu|blikk.hu|medicalonline.hu
@@ -1888,6 +1890,7 @@ infostart.hu#?##sitemodal:-abp-has(.fb-button)
 ||*.hu/*wp-content/plugins/complianz-gdpr/*.css$stylesheet
 ||cookielaw.org^$third-party
 ||unideb.hu/*/szechenyi-2020-strukturalis-alap-logo.png$image
+||ittjartam.hu/ajax.php?action=offerblogcikk
 ! This section file contains rules for bypassing anti-adblock protections.
 ! The rules in this section should be compatible with all popular adblockers (Adblock Plus, AdGuard, uBlock Origin).
 !-------------------------------------------------------------------------------!
@@ -1952,6 +1955,7 @@ videa.hu,videaloop.hu##.top-video-container-banner
 ||campaign.telex.hu/showtime.php
 ||websas.hu/statistics/
 ||tesco.hu/*/update-fingerprint
+||ittjartam.hu/ajax.php?action=LogSearchHistory
 !-------------------------------------------------------------------------------!
 !------ Generic network filters - Tracking domains -----------------------------!
 !-------------------------------------------------------------------------------!
@@ -2022,6 +2026,8 @@ videa.hu,videaloop.hu##.top-video-container-banner
 ! - Broken scripts
 ! - etc.
 ! The rules in this section should be compatible with all popular adblockers (Adblock Plus, AdGuard, uBlock Origin).
+! https://github.com/AdguardTeam/AdguardFilters/issues/214046
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=homedepot.ca
 ! https://github.com/hufilter/hufilter/issues/445
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=mafab.hu
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139139
@@ -2064,6 +2070,7 @@ gamer.hu$$script[tag-content="cli_cookiebar_"]
 ! https://github.com/hufilter/hufilter/issues/8
 napiszar.com$$script[data-cfasync="false"]
 portfolio.hu$$script[tag-content="fbmodal-title"]
+arcanum.com#%#//scriptlet('set-constant', 'show_modal', 'noopFunc')
 blikk.hu#%#//scriptlet('set-cookie', 'isLeavingPopUpReady', '3')
 onlinepenztarca.hu#%#//scriptlet('set-local-storage-item', 'felhasznalo_cookie_preferencia', '0')
 ! https://github.com/hufilter/hufilter/issues/520

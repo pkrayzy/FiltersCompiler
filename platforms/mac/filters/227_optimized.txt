@@ -1,9 +1,10 @@
-! Checksum: 05QhBo6EfHr3Z1MiaGIl2w
+! Checksum: unJ5ajg39xFAyUZm0oCS1w
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.22.99
-! TimeUpdated: 2025-09-22T04:37:00+00:00
+! Version: 2.0.23.6
+! TimeUpdated: 2025-10-12T20:34:24+00:00
 ! Expires: 1 day (update frequency)
+||digitalcamp.co.kr^$third-party
 ||mman.kr^
 ||admize.io^
 ||adguru.kr^$third-party
@@ -520,6 +521,7 @@
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
 /ad-manager.min.js
+||cdn.zigcou.com/static/*.webp$domain=2798731938.zigcou.com
 ||news.sbs.co.kr/js/news-player/player.adInfoUrlList.js
 ||11st.co.kr/js/ver/*/powerLink.js
 ||ssl.pstatic.net/t.static.blog/mylog/versioning//js/post/ssp/SspAdContentCallerFor
@@ -1588,6 +1590,10 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+search.naver.com##ul > li[data-slog-content][data-slog-visible]:has(div[id^="view_type_guide_"] button > svg[width="36"] path[d^="M13.596 10.988c0"])
+maplescouter.com##.gap-2 > div[class="min-w-[440px]"]
+maplescouter.com##div[class=""] > .flex-col > .justify-center:has(> div[class$="h-[100px]"])
+search.naver.com##.book_list_wrap li[data-ad="true"]
 m.search.naver.com##.book_recommend_list .api_flicking_wrap > div[data-slog-content^="bok_ans:pmax-"]
 search.naver.com##.book_recommend_list .api_flicking_wrap > div[data-effective-adlog]
 search.naver.com##.book_correct .shop_area .item_sub:has(> .sub_inner > .tit_bx > a[href^="https://ader.naver.com/"])
@@ -3326,6 +3332,7 @@ opworlds18.com,opworlds19.com,opworlds20.com,opworlds21.com,opworlds22.com,opwor
 spochak.com#?#table .basic-info-alert:has(a[href="/marble/"])
 avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 zzzz.lol#?#.widget-side .widget-title:has(+ div a[href^="/bbs/link.php?bo_table="][target="_blank"])
+chzzk.naver.com#$?#.webplayer-internal-core-shadow > .wpc-pos-abs { remove: true; }
 m.fmkorea.com#$?#.bd.bd_mobile:not(:has(*)):has(~ #spot form[action][method].search) { remove: true; }
 m.fmkorea.com#$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
 search.daum.net#$?#body.nate aside#mAside > div[disp-attr]:has(> .wing_nate) + div[disp-attr] { margin-top: 0px !important; }
@@ -3421,6 +3428,8 @@ m.humoruniv.com#%#//scriptlet('set-constant', 'list_end_run', 'noopFunc')
 m.humoruniv.com#%#//scriptlet('abort-on-stack-trace', '$.prototype.html', '_boom')
 m.humoruniv.com#%#//scriptlet('abort-current-inline-script', '$.prototype.html', '/\/images\/[A-z0-9-_]+\.?(jpg|gif)/')
 m.fmkorea.com#%#//scriptlet('json-prune', 'tpl apply', 'tpl.[].c')
+chzzk.naver.com#%#//scriptlet('json-prune-xhr-response', 'content.playerAdDisplayResponse', '', 'api.chzzk.naver.com/service/t/')
+heye.kr#%#//scriptlet('prevent-window-open', 'pandalive.co.kr/evt/')
 newneek.co#%#//scriptlet('prevent-xhr', 'api-v2.adrop.io/request')
 map.naver.com#%#//scriptlet('json-prune-xhr-response', 'layers.[-].metadata.name.{=}.POI_Ads', '', '/PCWeb_Real.json')
 pcmap.place.naver.com,m.place.naver.com#%#//scriptlet('json-prune', '[].data.poiRecommendations.recommendations.[].items.[-].adClickLog.clickUrl')
@@ -3535,7 +3544,14 @@ t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 !#safari_cb_affinity
 t.hi098123.com#$#.tabad { top: -100px !important; }
-chzzkban.xyz#%#//scriptlet('prevent-setTimeout', 'window.getComputedStyle')
+dcinside.com#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype.addEventListener', '_ad=')
+dcinside.com#%#//scriptlet('remove-cookie', 'gaejuki_ad')
+dcinside.com#%#//scriptlet('prevent-setTimeout', 'addc.dcinside.com')
+dcinside.com#%#//scriptlet('set-local-storage-item', '/adblock_detected/', '$remove$')
+dcinside.com#%#//scriptlet('abort-current-inline-script', 'setTimeout', 'ajax/naverad')
+chzzkban.xyz#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com method:HEAD')
+chzzkban.xyz#%#//scriptlet('prevent-setTimeout', 'getComputedStyle')
+chzzkban.xyz#%#//scriptlet('prevent-setTimeout', '!window.__adsToken,')
 mylocation.co.kr#%#//scriptlet('prevent-setTimeout', 'adBlockedMessage')
 ||shana.pe.kr/shana_check/scp*.js$script
 remiz.co.kr#%#//scriptlet('spoof-css', '.adsbygoogle', 'display', 'block')
@@ -3636,6 +3652,7 @@ lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lo
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag,domain=~wcyb.com
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=~investing.com|~wcyb.com
+heye.kr$$script:contains(/window\.open\([^)]*\);\s*\w+\.focus/)
 m.humoruniv.com$$script:contains(/run[\s\S]*?data[\s\S]*?OnClick[\s\S]*?ad\d_/)
 meeco.kr$$script[tag-content="error-report.com"]
 kio.ac$$script[tag-content="K$()"]
