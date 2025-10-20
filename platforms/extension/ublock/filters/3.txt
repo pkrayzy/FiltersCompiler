@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 9XcaGNXrTnbEL9jfIYH6Qg
-! Diff-Path: ../patches/3/3-s-1760357720-3600.patch
+! Checksum: /HJg0UlaRoxTt+DyPw2k5A
+! Diff-Path: ../patches/3/3-s-1760962524-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.92.80
-! TimeUpdated: 2025-10-13T12:11:12+00:00
+! Version: 2.0.93.15
+! TimeUpdated: 2025-10-20T12:11:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -18,6 +18,9 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! Youtube
+!+ NOT_PLATFORM(ext_chromium_mv3)
+www.youtube.com##+js(no-xhr-if, /\/api\/stats\/atr\?.+?&rt=\d+\.\d+.+?&volume=\d+&cbr=.+?&fexp=v1%[-%0-9C]{300\,}&.+?&muted=\d(&vis=3)?&docid=/ method:POST)
 ! Ad-Shield
 ! Prevent Ad-Shield tracking script - Only tracking ad block traffic. NOT Ad-Shield advertisement or protection.
 slobodnadalmacija.hr,meconomynews.com,brandbrief.co.kr,motorgraph.com##+js(abort-current-script, atob, eval(decodeURIComponent(escape(window.atob("KCgpPT5)
@@ -495,6 +498,16 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||inetstats.org^$third-party
+||analysis.chatglm.cn^
+||*-default-cn.rum.aliyuncs.com^
+||ping.pdst.fm^
+||api.sae.systems^
+||analytics.metriko.app^
+||stats.fluorescent.co^
+||wurflcloud.com^
+||tvspix.com^
+||events.stylux.io^
 ||*-sdk.rum.aliyuncs.com^
 ||digitalcamp.co.kr^$third-party
 ||marathondataco.com^$third-party
@@ -507,7 +520,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||overtracking.com^$third-party
 ||funsdata.com^
 ||ahatm12od.top^
-||an.gr-wcon.com^
 ||sdkapi-prod.dfinery.ai^
 ||behavior-tracking-event-gateway.imweb.me^
 ||smind.hr^$third-party
@@ -699,7 +711,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||analytics.turk.pro^
 ||metric-api.newrelic.com^
 ||conduit-beacon.mtvnservices.com^
-||redfast.com^
 ||analytics.newsifier.nl^
 ||mn-tz.com^
 ||tr.thecontentserver.com^
@@ -71451,6 +71462,18 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||haystack.wavve.com^
+||user-event-log.aminer.cn^
+||pixel.dashfi.dev^
+||c.quackr.io^
+||xstat.gazeta.bo^
+||stats.avito.ru^
+||nr-beacon.movingimage.com^
+||analytics.monetha.io^
+||uac.kyeongin.com^
+||clogger.nocutnews.co.kr^
+||reports.omegacommerce.com^
+||pvdpix.com^$third-party
 ||collector-sbanking.shb-pelib.com^
 ||uac.etnews.com^
 ||fuse.ubs.com^
@@ -109192,6 +109215,8 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/rum/events
+/gs/ccm/collect?
 /piano/engagement
 /statsig/rgstr?k=client-
 /v1/rgstr?k=client-
@@ -109392,6 +109417,7 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 ! Cloudflare permormance monitoring
 /cdn-cgi/rum?
 !
+/op/analytics.js?domain=
 /send_ga4_params?
 &sst.sw_exp=
 ://tagging.*/settings.js
@@ -109950,6 +109976,37 @@ _tracking.php?b=
 !
 ! NOTE: Specific rules
 !
+||an.gr-wcon.com^$script
+||storm.mg/api/logs/
+||storm.mg/avivid.js
+||api.thefantazy.com/web-vitals
+||shop-apotheke.com/conversational-api/analytics
+||static.shop-apotheke.com/media/js/shopmonitor3.js
+||hobbygames.ru/?route=product/product/visit
+||heumm.com/backpg/add_visit_log.cm
+||heumm.com/js/fb_pixel.js
+||heumm.com/js/advanced_trace.js
+||heumm.com/js/site_log.js
+||api.biz.sbs.co.kr/statistics/
+bunshun.jp##.recommend-articles:has(> div[class^="taboola"])
+||play.*.com/vendor/$domain=play.aetv.com|play.mylifetime.com
+||vbr.ru/next/api/v2/n/help/*/view
+||vbr.ru/init-z.bmp
+||redfast.com/ping/
+||statix.business-gazeta.ru/js/components/metrics.js
+||statix.business-gazeta.ru/js/components/murmur.js
+||fanfictionero.com/srv/statistics/
+||aa.com/aileron/api/log|
+||fafvertizing.crazygames.com/*-prebid-
+||bookitnow.lt/gtm/
+||geradovana.lt/gtm/
+||lieliskadavana.lv/gtm/
+||cdn.liga.net/assets/js/remplib.js
+||cdn.liga.net/assets/js/campaign.js
+letterboxd.com##+js(href-sanitizer, a[href^="https://click.justwatch.com/"], ?r)
+||letterboxd.com/sm_stats_bug.do
+||voorkeuren.tvgids.nl/v1/_|
+||repost.aws/api/v*/content/markResourceViewed
 ||raine.accuweather.com/tracker/
 ||static.comdirect.de/*Logger.js
 ||cognito-identity.*.amazonaws.com^$domain=qr.finedinemenu.com
@@ -110321,7 +110378,6 @@ gq.com##+js(set-local-storage-item, /^avoinspector/, $remove$)
 ||check24.*/misc/tracking_gif.php
 ||check24.*/gif/*/info.gif
 ||check24.*/files/give_png.php
-nhk-ondemand.jp##+js(abort-on-property-write, wd.s_c_il)
 ||kma.go.kr/kma/resources/js/UserScriptConf.js
 ||kabu-sokuhou.com/js/cpv/
 4pda.to##+js(remove-attr, data-dotrack, a[data-dotrack])
@@ -110969,7 +111025,7 @@ geinoukame.com##.ninja-recommend-block + hr
 ||wealthfront.com/track_next?p=
 ||gg.asuracomic.net/api/views/collect
 ||probance.jp/webtrax/public/probance_tracker.js
-/firebase-analytics.js$domain=furunavi.jp
+/firebase-analytics.js$domain=furunavi.jp|mt.co.kr
 ||static.site24x7rum.jp/beacon/
 ||api.actagtracker.jp/tag|
 ||shop.post.japanpost.jp/js/analytics_cookie.js
@@ -111592,7 +111648,6 @@ sinoptik.ua##img[src^="//counter.ukr.net/"]
 ||gobankingrates.com/analytics/latest/ct.bundle.js
 ||scv-cafe.io.naver.com/jackpotlog/*/logs$xmlhttprequest,redirect=noop.json
 ||digiturk.com.tr/_Scripts/AnalyticsEvents.js
-||apps.nhk.or.jp/assets/dtm/launch-
 ||img.syosetu.org/js/c_
 ||lasso.link/events/tracking
 ||clipkit.co/clipkit_assets/beacon-
@@ -114955,6 +115010,9 @@ gmarket.co.kr##+js(fingerprint2)
 /CI0/0$image
 %2FCI0%2F0$image
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/215466
+github.com%2Fnotifications%2Fbeacon%3D*.gif$image
+github.com/notifications/beacon=*.gif$image
 ! seasungames.com
 dm-sg.aliyuncs.com/trace/*/report$image
 dm-sg.aliyuncs.com%2Ftrace%2F*%2Freport$image
@@ -115608,6 +115666,7 @@ twitter.com%2Fscribe%2Fibis%3Ft%3D$image
 !
 ! https://x.com/Tightnaven/status/1974739387994030253
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211274
+! https://github.com/AdguardTeam/AdguardFilters/issues/215550
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210553
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207126
 @@||googletagmanager.com/gtm.js$domain=oto.net
@@ -116073,6 +116132,10 @@ twitter.com%2Fscribe%2Fibis%3Ft%3D$image
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/215614
+! vbr.ru
+! x.com
+! https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/rules-and-policies/cookie-description-lists/cookie-description-list-en.pdf
 ! novakidschool.com
 ! purevpn.de
 ! fashionnova.com
@@ -116487,6 +116550,13 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||experiment.pixverse.ai^
+||capture.pixverse.ai^
+||report.pixverse.ai^
+||dxp.baidu.com^
+||nsclickvideo.xiaodutv.com^
+||api-access.pangolin-sdk-toutiao1.com^
+||xda.xiaodutv.com^
 ||analytics-ccu.qpyou.cn^
 ||analytics-log.withhive.com^
 ||prebid-server-canary.ifunny.co^
@@ -117556,6 +117626,12 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/215786
+@@||googletagmanager.com/gtm.js$domain=sferis.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/215834
+@@||googletagmanager.com/gtm.js$domain=tauron.pl
+! https://github.com/AdguardTeam/AdguardFilters/issues/215550
+@@||play.*.com/vendor/VisitorAPI.js$domain=play.aetv.com|play.mylifetime.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214804
 @@||analytics.prensaiberica.es/api/delivery/recommendations$domain=farodevigo.es
 @@||cdn.cxense.com/cx*.js$domain=farodevigo.es
@@ -121691,6 +121767,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||captivatingillusion.com^
 ||captivatingpanorama.com^
 ||captivatingperformance.com^
+||cardmethod.com^
 ||carefuldolls.com^
 ||caringcast.com^
 ||carloforward.com^
@@ -122099,6 +122176,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||functionalcrown.com^
 ||functionalfeather.com^
 ||funoverbored.com^
+||funtoyplanet.com^
 ||furryfork.com^
 ||fusedcontent.com^
 ||futuristicapparatus.com^
@@ -122138,6 +122216,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||gloriousbeef.com^
 ||glowingmeadow.com^
 ||gluedpixel.com^
+||goddesslamps.com^
 ||godseedband.com^
 ||goldfishgrowth.com^
 ||goldstudies.com^
@@ -122177,6 +122256,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||gulliblegrip.com^
 ||gustocooking.com^
 ||gustygrandmother.com^
+||haikusoap.com^
 ||halcyoncanyon.com^
 ||halcyonsculpture.com^
 ||haltingbadge.com^
@@ -122238,6 +122318,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||humourspot.com^
 ||hurtgrape.com^
 ||hustlercoach.com^
+||hybridburst.com^
 ||hydraconcept.com^
 ||hyperlegend.com^
 ||hypnoticwound.com^
@@ -122269,6 +122350,8 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||intentlens.com^
 ||internalcondition.com^
 ||internalsink.com^
+||intricateberry.com^
+||inventorycache.com^
 ||inventtango.com^
 ||iotapool.com^
 ||irelandroad.com^
@@ -122310,6 +122393,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||kidpowers.com^
 ||kindasingle.com^
 ||kindhush.com^
+||kindlereunion.com^
 ||kitetuning.com^
 ||kittycatking.com^
 ||knewpenny.com^
@@ -122422,6 +122506,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||memorizematch.com^
 ||memorizeneck.com^
 ||mentorsticks.com^
+||mercuryace.com^
 ||meremark.com^
 ||merequartz.com^
 ||merryopal.com^
@@ -122438,6 +122523,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||mindfulgem.com^
 ||mindlessmark.com^
 ||mineinvoice.com^
+||minibilling.com^
 ||minorcattle.com^
 ||minuteburst.com^
 ||miscreantmoon.com^
@@ -122504,6 +122590,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||notcardboard.com^
 ||notconscious.com^
 ||notifyglass.com^
+||notrealcat.com^
 ||noundictionary.com^
 ||novaseekers.com^
 ||nowaymail.com^
@@ -122576,6 +122663,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||pickmicro.com^
 ||pietexture.com^
 ||pigeonsetc.com^
+||pigmentpaper.com^
 ||pinchsquirrel.com^
 ||pincourse.com^
 ||piquantgrove.com^
@@ -122679,6 +122767,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||quizzicalzephyr.com^
 ||rabbitbreath.com^
 ||rabbitrifle.com^
+||rackforstorage.com^
 ||radiantcanopy.com^
 ||radiantlullaby.com^
 ||radiateprose.com^
@@ -123167,6 +123256,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||toomanyalts.com^
 ||topbookgifts.com^
 ||topcrazypress.com^
+||topthrowbacks.com^
 ||touristfuel.com^
 ||toysbasics.com^
 ||toytakeover.com^
@@ -123320,6 +123410,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||wrongwound.com^
 ||wtaccesscontrol.com^
 ||yieldingwoman.com^
+||youcandrawanything.com^
 ||yourlifedream.com^
 ||zephyrcatalyst.com^
 ||zephyrlabyrinth.com^

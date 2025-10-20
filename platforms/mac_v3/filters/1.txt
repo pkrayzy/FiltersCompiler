@@ -1,9 +1,9 @@
-! Checksum: 99oMk9CE7BAE+k/srDkPMg
-! Diff-Path: ../patches/1/1-s-1760368328-3600.patch
+! Checksum: nNQVmH+z7BRebYvaBXBPWw
+! Diff-Path: ../patches/1/1-s-1760958673-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.1.2.30
-! TimeUpdated: 2025-10-13T15:07:30+00:00
+! Version: 2.1.2.41
+! TimeUpdated: 2025-10-20T11:06:33+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1437,6 +1437,7 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||6i7y3i.ru^
 ||punchmedia.ru^
 ||imaginarybad.com^$all
 ||california1955.nl^
@@ -4882,7 +4883,7 @@ otzovik.com$$script[wildcard="*function*blockId*"][min-length="1000"][max-length
 !
 !
 ! Add Yandex owned sites to `jsonprune` rule
-$script,xmlhttprequest,domain=ya.ru|yandex.*|shedevrum.ai,jsonprune=\$..[direct\, "rtbAuctionInfo"\, "seatbid"]
+$script,xmlhttprequest,domain=ya.ru|yandex.*|shedevrum.ai,jsonprune=\$..[direct\, "rtbAuctionInfo"\, "renderLinkTail"\, "seatbid"]
 yandex.*#%#//scriptlet('remove-cookie', '/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/')
 $cookie=/blcrm|bltsr|zmFQeXtI|JPIqApiY|computer/,domain=yandex.*
 ! ad on chrome://newtab
@@ -6994,6 +6995,12 @@ glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita
 !
 !
 !
+downradar.ru##.one-half + div.one-half > a[target="_blank"]
+||vbr.ru/next/api/v*/banner/
+||vbr.ru/next/api/v*/banners/
+||vbr.ru/next/api/v*/branding/
+||statix.business-gazeta.ru/js/components/slots.js
+weacom.ru###video_control_parthner
 chesnok.media##.reklama_d
 ||static.vr.m-31.ru/sticky-stage/*/sticky-ad-player.
 vidal.ru##.products-table > tbody > tr[class] ~ tr:not([class])
@@ -7381,6 +7388,9 @@ chehov-vid.ru##.container-fluid > div#events
 mumuplayer.com##.NIE-art-right > div.pc
 comss.ru##body > div.container:has(> div.row > div.col-md-9 > div[id^="id-"])
 comss.ru##body > div.container:has(div[id^="yandex_rtb"]) + div.container:has(> div.spacer)
+sport-express.ru##.se-translation-scoreboard-event__header-badges
+sport-express.ru##.sp-matchcenter-board__bookies
+sport-express.ru##.sp-matchcenter-board__extra-links
 sport-express.ru##a[href^="//hd.kinopoisk.ru/"]
 sport-express.ru##div[data-component="se-game-app"]
 sport-express.ru##._ad_container_
@@ -17355,17 +17365,17 @@ pornolab-zerkalo.appspot.com,pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net#
 ! END: pornolab
 !
 ! Prevent of loading WS (onerror event)
-||cdn.hdat.xyz/*.js$script,redirect=noopjs,important,~websocket
-||cdn7.rocks/*.js$script,redirect=noopjs,important,~websocket
+||cdn.hdat.xyz/*.js$script,redirect=noopjs,important
+||cdn7.rocks/*.js$script,redirect=noopjs,important
 ||code.directadvert.ru/data/*.js$script,redirect=noopjs,important
-||et-code.ru/bens/vinos.js$script,redirect=noopjs,important,~websocket
-||gynax.com/js/*.js?r=$redirect=nooptext,important,~websocket
-||m.mixadvert.com/show/?id=$redirect=nooptext,important,~websocket
-||nickhel.com/js/$redirect=nooptext,important,~websocket
-||oconner.*/js/lib.js$script,redirect=noopjs,important,~websocket
-||oconner.biz:8041/js/lib.js$script,redirect=noopjs,important,~websocket
-||redtram.com/n4p/$redirect=nooptext,important,~websocket
-||trafmag.com/etarg-code.js$script,redirect=noopjs,important,~websocket
+||et-code.ru/bens/vinos.js$script,redirect=noopjs,important
+||gynax.com/js/*.js?r=$redirect=nooptext,important
+||m.mixadvert.com/show/?id=$redirect=nooptext,important
+||nickhel.com/js/$redirect=nooptext,important
+||oconner.*/js/lib.js$script,redirect=noopjs,important
+||oconner.biz:8041/js/lib.js$script,redirect=noopjs,important
+||redtram.com/n4p/$redirect=nooptext,important
+||trafmag.com/etarg-code.js$script,redirect=noopjs,important
 !
 ! For Zona app
 ||admulti.com/javascripts/rot.js
