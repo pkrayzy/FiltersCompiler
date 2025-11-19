@@ -1,9 +1,9 @@
-! Checksum: EyCExnGIAZzDTwJO6cejpA
-! Diff-Path: ../patches/6/6-s-1763071878-3600.patch
+! Checksum: 7eaROuPlpmcdRzxZShU0Fg
+! Diff-Path: ../patches/6/6-s-1763468114-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.50.30
-! TimeUpdated: 2025-11-13T22:07:30+00:00
+! Version: 2.0.50.33
+! TimeUpdated: 2025-11-18T12:11:34+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -370,6 +370,8 @@ essen-und-trinken.de#%#//scriptlet('prevent-setTimeout', 's.call(null)', '10')
 schnittmuster-datenbank.de#%#//scriptlet("abort-on-property-read", "adsBlocked")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/218085
+radioforen.de##body > .u-scrollButtons ~ script ~ div[style]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216094
 seoschmiede.at#%#//scriptlet('abort-on-stack-trace', 'document.getElementById', 'getWidget')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212927
@@ -1460,6 +1462,9 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+||radioforen.de/index.php?sam-item
+||radioforen.de/index.php?sam-package
+autonotizen.de##div[id^="gtag_adslot"]
 forum.amateurpin.xxx##.banner-box
 forum.amateurpin.xxx###footer_iframe_wrapper
 chip.de##div[data-vr-contentbox]:has( > article:only-child > figure > .Label.bg-gray-lm)
@@ -4757,7 +4762,7 @@ weser-kurier.de##.adobj
 radiohamburg.de##.ads-rectangle
 fcn.de##.ads:not([class^="ads small-block-grid-"])
 tvspielfilm.de##.adsd_rectangle
-1erforum.de,eatsmarter.de##.adsense
+autonotizen.de,1erforum.de,eatsmarter.de##.adsense
 polizeinews.ch##.adv_middle
 tvspielfilm.de##.advertising-box
 radiohamburg.de##.afs_ads
@@ -6761,7 +6766,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||ad-serving.de^$third-party
 ||ad-sun.de^$third-party
 ||ad.de.doubleclick.net^$third-party
-||ad.netzquadrat.de^$third-party
 ||ad4cash.de^$third-party
 ||ad4m.at^$third-party
 ||ad4mat.de^$third-party
@@ -6986,7 +6990,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||websc.org^$popup,third-party
 ||wixnm.com^$popup
 ||xtreff69.com^$popup
-||zomap.de^$popup,third-party
 ||1deluxe.eu/banner/
 ||213.133.100.18^*&clicktag=
 ||4fal.com/profilbannercreate/$third-party
@@ -6994,7 +6997,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||a.check24.net/misc/view.php$domain=~wechseln.de
 ||abo2.de/abo-direkt/$third-party
 ||ad.71i.de^
-||ad.bwise.ch^
 ||ad.jaumo.com^
 ||adsby.de^$third-party
 ||aff.carvertical.com^$third-party
@@ -7163,12 +7165,10 @@ wetter.com#@#div[id^="div-gpt-"]
 ||netzis.de/Banner/$third-party
 ||newsticker.save.tv^$third-party
 ||nexworld.tv^*/banner/$third-party
-||oddsserve-wqps7yvkz.stackpathdns.com^
 ||oecherdeal.de^$subdocument,third-party
 ||okm-community.com/banner/$third-party
 ||om.dsl.1und1.de^$third-party
 ||online-casino.de^$subdocument,third-party
-||partner.fondsdiscount.de^
 ||partner.gewinnspiele.de^$third-party
 ||partner.leguide.com^$third-party
 ||partner.maxxim.de^
@@ -8714,7 +8714,6 @@ transfermarkt.de##.OUTBRAIN .ob-p
 ||moatads.com^$domain=autobild.de
 ||mookie1.com^$domain=autobild.de
 ||pagead2.googlesyndication.com^$domain=autobild.de|gofeminin.de
-||perfectmarket.com^$domain=autobild.de
 ||plista.com/pictureads/$domain=autobild.de
 ||pubmatic.com^$domain=gofeminin.de
 ||redintelligence.net^$domain=g.doubleclick.net
@@ -9870,7 +9869,7 @@ radioguetersloh.de##.btn2
 tvspielfilm.de##.button.affiliate
 lounge.fm##.buy
 eventelevator.de##.bwdfb-widget
-bravo.de,cosmopolitan.de,happinez.de,lecker.de,liebenswert-magazin.de,maennersache.de,praxisvita.de,selbst.de,wunderweib.de##.bx-ada
+bravo.de,cosmopolitan.de,happinez.de,lecker.de,liebenswert-magazin.de,maennersache.de,selbst.de,wunderweib.de##.bx-ada
 kremser-sc.at,sgleutershausen.de##.bx-viewport
 amerikawoche.com##.bxnxr_column
 dererker.it##.bxslider

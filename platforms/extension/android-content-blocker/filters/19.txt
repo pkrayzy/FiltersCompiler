@@ -1,8 +1,8 @@
-! Checksum: yCUwJJnfZ2BoVDBaG2GJ6g
+! Checksum: //KYyKTegZPMMlUDtb7k9Q
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.65.40
-! TimeUpdated: 2025-11-17T01:36:08+00:00
+! Version: 2.0.65.54
+! TimeUpdated: 2025-11-18T20:09:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -67,6 +67,8 @@ mail.yandex.*##div[class^="RightColumn-m__root--"]
 !
 ! Yandex.Search
 ! Main page under the search bar
+ya.ru##main[class="body__wrapper"] form ~ div[style^="--height-ratio:"]
+yandex.*##main[class="body__wrapper"] form ~ div > div[style^="--height-ratio:"]
 yandex.ru##.main__block-banner iframe[src]
 ! the ad is on the right side, which is mostly non-reproducible
 !
@@ -582,6 +584,7 @@ phys.org##.popup-cookies__displayed
 kudyznudy.cz##.sx-info-c-message
 modthesims.info###adblockmessage
 codeshare.io##.sad-face
+startpage.com###main > .support-banner
 ||heraldnet.com/wp-content/plugins/incognito_dectector/js/incognito-detector.js
 @@||pokemonsleep.club^$script,~third-party
 ||static.themoscowtimes.com/vendor/adblocker/adblocker.js
@@ -2467,6 +2470,7 @@ aol.com###player
 !
 ! SECTION[id=content_blockers]: Anti-adblock - The rules for content blockers only
 !#safari_cb_affinity(general)
+@@||lib.wtg-ads.com/publisher/kio.ac/sb_interstitial_wtg.js$domain=kio.ac
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=talksport.com
 @@||securepubads.g.doubleclick.net/pagead/*/pubads_impl.js$domain=talksport.com
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=talksport.com
@@ -2692,6 +2696,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+forbes.ru##.fVh36
 watchprowrestlings.live###likeShareOverlay
 forum.amateurpin.xxx##div[class^="apx-modal"]
 ||cdn.jsdelivr.net/npm/canvas-confetti*/dist/confetti.browser.min.js$domain=forum.amateurpin.xxx
@@ -3601,6 +3606,8 @@ picmo.me,jingukan.co.jp##.bfb_textBtn
 n1info.hr##.brid-holder.brid-sticky
 n1info.hr##.brid-close
 jornaldocarro.estadao.com.br##.jc-floating-button
+||minorasu.basf.co.jp/shared/scripts/microConversion.js
+||minorasu.basf.co.jp/shared/scripts/questionnaire.js
 minorasu.basf.co.jp###questionnaire
 minorasu.basf.co.jp###questionnaire-overlay
 ymobile.jp##.lp-cta-wrapper
@@ -3710,7 +3717,7 @@ creciendo.com###wpn-popup-backdrop
 creciendo.com###wpn-banner
 legrandcontinent.eu##.disposableBanner
 adultdvdempire.com,adultempire.com##.sticky-tagline
-techcommunity.microsoft.com##.ui-widget-overlay
+vodafone.de,techcommunity.microsoft.com##.ui-widget-overlay
 ds-b.jp###pc-fixed-menu
 ufret.jp###notice
 any.run##.spring-sale-banner
@@ -8931,6 +8938,16 @@ ozgurkocaeli.com.tr,turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocael
 !
 ! SECTION: Subscriptions - Regular rules
 !
+developers.google.com##.devsite-user-callout-container
+anydesk.com##.newsletter-bg-img-png-hero-img
+cryptorussia.ru##.rating-side
+xiaomiupdate.com###elementor-popup-modal-5336
+dixinews.ru##.follow-us-dzen
+meteopool.org##.mainIndexSDA
+gemotest.ru##.js-subscribe-container
+msn.com##.newProviderBannerContainer
+msn.com##.consumption-page-gridarea_eocb_leadgen
+hanopatch4u.com##.et-popup-wrapper
 mel.fm##.b-pb-article__body a[href="https://t.me/gramota_mel"]
 plaisio.gr##article[data-test="NewsletterRegistration"]
 newsweek.com##section[class^="InlineNewsletterSignup_"]
@@ -11919,7 +11936,7 @@ total-croatia-news.com##.sign-newsletter
 blizko.by##cite
 aamuposti.fi##.diks-box--commercial
 bbbl.dev##.subscription-section
-bbbl.dev##.telegram-widget
+gemotest.ru,bbbl.dev##.telegram-widget
 npr.org##.callout--newsletter
 theprovince.com##.callout
 kralmuzik.com.tr,techbang.com##.google-news-wrapper

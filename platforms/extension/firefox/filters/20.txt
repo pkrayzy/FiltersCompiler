@@ -1,9 +1,9 @@
-! Checksum: JC7K2o5M5c8zNi5Cj9F74A
-! Diff-Path: ../patches/20/20-s-1763053952-3600.patch
+! Checksum: mBw+RKt3zTV11QxXQHIS3Q
+! Diff-Path: ../patches/20/20-s-1763489620-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.24.60
-! TimeUpdated: 2025-11-13T17:08:49+00:00
+! Version: 2.0.24.65
+! TimeUpdated: 2025-11-18T18:10:14+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -59,6 +59,8 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+nintendo.com##a[href*="/app/"]
+enuygun.com##div[data-testid^="mobile-app-banner"]
 nbg.gr##app-slider-fancy-tabs
 news18.com##.opnapp
 bushikaku.net#%#//scriptlet('set-cookie', 'hide_fixed_bottom_app_banner', 'true')
@@ -3810,6 +3812,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+familydollar.com#%#//scriptlet('set-local-storage-item', 'isDisplayDownloadAppSection', '0')
+perplexity.ai#%#//scriptlet('set-cookie', 'pplx.mweb-splash-page-dismissed', 'true')
 aviasales.ru#%#//scriptlet('set-cookie', 'mobile_app_redirect', '1')
 vevor.co.uk##.AppDrainage
 hh.ru##div[class^="magritte-card"]:has(a[href^="https://hhlink.onelink.me/"])
@@ -4045,6 +4049,9 @@ m.yelp.com#$#html { overflow: auto !important; position: unset !important; }
 m.yelp.com##div[class*="main-content__"] > div > ol > div:has(> div > a[aria-label="Download the Yelp app"])
 m.yelp.com###reviews > div[class^="trust-banner__"] + a + div > a[aria-label="Download the Yelp app"]:empty
 temu.com#%#//scriptlet('trusted-click-element', 'div[js-selector^="mobile-download-ui"] > div > div[aria-label="close"]', '', '1500')
+temu.com#%#//scriptlet('trusted-click-element', 'div[js-selector^="mobile-download-ui"] > div > button[aria-label^="close"]', '', '1500')
+temu.com###main > .loadable-container > div[role="main"] > div > div:not([class])> div[style^="height"]:empty + div[style^="position:"]:has(> div:not([class]) > div[style^="position:"] > div[style^="height"] > div[style^="height"] > div[js-selector="mobile-download-ui"])
+temu.com###main > .loadable-container > div[role="main"] > div > div:not([class])> div[style^="height"]:empty:has(+ div[style^="position:"] > div:not([class]) > div[style^="position:"] > div[style^="height"] > div[style^="height"] > div[js-selector="mobile-download-ui"])
 reclameaqui.com.br#$#div[data-testid="complete-header"] > div[data-testid="banner-container"] { display: none !important; }
 reclameaqui.com.br#$#div[data-testid="complete-header"] > div[data-testid="banner-container"] + header > div[style="top:90px"] { top: 0 !important; }
 my-best.com###__next > div.css-1pcjl0n > a[href="https://mybest.go.link/924F7"]
