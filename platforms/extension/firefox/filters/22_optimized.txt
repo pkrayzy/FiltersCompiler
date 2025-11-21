@@ -1,9 +1,9 @@
-! Checksum: BpX1r4PPu2CZEwHvXnsLHQ
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1763433656-3600.patch
+! Checksum: 3Tzq/uSh+Y1ffuDNA2xu7w
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1763692831-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.13.3
-! TimeUpdated: 2025-11-13T21:07:42+00:00
+! Version: 2.0.13.5
+! TimeUpdated: 2025-11-20T09:08:14+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### Block useless widgets #######################
@@ -74,13 +74,15 @@ tyoieronews.blog.jp##li2 + style + br + blockquote
 giants-news.com##.container_bottom_widget
 giants-news.com##.container_top_widget
 giants-news.com###block-18
+honwaka2ch.livedoor.biz##.column-inner-2 > div[style^="font-weight: bold;"][style$="background: rgb(173, 216, 230);"]
+honwaka2ch.livedoor.biz##.column-inner-2 > div[style^="width: 100%;"][style$="background: #fff;"]
+honwaka2ch.livedoor.biz###ld-services
 lovekoala.com##iframe[class^="rssheight"]
 lovekoala.com##.rsscolumn
 jumpsokuhou.com##.include1
 jumpsokuhou.com##.include2
 ||jumpsokuhou.com/include1.html
 ||jumpsokuhou.com/include2.html
-jumpmatome2ch.net###rss-post-bottom
 7-24blog.com##iframe[src="https://7-24blog.com/1.html"]
 7-24blog.com##.wjp
 jumpmatome2ch.biz###custom_html-6
@@ -232,7 +234,6 @@ minkch.com###execphp-5
 tousatusin.com##footer div[id^="text-"]:has(div.ninja-recommend-block)
 umaumanews.com###st_custom_html_widget-3
 umaumanews.com###text-20
-netouyonews.net##main > aside[id^="pc_text"]:has(script[src^="https://blogroll.livedoor.net/"])
 comic.nan-net.com##.rssreader
 ||karukantimes.com/rss*.html$subdocument
 ||blog.livedoor.jp/nanjstu/bt_rss3.htm
@@ -282,6 +283,7 @@ blog.tinect.jp##p + .g.g-46 > .g-single
 jiwasoku.com###pcpc-rss
 jiwasoku.com###test-blo
 mona-news.com##.article-body-inner > dd:has(a[href^="https://livedoor.blogimg.jp/mona_news/"]) ~ dd
+sindoi.com##div[class^="sougo-rss"]
 h-ken.net###footer-rssLinkListHtml
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"]
 kijomatomelog.com##span[style="font-weight: bold;"] ~ a[href^="http://matomeantena.com/feed/"] ~ a[href][target="_blank"]
@@ -309,7 +311,6 @@ crx7601.com#?#.article-body-inner .twitter-tweet ~ b:has(+ .ninja-recommend-bloc
 hmangamatome.net##.rssbox_midashi
 hmangamatome.net,sexytvcap.com,erodoujinjohoukan.com###toprss
 /wp-content/plugins/chaty/*$domain=krx18.com|canadaglobalinfo.com|mkvcinemas.kim
-netouyonews.net##.wp-rss-template-container
 sugi69693.xyz###sidebar
 flashff-blog.com##.rsswaku
 tousatu-club.com##.widget_custom_html
@@ -333,7 +334,6 @@ chomanga.org#?#.widget:has(div[class^="rss-box"])
 genshin-matomech.umadacchi.net###block-8
 geektushin.com##.widget-above-related-entries
 geektushin.com##.widget-below-related-entries
-geektushin.com,matomajor-games.com,nintendoevery.com##.widget_rss
 uma-log.net###custom_html-8
 negisoku.com##.t_a > span
 negisoku.com##.article-body-more > p[style="color:gray;text-align:right;"]
@@ -468,8 +468,6 @@ nekowan.com#?##more > span > strong:contains(オススメサイト新着記事)
 twibuz.com,nekowan.com##div[class^="blogroll-"]
 kazokuchannel.doorblog.jp##.left-column-inner > div.plugin-memo:first-child
 gundamlog.com#?#.plugin-memo > div.side > div > script[src$="/blogroll.js"]:upward(3)
-kijolifehack.com##.article-body-more > div.t_h:first-child
-kijolifehack.com##.article-body-more > span > span[style="font-weight: bold; font-size: 125%;"] + span[style="font-size: 125%;"]
 tozanchannel.blog.jp#?#.menuLineLightW-3:contains(人気記事)
 akb48matomemory.com##section[id^="PERMALINK_SYSTEM"]
 akb48matomemory.com#?#span[style="font-size: 125%;"]:has(> a[target="_blank"])
@@ -498,7 +496,6 @@ oryouri.2chblog.jp##.contents_rss_text
 ryusoku.com###recommend-bottom
 ryusoku.com###recommend-entry-iframe
 ryusoku.com##.widget-topic
-kijolifehack.com##.free_linkbox
 otoko-honne.com,kijolifehack.com##.osusume_box
 kijobibouroku.com,shuraba.net,uwasakijo.net,ikuji-news.com,kichimama.com,kijobibouroku.com,kimagure-kijyo.com##.ifram
 livejupiter2.blog.jp,jishin-yogen.com,shuraba.net,uwasakijo.net,ikuji-news.com,kichimama.com,kijobibouroku.com,kimagure-kijyo.com##.pickup
@@ -978,7 +975,6 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||avaamo.com^$third-party
 ||blinger.io^$third-party
 ||cdn.freshbots.ai^$third-party
-||cdn.krible.com^$third-party
 ||cdn.reamaze.com^$third-party
 ||chaser.ru^$third-party
 ||chat.autofaq.ai^$third-party
@@ -1180,6 +1176,7 @@ dime.jp##.sidebarRanking
 arukikata.co.jp##.popin
 iqossan.com###custom_html-44
 otonano-shumatsu.com##.popin-block
+tss-tv.co.jp##.hns_bottomadbox
 news.audee.jp###popinBox
 yamakei-online.com##.ad-pop-nw3-nw4
 ryukyushimpo.jp#?#article ~ .flex-col:has(.items-center > #_popIn_recommend)
@@ -1195,7 +1192,6 @@ mbs.jp##.common-wrap--ranking
 ||api.popin.cc^$third-party
 media.moneyforward.com##.mp-recommends
 media.moneyforward.com##.mp-popin-analytics
-media.moneyforward.com##.home-ranking
 otonanswer.jp##aside > div[style="min-height: 881px;"]
 bike-news.jp#$?#.swiper-slide[data-history^=photo_extra] { remove: true; }
 otonanswer.jp#$?#.swiper-slide[data-history^="photo_extra"] { remove: true; }
@@ -1268,6 +1264,7 @@ vuzopedia.ru##.fullChatBlock
 mastory.jp##.qualvaBtn
 aeza.net#?#header > div[class^="sc-"] > div[class^="sc-"] > div[class^="sc-"]:has(> div[class^="sc-"]:first-child:contains(/^Support$/))
 ||k-pilot.kariyer.net^
+||assistant.watson.appdomain.cloud^$domain=smartmetertexas.com
 ||chester-tax.com/wp-chester-tax/wp-content/plugins/chester-chatbot/
 ||chatdealer.jp^$domain=zeirisi.co.jp
 sofmap.com###voc_ec_button
@@ -1371,7 +1368,6 @@ t-online.de,welt.de##iframe[src^="https://widget.civey.com"]
 ||app.mycountrytalks.org^$third-party
 ||nofluffjobs.com^$third-party
 ||cp-jobmacha-servicemacha-widgets.*.aliyuncs.com/chinapress-jobads-prod.js
-||ziprecruiter.com/jobs-widget/$third-party
 ||js-seeker.newjobs.com^$domain=monster.com
 ||js.jebbit.com/companion/*/widget.js$third-party
 nextpit.de##.jobbioapp
@@ -1426,8 +1422,6 @@ boykot.co#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'lastClo
 holod.media##.a-donate
 istories.media##div[class^="DonationsModalTimer-"]
 ncronline.org##.region-main-top
-stlpr.org##.alleg-donate-embed
-perito.media##.footer__swiper-row > div.footer-swiper:has(> div.footer-swiper__container a[href="https://perito.media/posts/perito-zapuskaet-patreon-i-boosty"])
 hrw.org###graphene--modal
 smutba.se,sfmlab.com##div[style="min-height: 90px; justify-content: center;"]
 smutba.se,sfmlab.com##.patreon
@@ -1578,7 +1572,7 @@ worldhistory.org###top_message
 archive.org###donate_banner
 ||yoomoney.ru/quickpay/shop-widget$domain=ovgorskiy.ru|blog.themarfa.name
 ||funding.webmoney.ru/widgets/$domain=ovgorskiy.ru|demek.ru|скачатьофис.рф
-||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net|premierguitar.com|svetandroida.cz|12punto.com.tr|game-maps.com|tv5.com.tr
+||news.google.com/swg/js/v1/swg-basic.js$domain=wololo.net|premierguitar.com|svetandroida.cz|12punto.com.tr|game-maps.com|tv5.com.tr|ginjfo.com
 themoscowtimes.com##.preheader_advert
 themoscowtimes.com##.contribute-article
 themoscowtimes.com#$#body { overflow: auto !important; }
@@ -1597,7 +1591,7 @@ you1news.com###custom_html-10
 pokemon-matome.net##div[class^="rssinline"]
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_widgets
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_ext
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext

@@ -1,8 +1,8 @@
-! Checksum: AGNMBI8t2ireebV85GA1tA
+! Checksum: QDs9wi8UOtVbtklNVC7lnw
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.95.11
-! TimeUpdated: 2025-11-18T16:08:30+00:00
+! Version: 2.0.95.31
+! TimeUpdated: 2025-11-21T10:07:56+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -25,6 +25,7 @@
 ! AdRiver
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/218234
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217458
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216735
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214045
@@ -336,6 +337,12 @@
 !
 !
 !
+||t.hyros.com^
+||data.thoughtmetric.io^
+||assets.9gtb.com^
+||cdn.logbase.io^
+||lc.recopick.com^
+||cv.aedi.ai^
 ||toup.net^$third-party
 ||tags.tiqcdn.com^
 ||prebid.loopmertb.com^
@@ -50141,6 +50148,8 @@
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||conversionsapigateway.com^
+||ebm.lfmall.co.kr^
 ||analytics.adjust.io^
 ||jitsu.ixbt.site^
 ||sgtm.ixbt.site^
@@ -54113,12 +54122,26 @@ _tracking.php?b=
 !
 ! NOTE: Specific rules
 !
+||chickencoopcompany.com/api/collect
+||p.hentaiforce.net/api/event
+itmedia.co.jp###endlinkConnection
+||aosom.*/track/do
+||cdn.aosomcdn.com/upload/js/dataflux-rum.js
+||inven.co.kr/api/banner_tracking/banner_view.php
+||checkmal.com/_res/js/Beusable.js
+||checkmal.com/_res/js/Naver.PremiumLog.js
+||portalrwd.bm5.pl/Ajax/GetIloscWyswietlen.aspx
+||portalrwd.bm5.pl/Stat/statystyki.aspx
+||byn.kr/main/exec.php?*exec_file=
+||vox.com/SendEventData
+||vox.com/blaize/datalayer
 ||api.builtin.com/track/client-events
 ||p.kulp.in/api/event
 ||kyivstar.ua/api/public/prometheus/collect-cookies-popup-metric
 ||commerce.adobe.com/*/log|
 ||a.fsdn.com/con/js/sftheme/vendor/bizx-prebid.js
 ||autonotizen.de/user/*/js/galocal.js
+||ccc.eu/*/api/Events/Publish
 ||connectif.cloud/integration-type/
 ||img1.wsimg.com/traffic-assets/js/tccl.min.js
 ||neuron.cbssports.cloud/client.js?platform=tracking-manager
@@ -57582,7 +57605,6 @@ animespirit.*###CollapsiblePanel_Statistics
 setafi.com##.footer_bl-3
 ||gamejolt.com/tick/
 ||chaturbate.com/api/adblocker/
-||evgnet.com/beacon/
 ||51nongyao.net/js/analytics.js
 kanobu.ru##a[href^="https://www.liveinternet.ru/click"]
 ||a24.biz/pixel/
@@ -59645,10 +59667,10 @@ twitter.com%2Fscribe%2Fibis%3Ft%3D$image
 ! rules is to make test pages work so that users could verify that AdGuard
 ! is properly working.
 !
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_protection_ext
 ! Detect of using AdGuard products
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Detect HTTPS filtering
 ! Detect Advanced Protection of AdGuard for iOS
@@ -60130,6 +60152,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! emart.ssg.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217766
 ! thekrazycouponlady.com
 ! lovense.com
@@ -60555,6 +60578,14 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||datarangers-event.myrightone.com^
+||stats.*.ronghub.com^
+||stats.rong-edge.com^
+||config.toto.zipoapps.com^
+||tracking.ksztone.com^
+||log.stickflow.xyz^
+||stats.us-light-edge.com^
+||log2.ihubgo.info^
 ||logreport-global-dual.coolhcloud.com^
 ||detaillog-global-dual.coolhcloud.com^
 ||tencentcs.com/structuredlog?
@@ -61645,6 +61676,9 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/218234
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||tags.tiqcdn.com/utag/cbsi/webplex-intl/prod/utag.js$domain=southpark.de|southpark.lat|southparkstudios.com.br|southparkstudios.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216829
 @@||canadiantire.tt.omtrdc.net/rest/$domain=canadiantire.ca
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217897
@@ -65832,6 +65866,7 @@ jolie.de/sites/default/files/google_tag/google_tag_manager/google_tag.script.js
 ||4jnzhl0d0.com^
 ||82o9v830.com^
 ||abilityscale.com^
+||abilitytoucan.com^
 ||abjectattempt.com^
 ||aboardamusement.com^
 ||aboardlevel.com^
@@ -65974,6 +66009,7 @@ jolie.de/sites/default/files/google_tag/google_tag_manager/google_tag.script.js
 ||billowybelief.com^
 ||billtable.com^
 ||binarycrest.com^
+||binarykite.com^
 ||binspiredtees.com^
 ||birthdaybelief.com^
 ||blackbrake.com^
@@ -66181,6 +66217,7 @@ jolie.de/sites/default/files/google_tag/google_tag_manager/google_tag.script.js
 ||copyfranchise.com^
 ||copyrightaccesscontrols.com^
 ||copyvibes.com^
+||coralcranes.com^
 ||coralreverie.com^
 ||corgibeachday.com^
 ||cornershirts.com^
@@ -66330,6 +66367,7 @@ jolie.de/sites/default/files/google_tag/google_tag_manager/google_tag.script.js
 ||effervescentvista.com^
 ||effulgentnook.com^
 ||effulgenttempest.com^
+||eightgreens.com^
 ||elasticchange.com^
 ||elderlybean.com^
 ||elderlytown.com^
@@ -66445,6 +66483,7 @@ jolie.de/sites/default/files/google_tag/google_tag_manager/google_tag.script.js
 ||flimsycircle.com^
 ||flimsythought.com^
 ||flippedfunnel.com^
+||floodedpixel.com^
 ||floodprincipal.com^
 ||flourishingcollaboration.com^
 ||flourishingendeavor.com^
@@ -66934,6 +66973,7 @@ jolie.de/sites/default/files/google_tag/google_tag_manager/google_tag.script.js
 ||oafishobservation.com^
 ||objecthero.com^
 ||objectsnetwork.com^
+||oblivionfleet.com^
 ||obscenesidewalk.com^
 ||octaneblood.com^
 ||offerniche.com^

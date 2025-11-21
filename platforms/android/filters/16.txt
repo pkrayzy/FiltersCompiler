@@ -1,9 +1,9 @@
-! Checksum: K8lS4sy4IoNB5/YPdMduUw
-! Diff-Path: ../patches/16/16-s-1763370787-3600.patch
+! Checksum: GeWHcXiTsXp1qhaQ9YtF+w
+! Diff-Path: ../patches/16/16-s-1763719905-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.54.98
-! TimeUpdated: 2025-11-17T09:09:47+00:00
+! Version: 2.0.55.5
+! TimeUpdated: 2025-11-21T10:08:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -223,7 +223,7 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
-japscan.*#%#//scriptlet('prevent-addEventListener', 'load', '/(,|&&)\s*[A-Z_a-z]+\s*\(.*?\)/')
+japscan.*#%#//scriptlet('prevent-addEventListener', 'load', '/aclib/')
 japscan.*#%#//scriptlet('set-constant', 'aclib.runInPagePush', 'noopFunc')
 japscan.*#%#//scriptlet('trusted-set-constant', 'aclib', '{"isShowingPop":false}')
 japscan.*#%#//scriptlet('trusted-set-constant', 'pubadxtag', '{"divIds":[]}')
@@ -642,6 +642,13 @@ $script,redirect-rule=noopjs,domain=tf1info.fr
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/217971
+! Fixes video player - required when DNS filtering is used
+! TODO: use scriptlet when it's available - https://github.com/AdguardTeam/Scriptlets/issues/173
+! "adjust-setInterval" is required to fix delay in video playback start
+tf1info.fr#%#//scriptlet('adjust-setInterval', 'defaultConsentString', '*', '0.001')
+!+ NOT_PLATFORM(ext_ff)
+tf1info.fr#%#(()=>{const e=function(){};window.tC={privacy:{getOptinCategories:e,cookieData:[]},addConsentChangeListener:e,removeConsentChangeListener:e,container:{reload:e}},window.tc_events_global=e})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213146
 ! Fixes loading video player and delay in video playback start
 ! Apps cannot inject script into iframe with "about:blank" src, so a workaround is required
@@ -875,6 +882,7 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+lemoniteur.fr##.b-ad-banner__wrap
 meilleure-innovation.com##.a-wrap:not(:has(>*))
 meilleure-innovation.com##.a-wrap:has(> div[id])
 lessentiel.lu##div[data-ad-unit-id]
@@ -1624,10 +1632,10 @@ lesfrontaliers.lu##.ad-listing
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_french
 ! Detect of using AdGuard products
-!+ PLATFORM(windows, mac, android, ios) NOT_OPTIMIZED
+!+ PLATFORM(windows, mac, android, cli, ios) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 ! Detect HTTPS filtering
-!+ PLATFORM(windows, mac, android) NOT_OPTIMIZED
+!+ PLATFORM(windows, mac, android, cli) NOT_OPTIMIZED
 ||https-filtering-check.adtidy.org^
 ! Detect Advanced Protection of AdGuard for iOS
 !
@@ -2150,9 +2158,6 @@ maxisciences.com,gentside.*,ohmymag.*#@#[data-ads-core]
 @@||cmpv2.berliner-zeitung.de/mms/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118491
 fshd.link#@#div[data-ad]
-! yts.mx - fixing video player
-$script,third-party,domain=yts.mx,badfilter
-||yts.mx/*.gif$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117619
 mobimart.it#@##ad_global_below_navbar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116378

@@ -1,8 +1,8 @@
-! Checksum: zTH7wU/XmqLMdaSlB0H2BQ
+! Checksum: x2DcSt39JlPZDmCP2DFjDw
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.54.98
-! TimeUpdated: 2025-11-17T09:09:47+00:00
+! Version: 2.0.55.5
+! TimeUpdated: 2025-11-21T10:08:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -596,6 +596,10 @@ prod-player.tf1.fr,tf1.fr,tf1info.fr#@#.carbon-ads
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/217971
+! Fixes video player - required when DNS filtering is used
+! TODO: use scriptlet when it's available - https://github.com/AdguardTeam/Scriptlets/issues/173
+! "adjust-setInterval" is required to fix delay in video playback start
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213146
 ! Fixes loading video player and delay in video playback start
 ! Apps cannot inject script into iframe with "about:blank" src, so a workaround is required
@@ -728,6 +732,7 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+lemoniteur.fr##.b-ad-banner__wrap
 lessentiel.lu##div[data-ad-unit-id]
 lejournaldelamaison.fr##div[data-actirise-slot]
 lejournaldelamaison.fr##div[data-hbdbrk-parent]
@@ -1349,7 +1354,7 @@ lesfrontaliers.lu##.ad-listing
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_french
 ! Detect of using AdGuard products
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Detect HTTPS filtering
 ! Detect Advanced Protection of AdGuard for iOS
@@ -1878,9 +1883,6 @@ maxisciences.com,gentside.*,ohmymag.*#@#[data-ads-core]
 @@||cmpv2.berliner-zeitung.de/mms/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118491
 fshd.link#@#div[data-ad]
-! yts.mx - fixing video player
-$script,third-party,domain=yts.mx,badfilter
-||yts.mx/*.gif$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117619
 mobimart.it#@##ad_global_below_navbar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116378

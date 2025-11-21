@@ -1,9 +1,9 @@
-! Checksum: /QxW6Eftu+fP7iYKTjVECA
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1763440951-14400.patch
+! Checksum: Q/ZLiEY7fa1Ta4R/Iamy8w
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1763541860-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.23.41
-! TimeUpdated: 2025-11-18T04:38:37+00:00
+! Version: 2.0.23.43
+! TimeUpdated: 2025-11-19T08:40:24+00:00
 ! Expires: 10 days (update frequency)
 ||digitalcamp.co.kr^$third-party
 ||mman.kr^
@@ -3053,7 +3053,6 @@ tftps.gg#$##top-area > div[class*=" "] > div[class*=" "]:has( div:not([class]) ~
 fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) { width: 100% !important; }
 fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) .news_top { width: revert-layer !important; }
 fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) .news_box { width: revert-layer !important; }
-velog.io##div:has(> a > img[alt="post-custom-banner"])
 tvroom5.org##ul.menu:has(> li > a[class^="banner_"])
 bbs.ruliweb.com#$##board_top .best_list { width: 100% !important; }
 3277532532.reviewtoday.net#$#div[class^="Post_continue_coupang__"] { display: none !important; }
@@ -3601,6 +3600,7 @@ m.dcinside.com#%#//scriptlet('set-local-storage-item', '/adblock_detected/', '$r
 gall.dcinside.com#%#//scriptlet('set-constant', 'blockedState', '', '', '', 'true')
 gall.dcinside.com#%#//scriptlet('remove-node-text', 'script', '/background:[\s\S]+setTimeout\( *\( *\) *=> *[A-Za-z0-9]+\.remove\( *\)[\s\S]+Math\.random\( *\) *< *percent *\/ *100/')
 gall.dcinside.com#%#//scriptlet('remove-node-text', 'script', '/finally *{\n* *document.documentElement.removeChild\( *[A-Za-z0-9]+ *\) *;\n* *}([ \n]|.)+_ad"]\);/')
+chzzkban.xyz#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js method:HEAD', 'emptyStr')
 erdcloud.com#$?#.ads-block-warning-overlay { remove: true; }
 mylocation.co.kr#%#//scriptlet('prevent-setTimeout', 'adBlockedMessage')
 ||shana.pe.kr/shana_check/scp*.js$script
@@ -3703,5 +3703,4 @@ lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lo
 ||newspic.kr^$removeparam=cp
 tv.nate.com#%#//scriptlet('trusted-dispatch-event', 'adended', '.nate-player.ntv-ad-playing')
 2798731938.zigcou.com#%#//scriptlet('trusted-replace-node-text', 'script', '{"props":{"pageProps":{"initialState":{', '"isClicked":false', '"isClicked":true')
-chzzkban.xyz#%#//scriptlet('trusted-suppress-native-method', 'Object.values', '{"easyListBlocked":true}', 'abort')
-chzzkban.xyz#%#//scriptlet('trusted-suppress-native-method', 'Object.values', '{"setTimeoutBlocked":true}', 'abort')
+chzzkban.xyz#%#//scriptlet('trusted-suppress-native-method', 'Node.prototype.contains', '{"className":"adsbygoogle"}', 'abort')

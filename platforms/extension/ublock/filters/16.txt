@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: YFEsV6LoNj8F6Dag7fYD4Q
-! Diff-Path: ../patches/16/16-s-1763370813-3600.patch
+! Checksum: ifhP7a9yiRpl2RAouMJ2mg
+! Diff-Path: ../patches/16/16-s-1763719928-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.54.98
-! TimeUpdated: 2025-11-17T09:09:47+00:00
+! Version: 2.0.55.5
+! TimeUpdated: 2025-11-21T10:08:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -616,6 +616,12 @@ $script,redirect-rule=noop.js,domain=tf1info.fr
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/217971
+! Fixes video player - required when DNS filtering is used
+! TODO: use scriptlet when it's available - https://github.com/AdguardTeam/Scriptlets/issues/173
+! "adjust-setInterval" is required to fix delay in video playback start
+tf1info.fr##+js(nano-setInterval-booster, defaultConsentString, *, 0.001)
+!+ NOT_PLATFORM(ext_ff)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213146
 ! Fixes loading video player and delay in video playback start
 ! Apps cannot inject script into iframe with "about:blank" src, so a workaround is required
@@ -832,6 +838,7 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+lemoniteur.fr##.b-ad-banner__wrap
 meilleure-innovation.com##.a-wrap:not(:has(>*))
 meilleure-innovation.com##.a-wrap:has(> div[id])
 lessentiel.lu##div[data-ad-unit-id]
@@ -2105,9 +2112,6 @@ maxisciences.com,gentside.*,ohmymag.*#@#[data-ads-core]
 @@||cmpv2.berliner-zeitung.de/mms/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118491
 fshd.link#@#div[data-ad]
-! yts.mx - fixing video player
-$script,third-party,domain=yts.mx,badfilter
-||yts.mx/*.gif$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117619
 mobimart.it#@##ad_global_below_navbar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116378

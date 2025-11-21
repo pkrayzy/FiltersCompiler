@@ -1,9 +1,9 @@
-! Checksum: rWl7kiBLoeEJgeNPxGLSIg
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1763464252-3600.patch
+! Checksum: loHqodjOT5hddsyvBlev9w
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1763719910-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.70.8
-! TimeUpdated: 2025-11-18T11:07:09+00:00
+! Version: 2.0.70.15
+! TimeUpdated: 2025-11-21T10:08:06+00:00
 ! Expires: 12 hours (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp|~rakuten.ne.jp
 ||js.miyuki-web.net^
@@ -1390,9 +1390,9 @@ _co_jp.*.php$document,domain=cc|com
 /shopping/item/m*/?zenid=$document,domain=cfd|fun|shop|space|top|xyz
 /mall/*.html?zenid=$document,domain=cfd|fun|shop|space|top|xyz
 /mart/*.html?zenid=$document,domain=cfd|fun|shop|space|top|xyz
-/^https?:\/\/([-0-9a-z]{3,}\.)?[a-z]{5,}\.[a-z]{3,7}\/product\/\d{4,}(\.html)?$/$document,domain=baby|blog|bond|cam|casa|fun|homes|online|org|rest|sbs|shop|top|website|yoga
+/^https?:\/\/([-0-9a-z]{3,}\.)?[a-z]{5,}\.[a-z]{3,7}\/product\/\d{4,}(\.html)?$/$document,domain=baby|blog|bond|cam|casa|fun|homes|online|org|rest|sbs|shop|surf|top|website|yoga
 /^https:\/\/[a-z]{5,8}\.[a-z]{4,10}\.[a-z]{2,6}\/item\/m\d{10,11}$/$document,domain=shop
-/^https:\/\/(?!www)[a-z]{3,5}\.[a-z]{4,10}\.[a-z]{2,6}\/item-(?:[0-9a-z]{10}|\d{8})\.html$/$document,match-case,domain=art|autos|baby|best|biz|blog|boats|buzz|cards|cc|cfd|click|cloud|club|cyou|eu|fit|fun|guru|hair|homes|info|ink|lat|life|live|lol|me|mom|my|one|online|pics|quest|sale|sbs|shop|site|skin|space|store|today|top|wiki|work|world|xyz
+/^https:\/\/(?!www)[a-z]{3,5}\.[a-z]{4,10}\.[a-z]{2,6}\/item-(?:[0-9a-z]{10}|\d{8})\.html$/$document,match-case,domain=art|autos|baby|best|biz|blog|boats|buzz|cards|cc|cfd|click|cloud|club|cyou|eu|fit|fun|guru|hair|homes|info|ink|lat|life|live|lol|me|mom|my|one|online|pics|qpon|quest|sale|sbs|shop|site|skin|space|store|today|top|wiki|work|world|xyz
 /^https?:\/\/(?!www)[a-z]{3,5}\.[0-9a-z]{4,10}\.[a-z]{2,6}\/[a-z]{3,15}\/(?=[a-z]{0,9}[0-9A-Z])[0-9A-z]{10}\.html$/$document,match-case,domain=art|autos|baby|best|biz|blog|boats|buzz|cards|cc|cfd|click|cloud|club|cyou|eu|fit|fun|guru|hair|homes|info|ink|lat|life|live|lol|me|mom|my|one|online|pics|quest|sale|sbs|shop|site|skin|space|store|today|top|wiki|work|world|xyz|~livedoor.biz|~livedoor.blog
 /?AC=*&IC=$document,domain=com|fun|online|site
 .asp?AC=*&IC=$document,domain=com|fun|online|site
@@ -1428,6 +1428,8 @@ city.iwakura.aichi.jp,city.gose.nara.jp,city.inazawa.aichi.jp,city.kawasaki.jp,c
 city.shiroishi.miyagi.jp,city.motomiya.lg.jp,city.sanyo-onoda.lg.jp,pref.hiroshima.lg.jp,city.fukuyama.hiroshima.jp,city.niiza.lg.jp,city.kure.lg.jp,city.hatsukaichi.hiroshima.jp,city.ebetsu.hokkaido.jp,city.shunan.lg.jp,city.tondabayashi.lg.jp,city.miki.lg.jp,city.ozu.ehime.jp,city.toda.saitama.jp,city.ageo.lg.jp,pref.fukushima.lg.jp,pref.okayama.jp,city.oyama.tochigi.jp,city.kimitsu.lg.jp,city.ishikari.hokkaido.jp,city.minamiawaji.hyogo.jp,city.yamaguchi.lg.jp###banner_footer1
 okashimart.com###js-advertisingHeader
 gundamlog.com###more > iframe[src^="https://richlink.blogsys.jp"]
+hotokami.jp##div[id^="gam-anchor"]
+hotokami.jp##.article-sns-box__wrapper + div.mt-1.mb-4.py-1.rounded
 anime-rating.com##.pochipp-box + p:has(> span.marker-under-red)
 vault76.info##.adbox3
 neo-blood.co.jp##.wp-block-st-blocks-my-box:has(> div.st-in-mybox > a[href^="//af.moshimo.com"])
@@ -2856,7 +2858,9 @@ itmedia.co.jp###RcolFeatures
 itmedia.co.jp###SideLinkLP
 itmedia.co.jp###LcolText
 itmedia.co.jp###AmazonRankingParts
-itmedia.co.jp#?##cmsBody > div.inner > h2.format--crosshead:contains(/売れ筋ランキング|聴き放題！|楽天ポイント/)
+itmedia.co.jp#?##cmsBody > div.inner > h2.format--crosshead:contains(/売れ筋ランキング|聴き放題！|楽天ポイント|」最新ランキングも/)
+itmedia.co.jp#?##cmsBody > div.inner > h2.format--crosshead:contains(/売れ筋ランキング|聴き放題！|楽天ポイント|」最新ランキングも/) + div.cmsButtonLink
+itmedia.co.jp#?##cmsBody > div.inner > h2.format--crosshead:contains(/売れ筋ランキング|聴き放題！|楽天ポイント|」最新ランキングも/) + div.cmsButtonLink + div.cmsButtonLink
 itmedia.co.jp###cmsBody > div.inner > h2.format--crosshead ~ div.cmsBodyBox:has(> div > center > strong > span > a[target="_blank"][rel="noopener"])
 adacomi.com##div[style="border-top:1px solid #555;padding:20px 10px;"]
 nlab.itmedia.co.jp##.main-pr-single-top
@@ -4799,7 +4803,7 @@ ddd-smart.net##iframe[src*="/www/delivery/"]
 ddd-smart.net##img[src*="//cdn.ddd-smart.net/ad/"][src*="336-280"]
 ddd-smart.net##.video-list
 ddd-smart.net##.bookview-wrap a[class*="id"][target="_blank"]
-ddd-smart.net##.bookview-wrap div.video-scroll
+ddd-smart.net##.video-scroll
 idokaba.net##.blog_text a[target="_blank"][rel="noopener"]
 idokaba.net##.blog_text a[target="_blank"][rel="noopener"] + br
 idokaba.net##script + p + hr[size="1"]
@@ -11244,8 +11248,10 @@ service.webgoto.net##a[href^="https://www.amazon.co.jp"][target="_blank"]
 ||yimg.jp/bdv/
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_japanese
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
-adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
+!+ PLATFORM(windows, mac, android, cli, ios) NOT_OPTIMIZED
+adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
+!+ PLATFORM(windows, mac, android, cli) NOT_OPTIMIZED
+||https-filtering-check.adtidy.org^
 okazurand.net,nihon-bijo-zukan.com#%#//scriptlet('href-sanitizer', 'a[href^="https://al.fanza.co.jp/?lurl="]', '?lurl')
 drill-planet.kobun.co.jp#@#body[onbeforeunload="return myFunction()"]
 ||nexon.com/ngm/?gm=$removeparam=gm
