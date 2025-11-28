@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ifhP7a9yiRpl2RAouMJ2mg
-! Diff-Path: ../patches/16/16-s-1763719928-3600.patch
+! Checksum: 2z8tlTqmlo1XOHh/i1uuWQ
+! Diff-Path: ../patches/16/16-s-1764220321-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.55.5
-! TimeUpdated: 2025-11-21T10:08:24+00:00
+! Version: 2.0.55.11
+! TimeUpdated: 2025-11-27T05:08:11+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -55,6 +55,9 @@
 ! Good: @@/adblocker/detect.js$domain=example.org
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/218498
+planhub.ca###popupAdBlockerDetected
+planhub.ca##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201585
 @@||fiches-auto.fr/popup2.js$~third-party
 !+ NOT_OPTIMIZED
@@ -838,6 +841,7 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+planhub.ca##.h-banner
 lemoniteur.fr##.b-ad-banner__wrap
 meilleure-innovation.com##.a-wrap:not(:has(>*))
 meilleure-innovation.com##.a-wrap:has(> div[id])
@@ -1627,6 +1631,8 @@ app.molotov.tv##+js(no-xhr-if, /ping?token=)
 @@||oasis-player*/web/monetization/*/monetization.js$domain=puls24.at|kabeleins.de|wetter.com|prosiebenmaxx.de|sixx.de|sat1.de|puls4.com|prosieben.de|kabeleinsdoku.de|kabeleinsdoku.at|zappn.tv|sat1.at
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/218667
+$popup,domain=strmup.to,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216878
 @@||xzeepb2clookuppsta001.blob.core.windows.net/bge/src/js/google-analytics.js$domain=euazurebge.b2clogin.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217251
