@@ -1,15 +1,18 @@
 ![Adblock Plus 2.0]
-! Checksum: kAwJ+itMBXyyvgLIntGGcA
-! Diff-Path: ../patches/17_optimized/17_optimized-s-1764328242-3600.patch
+! Checksum: tpFjAUqHx6i0dOMqtcMqNQ
+! Diff-Path: ../patches/17_optimized/17_optimized-s-1764587429-3600.patch
 ! Title: AdGuard URL Tracking filter (Optimized)
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.12.43
-! TimeUpdated: 2025-11-28T11:07:06+00:00
+! Version: 2.0.12.49
+! TimeUpdated: 2025-12-01T11:07:53+00:00
 ! Expires: 5 days (update frequency)
 $removeparam=vs_campaign_id
 $removeparam=adsterra_clid
 $removeparam=adsterra_placement_id
 $removeparam=loclid
+$removeparam=_ly_c
+$removeparam=_ly_r
+$removeparam=yj_r
 $removeparam=line_uid
 $removeparam=mt_click_id
 $removeparam=mt_network
@@ -294,10 +297,13 @@ $removeparam=fb_action_types
 $removeparam=fb_comment_id
 $removeparam=fb_ref
 $removeparam=fb_source
-||careerindex.jp^$removeparam=_ly_c
-||careerindex.jp^$removeparam=_ly_r
+||aozorabank.co.jp^$removeparam=lid
+||teinei.co.jp^$removeparam=ref
+||teinei.co.jp^$removeparam=camp_no
+||teinei.co.jp^$removeparam=rmai
+||frontier-direct.jp^$removeparam=argument
+||frontier-direct.jp^$removeparam=dmai
 ||careerindex.jp^$removeparam=pathway
-||careerindex.jp^$removeparam=yj_r
 ||sell.amazon.de^$removeparam=refTag
 ||sell.amazon.de^$removeparam=ld
 ||qoo10.jp^$removeparam=__da_seqno
@@ -317,10 +323,6 @@ $removeparam=fb_source
 ||chickencoopcompany.com/services/$removeparam=analytics_context
 ||chickencoopcompany.com/services/$removeparam=analytics_trace_id
 ||shop.app/accounts/$removeparam=analytics_trace_id
-*$removeparam=_ly_c,domain=smbc.co.jp|app.hireroo.io|metlife.co.jp|store.mens-null.net|zurichlife.co.jp|hisamitsu.co.jp|sbisec.co.jp|sompo-direct.co.jp|tghd.co.jp|and-pro.jp|nitori-net.jp|cmoa.jp|sonybank.jp|research-panel.jp
-*$removeparam=_ly_r,domain=smbc.co.jp|app.hireroo.io|metlife.co.jp|store.mens-null.net|zurichlife.co.jp|hisamitsu.co.jp|sbisec.co.jp|sompo-direct.co.jp|tghd.co.jp|and-pro.jp|nitori-net.jp|cmoa.jp|sonybank.jp|research-panel.jp
-*$removeparam=yj_r,domain=metlife.co.jp|app.hireroo.io|smbc.co.jp|store.mens-null.net|zurichlife.co.jp|hisamitsu.co.jp|sbisec.co.jp|sompo-direct.co.jp|tghd.co.jp|and-pro.jp|nitori-net.jp|cmoa.jp|sonybank.jp|research-panel.jp
-*$removeparam=yclid,domain=smbc.co.jp
 ||byn.kr^$removeparam=rURL
 ||smbc.co.jp^$removeparam=aff
 ||smbc.co.jp^$removeparam=um
@@ -328,8 +330,8 @@ $removeparam=fb_source
 ||metlife.co.jp^$removeparam=BannerCode
 ||metlife.co.jp^$removeparam=Page
 ||gu-global.com^$removeparam=path
-*$removeparam=ldtag_cl,domain=jpcast.japanpost.jp|fsa.go.jp|gu-global.com|fukushima-hook.jp|chiba-helmet.jp|k-ty.com|mochida.co.jp
-*$removeparam=lt_r,domain=fukushima-hook.jp|chiba-helmet.jp|k-ty.com|mochida.co.jp|japanpost.jp
+*$removeparam=ldtag_cl,domain=jpcast.japanpost.jp|fsa.go.jp|gu-global.com|fukushima-hook.jp|chiba-helmet.jp|k-ty.com|mochida.co.jp|shingaku.mynavi.jp
+*$removeparam=lt_r,domain=fukushima-hook.jp|chiba-helmet.jp|k-ty.com|mochida.co.jp|japanpost.jp|shingaku.mynavi.jp
 ||mel.fm^$removeparam=infNews
 ||cmoa.jp^$removeparam=cmoa
 ||cmoa.jp^$removeparam=cmoa_pg
@@ -431,12 +433,12 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ||midasbuy.com^$removeparam=from
 ||idnes.cz^$removeparam=zdroj
 ||coloso.co.kr^$removeparam=fb_asc
-||alia-cloudflare.com/launcher/$removeparam=url,xmlhttprequest
-||alia-cloudflare.com/launcher/$removeparam=is_mobile,xmlhttprequest
-||alia-cloudflare.com/launcher/$removeparam=timezone,xmlhttprequest
-||alia-cloudflare.com/launcher/$removeparam=ip_address,xmlhttprequest
-||alia-cloudflare.com/launcher/$removeparam=user_agent,xmlhttprequest
-||alia-cloudflare.com/launcher/$removeparam=new_session,xmlhttprequest
+||alia-cloudflare.com/launcher/$removeparam=url,xhr
+||alia-cloudflare.com/launcher/$removeparam=is_mobile,xhr
+||alia-cloudflare.com/launcher/$removeparam=timezone,xhr
+||alia-cloudflare.com/launcher/$removeparam=ip_address,xhr
+||alia-cloudflare.com/launcher/$removeparam=user_agent,xhr
+||alia-cloudflare.com/launcher/$removeparam=new_session,xhr
 ||operanewsapp.com^$removeparam=from
 ||operanewsapp.com^$removeparam=request_id
 ||operanewsapp.com^$removeparam=share_from
@@ -721,9 +723,9 @@ $removeparam=phfp,domain=protonvpn.com|proton.me
 ||moebel.de^$removeparam=visitor_id
 ||moebel.de^$removeparam=visitor_status
 $removeparam=cid,domain=nhk.jp|nhk.or.jp
-||edge.curalate.com/v1/media/$xmlhttprequest,removeparam=appId
-||edge.curalate.com/v1/media/$xmlhttprequest,removeparam=fpcuid
-||edge.curalate.com/v1/media/$xmlhttprequest,removeparam=rid
+||edge.curalate.com/v1/media/$xhr,removeparam=appId
+||edge.curalate.com/v1/media/$xhr,removeparam=fpcuid
+||edge.curalate.com/v1/media/$xhr,removeparam=rid
 ||edge.curalate.com/v1/img/$image,removeparam=spatialTags
 ||action.metaffiliation.com$removeparam=argsite
 ||rentio.jp^$removeparam=click_from
@@ -1263,7 +1265,7 @@ mailchimp.com$removeparam=amp%3Bafl
 ||fon.bet^$removeparam=sub_1
 ||you.163.com^$removeparam=from
 ||jetbrains.com^$removeparam=from
-||middleware.p7s1.io/galileo/v1/tracking?device=*&country=*&path=$removeparam=/^(device|country|path)=/,xmlhttprequest
+||middleware.p7s1.io/galileo/v1/tracking?device=*&country=*&path=$removeparam=/^(device|country|path)=/,xhr
 ||theathletic.com^$removeparam=login_source
 ||theathletic.com^$removeparam=ref_page
 ||productcatalog.channeladvisor.com^$document,removeparam=InteractionSessionId
@@ -1372,7 +1374,7 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ||bloomberg.com^$removeparam=sref
 ||bloomberg.com^$removeparam=srnd
 ||marketwatch.com^$removeparam=mod
-||podbean.com/player/$xmlhttprequest,removeparam=referrer
+||podbean.com/player/$xhr,removeparam=referrer
 ||podbean.com/pb/$media,removeparam=pbss
 ||d.odsyms15.com/click$removeparam=article_id
 ||d.odsyms15.com/click$removeparam=ext.referrer
@@ -1433,7 +1435,7 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ||ads.tiktok.com/*/signup$removeparam=cacheSDK
 ||ads.tiktok.com/*/signup$removeparam=region
 ||voicy.jp^$removeparam=share.ref
-||chaturbate.com^$removeparam=/tour|campaign/,~third-party
+||chaturbate.com^$removeparam=/tour|campaign/,~3p
 ||awaliwa.com^$removeparam=lg
 ||awaliwa.com^$removeparam=s
 ||awaliwa.com^$removeparam=c
@@ -1518,11 +1520,11 @@ $removeparam=stm_medium,domain=shopee.ph|shopee.co.th|shopee.co.id
 $removeparam=stm_source,domain=shopee.ph|shopee.co.th|shopee.co.id
 ||adguard.$removeparam=clid
 $removeparam=clid,domain=adguard-vpn.*|adguardvpn-help.*
-||campaigns-serving.cognativex.com^$xmlhttprequest,removeparam=history_postids
-||campaigns-serving.cognativex.com^$xmlhttprequest,removeparam=device_code
-||campaigns-serving.cognativex.com^$xmlhttprequest,removeparam=exc_ads
-||campaigns-serving.cognativex.com^$xmlhttprequest,removeparam=history_adids
-||dzen.ru/api/*/launcher/stats/$image,xmlhttprequest,removeparam
+||campaigns-serving.cognativex.com^$xhr,removeparam=history_postids
+||campaigns-serving.cognativex.com^$xhr,removeparam=device_code
+||campaigns-serving.cognativex.com^$xhr,removeparam=exc_ads
+||campaigns-serving.cognativex.com^$xhr,removeparam=history_adids
+||dzen.ru/api/*/launcher/stats/$image,xhr,removeparam
 ||dzen.ru^$removeparam=from
 ||dzen.ru^$removeparam=cl4url
 ||dzen.ru^$removeparam=tst
@@ -1683,7 +1685,7 @@ $removeparam=ref,domain=jin115.com|bipblog.com|animember.net|sbbit.jp|blog.lived
 ||humblebundle.com^$removeparam=linkID
 ||netkeiba.com^$removeparam=rf
 ||services.addons.mozilla.org^$removeparam=telemetry-client-id
-||versioncheck.addons.mozilla.org^$xmlhttprequest,removeparam=appID
+||versioncheck.addons.mozilla.org^$xhr,removeparam=appID
 ||download.mozilla.org^$removeparam=attribution_sig
 ||download.mozilla.org^$removeparam=attribution_code
 ||nextgov.com^$removeparam=oref
@@ -1799,7 +1801,7 @@ $removeparam=scid,domain=rakuten.co.jp|rakuten-wallet.co.jp
 ||adj.st^$removeparam=adj_deeplink
 ||adj.st^$removeparam=adj_install_callback
 ||adj.st^$removeparam=adj_event_callback_dn2j7g_5mdnim
-||data.alexa.com/data/$xmlhttprequest,removeparam=/cdt|ref/
+||data.alexa.com/data/$xhr,removeparam=/cdt|ref/
 ||comodo.com^$removeparam=key5sk1
 ||comodo.com^$removeparam=track
 ||comodo.com^$removeparam=af
@@ -2127,12 +2129,12 @@ $removeparam=asc_source,domain=aboutamazon.com|amazon.*|amzn.to
 ||mp.weixin.qq.com^$removeparam=launchid
 ||mp.weixin.qq.com^$removeparam=from
 ||mp.weixin.qq.com^$removeparam=aid
-||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=slot
-||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=sessionId
-||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=anId
-||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=wr
-||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=sr
-||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=url
+||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=slot
+||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=sessionId
+||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=anId
+||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=wr
+||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=sr
+||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=url
 ||cam4.com^$removeparam=act
 ||cam4.com^$removeparam=suid
 ||cam4.com^$removeparam=showSignupPopup
@@ -2282,12 +2284,12 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 @@||em.dynamicyield.com^$removeparam=cuid
 @@||a8cv.amiami.jp/click/$removeparam=a8
 !+ PLATFORM(ext_ublock)
-@@||rpc.meituan.com/api/foodorder$removeparam,xmlhttprequest,domain=awp.meituan.com
-@@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
-@@||portal-portm.meituan.com/horn$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
+@@||rpc.meituan.com/api/foodorder$removeparam,xhr,domain=awp.meituan.com
+@@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xhr,domain=meishi.meituan.com
+@@||portal-portm.meituan.com/horn$removeparam=utm_medium,xhr,domain=meishi.meituan.com
 @@||tix.axs.com^$removeparam=irclickid
 !+ PLATFORM(ext_ublock)
-@@||m.maoyan.com/api/mtrade/mmcs/cinema/v2/select/movie/cinemas.json$removeparam,xmlhttprequest
+@@||m.maoyan.com/api/mtrade/mmcs/cinema/v2/select/movie/cinemas.json$removeparam,xhr
 @@||rd.bizrate.com^$removeparam=utm_campaign
 @@||rd.bizrate.com^$removeparam=utm_medium
 @@||reddit.app.link^$removeparam=utm_content,domain=reddit.app.link
@@ -2306,8 +2308,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 @@||lifehacker.ru^$removeparam=erid
 @@||transfernow.net/*/*?utm_source=$removeparam=utm_source
 @@||cleviationly.com/adServe/aff?cmpid=*mydealz*&dlink=$removeparam=cmpid
-@@||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=slot,domain=reuters.com
-@@||pixel.adsafeprotected.com/services/pub?$xmlhttprequest,removeparam=anId,domain=reuters.com
+@@||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=slot,domain=reuters.com
+@@||pixel.adsafeprotected.com/services/pub?$xhr,removeparam=anId,domain=reuters.com
 @@||mootoon.co.kr^$removeparam=cuid
 @@||forbes.ru^$removeparam=erid
 @@||greenbuildingadvisor.com^$removeparam=oly_enc_id
@@ -2349,7 +2351,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 @@||app.plex.tv/auth-form/$removeparam=utm_content,domain=app.plex.tv
 @@||app.plex.tv/auth-form/$removeparam=utm_medium,domain=app.plex.tv
 @@||plex.tv/api/v*/users/*?utm_source=$removeparam=utm_source,domain=watch.plex.tv
-@@/embed/comments^$removeparam,~third-party,domain=clickhole.com|lifehacker.com|splinternews.com|avclub.com|deadspin.com|gizmodo.com|jalopnik.com|jezebel.com|kotaku.com|qz.com|theinventory.com|theonion.com|theroot.com|thetakeout.com
+@@/embed/comments^$removeparam,~3p,domain=clickhole.com|lifehacker.com|splinternews.com|avclub.com|deadspin.com|gizmodo.com|jalopnik.com|jezebel.com|kotaku.com|qz.com|theinventory.com|theonion.com|theroot.com|thetakeout.com
 @@||urldefense.com^$removeparam
 @@||cdn.privatehost.com/videos*/$removeparam
 @@||rightnowtech.com/engagement/api/consumer/nvidia/*/requestEngagement?pool=$removeparam

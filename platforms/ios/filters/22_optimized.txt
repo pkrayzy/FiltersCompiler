@@ -1,5 +1,5 @@
-! Checksum: QBq5MLHduC3sNe3Xzm0ZYg
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1764297699-3600.patch
+! Checksum: H2oSTqWU/FU8shY78bC38Q
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1764557732-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.13.11
@@ -63,7 +63,6 @@ nizimoenews.livedoor.blog,butumori.com,netizen-voice.blog.jp,ityouchannel.livedo
 hosyusokuhou.jp###contents > h3:has(+ #bottom_rss)
 hosyusokuhou.jp###footerrss
 hosyusokuhou.jp##.entrybody > div.t_b:last-of-type ~ a[rel="noopener noreferrer"]
-dorosoku.com###header_rss
 youskbe.com###pkup
 bakufu.jp##.entry-content > table[width="100%"]
 tyoieronews.blog.jp##table[summary^="記事紹介"]
@@ -79,6 +78,7 @@ jumpsokuhou.com##.include1
 jumpsokuhou.com##.include2
 ||jumpsokuhou.com/include1.html
 ||jumpsokuhou.com/include2.html
+jumpmatome2ch.net###rss-post-bottom
 7-24blog.com##iframe[src="https://7-24blog.com/1.html"]
 7-24blog.com##.wjp
 jumpmatome2ch.biz###custom_html-6
@@ -153,7 +153,6 @@ kandatasokuho.com##.main-body > div#inner-contents ~ a[href="https://open2ch.net
 kandatasokuho.com#%#//scriptlet('remove-node-text', '#text', '引用元：')
 mona-news.com##.article-body-outer dd:has(> span[style^="color: "] > a[href^="https://2ch-c.net/"][target="_blank"])
 repsoku.net##.headline-group:has(> .headline:only-child > script[src*="livedoor.net"])
-norisoku.com##iframe[src^="https://norisoku.com/rss-"]
 incident-wo.com##.blogroll-wrapper0
 crx7601.com##div[class^="article-body"] > blockquote > .t_b ~ b
 crx7601.com##div[class^="article-body"] > blockquote > .t_b ~ span[style^="font-"]
@@ -667,7 +666,6 @@ gsch.tfmwish.com##.rssti
 mashlife.doorblog.jp,gsch.tfmwish.com##div[class^="blogroll-wrapper"]
 gundamlog.com###urss
 gundamlog.com###top_rss
-||norisoku.com/rss-
 mona-news.com##div[id^="rss_"]
 gamestlike.com,vtubersokuhou.com##.maintop-widget
 revuestarlightre.com,scienceplus2ch.com###rss-roll-01
@@ -948,7 +946,6 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||digital-interview.com^$third-party
 ||dtbot.directtalk.com.br^$third-party
 ||easyliao.com^$third-party
-||edialog24.com^$third-party
 ||embed.doorbell.io^$third-party
 ||api.autopilothq.com^$third-party
 ||api.cloudleadia.com^$third-party
@@ -1024,7 +1021,6 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||partner-widget.vse-sdal.com^
 ||gubagootracking.com^$third-party
 ||cdn.gubagoo.io^$third-party
-||assets.bouyguestelecom.fr/Palpatine_Omnikit/omnikit@1/widget.init.js
 toroslaredas.com.tr,baskentedas.com.tr,ayedas.com.tr###anketButonId
 zakzak.co.jp###main-column > .lazyload-wrapper:has(> header + .story-card-feed > span > a[data-gtm-category="contents"][data-gtm-action])
 asus.com#%#//scriptlet('hide-in-shadow-dom', '#brandAssistant-root')
@@ -1293,6 +1289,7 @@ moluch.ru##.ask_out
 @@||config.gorgias.chat^$domain=uperfect.com
 @@||client.crisp.chat^$domain=journey.cloud|aa.net.uk|pebblehost.com
 @@||service.force.com/embeddedservice/*/esw.min.js$domain=microchip.com|visible.com|playstation.com|cyberpowersystems.com|lego.com|support.sonos.com
+@@||client.crisp.chat^$domain=support.aftership.com
 namu.wiki#?#div[class*=" "] > div[class*=" "]:has(> a[target="_blank"][rel="noopener"]):contains(더 보기)
 asianpinay.com#?#.row > div[class^="order-"]:has(> .video-block-happy)
 zerohedge.com###polymarket-market-embed
@@ -1333,7 +1330,6 @@ apollo.pl##.thulium-chat-wrapper
 ||youtube.com/embed/?enablejsapi=1&origin=*3dnews.ru&widgetid=1
 ign.com##div[data-cy="tierlist-view-trigger"]
 vg247.com##.poll_wrapper
-aerzteblatt.de##iframe#civey
 t-online.de#?#div[data-testid="StageLayout.StreamItem"]:has(> figure:only-child > iframe[src*="civey"])
 tagesspiegel.de###story-elements > div[class]:has(> div#opinary-automation-placeholder)
 freiepresse.de##.opinary-widget-embed
@@ -1402,7 +1398,6 @@ pbs.org#$#div[data-popup-type="large_funding"] { display: none !important; }
 pbs.org#$#body[style^="overflow:"] { overflow: auto !important; }
 novastream.top###donationBanner
 documentaryarea.com###watermark
-||documentaryarea.com/Favicons/Contribution.png
 waterfordwhispersnews.com##.wwn-announcment-box
 echofm.online##div[class^="sc-"]:has(> a[href="/donation"])
 huffpost.com##.big-banner-container:has(.big-banner__support-button)
@@ -1493,8 +1488,6 @@ suntimes.com##.piano_group_banner
 suntimes.com##.piano-after-body
 suntimes.com##.piano_article_sidebar
 nycpokemap.com,londonpogomap.com,vanpokemap.com,sgpokemap.com,sydneypogomap.com###overlay
-5pillarsuk.com##.ulp-bounceIn
-5pillarsuk.com##.ulp-overlay
 groza.media,netprizyvu.ru,efsyn.gr##.donation
 hrw.org##.donation-block__content
 hrw.org###block-donationfooterblock
