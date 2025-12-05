@@ -1,9 +1,9 @@
-! Checksum: jk/JaZIkuOIdIto5PggLGw
-! Diff-Path: ../patches/20/20-s-1764576867-3600.patch
+! Checksum: MxXQEoWaXcynYzwF43t+Dg
+! Diff-Path: ../patches/20/20-s-1764911469-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.25.5
-! TimeUpdated: 2025-12-01T08:11:16+00:00
+! Version: 2.0.25.22
+! TimeUpdated: 2025-12-05T05:08:28+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -22,6 +22,7 @@
 /js/jquery.smartbanner.js
 ||br.app.link^$third-party
 !
+##.duyuru_kutusu
 ##.ldapp-article
 ###xm_app_stickyHeader
 ##.app-ad-container-desktop
@@ -59,6 +60,20 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+producthunt.com##.theme-mirror:has(> .fixed > .flex > a[href^="https://producthunt.app.link"])
+crimeradar.us##a[href^="https://app.adjust.com/1q711p7o"]
+offerup.com##button[aria-label="Get the app"]
+offerup.com##.MuiGrid-direction-xs-column > div.MuiGrid-item:has(img[alt="Offerup application QR code"])
+burgerking.co.jp#%#//scriptlet('trusted-set-local-storage-item', 'is_mainpopup_opened', 'none_expired')
+burgerking.co.jp###ionApp > .modalWrap:has(> .appuse_pop)
+kolesa.kz##.kolesa-app-promo
+lastminute.com.au##.CustomerNotificationsWrapper
+lastminute.com.au##.customer-notification-container
+travelist.jp##.sp-header-applink-banner
+skyticket.jp###__next > div[class^="Header__StHeaderArea"]:has(skyticket-header[show-app-promotion="true"])
+airtrip.jp###app_banner_top
+m.olx.ua##div[class^="css-"]:has(> button[data-testid="app-install-banner-open"])
+chirashiplus.jp##.contents > a[href="https://app.chirashiplus.jp/"]
 adidas.ua##.header__static-container ~ .sap
 poshmark.com##.btn--open-in-app
 hotokami.jp##a[onclick*="app"]
@@ -212,7 +227,7 @@ shtrafy-gibdd.ru##div[data-sidebar-app-links]
 tutu.ru##div[data-ti="offersList"] a[href^="https://tutu.onelink.me/"]
 operanewsapp.com#%#//scriptlet('trusted-click-element', '.guide-modal a.continue-btn', '', '500')
 zenhotels.com##.homepage-mobile-wrapper
-tatilsepeti.com##.app-banner-wrapper
+auto.ria.com,tatilsepeti.com##.app-banner-wrapper
 faceit.com##div[class^="style__AdPlacementWrapper-sc-"]
 gazetki.pl###mobile-app-popup
 m.daum.net#%#//scriptlet('set-cookie', 'daumappbannerV2', '1')
@@ -239,7 +254,6 @@ makemytrip.com###appDownloadWrapper
 gdh.digital##img[alt="Download GDH App"]
 gdh.digital##.border[class^="max-w-"]:has(> .items-center > .flex-row > a[href^="https://play.google.com/"])
 masrawy.com##.masrawyApp
-filmizle.*,hdfilmsitesi.me##.duyuru_kutusu
 wg-gesucht.de###homepage_center > div.wgg_panel:has(> div.row a[href^="https://play.google.com/store/"])
 3wwd.com##.aznav
 asiaflix.*##app-mobile-banner
@@ -1798,7 +1812,7 @@ tapple.me#?#.t-flex > div[class]:has(> div.relative > div.absolute > div[data-ga
 kekememes.de#$#.aq4y { display: none!important; }
 kekememes.de#$#body { overflow: visible!important; }
 media.framu.world##a[href^="https://seeek.world/redirect_app_stores"]
-typhoon.yahoo.co.jp,livefans.jp##.appBnr
+sakuratravel.jp,typhoon.yahoo.co.jp,livefans.jp##.appBnr
 tabelog.com##.app-ranking-bnr
 wear.jp#?#.bg-gray-200:has(> div.bg-white a[href^="https://itunes.apple.com/jp/app/"])
 alphaindustries.eu##.ato-main-cont
@@ -2032,7 +2046,7 @@ mbok.jp##.GotoApp
 brandeli.com###appbuner
 store.wacoal.jp##.spm-toast[style="display: block; animation-duration: 1000ms; animation-timing-function: ease-in; left: 0px; right: 0px; margin-left: auto; margin-right: auto;"]
 auto.ria.com##.entry-promo-app
-auto.ria.com##.mopile-app-banner
+ria.com##.mopile-app-banner
 flightradar24.com##.applink-container
 sankakucomplex.com###news-ticker
 etsy.com###web2app-shophome
@@ -2284,13 +2298,13 @@ sp.netkeiba.com##.netkeiba_app_link01
 france24.com##.o-self-promo--app
 nikkei.com##a[data-rn-track="open_in_app"]
 booklive.jp##.app_btn_area
-nova.rs##.banner-footer
+planetazdorovo.ru,nova.rs##.banner-footer
 meduza.io##body[class^="amp-"] div[class^="style__BannerTop-"]
 suumo.jp##.appIntroduction
 suumo.jp##.appbnr
 hipdf.com##.wsc-ad-plugin-container
 aliexpress.com,aliexpress.us#$#body.smartbanner-placeholder { padding-top: 0 !important; }
-aliexpress.com,aliexpress.us#$##header-float-banner { display: none !important; }
+aliexpress.com,aliexpress.us#%#//scriptlet('trusted-click-element', '#header-float-banner img[alt="Close button"]')
 golosameriki.com###wrowblock-4949_73
 golosameriki.com###wrowblock-27871_73
 gorenduyan.com,nepisirsem.com#$#html.smartbanner-show { margin-top: 0!important; }
@@ -2891,7 +2905,7 @@ weather.yahoo.co.jp###doubleImage
 weather.yahoo.co.jp##.footeLinkPromo
 weather.yahoo.co.jp##.appLink
 typhoon.yahoo.co.jp,weather.yahoo.co.jp##.mdStickyFooter
-sixty-percent.com,m.sporx.com,baitoru.com,hokuohkurashi.com,weather.yahoo.co.jp##a[href^="https://app.adjust.com/"]
+smartnews.com,sixty-percent.com,m.sporx.com,baitoru.com,hokuohkurashi.com,weather.yahoo.co.jp##a[href^="https://app.adjust.com/"]
 roadway.yahoo.co.jp##.banners > li > a[href^="https://app.adjust.com/"]
 roadway.yahoo.co.jp##.banners > li > a[href^="https://itunes.apple.com/app/"]
 roadway.yahoo.co.jp###rc_app
@@ -2977,6 +2991,7 @@ academia.edu,raysigorta.com.tr,i2symbol.com#$#.modal-backdrop { display: none!im
 zhihu.com,vprok.ru,raysigorta.com.tr,m.sportmaster.ru,i2symbol.com#$#body { overflow: visible!important; }
 zhihu.com#$#.MobileModal-wrapper { display: none !important; }
 zhihu.com#%#//scriptlet('trusted-click-element', '.MobileModal-wrapper button.Button--secondary', '', '500')
+zhihu.com#%#//scriptlet('trusted-click-element', '.AnswersNavWrapper button.ContentItem-expandButton', '', '1000')
 msn.com###ahsbanner
 profile.ru#?#.right-side > div.cell:has(> a[href$="mobilnye-prilozheniya"])
 asna.ru#?##header > div:has(> div > a[href^="https://play.google.com"] + a[href^="https://itunes.apple.com"])

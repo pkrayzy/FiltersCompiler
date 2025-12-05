@@ -1,9 +1,9 @@
-! Checksum: v9MAufnjjb4KpacbQlecjg
-! Diff-Path: ../patches/3_optimized/3_optimized-s-1764587408-3600.patch
+! Checksum: QbS3j5XHb+OXzNkP09a8lg
+! Diff-Path: ../patches/3_optimized/3_optimized-s-1764908172-3600.patch
 ! Title: AdGuard Tracking Protection filter (Optimized)
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.95.92
-! TimeUpdated: 2025-12-01T11:07:33+00:00
+! Version: 2.0.96.13
+! TimeUpdated: 2025-12-05T04:13:18+00:00
 ! Expires: 12 hours (update frequency)
 !+ NOT_PLATFORM(ext_chromium_mv3)
 www.youtube.com#%#//scriptlet('prevent-xhr', '/\/api\/stats\/atr\?.+?&rt=\d+\.\d+.+?&volume=\d+&cbr=.+?&fexp=v1%[-%0-9C]{300,}&.+?&muted=\d(&vis=3)?&docid=/ method:POST')
@@ -257,12 +257,13 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ||ib.snssdk.com^
 ||xlog.snssdk.com^
 ||log.snssdk.com^
+||tracker.zmaticoo.com^
+||tags.mlytics.com^
 ||tncid.app^
 ||rampanel.com^$third-party
 ||l5id.com^
 ||evorra.net^
 ||yext.com^$third-party
-||hackle.io^$third-party
 ||track.aimroas.com^
 ||upsellit.com^$third-party
 ||assetsconfigcdn.org^
@@ -49909,6 +49910,11 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 |piwik.
+||phaseshift.almagrow.com^
+||analytics.claudelog.com^
+||i.go.sohu.com^
+||tagbridge.vlp.cz^
+||advancedanalytics-websocket-pri-001.hexaglobe.net^
 ||htm*.hepsiburada.com^
 ||valencia-beacons.xumo.com^
 ||sync.getpublica.com^
@@ -50281,7 +50287,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ||tracking.ringieraxelspringer.tech^
 ||event.*.shoplive.cloud^
 ||aidsvc.netflix.com^
-||sensor.grubhub.com^
 ||kloggyr-service.kyruus.com^
 ||geo.justwatch.com^
 ||sspnm.emol.com^
@@ -71060,6 +71065,18 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 ||mmdm.ru/static/users/js/login.*.js$replace=/yaCounter\d+\.reachGoal\('\w+'\);//
 ||google-analytics.com^$object,redirect=noopjs
 ||googletagmanager.com/gtag/$third-party,object,redirect=noopjs
+virgule.lu##section[id^="recirculationAside-ArticleGroup-Recommandé-pour-vous-"]
+||kaufland.de/api/uts/events
+||kaufland.de/_/perf/
+||eum.instana.rewe-group.com/eum
+||rewe.de/api/xrd/web-vitals
+||rewe.de/api/xrd/performance
+||sexyrealsexdolls.com/api/collect
+||wheelify-front.carecart.io/postimpression
+||kolesa.kz/ms/rum/v1/send
+||kcdn.online/empty.gif?r=
+lastminute.com.au/api/uisprime/track
+||audiocircuit.dk/koko-analytics-collect.php
 /wp-content/plugins/pmc-plugins/pmc-harmony-companion/build/ga.js$domain=wwd.com|sportico.com
 ||zhihu.com/sc-profiler
 ||zhihu.com/zbst/events/
@@ -76139,6 +76156,8 @@ gmarket.co.kr#%#//scriptlet('fingerprintjs2')
 ||ya.ru/clck/
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||bing.com/fd/ls/
+%2Famsweb.php%3F
+/amsweb.php?$image
 mail.ferret-one.com/beacon$image
 mail.ferret-one.com%2Fbeacon$image
 /tf/o/*$image
@@ -76171,6 +76190,8 @@ mail.ferret-one.com%2Fbeacon$image
 %2FCI0%2F0$image
 /ss/o/*/ho.gif$image
 %2Fss%2Fo%2F*%2Fho.gif$image
+://t.paypal.com/ts?v=$image
+%3A%2F%2Ft.paypal.com%2Fts%3Fv%3D$image
 emailtracking.cashstar.com$image
 mailgun-tracking.ridi.com$image
 client-data.knak.io$image
@@ -76427,6 +76448,8 @@ news.samsung.com%2Fus%2F%3Fnoti%3D$image
 esputnik.com%2Frepository%2Fapplications%2Fcommons%2Fhidden.png
 esputnik.com/repository/applications/commons/hidden.png
 email.mail2.smartrmail.co$image
+email.*.com/o/$image
+email.*.com%2Fo%2F$image
 trk.*.com/o/$image
 trk.*.com%2Fo%2F$image
 ctrk.klclick*.com/o/$image
@@ -77673,6 +77696,7 @@ dlsdk.appsflyer.com^
 ||int.vlancaa.site^
 ||int.vlancaa.fun^
 ||tok.vaicore.xyz^
+||tc.vbnmhjlp.com^
 ||logrcv.adseyeservice.com^
 ||stats.cn.ronghub.com^
 ||statistic.live.126.net^
@@ -78738,6 +78762,8 @@ d4?appid*type*
 !### Temporary ###
 @@||st-*.dynamicyield.com/st*&inHead=true&id=*&jsession=*scriptVersion=*&noConsent=
 !#################
+@@||tags.tiqcdn.com/utag/bofa/ml/prod/utag.js$domain=ml.com
+||tms.post.ch/*gtm.js|$script,redirect=google-analytics
 @@||cdn.clerk.io/clerk.js$domain=smnovella.com
 @@||datadoghq-browser-agent.com/*/datadog-logs.js$domain=crosset.onward.co.jp
 @@||tags.tiqcdn.com/utag/pch/*/prod/utag.js$domain=pch.com
@@ -78850,6 +78876,7 @@ id.condenast.com#%#//scriptlet('set-constant', 'appInfo.snowplow.trackSelfDescri
 @@||cl-eu4.k5a.io/*.js$domain=itavisen.no
 @@||api.ip.sb/geoip$domain=tauri.localhost
 @@||cdn.segment.com/analytics.js/*/analytics.min.js$script,domain=accounts-bc.com
+||mechacomic.jp^$referrerpolicy=origin
 @@||cdn.petametrics.com^$script,domain=mechacomic.jp
 @@||query.petametrics.com^$image,xmlhttprequest,domain=mechacomic.jp
 @@||googletagmanager.com/gtm.js$domain=firsty.app
@@ -81143,6 +81170,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||applyless.com^
 ||aquaticowl.com^
 ||archswimming.com^
+||arclet.net^
 ||aromamirror.com^
 ||arrivegrowth.com^
 ||arubahello.com^
@@ -81302,6 +81330,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||canvasandsocks.com^
 ||capablecup.com^
 ||capriciouscorn.com^
+||captainstick.com^
 ||captivatingcanyon.com^
 ||captivatingillusion.com^
 ||captivatingpanorama.com^
@@ -81529,6 +81558,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||dinnerquartz.com^
 ||direfuldesk.com^
 ||disagreeabledrop.com^
+||discopond.com^
 ||discreetfield.com^
 ||discreetquarter.com^
 ||distributionpocket.com^
@@ -81686,6 +81716,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||fixedfold.com^
 ||flakyfeast.com^
 ||flameuncle.com^
+||flashtexting.com^
 ||fleetbegin.com^
 ||flimsycircle.com^
 ||flimsythought.com^
@@ -81792,6 +81823,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||gorgeousedge.com^
 ||gorillapage.com^
 ||gossamerwing.com^
+||gotlunched.com^
 ||gracefulmilk.com^
 ||grainmass.com^
 ||grandfatherguitar.com^
@@ -81916,6 +81948,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||inputicicle.com^
 ||inquisitiveice.com^
 ||inquisitiveinvention.com^
+||insectmacros.com^
 ||inspirebees.com^
 ||insulatech.com^
 ||intelligentscissors.com^
@@ -82117,6 +82150,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||modularmental.com^
 ||momentfilter.com^
 ||monacobeatles.com^
+||monkeyapes.com^
 ||monkeystyping.com^
 ||monstermemes.com^
 ||monthlyhat.com^
@@ -82222,6 +82256,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||overratedchalk.com^
 ||owlreporter.com^
 ||owlsr.us^
+||owlstwo.com^
 ||oxygenfuse.com^
 ||pailcrime.com^
 ||pailpatch.com^
@@ -82735,6 +82770,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||stocktheme.com^
 ||stomachscience.com^
 ||stonechin.com^
+||stonepole.com^
 ||stopstomach.com^
 ||stormyflower.com^
 ||straightnest.com^

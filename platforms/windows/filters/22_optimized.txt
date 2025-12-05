@@ -1,9 +1,9 @@
-! Checksum: khDlmkOMqSrz2pmMl6FmbQ
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1764557744-3600.patch
+! Checksum: B9vm4OJ7nYHxVvfwUbvXEg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1764902571-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.13.11
-! TimeUpdated: 2025-11-27T17:06:53+00:00
+! Version: 2.0.13.13
+! TimeUpdated: 2025-12-04T10:08:45+00:00
 ! Expires: 12 hours (update frequency)
 !#######################################################
 !######### Block useless widgets #######################
@@ -66,9 +66,6 @@ hosyusokuhou.jp##.entrybody > div.t_b:last-of-type ~ a[rel="noopener noreferrer"
 youskbe.com###pkup
 bakufu.jp##.entry-content > table[width="100%"]
 tyoieronews.blog.jp##table[summary^="記事紹介"]
-giants-news.com##.container_bottom_widget
-giants-news.com##.container_top_widget
-giants-news.com###block-18
 honwaka2ch.livedoor.biz##.column-inner-2 > div[style^="font-weight: bold;"][style$="background: rgb(173, 216, 230);"]
 honwaka2ch.livedoor.biz##.column-inner-2 > div[style^="width: 100%;"][style$="background: #fff;"]
 honwaka2ch.livedoor.biz###ld-services
@@ -323,6 +320,7 @@ chomanga.org#?#.widget:has(div[class^="rss-box"])
 genshin-matomech.umadacchi.net###block-8
 geektushin.com##.widget-above-related-entries
 geektushin.com##.widget-below-related-entries
+geektushin.com,matomajor-games.com,nintendoevery.com##.widget_rss
 uma-log.net###custom_html-8
 negisoku.com##.t_a > span
 negisoku.com##.article-body-more > p[style="color:gray;text-align:right;"]
@@ -353,6 +351,7 @@ vipnews.jp##.article-body-more > br:nth-child(2)
 inazumanews2.com##.link01
 inutomo11.com##.article-body-more > script ~ b
 inutomo11.com##.article-body-more > script ~ br
+bl-archive.net##.main-top > div.column-inner > div.widget_text
 mudainodocument.com##.entry-content > span[style="font-size: x-large; font-weight: bold;"]
 brow2ing.com##.popular_article_pick_up
 jishin-yogen.com##.rss_outline02
@@ -483,7 +482,6 @@ oryouri.2chblog.jp##.contents_rss_text
 ryusoku.com###recommend-bottom
 ryusoku.com###recommend-entry-iframe
 ryusoku.com##.widget-topic
-otoko-honne.com,kijolifehack.com##.osusume_box
 kijobibouroku.com,shuraba.net,uwasakijo.net,ikuji-news.com,kichimama.com,kijobibouroku.com,kimagure-kijyo.com##.ifram
 livejupiter2.blog.jp,jishin-yogen.com,shuraba.net,uwasakijo.net,ikuji-news.com,kichimama.com,kijobibouroku.com,kimagure-kijyo.com##.pickup
 nijimoemoe.com##.sine1 ~ div[class^="sine"]
@@ -1119,6 +1117,7 @@ volyninfa.com.ua###custom_html-2
 ||w.chatlio.com/v5/w.chatlio-widget.js
 ||wchat.freshchat.com/js/widget.js
 ||widget.info-*.ru/js/init.js?t=$script,third-party
+@@||widgets.coingecko.com/gecko-coin-price-chart-widget.js$domain=rewards.ambire.com
 @@||secure.livechatinc.com/customer/action/open_chat?$domain=direct.lc.chat
 @@||static.landbot.io/landbot-widget/landbot-widget-*.js$domain=emma-matratze.de
 @@||widget.happyfoxchat.com^$domain=support.linksys.com
@@ -1201,7 +1200,6 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 ||vivocha.com^$third-party
 ||ac-chatbot.freebie-ac.jp^$third-party
 ||decagon.ai^$third-party
-||widget.hireaiva.com^$third-party
 ||ekr.zdassets.com/compose/zopim_chat/
 ||chatbro.com^$third-party
 ||chatbase.co^$third-party
@@ -1232,6 +1230,8 @@ freestreams-live.my###custom_html-9
 ||helpdeskeddy.com//js/contact-widget.js$domain=litres.ru
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com|revouninstaller.com
 litres.ru###call_support
+mediaexpert.pl###help-bubble
+mediaexpert.pl###expert-help-bubble
 ||livechat.oyunfor.com^
 ugreen.com##body > div[style="visibility: visible;"]:has(> div > iframe#launcher)
 animelon.com##div[class^="discord"]
@@ -1264,7 +1264,6 @@ sevenbank.co.jp##.fn-followingMenu
 ing.com.tr###chat
 ||webpage.qidian.qq.com/qidian/chatv3/$third-party
 diskgenius.cn##.class_qidian_wpa
-||guest-agent.mobilus.me/web/mobi-agent-client-frame-loader.min.js$domain=city.arakawa.tokyo.jp
 sparkasse-oberlausitz-niederschlesien.de##.chatbot_linda_link
 ||live-cwc.elron.titancs.mindtitan.com/chat-web-sdk-$domain=elron.ee
 ||studlancer.net/images/chat/studlancer_chat.js
@@ -1283,6 +1282,7 @@ moluch.ru##.ask_out
 ||cdn.shopify.com/shopifycloud/shopify_chat^$third-party
 ||csportal.directstar.ru^$domain=store.sony.ru
 ||procdncache.com/chat.php
+||reactive.factor.ua/buhgalter911_chat/$domain=buhgalter.com.ua
 ||selcdn.net/chatBot.js
 ||service.force.com/embeddedservice/*/esw.min.js
 ||smartsuppchat.com/loader.js
@@ -1331,6 +1331,7 @@ apollo.pl##.thulium-chat-wrapper
 ||youtube.com/embed/?enablejsapi=1&origin=*3dnews.ru&widgetid=1
 ign.com##div[data-cy="tierlist-view-trigger"]
 vg247.com##.poll_wrapper
+aerzteblatt.de##iframe#civey
 t-online.de#?#div[data-testid="StageLayout.StreamItem"]:has(> figure:only-child > iframe[src*="civey"])
 tagesspiegel.de###story-elements > div[class]:has(> div#opinary-automation-placeholder)
 freiepresse.de##.opinary-widget-embed
@@ -1450,6 +1451,7 @@ holod.media##.a-donate-block
 ghostery.com##.ds-notification-donate-container
 agents.media##.single-post__donate-block
 butwhytho.net###elementor-popup-modal-209972
+brooklynrail.org##body > div.fixed.bg-opacity-75.items-center
 pravmir.ru##div[id^="hh_donate_button_widget"]
 arxiv.org##.bps-banner.forum
 arxiv.org###support-ack
@@ -1503,7 +1505,6 @@ echofm.online##main > article.wp-embed-responsive ~ div[class^="sc-"]:has(> div[
 proekt.media##proekt-blocks > proekt-block:has(span#donateButton)
 gigazine.net###donation_wrapper
 getcomics.org##.wpfront-notification-bar-spacer
-insideclimatenews.org##.icn-donate-block
 insideclimatenews.org##.donate-cta
 agents.media##.single-post__donate-block
 charter97.org###donate-article
