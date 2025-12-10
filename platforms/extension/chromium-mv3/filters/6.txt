@@ -1,8 +1,8 @@
-! Checksum: UhicgwK66IZ5EWYrungdnw
+! Checksum: 17CD3+opxl9iciELOJd8/Q
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.50.49
-! TimeUpdated: 2025-12-04T21:07:39+00:00
+! Version: 2.0.50.55
+! TimeUpdated: 2025-12-09T09:09:33+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -362,6 +362,7 @@ essen-und-trinken.de#%#//scriptlet('prevent-setTimeout', 's.call(null)', '10')
 schnittmuster-datenbank.de#%#//scriptlet("abort-on-property-read", "adsBlocked")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/219175
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218085
 radioforen.de##body > .u-scrollButtons ~ script ~ div[style]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216094
@@ -1000,9 +1001,7 @@ prosieben.de#%#//scriptlet('set-constant', 'Object.prototype.checkAdProxyAvailab
 ! https://github.com/AdguardTeam/AdguardFilters/issues/148783
 data-load.*#%#//scriptlet('set-cookie', '_xflora', '1')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146229
-! TODO: use scriptlet "inject-css-in-shadow-dom" when it will be available in apps
-! gmx.net,gmx.at,web.de#%#//scriptlet('inject-css-in-shadow-dom', '.list-programmatic-ad-item--multi-line, .list-inbox-ad-item--multi-line { display: none !important; }')
-gmx.net,gmx.at,web.de#%#(()=>{const a=(a,b,c)=>{const d=Reflect.apply(a,b,c),e=".list-programmatic-ad-item--multi-line, .list-inbox-ad-item--multi-line { display: none !important; }";if("adoptedStyleSheets"in document){const a=new CSSStyleSheet;a.replaceSync(e),d.adoptedStyleSheets=[a]}else{const a=document.createElement("style");a.innerText=e,d.appendChild(a)}return d};window.Element.prototype.attachShadow=new Proxy(window.Element.prototype.attachShadow,{apply:a})})();
+gmx.net,gmx.at,web.de#%#//scriptlet('inject-css-in-shadow-dom', '.list-programmatic-ad-item--multi-line, .list-inbox-ad-item--multi-line, list-inbox-ad-item, .list-inbox-ad-item--single-line { display: none !important; }')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158944
 chip.de#%#//scriptlet('abort-current-inline-script', 'document.querySelector', 'DisplayAcceptableAdIfAdblocked')
 chip.de#%#//scriptlet('trusted-replace-node-text', 'style', '/a [\s\S]* padding-top[\s\S]*aspect-ratio/', '/.*(\..*?) [\s\S]*padding-top[\s\S]*aspect-ratio[\s\S]*/', '$1 { display: none !important; }')
@@ -1449,6 +1448,7 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+testsieger.de###sponsoredProductPdp
 chip.de##article + div:has(> h3:first-child + a[href^="https://www.chip.de/angebote"]:last-child)
 heise.de##.swvzinfobox + hr
 heise.de##.swvzinfobox
@@ -1923,7 +1923,6 @@ heidelberg24.de,ruhr24.de##div[class*="BeepSlot"]
 karlsruhe-insider.de##div[id^="stroeer-banner"]
 dermanostic.com#%#//scriptlet('trusted-set-attr', 'a[href*="adj_redirect_macos="][href*="app-herunterladen"]', 'href', '/app-herunterladen/')
 welt.de##div[data-component="AdTeaser"]
-welt.de##.c-ad-container
 promiflash.de###desktopTop
 promiflash.de##.hidden.sm\:flex:has(> div.hidden.sm\:block)
 rp-online.de##div.floated
@@ -5724,6 +5723,8 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/219175
+@@||partners2.das-onlinespiel.de/client.js$domain=games.focus.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216033
 @@*$popup,~third-party,domain=canna.to|canna-power.to
 ! https://github.com/AdguardTeam/AdguardFilters/issues/215811
@@ -5795,8 +5796,6 @@ plastverarbeiter.de,neue-verpackung.de#@##content_ad_2
 freenet.de#@##frnBanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125221
 @@||ad71.adfarm1.adition.com/lt?nw=$domain=atv.at
-! https://github.com/AdguardTeam/AdguardFilters/issues/125101
-@@||static.trbo.com/img/$domain=o2online.de
 ! berliner-zeitung.de - article hidden on main page which contains the word Anzeige in its header
 berliner-zeitung.de#@?#.m-article-teaser:has(div:contains(Anzeige))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122203
@@ -5858,8 +5857,12 @@ fahrrad.de#@#.is-sponsored
 ! t-online.de video not working
 @@||player.glomex.com/integration^$domain=t-online.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82143
+! https://github.com/AdguardTeam/AdguardFilters/issues/125101
+!#safari_cb_affinity(social)
+@@||static.trbo.com/img/$domain=o2online.de
 @@||static-v*.trbo.com/plugin/trbo_*.js$domain=o2online.de
 @@||api-v*.trbo.com/r.php$domain=o2online.de
+!#safari_cb_affinity
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82443
 @@||ravensburger-werbemittel.de/content/wcm/mediadata/images/Werbemittel/$~third-party
 @@||ravensburger.com/content/wcm/mediadata/images/Werbemittel/$domain=ravensburger-werbemittel.de
@@ -8521,7 +8524,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||zwerg-am-berg.de/wp-content/uploads/*/Banner_
 /^https?:\/\/.*\/[a-z0-9A-Z_]{2,15}\.(php|jx|jsx|1ph|jsf|jz|jsm|j$)/$image,script,subdocument,domain=beeg-pornos.com|besterpornos.com|deinesexfilme.com|deutsche-sexfilme.net|deutschsex.com|deutschsex.mobi|einfachtitten.com|gutesexfilme.com|hd-pornos.info|hd-sexfilme.com|lesbenhd.com|meinyouporn.com|nurxxx.mobi|pornoaffe.com|pornoente.tv|pornofisch.com|pornohammer.com|pornohans.com|pornohirsch.net|pornojenny.com|pornoklinge.com|pornotom.com|pornotommy.com|pornozebra.com|reifporn.de|sexente.com|sexvideos-hd.com|tube8-pornos.com|xhamster-sexvideos.com|xnxx-porno.com
 /^https?:\/\/.*\/.*(sw[0-9a-z._-]|\.notify\.).*/$script,domain=hammerporno.xxx
-/^https?:\/\/[0-9a-z]{8,}\.com\/.*/$~media,~subdocument,third-party,domain=190.115.18.20|aniworld.to|bs.to|burningseries.nz|burningseries.se|burningseries.sx|burningseries.vc|kinoger.to|kinokiste.live|megakino.co|s.to|serien.cam|serienstream.to|topstreamfilm.live
+/^https?:\/\/[0-9a-z]{8,}\.com\/.*/$~media,~subdocument,third-party,domain=190.115.18.20|aniworld.to|bs.to|burningseries.nz|burningseries.sx|burningseries.vc|kinoger.to|kinokiste.live|megakino.co|s.to|serien.cam|serienstream.to|topstreamfilm.live
 /^https?:\/\/[0-9a-z]{8,}\.xyz\/.*/$~media,third-party,domain=kinoger.com|kinoger.pw|kinokiste.live|megakino.co|topstreamfilm.live
 /googleads.$domain=g.doubleclick.net|googlesyndication.com
 /pagead2.$domain=g.doubleclick.net|googlesyndication.com|imasdk.googleapis.com
@@ -10097,7 +10100,7 @@ queer.de##.leistenbanner
 frischauf-gp.de##.ligaadd
 1000ps.ch##.links
 xdate.ch##.list-AxDxS
-mydict.com,mydict.net##.list-group
+mydict.net##.list-group
 gmx.ch,gmx.net,web.de##.list-inbox-ad-item--multi-line
 gmx.ch,gmx.net,web.de##.list-programmatic-inbox-ad-item__iframe
 queer.de##.listenbannerlinks
@@ -10785,7 +10788,6 @@ finanzen.net##a[href="#p500Werbehinweis"]
 areadvd.de##a[href="/panasonic_de"]
 strippokerregeln.com##a[href="/www/888casino"]
 finanzen.net##a[href="http://g.finanzen.net/ubs-aktiendetail-hebel-fallback"]
-outleter.org##a[href="http://topne.ws/onlineoutlet"]
 beeg-pornos.com,deinesexfilme.com,einfachtitten.com,gutesexfilme.com,halloporno.net,hd-sexfilme.com,hdpornos.net,herzporno.com,lesbenhd.com,meinyouporn.com,milffabrik.com,nursexfilme.com,pornhub-sexfilme.net,pornoaffe.net,pornodavid.com,pornoente.tv,pornofelix.com,pornofisch.com,pornohammer.com,pornohans.com,pornohelm.com,pornohirsch.net,pornojenny.com,pornoklinge.com,pornoleon.com,pornolisa.com,pornoritze.com,pornoschlange.com,pornosusi.com,pornotanja.com,pornotom.com,pornotommy.com,pornovideos-hd.com,pornozebra.com,sexente.com,sexfilme-gratis.com,sexvideos-gratis.com,sexvideos-hd.com,tube8-pornos.com,xnxx-porno.com,xnxx-pornos.xxx,xnxx-sexfilme.com##a[href="https://bit.ly/"]
 finanzen.ch##a[href="https://g.finanzen.net/bitpanda-finch_013-web-overall-btc_kaufen_navigation"]
 finanzen.ch##a[href="https://g.finanzen.net/ch-etoro-trading-button-navi"]
