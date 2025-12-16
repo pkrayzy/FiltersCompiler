@@ -1,9 +1,9 @@
-! Checksum: pTHFsCqk8C+TRNfvi+cHeQ
-! Diff-Path: ../patches/224/224-s-1765541720-3600.patch
+! Checksum: +q4Lp3oPuPIkGvuTxpt2nQ
+! Diff-Path: ../patches/224/224-s-1765887317-3600.patch
 ! Title: AdGuard Chinese filter
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.49.67
-! TimeUpdated: 2025-12-12T12:12:44+00:00
+! Version: 2.1.49.94
+! TimeUpdated: 2025-12-16T12:12:47+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -19,7 +19,9 @@
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
-!
+||shieryuefajkix.com^
+||shisanmaozser.com^
+||txhywh.cn^
 ||onemob.mobi^$third-party
 ||tp.suppercacheimages.top^
 ||9867.org^
@@ -1072,6 +1074,10 @@ ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com###content_left > .r
 !
 ! NOTE: Specific rules
 !
+yeshuyuan.com##a[href^="http://www.18wen18.com/"]
+yeshuyuan.com#%#//scriptlet('abort-on-property-read', 'adbyunion')
+||kanav.ad/template/*/images/qf/
+kanav.ad##div[class^="img-ad"]
 youku.com##div[class*="adDrawer"]
 *$xmlhttprequest,denyallow=ddxsmf.com|apps.bdimg.com|cdnsrc.asp.net,domain=ddxsmf.com
 eprice.com.hk##div[style]:has(> div[id^="div-gpt-ad-"])
@@ -1233,7 +1239,8 @@ sim.xiangyanglao.cn###popup
 sim.xiangyanglao.cn##.media-r > a[target] > img
 ||dbt6ga5v6d15f.cloudfront.net/slf^$domain=vikacg.com
 ||imagedelivery.net^$domain=vikacg.com
-umbooks.com,vikacg.com#%#//scriptlet('prevent-window-open')
+vikacg.com#%#//scriptlet('prevent-window-open', '!/external')
+umbooks.com#%#//scriptlet('prevent-window-open')
 cesu.ai##div[class^="money_"]
 ||cesu.ai/uploads/AdvertImages/
 codernav.com##.io-widget-ad-lunbotu
@@ -5132,6 +5139,7 @@ newduba.cn###jq_youxi
 ##.a-media.ex-728-90
 ##a[clickmode="cpt"]
 ###foot > #btmBox
+##.home-qf > div[class*="img-ad"]
 ##.module-player > .dds_w
 ##.content > .dds_w
 ##body > div.container[style="margin-bottom: 10px;"] > script:first-child ~ div[style="height:60px;width:100%;"]
@@ -5159,6 +5167,54 @@ newduba.cn###jq_youxi
 .z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||6fm4dcpj31.com^
+||cautious60.com^
+||aybikaemg.com^
+||b053d0h076.com^
+||fortune59.com^
+||tkll12160nb.com^
+||zbfo.cn^
+||3245duu17z.com^
+||tkll12161nb.com^
+||88r6s1hecp.com^
+||7b6c81b4c2.com^
+||your-name.click^
+||qtevriko.com^
+||086123.xyz^
+||grateful03.com^
+||877mcpiom.com^
+||p99c3kwxg.com^
+||shipment30.top^
+||tkll12150nb.com^
+||l6h17ybxe.com^
+||nqwgvk.cn^
+||kls24qtvc.com^
+||tkll12151nb.com^
+||afrlodurf.com^
+||ixog.cn^
+||harmful26.top^
+||tasgxk4ia6.com^
+||0tc1bdbgsm.com^
+||tkll12140nb.com^
+||oekkuthy.com^
+||partnership75.com^
+||jgid.cn^
+||8wvb8xoqgq.com^
+||v4ox630nia.com^
+||tkll12141nb.com^
+||bmmpotgeaz.com^
+||0hagz9mdc.com^
+||appoint38.com^
+||v84tz11w7.com^
+||tkll12130nb.com^
+||vrrm.cn^
+||insurance55.top^
+||yarcokme.com^
+||fsmnmorgb.com^
+||9soefyenw.com^
+||tkll12131nb.com^
+||ephothuwi.com^
+||bnqektutom.com^
 ||3nopvvhju5.com^
 ||veuf2obzc8.com^
 ||travel44.top^
@@ -13714,6 +13770,8 @@ meijutt.*/js/pcjs/
 ||ping0.cc/static/images/ad/
 ||workers.dev^$domain=axiang.cc
 zhihu.com##.Pc-word-new
+youku.com##div[class*="adDrawer"]
+vikacg.com,vikacg.icu,vikacg.xyz##div[class^="my-"] > a[href^="http"]:not([href*="vikacg."])
 6park.com##td[style="line-height:30px;text-align:center;color:red;background-color:white;"]
 6park.com##.main_news_list > a[href^="http"]:not([href*="6park.com"])
 hkcards.com#?#div[style*="min-height"]:has(.my-1)
@@ -22220,7 +22278,6 @@ fqsousou.com,kengso.com#@#.user-share
 ||de.tynt.com^
 ||diagnosis.ad.xiaomi.com^
 ||dig.bdurl.net^
-||dl.zuimeitianqi.com^
 ||dlogs.bwton.com^
 ||dm.toutiao.com^
 ||domain.aishengji.com^
@@ -22240,8 +22297,6 @@ fqsousou.com,kengso.com#@#.user-share
 ||ef-dongfeng.tanx.com^
 ||engine.dcad01.com^
 ||entry.baidu.com^
-||errlog.umeng.com^
-||errnewlog.umeng.com^
 ||et-eus.w.inmobi.com^
 ||event.tradplusad.com^
 ||events-drcn.op.dbankcloud.cn^
@@ -22551,7 +22606,6 @@ fqsousou.com,kengso.com#@#.user-share
 ||s8t.teads.tv^
 ||saad.ms.zhangyue.net^
 ||saas.hpplay.cn^
-||safebrowsing.googleapis.com^
 ||safebrowsing.urlsec.gg.com^
 ||samsung-com.112.2o7.net^
 ||samsungads.com^
@@ -22619,6 +22673,7 @@ fqsousou.com,kengso.com#@#.user-share
 ||supply.inmobicdn.net^
 ||sv-video.play.aiseet.atianqi.com^
 ||syh-imp.cdnjtzy.com^
+||syh.zybang.com^
 ||szbdyd.com^
 ||t-dsp.pinduoduo.com^
 ||t.applovin.com^
