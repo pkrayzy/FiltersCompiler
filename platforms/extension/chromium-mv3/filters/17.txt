@@ -1,8 +1,8 @@
-! Checksum: PjOe7DO2e/wkQ7FjTCEkiQ
+! Checksum: 0oU5aa72dLBzcTsPGfcPtw
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.12.63
-! TimeUpdated: 2025-12-11T15:09:12+00:00
+! Version: 2.0.12.67
+! TimeUpdated: 2025-12-17T17:10:21+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -458,8 +458,13 @@ $removeparam=fb_source
 ! In some cases, it's allowed to add content type and `$domain` modifiers.
 !
 ! Good: ||example.org^$removeparam=cx
+! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://www.oricon.co.jp/kyujin/?ref_cd=kyujinbtnbottom-news
+||oricon.co.jp^$removeparam=ref
+! https://carviewform.yahoo.co.jp/kaitori/?src=kuruma_news__kaitorisatei_button
+||carviewform.yahoo.co.jp^$removeparam=src
 ! https://github.com/AdguardTeam/AdguardFilters/issues/219694
 ! aglint-disable-next-line
 ! https://github.com/AdguardTeam/AdguardFilters/issues/219079
@@ -1143,6 +1148,8 @@ $removeparam=cid,domain=nhk.jp|nhk.or.jp
 ||puma.com^$removeparam=sc_eh
 !
 ! reddit.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/219381#issuecomment-3648484916
+||reddit.com^$removeparam=target_user
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191029
 ||reddit.com^$removeparam=%243p
 ||reddit.com^$removeparam=%24deep_link
@@ -3327,6 +3334,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/31203
+@@||metabase.com^$removeparam=utm_term
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214119
 @@||adj.st^$removeparam=adj_t
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213210

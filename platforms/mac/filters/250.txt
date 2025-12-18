@@ -1,12 +1,12 @@
-! Checksum: YAy8JBVqA5iPJBUFEiOHVA
+! Checksum: aLapwoHjAF/hyJF16Q1Ypg
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.18.53
-! TimeUpdated: 2025-12-11T16:44:19+00:00
+! Version: 2.0.18.58
+! TimeUpdated: 2025-12-16T16:43:30+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 01December2025v1-Compilation
+! OriginalVersion: 16December2025v1-Compilation
 ! Expires: 18 hours
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -16412,7 +16412,7 @@ google.*#?##rso > div[class]:has(h3:contains(/^.*(H\ow\st\o|fre{2})\s(\instal{2}
 ! Very experimental entry; see https://github.com/DandelionSprout/adfilt/issues/950 and https://www.techspot.com/news/77949-ccleaner-could-install-avast-anti-virus-without-permission.html
 ||avast.$app=CCleaner.exe|CCleaner64.exe|CCleanerCloudAgent.exe|ccsetup617.exe|ccsetup618.exe|ccsetup619.exe|ccsetup620.exe|ccsetup621.exe|ccsetup622.exe|ccsetup623.exe|ccsetup624.exe|ccsetup625.exe|ccsetup70.exe
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! OriginalVersion: 10December2025v1-Beta
+! OriginalVersion: 16December2025v1-Beta
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -16958,6 +16958,7 @@ forbes.com##.article-sharing
 rawstory.com##.share-flipboard
 rawstory.com##.share-tw
 rawstory.com##.share-fb
+rawstory.com##.share-popup.rm-stats-tracked
 ! All embed feeds I've seen of it, have been broken since July 2023 anyway
 ||syndication.twitter.com/srv/timeline-profile^$third-party
 ##iframe[src*="//syndication.twitter.com/"]:has(div[data-testid=empty_state_header_text])
@@ -18708,7 +18709,7 @@ www.nrk.no##.nrkno-player-controls__bar::before
 ! play•tv2•no (27/08/2025)
 play.tv2.no##div[data-testid=player-controls]::before
 ! Title: 🍁 Anti-"Aİ results in tech situations where Aİ was not asked for" List
-! OriginalVersion: 20November2025v2-Alpha
+! OriginalVersion: 12December2025v1-Alpha
 ! Expires: 2 days
 ! Homepage: https://github.com/DandelionSprout/adfilt/tree/master
 ! Description: 1) I'm way too old for the Aİ bubble, and I'm not even 30 yet. 2) Google's pushing of Aİ in regular search results in particular have a very bad reputation for often being wrong about things. This list will however not block Aİ prompt sites.
@@ -18718,6 +18719,8 @@ play.tv2.no##div[data-testid=player-controls]::before
 www.google.*,ipv6.google.com###m-x-content div[class]:first-of-type:not([class*=" "]):has(> [data-rl])
 www.google.*,ipv6.google.com##style:first-of-type ~ div ~ button[jsaction*=mouseleave i]:last-of-type
 www.google.*,ipv6.google.com##div[data-st-cnt] div[role=list] > div[role=listitem]:has(a[href*="&udm=50&"])
+! (12/12/2025)
+www.google.*,ipv6.google.com##div[data-host-wiz-contract-name] div[data-subtree] > div[jsuid]:first-of-type:has(~ [jsaction^=request])
 ! Microsoft Word Online
 word-edit.officeapps.live.com,word.cloud.microsoft###TellMeWrapper_container
 word-edit.officeapps.live.com,word.cloud.microsoft##.BeforePageContent
@@ -23907,7 +23910,6 @@ valdemarsro.dk###recipe-intro p:last-of-type
 ! If Bandcamp wishes to enforce a limit on online track plays, surely they could at least have dropped the comically obvious dark pattern
 .bcbits.com/img/heartbreak.png^
 ! So that people who uninstall Chrome can complete the "Why did you uninstall Chrome?" survey (Caused by AdGuard Popups Filter)
-@@||gstatic.com/uservoice/surveys/resources/prod/js/survey/survey_binary$script
 google.*#@##google-hats-survey
 ! https://www•independent•co•uk/news/world/americas/us-politics/nsa-inappropriate-chat-fired-gabbard-b2705027.html notification prompt (For list users with neither AdGuard Tracking Protection or EasyPrivacy; 27/02/2025)
 ||appboycdn.com^$third-party
@@ -23961,3 +23963,8 @@ github.com#$?#.clearfix:has(h1:contains(/^Uploading files .*NorwegianExperimenta
 ||anyclip.com^$app=TETR.IO.exe
 ! https://github.com/DandelionSprout/adfilt/issues/1189
 duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##button:first-of-type + div:last-of-type[class*=" "]:has(button)
+! Tried out Batch Text File Editor once, closed the program, and was greeted with the browser opening a somewhat intrusive page
+||binarymark.com/products/*/thank-you-for-using^$popup
+||binarymark.com/products/*/uninstalled^$popup
+! Similar thingie for AOMEI Partition Assistant
+||diskpart.com/*?source=auto-popup^$popup

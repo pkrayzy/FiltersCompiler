@@ -1,9 +1,9 @@
-! Checksum: +6CuRZIeAFDlSoVyw4TTXA
-! Diff-Path: ../patches/17_optimized/17_optimized-s-1765465913-3600.patch
+! Checksum: k5x2F0GKVx/gf8bCAQpDUg
+! Diff-Path: ../patches/17_optimized/17_optimized-s-1765991605-3600.patch
 ! Title: AdGuard URL Tracking filter (Optimized)
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.12.63
-! TimeUpdated: 2025-12-11T15:09:12+00:00
+! Version: 2.0.12.67
+! TimeUpdated: 2025-12-17T17:10:21+00:00
 ! Expires: 12 hours (update frequency)
 $removeparam=ftag
 $removeparam=janet
@@ -305,6 +305,8 @@ $removeparam=fb_action_types
 $removeparam=fb_comment_id
 $removeparam=fb_ref
 $removeparam=fb_source
+||oricon.co.jp^$removeparam=ref
+||carviewform.yahoo.co.jp^$removeparam=src
 ||kaigonoshigoto.jp^$removeparam=scid
 ||coco.fun/share/$removeparam=share_to
 ||coco.fun/share/$removeparam=m
@@ -770,6 +772,7 @@ $removeparam=cid,domain=nhk.jp|nhk.or.jp
 ||puma.com^$removeparam=sc_uid
 ||puma.com^$removeparam=sc_llid
 ||puma.com^$removeparam=sc_eh
+||reddit.com^$removeparam=target_user
 ||reddit.com^$removeparam=%243p
 ||reddit.com^$removeparam=%24deep_link
 ||reddit.com^$removeparam=post_index
@@ -2301,6 +2304,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !+ PLATFORM(windows, mac, android, cli) NOT_OPTIMIZED
 ||https-filtering-check.adtidy.org^
+@@||metabase.com^$removeparam=utm_term
 @@||adj.st^$removeparam=adj_t
 @@||passport.jlcpcb.com^$removeparam=from
 @@||yandex.go.link^$removeparam=adj_t
