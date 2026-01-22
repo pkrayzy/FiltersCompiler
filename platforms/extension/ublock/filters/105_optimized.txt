@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Fjjo6pcIDQgZCTBPQeTYmQ
-! Diff-Path: ../patches/105_optimized/105_optimized-s-1765500676-14400.patch
+! Checksum: bzuRFs5MAO4T7/S6WRA5+g
+! Diff-Path: ../patches/105_optimized/105_optimized-s-1768740523-14400.patch
 ! Title: EasyList Czech and Slovak (Optimized)
 ! Description: Additional filter list for websites in Czech and Slovak.
-! Version: 2.0.3.22
-! TimeUpdated: 2025-12-12T00:47:48+00:00
+! Version: 2.0.3.29
+! TimeUpdated: 2026-01-18T12:44:59+00:00
 ! Expires: 5 days (update frequency)
 .com/bannery/
 .cz/ads/
@@ -115,6 +115,7 @@ warcenter.cz/interstitial_fs.js
 ||hojko.com/images/banner*.gif
 ||image.sector.sk^
 ||img.zoznam.sk/adimages/
+||kosicak.sk/push.js$script
 ||mhdba.eu/banerova-reklama-animacia.gif
 ||michalovskespravy.sk/files/a57xq6rhr5uuzzyf.gif
 ||mojanitra.sk/banery/
@@ -483,8 +484,9 @@ sauto.cz##.ssp-handled
 sauto.cz##div[class*="c-ssp-"]
 sauto.cz##.p-uw-item-detail__skyscraper
 sauto.cz##.c-layout__wrapper > :not(.c-layout)
-sauto.cz##.c-item-list__list > :not([class*="c-item"])
-sauto.cz##.c-car-details-section__table-value > a
+sauto.cz##.c-car-details-section__content > table a
+sauto.cz##div[class*="c-cebia-report"]
+sauto.cz##button[class*="c-a-basic-info__insurance"]
 sauto.cz##.p-uw-item-detail__car-column > div:has(.car-insurance__header-wrapper)
 serialzone.cz##.banner-header
 serialzone.cz##.mid-lead-hp
@@ -612,7 +614,8 @@ konzolista.cz##.v-card--link:has(.ad)
 lupa.cz,root.cz##div.article--content:has(div.design-advert)
 motorkari.cz##div:has(> a[href*="?act=detail&f=8"])
 msmt.cz##.bcc:has(.banners)
-sauto.cz##div:has(>.car-insurance__coop-info)
+sauto.cz##div[class*="sds-"]:has(>div[class^="car-insurance_"])
+sauto.cz##ul:has(.c-item) > :not(.c-item)
 slovnik.aktuality.sk##.desktop-wrapper:has([id^="div-gpt-ad"])
 sports24.cz##.tdc-row:not(:has(>.tdc-element-style))
 vtn-vranov.sk##.widget:has(img[src*="/ads/"])
@@ -689,6 +692,7 @@ titulky.com##a:matches-css(background:/marteva/i):upward(3)
 titulky.com##+js(aeld, load, document.cookie)
 titulky.com##+js(set, xmxalr, )
 titulky.com###head_c:style(margin-top: 0 !important;)
+titulky.com##+js(acis, showAdb_info)
 tn.nova.cz##+js(set, useSeznamAds, false)
 ||trackad.cz/adtrack.php$domain=nova.cz,script,redirect=noop.js
 uschovna.cz##body:style(background:none !important;)

@@ -1,11 +1,12 @@
-! Checksum: EjaJtdasti/Qjs4JNX6OsA
-! Diff-Path: ../patches/227/227-s-1765932683-14400.patch
+! Checksum: 5ZbvEZeXKRJfhwzBpNLJ8Q
+! Diff-Path: ../patches/227/227-s-1769057369-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.23.54
-! TimeUpdated: 2025-12-17T00:48:13+00:00
+! Version: 2.0.23.69
+! TimeUpdated: 2026-01-22T04:46:39+00:00
 ! Expires: 10 days (update frequency)
 !
+||ad.adwiser.kr^
 ||digitalcamp.co.kr^$third-party
 ||mman.kr^
 ||admize.io^
@@ -252,6 +253,7 @@
 ||awd.spochak.com^
 !
 ! DOMAIN-REFRESHER: END
+||ad.mojisead.co.kr^
 ||get*bannerads-6egeg2u34q-du.a.run.app^
 ||ad.kakaobank.com^
 ||ad-pulse.kakaobank.cloud^
@@ -403,6 +405,7 @@
 ||tenping.kr^$third-party
 ||infolinks.com^
 ||adcastmarket.com^
+||ads.aceplanet.co.kr^
 ##iframe[src*="//ad.imp.joins.com/"]
 ##amp-ad
 ##iframe[src*="//authanalysis.com/"]
@@ -530,6 +533,7 @@ namu.wiki,~board.namu.wiki##div[class]:not([class*=" "]) ~ div[class*=" "] > *[c
 !
 ! DOMAIN-REFRESHER: START
 !
+[$domain=/torrentsee[0-9]+\.com/]##.container > div[style^="z-index:999; "]
 !
 ! DOMAIN-REFRESHER: END
 !
@@ -544,6 +548,10 @@ namu.wiki,~board.namu.wiki##div[class]:not([class*=" "]) ~ div[class*=" "] > *[c
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
 !
+||img.tvchosun.com/news/article/content_ad.js
+||mapleland.gg/img/Latal
+||web.joongna.com/main-web/_next/static/chunks/ProductAdsBlock
+||common.joongna.com/static/json/exclude-adsense.json
 ||kyobobook.co.kr/api/gw/onk/ad/
 ||contents.kyobobook.co.kr/advrcntr/IMAC/creatives/
 ||p-api.vortexgaming.io/api/banner?
@@ -1673,6 +1681,13 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+excellesports.com##.modal_contents .modal_wrap
+m.search.naver.com##div[data-block-id^="review/prs_template_"] .sds-comps-header ~ div[data-template-type="vertical"] .sds-comps-vertical-layout.sds-comps-full-layout:has(> .sds-comps-vertical-layout a[href^="https://ader.naver.com/"])
+m.search.naver.com##div[data-block-id^="review/prs_template_"] .sds-comps-header ~ div[data-template-type="vertical"] .sds-comps-vertical-layout.sds-comps-full-layout:has(> .sds-comps-vertical-layout a[href^="https://ader.naver.com/"]) + span
+enjuso.com##.enjuso_exp > a[href^="https://"]
+m.cafe.daum.net##.nativead-placeholder
+w.nicesongtoyou.com##.post-content p ~ div:has(.chatgin-a)
+mapleland.gg##main.relative > .md\:px-0.z-\[999\]
 kyobobook.co.kr##.wpromo-banner
 kyobobook.co.kr##.fly_menu_banner
 mvod.jtbc.co.kr##div[class^="iframe_"][class$="_ad"]
@@ -1706,7 +1721,7 @@ search.naver.com##div[id^="fdr-"].sc_new .sds-comps-vertical-layout:has(> div[da
 search.naver.com##div[id^="fdr-"].sc_new .sds-comps-vertical-layout:has(> div[data-power-content-url]) + span
 search.11st.co.kr###section_topAdArea
 m.ppomppu.co.kr##.ct > .category_box ~ .hot_tag ~ div[style^="text-align:center;width:"]
-search.naver.com##ul > li[data-slog-content][data-slog-visible]:has(div[id^="view_type_guide_"] button > svg[Width="36"] path[d^="M13.596 10.988c0"])
+search.naver.com##ul > li[data-slog-content][data-slog-visible]:has(div[id^="view_type_guide_"] button svg[width] path:is([d^="M13.596 10.988c0"], [d^="M13.096 10.988c0"]))
 maplescouter.com##.gap-2 > div[class="min-w-[440px]"]
 maplescouter.com##div[class=""] > .flex-col > .justify-center:has(> div[class$="h-[100px]"])
 search.naver.com##.book_list_wrap li[data-ad="true"]
@@ -2983,6 +2998,8 @@ kio.ac##main > div:has(> div > div > a > img)
 !
 ! DOMAIN-REFRESHER: START
 !
+nightofpeace.com,ilovebees.io##.e-con-full.e-flex.e-con:has(a[target="_blank"] img)
+nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_blank"] img)
 [$domain=/lover[0-9]\.net/]##.div-over
 [$domain=/^torrentqq[0-9]+.com/]##.at-banner
 [$domain=/torrentpi[0-9]+\.com/]##.basic-post-gallery
@@ -3679,6 +3696,8 @@ m.fmkorea.com#%#//scriptlet('json-prune', 'tpl apply', 'tpl.[].c')
 chzzk.naver.com#%#//scriptlet('json-prune-xhr-response', 'ads.[-].eventTracking.ackImpressions.[].url', 'ads.[].adInfo.responseSize', 'api.chzzk.naver.com/service/t/')
 chzzk.naver.com#%#//scriptlet('json-prune-xhr-response', 'adBreaks.[-].adSources.[].withRemindAd', 'videoAdScheduleId', 'api.chzzk.naver.com/service/t/')
 !
+excellesports.com#%#//scriptlet('set-cookie', 'popup_view', 'disable')
+maple.gg#%#//scriptlet('set-cookie', 'hideFrontPagePopup', 'true')
 enuri.com#%#//scriptlet('set-constant', 'getPowerLink', 'noopFunc')
 heye.kr#%#//scriptlet('prevent-window-open', 'pandalive.co.kr/evt/')
 newneek.co#%#//scriptlet('prevent-xhr', 'api-v2.adrop.io/request')
@@ -3825,7 +3844,14 @@ gall.dcinside.com#%#//scriptlet('remove-node-text', 'script', '/background:[\s\S
 gall.dcinside.com#%#//scriptlet('remove-node-text', 'script', '/finally *{\n* *document.documentElement.removeChild\( *[A-Za-z0-9]+ *\) *;\n* *}([ \n]|.)+_ad"]\);/')
 ! chzzkban.xyz
 chzzkban.xyz#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js method:HEAD', 'emptyStr')
+! dicoall.com
+dicoall.com#@##AdHeader
+dicoall.com#@##AD_Top
+dicoall.com#@##homead
+dicoall.com#@##ad-lead
+dicoall.com#@##rightAd
 !
+cheatdot.com#%#//scriptlet('prevent-setTimeout', 'window.getComputedStyle(t).display')
 tv.jtbc.co.kr,mvod.jtbc.co.kr,onair.jtbc.co.kr#%#//scriptlet('prevent-setTimeout', 'getComputedStyle(t).getPropertyValue("visibility")')
 erdcloud.com#$?#.ads-block-warning-overlay { remove: true; }
 mylocation.co.kr#%#//scriptlet('prevent-setTimeout', 'adBlockedMessage')
@@ -3857,7 +3883,7 @@ svrforum.com##body > div[class][style*="box-shadow:"]
 luckyquiz3.blogspot.com#%#//scriptlet('prevent-xhr', 'adsbygoogle')
 sbs.co.kr#%#//scriptlet('prevent-element-src-loading', 'script', 'imasdk.googleapis.com/js/sdkloader/ima3.js')
 deokhu.com,3dpchip.com#%#//scriptlet('abort-current-inline-script', 'chp_ads_blocker_detector')
-3dpchip.com#%#//scriptlet('prevent-xhr', '/(compass.adop.cc|adsbygoogle)/', 'emptyStr')
+3dpchip.com#%#//scriptlet('prevent-xhr', '/(compass.adop.cc|adsbygoogle|taboola)/', 'emptyStr')
 3dpchip.com#%#//scriptlet('prevent-element-src-loading', 'script', 'compass.adop.cc')
 3dpchip.com#%#//scriptlet('abort-on-property-write', 'HTMLAnchorElement.prototype.onclick')
 sysnet.pe.kr#%#//scriptlet('prevent-setTimeout', 'banner_book')

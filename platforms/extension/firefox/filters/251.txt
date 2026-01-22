@@ -1,13 +1,13 @@
-! Checksum: Hy3mI17TlVc3R2U1rOM1OQ
-! Diff-Path: ../patches/251/251-s-1765471614-14400.patch
+! Checksum: S6CeIC+C4ELv2vxbtjH+SA
+! Diff-Path: ../patches/251/251-s-1768970960-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.9.28
-! TimeUpdated: 2025-12-11T16:44:19+00:00
+! Version: 2.0.9.34
+! TimeUpdated: 2026-01-21T04:46:35+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 11December2025v1
+! OriginalVersion: 21January2026v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -20,6 +20,7 @@
 ! - This list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
 ! - This list can not remove parameters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
 ! - As of 15/03/2024, this list did not work properly in Brave Browser, due to Brave missing several critical features this list uses. Please use this list only with uBlock Origin or AdGuard. User statements have however ticked in mid-2025 that the breakage is smaller.
+! - As of 29/12/2025, there are no known ways to even _try_ to load this list on MV3. In that case, changing to an MV2 browser is the only fix. If you use Windows, running "winget search mv2" and/or "winget search gecko" in PowerShell will show a more-or-less up-to-date list of browsers that support this list.
 ! 🗺️ ——— General remove rules ——— 🗺️ !
 ! From AdGuard CoreLibs (11/11/2020)
 $removeparam=yclid
@@ -101,7 +102,7 @@ $removeparam=wickedid
 ! https://www•dx•com/p/sliding-camera-protective-cover-for-smartphones-laptops-tablets-2729311•html?Utm_rid=91262049&Utm_source=affiliatewindow (21/11/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488307
 ! Exclude sendgbCOM - https://github.com/AdguardTeam/AdguardFilters/issues/100285
-$document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp|~uploadnow.io
+$document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp|~uploadnow.io|~usprobioticguide.com
 $document,removeparam=/^itm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^mtm_.*$/,domain=~redir.tradedoubler.com
@@ -238,7 +239,7 @@ $document,removeparam=igshid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3041969
 $document,removeparam=snr,domain=steampowered.com|steamcommunity.com|steamgames.com
 ! https://www•trouw•nl/nieuws/het-draagvlak-in-crisistijd-doet-premier-rutte-bijna-zweven-maar-hij-kan-ook-hard-vallen~bf367a86/?referrer=(...) (05/03/2021)
-$document,removeparam=referrer,domain=~bolt.com|~f4map.com|~deviantart.com|~github.com|~discover.*|~vimeo.*|~123-reg.co.uk|~cravesandflames.com|~portswigger.net|~aluminate.net
+$document,removeparam=referrer,domain=~bolt.com|~f4map.com|~deviantart.com|~github.com|~discover.*|~vimeo.*|~123-reg.co.uk|~cravesandflames.com|~portswigger.net|~aluminate.net|~timeguessr.com
 $document,removeparam=ext_source
 ! https://graphicriver•net/item/invoice-estimation-brief/20668760?iradid=275988&irpid=1288974&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1 (17/03/2021)
 $removeparam=iradid
@@ -1491,6 +1492,10 @@ $removeparam=t-src
 $removeparam=x-clickref
 ! https://books•google•no/books/content?id=KbFqi9cpwuQC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70BhbQXJ5hBfc32IGWz-OW3JvUFUdxqYGV-yNSB4KIMMW5s6sVwNYplF-TLNXSVlLLfq52lJP8w32UP4HqSGjFYZ5HYIaUyblNMx-BSErKIQaprokgJSDzEXRT2LSA7WMteEiI4 (08/11/2025)
 $removeparam=imgtk
+! BinaryMark tools (20/01/2026)
+?ref=winget|$removeparam=/^ref=winget$/
+! https://as•com/futbol/internacional/portazo-a-la-ley-wenger-f202601-n/?id_externo_rsoc=CM_ES_TW (20/01/2026)
+$removeparam=id_externo_rsoc
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -1499,7 +1504,7 @@ $removeparam=imgtk
 ! 🐹 ——— Specific remove rules 🐹 ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1NO, RARbgTO, Disney+ newsletter unsubscriptions)
-$document,removeparam=cid,domain=8days.sg|abcnews.go.com|adguard.com|adshares.net|ae.com|anntaylor.com|apple.com|bitdefender.*|blair.com|channelnewsasia.com|childrensplace.com|controld.com|dcard.tw|elmundo.es|emirates.com|factoryoutletstore.com|fifa.com|flipkart.com|gamestop.com|giphy.com|glasses.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|lenovo.com|loft.com|marca.com|microsoft.com|nbcnews.com|nike.com|nyandcompany.com|overstock.com|persol.com|proshop.*|radissonhotelsamericas.com|ray-ban.com|rei.com|rightmove.co.uk|samsung.com|stadium.*|staples.com|telenor.no|todayonline.com|tokopedia.com|tommy.com|toms.com|totalbeauty.com|tractorsupply.com|underarmour.com|vineyardvines.com|voxi.co.uk|wine.com|wsj.com|xg4ken.com|zales.com
+$document,removeparam=cid,domain=8days.sg|abcnews.go.com|adguard.com|adshares.net|ae.com|anntaylor.com|apple.com|bitdefender.*|blair.com|channelnewsasia.com|childrensplace.com|controld.com|dcard.tw|elmundo.es|emirates.com|factoryoutletstore.com|fifa.com|flipkart.com|gamestop.com|giphy.com|glasses.com|haband.com|intel.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|lenovo.com|loft.com|marca.com|microsoft.com|nbcnews.com|nike.com|nyandcompany.com|overstock.com|persol.com|proshop.*|radissonhotelsamericas.com|ray-ban.com|rei.com|rightmove.co.uk|samsung.com|stadium.*|staples.com|telenor.no|todayonline.com|tokopedia.com|tommy.com|toms.com|totalbeauty.com|tractorsupply.com|underarmour.com|vineyardvines.com|voxi.co.uk|wine.com|wsj.com|xg4ken.com|zales.com
 ! https://deal•no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www•amazon•com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
@@ -1514,7 +1519,7 @@ $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobi
 $removeparam=src,document,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hallmark.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|msn.com|neeva.com|newbalance.com|nexo.io|officestationery.co.uk|okdo.com|raspipc.es|reichelt.*|tandfonline.com|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|x.com|tumblr.com|aliexpress.*
 ! https://github.com/DandelionSprout/adfilt/pull/474
 ! https://user•qzone•qq•com/1250252459?source=aiostar (01/02/2022)
-$document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|about.gitlab.com|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|bluemountain.com|boscovs.com|boxboat.com|britishcornershop.co.uk|brownells.*|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|cmswire.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|educba.com|edx.org|eonline.com|escentual.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hbomax.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|ilgusto.it|instagram.com|italian.tech|itnext.io|jacquielawson.com|jobs.deepl.com|just-eat.co.uk|kasta.io|ladbible.com|lastampa.it|learn.microsoft.com|medium.com|microsoftedgewelcome.microsoft.com|monster.fi|nautica.com|netflix.com|ngx.me|nortonsafe.search.ask.com|nytimes.com|onehanesplace.com|outnorth.fi|paypal.com|petsupplies.com|phonesoap.com|privatehomeclips.com|propublica.org|quizlet.com|remppatori.fi|repubblica.it|riteaid.com|runnode.com|search.brave.com|seekingalpha.com|sonos.com|spiceworks.com|squarespace.com|startpage.com|studio.co.uk|subscribe.gq.com|t.me|tcgplayer.com|theathletic.com|thedailybeast.com|themeditelegraph.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|trendmicro.com|tumblr.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|x.com|xd.wayin.com|ylighting.com|youtube.com|35.190.94.206|206.94.190.35.bc.googleusercontent.com|yubo.live
+$document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|about.gitlab.com|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|bluemountain.com|boscovs.com|boxboat.com|britishcornershop.co.uk|brownells.*|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|cmswire.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|educba.com|edx.org|eonline.com|escentual.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hbomax.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|ilgusto.it|instagram.com|italian.tech|itnext.io|intel.com|jacquielawson.com|jobs.deepl.com|just-eat.co.uk|kasta.io|ladbible.com|lastampa.it|learn.microsoft.com|medium.com|microsoftedgewelcome.microsoft.com|monster.fi|nautica.com|netflix.com|ngx.me|nortonsafe.search.ask.com|nytimes.com|onehanesplace.com|outnorth.fi|paypal.com|petsupplies.com|phonesoap.com|privatehomeclips.com|propublica.org|quizlet.com|remppatori.fi|repubblica.it|riteaid.com|runnode.com|search.brave.com|seekingalpha.com|sonos.com|spiceworks.com|squarespace.com|startpage.com|studio.co.uk|subscribe.gq.com|t.me|tcgplayer.com|theathletic.com|thedailybeast.com|themeditelegraph.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|trendmicro.com|tumblr.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|x.com|xd.wayin.com|ylighting.com|youtube.com|35.190.94.206|206.94.190.35.bc.googleusercontent.com|yubo.live
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|marketwatch.com|penews.com
@@ -3084,6 +3089,8 @@ $removeparam=brand,domain=cyberghostvpn.com|privateinternetaccess.com
 !!! ||zhihu.com^$removeparam=search_source
 ||zhihu.com^$removeparam=hybrid_search_source
 ||zhihu.com^$removeparam=hybrid_search_extra
+! https://github.com/DandelionSprout/adfilt/pull/1216
+||zhihu.com^$removeparam=share_code
 ! https://www•theregister•com/2021/12/20/linux_5_16_rc6/?td=keepreading-btm
 ||theregister.com^$removeparam=td
 ! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/210
@@ -4292,6 +4299,43 @@ $removeparam=id,domain=affiliate.orangewebsite.com|linksynergy.com|www.bestbuy.*
 ||threads.com^$removeparam=slof
 ! https://github.com/AdguardTeam/AdguardFilters/commit/8dd645bf0f76488cf8d06182c94eef8750c33588
 ||5-fifth.com^$document,removeparam=janet
+! https://www•dll-files•com/easyanticheat_x64•dll•html
+||dllfiles.com^$removeparam=c
+! https://www•microsoft•com/en-gb/download/details•aspx?id=17851&quot
+||microsoft.com/*/download/details$removeparam=quot
+! https://www•microsoft•com/en-gb/download/details•aspx?id=103324&lc=1033
+||microsoft.com/*/download/details$removeparam=lc
+! https://wrd01•asuswebstorage•com/webrelay/directdownload/?x-asc-sid=10014&fi=4434291128&ve=1&pv=0&x-asc-sid-version=6•25•3•3&x-asc-device-name=Y2hyb21lKDE0Mi4wLjAp&x-asc-os-version=Windows%2010&rn=V2ViU3RvcmFnZVN5bmNJbnN0YWxsZXIuemlw&tlt=Z3bz%2BfinCFJ%2BZrKsasWKX%2BjaR7T%2Fpbe%2BaFrrCTiJj8o%3D (05/01/2026)
+||asuswebstorage.com^$removeparam=ve
+||asuswebstorage.com^$removeparam=pv
+||asuswebstorage.com^$removeparam=x-asc-sid-version
+||asuswebstorage.com^$removeparam=x-asc-device-name
+||asuswebstorage.com^$removeparam=x-asc-os-version
+||asuswebstorage.com^$removeparam=tlt
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15489321
+featured_on=talkpython$document,removeparam=featured_on
+ref=51st.news$document,removeparam=ref
+ref=academy.socos.org$document,removeparam=ref
+ref=aftermath.site$document,removeparam=ref
+ref=ppc.land$document,removeparam=ref
+ref=the-browser$document,removeparam=ref
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15490503
+||intel.com^$document,removeparam=campid
+||intel.com^$document,removeparam=erpm_id
+||intel.com^$document,removeparam=mkt_cid
+||intel.com^$document,removeparam=programid
+! https://game.intel.com/us/stories/thinking-about-the-roman-empire-anno-117-pax-romana-is-out-now?cid=em&source=mkt&campid=g25qr1&programid=EBP1806&mkt_cid=&erpm_id=&source_id=CEG_25_HQ_Reputation_01_GAPNewsNov17WW_NL_ENG_MKA-566452&em_id=2679
+! https://game.info.intel.com/events/public/v1/encoded/track/tc/GA+113/cffcp04/VVSlnq2M5c64N2rxR-Jyc2_CW7MhRLh5gdJJ3N2jjSxY2-ZmqW8wLKSR6lZ3m9W21bQqH7Q_yTVW3S2F-S9g_F33W4znb726713pgW67N96q67Wx1QN23lv0Gd0k45W8gSnNx2CQftkW3Wtf7N6JSNklN940bHDWXCRcW5zpWJ_4bggwdW1P6jGy17wJXyW1xT5Db28w5-tW4LWCf38mLdj5W6fQGpq6v4GSkW3YQ9dD7T_DKyW7jPd9S1TrJcZW1vcfmB7YNxG_W8zwKMb339nvzW8qH6v-2YPkRZW5s6kVM8QrcpRW8RsZV_2S0hLJW5gy24T7PTrXNW5JK0kV1V3NTNW83bBGL7QD_kFW5lRnp75qJmvYW37NzTZ3W9r6MW56z6Jz7HlY73W6f3dDV7MRNz8W5wXXjd8RjZYKf3qJb0C04?_ud=c329ca74-a39a-484a-825b-9a5e407830fe&_jss=1&_fl=8&_pl=5&_hc=8&_lg=en-US,en&_plt=Win32&_scr=1280,800
+||game.intel.com^$document,removeparam=content
+||game.intel.com^$document,removeparam=em_id
+||game.intel.com^$document,removeparam=source_id
+||game.info.intel.com^$document,removeparam=_fl
+||game.info.intel.com^$document,removeparam=_hc
+||game.info.intel.com^$document,removeparam=_jss
+||game.info.intel.com^$document,removeparam=_lg
+||game.info.intel.com^$document,removeparam=_pl
+||game.info.intel.com^$document,removeparam=_plt
+||game.info.intel.com^$document,removeparam=_scr
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
 ! https://sproutsluckycorner•files•wordpress•com/2019/12/ring-fit-adventure-smoothies-1•png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com|dr.dk|if.com.au
