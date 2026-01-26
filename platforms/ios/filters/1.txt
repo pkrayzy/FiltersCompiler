@@ -1,9 +1,9 @@
-! Checksum: FHKAfBlGMUzjyGBMOvpyvQ
-! Diff-Path: ../patches/1/1-s-1769062467-3600.patch
+! Checksum: Ox1CTbdURzA4+YveW8mWwA
+! Diff-Path: ../patches/1/1-s-1769425931-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.1.3.99
-! TimeUpdated: 2026-01-22T06:11:07+00:00
+! Version: 2.1.4.5
+! TimeUpdated: 2026-01-26T11:08:23+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1425,6 +1425,7 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||sexgramm.ru^
 ||trpwdg.com^$third-party
 ||unoadsrv.com^
 ||ads.kingads.digital^
@@ -4981,6 +4982,8 @@ ya.ru,yandex.*##.services-feed_banner_yes
 ya.ru##.Skeleton_type_ad_search
 [$path=/search]ya.ru,yandex.*##.AdvMedia
 yandex.*##body:not([data-bem*="pogoda"]) .mini-suggest__popup-content > li[data-type="nav"]
+! ad in the search results
+[$path=/search]ya.ru,yandex.*##.content__left li.serp-item:has(> div[class] div.AdvLabel)
 ! ad in a search proposal
 ya.ru,yandex.*##div[id^="suggest-item"] > a[href^="http://yabs."][href*="/count/"]
 ya.ru,yandex.*##div[id^="suggest-item"] > a[href^="https://yabs."][href*="/count/"]
@@ -5048,10 +5051,10 @@ yandex.*#?#.business-card-title-view__actions > div.business-card-title-view__ad
 ! Yandex.Pogoda
 !
 ! Yandex.Market
+market.yandex.*##div[data-apiary-widget-name="@monetize/MadvHeaderPromoStreamer"]
 market.yandex.*##div[data-apiary-widget-name="@marketfront/CreativeBanner"]
-market.yandex.*##div[data-apiary-widget-name="@light/RecomMediaAdv"]
+market.yandex.*##div[data-apiary-widget-name="@monetize/RecomMediaAdv"]
 market.yandex.*##div[data-apiary-widget-name="@monetize/HeroBannerCarouselLazyCreator"]
-market.yandex.*##div[data-zone-name="headerPromo"]
 market.yandex.*###banner-streamer
 !
 ! Yandex.Video
@@ -6996,6 +6999,11 @@ vedomosti.ru,kommersant.ru,rg.ru,glavbukh.ru,chehov-vid.ru,161.ru,prufy.ru,ysia.
 !
 !
 !
+.mvapspdmpg.com/movie/files/episodes/*-RU.mp4|
+rutoro.info##.box_in > div[align="center"]:has(> a:not([class]) img)
+cyber.sports.ru##.structured-body-wrapper > p.sb-paragraph:has(> a[href^="https://go.redav.online/"])
+pikabu.ru##.promo-button
+pikabu.ru###branding_ad_header
 vedomosti.ru##.article__metrics
 ||netmonet.co/api/banner/vpn
 ||netmonet.co/api/general/adfox
@@ -7037,6 +7045,7 @@ pgn21.ru##div[class*="Banner"]
 cian.ru##[class*="--special-promo"]
 kinoteatr.ru##.supervtornik_banner_wrapper
 ||api.rstprgapipt.com/an/lib.js
+||api.rstprgapipt.com/api-integration/player/vast1.xml?view=
 cdek.ru##div.overflow-hidden:has(> div[data-prebid-placement-id])
 forum.zoneofgames.ru##div[style="width:100%;height:480px;"]
 uchi.ru##a[href^="https://www.tbank.ru/cards/"]
