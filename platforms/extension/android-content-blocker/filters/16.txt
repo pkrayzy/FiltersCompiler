@@ -1,8 +1,8 @@
-! Checksum: Ckw37CZtxFAoY8v7cCOyGg
+! Checksum: UOIiJp9ykkeW0NpubHHpog
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.55.69
-! TimeUpdated: 2026-01-25T13:17:00+00:00
+! Version: 2.0.55.74
+! TimeUpdated: 2026-01-27T06:12:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -53,6 +53,9 @@
 ! Good: @@/adblocker/detect.js$domain=example.org
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/223523
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=coupdepouce.com
+@@||micro.rubiconproject.com/prebid/dynamic/*.js$domain=coupdepouce.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220854
 !+ PLATFORM(ios, ext_android_cb)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=monlatuque.com
@@ -462,7 +465,7 @@ fsolver.fr#@#.ad-placement
 !+ PLATFORM(ios, ext_android_cb)
 @@||eurosport.fr^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9961
-nrj-play.fr#@#.ad-zone
+nrj-play.fr#@#.ad-zone:not(.textads):not(.adsbygoogle)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7013
 ultimate-catch.eu##.special-message-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6773
@@ -819,7 +822,7 @@ lefigaro.fr##.fig-partner
 ||widget.betin.ai/get/geny
 futura-sciences.com##.ad-parent-billboard
 futura-sciences.com##.ad-parent-halfpage
-tvaplus.ca##div[data-testid="ad-container"]
+coupdepouce.com,tvaplus.ca##div[data-testid="ad-container"]
 tesla-mag.com##.sidebar-inner-wrap > section[id^="block-"]
 dealabs.com##div[id$="FuseZonePortal"]
 lephoceen.fr##div[class^="ad_ad_"]
