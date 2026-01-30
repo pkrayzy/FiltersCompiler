@@ -1,9 +1,9 @@
-! Checksum: dTB7emTFdrdqi/lDLV7WMg
-! Diff-Path: ../patches/11/11-s-1769512371-3600.patch
+! Checksum: XLiXUHOeGwOqNkJ1mESc1Q
+! Diff-Path: ../patches/11/11-s-1769710761-3600.patch
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.67.33
-! TimeUpdated: 2026-01-27T11:09:48+00:00
+! Version: 2.0.67.43
+! TimeUpdated: 2026-01-29T18:16:34+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -169,6 +169,12 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||x3m.biz^
+||d1tru86qrby720.cloudfront.net^
+||ads.phonepe.com^
+||ads-static.phonepe.com^
+||bstream.channelcom.tech^
+||ggbond.peaksite.tech^
 ||mediation.goog^
 ||axon.ai^
 ||up.ousabq.tech^
@@ -2418,10 +2424,17 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+thetoc.gr##.bannerparent
+thetoc.gr##.mg_underhero
+m.yelp.com##div[class*="new-serpia-"] > ol > li:has(div[data-traffic-crawl-id="SearchResultBizName"] > h3 > a[href^="/adredir?"])
+m.yelp.com##div[class*="new-serpia-"] > ol > li:has(> div[class*="sponsored-icon"])
+4j.com###Games_TopAdDiv
+mydealz.de##div[class]:has(> .ad--bg:only-child)
+amazon.*###softlines-btf-substitute-zone-container-3_feature_div
 amazon.*###softlines-mobile-btf-discovery-zone-T3_feature_div
 accuradio.com##div[class^="MobileBottomAd"]
 accuradio.com##div[class^="MobileSquareAd"]
-newegg.com#%#//scriptlet('json-prune-fetch-response', ' RecommendItems.RecommendInfo.[-].DataSource.[=].spsr SimilarItems.RecommendInfo.[-].DataSource.[=].spsr', '', 'm/product/ajax/productPersonalization')
+newegg.com#%#//scriptlet('json-prune-fetch-response', ' RecommendItems.RecommendInfo.[-].DataSource.[=].spsr RecommendInfo.[-].DataSource.[=].spsr', '', 'm/product/ajax/productPersonalization')
 newegg.com##span[data-nosnippet="true"] > .sponsored-brands-items
 fok.nl#$#@media (max-width: 1023px) { #pageWrapper { top: 5px !important; } }
 televisa.com##.sm\:hidden.-mb-2
@@ -3775,7 +3788,6 @@ yahoo.com##div[id^="sda-LREC-"] > div[id^="LREC-"]
 aksam.com.tr##div[style="text-align:center;height:310px;"]
 aksam.com.tr##div[style="height:310px;"]
 aksam.com.tr##div[style="height:140px;"]
-mangapark.io##main > div:has(> div.px-3 > a[href][target="_blank"][q\:key="CY_1"])
 gazo-chat.net##a[href^="https://fam-ad.com/"]
 pixwox##.ah-box
 nan-net.com##.bbs_box[style="height:70px;"]
@@ -8310,6 +8322,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Solving problems: problematic apps must be excluded by adding `~package_name` to these rules.
 !                   The most of excluded apps - browsers. They should not be matched.
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221986
 ! Mail.Ru ads in apps
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220432
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217628

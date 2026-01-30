@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: xPw0edO/SaCjgomGBod1RA
-! Diff-Path: ../patches/3_optimized/3_optimized-s-1769485326-3600.patch
+! Checksum: RKwjtepmTNuiTJ91LHMY0A
+! Diff-Path: ../patches/3_optimized/3_optimized-s-1769750921-3600.patch
 ! Title: AdGuard Tracking Protection filter (Optimized)
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.99.20
-! TimeUpdated: 2026-01-27T03:38:22+00:00
+! Version: 2.0.99.38
+! TimeUpdated: 2026-01-30T05:25:18+00:00
 ! Expires: 5 days (update frequency)
 !+ NOT_PLATFORM(ext_chromium_mv3)
 www.youtube.com##+js(no-xhr-if, /\/api\/stats\/atr\?.+?&rt=\d+\.\d+.+?&volume=\d+&cbr=.+?&fexp=v1%[-%0-9C]{300\,}&.+?&muted=\d(&vis=3)?&docid=/ method:POST)
@@ -211,6 +211,9 @@ biteki.com##.slick-slide > div[id] + script:upward(1):remove()
 ||ib.snssdk.com^
 ||xlog.snssdk.com^
 ||log.snssdk.com^
+||1mythtracker.xyz^
+||analytic.is^$3p
+||hsadspixel.net^
 ||log.grm.gsretail.com^
 ||trackhorizon.nnmtools.com^
 ||d1dxoqu0t5mb7j.cloudfront.net^
@@ -62089,6 +62092,9 @@ biteki.com##.slick-slide > div[id] + script:upward(1):remove()
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 |piwik.
+||t.y8.com^
+||cs.avito.ru^
+||logsk.glomancloud.gr^
 ||insights-tag.convertkit.com^
 ||b.trueanthem.com^
 ||matomo.eduwill.net^
@@ -62097,7 +62103,6 @@ biteki.com##.slick-slide > div[id] + script:upward(1):remove()
 ||frontier.capcutw.us^
 ||mssdk16-normal-us-ttp.capcutapi.us^
 ||log-v*-boot.capcutapi.com^
-||pinpoint.espn.com^
 ||analytics.itbox.ua^
 ||stats.insighttimer.com^
 ||trackinglibrary.prodperfect.com^
@@ -115442,6 +115447,17 @@ _tracking.php?b=
 /prod/dfm/t8y9347t.min.js$redirect=noop.txt,important,domain=dailycamera.com,image,media,subdocument,stylesheet,script,xhr,other
 ||google-analytics.com^$object,redirect=noop.js,script
 ||googletagmanager.com/gtag/$3p,object,redirect=noop.js,script
+||ifsagram*.com/vt_beacon.php
+||s.yimg.jp/images/approach/jslib/clear.gif?
+||xmind.app/_api/plsbl/gtag
+||account.y8.com/api/v*/json/tracking/
+||avito.st/s/pixel/script.js
+||avito.st/mstatic/build/legacy/*/fingerprint.*.js
+||adsimg.vevorstatic.com/upload/vevor/custom/vcr/*/vcr.js
+||adsimg.vevor.com/upload/ga/*.js
+octobrowser.net##+js(set-local-storage-item, oc_uuid, $remove$)
+||octobrowser.net/hs/scriptloader/
+||js.zol.com.cn/pvn/z.pv
 ||img.eduwill.net/resources/tracking/live/globalMainTracking.js
 ||img.eduwill.net/eduwill/live/js/common/forMatomo.js
 ||app.s.id/api/sda/tr
@@ -116074,7 +116090,6 @@ livemint.com##+js(set-constant, dapTracker.track, noopFunc)
 /^https:\/\/(www|checkout|giris)\.hepsiburada\.com\/([a-zA-Z0-9\-_]+\/){3,7}([a-zA-Z0-9\-_]+|[a-zA-Z0-9\-_]+\/[a-zA-Z0-9\-_]+)$/$script,~3p,domain=hepsiburada.com
 ||walmart.com/sp/b/s/im|
 ||services.msgsndr.com/attribution_service/
-||moderate.cleantalk.org/*/frontend_data
 ||herokuapp.com/save_utm_params
 ||calendly.com/api/booking/analytics/track
 ||tag.flvcdn.net/lytag.js
@@ -117503,7 +117518,7 @@ device4game.ru##.tg-first-footer-widget
 ||urldefense.proofpoint.com^*analytics_insight.min.js
 ||uq.force.com/auraAnalytics^
 ||hurriyet.com.tr/banalytics.js
-president.jp##.recommend
+lasisa.net,president.jp##.recommend
 ||zatsubitown.com/mailfriend/kaiseki
 ||doda.jp/DodaCommon/Html/js/RtoasterTrack.js
 ||doda.jp/resources/dcfront/js/usrclkTracking.js
@@ -120682,6 +120697,7 @@ link.gmapp*.net$image
 %2FCI0%2F0$image
 /ss/o/*/ho.gif$image
 %2Fss%2Fo%2F*%2Fho.gif$image
+.awstrack.me$image
 mail.ferret-one.com/beacon$image
 mail.ferret-one.com%2Fbeacon$image
 healio.com/medialibrary/pixel.png?tp=
@@ -121208,6 +121224,11 @@ dlsdk.appsflyer.com^
 ||int.vlancaa.site^
 ||int.vlancaa.fun^
 ||tok.vaicore.xyz^
+||ip.xindong.com^
+||openlog.tapapis.com^
+||logc-sg.tsd.xindong.com^
+||e.tapdb.ap-sg.tapapis.com^
+||track.onef.pro^
 ||log.weathertrip.net^
 ||log.clearcleanerpro.live^
 ||client-telemetry-preauth.hingeprod.net^
@@ -123633,7 +123654,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 @@||google-analytics.com/gtm/js?id=$domain=joblo.com
 @@||google-analytics.com/analytics.js$domain=joblo.com
 @@||query1.petametrics.com/*&sdk=bc-jsonp$domain=lanacion.com.ar
-@@||googletagservices.com/tag/js/gpt.js$domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de|ohmirevista.com
+@@||googletagservices.com/tag/js/gpt.js$domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|maxisciences.com|ohmymag.com|ohmymag.de
 @@||googletagmanager.com/gtm.js$domain=easycredit.de
 @@||google-analytics.com/analytics.js$domain=easycredit.de
 @@||google-analytics.com/gtm/js?id=$domain=easycredit.de
@@ -124682,6 +124703,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||actuallysnake.com^
 ||adamantsnail.com^
 ||addictedattention.com^
+||addressfriend.com^
 ||admiral.pub^
 ||admiralproxied.com^
 ||admissionaudit.com^
@@ -124822,6 +124844,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||blockdial.com^
 ||bloomsend.com^
 ||blueeyedblow.com^
+||bluelionlabs.net^
 ||bluenest.net^
 ||bluevinebooks.com^
 ||blushingbeast.com^
@@ -125285,6 +125308,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||fewkittens.com^
 ||fieldconfig.com^
 ||figsprotein.com^
+||figurehunter.net^
 ||fillthemap.com^
 ||filtercutter.com^
 ||finalizeforce.com^
@@ -125608,6 +125632,7 @@ demae-can.com##+js(remove-attr, data-trm-action|data-trm-category|data-trm-label
 ||kindhush.com^
 ||kindlereunion.com^
 ||kitetuning.com^
+||kittentacos.com^
 ||kittycatking.com^
 ||knewpenny.com^
 ||knifetreasury.com^

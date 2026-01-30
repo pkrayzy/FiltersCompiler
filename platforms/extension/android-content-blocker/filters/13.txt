@@ -1,8 +1,8 @@
-! Checksum: Kj+YeE6XOY7nJ+kr1UAJkw
+! Checksum: m+U0uxGLi7Lf8fa1iMYu9g
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.61.59
-! TimeUpdated: 2026-01-27T08:10:44+00:00
+! Version: 2.0.61.75
+! TimeUpdated: 2026-01-30T10:14:08+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -191,6 +191,7 @@
 ! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
 !
 !
+||hepsiads-ui.hepsiburada.com^
 ||filmreklam.livebahispartners.com^$popup
 ||adsmanagement.atamedyagrubu.com^
 ||hepsiads-gw.hepsiburada.com^
@@ -453,9 +454,6 @@ mangaship.com#@#.ad-placement
 ! TODO: remove hint when app for iOS/Safari extension will use scriptlets library version 1.9.57 or newer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83318
 coinotag.com###kanews-modal-adblock
-! https://github.com/AdguardTeam/AdguardFilters/issues/99642
-@@||cnnturk.com/scripts/ad-type.bundle.js
-@@||cnnturk.com//assets/dist/js/300x250_dfp.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71695
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=exxen.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72151
@@ -1222,7 +1220,6 @@ info,biz###content > p[style*="text-align: center;"]
 info##.holder > p[style^="background-color:"][style*="font-weight: bold;"]
 info,com###page > p[style^="background-color:"][style$="text-align: center;"]
 info,com###video > p[style^="background-color:"][style*="font-weight: bold;"]
-sexzun.com##.kon
 badtv.net,doeda.one##center > p[style^="background-color:"][style*="font-weight: bold;"]
 !
 ! common names
@@ -1269,6 +1266,17 @@ dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdas
 !
 ! NOTE: Specific rules
 !
+*$script,third-party,domain=turkifsalifetr1.blog
+ifsagram6.com###promoPopup
+||vendor-provider.*.cdn.digitaloceanspaces.com/ebetlab/*/promotions/$image
+sahibinden.com##.masthead-banner-container
+checkout.hepsiburada.com##div[class^="basket_container_"] div[class^="reco_"]
+checkout.hepsiburada.com##div[class^="basket_container_"] div[class^="carousel_container_"]
+||haberturk.com/adscbg/
+||im.haberturk.com/assets/hopeplayer/released/plugins/ads-debug.min.js
+||sozcu.com.tr/lib/adsv2_dist/
+onedio.com##div.justify-center.xl\:flex.hidden
+/^https:\/\/apisplus[0-9]?\.live\/v[0-9]\.[0-9]\/[a-z]+$/$xmlhttprequest,domain=tr.sportplus.tv
 ntv.com.tr##div[class^="taboola-"]
 transfermarkt.com.tr##.sorare-banner
 haberler.com###inpage_reklam_desktop
@@ -5097,6 +5105,7 @@ zeustv109.com,zeustv110.com,zeustv111.com,zeustv112.com,zeustv113.com,zeustv114.
 !
 ! xsportv*.xyz - frequently changed domains
 xsportv45.xyz,xsportv46.xyz,xsportv47.xyz,xsportv48.xyz,xsportv49.xyz,xsportv50.xyz,xsportv51.xyz,xsportv52.xyz,xsportv53.xyz,xsportv54.xyz,xsportv55.xyz,xsportv56.xyz,xsportv57.xyz,xsportv58.xyz,xsportv59.xyz,xsportv60.xyz,xsportv61.xyz,xsportv62.xyz,xsportv63.xyz,xsportv64.xyz##.betting-sites
+xsportv45.xyz,xsportv46.xyz,xsportv47.xyz,xsportv48.xyz,xsportv49.xyz,xsportv50.xyz,xsportv51.xyz,xsportv52.xyz,xsportv53.xyz,xsportv54.xyz,xsportv55.xyz,xsportv56.xyz,xsportv57.xyz,xsportv58.xyz,xsportv59.xyz,xsportv60.xyz,xsportv61.xyz,xsportv62.xyz,xsportv63.xyz,xsportv64.xyz##a[href^="https://t2m.io/"]
 !
 ! vegatv*.shop - frequently changed domains
 ||vegatv*.shop/*.gif
@@ -5126,10 +5135,8 @@ acartv77.live,acartv78.live,acartv79.live,acartv80.live,acartv81.live,acartv82.l
 ! http://kisalt.app/bosssportstv / https://t.me/bosssportstv
 ||bosssports*.com/injecti.js
 ||bosssports*.com/*.gif
-! aglint-disable-next-line no-invalid-modifiers
-||video.twimg.com/amplify_video/*/vid/*.mp4$domain=bosssports214.com|bosssports215.com|bosssports216.com|bosssports217.com|bosssports218.com|bosssports219.com|bosssports220.com|bosssports221.com|bosssports222.com|bosssports223.com
-bosssports214.com,bosssports215.com,bosssports216.com,bosssports217.com,bosssports218.com,bosssports219.com,bosssports220.com,bosssports221.com,bosssports222.com,bosssports223.com##.iframe-buttons
-bosssports214.com,bosssports215.com,bosssports216.com,bosssports217.com,bosssports218.com,bosssports219.com,bosssports220.com,bosssports221.com,bosssports222.com,bosssports223.com##ul > li > a:not([href^="https://bosssports"][href$=".com/"])
+bosssports326.com,bosssports327.com,bosssports328.com,bosssports329.com,bosssports330.com,bosssports331.com,bosssports332.com,bosssports333.com,bosssports334.com,bosssports335.com,bosssports336.com,bosssports337.com,bosssports338.com,bosssports339.com,bosssports340.com,bosssports341.com,bosssports342.com,bosssports343.com,bosssports344.com,bosssports345.com##.iframe-buttons
+bosssports326.com,bosssports327.com,bosssports328.com,bosssports329.com,bosssports330.com,bosssports331.com,bosssports332.com,bosssports333.com,bosssports334.com,bosssports335.com,bosssports336.com,bosssports337.com,bosssports338.com,bosssports339.com,bosssports340.com,bosssports341.com,bosssports342.com,bosssports343.com,bosssports344.com,bosssports345.com##ul > li > a:not([href^="https://bosssports"][href$=".com/"])
 !
 ! inattvizle*.top - frequently changed domains
 ||inattvizle*.top/lib/uploads/r/
@@ -5149,8 +5156,6 @@ otobettv12.com,otobettv13.com,otobettv14.com,otobettv15.com,otobettv16.com,otobe
 rotabettv370.com,rotabettv371.com,rotabettv372.com,rotabettv373.com,rotabettv374.com,rotabettv375.com,rotabettv376.com,rotabettv377.com,rotabettv378.com,rotabettv379.com,rotabettv380.com,rotabettv381.com,rotabettv382.com,rotabettv383.com,rotabettv384.com,rotabettv385.com,rotabettv386.com,rotabettv387.com,rotabettv388.com,rotabettv389.com,rotabettv390.com,rotabettv391.com,rotabettv392.com,rotabettv393.com,rotabettv394.com,rotabettv395.com,rotabettv396.com,rotabettv397.com,rotabettv398.com,rotabettv399.com,rotabettv400.com,rotabettv401.com,rotabettv402.com,rotabettv403.com,rotabettv404.com,rotabettv405.com,rotabettv406.com,rotabettv407.com,rotabettv408.com,rotabettv409.com,rotabettv410.com,rotabettv411.com,rotabettv412.com,rotabettv413.com,rotabettv414.com,rotabettv415.com##body > a[href^="https://"][target="_blank"]
 !
 ! betisttv*.live - frequently changed domains
-betist126tv.live,betist127tv.live,betist128tv.live,betist129tv.live,betist130tv.live,betist131tv.live,betist132tv.live,betist134tv.live,betist135tv.live,betist136tv.live##.nk-nav > li > a[target="_blank"]
-betist126tv.live,betist127tv.live,betist128tv.live,betist129tv.live,betist130tv.live,betist131tv.live,betist132tv.live,betist134tv.live,betist135tv.live,betist136tv.live##body > div[style="position:fixed;height:100%;z-index:1;width:100%"]
 !
 ! portobettv*.com - frequently changed domains
 ||portobettv*.com/assets/img/banners/
@@ -5319,6 +5324,11 @@ justintvizle550.top,justintvizle551.top,justintvizle552.top,justintvizle553.top,
 ! selcuksports2.com
 selcuksports2.com,selcuksports3.com,selcuksports4.com,selcuksports5.com,selcuksports6.com,selcuksports7.com,selcuksports8.com,selcuksports9.com,selcuksports10.com,selcuksports11.com,selcuksports12.com,selcuksports13.com,selcuksports14.com,selcuksports15.com,selcuksports16.com,selcuksports17.com,selcuksports18.com,selcuksports19.com,selcuksports20.com,selcuksports21.com##img[id^="top-ads-"]
 ! CASE 3 - probably fake
+||taraftariumhdizle24.org/dimg/*.gif$image
+taraftariumhdizle24.org###pageskin-link
+taraftariumhdizle24.org##a[href^="https://hemengit.link/"]
+taraftariumhdizle24.org,taraftarium24bet.net##.alert
+taraftariumhdizle24.org,taraftarium24bet.net##.footer-sticky
 ||graftonfishingsupply.com/dosyalar/
 pressedfur.com##.player > a[href][target="_blank"]
 ||blogger.googleusercontent.com/img/*.gif$domain=taraftariummdeneme.blogspot.com

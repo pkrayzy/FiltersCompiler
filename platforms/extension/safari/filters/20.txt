@@ -1,9 +1,9 @@
-! Checksum: KKbObUU9IFmlZGn7BjljHw
-! Diff-Path: ../patches/20/20-s-1769482472-3600.patch
+! Checksum: wqLRFKxRLUOIX23BfS/1vg
+! Diff-Path: ../patches/20/20-s-1769745458-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.26.68
-! TimeUpdated: 2026-01-27T02:51:10+00:00
+! Version: 2.0.26.77
+! TimeUpdated: 2026-01-30T03:54:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -60,6 +60,11 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+valant.io##vng-smart-banner
+m.avito.ru##.js-apps-banner
+vevor.*##.AppDrainage
+caretobeauty.com##.pwa-download-footer__content
+caretobeauty.com#%#//scriptlet('set-local-storage-item', 'downloadPopupDisplayed', 'true')
 liveradious.com#%#//scriptlet('set-local-storage-item', 'stickyLineRemoved', 'true')
 satariz.com#%#//scriptlet('set-local-storage-item', 'satariz_mobile_app_banner_dismissed', 'true')
 radio.de,radio.at,radio.net##div:has(> div:first-child + div:last-child > .app-banner-btn)
@@ -441,7 +446,7 @@ scoopzapp.com#?#.fixed:has(> div[class]:only-child > div[class] > div:only-child
 bristol.ru##.first-order-modal
 raycast.com##div[class^="GlobalBanner"]
 imdb.com##.imdb-header__app-button
-doordash.com##main > div[style="border: none; margin-top: var(--usage-space-medium);"]
+doordash.com##div[class^="StyledStackChildren-"]:has(> div[data-testid="appDownload"]:first-child + button[data-testid="appDownloadButton"]:last-child)
 doordash.com#%#//scriptlet('trusted-set-local-storage-item', 'appDownloadPromptDismissedV2Ttl', '{"value":"99999999999999","expiresAt":99999999999999}')
 t.shuqi.com##.ReaderFreeFixedGuideBtn
 enerjisa.com.tr,easy.co.il##.qr-container
@@ -3705,6 +3710,8 @@ wear.jp#%#//scriptlet('trusted-set-session-storage-item', 'status_of_app_redirec
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
 !
+!+ NOT_OPTIMIZED
+doordash.com##main > div[style="border: none; margin-top: var(--usage-space-medium);"]
 !+ NOT_OPTIMIZED
 ticketmaster.com##.page > div[style]:not([class],[id]):has(> div[class]:only-child > div[class]:only-child > div[class] > a[href*="onelink.me"]:only-child)
 !+ NOT_OPTIMIZED
