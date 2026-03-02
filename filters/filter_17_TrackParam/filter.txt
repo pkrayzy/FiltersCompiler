@@ -15,6 +15,12 @@
 !
 ! NOTE: Generic rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224235
+! https://github.com/AdguardTeam/AdguardFilters/issues/217915
+$removeparam=analytics_context
+$removeparam=analytics_trace_id
+! Bance
+$removeparam=bance_xuid
 ! Oracle Eloqua
 $removeparam=elqTrackId
 $removeparam=elq
@@ -450,7 +456,7 @@ $denyallow=meishi.meituan.com|portal-portm.meituan.com|rd.bizrate.com|glavnoe.li
 $denyallow=usprobioticguide.com|rd.bizrate.com|glavnoe.life|redirects.tradedoubler.com|t.send.vt.edu|google.ad|google.ae|google.al|google.am|google.as|google.at|google.az|google.ba|google.be|google.bf|google.bg|google.bi|google.bj|google.bs|google.bt|google.by|google.ca|google.cat|google.cd|google.cf|google.cg|google.ch|google.ci|google.cl|google.cm|google.cn|google.co.ao|google.co.bw|google.co.ck|google.co.cr|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.ls|google.co.ma|google.co.mz|google.co.nz|google.co.th|google.co.tz|google.co.ug|google.co.uk|google.co.uz|google.co.ve|google.co.vi|google.co.za|google.co.zm|google.co.zw|google.com|google.com.af|google.com.ag|google.com.ai|google.com.ar|google.com.au|google.com.bd|google.com.bh|google.com.bn|google.com.bo|google.com.br|google.com.bz|google.com.co|google.com.cu|google.com.cy|google.com.do|google.com.ec|google.com.eg|google.com.et|google.com.fj|google.com.gh|google.com.gi|google.com.gt|google.com.hk|google.com.jm|google.com.kh|google.com.kw|google.com.lb|google.com.ly|google.com.mm|google.com.mt|google.com.mx|google.com.my|google.com.na|google.com.nf|google.com.ng|google.com.ni|google.com.np|google.com.om|google.com.pa|google.com.pe|google.com.pg|google.com.ph|google.com.pk|google.com.pr|google.com.py|google.com.qa|google.com.sa|google.com.sb|google.com.sg|google.com.sl|google.com.sv|google.com.tj|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vc|google.com.vn|google.cv|google.cz|google.de|google.dj|google.dk|google.dm|google.dz|google.ee|google.es|google.fi|google.fm|google.fr|google.ga|google.ge|google.gg|google.gl|google.gm|google.gp|google.gr|google.gy|google.hn|google.hr|google.ht|google.hu|google.ie|google.im|google.iq|google.is|google.it|google.je|google.jo|google.kg|google.ki|google.kz|google.la|google.li|google.lk|google.lt|google.lu|google.lv|google.md|google.me|google.mg|google.mk|google.ml|google.mn|google.ms|google.mu|google.mv|google.mw|google.ne|google.nl|google.no|google.nr|google.nu|google.pl|google.pn|google.ps|google.pt|google.ro|google.rs|google.ru|google.rw|google.sc|google.se|google.sh|google.si|google.sk|google.sm|google.sn|google.so|google.sr|google.st|google.td|google.tg|google.tk|google.tl|google.tm|google.tn|google.to|google.tt|google.vg|google.vu|google.ws,removeparam=utm_campaign
 $denyallow=glavnoe.life,removeparam=utm_referrer
 $denyallow=reddit.app.link|glavnoe.life|gaugau.futabanet.jp|redirects.tradedoubler.com|app.plex.tv,removeparam=utm_content
-$denyallow=video-shoper.ru|glavnoe.life|uploadnow.io|3dnews.ru|transfernow.net|carrefourpl.snrpage.com|transfernow.net|lanacion.com.ar|t.send.vt.edu|ofeminin.pl|auto-swiat.pl|komputerswiat.pl|noizz.pl|plejada.pl|medonet.pl|businessinsider.com.pl|sendgb.com|plex.tv|insurancexblog.blogspot.com,removeparam=utm_source
+$denyallow=canadacompanyregistry.com|video-shoper.ru|glavnoe.life|uploadnow.io|3dnews.ru|transfernow.net|carrefourpl.snrpage.com|transfernow.net|lanacion.com.ar|t.send.vt.edu|ofeminin.pl|auto-swiat.pl|komputerswiat.pl|noizz.pl|plejada.pl|medonet.pl|businessinsider.com.pl|sendgb.com|plex.tv|insurancexblog.blogspot.com,removeparam=utm_source
 $denyallow=glavnoe.life|metabase.com,removeparam=utm_term
 $denyallow=tix.axs.com,removeparam=irclickid
 $denyallow=booklive.jp,removeparam=vc_lpp
@@ -506,6 +512,58 @@ $removeparam=tduid
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15946121
+||time.com^$removeparam=iid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15944807
+||builder.aws.com^$removeparam=trk
+||pages.awscloud.com^$removeparam=trk
+||registration.awsevents.com^$removeparam=trk
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15938541
+||coderpad.io^$removeparam=cg_referrer
+! https://github.com/AdguardTeam/AdguardFilters/issues/225628
+||ostrovok.ru^$removeparam=partner_slug
+||ostrovok.ru^$removeparam=partner_extra
+||ostrovok.ru^$removeparam=utmToken
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15911579
+||navan.com^$removeparam=source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15904700
+||marriott.com^$removeparam=dtm_user_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15866571
+||tracking.narvar.com^$removeparam=src
+! https://github.com/AdguardTeam/AdguardFilters/issues/225249
+||news.jp^$removeparam=c
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15852187
+||reddit.com^$removeparam=entry_point
+! https://github.com/AdguardTeam/AdguardFilters/issues/224934
+||bunjang.co.kr^$removeparam=ref_content
+||bunjang.co.kr^$removeparam=ref_code
+||bunjang.co.kr^$removeparam=imp_id
+! https://github.com/AdguardTeam/AdguardFilters/issues/224605
+||account.proton.me^$removeparam=ref
+! https://github.com/AdguardTeam/AdguardFilters/issues/224428
+||soundcore.com^$document,removeparam=ref
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15687218
+||feeder.co^$removeparam=from
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15686111
+ref=shadcn.com^$removeparam=ref
+! https://github.com/AdguardTeam/AdguardFilters/issues/223803
+||petbook.de^$removeparam=dicbo
+||petbook.de^$removeparam=cid
+! https://riamo.ru/news/proisshestviya/voditel-avtobusa-v-podmoskove-dovez-istekajuschego-krovju-parnja-do-bolnitsy/?from=inf_cards
+||riamo.ru^$removeparam=from
+! https://blog.qiita.com/stock-share-beta/?utml_campaign=qiita_notification
+||blog.qiita.com^$removeparam=utml_campaign
+! https://x.com/Kdroidwin1/status/2017425829844963380 cv-measurement ads
+||cv-measurement.com^$removeparam=adcopy
+||cv-measurement.com^$removeparam=adbnr
+||cv-measurement.com^$removeparam=creative
+||ad.games.dmm.co.jp^$removeparam=clid
+||rcv.ixd.dmm.com^$removeparam=ad
+||rcv.ixd.dmm.com^$removeparam=advertiser
+||rcv.ixd.dmm.com^$removeparam=clid
+||ratel-ad.com^$removeparam=advertiser
+||123chat.jp/promotion/$removeparam=cid
+||123chat.jp/promotion/$removeparam=p
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222986
 ||tw.news.yahoo.com^$removeparam=link_source
 ||tw.news.yahoo.com^$removeparam=taid
@@ -611,10 +669,6 @@ $removeparam=tduid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218625
 ||zurichlife.co.jp^$removeparam=waad
 ||zurichlife.co.jp^$removeparam=agentCode
-! https://github.com/AdguardTeam/AdguardFilters/issues/217915
-||chickencoopcompany.com/services/$removeparam=analytics_context
-||chickencoopcompany.com/services/$removeparam=analytics_trace_id
-||shop.app/accounts/$removeparam=analytics_trace_id
 ! byn.kr - any product page via product listing page
 ||byn.kr^$removeparam=rURL
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218031
@@ -878,6 +932,8 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204894
 ||ebikes.ca^$removeparam=___store
 ||ebikes.ca^$removeparam=___from_store
+! https://github.com/AdguardTeam/AdguardFilters/issues/224442
+||tapatalk.com^$removeparam=sid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206358
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205132
 /viewforum.php?$removeparam=sid
@@ -2207,6 +2263,8 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ||click.speee-ad.jp^$removeparam=slot_index
 ||click.speee-ad.jp^$removeparam=v
 !! tiktok
+! https://github.com/AdguardTeam/AdguardFilters/issues/225183
+||tiktok.com^$removeparam=_t
 ! https://github.com/AdguardTeam/AdguardFilters/issues/192966
 ||tiktok.com$removeparam=referer_video_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4978150
@@ -3428,6 +3486,8 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 !
+! canadacompanyregistry.com - utm_source is used to lookup the company name; removing it breaks the page
+@@||canadacompanyregistry.com^$removeparam=utm_campaign
 ! https://github.com/uBlockOrigin/uAssets/issues/31494
 @@||usprobioticguide.com^$removeparam=utm_campaign
 ! https://github.com/uBlockOrigin/uAssets/issues/31203

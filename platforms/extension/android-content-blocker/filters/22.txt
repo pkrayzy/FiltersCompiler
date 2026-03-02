@@ -1,8 +1,8 @@
-! Checksum: Nezr/qodfFUmNsQzn2aksQ
+! Checksum: lJIRTdOeCbuwEEaVbvM/5w
 ! Title: AdGuard Widgets filter
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.13.53
-! TimeUpdated: 2026-01-30T03:55:00+00:00
+! Version: 2.0.13.66
+! TimeUpdated: 2026-02-27T06:23:27+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -88,6 +88,8 @@ nizimoenews.livedoor.blog,butumori.com,netizen-voice.blog.jp,ityouchannel.livedo
 !
 ! NOTE: Blogroll specific rules
 !
+dot.asahi.com##.m-widget.js-closewidget-target
+muryou-tanoshimu.com##iframe[id^="rssframe"]
 zzzsoku.com##.archive
 starwars.com##.social-copy-container
 xda-developers.com,howtogeek.com,makeuseof.com##.quick-action-sidebar
@@ -1070,7 +1072,7 @@ youskbe.com,gurum.biz,newtoku.jp##.blogroll
 keyakizaka46matomerabo.com###singleFooter__rss
 keyakizaka46matomerabo.com##.articleSingle__rss
 keyakizaka46matomerabo.com##.rssFeed
-beasoku.com##.l-rss-header
+beasoku.com##.archive > div.custom-html-widget > div.l-rss-header
 beasoku.com##.l-rss-header_title
 genshin-matomech.umadacchi.net,beasoku.com##.rss-flex
 beasoku.com##.rss-block
@@ -1305,7 +1307,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||getbutton.io^$third-party
 ||widget.siteheart.com^$third-party
 ||widget.skobeeff.ru^$third-party
-||widget.surveymonkey.com^$third-party
+||widget.surveymonkey.com^$domain=~chicago.gov
 ||widget.teletype.app^$third-party
 ||widget.textback.io^$third-party
 ||widget.webica.pro^$third-party
@@ -1345,7 +1347,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||liveexpert.ru^$third-party
 ||livesupporti.com^$third-party
 ||embed.tawk.to^$third-party,domain=~roonlabs.com|~milesweb.co.uk
-||jivosite.com^$third-party,domain=~jivosite.ru
+||jivosite.com^$third-party,domain=~jivosite.ru|~jivo.chat
 ||mod.calltouch.ru^$third-party
 ||netroxsc.ru^$third-party
 ||pinformer.sinoptik.ua^$third-party
@@ -1411,7 +1413,6 @@ phoenixnap.com##.live-chat-btn
 ||kuzen.io^$domain=chugoku-np.co.jp
 doc.ua##.header__call-btn
 ||vashnal.ru/wid10437.php
-||code.jivosite.com/script/widget$third-party
 apteka911.ua###jivo_custom_btn
 ||code.jivo.ru/widget/$third-party
 ||engage.wixapps.net/chat-widget-server/
@@ -1736,6 +1737,8 @@ yukawanet.com###custom_html-27
 /js/chat/edu_chat.js
 /wp-content/plugins/creame-whatsapp-me/public/js/joinchat.
 !
+||zdorovyak.com^$third-party
+||code.tidio.co^$third-party
 ||omniqa.ru^
 ||livechat.nextop.com^$third-party
 ||titanembeds.com^$third-party
@@ -1795,11 +1798,16 @@ freestreams-live.my###custom_html-9
 daddyhd.com##.sidebar__inner
 !
 ! Blocking these chat widgets if they are really annoying
+||zoom.us/*/web-sdk/zcc-sdk.js$domain=fullcompass.com
 ||widget.intercom.io^$domain=appmaster.io|internxt.com|mainwp.com
 ||helpdeskeddy.com//js/contact-widget.js$domain=litres.ru
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com|revouninstaller.com
 litres.ru###call_support
 !
+blog.csdn.net##.csdn-side-toolbar a.option-box[data-type="cs"]
+blog.csdn.net##.csdn-side-toolbar a#sidecolumn-deepseek
+consultant.net.ua##.js-assistant-chat__wrapper
+piraeusbank.gr##app-chat-bot
 ||sdk.ycloud.com/growth-tool/install.js
 ||vk.com/reforged_widget.php$important
 nbg.gr###chat-widget-root
@@ -2106,6 +2114,7 @@ majorgeeks.com##div[style="height:340px;margin:0;padding:0;overflow:auto;"]
 ||youtube.com/embed/?enablejsapi=1&origin=*3dnews.ru&widgetid=1
 ! Voting widget
 ! specific
+politeianet.gr##.smcx-passive-feedback
 yahoo.com##.caas-iframe[data-type="opinary"]
 ign.com##div[data-cy="tierlist-view-trigger"]
 vg247.com##.poll_wrapper

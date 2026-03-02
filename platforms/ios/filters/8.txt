@@ -1,9 +1,9 @@
-! Checksum: YaqHVQu2FfzwJxGMvRrSOw
-! Diff-Path: ../patches/8/8-s-1769062469-3600.patch
+! Checksum: xJgAbDtQwsSQyZeGqFrzEw
+! Diff-Path: ../patches/8/8-s-1771729847-3600.patch
 ! Title: AdGuard Dutch filter
 ! Description: EasyList Dutch + AdGuard Dutch filter. Filter list that specifically removes ads on websites in Dutch language.
-! Version: 2.0.8.93
-! TimeUpdated: 2026-01-22T06:11:34+00:00
+! Version: 2.0.9.2
+! TimeUpdated: 2026-02-22T03:07:11+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1595,7 +1595,6 @@ radio10.nl#@#.text-ads
 radio10.nl#@#.text-ad-links
 radio10.nl#@#.ad-text
 radio10.nl#@#.adSense
-radio10.nl#@#.adBlock
 radio10.nl#@#.adContent
 radio10.nl#@#.adBanner
 radio10.nl#@#.AdBody
@@ -1657,6 +1656,7 @@ kijk.nl#@##topbanner_ad
 @@/prebid/ad.gif?user=*&adId=$domain=kijk.nl
 @@||ads-talpa.adhese.com/json/$domain=kijk.nl
 kijk.nl#$#body .pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: initial !important; }
+kijk.nl#%#(()=>{const t={apply:(t,e,n)=>{try{if((new Error).stack.includes("Popup"))return Reflect.apply(t,e,n);const o=e;"function"==typeof o&&(o.toString().includes("adBlockerDetected")||o.toString().includes("pub_300x250m"))&&(e=()=>new Promise((t=>t(!1))))}catch(t){}return Reflect.apply(t,e,n)}};window.Function.prototype.apply=new Proxy(window.Function.prototype.apply,t)})();
 @@||axed.nl^$generichide
 @@||kijk.nl^$generichide
 @@||shownieuws.nl^$generichide
@@ -1816,6 +1816,14 @@ omroepwest.nl#$#.adcontainer-Rectangle { position: absolute!important; left: -40
 ! Good: example.org###rek; ||example.com/ads/
 ! Bad: example.org#@##banner_ad (for instance, should be in allowlist.txt or in antiadblock.txt)
 !
+f1maximaal.nl###article-blocks > .raw-html-component
+||resources.planetnine.com/scripts/f1maximaal.nl.js
+fok.nl###r89-mobile-rectangle-low-0-wrapper
+fok.nl###r89-video-outstream-wrapper
+ad.cw##.ad-main-advertisement-top
+mijnwoordenboek.nl##.slider-wrap:has(> div[id^="Mijnwoordenboek."])
+mijnwoordenboek.nl##div[id^="Mijnwoordenboek."]
+mijnwoordenboek.nl##div[style="min-height:270px"]
 ||ssl.p.jwpcdn.com/player/v/*/vast.js$domain=matele.be
 f1maximaal.nl##.raw-html-component:has(>div.Pnvp__ad)
 telegraaf.nl##.tik4-extension--inline-ad
@@ -1886,6 +1894,7 @@ hartvannederland.nl#?#div:has(> span:first-child:contains(Advert))
 omroepbrabant.nl#%#//scriptlet('google-ima3')
 omroepbrabant.nl#%#//scriptlet('adjust-setTimeout', '[native code]', '6000', '0.001')
 9292.nl##:is(div, aside, astro-island):has(> div[data-testid="gpt-ad-root"])
+||cdn-ster-nl.akamaized.net/STERAD_*.mp4$domain=npo.nl
 nos.nl#%#//scriptlet('json-prune', 'adUrl')
 ||adconfig.ster.nl^$domain=nos.nl
 ||hfg.iuknyw5evnygw9v.nl/*?*=omroepzeeland&direct=
@@ -1943,8 +1952,8 @@ knack.be##.c-header__ad
 serietotaal.nl##div[class*="banner"]
 serietotaal.nl##div[id^="ad"]
 serietotaal.nl##.rect-in-headlines
-marktplaats.nl##.hz-Banner
-marktplaats.nl##.bannerContainerLoading
+2dehands.be,marktplaats.nl##.hz-Banner
+2dehands.be,marktplaats.nl##.bannerContainerLoading
 marktplaats.nl##.mp-Page-element > .mp-Listings + div:not([class]):not([id]):has(> .mp-Listings__admarktTitle)
 marktplaats.nl#?#ul.mp-Listings > li.mp-Listing:has(> .mp-Listing-coverLink > .mp-Listing-group > .mp-Listing-group--price-date-feature > span.mp-Listing-priority > span:contains(/^Topadvertentie$/))
 turksemedia.nl#$?#div[class="sidebar_item"][style="padding-bottom: 16px;"]:has(> a > img[width="276"]) { remove: true; }
@@ -2128,6 +2137,13 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224045
+ad.cw#@#.ad-content
+ad.cw#@#.ad-main
+ad.cw#@#.ad-container-wrapper
+ad.cw#@#.ad-header
+ad.cw#@#.ad-col
+ad.cw#@#.ad-row
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216470
 wintersport.nl#@?#.mb-6:contains(gesponsord)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213830
@@ -2145,11 +2161,11 @@ puna.nl#@#.raw-html-component
 @@||tags.refinery89.com/vkmagcom.js$domain=vkmag.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177361
 marktnet.nl#@#.ad-description
+! https://github.com/AdguardTeam/AdguardFilters/issues/224482
+!+ PLATFORM(ios, ext_safari)
+@@||mmcdn.nl/tags/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/165229
 @@||mmcdn.nl/tags/vkmag.com/
-! https://github.com/AdguardTeam/AdguardFilters/issues/131712
-!+ PLATFORM(ios, ext_safari)
-@@||mmcdn.nl/tags/moviemeter.nl/home.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130694
 underarmour.nl#@#.b-header-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115999

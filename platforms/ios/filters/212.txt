@@ -1,15 +1,15 @@
-! Checksum: 6xNiS606UmoTWJqE3mIygQ
-! Diff-Path: ../patches/212/212-s-1769777419-14400.patch
+! Checksum: 2gNePvySyfzNEB8ZLWII2A
+! Diff-Path: ../patches/212/212-s-1772455853-14400.patch
 ! Title: RU AdList: Counters
 ! Description: RU AdList supplement for trackers blocking.
-! Version: 2.1.83.75
-! TimeUpdated: 2026-01-30T12:46:52+00:00
+! Version: 2.1.85.59
+! TimeUpdated: 2026-03-02T12:47:14+00:00
 ! Expires: 5 days (update frequency)
 !
-! Checksum: 20RyFlvNa/giodSWwO7PXw
-! OriginalVersion: 202601301232
+! Checksum: tDWzQzlZ/UHsE3qbNjOQww
+! OriginalVersion: 202603021241
 ! Title: RU AdList: Counters
-! Last modified: 30 Jan 2026 12:32 UTC
+! Last modified: 02 Mar 2026 12:41 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -108,7 +108,7 @@
 /counter.php?$~object
 /counter^$domain=~av.by|~bspb.ru|~foxford.ru|~goodgame.ru|~itpc.ru|~mgazeta.com|~tgc-2.ru
 /counter_$domain=~stopgame.ru
-/counters^$domain=~au.ru|~av.by|~filmweb.pl|~glavagronom.ru|~itpc.ru|~letu.ru|~mos.ru|~pay.tns-e.ru|~pikabu.ru|~poro.gg|~traktorist.ua|~work.ua
+/counters^$domain=~au.ru|~av.by|~filmweb.pl|~glavagronom.ru|~itpc.ru|~jiten.moe|~letu.ru|~mos.ru|~pay.tns-e.ru|~pikabu.ru|~poro.gg|~traktorist.ua|~work.ua
 /csi?v=*&action=
 /cycounter.
 /cycounter^
@@ -152,6 +152,7 @@
 /readcounter.
 /sbtracking/pageview2?
 /services/counter.gif
+/sgtm/gtm.js
 /sourcebuster.min.js$domain=~smclinic-sol.ru
 /stat.htm$subdocument
 /stat/dspixel.js?
@@ -180,7 +181,7 @@
 ://hit.$third-party
 ://hits.$third-party
 ://piwik.$third-party
-://stat.$third-party,~stylesheet,~subdocument,domain=~sportlive365.net
+://stat.$third-party,~stylesheet,~subdocument,domain=~github.io|~sportlive365.net
 ://top.$third-party,~stylesheet,~xmlhttprequest
 ://tracking.*/event
 ;0x0;0;0;-;0|
@@ -261,6 +262,7 @@ _pagespeed_beacon?
 ||abt.s3.yandex.net/expjs/latest/exp.js
 ||accessily.com/img/Accessily_badge.png
 ||acint.net^$third-party
+||acollector.wb.ru^$third-party
 ||acstat.com^$third-party
 ||addthis.com^*.gif?*&CXNID=
 ||adfstat.yandex.ru^
@@ -308,6 +310,7 @@ _pagespeed_beacon?
 ||api-hprof.odkl.ru/api/crash/trackSession?
 ||api-hprof.odkl.ru/api/crash/upload?$domain=~ok.ru
 ||api-hprof.odkl.ru/api/crash/uploadBatch?$domain=~ok.ru
+||api-statist.tinkoff.ru/gateway/*/events
 ||api.mindbox.ru/scripts/*/tracker.
 ||api.vp.rambler.ru/events/
 ||apistats.rg.ru/add-visit?
@@ -617,6 +620,7 @@ _pagespeed_beacon?
 ||jitsu.ixbt.com^
 ||jitsu.ixbt.site^
 ||join.com.ua/count.cgi?
+||journal-bt.wildberries.ru^$domain=~journal-bt.wildberries.ru
 ||jsblom.com^$third-party
 ||jsengine.ru/geoproxy/
 ||jsonip.com^$third-party
@@ -785,6 +789,7 @@ _pagespeed_beacon?
 ||r.i.ua^$third-party
 ||r.mail.ru/|$subdocument
 ||r.msn.com^
+||r3.mail.ru/j/error/?t=$image
 ||r3.mail.ru/k?
 ||radarurl.com^$third-party
 ||rambler.ru/clicks/
@@ -958,6 +963,7 @@ _pagespeed_beacon?
 ||target.smi2.net^$domain=~smi2.ru
 ||target.ukr.net^
 ||tazeros.com^$third-party
+||tbank.ru/api/*/log/
 ||tbe.tom.ru^$third-party
 ||tdregistr.online^$third-party
 ||telemetry.dzen.ru^
@@ -1250,29 +1256,29 @@ ya.*,yandex.*#$?#[id][aria-label] > [class]:has(> div > button:matches-attr(/[a-
 ||yastatic.net/s3/games-static/_/build/game/desktop/yandex/Promo.$important
 !
 ! мобильная версия
-ya.*#$?##search-result > [class*="__card"]:has(> div > span:contains(/^Промо$|^Реклама$/)) { display: none !important }
+ya.*,yandex.*#$?##search-result > [class*="__card"]:has(> div > span:contains(/^Промо$|^Реклама$/)) { display: none !important }
 yandex.*#$?#.touch-feed > div > .feed-item[id^="zen-row-"]:has([class^="zen-ui-channel-info"][class$="subtitle-text"]:contains(промо)) { display: none !important }
 !
 ! Альтернативное решение для старых браузеров
 @@||an.yandex.ru/jserr/1|$domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||an.yandex.ru/mapuid/tnscounter/?from=yan_oo-rtb-direct|$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||an.yandex.ru/mapuid/yandex/$image,domain=auto.ru|dzen.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
-@@||an.yandex.ru/meta/*target-ref=*afisha.yandex.$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||an.yandex.ru/meta/*target-ref=*pogoda$xmlhttprequest,domain=yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
 @@||an.yandex.ru/resource/spacer.gif|$image,domain=dzen.ru|ya.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
 @@||an.yandex.ru/system/context.js|$domain=dzen.ru|ya.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
 @@||mc.yandex.ru/metrika/advert.gif|$xmlhttprequest,domain=dzen.ru|ya.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||static-mon.yandex.net/static/main.js?pid=$xmlhttprequest,domain=dzen.ru|ya.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
-@@||yandex.ru/ads/page/*target-ref=*afisha.yandex.$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yandex.ru/ads/page/*target-ref=*pogoda$xmlhttprequest,domain=yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
-@@||yandex.ru/ads/system/context.js?|$script,domain=dzen.ru|ya.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
+@@||yandex.ru/ads/system/context.js?$script,domain=dzen.ru
+@@||yandex.ru/ads/system/context.js?|$script,domain=ya.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
 @@||yandex.ru/ads/system/context.js|$domain=dzen.ru|ya.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
 @@||yandex.ru/ads/system/header-bidding.js|$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||yandex.ru/ads/system/widget.js|$script,domain=dzen.ru
 @@||yastatic.net/daas/atom.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yastatic.net/pcode/adfox/loader.js|$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yastatic.net/safeframe-bundles/*/host.js|$xmlhttprequest,domain=dzen.ru|ya.ru|yandex.*|yandex.by|yandex.kz|yandex.lv|yandex.ru|yandex.uz
 ||yastatic.net/partner-code-bundles/$badfilter
-||yastatic.net/partner-code-bundles/$domain=~auto.ru
+||yastatic.net/partner-code-bundles/$domain=~auto.ru|~dzen.ru
 !
 ! 4pda.to (ранее 4pda.ru)
 ! верхняя плашка
@@ -1310,6 +1316,8 @@ yandex.*#$?#.touch-feed > div > .feed-item[id^="zen-row-"]:has([class^="zen-ui-c
 @@||auth.mail.ru/sdc?from=https$document,domain=e.mail.ru|octavius.mail.ru|vk.mail.ru
 !
 ! R.mail.ru
+!
+! Ozon.ru
 !
 ! Ria.com
 !

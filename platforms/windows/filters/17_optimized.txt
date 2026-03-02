@@ -1,10 +1,13 @@
-! Checksum: FK9FovUJgEVbYA4+lGfk4A
-! Diff-Path: ../patches/17_optimized/17_optimized-s-1769678522-3600.patch
+! Checksum: zZML8mKpQfNbRXM1BsXA3g
+! Diff-Path: ../patches/17_optimized/17_optimized-s-1772205747-3600.patch
 ! Title: AdGuard URL Tracking filter (Optimized)
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.12.91
-! TimeUpdated: 2026-01-29T09:19:05+00:00
+! Version: 2.0.13.9
+! TimeUpdated: 2026-02-27T15:19:04+00:00
 ! Expires: 12 hours (update frequency)
+$removeparam=analytics_context
+$removeparam=analytics_trace_id
+$removeparam=bance_xuid
 $removeparam=elqTrackId
 $removeparam=elq
 $removeparam=elqaid
@@ -315,6 +318,40 @@ $removeparam=erid
 $removeparam=oly_enc_id
 $removeparam=_ga
 $removeparam=tduid
+||time.com^$removeparam=iid
+||builder.aws.com^$removeparam=trk
+||pages.awscloud.com^$removeparam=trk
+||registration.awsevents.com^$removeparam=trk
+||coderpad.io^$removeparam=cg_referrer
+||ostrovok.ru^$removeparam=partner_slug
+||ostrovok.ru^$removeparam=partner_extra
+||ostrovok.ru^$removeparam=utmToken
+||navan.com^$removeparam=source
+||marriott.com^$removeparam=dtm_user_id
+||tracking.narvar.com^$removeparam=src
+||news.jp^$removeparam=c
+||reddit.com^$removeparam=entry_point
+||bunjang.co.kr^$removeparam=ref_content
+||bunjang.co.kr^$removeparam=ref_code
+||bunjang.co.kr^$removeparam=imp_id
+||account.proton.me^$removeparam=ref
+||soundcore.com^$document,removeparam=ref
+||feeder.co^$removeparam=from
+ref=shadcn.com^$removeparam=ref
+||petbook.de^$removeparam=dicbo
+||petbook.de^$removeparam=cid
+||riamo.ru^$removeparam=from
+||blog.qiita.com^$removeparam=utml_campaign
+||cv-measurement.com^$removeparam=adcopy
+||cv-measurement.com^$removeparam=adbnr
+||cv-measurement.com^$removeparam=creative
+||ad.games.dmm.co.jp^$removeparam=clid
+||rcv.ixd.dmm.com^$removeparam=ad
+||rcv.ixd.dmm.com^$removeparam=advertiser
+||rcv.ixd.dmm.com^$removeparam=clid
+||ratel-ad.com^$removeparam=advertiser
+||123chat.jp/promotion/$removeparam=cid
+||123chat.jp/promotion/$removeparam=p
 ||tw.news.yahoo.com^$removeparam=link_source
 ||tw.news.yahoo.com^$removeparam=taid
 ||netmonet.co^$removeparam=id
@@ -384,9 +421,6 @@ $removeparam=tduid
 ||healthgrades.com^$removeparam=referrerSource
 ||zurichlife.co.jp^$removeparam=waad
 ||zurichlife.co.jp^$removeparam=agentCode
-||chickencoopcompany.com/services/$removeparam=analytics_context
-||chickencoopcompany.com/services/$removeparam=analytics_trace_id
-||shop.app/accounts/$removeparam=analytics_trace_id
 ||byn.kr^$removeparam=rURL
 ||smbc.co.jp^$removeparam=aff
 ||smbc.co.jp^$removeparam=um
@@ -552,6 +586,7 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ||em.dynamicyield.com^$removeparam=tag_ids
 ||ebikes.ca^$removeparam=___store
 ||ebikes.ca^$removeparam=___from_store
+||tapatalk.com^$removeparam=sid
 /viewforum.php?$removeparam=sid
 /viewtopic.php?$removeparam=sid
 ||html5.gamedistribution.com^$removeparam=mp_site_url
@@ -1472,6 +1507,7 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ||click.speee-ad.jp^$removeparam=sess_id
 ||click.speee-ad.jp^$removeparam=slot_index
 ||click.speee-ad.jp^$removeparam=v
+||tiktok.com^$removeparam=_t
 ||tiktok.com$removeparam=referer_video_id
 ||tiktok.com^$removeparam=embed_source
 ||tiktok.com^$removeparam=referer_url
@@ -2342,6 +2378,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !+ PLATFORM(windows, mac, android, cli) NOT_OPTIMIZED
 ||https-filtering-check.adtidy.org^
+@@||canadacompanyregistry.com^$removeparam=utm_campaign
 @@||usprobioticguide.com^$removeparam=utm_campaign
 @@||metabase.com^$removeparam=utm_term
 @@||adj.st^$removeparam=adj_t

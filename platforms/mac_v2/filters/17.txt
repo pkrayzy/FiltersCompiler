@@ -1,9 +1,9 @@
-! Checksum: rGLuhDK7pk56Cqzay8OunA
-! Diff-Path: ../patches/17/17-s-1769678517-3600.patch
+! Checksum: /cCnra9JjMTsjtO7P1hYtA
+! Diff-Path: ../patches/17/17-s-1772205738-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.12.91
-! TimeUpdated: 2026-01-29T09:19:05+00:00
+! Version: 2.0.13.9
+! TimeUpdated: 2026-02-27T15:19:04+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -22,6 +22,12 @@
 !
 ! NOTE: Generic rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224235
+! https://github.com/AdguardTeam/AdguardFilters/issues/217915
+$removeparam=analytics_context
+$removeparam=analytics_trace_id
+! Bance
+$removeparam=bance_xuid
 ! Oracle Eloqua
 $removeparam=elqTrackId
 $removeparam=elq
@@ -493,6 +499,58 @@ $removeparam=tduid
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15946121
+||time.com^$removeparam=iid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15944807
+||builder.aws.com^$removeparam=trk
+||pages.awscloud.com^$removeparam=trk
+||registration.awsevents.com^$removeparam=trk
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15938541
+||coderpad.io^$removeparam=cg_referrer
+! https://github.com/AdguardTeam/AdguardFilters/issues/225628
+||ostrovok.ru^$removeparam=partner_slug
+||ostrovok.ru^$removeparam=partner_extra
+||ostrovok.ru^$removeparam=utmToken
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15911579
+||navan.com^$removeparam=source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15904700
+||marriott.com^$removeparam=dtm_user_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15866571
+||tracking.narvar.com^$removeparam=src
+! https://github.com/AdguardTeam/AdguardFilters/issues/225249
+||news.jp^$removeparam=c
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15852187
+||reddit.com^$removeparam=entry_point
+! https://github.com/AdguardTeam/AdguardFilters/issues/224934
+||bunjang.co.kr^$removeparam=ref_content
+||bunjang.co.kr^$removeparam=ref_code
+||bunjang.co.kr^$removeparam=imp_id
+! https://github.com/AdguardTeam/AdguardFilters/issues/224605
+||account.proton.me^$removeparam=ref
+! https://github.com/AdguardTeam/AdguardFilters/issues/224428
+||soundcore.com^$document,removeparam=ref
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15687218
+||feeder.co^$removeparam=from
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15686111
+ref=shadcn.com^$removeparam=ref
+! https://github.com/AdguardTeam/AdguardFilters/issues/223803
+||petbook.de^$removeparam=dicbo
+||petbook.de^$removeparam=cid
+! https://riamo.ru/news/proisshestviya/voditel-avtobusa-v-podmoskove-dovez-istekajuschego-krovju-parnja-do-bolnitsy/?from=inf_cards
+||riamo.ru^$removeparam=from
+! https://blog.qiita.com/stock-share-beta/?utml_campaign=qiita_notification
+||blog.qiita.com^$removeparam=utml_campaign
+! https://x.com/Kdroidwin1/status/2017425829844963380 cv-measurement ads
+||cv-measurement.com^$removeparam=adcopy
+||cv-measurement.com^$removeparam=adbnr
+||cv-measurement.com^$removeparam=creative
+||ad.games.dmm.co.jp^$removeparam=clid
+||rcv.ixd.dmm.com^$removeparam=ad
+||rcv.ixd.dmm.com^$removeparam=advertiser
+||rcv.ixd.dmm.com^$removeparam=clid
+||ratel-ad.com^$removeparam=advertiser
+||123chat.jp/promotion/$removeparam=cid
+||123chat.jp/promotion/$removeparam=p
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222986
 ||tw.news.yahoo.com^$removeparam=link_source
 ||tw.news.yahoo.com^$removeparam=taid
@@ -598,10 +656,6 @@ $removeparam=tduid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218625
 ||zurichlife.co.jp^$removeparam=waad
 ||zurichlife.co.jp^$removeparam=agentCode
-! https://github.com/AdguardTeam/AdguardFilters/issues/217915
-||chickencoopcompany.com/services/$removeparam=analytics_context
-||chickencoopcompany.com/services/$removeparam=analytics_trace_id
-||shop.app/accounts/$removeparam=analytics_trace_id
 ! byn.kr - any product page via product listing page
 ||byn.kr^$removeparam=rURL
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218031
@@ -865,6 +919,8 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204894
 ||ebikes.ca^$removeparam=___store
 ||ebikes.ca^$removeparam=___from_store
+! https://github.com/AdguardTeam/AdguardFilters/issues/224442
+||tapatalk.com^$removeparam=sid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206358
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205132
 /viewforum.php?$removeparam=sid
@@ -2192,6 +2248,8 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ||click.speee-ad.jp^$removeparam=slot_index
 ||click.speee-ad.jp^$removeparam=v
 !! tiktok
+! https://github.com/AdguardTeam/AdguardFilters/issues/225183
+||tiktok.com^$removeparam=_t
 ! https://github.com/AdguardTeam/AdguardFilters/issues/192966
 ||tiktok.com$removeparam=referer_video_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4978150
@@ -3403,6 +3461,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !
 !
 !
+! canadacompanyregistry.com - utm_source is used to lookup the company name; removing it breaks the page
+@@||canadacompanyregistry.com^$removeparam=utm_campaign
 ! https://github.com/uBlockOrigin/uAssets/issues/31494
 @@||usprobioticguide.com^$removeparam=utm_campaign
 ! https://github.com/uBlockOrigin/uAssets/issues/31203
