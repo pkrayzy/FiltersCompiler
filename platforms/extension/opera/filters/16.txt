@@ -1,9 +1,9 @@
-! Checksum: dF+DrHVPFHHk2olyuvI5DQ
-! Diff-Path: ../patches/16/16-s-1772381625-3600.patch
+! Checksum: Ft5vc4cbHM0+7IlYv8B+fA
+! Diff-Path: ../patches/16/16-s-1773895633-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.56.15
-! TimeUpdated: 2026-03-01T16:09:42+00:00
+! Version: 2.0.56.28
+! TimeUpdated: 2026-03-19T04:44:05+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -25,7 +25,6 @@
 ||proxy.ads.canalplus-bo.net^
 ||7bd92.v.fwmrm.net^
 ||7cbf2.v.fwmrm.net^
-||7cd77.v.fwmrm.net^
 ||1f2e7.v.fwmrm.net^
 ||7b9de.v.fwmrm.net^
 ||ads.dugwood.com^
@@ -110,7 +109,6 @@ _adagency_$~xmlhttprequest
 ! https://github.com/uBlockOrigin/uAssets/issues/28666
 lecrabeinfo.net#%#//scriptlet('set-constant', 'LCI.adNetwork', 'undefined')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196696
-magazine-avantages.fr#@#.AdsBox
 magazine-avantages.fr#$#body { overflow: auto !important; }
 magazine-avantages.fr#$##overlay { display: none !important; }
 magazine-avantages.fr#$#.qiota_onboard:has(> div.AdBlockModal) { display: none !important; }
@@ -122,13 +120,11 @@ petitfute.com#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.go
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191116
 ||minenode.fr/dashboard/function/js/AzurHOSTS/pubs.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191055
-marieclaire.fr#@#.AdsBox
 marieclaire.fr#$#body { overflow: auto !important; }
 marieclaire.fr#$##overlay { display: none !important; }
 marieclaire.fr#$?#.qiota_onboard:has(> div.AdBlockModal) { display: none !important; }
 ||static.qiota.com/assets/getQiota.js$domain=marieclaire.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190815
-larvf.com#@#.AdsBox
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188979
 sekai.one###adblock-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/186309
@@ -216,7 +212,6 @@ empire-anime.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 empire-anime.com,empire-streamz.fr,empire-streaming.*,empire-stream.net#%#//scriptlet('set-constant', 'navigator.brave', 'undefined')
 @@||e-player-stream.app/player/assets/js/ads.js?$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/153700
-cosmopolitan.fr#@#.AdsBox
 ! https://github.com/uBlockOrigin/uAssets/issues/18431
 ||parlons-basket.com/wp-content/themes/parlons-basket/js/detector.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/151986
@@ -233,7 +228,7 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
-japscan.*#%#//scriptlet("remove-node-text", "script", "/pubadx-ad|runBanner|threshold|getBoundingClientRect|nextElementSibling|TagName'|\+'play|'ebu|gger'|\.constructor\(|\/gif;base64/")
+japscan.*#%#//scriptlet("remove-node-text", "script", "/pubadx-ad|runBanner|threshold|getBoundingClientRect|nextEl'|TagName'|\+'play|'debu|'gge'|\.constructor\(|\/gif;base64|'runInte|nterstitial'|\+'png/")
 japscan.*#%#//scriptlet('abort-current-inline-script', 'MessageChannel', '0x')
 japscan.*#%#//scriptlet('prevent-requestAnimationFrame', '/(\s*)\s*=>/')
 japscan.*#%#//scriptlet('trusted-suppress-native-method', 'Array.prototype.join', '""', 'prevent', 'inlineScript')
@@ -673,7 +668,7 @@ tf1info.fr#%#(()=>{const e=function(){};window.tC={privacy:{getOptinCategories:e
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213146
 ! Fixes loading video player and delay in video playback start
 ! Apps cannot inject script into iframe with "about:blank" src, so a workaround is required
-!+ NOT_PLATFORM(windows, mac, android)
+!+ NOT_PLATFORM(windows, mac, android, cli)
 supersoluce.com#%#//scriptlet('adjust-setTimeout', 'event_listener_timeout', '*', '0.001')
 @@||flashb.id/universal/*.js$domain=supersoluce.com
 @@||flashb.id/assets/js/hbdbrk_*_m.js$domain=supersoluce.com
@@ -908,6 +903,7 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 !
 !
 !
+||7cd77.v.fwmrm.net/ad/
 ||static.filecrypt.to/js/aaaaa*$script
 bonjour-ratp.fr###main > div:has([style*="placeholder_ad"])
 cimtchau.ca#?#.pub-box + p:contains(Publicité)
@@ -1187,7 +1183,6 @@ lesfrontaliers.lu#$?##fullad-active { remove: true; }
 lesfrontaliers.lu#?#.articles-wrapper article[id^="post-"]:has(> section[class] > span.sponsored-indicator)
 forumconstruire.com#?#.discussion_box > .post_simple_contener:has(> .post_simple > .postsimple_post_cell > .postsimple_head_cell > .postsimple_poster_info > div > .postsimple_pseudo > a > span:contains(/^Auto-promo$/))
 forumconstruire.com#?##topic_discussion_box > div.post_simple_contener:has(div.postsimple_avatar_cell[onclick="document.location.href = '//www.forumconstruire.com/membre-1.php'"])
-extreme-down.ninja#?##sidebar-right > div.blockbox:has(> div.sidetitle > i:contains(Annonces))
 cuisineactuelle.fr#?#[class$="Container-right"] > div.m-top-md:has(> div > span:contains(Publicité))
 shopping.rakuten.com#?#.topheader > .topheader-1:has(> div[id^="crt-"])
 qwant.com#?#.results-container > div.result:has(> div.url > span.info:contains(Annonce))
@@ -1413,7 +1408,6 @@ lavoixdunord.fr###hp_banniere_haute
 calendrier.com##.promo_link
 purepeople.com##.article-page-sticky
 purepeople.com##.ad__holder
-vostfr.stream##.mvic-btn > a.btn-successful
 caradisiac.com###MegaBan
 caradisiac.com##.containerPub
 liberation.fr##div[class^="StickyAd-"]

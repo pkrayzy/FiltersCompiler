@@ -1,8 +1,8 @@
-! Checksum: K6rnJht6xpTDPuqKS6A1pg
+! Checksum: HDWS0V/PlipahJR2VMQ8yw
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.10.73
-! TimeUpdated: 2026-02-28T04:48:27+00:00
+! Version: 2.0.10.95
+! TimeUpdated: 2026-03-19T20:46:05+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -3676,6 +3676,8 @@ cracksmid.com##div[style=""] > center > center
 ^Anph=(0101)-$document
 !+ NOT_OPTIMIZED
 /^https:\/\/[a-z]{5,20}-[0-9a-z]{16}\.z03\.azurefd\.net\/[0-9A-Za-z]+0[0-9A-Za-z]+\/index\.html/$document,match-case,domain=z03.azurefd.net
+!+ NOT_OPTIMIZED
+||azurefd.net/?bcda=$document
 !
 ! https://github.com/uBlockOrigin/uBlock-discussions/discussions/302#discussioncomment-10338866
 !+ NOT_OPTIMIZED
@@ -3888,6 +3890,8 @@ cracksmid.com##div[style=""] > center > center
 ||github.io/*/media/beep.mp3
 !+ NOT_OPTIMIZED
 ||azurefd.net/media/beep.mp3
+!+ NOT_OPTIMIZED
+||azurefd.net/fullscreen.js
 !
 ! https://github.com/uBlockOrigin/uAssets/issues/29718
 ! ClickFix
@@ -4972,7 +4976,7 @@ cracksmid.com##div[style=""] > center > center
 ! https://github.com/uBlockOrigin/uBOL-home/issues/156
 ! https://github.com/uBlockOrigin/uAssets/issues/27941
 !+ NOT_OPTIMIZED
-/^https:\/\/s[cfntz]y?[ace][acemnu][a-z]{1,4}or?[mn][a-z]{4,8}[iy][a-z]?\.com\//$document,to=com|~steamcommunity.com|~szentkoronaradio.com
+/^https:\/\/s[cfntz]y?[ace][acemnu][a-z]{1,4}or?[mn][a-z]{4,8}[iy][a-z]?\.com\//$document,to=com|~steamcommunity.com|~stauntonandhenry.com|~szentkoronaradio.com
 !+ NOT_OPTIMIZED
 /^https:\/\/s[cfntz]y?[ace][acemnu][a-z]{1,4}or?[mn][a-z]{4,8}[iy][a-z]?\.cc\//$document,to=cc
 !+ NOT_OPTIMIZED
@@ -5402,6 +5406,9 @@ cracksmid.com##div[style=""] > center > center
 ! https://www.virustotal.com/gui/url/e0f4f24fcaab6c1f540ac141d0c2088d3c5f5f6a2fad4bde212a00a676825ac3
 !+ NOT_OPTIMIZED
 ||xcoinspro.com^$document
+! https://github.com/uBlockOrigin/uAssets/issues/32047
+!+ NOT_OPTIMIZED
+||tariprotocol.com^$document
 ! swan.com
 ! https://www.reddit.com/r/Scams/comments/1o1muxh/us_has_anyone_ever_heard_of_httpsswan9topassets/
 !+ NOT_OPTIMIZED
@@ -6263,8 +6270,9 @@ webflow.io##html.w-mod-js:not(.wf-active) > body:not([class]):not([id]) > a[clas
 /unsub/unsub^$document
 !+ NOT_OPTIMIZED
 /unsub_sent.php|$document,method=post
+! https://github.com/uBlockOrigin/uAssets/discussions/32019
 !+ NOT_OPTIMIZED
-/^https?:\/\/www\.[a-z]{9,20}\.com\/o-[a-z]{4}-[a-z]\d6-[a-f0-9]{32}\b/$document,match-case,to=com
+/^https?:\/\/www\.[a-z]{9,20}\.com\/o-[a-z]{4}-[a-z]\d{2}-[a-f0-9]{32}\b/$document,match-case,to=com
 !+ NOT_OPTIMIZED
 /^https?:\/\/[a-z]+\.[a-z]{4,}\/oop\/\d+_md(?:\/\d+){5}\b/$document,match-case
 !+ NOT_OPTIMIZED
@@ -6787,7 +6795,7 @@ pages.dev##html:not([class]) > body.gradient-bg.min-h-screen.flex.items-center.j
 ! https://survey.dawn .com/MetaMask-Help.html - phishing
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217414
 !+ NOT_OPTIMIZED
-/^https://d[0-9a-z]{19}\.[a-z]{3,4}-[a-z]{7,8}\.[a-z]{3}\/xm\/xm\d\/\?/$document,to=pro|sbs
+/^https://d[0-9a-z]{19}\.[a-z]{3,4}-[a-z]{7,8}(?:\.[a-z]{2})?\.[a-z]{2,3}\/xm\/xm\d\/\?/$document,to=co.in|pro|sbs
 ! https://www.reddit.com/r/antivirus/comments/1ouridv/how_do_i_get_rid_of_these_notifications/
 ! https://imessagegreetins.de/gogtuin/accounts.google/ phishing
 ! https://github.com/uBlockOrigin/uAssets/issues/30817
@@ -7094,3 +7102,46 @@ pages.dev##html:not([class]) > body.gradient-bg.min-h-screen.flex.items-center.j
 ! https://github.com/uBlockOrigin/uAssets/issues/31877
 ! https://github.com/uBlockOrigin/uAssets/issues/31922
 ! https://youtube.com/watch?v=jnNwERQCQ3k
+! https://annex.security/blog/pixel-perfect/
+!+ NOT_OPTIMIZED
+||api.extensionanalyticspro.top^
+! https://github.com/uBlockOrigin/uBlock-discussions/discussions/972
+! https://github.com/uBlockOrigin/uAssets/issues/32080
+! https://www.malwarebytes.com/blog/threat-intel/2026/03/fake-cleanmymac-site-installs-shub-stealer-and-backdoors-crypto-wallets
+! https://x.com/masaomi346/status/2030929145740558697
+!+ NOT_OPTIMIZED
+||cdn-server.beer/api/css.js
+! https://pushsecurity.com/blog/installfix/
+!+ NOT_OPTIMIZED
+||claude-code-$document,to=edgeone.app|pages.dev|squarespace.com
+! https://www.remove.bg/
+! https://github.com/uBlockOrigin/uAssets/issues/32160
+! https://github.com/AdguardTeam/AdguardFilters/issues/226913
+! https://github.com/uBlockOrigin/uAssets/issues/32153
+!+ NOT_OPTIMIZED
+##body > div[data-captcha-enable="true"] > div.cleanslate[id^="google-captcha-"] > div.captcha-box
+! https://github.com/uBlockOrigin/uAssets/issues/32197
+! https://github.com/uBlockOrigin/uAssets/issues/32206
+!+ NOT_OPTIMIZED
+||audiveris.com^$document
+! phishing emails - https://storage.googleapis.com/hmdbox/hmd_v2.html
+!+ NOT_OPTIMIZED
+||storage.googleapis.com/hmdbox/$document
+!+ NOT_OPTIMIZED
+||hmdv2.gogomailbali.eu.org^$document
+!+ NOT_OPTIMIZED
+||hybridglobalnet.com^$document
+!+ NOT_OPTIMIZED
+/^https?:\/\/[a-z]+\d\.gogomailbali(\.it)?\.eu\.org\/#\?act=/$document,match-case,to=eu.org
+!+ NOT_OPTIMIZED
+/^https:\/\/storage\.googleapis\.com\/[a-z]{5,}\/[a-z]+_v\d\.html\#\?act=/$document,match-case,to=storage.googleapis.com
+! https://github.com/uBlockOrigin/uAssets/issues/32238
+! https://github.com/AdguardTeam/AdguardFilters/issues/227007
+! https://www.virustotal.com/gui/url/e668590b514e62f8af33200c3ef36e33bd7dcf9b4360bf5a7b99768bece566fd
+! https://www.virustotal.com/gui/file/c7bd726cbf743c593195ea0945907e9ee15d5c9ad7b7abbf69490fa34e7016dc
+! https://youtube.com/watch?v=I17MsVXACto
+! https://www.virustotal.com/gui/file/c734d74e40d436cadcc972e542d151d1dcbb44fc3f429ad2ada0ad8a8da4aa64
+! https://www.virustotal.com/gui/file/f5181886084854b0ea6eadcc3fc7194bb7245aa30a424f9ef5e5e74760417037
+! https://www.reddit.com/r/firefox/comments/1rumsyj/how_do_i_get_rid_of_these_popups/
+! https://www.reddit.com/r/antivirus/comments/1rr7jx4/clicked_on_an_ad_download_button_that_forwarded/
+! https://github.com/uBlockOrigin/uAssets/issues/32240
