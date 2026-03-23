@@ -1,8 +1,8 @@
-! Checksum: w1zMEhvQGMOhxrr9AMCoUg
+! Checksum: WnTYBLg5qEKFVxa5SrUWhA
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.67.98
-! TimeUpdated: 2026-03-02T11:18:50+00:00
+! Version: 2.0.68.38
+! TimeUpdated: 2026-03-23T09:27:53+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -168,6 +168,10 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||ad.bestools.group^
+||ad.zankhana.ltd^
+||afs.googlesyndication.com^
+||pob-mob2.websearchbrowser.com^
 ||ucads.ucweb.com^
 ||ad-api.maxnapps.com^
 ||d3vgkjyuhp91nc.cloudfront.net^
@@ -1833,8 +1837,6 @@ matomedane.jp#@##AdvHeader
 ! It's caused by RU AdList
 drive2.com,drive2.ru#@#div[itemtype^="http://schema.org/"] ~ div[data-role][data-target] ~ div:not(:last-child)
 drive2.com,drive2.ru#@#div[itemtype="http://schema.org/BlogPosting"] ~ div:not(:last-child)
-! https://github.com/AdguardTeam/AdguardFilters/issues/64328
-itest.5ch.net#@#.js-cardview_ad-320x180
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62819
 milesplit.com#@#.sticky-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64329
@@ -1889,8 +1891,6 @@ niji-gazo.com#@#.ad-block
 @@||pics.porndroids.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18815
 @@||api.gamer.com.tw/mobile_app/anime/*/stat_ad.php
-! https://github.com/AdguardTeam/AdguardFilters/issues/23151
-cancam.jp#@#.overlay-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21581
 @@||meta.wikimedia.org/wiki^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21111
@@ -2123,6 +2123,33 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+aydindenge.com.tr##.mad
+moviecrow.com###top-banner
+twpornstars.com##.block-inline.mobile
+m.slashdot.org###vibe-code
+yesasia.ru##div[style="display:block;height:600px;overflow:hidden;"]
+mwed.jp##div[style="margin-top:60px; width:300px; margin-inline:auto;"]
+cancam.jp##.sp-template-field
+123865.com##.appBottomBtn ~ .ant-carousel
+cdn.ampproject.org##.ad-control-left
+by-them.com##.page_bottom_fixed_ad_wap
+trilltrill.jp##.RecruitmentBoxNew
+lezzet.com.tr##.db-ads
+||ogfap.com/_astro/AdContainer.
+adultgamesworld.com###showinmob
+minuteinbox.com##.addBlock
+marieclaire.com.tr##div[style^="width:320px;"][style*="height:100px"]
+vidara.to,vidara.so##.ad-download-box
+medex.com.bd##.campaign-block
+ascii.jp###amaznav
+justporn.com##a[href^="https://theporndude.com/"]
+justporn.com##.fade.fp-logo
+watchmygf.me##.tablet-b
+elobservador.com.uy###topZocalo
+eleconomista.es##div[data-ad-unit-id]
+eleconomista.es##aside#main-rail
+dplnews.com##.header-inner
+dplnews.com##.primary-sidebar-widget > .g
 sn-online.de##div[id^="mad_"]
 ainzscans01.com###i56tm99ncgnw
 xn--pckua2a7gp15o89zb.com##.p-related_adBanner_wrap
@@ -4990,7 +5017,6 @@ sport.sky.de##.sdc-site-au--amp > .sdc-site-au__label
 repubblica.it##div[id^="advHook-"]
 m.gazeta.ru##div[id^="gazeta-adv"]
 m.gazeta.ru##div[itemprop="articleBody"] > div[style^="min-height:"]
-5ch.net##.ads_conten_main
 tz.de##a[href^="https://www.outbrain.com/what-is/default/"]
 tz.de##a[href^="https://www.outbrain.com/what-is/default/"] + div[style="margin-top: 5px;"]
 tz.de##div[class="amp-flying-carpet-text-border"]
@@ -6894,6 +6920,7 @@ ya.ru,yandex.*##.DirectInline-Wrapper
 !
 ! Afisha
 ! Dzen
+dzen.ru##div[class^="dzen-mobile"][class*="bannerWrapper"]
 dzen.ru##div[class^="dzen-mobile__widgetContainer-"] ~ div[class*=" dzen-mobile__"]  div[style^="padding-top:"]
 dzen.ru##div[class*="topContent"][class*="mobile__hasBanner"]
 dzen.ru##.article-render-mobile__embed_embed-type_yandex-direct

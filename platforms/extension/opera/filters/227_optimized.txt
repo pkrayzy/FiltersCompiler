@@ -1,9 +1,9 @@
-! Checksum: mzJ0Wdv0GuuqvWcTXhwNXQ
-! Diff-Path: ../patches/227_optimized/227_optimized-s-1771966067-14400.patch
+! Checksum: u7H3Kf7w+JsHe71l7vQAOQ
+! Diff-Path: ../patches/227_optimized/227_optimized-s-1773795619-14400.patch
 ! Title: List-KR (Optimized)
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.23.74
-! TimeUpdated: 2026-02-24T20:44:59+00:00
+! Version: 2.0.23.79
+! TimeUpdated: 2026-03-18T00:57:12+00:00
 ! Expires: 10 days (update frequency)
 ||ad.adwiser.kr^
 ||digitalcamp.co.kr^$third-party
@@ -247,6 +247,7 @@
 ||ttse.b-cdn.net^
 ||i.keezip.com^
 ||awd.spochak.com^
+||cafe-ads-api.daum.net^
 ||worker.gsr-ads.co.kr^
 ||ad.mojisead.co.kr^
 ||get*bannerads-6egeg2u34q-du.a.run.app^
@@ -535,6 +536,7 @@ namu.wiki,~board.namu.wiki##div[class]:not([class*=" "]) ~ div[class*=" "] > *[c
 /studio_backend/adforus.
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
+||cdn.algumon.com/temp/$image
 ||api.coupangstreaming.com/ads-vod-public/
 /mobus/resources/images/route_inquiry_addBoxImg$domain=m.bustago.or.kr
 ||m.stock.naver.com/front-api/ad/reward
@@ -1393,6 +1395,7 @@ namu.wiki,~board.namu.wiki##div[class]:not([class*=" "]) ~ div[class*=" "] > *[c
 ||ssl.pstatic.net/tveta/libs/
 ||vclock.kr/inf0/hot.php^
 ||aproxy-vast.wavve.com/*/v/*_AD_*/req/$xmlhttprequest
+||mingk*.net/data/file/passfree/$domain=/mingky[0-9]+\.net/
 /^https:\/\/(www\.)?yako[0-9]+\.com\/upload\/banner\//$domain=/yako[0-9]+\.com/
 /lover[0-9]\.net\/file\/tohotv\/.*\.gif$domain=/lover[0-9]\.net/
 /lover[0-9]\.net\/file\/1bet\/.*\.gif$domain=/lover[0-9]\.net/
@@ -1636,6 +1639,15 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+www.algumon.com##.deal-content > .deal-list-full:is(:has(> .gap-1.pt-3 div[style^="display: flex; justify-content: center;"]), :has(> .gap-1.pt-3.pb-3.px-3 > a[href^="https://link.coupang.com/a/"]))
+damoang.net##div[data-slot="board-list-promotion"]
+damoang.net##main .gap-4.sm\:grid-cols-3 > .gap-1
+damoang.net##aside .gap-4 > div[data-slot="sidebar-banner"]
+damoang.net##aside .gap-4 > .gap-4:has(.ad-slot-container)
+damoang.net##aside .gap-4 > .top-\[64px\].space-y-4
+damoang.net##main .divide-border.overflow-hidden.-mx-5.md\:mx-0 a.promo-classic-row
+damoang.net##main .divide-border.overflow-hidden.-mx-5.md\:mx-0 .py-2:has(> .ad-slot-container)
+damoang.net##div[data-slot="board-list-promotion"]
 bbs.ruliweb.com##.board_main ~ div[style^="width: 100%; height: "][style$="align-items: center;"]
 m.bustago.or.kr###safeconnectAddBox
 dundam.xyz##.instv-ad
@@ -2954,6 +2966,7 @@ etoland.co.kr##div#super_store_skin_v1
 etoland.co.kr##div.my_880_100_wrap
 koreaminecraft.net##tr.notice:not(:has(.wst_member_title))
 kio.ac##main > div:has(> div > div > a > img)
+[$domain=/mingky[0-9]+\.net/]##.contents_wrap.column div[style="display: flex; flex-direction: column; align-items: center;"]
 nightofpeace.com,ilovebees.io##.e-con-full.e-flex.e-con:has(a[target="_blank"] img)
 nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_blank"] img)
 [$domain=/lover[0-9]\.net/]##.div-over
@@ -3153,6 +3166,7 @@ x86.co.kr#@#.download_ad
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com|dongbanmall.com
 @@||dasibogo.net/wp-content/uploads/sites/23/2024/04/dasibogologo$domain=dasibogo.net
 auto.danawa.com#%#//scriptlet('set-constant', 'NAVER_ADPOST_V2', 'noopFunc')
+damoang.net#$#main .gap-4.sm\:grid-cols-3:has(> .gap-1 ~ div[data-slot="card"]) { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 m.bustago.or.kr#$#.InquiryList { height: 100% !important; }
 dundam.xyz#$#.today-grade { width: 100% !important; }
 start.klauncher.kr#$#.main-content { width: calc(100vw - 220px) !important; }

@@ -1,9 +1,9 @@
-! Checksum: JxLJpvK+tx634hNeltRNgA
-! Diff-Path: ../patches/11/11-s-1772450519-3600.patch
+! Checksum: MEZa6FdnSZIDu1ZZGOHs6w
+! Diff-Path: ../patches/11/11-s-1774258252-3600.patch
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.67.98
-! TimeUpdated: 2026-03-02T11:18:50+00:00
+! Version: 2.0.68.38
+! TimeUpdated: 2026-03-23T09:27:53+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -169,6 +169,10 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||ad.bestools.group^
+||ad.zankhana.ltd^
+||afs.googlesyndication.com^
+||pob-mob2.websearchbrowser.com^
 ||ucads.ucweb.com^
 ||ad-api.maxnapps.com^
 ||d3vgkjyuhp91nc.cloudfront.net^
@@ -2352,8 +2356,6 @@ nashemisto.dp.ua,5692.com.ua,048.ua$@$amp-ad
 ! It's caused by RU AdList
 drive2.com,drive2.ru#@#div[itemtype^="http://schema.org/"] ~ div[data-role][data-target] ~ div:not(:last-child)
 drive2.com,drive2.ru#@#div[itemtype="http://schema.org/BlogPosting"] ~ div:not(:last-child)
-! https://github.com/AdguardTeam/AdguardFilters/issues/64328
-itest.5ch.net#@#.js-cardview_ad-320x180
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62819
 milesplit.com#@#.sticky-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64329
@@ -2405,8 +2407,6 @@ niji-gazo.com#@#.ad-block
 @@||pics.porndroids.com^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18815
 @@||api.gamer.com.tw/mobile_app/anime/*/stat_ad.php
-! https://github.com/AdguardTeam/AdguardFilters/issues/23151
-cancam.jp#@#.overlay-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21581
 @@||meta.wikimedia.org/wiki^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21111
@@ -2648,6 +2648,53 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+aydindenge.com.tr##.mad
+ole.com.ar#$#.bannerTopHeader ~ section[class^="sc-"]:has(> div[class^="sc-"] div.right) { top: 0 !important; }
+ole.com.ar#$##__next > header { padding-top: 50px !important; }
+ole.com.ar##article > div[class^="sc-"]:has(> div[id^="div-gpt-ad"])
+moviecrow.com###top-banner
+www.nytimes.com#%#//scriptlet('trusted-replace-argument', 'matchMedia.call', '1', '"none"', 'max-width')
+twpornstars.com##.block-inline.mobile
+m.slashdot.org###vibe-code
+yesasia.ru##div[style="display:block;height:600px;overflow:hidden;"]
+mwed.jp##div[style="margin-top:60px; width:300px; margin-inline:auto;"]
+cancam.jp##.sp-template-field
+123865.com##.appBottomBtn ~ .ant-carousel
+123865.com##.ant-modal-root:has(> .tuia-modal-wrap)
+cdn.ampproject.org##.ad-control-left
+by-them.com##.page_bottom_fixed_ad_wap
+trilltrill.jp##.RecruitmentBoxNew
+lezzet.com.tr##.db-ads
+trashbox.ru#%#//scriptlet('set-constant', 'bw_no_ad', 'noopFunc')
+suki-kira.com#$##im_interstitial_b { display: none !important; }
+suki-kira.com#$#body[style="overflow: hidden;"] { overflow: auto !important; }
+||ogfap.com/_astro/AdContainer.
+ogfap.com#%#//scriptlet('trusted-set-local-storage-item', 'ad-shown', '$now$')
+ogfap.com#%#//scriptlet('trusted-set-local-storage-item', 'ad-modal-visible', '$now$')
+shorts.xxx#$?#.boxads:not([data-creator]) { remove: true; }
+onlytik.com#%#//scriptlet('set-constant', 'ads_every_x_videos', 'undefined')
+onlytik.com#%#//scriptlet('prevent-addEventListener', 'click', 'clkUnder')
+adultgamesworld.com###showinmob
+minuteinbox.com##.addBlock
+marieclaire.com.tr##div[style^="width:320px;"][style*="height:100px"]
+player4me.vip#%#//scriptlet('abort-on-property-write', 'cache_loader')
+dalealbo.cl#$#.top-sticky-wrapper { display: none !important; }
+dalealbo.cl#$#header { top: 0 !important; }
+vidara.to,vidara.so##.ad-download-box
+gubdaily.ru#$?#.gub-ad-mob { remove: true; }
+gubdaily.ru##div[class^="ai-viewport"]:has(> .code-block > .gub-ad-article)
+medex.com.bd##.campaign-block
+ascii.jp###amaznav
+fullvideosporn.com#?#.video-header:contains(Advertisement)
+justporn.com##a[href^="https://theporndude.com/"]
+justporn.com##.fade.fp-logo
+watchmygf.me##.tablet-b
+elobservador.com.uy###topZocalo
+eleconomista.es##div[data-ad-unit-id]
+eleconomista.es##aside#main-rail
+dplnews.com##.header-inner
+dplnews.com##.primary-sidebar-widget > .g
+notebookcheck.com##.tx-nbc2fe-incontent-column:has(> .nbc-r-float-inline > div[id^="div-gpt-ad"])
 sn-online.de##div[id^="mad_"]
 softpedia.com##.applist > div.nl_item:has(> div.ad)
 ainzscans01.com###i56tm99ncgnw
@@ -2715,7 +2762,6 @@ thetoc.gr##.mg_underhero
 m.yelp.com##div[class*="new-serpia-"] > ol > li:has(a[href^="/adredir?"])
 m.yelp.com##div[class*="new-serpia-"] > ol > li:has(> div[class*="sponsored-icon"])
 4j.com###Games_TopAdDiv
-mydealz.de##div[class]:has(> .ad--bg:only-child)
 amazon.*###softlines-btf-substitute-zone-container-3_feature_div
 amazon.*###softlines-mobile-btf-discovery-zone-T3_feature_div
 accuradio.com##div[class^="MobileBottomAd"]
@@ -3828,7 +3874,7 @@ nikkansports.com###photoScrollText
 transtxxx.com##div[class^="video-conten"] > div[class]:first-child > div[class]:first-child > div[class]:first-child:has(> div[class] > div[id][class]:empty)
 transfer.smt.docomo.ne.jp##.d2c_header[style="height:250px"]
 dengekionline.com##div[class^="BasicLayout"][class*="BannerForSp_"]
-itest.5ch.net#$#.ad_300x250 { position: absolute !important; left: -3000px !important; }
+itest.5ch.io#$#.ad_300x250 { position: absolute !important; left: -3000px !important; }
 eclat.hpplus.jp###dfp_overlay
 milk-key.com##.ams-place
 raenonx.cc##.grid:has(> .overflow-hidden > .absolute > .adsbygoogle)
@@ -6045,7 +6091,6 @@ sport.sky.de##.sdc-site-au--amp > .sdc-site-au__label
 repubblica.it##div[id^="advHook-"]
 m.gazeta.ru##div[id^="gazeta-adv"]
 m.gazeta.ru##div[itemprop="articleBody"] > div[style^="min-height:"]
-5ch.net##.ads_conten_main
 tz.de##a[href^="https://www.outbrain.com/what-is/default/"]
 tz.de##a[href^="https://www.outbrain.com/what-is/default/"] + div[style="margin-top: 5px;"]
 tz.de##div[class="amp-flying-carpet-text-border"]
@@ -8369,6 +8414,7 @@ yandex.ru#?#body[class*="news_phone"] div.news-container > span > div > div.unit
 ! Afisha
 afisha.yandex.*##div[data-test-id="layout.root"] > div[class]:has(> div.adfox)
 ! Dzen
+dzen.ru##div[class^="dzen-mobile"][class*="bannerWrapper"]
 dzen.ru##div[class^="dzen-mobile__widgetContainer-"] ~ div[class*=" dzen-mobile__"]  div[style^="padding-top:"]
 dzen.ru##div[class*="topContent"][class*="mobile__hasBanner"]
 dzen.ru##.article-render-mobile__embed_embed-type_yandex-direct
@@ -8547,6 +8593,8 @@ vimm.net#$#body > #main { bottom: 0 !important; }
 accuweather.com#$#.header-placeholder.has-adhesion { height: 44px !important; }
 accuweather.com#%#//scriptlet('remove-class', 'has-adhesion', '.header-placeholder.has-adhesion')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187643
+!+ PLATFORM(windows, mac, android, cli)
+mail.yahoo.com#?#aside[data-test-id="leaderboard-ad-mobile"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/165241
 yahoo.com#$?#li[data-wf-native-da-id^="ntk-native-ad-"] { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69965

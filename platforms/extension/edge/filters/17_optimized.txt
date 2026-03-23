@@ -1,9 +1,9 @@
-! Checksum: s2vW36Yo3l1bh2/94mI3Tw
-! Diff-Path: ../patches/17_optimized/17_optimized-s-1772205715-3600.patch
+! Checksum: RVVlNFBg96KP6PTwM9vGQw
+! Diff-Path: ../patches/17_optimized/17_optimized-s-1774235608-3600.patch
 ! Title: AdGuard URL Tracking filter (Optimized)
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.13.9
-! TimeUpdated: 2026-02-27T15:19:04+00:00
+! Version: 2.0.13.21
+! TimeUpdated: 2026-03-23T03:10:21+00:00
 ! Expires: 10 days (update frequency)
 $removeparam=analytics_context
 $removeparam=analytics_trace_id
@@ -134,7 +134,6 @@ $removeparam=cx_recsOrder
 $removeparam=cx_recsWidget
 $removeparam=mkt_tok
 $removeparam=mindbox-message-key
-$removeparam=_kx
 ?uclick=*&uclickhash=$removeparam
 /?uclick=*;uclickhash=$removeparam
 &uclick=*&uclickhash=$removeparam
@@ -318,7 +317,22 @@ $removeparam=erid
 $removeparam=oly_enc_id
 $removeparam=_ga
 $removeparam=tduid
+||t.ly^$removeparam=ref
+||musescore.com^$removeparam=feature
+||paypal.com^$removeparam=utm_unptid
+||paypal.com^$removeparam=ppid
+||paypal.com^$removeparam=unptid
+||paypal.com^$removeparam=unp_tpcid
+||paypal.com^$removeparam=page
+||paypal.com^$removeparam=link_ref
+||paypal.com^$removeparam=rsta
+||paypal.com^$removeparam=cnac
+||paypal.com^$removeparam=pgrp
+||languagetool.org^$removeparam=host
+||languagetool.org^$removeparam=matomo
+||languagetool.org^$removeparam=trial_status
 ||time.com^$removeparam=iid
+||aws.eu^$removeparam=trk
 ||builder.aws.com^$removeparam=trk
 ||pages.awscloud.com^$removeparam=trk
 ||registration.awsevents.com^$removeparam=trk
@@ -554,6 +568,7 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ||duckduckgo.com^$removeparam=vis
 ||duckduckgo.com^$removeparam=perf_id
 ||duckduckgo.com^$removeparam=parent_perf_id
+||duckduckgo.com^$removeparam=/^experiment_/
 ||olybet.lv^$removeparam=ref
 ||provereno.media^$removeparam=tg_rhash
 ||weathernews.jp^$removeparam=fm
@@ -1494,6 +1509,8 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ||lite.qwant.com/redirect/$removeparam=uri
 ||realestate.yahoo.co.jp^$removeparam=sc_out
 ||glami.cz^$removeparam=/ga[ct]id/
+||open.spotify.com^$removeparam=sp_cid
+||open.spotify.com^$removeparam=dlsi
 ||open.spotify.com^$removeparam=pi
 ||open.spotify.com^$removeparam=referral
 ||open.spotify.com^$removeparam=si
@@ -2377,6 +2394,7 @@ $removeparam=s,domain=twitter.com|x.com
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 !+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
+@@||iforms.americanexpress.com^$removeparam=cuid
 @@||canadacompanyregistry.com^$removeparam=utm_campaign
 @@||usprobioticguide.com^$removeparam=utm_campaign
 @@||metabase.com^$removeparam=utm_term

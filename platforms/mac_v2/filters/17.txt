@@ -1,9 +1,9 @@
-! Checksum: /cCnra9JjMTsjtO7P1hYtA
-! Diff-Path: ../patches/17/17-s-1772205738-3600.patch
+! Checksum: 3VTe+IFbofl6G3nUSidijw
+! Diff-Path: ../patches/17/17-s-1774235635-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.13.9
-! TimeUpdated: 2026-02-27T15:19:04+00:00
+! Version: 2.0.13.21
+! TimeUpdated: 2026-03-23T03:10:21+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -225,8 +225,6 @@ $removeparam=cx_recsWidget
 $removeparam=mkt_tok
 ! Mindbox email tracking
 $removeparam=mindbox-message-key
-! Klaviyo onsite tracking
-$removeparam=_kx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123544
 ! ad click tracking
 ?uclick=*&uclickhash=$removeparam
@@ -499,9 +497,30 @@ $removeparam=tduid
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-16099608
+||t.ly^$removeparam=ref
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-16004356
+||musescore.com^$removeparam=feature
+! paypal.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/225822
+||paypal.com^$removeparam=utm_unptid
+||paypal.com^$removeparam=ppid
+||paypal.com^$removeparam=unptid
+||paypal.com^$removeparam=unp_tpcid
+||paypal.com^$removeparam=page
+||paypal.com^$removeparam=link_ref
+||paypal.com^$removeparam=rsta
+||paypal.com^$removeparam=cnac
+||paypal.com^$removeparam=pgrp
+! languagetool.org
+||languagetool.org^$removeparam=host
+||languagetool.org^$removeparam=matomo
+||languagetool.org^$removeparam=trial_status
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15946121
 ||time.com^$removeparam=iid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15984971
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-15944807
+||aws.eu^$removeparam=trk
 ||builder.aws.com^$removeparam=trk
 ||pages.awscloud.com^$removeparam=trk
 ||registration.awsevents.com^$removeparam=trk
@@ -869,6 +888,11 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ||duckduckgo.com^$removeparam=vis
 ||duckduckgo.com^$removeparam=perf_id
 ||duckduckgo.com^$removeparam=parent_perf_id
+!
+! A/B testing
+||duckduckgo.com^$removeparam=/^experiment_/
+! https://github.com/AdguardTeam/AdguardFilters/issues/227413#issuecomment-4107238932
+! ||duckduckgo.com^$removeparam=atb
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208058
 ||olybet.lv^$removeparam=ref
@@ -2228,6 +2252,9 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143623
 ||glami.cz^$removeparam=/ga[ct]id/
 ! spotify.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/225820
+||open.spotify.com^$removeparam=sp_cid
+||open.spotify.com^$removeparam=dlsi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214514
 ||open.spotify.com^$removeparam=pi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143625
@@ -3461,6 +3488,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/227175
+@@||iforms.americanexpress.com^$removeparam=cuid
 ! canadacompanyregistry.com - utm_source is used to lookup the company name; removing it breaks the page
 @@||canadacompanyregistry.com^$removeparam=utm_campaign
 ! https://github.com/uBlockOrigin/uAssets/issues/31494
