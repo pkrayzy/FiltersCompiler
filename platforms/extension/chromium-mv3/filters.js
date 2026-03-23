@@ -341,8 +341,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.1.4.87",
-			"timeUpdated": "2026-03-23T04:49:10+0000",
+			"version": "2.1.4.89",
+			"timeUpdated": "2026-03-23T15:26:47+0000",
 			"deprecated": false,
 			"languages": [
 				"ru"
@@ -366,8 +366,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.4.55.39",
-			"timeUpdated": "2026-03-23T09:27:35+0000",
+			"version": "2.4.55.46",
+			"timeUpdated": "2026-03-23T16:24:34+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -389,8 +389,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.1.1.75",
-			"timeUpdated": "2026-03-23T07:34:10+0000",
+			"version": "2.1.1.77",
+			"timeUpdated": "2026-03-23T14:29:37+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -410,8 +410,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.26.42",
-			"timeUpdated": "2026-03-23T08:25:23+0000",
+			"version": "2.1.26.45",
+			"timeUpdated": "2026-03-23T12:22:35+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -526,8 +526,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/9.txt",
 			"trustLevel": "full",
-			"version": "2.0.33.74",
-			"timeUpdated": "2026-03-23T08:25:35+0000",
+			"version": "2.0.33.75",
+			"timeUpdated": "2026-03-23T10:26:36+0000",
 			"deprecated": false,
 			"languages": [
 				"es",
@@ -594,8 +594,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.63.15",
-			"timeUpdated": "2026-03-23T09:27:54+0000",
+			"version": "2.0.63.17",
+			"timeUpdated": "2026-03-23T12:22:44+0000",
 			"deprecated": false,
 			"languages": [
 				"tr"
@@ -650,8 +650,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.13.21",
-			"timeUpdated": "2026-03-23T03:10:21+0000",
+			"version": "2.0.13.23",
+			"timeUpdated": "2026-03-23T14:29:57+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -670,8 +670,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.83.40",
-			"timeUpdated": "2026-03-23T09:28:04+0000",
+			"version": "2.0.83.42",
+			"timeUpdated": "2026-03-23T12:22:54+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -692,8 +692,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.72.66",
-			"timeUpdated": "2026-03-23T09:28:05+0000",
+			"version": "2.0.72.70",
+			"timeUpdated": "2026-03-23T16:25:04+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -714,8 +714,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/20.txt",
 			"trustLevel": "full",
-			"version": "2.0.28.5",
-			"timeUpdated": "2026-03-23T08:25:57+0000",
+			"version": "2.0.28.7",
+			"timeUpdated": "2026-03-23T15:27:27+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -736,8 +736,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.42.79",
-			"timeUpdated": "2026-03-23T07:34:42+0000",
+			"version": "2.0.42.81",
+			"timeUpdated": "2026-03-23T13:36:53+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -758,8 +758,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.13.73",
-			"timeUpdated": "2026-03-16T13:37:43+0000",
+			"version": "2.0.13.74",
+			"timeUpdated": "2026-03-23T12:22:56+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -882,8 +882,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.87.57",
-			"timeUpdated": "2026-03-23T08:46:55+0000",
+			"version": "2.1.87.59",
+			"timeUpdated": "2026-03-23T16:47:28+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -957,8 +957,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.87.56",
-			"timeUpdated": "2026-03-23T08:46:57+0000",
+			"version": "2.1.87.58",
+			"timeUpdated": "2026-03-23T16:47:29+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1022,13 +1022,13 @@
 		{
 			"filterId": 203,
 			"name": "Hungarian filter",
-			"description": "Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.",
+			"description": "Hufilter. Filter list that specifically removes ads, privacy threats, and security risks on websites in the Hungarian language.",
 			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://github.com/hufilter/hufilter/wiki",
+			"homepage": "https://hufilter.hu/",
 			"expires": 864000,
 			"displayNumber": 2,
 			"groupId": 7,
-			"subscriptionUrl": "https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt",
+			"subscriptionUrl": "https://filters.hufilter.hu/hufilter-adguard.txt",
 			"trustLevel": "high",
 			"version": "2.0.4.89",
 			"timeUpdated": "2026-03-21T12:46:12+0000",
@@ -1039,6 +1039,7 @@
 			"tags": [
 				1,
 				2,
+				4,
 				48,
 				10
 			],
@@ -1169,8 +1170,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.56.44",
-			"timeUpdated": "2026-03-23T09:28:09+0000",
+			"version": "2.1.56.47",
+			"timeUpdated": "2026-03-23T15:27:30+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"
@@ -1379,8 +1380,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.80.88",
-			"timeUpdated": "2026-03-23T08:47:49+0000",
+			"version": "2.0.80.90",
+			"timeUpdated": "2026-03-23T16:48:14+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"
@@ -1427,8 +1428,8 @@
 			"groupId": 5,
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
-			"version": "2.0.13.89",
-			"timeUpdated": "2026-03-23T00:59:09+0000",
+			"version": "2.0.13.90",
+			"timeUpdated": "2026-03-23T12:48:04+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [

@@ -1,8 +1,8 @@
-! Checksum: dqS12EAnAZzWuIYC4qcGlg
+! Checksum: Nhc2ebvQZIYKXZjrsCnxlQ
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.13.21
-! TimeUpdated: 2026-03-23T03:10:21+00:00
+! Version: 2.0.13.23
+! TimeUpdated: 2026-03-23T14:29:57+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -452,7 +452,7 @@ $removeparam=fb_source
 ! SECTION: Generic rules with exclusions for the MV3 extensions
 !
 $denyallow=cleviationly.com,removeparam=cmpid
-$denyallow=adj.st|yandex.go.link,removeparam=adj_t
+$denyallow=adj.st|yandex.go.link|dermanostic.go.link,removeparam=adj_t
 $denyallow=em.dynamicyield.com|mootoon.co.kr|iforms.americanexpress.com,removeparam=cuid
 $denyallow=a8cv.amiami.jp,removeparam=a8
 $denyallow=meishi.meituan.com|portal-portm.meituan.com|rd.bizrate.com|glavnoe.life|mmcref.pl|t.send.vt.edu|app.plex.tv,removeparam=utm_medium
@@ -484,6 +484,8 @@ $denyallow=tradedoubler.com,removeparam=tduid
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/227596
+||duck.ai^$removeparam=origin
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-16099608
 ||t.ly^$removeparam=ref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-16004356
