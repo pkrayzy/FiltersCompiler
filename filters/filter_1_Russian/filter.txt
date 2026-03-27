@@ -1437,6 +1437,7 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||gjv7fg.ru^
 ||veyszc.com^
 ||spdcdnmpg.com^
 ||getnodejs.com^
@@ -2773,7 +2774,6 @@ http://w7.ru^$third-party
 ||lc2ads.ru^$third-party
 ||lcads.ru^$third-party
 ||leadgid.go2cloud.org^$third-party
-||leads.su^$third-party
 ||leadsleader.ru^$third-party
 ||leadzu.com^$third-party
 ||league-of-legends.ru^$third-party
@@ -6886,8 +6886,6 @@ yandex.md,yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru$$div[
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50723
 ! For Ukrainian users of Yandex.Browser(ads are loaded using proxy)
 zoneofgames.ru$$script[tag-content="an.yandex.ru"][max-length="700"]
-! https://github.com/AdguardTeam/AdguardFilters/issues/45414
-tochka.net$$script[wildcard="var f,e,r,n,i"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42990
 animebest.org$$iframe[srcdoc="getOwnPropertyDescriptor"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41410
@@ -7336,6 +7334,10 @@ gorod24.online,vedomosti.ru,kommersant.ru,rg.ru,glavbukh.ru,chehov-vid.ru,161.ru
 !
 !
 !
+otzyvru.com##body > div.body_wrapper:has(> div[id^="yandex_rtb_"])
+calc.by##.ads-block-
+||image.krasview.ru/thread/1946128/a1033c691da65e2dfa15749f4ea0dfa4_700.jpg
+shazoo.ru##a[href^="https://yandex.ru/adfox/"]
 ||static.ofd.ru/mail/all/*/banner*.png
 ofd.ru##a[href^="https://ofd.ru/ReceiptBanner/Click?"]
 platformaofd.ru###cheque_html_block > table:not([class]):has(#big_data_container)
@@ -18827,6 +18829,9 @@ lib.seu.edu.cn#@#.one-search
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
+! https://github.com/AdguardTeam/AdGuardExtra/issues/644
+! aglint-disable-next-line
+@@||yandex.*/web-maps/$extension='AdGuard Extra'|'AdGuard Extra (Beta)'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225157
 ||yandex.ru/ads/system/context.js$script,redirect=noopjs,domain=5.viptorpro.com
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -20266,6 +20271,8 @@ citrus.ua,xsport.ua,zi.dn.ua,zi.ua##img[src^="/upload/rk/"]
 !
 !
 !
+football24.ua##app-adv-placeholder
+football24.ua##app-video-adv-block
 rozetka.com.ua##.catalog-grid > .catalog-grid__cell:has(div.relative > .goods-tile__inner > div.goods-tile__content > span.promo-label ~ a[href*="?advToken"][rel$="sponsored"])
 svoboda.org##.special-sidebar
 minfin.com.ua###main-product-offer
@@ -20296,7 +20303,7 @@ m-translate.org.ua#?#.ui > div.synonym:has(> div.divider:contains(Ad))
 minfin.com.ua##div[data-bn-slot]
 bigkyiv.com.ua###headlessui-portal-root
 novyny.live##.adv-sidebars
-24tv.ua##app-main-page-adv-block
+football24.ua,24tv.ua##app-main-page-adv-block
 poltava24.com.ua##.adsgoogle
 ||slotscity.ua/registration?refcode=$document
 glavcom.ua##.sunsite_actions

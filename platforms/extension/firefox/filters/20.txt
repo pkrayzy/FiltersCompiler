@@ -1,9 +1,9 @@
-! Checksum: Bxk6RnnbZTAMY4Ni8CST3g
-! Diff-Path: ../patches/20/20-s-1774279804-3600.patch
+! Checksum: j/jg/ChVSGJuiiVHMCfBug
+! Diff-Path: ../patches/20/20-s-1774517406-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.28.7
-! TimeUpdated: 2026-03-23T15:27:27+00:00
+! Version: 2.0.28.15
+! TimeUpdated: 2026-03-26T09:27:16+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -60,6 +60,11 @@ rxgo.com,alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepe
 !
 !
 !
+bikemap.net##div[class^="app-qr-code-module"]
+xn--90aijkdmaud0d.xn--p1ai##.application-link
+dugun.com##.js-app-download-bar
+citycost.org#%#//scriptlet('set-cookie', 'banner-hidden', 'true')
+citycost.org#%#//scriptlet('trusted-click-element', '.modal-get-app .ui-modal__close-btn', '', '730')
 elpais.com.co##.prose > div:not([class]):has(> div.not-prose > div.flex > div.flex > a[href^="https://play.google.com/store/apps/"])
 lazada.sg###J_CampaignBanner
 lazada.sg###J_Banner
@@ -89,8 +94,6 @@ wear.jp#%#//scriptlet('set-session-storage-item', 'showed_app_redirect_half_moda
 shufoo.net#$#.appdl_modal_overlay { display: none !important; }
 shufoo.net#%#//scriptlet('remove-class', 'is-hidden', 'body')
 palcy.jp##aside > .flex-col:has(> a[href^="https://palcy.onelink.me/"])
-m.vk.com#%#//scriptlet('trusted-set-cookie', 'remixvideo_mvk_first_session_promo_last_seen_timestamp', '%7B%22banner%22%3A99999999999999%7D')
-m.vk.com##a[class*="OpenInAppPromoButton__button--"]
 ripley.cl##section[data-testid="marketing--popup"]
 pw.live##div[class^="deepLinks_getAppWrapper"]
 books.yandex.ru##div[class^="AppPromoDesktopBanner_"]
@@ -4060,6 +4063,13 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+vmeste.mosreg.ru##dd-go-mobile-app
+vmeste.mosreg.ru##.cdk-overlay-backdrop:has(~ .cdk-global-overlay-wrapper dd-go-mobile-app)
+suno.com#%#//scriptlet('trusted-set-local-storage-item', 'mobile-web-redirect-dismissed', '{"timestamp":9999999999999}')
+trip.com##.tcp-h5-header-app-download-btn
+trip.com##div[class^="app-download-bottomstyle"]
+m.vkvideo.ru,m.vk.com#%#//scriptlet('trusted-set-cookie', 'remixvideo_mvk_first_session_promo_last_seen_timestamp', '%7B%22banner%22%3A99999999999999%7D')
+m.vkvideo.ru,m.vk.com##a[class*="OpenInAppPromoButton__button--"]
 thefreedictionary.com##.header-top > a.download-link
 expero.ru##.banner-loader
 etstur.com###appStoreContentForm

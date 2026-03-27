@@ -1,14 +1,14 @@
-! Checksum: gEE2eUS9Ef1EWI4t0T2tIQ
-! Diff-Path: ../patches/243/243-s-1774183769-14400.patch
+! Checksum: RLCT8cBJuLCQBdDHpvAgXQ
+! Diff-Path: ../patches/243/243-s-1774601401-14400.patch
 ! Title: Frellwit's Swedish Filter
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.24.18
-! TimeUpdated: 2026-03-22T12:46:40+00:00
+! Version: 2.0.24.21
+! TimeUpdated: 2026-03-27T08:47:17+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2026-03-22 11:41:54 CET
+! Last modified: 2026-03-27 07:09:06 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -810,6 +810,7 @@ hrnytt.se#?#.spd-article-over-pic:contains(/spons/i):upward(a)
 hrnytt.se#?#.spd-article-over-pic:contains(/spons/i):upward(a) + h4
 hrsvepet.se,cfosvepet.se,vdsvepet.se#$#body { overflow:unset!important; opacity:unset!important; }
 hrsvepet.se,cfosvepet.se,vdsvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner, .top-banner-wrapper, .toppbanner-under-header, .pre-header-banner-wrapper, div[data-leadflow-host], .banner-host-pro, .take-over-banner
+hrsvepet.se,cfosvepet.se,vdsvepet.se##.w-dyn-item:has(a[href="/katergori/employer-branding"])
 hrsvepet.se,cfosvepet.se,vdsvepet.se##:is(.recent-post-item, .w-dyn-item):has(a[href="#"]:not(.w-condition-invisible))
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se##.inline-share-buttons
 husbilhusvagn.se,vibilagare.se##.article-native
@@ -900,6 +901,7 @@ kandisvarlden.com#%#//scriptlet('ubo-acs', 'disableEnterKey')
 kandisvarlden.com#$#.unselectable { -moz-user-select:unset!important; -webkit-user-select:unset!important; cursor:unset!important; }
 kardemummagumman.se###custom_html-2
 karinrahm.se#$#.thb-page-transition-on { opacity:1!important }
+karinrahm.se,sydasien.se##.thb-cookie-bar
 karlskogavaxer.se,molndalvaxer.se#?#.elementor-heading-title:contains(/annons/i):upward(.elementor-column)
 karriarlakare.se##a[target][onclick], #cliSettingsPopup
 karriarlakare.se#?#.annons-label:upward(a)
@@ -1063,6 +1065,8 @@ maskinisten.net##.randomads-footer, .ads-footer-icon
 maskinteknik.org###headroom > .hstat:has(.annonssegmenthead)
 maskinteknik.org#$##headroom { min-height:unset!important; }
 massasport.se##.post:has(a[href*="spelbolag"], a[href*="casino"], a[href*="spelplattform"])
+matkasse.se##div.fixed.bg-black\/80:empty
+matkasse.se##div.fixed.bg-black\/80:empty + div.fixed:has(button[aria-controls*="consent"])
 matochpyssel.nu#$#.loading { opacity:1!important }
 matpriskollen.se###kd-preloader
 matspar.se#?#div[id^="gpt-ad"]:upward(1)
@@ -1494,7 +1498,6 @@ swedroid.se##.puff:has(script[data-pbid])
 swedroid.se#?#.puff:contains(/Aktuellt på Prisjakt/i)
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sxk.se###start-sponsors
-sydasien.se##.thb-cookie-bar
 sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner, .hspalt
 synonyma.se##amp-user-notification.cookie
 synonyma.se##.full-bleed:has(.adsbygoogle)
@@ -2024,6 +2027,7 @@ zeromagazine.nu##div[id^="ads"]
 &displayMode=modal$domain=dagen.se
 *$subdocument,third-party,redirect=click2load.html,domain=alltomsallskapsspel.se
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net
+*$script,~third-party,domain=hrsvepet.se|cfosvepet.se|vdsvepet.se
 *$script,redirect-rule=noopjs,domain=elevspel.se
 -VideoAD$domain=alekuriren.se
 -banner$image,domain=bokadirekt.se
@@ -2577,7 +2581,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/pixel-review-partnerlinker-addon
 /plugins/popups/*$script,domain=svenskhistoria.se|bugburger.se
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se|forvaltarforum.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|jobsinsweden.se
-/plugins/pressidium-cookie-consent$script,domain=undervarttak.se|paleoskafferiet.se|radiotreby.se
+/plugins/pressidium-cookie-consent$script,domain=undervarttak.se|radiotreby.se
 /plugins/pum-$script,domain=snowmobile.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /plugins/quantcast-choice$script,domain=javligtgott.se|villalivet.se
 /plugins/quick-adsense
@@ -2889,7 +2893,6 @@ zeromagazine.nu##div[id^="ads"]
 /?news=ajaxrequest&bannerzone
 /?news=ajaxrequest&blok=sliderBanner
 /?template=prisjakt$domain=ljudochbild.se
-/?trafikkalla$image,domain=bloggplatsen.se
 /@sentry$script,domain=aftonbladet.se
 /_adsmodern/*$image
 /_astro/InitializeAdverts$domain=aftonbladet.se
@@ -2941,7 +2944,6 @@ _banner.php?$domain=tvmatchen.nu
 ||adhype-assets.com/images/*betting
 ||adhype-assets.com/images/*casino
 ||adhype.se/js/native
-||admin.bloggplatsen.se/status/$image
 ||adnordics.com^$third-party
 ||adonsales.com^$third-party
 ||adonstudio.com^$third-party
@@ -3260,6 +3262,7 @@ _banner.php?$domain=tvmatchen.nu
 ||jenkler.se^$domain=uex.se
 ||jitsu.com/p.js
 ||jobtip.se^$domain=shortcut.se
+||jsc.native.azerion.com^$third-party
 ||jst.ai^$third-party
 ||js.adsaga.se^$third-party
 ||js.evtr.nordiskemedier.dk^
