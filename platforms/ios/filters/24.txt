@@ -1,8 +1,8 @@
-! Checksum: EuskDEVLjjnco5w/PQ7zEQ
+! Checksum: uG95gCy2tJ1SVRAW4n9Tng
 ! Title: Quick Fixes Filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.9.8
-! TimeUpdated: 2026-03-30T05:33:24+00:00
+! Version: 2.0.9.9
+! TimeUpdated: 2026-03-30T14:08:09+00:00
 ! Expires: 5 days (update frequency)
 ! Title: Krayzylist
 ! Description: Personal Blocklist
@@ -219,6 +219,16 @@ bing.com##.b_ans.b_mop.b_imgansacf,.b_ans.b_mop.b_vidAns
 ! People Also Ask !
 bing.com##.b_ans > .rqnaContainerwithfeedback,.df_alaskcarousel,#sa_requery
 bing.com##.b_mop:has(.rqnaContainerwithfeedback,.df_alaskcarousel)
+!!--Scriptlets--!!
+bloomberg.com#%#//scriptlet('remove-cookie')
+bloomberg.com#%#//scriptlet('set-session-storage-item', '/*/', '$remove$')
+bloomberg.com#%#//scriptlet('set-local-storage-item', '/*/', '$remove$')
+ft.com#%#//scriptlet('remove-cookie')
+ft.com#%#//scriptlet('set-session-storage-item', '/*/', '$remove$')
+ft.com#%#//scriptlet('set-local-storage-item', '/*/', '$remove$')
+nytimes.com#%#//scriptlet('remove-cookie')
+nytimes.com#%#//scriptlet('set-session-storage-item', '/*/', '$remove$')
+nytimes.com#%#//scriptlet('set-local-storage-item', '/*/', '$remove$')
 www.youtube.com#%#(()=>{const t={apply:(t,o,n)=>{const e=n[0];return"function"==typeof e&&e.toString().includes("onAbnormalityDetected")&&(n[0]=function(){}),Reflect.apply(t,o,n)}};window.Promise.prototype.then=new Proxy(window.Promise.prototype.then,t)})();
 www.youtube.com#%#(()=>{const e={apply:(e,t,n)=>{const o=Reflect.apply(e,t,n);try{o instanceof HTMLIFrameElement&&"about:blank"===o.src&&o.contentWindow&&(o.contentWindow.fetch=window.fetch,o.contentWindow.Request=window.Request)}catch(e){}return o}};Node.prototype.appendChild=new Proxy(Node.prototype.appendChild,e)})();
 www.youtube.com#%#//scriptlet('adjust-setTimeout', '[native code]', '17000', '0.001')
