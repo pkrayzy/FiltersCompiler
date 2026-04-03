@@ -363,7 +363,11 @@
 			},
 			"be": {
 				"name": "Віджэты сацыяльных сетак",
+<<<<<<< HEAD
 				"description": "Блакуе элементы сацыяльных сетак, такія як кнопкі «Падабаецца» і «Падзяліцца»"
+=======
+				"description": "Блакіруе элементы сацыяльных сетак, такія як кнопкі «Упадабаць» і «Падзяліцца»"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Социални уиджети",
@@ -541,7 +545,11 @@
 			},
 			"be": {
 				"name": "Раздражняльнікі",
+<<<<<<< HEAD
 				"description": "Блакуе надакучлівыя вэб-элементы, такія як паведамленні аб файлах cookie або ўсплывальныя вокны на старонцы"
+=======
+				"description": "Блакіруе надакучлівыя вэб-элементы, такія як апавяшчэнні аб файлах cookie або ўсплывальныя вокны на старонцы"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Дразнещи",
@@ -719,7 +727,11 @@
 			},
 			"be": {
 				"name": "Бяспека",
+<<<<<<< HEAD
 				"description": "Блакуе запыты да фішынгавых і шкоднасных сайтаў"
+=======
+				"description": "Блакіруе запыты да фішынгавых і шкодных вэб-сайтаў"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Безопасност",
@@ -1075,7 +1087,11 @@
 			},
 			"be": {
 				"name": "На пэўнай мове",
+<<<<<<< HEAD
 				"description": "Блакуе рэкламу на вэб-сайтах на вызначаных мовах"
+=======
+				"description": "Блакіруе рэкламу на вэб-сайтах указаных мовах"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Специфични за езика",
@@ -1254,7 +1270,11 @@
 				"name": "حظر الإعلانات"
 			},
 			"be": {
+<<<<<<< HEAD
 				"description": "Створаны для блакавання інтэрнэт-рэкламы",
+=======
+				"description": "Распрацаваны для блакіроўкі рэкламы ў інтэрнэце",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"name": "Блакіроўка рэкламы"
 			},
 			"bg": {
@@ -1611,7 +1631,11 @@
 			},
 			"be": {
 				"description": "Створаны для блакавання элементаў сацыяльных сетак (віджэты, кнопкі \"Мне падабаецца\" і таму падобнае)",
+<<<<<<< HEAD
 				"name": "Блакаванне віджэтаў сацыяльных сетак"
+=======
+				"name": "Блакіроўка віджэтаў сацыяльных сетак"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"description": "Предназначени са да блокират елементи от социалните мрежи (уиджети, бутони \"Харесва ми\" и др.)",
@@ -2145,7 +2169,11 @@
 			},
 			"be": {
 				"description": "Створаны для блакавання апавяшчэнняў cookie",
+<<<<<<< HEAD
 				"name": "Блакаванне апавяшчэнняў cookie"
+=======
+				"name": "Блакіроўка апавяшчэнняў аб файлах cookie"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"description": "Проектиран за блокиране на съобщения за бисквитки на уеб сайтове",
@@ -5705,7 +5733,11 @@
 			},
 			"be": {
 				"description": "Мае адпраўкі да фільтра мабільнай рэкламы",
+<<<<<<< HEAD
 				"name": "Адпраўка да фільтра мабільнай рэкламы"
+=======
+				"name": "Адсылка да фільтра мабільнай рэкламы"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"description": "Съдържа референции към филтъра за мобилни реклами",
@@ -6061,7 +6093,11 @@
 			},
 			"be": {
 				"description": "Мае адпраўкі да фільтра Liste FR",
+<<<<<<< HEAD
 				"name": "Адпраўка да фільтра Liste FR"
+=======
+				"name": "Адсылка да фільтра Liste FR"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"description": "Съдържа референции към филтъра Liste FR",
@@ -10155,7 +10191,11 @@
 			},
 			"be": {
 				"description": "Прызначаны для блакавання паведамленняў ўэб-сайтаў пра палітыка cookie",
+<<<<<<< HEAD
 				"name": "Блакаванне паведамленняў cookie"
+=======
+				"name": "Блакіроўка апавяшчэнняў файлаў cookie"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"description": "Създаден да блокира предупрежденията на уебсайтове за политиките за бисквитки",
@@ -11223,7 +11263,11 @@
 			},
 			"be": {
 				"description": "Мае адпраўкі да фільтра ROList",
+<<<<<<< HEAD
 				"name": "Адпраўка да фільтра RoList"
+=======
+				"name": "Адсылка да фільтра RoList"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"description": "Съдържа препратки към филтъра ROList",
@@ -11401,7 +11445,11 @@
 			},
 			"be": {
 				"description": "Мае адпраўкі да фільтра EasyPrivacy",
+<<<<<<< HEAD
 				"name": "Адпраўка да фільтра EasyPrivacy"
+=======
+				"name": "Адсылка да фільтра EasyPrivacy"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"description": "Има референции към филтъра EasyPrivacy",
@@ -13894,7 +13942,11 @@
 				"description": "فلتر يتيح منع الإعلانات على مواقع الويب باللغة الروسية"
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Рускі фільтр",
+=======
+				"name": "AdGuard Russian filter",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Рускі фільтр AdGuard. Фільтр, што дазваляе прыбраць рэкламу з сайтаў на рускай мове."
 			},
 			"bg": {
@@ -14606,7 +14658,11 @@
 				"description": "تم تصميم عامل التصفية لاختبار قواعد معينه للتصفية الخطرة قبل اضافتها إلى عوامل التصفية الاساسيه."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Эксперыментальны фільтр",
+=======
+				"name": "Эксперыментальны фільтр AdGuard",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Фільтр, прызначаны для праверкі некаторых небяспечных правілаў фільтрацыі перад тым як яны будуць дададзены ў асноўныя фільтры."
 			},
 			"bg": {
@@ -15140,7 +15196,11 @@
 				"description": "قائمة الهولندية + فلترادجوارد الهولندية. قائمة التصفية التي تزيل الإعلانات على مواقع الويب باللغة الهولندية على وجه التحديد"
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Галандскі фільтр",
+=======
+				"name": "Галандскі фільтр AdGuard",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "EasyList Dutch + Галандскі фільтр AdGuard. Фільтр, што дазваляе прыбраць рэкламу з сайтаў на галандскай мове."
 			},
 			"bg": {
@@ -15497,7 +15557,11 @@
 			},
 			"be": {
 				"name": "Фільтр карыснай рэкламы",
+<<<<<<< HEAD
 				"description": "Фільтр, які разблакуе пошукавую рэкламу ў Google, DuckDuckGo, Bing або Yahoo і самарэкламу на сайтах."
+=======
+				"description": "Фільтр, які прыводзіць да разблакіроўкі пошукавай рэкламы ў Google, DuckDuckGo, Bing або Yahoo і самарэкламы на вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за полезни реклами",
@@ -15852,7 +15916,11 @@
 				"description": "قائمة التصفية التي تزيل الإعلانات تحديدًا على مواقع الويب باللغة التركية"
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Турэцкі фільтр",
+=======
+				"name": "AdGuard Turkish filter",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Фільтр, які прызначаны для выдалення рэкламы на вэб-сайтах на турэцкай мове."
 			},
 			"bg": {
@@ -16031,7 +16099,11 @@
 			},
 			"be": {
 				"name": "Фільтр раздражняльнікаў AdGuard",
+<<<<<<< HEAD
 				"description": "Блакіруе раздражняльныя элементы на вэб-старонках, уключаючы апавяшчэнні аб файлах cookie, староннія віджэты і ўсплывальныя вокны на старонцы. Змяшчае наступныя фільтры AdGuard: апавяшчэнні аб файлах cookie, усплывальныя вокны, банеры для мабільных праграм, іншыя непрыемнасці і віджэты."
+=======
+				"description": "Блакіруе раздражняльныя элементы на вэб-старонках, уключаючы апавяшчэнні аб файлах cookie, староннія віджэты і ўсплывальныя вокны на старонцы. Змяшчае наступныя фільтры AdGuard: апавяшчэнні аб файлах cookie, усплывальныя вокны, банеры для мабільных праграм, іншыя раздражняльнікі і віджэты."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за досадни реклами",
@@ -16565,7 +16637,11 @@
 			},
 			"be": {
 				"name": "Фільтр апавяшчэнняў аб файлах cookie AdGuard",
+<<<<<<< HEAD
 				"description": "Блакіруе паведамленні аб файлах cookie на вэб-старонках."
+=======
+				"description": "Блакіруе апавяшчэнні аб файлах cookie на вэб-старонках."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за известия за бисквитки на AdGuard",
@@ -16742,8 +16818,13 @@
 				"description": "يحظر جميع أنواع النوافذ المنبثقة غير الضرورية لتشغيل مواقع الويب وفقا لسياسة التصفية الخاصة بنا."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Фільтр усплываючых вокнаў AdGuard",
 				"description": "Блакуе ўсе віды ўсплывальных вокнаў, якія не патрэбныя для працы сайтаў у адпаведнасці з нашай Палітыкай фільтрацыі."
+=======
+				"name": "Фільтр усплывальных вокнаў AdGuard",
+				"description": "Блакіруе ўсе віды ўсплывальных вокнаў, якія не патрэбныя для працы сайтаў, згодна з нашай палітыкай фільтраў."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за изскачащи прозорци AdGuard",
@@ -16921,7 +17002,11 @@
 			},
 			"be": {
 				"name": "Фільтр банераў для мабільных прылад AdGuard",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя банеры, якія рэкламуюць мабільныя праграмы вэб-сайтаў."
+=======
+				"description": "Блакіруе раздражняльныя банеры, якія рэкламуюць мабільныя праграмы вэб-сайтаў."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за банери за мобилни приложения AdGuard",
@@ -17099,7 +17184,11 @@
 			},
 			"be": {
 				"name": "Фільтр іншых раздражняльнікаў AdGuard",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя элементы на вэб-старонках, якія не адносяцца да папулярных катэгорый раздражнення."
+=======
+				"description": "Блакіруе раздражняльныя элементы на вэб-старонках, якія не падпадаюць пад папулярныя катэгорыі раздражнення."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за досадни реклами AdGuard",
@@ -17277,7 +17366,11 @@
 			},
 			"be": {
 				"name": "Фільтр віджэтаў AdGuard",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя віджэты іншых вытворцаў: інтэрнэт-памочнікі, жывыя чаты падтрымкі і г.д."
+=======
+				"description": "Блакіруе раздражняльныя віджэты ад старонніх распрацоўшчыкаў: памочнікі ў інтэрнэце, чаты падтрымкі ў рэальным часе і г.д."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за джаджи AdGuard",
@@ -18344,7 +18437,11 @@
 				"description": "قائمة تصفية إضافية لمواقع الويب باللغة التشيكية والسلوفاكية."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "EasyList на чэшскай і славацкай мовах",
+=======
+				"name": "EasyList Czech and Slovak",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Дадатковы спіс фільтраў для вэб-сайтаў на чэшскай і славацкай мовах."
 			},
 			"bg": {
@@ -19234,7 +19331,11 @@
 				"description": "قائمة تصفية إضافية لمواقع الويب باللغة الليتوانية."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "EasyList Літва",
+=======
+				"name": "EasyList Lithuania",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Дадатковы спіс фільтраў для вэб-сайтаў на літоўскай мове."
 			},
 			"bg": {
@@ -20302,7 +20403,11 @@
 				"description": "قائمة تصفية إضافية لمواقع الويب باللغة الآيسلندية."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Ісландскі спіс ABP",
+=======
+				"name": "Icelandic ABP List",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Дадатковы спіс фільтраў для вэб-сайтаў на ісландскай мове."
 			},
 			"bg": {
@@ -20837,7 +20942,11 @@
 			},
 			"be": {
 				"name": "Fanboy's Annoyances",
+<<<<<<< HEAD
 				"description": "Падаляе ўсплыўныя вокны на старонцы і іншыя непрыемнасці. Улучае спісы cookie-файлаў Fanboy's Social Blocking і EasyList."
+=======
+				"description": "Выдаляе ўсплывальныя вокны на старонцы і іншыя раздражняльныя элементы. Уключае ў сябе фільтры Fanboy's Social Blocking і EasyList Cookie Lists."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Fanboy's Annoyances",
@@ -21371,7 +21480,11 @@
 			},
 			"be": {
 				"name": "Web Annoyances Ultralist",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя элементы ўэб-старонак і аднаўляе страчаную прастору на экране."
+=======
+				"description": "Блакіруе раздражняльныя элементы на вэб-старонках і аднаўляе страчаную прастору на экране."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Web Annoyances Ultralist",
@@ -21549,7 +21662,11 @@
 			},
 			"be": {
 				"name": "EasyList Thailand",
+<<<<<<< HEAD
 				"description": "Фільтр, які блакуе рэкламу на тайскіх сайтах."
+=======
+				"description": "Фільтр, які блакіруе рэкламу на тайскіх вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "EasyList Thailand",
@@ -21723,6 +21840,7 @@
 		"203": {
 			"ar": {
 				"name": "فلاتر هانغاريا",
+<<<<<<< HEAD
 				"description": "هوفيلتر. قائمة الفلاتر التي تزيل على وجه التحديد الإعلانات من مواقع الويب باللغة المجرية."
 			},
 			"be": {
@@ -21896,6 +22014,181 @@
 			"zh_TW": {
 				"name": "Hungarian filter",
 				"description": "Hufilter。專門地移除於匈牙利語網站上的廣告之過濾清單。"
+=======
+				"description": "Hufilter. قائمة الفلاتر التي تزيل على وجه التحديد الإعلانات وتهديدات الخصوصية ومخاطر الأمان على مواقع الويب باللغة المجرية."
+			},
+			"be": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Спіс фільтраў, які адмыслова зроблены для выдалення рэкламы, пагроз прыватнасці і рызык бяспекі на вэб-сайтах з венгерскай мовай."
+			},
+			"bg": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Списък с филтри, който специално премахва реклами, заплахи за поверителността и рискове за сигурността в уебсайтове на унгарски език."
+			},
+			"ca": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Llista de filtres que elimina específicament anuncis, amenaces per a la privadesa i riscos de seguretat a llocs web en la llengua hongaresa."
+			},
+			"cs": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Seznam filtrů, které specificky odstraňují reklamy, hrozby pro soukromí a bezpečnostní rizika na webových stránkách v maďarském jazyce."
+			},
+			"da": {
+				"name": "Ungarsk filter",
+				"description": "Hufilter. Filterliste, der specifikt fjerner annoncer, samt fortroligheds- og sikkerhedstrusler på ungarsksprogede websteder."
+			},
+			"de": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filterliste, die speziell Werbung, Datenschutzbedrohungen und Sicherheitsrisiken auf Websites in ungarischer Sprache entfernt."
+			},
+			"el": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Λίστα φίλτρου που αφαιρεί συγκεκριμένα διαφημίσεις, απειλές απορρήτου και κινδύνους ασφάλειας σε ιστοσελίδες στην ουγγρική γλώσσα."
+			},
+			"en": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filter list that specifically removes ads, privacy threats, and security risks on websites in the Hungarian language."
+			},
+			"es": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que elimina específicamente anuncios, amenazas a la privacidad y riesgos de seguridad en sitios web en idioma húngaro."
+			},
+			"es_ES": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que elimina específicamente anuncios, amenazas a la privacidad y riesgos de seguridad en sitios web en idioma húngaro."
+			},
+			"fa": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. فهرست پالایش که به‌طور خاص تبلیغات، تهدیدهای حریم خصوصی و خطرات امنیتی را در تارنماها به زبان مجارستانی حذف می‌کند."
+			},
+			"fi": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Suodatinlista, joka poistaa erityisesti mainokset, yksityisyyteen kohdistuvat uhat ja turvallisuusriskit unkarinkielisillä verkkosivustoilla."
+			},
+			"fr": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Une liste de filtres qui retire les publicités, les menaces pour la vie privée et les risques de sécurité sur les sites Web en Hongrois."
+			},
+			"he": {
+				"name": "מסנן הונגרי",
+				"description": "Hufilter. רשימת מסננים שמסירה במפורש פרסומות, איומים על הפרטיות וסיכוני אבטחה באתרים בשפה ההונגרית."
+			},
+			"hi": {
+				"name": "Hungarian filter",
+				"description": "Hufilter। फ़िल्टर सूची जो विशेष रूप से हंगेरियन भाषा में वेबसाइटों पर विज्ञापन, गोपनीयता संबंधी खतरों और सुरक्षा जोखिमों को हटाए।"
+			},
+			"hr": {
+				"name": "Mađarski filtar",
+				"description": "Hufilter. Popis filtara posebno dizajniran za uklanjanje oglasa, prijetnji privatnosti i sigurnosnih rizika na web stranicama na mađarskom jeziku."
+			},
+			"hu": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Szűrőlista, amely kifejezetten eltávolítja a hirdetéseket, az adatvédelmi fenyegetéseket és a biztonsági kockázatokat a magyar nyelvű weboldalakon."
+			},
+			"hy": {
+				"name": "Hungarian filter",
+				"description": "Hufilter: Զտիչների ցուցակ, որն ըստ հատուկ հեռացնում է մարքեթինգի հայտարարությունները, գաղտնիության սպառնալիքները և անվտանգության ռիսկերը հունգարերեն լեզվով կայքերում։"
+			},
+			"id": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Daftar filter yang secara khusus menghapus iklan, ancaman privasi, dan risiko keamanan di situs web dalam bahasa Hongaria."
+			},
+			"it": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Elenco di filtri che rimuove specificamente annunci pubblicitari, minacce alla privacy e rischi per la sicurezza dai siti web in lingua ungherese."
+			},
+			"ja": {
+				"name": "Hungarian filter",
+				"description": "Hufilter。ハンガリー語ウェブサイト上の広告・プライバシー脅威・セキュリティリスクをするための専用フィルタリスト。"
+			},
+			"ko": {
+				"name": "Hungarian filter",
+				"description": "Hufilter는 헝가리어 웹사이트의 광고와 보안 위협을 특별히 차단하는 필터 목록입니다."
+			},
+			"lt": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filtrų sąrašas, kuris specialiai pašalina reklamas, privatumo grėsmes ir saugumo rizikas iš svetainių vengrų kalba."
+			},
+			"mk": {
+				"name": "Унгарски филтер",
+				"description": "Hufilter. Список со филтри што конкретно ги отстранува рекламите, заканите за приватноста и безбедносните ризици на веб-страниците на унгарски јазик."
+			},
+			"ms": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Senarai penapis yang secara khusus menghapus iklan, ancaman privasi, dan risiko keselamatan pada laman web dalam bahasa Hungari."
+			},
+			"nl": {
+				"name": "Hongaarse filter",
+				"description": "Hufilter. Filterlijst die specifiek advertenties, privacydreigingen en beveiligingsrisico's op websites in de Hongaarse taal verwijdert."
+			},
+			"no": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filterliste som spesifikt fjerner annonser, personverntrusler og sikkerhetsrisikoer på ungarskspråklige nettsteder."
+			},
+			"pl": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Lista filtrów, która w szczególności usuwa reklamy, zagrożenia dla prywatności oraz ryzyka związane z bezpieczeństwem na stronach internetowych w języku węgierskim."
+			},
+			"pt": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que remove anúncios, ameaças à privacidade e riscos de segurança em sites em língua húngara."
+			},
+			"pt_BR": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que remove anúncios, ameaças à privacidade e riscos de segurança em sites em língua húngara."
+			},
+			"pt_PT": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que remove anúncios, ameaças à privacidade e riscos de segurança em sites em língua húngara."
+			},
+			"ro": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Listă de filtre care elimină în mod specific reclame, amenințări la adresa confidențialității și riscuri de securitate pe site-uri web în limba maghiară."
+			},
+			"ru": {
+				"name": "Hungarian filter",
+				"description": "Фильтр, который удаляет рекламу, угрозы конфиденциальности и безопасности на сайтах на венгерском языке."
+			},
+			"sk": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Zoznam filtrov, ktorý špecificky odstraňuje reklamy, hrozby pre súkromie a bezpečnostné riziká na webových stránkach v maďarskom jazyku."
+			},
+			"sl": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Seznam filtrov, ki posebej odstrani oglase, grožnje zasebnosti in varnostna tveganja na spletnih straneh v madžarščini."
+			},
+			"sr": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Lista filtera koja posebno uklanja reklame, pretnje privatnosti i bezbednosne rizike na sajtovima na mađarskom jeziku."
+			},
+			"sv": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filterlista som specifikt tar bort annonser, integritetshot och säkerhetsrisker på webbplatser på ungerska."
+			},
+			"th": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. รายการตัวกรองที่ลบโฆษนา ภัยคุกคามด้านความเป็นส่วนตัว และความเสี่ยงด้านความปลอดภัยบนเว็บไซต์ในภาษาฮังการีโดยเฉพาะ"
+			},
+			"tr": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Özellikle Macarca dilindeki sitelerde reklamları, gizlilik tehditlerini ve güvenlik risklerini kaldıran filtre listesi."
+			},
+			"uk": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Список фільтрів, призначений спеціально для вилучення реклами, загроз приватності та ризиків безпеки на сайтах угорською мовою."
+			},
+			"vi": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Danh sách bộ lọc chuyên dùng để loại bỏ quảng cáo, các mối đe doạ quyền riêng tư và các rủi ro bảo mật trên các trang bằng tiếng Hungary."
+			},
+			"zh": {
+				"name": "Hungarian filter",
+				"description": "Hufilter。专门在匈牙利语网站上删除广告、隐私威胁和安全风险的过滤列表。"
+			},
+			"zh_TW": {
+				"name": "Hungarian filter",
+				"description": "Hufilter。專門刪除於匈牙利語網站上的廣告、隱私威脅，以及安全風險之過濾器清單。"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			}
 		},
 		"204": {
@@ -21905,7 +22198,11 @@
 			},
 			"be": {
 				"name": "Peter Lowe's Blocklist",
+<<<<<<< HEAD
 				"description": "Фільтр, які блакіруе рэкламу, трэкеры і іншыя непрыемныя рэчы."
+=======
+				"description": "Фільтр, які блакіруе рэкламу, праграмы сачэння і іншыя непрыемныя рэчы."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Peter Lowe's Blocklist",
@@ -22083,7 +22380,11 @@
 			},
 			"be": {
 				"name": "Xfiles",
+<<<<<<< HEAD
 				"description": "Італьянскі фільтр для блакавання рэкламы."
+=======
+				"description": "Італьянскі фільтр для блакіроўкі рэкламы."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Xfiles",
@@ -22439,7 +22740,11 @@
 			},
 			"be": {
 				"name": "Online Malicious URL Blocklist",
+<<<<<<< HEAD
 				"description": "Блакіруе дамены, якія былі заўважаны ў пашырэнні шкоднага і шпіёнскага ПЗ."
+=======
+				"description": "Блакіруе дамены, якія былі заўважаны ў пашырэнні шкодных і шпіёнскіх праграм."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Online Malicious URL Blocklist",
@@ -22795,7 +23100,11 @@
 			},
 			"be": {
 				"name": "ABPVN List",
+<<<<<<< HEAD
 				"description": "В'етнамскі фільтр для блакавання рэкламы."
+=======
+				"description": "В'етнамскі фільтр для блакіроўкі рэкламы."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "ABPVN List",
@@ -24214,6 +24523,7 @@
 		},
 		"227": {
 			"ar": {
+<<<<<<< HEAD
 				"name": "List-KR",
 				"description": "عامل التصفية الذي يزيل الإعلانات والنصوص المختلفة من مواقع الويب ذات المحتوى الكوري. مدمج ومُعزز بقواعد AdGuard الخاصة بالفلترة المحسنة. من المتوقع أن يتم استخدام هذا الفلتر جنبًا إلى جنب مع فلتر AdGuard Base."
 			},
@@ -24388,6 +24698,182 @@
 			"zh_TW": {
 				"name": "List-KR",
 				"description": "從具有韓文內容的網站上移除廣告和各種腳本的過濾器。為了增進的過濾，被與特定 AdGuard 的規則結合和擴增。此過濾器受預期與 AdGuard 基本過濾器一起被使用。"
+=======
+				"name": "List-KR Classic filter list",
+				"description": "قائمة المرشحات List-KR Сlassic ل AdGuard تحظر الإعلانات وتعطل سكريبتات منع حظر الإعلانات على المواقع والتطبيقات الناطقة بالكورية."
+			},
+			"be": {
+				"name": "List-KR Classic filter list",
+				"description": "Спіс фільтраў List-KR Classic для AdGuard блакіруе рэкламу і адключае скрыпты-анты-блакіроўшчыкі на карэйскамоўных вэб-сайтах і ў дадатках."
+			},
+			"bg": {
+				"name": "List-KR Classic filter list",
+				"description": "Списъкът с филтри List-KR Classic за AdGuard блокира реклами и деактивира анти-адблокиращи скриптове в корейскоезични уебсайтове и приложения."
+			},
+			"ca": {
+				"name": "List-KR Classic filter list",
+				"description": "La llista de filtres List-KR Classic per a AdGuard bloqueja anuncis i desactiva scripts anti-adblock en llocs web i aplicacions en llengua coreana."
+			},
+			"cs": {
+				"name": "List-KR Classic filter list",
+				"description": "The List-KR Сlassic filter list pro AdGuard blokuje reklamy a deaktivuje skripty proti blokování reklam na webových stránkách a v aplikacích v korejském jazyce."
+			},
+			"da": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic-filterlisten til AdGuard blokerer annoncer og deaktiverer anti-adblock-scripts på koreansksprogede websteder og apps."
+			},
+			"de": {
+				"name": "List-KR Classic filter list",
+				"description": "Diese Filterliste für AdGuard blockiert Werbung und deaktiviert Anti-Adblock-Skripte auf koreanischen Websites sowie in Apps."
+			},
+			"el": {
+				"name": "List-KR Classic filter list",
+				"description": "Η λίστα φίλτρων List-KR Сlassic για το AdGuard μπλοκάρει τις διαφημίσεις και απενεργοποιεί τις δέσμες ενεργειών anti-adblock σε ιστότοπους και εφαρμογές στην κορεατική γλώσσα."
+			},
+			"en": {
+				"name": "List-KR Classic filter list",
+				"description": "The List-KR Сlassic filter list for AdGuard blocks ads and disables anti-adblock scripts on Korean-language websites and apps."
+			},
+			"es": {
+				"name": "List-KR Classic filter list",
+				"description": "La lista de filtros List-KR Classic para AdGuard bloquea los anuncios y desactiva los scripts anti-bloqueo de anuncios en sitios web y aplicaciones en idioma coreano."
+			},
+			"es_ES": {
+				"name": "List-KR Classic filter list",
+				"description": "La lista de filtros List-KR Classic para AdGuard bloquea los anuncios y desactiva los scripts anti-bloqueo de anuncios en sitios web y aplicaciones en idioma coreano."
+			},
+			"fa": {
+				"name": "List-KR Classic filter list",
+				"description": "فهرست‌های پالایش کلاسیک List-KR برای AdGuard تبلیغات را مسدود می‌کند و اسکریپت‌های ضدِ مسدودکنندهٔ تبلیغات را در تارنماها و برنامک‌های کره‌ای‌زبان غیرفعال می‌کند."
+			},
+			"fi": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic -suodatinlista AdGuardille estää mainokset ja poistaa käytöstä anti-adblock-skriptit koreankielisillä verkkosivustoilla ja sovelluksissa."
+			},
+			"fr": {
+				"name": "List-KR Classic filter list",
+				"description": "La liste de filtres List-KR Classic pour AdGuard bloque les publicités et désactive les scripts anti-blocage de publicités sur les sites web et les applications en coréen."
+			},
+			"he": {
+				"name": "List-KR Classic filter list",
+				"description": "רשימת מסננים List-KR Сlassic עבור AdGuard חוסמת פרסומות ומשביתה סקריפטים של מניעת חוסם פרסומות באתרים ובאפליקציות בשפה הקוריאנית."
+			},
+			"hi": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard के लिए List-KR Сlassic फ़िल्टर सूची कोरियाई भाषा की वेबसाइटों और ऐप्स पर विज्ञापनों को ब्लॉक करती है और एंटी-एडब्लॉक स्क्रिप्ट को निष्क्रिय कर देती है।"
+			},
+			"hr": {
+				"name": "List-KR Classic filter list",
+				"description": "Filter List-KR Classic za AdGuard blokira oglase i onemogućuje skripte protiv blokiranja oglasa na web-stranicama i aplikacijama na korejskom jeziku."
+			},
+			"hu": {
+				"name": "List-KR Classic filter list",
+				"description": "A List-KR Сlassic szűrőlista az AdGuard számára blokkolja a hirdetéseket és letiltja az anti-adblock szkripteket a koreai nyelvű weboldalakon és alkalmazásokban."
+			},
+			"hy": {
+				"name": "List-KR Classic filter list",
+				"description": "The List-KR Сlassic filter list-ը արգելափակում է գովազդները և անջատում գովազդի արգելափակման դեմ սկրիպտները կորեերեն լեզվով կայքերում և հավելվածներում:"
+			},
+			"id": {
+				"name": "List-KR Classic filter list",
+				"description": "Daftar filter List-KR Сlassic untuk AdGuard memblokir iklan dan menonaktifkan skrip anti-adblock di situs web dan aplikasi berbahasa Korea."
+			},
+			"it": {
+				"name": "List-KR Classic filter list",
+				"description": "La lista di filtri List-KR Сlassic per AdGuard blocca gli annunci e disabilita gli script anti-adblock su siti e app in lingua coreana."
+			},
+			"ja": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard用のList-KR Classic filter list は、韓国語ウェブサイトやアプリ上の広告をブロックし、広告ブロック対策スクリプトを無効にします。"
+			},
+			"ko": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard용 List-KR Сlassic 필터 목록은 한국어 웹사이트와 앱에서 광고를 차단하고 광고 차단 방지 스크립트를 비활성화합니다."
+			},
+			"lt": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic filtrų sąrašas, skirtas AdGuard, blokuoja ads ir išjungia anti-adblock scripts korėjiečių kalbos websites ir apps."
+			},
+			"mk": {
+				"name": "List-KR Classic filter list",
+				"description": "Листата со филтри за AdGuard блокира реклами и ги оневозможува скриптите против блокирање реклами на веб-страници и апликации на корејски јазик."
+			},
+			"ms": {
+				"name": "List-KR Classic filter list",
+				"description": "Senarai penapis List-KR Classic untuk AdGuard menyekat iklan dan melumpuhkan skrip anti-penapisan pada laman web dan aplikasi berbahasa Korea."
+			},
+			"nl": {
+				"name": "List-KR Classic filter list",
+				"description": "De List-KR Сlassic-filterlijst voor AdGuard blokkeert advertenties en schakelt anti-advertentieblokkeringsscripts uit op Koreaanse websites en apps."
+			},
+			"no": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic-filterlisten for AdGuard blokkerer annonser og deaktiverer anti-adblock-skript på koreanskspre5klige nettsteder og apper."
+			},
+			"pl": {
+				"name": "List-KR Classic filter list",
+				"description": "Lista filtrów List-KR Classic dla AdGuard blokuje reklamy i wyłącza skrypty anty-adblock na koreańskojęzycznych stronach internetowych i aplikacjach."
+			},
+			"pt": {
+				"name": "List-KR Classic filter list",
+				"description": "A lista de filtro List-KR Сlassic para o AdGuard bloqueia anúncios e desativa scripts anti-adblock em sítios Web e aplicações em língua coreana."
+			},
+			"pt_BR": {
+				"name": "List-KR Classic filter list",
+				"description": "A lista de filtros List-KR Classic para AdGuard bloqueia anúncios e desativa scripts anti-bloqueio de anúncios em sites e aplicativos em coreano."
+			},
+			"pt_PT": {
+				"name": "List-KR Classic filter list",
+				"description": "A lista de filtro List-KR Сlassic para o AdGuard bloqueia anúncios e desativa scripts anti-adblock em sítios Web e aplicações em língua coreana."
+			},
+			"ro": {
+				"name": "List-KR Classic filter list",
+				"description": "Lista de filtre List-KR Сlassic pentru AdGuard blochează reclamele și dezactivează scripturile anti-adblock pe site-uri web și aplicații în limba coreeană."
+			},
+			"ru": {
+				"name": "List-KR Classic filter list",
+				"description": "Блокирует рекламу и отключает скрипты против блокировщиков рекламы на корейских сайтах и в приложениях."
+			},
+			"sk": {
+				"name": "List-KR Classic filter list",
+				"description": "Zoznam filtrov List-KR Сlassic pre AdGuard blokuje reklamy a deaktivuje anti-adblock skripty na kórejských webových stránkach a aplikáciách."
+			},
+			"sl": {
+				"name": "List-KR Classic filter list",
+				"description": "Seznam filtrov List-KR Classic za AdGuard blokira oglase in onemogoči skripte proti blokiranju oglasov na spletnih mestih in aplikacijah v korejskem jeziku."
+			},
+			"sr": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic lista filtera za AdGuard blokira oglase i onemogućava anti-adblock skripte na veb-sajtovima i app-ovima na korejskom jeziku."
+			},
+			"sv": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic-filterlistan för AdGuard blockerar annonser och inaktiverar anti-adblock-skript på koreanskspråkiga webbplatser och appar."
+			},
+			"th": {
+				"name": "List-KR Classic filter list",
+				"description": "รายการฟิลเตอร์ List-KR Classic สำหรับ AdGuard จะบล็อกโฆษนาและปิดใช้งานสคริปต์ป้องกันการบล็อกโฆษนาในเว็บไซต์และแอปภาษาเกาหลี"
+			},
+			"tr": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard için List-KR Klasik filtre listesi, Korece siteler ve uygulamalarda reklamları engeller ve anti-reklam engelleyici komut dosyalarını devre dışı bırakır."
+			},
+			"uk": {
+				"name": "List-KR Classic filter list",
+				"description": "Список фільтрів List-KR Сlassic для AdGuard блокує рекламу та вимикає скрипти проти блокування реклами на корейськомовних сайтах і в застосунках."
+			},
+			"vi": {
+				"name": "List-KR Classic filter list",
+				"description": "Danh sách bộ lọc List-KR Сlassic cho AdGuard chặn quảng cáo và vô hiệu hóa các script chống chặn quảng cáo trên các trang web và app bằng tiếng Hàn."
+			},
+			"zh": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic 过滤规则用于 AdGuard，可拦截韩语网站及应用中的广告，并禁用反广告拦截脚本。"
+			},
+			"zh_TW": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic 過濾規則用於 AdGuard，可封鎖韓語網站及應用程式中的廣告，並停用反廣告封鎖腳本。"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			}
 		},
 		"228": {
@@ -24397,7 +24883,11 @@
 			},
 			"be": {
 				"name": "xinggsf",
+<<<<<<< HEAD
 				"description": "Блакуе рэкламу на кітайскіх відэаплатформах (MangoTV, DouYu і іншых)."
+=======
+				"description": "Блакіруе рэкламу на кітайскіх відэаплатформах (MangoTV, DouYu і іншых)."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "xinggsf",
@@ -25643,7 +26133,11 @@
 			},
 			"be": {
 				"name": "Polish Annoyances Filters",
+<<<<<<< HEAD
 				"description": "Фільтр, які хавае і блакуе ўсплыўную рэкламу, віджэты, рассыланні, пуш-апавяшчэнні, унутраныя спасылкі, якія не ставяцца да тэмы, і іншыя раздражняльныя элементы. Польскія GDPR-Cookies фільтры ўжо ўлучаны ў яго."
+=======
+				"description": "Фільтр, які хавае і блакіруе ўсплывальную рэкламу, віджэты, рассылку навін, push-апавяшчэнні, стрэлкі з пазначанымі ўнутранымі спасылкамі, якія не датычацца тэмы і іншыя раздражняльныя элементы. Polish GDPR-Cookies Filters ужо ўключаны ў яго."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Polish Annoyances Filters",
@@ -26533,7 +27027,11 @@
 			},
 			"be": {
 				"name": "YousList",
+<<<<<<< HEAD
 				"description": "Фільтр, які блакуе рэкламу на карэйскіх сайтах."
+=======
+				"description": "Фільтр, які блакіруе рэкламу на карэйскіх вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "YousList",
@@ -26889,7 +27387,11 @@
 			},
 			"be": {
 				"name": "Polish Anti-Annoying Special Supplement",
+<<<<<<< HEAD
 				"description": "Фільтры, якія блакуюць і хаваюць RSS-элементы і рэшткі ўтоеных рассыланняў, сумешчаных з элементамі сацыяльных сетак на польскіх сайтах."
+=======
+				"description": "Фільтры, якія блакіруюць і хаваюць элементы RSS і рэшту са схаванай рассылкай навін, якая аб'яднана з элементамі сацыяльных сетак на польскіх вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Polish Anti-Annoying Special Supplement",
@@ -27151,7 +27653,11 @@
 			},
 			"ko": {
 				"name": "Dandelion Sprout's Nordic Filters",
+<<<<<<< HEAD
 				"description": "이 목록은 노르웨이, 덴마크, 아이슬란드, 덴마크 영토 및 사미 원주민 인구를위한 웹사이트를 다룹니다."
+=======
+				"description": "이 목록은 노르웨이, 덴마크, 아이슬란드, 덴마크 영토 및 사미 원주민 인구를 위한 웹사이트를 다룹니다."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"lt": {
 				"name": "Dandelion Sprout's Nordic Filters",

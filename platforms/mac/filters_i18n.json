@@ -946,7 +946,11 @@
 				"description": "فلتر يتيح منع الإعلانات على مواقع الويب باللغة الروسية"
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Рускі фільтр",
+=======
+				"name": "AdGuard Russian filter",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Рускі фільтр AdGuard. Фільтр, што дазваляе прыбраць рэкламу з сайтаў на рускай мове."
 			},
 			"bg": {
@@ -1658,7 +1662,11 @@
 				"description": "تم تصميم عامل التصفية لاختبار قواعد معينه للتصفية الخطرة قبل اضافتها إلى عوامل التصفية الاساسيه."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Эксперыментальны фільтр",
+=======
+				"name": "Эксперыментальны фільтр AdGuard",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Фільтр, прызначаны для праверкі некаторых небяспечных правілаў фільтрацыі перад тым як яны будуць дададзены ў асноўныя фільтры."
 			},
 			"bg": {
@@ -2192,7 +2200,11 @@
 				"description": "قائمة الهولندية + فلترادجوارد الهولندية. قائمة التصفية التي تزيل الإعلانات على مواقع الويب باللغة الهولندية على وجه التحديد"
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Галандскі фільтр",
+=======
+				"name": "Галандскі фільтр AdGuard",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "EasyList Dutch + Галандскі фільтр AdGuard. Фільтр, што дазваляе прыбраць рэкламу з сайтаў на галандскай мове."
 			},
 			"bg": {
@@ -2549,7 +2561,11 @@
 			},
 			"be": {
 				"name": "Фільтр карыснай рэкламы",
+<<<<<<< HEAD
 				"description": "Фільтр, які разблакуе пошукавую рэкламу ў Google, DuckDuckGo, Bing або Yahoo і самарэкламу на сайтах."
+=======
+				"description": "Фільтр, які прыводзіць да разблакіроўкі пошукавай рэкламы ў Google, DuckDuckGo, Bing або Yahoo і самарэкламы на вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за полезни реклами",
@@ -2898,13 +2914,198 @@
 				"description": "用於所有已知的行動廣告網路之過濾器。對於行動裝置是有用的。"
 			}
 		},
+<<<<<<< HEAD
+=======
+		"12": {
+			"ar": {
+				"name": "فلتر سفاريAdGuard",
+				"description": "فلتر خاص ل سفاري 9+ على نظام التشغيل OS and OS X. نحتاج إلى فلتر منفصل ل سفاري لأنه لا يدعم بشكل كامل بناء جملة القواعد لدينا"
+			},
+			"be": {
+				"name": "Фільтр для Safari",
+				"description": "Адмысловы фільтр для браўзера Safari 9+ на iOS i macOS. Праграме неабходны асобны фільтр, бо Safari не цалкам падтрымлівае нашы правілы фільтрацыі."
+			},
+			"bg": {
+				"name": "Филтър за Сафари",
+				"description": "Специален филтър за Сафари 9+ на iOS и OS X. Трябва отделен филтър за Сафари, тъй като той не поддържа напълно синтаксиса на нашите правила."
+			},
+			"ca": {
+				"name": "AdGuard Safari filter",
+				"description": "Special filter for Safari 9+ on iOS and Mac OS. We need a separate filter for Safari browser because it does not fully support our rules syntax."
+			},
+			"cs": {
+				"name": "Safari filtr AdGuard",
+				"description": "Speciální filtr pro Safari 9 a vyšší na iOS a Mac OS. Pro Safari je potřebný separátní filtr, protože zcela nepodporuje naši syntaxi pravidel."
+			},
+			"da": {
+				"name": "AdGuard Safari-filter",
+				"description": "Specialfilter til Safari 9+ på iOS og Mac OS. Der kræves et separat filter til Safari-browseren, da den ikke fuldt ud understøtter AdGuards regelsyntaks."
+			},
+			"de": {
+				"name": "AdGuard Safari-Filter",
+				"description": "Besonderer Filter für Safari 9+ in iOS und macOS. Wir benötigen einen seperaten Filter für Safari, da dieser nicht die gesamte Regel-Syntax unterstützt."
+			},
+			"el": {
+				"name": "AdGuard Safari Φίλτρο",
+				"description": "Ειδικό φίλτρο για Safari 9+ σε iOS και macOS. Χρειαζόμαστε ένα ξεχωριστό φίλτρο για το πρόγραμμα περιήγησης Safari επειδή δεν υποστηρίζει πλήρως τη σύνταξη των κανόνων μας."
+			},
+			"en": {
+				"name": "AdGuard Safari filter",
+				"description": "Special filter for Safari 9+ on iOS and macOS. We need a separate filter for Safari browser because it does not fully support our rules syntax."
+			},
+			"es": {
+				"name": "Filtro para Safari",
+				"description": "Filtro especial para Safari 9+ en iOS y macOS. Necesitamos un filtro distinto porque no soporta completamente nuestras reglas de sintaxis."
+			},
+			"es_ES": {
+				"name": "Filtro para Safari",
+				"description": "Filtro especial para Safari 9+ en iOS y macOS. Necesitamos un filtro distinto porque no soporta completamente nuestras reglas de sintaxis."
+			},
+			"fa": {
+				"name": "فیلتر سافاری",
+				"description": "فیلتر ویژه برای سافاری 9+ در آی اُ اِس و اُ اِس ایکس.ما باید فیلتر سافاری را جدا کنیم چون نحو دستور ما را کاملا پشتیبانی نمی کند."
+			},
+			"fi": {
+				"name": "AdGuardin Safari-suodatin",
+				"description": "Erityinen suodatin Safari 9+:lle iOS ja macOS -laitteissa. Safari tarvitsee erillisen suodattimen, koska se ei ole täysin yhteensopiva sääntöjemme syntaksin kanssa."
+			},
+			"fr": {
+				"name": "Filtre AdGuard pour Safari",
+				"description": "Filtre spécial pour Safari 9+ sous IOS et OS X. Nous avons besoin d'un filtre indépendant pour Safari car il ne supporte pas pleinement la syntaxe de programmation des règles de filtrages."
+			},
+			"he": {
+				"name": "מסנן Safari של AdGuard",
+				"description": "מסנן מיוחד עבור Safari 9+ על iOS ועל macOS. יש מסנן נפרד עבור דפדפן Safari מאחר שהוא אינו תומך במלואו בתחביר הכללים"
+			},
+			"hi": {
+				"name": "AdGuard सफारी फ़िल्टर",
+				"description": "iOS और macOS पर Safari 9+ के लिए विशेष फ़िल्टर। हमें Safari ब्राउज़र के लिए एक अलग फ़िल्टर की आवश्यकता है क्योंकि यह हमारी नियमों की वाक्य रचना का पूर्ण समर्थन नहीं करता है।"
+			},
+			"hr": {
+				"name": "AdGuard Safari filtar",
+				"description": "Poseban filtar za Safari 9+ na iOS-u i Mac OS-u. Za Safari preglednik, potreban nam je poseban filtar jer u potpunosti ne podržava sintaksu naših pravila."
+			},
+			"hu": {
+				"name": "AdGuard Safari szűrő",
+				"description": "Speciális szűrő a Safari 9+ alkalmazáshoz iOS és macOS rendszereken. Szükségünk van egy külön szűrőre a Safari böngészőhöz, mivel az nem támogatja teljes mértékben a szabályok szintaxisát."
+			},
+			"hy": {
+				"name": "AdGuard Safari զտիչ",
+				"description": "Հատուկ զտիչ Safari 9+-ի համար iOS և macOS-ում։ Մենք առանձնահատուկ զտիչի կարիք ունենք Safari բրաուզերի համար, քանի որ այն լիովին չի աջակցում մեր կանոնների սինթաքսին։"
+			},
+			"id": {
+				"name": "Penyaring Safari AdGuard",
+				"description": "Penyaring khusus untuk Safari 9+ di iOS dan macOS. Kami memerlukan penyaring terpisah untuk peramban tersebut dikarenakan Safari tidak sepenuhnya mendukung sintaks aturan kami."
+			},
+			"it": {
+				"name": "Filtro AdGuard Safari",
+				"description": "Speciale filtro per Safari 9+ su iOS e macOS. Abbiamo bisogno di un filtro separato per Safari poichè esso non supporta pienamente la sintassi delle nostre regole."
+			},
+			"ja": {
+				"name": "AdGuard Safariフィルタ",
+				"description": "iOSとOS X上のSafari 9以降のための専用フィルター。Safariはルール構文を完全にサポートしていないため、独自のフィルターが必要です。"
+			},
+			"ko": {
+				"name": "AdGuard Safari 필터",
+				"description": "iOS 및 macOS용 Safari 9 이상 버전용 특수 필터. Safari 브라우저는 규칙 신텍스를 완전히 지원하지 않기 때문에 별도의 필터가 필요합니다."
+			},
+			"lt": {
+				"name": "AdGuard Safari filtras",
+				"description": "Specialus Safari 9+ filtras skirtas iOS ir Mac OS. Mums reikia atskiro Safari naršyklės filtro, nes jis nevisiškai palaiko mūsų taisyklių sintaksę."
+			},
+			"mk": {
+				"name": "Филтер за Safari",
+				"description": "Специјален филтер за Safari 9+ на iOS и macOS. Потребен ни е посебен филтер за прелистувачот Safari бидејќи не ја поддржува целосно синтаксата на нашите правила."
+			},
+			"ms": {
+				"name": "Penapis Safari AdGuard",
+				"description": "Penapis khas untuk Safari 9+ pada iOS dan macOS. Kami memerlukan penapis yang berasingan untuk pelayar Safari kerana ia tidak menyokong sepenuhnya sintaks peraturan kami."
+			},
+			"nl": {
+				"name": "Safari filter",
+				"description": "Speciaal filter voor Safari 9+ op iOS en MacOS. We hebben een special filter voor de Safari browser nodig omdat het niet onze regelsyntax ondersteunt."
+			},
+			"no": {
+				"name": "AdGuards Safari-filter",
+				"description": "Spesielt filter for Safari 9+ på iOS og OS X. Vi trenger et separat filter for Safari fordi det ikke fullt ut støtter vår regeksyntax."
+			},
+			"pl": {
+				"name": "Filtr Safari AdGuard",
+				"description": "Specjalny filtr dla Safari 9+ na iOS oraz OS X. Jest on wymagany gdyż Safari niezupełnie wspiera naszą składnie reguł blokowania."
+			},
+			"pt": {
+				"name": "Filtro do Safari do AdGuard",
+				"description": "Filtro especial para o Safari 9+ no iOS e OS X. Precisamos de um filtro separado para o Safari porque não suporta totalmente a sintaxe das nossas regras."
+			},
+			"pt_BR": {
+				"name": "Filtro para Safari do AdGuard",
+				"description": "Filtro especial para o Safari 9+ no iOS e macOS. Precisamos de um filtro separado para o Safari porque ele não suporta totalmente a nossa sintaxe regras."
+			},
+			"pt_PT": {
+				"name": "Filtro do Safari do AdGuard",
+				"description": "Filtro especial para o Safari 9+ no iOS e OS X. Precisamos de um filtro separado para o Safari porque não suporta totalmente a sintaxe das nossas regras."
+			},
+			"ro": {
+				"name": "Filtre AdGuard pentru Safari",
+				"description": "Filtru special pentru Safari 9+ pe iOS și macOS. Browserul Safari are nevoie de un filtru separat, deoarece nu acceptă pe deplin sintaxa regulilor noastre."
+			},
+			"ru": {
+				"name": "Фильтр для Safari",
+				"description": "Специальный фильтр для браузера Safari 9+ на iOS и OS X. Нам нужен дополнительный фильтр, так как Safari не полностью поддерживает наши правила фильтрации."
+			},
+			"sk": {
+				"name": "AdGuard Safari filter",
+				"description": "Špeciálny filter pre Safari 9 a vyššie na iOS a OS X. Pre Safari je potrebný separátny filter, pretože nepodporuje úplne našu syntax pravidiel."
+			},
+			"sl": {
+				"name": "AdGuard Safari filter",
+				"description": "Poseben filter za Safari 9+ na iOS in Mac OS. Za brskalnik Safari potrebujemo ločen filter, ker ne podpira v celoti sintakse naših pravil."
+			},
+			"sr": {
+				"name": "AdGuard Safari filter",
+				"description": "Poseban filter za Safari 9+ on iOS i Mac OS. Imamo odvojeni filter za Safari preglednik zato što on ne podržava potpuno našu sintaksu pravila."
+			},
+			"sv": {
+				"name": "AdGuards Safarifilter",
+				"description": "Specialfilter för Safari 9+ på iOS och OS X. Vi behöver ett separat filter för Safari eftersom den inte fullt ut stöder våra filterregelssyntaxer."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรอง Safari",
+				"description": "ตัวกรองพิเศษสำหรับ Safari 9+ บน iOS และ Mac OS เราต้องการตัวกรองแยกต่างหากสำหรับเบราว์เซอร์ Safari เพราะไม่รองรับไวยากรณ์กฎของเราอย่างสมบูรณ์"
+			},
+			"tr": {
+				"name": "AdGuard Safari filtresi",
+				"description": "iOS ve macOS'ta Safari 9+ için özel filtre. Kural söz dizimimizi tam olarak desteklemediğinden Safari tarayıcısı için ayrı bir filtreye ihtiyacımız var."
+			},
+			"uk": {
+				"name": "Фільтр Safari",
+				"description": "Спеціальний фільтр для Safari 9+ на iOS та macOS. Нам потрібен окремий фільтр для Safari, оскільки він не повністю підтримує наш синтаксис правил."
+			},
+			"vi": {
+				"name": "Bộ lọc Safari",
+				"description": "Bộ lọc đặc biệt dành cho Safari 9+ trên iOS và OS X. Chúng tôi cần một bộ lọc riêng biệt cho Safari vì nó không hoàn toàn hỗ trợ cú pháp của chúng tôi."
+			},
+			"zh": {
+				"name": "AdGuard Safari 过滤器",
+				"description": "专为 iOS 与 MacOS 平台上的 Safari 9 及其后续版本所定制的过滤器。由于 Safari Browser 未能完全支持我们的规则语法，我们专门分列了独立的过滤器列表。"
+			},
+			"zh_TW": {
+				"name": "AdGuard Safari 過濾器",
+				"description": "用於在 iOS 和 macOS 上的 Safari 9+ 之專門的過濾器。對於 Safari 瀏覽器，我們需要一種個別的過濾器，因為它不完全地支援我們的規則語法。"
+			}
+		},
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 		"13": {
 			"ar": {
 				"name": "فلتر تركيAdGuard",
 				"description": "قائمة التصفية التي تزيل الإعلانات تحديدًا على مواقع الويب باللغة التركية"
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Турэцкі фільтр",
+=======
+				"name": "AdGuard Turkish filter",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Фільтр, які прызначаны для выдалення рэкламы на вэб-сайтах на турэцкай мове."
 			},
 			"bg": {
@@ -3083,7 +3284,11 @@
 			},
 			"be": {
 				"name": "Фільтр раздражняльнікаў AdGuard",
+<<<<<<< HEAD
 				"description": "Блакіруе раздражняльныя элементы на вэб-старонках, уключаючы апавяшчэнні аб файлах cookie, староннія віджэты і ўсплывальныя вокны на старонцы. Змяшчае наступныя фільтры AdGuard: апавяшчэнні аб файлах cookie, усплывальныя вокны, банеры для мабільных праграм, іншыя непрыемнасці і віджэты."
+=======
+				"description": "Блакіруе раздражняльныя элементы на вэб-старонках, уключаючы апавяшчэнні аб файлах cookie, староннія віджэты і ўсплывальныя вокны на старонцы. Змяшчае наступныя фільтры AdGuard: апавяшчэнні аб файлах cookie, усплывальныя вокны, банеры для мабільных праграм, іншыя раздражняльнікі і віджэты."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за досадни реклами",
@@ -3254,6 +3459,187 @@
 				"description": "封鎖於網頁上令人惱怒的元件，包含 cookie 通知、第三方的小工具和在頁的彈出式視窗。包含以下的 AdGuard 過濾器：AdGuard Cookie 通知過濾器、AdGuard 彈出式視窗過濾器、AdGuard 行動應用程式橫幅過濾器、AdGuard 其它惱人的事物過濾器和 AdGuard 小工具過濾器。"
 			}
 		},
+<<<<<<< HEAD
+=======
+		"15": {
+			"ar": {
+				"name": "مرشح AdGuard DNS",
+				"description": "الفلتر يتكون من عدة فلاتر أخرى (مرشح قاعد ادجوارد وفلتر الوسائط الاجتماعية وفلتر حماية التتبع وفلتر إعلانات الجوال و القائمة السهلة و الخصوصية السهلة) وتبسيطه على وجه التحديد ليكون متوافقًا بشكل أفضل مع حظر الإعلانات على مستوى دنس"
+			},
+			"be": {
+				"name": "Фільтр AdGuard DNS",
+				"description": "Фільтр, складзены з некалькіх фільтраў (Базавы фільтр AdGuard, Фільтр сацыяльных сетак, Фільтр лічыльнікаў і сістэм аналітыкі, Фільтр мабільнай рэкламы, EasyList і EasyPrivacy), і адмыслова спрошчаны, каб быць лепш сумяшчальным з блакаваннем рэкламы на роўні DNS."
+			},
+			"bg": {
+				"name": "AdGuard Simplified domain names filter",
+				"description": "Filter composed from several other filters (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking."
+			},
+			"ca": {
+				"name": "AdGuard DNS filtre",
+				"description": "Filtre composta de diversos filtres (AdGuard Base filtre, Mitjans de comunicació Social filtre, el Seguiment de filtre de Protecció, els Anuncis per a Mòbils filtre, EasyList i EasyPrivacy) i simplificat específicament per ser millor compatible amb DNS-nivell de bloqueig d'anuncis."
+			},
+			"cs": {
+				"name": "Filtr AdGuard DNS",
+				"description": "Filtr složený z více jiných filtrů (Základní filtrAdGuard, Filtr sociálních médií, Filtr ochrany sledování, Filtr mobilních reklam, EasyList a EasyPrivacy), který je zjednodušený pro lepší kompatibilitu s blokováním reklamy na úrovni DNS."
+			},
+			"da": {
+				"name": "AdGuard DNS-filter",
+				"description": "Filter sammensat af flere forskellige filtre (AdGuard Basis-, Social Medie-, Sporingsbeskyttelses- og Mobilannoncefiltre, EasyList og EasyPrivacy) forenklet specifikt for bedre kompatibilitet med DNS-niveau adblovking."
+			},
+			"de": {
+				"name": "AdGuard DNS-Filter",
+				"description": "Filter, der sich aus mehreren anderen Filtern zusammensetzt (AdGuard Base-Filter, Social Media-Filter, Tracking-Schutz-Filter, Filter für mobile Werbung, EasyList und EasyPrivacy) und speziell vereinfacht wurde, um besser für das Sperren von Werbung auf DNS-Ebene kompatibel zu sein."
+			},
+			"el": {
+				"name": "AdGuard DNS Φίλτρο",
+				"description": "Φίλτρο που αποτελείται από πολλά άλλα φίλτρα (AdGuard Βασικό φίλτρο, φίλτρο κοινωνικών δικτύων, φίλτρο προστασίας παρακολούθησης, φίλτρο διαφημίσεων για κινητά, EasyList και EasyPrivacy) και απλοποιήθηκε ειδικά για να είναι καλύτερα συμβατό με τον αποκλεισμό διαφημίσεων σε επίπεδο DNS."
+			},
+			"en": {
+				"name": "AdGuard DNS filter",
+				"description": "Filter composed of several other filters (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking."
+			},
+			"es": {
+				"name": "Filtro DNS",
+				"description": "Filtro compuesto por varios filtros (Filtro base, filtro de redes sociales, filtro de protección contra rastreo, filtro para anuncios móviles, EasyList y EasyPrivacy) y está simplificado específicamente para ser compatible con el bloqueo de anuncios a nivel DNS."
+			},
+			"es_ES": {
+				"name": "Filtro DNS",
+				"description": "Filtro compuesto por varios filtros (Filtro base, filtro de redes sociales, filtro de protección contra rastreo, filtro para anuncios móviles, EasyList y EasyPrivacy) y está simplificado específicamente para ser compatible con el bloqueo de anuncios a nivel DNS."
+			},
+			"fa": {
+				"name": "فیلتر نام دامنه ساده شده AdGuard",
+				"description": "فیلتر تشکیل شده از چندین فیلتر دیگر (فیلتر پایه AdGuard،فیلتر انگلیسی، فیلتر رسانه اجتماعی، فیلت جاسوس افزار، فیلتر تبلیغات موبایل، EasyList،ایزی پیرویسی) و ساده شده مخصوصا برای سازگاری بهتر با مسدودسازی تبلیع در سطح DNS."
+			},
+			"fi": {
+				"name": "AdGuardin DNS-suodatin",
+				"description": "Suodatin koostuu useista erillisistä suodattimista (AdGuardin vakiosuodatin, sosiaalisen median suodatin, seurantaestosuodatin, mobiilimainossuodatin, EasyList ja EasyPrivacy) ja se on erityisesti tiivistetty DNS-tason mainosestoon sopivammaksi."
+			},
+			"fr": {
+				"name": "Filtre AdGuard Noms de Domaine Simplifiés  (DNS).",
+				"description": "Filtre composé de plusieurs filtres ( Filtre AdGuard Basique, Filtre Réseaux sociaux, Filtre Anti-espionnage, Filtre Publicités Mobiles, EasyList et EasyPrivacy) et simplifié exprés pour maximiser sa compatibilité avec le niveau de blocage du DNS."
+			},
+			"he": {
+				"name": "מסנן שמות תחום מופשטים של AdGuard",
+				"description": "מסנן שמורכב מכמה מסננים אחרים (מסנן הבסיס של AdGuard, מסנן מדיה חברתית, מסנן הגנה מפני מעקב, מסנן פרסומות לניידים, EasyList ו־EasyPrivacy) ומופשט במיוחד כדי להיות תואם עם חסימת פרסומות ברמת DNS."
+			},
+			"hi": {
+				"name": "एडगार्ड DNS फ़िल्टर",
+				"description": "कई अन्य फ़िल्टर (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList और EasyPrivacy) से बना फ़िल्टर और DNS-स्तर विज्ञापन ब्लॉकिंग के साथ बेहतर संगत होने के लिए विशेष रूप से सरलीकृत किया गया है।"
+			},
+			"hr": {
+				"name": "AdGuard DNS filtar",
+				"description": "Filtar je sastavljen od nekoliko drugih filtara (AdGuard Osnovni filtar, Filtar za društvene mreže, Filtar zaštite od praćenja, Filtar za mobilne oglase, EasyList i EasyPrivacy) i uz topojednostavljen da bi bio bolje kompatibilan sa blokiranjem oglasa na DNS razini."
+			},
+			"hu": {
+				"name": "AdGuard DNS szűrő",
+				"description": "Szűrő, amely több más szűrő (AdGuard Alap szűrő, Közösségi Média szűrő, Követés Elleni szűrő, Mobil Reklám szűrő, EasyList és EasyPrivacy) egyesítéséből áll, kifejezetten leegyszerűsítve, hogy minél inkább kompatibilis legyen a DNS szintű hirdetésblokkolással."
+			},
+			"hy": {
+				"name": "AdGuard DNS ֆիլտր",
+				"description": "Ֆիլտր, որը բաղկացած է մի քանի այլ ֆիլտրերից (AdGuard-ի հիմնարար ֆիլտր, սոցիալական մեդիայի ֆիլտր, հետևողականության պաշտպանության ֆիլտր, շարժական գովազդների ֆիլտր, EasyList և EasyPrivacy) և պարզեցված է, որպեսզի ավելի լավ համատեղելի լինի DNS մակարդակի գովազդների արգելափակման հետ։"
+			},
+			"id": {
+				"name": "Penyaring nama domain yang disederhanakan AdGuard",
+				"description": "Penyaring terdiri atas beberapa penyaring lainnya (AdGuard Base filter, Social media filter, Spyware filter, Mobile ads filter, EasyList and EasyPrivacy) dan disederhanakan secara khusus agar lebih kompatibel dengan pemblokiran iklan tingkat DNS."
+			},
+			"it": {
+				"name": "Filtro DNS di AdGuard",
+				"description": "Filtro composto da diversi altri (filtro AdGuard di Base, filtro Social Media, filtro Protezione Anti-Monitoraggio, filtro per Dispositivi, EasyList e EasyPrivacy); semplificato specificatamente per essere maggiormente compatibile con il blocca-annunci a livello di DNS."
+			},
+			"ja": {
+				"name": "AdGuard DNSフィルタ",
+				"description": "AdGuardベースフィルタ、SNS用フィルタ、追跡防止フィルタ、モバイル広告フィルタ、EasyList、EasyPrivacyから構成され、DNSレベルの広告ブロックとの互換性が向上するように簡素化されたフィルタです。"
+			},
+			"ko": {
+				"name": "AdGuard DNS 필터",
+				"description": "여러 필터 (AdGuard 베이스 필터, 소셜 미디어 필터, 추적 보호 필터, 모바일 광고 필터, EasyList, EasyPrivacy)를 포함하며, 더 나은 DNS 레벨의 필터링을 위해 간소화 된 필터입니다."
+			},
+			"lt": {
+				"name": "AdGuard DNS filtras",
+				"description": "Filtras, sudarytas iš kelių filtrų (AdGuard Base, socialinės medijos, stebėjimo apsaugos, mobiliųjų skelbimų, EasyList ir EasyPrivacy filtrų) ir specialiai supaprastintas, kad būtų geriau suderinamas su DNS lygio reklamų blokavimu."
+			},
+			"mk": {
+				"name": "AdGuard DNS филтер",
+				"description": "Филтер составен од неколку други филтри (основниот филтер, филтер за социјални медиуми, филтер за заштита од следење, филтер за мобилни реклами, EasyList и EasyPrivacy) и специјално поедноставен за да биде подобро компатибилен со блокирање реклами на ниво на DNS."
+			},
+			"ms": {
+				"name": "Penapis DNS AdGuard",
+				"description": "Penapis yang terdiri daripada beberapa penapis lain (AdGuard Base, Penapis Media Sosial, Penapis Perlindungan Penjejakan, Penapis Iklan Mudah Alih, EasyList dan EasyPrivacy) dan dipermudahkan secara khusus untuk menjadi lebih serasi dengan penghalang iklan pada tahap DNS."
+			},
+			"nl": {
+				"name": "AdGuard DNS-filter",
+				"description": "Filter samengesteld uit verschillende andere filters (AdGuard-basisfilter, Sociale media filter, Traceerbeveiligingsfilter, Filter voor mobiele advertenties, EasyList en EasyPrivacy) en specifiek vereenvoudigd om beter compatibel te zijn met advertentieblokkering op DNS-niveau."
+			},
+			"no": {
+				"name": "AdGuards forenklede domenenavnfilter",
+				"description": "Filter sammensatt av flere andre filtre (AdGuards hovedfilter, sosiale medier-filter, spionvare-filter, mobilannonser-filter, EasyList og EasyPrivacy) og forenklet spesielt for å være bedre kompatibelt med annonseblokkering på DNS-nivå."
+			},
+			"pl": {
+				"name": "Filtr AdGuard DNS",
+				"description": "Filtr złożony z kilku innych filtrów (Podstawowy filtr AdGuard, Filtr mediów społecznościowych, Filtr elementów szpiegujących, Filtr reklam mobilnych, EasyList i EasyPrivacy), który został uproszczony dla lepszej zgodności z blokowaniem reklam na poziomie DNS."
+			},
+			"pt": {
+				"name": "Filtro para AdGuard DNS",
+				"description": "Filtro composto por vários outros filtros (Base de filtros do AdGuard, filtro de Redes Sociais, filtro de proteção de nonitorização, filtro de anúncios para dispositivos móveis, EasyList e EasyPrivacy) e simplificado especificamente para haver maior compatibilidade com o bloqueio de anúncios ao nível do DNS."
+			},
+			"pt_BR": {
+				"name": "Filtro para AdGuard DNS",
+				"description": "Filtro composto de vários outros filtros (filtro base do AdGuard, filtro para mídia social, filtro de proteção contra rastreamento, filtro para dispositivo móvel, EasyList e EasyPrivacy). Também contém domínios simplificados para uma melhor compatibilidade no bloqueio de anúncios de nível DNS."
+			},
+			"pt_PT": {
+				"name": "Filtro para AdGuard DNS",
+				"description": "Filtro composto por vários outros filtros (Base de filtros do AdGuard, filtro de Redes Sociais, filtro de proteção de nonitorização, filtro de anúncios para dispositivos móveis, EasyList e EasyPrivacy) e simplificado especificamente para haver maior compatibilidade com o bloqueio de anúncios ao nível do DNS."
+			},
+			"ro": {
+				"name": "Filtru DNS AdGuard",
+				"description": "Filtru compus din mai multe alte filtre (filtru de bază AdGuard, filtru Social Media, filtru de Protecție de Urmărire, filtru de Reclame Mobile, EasyList și EasyPrivacy) și simplificat special pentru o mai bună compatibilitate cu blocarea de reclame la nivel DNS."
+			},
+			"ru": {
+				"name": "DNS-фильтр",
+				"description": "Фильтр, составленный из нескольких фильтров (Базовый фильтр, Фильтр социальных сетей, Фильтр счетчиков и систем аналитики, Фильтр мобильной рекламы, EasyList и EasyPrivacy), и специально упрощенный, чтобы быть лучше совместимым с блокировкой рекламы на уровне DNS."
+			},
+			"sk": {
+				"name": "AdGuard DNS filter",
+				"description": "Filter zložený z viacerých iných filtrov (AdGuard základný filter, filter sociálnych sietí, filter proti sledovaniu, filter mobilnej reklamy, EasyList a EasyPrivacy), ktorý je zjednodušený pre lepšiu kompatibilitu s blokovaním reklamy na úrovni DNS."
+			},
+			"sl": {
+				"name": "AdGuard Filter poenostavljenih imen domen",
+				"description": "Filter, sestavljen iz več drugih filtrov (AdGuard Osnovni filter, Filter družbenih medijev, Filter zaščite sledenja, Filter mobilnih oglasov, EasyList and EasyPrivacy) in poenostavljen posebej, da je bolj združljiv z zaviranjem oglasov na ravni DNS."
+			},
+			"sr": {
+				"name": "AdGuard pojednostavljeni filter domena",
+				"description": "Filter sastavljen od nekoliko drugih filtera (AdGuard osnovni filter, filter društvenih mreža, filter za zaštitu od praćenja, filter mobilnih reklama, EasyList i EasyPrivacy) Ovo je posebno pojednostavljeno kako bi bilo bolje kompatibilno sa blokiranjem reklama na DNS nivou."
+			},
+			"sv": {
+				"name": "AdGuard DNS-filter",
+				"description": "Filter som kombinerar flera andra filter (AdGuards grundfilter, filter för sociala medier , spårningsfilter, filter för mobilannonser, EasyList och EasyPrivacy) och förenklade,  specifikt för förbättrad kompatibilitet med annonsblockering på DNS-nivå."
+			},
+			"th": {
+				"name": "AdGuard ตัวกรองชื่อโดเมนแบบย่อ",
+				"description": "ตัวกรองประกอบด้วยตัวกรองอื่น ๆ (ตัวกรอง AdGuard Base, ตัวกรองสื่อสังคมออนไลน์, ตัวกรองการป้องกันการติดตาม, ตัวกรองโฆษณาบนมือถือ, EasyList และ EasyPrivacy) และเรียบง่ายโดยเฉพาะเพื่อให้เข้ากันได้ดีขึ้นกับการปิดกั้นโฆษณาระดับ DNS"
+			},
+			"tr": {
+				"name": "AdGuard DNS filtresi",
+				"description": "Temel olarak birkaç filtreyi birleştirir (AdGuard Temel filtresi, Sosyal Medya filtresi, İzleme Koruması filtresi, Mobil Reklam filtresi, EasyList ve EasyPrivacy) ve DNS düzeyinde reklam engellemeyle daha uyumlu olması için özel olarak basitleştirilmiştir."
+			},
+			"uk": {
+				"name": "DNS-фільтр AdGuard",
+				"description": "Фільтр, який складається з декількох інших фільтрів (Основного, Віджетів соцмереж, Захисту від стеження, Мобільної реклами, EasyList і EasyPrivacy) і певним чином спрощений задля кращої сумісності з блокуванням реклами на рівні DNS."
+			},
+			"vi": {
+				"name": "Bộ lọc tên miền đơn giản",
+				"description": "Bộ lọc được tạo từ nhiều bộ lọc khác nhau (Bộ lọc tiếng Anh, phương tiện mạng xã hội, phần mềm gián điệp, quảng cáo di động, EasyList và EasyPrivacy) và được đơn giản hoá để tương thích tốt hơn với việc chặn quảng cáo ở mức DNS."
+			},
+			"zh": {
+				"name": "AdGuard DNS 过滤器",
+				"description": "此过滤器由其他几个过滤器（AdGuard 基础过滤器、社交媒体过滤器、防跟踪保护过滤器、移动广告过滤器、EasyList 和 EasyPrivacy）组成，并经过简化，以便更好地与 DNS 级别的广告拦截兼容。"
+			},
+			"zh_TW": {
+				"name": "AdGuard DNS 過濾器",
+				"description": "由幾個其它的過濾器（AdGuard 基本過濾器、社群媒體過濾器、追蹤防護過濾器、行動廣告過濾器、EasyList 和 EasyPrivacy）所組成之過濾器，並被特別地簡化為與 DNS 層級的廣告封鎖更好地相容。"
+			}
+		},
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 		"16": {
 			"ar": {
 				"name": "فلترفرنسي AdGuard",
@@ -3617,7 +4003,11 @@
 			},
 			"be": {
 				"name": "Фільтр апавяшчэнняў аб файлах cookie AdGuard",
+<<<<<<< HEAD
 				"description": "Блакіруе паведамленні аб файлах cookie на вэб-старонках."
+=======
+				"description": "Блакіруе апавяшчэнні аб файлах cookie на вэб-старонках."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за известия за бисквитки на AdGuard",
@@ -3794,8 +4184,13 @@
 				"description": "يحظر جميع أنواع النوافذ المنبثقة غير الضرورية لتشغيل مواقع الويب وفقا لسياسة التصفية الخاصة بنا."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Фільтр усплываючых вокнаў AdGuard",
 				"description": "Блакуе ўсе віды ўсплывальных вокнаў, якія не патрэбныя для працы сайтаў у адпаведнасці з нашай Палітыкай фільтрацыі."
+=======
+				"name": "Фільтр усплывальных вокнаў AdGuard",
+				"description": "Блакіруе ўсе віды ўсплывальных вокнаў, якія не патрэбныя для працы сайтаў, згодна з нашай палітыкай фільтраў."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за изскачащи прозорци AdGuard",
@@ -3973,7 +4368,11 @@
 			},
 			"be": {
 				"name": "Фільтр банераў для мабільных прылад AdGuard",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя банеры, якія рэкламуюць мабільныя праграмы вэб-сайтаў."
+=======
+				"description": "Блакіруе раздражняльныя банеры, якія рэкламуюць мабільныя праграмы вэб-сайтаў."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за банери за мобилни приложения AdGuard",
@@ -4151,7 +4550,11 @@
 			},
 			"be": {
 				"name": "Фільтр іншых раздражняльнікаў AdGuard",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя элементы на вэб-старонках, якія не адносяцца да папулярных катэгорый раздражнення."
+=======
+				"description": "Блакіруе раздражняльныя элементы на вэб-старонках, якія не падпадаюць пад папулярныя катэгорыі раздражнення."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за досадни реклами AdGuard",
@@ -4329,7 +4732,11 @@
 			},
 			"be": {
 				"name": "Фільтр віджэтаў AdGuard",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя віджэты іншых вытворцаў: інтэрнэт-памочнікі, жывыя чаты падтрымкі і г.д."
+=======
+				"description": "Блакіруе раздражняльныя віджэты ад старонніх распрацоўшчыкаў: памочнікі ў інтэрнэце, чаты падтрымкі ў рэальным часе і г.д."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Филтър за джаджи AdGuard",
@@ -5396,7 +5803,11 @@
 				"description": "قائمة تصفية إضافية لمواقع الويب باللغة التشيكية والسلوفاكية."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "EasyList на чэшскай і славацкай мовах",
+=======
+				"name": "EasyList Czech and Slovak",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Дадатковы спіс фільтраў для вэб-сайтаў на чэшскай і славацкай мовах."
 			},
 			"bg": {
@@ -6286,7 +6697,11 @@
 				"description": "قائمة تصفية إضافية لمواقع الويب باللغة الليتوانية."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "EasyList Літва",
+=======
+				"name": "EasyList Lithuania",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Дадатковы спіс фільтраў для вэб-сайтаў на літоўскай мове."
 			},
 			"bg": {
@@ -7532,7 +7947,11 @@
 				"description": "قائمة تصفية إضافية لمواقع الويب باللغة الآيسلندية."
 			},
 			"be": {
+<<<<<<< HEAD
 				"name": "Ісландскі спіс ABP",
+=======
+				"name": "Icelandic ABP List",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 				"description": "Дадатковы спіс фільтраў для вэб-сайтаў на ісландскай мове."
 			},
 			"bg": {
@@ -8067,7 +8486,11 @@
 			},
 			"be": {
 				"name": "Fanboy's Annoyances",
+<<<<<<< HEAD
 				"description": "Падаляе ўсплыўныя вокны на старонцы і іншыя непрыемнасці. Улучае спісы cookie-файлаў Fanboy's Social Blocking і EasyList."
+=======
+				"description": "Выдаляе ўсплывальныя вокны на старонцы і іншыя раздражняльныя элементы. Уключае ў сябе фільтры Fanboy's Social Blocking і EasyList Cookie Lists."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Fanboy's Annoyances",
@@ -8601,7 +9024,11 @@
 			},
 			"be": {
 				"name": "Web Annoyances Ultralist",
+<<<<<<< HEAD
 				"description": "Блакуе раздражняльныя элементы ўэб-старонак і аднаўляе страчаную прастору на экране."
+=======
+				"description": "Блакіруе раздражняльныя элементы на вэб-старонках і аднаўляе страчаную прастору на экране."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Web Annoyances Ultralist",
@@ -8779,7 +9206,11 @@
 			},
 			"be": {
 				"name": "EasyList Thailand",
+<<<<<<< HEAD
 				"description": "Фільтр, які блакуе рэкламу на тайскіх сайтах."
+=======
+				"description": "Фільтр, які блакіруе рэкламу на тайскіх вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "EasyList Thailand",
@@ -8953,6 +9384,7 @@
 		"203": {
 			"ar": {
 				"name": "فلاتر هانغاريا",
+<<<<<<< HEAD
 				"description": "هوفيلتر. قائمة الفلاتر التي تزيل على وجه التحديد الإعلانات من مواقع الويب باللغة المجرية."
 			},
 			"be": {
@@ -9126,6 +9558,181 @@
 			"zh_TW": {
 				"name": "Hungarian filter",
 				"description": "Hufilter。專門地移除於匈牙利語網站上的廣告之過濾清單。"
+=======
+				"description": "Hufilter. قائمة الفلاتر التي تزيل على وجه التحديد الإعلانات وتهديدات الخصوصية ومخاطر الأمان على مواقع الويب باللغة المجرية."
+			},
+			"be": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Спіс фільтраў, які адмыслова зроблены для выдалення рэкламы, пагроз прыватнасці і рызык бяспекі на вэб-сайтах з венгерскай мовай."
+			},
+			"bg": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Списък с филтри, който специално премахва реклами, заплахи за поверителността и рискове за сигурността в уебсайтове на унгарски език."
+			},
+			"ca": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Llista de filtres que elimina específicament anuncis, amenaces per a la privadesa i riscos de seguretat a llocs web en la llengua hongaresa."
+			},
+			"cs": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Seznam filtrů, které specificky odstraňují reklamy, hrozby pro soukromí a bezpečnostní rizika na webových stránkách v maďarském jazyce."
+			},
+			"da": {
+				"name": "Ungarsk filter",
+				"description": "Hufilter. Filterliste, der specifikt fjerner annoncer, samt fortroligheds- og sikkerhedstrusler på ungarsksprogede websteder."
+			},
+			"de": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filterliste, die speziell Werbung, Datenschutzbedrohungen und Sicherheitsrisiken auf Websites in ungarischer Sprache entfernt."
+			},
+			"el": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Λίστα φίλτρου που αφαιρεί συγκεκριμένα διαφημίσεις, απειλές απορρήτου και κινδύνους ασφάλειας σε ιστοσελίδες στην ουγγρική γλώσσα."
+			},
+			"en": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filter list that specifically removes ads, privacy threats, and security risks on websites in the Hungarian language."
+			},
+			"es": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que elimina específicamente anuncios, amenazas a la privacidad y riesgos de seguridad en sitios web en idioma húngaro."
+			},
+			"es_ES": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que elimina específicamente anuncios, amenazas a la privacidad y riesgos de seguridad en sitios web en idioma húngaro."
+			},
+			"fa": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. فهرست پالایش که به‌طور خاص تبلیغات، تهدیدهای حریم خصوصی و خطرات امنیتی را در تارنماها به زبان مجارستانی حذف می‌کند."
+			},
+			"fi": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Suodatinlista, joka poistaa erityisesti mainokset, yksityisyyteen kohdistuvat uhat ja turvallisuusriskit unkarinkielisillä verkkosivustoilla."
+			},
+			"fr": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Une liste de filtres qui retire les publicités, les menaces pour la vie privée et les risques de sécurité sur les sites Web en Hongrois."
+			},
+			"he": {
+				"name": "מסנן הונגרי",
+				"description": "Hufilter. רשימת מסננים שמסירה במפורש פרסומות, איומים על הפרטיות וסיכוני אבטחה באתרים בשפה ההונגרית."
+			},
+			"hi": {
+				"name": "Hungarian filter",
+				"description": "Hufilter। फ़िल्टर सूची जो विशेष रूप से हंगेरियन भाषा में वेबसाइटों पर विज्ञापन, गोपनीयता संबंधी खतरों और सुरक्षा जोखिमों को हटाए।"
+			},
+			"hr": {
+				"name": "Mađarski filtar",
+				"description": "Hufilter. Popis filtara posebno dizajniran za uklanjanje oglasa, prijetnji privatnosti i sigurnosnih rizika na web stranicama na mađarskom jeziku."
+			},
+			"hu": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Szűrőlista, amely kifejezetten eltávolítja a hirdetéseket, az adatvédelmi fenyegetéseket és a biztonsági kockázatokat a magyar nyelvű weboldalakon."
+			},
+			"hy": {
+				"name": "Hungarian filter",
+				"description": "Hufilter: Զտիչների ցուցակ, որն ըստ հատուկ հեռացնում է մարքեթինգի հայտարարությունները, գաղտնիության սպառնալիքները և անվտանգության ռիսկերը հունգարերեն լեզվով կայքերում։"
+			},
+			"id": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Daftar filter yang secara khusus menghapus iklan, ancaman privasi, dan risiko keamanan di situs web dalam bahasa Hongaria."
+			},
+			"it": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Elenco di filtri che rimuove specificamente annunci pubblicitari, minacce alla privacy e rischi per la sicurezza dai siti web in lingua ungherese."
+			},
+			"ja": {
+				"name": "Hungarian filter",
+				"description": "Hufilter。ハンガリー語ウェブサイト上の広告・プライバシー脅威・セキュリティリスクをするための専用フィルタリスト。"
+			},
+			"ko": {
+				"name": "Hungarian filter",
+				"description": "Hufilter는 헝가리어 웹사이트의 광고와 보안 위협을 특별히 차단하는 필터 목록입니다."
+			},
+			"lt": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filtrų sąrašas, kuris specialiai pašalina reklamas, privatumo grėsmes ir saugumo rizikas iš svetainių vengrų kalba."
+			},
+			"mk": {
+				"name": "Унгарски филтер",
+				"description": "Hufilter. Список со филтри што конкретно ги отстранува рекламите, заканите за приватноста и безбедносните ризици на веб-страниците на унгарски јазик."
+			},
+			"ms": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Senarai penapis yang secara khusus menghapus iklan, ancaman privasi, dan risiko keselamatan pada laman web dalam bahasa Hungari."
+			},
+			"nl": {
+				"name": "Hongaarse filter",
+				"description": "Hufilter. Filterlijst die specifiek advertenties, privacydreigingen en beveiligingsrisico's op websites in de Hongaarse taal verwijdert."
+			},
+			"no": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filterliste som spesifikt fjerner annonser, personverntrusler og sikkerhetsrisikoer på ungarskspråklige nettsteder."
+			},
+			"pl": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Lista filtrów, która w szczególności usuwa reklamy, zagrożenia dla prywatności oraz ryzyka związane z bezpieczeństwem na stronach internetowych w języku węgierskim."
+			},
+			"pt": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que remove anúncios, ameaças à privacidade e riscos de segurança em sites em língua húngara."
+			},
+			"pt_BR": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que remove anúncios, ameaças à privacidade e riscos de segurança em sites em língua húngara."
+			},
+			"pt_PT": {
+				"name": "Filtro húngaro",
+				"description": "Hufilter. Lista de filtros que remove anúncios, ameaças à privacidade e riscos de segurança em sites em língua húngara."
+			},
+			"ro": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Listă de filtre care elimină în mod specific reclame, amenințări la adresa confidențialității și riscuri de securitate pe site-uri web în limba maghiară."
+			},
+			"ru": {
+				"name": "Hungarian filter",
+				"description": "Фильтр, который удаляет рекламу, угрозы конфиденциальности и безопасности на сайтах на венгерском языке."
+			},
+			"sk": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Zoznam filtrov, ktorý špecificky odstraňuje reklamy, hrozby pre súkromie a bezpečnostné riziká na webových stránkach v maďarskom jazyku."
+			},
+			"sl": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Seznam filtrov, ki posebej odstrani oglase, grožnje zasebnosti in varnostna tveganja na spletnih straneh v madžarščini."
+			},
+			"sr": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Lista filtera koja posebno uklanja reklame, pretnje privatnosti i bezbednosne rizike na sajtovima na mađarskom jeziku."
+			},
+			"sv": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Filterlista som specifikt tar bort annonser, integritetshot och säkerhetsrisker på webbplatser på ungerska."
+			},
+			"th": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. รายการตัวกรองที่ลบโฆษนา ภัยคุกคามด้านความเป็นส่วนตัว และความเสี่ยงด้านความปลอดภัยบนเว็บไซต์ในภาษาฮังการีโดยเฉพาะ"
+			},
+			"tr": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Özellikle Macarca dilindeki sitelerde reklamları, gizlilik tehditlerini ve güvenlik risklerini kaldıran filtre listesi."
+			},
+			"uk": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Список фільтрів, призначений спеціально для вилучення реклами, загроз приватності та ризиків безпеки на сайтах угорською мовою."
+			},
+			"vi": {
+				"name": "Hungarian filter",
+				"description": "Hufilter. Danh sách bộ lọc chuyên dùng để loại bỏ quảng cáo, các mối đe doạ quyền riêng tư và các rủi ro bảo mật trên các trang bằng tiếng Hungary."
+			},
+			"zh": {
+				"name": "Hungarian filter",
+				"description": "Hufilter。专门在匈牙利语网站上删除广告、隐私威胁和安全风险的过滤列表。"
+			},
+			"zh_TW": {
+				"name": "Hungarian filter",
+				"description": "Hufilter。專門刪除於匈牙利語網站上的廣告、隱私威脅，以及安全風險之過濾器清單。"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			}
 		},
 		"204": {
@@ -9135,7 +9742,11 @@
 			},
 			"be": {
 				"name": "Peter Lowe's Blocklist",
+<<<<<<< HEAD
 				"description": "Фільтр, які блакіруе рэкламу, трэкеры і іншыя непрыемныя рэчы."
+=======
+				"description": "Фільтр, які блакіруе рэкламу, праграмы сачэння і іншыя непрыемныя рэчы."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Peter Lowe's Blocklist",
@@ -9313,7 +9924,11 @@
 			},
 			"be": {
 				"name": "Xfiles",
+<<<<<<< HEAD
 				"description": "Італьянскі фільтр для блакавання рэкламы."
+=======
+				"description": "Італьянскі фільтр для блакіроўкі рэкламы."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Xfiles",
@@ -9669,7 +10284,11 @@
 			},
 			"be": {
 				"name": "Online Malicious URL Blocklist",
+<<<<<<< HEAD
 				"description": "Блакіруе дамены, якія былі заўважаны ў пашырэнні шкоднага і шпіёнскага ПЗ."
+=======
+				"description": "Блакіруе дамены, якія былі заўважаны ў пашырэнні шкодных і шпіёнскіх праграм."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Online Malicious URL Blocklist",
@@ -10559,7 +11178,11 @@
 			},
 			"be": {
 				"name": "ABPVN List",
+<<<<<<< HEAD
 				"description": "В'етнамскі фільтр для блакавання рэкламы."
+=======
+				"description": "В'етнамскі фільтр для блакіроўкі рэкламы."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "ABPVN List",
@@ -12690,6 +13313,7 @@
 		},
 		"227": {
 			"ar": {
+<<<<<<< HEAD
 				"name": "List-KR",
 				"description": "عامل التصفية الذي يزيل الإعلانات والنصوص المختلفة من مواقع الويب ذات المحتوى الكوري. مدمج ومُعزز بقواعد AdGuard الخاصة بالفلترة المحسنة. من المتوقع أن يتم استخدام هذا الفلتر جنبًا إلى جنب مع فلتر AdGuard Base."
 			},
@@ -12864,6 +13488,182 @@
 			"zh_TW": {
 				"name": "List-KR",
 				"description": "從具有韓文內容的網站上移除廣告和各種腳本的過濾器。為了增進的過濾，被與特定 AdGuard 的規則結合和擴增。此過濾器受預期與 AdGuard 基本過濾器一起被使用。"
+=======
+				"name": "List-KR Classic filter list",
+				"description": "قائمة المرشحات List-KR Сlassic ل AdGuard تحظر الإعلانات وتعطل سكريبتات منع حظر الإعلانات على المواقع والتطبيقات الناطقة بالكورية."
+			},
+			"be": {
+				"name": "List-KR Classic filter list",
+				"description": "Спіс фільтраў List-KR Classic для AdGuard блакіруе рэкламу і адключае скрыпты-анты-блакіроўшчыкі на карэйскамоўных вэб-сайтах і ў дадатках."
+			},
+			"bg": {
+				"name": "List-KR Classic filter list",
+				"description": "Списъкът с филтри List-KR Classic за AdGuard блокира реклами и деактивира анти-адблокиращи скриптове в корейскоезични уебсайтове и приложения."
+			},
+			"ca": {
+				"name": "List-KR Classic filter list",
+				"description": "La llista de filtres List-KR Classic per a AdGuard bloqueja anuncis i desactiva scripts anti-adblock en llocs web i aplicacions en llengua coreana."
+			},
+			"cs": {
+				"name": "List-KR Classic filter list",
+				"description": "The List-KR Сlassic filter list pro AdGuard blokuje reklamy a deaktivuje skripty proti blokování reklam na webových stránkách a v aplikacích v korejském jazyce."
+			},
+			"da": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic-filterlisten til AdGuard blokerer annoncer og deaktiverer anti-adblock-scripts på koreansksprogede websteder og apps."
+			},
+			"de": {
+				"name": "List-KR Classic filter list",
+				"description": "Diese Filterliste für AdGuard blockiert Werbung und deaktiviert Anti-Adblock-Skripte auf koreanischen Websites sowie in Apps."
+			},
+			"el": {
+				"name": "List-KR Classic filter list",
+				"description": "Η λίστα φίλτρων List-KR Сlassic για το AdGuard μπλοκάρει τις διαφημίσεις και απενεργοποιεί τις δέσμες ενεργειών anti-adblock σε ιστότοπους και εφαρμογές στην κορεατική γλώσσα."
+			},
+			"en": {
+				"name": "List-KR Classic filter list",
+				"description": "The List-KR Сlassic filter list for AdGuard blocks ads and disables anti-adblock scripts on Korean-language websites and apps."
+			},
+			"es": {
+				"name": "List-KR Classic filter list",
+				"description": "La lista de filtros List-KR Classic para AdGuard bloquea los anuncios y desactiva los scripts anti-bloqueo de anuncios en sitios web y aplicaciones en idioma coreano."
+			},
+			"es_ES": {
+				"name": "List-KR Classic filter list",
+				"description": "La lista de filtros List-KR Classic para AdGuard bloquea los anuncios y desactiva los scripts anti-bloqueo de anuncios en sitios web y aplicaciones en idioma coreano."
+			},
+			"fa": {
+				"name": "List-KR Classic filter list",
+				"description": "فهرست‌های پالایش کلاسیک List-KR برای AdGuard تبلیغات را مسدود می‌کند و اسکریپت‌های ضدِ مسدودکنندهٔ تبلیغات را در تارنماها و برنامک‌های کره‌ای‌زبان غیرفعال می‌کند."
+			},
+			"fi": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic -suodatinlista AdGuardille estää mainokset ja poistaa käytöstä anti-adblock-skriptit koreankielisillä verkkosivustoilla ja sovelluksissa."
+			},
+			"fr": {
+				"name": "List-KR Classic filter list",
+				"description": "La liste de filtres List-KR Classic pour AdGuard bloque les publicités et désactive les scripts anti-blocage de publicités sur les sites web et les applications en coréen."
+			},
+			"he": {
+				"name": "List-KR Classic filter list",
+				"description": "רשימת מסננים List-KR Сlassic עבור AdGuard חוסמת פרסומות ומשביתה סקריפטים של מניעת חוסם פרסומות באתרים ובאפליקציות בשפה הקוריאנית."
+			},
+			"hi": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard के लिए List-KR Сlassic फ़िल्टर सूची कोरियाई भाषा की वेबसाइटों और ऐप्स पर विज्ञापनों को ब्लॉक करती है और एंटी-एडब्लॉक स्क्रिप्ट को निष्क्रिय कर देती है।"
+			},
+			"hr": {
+				"name": "List-KR Classic filter list",
+				"description": "Filter List-KR Classic za AdGuard blokira oglase i onemogućuje skripte protiv blokiranja oglasa na web-stranicama i aplikacijama na korejskom jeziku."
+			},
+			"hu": {
+				"name": "List-KR Classic filter list",
+				"description": "A List-KR Сlassic szűrőlista az AdGuard számára blokkolja a hirdetéseket és letiltja az anti-adblock szkripteket a koreai nyelvű weboldalakon és alkalmazásokban."
+			},
+			"hy": {
+				"name": "List-KR Classic filter list",
+				"description": "The List-KR Сlassic filter list-ը արգելափակում է գովազդները և անջատում գովազդի արգելափակման դեմ սկրիպտները կորեերեն լեզվով կայքերում և հավելվածներում:"
+			},
+			"id": {
+				"name": "List-KR Classic filter list",
+				"description": "Daftar filter List-KR Сlassic untuk AdGuard memblokir iklan dan menonaktifkan skrip anti-adblock di situs web dan aplikasi berbahasa Korea."
+			},
+			"it": {
+				"name": "List-KR Classic filter list",
+				"description": "La lista di filtri List-KR Сlassic per AdGuard blocca gli annunci e disabilita gli script anti-adblock su siti e app in lingua coreana."
+			},
+			"ja": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard用のList-KR Classic filter list は、韓国語ウェブサイトやアプリ上の広告をブロックし、広告ブロック対策スクリプトを無効にします。"
+			},
+			"ko": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard용 List-KR Сlassic 필터 목록은 한국어 웹사이트와 앱에서 광고를 차단하고 광고 차단 방지 스크립트를 비활성화합니다."
+			},
+			"lt": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic filtrų sąrašas, skirtas AdGuard, blokuoja ads ir išjungia anti-adblock scripts korėjiečių kalbos websites ir apps."
+			},
+			"mk": {
+				"name": "List-KR Classic filter list",
+				"description": "Листата со филтри за AdGuard блокира реклами и ги оневозможува скриптите против блокирање реклами на веб-страници и апликации на корејски јазик."
+			},
+			"ms": {
+				"name": "List-KR Classic filter list",
+				"description": "Senarai penapis List-KR Classic untuk AdGuard menyekat iklan dan melumpuhkan skrip anti-penapisan pada laman web dan aplikasi berbahasa Korea."
+			},
+			"nl": {
+				"name": "List-KR Classic filter list",
+				"description": "De List-KR Сlassic-filterlijst voor AdGuard blokkeert advertenties en schakelt anti-advertentieblokkeringsscripts uit op Koreaanse websites en apps."
+			},
+			"no": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic-filterlisten for AdGuard blokkerer annonser og deaktiverer anti-adblock-skript på koreanskspre5klige nettsteder og apper."
+			},
+			"pl": {
+				"name": "List-KR Classic filter list",
+				"description": "Lista filtrów List-KR Classic dla AdGuard blokuje reklamy i wyłącza skrypty anty-adblock na koreańskojęzycznych stronach internetowych i aplikacjach."
+			},
+			"pt": {
+				"name": "List-KR Classic filter list",
+				"description": "A lista de filtro List-KR Сlassic para o AdGuard bloqueia anúncios e desativa scripts anti-adblock em sítios Web e aplicações em língua coreana."
+			},
+			"pt_BR": {
+				"name": "List-KR Classic filter list",
+				"description": "A lista de filtros List-KR Classic para AdGuard bloqueia anúncios e desativa scripts anti-bloqueio de anúncios em sites e aplicativos em coreano."
+			},
+			"pt_PT": {
+				"name": "List-KR Classic filter list",
+				"description": "A lista de filtro List-KR Сlassic para o AdGuard bloqueia anúncios e desativa scripts anti-adblock em sítios Web e aplicações em língua coreana."
+			},
+			"ro": {
+				"name": "List-KR Classic filter list",
+				"description": "Lista de filtre List-KR Сlassic pentru AdGuard blochează reclamele și dezactivează scripturile anti-adblock pe site-uri web și aplicații în limba coreeană."
+			},
+			"ru": {
+				"name": "List-KR Classic filter list",
+				"description": "Блокирует рекламу и отключает скрипты против блокировщиков рекламы на корейских сайтах и в приложениях."
+			},
+			"sk": {
+				"name": "List-KR Classic filter list",
+				"description": "Zoznam filtrov List-KR Сlassic pre AdGuard blokuje reklamy a deaktivuje anti-adblock skripty na kórejských webových stránkach a aplikáciách."
+			},
+			"sl": {
+				"name": "List-KR Classic filter list",
+				"description": "Seznam filtrov List-KR Classic za AdGuard blokira oglase in onemogoči skripte proti blokiranju oglasov na spletnih mestih in aplikacijah v korejskem jeziku."
+			},
+			"sr": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic lista filtera za AdGuard blokira oglase i onemogućava anti-adblock skripte na veb-sajtovima i app-ovima na korejskom jeziku."
+			},
+			"sv": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Сlassic-filterlistan för AdGuard blockerar annonser och inaktiverar anti-adblock-skript på koreanskspråkiga webbplatser och appar."
+			},
+			"th": {
+				"name": "List-KR Classic filter list",
+				"description": "รายการฟิลเตอร์ List-KR Classic สำหรับ AdGuard จะบล็อกโฆษนาและปิดใช้งานสคริปต์ป้องกันการบล็อกโฆษนาในเว็บไซต์และแอปภาษาเกาหลี"
+			},
+			"tr": {
+				"name": "List-KR Classic filter list",
+				"description": "AdGuard için List-KR Klasik filtre listesi, Korece siteler ve uygulamalarda reklamları engeller ve anti-reklam engelleyici komut dosyalarını devre dışı bırakır."
+			},
+			"uk": {
+				"name": "List-KR Classic filter list",
+				"description": "Список фільтрів List-KR Сlassic для AdGuard блокує рекламу та вимикає скрипти проти блокування реклами на корейськомовних сайтах і в застосунках."
+			},
+			"vi": {
+				"name": "List-KR Classic filter list",
+				"description": "Danh sách bộ lọc List-KR Сlassic cho AdGuard chặn quảng cáo và vô hiệu hóa các script chống chặn quảng cáo trên các trang web và app bằng tiếng Hàn."
+			},
+			"zh": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic 过滤规则用于 AdGuard，可拦截韩语网站及应用中的广告，并禁用反广告拦截脚本。"
+			},
+			"zh_TW": {
+				"name": "List-KR Classic filter list",
+				"description": "List-KR Classic 過濾規則用於 AdGuard，可封鎖韓語網站及應用程式中的廣告，並停用反廣告封鎖腳本。"
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			}
 		},
 		"228": {
@@ -12873,7 +13673,11 @@
 			},
 			"be": {
 				"name": "xinggsf",
+<<<<<<< HEAD
 				"description": "Блакуе рэкламу на кітайскіх відэаплатформах (MangoTV, DouYu і іншых)."
+=======
+				"description": "Блакіруе рэкламу на кітайскіх відэаплатформах (MangoTV, DouYu і іншых)."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "xinggsf",
@@ -14475,7 +15279,11 @@
 			},
 			"be": {
 				"name": "Polish Annoyances Filters",
+<<<<<<< HEAD
 				"description": "Фільтр, які хавае і блакуе ўсплыўную рэкламу, віджэты, рассыланні, пуш-апавяшчэнні, унутраныя спасылкі, якія не ставяцца да тэмы, і іншыя раздражняльныя элементы. Польскія GDPR-Cookies фільтры ўжо ўлучаны ў яго."
+=======
+				"description": "Фільтр, які хавае і блакіруе ўсплывальную рэкламу, віджэты, рассылку навін, push-апавяшчэнні, стрэлкі з пазначанымі ўнутранымі спасылкамі, якія не датычацца тэмы і іншыя раздражняльныя элементы. Polish GDPR-Cookies Filters ужо ўключаны ў яго."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Polish Annoyances Filters",
@@ -15721,7 +16529,11 @@
 			},
 			"be": {
 				"name": "YousList",
+<<<<<<< HEAD
 				"description": "Фільтр, які блакуе рэкламу на карэйскіх сайтах."
+=======
+				"description": "Фільтр, які блакіруе рэкламу на карэйскіх вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "YousList",
@@ -16255,7 +17067,11 @@
 			},
 			"be": {
 				"name": "Polish Anti-Annoying Special Supplement",
+<<<<<<< HEAD
 				"description": "Фільтры, якія блакуюць і хаваюць RSS-элементы і рэшткі ўтоеных рассыланняў, сумешчаных з элементамі сацыяльных сетак на польскіх сайтах."
+=======
+				"description": "Фільтры, якія блакіруюць і хаваюць элементы RSS і рэшту са схаванай рассылкай навін, якая аб'яднана з элементамі сацыяльных сетак на польскіх вэб-сайтах."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"bg": {
 				"name": "Polish Anti-Annoying Special Supplement",
@@ -16517,7 +17333,11 @@
 			},
 			"ko": {
 				"name": "Dandelion Sprout's Nordic Filters",
+<<<<<<< HEAD
 				"description": "이 목록은 노르웨이, 덴마크, 아이슬란드, 덴마크 영토 및 사미 원주민 인구를위한 웹사이트를 다룹니다."
+=======
+				"description": "이 목록은 노르웨이, 덴마크, 아이슬란드, 덴마크 영토 및 사미 원주민 인구를 위한 웹사이트를 다룹니다."
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			},
 			"lt": {
 				"name": "Dandelion Sprout's Nordic Filters",
