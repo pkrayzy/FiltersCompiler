@@ -1,11 +1,10 @@
 !
-! Checksum: L1xFZaDP5UQXyARB7kynNA
 ! Homepage: https://github.com/k2jp/abp-japanese-filters/
 ! Title: ABP Japanese filters (ONLY FOR Japanese and experienced users: READ Support Policy)
 ! Expires: 6 hours
-! OriginalVersion: 201712210038
+! OriginalVersion: 202105262051
 !
-! Last modified: 2017-12-21 00:38 JST(UTC+0900)
+! Last modified: 2021-05-26 20:51 JST(UTC+0900)
 ! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
 ! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
 ! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -28,6 +27,12 @@
 @@/static/coffee/compiled/modules/clean/analytics-vflrGf3Yu.$script,domain=dropbox.com
 ! False positives with theme css by adaptivethemes.com, Jun 11, 2012
 @@_Ad/css/theme/
+! False positives on NHK movie pages with the existing .analytics. filter, reported via ISSUE REPORT by Adblock Plus, Apr 22, 2019
+@@||analytics.edgekey.net/html5/$domain=nhk.or.jp
+! Similar to the existing whitelist filter above, reported via an Issue report, Oct 30, 2019
+@@||analytics.edgekey.net/ma_library/$script,domain=nhk.or.jp
+! Similar to the existing whitelist filters above, reported via an Issue Report, Nov 13, 2019
+@@||analytics.edgekey.net/config/beacon-$xmlhttprequest,domain=nhk.or.jp
 ! False positives with Ameblo skin named "colors_ad" or "ad_viva-cutieblog", reported via Issue Report, Jan 12, 2012, Dec 29, 2011, Apr 11, 2014
 @@||ameba.jp/p_skin/
 ! autoblog(AOL) sucks! It requires some trackings to render correctly, reported twice by Issue Report
@@ -39,7 +44,6 @@
 @@||fc2.com^*/kanasoku/advertisement.js
 ! Workaround to fix false positive with a mis-named background image which cause white title and menu background, reported by edogawakuryu via [https://code.google.com/p/adblock-plus-japanese-filter/issues/detail?id=23 Issue 23], Feb 3, 2012
 @@||foreignaffairs.com^*/sitetheme/images/body-top-ad-background.$image
-! False positive at gamers-review.net . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=77 are blocked. 2012-01-05
 @@||gamers-review.net/data/js/adbg.$script
 ! Many false positive with stylesheets and JavaScripts, reported via Issue Report, Jan 6, 2012
 @@||goal.com^*-ad-
@@ -55,12 +59,12 @@
 ! A filter -ads^ causes a false positive with a [http://translate.google.com/translate/static/kcpbtI_-aDs/css/desktop_ltr.css css stylesheet] at translate.google.com and translate.google.co.jp, reported by @dullneko, July 18, 2012
 @@||translate.google.*/translate/static/*-aDs/css/*.$stylesheet
 ! False positives with the existing |https:*?ip=$third-party filter at YouTube embedded pages, reported by Issue Report, Aug 17, 2015
-@@||googlevideo.com/videoplayback?ip=
+! ?ip= is no longer blocked at youtube.com, May 26, 2021
+! @@||googlevideo.com/videoplayback?ip=$domain=youtube.com
 ! False positives with the existing |https:*?*&ip=$third-party filter at YouTube and embedded pages, reported by baq via blog comment
 ! Simplified for gaming.youtube.com and limited the domain for better performance, Nov 13, 2015
-@@||googlevideo.com^*?*&ip=$domain=youtube.com
-@@||gyoen.minpos.com/delivery/ajs.php?zoneid=76&
-@@||gyoen.minpos.com/delivery/ajs.php?zoneid=77&
+! &ip= is no longer blocked at youtube.com, May 26, 2021
+! @@||googlevideo.com^*?*&ip=$domain=youtube.com
 ! ^urchin. filter causes false positives with the Japanese Amazon external audio player at web-cache.chocomaru.com, reporeted by 鳥 via blog, May 12, 2013
 @@||google-analytics.com/urchin.js$domain=web-cache.chocomaru.com
 ! Workaround to avoid an UNABLE TO LOAD PLUGIN error with .analytics- filter, Jan 26, 2014
@@ -83,7 +87,6 @@
 @@||ssl-images-amazon.com^*/browser-scripts/*-beacon/$script,stylesheet
 @@||imdb.com^*/doubleclick/
 ! Workaround for adblock detector, which includes "adblock = false;" only.
-@@||static.isohunt.com/js/adframe.$script
 ! False positives with online office application view at skydrive.live.com, Apr 24, 2012
 ! Example of a false positive: &ad=ja-JP&
 @@||officeapps.live.com^*frame.*&ad=
@@ -94,8 +97,6 @@
 ! Another false positive found at justin.tv ,reported and resolved via Issue Report, Dec 16, 2011
 @@||vox-static.liverail.com/swf/*/admanager.$domain=justin.tv|twitch.tv
 @@||media-imdb.com^*/ads.$script
-! False positive at xbox-news.com . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=79 are blocked. 2011-09-23
-@@||gyoen.minpos.com/delivery/ajs.php?zoneid=79&
 ! False positive with data used for dynamic photo slides, reported via Issue Report, Feb 28, 2012
 @@||nationalgeographic.co.jp/DynamicLead/xml/Top/promo.$xmlhttprequest
 ! False positive at ndrive2.naver.jp . Login stops displaying "Loading N Drive" forever, Jan 23, 2012
@@ -105,7 +106,6 @@
 @@||nec.co.jp^*/rss.$script
 ! False positives with Java SE 7u4 downloading 2012-04-27
 @@||oracleimg.com^*/assets/metrics/ora_$domain=oracle.com
-! False positive at psmk2.net . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=76 are blocked. 2011-08-29
 @@||psmk2.net/data/js/adbg.$script
 ! False positives with combined script and stylesheet 2011-10-17
 @@||rottentomatoescdn.com/assets/*/ads.
@@ -118,7 +118,6 @@
 ! False positives at own3d.tv reported via Issue Report, Nov 21, 2011
 @@||tubemogul.com/crossdomain.xml|
 @@||tubemogul.com/bootloader/TubeMogulFlowPlayer.
-! False positive at xbox-news.com . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=79 are blocked. 2011-09-23
 @@||xbox-news.com/data/js/adbg.$script
 ! Logo of Wikipedia uses URL including /ad/ ... reported via Issue Report, Jan 3, 2012
 @@||wikimedia.org/wikipedia/commons/*Wikipedia-logo*$image
@@ -144,6 +143,8 @@
 @@//player.ooyala.com^
 ! Loosen a promotion image blocking criterion on a shopping site because it looked too ugly... Dec 15, 2011
 @@/promotion/*$domain=shopping.yahoo.co.jp
+! False positives with harmless pings used for alive monitoring, reported at [Issues #30](https://github.com/k2jp/abp-japanese-filters/issues/30), Feb 17, 2019
+@@||127.0.0.1:*/ping$domain=folding.stanford.edu
 ! False positives with a combined stylesheet used with the ^ads^ filter, and a combined JavaScript used with -ads^ filter, reported via Issue Report, Oct 3, 2014
 @@||abc.com/*.css?*#assets=*,$stylesheet
 @@||abc.com/*.js?*#assets=*,$script
@@ -163,7 +164,7 @@
 @@||conviva.com/crossdomain.xml|
 @@||conviva.com/lpconfig/cfg/
 ! A new rare false positive with conviva filters found at ustream.tv 2011-12-10
-@@||livepassdl.conviva.com^*/LivePassModuleMain.$object-subrequest
+!@@||livepassdl.conviva.com^*/LivePassModuleMain.$object-subrequest
 ! False positives with combined scripts including "&ad=" 2012-04-06
 @@||cookpad.com/loading/all_in_one?
 ! False positives with random path including /ad/, reported via Issue Report, May 3, 2014
@@ -271,6 +272,8 @@
 @@||twimg.com/insights/images/analytics-$domain=analytics.twitter.com
 ! False positives with the existing -analytics^, at analytics.twitter.com audience view, Nov 13, 2015
 @@||twimg.com/macaw-analytics/$domain=analytics.twitter.com
+! False positives with Report User function at twitter.com, reported at [Issue #43](https://github.com/k2jp/abp-japanese-filters/issues/43), Feb 17, 2019
+@@||twitter.com/i/safety/$domain=twitter.com
 ! False positives with XHR used with ^analytics. filter, at analytics.twitter.com, Aug 29, 2014
 @@||analytics.twitter.com^$xmlhttprequest,domain=analytics.twitter.com
 ! False positives with |http:*^ad- filter, Mar 20, 2014
@@ -287,8 +290,8 @@
 ! False positive with questionnaires, reported via Issue Report, Mar 20, 2012
 @@||blog.with2.net/vote/
 ! False positives with combined scripts
-@@||yahoo.*/combo?*&$script,stylesheet,domain=yahoo.co.jp|yahoo.com
-@@||yahooapis.*/combo?*&$script,stylesheet,domain=yahoo.co.jp|yahoo.com
+@@||yahoo.*/combo?*&$script,stylesheet,domain=tumblr.com|yahoo.co.jp|yahoo.com
+@@||yahooapis.*/combo?*&$script,stylesheet,domain=tumblr.com|yahoo.co.jp|yahoo.com
 ! False positives with HIGHLIGHT.JS scripts, reported by @dullneko via blog comment, Aug 29, 2012
 @@||yandex.st/highlightjs/
 ! False positives with jQuery, reported by 誤ブロック via blog comment, May 26, 2013
@@ -296,7 +299,7 @@
 ! False positives with combined stylesheets or scripts at Yahoo!
 ! Merged and limited the domain, Oct 25 and 26, 2014
 ! Added support for flickr.com acquired by Yahoo!, Jun 09, 2015
-@@.yimg.*/combo?*&$script,stylesheet,domain=flickr.com|yahoo.co.jp|yahoo.com
+@@.yimg.*/combo?*&$script,stylesheet,domain=flickr.com|tumblr.com|yahoo.co.jp|yahoo.com
 ! Layout collapse and some missing images because of the URL including /ad_partner/, Jan 18, 2012
 @@||s.yimg.jp/images/webowner/ad_partner/$domain=webowner.yahoo.co.jp
 ! False positives at analytics pages inside YouTube, reported via Issue Report, Feb 27, 2012
@@ -306,7 +309,14 @@
 ! ########## Option only START ##########
 |data:text/html^$document
 |data:text/html^$popup
+|http:$image,object,ping,script,subdocument,xmlhttprequest,domain=ime.nu|ime.st
 ! Commented out for the incompatibility with uBlock Origin, Dec 08, 2016
+! |http:$ping
+! |https:$ping
+|http:$popup,domain=1channel.ch|1fichier.com|2baksa.net|6brj.com|adexprt.com|adnxs.com|adshostnet.com|adspirit.de|adsplats.com|airliners.net|alphatv.gr|alrincon.com|animeflv.net|animeid.tv|ann-kate.jp|bitporno.com|bitshare.com|booking.com|cinerip.com|cloudfront.net|co-co-co.co|cpasbien.io|cpasbien.pw|ctdisk.com|depositfiles.com|ellinofreneiafm.gr|emule-island.ru|eurosptp.com|extra.to|extratorrent.cc|extratorrentlive.com|eztv.ag|filenuke.com|filesonic.com|filesonic.fr|filesonic.jp|flashx.tv|freakshare.com|freebunker.com|freshremix.ru|hao123.com|hdtorrents.info|hikaritube.com|hot-jav.com|hotavxxx.com|hotporndl.com|humoron.com|imagecarry.com|imagefruit.com|imagesnake.com|imgcarry.com|imgchili.com|imgking.co|imgshots.com|isohunt.com|javlinks.com|kinoman.tv|kinox.to|kinox.tv|leversions.info|libertyland.tv|lumfile.com|megafilmesonline.net|megaupload.com|megavideo.com|mk-sniper.net|moppy.jp|movie4k.to|movie4k.tv|movie8k.me|newpct1.com|nuvid.com|openadserving.com|openload.co|peliculaspepito.to|pornbus.org|primewire.ag|promptfile.com|qponning.com|rev2pub.com|rueducommerce.fr|senmanga.com|seriesflv.net|seriespepito.to|slickdeals.net|speedyshare.com|streamcloud.eu|streamingclic.net|swesub.tv|t411.ch|t411.li|telechargementz.org|torrentbox.com|torrentfrancais.com|torrentunblock.com|torrentz.eu|tucinecom.com|turbobit.net|umbertoarciero.it|un-lien.fr|unblocked.li|uploadable.ch|uploadrocket.net|uptobox.com|veoh.com|videomega.tv|vidtodo.com|vidzi.tv|viooz.co|vshare.eu|watch-series.to|xhamster.com|xnxx.com|xvideos.com|youporn.com|yourfilehost.com|yourlib.net|yunfile.com|yyets.com
+|https:$popup,domain=1channel.ch|1fichier.com|2baksa.net|6brj.com|adexprt.com|adnxs.com|adshostnet.com|adspirit.de|adsplats.com|airliners.net|alphatv.gr|alrincon.com|animeflv.net|animeid.tv|ann-kate.jp|bitporno.com|bitshare.com|booking.com|cinerip.com|cloudfront.net|co-co-co.co|cpasbien.io|cpasbien.pw|ctdisk.com|depositfiles.com|ellinofreneiafm.gr|emule-island.ru|eurosptp.com|extra.to|extratorrent.cc|extratorrentlive.com|eztv.ag|filenuke.com|filesonic.com|filesonic.fr|filesonic.jp|flashx.tv|freakshare.com|freebunker.com|freshremix.ru|hao123.com|hdtorrents.info|hikaritube.com|hot-jav.com|hotavxxx.com|hotporndl.com|humoron.com|imagecarry.com|imagefruit.com|imagesnake.com|imgcarry.com|imgchili.com|imgking.co|imgshots.com|isohunt.com|javlinks.com|kinoman.tv|kinox.to|kinox.tv|leversions.info|libertyland.tv|lumfile.com|megafilmesonline.net|megaupload.com|megavideo.com|mk-sniper.net|moppy.jp|movie4k.to|movie4k.tv|movie8k.me|newpct1.com|nuvid.com|openadserving.com|openload.co|peliculaspepito.to|pornbus.org|primewire.ag|promptfile.com|qponning.com|rev2pub.com|rueducommerce.fr|senmanga.com|seriesflv.net|seriespepito.to|slickdeals.net|speedyshare.com|streamcloud.eu|streamingclic.net|swesub.tv|t411.ch|t411.li|telechargementz.org|torrentbox.com|torrentfrancais.com|torrentunblock.com|torrentz.eu|tucinecom.com|turbobit.net|umbertoarciero.it|un-lien.fr|unblocked.li|uploadable.ch|uploadrocket.net|uptobox.com|veoh.com|videomega.tv|vidtodo.com|vidzi.tv|viooz.co|vshare.eu|watch-series.to|xhamster.com|xnxx.com|xvideos.com|youporn.com|yourfilehost.com|yourlib.net|yunfile.com|yyets.com
+|http:$subdocument,domain=jump.2ch.net|mangahere.co
+|https:$subdocument,domain=jump.2ch.net|mangahere.co
 ! ---------- Option only END ----------
 !
 ! ########## URL Fragments START ##########
@@ -414,8 +424,9 @@
 &iad=
 &impid=
 &impid=$document
-|http:*?*&ip=$third-party
-|https:*?*&ip=$third-party
+|http:*?*&ip=$third-party,domain=~youtube.com
+|https:*?*&ip=$third-party,domain=~youtube.com
+&key=*&scrWidth=*&scrHeight=*&tz=$document
 |http:*?*&lp=*id=$popup
 |https:*?*&lp=*id=$popup
 &lp_domain=$popup
@@ -492,10 +503,10 @@
 |http:*-ad-$popup
 |https:*-ad-
 |https:*-ad-$popup
-|http:*-ad.
-|http:*-ad.$popup
-|https:*-ad.
-|https:*-ad.$popup
+|http:*-ad.$domain=~tri-ad.global
+|http:*-ad.$popup,domain=~tri-ad.global
+|https:*-ad.$domain=~tri-ad.global
+|https:*-ad.$popup,domain=~tri-ad.global
 |http:*-ad^
 |http:*-ad^$popup
 |https:*-ad^
@@ -588,6 +599,10 @@
 -adcombo.
 -adcombo^
 -adcombo_
+-adformat-
+-adformat.
+-adformat^
+-adformat_
 -adframe-
 -adframe-$document
 -adframe.
@@ -624,6 +639,10 @@
 -adlink.
 -adlink^
 -adlink_
+-adplace-
+-adplace.
+-adplace^
+-adplace_
 -adplus-
 -adplus.
 -adplus^
@@ -803,7 +822,6 @@
 -advertising-
 -advertising.
 -advertising^
--advertising_
 -adverts-
 -adverts.
 -adverts^
@@ -1081,10 +1099,10 @@
 -mixpanel.$third-party
 -mixpanel^$third-party
 -mixpanel_$third-party
--mraid-$object-subrequest,script,websocket,xmlhttprequest
--mraid.$object-subrequest,script,websocket,xmlhttprequest
--mraid^$object-subrequest,script,websocket,xmlhttprequest
--mraid_$object-subrequest,script,websocket,xmlhttprequest
+-mraid-$script,websocket,xmlhttprequest
+-mraid.$script,websocket,xmlhttprequest
+-mraid^$script,websocket,xmlhttprequest
+-mraid_$script,websocket,xmlhttprequest
 -numerik-art-
 -numerik-art.
 -numerik-art^
@@ -1230,14 +1248,14 @@
 -teasers_
 -textad.
 -utm.$script
--vast-$object-subrequest,script,websocket,xmlhttprequest
--vast.$object-subrequest,script,websocket,xmlhttprequest
--vast^$object-subrequest,script,websocket,xmlhttprequest
--vast_$object-subrequest,script,websocket,xmlhttprequest
--vpaid-$object-subrequest,script,websocket,xmlhttprequest
--vpaid.$object-subrequest,script,websocket,xmlhttprequest
--vpaid^$object-subrequest,script,websocket,xmlhttprequest
--vpaid_$object-subrequest,script,websocket,xmlhttprequest
+-vast-$script,websocket,xmlhttprequest
+-vast.$script,websocket,xmlhttprequest
+-vast^$script,websocket,xmlhttprequest
+-vast_$script,websocket,xmlhttprequest
+-vpaid-$script,websocket,xmlhttprequest
+-vpaid.$script,websocket,xmlhttprequest
+-vpaid^$script,websocket,xmlhttprequest
+-vpaid_$script,websocket,xmlhttprequest
 -yahooads-
 -yahooads.
 -yahooads^
@@ -1341,6 +1359,10 @@
 .adcombo.
 .adcombo^
 .adcombo_
+.adformat-
+.adformat.
+.adformat^
+.adformat_
 .adframe-
 .adframe-$document
 .adframe.
@@ -1378,6 +1400,10 @@
 .adlink.
 .adlink^
 .adlink_
+.adplace-
+.adplace.
+.adplace^
+.adplace_
 .adplus-
 .adplus.
 .adplus^
@@ -1765,6 +1791,7 @@
 .dsp_$third-party
 .engine?$third-party
 .engine?id=
+.engine?id=$document
 .engine?guid=$popup
 .evercookie-
 .evercookie.
@@ -1790,6 +1817,8 @@
 .impression_id_
 .jeu-a-telecharger.
 .jeuxofferts.
+.js?cid=$third-party
+.js?cid=*&v=
 .kissinsights.com/
 .landing-$popup
 .landing-$third-party
@@ -1835,10 +1864,10 @@
 .mobifiesta.
 .mobifun.
 .movifiesta.
-.mraid-$object-subrequest,script,websocket,xmlhttprequest
-.mraid.$object-subrequest,script,websocket,xmlhttprequest
-.mraid^$object-subrequest,script,websocket,xmlhttprequest
-.mraid_$object-subrequest,script,websocket,xmlhttprequest
+.mraid-$script,websocket,xmlhttprequest
+.mraid.$script,websocket,xmlhttprequest
+.mraid^$script,websocket,xmlhttprequest
+.mraid_$script,websocket,xmlhttprequest
 .my-tv-store.
 .netflame.cc^
 .numerik-art-
@@ -1862,7 +1891,6 @@
 .php?k=*&h=*&ban=*&iid=
 .php?k=*&h=*&ban=*&iid=$popup
 ! Simplified to ?zoneid=
-! .php?zoneid=
 .pixeltracking-
 .pixeltracking.
 .pixeltracking^
@@ -1991,15 +2019,15 @@
 .teasers^
 .teasers_
 .TieupNotification.
-.vast-$object-subrequest,script,websocket,xmlhttprequest
-.vast.$object-subrequest,script,websocket,xmlhttprequest
-.vast^$object-subrequest,script,websocket,xmlhttprequest
-.vast_$object-subrequest,script,websocket,xmlhttprequest
+.vast-$script,websocket,xmlhttprequest
+.vast.$script,websocket,xmlhttprequest
+.vast^$script,websocket,xmlhttprequest
+.vast_$script,websocket,xmlhttprequest
 .vipmobile.
-.vpaid-$object-subrequest,script,websocket,xmlhttprequest
-.vpaid.$object-subrequest,script,websocket,xmlhttprequest
-.vpaid^$object-subrequest,script,websocket,xmlhttprequest
-.vpaid_$object-subrequest,script,websocket,xmlhttprequest
+.vpaid-$script,websocket,xmlhttprequest
+.vpaid.$script,websocket,xmlhttprequest
+.vpaid^$script,websocket,xmlhttprequest
+.vpaid_$script,websocket,xmlhttprequest
 .yahooads-
 .yahooads.
 .yahooads^
@@ -2295,8 +2323,6 @@
 /afu.php?id=$popup
 /afu.php?subid=
 /afu.php?subid=$popup
-! merged into .php?zoneid=
-! /ajs.php?zoneid=
 /alerts/*?$popup
 /amatool/*$third-party
 /amazon-right$script
@@ -2318,8 +2344,8 @@
 ! Re-enabled the commented out filter again, Apr 04, 2017
 /annotations_$domain=youtube.com
 /aolvidmetrics/*
-/applibar.$domain=live.nicovideo.jp|www.nicovideo.jp
-/applibar_$domain=live.nicovideo.jp|www.nicovideo.jp
+/applibar.$domain=nicovideo.jp
+/applibar_$domain=nicovideo.jp
 /AppMeasurementExtension.
 /apu.php?id=
 /arj?o=
@@ -2330,8 +2356,6 @@
 /atrk.$third-party
 /autotrack.$script
 /AutoTracker.$script
-! merged into .php?zoneid=
-! /avw.php?zoneid=
 /axyzsdk.$script
 /banads/*
 /banner140.$third-party
@@ -2437,6 +2461,7 @@
 /direct?placement_id=
 /direct?placement_id=$popup
 /dmm.$script
+/dmx^$domain=dailymotion.com
 /do2icnk.
 /docodoco?
 /e?type^$third-party
@@ -2470,10 +2495,10 @@
 /get-js?dc_id=
 ! Commented out duplicated filters [https://github.com/k2jp/abp-japanese-filters/issues/9 reported] by [https://github.com/SMed79 SMed79], Jun 20, 2015
 ! /getad^
-/getmarquee-$domain=live.nicovideo.jp|www.nicovideo.jp
-/getmarquee.$domain=live.nicovideo.jp|www.nicovideo.jp
-/getmarquee^$domain=live.nicovideo.jp|www.nicovideo.jp
-/getmarquee_$domain=live.nicovideo.jp|www.nicovideo.jp
+/getmarquee-$domain=nicovideo.jp
+/getmarquee.$domain=nicovideo.jp
+/getmarquee^$domain=nicovideo.jp
+/getmarquee_$domain=nicovideo.jp
 /globalAdTag.$script
 /redirect/*$document
 /google.html?cb=$subdocument
@@ -2514,8 +2539,6 @@
 /img/p_banner/*
 /img/pr_.$domain=diamond.jp
 /img/watch/tag_sync/*
-! Merged into .php?zoneid=
-! /iml.php?zoneid=
 /impression?$third-party
 /impression_measure.*?$image,object,subdocument
 /inc_$script,domain=gizmodo.jp|kotaku.jp|lifehacker.jp
@@ -2551,6 +2574,7 @@
 /jwd^$script
 /jwd_$script
 /jwpsrv.$script
+/kameleoon.$script,third-party
 /kanasoku/9-
 /kanasoku*/at_side.
 /kanasoku/Live.
@@ -2600,8 +2624,8 @@
 /lt?guid=*&gender=*&zip=
 /lt?sid=*&gender=*&zip=
 /makePCookie_
-/marquee/*$domain=live.nicovideo.jp|www.nicovideo.jp
-/marqueeplayer.$domain=live.nicovideo.jp|www.nicovideo.jp
+/marquee/*$domain=nicovideo.jp
+/marqueeplayer.$domain=nicovideo.jp
 /matc.$script
 /mbadw.$third-party
 /MBF_MS_
@@ -2639,6 +2663,8 @@
 /OneSignalSDK.$script
 ! this cause javascript to stop: /oo/$domain=zai.diamond.jp
 /opt_content.js^$script,third-party
+/optout/get^*&key=*&t=$third-party
+/optout/set^*&key=*&t=$third-party
 ! Commented out the duplicated filter with ?bidid=$document, May 31, 2017
 ! /out?bidid=$document
 /overtureAd.
@@ -2671,8 +2697,6 @@
 /pop-imp/*$document
 /pop-imp/*$popup
 /pop-over.
-! merged into .php?zoneid=
-! /pop.php?zoneid=
 ! merged into _packcpm. Jul 19, 2016
 ! /pop_packcpm.
 ! Commented out duplicated filters [https://github.com/k2jp/abp-japanese-filters/issues/9 reported] by [https://github.com/SMed79 SMed79], Jun 20, 2015
@@ -2801,7 +2825,8 @@
 /snare.js
 /sOmni.
 /social.$script,domain=gizmodo.jp|kotaku.jp|lifehacker.jp
-/spacer.*?$image,object,subdocument
+! Too ambitious, Mar 06, 2019
+! /spacer.*?$image,object,subdocument
 /srv/delivery.
 /server/delivery/*
 /server/delivery/*$popup
@@ -2879,8 +2904,13 @@
 /wad.$subdocument,third-party
 /wanalytics-
 /wanalytics/*
+/watch.*.js?key=*&refer=
+/watch.*?key=*&refer=$document
+/watch.*?key=*&refer=$popup
 /watch?key=$document
 /watch?key=$popup
+/watch?refer=*&key=$document
+/watch?refer=*&key=$popup
 /watch?shu=$document
 /watch?shu=$popup
 /watch_autoplayrenderer.$script,domain=youtube.com
@@ -2915,6 +2945,7 @@
 /yie/ld/*
 /yieldbot.$third-party
 /yim.$object,script,subdocument
+/yql?$domain=tumblr.com|yahoo.co.jp|yahoo.com
 /ystat.
 /ywa.$script
 /z.php?id=$document
@@ -3050,13 +3081,14 @@
 ?clk=*&rfr=$popup
 ?dist_id=*&channel=$popup
 ?dist_id=*&channel=$third-party
+?enqId=*&monitorId=$popup
 ! Commented out duplicated filters [https://github.com/k2jp/abp-japanese-filters/issues/9 reported] by [https://github.com/SMed79 SMed79], Jun 20, 2015
 ! ?file=ads&
 ?id_promo=
 ?impid=
 ?impid=$document
-|http:*?ip=$third-party
-|https:*?ip=$third-party
+|http:*?ip=$third-party,domain=~youtube.com
+|https:*?ip=$third-party,domain=~youtube.com
 |http:*?lp=*id=$popup
 |https:*?lp=*id=$popup
 ?lp_domain=$popup
@@ -3246,6 +3278,10 @@
 ^adblock-checker.$domain=~github.com
 ^adblock-checker^$domain=~github.com
 ^adblock-checker_$domain=~github.com
+^adblockcheck-$domain=~github.com
+^adblockcheck.$domain=~github.com
+^adblockcheck^$domain=~github.com
+^adblockcheck_$domain=~github.com
 ^adcall-
 ^adcall.
 ^adcall^
@@ -3318,6 +3354,10 @@
 ^adcounter.
 ^adcounter^
 ^adcounter_
+^abDetector-$domain=~github.com
+^abDetector.$domain=~github.com
+^abDetector^$domain=~github.com
+^abDetector_$domain=~github.com
 ^adfarm-
 ^adfarm.
 ^adfarm^
@@ -3362,6 +3402,10 @@
 ^adfarm9.
 ^adfarm9^
 ^adfarm9_
+^adformat-
+^adformat.
+^adformat^
+^adformat_
 ^adframe-
 ^adframe-$document
 ^adframe.
@@ -3542,6 +3586,10 @@
 ^adPixel.
 ^adPixel^
 ^adPixel_
+^adplace-
+^adplace.
+^adplace^
+^adplace_
 ^adPlayer-
 ^adPlayer.
 ^adPlayer^
@@ -4151,14 +4199,14 @@
 ^azlink^$object,script,subdocument
 ^azlink_$object,script,subdocument
 ^banner-$popup
-^banner-$script,object-subrequest,subdocument
+^banner-$script,subdocument
 ^banner.$popup
-^banner.$script,object-subrequest,subdocument
+^banner.$script,subdocument
 ^banner^$popup
-^banner^$script,object-subrequest,subdocument
+^banner^$script,subdocument
 ^banner_$image,object,subdocument,domain=fc2.com
 ^banner_$popup
-^banner_$script,object-subrequest,subdocument
+^banner_$script,subdocument
 ^banner_iframe-
 ^banner_iframe.
 ^banner_iframe^
@@ -4176,13 +4224,13 @@
 ^bannerid^
 ^bannerid_
 ^banners-$popup
-^banners-$script,object-subrequest,subdocument
+^banners-$script,subdocument
 ^banners.$popup
-^banners.$script,object-subrequest,subdocument
+^banners.$script,subdocument
 ^banners^$popup
-^banners^$script,object-subrequest,subdocument
+^banners^$script,subdocument
 ^banners_$popup
-^banners_$script,object-subrequest,subdocument
+^banners_$script,subdocument
 ^beacon-
 ^beacon.
 ^beacon^
@@ -4195,10 +4243,18 @@
 ^beacons.
 ^beacons^
 ^beacons_
+^beaconType-
+^beaconType.
+^beaconType^
+^beaconType_
 ^become-$third-party
 ^become.$third-party
 ^become^$third-party
 ^become_$third-party
+^bidder-$third-party
+^bidder.$third-party
+^bidder^$third-party
+^bidder_$third-party
 ^blockadblock-$domain=~github.com
 ^blockadblock.$domain=~github.com
 ^blockadblock^$domain=~github.com
@@ -4969,10 +5025,10 @@
 ^mobileads.
 ^mobileads^
 ^mobileads_
-^mraid-$object-subrequest,script,websocket,xmlhttprequest
-^mraid.$object-subrequest,script,websocket,xmlhttprequest
-^mraid^$object-subrequest,script,websocket,xmlhttprequest
-^mraid_$object-subrequest,script,websocket,xmlhttprequest
+^mraid-$script,websocket,xmlhttprequest
+^mraid.$script,websocket,xmlhttprequest
+^mraid^$script,websocket,xmlhttprequest
+^mraid_$script,websocket,xmlhttprequest
 ^mtrcs-$script
 ^mtrcs.$script
 ^mtrcs^$script
@@ -4982,10 +5038,18 @@
 ^mutual_link^$object,script,subdocument
 ^mutual_link_$object,script,subdocument
 ^MyAffiliatesID^$popup
+^nanovisor-
+^nanovisor.
+^nanovisor^
+^nanovisor_
 ^nativendo-
 ^nativendo.
 ^nativendo^
 ^nativendo_
+^nicoad-*$domain=~nicoad.nicovideo.jp|nicovideo.jp
+^nicoad.*$domain=~nicoad.nicovideo.jp|nicovideo.jp
+^nicoad^*$domain=~nicoad.nicovideo.jp|nicovideo.jp
+^nicoad_*$domain=~nicoad.nicovideo.jp|nicovideo.jp
 ^nielsen-
 ^nielsen.
 ^nielsen^
@@ -5179,13 +5243,21 @@
 ^pub_config^
 ^pub_config_
 ^pubads-
+^pubads-$document
 ^pubads.
+^pubads.$document
 ^pubads^
+^pubads^$document
 ^pubads_
+^pubads_$document
 ^quantcast-
 ^quantcast.
 ^quantcast^
 ^quantcast_
+^quit-hogging-$domain=~github.com
+^quit-hogging.$domain=~github.com
+^quit-hogging^$domain=~github.com
+^quit-hogging_$domain=~github.com
 ^random_banner-
 ^random_banner.
 ^random_banner^
@@ -5299,6 +5371,10 @@
 ^surveys.$third-party
 ^surveys^$third-party
 ^surveys_$third-party
+^tagging-$third-party
+^tagging.$third-party
+^tagging^$third-party
+^tagging_$third-party
 ^tblb-$third-party
 ^tblb.$third-party
 ^tblb^$third-party
@@ -5391,10 +5467,18 @@
 ^urchin.
 ^urchin^
 ^urchin_
-^vast-$object-subrequest,script,websocket,xmlhttprequest
-^vast.$object-subrequest,script,websocket,xmlhttprequest
-^vast^$object-subrequest,script,websocket,xmlhttprequest
-^vast_$object-subrequest,script,websocket,xmlhttprequest
+^vast-$script,websocket,xmlhttprequest
+^vast.$script,websocket,xmlhttprequest
+^vast^$script,websocket,xmlhttprequest
+^vast_$script,websocket,xmlhttprequest
+^videoad-
+^videoad.
+^videoad^
+^videoad_
+^videoads-
+^videoads.
+^videoads^
+^videoads_
 ^voluum-
 ^voluum-$document
 ^voluum.$domain=~voluum.com
@@ -5403,10 +5487,10 @@
 ^voluum^$document
 ^voluum_
 ^voluum_$document
-^vpaid-$object-subrequest,script,websocket,xmlhttprequest
-^vpaid.$object-subrequest,script,websocket,xmlhttprequest
-^vpaid^$object-subrequest,script,websocket,xmlhttprequest
-^vpaid_$object-subrequest,script,websocket,xmlhttprequest
+^vpaid-$script,websocket,xmlhttprequest
+^vpaid.$script,websocket,xmlhttprequest
+^vpaid^$script,websocket,xmlhttprequest
+^vpaid_$script,websocket,xmlhttprequest
 ^watchtcm^$popup
 ^xbanner-$third-party
 ^xbanner.$third-party
@@ -5555,6 +5639,10 @@ _adcombo-
 _adcombo.
 _adcombo^
 _adcombo_
+_adformat-
+_adformat.
+_adformat^
+_adformat_
 _adframe-
 _adframe-$document
 _adframe.
@@ -5591,6 +5679,10 @@ _adlink-
 _adlink.
 _adlink^
 _adlink_
+_adplace-
+_adplace.
+_adplace^
+_adplace_
 _AdPlugin-
 _AdPlugin.
 _AdPlugin^
@@ -6071,10 +6163,10 @@ _mixpanel-$third-party
 _mixpanel.$third-party
 _mixpanel^$third-party
 _mixpanel_$third-party
-_mraid-$object-subrequest,script,websocket,xmlhttprequest
-_mraid.$object-subrequest,script,websocket,xmlhttprequest
-_mraid^$object-subrequest,script,websocket,xmlhttprequest
-_mraid_$object-subrequest,script,websocket,xmlhttprequest
+_mraid-$script,websocket,xmlhttprequest
+_mraid.$script,websocket,xmlhttprequest
+_mraid^$script,websocket,xmlhttprequest
+_mraid_$script,websocket,xmlhttprequest
 _numerik-art-
 _numerik-art.
 _numerik-art^
@@ -6235,14 +6327,14 @@ _teasers-
 _teasers.
 _teasers^
 _teasers_
-_vast-$object-subrequest,script,websocket,xmlhttprequest
-_vast.$object-subrequest,script,websocket,xmlhttprequest
-_vast^$object-subrequest,script,websocket,xmlhttprequest
-_vast_$object-subrequest,script,websocket,xmlhttprequest
-_vpaid-$object-subrequest,script,websocket,xmlhttprequest
-_vpaid.$object-subrequest,script,websocket,xmlhttprequest
-_vpaid^$object-subrequest,script,websocket,xmlhttprequest
-_vpaid_$object-subrequest,script,websocket,xmlhttprequest
+_vast-$script,websocket,xmlhttprequest
+_vast.$script,websocket,xmlhttprequest
+_vast^$script,websocket,xmlhttprequest
+_vast_$script,websocket,xmlhttprequest
+_vpaid-$script,websocket,xmlhttprequest
+_vpaid.$script,websocket,xmlhttprequest
+_vpaid^$script,websocket,xmlhttprequest
+_vpaid_$script,websocket,xmlhttprequest
 _yahooads-
 _yahooads.
 _yahooads^
@@ -6299,6 +6391,7 @@ _yahooads_
 ://analyze6.$third-party
 ://analyze7.$third-party
 ://analyze8.$third-party
+://analyze8.$third-party
 ://analyzer.$third-party
 ://analyzer0.$third-party
 ://analyzer1.$third-party
@@ -6308,6 +6401,7 @@ _yahooads_
 ://analyzer5.$third-party
 ://analyzer6.$third-party
 ://analyzer7.$third-party
+://analyzer8.$third-party
 ://analyzer8.$third-party
 |http://ax-d.
 |https://ax-d.
@@ -6330,16 +6424,21 @@ _yahooads_
 ://campaign9.
 ://click.$document
 ://click.$popup
+://click.$third-party
 ://clicks.$document
 ://clicks.$popup
+://clicks.$third-party
 ://clickeu.$popup
 ://clk.$popup
+://clk.$third-party
 ://creative.
 ://creative.$document
 ://creative.$popup
+://creative.$third-party
 ://creatives.
 ://creatives.$document
 ://creatives.$popup
+://creatives.$third-party
 ://d.*/l/load.js^$script,third-party
 ://d.*/r/rd.html^$document
 ://delivery.$third-party
@@ -6709,6 +6808,7 @@ _yahooads_
 ||aceadsys.net^$popup
 ||aceadsys.net^$third-party
 ||acestream.net^$third-party
+||acloudimages.com^
 ||acnt.biz^$third-party
 ||acs86.com^
 ||actaads.com^$third-party
@@ -6964,6 +7064,7 @@ _yahooads_
 ||adorika.$popup
 ||adorika.$third-party
 ||adotic.com^$third-party
+||adotmob.com^
 ||adotube.com^$third-party
 ||adpath.net^$third-party
 ||adpdx.com^
@@ -6988,6 +7089,7 @@ _yahooads_
 ||adrocketmedia.com^
 ||adroll.com^$third-party
 ||adrotator.$popup
+||adrs.me^
 ||ads2rtb.com^
 ||ads2srv.com^
 ||adsafe.fr^
@@ -7060,6 +7162,7 @@ _yahooads_
 ||adtgs.com^
 ||adtgs.com^$popup
 ||adthink-media.com^
+||adtng.com^
 ||adtrace.org^
 ||adtracker.jp^
 ||adtradedesk.com^
@@ -7212,6 +7315,8 @@ _yahooads_
 ||ntvimg-a.akamaihd.net^
 ||serviceama-a.akamaihd.net^
 ||razorweb-a.akamaihd.net^
+||assets-momentum.akamaized.net^
+||media-analytics.akamaized.net^
 ||akibablog.net/lilbox/
 ||akmega.ru^
 ||aknod.com^$third-party
@@ -7331,6 +7436,7 @@ _yahooads_
 ||amung.us/pingjs/
 ||amuseer.com^
 ||widgets.amung.us/pro.$script
+||amzonnews.club^
 ||anal-profond.net^
 ||anchorfree.net^$third-party
 ||andomedia.com^
@@ -7362,6 +7468,7 @@ _yahooads_
 ||aolcdn.com/js/mg2.$script
 ||aolp.jp^
 ||aondenamoro.com^
+||aoxmediamarketing.com^$third-party
 ||apabox.com^
 ||apicit.net^
 ||apivids.com^$third-party
@@ -7430,6 +7537,7 @@ _yahooads_
 ||atdmt.com^$third-party
 ||atemda.com^
 ||atgsvcs.com^
+||aticdn.net^
 ||atinternet.com^$third-party
 ||ationnet.co.kr^$third-party
 ||ationnet.com^$third-party
@@ -7533,6 +7641,7 @@ _yahooads_
 ||bbelements.com^$third-party
 ||bbs-ad.com^$third-party
 ||bcegovo.ru^
+||bcloudhost.com^
 ||bcooljs.info^
 ||beanscattering.jp^
 ||bebi.com^$third-party
@@ -7614,6 +7723,7 @@ _yahooads_
 ||blozoo.$third-party
 ||blue-cloud.net^$third-party
 ||bluecava.com^$third-party
+||blueconic.net^
 ||bluekai.com^$third-party
 ||bluelithium.com^
 ||bluetrackmedia.com^$popup
@@ -7659,8 +7769,6 @@ _yahooads_
 ||brazzers.com^$third-party
 ||brealtime.com^$third-party
 ||breedac.com^
-! Note: Probably, blocking the whole domain is too strict, Apr 29, 2012
-||brightcove.$third-party
 ||brightcove.com/1pix.
 ||brightonclick.com^
 ||brilig.com^$third-party
@@ -7739,6 +7847,7 @@ _yahooads_
 ||cbsinteractive.com/plugins/adp/
 ||cdn-image.com^
 ||1524001641.rsc.cdn77.org^
+||cdnads.com^
 ||cdnbd.
 ||cdnbf.net^$third-party
 ||cdneurope.com^
@@ -7780,6 +7889,8 @@ _yahooads_
 ||chercher-un-credit.com^
 ||chercher.org^
 ||chestyry.com^
+||chidsimp.com^
+||chidsimp.com^$document
 ||chie8oo.com^
 ||log.china.cn^
 ||chitika.com^$third-party
@@ -7848,7 +7959,8 @@ _yahooads_
 ||np7beacon.cloudapp.net^
 ||cloudcdnru.com^
 ||cloudcnd.com^
-||ajax.cloudflare.com^
+! False positive with harmless scripts reported at [Issue 40](https://github.com/k2jp/abp-japanese-filters/issues/40) , Feb 21, 2019
+! ||ajax.cloudflare.com^
 ||cloudflare.solutions^
 ||cloudfront.net/js/reach.$script
 ||cloudfront.net/lps
@@ -8094,6 +8206,10 @@ _yahooads_
 ||cybermonitor.com^
 ||cyberwing.co.jp^$third-party
 ||ad.cyzo.com^
+|http://d.pr^
+|http://d.pr^$document
+|https://d.pr^
+|https://d.pr^$document
 ||d-064.com^$third-party
 ||d-suite.jp^$third-party
 ||d03x2011.com^
@@ -8112,14 +8228,15 @@ _yahooads_
 ||dafferes.com^
 ||daffices.com^
 ||dafficha.com^
-||dailymotion.com*/masscast/
-||dailymotion.com/behavior/
-||dailymotion.com/history/
+||dailymotion.com*/masscast/$domain=dailymotion.com
+||dailymotion.com/behavior/$domain=dailymotion.com
+||dailymotion.com/history/$domain=dailymotion.com
 ! Commented out duplicated filters [https://github.com/k2jp/abp-japanese-filters/issues/9 reported] by [https://github.com/SMed79 SMed79], Jun 20, 2015
-! ||dailymotion.com/logger/
-||dailymotion.com/sense/
-||dailymotion.com/track/
-||sense.dailymotion.com^
+! ||dailymotion.com/logger/$domain=dailymotion.com
+||dailymotion.com/sense/$domain=dailymotion.com
+||dailymotion.com/track/$domain=dailymotion.com
+||dmxleo.dailymotion.com^$domain=dailymotion.com
+||sense.dailymotion.com^$domain=dailymotion.com
 ||dailyprofitmethod.org$popup
 ||dailyvideorewards.com^$popup
 ||actracer.daiwahouse.co.jp^
@@ -8198,6 +8315,7 @@ _yahooads_
 ||diegrossechance.net$popup
 ||dificaux.com^
 ||digitalworld.fr^
+||digitru.st^$third-party
 ||dimestore.com^
 ||dimprive.com^
 ||dingoads.info^$popup
@@ -8235,11 +8353,13 @@ _yahooads_
 ||dmm.co.jp^$domain=~dmm.co.jp|~dmm.com
 ||dmm.co.jp/lp/$popup
 ||dmm.com^$domain=~dmm.co.jp|~dmm.com
+||dmm.com/af/
 ||dmm.com/lp/$popup
 ||aqua.dmm.co.jp^
 ||dmpcounter.com^
 ||dmtracker.com^$third-party
 ||dmtry.com^
+||dmxleo.com^
 ||dn888.com^
 ||dnpdmp.jp^$third-party
 ||docodoco.jp^$third-party
@@ -8378,6 +8498,7 @@ _yahooads_
 ||eloqua.com^$third-party
 ||email-cadeaux.com^
 ||email-match.com^$third-party
+||email-weightwatchers.com^
 ||embed.ly^$third-party
 ||embedly.com^
 ||emea.pub^
@@ -8479,6 +8600,7 @@ _yahooads_
 ||extra33.com^
 ||extreme-dm.com^
 ||exyu-soft.com^
+||eyeota.net^$third-party
 ||eyewonder.com^$third-party
 ||ezbbs.net/*/sample*/img/
 ||ezlkflefig.ru^
@@ -8486,6 +8608,7 @@ _yahooads_
 ||facdn.com^
 ||facebook.com/ai.php?
 ||facebook.com/plugins/recommendations.
+||an.facebook.com^
 ||facebookofsex.com^$third-party
 ||faciles-rencontres.com^
 ||fairfax.com.au^$third-party
@@ -8494,6 +8617,7 @@ _yahooads_
 ||fastclick.net^
 ||fastdiscountz.com^$third-party
 ||fastestjs.info^
+||fastly-insights.com^
 ||fastpic.ru^$third-party
 ||fastsearcher.ru^
 ||faststarter.ru^
@@ -8531,6 +8655,7 @@ _yahooads_
 ||fedrobi.ru^
 ||feedjit.com^$third-party
 ||feedsweep.com^$third-party
+||feedvertizus.com^
 ||feljack.com^
 ||fetchback.com^$third-party
 ||fetish-sexe.biz^
@@ -8583,6 +8708,7 @@ _yahooads_
 ||fotocash.ru^$third-party
 ||fotostrana.ru^$third-party
 ||fougueuses-rencontres.com^
+||fourmtagservices.com^
 ||fout.jp^$third-party
 ||foxadd.com^
 ||foxmetrics.com^$third-party
@@ -8634,6 +8760,7 @@ _yahooads_
 ||gameoftraffic.com^
 ||gamesrevenue.com^$third-party
 ||gaminatorslots.com^$popup
+||gamingadult.com^$third-party
 ||ganaza.ru^
 ||garss.jp^$third-party
 ||garss.tv^$third-party
@@ -8758,6 +8885,7 @@ _yahooads_
 ||video-stats.video.google.com^
 ||googleadservices.com^
 ||imasdk.googleapis.com^
+||googledrive.network^
 ||googleplugin.ru^
 ||googlesyndication.com^
 ||googletagmanager.com^$third-party
@@ -8807,6 +8935,7 @@ _yahooads_
 ||hananokai.tv^
 ||adcreative.hangame.co.jp^
 ||hannist.com^
+||hanstrackr.com^$third-party
 ||happymail.co.jp^$third-party
 ||hardsextubepremium.com^$third-party
 ||hareljann.com^
@@ -8823,6 +8952,7 @@ _yahooads_
 ||hdstreamerjs.info^
 ||hdvidcodecs.com^
 ||heapanalytics.com^$third-party
+||hearstnp.com^
 ||heatsync.com^$third-party
 ||heavy-r.com^$popup
 ||hebdotop.com^$third-party
@@ -8946,6 +9076,7 @@ _yahooads_
 ||icontent.us^
 ||icqadvert.org^$third-party
 ||ictowaz.ru^
+||id5-sync.com^
 ||idcfcloud.com^*/pageviews?$third-party
 ||ideaxidea.com/*_banner.
 ||idee-malins-du-net.com^
@@ -8960,6 +9091,7 @@ _yahooads_
 ||idyllove.com^
 ||idylnetwork.com^
 ||idylsenior.com^
+||ie8eamus.com^
 ||iesnare.com^
 ||iforex.com^$third-party
 ||ifortino.ru^
@@ -9038,6 +9170,7 @@ _yahooads_
 ||incmd06.com^
 ||inctivee.com^
 ||indeed.com^$third-party
+||indexww.com^
 ||inditazione.com^
 ||industrybrains.com^$third-party
 ||inedomedia.com^$third-party
@@ -9099,6 +9232,7 @@ _yahooads_
 ||ioam.de^
 ||iogous.com^$third-party
 ||iperceptions.com^$third-party
+||ip-api.$third-party
 ||ip-label.net^$third-party
 ||ipify.org^$third-party
 ||ipornia.com^
@@ -9184,6 +9318,7 @@ _yahooads_
 ||jorjfix.ru^
 ||jowapt.com^
 ||joycasino.com^
+||jp-sex.com^$third-party
 ||jpg-server.com^$third-party
 ||fzk.jpn.com^
 ||jrfced.com^
@@ -9237,6 +9372,7 @@ _yahooads_
 ||img.kakaku.com/images/*/set/bn_$image,object,subdocument
 ||notice.kakaku.com^
 ||kaktuz.com^$third-party
+||kameleoon.com^$third-party
 ||kan3.info^
 ||kanaloco.jp/common/img/common/yondoku*.$image
 ||kantan-access.com^$third-party
@@ -9252,7 +9388,6 @@ _yahooads_
 ||keyrun.cn^$third-party
 ||keywordlink.co.kr^$third-party
 ||khimitsin.ru^
-||kiev.ua^$third-party
 ||kikoucam.com^
 ||kilopog.com^
 ||kimcheese.ru^
@@ -9462,7 +9597,6 @@ _yahooads_
 ||loadk.net^
 ||loadresync.net^
 ||locandito.com^
-||lockerdome.com^$third-party
 ||locoday.com^
 ||log-marketing.jp^
 ||logly.co.jp^$third-party
@@ -9527,6 +9661,7 @@ _yahooads_
 ||lzjl.com^
 ! Merged into ||*-arata.com^$third-party, Apr 17, 2017
 ! ||m-arata.com^$third-party
+||m0mentum.net^
 ||m2pub.com^
 ||m2pub.com^$popup
 ||ma-cam-live.com^
@@ -9534,6 +9669,7 @@ _yahooads_
 ||mach10.fr^
 ||macpath.net^
 ||macpath.net^$popup
+||macromill.com^$third-party
 ||macsoft.jp/img/Banner1/
 ||macsoft.jp/img/af/
 ||mag2.com/js/osusume.$script
@@ -9616,6 +9752,7 @@ _yahooads_
 ||mediarich.ru^
 ||mediarich.us^$third-party
 ||mediarich.ws^$third-party
+||mediarithmics.com^$third-party
 ||mediashakers.com^$third-party
 ||mediateas.com^
 ||mediatraffic.com.ua^$third-party
@@ -9679,6 +9816,7 @@ _yahooads_
 ||miapex.com^$third-party
 ||micro-a.ru^
 ||microad.jp^$third-party
+||microadinc.com^
 ||microsoft.com/library/svy/
 ||c.microsoft.com^
 ||c1.microsoft.com^
@@ -9686,6 +9824,7 @@ _yahooads_
 ||midnightjs.net^
 ||mieuxchoisir.com^
 ||millioncounter.com^
+||minescripts.info^
 ||miniinthebox.com^$popup
 ||minisalopes.com^
 ||ministerial5.com^$third-party
@@ -9720,6 +9859,7 @@ _yahooads_
 ||mobatory.com^
 ||mobbober.com^
 ||mobbobr.com^
+||mobiclean.xyz^
 ||mobicont.com^
 ||mobicow.com^$third-party
 ||mobidealer.$third-party
@@ -9884,6 +10024,7 @@ _yahooads_
 ||nanoadbite.com^
 ||nanoadexchange.com^
 ||nanoadexchange.com^$popup
+||nanovisor.io^
 ||nasads.com^
 ||nasecure.com^
 ||nastydollars.com^$third-party
@@ -9900,6 +10041,7 @@ _yahooads_
 ||neomion.com^
 ||nepalon.com^
 ||nervora.net^
+||nesmotrinamenya.ru^
 ||net-tool.net^
 ||netaatoz.jp/rss
 ||netaffiliation.$third-party
@@ -9930,6 +10072,7 @@ _yahooads_
 ||neudesicmediagroup.com^$third-party
 ||new-akiba.com/images/banner/$domain=new-akiba.com
 ||new-akiba.com/special/$domain=new-akiba.com
+||newagemarketinggroupdigital.info^
 ||newdopoln.ru^
 ||newpoptab.com^
 ||newpoptab.com^$popup
@@ -9948,6 +10091,7 @@ _yahooads_
 ||newsweekjapan.jp/images/common/sideAd.$image,object,subdocument
 ||newzia.jp^$third-party
 ||nexac.com^
+||nexage.com^$third-party
 ||nfobeat.com^
 ||ngbn.net^$third-party
 ||bc.nhk.jp^
@@ -9955,17 +10099,18 @@ _yahooads_
 ||mtcs.nhk.or.jp^
 ||nhncorp.jp^$third-party
 ||nicoseiga.jp/material/
-||nicovideo.jp/flog.
+||nicovideo.jp/flog.$domain=nicovideo.jp
 ||nicovideo.jp/Uads$script,domain=~uad.nicovideo.jp
-||ad.nicovideo.jp^
-! ||ads.nicovideo.jp^
+||ad.nicovideo.jp^$domain=nicovideo.jp
+! ||ads.nicovideo.jp^$domain=nicovideo.jp
 ||dic.nicovideo.jp/img/*banner*.$image,object,domain=dic.nicovideo.jp
 ||enquete.nicovideo.jp^$domain=~enquete.nicovideo.jp
-||ichiba.nicovideo.jp/img/bnrIchiba
+||ichiba.nicovideo.jp/img/bnrIchiba$domain=nicovideo.jp
 ! Commented out to avoid closing connection 2011-10-23
-! ||ow.live.nicovideo.jp^
-||urc.live.nicovideo.jp^
-||uad-api.nicovideo.jp^
+! ||ow.live.nicovideo.jp^$domain=nicovideo.jp
+||urc.live.nicovideo.jp^$domain=nicovideo.jp
+||nicoad.nicovideo.jp^$domain=~nicoad.nicovideo.jp|nicovideo.jp
+||uad-api.nicovideo.jp^$domain=nicovideo.jp
 ||api.uad.nicovideo.jp^$domain=~uad.nicovideo.jp
 ||nielsen.com^$third-party
 ||nifty.com^*/match_com-module-
@@ -9996,13 +10141,13 @@ _yahooads_
 ||nikkeibp.co.jp/images/*/itprostore.$image,object,subdocument
 ||nikkeibp.co.jp/img/rpt/
 ||bizad.nikkeibp.co.jp^
-||nimg.jp^*/searchformflash/
-||nimg.jp^*/Uad$script,domain=~uad.nicovideo.jp
-||nimg.jp/img/index/top/nsen/
-||nimg.jp/js/*_uad_
-||nimg.jp/js/index.$script
+||nimg.jp^*/searchformflash/$domain=nicovideo.jp
+||nimg.jp^*/Uad$script,domain=nicovideo.jp|~uad.nicovideo.jp
+||nimg.jp/img/index/top/nsen/$domain=nicovideo.jp
+||nimg.jp/js/*_uad_$domain=nicovideo.jp
+||nimg.jp/js/index.$script,domain=nicovideo.jp
 ! ||nimg.jp/swf/appli/ cause false positives at app.nicovideo.jp
-||nimg.jp/swf/appli/$domain=~app.nicovideo.jp
+||nimg.jp/swf/appli/$domain=nicovideo.jp|~app.nicovideo.jp
 ||ninjasoftwarellc.com^
 ||nizigenero.com^$third-party
 ||njaxjs.me^
@@ -10026,6 +10171,7 @@ _yahooads_
 ||novamov.com^$third-party
 ||novostimira.$third-party
 ||novoteka.ru^$third-party
+||now.sh^$third-party
 ||nowvisitors.com^$third-party
 ||npario-inc.net^$third-party
 ||nr-data.net^
@@ -10052,6 +10198,7 @@ _yahooads_
 ||files.nyaa.se^$image,domain=nyaa.se
 ! Commented out a YouTube HTML5 false positive filter, reported as Issue 22. 2011-08-09
 ! ||o-o.preferred.
+||oath.com^$third-party
 ||obnale.ru^
 ||obtenir-de-l-argent.com^
 ||obvdjs.info^
@@ -10112,6 +10259,7 @@ _yahooads_
 ||l.player.ooyala.com^
 ||opbandit.com^$third-party
 ||open-mind.vc^
+||open8.com^$third-party
 ||openads.org^
 ! Dropped a third-party option because adwares or malwares open it directly, Apr 2, 2012
 ||openadserving.com^
@@ -10139,6 +10287,7 @@ _yahooads_
 ||optplay.com^$third-party
 ||orange-park.jp^$third-party
 ||orangeads.fr^
+||orca-pass.net^$third-party
 ||oret.jp^$third-party
 ||osa.pl^
 ! ||ads.osdn.jp^
@@ -10158,6 +10307,7 @@ _yahooads_
 ||p-advg.com^$third-party
 ||p-bxm.com^$third-party
 ||p-td.com^
+||pabbp.com^
 ||padsdel.com^
 ||padsdelivery.com^$third-party
 ||padstm.com^
@@ -10309,6 +10459,7 @@ _yahooads_
 ||ppro.de^
 ||ppsearcher.ru^
 ||preact.io^$third-party
+||preaf.jp^$third-party
 ||precisionclick.com^$third-party
 ||predictad.com^$third-party
 ||predictormedia.com^
@@ -10345,8 +10496,10 @@ _yahooads_
 ||proligtb.com^
 ||proncar.ru^
 ||proparm.jp^
+||propellerclick.com^
 ||propellerpops.com^
 ||propermediadeals.com^
+||proxistore.com^$third-party
 ||prpops.com^
 ||prscripts.com^
 ||prwidgets.com^
@@ -10373,6 +10526,7 @@ _yahooads_
 ||pureadexchange.com^$popup
 ||pus2011.com^
 ||push7.jp^$third-party
+||pushmejs.com^
 ||pussycash.com^$third-party
 ||putags.com^
 ||pwbjgo7q6y.com^
@@ -10380,6 +10534,7 @@ _yahooads_
 ||pxl2015x1.com^
 ||pya.cc/banner/bb_
 ||pzcdn.com^
+||pzoifaum.info^
 |http://q.gs^$popup
 |https://q.gs^$popup
 ||q1media.com^$third-party
@@ -10501,6 +10656,7 @@ _yahooads_
 ||related.deals^$third-party
 ||relax.ru^
 ||relexion-credit.com^
+||remarketingpixel.com^
 ||remontvdome.com.ua^$popup
 ||removeadblock.com^
 ||rencontre-en-direct.com^
@@ -10608,6 +10764,7 @@ _yahooads_
 ||rtbsystem.com^$third-party
 ||rtbtraf.com^
 ||rtk.io^$third-party
+||rtmark.net^$third-party
 ||rtoaster.jp^
 ||ru4.com^$third-party
 ||rubiconadnet.com^
@@ -10665,6 +10822,7 @@ _yahooads_
 ||scour.com/services/getLocation/
 ||scribblelive.$third-party
 ||sd1.fr^
+||sdad.guru^
 ||aa.sdo.com^
 ||aagw.sdo.com^
 ||se-draguer.com^
@@ -10708,6 +10866,7 @@ _yahooads_
 ||sensic.net^$third-party
 ||sensis.com.au^$third-party
 ||sensismediasmart.com.au^$third-party
+||sentry.io^$third-party
 ||seogreat.net^$third-party
 ||seoparts.com^
 ||seoparts.net^$third-party
@@ -10852,6 +11011,7 @@ _yahooads_
 ||siteshots.com^$third-party
 ||sitesnapi.com^$third-party
 ||sitestat.com^$third-party
+||siteswithcontent.com^
 ||sitetag.us^$third-party
 ||sitetagger.$third-party
 ||sitewebred.info^
@@ -11028,6 +11188,7 @@ _yahooads_
 ||striete.com^
 ||stringenfolie.com^
 ||sublimeskinz.com^$third-party
+||sugabit.net^
 ||sumapo.org^
 ||sumome.com^$third-party
 ||sumorobo.net^$popup
@@ -11065,6 +11226,7 @@ _yahooads_
 ||synasender.com^
 ||syngrestic.com^
 ||syoh.jp^$third-party
+||syouhisya-kinyu.com^$popup
 ||systweak.com^$popup
 ||systweak.com^$third-party
 ||syxy.com^
@@ -11079,6 +11241,7 @@ _yahooads_
 ||tafla.ru^
 ! Third-party redirecting scripts, reported at http://labs.sucuri.net/?note=2015-08-31 , Sep 01, 2015
 ||tag-cloud-generator.com^
+||tagcommander.com^
 ||takealldir.ru^
 ||takensparks.com^$third-party
 ||tanzuki.net^
@@ -11089,6 +11252,7 @@ _yahooads_
 ||ad.targetingmarketplace.com^
 ||targetan.com^
 ||targetix.net^$third-party
+||taxel.jp^
 ||tbs.co.jp/rtac/
 ||tbn.ru^$third-party
 ||tchat-rose.com^
@@ -11206,6 +11370,7 @@ _yahooads_
 ||trackfox2.com^$popup
 ||tracking.to^
 ||tracking101.com^
+||trackingpro.pro^
 ||tracknson.com^
 ||tracksitetraffic1.com^
 ||trackstatsnow.com^
@@ -11231,6 +11396,7 @@ _yahooads_
 ||trafex.net^
 ||traffic-exchange.tv^$third-party
 ||traffic.ru^$third-party
+||trafficads.net^
 ||trafficandrei.ru^
 ||trafficbroker.com^
 ||trafficdna.com^$third-party
@@ -11244,6 +11410,7 @@ _yahooads_
 ||trafficmp.com^$third-party
 ||trafficreps.com^
 ||trafficrevenue.net^$third-party
+||trafficsan.com^
 ||trafficshop.com^
 ||trafficstars.com^$third-party
 ||trafficsway.com^
@@ -11367,6 +11534,7 @@ _yahooads_
 ||urlcash.$document
 ||urlcash.$popup
 ||urlcash.$third-party
+||urldelivery.com^
 ||urlgalleries.net^
 ||urlgalleries.net^$popup
 ||usagc.org^$third-party
@@ -11454,6 +11622,7 @@ _yahooads_
 ||videostrip.com^
 ||videosz.com^$third-party
 ||videozer.com^$third-party
+||vidsdelivery.com^
 ||vidustal.com^
 ||vietad.vn^$third-party
 ||vietalle.com^
@@ -11464,6 +11633,7 @@ _yahooads_
 ||t.vimeo.com^
 ||vindicosuite.com^
 ||vinregle.com^
+||vinumr.com^
 ||vipscasinodirectory.com^
 ||viptizer.com^$third-party
 ||virtuagirlhd.com^$third-party
@@ -11503,6 +11673,7 @@ _yahooads_
 ||voluum*.com^
 ||voluum*.com^$document
 ||voluumtrk.com^
+||votetoda.com^
 ||votre-aide-pret.com^
 ||votre-devis-credit.com^
 ||voyeurparadize.com^
@@ -11708,12 +11879,21 @@ _yahooads_
 ||yahoo.*/b?
 ||yahoo.*/c?
 ||yahoo.*/gb.gif?
+||yahoo.*/p.gif?$domain=tumblr.com|yahoo.co.jp|yahoo.com
 ||yahoo.*/images/rt.
 ||yahoo.*/images/rt_
 ||yahoo.*/js/geov2.$script
 ||yahoo.*/js/no.$script
 ||yahoo.*/js/sq.$script
 ||yahoo.*/mc/md.$subdocument
+||yahoo.co.jp/_td-$domain=yahoo.co.jp
+||yahoo.co.jp/_td.$domain=yahoo.co.jp
+||yahoo.co.jp/_td^$domain=yahoo.co.jp
+||yahoo.co.jp/_td_$domain=yahoo.co.jp
+||yahoo.com/_td-$domain=yahoo.com
+||yahoo.com/_td.$domain=yahoo.com
+||yahoo.com/_td^$domain=yahoo.com
+||yahoo.com/_td_$domain=yahoo.com
 ||amp.yahoo.
 ||analytics.yahoo.$third-party
 ! Commented out duplicated filters [https://github.com/k2jp/abp-japanese-filters/issues/9 reported] by [https://github.com/SMed79 SMed79], Jun 20, 2015
@@ -11753,6 +11933,7 @@ _yahooads_
 ||rdsig.yahoo.$image,object,subdocument
 ||rtb.pclick.secure.yahoo.
 ||tomlin.yahoo.
+||udc.yahoo.$domain=tumblr.com|yahoo.co.jp|yahoo.com
 ||ybp.yahoo.
 ||ybx.yahoo.
 ||yeas.yahoo.
@@ -11790,38 +11971,39 @@ _yahooads_
 ||yieldtraffic.com^
 ||yieldtraffic.com^$popup
 ||yigao.com^$third-party
-||yimg.*/bdv/
-||yimg.*/images/*/campaign/$domain=yahoo.co.jp|yahoo.com
-||yimg.*/images/*/point$domain=yahoo.co.jp|yahoo.com
-||yimg.*/images/*/pr/
-||yimg.*/images/account/sp/*/reg/ccc/
+||yimg.*/bdv/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/*/campaign/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/*/point$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/*/pr/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/account/sp/*/reg/ccc/$domain=tumblr.com|yahoo.co.jp|yahoo.com
 ! Commented out duplicated filters [https://github.com/k2jp/abp-japanese-filters/issues/9 reported] by [https://github.com/SMed79 SMed79], Jun 20, 2015
-! ||yimg.*/images/analytics/
+! ||yimg.*/images/analytics/$domain=tumblr.com|yahoo.co.jp|yahoo.com
 ! Moved to the Paranoid subscription to avoid a false positive blocking loading comments on each news at headlines.yahoo.co.jp. I think this is a tight-coupled bug because the filter is correctly blocking beacons or loggings. YAHOO JAPAN is essentially responsible for fixing it, May 16, 2015
-! ||yimg.*/images/ds/
-||yimg.*/images/listing/
-||yimg.*/images/market/
-||yimg.*/images/news/newsSearch/
+! ||yimg.*/images/ds/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/listing/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/market/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/news/newsSearch/$domain=tumblr.com|yahoo.co.jp|yahoo.com
 ! Commented out a filter for beacon generator to avoid ReferenceError: YAHOO is not defined @ http://i.yimg.jp/lib/news/ult_1_1-min.js:1 , Jan 17, 2014
 ! Even though this filter is commented out, the beacon server ybx.yahoo.co.jp is still blocked ;-)
-! ||yimg.*/images/rapid/
-||yimg.*/images/settlecomtd/yjbfp/
-||yimg.*/images/ycd/
-||yimg.*/images/yjcard/$domain=yahoo.co.jp|yahoo.com
-||yimg.*/js/geov*.$script
-||yimg.*/lib/*/cs_$script
-||yimg.*/lib/*/bc_$script
-||yimg.*/lib/3pm/$script
-||yimg.*/lib/bc/$script
-||yimg.com/cv/
-||yimg.com/iv/
-||yimg.com/qb/
-||yimg.com/rq/
-||yimg.jp/cv/
-||yimg.jp/iv/
-||yimg.jp/qb/
-||yimg.jp/rq/
-! ||ads.yimg.
+! ||yimg.*/images/rapid/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/settlecomtd/yjbfp/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/ycd/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/images/yjcard/$domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/js/geov*.$script,domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/lib/*/cs_$script,domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/lib/*/bc_$script,domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/lib/*/sda/$script,domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/lib/3pm/$script,domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.*/lib/bc/$script,domain=tumblr.com|yahoo.co.jp|yahoo.com
+||yimg.com/cv/$domain=yahoo.com
+||yimg.com/iv/$domain=yahoo.com
+||yimg.com/qb/$domain=yahoo.com
+||yimg.com/rq/$domain=yahoo.com
+||yimg.jp/cv/$domain=yahoo.co.jp
+||yimg.jp/iv/$domain=yahoo.co.jp
+||yimg.jp/qb/$domain=yahoo.co.jp
+||yimg.jp/rq/$domain=yahoo.co.jp
+! ||ads.yimg.$domain=tumblr.com|yahoo.co.jp|yahoo.com
 ||yiqiwin.com^$third-party
 ||yldbt.com^
 ||yldmgrimg.net^
@@ -11838,13 +12020,17 @@ _yahooads_
 ||youradexchange.com^$popup
 ||youradexchange.com^$third-party
 ||youradslab.com^
+||yourfirstcheapshop.com^$third-party
 ||yourjavascript.com^$third-party
 ||youtopry.com^
-||youtube.com/get_video?
-||youtube.com/ptracking?
-||youtube.com/set_awesome?
-||s.youtube.com^
-||s2.youtube.com^
+||youtube.com/api/stats/$domain=youtube.com
+||youtube.com/get_midroll_info^$domain=youtube.com
+||youtube.com/get_video?$domain=youtube.com
+||youtube.com/ptracking?$domain=youtube.com
+||youtube.com/set_awesome?$domain=youtube.com
+||youtube.com/youtubei/$domain=youtube.com
+||s.youtube.com^$domain=youtube.com
+||s2.youtube.com^$domain=youtube.com
 ||youwatchtab.com^
 ||youwatchtab.com^$popup
 !False Positives with dammy 1x1 placeholders for css spriting
@@ -11896,6 +12082,7 @@ _yahooads_
 ||zimg.jp^
 ||zinzimo.info^$third-party
 ||ziyu.net^$third-party
+||zmctrack.net^
 ||zn0s.com^
 ||znews.su^$third-party
 ||zog.link^
@@ -12297,13 +12484,12 @@ _yahooads_
 !
 ! ---------- Domains optionally with path END ----------
 
-! Checksum: pChrW3FOLBUnj9GTjUbUVw
 ! Homepage: https://github.com/k2jp/abp-japanese-filters/
 ! Title: ABP Japanese Element-hiding filters (ONLY FOR Japanese and experienced users: READ Support Policy)
 ! Expires: 6 hours
-! OriginalVersion: 201712041516
+! OriginalVersion: 201910012344
 !
-! Last modified: 2017-12-04 15:16 JST(UTC+0900)
+! Last modified: 2019-10-01 23:44 JST(UTC+0900)
 ! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
 ! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
 ! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -12794,6 +12980,7 @@ _yahooads_
 ##a[href*="ad-v.jp/*/click/"]
 ! Moved to the paranoid subscription, Mar 9, 2013
 ! ##a[href*="//adf.ly/"]
+##a[href*=".adfactory.io/"]
 ##a[href*="//adjc.biz/"]
 ##a[href*="//cou.adjust-net.jp"]
 ##a[href*="adjustnetwork.com/aan/"]
@@ -12804,8 +12991,9 @@ _yahooads_
 ##a[href*="//adultsuns.net/"]
 ##a[href*=".advg.jp/ad"]
 ##a[href*="advleniv.com/"]
-##a[href*="//ad.agilemedia.jp"]
+##a[href*=".afesta.tv/?af="]
 ##a[href*="affbuzzads.com"]
+##a[href*="//ad.agilemedia.jp"]
 ##a[href*="ainte.jp/cid/"]
 ##a[href*="//sos.allabout.co.jp"]
 ##a[href*=".apple.com/"][href*="/id"][href*="&amp;at="]
@@ -12824,6 +13012,7 @@ _yahooads_
 ##a[href*=".bizreach.jp/"]
 ##a[href*=".blogmura.com/in/"]
 ##a[href*="//extlink.blogsys.jp/"]
+##a[href*=".bokenya.jp/af/"]
 ##a[href*=".brothersoft."]
 ##a[href*=".ca-mpr.jp/"]
 ##a[href*="//refer.ccbill.com"]
@@ -12836,6 +13025,7 @@ _yahooads_
 ##a[href*=".cpalead.com"]
 ##a[href*=".csolution.jp/"][href*="//cm-"]
 ##a[href*=".cuenote.jp/"]
+##a[href*="//d.pr/"]
 ##a[href*="digiket.com/work/show/_data/ID="][href*="/AFID="]
 ##a[href*="//djdmms.net/"]
 ##a[href*="dlsite.com/dlaf/=/link/"]
@@ -12878,6 +13068,7 @@ _yahooads_
 ##a[href*="//cl.jlisting.jp"]
 ##a[href*="//36.jpn.org/"]
 ##a[href*="//on.jpn.org/"]
+##a[href*="//jpnhighlow-as.life/"]
 ##a[href*="//search.jword.jp"]
 ##a[href*="//kvors.com/click/?"]
 ##a[href*="//lahw.info/"]
@@ -12912,6 +13103,7 @@ _yahooads_
 ##a[href*=".afl.rakuten.co.jp/hsc/"]
 ##a[href*="//rd.rakuten.co.jp/c/?"]
 ! ##a[href*="//rd.rakuten.co.jp/s/?"]
+~rapidgator.net##a[href*="//rapidgator.net/article/premium/"]
 ~rikunabi.com##a[href*=".rikunabi.com/"][href*=";vos="]
 ~rikunabi.com##a[href*=".rikunabi.com/"][href*="?vos="]
 ##a[href*="rssad.jp/trendmatch/"]
@@ -13516,7 +13708,6 @@ _yahooads_
 ##[class*="-AD7"]:not(:root):not(body):not(input)
 ##[class*="-AD8"]:not(:root):not(body):not(input)
 ##[class*="-AD9"]:not(:root):not(body):not(input)
-##[class*="-ADS-"]:not(:root):not(body):not(input)
 ##[class*="-ADS_"]:not(:root):not(body):not(input)
 ##[class*="-ADS0"]:not(:root):not(body):not(input)
 ##[class*="-ADS1"]:not(:root):not(body):not(input)
@@ -13539,7 +13730,6 @@ _yahooads_
 ##[class*="-ADV7"]:not(:root):not(body):not(input)
 ##[class*="-ADV8"]:not(:root):not(body):not(input)
 ##[class*="-ADV9"]:not(:root):not(body):not(input)
-##[class*="-ADs-"]:not(:root):not(body):not(input)
 ##[class*="-ADs_"]:not(:root):not(body):not(input)
 ##[class*="-ADs0"]:not(:root):not(body):not(input)
 ##[class*="-ADs1"]:not(:root):not(body):not(input)
@@ -13563,7 +13753,6 @@ _yahooads_
 ##[class*="-ad7"]:not(:root):not(body):not(input)
 ##[class*="-ad8"]:not(:root):not(body):not(input)
 ##[class*="-ad9"]:not(:root):not(body):not(input)
-##[class*="-ads-"]:not(:root):not(body):not(input)
 ##[class*="-ads_"]:not(:root):not(body):not(input)
 ##[class*="-ads0"]:not(:root):not(body):not(input)
 ##[class*="-ads1"]:not(:root):not(body):not(input)
@@ -14231,6 +14420,7 @@ nicovideo.jp###banner
 nicovideo.jp###flogbox
 nicovideo.jp###Recommend
 nicovideo.jp###web_pc_prime
+nicovideo.jp##.MarqueeContainer
 nicovideo.jp##.sidewallAd
 seiga.nicovideo.jp##a[href*="//rd.nicovideo.jp/cc/seiga_top/"]
 www.nicovideo.jp###content > #enquete-placeholder ~ *
@@ -14395,7 +14585,10 @@ twitter.com##.promoted-account
 twitter.com##.promptbird
 twitter.com##.promoted-trend
 twitter.com##.promoted-tweet
+twitter.com##.stream-items > .has-recap
 twitter.com##.stream-items > .stream-user-gallery.separation-module
+twitter.com##.stream-items > .WtfLargeCarouselStreamItem
+twitter.com##.stream-items > [data-suggestion-json*="ActivityTweet"]
 analytics.twitter.com###BlockedAdsWarning
 twitteranalyzer.com###BannerHolder
 uniangel.info###cgi
@@ -14500,6 +14693,7 @@ youtube.com###feed-pyv-container
 youtube.com###ticker
 youtube.com##.ads-pyv
 youtube.com##.watch-pyv-vid
+youtube.com##.ytp-next-button.ytp-button
 ! ---------- Element Hiding with domains END ----------
 !
 ! ########## Samurai Factory END ##########
@@ -14507,22 +14701,14 @@ ongaeshi.biz,akazunoma.com,amearare.com,ame-zaiku.com,ari-jigoku.com,atukan.com,
 ! ---------- Samurai Factory END ----------
 !
 ! ---------- Element Hiding END ----------
+
 !
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/1964
-@@||google.*/maps/_/js/
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/1802
-@@||alicdn.com/tb-mod/$domain=taobao.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/34795#issuecomment-544906454
+twitter.com#@#[class*="-ad9"]:not(:root):not(body):not(input)
+! https://github.com/AdguardTeam/AdguardFilters/issues/24979
+@@||cdns.gigya.com/js/gigya.js$domain=tf1.fr
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1686
 ! fixing Google Music
 @@|http:*?*&ip=$domain=play.google.com
-! http://forum.adguard.com/showthread.php?9195
-@@||facebook.com/connect/ping$domain=starislandgames.net
-! [Temporary] http://forum.adguard.com/showthread.php?7984
-@@||global.fncstatic.com/static/p/video/app/landing/
-! http://forum.adguard.com/showthread.php?8373 (#78)
-e.mail.ru#@#[class*="advertising"]:not(body):not(input)
-! blocks useful popups(like chat with the seller) For ABP Japanese Filters
+! blocks useful popups(like chat with the seller)
 @@||aliexpress.com^
-! https://github.com/AdguardTeam/AdguardForWindows/issues/448
-2animx.com#@#[id*="_ad_"]:not([id*="no_ad"]):not([class^="artical"]):not(body):not(input)
-!

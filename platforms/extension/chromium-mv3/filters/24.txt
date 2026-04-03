@@ -1,0 +1,230 @@
+! Checksum: yPAxn9vBCzgLEJ5hH7lUOw
+! Title: Quick Fixes Filter
+! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
+! Version: 2.0.8.20
+! TimeUpdated: 2025-10-10T20:10:26-04:00
+! Expires: 10 days (update frequency)
+!-------------------------------------------------------------------------------!
+!------------------ Krayzylist -------------------------------------------------!
+!-------------------------------------------------------------------------------!
+!#safari_cb_affinity(custom)
+! Title: Krayzylist
+! Description: Personal Blocklist
+! Expires: 1 hour (update frequency)
+! Last modified:
+!!---Fonts---!!
+NotoSans*$font
+OpenSans-*00*$font
+||fonts.gstatic.com/s/googlesans/$font
+||fonts.gstatic.com/s/roboto/$font
+!!---Rakuten---!!
+@@||rakuten.com$document
+@@||datadoghq-browser-agent.com*$domain=rakuten.com|rakuten.ca
+@@||datadoghq.com*$domain=rakuten.com|rakuten.ca
+@@||ebates.com*$domain=rakuten.com|rakuten.ca
+@@||ecbsn.com*$domain=rakuten.com|rakuten.ca
+@@||jdoqocy.com*$domain=bing.com|rakuten.com|rakuten.ca
+@@||linksynergy.com*$domain=rakuten.com|rakuten.ca
+@@||optimizely.com*$domain=rakuten.com|rakuten.ca
+@@||segment.com*$domain=rakuten.com|rakuten.ca
+!!--Scriptlets--!!
+! bloomberg.com#%#(()=>const{log,warn,error,debug}=window.console;const subs={BLOOMBERG_ALL:'bbg-all',BLOOMBERG_DIGITAL:'bbg-digital',BUSINESSWEEK_PRINT:'bw-print',BUSINESSWEEK_DIGITAL:'bw-digital',BUSINESSWEEK_ZINIO:'bw-zinio'};const subStrings=Object.values(subs);const _searchParamsGet=URLSearchParams.prototype.get;URLSearchParams.prototype.get=function get(){let params=_searchParamsGet.apply(this,arguments);if(arguments[0]==='mockSub'){return 'bbg'}if(arguments[0]==='showPaywall'){return null}return params};const _arraySome=Array.prototype.some;Array.prototype.some=function some(){let includesSubs=false;subStrings.forEach(str=>{if(this.includes(str)){includesSubs=true}});if(includesSubs){return true}return _arraySome.apply(this,arguments)};Object.defineProperty(window,'_regUserInfo',{get(){return window._regUserInfo_},set(v){v.subscription={type:'BBW'};window._regUserInfo_=v}});Object.defineProperties(Object.prototype,{_isTerminalSubscriber:{get(){return true},set(){}},_isBBGSubscriber:{get(){return true},set(){}},_isBWSubscriber:{get(){return true},set(){}}});)();
+bloomberg.com,ft.com,nytimes.com#%#//scriptlet('remove-cookie')
+bloomberg.com,ft.com,nytimes.com#%#//scriptlet('set-local-storage-item', '/*/', '$remove$')
+bloomberg.com,ft.com,nytimes.com#%#//scriptlet('set-session-storage-item', '/*/', '$remove$')
+reddit.com#%#//scriptlet('set-cookie', 'theme', '0')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', '1', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', '5', '1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'aj', 'u')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'ak', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'ao', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'ap', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'aq', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'ar', '1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'au', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'av', '1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'ax', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'ay', 'b')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'bc', '1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'bi', '1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'dcm', '3')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'dcs', '0')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'psb', '-1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'sn', '5')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'v', 'm')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'a', 'n')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'be', '3')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 'bj', '1')
+duckduckgo.com#%#//scriptlet('trusted-set-cookie', 't', 'n')
+!!---General URL---!!
+/*.consentdrawer.bundle.*$script
+/AppMeasurement.min.js$script
+/admr.*$script
+/ads/adsbygoogle.*$script
+/airgap.js
+/airgapWrapper.js
+/cxense-candy.js
+/display-ads.*$script
+/eu_cookie_compliance.min.js
+/gdpr*.bundle.js
+/openads/js/*$script
+/pmc-sticky-rail-ads/*$script
+/pum-site-scripts.js
+/scripts/adslot.js
+/setup-ads.*$script
+/wp-content/plugins/elementor-pro/*$script
+@@/trackit.js$domain=click.americanexpress.com
+!!---Specific URL---!!
+||a.jsrdn.com$script
+||adtech.redventures.io$script
+||appboycdn.com$script
+||assets.msn.com/*/action-tray.*.js$script
+||assets.msn.com/*/libs_ad-service_dist_AdRequestManager*.js$script
+||assets.msn.com/*/mobile-app-upsell.*.js$script
+||assets.msn.com/*/one-footer.*.js$script
+||cdn.brandmetrics.com/*/theathletic.js$script
+||cdn.consentmanager.net$script
+||cdn.cookielaw.org$script
+||cdn.cxense.com$script
+||cdn.iubenda.com/cookie_solution$script
+||cdn.jwplayer.com^$script
+||cdn.optimizely.com$script
+||cdn.privacy-mgmt.com$third-party
+||cdn.taboola.com/*/loader.js$script
+||cmp.inmobi.com$script
+||convertkit.com/ckjs$script
+||fundingchoicesmessages.google.com^$script
+||gstatic.com/external_hosted/lottie/lottie_light.js$script
+||js.memberful.com$script
+||jwpcdn.com^$script
+||klaviyo.com/media/js$script
+||lightboxcdn.com$script
+||nyt.com/ads/
+||nytimes.com/vi-assets/static-assets/adslot-*.js$script
+||piratewires.com/_next/static/chunks/app/$script
+||pixeledhub.com$script
+||polyfill-fastly.io$script
+||scripts.webcontentassessor.com$third-party
+||snap.licdn.com$script
+||sourcepoint.*.com$script
+||static.klaviyo.com/*/default~signup_forms~onsite-triggering.*$script
+||static.semafor.com/_next/static/chunks$script
+||static01.nyt.com/ads^
+||substackcdn.com/*/free_email_form-*.js$script
+||substackcdn.com/*/HoverCard-*.js$script
+||tags.tiqcdn.com$script
+||theathletic.com/*/webpack*.js$script
+||whoami-static.barstoolsports.com$script
+||youtube.com/s/*/intersection-observer.min.js$script
+!!---Specific CSS---!!
+architecturaldigest.com,bonappetit.com,cntraveler.com,gq.com,newyorker.com,pitchfork.com,self.com,teenvogue.com,them.us,vanityfair.com,vogue.com,wired.com##figure[data-testid="cne-interlude-container"]
+bulbapedia.bulbagarden.net###siteNotice
+cbssports.com#$#.Skybox--minHeight,.Skybox--minHeightBoth { --global-nav-v2-offset: 0px !important; }
+cbssports.com###GlobalNavOffset,#GlobalNavOffsetSpacer
+cbssports.com##body > div:has([data-adm-url])
+cnbc.com##.PortfolioBannerAd-adContainer
+cnet.com##.c-adSkyBox,.c-adSkyBox_expanded,.c-avStickyVideo,.c-CnetAvStickyVideo,.c-avLazyStickyVideo-sticky,.c-head_disclosure,.c-globalDisclosure,.c-naviWidget
+daringfireball.net##.ookiaks
+digitaltrends.com##.dtads-content,.dtads-location,.dtads-mobile
+digitaltrends.com##[class*="dtads-"]
+espn.com##.article-legal-footer
+fantasypros.com##.leaderboard-footer-wrap,.mpb-upgrade-modal-container,section.pc_advertisement-section
+ft.com##[data-config-key="leaderboard"]
+healthline.com##.wp-block-healthline-jwplayer
+msn.com##.articlePageIntraArticleFullWidth,.banner-container,.consumption-page-banner-wrapper,.consumption-page-feed-wrapper,.end-of-content-block,.mcp-feed-container,above-river-block,homepage-footer,mobile-footer,views-right-rail
+msn.com###continuousReadingContainer > div > fluent-button.article-cont-read-button-on-app.accent
+mygolfspy.com##form
+nbcsports.com##.ArticlePage-lead,bsp-banner,bsp-reverse-scroll-ad.Page-ad,.ArticlePage-actions-wrapper
+nfl.com##.d3-l-adv-row
+nfl.com#$#article[class] { margin-top: 0px !important; }
+nypost.com##.entry-content.featured-image.featured-image__wrapper,.membership-comments-container,.membership-reactions-module,.nyp-zephr-flyout,.scrollingdown.hide,.widget--vividseats,amp-video-iframe,.recirc,.wp-block-nypost-editor-newsletter
+nypost.com##div:has([data-adm-url])
+nytimes.com##[id*="story-ad-"]
+pgatour.com##tbody.css-0 > tr.no-print.css-0
+reuters.com##[data-testid="RefinitivPromoBar"],[data-testid="ResponsiveAdSlot"]
+semafor.com##div[class*="styles_floatingBanner"]
+si.com##figure[data-mm-id],figure.style_uhlm2
+/mm-recirculation-injector.js$script
+||cdn.userway.org^$domain=si.com
+||players.voltaxservices.io^
+||prebid.media.net^
+||vms-videos.minutemediaservices.com^
+||html-load.com/player/www.si.com^$xmlhttprequest
+si.com##[class^="img_"]:has([data-google-query-id])
+si.com##[id^="tout_"]
+si.com##[id="mmvid"]
+soundguys.com##div[data-ad-type],.e_gd.e_f
+speedtest.net##.mobile-during-test-banner,.mobile-pretest,.modal-overlay
+thurrott.com##div[data-concert],[data-thurrott-section="inline-form"]
+usatoday.com##body > div:has([href*="https://getad"])
+usatoday.com#$#header.gnt_n { margin: 0px 0 0 }
+usatoday.com#$#header.gnt_n { top: 0px }
+variety.com##.pmc-contextual-player,#sticky-rail-ad
+variety.com##[id*="adm-inline-article-ad-"]
+whathifi.com###top-leaderboard
+wikipedia.org###centralNotice
+x.com##div[aria-label="Home timeline"] > div:has([data-testid="tweetTextarea_0_label"])
+zerohedge.com##.BlockContactInfo_dropdown__n9SPS,.BlockLogin_container__f_B6j,.BlockSearch_container__UmRtJ,.bottom-banner-container,.leaderboard-mobile,.leaderboard-tablet-container,.native,.SidebarLeft_debateCallout__mMVK8,.TopPosts_posts__kSDL7,.ZeroHedgeReads_container__qAqpv,.leaderboard-container
+zerohedge.com##[class*="PromoBanner_"]
+zerohedge.com##[id*="in-content"]
+zerohedge.com##[id*="list-display-"]
+zerohedge.com###exitModalOverlay,#footer,#store-promo
+zerohedge.com##div.fc-ab-root:nth-child(n)
+zerohedge.com##div[class*="TheMarketEarHomePageSidebar"]
+zerohedge.com##div[id="content-pack"]
+zerohedge.com##section[class*="PromoButton_"]
+/images/marketing/zh_store.jpg$domain=zerohedge.com
+!!--Google--!!
+google.com##.ULSxyf > .MjjYud > [data-iu] > #iur,.vRy7rc
+google.com##.ULSxyf > .MjjYud > [data-iu]:has(#iur,.vRy7rc)
+google.com##.ULSxyf:has(.MjjYud > [class] > [jsmodel] > #iur)
+google.com###rcnt #Odp5De:has(#iur)
+google.com##.MjjYud .vt6azd > .Wt5Tfe:has([jsname="Cpkphb"])
+google.com##.MjjYud .vt6azd > [jscontroller="aD8OEe"]:has(.DyfMyc)
+google.com###media_result_group,#iur,.related-question-pair
+google.com##[jsname="xQjRM"]:has([data-initq],#media_result_group,.cUnQKe)
+google.com##[jsname="Ypkwb"],[jsname="Cpkphb"],[data-initq],#bres,.cUnQKe,.vRy7rc
+google.com##[jsname="xQjRM"] > .sATSHe:has([jsname="Cpkphb"])
+google.com###kp-wp-tab-overview > div > [jsname="xQjRM"]:has(.vt6azd > .Wt5Tfe > .ouy7Mc)
+!!--DuckDuckGo--!!
+duckduckgo.com##.related-searches,[data-layout="images"],[data-testid="images"],[data-testid="related_searches"],span[data-testid="feedback-prompt"],[data-layout="videos"],[data-testid="feedback-prompt"],[data-layout="related_searches"],.related-searches
+!!--Bing--!!
+@@||bing.com/fd/ls/
+! MoP Answers !
+bing.com##.b_ans.b_mop.b_imgansacf,.b_mop.b_imgans,.b_mop.b_mopb.b_vidans,.b_mop.b_vidAns
+! Related Searches !
+bing.com##.b_mrs,.b_msg.b_canvas,.b_rrsr,.b_rs,.richrswrapper,.rrMrsWrapper,#b_alsotry,#b_mrs_DynamicMRS,#b_typetosearchtips,#inline_rs,#relatedQnAListDisplay,#relatedSearchesLGWContainer,.b_inline_ajax_rs
+bing.com##.b_ans:has(.b_rs)
+bing.com##.b_mop:has(.rqnaContainer)
+! CoPilot Logos !
+bing.com##.b_phead_chat_link,.ca_top_sec
+! Unnecessary Labels !
+bing.com##.b_ans.opal_serpftrc,.b_caption ::before,.b_widgetContainer.slide-in,.ca_top_sec,.df_multisrc,.fdbk_thmb_root,.fdbk-cntr,.gs_hv2,.gs_notitle,.gs_pre_cont,.gs_secctrl,#b_mtp,#b_pag_sh_btn_container,#fbtop,#qs_searchBoxOuter,#sacs_win,.b_caption.b_rich
+! People Also Ask !
+bing.com##.b_ans > .rqnaContainerwithfeedback,.df_alaskcarousel,#sa_requery
+! Shopping Ads !
+bing.com##.sa_productAds,[data-ans="BingMon_SponsoredAdsBlock"]
+bing.com##.b_ans:has(.sa_productAds,[data-ans="BingMon_SponsoredAdsBlock"])
+www.youtube.com#%#(()=>{const t={apply:(t,o,n)=>{const e=n[0];return"function"==typeof e&&e.toString().includes("onAbnormalityDetected")&&(n[0]=function(){}),Reflect.apply(t,o,n)}};window.Promise.prototype.then=new Proxy(window.Promise.prototype.then,t)})();
+www.youtube.com#%#(()=>{const e={apply:(e,t,n)=>{const o=Reflect.apply(e,t,n);try{o instanceof HTMLIFrameElement&&"about:blank"===o.src&&o.contentWindow&&(o.contentWindow.fetch=window.fetch,o.contentWindow.Request=window.Request)}catch(e){}return o}};Node.prototype.appendChild=new Proxy(Node.prototype.appendChild,e)})();
+www.youtube.com#%#//scriptlet('adjust-setTimeout', '[native code]', '17000', '0.001')
+www.youtube.com#%#(()=>{let t=document.location.href,e=[],n=[],o="",r=!1;const i=Array.prototype.push,a={apply:(t,o,a)=>(window.yt?.config_?.EXPERIMENT_FLAGS?.html5_enable_ssap_entity_id&&a[0]&&a[0]!==window&&"number"==typeof a[0].start&&a[0].end&&"ssap"===a[0].namespace&&a[0].id&&(r||0!==a[0]?.start||n.includes(a[0].id)||(e.length=0,n.length=0,r=!0,i.call(e,a[0]),i.call(n,a[0].id)),r&&0!==a[0]?.start&&!n.includes(a[0].id)&&(i.call(e,a[0]),i.call(n,a[0].id))),Reflect.apply(t,o,a))};window.Array.prototype.push=new Proxy(window.Array.prototype.push,a),document.addEventListener("DOMContentLoaded",(function(){if(!window.yt?.config_?.EXPERIMENT_FLAGS?.html5_enable_ssap_entity_id)return;const i=()=>{const t=document.querySelector("video");if(t&&e.length){const i=Math.round(t.duration),a=Math.round(e.at(-1).end/1e3),c=n.join(",");if(!1===t.loop&&o!==c&&i&&i===a){const n=e.at(-1).start/1e3;t.currentTime<n&&(t.currentTime=n,r=!1,o=c)}else if(!0===t.loop&&i&&i===a){const n=e.at(-1).start/1e3;t.currentTime<n&&(t.currentTime=n,r=!1,o=c)}}};i();new MutationObserver((()=>{t!==document.location.href&&(t=document.location.href,e.length=0,n.length=0,r=!1),i()})).observe(document,{childList:!0,subtree:!0})}))})();
+www.youtube.com#%#(()=>{const t={construct:(t,e,c)=>{try{const n=e[0];let o=e[1]?.body;if(!n?.includes("youtubei")||location.href.includes("/shorts/")||location.href.includes("youtube.com/tv")||!o)return Reflect.construct(t,e,c);if(o.includes('"contentPlaybackContext"')||o.includes('"adSignalsInfo"')){const n=JSON.parse(o);if(!n.context?.client)return Reflect.construct(t,e,c);n.playbackContext&&(n.playbackContext.adPlaybackContext={pyv:!0}),n.playerRequest&&(n.playerRequest.playbackContext.adPlaybackContext={pyv:!0}),o=JSON.stringify(n),e[1].body=o}}catch(t){}return Reflect.construct(t,e,c)}};window.Request=new Proxy(window.Request,t)})();
+www.youtube.com#%#(()=>{const e={apply:(e,t,n)=>{if(location.href.includes("/shorts/")||location.href.includes("youtube.com/tv"))return Reflect.apply(e,t,n);try{let o=n[0];if(o&&(o.includes('"contentPlaybackContext"')||o.includes('"adSignalsInfo"'))){const c=JSON.parse(o);if(!c.context?.client)return Reflect.apply(e,t,n);c.playbackContext&&(c.playbackContext.adPlaybackContext={pyv:!0}),c.playerRequest&&(c.playerRequest.playbackContext.adPlaybackContext={pyv:!0}),o=JSON.stringify(c),n[0]=o}}catch(e){}return Reflect.apply(e,t,n)}};window.TextEncoder.prototype.encode=new Proxy(window.TextEncoder.prototype.encode,e)})();
+www.youtube.com#%#(()=>{const t={apply:(t,e,a)=>{if(location.href.includes("/shorts/")||location.href.includes("youtube.com/tv"))return Reflect.apply(t,e,a);try{const n=a[0];if(!n?.context?.client)return Reflect.apply(t,e,a);n.playbackContext&&(n.playbackContext.adPlaybackContext={pyv:!0}),n.playerRequest&&(n.playerRequest.playbackContext.adPlaybackContext={pyv:!0}),a[0]=n}catch(t){}return Reflect.apply(t,e,a)}};window.JSON.stringify=new Proxy(window.JSON.stringify,t)})();
+www.youtube.com#%#(()=>{const t={apply:(t,e,n)=>{try{let a=n[0];if(!a||location.href.includes("youtube.com/tv"))return Reflect.apply(t,e,n);const o=Array.isArray(a),c=o?a[0]:a;if(c.includes('"contentPlaybackContext"')||c.includes('"adSignalsInfo"')){const a=JSON.parse(c);if(!a.context?.client)return Reflect.apply(t,e,n);a.playbackContext&&(a.playbackContext.adPlaybackContext={pyv:!0}),a.playerRequest&&(a.playerRequest.playbackContext.adPlaybackContext={pyv:!0});const l=JSON.stringify(a);o?n[0][0]=l:n[0]=l}}catch(t){}return Reflect.apply(t,e,n)}};window.XMLHttpRequest.prototype.send=new Proxy(window.XMLHttpRequest.prototype.send,t)})();
+www.youtube.com#%#(()=>{const t=Function.prototype.call;let e=!1,o=!1,n=!1;const c={apply:(c,r,a)=>{const l=a[0];if(l?.requestNumber&&l?.snapshot)try{o=((t,e=5)=>{if("object"!=typeof t||null===t)return!1;const o=new Array(1e3);let c=0;const r=new WeakSet;for(o[c++]={obj:t,depth:0};c>0&&!n;){const{obj:t,depth:a}=o[--c];if(a>e||"object"!=typeof t||null===t||r.has(t))continue;let l;r.add(t);try{l=Object.hasOwn(t,"backoffTimeMs")}catch(t){}if(l)return void 0!==t.backoffTimeMs||(n=!0,!1);for(const e in t)if(Object.hasOwn(t,e)){let n;try{n=t[e]}catch(t){}null!==n&&"object"==typeof n&&!r.has(n)&&c<o.length&&(o[c++]={obj:n,depth:a+1})}}return!1})(l),e=!0,(o||n)&&(Function.prototype.call=t)}catch(t){}return Reflect.apply(c,r,a)}};window.Function.prototype.call=new Proxy(window.Function.prototype.call,c);window.addEventListener("load",(async()=>{if(Function.prototype.call=t,!o&&e)return;const n=window.location.search,c=new URLSearchParams(n).get("v");if(!c)return;const r=await(a="#movie_player",l=200,i=1e4,new Promise((t=>{if(!a||!l||!i)return void t(null);const e=Date.now()+i,o=()=>{const n=document.querySelector(a);n?t(n):Date.now()>e?t(null):setTimeout(o,l)};o()})));var a,l,i;if(!r)return;const s=new URLSearchParams(n).get("t")??"0",u=parseInt(s,10);if("function"==typeof r.loadVideoById)try{r.loadVideoById(c,u)}catch(t){}}))})();
+youtube.com#%#//scriptlet('ubo-json-prune.js', 'playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots legacyImportant')
+www.youtube.com#%#//scriptlet('ubo-nano-stb.js', '[native code]', '17000', '0.001')
+!www.youtube.com##+js(json-prune-fetch-response, playerAds adPlacements adSlots no_ads playerResponse.playerAds playerResponse.adPlacements playerResponse.adSlots playerResponse.no_ads [].playerResponse.adPlacements [].playerResponse.playerAds [].playerResponse.adSlots [].playerResponse.no_ads, , propsToMatch, /player\?|get_watch|^\W+$/)
+www.youtube.com#%#//scriptlet('ubo-json-prune-fetch-response.js', 'adPlacements adSlots no_ads playerResponse.adPlacements playerResponse.adSlots playerResponse.no_ads [].playerResponse.adPlacements [].playerResponse.adSlots [].playerResponse.no_ads', '', 'propsToMatch', '/player?')
+www.youtube.com#%#//scriptlet('ubo-json-prune-fetch-response.js', 'playerAds adPlacements adSlots no_ads playerResponse.playerAds playerResponse.adPlacements playerResponse.adSlots playerResponse.no_ads', '', 'propsToMatch', '/playlist?')
+www.youtube.com#%#//scriptlet('ubo-json-prune-xhr-response.js', 'playerAds adPlacements adSlots no_ads playerResponse.playerAds playerResponse.adPlacements playerResponse.adSlots playerResponse.no_ads [].playerResponse.adPlacements [].playerResponse.playerAds [].playerResponse.adSlots [].playerResponse.no_ads', '', 'propsToMatch', '/\/player(?:\?.+)?$/')
+www.youtube.com#%#//scriptlet('ubo-rmnt.js', 'script', 'window\,"fetch"')
+youtube.com#%#//scriptlet('ubo-json-prune.js', 'entries.[-].command.reelWatchEndpoint.adClientParams.isAd')
+!www.youtube.com##+js(trusted-replace-outbound-text, JSON.stringify, contentPlaybackContext":{, contentPlaybackContext":{"isInlinePlaybackNoAd":true\,, condition, contentPlaybackContext)
+! www.youtube.com##+js(trusted-replace-outbound-text, JSON.stringify, "clientScreen":"WATCH", "clientScreen":"ADUNIT", condition, contentPlaybackContext)
+! www.youtube.com##+js(trusted-json-edit-fetch-request, .context.client+={"clientScreen":"ADUNIT"}, /get_watch?)
+! www.youtube.com##+js(trusted-replace-outbound-text, JSON.stringify, "params":", "params":"yAEB, condition, /("contentPlaybackContext":{".*\,"params":"|"params":".*"contentPlaybackContext":{")/)
+! www.youtube.com##+js(trusted-replace-outbound-text, JSON.stringify, "contentCheckOk":false, "params":"yAEB"\,"contentCheckOk":false, condition, /^(?=.*"contentPlaybackContext":{")(?!.*"params":").*$/)
+!#safari_cb_affinity
