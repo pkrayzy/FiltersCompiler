@@ -342,8 +342,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/1.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.4.76",
 			"timeUpdated": "2026-03-12T15:23:42+0000",
+=======
+			"version": "2.1.5.17",
+			"timeUpdated": "2026-04-03T12:19:42+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.1.5.17",
 			"timeUpdated": "2026-04-03T12:19:42+0000",
@@ -372,8 +377,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.4.53.2",
 			"timeUpdated": "2026-03-13T00:34:11+0000",
+=======
+			"version": "2.4.57.90",
+			"timeUpdated": "2026-04-03T13:32:55+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.4.57.90",
 			"timeUpdated": "2026-04-03T13:32:55+0000",
@@ -400,8 +410,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.1.45",
 			"timeUpdated": "2026-03-12T17:23:02+0000",
+=======
+			"version": "2.1.2.38",
+			"timeUpdated": "2026-04-03T13:33:06+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.1.2.38",
 			"timeUpdated": "2026-04-03T13:33:06+0000",
@@ -426,8 +441,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/4.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.26.14",
 			"timeUpdated": "2026-03-12T20:12:48+0000",
+=======
+			"version": "2.1.26.83",
+			"timeUpdated": "2026-04-03T11:19:30+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.1.26.83",
 			"timeUpdated": "2026-04-03T11:19:30+0000",
@@ -472,8 +492,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/6.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.51.40",
 			"timeUpdated": "2026-03-12T16:28:11+0000",
+=======
+			"version": "2.0.51.58",
+			"timeUpdated": "2026-03-31T16:27:43+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.51.58",
 			"timeUpdated": "2026-03-31T16:27:43+0000",
@@ -502,8 +527,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/7.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.72.73",
 			"timeUpdated": "2026-03-12T13:32:19+0000",
+=======
+			"version": "2.0.73.17",
+			"timeUpdated": "2026-04-02T14:32:05+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.73.17",
 			"timeUpdated": "2026-04-02T14:32:05+0000",
@@ -531,8 +561,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/8.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.9.2",
 			"timeUpdated": "2026-02-22T03:07:11+0000",
+=======
+			"version": "2.0.9.7",
+			"timeUpdated": "2026-03-31T10:26:36+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.9.7",
 			"timeUpdated": "2026-03-31T10:26:36+0000",
@@ -562,8 +597,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/9.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.33.61",
 			"timeUpdated": "2026-03-12T19:22:19+0000",
+=======
+			"version": "2.0.33.88",
+			"timeUpdated": "2026-04-03T11:19:36+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.33.88",
 			"timeUpdated": "2026-04-03T11:19:36+0000",
@@ -593,8 +633,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/10.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.3.87",
 			"timeUpdated": "2026-03-04T13:29:00+0000",
+=======
+			"version": "2.0.3.88",
+			"timeUpdated": "2026-03-17T14:30:41+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.3.88",
 			"timeUpdated": "2026-03-17T14:30:41+0000",
@@ -616,8 +661,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/11.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.68.18",
 			"timeUpdated": "2026-03-12T17:23:13+0000",
+=======
+			"version": "2.0.68.67",
+			"timeUpdated": "2026-04-03T11:19:38+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.68.67",
 			"timeUpdated": "2026-04-03T11:19:38+0000",
@@ -645,8 +695,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/13.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.63.3",
 			"timeUpdated": "2026-03-12T19:22:24+0000",
+=======
+			"version": "2.0.63.47",
+			"timeUpdated": "2026-04-01T17:24:09+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.63.47",
 			"timeUpdated": "2026-04-01T17:24:09+0000",
@@ -675,8 +730,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/16.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.56.22",
 			"timeUpdated": "2026-03-11T14:22:54+0000",
+=======
+			"version": "2.0.56.39",
+			"timeUpdated": "2026-04-02T18:23:47+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.56.39",
 			"timeUpdated": "2026-04-02T18:23:47+0000",
@@ -711,8 +771,13 @@
 			],
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.13.15",
 			"timeUpdated": "2026-03-12T17:23:24+0000",
+=======
+			"version": "2.0.13.29",
+			"timeUpdated": "2026-04-03T04:51:12+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.13.29",
 			"timeUpdated": "2026-04-03T04:51:12+0000",
@@ -736,8 +801,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/18.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.82.79",
 			"timeUpdated": "2026-03-12T19:22:41+0000",
+=======
+			"version": "2.0.84.24",
+			"timeUpdated": "2026-04-03T13:33:40+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.84.24",
 			"timeUpdated": "2026-04-03T13:33:40+0000",
@@ -763,8 +833,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/19.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.72.13",
 			"timeUpdated": "2026-03-12T20:13:11+0000",
+=======
+			"version": "2.0.73.36",
+			"timeUpdated": "2026-04-03T13:33:42+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.73.36",
 			"timeUpdated": "2026-04-03T13:33:42+0000",
@@ -790,8 +865,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/20.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.27.87",
 			"timeUpdated": "2026-03-12T14:23:38+0000",
+=======
+			"version": "2.0.28.30",
+			"timeUpdated": "2026-04-03T09:24:53+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.28.30",
 			"timeUpdated": "2026-04-03T09:24:53+0000",
@@ -817,8 +897,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/21.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.42.45",
 			"timeUpdated": "2026-03-12T16:28:31+0000",
+=======
+			"version": "2.0.43.17",
+			"timeUpdated": "2026-04-03T13:33:43+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.43.17",
 			"timeUpdated": "2026-04-03T13:33:43+0000",
@@ -844,8 +929,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/22.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.13.71",
 			"timeUpdated": "2026-03-12T16:28:31+0000",
+=======
+			"version": "2.0.13.81",
+			"timeUpdated": "2026-04-03T04:51:16+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.13.81",
 			"timeUpdated": "2026-04-03T04:51:16+0000",
@@ -871,8 +961,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/23.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.7.83",
 			"timeUpdated": "2026-03-12T15:24:25+0000",
+=======
+			"version": "2.0.7.93",
+			"timeUpdated": "2026-04-02T15:27:59+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.7.93",
 			"timeUpdated": "2026-04-02T15:27:59+0000",
@@ -926,8 +1021,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.3.29",
 			"timeUpdated": "2026-01-18T12:44:59+0000",
+=======
+			"version": "2.0.3.30",
+			"timeUpdated": "2026-03-27T16:46:59+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.3.30",
 			"timeUpdated": "2026-03-27T16:46:59+0000",
@@ -958,8 +1058,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.6.20",
 			"timeUpdated": "2026-03-12T05:01:52+0000",
+=======
+			"version": "2.0.6.27",
+			"timeUpdated": "2026-04-01T12:47:59+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.6.27",
 			"timeUpdated": "2026-04-01T12:47:59+0000",
@@ -988,8 +1093,13 @@
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.86.96",
 			"timeUpdated": "2026-03-13T00:53:16+0000",
+=======
+			"version": "2.1.88.19",
+			"timeUpdated": "2026-04-03T12:47:07+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.1.88.19",
 			"timeUpdated": "2026-04-03T12:47:07+0000",
@@ -1068,8 +1178,13 @@
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.86.95",
 			"timeUpdated": "2026-03-13T00:53:17+0000",
+=======
+			"version": "2.1.88.18",
+			"timeUpdated": "2026-04-03T12:47:07+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.1.88.18",
 			"timeUpdated": "2026-04-03T12:47:07+0000",
@@ -1098,8 +1213,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/realodix/AdBlockID/main/dist/adblockid.adfl.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.28.47",
 			"timeUpdated": "2026-03-11T20:44:18+0000",
+=======
+			"version": "2.0.28.69",
+			"timeUpdated": "2026-04-03T12:47:13+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.28.69",
 			"timeUpdated": "2026-04-03T12:47:13+0000",
@@ -1143,6 +1263,7 @@
 			"filterId": 203,
 			"name": "Hungarian filter",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"description": "Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.",
 			"timeAdded": "2014-06-30T07:56:55+0000",
 			"homepage": "https://github.com/hufilter/hufilter/wiki",
@@ -1154,6 +1275,8 @@
 			"version": "2.0.4.81",
 			"timeUpdated": "2026-03-12T20:44:36+0000",
 =======
+=======
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			"description": "Hufilter. Filter list that specifically removes ads, privacy threats, and security risks on websites in the Hungarian language.",
 			"timeAdded": "2014-06-30T07:56:55+0000",
 			"homepage": "https://hufilter.hu/",
@@ -1164,6 +1287,9 @@
 			"trustLevel": "high",
 			"version": "2.0.4.95",
 			"timeUpdated": "2026-04-02T08:47:32+0000",
+<<<<<<< HEAD
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
+=======
 >>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			"deprecated": false,
 			"languages": [
@@ -1173,6 +1299,10 @@
 				1,
 				2,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+				4,
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 				4,
 >>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
@@ -1193,8 +1323,13 @@
 			"subscriptionUrl": "https://urlhaus-filter.pages.dev/urlhaus-filter-ag-online.txt",
 			"trustLevel": "low",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.6.68",
 			"timeUpdated": "2026-03-13T00:53:33+0000",
+=======
+			"version": "2.1.7.2",
+			"timeUpdated": "2026-04-03T12:47:27+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.1.7.2",
 			"timeUpdated": "2026-04-03T12:47:27+0000",
@@ -1219,8 +1354,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.42.36",
 			"timeUpdated": "2026-03-12T08:45:44+0000",
+=======
+			"version": "2.0.42.78",
+			"timeUpdated": "2026-04-03T12:47:28+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.42.78",
 			"timeUpdated": "2026-04-03T12:47:28+0000",
@@ -1248,8 +1388,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-adblock-filters/adblock.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.16.37",
 			"timeUpdated": "2026-03-04T20:43:49+0000",
+=======
+			"version": "2.0.16.42",
+			"timeUpdated": "2026-03-29T20:44:31+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.16.42",
 			"timeUpdated": "2026-03-29T20:44:31+0000",
@@ -1277,8 +1422,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/cookies_filters/adblock_cookies.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.5.47",
 			"timeUpdated": "2026-03-02T00:55:09+0000",
+=======
+			"version": "2.0.5.49",
+			"timeUpdated": "2026-03-28T12:46:44+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.5.49",
 			"timeUpdated": "2026-03-28T12:46:44+0000",
@@ -1327,8 +1477,13 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/224.txt",
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.55.82",
 			"timeUpdated": "2026-03-13T00:34:49+0000",
+=======
+			"version": "2.1.56.99",
+			"timeUpdated": "2026-04-03T12:20:59+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.1.56.99",
 			"timeUpdated": "2026-04-03T12:20:59+0000",
@@ -1348,6 +1503,7 @@
 		{
 			"filterId": 227,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"name": "List-KR",
 			"description": "Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.",
 			"timeAdded": "2014-06-30T07:56:55+0000",
@@ -1360,6 +1516,8 @@
 			"version": "2.0.23.77",
 			"timeUpdated": "2026-03-11T05:00:01+0000",
 =======
+=======
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			"name": "List-KR Classic filter list",
 			"description": "The List-KR Сlassic filter list for AdGuard blocks ads and disables anti-adblock scripts on Korean-language websites and apps.",
 			"timeAdded": "2014-06-30T07:56:55+0000",
@@ -1371,6 +1529,9 @@
 			"trustLevel": "high",
 			"version": "2.0.23.86",
 			"timeUpdated": "2026-04-02T16:47:50+0000",
+<<<<<<< HEAD
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
+=======
 >>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 			"deprecated": false,
 			"languages": [
@@ -1396,8 +1557,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/gh-pages/Finland_adb.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.12.36",
 			"timeUpdated": "2026-03-08T20:40:39+0000",
+=======
+			"version": "2.0.12.37",
+			"timeUpdated": "2026-03-27T16:47:39+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.12.37",
 			"timeUpdated": "2026-03-27T16:47:39+0000",
@@ -1425,8 +1591,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.6.10",
 			"timeUpdated": "2026-02-19T16:47:01+0000",
+=======
+			"version": "2.0.6.11",
+			"timeUpdated": "2026-03-27T16:47:40+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.6.11",
 			"timeUpdated": "2026-03-27T16:47:40+0000",
@@ -1458,8 +1629,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/olegwukr/polish-privacy-filters/master/anti-adblock.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.3.56",
 			"timeUpdated": "2025-12-18T08:42:56+0000",
+=======
+			"version": "2.0.3.57",
+			"timeUpdated": "2026-03-27T16:47:44+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.3.57",
 			"timeUpdated": "2026-03-27T16:47:44+0000",
@@ -1487,8 +1663,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.24.11",
 			"timeUpdated": "2026-03-11T20:44:54+0000",
+=======
+			"version": "2.0.24.26",
+			"timeUpdated": "2026-04-03T08:47:26+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.24.26",
 			"timeUpdated": "2026-04-03T08:47:26+0000",
@@ -1519,8 +1700,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuard.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.8.45",
 			"timeUpdated": "2026-03-12T12:47:19+0000",
+=======
+			"version": "2.0.8.47",
+			"timeUpdated": "2026-03-27T05:15:25+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.8.47",
 			"timeUpdated": "2026-03-27T05:15:25+0000",
@@ -1555,8 +1741,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/SerboCroatianList.txt",
 			"trustLevel": "high",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.0.70",
 			"timeUpdated": "2025-12-05T08:41:43+0000",
+=======
+			"version": "2.0.0.71",
+			"timeUpdated": "2026-03-21T12:46:40+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.0.71",
 			"timeUpdated": "2026-03-21T12:46:40+0000",
@@ -1586,8 +1777,13 @@
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.80.27",
 			"timeUpdated": "2026-03-13T00:53:57+0000",
+=======
+			"version": "2.0.81.50",
+			"timeUpdated": "2026-04-03T12:47:52+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.81.50",
 			"timeUpdated": "2026-04-03T12:47:52+0000",
@@ -1639,8 +1835,13 @@
 			"subscriptionUrl": "https://malware-filter.gitlab.io/malware-filter/phishing-filter-ag.txt",
 			"trustLevel": "low",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.13.69",
 			"timeUpdated": "2026-03-13T00:54:01+0000",
+=======
+			"version": "2.0.14.12",
+			"timeUpdated": "2026-04-03T12:47:56+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.14.12",
 			"timeUpdated": "2026-04-03T12:47:56+0000",
@@ -1664,8 +1865,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
 			"trustLevel": "low",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.7.2",
 			"timeUpdated": "2026-03-12T05:02:44+0000",
+=======
+			"version": "2.0.7.24",
+			"timeUpdated": "2026-04-03T05:13:57+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.7.24",
 			"timeUpdated": "2026-04-03T05:13:57+0000",
@@ -1689,8 +1895,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
 			"trustLevel": "low",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.10.85",
 			"timeUpdated": "2026-03-12T08:46:14+0000",
+=======
+			"version": "2.0.11.12",
+			"timeUpdated": "2026-04-03T12:47:56+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.11.12",
 			"timeUpdated": "2026-04-03T12:47:56+0000",
@@ -1714,8 +1925,13 @@
 			"subscriptionUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuard.txt",
 			"trustLevel": "low",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.0.0.13",
 			"timeUpdated": "2026-02-26T08:47:20+0000",
+=======
+			"version": "2.0.0.16",
+			"timeUpdated": "2026-03-29T01:03:50+0000",
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 			"version": "2.0.0.16",
 			"timeUpdated": "2026-03-29T01:03:50+0000",
