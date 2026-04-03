@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # AG Filters Registry
 
 1. [Introduction](#introduction)
@@ -207,6 +208,92 @@ Every filter directory contains these files:
 
 - `metadata.json`
 
+=======
+# AdGuard Filters Registry
+
+AdGuard Filters Registry is the canonical repository of filter list subscriptions
+available to AdGuard users. It stores AdGuard's own filters and re-hosted
+third-party filter lists served via `filters.adtidy.org`. Filters can be slightly
+modified in order to achieve better compatibility with AdGuard.
+
+The build pipeline compiles filter templates into platform-specific outputs
+for 8 AdGuard product platforms (Android, CLI, Extension, iOS, Mac, Mac v2,
+Mac v3, Windows), generates incremental patches, and produces localized metadata.
+
+## Table of Contents
+
+- [Third-Party Filter Acceptance Policy](#third-party-filter-acceptance-policy)
+- [Filters Reference](#filters-reference)
+    - [Filter Directory Structure](#filter-directory-structure)
+    - [Tags](#tags)
+    - [Groups](#groups)
+    - [Optimization](#optimization)
+    - [Compiler Customization](#compiler-customization)
+    - [Localization](#localization)
+    - [Templates](#templates)
+- [Wildcard Domain Expansion](#wildcard-domain-expansion)
+- [Repository Compression](#repository-compression)
+- [Documentation](#documentation)
+
+## Third-Party Filter Acceptance Policy
+
+We may add third-party filters to AdGuard Filters Registry. When making a decision about adding a third-party filter,
+we follow these rules:
+
+1. The filter should be oriented towards browser content blockers.
+2. The filter should be legal. If it has rules for paywall circumvention, we won't add such a filter.
+3. The filter should have a place for receiving user complaints and holding discussions,
+  such as a repository on github.com, or a website open to public.
+4. The filter should be relatively popular, meaning:
+    - if there is a repository on GitHub, the number of stars should be at least 50;
+    - if there is no repository on GitHub, the number of analyzed issues and discussions is estimated
+      at 10 per month on the filter's website;
+    - the filter should be actively supported for at least 6 months.
+5. The filter should be regularly updated with at least 10 updates per month.
+6. The filter should be compatible with AdGuard products.
+  You can familiarize yourself with AdGuard syntax in our [knowledge base][kb-rules-syntax].
+7. If the filter works only in some operating systems and satisfies all other criteria,
+  it will be added but only for the supported platforms.
+8. Previously added filters that haven't received any support for a year will be removed.
+  We reserve the right to remove the filter earlier, depending on circumstances.
+9. If the filter contains too many problematic rules, it will not be added.
+  A rule is considered problematic if it causes false positives or otherwise displays unintended behavior.
+  Decisions about filters with problematic rules are arbitrary
+  and there may be exceptions (see items 9 and 10, for example).
+    - If the filter intentionally blocks or restricts access to any services for no reason other than being
+    a reflection of the filter author's opinion, the filter will not get added, or will get removed if already added.
+10. If the filter is popular in a specific region and there are no alternatives to it, then it can be added as is.
+11. If the filter gets added, it receives a so-called [trustLevel](#trustLevel) (Low, High, Full),
+  based on the number of problematic rules it contains and some other factors.
+  Filters without "Full" trust level may have part of their rules disabled.
+    - The trust level of a filter can be re-reviewed and raised if the author improves the filter over time.
+12. If there are two or more similar filters that satisfy all other criteria,
+  they all may be added if they don't duplicate each other and don't conflict with each other.
+  If there is a large amount of conflicting or duplicate rules,
+  the filter with more matches on such rules gets the priority.
+
+[kb-rules-syntax]: https://adguard.com/kb/general/ad-filtering/create-own-filters
+
+## Filters Reference
+
+Each filter lives in its own directory under `filters/` (AdGuard filters)
+or `filters/ThirdParty/` (third-party filters).
+
+### Filter Directory Structure
+
+Every filter directory contains these files:
+
+- `template.txt`
+
+    [Template file](#templates) is used by the filters compiler to prepare the final filter version.
+
+- `exclude.txt`
+
+    A list of regular expressions. Rules that match these exclusions will not be included in the resulting filter.
+
+- `metadata.json`
+
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
     Filter metadata. Includes name, description, etc.
 
     - `filterId` — number, unique filter identifier.
@@ -251,6 +338,9 @@ Every filter directory contains these files:
     >    - If you want to remove the filter from the registry and stop building it,
     >      use the `disabled` metadata flag with the `obsolete` tag.
 
+<<<<<<< HEAD
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
+=======
 >>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
     <details>
         <summary>Metadata example</summary>
@@ -300,7 +390,10 @@ Every filter directory contains these files:
     This file contains rules that are excluded by the filters compiler based on the specified trustLevel.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gh-compiler-trust-levels]: https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels
+=======
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 =======
 >>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 [kb-hint-platforms]: https://adguard.com/kb/general/ad-filtering/create-own-filters/#platform-and-not_platform-hints
@@ -356,15 +449,21 @@ until the compression goal (defined in percentages) is achieved.
 [kb-filter-statistics]: https://adguard.com/kb/general/ad-filtering/tracking-filter-statistics/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Compiler customization
 
 Script located in `scripts/build/custom_platforms.js` customizes the way filters are compiled for certain platforms.
 We should use it if we need to temporary change rules for a platform.
 =======
+=======
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 ### Compiler Customization
 
 Script located in `scripts/build/custom_platforms.js` customizes the way filters are compiled for certain platforms.
 We should use it if we need to temporarily change rules for a platform.
+<<<<<<< HEAD
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
+=======
 >>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 In all other cases, we should prefer the default configuration.
 
@@ -412,6 +511,7 @@ Below is a example of the configuration for the platform `AdGuard for Chrome` wi
 
 If you want to help with filters translations, you can join us on Crowdin:
 <https://crowdin.com/project/adguard-applications/en#/miscellaneous/filters-registry>.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 Please learn more about translating our products: <https://adguard.com/kb/miscellaneous/contribute/translate/program/>
@@ -752,6 +852,18 @@ Please learn more about translating our products: <https://adguard.com/kb/miscel
 More information about the `@include` directive and its options
 can be found in [its documentation][gh-compiler-include-directive].
 
+=======
+
+Please learn more about translating our products: <https://adguard.com/kb/miscellaneous/contribute/translate/program/>
+
+### <a id="templates"></a> Templates
+
+`@include` directive allows to include the content of specified file into the filter.
+
+More information about the `@include` directive and its options
+can be found in [its documentation][gh-compiler-include-directive].
+
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
 ## Wildcard Domain Expansion
 
 Some filter rules use wildcard domains (e.g., `domain.*`). The build pipeline can expand
@@ -800,4 +912,7 @@ For the compression procedure and commands, see
 
 [gh-compiler-include-directive]: https://github.com/AdguardTeam/FiltersCompiler#include-directive
 [gh-compiler-trust-levels]: https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels
+<<<<<<< HEAD
+>>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
+=======
 >>>>>>> de732e43b45614726d4e46b37eb11f5bbb9f6992
