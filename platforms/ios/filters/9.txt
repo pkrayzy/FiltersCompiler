@@ -1,9 +1,9 @@
-! Checksum: M37GzmzRNTOlmq3MddwtxQ
-! Diff-Path: ../patches/9/9-s-1776156238-3600.patch
+! Checksum: skUFTobv8xVqrBE+8XzXig
+! Diff-Path: ../patches/9/9-s-1776325373-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.33.99
-! TimeUpdated: 2026-04-14T08:40:21+00:00
+! Version: 2.0.34.4
+! TimeUpdated: 2026-04-16T07:39:05+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -267,6 +267,9 @@ infomatricula.pt#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 infomatricula.pt#%#//scriptlet('prevent-setTimeout', '/=window\.setInterval\([\s\S]*?\.push\(/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220472
 darkmahou.io#%#//scriptlet('abort-on-stack-trace', 'document.getElementById', 'showAdblockAlert')
+! https://github.com/AdguardTeam/AdguardFilters/issues/229248
+3xyaoi.com#%#//scriptlet('prevent-setTimeout', 'bait')
+3xyaoi.com##div[id$="adblock-layer"]
 ! https://github.com/uBlockOrigin/uAssets/issues/22957#issuecomment-3628711511
 3xyaoi.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -1380,11 +1383,6 @@ seriesdonghua.com,mundodonghua.com#%#//scriptlet("set-constant", "loadingAds", "
 @@||progamingstudio.com/js/siropu/am/ads.min.js
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 @@||amtonline.com.br^$generichide
-! https://github.com/AdguardTeam/AdguardFilters/issues/20512
-!+ NOT_PLATFORM(windows, mac, android, cli)
-@@.png#$domain=tv-onlinehd.com
-!+ NOT_PLATFORM(windows, mac, android, cli)
-@@||tv-onlinehd.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20041
 @@/advert.js$domain=gamevicio.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20407
@@ -2370,12 +2368,12 @@ http://adw.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
 /^(?!.*(mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|doodcdn.io|intensedebate.com|vixcloud.co|cdn.plyr.io|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|imgsmail.ru|cloudflare.net|rabbitstream.net|alicdn.com|(\/\/|\.)x\.com)).*$/$third-party,script,_____,domain=thepiratefilmestorrent.biz|serieslatinoamerica.tv|pelispoptv.com|mangatigre.net|darkmahou.org|brjogostorrents.com|ricoysuave.com
 ! Similar to regexp above, but using the denyallow modifier
-*$script,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|doodcdn.io|intensedebate.com|vixcloud.co|cdn.plyr.io|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|wordpress.com|fastcomments.com|plyr.io|imgsmail.ru|cloudflare.net|rabbitstream.net|x.com|alicdn.com|jkdesa.com|jkdesu.com|tailwindcss.com|cloudflareinsights.com,_____,domain=anroll.net|monoschinos2.com|animeyt.es|leercapitulo.com|pelisflix2.green|darkmahou.org|comandotorrents.to|comandoplay.com|pelismax.one|seriesgod.cc|anime-jl.net|zonatmo.com|ferromotor.com|motoratrium.com|loveteching.com|animefire.plus|gratistorrent.com|readhunters.xyz|animefire.io|mangalivre.tv|jkanime.net|novelaplay.com
+*$script,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|doodcdn.io|intensedebate.com|vixcloud.co|cdn.plyr.io|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|wordpress.com|fastcomments.com|plyr.io|imgsmail.ru|cloudflare.net|rabbitstream.net|x.com|alicdn.com|jkdesa.com|jkdesu.com|tailwindcss.com|cloudflareinsights.com,_____,domain=anroll.net|monoschinos2.com|animeyt.es|leercapitulo.com|pelisflix2.green|darkmahou.org|comandotorrents.to|comandoplay.com|pelismax.one|seriesgod.cc|anime-jl.net|zonatmo.com|ferromotor.com|motoratrium.com|loveteching.com|animefire.plus|gratistorrent.com|readhunters.xyz|animefire.io|mangalivre.tv|jkanime.net|novelaplay.com|3xyaoi.com
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 $third-party,script,domain=mangatigre.com
 !
 ! ##body .ad
-3djuegospc.com,directoalpaladar.com,winsports.co,meupc.net,xataka.com.br,solowrestling.com,europapress.es,trendencias.com,futuro.cl,solowrestling.mundodeportivo.com,meneame.net,3djuegos.com,meteoconsult.es,meuguia.tv,territoriosamsung.com,conjur.com.br,meups.com.br,elcorreogallego.es,3djuegos.lat,xatakandroid.com,nsctotal.com.br,noticiasdenavarra.com,informacion.es,applesfera.com,xatakamovil.com,espinof.com,mundoxiaomi.com,vidaextra.com,mediotiempo.com,elpais.com,olhardigital.com.br,atribuna.com.br,jovemnerd.com.br,laopiniondemurcia.es,larazon.es,dicio.com.br,band.uol.com.br,xataka.com,onyxplay.com,genbeta.com,vagalume.com.br,xatakandroid.com,abril.com.br##body .ad
+cine.com,3djuegospc.com,directoalpaladar.com,winsports.co,meupc.net,xataka.com.br,solowrestling.com,europapress.es,trendencias.com,futuro.cl,solowrestling.mundodeportivo.com,meneame.net,3djuegos.com,meteoconsult.es,meuguia.tv,territoriosamsung.com,conjur.com.br,meups.com.br,elcorreogallego.es,3djuegos.lat,xatakandroid.com,nsctotal.com.br,noticiasdenavarra.com,informacion.es,applesfera.com,xatakamovil.com,espinof.com,mundoxiaomi.com,vidaextra.com,mediotiempo.com,elpais.com,olhardigital.com.br,atribuna.com.br,jovemnerd.com.br,laopiniondemurcia.es,larazon.es,dicio.com.br,band.uol.com.br,xataka.com,onyxplay.com,genbeta.com,vagalume.com.br,xatakandroid.com,abril.com.br##body .ad
 ! ##.ads
 serviporno.com,solvetic.com,gamesfull.app,agazeta.com.br,lasexta.com,extra.ec,globo.com,amomeupet.org,cifras.com.br,gaz.com.br,placar.com.br,futebolinterior.com.br,tvhistoria.com.br,tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.com.br,link.estadao.com.br,atomixhq.*,jc.ne10.uol.com.br,internetpasoapaso.com,acidadeon.com,leouve.com.br,larazon.es,infoescola.com,cbn.globoradio.globo.com,abril.com.br,odia.ig.com.br,especiais.g1.globo.com,tribunapr.com.br,anime-tube.tv##.ads
 ! ##body .banner
@@ -2385,6 +2383,9 @@ kltutors.com,eloutput.com,mundobytes.com,techondicas.com,jornalrepercussao.com.b
 !
 ! NOTE: Specific rules
 !
+cine.com###pads
+cine.com##div[class^="r89-"]
+cine.com###serie_play:has(> div[id^="cf_async_"])
 legendei.net#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype.addEventListener', 'trigger')
 legendei.net#%#//scriptlet('prevent-addEventListener', '', 'trigger')
 legendei.net#%#//scriptlet('prevent-window-open')
@@ -2730,6 +2731,7 @@ cooperativa.cl##.contenedor-sticky
 pauta.cl,pagina7.cl,cooperativa.cl,latina.pe##.u-the-banner
 wapa.pe##.recent__wrapper:has(> div[class^="BlockCuponidad_"])
 libero.pe,larepublica.pe##div[class^="BlockCuponidad_wrapper-"]
+lance.com.br##div:is(.sticky, .hidden) > .font-krub:has(+ div.h-max > div[id^="quadrado_"])
 lance.com.br##.sticky.z-0:has(> div > div[id^="quadrado"])
 lance.com.br##.quadradoFixo
 lance.com.br###div_rodape
@@ -2803,7 +2805,9 @@ cnnbrasil.com.br##div[id^="sidebar_ads"]
 cnnbrasil.com.br###ads-banner-header
 cxtvenvivo.com##.ad-titulo
 cxtvenvivo.com##.text-center:has(> .ad-titulo)
-animeonline.lat#%#//scriptlet('prevent-addEventListener', 'click', 'Popunder')
+peliplayhd.org##.player .plyrbg
+peliplayhd.org##center > a[target="_blank"] > img:not(.telegram-icon)
+peliplayhd.org,animeonline.lat#%#//scriptlet('prevent-addEventListener', 'click', 'Popunder')
 canalporno.com###overlay-video
 gazetadopovo.com.br##div[class^="postAside_post-aside-banner__"]
 canalporno.com##.r11ght-pl4yer-169
@@ -4982,10 +4986,6 @@ meutimao.com.br##.adsense_colado
 meutimao.com.br##.publicidade_970x90
 file4go.net##body > #divbox[style^="position:"]
 file4go.net##body > #divmodal[style^="position:"]
-tv-onlinehd.com###capa1
-tv-onlinehd.com###closeX1
-||tv-onlinehd.com/publi/publi
-||tv-onlinehd.com/publi/cerrar
 dn.pt##.t-pubbox-ct-1
 ||videoszoofiliahd.com/embed/bit.js
 publico.es,noticiasautomotivas.com.br,segredosdomundo.r7.com,blogdoiphone.com###custom_html-6
