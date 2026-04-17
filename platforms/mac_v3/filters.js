@@ -634,44 +634,6 @@
 			"downloadUrl": "https://filters.adtidy.org/mac_v3/filters/14.txt"
 		},
 		{
-<<<<<<< HEAD
-=======
-			"filterId": 15,
-			"name": "AdGuard DNS filter",
-			"description": "Filter composed of several other filters (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
-			"deprecated": true,
-			"expires": 43200,
-			"displayNumber": 3,
-			"groupId": 6,
-			"subscriptionUrl": "https://filters.adtidy.org/mac_v3/filters/15.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3",
-				"ext_opera_mv3"
-			],
-			"trustLevel": "full",
-			"version": "2.1.18.71",
-			"timeUpdated": "2026-04-17T01:39:49+0000",
-			"languages": [],
-			"tags": [
-				45,
-				1,
-				2,
-				9,
-				11,
-				25,
-				26,
-				13,
-				58,
-				59,
-				60,
-				61
-			],
-			"downloadUrl": "https://filters.adtidy.org/mac_v3/filters/15.txt"
-		},
-		{
->>>>>>> 97fb30df2412b4dfb405cc065592efabd470cba4
 			"filterId": 16,
 			"name": "AdGuard French filter",
 			"description": "Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.",
