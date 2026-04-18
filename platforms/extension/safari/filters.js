@@ -645,13 +645,12 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/15_optimized.txt",
 			"platformsIncluded": [
-				"ext_ublock",
 				"ext_safari",
 				"ios"
 			],
 			"trustLevel": "full",
-			"version": "2.1.18.75",
-			"timeUpdated": "2026-04-17T13:46:55+0000",
+			"version": "2.1.18.76",
+			"timeUpdated": "2026-04-18T00:05:41+0000",
 			"languages": [],
 			"tags": [
 				45,
