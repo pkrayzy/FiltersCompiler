@@ -13,15 +13,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Full history needed for merge
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Add upstream remote
         run: git remote add upstream https://github.com/AdguardTeam/FiltersRegistry.git
 
       - name: Fetch upstream
-        run: git fetch upstream master
+        run: git fetch --depth=1 upstream master
 
       - name: Merge upstream master (unless skip ci)
         run: |
