@@ -1,0 +1,16 @@
+--- Fetch Commits ---
+
+git fetch upstream && git log -1 --format=%B upstream/master | grep -q "^skip ci" || git merge upstream/master
+
+
+--- Remove skip ci commits ---
+
+git filter-branch --force --commit-filter '
+  if git rev-parse --verify $GIT_COMMIT^{tree} >/dev/null 2>&1; then
+    if git log -1 --pretty=%B $GIT_COMMIT | grep -q "^skip ci"; then
+      skip_commit "$@"
+    else
+      git commit-tree "$@"
+    fi
+  fi
+' -- master
