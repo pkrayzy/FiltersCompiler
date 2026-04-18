@@ -1,22 +1,17 @@
-name: Sync from upstream and cleanup skip ci commits
+name: Sync with Upstream
 
 on:
   schedule:
-    # Runs at midnight EST (5 AM UTC)
-    - cron: '0 5 * * *'
-  workflow_dispatch: # Allows manual trigger
-
-permissions:
-  contents: write
+    - cron: '0 5 * * *'  # Runs daily at midnight EST (5 AM UTC)
+  workflow_dispatch:
 
 jobs:
-  sync-and-cleanup:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: master
           fetch-depth: 0
 
       - name: Configure git
@@ -25,47 +20,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Add upstream remote
+        run: git remote add upstream ${{ github.server_url }}/${{ github.repository_owner }}/upstream.git
+        continue-on-error: true
+
+      - name: Fetch and conditionally merge upstream
         run: |
-          git remote add upstream ${{ github.server_url }}/${{ github.repository_owner }}/upstream.git || true
-          git remote set-url upstream ${{ github.server_url }}/${{ github.repository_owner }}/upstream.git
+          git fetch upstream
+          git log -1 --format=%B upstream/master | grep -q "^skip ci" || git merge upstream/master
 
-      - name: Fetch upstream
-        run: git fetch upstream master
-
-      - name: Merge upstream commits (excluding skip ci)
-        shell: bash
-        run: |
-          # Get all commits from upstream that aren't in local master
-          COMMITS=$(git rev-list master..upstream/master)
-          
-          if [ -z "$COMMITS" ]; then
-            echo "No new commits from upstream"
-          else
-            # Cherry-pick commits that don't start with "skip ci"
-            for commit in $COMMITS; do
-              MESSAGE=$(git log -1 --pretty=%B $commit)
-              if [[ ! "$MESSAGE" =~ ^skip\ ci ]]; then
-                echo "Cherry-picking: $commit - $MESSAGE"
-                git cherry-pick $commit || git cherry-pick --abort
-              else
-                echo "Skipping: $commit - $MESSAGE"
-              fi
-            done
-          fi
-
-      - name: Remove existing skip ci commits from history
-        shell: bash
-        run: |
-          git filter-branch --commit-filter '
-            if git rev-parse --verify $GIT_COMMIT^{tree} >/dev/null 2>&1; then
-              if git log -1 --pretty=%B $GIT_COMMIT | grep -q "^skip ci"; then
-                skip_commit "$@"
-              else
-                git commit-tree "$@"
-              fi
-            fi
-          ' -- master
-
-      - name: Force push cleaned history
-        run: git push origin master --force
+      - name: Push changes
+        run: git push origin HEAD
         continue-on-error: true
