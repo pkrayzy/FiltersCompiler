@@ -1,8 +1,8 @@
-! Checksum: yFKmHxwZGW3k/XoJ+Ee/ug
+! Checksum: V4ZI4j9hanoJOA1U7k5TEw
 ! Title: Quick Fixes Filter (Optimized)
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.8.30
-! TimeUpdated: 2026-04-23T17:24:23+00:00
+! Version: 2.0.8.31
+! TimeUpdated: 2026-04-23T17:34:22+00:00
 ! Expires: 5 days (update frequency)
 ||fonts.gstatic.com/s/googlesans/v29/$font
 ||fonts.gstatic.com/s/roboto/$font
@@ -181,7 +181,7 @@ google.com##[data-container-id="ad-content"]
 duckduckgo.com##.related-searches,[data-layout="images"],[data-testid="images"],[data-testid="related_searches"],span[data-testid="feedback-prompt"],[data-layout="videos"],[data-testid="feedback-prompt"],[data-layout="related_searches"],.related-searches
 @@||bing.com/fd/ls/
 bing.com##.wptSld:has(.top_ads_magazine,.b_adcard,.satpc-container)
-bing.com###b_pole:has(.b_ad)
+bing.com###b_pole:has(.b_ad,.b_adLastChild)
 bing.com###b_wpt_adst
 bing.com#$#.b_wpTabsWrapper { margin-top: 0px !important; }
 bing.com#$##ca_main { padding-top: 0px !important; }
@@ -3637,6 +3637,8 @@ playeriframe.lol,stream.hownetwork.xyz###donate > a[href][style][onclick="thank_
 fuqster.com##a[href^="https://landing.brazzersnetwork.com/"]
 histalk2.com###header_ad
 ||npttech.com^$badfilter
+||twinrdengine.com^$document
+||foldgun.xyz^$document
 ||platform.twitter.com/embed/$~stylesheet,~subdocument,third-party,badfilter
 ebay.*#%#//scriptlet('ubo-href-sanitizer', 'li.nav--list > a[href^="http://"]', '+https')
 ||pushbullet.com^$third-party,badfilter
@@ -3666,14 +3668,19 @@ right.com.cn##.wp.a_t
 @@||kojodan.jp^$generichide
 turboplayers.xyz#$?##pop.div_pop { remove: true; }
 ||static.klaviyo.com^$badfilter
+||dmxleo.dailymotion.com^
 geo.dailymotion.com#%#//scriptlet('ubo-set', 'DMP_ENABLE_ADS', 'false')
 ||assets-jpcust.jwpsrv.com^$badfilter
 *.cfd$script,domain=animeunity.so|vixcloud.co
 *.rest$script,domain=animeunity.so|vixcloud.co
 ##div.card > div#cbRow.checkbox-row[onclick="startVerify()"]
+||update-check.com^$all
 ||cleanguard.tech^$all
+||studio-obs.net^$all
+||loseyourip.com^$all
 ||lnkr.us^$document
 ||icontent.us^$document
+||qip.ru^$document
 ||ratexchange.net^
 ||adnotbad.com^
 ||serverads.net^
@@ -3697,6 +3704,12 @@ brillen.de#%#//scriptlet('ubo-acs', 'document.createElement', 'script')
 ||mtsa.com.my/mtcs.php/pageview/track^$image
 ||api.tumblr.com/*/share/stats$script,third-party
 frogogo.ru#%#//scriptlet('ubo-aopw', 'ADMITAD')
+||copyhomework.com^
+||coursecopy.com^
+||quiztoolbox.com^
+||quizlookup.com^
+||studyeffect.com^
+||testbooksolutions.com^
 /stats.php?*event=$image
 /check.php?t=*&rand=$image,~third-party
 ||recommend.9gag.com/interact/event/?ip
@@ -3708,11 +3721,15 @@ frogogo.ru#%#//scriptlet('ubo-aopw', 'ADMITAD')
 ||playbrain.io/analytics/
 tweakers.net#%#//scriptlet('ubo-aost', 'btoa', 'send')
 ||yuktamedia.com^$third-party
+||gamedock.io^$third-party
 ||stats.webgames.io^
+||blogfoster.com^$third-party
 ||myanalytic.net^$third-party
+||t.simply-hentai.com^
 search.brave.com#%#//scriptlet('ubo-no-fetch-if', 'body:browser')
 ||d3bch4rrbnbe5n.cloudfront.net/pxl.png^
 /visilabs.min.js
+||civicscience.com^$third-party
 /dataunlocker$script,~third-party,domain=~dataunlocker.com
 ||data-saver-cindi.herokuapp.com^
 ||a.stateless.me^
@@ -3747,17 +3764,22 @@ aikatu.jp,ark-unity.com,cool-style.com.tw,doanhnghiepvn.vn,mykhel.com,mynet.com#
 tacobell.com#%#//scriptlet('ubo-set', 'bmak.js_post', 'false')
 ||ahentai.top/counter.php
 ||caitlin.top/counter.php
+||tr.jianshu.com^
 /lib/f_ad_code.js
 /\.com\/[-_0-9a-zA-Z]{4,}\/[-\/_0-9a-zA-Z]{25,}$/$script,~third-party,domain=gu-global.com|uniqlo.com
 ||metrics.surinenglish.com^
 @@||natureetdecouvertes.com^*/pixel.png$~third-party,badfilter
 ||cm.bilibili.com/cm/api/$xmlhttprequest
 ||wannads.com/api/track/fingerprint^
+||va.huya.com^
+||e-stat.huya.com^
+||analytics.tiendaenoferta.com^
 /cfga/jquery.js?$image
 ||mynewsmedia.co/*/Linkpage/ads_stats_controller.php
 ||gplinks.co/Auth/ads_stats_controller.php
 ||videovard.*/api/front/view^$xmlhttprequest,important
 endbasic.dev,jmmv.dev#%#//scriptlet('ubo-no-xhr-if', 'method:POST')
+||b90.yahoo.co.jp^
 /log/*$xmlhttprequest,domain=vizcloud.*|vizcloud2.*
 /?p=%2F*&h=https%3A%2F%2F*&r=&sid=*&qs=*&cid=$image,~third-party
 /?h=https%3A%2F%2F*&r=&sid=*&qs=*&cid=$image,~third-party
@@ -3794,6 +3816,7 @@ zhihu.com#%#//scriptlet('ubo-no-xhr-if', 'log-sdk.ksapisrv.com/rest/wd/common/lo
 ||api.bilibili.com/x/internal/gaia-gateway/ExClimbWuzhi$xmlhttprequest,~third-party
 -telemetry.officeapps.live$ping,xmlhttprequest
 ||flow.microsoft.com/providers/Internal.Telemetry
+||client-telemetry.roblox.com^
 ||now.gg/oapi/6/play/v1/reportEvent
 ||now.us/oapi/6/play/v1/reportEvent
 ||kemono.party/js/script.js
@@ -3804,7 +3827,12 @@ zhihu.com#%#//scriptlet('ubo-no-xhr-if', 'log-sdk.ksapisrv.com/rest/wd/common/lo
 ||trck.eczyl.com^
 ||trcp.gamefantech.com^
 ||track.opt-tds.com^
+||track.link-tds.com^
+||freetrckr.com^
 ||news-pewuce.com^
+||cjewz.com^
+||chpok.site^
+||smartaccess.biz^
 ||adonsonlyd.xyz^
 ||cdn.branch.io/branch-latest.min.js$important,domain=nbc.com|pac-12.com
 ||onesignal.com^$domain=blurayufr.xyz|columbian.com|faqwiki.us|freecoursesonline.me|ftuapps.dev|gamersdiscussionhub.com|levelupalone.com|onehack.us|xiaomitools.com
@@ -3894,6 +3922,7 @@ donanimhaber.com#%#//scriptlet('ubo-href-sanitizer', 'body a[href^="/ExternalLin
 /detroitchicago/imp.gif$ping
 /wpm@*/web-pixel-
 /shopifycloud/media-analytics/v*/analytics.js
+||bdvmetricas.banvenez.com.ve^
 ||bilet.com/gtmcf/
 ||razorpay.com/build/razor-analytics/
 ||razorpay.com/build/analytics-sdk/
@@ -3904,6 +3933,7 @@ donanimhaber.com#%#//scriptlet('ubo-href-sanitizer', 'body a[href^="/ExternalLin
 ||playnow.wtf^
 &ii=fingerprintjs-pro-react
 intellischool.id#%#//scriptlet('ubo-no-xhr-if', 'fingerprintjs-pro-react')
+||pbc.nypost.com^
 ||browser.events.data.microsoft.com^$domain=apps.microsoft.com
 beaumontenterprise.com,chron.com,ctinsider.com,ctpost.com,expressnews.com,houstonchronicle.com,lmtonline.com,middletownpress.com,mrt.com,newstimes.com,nhregister.com,registercitizen.com,sfchronicle.com,stamfordadvocate.com,thehour.com,timesunion.com#%#//scriptlet('ubo-cookie-remover', 'realm.cookiesAndJavascript')
 heavyfetish.com#%#//scriptlet('ubo-set', 'flashvars.event_reporting', '')
@@ -3980,6 +4010,8 @@ oilprice.com#%#//scriptlet('ubo-remove-cookie', 'ga_store_user_id')
 buildtheearth.net#%#//scriptlet('ubo-remove-cookie', '/^_pk_id./', 'when', 'scroll keydown')
 allrecipes.com#%#//scriptlet('ubo-remove-cookie', '/_sharedid|_lc2_fpi/')
 allrecipes.com#%#//scriptlet('ubo-set-local-storage-item', '/_li_duid|_lc2_fpi/', '$remove$')
+||demeter-tr-core-collect.trendyol.com^
+||collect.trendyol.com^
 ||cdn.dsmcdn.com/sfx/mergen/
 trendyol.com,trendyol-milla.com#%#//scriptlet('ubo-set', 'process', '{}')
 trendyol.com,trendyol-milla.com#%#//scriptlet('ubo-set', 'process.env', '{}')
@@ -3988,10 +4020,13 @@ bostonscally.com#%#//scriptlet('ubo-remove-cookie', '/__ta_|_shopify_y/', 'when'
 ||api.intelligems.io/v*/track|
 4gamers.com.tw#%#//scriptlet('ubo-remove-cookie', '_pkc', 'when', 'scroll keydown')
 4game.com,4game.ru#%#//scriptlet('ubo-set-local-storage-item', '/fingerprint|trackingEvents/', '$remove$')
+||sdk.optimove.net^
 shutterstock.com#%#//scriptlet('ubo-remove-cookie', '/sstk_anonymous_id|htjs_anonymous_id/', 'when', 'scroll keydown')
 shutterstock.com#%#//scriptlet('ubo-set-local-storage-item', '/htjs_|stck_|statsig/', '$remove$')
 mobalytics.gg#%#//scriptlet('ubo-set-local-storage-item', '/mixpanel/', '$remove$')
 ||investing.com/gcode/
+||promos.investing.com^
+||monetization.prod.invmed.co^
 hopper.com#%#//scriptlet('ubo-set-local-storage-item', 'ld:$anonUserId', '$remove$')
 mumuplayer.com#%#//scriptlet('ubo-set-local-storage-item', '/_user_id$/', '$remove$')
 ||cdn.concert.io/fins/segment
@@ -4006,17 +4041,20 @@ soundcloud.com#%#//scriptlet('ubo-set-local-storage-item', '/sc_tracking_anonymo
 mykitsch.com#%#//scriptlet('ubo-remove-cookie', '_shopify_y', 'when', 'scroll keydown')
 mykitsch.com#%#//scriptlet('ubo-set-local-storage-item', '/lc_anon_user_id|_constructorio_search_client_id/', '$remove$')
 ||lumhdco.mykitsch.com/*/js|$script
+||rakutenadvertising.io^$third-party
 huntress.com#%#//scriptlet('ubo-remove-cookie', '/^_sp_id/', 'when', 'scroll keydown')
 huntress.com#%#//scriptlet('ubo-set-local-storage-item', '/builderVisitorId|snowplowOutQueue_cf/', '$remove$')
 flo.com.tr#%#//scriptlet('ubo-remove-cookie', 'bunsar_visitor_id', 'when', 'scroll keydown')
 flo.com.tr#%#//scriptlet('ubo-set-local-storage-item', '/__anon_id|efl-uuid/', '$remove$')
 gala.com#%#//scriptlet('ubo-set-local-storage-item', '_gal1', '$remove$')
 ||spotify.com/gabo-receiver-service/public/v3/events
+||kochava.com^$third-party
 natgeotv.com#%#//scriptlet('ubo-no-xhr-if', '/VisitorAPI|AppMeasurement/')
 natgeotv.com#%#//scriptlet('ubo-set', 'Visitor', '{}')
 ||fichub.com/plugins/adobe/lib/$xmlhttprequest,domain=natgeotv.com,important
 ||house.comikey.com/unw.gif?$image,~third-party
 ||googletagmanager.com/gtag/js$domain=starblast.io,important
+||signal.falixnodes.net^
 ||cdn.cuty.io/fps.js$script
 androidpolice.com,makeuseof.com,movieweb.com,xda-developers.com#%#//scriptlet('ubo-cookie-remover', '/articlesRead|previousPage/')
 /^https?:\/\/chatgpt\.com\/ces\/v1\/[a-z]$/$xmlhttprequest,domain=chatgpt.com|openai.com|sora.com,method=post
@@ -4053,6 +4091,7 @@ coursera.org#%#//scriptlet('ubo-no-fetch-if', 'eventing')
 ||cmp.*.no^*/metrics/$important
 /^https:\/\/mudah\.my\/[a-zA-Z0-9]{16}\/[a-zA-Z0-9]{16}\?apiKey=/$script,~third-party,domain=mudah.my
 ||view.mngusr.com^$domain=chapmanganato.to|manganato.com
+||analytics.strapi.io^
 ||royalroad.com/dist/sentry.js$script
 ||api.modrinth.com/analytics/
 dev.to#%#//scriptlet('ubo-cookie-remover', 'ahoy_visitor')
@@ -4078,6 +4117,7 @@ spankbang.*#%#//scriptlet('ubo-set', 'send_gravity_event', 'noopFunc')
 spankbang.*#%#//scriptlet('ubo-set', 'send_recommendation_event', 'noopFunc')
 perplexity.ai#%#//scriptlet('ubo-aost', 'window.screen.height', 'setTimeout')
 ||perplexity.ai/rest/metrics/collect^$xmlhttprequest,~third-party,method=post
+||yandexmetrica.com^
 blog.cloudflare.com,www.cloudflare.com#%#//scriptlet('ubo-no-fetch-if', 'method:POST body:zaraz')
 ||radar.cloudflare.com/api/analytics
 ||udc.yahoo.com^
@@ -4562,6 +4602,7 @@ newsletter.adnz.co%2F*$image
 ||joinhoney.com/evs
 ||g.doubleclick.net/tag/js/gpt.js$script,xmlhttprequest,domain=cornwalllive.com,important
 ||g.doubleclick.net/gpt/pubads_impl_$domain=cornwalllive.com,important
+||s.pie.org^
 ||suno.com/metrics/
 ||suno.com/v1//rgstr
 ||suno.com/monitoring
@@ -4589,6 +4630,7 @@ farmersjournal.ie#%#//scriptlet('ubo-remove-cookie', '_vid_t')
 farmersjournal.ie#%#//scriptlet('ubo-set-local-storage-item', '/^_vid_(lr|t)$/', '$remove$')
 ||wsimg.com/traffic-assets/$script,third-party
 souq-design.com#%#//scriptlet('ubo-remove-cookie', '/^(_tccl_|_scc_session|fpfid)/')
+||optable.co^$third-party
 laurelberninteriors.com#%#//scriptlet('ubo-set-local-storage-item', '/adthrive|ccuid|at_sticky_data|geo-location|OPTABLE_/', '$remove$')
 laurelberninteriors.com#%#//scriptlet('ubo-set-session-storage-item', '/previous/', '$remove$')
 laurelberninteriors.com#%#//scriptlet('ubo-set', 'adthrive._components.start', 'noopFunc')
@@ -4598,6 +4640,7 @@ evropa2.cz#%#//scriptlet('ubo-set-local-storage-item', '/cnc_alien_invasion_code
 ||grok.com/api/statsig/log_event
 ||grokipedia.com/api/log
 ||cdn.stroeerdigitalgroup.de/metatag/live/$domain=~golem.de
+||spexjs.com^
 myanimelist.net#%#//scriptlet('ubo-no-fetch-if', 'method:POST body:page_view')
 ||script.wikia.nocookie.net/fandom-ae-assets/identity-service/$domain=fandom.com|tvguide.com
 ||gateway.us.zip.co/analytics^
@@ -4609,6 +4652,7 @@ abs-cbn.com#%#//scriptlet('ubo-set-session-storage-item', 'VR-INJECTOR-INSTANCES
 ||tienphong.vn/v*/web/js/analytics.min.js
 ||fptonline.net/ea_min.js
 ||vtcnews.vn/Content/pc/js/pages/loadjs/tracking.js
+||track.vtcnews.vn^
 ||trueachievements.com/tgn/ana?*page_view
 /ingest/*^ip=
 /ingress/*^ip=
@@ -4643,14 +4687,17 @@ mediamarkt.de#%#//scriptlet('ubo-aopw', 'ftr__startScriptLoad')
 ||linklog.tiagorangel.com/api/script.js
 linklog.tiagorangel.com#%#//scriptlet('ubo-set', 'data', 'true')
 ||brighteon.com/api-v*/public/visit-tracking
+||slc.cbssports.com^
 ||monitor.*/test?rnd=$xmlhttprequest,third-party
 /measurements/*.ts?rnd=$xmlhttprequest,third-party
 ||netflix.com/log/
 /iomm/latest/bootstrap/*
+||publictelemetry.tophat.com^
 ||wolverine.com/on/demandware.static/*/internal/jscript/dwac-*.js
 /gp/video/acquisition/utilities/monitoring|
 /cdp/usage/GetWeblabTreatment?
 /cdp/usage/ClientsideImpression?
+||minerva.devices.a2z.com^
 ||global.telemetry.insights.video.a2z.com^
 ||amazon.com/1/action-impressions/
 /wp-content/plugins/pixelyoursite-pro/*
@@ -4658,12 +4705,16 @@ linklog.tiagorangel.com#%#//scriptlet('ubo-set', 'data', 'true')
 ||editor.labelbox.com/metrics
 ||assets.prod.abebookscdn.com/*/scripts/digitaldata/analytics-
 ||assets.prod.abebookscdn.com/*/scripts/utilities/PixelRenderer-
+||tolt.io^$third-party
 /dfxaf3-*.js|$script
 ||terabox.app/wfm/jnqp
 ||tags.tiqcdn.com/utag/*/prod/utag.js$domain=1und1.de|adidas.co.uk|adidas.nl|adidas.pl|anantara.com|brother-usa.com|calvinklein.ca|cnet.com|grubhub.com|help.dropbox.com|hulu.com|iflscience.com|krymr.com|lineadirecta.com|louisvuitton.com|mcafee.com|mitsubishi-motors.co.jp|modernatx.com|monroeandmain.com|mtv.co.uk|mtv.de|mtv.it|mtvema.com|nickjr.com|post.ch|qvc.jp|radissonhotels.com|sibreal.org|simplybusiness.co.uk|talksport.com|taylor.com|thesun.co.uk|totaljobs.com|truecar.com|uber.com|ubereats.com|usnews.com
 ||tags.tiqcdn.com/utag/*/utag.sync.js$domain=calvinklein.ca|hosteurope.de|sibreal.org|yousee.dk
+||ast.techbook.de^
 /shopifycloud/shopify/assets/shop_events_listener-*.js
 /cdn/shopifycloud/consent-tracking-api/*
+||log.tinxe.vn^
+||log.oto.com.vn^
 ||static.znews.vn/releases/*/js/analytic.min.js
 ||static.plo.vn/v*/web/js/log.min.js
 ||justwatch.com/appassets/js/sp-*.lite.min.js
@@ -4672,10 +4723,14 @@ forbes.com##.recirc-rail
 forbes.com#?#main div[class][style^="top:"]:contains(FORBES’ FEATURED Video)
 forbes.com##main div[class][style^="top:"]:has(> div > fbs-video[ad-unit-path])
 ||cdn.jsdelivr.net/npm/statsig-js
+||stats.pronouns.page^
 ||googletagmanager.com/gtm.js$important,domain=dmax.de
+||umami.webtor.io^
+||netronline.dev^
 ||murphy.zoho.in/murphy/*/clientmetricslog?logtype=clientmetrics
 ||murphy.zoho.in/murphy/*/ingest/infoLogs
 ||murphy.zoho.in/murphy/*/exceptions
+||socke7.com^
 ||pcoptimizedsettings.com/wp-json/caos/v1/proxy/stealth*page_view
 ||novizer.org/api/send
 ||amazon.com/follow/log-metrics
@@ -4685,11 +4740,15 @@ forbes.com##main div[class][style^="top:"]:has(> div > fbs-video[ad-unit-path])
 ||linksynergy.com^$document,badfilter
 roblox.com#%#//scriptlet('ubo-href-sanitizer', 'a[href^="https://cts.businesswire.com/ct/CT?"][href*="url=http"]', '?url')
 ||roblox.com/x0k461/e6c1b/xc9
+||ecsv2.roblox.com^$image
+||e.revenue.cat^
 dailydot.com#%#//scriptlet('ubo-no-fetch-if', 'url:/undefined method:POST')
 ||spezialklinik-neukirchen.de/matomo/matomo.js$important
 ||nouvelobs.com/*?s=$ping
+||analytics-service.api.linkme.global^
 itmedia.co.jp#%#//scriptlet('ubo-remove-cookie', '/cX_P|_pc/')
 itmedia.co.jp#%#//scriptlet('ubo-set-local-storage-item', '/^_cX_/', '$remove$')
+||analytics.fmovies4u.com^
 ||consent.preference-center.com/v2/edge
 ||secure.loverugbyleague.com/edge/v2/e
 ||secure.loverugbyleague.com/engine/v1/e
@@ -4708,7 +4767,9 @@ itmedia.co.jp#%#//scriptlet('ubo-set-local-storage-item', '/^_cX_/', '$remove$')
 ||detect-ccd.creativecloud.adobe.com^
 lnk.to,smarturl.it#%#//scriptlet('ubo-set', 'linkfire.tracking', '{}')
 /^https:\/\/www\.[a-z0-9]{8}\.com\/i\/[A-Z0-9]{5}\/[A-Z0-9]{6}\/$/$image,third-party,match-case,to=com
+||dq8i9djm.com^$third-party
 ||static.qiota.com/assets/getQiota.js
+||static-rmr.reworldmediafactory.com^
 /s/array/phc_*/config$script,xmlhttprequest,~third-party
 /s/e/*^ip=$xmlhttprequest,~third-party
 /s/i/*/e/*^ip=$xmlhttprequest,~third-party
@@ -4720,6 +4781,7 @@ lnk.to,smarturl.it#%#//scriptlet('ubo-set', 'linkfire.tracking', '{}')
 ||fileditchfiles.me/api/plausible
 ||pik.opendesktop.org/pik.js
 ||timeanddate.*/scripts/logperf.php
+||fubuki-umami.space^
 blaklader.*##div#onetrust-consent-sdk
 decider.com,nypost.com,pagesix.com##.zephr-component
 cellcom.co.il##.cookies_popup_container
@@ -7676,6 +7738,7 @@ zerogpt.net#%#//scriptlet('ubo-nostif', 'adsbygoogle')
 linkco.re#$#section.lyric_lyric { user-select: text !important; -webkit-user-select: text !important; -moz-user-select: text !important; -khtml-user-select: text !important; -webkit-user-drag: auto !important; -khtml-user-drag: auto !important; -webkit-touch-callout: auto !important; -moz-touch-callout: auto !important; }
 txori.com#%#//scriptlet('ubo-aeld', 'contextmenu', '_0x')
 team-octavi.com#%#//scriptlet('ubo-aost', 'document.addEventListener', 'preventDeleteDialog')
+||mms.cnn.com^$~third-party
 bypass.city,adbypass.org#%#//scriptlet('ubo-no-fetch-if', '/googlesyndication|googletag/')
 bypass.city,adbypass.org#%#//scriptlet('ubo-nowoif')
 nicekkk.com#%#//scriptlet('ubo-rmnt', 'script', 'debugger')
@@ -7843,6 +7906,7 @@ vembed.*#%#//scriptlet('ubo-rmnt', 'script', 'devtools')
 netu.*,netuplayer.top,stbnetu.xyz#%#//scriptlet('ubo-set', 'devtoolsDetector.launch', 'noopFunc')
 stblion.xyz#%#//scriptlet('ubo-rmnt', 'script', 'while(!![]){try{var')
 scenexe.io#%#//scriptlet('ubo-set-local-storage-item', 'ad_blocker', 'false')
+@@||googlesyndication.com^$script,domain=cheatnetwork.eu
 @@||cheatnetwork.eu^$script,xmlhttprequest,~third-party
 @@||cheatnetwork.eu^$generichide
 hdrez.com#%#//scriptlet('ubo-aopw', 'document.oncontextmenu')

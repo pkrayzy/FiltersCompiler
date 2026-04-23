@@ -1,8 +1,8 @@
-! Checksum: g5NLEnSzRgbJYtPWIo0QVw
+! Checksum: cXftF919QZMAwf6ZE8fWUA
 ! Title: Quick Fixes Filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.8.30
-! TimeUpdated: 2026-04-23T17:24:23+00:00
+! Version: 2.0.8.31
+! TimeUpdated: 2026-04-23T17:34:22+00:00
 ! Expires: 5 days (update frequency)
 ! Title: Krayzylist
 ! Description: Personal Blocklist
@@ -214,7 +214,7 @@ duckduckgo.com##.related-searches,[data-layout="images"],[data-testid="images"],
 !!--Bing--!!
 @@||bing.com/fd/ls/
 bing.com##.wptSld:has(.top_ads_magazine,.b_adcard,.satpc-container)
-bing.com###b_pole:has(.b_ad)
+bing.com###b_pole:has(.b_ad,.b_adLastChild)
 bing.com###b_wpt_adst
 ! Styles
 bing.com#$#.b_wpTabsWrapper { margin-top: 0px !important; }
@@ -6036,7 +6036,9 @@ histalk2.com###header_ad
 ||npttech.com^$badfilter
 ! block doc on Safari
 ! https://www.reddit.com/r/uBlockOrigin/comments/1ntc3nt/why_was_strict_blocking_removed_from_ubo_lite/
+||twinrdengine.com^$document
 ! https://github.com/uBlockOrigin/uAssets/issues/31659
+||foldgun.xyz^$document
 ! others
 ! https://github.com/uBlockOrigin/uAssets/issues/29624
 ! https://github.com/uBlockOrigin/uBOL-home/issues/445
@@ -6129,6 +6131,7 @@ turboplayers.xyz#$?##pop.div_pop { remove: true; }
 ! StevenBlack/hosts issue
 ||static.klaviyo.com^$badfilter
 ! https://github.com/uBlockOrigin/uAssets/issues/31350
+||dmxleo.dailymotion.com^
 geo.dailymotion.com#%#//scriptlet('ubo-set', 'DMP_ENABLE_ADS', 'false')
 ! bad filter in Steven Black�s Unified Hosts (adware + malware)
 ||assets-jpcust.jwpsrv.com^$badfilter
@@ -6138,9 +6141,12 @@ geo.dailymotion.com#%#//scriptlet('ubo-set', 'DMP_ENABLE_ADS', 'false')
 ! Remove when badware list is back on safari
 ! https://www.malwarebytes.com/blog/threat-intel/2026/03/infiniti-stealer-a-new-macos-infostealer-using-clickfix-and-python-nuitka
 ##div.card > div#cbRow.checkbox-row[onclick="startVerify()"]
+||update-check.com^$all
 ! https://www.reddit.com/r/antivirus/comments/1siyee3/what_the_hell_is_this_i_dont_even_go_on_adult/
 ||cleanguard.tech^$all
 ! https://www.youtube.com/watch?v=fwJKKrg1OJM
+||studio-obs.net^$all
+||loseyourip.com^$all
 ! Title: uBlock filters – Privacy
 ! Last modified: %timestamp%
 ! Expires: 7 days
@@ -6162,6 +6168,7 @@ geo.dailymotion.com#%#//scriptlet('ubo-set', 'DMP_ENABLE_ADS', 'false')
 ! https://www.reddit.com/r/chrome/comments/473ves/help_how_to_remove_qipru_redirect_when_searching/
 ||lnkr.us^$document
 ||icontent.us^$document
+||qip.ru^$document
 ! https://github.com/gorhill/uBlock/issues/1411#issuecomment-201031771
 ||ratexchange.net^
 ||adnotbad.com^
@@ -6230,6 +6237,12 @@ brillen.de#%#//scriptlet('ubo-acs', 'document.createElement', 'script')
 frogogo.ru#%#//scriptlet('ubo-aopw', 'ADMITAD')
 ! https://github.com/uBlockOrigin/uAssets/issues/8105
 ! block known tracking honeypots
+||copyhomework.com^
+||coursecopy.com^
+||quiztoolbox.com^
+||quizlookup.com^
+||studyeffect.com^
+||testbooksolutions.com^
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/1388
 ! https://github.com/uBlockOrigin/uAssets/commit/ee5aec09e45376b7e6fb50ff56cb54425826df0d#commitcomment-44879744
 /stats.php?*event=$image
@@ -6252,12 +6265,15 @@ tweakers.net#%#//scriptlet('ubo-aost', 'btoa', 'send')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81533
 ||yuktamedia.com^$third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81778
+||gamedock.io^$third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75098
 ||stats.webgames.io^
 ! https://github.com/uBlockOrigin/uAssets/issues/9273
+||blogfoster.com^$third-party
 ! mettablog.com
 ||myanalytic.net^$third-party
 ! simply-hentai.com beacon
+||t.simply-hentai.com^
 ! https://search.brave.com/search?q=Chromium
 search.brave.com#%#//scriptlet('ubo-no-fetch-if', 'body:browser')
 ! https://github.com/uBlockOrigin/uAssets/pull/9472
@@ -6265,6 +6281,7 @@ search.brave.com#%#//scriptlet('ubo-no-fetch-if', 'body:browser')
 ! https://github.com/uBlockOrigin/uAssets/issues/9123
 /visilabs.min.js
 ! https://github.com/orgs/uBlockOrigin/teams/ublock-filters-volunteers/discussions/354
+||civicscience.com^$third-party
 ! https://github.com/uBlockOrigin/uAssets/issues/9932
 /dataunlocker$script,~third-party,domain=~dataunlocker.com
 ||data-saver-cindi.herokuapp.com^
@@ -6312,6 +6329,7 @@ tacobell.com#%#//scriptlet('ubo-set', 'bmak.js_post', 'false')
 ||ahentai.top/counter.php
 ||caitlin.top/counter.php
 ! https://github.com/easylist/easylist/pull/9370
+||tr.jianshu.com^
 ! https://github.com/easylist/easylist/pull/9469#issuecomment-950179366
 /lib/f_ad_code.js
 ! https://github.com/Yuki2718/adblock/issues/40
@@ -6328,7 +6346,10 @@ tacobell.com#%#//scriptlet('ubo-set', 'bmak.js_post', 'false')
 ||wannads.com/api/track/fingerprint^
 ! https://github.com/uBlockOrigin/uAssets/issues/10690
 ! https://github.com/uBlockOrigin/uAssets/pull/10610
+||va.huya.com^
+||e-stat.huya.com^
 ! pornocolombiano.net analytics
+||analytics.tiendaenoferta.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/10995
 ! https://github.com/easylist/easylist/issues/6724#issuecomment-1003172754
 ! https://github.com/uBlockOrigin/uAssets/pull/15692#issuecomment-1321098072
@@ -6341,6 +6362,7 @@ tacobell.com#%#//scriptlet('ubo-set', 'bmak.js_post', 'false')
 ! https://github.com/uBlockOrigin/uAssets/issues/11644
 endbasic.dev,jmmv.dev#%#//scriptlet('ubo-no-xhr-if', 'method:POST')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106875
+||b90.yahoo.co.jp^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110958
 ! https://github.com/uBlockOrigin/uAssets/issues/11885
 /log/*$xmlhttprequest,domain=vizcloud.*|vizcloud2.*
@@ -6421,6 +6443,7 @@ zhihu.com#%#//scriptlet('ubo-no-xhr-if', 'log-sdk.ksapisrv.com/rest/wd/common/lo
 ! https://github.com/uBlockOrigin/uAssets/issues/17119
 ||flow.microsoft.com/providers/Internal.Telemetry
 ! https://github.com/uBlockOrigin/uAssets/issues/17120
+||client-telemetry.roblox.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/17797
 ||now.gg/oapi/6/play/v1/reportEvent
 ||now.us/oapi/6/play/v1/reportEvent
@@ -6435,7 +6458,12 @@ zhihu.com#%#//scriptlet('ubo-no-xhr-if', 'log-sdk.ksapisrv.com/rest/wd/common/lo
 ||trck.eczyl.com^
 ||trcp.gamefantech.com^
 ||track.opt-tds.com^
+||track.link-tds.com^
+||freetrckr.com^
 ||news-pewuce.com^
+||cjewz.com^
+||chpok.site^
+||smartaccess.biz^
 ||adonsonlyd.xyz^
 ! https://github.com/uBlockOrigin/uAssets/issues/17786
 ! https://github.com/uBlockOrigin/uAssets/issues/20569
@@ -6475,6 +6503,7 @@ zefoy.com#%#//scriptlet('ubo-set', 'firebase.analytics', 'noopFunc')
 /pmc-plugins/pmc-social-share-bar/*/tracking.js
 ! McClatchy-sites tracking
 ! https://github.com/easylist/easylist/pull/16317#issuecomment-1593693211
+!||analytics-sdk.yle.fi^$script,1p,important
 !yle.fi##+js(set, yleAnalytics, noopFunc)
 ! https://github.com/uBlockOrigin/uAssets/issues/18562
 ! https://github.com/uBlockOrigin/uAssets/issues/7646
@@ -6753,6 +6782,7 @@ donanimhaber.com#%#//scriptlet('ubo-href-sanitizer', 'body a[href^="/ExternalLin
 /shopifycloud/media-analytics/v*/analytics.js
 ! Test on uBO first
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213240
+||bdvmetricas.banvenez.com.ve^
 ! https://www.bilet.com/ido
 ||bilet.com/gtmcf/
 ! https://razorpay.com/
@@ -6770,6 +6800,7 @@ donanimhaber.com#%#//scriptlet('ubo-href-sanitizer', 'body a[href^="/ExternalLin
 &ii=fingerprintjs-pro-react
 intellischool.id#%#//scriptlet('ubo-no-xhr-if', 'fingerprintjs-pro-react')
 ! https://nypost.com/
+||pbc.nypost.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/30415
 ||browser.events.data.microsoft.com^$domain=apps.microsoft.com
 ! Tracking cookies
@@ -6911,6 +6942,8 @@ buildtheearth.net#%#//scriptlet('ubo-remove-cookie', '/^_pk_id./', 'when', 'scro
 allrecipes.com#%#//scriptlet('ubo-remove-cookie', '/_sharedid|_lc2_fpi/')
 allrecipes.com#%#//scriptlet('ubo-set-local-storage-item', '/_li_duid|_lc2_fpi/', '$remove$')
 ! https://www.trendyol.com/
+||demeter-tr-core-collect.trendyol.com^
+||collect.trendyol.com^
 ! https://www.trendyol.com/kadin-mont-x-g1-c118
 ! https://github.com/uBlockOrigin/uAssets/issues/25875
 ||cdn.dsmcdn.com/sfx/mergen/
@@ -6924,6 +6957,7 @@ bostonscally.com#%#//scriptlet('ubo-remove-cookie', '/__ta_|_shopify_y/', 'when'
 4gamers.com.tw#%#//scriptlet('ubo-remove-cookie', '_pkc', 'when', 'scroll keydown')
 ! https://eu.4game.com/
 4game.com,4game.ru#%#//scriptlet('ubo-set-local-storage-item', '/fingerprint|trackingEvents/', '$remove$')
+||sdk.optimove.net^
 ! https://www.shutterstock.com/ja
 ! https://github.com/uBlockOrigin/uAssets/issues/30262
 shutterstock.com#%#//scriptlet('ubo-remove-cookie', '/sstk_anonymous_id|htjs_anonymous_id/', 'when', 'scroll keydown')
@@ -6932,6 +6966,8 @@ shutterstock.com#%#//scriptlet('ubo-set-local-storage-item', '/htjs_|stck_|stats
 mobalytics.gg#%#//scriptlet('ubo-set-local-storage-item', '/mixpanel/', '$remove$')
 ! https://it.investing.com/
 ||investing.com/gcode/
+||promos.investing.com^
+||monetization.prod.invmed.co^
 ! https://www.topazlabs.com/experience/photo-trial-2
 ! https://hopper.com/
 hopper.com#%#//scriptlet('ubo-set-local-storage-item', 'ld:$anonUserId', '$remove$')
@@ -6954,6 +6990,7 @@ soundcloud.com#%#//scriptlet('ubo-set-local-storage-item', '/sc_tracking_anonymo
 mykitsch.com#%#//scriptlet('ubo-remove-cookie', '_shopify_y', 'when', 'scroll keydown')
 mykitsch.com#%#//scriptlet('ubo-set-local-storage-item', '/lc_anon_user_id|_constructorio_search_client_id/', '$remove$')
 ||lumhdco.mykitsch.com/*/js|$script
+||rakutenadvertising.io^$third-party
 ! https://www.huntress.com/blog
 huntress.com#%#//scriptlet('ubo-remove-cookie', '/^_sp_id/', 'when', 'scroll keydown')
 huntress.com#%#//scriptlet('ubo-set-local-storage-item', '/builderVisitorId|snowplowOutQueue_cf/', '$remove$')
@@ -7043,6 +7080,7 @@ gala.com#%#//scriptlet('ubo-set-local-storage-item', '_gal1', '$remove$')
 ! https://github.com/uBlockOrigin/uAssets/issues/18938#issuecomment-1693238481
 ! https://community.brave.app/t/unable-to-open-reddit-com-urls-in-private-tabs/503125/4
 ! https://github.com/uBlockOrigin/uAssets/issues/27036
+||kochava.com^$third-party
 ! cxense.com
 ! viously
 ! Exceptions
@@ -7063,6 +7101,7 @@ natgeotv.com#%#//scriptlet('ubo-set', 'Visitor', '{}')
 ! https://github.com/easylist/easylist/issues/17135
 ||googletagmanager.com/gtag/js$domain=starblast.io,important
 ! https://github.com/uBlockOrigin/uAssets/issues/18260
+||signal.falixnodes.net^
 ! https://github.com/uBlockOrigin/uAssets/issues/19954
 ||cdn.cuty.io/fps.js$script
 ! https://lenovo.com/us/en/legal/copytrade/?orgRef=[...] - Search Google for "Lenovo copyright", Click on the first result
@@ -7129,6 +7168,7 @@ coursera.org#%#//scriptlet('ubo-no-fetch-if', 'eventing')
 ! https://github.com/uBlockOrigin/uAssets/issues/22631#issuecomment-1962238669
 ||view.mngusr.com^$domain=chapmanganato.to|manganato.com
 ! https://github.com/uBlockOrigin/uAssets/issues/22676
+||analytics.strapi.io^
 ! https://www.royalroad.com/home
 ||royalroad.com/dist/sentry.js$script
 ! https://github.com/uBlockOrigin/uAssets/issues/23299
@@ -7181,6 +7221,7 @@ perplexity.ai#%#//scriptlet('ubo-aost', 'window.screen.height', 'setTimeout')
 ! https://www.oligo.security/blog/0-0-0-0-day-exploiting-localhost-apis-from-the-browser
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/3443
 ! https://localmess.github.io/
+||yandexmetrica.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/25432
 ! https://github.com/uBlockOrigin/uAssets/issues/23511
 ! https://github.com/uBlockOrigin/uAssets/issues/25467
@@ -7833,6 +7874,7 @@ newsletter.adnz.co%2F*$image
 ||g.doubleclick.net/tag/js/gpt.js$script,xmlhttprequest,domain=cornwalllive.com,important
 ||g.doubleclick.net/gpt/pubads_impl_$domain=cornwalllive.com,important
 ! https://github.com/AdguardTeam/AdguardFilters/commit/4daa90c90372f1413f6c6790386c80886526a169
+||s.pie.org^
 ! https://github.com/uBlockOrigin/uAssets/issues/26644
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/3504
 ||suno.com/metrics/
@@ -7885,6 +7927,7 @@ farmersjournal.ie#%#//scriptlet('ubo-set-local-storage-item', '/^_vid_(lr|t)$/',
 ||wsimg.com/traffic-assets/$script,third-party
 souq-design.com#%#//scriptlet('ubo-remove-cookie', '/^(_tccl_|_scc_session|fpfid)/')
 ! https://github.com/easylist/easylist/pull/21305
+||optable.co^$third-party
 laurelberninteriors.com#%#//scriptlet('ubo-set-local-storage-item', '/adthrive|ccuid|at_sticky_data|geo-location|OPTABLE_/', '$remove$')
 laurelberninteriors.com#%#//scriptlet('ubo-set-session-storage-item', '/previous/', '$remove$')
 laurelberninteriors.com#%#//scriptlet('ubo-set', 'adthrive._components.start', 'noopFunc')
@@ -7902,6 +7945,7 @@ evropa2.cz#%#//scriptlet('ubo-set-local-storage-item', '/cnc_alien_invasion_code
 ! https://px.a8.net/svt/ejp?a8mat=2TMZ7K+6IKXR6+NA2+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.amiami.jp%2Ftop%2Fdetail%2Fdetail%3Fgcode%3DFIGURE-180018
 ! https://github.com/AdguardTeam/AdguardFilters/commit/32cecef77d862d6922e585f86161686ba8925525
 ! https://pagalfree.com/
+||spexjs.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/28150
 ! https://github.com/uBlockOrigin/uAssets/issues/25757
 myanimelist.net#%#//scriptlet('ubo-no-fetch-if', 'method:POST body:page_view')
@@ -7923,6 +7967,7 @@ abs-cbn.com#%#//scriptlet('ubo-set-session-storage-item', 'VR-INJECTOR-INSTANCES
 ||fptonline.net/ea_min.js
 ! https://vtcnews.vn/
 ||vtcnews.vn/Content/pc/js/pages/loadjs/tracking.js
+||track.vtcnews.vn^
 ! https://github.com/uBlockOrigin/uAssets/issues/28450
 ||trueachievements.com/tgn/ana?*page_view
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/3650
@@ -7993,6 +8038,7 @@ linklog.tiagorangel.com#%#//scriptlet('ubo-set', 'data', 'true')
 ! https://github.com/uBlockOrigin/uAssets/issues/29578
 ||brighteon.com/api-v*/public/visit-tracking
 ! https://www.cbssports.com/nfl/
+||slc.cbssports.com^
 ||monitor.*/test?rnd=$xmlhttprequest,third-party
 /measurements/*.ts?rnd=$xmlhttprequest,third-party
 ! https://www.netflix.com/
@@ -8001,12 +8047,14 @@ linklog.tiagorangel.com#%#//scriptlet('ubo-set', 'data', 'true')
 ! https://www.servustv.com/
 /iomm/latest/bootstrap/*
 ! https://app.tophat.com/catalog/
+||publictelemetry.tophat.com^
 ! https://www.wolverine.com/
 ||wolverine.com/on/demandware.static/*/internal/jscript/dwac-*.js
 ! amazon prime video
 /gp/video/acquisition/utilities/monitoring|
 /cdp/usage/GetWeblabTreatment?
 /cdp/usage/ClientsideImpression?
+||minerva.devices.a2z.com^
 ||global.telemetry.insights.video.a2z.com^
 ||amazon.com/1/action-impressions/
 ! https://apothekenaratgeber.com/
@@ -8019,6 +8067,7 @@ linklog.tiagorangel.com#%#//scriptlet('ubo-set', 'data', 'true')
 ||assets.prod.abebookscdn.com/*/scripts/digitaldata/analytics-
 ||assets.prod.abebookscdn.com/*/scripts/utilities/PixelRenderer-
 ! https://lovo.ai/
+||tolt.io^$third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212827
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212830
 /dfxaf3-*.js|$script
@@ -8027,10 +8076,13 @@ linklog.tiagorangel.com#%#//scriptlet('ubo-set', 'data', 'true')
 ||tags.tiqcdn.com/utag/*/prod/utag.js$domain=1und1.de|adidas.co.uk|adidas.nl|adidas.pl|anantara.com|brother-usa.com|calvinklein.ca|cnet.com|grubhub.com|help.dropbox.com|hulu.com|iflscience.com|krymr.com|lineadirecta.com|louisvuitton.com|mcafee.com|mitsubishi-motors.co.jp|modernatx.com|monroeandmain.com|mtv.co.uk|mtv.de|mtv.it|mtvema.com|nickjr.com|post.ch|qvc.jp|radissonhotels.com|sibreal.org|simplybusiness.co.uk|talksport.com|taylor.com|thesun.co.uk|totaljobs.com|truecar.com|uber.com|ubereats.com|usnews.com
 ||tags.tiqcdn.com/utag/*/utag.sync.js$domain=calvinklein.ca|hosteurope.de|sibreal.org|yousee.dk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213050
+||ast.techbook.de^
 ! Shopify
 /shopifycloud/shopify/assets/shop_events_listener-*.js
 /cdn/shopifycloud/consent-tracking-api/*
 ! https://tinxe.vn/
+||log.tinxe.vn^
+||log.oto.com.vn^
 ! https://lifestyle.znews.vn/tarzan-doi-thuc-tra-gia-vi-tay-khong-vat-ca-sau-o-australia-post1582975.html
 ||static.znews.vn/releases/*/js/analytic.min.js
 ! https://plo.vn/
@@ -8046,15 +8098,19 @@ forbes.com##main div[class][style^="top:"]:has(> div > fbs-video[ad-unit-path])
 ! https://www.hepsiburada.com/
 ||cdn.jsdelivr.net/npm/statsig-js
 ! https://en.pronouns.page/
+||stats.pronouns.page^
 ! https://dmax.de/
 ||googletagmanager.com/gtm.js$important,domain=dmax.de
 ! https://webtor.io/
+||umami.webtor.io^
 ! https://github.com/uBlockOrigin/uAssets/issues/26527
+||netronline.dev^
 ! mail.zoho.in metrics
 ||murphy.zoho.in/murphy/*/clientmetricslog?logtype=clientmetrics
 ||murphy.zoho.in/murphy/*/ingest/infoLogs
 ||murphy.zoho.in/murphy/*/exceptions
 ! https://pixvid.org/video/kJvmn
+||socke7.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/30535
 ||pcoptimizedsettings.com/wp-json/caos/v1/proxy/stealth*page_view
 ! https://github.com/uBlockOrigin/uAssets/issues/30624
@@ -8072,7 +8128,9 @@ forbes.com##main div[class][style^="top:"]:has(> div > fbs-video[ad-unit-path])
 ! https://github.com/uBlockOrigin/uAssets/issues/30913
 roblox.com#%#//scriptlet('ubo-href-sanitizer', 'a[href^="https://cts.businesswire.com/ct/CT?"][href*="url=http"]', '?url')
 ||roblox.com/x0k461/e6c1b/xc9
+||ecsv2.roblox.com^$image
 ! https://github.com/uBlockOrigin/uAssets/issues/30953
+||e.revenue.cat^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/219244
 ! http://click.linksynergy.com/fs-bin/click?id=/Vv6e0WKODg&subid=1&offerid=81293.1&type=10&tmpid=1863&RD_PARM1=http%253A%252F%252Fwww.pc-koubou.jp%252Fproducts%252Fdetail.php?product_id=1038106
 ! dailydot.com pageview
@@ -8082,10 +8140,12 @@ dailydot.com#%#//scriptlet('ubo-no-fetch-if', 'url:/undefined method:POST')
 ! nouvelobs.com pageview
 ||nouvelobs.com/*?s=$ping
 ! https://link.me/uhveenyuhh
+||analytics-service.api.linkme.global^
 ! https://github.com/uBlockOrigin/uAssets/issues/31523
 itmedia.co.jp#%#//scriptlet('ubo-remove-cookie', '/cX_P|_pc/')
 itmedia.co.jp#%#//scriptlet('ubo-set-local-storage-item', '/^_cX_/', '$remove$')
 ! https://github.com/uBlockOrigin/uAssets/issues/31525
+||analytics.fmovies4u.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/31955
 ||consent.preference-center.com/v2/edge
 ||secure.loverugbyleague.com/edge/v2/e
@@ -8118,8 +8178,10 @@ itmedia.co.jp#%#//scriptlet('ubo-set-local-storage-item', '/^_cX_/', '$remove$')
 lnk.to,smarturl.it#%#//scriptlet('ubo-set', 'linkfire.tracking', '{}')
 ! https://github.com/uBlockOrigin/uAssets/issues/32431
 /^https:\/\/www\.[a-z0-9]{8}\.com\/i\/[A-Z0-9]{5}\/[A-Z0-9]{6}\/$/$image,third-party,match-case,to=com
+||dq8i9djm.com^$third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228505
 ||static.qiota.com/assets/getQiota.js
+||static-rmr.reworldmediafactory.com^
 ! https://github.com/uBlockOrigin/uAssets/issues/32594
 /s/array/phc_*/config$script,xmlhttprequest,~third-party
 /s/e/*^ip=$xmlhttprequest,~third-party
@@ -8136,6 +8198,7 @@ lnk.to,smarturl.it#%#//scriptlet('ubo-set', 'linkfire.tracking', '{}')
 ! https://github.com/uBlockOrigin/uAssets/issues/23472
 ||timeanddate.*/scripts/logperf.php
 ! https://github.com/uBlockOrigin/uAssets/issues/32627
+||fubuki-umami.space^
 ! Merge in resource-abuse.txt
 ! Title: uBlock filters – Cookie Notices
 ! Last modified: %timestamp%
@@ -14757,6 +14820,7 @@ txori.com#%#//scriptlet('ubo-aeld', 'contextmenu', '_0x')
 ! https://team-octavi.com/ anti right click
 team-octavi.com#%#//scriptlet('ubo-aost', 'document.addEventListener', 'preventDeleteDialog')
 ! https://github.com/uBlockOrigin/uAssets/issues/19370
+||mms.cnn.com^$~third-party
 ! https://github.com/uBlockOrigin/uAssets/issues/19421
 bypass.city,adbypass.org#%#//scriptlet('ubo-no-fetch-if', '/googlesyndication|googletag/')
 bypass.city,adbypass.org#%#//scriptlet('ubo-nowoif')
@@ -15040,6 +15104,7 @@ stblion.xyz#%#//scriptlet('ubo-rmnt', 'script', 'while(!![]){try{var')
 ! https://scenexe.io/ anti adblock
 scenexe.io#%#//scriptlet('ubo-set-local-storage-item', 'ad_blocker', 'false')
 ! https://github.com/uBlockOrigin/uAssets/issues/21065
+@@||googlesyndication.com^$script,domain=cheatnetwork.eu
 @@||cheatnetwork.eu^$script,xmlhttprequest,~third-party
 @@||cheatnetwork.eu^$generichide
 ! hdrez .com anti right click, f-keys
