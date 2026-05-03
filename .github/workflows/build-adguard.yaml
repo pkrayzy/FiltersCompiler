@@ -3,9 +3,9 @@ name: Build AdGuard filters
 on:
   # For manual run builds
   workflow_dispatch:
-  schedule:
-    # Run every hour at minute 0
-    - cron: '30 3 * * *'
+  repository_dispatch:
+    types:
+      - trigger-easylist
   pull_request:
     paths-ignore:
       # Do not trigger build on changes to the following files.
@@ -37,14 +37,8 @@ jobs:
       # - name: Lint
       #   run: yarn lint
 
-      - name: Build DNS filter
-        run: yarn build -i=15
-
       - name: Build EasyList
         run: yarn build -i=12
-
-      - name: Build Quick Fixes
-        run: yarn build -i=24
 
       - name: Push to repository
         run: |
