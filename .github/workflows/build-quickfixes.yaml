@@ -1,0 +1,53 @@
+name: Build AdGuard filters
+
+on:
+  # For manual run builds
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - trigger-quickfixes
+  pull_request:
+    paths-ignore:
+      # Do not trigger build on changes to the following files.
+      # It is needed to avoid pull request merge blocking
+      # as compiler does not use the updated config during the build.
+      - "optimization_config.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo with depth 1
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Update dependencies
+        run: yarn upgrade
+
+      # - name: Lint
+      #   run: yarn lint
+
+      - name: Build DNS filter
+        run: yarn build -i=15
+
+      - name: Build Quick Fixes
+        run: yarn build -i=24
+
+      - name: Push to repository
+        run: |
+          git config --global user.name "pkrayzy"
+          git config --global user.email "pkrayzy@users.noreply.github.com"
+          now=$(date)
+          git add -A
+          git commit -m "Update Filters on $now"
+          git push
