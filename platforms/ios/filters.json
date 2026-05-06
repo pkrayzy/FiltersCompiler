@@ -649,8 +649,8 @@
 				"ios"
 			],
 			"trustLevel": "full",
-			"version": "2.1.19.17",
-			"timeUpdated": "2026-05-05T12:21:26+0000",
+			"version": "2.1.19.18",
+			"timeUpdated": "2026-05-06T05:28:20+0000",
 			"languages": [],
 			"tags": [
 				45,
