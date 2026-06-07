@@ -1,0 +1,34 @@
+name: Prune Commit History
+
+on:
+  push:
+    branches:
+      - master # Or main, depending on the default branch
+
+jobs:
+  prune_history:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history to ensure we can find the Nth commit
+
+      - name: Get last 100 commits hash
+        id: get_hash
+        run: |
+          # Find the SHA of the 100th commit from the tip (HEAD)
+          LAST_COMMIT=$(git rev-list --max-count=100 HEAD)
+          echo "Last 100 commits start at: $LAST_COMMIT"
+          echo "last_commit=$LAST_COMMIT" >> $GITHUB_OUTPUT
+
+      - name: Rewrite history (DANGEROUS OPERATION)
+        # WARNING: Rewriting history on a shared branch like 'master' is highly destructive.
+        # This step assumes you want to force push the rewritten history.
+        run: |
+          git reset --hard $LAST_COMMIT
+          git push origin master --force
+
+      - name: Cleanup (Optional)
+        if: always()
+        run: echo "History pruning attempt complete."
