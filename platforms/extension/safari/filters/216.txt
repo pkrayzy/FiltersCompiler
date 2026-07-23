@@ -1,9 +1,9 @@
-! Checksum: Dq8y5IuNpIAXaeYWYD9g6A
-! Diff-Path: ../patches/216/216-s-1776257623-14400.patch
+! Checksum: ux2/w3APQLpj229LcvQYxA
+! Diff-Path: ../patches/216/216-s-1784567005-14400.patch
 ! Title: Official Polish filters for AdBlock, uBlock Origin & AdGuard
 ! Description: Additional filter list for websites in Polish.
-! Version: 2.0.16.50
-! TimeUpdated: 2026-04-15T12:50:23+00:00
+! Version: 2.0.16.59
+! TimeUpdated: 2026-07-20T17:00:06+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: Official Polish Filters for AdBlock, uBlock Origin & AdGuard
@@ -14,9 +14,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 !   Patronite ==> https://patronite.pl/polskiefiltry
-! Last modified: 15 April 2026
+! Last modified: 20 July 2026
 ! Expires: 1 day
-! OriginalVersion: 2026041501
+! OriginalVersion: 2026072002
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
@@ -24,7 +24,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2026 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2026041501 aktualizacja: sr, 15 kwietnia 2026, 14:20:00
+! v.2026072002 aktualizacja: pon, 20 lipca 2026, 17:05:00
 !
 !
 !1#-----------------------General advert blocking filters-----------------------!
@@ -435,7 +435,7 @@ antyweb.pl##.group.no-margin.columns-wrapper > .group.no-margin.columns-wrapper
 antyweb.pl##.touch + IMG.notMobile[src*="/1200x400"]
 antyweb.pl##.transparent, .box-adv, .grid-item--height-2.grid-item--width-2.grid-item
 antyweb.pl##[class$="banner--place"]
-! aptekarski.com,swiatzdrowia.pl##.placement-item
+aptekarski.com##.placement-item
 apynews.pl##.featured-advert
 archiwum.wiesci.com.pl##table:nth-of-type(1) > tbody > tr > td:nth-of-type(3), table:nth-of-type(2) > tbody > tr > td:nth-of-type(3)
 arenadesign.pl##div.owl-item
@@ -590,6 +590,7 @@ biztok.pl,teleshow.wp.pl,gwiazdy.wp.pl,moto.wp.pl,wiadomosci.wp.pl,money.pl,tury
 blado.pl##span[style^="font-size: 15"] > center, h2[style^="font-size: 14"] > center
 blasty.pl##.ads_top_of_list
 blaugrana.pl##[class^="gridAd"]
+blik.com###advertise_left.advertise_left, #advertise_right.advertise_right
 blog.nowebrzmienia.pl###text-2 > .widget-title-container
 blog.pluralsight.com##.video.widescreen.flex-video
 blogbukmacherski.pl###stream-item-widget-3 > .stream-item-widget-content
@@ -1712,6 +1713,7 @@ inowroclaw.info.pl##.row:nth-of-type(4) > .fl.w250, div.l-container > div.l-row 
 inowroclaw.info.pl##CENTER > A > IMG
 inpost.pl##.after-search-banner.topbannerresultsSearch
 instalacjebudowlane.pl###belka, #panel
+instalki.pl##center:has(span)
 instalki.pl###PushangoAlert, #Mod359
 instalki.pl###banner
 instalki.pl##DIV > DIV[style^="width: 90%; padding: 15px"]
@@ -2749,6 +2751,10 @@ oswiecimonline.pl##.vc_col-sm-12.vc_column_container.wpb_column > .vc_column-inn
 oswiecimskie24.pl##.noad
 otodom.pl###adsTopOD
 otodom.pl##div[data-cy="search.listing.promoted"]
+! Block the Masthead element
+otodom.pl##[data-sentry-component="Masthead"]
+! Remove the top padding from the NexusHeader element
+otodom.pl#$#[data-sentry-component="NexusHeader"] { padding-top: 0px !important }
 otomoto.pl##[data-testid="banner-link"]
 otopanorama.pl##.wpb_content_element.wpb_text_column
 ototorun.pl##.row:nth-of-type(6) > .fl.w1000
@@ -2961,6 +2967,7 @@ poranny.pl,polskatimes.pl##h2 > span
 portal.abczdrowie.pl##.a-ctn-d
 portal.librus.pl#?##synergiaLogin + div[class]:has(picture > source[srcset*="librus"] ~ img[src*="librus"])
 portal.region.info.pl##.et_pb_image.et_pb_module
+portal.librus.pl#$?#advertisement-module { remove: true; }
 portal24h.pl###rt-content-bottom
 portalgorski.pl,miedziowe.pl##[class*="banner"]
 portalkomunalny.pl##.pasinfotxt.above
@@ -4791,6 +4798,7 @@ www.wirtualnemedia.pl###wtg_art_full_service
 ||popclck.org/$script,domain=wrealu24.pl
 ||portalmorski.pl/images/banners/
 ||portalplock.pl/banery/
+||portal.librus.pl/ad^
 ||powernet.pl/mm/260/0/image_files/sidebar/$image
 ||powiat24.pl/photos/adv_$image
 ||pp.funhub.pl^$domain=naszemiasto.pl
@@ -5043,6 +5051,8 @@ www.wirtualnemedia.pl###wtg_art_full_service
 ||c2c24.pl^
 ||api.avanti24.pl/checkFrames/$xmlhttprequest,domain=next.gazeta.pl
 ||statix.stockwatch.pl/content/010101/js/adso.init.121.js$script,domain=www.stockwatch.pl
+||collect.neuca24.pl^
+||matomo.neuca24.pl^
 !
 !11#---------------------------------Multi Regex----------------------------------!
 /:\/\/[a-zA-Z0-9]{3,9}\.quartic\.pl\/Ad\//$script
@@ -5102,8 +5112,6 @@ www.wirtualnemedia.pl###wtg_art_full_service
 @@||gazetabilgoraj.pl/wp-content/plugins/better-adsmanager/js/advertising.min.js$script
 @@||go.eu.bbelements.com/please/code|$domain=filmweb.pl
 @@||google-analytics.com^$domain=certyficate.it|liptonicetea.com|filmweb.pl|aptekarski.com
-@@||googletagmanager.com/gtag/$script,domain=certyficate.it|aptekarski.com
-@@||googletagmanager.com/gtm.js$script,domain=www.emag.pl|benchmark.pl|komputerswiat.pl|www.jabra.pl|plus.pl|expressilustrowany.pl|motofakty.pl|kurierlubelski.pl|stronakobiet.pl|ads.allegro.pl|skoda-auto.pl|aptekarski.com
 @@||googletagservices.com/tag/js/gpt.js$script,domain=wprost.pl
 @@||guce.advertising.com/collectIdentifiers?sessionId=
 @@||hit.gemius.pl/gplayer.js$script,domain=polotv.pl|pilot.wp.pl
@@ -5150,21 +5158,21 @@ www.wirtualnemedia.pl###wtg_art_full_service
 @@||cdn.onesignal.com/sdks/$script,domain=www.aptekarska.pl|aptekarski.com
 @@||onesignal.com/$domain=www.aptekarska.pl|aptekarski.com
 @@||region1.analytics.google.com/$domain=www.aptekarska.pl|aptekarski.com
-@@||region1.google-analytics.com/$domain=swiatzdrowia.pl
+!@@||region1.google-analytics.com/$domain=swiatzdrowia.pl
 @@||ulixes.pl/www/images/slider/$domain=aptekazawiszy.pl
-@@||doubleclick.net/$domain=swiatzdrowia.pl
-@@||www.google-analytics.com$domain=swiatzdrowia.pl
-@@||www.googletagmanager.com/$domain=swiatzdrowia.pl
-@@||region1.analytics.google.com$domain=swiatzdrowia.pl
-@@||consent.cookiefirst.com/sites/swiatzdrowia.pl*$script,domain=swiatzdrowia.pl
-@@||consent.cookiefirst.com/banner.no-autoblock.js$script,domain=swiatzdrowia.pl
-@@||consent.cookiefirst.com/sites/swiatzdrowia.pl*$xmlhttprequest,domain=swiatzdrowia.pl
-@@||edge.cookiefirst.com/prod/location?origin=swiatzdrowia.pl$xmlhttprequest,domain=swiatzdrowia.pl
-@@||consent.cookiefirst.com/bulk/bc-handler.min.js*$script,domain=swiatzdrowia.pl
-@@||consent.cookiefirst.com/banner/*$script,domain=swiatzdrowia.pl
-@@||consent.cookiefirst.com/banner/*$stylesheet,domain=swiatzdrowia.pl
-@@||consent.cookiefirst.com/banner/*$xmlhttprequest,domain=swiatzdrowia.pl
-@@/ads/ga-audiences$domain=swiatzdrowia.pl
+!@@||doubleclick.net/$domain=swiatzdrowia.pl
+!@@||www.google-analytics.com$domain=swiatzdrowia.pl
+!@@||www.googletagmanager.com/$domain=swiatzdrowia.pl
+!@@||region1.analytics.google.com$domain=swiatzdrowia.pl
+!@@||consent.cookiefirst.com/sites/swiatzdrowia.pl*$script,domain=swiatzdrowia.pl
+!@@||consent.cookiefirst.com/banner.no-autoblock.js$script,domain=swiatzdrowia.pl
+!@@||consent.cookiefirst.com/sites/swiatzdrowia.pl*$xhr,domain=swiatzdrowia.pl
+!@@||edge.cookiefirst.com/prod/location?origin=swiatzdrowia.pl$xhr,domain=swiatzdrowia.pl
+!@@||consent.cookiefirst.com/bulk/bc-handler.min.js*$script,domain=swiatzdrowia.pl
+!@@||consent.cookiefirst.com/banner/*$script,domain=swiatzdrowia.pl
+!@@||consent.cookiefirst.com/banner/*$stylesheet,domain=swiatzdrowia.pl
+!@@||consent.cookiefirst.com/banner/*$xhr,domain=swiatzdrowia.pl
+!@@/ads/ga-audiences$domain=swiatzdrowia.pl
 @@||spolecznosci.net$script,domain=www.donald.pl
 !
 !13#------------------------Whitelist specific element hiding rules------------------------!
@@ -5472,13 +5480,17 @@ filmyfilmy.pl###play
 ||mondeanimalinteressant.com^
 ||realitydaily24.com^
 ||newsbyte8386.com^
+||vuuel.com^
+||forcedgifting.com^
+||dobrezrodla.com^
+||feji.io^
 !
 !24#--------------------------Rules for ublock, but can be use with adblock------------!
 ||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=exs.pl,important
 ||ipla.hit.stat24.com^$object,domain=ipla.tv,important
 !
 !25#--------------------------Experimental rules------------!
-~pilot.wp.pl,~poczta.wp.pl,wp.pl##body > div:nth-of-type(1)[style^="display: block;"]:not(#page)
+!~pilot.wp.pl,~poczta.wp.pl,wp.pl##body > div:nth-of-type(1)[style^="display: block;"]:not(#page)
 !
 !26#--------------------------Rules for pages with random adv scripts hide elem------------!
 electro-torrent.pl##a[href*="://o9d.pl/"]
@@ -5637,6 +5649,9 @@ zywotziemniaka.wp.pl##.advertisement, .banner
 ||wpkoszyk.wp.pl/api/koszyk$xmlhttprequest
 ||www.wp.pl/*.okazje-kokpit.chunk.js
 ||xml.enovatis.pl/mrdsl/json.php$xmlhttprequest,domain=turystyka.wp.pl
+@@||dot.wp.pl/*/dot.gif?rmt=css$stylesheet,domain=kobieta.wp.pl
+@@||std.wpcdn.pl/images/adv/placeholder_wp.svg$image,domain=kobieta.wp.pl
+@@||kobieta.wp.pl^$elemhide
 !
 !33#--------------------------WP element hide------------!
 autocentrum.pl,autokult.pl,fotoblogia.pl,gadzetomania.pl,genialne.pl,jastrzabpost.pl,kobieta.wp.pl,komorkomania.pl,money.pl,open.fm,polygamia.pl,pudelek.pl,pysznosci.pl,wideo.wp.pl##style + div[class]
@@ -6034,25 +6049,26 @@ avanti24.pl,czterykaty.pl,edziecko.pl,g.pl,gazeta.pl,haps.pl,hapsvod.pl,magazyn-
 ||extcdn.burdamedia.pl$script
 !
 !49#--------------------------EasyPrivacy Bugs------------!
-@@||tv.wp.pl/do/*/dotn?sw=$image,~third-party,domain=tv.wp.pl
-@@||staty.portalradiowy.pl/wstats/wstats.php$script,domain=discoparty.pl|discopolonew.cba.pl
+@@||ceneo.pl/Scripts/dist/Desktop/base/custom/Basket/analytics.js$script,domain=ceneo.pl
+@@||exacttarget.com/CloudPages/lib/smartcapture-formjs.js$script,domain=cloud.polska.auchan.pl
 @@||fastwhitecat.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-download-tracker.js
 @@||get.x-link.pl/$subdocument,domain=dziendobry.tvn.pl
-@@||www.googletagmanager.com/gtag/js$script,domain=www.geselle.pl|heydoc.pl
-@@||www.google-analytics.com/analytics.js$script,domain=www.geselle.pl|aptekarska.pl
-@@||www.google-analytics.com/gtm/js$script,domain=www.geselle.pl|aptekarska.pl
-@@||ceneo.pl/Scripts/dist/Desktop/base/custom/Basket/analytics.js$script,domain=ceneo.pl
-@@||www.googletagmanager.com/gtm.js$script,domain=www.mbank.pl
-@@||online.mbank.pl/venezia/fingerprint.js$script,domain=online.mbank.pl
-@@||ts.tradetracker.net/?cid=$image,domain=ksiegarnia-edukacyjna.pl
-@@||ticket.energylandia.pl/static/prod/scripts/modules/analytics.js$script,domain=ticket.energylandia.pl
-@@||wpfc.ml^$domain=kryminalnapolska.pl
-@@||exacttarget.com/CloudPages/lib/smartcapture-formjs.js$script,domain=cloud.polska.auchan.pl
-@@||smushcdn.com/*/blank.gif$image,domain=bithub.pl
-@@||polfan.pl/*/fingerprint2.min.js$script,~third-party,domain=polfan.pl
-@@||googletagmanager.com^$script,domain=www.aptekarska.pl|aptekarski.com
+@@||google-analytics.com/analytics.js$script,domain=www.geselle.pl|aptekarska.pl
+@@||google-analytics.com/gtm/js$script,domain=www.geselle.pl|aptekarska.pl
 @@||google-analytics.com^$domain=www.aptekarska.pl|aptekarski.com
-@@||www.googletagmanager.com/gtm.js$script,domain=geselle.pl
+@@||googletagmanager.com/gtag/js$script,domain=www.geselle.pl|heydoc.pl
+@@||googletagmanager.com/gtag/$script,domain=certyficate.it|aptekarski.com
+@@||googletagmanager.com/gtm.js$script,domain=www.emag.pl|benchmark.pl|komputerswiat.pl|www.jabra.pl|plus.pl|expressilustrowany.pl|motofakty.pl|kurierlubelski.pl|stronakobiet.pl|ads.allegro.pl|skoda-auto.pl|aptekarski.com|geselle.pl|www.mbank.pl|krzyzowki123.pl
+@@||googletagmanager.com/gtm.js$xmlhttprequest,domain=krzyzowki123.pl
+@@||googletagmanager.com^$script,domain=www.aptekarska.pl|aptekarski.com
+@@||online.mbank.pl/venezia/fingerprint.js$script,domain=online.mbank.pl
+@@||polfan.pl/*/fingerprint2.min.js$script,~third-party,domain=polfan.pl
+@@||smushcdn.com/*/blank.gif$image,domain=bithub.pl
+@@||staty.portalradiowy.pl/wstats/wstats.php$script,domain=discoparty.pl|discopolonew.cba.pl
+@@||ticket.energylandia.pl/static/prod/scripts/modules/analytics.js$script,domain=ticket.energylandia.pl
+@@||ts.tradetracker.net/?cid=$image,domain=ksiegarnia-edukacyjna.pl
+@@||tv.wp.pl/do/*/dotn?sw=$image,~third-party,domain=tv.wp.pl
+@@||wpfc.ml^$domain=kryminalnapolska.pl
 @@||www.cloudflare.com/cdn-cgi/trace$domain=plus.pl|polsatbox.pl
 !
 !50#--------------------------Video Players------------!
