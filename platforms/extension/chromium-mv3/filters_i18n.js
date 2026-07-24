@@ -19031,11 +19031,7 @@
 			},
 			"tr": {
 				"name": "ROList",
-<<<<<<< HEAD
-				"description": "Rumence siteleri için ek filtre listesi."
-=======
 				"description": "Rumence siteler için ek filtre listesi."
->>>>>>> bb682191bce89b0499264da29397e2e4adb2efb1
 			},
 			"uk": {
 				"name": "ROList",
