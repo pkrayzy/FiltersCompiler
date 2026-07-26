@@ -22,13 +22,16 @@ jobs:
       - name: Fetch upstream
         run: git fetch --depth=1 upstream master
 
-      - name: Merge upstream master (unless skip ci)
+      - name: Merge upstream master (unless bot commit)
         run: |
-          LAST_MSG=$(git log -1 --format=%B upstream/master)
-          if echo "$LAST_MSG" | grep -q "^skip ci"; then
-            echo "Latest upstream commit starts with 'skip ci' — skipping merge."
+          # Get the author email of the latest commit on upstream/master
+          AUTHOR_EMAIL=$(git log -1 --format=%ae upstream/master)
+          
+          if [[ "$AUTHOR_EMAIL" == "github-actions[bot]@users.noreply.github.com" ]]; then
+            echo "Latest upstream commit is from github-actions bot — skipping merge."
             exit 0
           fi
+          
           git config --global user.name "pkrayzy"
           git config --global user.email "pkrayzy@users.noreply.github.com"
           git merge upstream/master --no-edit
