@@ -1,8 +1,8 @@
-! Checksum: 0TRdUjYOdYrods3bJ44ZvQ
+! Checksum: dqXJxT/WGg8hDzBoWvrWew
 ! Title: Quick Fixes Filter (Optimized)
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.10.46
-! TimeUpdated: 2026-07-30T01:50:32+00:00
+! Version: 2.0.10.47
+! TimeUpdated: 2026-07-30T02:06:59+00:00
 ! Expires: 5 days (update frequency)
 /*.consentdrawer.bundle.*$script
 /admr.*$script
@@ -199,6 +199,7 @@ bing.com###b_mtp,#sacs_win
 bloomberg.com,theverge.com#%#//scriptlet('remove-cookie')
 bloomberg.com,nytimes.com,theverge.com#%#//scriptlet('set-session-storage-item', '/*/', '$remove$')
 bloomberg.com,nytimes.com,theverge.com#%#//scriptlet('set-local-storage-item', '/*/', '$remove$')
+nytimes.com#%#//scriptlet('trusted-replace-fetch-response', '"show_ads":true', '"show_ads":false', 'statsig/initialize')
 *_ad_$media,domain=youtube.com,third-party
 youtube.com#?#.ytlr-horizontal-list-renderer__items > .yt-virtual-list__container > .yt-virtual-list__item--visible.yt-virtual-list__item--selected.yt-virtual-list__item:contains(Ad)
 ||googlevideo.com/initplayback?source=youtube&*c=TVHTML5&*oad=$xmlhttprequest,domain=youtube.com
