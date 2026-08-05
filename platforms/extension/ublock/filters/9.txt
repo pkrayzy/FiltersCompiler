@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: cF37QCa3CBFXd2Fhb9TT5w
-! Diff-Path: ../patches/9/9-s-1784748988-3600.patch
+! Checksum: FZhpJ8qa2CGgtHC+ZhF8Fg
+! Diff-Path: ../patches/9/9-s-1785916914-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.35.7
-! TimeUpdated: 2026-07-22T19:33:16+00:00
+! Version: 2.0.35.21
+! TimeUpdated: 2026-08-05T07:58:48+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -25,6 +25,8 @@
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
 !
+||chorumebbbbgoza.xyz^
+||superflixapi.pro/player/pop-signal?
 ||comprargratis.com.br^
 ||cdn-4k-webp.site^
 ||adzep.io^
@@ -200,8 +202,12 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/236737
+miukt.com.br##+js(addEventListener-defuser, DOMContentLoaded, .offsetHeight === 0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/236135
 xataka.com##+js(no-setTimeout-if, offsetHeight===0)
+! https://github.com/AdguardTeam/AdguardFilters/issues/235399
+streamverde.net##body > div[id^="sys-notify-"] > div:has(> img[src="https://streamverde.net/wp-content/plugins/sv-gato-pidao/assets/buetas01.png"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/235706
 lycantoons.com##+js(prevent-fetch, /google-analytics\.com|pubadx\.one/)
 lycantoons.com##+js(no-setTimeout-if, offsetHeight)
@@ -1119,9 +1125,6 @@ hobba.tv#@##ad-box
 @@||projetomotog.blogspot.com^$generichide
 !+ PLATFORM(ext_ff, ext_opera, ext_edge, ios, ext_android_cb, ext_safari, ext_ublock)
 @@.jpg#$domain=projetomotog.blogspot.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/34582
-!+ NOT_PLATFORM(windows, mac, android, cli)
-@@||torrentmegafilme.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34477
 radiotormentamx.com###ad:style(position: absolute!important; left: -3000px!important;)
 radiotormentamx.com###adsdiv:style(position: absolute!important; left: -3000px!important;)
@@ -2135,7 +2138,28 @@ proandroid.com,lusometeo.com,kltutors.com,eloutput.com,mundobytes.com,techondica
 !
 ! NOTE: Specific rules
 !
+suckinghat.com##.lds-hourglass
+sololatino.net##+js(addEventListener-defuser, click, localStorage)
+sololatino.net##+js(no-window-open-if)
+||nexustoons.com/api/settings/pop-ads
+||nexustoons.com/api/settings/ads
+||nexustoons.com/api/ads
+lance.com.br##.paywall-content > p:has(a[href^="https://hiper.bet.br/ptb/authentication/signup?"])
+lance.com.br###btn-open-chat
+hotchamas.com##.video-card-ad
+hotchamas.com##.watch-sidebar-ads
+underhentai.net##.row > article.post-card:has(> a[href] > div.img-wrapper > div.badge:contains(/^AD$/g))
+underhentai.net##menu > li:has(> a[href="/games/"])
+animestotais.com.br##.terabox-promo
+animestotais.com.br##.theiaStickySidebar > div.widget_custom_html:has(div.terabox-promo)
+reclameaqui.com.br##div[data-ra-complaint-ad]
+ltube.us###ad-pro-left-widget
 vix.com##button[data-testid="player-up-sell-entry-button"]
+streamverde.net###fwl-widget-box
+||azureedge-global-fastly-cloudfront-ondigitalocean-stackpathcdn.buzz^
+||streamverde.net/core-metrics.js
+xn--kcksk7a2bl5le7b6doc1h3f.com,superflixapi.pro,redeflixapi.store##+js(no-window-open-if)
+redeflixapi.store##+js(addEventListener-defuser, click, openFullscreenAdOnce)
 gazetadopovo.com.br##div[class^="outbrain"]
 gazetadopovo.com.br##div[class^="topBannerAd"]
 gazetadopovo.com.br##div[class$="postAsideBanner"]
@@ -3361,8 +3385,6 @@ lance.com.br##main .flex-col.justify-start > .w-full.mx-auto:has(img[alt="Lance!
 ig.com.br###ad_inimage
 ig.com.br##.ig-taboola
 promobit.com.br##.grid > div[class^="col-start"]:has(div.bg-neutral-high-100)
-lance.com.br##.screenWidth + .shadow-sticky
-lance.com.br##div[class]:has(> div[id^="rasgado_"])
 promobit.com.br##aside > div.items-center:has(> div[id*="300x250"])
 promobit.com.br###__next > div.block:has(> div.block > a[href^="https://s.click.aliexpress.com/"])
 ojogo.pt,dinheirovivo.pt,tsf.pt,dn.pt,jn.pt##.pub-wrapper
