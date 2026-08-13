@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ! Checksum: 2vOChfiPvZCN3fb8LVtgaw
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
@@ -19,6 +20,13 @@
 ! Version: 2.0.52.89
 ! TimeUpdated: 2026-08-05T10:53:31+00:00
 >>>>>>> ca4d06193f52a53076379988151ceb76bd143689
+=======
+! Checksum: E5cezdXwxvxm/o/OvZAbnQ
+! Title: AdGuard German filter
+! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
+! Version: 2.0.52.95
+! TimeUpdated: 2026-08-12T14:29:55+00:00
+>>>>>>> 55efbb48509e90e8b4fb2ab217e845540536b7d4
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -380,6 +388,10 @@ schnittmuster-datenbank.de#%#//scriptlet("abort-on-property-read", "adsBlocked")
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/238166
+||ligainsider.de/public/desktop/js/li-probe-base.js
+||ligainsider.de/li-probe.js
+||ligainsider.de/public/desktop/js/li-wall.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/236444
 adhs-zentrum.de#%#//scriptlet('prevent-navigation', 'werbeblocker')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234818
@@ -1440,8 +1452,8 @@ lkz.de##.nfy-row-ad
 ! chip.de##li > a[href*="chip.de/downloads/"][target="_blank"]:has(img[src*="hash"])
 chip.de##main > section.wrapper-safe:has(> .Downloads-Alternative[style="display: none !important;"]:only-child)
 chip.de##main > section.wrapper-safe:has(> h3:first-child + .Downloads-Alternative[style="display: none !important;"]:last-child)
-chip.de##a[href*="chip.de/downloads/"]:has(img[src*="hash"]:not([class], [data-src]))
-chip.de##a[href*="chip.de/downloads/"] img[src*="hash"]:not([class], [data-src])
+chip.de##a[href*="chip.de/downloads/"]:has(img[src*="hash"]:not([class], [data-src], [alt]))
+chip.de##a[href*="chip.de/downloads/"] img[src*="hash"]:not([class], [data-src], [alt])
 chip.de##li > a[href*="chip.de/downloads/"][class]:not([class*=" "]) img[src*="hash"]
 chip.de#?#li > a[href*="chip.de/downloads/"][class]:not([class*=" "]):has(img[src*="hash"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180261
@@ -1510,6 +1522,10 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+chip.de##.BestCheck
+11freunde.de##[data-advertisement]
+11freunde.de##div[x-data*="adSlot"]
+||esut.de/wp-content/banners/$image
 eltern.de##.page__aside > .js-ob:empty
 eltern.de##.page__aside > .footer-teaserblock:not(:has(>*))
 eltern.de##.article__body > .multi-purpose-slot:has(> .multi-purpose-slot__static-content > .list-element > .ad-labels)
@@ -1708,7 +1724,7 @@ testsieger.de###sponsoredAdsHeader
 testsieger.de###offers
 testsieger.de###mainOfferCards
 testsieger.de##.ts-pdp-product-right-col > h4:has(+ #mainOfferCards)
-soldat-und-technik.de##.g:has(> .g-dyn > a[onclick*="advert_name"])
+esut.de,soldat-und-technik.de##.g:has(> .g-dyn > a[onclick*="advert_name"])
 evangelisch.de##.b-banner
 ||evangelisch.de/sites/default/files/banner/
 flashfussball.de##div[id^="zoneContainer-"]
@@ -5923,6 +5939,11 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/237609
+! caused by external filter list BPC-clone
+||spiegel.de/public/shared/generated/js/commons.*.js$script,~third-party,badfilter
+! https://github.com/AdguardTeam/AdguardFilters/issues/237283
+@@||ads.julephosting.de/podcasts/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231337
 ||target-video.com^$third-party,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222073
@@ -7381,8 +7402,8 @@ wetter.com#@#div[id^="div-gpt-"]
 ||vulkanbetting.biz^$popup
 ||vulkanvegas-de.com^$popup
 ||vulkanvegascasino.at^$popup
-/as1.php$domain=boerse.ai|boerse.am|boerse.im|boerse.kz|boerse.sx|boerse.tw
-/b.php$domain=boerse.ai|boerse.am|boerse.im|boerse.kz|boerse.sx|boerse.tw
+/as1.php$domain=boerse.ai|boerse.am|boerse.im|boerse.sx|boerse.tw
+/b.php$domain=boerse.ai|boerse.am|boerse.im|boerse.sx|boerse.tw
 ^what=zone^$domain=ww3.cad.de|ww4.cad.de
 |http://$subdocument,third-party,domain=bonimail.de
 ||112-magazin.de/images/banners/
@@ -9440,7 +9461,6 @@ kochrezepte.at###slot_middle
 kochrezepte.at###slot_middle_2
 bigfm.de###smartclip-overlay
 smsgott.de###smsboxIframe
-factsverlag.de###sp-content-top
 wochenblitz.com###sp-sidebar1
 deinesexfilme.com,einfachtitten.com,gutesexfilme.com,halloporno.net,hd-sexfilme.com,hdpornos.net,herzporno.com,nursexfilme.com,pornoente.tv,pornofelix.com,pornofisch.com,pornohammer.com,pornohans.com,pornohirsch.net,pornojenny.com,pornoklinge.com,pornoschlange.com,pornotom.com,pornotommy.com,pornozebra.com,sexente.com,sexvideos-gratis.com,sexvideos-hd.com,tube8-pornos.com,xhamster-sexfilme.com,xnxx-porno.com,xnxx-sexfilme.com###special_column
 hd-pornos.info,pornoente.tv###spezial_column

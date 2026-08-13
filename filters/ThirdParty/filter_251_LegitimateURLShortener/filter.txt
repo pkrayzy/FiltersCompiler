@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 4August2026v1
+! OriginalVersion: 11August2026v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary ?/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1825,6 +1825,9 @@ $removeparam=/^src=winget$/
 $removeparam=checkForDeferred
 $removeparam=deepLinkGuid
 
+! https://www•playstation•com/no-no/ps-plus/?smcid=pdc%3Ano-no%3Asupport-subscriptions-ps-plus-pc%3Aprimary%20nav%3Amsg-ps-plus%3Aabonner (10/08/2026)
+$removeparam=smcid
+
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -2101,6 +2104,8 @@ $removeparam=sk,domain=aliexpress.*|bing.com
 ! https://www•bing•com/apps/wallpaper?pc=w011&brand=bing (30/07/2026)
 ||bing.com/apps^$removeparam=pc
 ||bing.com/apps^$removeparam=brand
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9776475
+$document,removeparam=entrypoint,domain=bing.com
 
 !!! ——— 🛍️ eBay ———
 ! https://www•ebay•com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=(...)&_trksid=p2481888•c100675•m4236&_trkparms=(...) (31/10/2020)
@@ -4091,7 +4096,7 @@ $removeparam=sub,domain=allboner.com|twinkvideos.com
 !!! ||target.$removeparam=preselect - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-11417832
 
 ! https://github.com/DandelionSprout/adfilt/pull/660
-$removeparam=ueid,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
+$removeparam=ueid,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com|theverge.com
 $removeparam=qo,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com|search.ask.com
 $removeparam=qsrc,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com|search.ask.com
 $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
@@ -4289,6 +4294,8 @@ $removeparam=pk_vid,document
 ||xiaohongshu.com^$removeparam=xhsshare,document
 ||xiaohongshu.com^$removeparam=appuid,document
 ||xiaohongshu.com^$removeparam=apptime,document
+! https://github.com/uBlockOrigin/uAssets/pull/34015
+||xiaohongshu.com^$removeparam=share_channel,document
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4966523
 ||login.afreecatv.com^$removeparam=szFrom
@@ -4571,7 +4578,7 @@ $document,removeparam=method,domain=peacocktv.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-7211861
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9964278
-$document,removeparam=share_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|sky.it
+$document,removeparam=share_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|sky.it|xiaohongshu.com|snapchat.com
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-7213022
 ||xvideos.$document,removeparam=sxcaf
@@ -4924,9 +4931,6 @@ ref=news.risky.biz$document,removeparam=ref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-10293338
 $document,removeparam=ucid,domain=unicredit.it|steampowered.com
 
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-9776475
-$document,removeparam=entrypoint,domain=bing.com
-
 ! Various subdomains, i.e. https://tg24.sky•it/?zoneid=editorial-global-nav_news-skytg24_null
 ||sky.it^$document,removeparam=zoneid
 
@@ -5145,7 +5149,6 @@ $removeparam=/^ref=underfl0w\.com$/
 $document,removeparam=loclid
 
 ! https://story•snapchat•com/p/a9868981-ac8a-4c7c-bdd3-bbd94c7cd46a/3298970858393600?timestamp=0&share_id=7TRPgdxQm4I&locale=nb-NO (03/10/2025)
-||snapchat.com^$removeparam=share_id
 ||snapchat.com^$removeparam=/^timestamp=0$/
 
 ! https://art•ngfiles•com/images/7074000/7074061_2473390_feitphikz_untitled-7074061•a6e40df658d48d6035c8a73e0144432c•webp?f1759264692
@@ -5433,6 +5436,9 @@ ref=sqliteviewer.app$document,removeparam=ref
 
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-17899820
 ||sonarsource.com^$document,removeparam=tidelift
+
+! https://www•msn•com/nb-no?bv=midlevel (10/08/2026)
+||msn.com^$removeparam=bv
 
 !#if !env_mobile
 ! 🖥️ ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ——— 🖥️ !
