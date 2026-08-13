@@ -649,13 +649,8 @@
 				"ios"
 			],
 			"trustLevel": "full",
-<<<<<<< HEAD
-			"version": "2.1.29.32",
-			"timeUpdated": "2026-08-13T00:31:19+0000",
-=======
-			"version": "2.1.31.12",
-			"timeUpdated": "2026-08-12T22:18:34+0000",
->>>>>>> 55efbb48509e90e8b4fb2ab217e845540536b7d4
+			"version": "2.1.29.33",
+			"timeUpdated": "2026-08-13T01:31:53+0000",
 			"languages": [],
 			"tags": [
 				45,
