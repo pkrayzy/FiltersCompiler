@@ -2,7 +2,7 @@
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
-! Last modified: Sat, 08 Aug 2026 13:12:31 +0300
+! Last modified: Mon, 17 Aug 2026 01:20:22 +0300
 ! Homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
@@ -96,10 +96,9 @@ aalto.fi#%#//scriptlet('ubo-set-cookie', 'cookiebot-consent--marketing', '0')
 aalto.fi#%#//scriptlet('ubo-set-cookie', 'cookiebot-consent--statistics', '0')
 ! -----SCRIPTS END-----
 ! mtv.fi & mtvuutiset.fi
-&browser=MozillaFirefox$xmlhttprequest,removeparam=browser,domain=mtv.fi|mtvuutiset.fi
 @@||fi-mtv3.videoplaza.tv/proxy/distributor$domain=mtv.fi|mtvuutiset.fi
-mtv.fi,mtvuutiset.fi#%#//scriptlet('json-prune-fetch-response', 'bumpers', '', 'url:/playback2.a2d.tv\/play/')
-mtv.fi,mtvuutiset.fi#%#//scriptlet('json-prune-fetch-response', 'playbackItem.isStitched', '', 'prism.a2d.tv')
+mtv.fi,mtvuutiset.fi#%#//scriptlet('json-prune-fetch-response', 'bumpers playbackItem.isStitched', '', 'a2d.tv/play/')
+mtv.fi,mtvuutiset.fi#%#//scriptlet('ubo-xml-prune', 'Ad', '', '/fwmrm.net\/ad\/g/')
 mtv.fi,mtvuutiset.fi#%#//scriptlet('ubo-xml-prune', 'MediaFile', '', 'fi-mtv3.videoplaza.tv/proxy/distributor')
 mtv.fi,mtvuutiset.fi#$?#.avod-web-player-csai { remove: true; }
 mtv.fi,mtvuutiset.fi##.avod-web-player-pause
@@ -714,6 +713,7 @@ koneviesti.fi#?#.layout__article-area__text-content > p:contains(/^\xA0$/)
 koneviesti.fi,maaseuduntulevaisuus.fi###rscontent > [data-ad-container="true"]
 koneviesti.fi,maaseuduntulevaisuus.fi##.promo
 koneviesti.fi,maaseuduntulevaisuus.fi##[class^="AdItem_adItem"]
+koneviesti.fi,maaseuduntulevaisuus.fi##[data-ad-container="true"]
 koneviesti.fi,maaseuduntulevaisuus.fi#?#.row .col-small-12.col-medium-12.col-large-12:contains(Mainos:)
 konsolifin.net##.konsolifin-vaakamainos
 kotikokki.net###partners-container-big
@@ -817,6 +817,7 @@ metsalehti.fi##.teaser-top-banner--partner
 metsalehti.fi##[data-set="main-ad"]
 metsastajaliitto.fi##.frontpage-ad-item:not(:has([href^="https://metsastajaliitto.fi/"]))
 metsastajaliitto.fi##.view-id-jahtimedia_latest .list-item:has([href^="https://jahtimedia.fi/mainokset/"])
+metsastysjakalastus.fi##.DfpAdSlot_dfp-ad-slot
 metsastysjakalastus.fi##.Index_native-ads
 metsastysjakalastus.fi,rakennusmaailma.fi,tekniikanmaailma.fi##.in-text-ad-slot-wrapper
 mikrobitti.fi##a[data-ga-teaser-name="PartnerContentTeaser"]
@@ -1141,7 +1142,7 @@ tilannehuone.fi##.contentti:has(> .mainos_yla:only-child)
 tilannehuone.fi##.halytyslista tr:has(.mainosinline)
 tilannehuone.fi##[class^=mainos]:not(:only-child)
 tilannehuone.fi#?##cnt_lista tr:contains(/^\s$/):has(+ tr:has(.mainosinline))
-tilannemedia.fi##.tdc-row:not(.td-stretch-content):has([data-ad-unit-id]):not([itemtype="https://schema.org/Article"] .tdc-row)
+tilannemedia.fi##.tilan-mobiilimainos-600
 tilisanomat.fi##.ctaad
 tinderinparhaat.com##.adf-placement-top
 tivi.fi##.kFYbNM
@@ -1165,8 +1166,14 @@ tori.fi##.retail-media-ad-wrapper
 tori.fi##div#banner_panorama_topmost
 tori.fi##div#panorama_top
 tori.fi##div#panorama_topmost
+totalvene.fi##.articlebanner
 totalvene.fi##.banner-content:has([data-ad-client])
+totalvene.fi##.banner-wrapper
+totalvene.fi##.grid-item:has(> .card--sponsored)
 totalvene.fi##.moduletable:has(.advert)
+totalvene.fi##.side-bar-container:has([data-revive-zoneid])
+totalvene.fi##.tv-container > .banner-wrapper
+totalvene.fi##.tv-container > .banner-wrapper
 totalvene.fi##.videoparaati
 totalvene.fi#?#.banner-group-header:contains(Mainos)
 traktorpool.fi##.billboard
@@ -1498,6 +1505,7 @@ murha.info#@#.adsbygoogle
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media,redirect=noopmp3-0.1s,domain=ruutu.fi|supla.fi
 ||sanoma-prod.integration-x.com^$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 /adverts/*.mp4$media,redirect=noopmp3-0.1s,domain=totalvene.fi
+||adsdk.bing.net/ast/ast.js$script,redirect=noopjs,domain=iltalehti.fi
 
 ! appears when blocking ads:
 ||mobiili.fi/wp-content/themes/mobiilitheme/images/small-loading.gif
