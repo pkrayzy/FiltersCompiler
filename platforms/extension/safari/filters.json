@@ -334,7 +334,7 @@
 			"filterId": 15,
 			"name": "AdGuard DNS filter",
 			"description": "Filter composed of several other filters (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.",
-			"timeAdded": "2014-06-30T03:56:55-0400",
+			"timeAdded": "2014-06-30T07:56:55+0000",
 			"homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
 			"deprecated": true,
 			"expires": 432000,
@@ -346,8 +346,8 @@
 				"ios"
 			],
 			"trustLevel": "full",
-			"version": "1.0.0.0",
-			"timeUpdated": "2026-08-25T19:15:43-0400",
+			"version": "1.0.0.1",
+			"timeUpdated": "2026-08-25T23:39:15+0000",
 			"languages": [],
 			"tags": [
 				45,
