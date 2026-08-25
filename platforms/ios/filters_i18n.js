@@ -16558,6 +16558,184 @@
 				"description": "Liste FR + AdGuard 法文過濾器。專門地移除於法語網站上的廣告之過濾清單。"
 			}
 		},
+		"17": {
+			"ar": {
+				"name": "فلتر AdGuard URL Tracking",
+				"description": "فلتر يعزز الخصوصية عن طريق إزالة معلمات التتبع من عناوين URL."
+			},
+			"be": {
+				"name": "Фільтр адсочвання па URL-адрасе AdGuard",
+				"description": "Фільтр, які прыбірае параметры асочвання з URL, тым самым паляпшаючы прыватнасць."
+			},
+			"bg": {
+				"name": "Филтър за проследяване на URL адреси AdGuard",
+				"description": "Филтър, който подобрява поверителността чрез премахване на параметрите за проследяване от URL адресите."
+			},
+			"ca": {
+				"name": "Filtre de seguiment d'URL d'AdGuard",
+				"description": "Filtre que millora la privadesa eliminant els paràmetres de seguiment dels URL."
+			},
+			"cs": {
+				"name": "AdGuard filtr sledování URL",
+				"description": "Filtr, který zvyšuje soukromí odstraněním parametrů sledování z adres URL."
+			},
+			"da": {
+				"name": "AdGuard URL Tracking-filter",
+				"description": "Filter, der booster fortrolighed ved at fjerne sporingsparametre fra URL'er."
+			},
+			"de": {
+				"name": "AdGuard URL-Tracking-Filter",
+				"description": "Filter, der die Privatsphäre erhöht, indem er Tracking-Parameter aus URLs entfernt."
+			},
+			"el": {
+				"name": "AdGuard URL Φίλτρο παρακολούθησης",
+				"description": "Το φίλτρο αυτό ενισχύει την προστασία του απορρήτου με την αφαίρεση παραμέτρων παρακολούθησης από τις διευθύνσεις URL."
+			},
+			"en": {
+				"name": "AdGuard URL Tracking filter",
+				"description": "Filter that enhances privacy by removing tracking parameters from URLs."
+			},
+			"es": {
+				"name": "Filtro contra rastreo de URL",
+				"description": "Filtro que mejora la privacidad eliminando los parámetros de rastreo de las URL."
+			},
+			"es_ES": {
+				"name": "Filtro contra rastreo de URL",
+				"description": "Filtro que mejora la privacidad eliminando los parámetros de rastreo de las URL."
+			},
+			"fa": {
+				"name": "فیلتر ردبیابی آدرس AdGuard",
+				"description": "فیلتری که با حذف شاخص های ردیابی از آدرس سایت ها موجب بهبود حریم خصوصی می شود."
+			},
+			"fi": {
+				"name": "AdGuardin URL-seurannanestosuodatin",
+				"description": "Suodatin, joka parantaa yksityisyyttä poistamalla seurantaparametrit URL-osoitteista."
+			},
+			"fr": {
+				"name": "Filtre AdGuard du suivi des URL",
+				"description": "Un filtre qui renforce la confidentialité en supprimant les paramètres de suivi depuis les liens URL."
+			},
+			"he": {
+				"name": "מסנן מעקב מענים של AdGuard",
+				"description": "מסנן שמטייב פרטיות ע״י הסרת פרמטרי מעקב ממענים."
+			},
+			"hi": {
+				"name": "एडगार्ड URL ट्रैकिंग फ़िल्टर",
+				"description": "URL से ट्रैकिंग पैरामीटर हटाकर गोपनीयता को बढ़ाने वाला फ़िल्टर।"
+			},
+			"hr": {
+				"name": "AdGuard URL filtar za praćenje",
+				"description": "Filtar koji poboljšava privatnost tako da uklanja parametre praćenja iz URL-ova."
+			},
+			"hu": {
+				"name": "AdGuard URL Követés szűrő",
+				"description": "Ez a szűrő fokozza az adatvédelmet azáltal, hogy eltávolítja a követésre használt paramétereket az oldalak URL-jeiből."
+			},
+			"hy": {
+				"name": "AdGuard URL Tracking filter",
+				"description": "Ֆիլտր, որը բարձրացնում է գաղտնիությունը, հեռացնելով հետագծման պարամետրերը URL-ներից։"
+			},
+			"id": {
+				"name": "Filter Pelacakan URL AdGuard",
+				"description": "Filter yang meningkatkan privasi dengan menghapus parameter pelacakan dari URL."
+			},
+			"it": {
+				"name": "Filtro AdGuard Anti-Monitoraggio URL",
+				"description": "Filtro che incrementa la privacy rimuovendo i parametri di monitoraggio dagli URL."
+			},
+			"ja": {
+				"name": "AdGuard URL追跡防止フィルタ",
+				"description": "URLからトラッキング（追跡）パラメーターを除去し、プライバシーを向上させるフィルタ。"
+			},
+			"ko": {
+				"name": "AdGuard URL 추적 필터",
+				"description": "추적에 쓰이는 URL 매개 변수를 제거하여 개인정보 보호를 강화하는 필터입니다."
+			},
+			"lt": {
+				"name": "AdGuard URL sekimo filtras",
+				"description": "Filtras, kuris didina privatumo lygį, pašalindamas sekimo parametrus iš URL."
+			},
+			"mk": {
+				"name": "Филтер за следење URL на AdGuard",
+				"description": "Филтер што ја подобрува приватноста со отстранување на параметрите за следење од URL-адреси."
+			},
+			"ms": {
+				"name": "Penapis Penjejakan URL AdGuard",
+				"description": "Penapis yang meningkatkan privasi dengan menghapus parameter penjejakan dari URL."
+			},
+			"nl": {
+				"name": "AdGuard URL Tracking filter",
+				"description": "Filter dat de privacy verbetert door trackingparameters uit URL's te verwijderen."
+			},
+			"no": {
+				"name": "AdGuard URL-sporingsfilter",
+				"description": "Filter som forbedrer personvernet ved å fjerne sporingsparametere fra nettadresser."
+			},
+			"pl": {
+				"name": "Filtr śledzenia URL AdGuard",
+				"description": "Filtr, który zwiększa prywatność, usuwając parametry śledzenia z adresów URL."
+			},
+			"pt": {
+				"name": "Filtro de monitorização de URL do AdGuard",
+				"description": "Filtro que aumenta a privacidade removendo parâmetros de monitorização de URLs."
+			},
+			"pt_BR": {
+				"name": "Filtro contra rastreamento de URL do AdGuard",
+				"description": "Filtro que aumenta a privacidade removendo parâmetros de rastreamento de URLs."
+			},
+			"pt_PT": {
+				"name": "Filtro de monitorização de URL do AdGuard",
+				"description": "Filtro que aumenta a privacidade removendo parâmetros de monitorização de URLs."
+			},
+			"ro": {
+				"name": "Filtrul de urmărire URL AdGuard",
+				"description": "Filtru care îmbunătățește confidențialitatea prin eliminarea parametrilor de urmărire din URL-uri."
+			},
+			"ru": {
+				"name": "Фильтр отслеживания по URL",
+				"description": "Фильтр, который убирает параметры отслеживания из URL, тем самым улучшая конфиденциальность."
+			},
+			"sk": {
+				"name": "AdGuard filter URL sledovania",
+				"description": "Filter, ktorý zvyšuje ochranu osobných údajov odstránením parametrov sledovania z URL adries."
+			},
+			"sl": {
+				"name": "AdGuard Filter sledenja URL",
+				"description": "Filter, ki izboljša zasebnost z odstranjevanjem parametrov sledenja iz URL naslovov."
+			},
+			"sr": {
+				"name": "AdGuard URL filter praćenja",
+				"description": "Filter koji poboljšava privatnost uklanjanjem parametara praćenja sa URLova."
+			},
+			"sv": {
+				"name": "AdGuard URL-spårningsfilter",
+				"description": "Filter som förbättrar integriteten genom att ta bort spårningsparametrar från webbadresser."
+			},
+			"th": {
+				"name": "ตัวกรองการติดตาม URL ของ AdGuard",
+				"description": "ตัวกรองที่เพิ่มความเป็นส่วนตัวโดยการลบพารามิเตอร์การติดตามออกจาก URL"
+			},
+			"tr": {
+				"name": "AdGuard URL İzleme filtresi",
+				"description": "İzleme parametrelerini URL'lerden kaldırarak gizliliği artıran filtre."
+			},
+			"uk": {
+				"name": "Фільтр URL-стеження AdGuard",
+				"description": "Покращує захист приватності через видалення параметрів стеження з URL-адрес."
+			},
+			"vi": {
+				"name": "Bộ Lọc URL Theo Dõi Của AdGuard",
+				"description": "Bộ lọc này tăng cường quyền riêng tư bằng việc xóa thông số theo dõi khỏi URL."
+			},
+			"zh": {
+				"name": "AdGuard URL 跟踪过滤器",
+				"description": "通过从 URL 中删除跟踪参数来增强隐私的过滤器。"
+			},
+			"zh_TW": {
+				"name": "AdGuard 網址追蹤過濾器",
+				"description": "透過從網址中移除追蹤參數來提升隱私的過濾器。"
+			}
+		},
 		"18": {
 			"ar": {
 				"name": "فلتر AdGuard لملفات تعريف الارتباط",
@@ -20296,6 +20474,184 @@
 				"description": "用於羅馬尼亞文網站之額外的過濾清單。"
 			}
 		},
+		"115": {
+			"ar": {
+				"name": "قائمة إعلانات RU",
+				"description": "قائمة تصفية إضافية لمواقع الويب باللغة الروسية."
+			},
+			"be": {
+				"name": "RU AdList",
+				"description": "Дадатковы спіс фільтраў для вэб-сайтаў на рускай мове."
+			},
+			"bg": {
+				"name": "RU AdList",
+				"description": "Допълнителен списък с филтри за уебсайтове на руски език."
+			},
+			"ca": {
+				"name": "RU AdList",
+				"description": "Llista de filtres addicionals per a llocs web en rus."
+			},
+			"cs": {
+				"name": "RU AdList",
+				"description": "Doplňkový seznam filtrů pro webové stránky v ruštině."
+			},
+			"da": {
+				"name": "RU Adlist",
+				"description": "Ekstra filterliste til russisksprogede websteder."
+			},
+			"de": {
+				"name": "RU AdList",
+				"description": "Zusätzliche Filterliste für Websites auf Russisch."
+			},
+			"el": {
+				"name": "RU AdList",
+				"description": "Πρόσθετη λίστα φίλτρων για ιστότοπους στα ρωσικά."
+			},
+			"en": {
+				"name": "RU AdList",
+				"description": "Additional filter list for websites in Russian."
+			},
+			"es": {
+				"name": "RU Adlist",
+				"description": "Lista de filtros adicionales para sitios web en ruso."
+			},
+			"es_ES": {
+				"name": "RU Adlist",
+				"description": "Lista de filtros adicionales para sitios web en ruso."
+			},
+			"fa": {
+				"name": "RU AdList",
+				"description": "فهرست فیلتر اضافی برای وب‌سایت‌ها به زبان روسی."
+			},
+			"fi": {
+				"name": "RU AdList",
+				"description": "Lisäsuodatinlista venäjänkielisille verkkosivustoille."
+			},
+			"fr": {
+				"name": "RU AdList",
+				"description": "Liste de filtres supplémentaire pour les sites web en russe."
+			},
+			"he": {
+				"name": "RU Adlist",
+				"description": "רשימת מסננים נוספת עבור אתרים ברוסית."
+			},
+			"hi": {
+				"name": "RU AdList",
+				"description": "रूसी में वेबसाइटों के लिए अतिरिक्त फ़िल्टर सूची।"
+			},
+			"hr": {
+				"name": "RU AdList",
+				"description": "Ruski dodatak za EasyList."
+			},
+			"hu": {
+				"name": "RU AdList",
+				"description": "Orosz kiegészítő az EasyList-hez."
+			},
+			"hy": {
+				"name": "RU AdList",
+				"description": "Լրացուցիչ զտիչների ցանկ ռուսերեն կայքերի համար։"
+			},
+			"id": {
+				"name": "RU AdList",
+				"description": "Suplemen Rusia untuk EasyList."
+			},
+			"it": {
+				"name": "Elenco Annunci RU",
+				"description": "Elenco addizionale dei filtri per i siti web in russo."
+			},
+			"ja": {
+				"name": "RU AdList",
+				"description": "ロシア語サイト用、補足フィルタリストです。"
+			},
+			"ko": {
+				"name": "RU AdList",
+				"description": "러시아어 웹사이트를 위한 추가 필터 목록입니다."
+			},
+			"lt": {
+				"name": "RU AdList",
+				"description": "Papildomas filtrų sąrašas rusų kalbos svetainėms."
+			},
+			"mk": {
+				"name": "RU AdList",
+				"description": "Дополнителен список на филтри за веб-страници на руски јазик."
+			},
+			"ms": {
+				"name": "RU AdList",
+				"description": "Senarai penapis tambahan untuk laman web dalam bahasa Rusia."
+			},
+			"nl": {
+				"name": "RU Adlist",
+				"description": "Extra filterlijst voor websites in het Russisch."
+			},
+			"no": {
+				"name": "RU AdList",
+				"description": "Russisk supplement til EasyList."
+			},
+			"pl": {
+				"name": "RU AdList",
+				"description": "Dodatkowa lista filtrów dla stron w języku rosyjskim."
+			},
+			"pt": {
+				"name": "RU AdList",
+				"description": "Lista de filtros adicionais para sites em Russo."
+			},
+			"pt_BR": {
+				"name": "RU AdList",
+				"description": "Suplemento russo para EasyList."
+			},
+			"pt_PT": {
+				"name": "RU AdList",
+				"description": "Lista de filtros adicionais para sites em Russo."
+			},
+			"ro": {
+				"name": "RU AdList",
+				"description": "Listă suplimentară de filtre pentru site-uri web în limba rusă."
+			},
+			"ru": {
+				"name": "RU AdList",
+				"description": "Дополнительный фильтр для сайтов на русском языке."
+			},
+			"sk": {
+				"name": "RU AdList",
+				"description": "Dodatočný zoznam filtrov pre webové stránky v ruštine."
+			},
+			"sl": {
+				"name": "RU AdList",
+				"description": "Dodaten seznam filtrov za spletne strani v ruskem jeziku."
+			},
+			"sr": {
+				"name": "RU AdList",
+				"description": "Ruski dodatak za EasyList."
+			},
+			"sv": {
+				"name": "RU AdList",
+				"description": "Extra filterlista för webbplatser på ryska."
+			},
+			"th": {
+				"name": "RU AdList",
+				"description": "ภาคผนวกภาษารัสเซียสำหรับ EasyList"
+			},
+			"tr": {
+				"name": "RU Adlist",
+				"description": "Rusça siteler için ek filtre listesi."
+			},
+			"uk": {
+				"name": "RU AdList",
+				"description": "Додатковий фільтр для вебсайтів російською мовою."
+			},
+			"vi": {
+				"name": "RU AdList",
+				"description": "Phần bổ trợ tiếng Nga cho EasyList."
+			},
+			"zh": {
+				"name": "RU Adlist",
+				"description": "俄语网站的补充过滤器列表。"
+			},
+			"zh_TW": {
+				"name": "RU AdList",
+				"description": "用於俄文網站之額外的過濾清單。"
+			}
+		},
 		"118": {
 			"ar": {
 				"name": "EasyPrivacy",
@@ -22788,6 +23144,362 @@
 				"description": "封鎖已知被用於傳播惡意軟體和間諜軟體的網域。"
 			}
 		},
+		"209": {
+			"ar": {
+				"name": "ADgk Mobile China list",
+				"description": "تصفية لمواقع المحمول الصينية."
+			},
+			"be": {
+				"name": "Спіс ADgk Mobile China",
+				"description": "Фільтр для мабільных сайтаў з кітайскай мовай."
+			},
+			"bg": {
+				"name": "ADgk Mobile China list",
+				"description": "Филтър за китайски мобилни сайтове."
+			},
+			"ca": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtre per a llocs mòbils xinesos."
+			},
+			"cs": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtr pro čínské mobilní stránky."
+			},
+			"da": {
+				"name": "ADgk Mobile China-liste",
+				"description": "Filter til kinesiske mobilwebsteder."
+			},
+			"de": {
+				"name": "ADgk Mobile China list",
+				"description": "Filter für mobile Websites auf Chinesisch."
+			},
+			"el": {
+				"name": "ADgk Mobile China list",
+				"description": "Φίλτρο για κινεζικούς ιστότοπους για κινητές συσκευές."
+			},
+			"en": {
+				"name": "ADgk Mobile China list",
+				"description": "Filter for Chinese mobile sites."
+			},
+			"es": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtro para sitios web móviles chinos."
+			},
+			"es_ES": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtro para sitios web móviles chinos."
+			},
+			"fa": {
+				"name": "ADgk Mobile China list",
+				"description": "پالایش برای سایت‌های موبایل چینی."
+			},
+			"fi": {
+				"name": "ADgk Mobile China list",
+				"description": "Suodatin kiinankielisille mobiilisivustoille."
+			},
+			"fr": {
+				"name": "Liste ADgk Mobile China",
+				"description": "Filtre pour les sites mobiles chinois."
+			},
+			"he": {
+				"name": "ADgk Mobile China list",
+				"description": "סינון עבור אתרי סלולר סיניים."
+			},
+			"hi": {
+				"name": "ADgk Mobile China list",
+				"description": "चीनी मोबाइल साइटों के लिए फ़िल्टर।"
+			},
+			"hr": {
+				"name": "Popis ADgk Mobile China",
+				"description": "Filtar za kineske mobilne stranice."
+			},
+			"hu": {
+				"name": "Online Malicious URL Blocklist",
+				"description": "Szűrő kínai mobil webhelyekhez."
+			},
+			"hy": {
+				"name": "ADgk Mobile China list",
+				"description": "Չինական շարժական կայքերի զտիչ։"
+			},
+			"id": {
+				"name": "ADgk Mobile China list",
+				"description": "Penyaring untuk situs seluler Cina."
+			},
+			"it": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtra per i siti mobili cinesi."
+			},
+			"ja": {
+				"name": "ADgk Mobile China list",
+				"description": "中国のモバイルサイト用フィルターです。"
+			},
+			"ko": {
+				"name": "ADgk Mobile China list",
+				"description": "모바일 중국어 사이트를 위한 필터입니다."
+			},
+			"lt": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtras Kinijos mobiliems svetainėms."
+			},
+			"mk": {
+				"name": "Список на ADgk Mobile China",
+				"description": "Филтер за кинески мобилни сајтови."
+			},
+			"ms": {
+				"name": "ADgk Mobile China list",
+				"description": "Penapis untuk laman mudah alih Cina."
+			},
+			"nl": {
+				"name": "ADgk Mobile China-lijst",
+				"description": "Filter voor mobiele Chinese sites."
+			},
+			"no": {
+				"name": "ADgk Mobile China list",
+				"description": "Filter for kinesiske mobilnettsider."
+			},
+			"pl": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtruj według chińskich witryn mobilnych."
+			},
+			"pt": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtro para sítios móveis chineses."
+			},
+			"pt_BR": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtro para sites móveis chineses."
+			},
+			"pt_PT": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtro para sítios móveis chineses."
+			},
+			"ro": {
+				"name": "ADgk Mobile China list",
+				"description": "Filtru pentru site-urile mobile chinezești."
+			},
+			"ru": {
+				"name": "ADgk Mobile China list",
+				"description": "Фильтр для китайских мобильных сайтов."
+			},
+			"sk": {
+				"name": "Zoznam ADgk Mobile China",
+				"description": "Filter pre čínske mobilné stránky."
+			},
+			"sl": {
+				"name": "ADgk Mobile China list",
+				"description": "Filter za kitajske mobilne spletne strani."
+			},
+			"sr": {
+				"name": "ADgk Mobile China list",
+				"description": "Filter za mobilne kineske stranice."
+			},
+			"sv": {
+				"name": "ADgk Mobile China list",
+				"description": "Filter för kinesiska mobilwebbplatser."
+			},
+			"th": {
+				"name": "ADgk Mobile China list",
+				"description": "ตัวกรองสำหรับเว็บไซต์มือถือจีน"
+			},
+			"tr": {
+				"name": "ADgk Mobile China list",
+				"description": "Çin mobil siteleri için filtre."
+			},
+			"uk": {
+				"name": "ADgk Mobile China list",
+				"description": "Фільтр для мобільних сайтів китайською мовою."
+			},
+			"vi": {
+				"name": "Danh sách ADgk Mobile China",
+				"description": "Lọc các trang web dành cho thiết bị di động của Trung Quốc."
+			},
+			"zh": {
+				"name": "ADgk 移动中文列表",
+				"description": "用于移动中文网站的过滤器"
+			},
+			"zh_TW": {
+				"name": "ADgk Mobile China list",
+				"description": "用於中文行動網站的過濾器。"
+			}
+		},
+		"210": {
+			"ar": {
+				"name": "Spam404",
+				"description": "يحميك هذا الفلتر من عمليات الاحتيال عبر الإنترنت."
+			},
+			"be": {
+				"name": "Spam404",
+				"description": "Гэты фільтр бароніць вас ад Інтэрнэт-махляроў."
+			},
+			"bg": {
+				"name": "Spam404",
+				"description": "Този филтър ви защитава от онлайн измами."
+			},
+			"ca": {
+				"name": "Spam404",
+				"description": "Aquest filtre et protegeix de les estafes en línia."
+			},
+			"cs": {
+				"name": "Spam404",
+				"description": "Tento filtr vás chrání před online podvody."
+			},
+			"da": {
+				"name": "Spam404",
+				"description": "Dette filter beskytter dig mod svindel."
+			},
+			"de": {
+				"name": "Spam404",
+				"description": "Dieser Filter schützt Sie vor Online-Betrug."
+			},
+			"el": {
+				"name": "Spam404",
+				"description": "Αυτό το φίλτρο σας προστατεύει από διαδικτυακές απάτες."
+			},
+			"en": {
+				"name": "Spam404",
+				"description": "This filter protects you from online scams."
+			},
+			"es": {
+				"name": "Spam404",
+				"description": "Este filtro te protege de las estafas en línea."
+			},
+			"es_ES": {
+				"name": "Spam404",
+				"description": "Este filtro te protege de las estafas en línea."
+			},
+			"fa": {
+				"name": "Spam404",
+				"description": "این پالایش شما را از کلاهبرداری‌های برخط محافظت می‌کند."
+			},
+			"fi": {
+				"name": "Spam404",
+				"description": "Tämä suodatin suojaa sinua verkkohuijauksilta."
+			},
+			"fr": {
+				"name": "Spam404",
+				"description": "Ce filtre vous protège des arnaques en ligne."
+			},
+			"he": {
+				"name": "Spam404",
+				"description": "מסנן זה מגן עלייך מפני הונאות מקוונות."
+			},
+			"hi": {
+				"name": "Spam404",
+				"description": "यह फ़िल्टर आपको ऑनलाइन धोखाधड़ी से बचाता है।"
+			},
+			"hr": {
+				"name": "Spam404",
+				"description": "Ovaj vas filtar štiti od mrežnih prijevara."
+			},
+			"hu": {
+				"name": "Spam404",
+				"description": "Ez a szűrő megvédi az online csalásoktól."
+			},
+			"hy": {
+				"name": "Spam404",
+				"description": "Այս զտիչը պաշտպանում է ձեզ առցանց խաբեություններից։"
+			},
+			"id": {
+				"name": "Spam404",
+				"description": "Filter ini melindungi Anda dari penipuan daring."
+			},
+			"it": {
+				"name": "Spam404",
+				"description": "Questo filtro ti protegge dalle truffe in rete."
+			},
+			"ja": {
+				"name": "Spam404",
+				"description": "このフィルターは、オンライン詐欺からあなたを守ります。"
+			},
+			"ko": {
+				"name": "Spam404",
+				"description": "온라인 사기로부터 사용자를 보호하는 필터."
+			},
+			"lt": {
+				"name": "Spam404",
+				"description": "Šis filtras apsaugo jus nuo internetinių sukčių."
+			},
+			"mk": {
+				"name": "Spam404",
+				"description": "Овој филтер ве штити од онлајн измами."
+			},
+			"ms": {
+				"name": "Spam404",
+				"description": "Penapis ini melindungi anda daripada penipuan dalam talian."
+			},
+			"nl": {
+				"name": "Spam404",
+				"description": "Dit filter beschermt je tegen online oplichting."
+			},
+			"no": {
+				"name": "Spam404",
+				"description": "Dette filteret beskytter deg mot nettverksbedrageri."
+			},
+			"pl": {
+				"name": "Spam404",
+				"description": "Ten filtr chroni Cię przed oszustwami internetowymi."
+			},
+			"pt": {
+				"name": "Spam404",
+				"description": "Este filtro protege você de golpes online."
+			},
+			"pt_BR": {
+				"name": "Spam404",
+				"description": "Este filtro protege você de golpes online."
+			},
+			"pt_PT": {
+				"name": "Spam404",
+				"description": "Este filtro protege você de golpes online."
+			},
+			"ro": {
+				"name": "Spam404",
+				"description": "Acest filtru vă protejează contra înșelătoriilor online."
+			},
+			"ru": {
+				"name": "Spam404",
+				"description": "Этот фильтр защищает вас от кибермошенников."
+			},
+			"sk": {
+				"name": "Spam404",
+				"description": "Tento filter vás chráni pred online podvodmi."
+			},
+			"sl": {
+				"name": "Spam404",
+				"description": "Ta filter vas ščiti pred spletnimi prevarami."
+			},
+			"sr": {
+				"name": "Spam404",
+				"description": "Ovaj filter vas štiti od prevara na mreži."
+			},
+			"sv": {
+				"name": "Spam404",
+				"description": "Detta filter skyddar dig från onlinebedrägerier."
+			},
+			"th": {
+				"name": "Spam404",
+				"description": "ตัวกรองนี้ช่วยปกป้องคุณจากการหลอกลวงทางออนไลน์"
+			},
+			"tr": {
+				"name": "Spam404",
+				"description": "Bu filtre sizi çevrimiçi dolandırıcılıklardan korur."
+			},
+			"uk": {
+				"name": "Spam404",
+				"description": "Цей фільтр захищає вас від шахрайства в мережі."
+			},
+			"vi": {
+				"name": "Spam404",
+				"description": "Bộ lọc này bảo vệ bạn trước lừa đảo trực tuyến."
+			},
+			"zh": {
+				"name": "Spam404",
+				"description": "这个过滤器保护您免受在线诈骗。"
+			},
+			"zh_TW": {
+				"name": "Spam404",
+				"description": "此過濾器保護您免於線上詐騙。"
+			}
+		},
 		"212": {
 			"ar": {
 				"name": "RU AdList: Counters",
@@ -22964,6 +23676,184 @@
 			"zh_TW": {
 				"name": "RU AdList: Counters",
 				"description": "用於追蹤器封鎖的 RU AdList 補充規則。"
+			}
+		},
+		"213": {
+			"ar": {
+				"name": "RU AdList: BitBlock",
+				"description": "ملحق RU AdList للمضايقات والاجتماعية."
+			},
+			"be": {
+				"name": "RU AdList: BitBlock",
+				"description": "Дапаўненне RU AdList для раздражняльнікаў і элементаў сацыяльных сетак."
+			},
+			"bg": {
+				"name": "RU AdList: BitBlock",
+				"description": "Допълнение RU AdList за досадни неща и социални мрежи."
+			},
+			"ca": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplement RU AdList per a molèsties i socials."
+			},
+			"cs": {
+				"name": "RU AdList: BitBlock",
+				"description": "Doplněk RU AdList pro obtěžování a sociální sítě."
+			},
+			"da": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList supplement til irritationer og sociale medier."
+			},
+			"de": {
+				"name": "RU AdList: BitBlock",
+				"description": "Ergänzungen zu RU AdList für das Sperren von Belästigungen und Soziale Netzwerke."
+			},
+			"el": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList συμπλήρωμα για ενοχλήσεις και κοινωνικά δίκτυα."
+			},
+			"en": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList supplement for annoyances and socials."
+			},
+			"es": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemento RU Adlist para elementos molestos y redes sociales."
+			},
+			"es_ES": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemento RU Adlist para elementos molestos y redes sociales."
+			},
+			"fa": {
+				"name": "RU AdList: BitBlock",
+				"description": "مکمل RU AdList برای موارد مزاحم و اجتماعی."
+			},
+			"fi": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList -laajennus sosiaalisille ja muille ärsykkeille."
+			},
+			"fr": {
+				"name": "RU AdList: BitBlock",
+				"description": "Supplément RU AdList pour les ennuis et les réseaux sociaux."
+			},
+			"he": {
+				"name": "RU AdList: BitBlock",
+				"description": "תוסף RU Adlist עבור מטרדים וחברתיות."
+			},
+			"hi": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList के लिए परेशानियों और सामाजिक तत्वों का पूरक।"
+			},
+			"hr": {
+				"name": "RU AdList: BitBlock",
+				"description": "Dodatak za RU AdList za smetnje i društvene mreže."
+			},
+			"hu": {
+				"name": "RU AdList: BitBlock",
+				"description": "Kiegészítés a RU AdList-hez, amely blokkolja a kellemetlenségeket és a közösségi média elemeket."
+			},
+			"hy": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList հավելում անհանգստություններ և սոցիալականացման համար։"
+			},
+			"id": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemen RU AdList untuk gangguan dan sosial."
+			},
+			"it": {
+				"name": "RU AdList: BitBlock",
+				"description": "Supplemento Elenco Annunci RU per elementi irritanti e social."
+			},
+			"ja": {
+				"name": "RU AdList: BitBlock",
+				"description": "迷惑な要素とSNS対応のための「RU AdList」用補完フィルター。"
+			},
+			"ko": {
+				"name": "RU AdList: BitBlock",
+				"description": "방해 요소와 SNS를 위한 추가 RU AdList."
+			},
+			"lt": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList papildymas trukdžiams ir socialiniams tinklams."
+			},
+			"mk": {
+				"name": "RU AdList: BitBlock",
+				"description": "Додаток на RU AdList против замарања и социјални додатоци."
+			},
+			"ms": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemen RU AdList untuk gangguan dan sosial."
+			},
+			"nl": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList aanvulling op ergernissen en socials."
+			},
+			"no": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList-supplement for irritasjoner og sosiale medier."
+			},
+			"pl": {
+				"name": "RU AdList: BitBlock",
+				"description": "Dodatek RU AdList do elementów irytujących i sieci społecznościowych."
+			},
+			"pt": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemento RU AdList para aborrecimentos e atividades sociais."
+			},
+			"pt_BR": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemento RU AdList para aborrecimentos e atividades sociais."
+			},
+			"pt_PT": {
+				"name": "RU AdList: BitBlock",
+				"description": "Suplemento RU AdList para aborrecimentos e atividades sociais."
+			},
+			"ro": {
+				"name": "RU AdList: BitBlock",
+				"description": "Supliment RU AdList pentru deranjări și socializare."
+			},
+			"ru": {
+				"name": "RU AdList: BitBlock",
+				"description": "Дополнение RU AdList для раздражителей и элементов социальных сетей."
+			},
+			"sk": {
+				"name": "RU AdList: BitBlock",
+				"description": "Doplnok RU AdList pre obťažovanie a sociálne siete."
+			},
+			"sl": {
+				"name": "RU AdList: BitBlock",
+				"description": "Dodatek RU Seznam za nadležnosti in družbena omrežja."
+			},
+			"sr": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList dodatak za dosadne stvari i društvene mreže."
+			},
+			"sv": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList-tillägg för irritationsmoment och social media."
+			},
+			"th": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList ภาคผนวกสำหรับความรำคาญและสังคม"
+			},
+			"tr": {
+				"name": "RU AdList: BitBlock",
+				"description": "Can sıkıcı öğe ve sosyal medya için RU AdList takviyesi."
+			},
+			"uk": {
+				"name": "RU AdList: BitBlock",
+				"description": "Доповнення для RU AdList, призначене для блокування подразників та елементів соцмереж."
+			},
+			"vi": {
+				"name": "RU AdList: BitBlock",
+				"description": "Phần bổ trợ chặn phiền nhiễu và mạng xã hội cho RU AdList."
+			},
+			"zh": {
+				"name": "RU AdList: BitBlock",
+				"description": "RU AdList 补充，用于拦截恼人元素和社交媒体相关信息。"
+			},
+			"zh_TW": {
+				"name": "RU AdList: BitBlock",
+				"description": "用於惱人的事物和社群媒體小工具之 RU AdList 補充規則。"
 			}
 		},
 		"214": {
@@ -23678,6 +24568,184 @@
 				"description": "用於在愛沙尼亞文網站上的廣告封鎖之過濾器。"
 			}
 		},
+		"219": {
+			"ar": {
+				"name": "ChinaList+EasyList",
+				"description": "قائمة Adblocking للصين. لاحظ أنه لا يتضمن في الواقع EasyList."
+			},
+			"be": {
+				"name": "ChinaList+EasyList",
+				"description": "Спіс для блакіравання рэкламы ў Кітаі. Звярніце ўвагу, што ён не ўключае EasyList."
+			},
+			"bg": {
+				"name": "ChinaList+EasyList",
+				"description": "Список за блокиране на реклами за Китай. Обърнете внимание, че той всъщност не включва EasyList."
+			},
+			"ca": {
+				"name": "ChinaList + EasyList",
+				"description": "Llista de bloqueig d'anuncis per a la Xina. Tingueu en compte que en realitat no inclou EasyList."
+			},
+			"cs": {
+				"name": "ChinaList+EasyList",
+				"description": "Seznam blokování reklam pro Čínu. Vezměte na vědomí, že ve skutečnosti nezahrnuje EasyList."
+			},
+			"da": {
+				"name": "ChinaList+EasyList",
+				"description": "Adblockingsliste for Kina. Bemærk, at den faktisk ikke inkluderer EasyList."
+			},
+			"de": {
+				"name": "ChinaList+EasyList",
+				"description": "Adblock-Liste für China. Beachten Sie, dass diese in EasyList derzeit nicht enthalten ist."
+			},
+			"el": {
+				"name": "ChinaList+EasyList",
+				"description": "Λίστα αποκλεισμού για την Κίνα. Σημειώστε ότι δεν περιλαμβάνει το EasyList."
+			},
+			"en": {
+				"name": "ChinaList+EasyList",
+				"description": "Adblocking list for China. Note that it does not actually include EasyList."
+			},
+			"es": {
+				"name": "ChinaList + EasyList",
+				"description": "Lista de bloqueo de anuncios para China. Tener en cuenta que en realidad no incluye EasyList."
+			},
+			"es_ES": {
+				"name": "ChinaList + EasyList",
+				"description": "Lista de bloqueo de anuncios para China. Tener en cuenta que en realidad no incluye EasyList."
+			},
+			"fa": {
+				"name": "ChinaList+EasyList",
+				"description": "فهرست مسدودسازی برای چین. توجه داشته باشید که در واقع شامل EasyList نمی‌شود."
+			},
+			"fi": {
+				"name": "ChinaList + EasyList",
+				"description": "Kiinankielisten mainosten estolista. Huomioi, ettei tämä sisällä EasyListiä."
+			},
+			"fr": {
+				"name": "ChinaList+EasyList",
+				"description": "Liste de blocage publicitaire pour la Chine. Notez qu'il n'inclut pas réellement EasyList."
+			},
+			"he": {
+				"name": "ChinaList+EasyList",
+				"description": "רשימת חסימת פרסומות עבור סין. המסנן אינו כולל את EasyList."
+			},
+			"hi": {
+				"name": "ChinaList+EasyList",
+				"description": "चीन के लिए विज्ञापन अवरोधन सूची। ध्यान दें कि इसमें वास्तव में ईज़ी लिस्ट शामिल नहीं है।"
+			},
+			"hr": {
+				"name": "ChinaList+EasyList",
+				"description": "Popis za blokiranje oglasa za Kinu. Imajte na umu da ne uključuje EasyList."
+			},
+			"hu": {
+				"name": "ChinaList+EasyList",
+				"description": "Kínai hirdetésblokkoló lista. Vegye figyelembe, hogy nem tartalmazza az EasyList-et."
+			},
+			"hy": {
+				"name": "ChinaList+EasyList",
+				"description": "Գովազդի արգելափակման ցուցակ Չինաստանի համար։ Նշեք, որ այն իրականում ներառում է EasyList։"
+			},
+			"id": {
+				"name": "ChinaList+EasyList",
+				"description": "Daftar pemblokiran iklan untuk Tiongkok. Perhatikan bahwa EasyList tidak disertakan."
+			},
+			"it": {
+				"name": "Elenco Cina + EasyList",
+				"description": "Elenco blocca-annunci per la cina. Si noti che in realtà esso non include EasyList."
+			},
+			"ja": {
+				"name": "ChinaList+EasyList",
+				"description": "中国用広告ブロックリスト。※EasyListは含まれていません。"
+			},
+			"ko": {
+				"name": "ChinaList+EasyList",
+				"description": "중국 광고 차단 목록입니다. EasyList는 포함되어 있지 않습니다."
+			},
+			"lt": {
+				"name": "ChinaList+EasyList",
+				"description": "Reklamos blokavimo sąrašas Kinijoje. Atkreipkite dėmesį, kad jis iš tikrųjų neapima EasyList."
+			},
+			"mk": {
+				"name": "ChinaList+EasyList",
+				"description": "Список за блокирање реклами за Кина. Забележете дека всушност не вклучува EasyList."
+			},
+			"ms": {
+				"name": "ChinaList+EasyList",
+				"description": "Senarai adblocking untuk China. Perhatikan bahawa ia tidak termasuk EasyList."
+			},
+			"nl": {
+				"name": "ChinaList+EasyList",
+				"description": "Advertentie blokkering voor China. Noteer dat EasyList hier niet is inbegrepen."
+			},
+			"no": {
+				"name": "ChinaList+EasyList",
+				"description": "Annonseblokkeringsliste for Kina. Merk at den faktisk ikke inkluderer EasyList."
+			},
+			"pl": {
+				"name": "ChinaList+EasyList",
+				"description": "Lista blokowania reklam w Chinach. Zauważ, że tak naprawdę nie zawiera EasyList."
+			},
+			"pt": {
+				"name": "ChinaList+EasyList",
+				"description": "Lista de bloqueio de anúncios para a China. Observe que, na verdade, ele não inclui EasyList."
+			},
+			"pt_BR": {
+				"name": "ChinaList+EasyList",
+				"description": "Lista de bloqueio de anúncios para a China. Observe que, na verdade, ele não inclui EasyList."
+			},
+			"pt_PT": {
+				"name": "ChinaList+EasyList",
+				"description": "Lista de bloqueio de anúncios para a China. Observe que, na verdade, ele não inclui EasyList."
+			},
+			"ro": {
+				"name": "ChinaList+EasyList",
+				"description": "Lista de blocare a reclamelor pentru China. Rețineți că nu include de fapt EasyList."
+			},
+			"ru": {
+				"name": "ChinaList+EasyList",
+				"description": "Фильтр для блокировки рекламы в Китае. Обратите внимание, что он не включает EasyList."
+			},
+			"sk": {
+				"name": "ChinaList+EasyList",
+				"description": "Zoznam pre blokovanie reklám pre Čínu. Upozorňujeme, že v skutočnosti nezahŕňa EasyList."
+			},
+			"sl": {
+				"name": "ChinaList+EasyList",
+				"description": "Seznam za zaviranje oglasov za Kitajsko. Upoštevajte, da dejansko ne vključuje EasyList."
+			},
+			"sr": {
+				"name": "ChinaList+EasyList",
+				"description": "Lista za blokiranje reklame Kine. Imajte na umu da ovo ne uključuje EasyList."
+			},
+			"sv": {
+				"name": "ChinaList+EasyList",
+				"description": "Annonsblockeringslista för Kina. Observera att den faktiskt inte inkluderar EasyList."
+			},
+			"th": {
+				"name": "ChinaList+EasyList",
+				"description": "รายการ Adblocking สำหรับประเทศจีน โปรดทราบว่าจริงๆแล้วมันไม่ได้รวม EasyList ไว้ด้วย"
+			},
+			"tr": {
+				"name": "ChinaList+EasyList",
+				"description": "Çin için reklam engelleme listesi. Aslında EasyList'i içermediğini unutmayın."
+			},
+			"uk": {
+				"name": "ChinaList+EasyList",
+				"description": "Фільтр блокування реклами для Китаю. Зауважте, що до його складу не входять фільтри EasyList."
+			},
+			"vi": {
+				"name": "ChinaList+EasyList",
+				"description": "Bộ lọc chặn quảng cáo tiếng Trung Quốc. Lưu ý rằng danh sách này không bao gồm EasyList."
+			},
+			"zh": {
+				"name": "ChinaList+EasyList",
+				"description": "针对中国的广告拦截列表。注意，它实际上并不包括EasyList。"
+			},
+			"zh_TW": {
+				"name": "ChinaList+EasyList",
+				"description": "供中國的廣告封鎖清單。注意，它實際上不包含 EasyList。"
+			}
+		},
 		"220": {
 			"ar": {
 				"name": "CJX's Annoyances List",
@@ -24032,6 +25100,362 @@
 			"zh_TW": {
 				"name": "Polish Social Filters",
 				"description": "用於社群小工具、彈出式視窗等等的波蘭文過濾清單。"
+			}
+		},
+		"222": {
+			"ar": {
+				"name": "Adblock-Persian list",
+				"description": "قائمة فلاتر منع الإعلانات الفارسية."
+			},
+			"be": {
+				"name": "Adblock-Persian list",
+				"description": "Персідскі спіс фільтраў для блакіроўкі рэкламы."
+			},
+			"bg": {
+				"name": "Adblock-Persian list",
+				"description": "Списък с филтри за блокиране на реклами на персийски."
+			},
+			"ca": {
+				"name": "Adblock-Persian list",
+				"description": "Llista de filtres de bloqueig d'anuncis persians."
+			},
+			"cs": {
+				"name": "Adblock-Persian list",
+				"description": "Perský seznam pro blokování reklam."
+			},
+			"da": {
+				"name": "Adblock-Persian liste",
+				"description": "Persisk adblockingfilterliste."
+			},
+			"de": {
+				"name": "Adblock-Persian list",
+				"description": "Persische Filterliste zum Sperren von Werbung."
+			},
+			"el": {
+				"name": "Adblock-Persian list",
+				"description": "Persian ad blocking filter list."
+			},
+			"en": {
+				"name": "Adblock-Persian list",
+				"description": "Persian ad blocking filter list."
+			},
+			"es": {
+				"name": "Adblock-Persian list",
+				"description": "Lista de filtros persa para bloqueo de anuncios."
+			},
+			"es_ES": {
+				"name": "Adblock-Persian list",
+				"description": "Lista de filtros persa para bloqueo de anuncios."
+			},
+			"fa": {
+				"name": "Adblock-Persian list",
+				"description": "فهرست پالایش تبلیغات فارسی."
+			},
+			"fi": {
+				"name": "Adblock-Persian list",
+				"description": "Suodatin mainosestoon persiankielisillä sivustoilla."
+			},
+			"fr": {
+				"name": "Adblock-Persian list",
+				"description": "Liste Persane des filtres de blocage de pub."
+			},
+			"he": {
+				"name": "רשימת Adblock פרסית",
+				"description": "רשימת מסננים של חסימת פרסומות בשפה הפרסית."
+			},
+			"hi": {
+				"name": "Adblock-Persian list",
+				"description": "फारसी विज्ञापन अवरोधन फ़िल्टर सूची।"
+			},
+			"hr": {
+				"name": "Adblock-Persian list",
+				"description": "Persian ad blocking filter list."
+			},
+			"hu": {
+				"name": "Adblock-Persian list",
+				"description": "Szűrőlista, amely blokkolja a hirdetéseket a perzsa nyelvű webhelyeken."
+			},
+			"hy": {
+				"name": "Adblock-Persian list",
+				"description": "Պարսկական գովազդի զտման ցանկ։"
+			},
+			"id": {
+				"name": "Adblock-Persian list",
+				"description": "Daftar filter pemblokiran iklan Persia."
+			},
+			"it": {
+				"name": "Adblock-Persian list",
+				"description": "Elenco di filtri blocca-annunci persiani."
+			},
+			"ja": {
+				"name": "Adblock-Persian list",
+				"description": "ペルシャ語用広告ブロックフィルタリスト。"
+			},
+			"ko": {
+				"name": "Adblock-Persian list",
+				"description": "페르시아 광고 차단 목록."
+			},
+			"lt": {
+				"name": "Adblock-Persian list",
+				"description": "Persų reklamos blokavimo filtrų sąrašas."
+			},
+			"mk": {
+				"name": "Adblock-Persian list",
+				"description": "Список на филтри за блокирање на персиски реклами."
+			},
+			"ms": {
+				"name": "Adblock-Persian list",
+				"description": "Senarai penapis yang menghalang iklan Parsi."
+			},
+			"nl": {
+				"name": "Adblock-Persian List",
+				"description": "Perzische advertentie blokkering filter lijst."
+			},
+			"no": {
+				"name": "Adblock-Persian list",
+				"description": "Persisk reklameblokkeringsfilterliste."
+			},
+			"pl": {
+				"name": "Adblock-Persian list",
+				"description": "Lista filtrów blokujących reklamy w języku perskim."
+			},
+			"pt": {
+				"name": "Adblock-Persian list",
+				"description": "Lista de filtros de bloqueio de anúncios persas."
+			},
+			"pt_BR": {
+				"name": "Adblock-Persian list",
+				"description": "Lista de filtros de bloqueio de anúncios persas."
+			},
+			"pt_PT": {
+				"name": "Adblock-Persian list",
+				"description": "Lista de filtros de bloqueio de anúncios persas."
+			},
+			"ro": {
+				"name": "Adblock-Persian list",
+				"description": "Lista de filtre de blocare a reclamelor persane."
+			},
+			"ru": {
+				"name": "Adblock-Persian list",
+				"description": "Персидский фильтр для блокировки рекламы."
+			},
+			"sk": {
+				"name": "Adblock-Persian list",
+				"description": "Perzský zoznam pre blokovanie reklám."
+			},
+			"sl": {
+				"name": "Adblock-Persian list",
+				"description": "Perzijski seznam filtrov za zaviranje oglasov."
+			},
+			"sr": {
+				"name": "Adblock-Persian list",
+				"description": "Lista filtera za blokiranje reklama na persijskom jeziku."
+			},
+			"sv": {
+				"name": "Adblock-Persian list",
+				"description": "Persisk filterlista för annonsblockering."
+			},
+			"th": {
+				"name": "Adblock-Persian list",
+				"description": "รายการตัวกรองการปิดกั้นโฆษณาของเปอร์เซีย"
+			},
+			"tr": {
+				"name": "Adblock-Persian list",
+				"description": "Farsça reklam engelleme filtre listesi."
+			},
+			"uk": {
+				"name": "Adblock-Persian list",
+				"description": "Перський фільтр для блокування реклами."
+			},
+			"vi": {
+				"name": "Adblock-Persian list",
+				"description": "Bộ lọc chặn quảng cáo tiếng Ba Tư."
+			},
+			"zh": {
+				"name": "波斯语 Adblock 列表",
+				"description": "波斯语广告拦截过滤列表"
+			},
+			"zh_TW": {
+				"name": "Adblock-Persian list",
+				"description": "波斯文的廣告封鎖過濾清單。"
+			}
+		},
+		"223": {
+			"ar": {
+				"name": "Fanboy's Swedish",
+				"description": "قائمة تصفية للمواقع باللغة السويدية."
+			},
+			"be": {
+				"name": "Fanboy's Swedish",
+				"description": "Фільтр для сайтаў на шведскай мове."
+			},
+			"bg": {
+				"name": "Fanboy's Swedish",
+				"description": "Списък с филтри за уебсайтове на шведски."
+			},
+			"ca": {
+				"name": "Fanboy's Swedish",
+				"description": "Llista de filtres per a llocs web en suec."
+			},
+			"cs": {
+				"name": "Fanboy's Swedish",
+				"description": "Seznam filtrů pro webové stránky ve švédštině."
+			},
+			"da": {
+				"name": "Fanboy's Swedish",
+				"description": "Filterliste til websteder på svensk."
+			},
+			"de": {
+				"name": "Fanboy's Swedish",
+				"description": "Filterliste für schwedische Websites."
+			},
+			"el": {
+				"name": "Fanboy's Swedish",
+				"description": "Λίστα φίλτρων για ιστότοπους στα σουηδικά."
+			},
+			"en": {
+				"name": "Fanboy's Swedish",
+				"description": "Filter list for websites in Swedish."
+			},
+			"es": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista de filtros para sitios web en sueco."
+			},
+			"es_ES": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista de filtros para sitios web en sueco."
+			},
+			"fa": {
+				"name": "Fanboy's Swedish",
+				"description": "فهرست پالایش برای تارنماها به زبان سوئدی."
+			},
+			"fi": {
+				"name": "Fanboy's Swedish",
+				"description": "Suodatin, joka estää mainoksia ruotsinkielisillä verkkosivuilla."
+			},
+			"fr": {
+				"name": "Fanboy's Swedish",
+				"description": "Liste de filtres pour les sites web en suédois."
+			},
+			"he": {
+				"name": "Fanboy's Swedish",
+				"description": "רשימת מסננים עבור אתרים בשוודית."
+			},
+			"hi": {
+				"name": "Fanboy's Swedish",
+				"description": "स्वीडिश वेबसाइटों के लिए फ़िल्टर सूची।"
+			},
+			"hr": {
+				"name": "Fanboy's Swedish",
+				"description": "Popis filtara za web stranice na švedskom."
+			},
+			"hu": {
+				"name": "Fanboy's Swedish",
+				"description": "Szűrőlista a svéd webhelyekhez."
+			},
+			"hy": {
+				"name": "Fanboy's Swedish",
+				"description": "Ֆիլտրի ցուցակը շվեդերեն կայքերի համար։"
+			},
+			"id": {
+				"name": "Fanboy's Swedish",
+				"description": "Daftar filter untuk website Swedia."
+			},
+			"it": {
+				"name": "Fanboy's Swedish",
+				"description": "Elenco di filtri per siti web in lingua svedese."
+			},
+			"ja": {
+				"name": "Fanboy's Swedish",
+				"description": "スウェーデン語のウェブサイト用フィルターリスト。"
+			},
+			"ko": {
+				"name": "Fanboy's Swedish",
+				"description": "스웨덴 웹사이트를 위한 필터 리스트"
+			},
+			"lt": {
+				"name": "Fanboy's Swedish",
+				"description": "Filtrų sąrašas svetainėms švedų kalba."
+			},
+			"mk": {
+				"name": "Fanboy's Swedish",
+				"description": "Список на филтри за веб-локации на шведски."
+			},
+			"ms": {
+				"name": "Fanboy's Swedish",
+				"description": "Senarai penapis untuk laman web dalam bahasa Sweden."
+			},
+			"nl": {
+				"name": "Fanboy's Zweeds",
+				"description": "Filterlijst voor websites in het Zweeds."
+			},
+			"no": {
+				"name": "Fanboy's Swedish",
+				"description": "Filterliste for nettsteder på svensk."
+			},
+			"pl": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista filtrów dla witryn w języku szwedzkim."
+			},
+			"pt": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista de filtros para sítios em sueco."
+			},
+			"pt_BR": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista de filtros para sites em sueco."
+			},
+			"pt_PT": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista de filtros para sítios em sueco."
+			},
+			"ro": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista de filtrare pentru site-uri web în limba suedeză."
+			},
+			"ru": {
+				"name": "Fanboy's Swedish",
+				"description": "Фильтр для сайтов на шведском языке."
+			},
+			"sk": {
+				"name": "Fanboy's Swedish",
+				"description": "Filtračný zoznam stránok vo švédčine."
+			},
+			"sl": {
+				"name": "Fanboy's Swedish",
+				"description": "Seznam filtrov za spletne strani v švedščini."
+			},
+			"sr": {
+				"name": "Fanboy's Swedish",
+				"description": "Lista filtera za sajtove na švedskom."
+			},
+			"sv": {
+				"name": "Fanboy's Swedish",
+				"description": "Filterlista för webbplatser på svenska."
+			},
+			"th": {
+				"name": "Fanboy's Swedish",
+				"description": "กรองรายการเว็บไซต์เป็นภาษาสวีเดน"
+			},
+			"tr": {
+				"name": "Fanboy's Swedish",
+				"description": "İsveççe siteler için filtre listesi."
+			},
+			"uk": {
+				"name": "Fanboy's Swedish",
+				"description": "Фільтр для вебсайтів шведською мовою."
+			},
+			"vi": {
+				"name": "Fanboy's Swedish",
+				"description": "Bộ lọc chặn quảng cáo tiếng Thuỵ Điển."
+			},
+			"zh": {
+				"name": "Fanboy 瑞典语",
+				"description": "用于瑞典语网站的过滤列表"
+			},
+			"zh_TW": {
+				"name": "Fanboy's Swedish",
+				"description": "用於瑞典文網站的過濾清單。"
 			}
 		},
 		"224": {
@@ -24390,6 +25814,184 @@
 				"description": "警告，它將於某些網站上破壞運用 Facebook 的評論，且也可能破壞某些 Facebook 應用程式或遊戲。"
 			}
 		},
+		"226": {
+			"ar": {
+				"name": "Fanboy's Vietnamese",
+				"description": "قائمة تصفية لمواقع الويب باللغة الفيتنامية."
+			},
+			"be": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Фільтр для сайтаў на в'етнамскай мове."
+			},
+			"bg": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Списък с филтри за уебсайтове на виетнамски."
+			},
+			"ca": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Llista de filtres per a llocs web en vietnamita."
+			},
+			"cs": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Seznam filtrů pro webové stránky ve vietnamštině."
+			},
+			"da": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filterliste til websteder på vietnamesisk."
+			},
+			"de": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filterliste für vietnamesische Websites."
+			},
+			"el": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Λίστα φίλτρου για ιστότοπους στο Βιετνάμ."
+			},
+			"en": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filter list for websites in Vietnamese."
+			},
+			"es": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista de filtros para sitios web en vietnamita."
+			},
+			"es_ES": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista de filtros para sitios web en vietnamita."
+			},
+			"fa": {
+				"name": "Fanboy's Vietnamese",
+				"description": "فهرست پالایش برای تارنماها به زبان ویتنامی."
+			},
+			"fi": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Suodatin, joka estää mainoksia vietnaminkielisillä verkkosivuilla."
+			},
+			"fr": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Liste de filtres pour les sites web en vietnamien."
+			},
+			"he": {
+				"name": "Fanboy's Vietnamese",
+				"description": "רשימת מסננים עבור אתרים בוייטנאמית."
+			},
+			"hi": {
+				"name": "Fanboy's Vietnamese",
+				"description": "वियतनामी वेबसाइटों के लिए फ़िल्टर सूची।"
+			},
+			"hr": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Popis filtara za web stranice na vijetnamskom."
+			},
+			"hu": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Szűrőlista a vietnámi webhelyekhez."
+			},
+			"hy": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Ֆիլտրի ցուցակը վիետնամերեն կայքերի համար։"
+			},
+			"id": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Daftar filter untuk website Vietnam."
+			},
+			"it": {
+				"name": "Fanboy vietnamita",
+				"description": "Elenco di filtri per siti web in lingua vietnamita."
+			},
+			"ja": {
+				"name": "Fanboy's Vietnamese",
+				"description": "ベトナム語のウェブサイト用フィルターリスト。"
+			},
+			"ko": {
+				"name": "Fanboy's Vietnamese",
+				"description": "베트남 웹사이트를 위한 필터 리스트"
+			},
+			"lt": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filtrų sąrašas tinklalapiams vietnamiečių kalba."
+			},
+			"mk": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Список на филтри за веб-локации на виетнамски."
+			},
+			"ms": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Senarai penapis untuk laman web dalam bahasa Vietnam."
+			},
+			"nl": {
+				"name": "Fanboy's Vietnamees",
+				"description": "Filterlijst voor websites in het Vietnamees."
+			},
+			"no": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filterliste for nettsteder på vietnamesisk."
+			},
+			"pl": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista filtrów dla witryn w języku wietnamskim."
+			},
+			"pt": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista de filtros para sítios em vietnamita."
+			},
+			"pt_BR": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista de filtros para sites em vietnamita."
+			},
+			"pt_PT": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista de filtros para sítios em vietnamita."
+			},
+			"ro": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista de filtrare pentru site-uri web în limba vietnameză."
+			},
+			"ru": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Фильтр для сайтов на вьетнамском языке."
+			},
+			"sk": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filtračný zoznam stránok vo vietnamčine."
+			},
+			"sl": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Seznam filtrov za spletne strani v vietnamščini."
+			},
+			"sr": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Lista filtera za sajtove na vijetnamskom."
+			},
+			"sv": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Filterlista för webbplatser på vietnamesiska."
+			},
+			"th": {
+				"name": "Fanboy's Vietnamese",
+				"description": "กรองรายการเว็บไซต์ในภาษาเวียดนาม"
+			},
+			"tr": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Vietnamca siteler için filtre listesi."
+			},
+			"uk": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Фільтр для вебсайтів в'єтнамською мовою."
+			},
+			"vi": {
+				"name": "Fanboy's Vietnamese",
+				"description": "Bộ lọc chặn quảng cáo tiếng Việt."
+			},
+			"zh": {
+				"name": "Fanboy 越南语",
+				"description": "用于越南语网站的过滤列表"
+			},
+			"zh_TW": {
+				"name": "Fanboy's Vietnamese",
+				"description": "用於越南文網站的過濾清單。"
+			}
+		},
 		"227": {
 			"ar": {
 				"name": "filterslist-KO Classic filter list",
@@ -24744,6 +26346,362 @@
 			"zh_TW": {
 				"name": "乘風廣告過濾器",
 				"description": "封鎖於中國視訊平台（芒果 TV、鬥魚和其它）上的廣告。"
+			}
+		},
+		"229": {
+			"ar": {
+				"name": "I don't care about cookies",
+				"description": "يخفي تحذيرات ملفات تعريف الارتباط المزعجة من جميع مواقع الويب تقريبًا ويوفر لك النقرات غير الضرورية."
+			},
+			"be": {
+				"name": "I don't care about cookies",
+				"description": "Хавае раздражняльныя папярэджанні пра cookie з усіх сайтаў і ратуе вас ад непатрэбных клікаў."
+			},
+			"bg": {
+				"name": "I don't care about cookies",
+				"description": "Крие досадни предупреждения за бисквитки от почти всички уебсайтове и ви спестява от ненужни кликания."
+			},
+			"ca": {
+				"name": "I don't care about cookies",
+				"description": "Amaga les molèsties que provoquen les advertències de galetes de gairebé tots els llocs web i et fa estalviar clics innecessaris."
+			},
+			"cs": {
+				"name": "I don't care about cookies",
+				"description": "Skryje nepříjemné varování o souborech cookie téměř ze všech webových stránek a ušetří vás od zbytečných kliknutí."
+			},
+			"da": {
+				"name": "I don't care about cookies",
+				"description": "Skjuler irriterende cookieadvarsler fra næsten alle websteder og sparer dig for unødvendige klik."
+			},
+			"de": {
+				"name": "I don't care about cookies",
+				"description": "Blendet lästige Cookie-Warnungen von fast allen Websites aus und erspart Ihnen unnötige Klicks."
+			},
+			"el": {
+				"name": "I don't care about cookies",
+				"description": "Αποκρύπτει ενοχλητικές προειδοποιήσεις cookie από σχεδόν όλους τους ιστότοπους και σας σώζει από περιττά κλικ."
+			},
+			"en": {
+				"name": "I don't care about cookies",
+				"description": "Hides annoying cookie warnings from almost all websites and saves you from unnecessary clicks."
+			},
+			"es": {
+				"name": "I don't care about cookies",
+				"description": "Oculta los molestos avisos de cookies de casi todos los sitios web y evita clics innecesarios."
+			},
+			"es_ES": {
+				"name": "I don't care about cookies",
+				"description": "Oculta los molestos avisos de cookies de casi todos los sitios web y evita clics innecesarios."
+			},
+			"fa": {
+				"name": "I don't care about cookies",
+				"description": "اخطارهای آزاردهنده کوکی‌ها را تقریباً از تمام وب‌سایت‌ها پنهان می‌کند و شما را از کلیک‌های غیرضروری نجات می‌دهد."
+			},
+			"fi": {
+				"name": "I don't care about cookies",
+				"description": "Piilottaa ärsyttäviä evästeilmoituksia melkein kaikilla sivustoilla ja säästää sinua turhilta painalluksilta."
+			},
+			"fr": {
+				"name": "I don't care about cookies",
+				"description": "Dissimule les alertes cookies ennuyeuses sur presque tous les sites web et vous libère des clics inutiles."
+			},
+			"he": {
+				"name": "I don't care about cookies",
+				"description": "מסתיר אזהרות מטרידות לגבי עוגיות מכל האתרים כמעט וחוסך לך לחיצות בלתי נחוצות."
+			},
+			"hi": {
+				"name": "I don't care about cookies",
+				"description": "यह लगभग सभी वेबसाइटों से परेशान करने वाले कुकी चेतावनियों को छिपाता है और आपको अनावश्यक क्लिक से बचाता है।"
+			},
+			"hr": {
+				"name": "I don't care about cookies",
+				"description": "Skriva dosadna upozorenja o kolačićima sa gotovo svih web stranica i štedi vas od nepotrebnih klikova."
+			},
+			"hu": {
+				"name": "I don't care about cookies",
+				"description": "Szinte az összes webhelyen elrejti a bosszantó sütikre vonatkozó figyelmeztetéseket, és megmenti a felesleges kattintásoktól."
+			},
+			"hy": {
+				"name": "I don't care about cookies",
+				"description": "Թաքցնում է կոկոսի զգուշացումները գրեթե բոլոր կայքերում և ազատում է ձեզ անպիտան սեղմումներից։"
+			},
+			"id": {
+				"name": "I don't care about cookies",
+				"description": "Menyembunyikan peringatan cookie yang mengganggu dari hampir semua situs web dan menyelamatkan Anda dari klik yang tidak diperlukan."
+			},
+			"it": {
+				"name": "I don't care about cookies",
+				"description": "Nasconde avvisi irritanti sui cookie da quasi tutti i siti web, evitandoti clic non necessari."
+			},
+			"ja": {
+				"name": "I don't care about cookies",
+				"description": "ほとんどのWebサイトで、Cookieに関する煩わしい通知を非表示にします。"
+			},
+			"ko": {
+				"name": "쿠키를 신경 쓰지 않습니다",
+				"description": "웹사이트에서 쿠키 경고를 숨기고 불필요한 클릭을 방지합니다."
+			},
+			"lt": {
+				"name": "I don't care about cookies",
+				"description": "Slėpia erzinančius slapukų įspėjimus iš beveik visų svetainių ir apsaugo nuo nereikalingų paspaudimų."
+			},
+			"mk": {
+				"name": "I don't care about cookies",
+				"description": "Ги крие досадните предупредувања за колачиња од речиси сите веб-локации и ве спасува од непотребни кликови."
+			},
+			"ms": {
+				"name": "I don't care about cookies",
+				"description": "Menyembunyikan amaran kuki yang mengganggu daripada hampir semua laman web dan menyelamatkan anda daripada klik yang tidak perlu."
+			},
+			"nl": {
+				"name": "I don't care about cookies",
+				"description": "Verbergt vervelende cookie waarschuwingen op nagenoeg alle websites en bespaart je nodeloos klikken."
+			},
+			"no": {
+				"name": "I don't care about cookies",
+				"description": "Skjuler irriterende cookie-varsler fra nesten alle nettsteder og sparer deg for unødvendige klikk."
+			},
+			"pl": {
+				"name": "I don't care about cookies",
+				"description": "Ukrywa irytujące ostrzeżenia o plikach cookie z prawie wszystkich witryn internetowych i chroni Cię przed niepotrzebnymi kliknięciami."
+			},
+			"pt": {
+				"name": "I don't care about cookies",
+				"description": "Oculta avisos de cookies irritantes de quase todos os sítios e evita cliques desnecessários."
+			},
+			"pt_BR": {
+				"name": "I don't care about cookies",
+				"description": "Oculta avisos de cookies irritantes de quase todos os sites e evita cliques desnecessários."
+			},
+			"pt_PT": {
+				"name": "I don't care about cookies",
+				"description": "Oculta avisos de cookies irritantes de quase todos os sítios e evita cliques desnecessários."
+			},
+			"ro": {
+				"name": "I don't care about cookies",
+				"description": "Ascunde mesajele enervante despre cookie-uri pe aproape toate site-urile și vă scutește de clicuri inutile."
+			},
+			"ru": {
+				"name": "I don't care about cookies",
+				"description": "Скрывает раздражающие предупреждения о cookie со всех сайтов и спасает вас от ненужных кликов."
+			},
+			"sk": {
+				"name": "I don't care about cookies",
+				"description": "Skryje nepríjemné varovania o súboroch cookie takmer zo všetkých webových stránok a ušetrí Vás od zbytočných kliknutí."
+			},
+			"sl": {
+				"name": "I don't care about cookies",
+				"description": "Skriva nadležna opozorila o piškotkih s skoraj vseh spletnih strani in vam prihrani čas za nepotrebne klike."
+			},
+			"sr": {
+				"name": "I don't care about cookies",
+				"description": "Uklanja dosadna upozorenja o kolačićima sa skoro svih sajtova i čuva vas od neophodnih klikova."
+			},
+			"sv": {
+				"name": "I don't care about cookies",
+				"description": "Döljer störande cookie-varningar från nästan alla webbplatser och sparar dig från onödiga klick."
+			},
+			"th": {
+				"name": "I don't care about cookies",
+				"description": "ซ่อนคำเตือนคุกกี้ที่น่ารำคาญจากเว็บไซต์เกือบทั้งหมดและช่วยให้คุณไม่ต้องคลิกโดยไม่จำเป็น"
+			},
+			"tr": {
+				"name": "I don't care about cookies",
+				"description": "Neredeyse tüm sitelerden rahatsız edici çerez uyarılarını gizler ve sizi gereksiz tıklamalardan kurtarır."
+			},
+			"uk": {
+				"name": "I don't care about cookies",
+				"description": "Приховує надокучливі попередження про кукі-файли майже на всіх вебсайтах та заощаджує ваш час від зайвих рухів мишею."
+			},
+			"vi": {
+				"name": "I don't care about cookies",
+				"description": "Ẩn thông báo sử dụng cookie trên hầu hết các trang và tiết kiệm cho bạn vài lần nhấp chuột."
+			},
+			"zh": {
+				"name": "我不在乎 cookies",
+				"description": "从几乎所有的网站上隐藏恼人的 cookie 警告，并节省您不必要的点击。"
+			},
+			"zh_TW": {
+				"name": "I don't care about cookies",
+				"description": "從幾乎所有的網站上隱藏惱人的 cookie 警告並使您省去不必要的點擊。"
+			}
+		},
+		"230": {
+			"ar": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "قائمة تصفية للمواقع باللغتين الإسبانية والبرتغالية."
+			},
+			"be": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Фільтр для сайтаў на іспанскай і партугальскай мовах."
+			},
+			"bg": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Списък с филтри за уебсайтове на испански и португалски."
+			},
+			"ca": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Llista de filtres per a llocs web en espanyol i portuguès."
+			},
+			"cs": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Seznam filtrů pro webové stránky ve španělštině a portugalštině."
+			},
+			"da": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filterliste til websteder på spansk og portugisisk."
+			},
+			"de": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filterliste für spanische und portugiesische Websites."
+			},
+			"el": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Λίστα φίλτρων για ιστότοπους στα Ισπανικά και στα Πορτογαλικά."
+			},
+			"en": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filter list for websites in Spanish and Portuguese."
+			},
+			"es": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Lista de filtros para sitios web en español y portugués."
+			},
+			"es_ES": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Lista de filtros para sitios web en español y portugués."
+			},
+			"fa": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "لیست فیلتر برای وب‌سایت‌ها به زبان‌های اسپانیایی و پرتغالی."
+			},
+			"fi": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Suodatin, joka estää mainoksia espanjan- ja portugalinkielisillä verkkosivuilla."
+			},
+			"fr": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Liste de filtres pour les sites web en espagnol et en portugais."
+			},
+			"he": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "רשימת מסננים עבור אתרים בספרדית ובפורטוגזית."
+			},
+			"hi": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "स्पेनिश और पुर्तगाली वेबसाइटों के लिए फ़िल्टर सूची।"
+			},
+			"hr": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Popis filtara za web stranice na španjolskom i portugalskom."
+			},
+			"hu": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Szűrőlista a spanyol és portugál webhelyekhez."
+			},
+			"hy": {
+				"name": "Fanboy’s Spanish/Portuguese",
+				"description": "Ֆիլտրի ցուցակը իսպաներեն և պորտուգալերեն կայքերի համար։"
+			},
+			"id": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Daftar filter untuk website Spanyol dan Portugis."
+			},
+			"it": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Elenco di filtri per siti web in lingua spagnola e portoghese."
+			},
+			"ja": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "スペイン語とポルトガル語のウェブサイト用フィルタリスト。"
+			},
+			"ko": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "스페인, 포르투갈 웹사이트를 위한 필터 리스트"
+			},
+			"lt": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filtrų sąrašas tinklalapiams ispanų ir portugalų kalbomis."
+			},
+			"mk": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Список на филтри за веб-страници на шпански и португалски."
+			},
+			"ms": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Senarai penapis untuk laman web dalam bahasa Sepanyol dan Portugis."
+			},
+			"nl": {
+				"name": "Fanboy's Spaans/Portugees",
+				"description": "Filterlijst voor websites in het Spaans/Portugees."
+			},
+			"no": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filterliste for nettsteder på spansk og portugisisk."
+			},
+			"pl": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Lista filtrów dla witryn w języku hiszpańskim i portugalskim."
+			},
+			"pt": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Lista de filtros para sítios em espanhol e português."
+			},
+			"pt_BR": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Lista de filtros para sites em espanhol e português."
+			},
+			"pt_PT": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Lista de filtros para sítios em espanhol e português."
+			},
+			"ro": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Lista de filtrare pentru site-uri web în limba spaniolă și portugheză."
+			},
+			"ru": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Фильтр для сайтов на испанском и португальском языках."
+			},
+			"sk": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filtračný zoznam stránok v španielčine a portugalčine."
+			},
+			"sl": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Seznam filtrov za spletne strani v španščini in vietnamščini."
+			},
+			"sr": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filter stvoren za špansko i portugalsko govorno područje."
+			},
+			"sv": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Filterlista för webbplatser på spanska och portugisiska."
+			},
+			"th": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "กรองรายการเว็บไซต์ในภาษาสเปนและโปรตุเกส"
+			},
+			"tr": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "İspanyolca ve Portekizce siteler için filtre listesi."
+			},
+			"uk": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Фільтр для вебсайтів іспанською та португальською мовами."
+			},
+			"vi": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "Bộ lọc chặn quảng tiếng Tây Ban Nha và Bồ Đào Nha."
+			},
+			"zh": {
+				"name": "Fanboy 西班牙语/葡萄牙语",
+				"description": "用于西班牙语和葡萄牙语网站的过滤列表"
+			},
+			"zh_TW": {
+				"name": "Fanboy's Spanish/Portuguese",
+				"description": "用於西班牙文和葡萄牙文網站的過濾清單。"
 			}
 		},
 		"231": {
@@ -26348,6 +28306,184 @@
 				"description": "封鎖第三方字體的過濾器。它可能會破壞一些網站的外觀和設計。"
 			}
 		},
+		"240": {
+			"ar": {
+				"name": "BarbBlock",
+				"description": "BarbBlock عبارة عن قائمة حظر محتوى مع ملحقات متصفح مستقلة لمتصفح Chrome و Firefox. يقوم بإدراج المواقع التي استخدمت عمليات الإزالة وفقًا لقانون الألفية الجديدة لحقوق طبع ونشر المواد الرقمية (DMCA) لفرض الإزالة من قوائم حظر المحتوى الأخرى. عمليات الإزالة هذه غير صالحة بشكل قاطع ، لكنها يمكن أن تكون فعالة في ترهيب المشاريع الصغيرة مفتوحة المصدر إلى الامتثال."
+			},
+			"be": {
+				"name": "BarbBlock",
+				"description": "BarbBlock – гэта фільтр для блакіравання змесціва з аўтаномнымі браўзернымі пашырэннямі для Chrome і Firefox. Дадзены фільтр уносіць у чорны спіс вэб-сайты, якія выкарыстоўвалі закон DMCA для прымусовага выдалення з іншых фільтраў блакіравання змесціва. Такія выключэнні катэгарычна недапушчальны, але яны могуць быць эфектыўнымі для запалохвання і падначалення невялікіх праектаў з адкрытым зыходным кодам."
+			},
+			"bg": {
+				"name": "BarbBlock",
+				"description": "BarbBlock е списък за блокиране на съдържание с независими разширения за браузър за Chrome и Firefox. Той добавя в черния списък сайтове, които са използвали DMCA изтегляния, за да принудят премахването си от други списъци за блокиране на съдържание. Такива изтегляния са категорично невалидни, но могат да бъдат ефективни за плаши малките проекти с отворен код да се съобразят."
+			},
+			"ca": {
+				"name": "BarbBlock",
+				"description": "BarbBlock és una llista de bloqueig de contingut amb extensions de navegador independents per a Chrome i Firefox. Afegeix a la llista negra els llocs que han utilitzat la retirada DMCA per forçar l'eliminació d'altres llistes de bloqueig de contingut. Tals retirades són categòricament invàlides, però poden ser efectives per intimidar petits projectes de codi obert per a la seva conformitat."
+			},
+			"cs": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je seznam na blokování obsahu se samostatnými rozšířeními pro Chrome a Firefox. Blokuje přístup ke stránkám, které si ve smyslu zákona DMCA vynutily odstranění z jiných seznamů blokování obsahu. Takové odstranění jsou kategoricky neplatné, ale mohou být účinné při zastrašováni malých open-source projektů."
+			},
+			"da": {
+				"name": "BarbBlock",
+				"description": "BarbBlock er en indholdsblokeringsliste med individuelle browserudvidelser til Chrome og Firefox. Den sortlister websteder, som har brugt DMCA-nedltagelser til at tvinge fjernelse fra andre indholdsblokeringslister. Sådanne nedltagelser er kategorisk ugyldige, men de kan være effektive til at skræmme små open-source projekter til overholdelse."
+			},
+			"de": {
+				"name": "BarbBlock",
+				"description": "BarbBlock ist eine Sperrliste für Inhalte mit eigenständigen Browser-Erweiterungen für Chrome und Firefox. Sie sperrt Websites, die DMCA-Take-Downs verwendet haben, um das Entfernen aus anderen Inhaltssperrlisten zu erzwingen. Solche Takedowns sind kategorisch ungültig, aber sie können wirksam sein, um kleine Open-Source-Projekte in die Einhaltung der Vorschriften einzuschüchtern."
+			},
+			"el": {
+				"name": "BarbBlock",
+				"description": "Το BarbBlock είναι μια λίστα αποκλεισμού περιεχομένου με αυτόνομες επεκτάσεις προγράμματος περιήγησης για Chrome και Firefox. Μαύρες λίστες ιστότοπων που έχουν χρησιμοποιήσει κατάργηση DMCA για να εξαναγκάσουν την κατάργηση από άλλες λίστες αποκλεισμού περιεχομένου. Τέτοιες καταργήσεις είναι κατηγορηματικά άκυρες, αλλά μπορεί να είναι αποτελεσματικές στον εκφοβισμό μικρών έργων ανοιχτού κώδικα."
+			},
+			"en": {
+				"name": "BarbBlock",
+				"description": "BarbBlock is a content blocking list with standalone browser extensions for Chrome and Firefox. It blacklists sites that have used DMCA takedowns to force removal from other content blocking lists. Such takedowns are categorically invalid, but they can be effective at intimidating small open-source projects into compliance."
+			},
+			"es": {
+				"name": "BarbBlock",
+				"description": "BarbBlock es una lista de bloqueo de contenido con extensiones de navegador independientes para Chrome y Firefox. Incluye en listas negras los sitios que han utilizado avisos DMCA para forzar la eliminación de otras listas de bloqueo de contenido. Tales eliminaciones son categóricamente no válidas, pero pueden ser efectivas para intimidar a pequeños proyectos de código abierto para que cumplan con la ley."
+			},
+			"es_ES": {
+				"name": "BarbBlock",
+				"description": "BarbBlock es una lista de bloqueo de contenido con extensiones de navegador independientes para Chrome y Firefox. Incluye en listas negras los sitios que han utilizado avisos DMCA para forzar la eliminación de otras listas de bloqueo de contenido. Tales eliminaciones son categóricamente no válidas, pero pueden ser efectivas para intimidar a pequeños proyectos de código abierto para que cumplan con la ley."
+			},
+			"fa": {
+				"name": "BarbBlock",
+				"description": "BarbBlock یک فهرست مسدودسازی محتوا با افزونه‌های مرورگر مستقل برای Chrome و فایرفاکس است. این فهرست سایت‌هایی را که از DMCA برای اجبار به حذف از فهرست‌های مسدودسازی محتوا دیگر استفاده کرده‌اند، به لیست سیاه اضافه می‌کند. اینگونه اقدامات DMCA به طور مطلق نامعتبر هستند، اما می‌توانند موثر باشند و باعث ترساندن پروژه‌های کوچک منبع باز به اطاعت شوند."
+			},
+			"fi": {
+				"name": "BarbBlock",
+				"description": "Sisällönestolista, jolla on omat selainlaajennukset Chromelle ja Firefoxille. Se estää sivustot, jotka ovat käyttäneet DMCA:n poistopyyntöjä muilta sisällönestolistoilta. Tällaiset poistopyynnöt ovat täysin virheellisiä, mutta saattavat olla tehokkas uhka, jolla pienemmät avoimen lähdekoodin projektit saadaan niitä noudattamaan."
+			},
+			"fr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock est une liste de blocage de contenu avec des extensions de navigateur autonomes pour Chrome et Firefox. Elle met sur la liste noire les sites qui ont utilisé les retraits DMCA pour forcer la suppression d'autres listes de blocage de contenu. De telles suppressions sont catégoriquement invalides, mais elles peuvent être efficaces pour intimider les petits projets open source pour les mettre en conformité."
+			},
+			"he": {
+				"name": "BarbBlock",
+				"description": "BarbBlock הוא רשימה של חסימת תוכן עם הרחבות דפדפן עצמאיות עבור Chrome ו־Firefox. הוא מוסיף אל רשימה שחורה אתרים שהשתמשו בהפלות DMCA כדי לאלץ הסרה מרשימות אחרות של חסימת תוכן. הפלות כאלו בלתי תקפות בעליל, אבל הן יכולות להיות יעילות בהפחדת מיזמי קוד פתוח קטנים לצורך היענות."
+			},
+			"hi": {
+				"name": "BarbBlock",
+				"description": "बारबब्लॉक एक कंटेंट ब्लॉकिंग सूची है जो क्रोम और फ़ायरफ़ॉक्स के लिए स्टैंडअलोन ब्राउज़र एक्सटेंशंस के साथ है। यह उन साइटों को ब्लैकलिस्ट करता है जिन्होंने अन्य कंटेंट ब्लॉकिंग सूचियों से हटाने के लिए DMCA टेकडाउन का उपयोग किया है। ऐसे टेकडाउन स्पष्ट रूप से अमान्य हैं, लेकिन वे छोटे ओपन-सोर्स प्रोजेक्टों को अनुपालन के लिए डराने में प्रभावी हो सकते हैं।"
+			},
+			"hr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je popis za blokiranje sadržaja sa samostalnim proširenjima preglednika za Chrome i Firefox. Ono stavlja web stranica na popis neželjenih, koje su koristile DMCA uklanjanje kako bi prisilile uklanjanje s drugih popisa za blokiranje sadržaja. Takva uklanjanja kategorički su nevaljana, ali mogu biti učinkovita u zastrašivanju malih projekata otvorenog koda."
+			},
+			"hu": {
+				"name": "BarbBlock",
+				"description": "A BarbBlock egy tartalomblokkoló lista, önálló Chrome és a Firefox böngészőbővítményekkel. Tiltólistára teszi azokat a webhelyeket, amelyek a DMCA segítségével távolíttatták el magukat az egyéb tartalomblokkoló listákról. Az ilyen eltávolítások kategorikusan érvénytelenek, de hatékonyan képesek megfélemlíteni a nyílt forráskódú kis projekteket."
+			},
+			"hy": {
+				"name": "BarbBlock",
+				"description": "BarbBlock-ն բովանդակության հավաքման ցանկ է ինքնուրույն զետեղված բրաուզերային ընդլայնումներով Chrome և Firefox-ի համար։ Այն սև ցուցակում է դնում այն կայքերը, որոնք օգտագործել են DMCA-ի փոխանցումներ՝ ստիպելու այլ բովանդակության հավաքման ցանկերից հանելու։ Այդպիսի փոխանցումները գեթ քվոտաբառային են, սակայն կարող են արդյունավետ լինել փոքր օփեն-սորզ ծրագրերի վրա ճնշում գործադրելու համար։"
+			},
+			"id": {
+				"name": "BarbBlock",
+				"description": "BarbBlock adalah daftar pemblokiran konten dengan ekstensi browser tersendiri untuk Chrome dan Firefox. Menambahkan daftar hitam situs yang telah menggunakan penghapusan DMCA untuk memaksa penghapusan dari daftar pemblokiran konten lainnya. Penghapusan semacam itu secara kategoris tidak valid, tetapi bisa efektif dalam mengintimidasi proyek sumber terbuka kecil agar patuh."
+			},
+			"it": {
+				"name": "BarbBlock",
+				"description": "BarbBlock è un elenco di blocco di contenuti con estensioni del browser standalone per Chrome e Firefox. Mette in lista nera quei siti che hanno utilizzato le rimozioni DMCA per forzare la rimozione da altri elenchi di blocco dei contenuti. Tali rimozioni sono categoricamente non valide, ma possono essere efficaci nell'intimidire i piccoli progetti open source in conformità."
+			},
+			"ja": {
+				"name": "BarbBlock",
+				"description": "BarbBlockは、ChromeとFirefox用のスタンドアロンのブラウザ拡張機能を持つコンテンツブロッキングリストです。他のコンテンツブロッキングリストから強制的に削除させるためにDMCA 侵害行為を使ったサイトをブラックリスト化します。このようなDMCAを使った取り締まりは厳密には無効ですが、小規模なオープンソースプロジェクトを脅して応諾させるには効果的です。"
+			},
+			"ko": {
+				"name": "BarbBlock",
+				"description": "BarbBlock은 Chrome 및 Firefox용 브라우저 확장 프로그램을 위한 콘텐츠 차단 목록입니다. 콘텐츠 차단 목록에서 강제 삭제를 위해 DMCA 게시 중단을 이용하는 사이트를 블랙리스트에 추가합니다. 해당 게시 중단이 절대적으로 유효한 것은 아니나, 소규모 오픈 소스 프로젝트로 하여금 규정을 준수시키는 데 효과적일 수 있습니다."
+			},
+			"lt": {
+				"name": "BarbBlock",
+				"description": "BarbBlock yra turinio blokavimo sąrašas su nepriklausomais naršyklės plėtiniais, skirtais Chrome ir Firefox. Jis juodajame sąraše turi svetaines, kurios naudojasi DMCA pašalinimo prašymais, kad priverstų išimti iš kitų turinio blokavimo sąrašų. Tokie pašalinimo prašymai yra kategoriškai neteisingi, tačiau gali būti veiksmingi, norint bauginti mažus atvirojo kodo projektus, kad jie laikytųsi reikalavimų."
+			},
+			"mk": {
+				"name": "BarbBlock",
+				"description": "BarbBlock е листа за блокирање содржини со самостојни екстензии на прелистувачот за Chrome и Firefox. Ги става на црните листи сајтови кои користеле отстранување DMCA за принудно отстранување од други списоци за блокирање содржини. Ваквите симнувања се категорично невалидни, но можат да бидат ефективни во заплашувањето на малите проекти со отворен код да се усогласат."
+			},
+			"ms": {
+				"name": "BarbBlock",
+				"description": "BarbBlock adalah senarai penyekat kandungan dengan penyambung pelayar berdiri sendiri untuk Chrome dan Firefox. Ia menyekat laman yang telah menggunakan penghapusan DMCA untuk memaksa pemindahan dari senarai penyekat kandungan lain. Penghapusan seperti ini adalah tidak sah secara kategorik, tetapi ia boleh berkesan dalam menakut-nakutkan projek-projek sumber terbuka yang kecil untuk mematuhi."
+			},
+			"nl": {
+				"name": "BarbBlock",
+				"description": "BarbBlock is een blokkeringslijst met standalone uitbreidingen voor Chrome en Firefox. Ze blokkeert websites die DMCA verwijderingsverzoeken gebruiken om verwijdering van andere blokkeringslijsten af te dwingen. Deze verwijderingsverzoeken zijn pertinent ongeldig, maar kunnen effectief zijn tegen kleinere open-source projecten."
+			},
+			"no": {
+				"name": "BarbBlock",
+				"description": "BarbBlock er en innholdsblokeringsliste med uavhengige nettleserutvidelser for Chrome og Firefox. Den sorterer nettsteder som har brukt DMCA-nedtagninger for å tvinge fjerning fra andre innholdsblokeringslister. Slike nedtagninger er kategorisk ugyldige, men de kan være effektive for å skremme små åpne kildeprosjekter til samsvar."
+			},
+			"pl": {
+				"name": "BarbBlock",
+				"description": "BarbBlock to lista blokująca treści z samodzielnymi rozszerzeniami przeglądarki dla Chrome i Firefox. Umieszcza na czarnej liście witryny, które stosowały żądania usunięcia treści na podstawie ustawy DMCA, aby wymusić usunięcie z innych list blokujących treści. Takie usunięcia są kategorycznie nieważne, ale mogą skutecznie zastraszać małe projekty open-source w celu zapewnienia zgodności."
+			},
+			"pt": {
+				"name": "BarbBlock",
+				"description": "BarbBlock é uma lista de bloqueio de conteúdo com extensões de navegador independentes para Chrome e Firefox. Ele coloca na lista negra sítios que usaram remoções por DMCA para forçar a remoção de outras listas de bloqueio de conteúdo. Essas remoções são categoricamente inválidas, mas podem ser eficazes para intimidar pequenos projetos de código aberto em conformidade."
+			},
+			"pt_BR": {
+				"name": "BarbBlock",
+				"description": "BarbBlock é uma lista de bloqueio de conteúdo com extensões de navegador independentes para Chrome e Firefox. Ele coloca na lista negra sites que usaram remoções por DMCA para forçar a remoção de outras listas de bloqueio de conteúdo. Essas remoções são categoricamente inválidas, mas podem ser eficazes para intimidar pequenos projetos de código aberto em conformidade."
+			},
+			"pt_PT": {
+				"name": "BarbBlock",
+				"description": "BarbBlock é uma lista de bloqueio de conteúdo com extensões de navegador independentes para Chrome e Firefox. Ele coloca na lista negra sítios que usaram remoções por DMCA para forçar a remoção de outras listas de bloqueio de conteúdo. Essas remoções são categoricamente inválidas, mas podem ser eficazes para intimidar pequenos projetos de código aberto em conformidade."
+			},
+			"ro": {
+				"name": "BarbBlock",
+				"description": "BarbBlock este o listă de blocare de conținut cu extensii de browser independente pentru Chrome și Firefox. Blochează site-urile care au utilizat cereri de eliminare DMCA din alte liste de blocare de conținut. Astfel de cereri de eliminare sunt complet eronate, dar pot reprezenta o amenințare eficientă pentru a face proiectele open source mai mici să le respecte."
+			},
+			"ru": {
+				"name": "BarbBlock",
+				"description": "BarbBlock – это фильтр для блокировки контента с автономными браузерными расширениями для Chrome и Firefox. Он вносит в черный список сайты, которые использовали закон DMCA для принудительного удаления из других фильтров блокировки контента. Такие изъятия категорически недопустимы, но они могут запугать, а затем подчинить небольшие проекты с открытым исходным кодом."
+			},
+			"sk": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je zoznam ma blokovanie obsahu so samostatnými rozšíreniami pre Chrome a Firefox. Blokuje prístup k stránkam, ktoré si v zmysle zákona DMCA vynútili odstránenie z iných zoznamov blokovania obsahu. Takéto odstránenia sú kategoricky neplatné, ale môžu byť účinné pri zastrašovaní malých open-source projektov."
+			},
+			"sl": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je seznam za zaviranje vsebine s samostojnimi razširitvami brskalnika za Chrome in Firefox. Spletne strani, ki so uporabila odstranitve z zakonom DMCA, uvrščajo na sezname nedovoljenih. Takšno odstranjevanje je kategorično neveljavno, lahko pa učinkovito zastraši skladnost majhnih odprtokodnih projektov."
+			},
+			"sr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je lista za blokiranje sadržaja sa samostalnim proširenjima pregledača za Chrome i Firefok. Na crne liste stavljaju veb lokacije koje su koristileuklanjanje DMCA kako bi prinudno uklonile sa drugih lista blokiranja sadržaja. Takva uklanjanja su kategorički nevaljana, ali mogu biti efikasna u zastrašivanjumalih projekata otvorenog koda u skladu."
+			},
+			"sv": {
+				"name": "BarbBlock",
+				"description": "BarbBlock är en innehållsblockeringslista med fristående webbläsartillägg för Chrome och Firefox. Den svartlistar webbplatser som har använt DMCA-takedowns för att tvinga bort dem från andra innehållsblockeringslistor. Sådana nedtagningar är kategoriskt ogiltiga, men de kan vara effektiva för att skrämma små projekt med öppen källkod till efterlevnad."
+			},
+			"th": {
+				"name": "BarbBlock",
+				"description": "BarbBlock เป็นรายการปิดกั้นเนื้อหาที่มีส่วนขยายเบราว์เซอร์แบบสแตนด์อโลนสำหรับ Chrome และ Firefox ขึ้นบัญชีดำไซต์ที่ใช้การลบ DMCA เพื่อบังคับให้ลบออกจากรายการปิดกั้นเนื้อหาอื่น ๆ การลบออกดังกล่าวไม่ถูกต้องโดยเด็ดขาด แต่อาจมีผลในการข่มขู่โครงการโอเพ่นซอร์สขนาดเล็กให้ปฏิบัติตาม"
+			},
+			"tr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock, Chrome ve Firefox için bağımsız tarayıcı uzantılarına sahip bir içerik engelleme listesidir. Diğer içerik engelleme listelerinden kaldırılmaya zorlamak için DMCA yayından kaldırma işlemlerini kullanan siteleri kara listeye alır. Bu tür yayından kaldırmalar kategorik olarak geçersizdir, ancak küçük açık kaynaklı projeleri uyumluluk açısından sindirmede etkili olabilirler."
+			},
+			"uk": {
+				"name": "BarbBlock",
+				"description": "BarbBlock — це фільтр блокування, а також незалежне розширення для браузерів Chrome та Firefox. Фільтр блокує сайти, які використовували закон DMCA для примусового вилучення правил з інших фільтрів. Такі вилучення категорично неприпустимі, але вони можуть бути ефективними в залякуванні та подальшому підпорядкуванню невеликих проєктів з відкритим кодом."
+			},
+			"vi": {
+				"name": "BarbBlock",
+				"description": "BarbBlock là bộ lọc quảng cáo cùng với tiện ích mở rộng cho Chrome và Firefox. BarbBlock chặn những trang đã dùng DMCA để ép những bộ lọc loại bỏ tên miền của nó. Những điều gỡ bỏ đó là vô lý, nhưng có hiệu quả đối với những dự án mã nguồn mở nhỏ."
+			},
+			"zh": {
+				"name": "BarbBlock",
+				"description": "BarbBlock是一个带独立Chrome和火狐浏览器扩展的内容拦截列表。它将那些使用DMCA下架通知迫使内容拦截列表将它们从拦截名单中删除的站点列入黑名单。这样的通知是绝对无效的，但这种做法可以有效地迫使小型开源项目就范。"
+			},
+			"zh_TW": {
+				"name": "BarbBlock",
+				"description": "BarbBlock 是對應用於 Chrome 和 Firefox 的獨立瀏覽器擴充功能之內容阻擋清單。它將已使用數位千禧年著作權法（DMCA）取締以從其它內容阻擋清單中強制排除的網站列入黑名單。這樣的取締是絕對無效的，但它們能有效地威嚇小型開源的專案就範。"
+			}
+		},
 		"241": {
 			"ar": {
 				"name": "EasyList Cookie List",
@@ -26524,6 +28660,184 @@
 			"zh_TW": {
 				"name": "EasyList Cookie List",
 				"description": "移除 cookie 和隱私警告。已被包含在 Fanboy's Annoyances 清單中。"
+			}
+		},
+		"242": {
+			"ar": {
+				"name": "NoCoin Filter List",
+				"description": "يعمل هذا الفلتر على تعطيل عمال المناجم المستندة إلى المتصفح مثل خلية العملة."
+			},
+			"be": {
+				"name": "NoCoin Filter List",
+				"description": "Гэты фільтр адключае браўзерныя майнеры, такія як Coinhive."
+			},
+			"bg": {
+				"name": "NoCoin Filter List",
+				"description": "Този филтър деактивира браузърни минирани, като coin-hive."
+			},
+			"ca": {
+				"name": "NoCoin Filter List",
+				"description": "Aquest filtre deshabilita miners basats en navegador, com coin-hive."
+			},
+			"cs": {
+				"name": "NoCoin Filter List",
+				"description": "Tento filtr blokuje těžbu kryptoměn na bázi prohlížeče, jako je například coin-hive."
+			},
+			"da": {
+				"name": "NoCoin Filter List",
+				"description": "Dette filter deaktiverer browserbaserede miners, såsom coin-hive."
+			},
+			"de": {
+				"name": "NoCoin Filter List",
+				"description": "Dieser Filter deaktiviert browserbasiertes „Schürfen nach Kryptowährung“ wie z.B. Coinhive."
+			},
+			"el": {
+				"name": "NoCoin Filter List",
+				"description": "Αυτό το φίλτρο απενεργοποιεί τους διακομιστές που βασίζονται στα προγράμματα περιήγησης, όπως το coin-hive."
+			},
+			"en": {
+				"name": "NoCoin Filter List",
+				"description": "This filter disables browser-based miners such as coin-hive."
+			},
+			"es": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro deshabilita los mineros basados ​​en navegador como Coinhive."
+			},
+			"es_ES": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro deshabilita los mineros basados ​​en navegador como Coinhive."
+			},
+			"fa": {
+				"name": "فهرست فیلتر NoCoin",
+				"description": "این فیلتر ماینرهای مبتنی بر مرورگر مانند coin-hive را غیرفعال می‌کند."
+			},
+			"fi": {
+				"name": "NoCoin Filter List",
+				"description": "Suodatin, joka poistaa käytöstä selainpohjaiset louhijat kuten coin-hive."
+			},
+			"fr": {
+				"name": "NoCoin Filter List",
+				"description": "Ce filtre désactive les mineurs basés sur les navigateurs comme coin-hive."
+			},
+			"he": {
+				"name": "NoCoin Filter List",
+				"description": "מסנן זה משבית כורים מבוססי דפדפן כגון כוורת מטבעות."
+			},
+			"hi": {
+				"name": "NoCoin Filter List",
+				"description": "यह फ़िल्टर ब्राउज़र-आधारित खनन उपकरणों जैसे कि कॉइन-हाइव को निष्क्रिय करता है।"
+			},
+			"hr": {
+				"name": "NoCoin Filter List",
+				"description": "Ovaj filtar onemogućava rudare temeljene na pregledniku, kao što je coin-hive."
+			},
+			"hu": {
+				"name": "NoCoin Filter List",
+				"description": "Ez a szűrő letiltja a böngészőalapú bányászokat, például coin-hive."
+			},
+			"hy": {
+				"name": "NoCoin Filter List",
+				"description": "Այս զտիչը անջատում է բրաուզերի հիման վրա ցուցակագրվող միներները, ինչպիսին է coin-hive-ը։"
+			},
+			"id": {
+				"name": "NoCoin Filter List",
+				"description": "Filter ini menonaktifkan penambang berbasis browser seperti coin-hive."
+			},
+			"it": {
+				"name": "Elenco Filtri NoCoin",
+				"description": "Questi filtri disattivano i miner di criptovalute come coin-hive."
+			},
+			"ja": {
+				"name": "NoCoin Filter List",
+				"description": "このフィルターは、コインハイブなどのようなブラウザベースのマイナーを無効にします。"
+			},
+			"ko": {
+				"name": "NoCoin Filter List",
+				"description": "이 필터는 코인 하이브와 같은 브라우저 기반 채굴 프로그램을 비활성화합니다."
+			},
+			"lt": {
+				"name": "NoCoin Filter List",
+				"description": "Šis filtras išjungia naršyklės pagrindu veikiančius kalnakasius, tokius kaip coin-hive."
+			},
+			"mk": {
+				"name": "NoCoin Filter List",
+				"description": "Овој филтер ги оневозможува ископувањата базирани на прелистувачи како што е coin-hive."
+			},
+			"ms": {
+				"name": "NoCoin Filter List",
+				"description": "Penapis ini mematikan penambang berdasarkan pelayar seperti coin-hive."
+			},
+			"nl": {
+				"name": "NoCoin Filter List",
+				"description": "Dit filter schakelt browser-gebaseerde miners uit, zoals coin-hive."
+			},
+			"no": {
+				"name": "NoCoin Filter List",
+				"description": "Denne filteret deaktiverer nettleserbaserte gruveplasser som coin-hive."
+			},
+			"pl": {
+				"name": "NoCoin Filter List",
+				"description": "Ten filtr wyłącza koparki kryptowalut działające w przeglądarce, takie jak coin-hive."
+			},
+			"pt": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro desativa mineradores baseados em navegador, como coin-hive."
+			},
+			"pt_BR": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro desativa mineradores baseados em navegador, como coin-hive."
+			},
+			"pt_PT": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro desativa mineradores baseados em navegador, como coin-hive."
+			},
+			"ro": {
+				"name": "NoCoin Filter List",
+				"description": "Acest filtru dezactivează minerii din browser, cum ar fi coin-hive."
+			},
+			"ru": {
+				"name": "NoCoin Filter List",
+				"description": "Этот фильтр отключает браузерные майнеры, такие как Coinhive."
+			},
+			"sk": {
+				"name": "NoCoin Filter List",
+				"description": "Tento filter blokuje ťažiarov na báze prehliadača, ako je napríklad coin-hive."
+			},
+			"sl": {
+				"name": "NoCoin Filter List",
+				"description": "Ta filter onemogoča rudarjenja, ki temeljijo na brskalniku, kot je coin-hive."
+			},
+			"sr": {
+				"name": "NoCoin Filter List",
+				"description": "Ovaj filter onemogućava rudarenja preko preglednika kao što je coin-hive."
+			},
+			"sv": {
+				"name": "NoCoin Filter List",
+				"description": "Detta filter inaktiverar webbläsarbaserade krypto-grävare som Coinhive."
+			},
+			"th": {
+				"name": "NoCoin Filter List",
+				"description": "ตัวกรองนี้ปิดใช้งานคนงานเหมืองที่ใช้เบราว์เซอร์เช่นเหรียญรัง"
+			},
+			"tr": {
+				"name": "NoCoin Filter List",
+				"description": "Bu filtre, coin-hive gibi tarayıcı tabanlı madencileri devre dışı bırakır."
+			},
+			"uk": {
+				"name": "NoCoin Filter List",
+				"description": "Цей фільтр вимикає браузерні майнери криптовалют, наприклад, coin-hive."
+			},
+			"vi": {
+				"name": "NoCoin Filter List",
+				"description": "Chặn các trình đào tiền ảo trên trình duyệt như coin-hive."
+			},
+			"zh": {
+				"name": "NoCoin 过滤列表",
+				"description": "此过滤器禁用基于浏览器的挖矿站点，如coin-hive。"
+			},
+			"zh_TW": {
+				"name": "NoCoin Filter List",
+				"description": "此過濾器禁用基於瀏覽器的挖礦程式，諸如 coin-hive。"
 			}
 		},
 		"243": {
@@ -26880,6 +29194,184 @@
 			"zh_TW": {
 				"name": "YousList",
 				"description": "封鎖於韓文網站上的廣告之過濾器。"
+			}
+		},
+		"245": {
+			"ar": {
+				"name": "AlleBlock",
+				"description": "عامل التصفية الذي يزيل العناصر المزعجة من مواقع التجارة الإلكترونية البولندية."
+			},
+			"be": {
+				"name": "AlleBlock",
+				"description": "Фільтр, які падаляе раздражняльныя элементы з польскіх сайтаў электроннай камерцыі."
+			},
+			"bg": {
+				"name": "AlleBlock",
+				"description": "Филтър, който премахва досадни елементи от полски сайтове за електронна търговия."
+			},
+			"ca": {
+				"name": "AlleBlock",
+				"description": "Filtre que elimina elements molestos dels llocs de comerç electrònic polonesos."
+			},
+			"cs": {
+				"name": "AlleBlock",
+				"description": "Filtr, který odstraňuje nepříjemné prvky z polských stránek elektronického obchodování."
+			},
+			"da": {
+				"name": "AlleBlock",
+				"description": "Filter, der fjerner irriterende elementer fra polske e-handelswebsteder."
+			},
+			"de": {
+				"name": "AlleBlock",
+				"description": "Filter, der lästige Elemente auf Webseiten polnischer E-Handelsplattformen entfernt."
+			},
+			"el": {
+				"name": "AlleBlock",
+				"description": "Φίλτρο που αφαιρεί ενοχλητικά στοιχεία από πολωνικούς ιστότοπους ηλεκτρονικού εμπορίου."
+			},
+			"en": {
+				"name": "AlleBlock",
+				"description": "Filter that removes annoying elements from Polish e-commerce sites."
+			},
+			"es": {
+				"name": "AlleBlock",
+				"description": "Filtro que elimina elementos molestos de los sitios de comercio electrónico polacos."
+			},
+			"es_ES": {
+				"name": "AlleBlock",
+				"description": "Filtro que elimina elementos molestos de los sitios de comercio electrónico polacos."
+			},
+			"fa": {
+				"name": "AlleBlock",
+				"description": "پالایشی که اجزاء آزاردهنده را از تارنماهای تجارت الکترونیک لهستان حذف می‌کند."
+			},
+			"fi": {
+				"name": "AlleBlock",
+				"description": "Suodatin, joka poistaa ärsyttäviä elementtejä puolalaisilta verkkokauppasivustoilta."
+			},
+			"fr": {
+				"name": "AlleBlock",
+				"description": "Filtre qui supprime les éléments gênants des sites de commerce électronique Polonais."
+			},
+			"he": {
+				"name": "AlleBlock",
+				"description": "מסנן שמסיר אלמנטים מטרידים מאתרים מסחר פולניים."
+			},
+			"hi": {
+				"name": "AlleBlock",
+				"description": "एक फ़िल्टर जो पोलिश ई-कॉमर्स साइटों से परेशान करने वाले तत्वों को हटाता है।"
+			},
+			"hr": {
+				"name": "AlleBlock",
+				"description": "Filtar koji uklanja dosadne elemente s web stranica poljskih e-trgovina."
+			},
+			"hu": {
+				"name": "AlleBlock",
+				"description": "Szűrő, amely eltávolítja a bosszantó elemeket a lengyel e-kereskedelmi webhelyekről."
+			},
+			"hy": {
+				"name": "AlleBlock",
+				"description": "Ֆիլտր, որը հեռացնում է նյարդայնացնող տարրերը պոլոնական էլեկտրոնային առևտրի կայքերից։"
+			},
+			"id": {
+				"name": "AlleBlock",
+				"description": "Filter yang menghilangkan elemen mengganggu dari situs e-commerce Polandia."
+			},
+			"it": {
+				"name": "AlleBlock",
+				"description": "Filtro che rimuove elementi irritanti dai siti di e-commerce polacchi."
+			},
+			"ja": {
+				"name": "AlleBlock",
+				"description": "ポーランドのECサイトで迷惑要素を除去するフィルター。"
+			},
+			"ko": {
+				"name": "AlleBlock",
+				"description": "폴란드 전자 상거래 사이트에서 방해 요소를 제거하는 필터입니다."
+			},
+			"lt": {
+				"name": "AlleBlock",
+				"description": "Filtras, kuris pašalina erzinančias elementus iš Lenkijos el. prekybos svetainių."
+			},
+			"mk": {
+				"name": "AlleBlock",
+				"description": "Филтер што ги отстранува досадните елементи од полските страници за е-трговија."
+			},
+			"ms": {
+				"name": "AlleBlock",
+				"description": "Penapis yang menghapus elemen yang mengganggu dari laman web e-dagang Poland."
+			},
+			"nl": {
+				"name": "AlleBlock",
+				"description": "Filter dat ergerlijke elementen van Poolse e-commerce websites verwijdert."
+			},
+			"no": {
+				"name": "AlleBlock",
+				"description": "Filter som fjerner irriterende elementer fra polske e-handelsnettsteder."
+			},
+			"pl": {
+				"name": "AlleBlock",
+				"description": "Filtr usuwający irytujące elementy z polskich witryn e-commerce."
+			},
+			"pt": {
+				"name": "AlleBlock",
+				"description": "Filtro que remove elementos irritantes de sítios de comércio eletrónico poloneses."
+			},
+			"pt_BR": {
+				"name": "AlleBlock",
+				"description": "Filtro que remove elementos irritantes de sites de comércio eletrônico poloneses."
+			},
+			"pt_PT": {
+				"name": "AlleBlock",
+				"description": "Filtro que remove elementos irritantes de sítios de comércio eletrónico poloneses."
+			},
+			"ro": {
+				"name": "AlleBlock",
+				"description": "Filtru care elimină elementele enervante de pe site-urile poloneze de comerț electronic."
+			},
+			"ru": {
+				"name": "AlleBlock",
+				"description": "Фильтр, который удаляет раздражающие элементы с польских сайтов электронной коммерции."
+			},
+			"sk": {
+				"name": "AlleBlock",
+				"description": "Filter, ktorý odstraňuje obťažujúce prvky z poľských stránok elektronického obchodu."
+			},
+			"sl": {
+				"name": "AlleBlock",
+				"description": "Filter, ki odstranjuje nadležne elemente s poljskih spletnih strani e-trgovine."
+			},
+			"sr": {
+				"name": "AlleBlock",
+				"description": "Filter koji uklanja dosadne elemente sa poljskih e-komerc sajtova."
+			},
+			"sv": {
+				"name": "AlleBlock",
+				"description": "Filter som tar bort irriterande element från polska e-handelssajter."
+			},
+			"th": {
+				"name": "AlleBlock",
+				"description": "ตัวกรองที่ลบองค์ประกอบที่น่ารำคาญออกจากไซต์อีคอมเมิร์ซของโปแลนด์"
+			},
+			"tr": {
+				"name": "AlleBlock",
+				"description": "Lehçe e-ticaret sitelerindeki rahatsız edici öğeleri kaldıran filtre."
+			},
+			"uk": {
+				"name": "AlleBlock",
+				"description": "Фільтр, який вилучає надокучливі елементи з польських комерційних сайтів."
+			},
+			"vi": {
+				"name": "AlleBlock",
+				"description": "Bộ lọc loại bỏ phiền nhiễu trên các trang thương mại điện tử tiếng Ba Lan."
+			},
+			"zh": {
+				"name": "AlleBlock",
+				"description": "从波兰电商站点移除恼人元素的过滤器"
+			},
+			"zh_TW": {
+				"name": "AlleBlock",
+				"description": "從波蘭電商網站上移除惱人的元件之過濾器。"
 			}
 		},
 		"246": {
@@ -27414,6 +29906,362 @@
 			"zh_TW": {
 				"name": "Dandelion Sprout's Nordic Filters",
 				"description": "此清單涵蓋有關挪威、丹麥、冰島、丹麥領土和薩米原住民的網站。"
+			}
+		},
+		"250": {
+			"ar": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "هذه القائمة مصنوعة بأسلوب قوائم مضايقات AdGuard و Fanboy. فهو يجمع بين العديد من قوائم Dandelion Sprout الدولية الأكثر فخرًا والأكثر احتفاظًا بها ، كتجميع منظم من أجل البساطة."
+			},
+			"be": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Гэты фільтр зроблены ў стылі AdGuard і Fanboy annoyances list. Яднае шмат фільтраў Dandelion Sprout і якія часта абнаўляюцца міжнародных фільтраў дзеля прастаты выкарыстання."
+			},
+			"bg": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Този списък е направен в стилa на списъците с дразнители на AdGuard и Fanboy. Той комбинира множество от най-гордите и най-често поддържани международни списъци на Dandelion Sprout, като курирана компилация заради простота."
+			},
+			"ca": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Aquesta llista es fa en l'estil de les llistes de molèsties d'AdGuard i Fanboy. Combina moltes de les llistes internacionals més orgulloses i freqüentment mantingudes de Dandelion Sprout, com una compilació curada per simplificar."
+			},
+			"cs": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Tento seznam je vytvořen ve stylu seznamů AdGuard a Fanboy's annoyances. Kombinuje mnoho z hrdých a nejčastěji udržovaných mezinárodních seznamů Dandelion Sprout."
+			},
+			"da": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Denne liste er udarbejdet i stil med AdGuards og Fanboys irritationslister. Den kombinerer mhp. enkelhed mange af Dandelion Sprout' bedste og hyppigst vedligeholdte internationale lister som en kurateret samling."
+			},
+			"de": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Diese Liste ist im Stil der AdGuard- und Fanboy-Belästigungslisten gehalten. Sie fasst viele der bekanntesten und am häufigsten gepflegten internationalen Listen von Dandelion Sprout zusammen und ist der Einfachheit halber eine kuratierte Zusammenstellung."
+			},
+			"el": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Αυτή η λίστα γίνεται με το στυλ των λιστών ενοχλήσεων του AdGuard και του Fanboy. Συνδυάζει πολλές από τις πιο περήφανες και πιο συχνά διατηρούμενες διεθνείς λίστες του Dandelion Sprout, ως μια επιμελημένη συλλογή για λόγους απλότητας."
+			},
+			"en": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake."
+			},
+			"es": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Esta lista está hecha al estilo de las listas de elementos molestos de AdGuard y Fanboy. Combina muchas de las listas internacionales de las que Dandelion Sprout se enorgullece y mantiene con mayor frecuencia, como una compilación seleccionada por simplicidad."
+			},
+			"es_ES": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Esta lista está hecha al estilo de las listas de elementos molestos de AdGuard y Fanboy. Combina muchas de las listas internacionales de las que Dandelion Sprout se enorgullece y mantiene con mayor frecuencia, como una compilación seleccionada por simplicidad."
+			},
+			"fa": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "این فهرست به شیوه AdGuard و فهرست‌های آزاردهنده Fanboy ساخته شده است. این فهرست به‌عنوان یک مجموعه انتخابی برای سادگی، بسیاری از فهرست‌های بین‌المللی قابل‌افتخار و پرمراقبت Dandelion Sprout را ترکیب می‌کند."
+			},
+			"fi": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "AdGuardin ja Fanboyn ärsykelistojen tyylinen lista, joka yhdistää monia Dandelion Sproutin merkittävimpiä ja käytetyimpiä kansainvälisiä listoja valikoiduksi kokoelmaksi yksinkertaisuuden vuoksi."
+			},
+			"fr": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Cette liste est conçue dans le style de la liste d’AdGuard et de la liste Fanboy Annoyances. Elle combine plusieurs des listes internationales les plus fières et les plus fréquemment entretenues par Dandelion Sprout, en tant que compilation organisée par souci de simplicité."
+			},
+			"he": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "רשימה זאת נעשתה בסגנון של רשימות AdGuard ושל Fanboy's Annoyances. היא משלבת הרבה מהרשימות הבין־לאומיות הגאות ביותר והמתוחזקות באופן תדיר, כאוסף תפור עבור טובת פשטות."
+			},
+			"hi": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "यह सूची AdGuard और Fanboy की खीज़ों की सूचनाओं की शैली में बनाई गई है। इसमें Dandelion Sprout की कई गर्वित और अक्सर देखी जाने वाली अंतरराष्ट्रीय सूचियाँ एकत्रित की गई हैं, ताकि सादगी की खातिर एक चयनित संग्रह के रूप में प्रस्तुत किया जा सके।"
+			},
+			"hr": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Ovaj je popis napravljen u stilu AdGuardovih i Fanboyevih popisa iritirajućih elemenata. Isti kombinira više Dandelion Sprout's poznatih i često obnavljanih popisa, kao pročišćeni popis zarad jednostavnosti."
+			},
+			"hu": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Ez a lista az AdGuard és a Fanboy kellemetlenségek elleni listák stílusában készült. Egyesíti Dandelion Sprout legjobb és leggyakrabban karbantartott nemzetközi listáit, az egyszerűség kedvéért válogatott összeállításként."
+			},
+			"hy": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Այս ցանկը ստեղծված է AdGuard-ի և Fanboy-ի նյարդայնության ցանկերի ոճով։ Այն համադրում է Dandelion Sprout-ի բազմաթիվ հպարտ և հաճախ պահպանվող միջազգային ցանկերը, որպես քաղվածք՝ հեշտության համար։"
+			},
+			"id": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Daftar ini dibuat dengan gaya daftar AdGuard dan Fanboy's annoyances. Ini menggabungkan banyak daftar internasional Dandelion Sprout's yang paling membanggakan dan paling sering dipelihara, sebagai kompilasi yang dikuratori demi kesederhanaan."
+			},
+			"it": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Questo elenco è realizzata nel medesimo stile degli elenchi AdGuard Fanboy Anti-Fastidio. Combina molti degli elenchi internazionali più fieri e sottoposti a frequente manutenzione da parte di Dandelion Sprout, come raccolta curata e contraddistinta della semplicità."
+			},
+			"ja": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "このリストは、AdGuardやFanboy's annoyancesリストのスタイルで作られています。このリストは、Dandelion Sproutが誇る、最も頻繁に維持されている国際的なリストの多くを、単純化のために厳選してまとめたものです。"
+			},
+			"ko": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "이 목록은 AdGuard 및 Fanboy's Annoyances list 스타일로 만들어졌습니다. Dandelion Sprout의 많은 특장점과 빈번하게 유지보수되는 국제적인 차단 목록들을 포함하며 간단함을 목적으로 엄선된 필터 모음집입니다."
+			},
+			"lt": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Šis sąrašas sukurtas pagal AdGuard ir Fanboy įkyrybių sąrašų stilių. Jis sujungia daugelį Dandelion Sprout tarptautinių sąrašų, kurie dažnai atnaujinami siekiant paprastumo."
+			},
+			"mk": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Оваа листа е направена во стилот на списоците против вознемирувања на AdGuard и Fanboy. Комбинира многу од најгордите и најчесто одржуваните меѓународни листи на Dandelion Sprout, како курирана компилација заради едноставност."
+			},
+			"ms": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Senarai ini dibuat dalam gaya senarai gangguan AdGuard dan Fanboy. Ia menggabungkan banyak senarai antarabangsa Dandelion Sprout yang paling dibanggakan dan paling kerap dipelihara, sebagai satu kompilasi terkurasi bagi tujuan kesederhanaan."
+			},
+			"nl": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Deze lijst is gemaakt in de stijl van de ergernissenlijsten van AdGuard en Fanboy. Het combineert veel van Dandelion Sprout's meest trotse en meest onderhouden internationale lijsten, als een samengestelde compilatie omwille van de eenvoud."
+			},
+			"no": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Denne listen er laget i stil med AdGuards og Fanboys irritasjonslister. Den kombinerer mange av Dandelion Sprouts stolteste og mest vedlikeholdte internasjonale lister, som en kuratert samling for enkelhets skyld."
+			},
+			"pl": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Ta lista jest sporządzona w stylu listy irytujących elementów AdGuard i Fanboy's annoyances. Łączy w sobie wiele z najbardziej dumnych i najczęściej utrzymywanych międzynarodowych list Dandelion Sprout, jako wyselekcjonowana kompilacja dla uproszczenia."
+			},
+			"pt": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Esta lista é feita no estilo das listas de aborrecimentos do AdGuard e do Fanboy. O filtro combina muitas das listas internacionais mais orgulhosas e mantidas com mais frequência da Dandelion Sprout, como uma compilação com curadoria de simplicidade."
+			},
+			"pt_BR": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Esta lista é feita no estilo das listas de aborrecimentos do AdGuard e do Fanboy. O filtro combina muitas das listas internacionais mais orgulhosas e mantidas com mais frequência da Dandelion Sprout, como uma compilação com curadoria de simplicidade."
+			},
+			"pt_PT": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Esta lista é feita no estilo das listas de aborrecimentos do AdGuard e do Fanboy. O filtro combina muitas das listas internacionais mais orgulhosas e mantidas com mais frequência da Dandelion Sprout, como uma compilação com curadoria de simplicidade."
+			},
+			"ro": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Această listă este făcută în stilul listelor AdGuard și Fanboy's Annoyances. Combină multe dintre cele mai bune și mai frecvent întreținute liste internaționale ale Dandelion Sprout într-o colecție selectată pentru simplitate."
+			},
+			"ru": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Этот фильтр сделан в стиле AdGuard's и Fanboy's annoyances list. Объединяет много фильтров Dandelion Sprout и часто обновляемых международных фильтров ради простоты использования."
+			},
+			"sk": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Tento zoznam je vytvorený v štýle adGuard a Fanboy zoznamov obťažujúcich stránok. Spája mnohé z najlepších a najčastejšie udržiavaných medzinárodných zoznamov Dandelion Sprout ako kurátorská kompilácia pre jednoduchosť."
+			},
+			"sl": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Ta seznam je narejen v slogu AdGuardovih in Fanboyjevih seznamov motenj. Združuje veliko najbolj ponosnih in najpogosteje vzdrževanih mednarodnih seznamov Dandelion Sprouta kot kurirska kompilacija zaradi preprostosti."
+			},
+			"sr": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Ova lista je napravljena u stilu AdGuardove i Fanboy liste nerviranja. Kombinuje mnoge od najponosnijih i najčešće održavanih međunarodnih lista Maslačka Sprouta, kao izlečenu kompilaciju zarad jednostavnosti."
+			},
+			"sv": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Den här listan är gjord i stil med AdGuards och Fanboys irritationslistor. Den kombinerar många av Dandelion Sprouts stoltaste och mest upprätthållna internationella listor, som en kurerad sammanställning för enkelhetens skull."
+			},
+			"th": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "รายการนี้จัดทำขึ้นในรูปแบบของรายการของ AdGuard และ Fanboy's annoyances เป็นการรวมรายการระดับนานาชาติที่น่าภาคภูมิใจที่สุดและได้รับการดูแลบ่อยที่สุดหลายรายการของ Dandelion Sprout ให้เป็นการรวบรวมที่รวบรวมไว้เพื่อความเรียบง่าย"
+			},
+			"tr": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Bu liste AdGuard'ın ve Fanboy's Annoyances listesi tarzında hazırlanmıştır. Kolaylık sağlamak amacıyla özenle seçilmiş bir derleme olarak, Dandelion Sprout'un en çok gurur duyduğu ve en sık güncellenen birçok uluslararası listesini birleştirir."
+			},
+			"uk": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Цей фільтр створено в стилі фільтрів подразників від AdGuard та розробника фільтрів Fanboy. Він поєднує багато фільтрів від розробника Dandelion Sprout, а саме фільтри, якими він пишається та підтримкою яких постійно займається. Створено задля простоти їх використання."
+			},
+			"vi": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "Danh sách này được thực hiện theo phong cách danh sách phiền toái của AdGuard và Fanboy. Nó kết hợp nhiều danh sách quốc tế tự hào nhất và được duy trì thường xuyên nhất của Dandelion Sprout, như một bộ sưu tập được quản lý vì lợi ích của sự đơn giản."
+			},
+			"zh": {
+				"name": "Dandelion Sprout's Annoyances 的列表",
+				"description": "这个列表是按照 AdGuard 和 Fanboy Annoyances 的列表的风格制作的。为简单起见，它合并了 Dandelion Sprout 的许多最引以为豪和最常维护的国际列表作为精选汇编。"
+			},
+			"zh_TW": {
+				"name": "Dandelion Sprout's Annoyances List",
+				"description": "此清單是以 AdGuard 和 Fanboy 的惱人的事物清單之樣式被製作。它結合許多 Dandelion Sprout 最自豪和最常被維護的國際清單，作為由於簡單目的之精選彙編。"
+			}
+		},
+		"251": {
+			"ar": {
+				"name": "Legitimate URL Shortener",
+				"description": "يزيل تلقائيًا قيم  '$' و '&' الغير ضرورية من عناوين URL، مما يسهل النسخ من شريط URL واللصق بمكان آخر كروابط. متضمن بالفعل في قائمة Sprout's Annoyances List."
+			},
+			"be": {
+				"name": "Legitimate URL Shortener",
+				"description": "Аўтаматычна выдаляе непатрэбныя «$» і «&» з URL-адрасоў, каб іх было прасцей капіраваць з адраснага радка і ўстаўляць кудысьці як спасылкі. Уже ўключана ў Dandelion Sprout's Annoyances List."
+			},
+			"bg": {
+				"name": "Legitimate URL Shortener",
+				"description": "Автоматично отстранява ненужните '$' и '&' стойности от URL адресите, което улеснява копирането им от адресната лента и поставянето им другаде като линкове. Вече включен в списъка с досадности на Dandelion Sprout."
+			},
+			"ca": {
+				"name": "Legitimate URL Shortener",
+				"description": "Elimina automàticament els valors innecessaris '$' i '&' de les URL, facilitant fer còpies des de la barra d'URL i enganxar-les a altres llocs com a enllaços. Ja inclòs a la llista de molèsties de Dandelion Sprout."
+			},
+			"cs": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automaticky odstraňuje nepotřebné hodnoty '$' a '&' z adres URL, což usnadňuje jejich kopírování z panelu URL a vkládání jako odkazy. Již zařazeno do Dandelion Sprout's Annoyances List."
+			},
+			"da": {
+				"name": "Legitimate URL Shortener",
+				"description": "Fjerner automatisk unødvendige '$'- og '&'-værdier fra URL'er, hvilket gør dem nemmere at kopiere fra adressebjælken og indsætte som links andre steder. Allerede inkluderet i Dandelion Sprout's Annoyances List."
+			},
+			"de": {
+				"name": "Legitimate URL Shortener",
+				"description": "Entfernt automatisch unnötige Werte wie „$“ und „&“ aus Webadressen, so dass diese leichter aus der Adressleiste kopiert und an anderer Stelle als Links eingefügt werden können. Bereits in der Dandelion Sprout's Annoyances List enthalten."
+			},
+			"el": {
+				"name": "Legitimate URL Shortener",
+				"description": "Αφαιρεί αυτόματα τις περιττές τιμές «$» και «&» από τα URL, κάνοντάς τα ευκολότερα να αντιγραφούν από τη γραμμή URL και να επικολληθούν οπουδήποτε αλλού ως σύνδεσμοι. Ήδη περιλαμβάνεται στην λίστα ενοχλήσεων του Dandelion Sprout."
+			},
+			"en": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List."
+			},
+			"es": {
+				"name": "Legitimate URL Shortener",
+				"description": "Elimina automáticamente los valores '$' y '&' innecesarios de las URL, lo que facilita la copia de la barra de URL y el pegado en otros lugares como enlaces. Ya incluido en la lista Dandelion Sprout's Annoyances."
+			},
+			"es_ES": {
+				"name": "Legitimate URL Shortener",
+				"description": "Elimina automáticamente los valores '$' y '&' innecesarios de las URL, lo que facilita la copia de la barra de URL y el pegado en otros lugares como enlaces. Ya incluido en la lista Dandelion Sprout's Annoyances."
+			},
+			"fa": {
+				"name": "Legitimate URL Shortener",
+				"description": "به طور خودکار مقادیر غیرضروری '$' و '&' را از آدرس اینترنتی حذف می‌کند، که باعث ساده‌تر شدن رونویسی از نوار آدرس اینترنتی و جایگذاری در جای دیگر به عنوان پیوند می‌شود."
+			},
+			"fi": {
+				"name": "Legitimate URL Shortener",
+				"description": "Poistaa automaattisesti URL-osoitteiden tarpeettomat $- ja &-arvot, joka helpottaa niiden kopioimista selaimen osoitepalkista ja liittämistä linkkeinä. Sisältyy jo Dandelion Sprout's Annoyances -listaan."
+			},
+			"fr": {
+				"name": "Legitimate URL Shortener",
+				"description": "Supprime automatiquement les valeurs « $ » et « & » inutiles des URL, ce qui les rend plus faciles à copier à partir de la barre d’adresse et à coller ailleurs en tant que liens. Déjà inclus dans la liste Dandelion Sprout's Annoyances List."
+			},
+			"he": {
+				"name": "Legitimate URL Shortener",
+				"description": "מסיר באופן אוטומטי ערכים של '$' וכן '&' ממענים, הופך אותם לקלים יותר להעתקה משורת הכתובת ולהדבקה בכל מקום אחר כקישורים. כבר כלול ברשימת ההפרעות של Dandelion Sprout."
+			},
+			"hi": {
+				"name": "Legitimate URL Shortener",
+				"description": "URL से अनावश्यक '$' और '&' मानों को स्वचालित रूप से हटा देता है, जिससे उन्हें URL बार से कॉपी करना और अन्य जगहों पर लिंक के रूप में पेस्ट करना आसान होता है। पहले से ही Dandelion Sprout की खीझ सूची में शामिल किया गया है।"
+			},
+			"hr": {
+				"name": "Legitimni URL Shortener",
+				"description": "Automatski uklanja nepotrebne znakove '$' i '&' iz URL-ova, čineći ih tako lakšim za kopiranje iz adresne trake i ljepljenje bilo gdje kao poveznice. Već uključeno u Dandelion Sprout's Annoyances List."
+			},
+			"hu": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automatikusan eltávolítja a felesleges '$' és '&' értékeket az URL-ekből, így azok könnyebben másolhatók az URL-sávból, és máshová beilleszthetők linkként. Már szerepel a Dandelion Sprout kártevők elleni listáján."
+			},
+			"hy": {
+				"name": "Legitimate URL Shortener",
+				"description": "Ավտոմատ կերպով հեռացնում է անպետք '$' և '&' արժեքները URL-ներից, مما նրանց հեշտությամբ կարելի է պատճենել URL վահանակից և տեղադրել այլուր որպես հղումներ։ Already included է Dandelion Sprout's Annoyances List-ում։"
+			},
+			"id": {
+				"name": "Legitimate URL Shortener",
+				"description": "Secara otomatis menghapus nilai '$' dan '&' yang tidak diperlukan dari URL, sehingga lebih mudah disalin dari bilah URL dan ditempel di tempat lain sebagai tautan. Sudah termasuk dalam Dandelion Sprout's Annoyances List."
+			},
+			"it": {
+				"name": "Legitimate URL Shortener",
+				"description": "Rimuove automaticamente i valori \"$\" e \"&\" non necessari dagli URL, rendendoli più facili da copiare dalla barra degli URL e incollarli altrove come collegamenti. Già incluso nell'elenco dei fastidi Dandelion Sprout's Annoyances List."
+			},
+			"ja": {
+				"name": "Legitimate URL Shortener（URL短縮）",
+				"description": "URLから不要な「$」や「&」値を自動的に削除し、URLバーからコピーして他の場所にリンクとして貼り付けやすくします。既に Dandelion Sprout の Annoyances List にも含まれています。"
+			},
+			"ko": {
+				"name": "Legitimate URL Shortener",
+				"description": "URL에서 불필요한 '$' 및 '&' 값을 자동으로 제거하여 URL 표시줄에서 쉽게 복사하고 다른 곳에 링크로 붙여넣을 수 있도록 합니다. 이미 Dandelion Sprout's Annoyances List에 포함되어 있습니다."
+			},
+			"lt": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automatiškai pašalina nereikalingas „$“ ir „&“ reikšmes iš URL, kad jas būtų lengviau kopijuoti iš URL juostos ir įklijuoti kitur kaip nuorodas. Jau įtrauktas į Dandelion Sprout's Annoyances List."
+			},
+			"mk": {
+				"name": "Legitimate URL Shortener",
+				"description": "Автоматски ги отстранува непотребните вредности на \"$\" и \"&\" од URL-адресите, што го олеснува нивното копирање од лентата за URL и нивното залепување на друго место како линкови. Веќе вклучен во Dandelion Sprout's Annoyances List."
+			},
+			"ms": {
+				"name": "Legitimate URL Shortener",
+				"description": "Secara automatik menghapus nilai '$' dan '&' yang tidak diperlukan daripada URL, menjadikannya lebih mudah untuk disalin daripada bar URL dan tampal di tempat lain sebagai pautan. Sudah termasuk dalam Senarai Gangguan Dandelion Sprout."
+			},
+			"nl": {
+				"name": "Legitieme URL-verkorter",
+				"description": "Verwijdert automatisch onnodige '$'- en '&'-waarden uit URL's, waardoor ze gemakkelijker van de URL-balk kunnen worden gekopieerd en elders als links kunnen worden geplakt. Al opgenomen in de ergernislijst van Dandelion Sprout."
+			},
+			"no": {
+				"name": "Legitimate URL Shortener",
+				"description": "Fjerner automatisk unødvendige '$'- og '&'-verdier fra URL-er, noe som gjør dem lettere å kopiere fra adressefeltet og lime inn andre steder som lenker. Allerede inkludert i Dandelion Sprout's Annoyances List."
+			},
+			"pl": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automatycznie usuwa niepotrzebne \"$\" oraz \"&\" z adresów URL, ułatwiając ich kopiowanie z paska adresu i ich dalsze wklejanie. Zawarte w Dandelion Sprout's Annoyances List."
+			},
+			"pt": {
+				"name": "Legitimate URL Shortener",
+				"description": "Remove automaticamente os valores desnecessários '$' e '&' dos URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outro lugar como links. Já incluído na lista Dandelion Sprout's Annoyances."
+			},
+			"pt_BR": {
+				"name": "Legitimate URL Shortener",
+				"description": "Remove automaticamente os valores desnecessários de '$' e '&' de URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outros lugares na forma de links. Já incluído na lista Dandelion Sprout's Annoyances."
+			},
+			"pt_PT": {
+				"name": "Legitimate URL Shortener",
+				"description": "Remove automaticamente os valores desnecessários '$' e '&' dos URLs, tornando-os mais fáceis de copiar da barra de URL e colar em outro lugar como links. Já incluído na lista Dandelion Sprout's Annoyances."
+			},
+			"ro": {
+				"name": "Legitimate URL Shortener",
+				"description": "Înlătură automat valorile '$' și '&' inutile de pe adresele URL, ceea ce le face mai ușor de copiat din bara URL și de lipit în altă parte ca linkuri. Deja inclus în lista Dandelion Sprout's Annoyances List."
+			},
+			"ru": {
+				"name": "Legitimate URL Shortener",
+				"description": "Автоматически удаляет ненужные '$' и '&' из URL-адресов, чтобы их было проще копировать из адресной строки и вставлять куда-то как ссылки. Уже включён в Dandelion Sprout's Annoyances List."
+			},
+			"sk": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automaticky odstraňuje nepotrebné hodnoty '$' a '&' z adries URL, čím uľahčuje ich kopírovanie z panela adries URL a ich prilepenie inam ako odkazy. Už zahrnuté v zozname Dandelion Sprout's Annoyances."
+			},
+			"sl": {
+				"name": "Legitimate URL Shortener",
+				"description": "Samodejno odstrani nepotrebne vrednosti '$' in '&' iz URL naslovov, zaradi česar jih je lažje kopirati iz vrstice URL in prilepiti drugam kot povezave. Že vključen v seznam Dandelion Sprout's Annoyances List."
+			},
+			"sr": {
+				"name": "Legitimate URL Shortener",
+				"description": "Automatski uklanja nepotrebne vrednosti \"$\" i \"&\" iz URL-ova, što olakšava kopiranje sa URL trake i lepljenje na drugo mesto kao veze. Već uključeni u Dandelion Sprout's Annoyances List."
+			},
+			"sv": {
+				"name": "Legitimate URL Shortener",
+				"description": "Tar automatiskt bort onödiga \"$\"- och \"&\"-värden från URL: er, vilket gör dem lättare att kopiera från URL-fältet och klistra in på andra ställen som länkar. Redan inkluderad i Dandelion Sprout's Annoyances List."
+			},
+			"th": {
+				"name": "Legitimate URL Shortener",
+				"description": "ลบค่า '$' และ '&' ที่ไม่จำเป็นออกจาก URL โดยอัตโนมัติ ทำให้ง่ายต่อการคัดลอกจากแถบ URL และวางที่อื่นเป็นลิ้งค์ อยู่ในรายการ Dandelion Sprout's Annoyances List แล้ว"
+			},
+			"tr": {
+				"name": "Legitimate URL Shortener",
+				"description": "Gereksiz '$' ve '&' değerlerini URL'lerden otomatik olarak kaldırarak bunların URL çubuğundan kopyalanmasını ve başka bir yere bağlantı olarak yapıştırılmasını kolaylaştırır. Dandelion Sprout's Annoyances List'e zaten dâhildir."
+			},
+			"uk": {
+				"name": "Legitimate URL Shortener",
+				"description": "Автоматично видаляє зайві параметри «$» та «&» з URL-адрес, у такий спосіб роблячи їх простішими для копіювання та поширення. Уже входить до складу фільтра Dandelion Sprout's Annoyances List."
+			},
+			"vi": {
+				"name": "Legitimate URL Shortener",
+				"description": "Tự động xóa các giá trị '$' và '&' không cần thiết khỏi URL, giúp bạn dễ dàng sao chép chúng từ thanh URL và dán vào nơi khác dưới dạng liên kết. Đã có trong Danh sách phiền toái của Dandelion Sprout."
+			},
+			"zh": {
+				"name": "Legitimate URL Shortener",
+				"description": "自动从 URL 中删除不必要的 '$' 和 '&' 值，使它们更容易从 URL 栏中复制并作为链接粘贴到其他地方。已包含在 Dandelion Sprout 的防骚扰列表中。"
+			},
+			"zh_TW": {
+				"name": "Legitimate URL Shortener",
+				"description": "從網址中自動地移除不必要的'$'和'&'值，使它們更容易從網址列中被複製並作為連結在別處被貼上。它已被列入 Dandelion Sprout's Annoyances List 中。"
 			}
 		},
 		"252": {
