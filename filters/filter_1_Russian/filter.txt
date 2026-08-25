@@ -3897,14 +3897,15 @@ mintmanga.com#%#//scriptlet('prevent-element-src-loading', 'script', 'adsbygoogl
 @@||pagead2.googlesyndication.com/pagead/js/$domain=mintmanga.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234715
 ||sochi.camera/adblock-detector.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/238710
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233664
+@@||yandex.ru/ads/system/context.js$domain=rr4farmtrof.com
 rr4farmtrof.com#%#//scriptlet('remove-node-text', 'script', 'adwall')
 rr4farmtrof.com$$script:contains(adwall)
 !#if (adguard_app_ios || adguard_ext_android_cb || ext_safari)
 @@||rr4farmtrof.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/$domain=rr4farmtrof.com
 @@||securepubads.g.doubleclick.net/tag/js/$domain=rr4farmtrof.com
-@@||yandex.ru/ads/system/context.js$domain=rr4farmtrof.com
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233134
 evilmod.ru#@##reklama
@@ -4030,8 +4031,7 @@ positiverecords.ru#@#.ad-google
 pikabu.ru#%#//scriptlet('abort-on-property-write', 'Ya')
 pikabu.ru$$script:contains(/\.getPropertyPriority.*=requestAnimationFrame/)
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_app_cli)
-pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader\([a-zA-Z0-9_є»·°іРѕІ]{0,18}/')
-pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader\([a-zA-Z0-9_]{0,7}[a-zA-Z0-9]{0,6}[hHxX]?[a-zA-Z0-9_]{1,2}[a-zA-Z0-9_]{1,3}_?[a-zA-Z0-9]?[a-zA-Z0-9_]?[RrpP]/')
+pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\[\'setRequestHeader\']|new window[\s\S]+ownerId/')
 !#endif
 ! sports.ru
 sports.ru#%#//scriptlet('json-prune', 'direct rtbAuctionInfo')
@@ -7106,6 +7106,8 @@ avtocod.ru,love.ngs.ru,mmo13.ru,altapress.ru,gastronom.ru,eg.ru,newsmaker.md,del
 !
 liga.net##.remp-banner
 epravda.com.ua##div[style="height:290px; clear: both; margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center;"]
+streamsports99.cx,streamsports99.tv,streamsports99.su,streamsports99.ru,streamsports99.*###main-content > div.container > div.grid div.border.bg-gradient-card:has(> div.flex > a[href^="https://billing.rocketstreams4k.com/"])
+streamsports99.cx,streamsports99.tv,streamsports99.su,streamsports99.ru,streamsports99.*##a[data-no-ad]
 streamsports99.cx,streamsports99.tv,streamsports99.su,streamsports99.ru,streamsports99.*##.musiqly-ad
 legalbet.by,legalbet.*##.top-three-block > div
 legalbet.by,legalbet.*##.bookmakers-in-footer
@@ -7476,6 +7478,15 @@ sport-express.ru,gorod24.online,vedomosti.ru,kommersant.ru,rg.ru,glavbukh.ru,che
 !
 ! NOTE: Specific rules
 !
+<<<<<<< HEAD
+=======
+mt.today##a[href^="https://clck.ru/"]
+mt.today##.bigbeautifulbutton
+profguide.io##.pg-banner-wrapper
+payberry.games##a[href^="https://share.flocktory.com/"]
+securitylab.ru###uber_banner
+securitylab.ru##.index-news-list > div.d-none:not([id]):has(> .news-card-banner)
+>>>>>>> 47c6ab85ff60e23c0309e571c516d4f4d03cb024
 pg12.ru##div[class^="promo-"]
 pg12.ru##div[class*="Promo"]
 pg12.ru###promo-after-comments
@@ -14702,7 +14713,7 @@ eparazit.ru##.sidebar a[target="_blank"] > canvas[width="300"]
 wd-x.ru##.sidebar a[target="_blank"] > img
 sadikionline.ru##.sidebar noindex > a > img
 sadikionline.ru##.sidebar noindex > iframe
-roscontrol.com,study.ru,kanobu.ru,mmorpg.su##.sidebar-banner
+securitylab.ru,roscontrol.com,study.ru,kanobu.ru,mmorpg.su##.sidebar-banner
 glavpost.com##.sidebar-banner-block
 ural56.ru##.sidebar-banner__item
 3dnews.ru##.sidebar-chunk > div.isspecial.sidebar-chunk
