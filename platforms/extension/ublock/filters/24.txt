@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: wSr8RLmv05bpqGV7GAKV2A
+! Checksum: dCa7Z5S8DNCStQjapGbOzw
 ! Title: Quick Fixes Filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 2.0.11.30
-! TimeUpdated: 2026-09-01T07:06:39+00:00
+! Version: 2.0.11.31
+! TimeUpdated: 2026-09-10T00:31:30+00:00
 ! Expires: 5 days (update frequency)
 ! Title: Krayzylist
 ! Description: Personal Blocklist
@@ -157,6 +157,7 @@ tunein.com##[id^="outstream-video-ad-"]
 usatoday.com##body > div:has([href^="https://getad"])
 usatoday.com##header.gnt_n:style(margin: 0px 0 0)
 usatoday.com##header.gnt_n:style(top: 0px)
+usatoday.com##gnt_x_w:has([aria-label="advertisement"])
 variety.com##.pmc-contextual-player,#sticky-rail-ad
 variety.com##[class^="img_"]:has([data-is-adhesion-ad])
 variety.com##[id^="adm-inline-article-ad-"]
@@ -256,7 +257,7 @@ bloomberg.com,nytimes.com,theverge.com##+js(set-local-storage-item, /*/, $remove
 ! @include "https://raw.githubusercontent.com/pkrayzy/HostlistCompiler/master/optimized/ublock_annoyances_optimized.txt" /exclude="../exclusions.txt"
 !
 ! Title: Anti-paywall filters
-! Last modified: 2026-09-01T07:05:42.774Z
+! Last modified: 2026-09-09T06:59:20.916Z
 !
 ! Compiled by @adguard/hostlist-compiler v0.0.0
 !
@@ -270,7 +271,7 @@ bloomberg.com,nytimes.com,theverge.com##+js(set-local-storage-item, /*/, $remove
 ! Homepage: https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters
 ! License: MIT; https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=LICENSE
 ! Last modified:
-! OriginalVersion: 4.4.2.7
+! OriginalVersion: 4.4.2.9
 ! General
 ||amplitude.com^$xhr,3p
 ||axate.io$script,3p
@@ -907,6 +908,9 @@ inman.com##+js(ra, class, div.entry-content-inner, stay)
 inman.com##div.content-wrap > div:not([class]):style(margin: 5% !important)
 inman.com##.ism-article-block
 ||cloudfront.net/imonkey-blog-*.min.js$script,domain=insidermonkey.com
+insiderwire.com##+js(ra, class, div.iw-lede-faded, stay)
+insiderwire.com##+js(ra, class, div.iw-gated, stay)
+insiderwire.com##div.iw-auth-gate,aside.iw-ad
 internationalepolitik.de##+js(set-local-storage-item, paywall-nids, $remove$)
 ||invmed.co/bootstrap/bootstrap.min.js$script,domain=investing.com
 ipsoa.it##+js(ra, style, div.paywall, stay)
@@ -1019,6 +1023,7 @@ tidningenridsport.se##+js(ra, class|style, div.mctos, stay)
 tidningenridsport.se##+js(rc, cli-barmodal-open, body.cli-barmodal-open, stay)
 tidningenridsport.se##div.locked
 trailsoffroad.com##.paywall
+||tygodnikpowszechny.pl/sites/default/files/js/js_$script,~3p
 wbjournal.com##+js(ra, style, div.expandable-paywall-premium-content, stay)
 wbjournal.com##div.paywall-container
 wbez.org##div.email-wall-content-lock:remove()
