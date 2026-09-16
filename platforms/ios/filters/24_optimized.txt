@@ -1,8 +1,8 @@
-! Checksum: hYLFpSu0BUjTuT1h7Dc23A
+! Checksum: uA4Ox/GX1AZEzB1tiPvWlA
 ! Title: Quick Fixes Filter (Optimized)
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 1.0.0.6
-! TimeUpdated: 2026-09-15T07:06:09+00:00
+! Version: 1.0.0.7
+! TimeUpdated: 2026-09-16T07:07:17+00:00
 ! Expires: 5 days (update frequency)
 NotoSans*$font
 OpenSans-*00*$font
@@ -215,7 +215,7 @@ bloomberg.com,theverge.com#%#//scriptlet('remove-cookie')
 bloomberg.com,nytimes.com,theverge.com#%#//scriptlet('set-session-storage-item', '/*/', '$remove$')
 bloomberg.com,nytimes.com,theverge.com#%#//scriptlet('set-local-storage-item', '/*/', '$remove$')
 ||amplitude.com^$xmlhttprequest,third-party
-||axate.io$script,third-party
+||axate.io^$script,third-party
 ||loader.*.com/prod/*/loader.min.js$script
 ||cdn.*.com/prod/*/loader.min.js$script
 ||blueconic.net^$third-party
@@ -235,7 +235,7 @@ bloomberg.com,nytimes.com,theverge.com#%#//scriptlet('set-local-storage-item', '
 ||js.pelcro.com^$script,third-party
 /xbuilder/experience/execute$xmlhttprequest,domain=~automobilwoche.de|~frontline.thehindu.com|~thedispatch.com
 @@||piano.io^$domain=hbr.org|japantimes.co.jp
-@@||tinypass.com$script,domain=ajc.com|thelogic.co
+@@||tinypass.com^$script,domain=ajc.com|thelogic.co
 ||api.pico.tools/client/query/*$xmlhttprequest,~third-party
 ||api.pico.tools/popup/null/*$xmlhttprequest,~third-party
 gadget.pico.tools#%#//scriptlet('ubo-json-prune', 'locked')
@@ -337,7 +337,7 @@ eastwest.eu#%#//scriptlet('ubo-ra', 'style', '.paywall', 'stay')
 eastwest.eu#%#//scriptlet('ubo-rc', 'paywall', '.paywall', 'stay')
 eastwest.eu###testo_articolo > p, #testo_articolo > h3
 eastwest.eu##.offerta_abbonamenti
-||apw.economictimes.indiatimes.com$xmlhttprequest,~third-party
+||apw.economictimes.indiatimes.com^$xmlhttprequest,~third-party
 ||economist.com/latest/wall-ui.js$script,~third-party
 ||editorialedomani.it/pelcro.js$script,~third-party
 elespanol.com#%#//scriptlet('ubo-rc', 'content-not-granted-paywall', 'div.content-not-granted-paywall', 'stay')
@@ -429,7 +429,7 @@ lanacion.com.ar#%#//scriptlet('ubo-set-local-storage-item', '/^/', '$remove$')
 lance.com.br#%#//scriptlet('ubo-rc', 'h-[550px]', 'div.paywall-content[class*="h-\["]', 'stay')
 ||latimes.com/meteringjs/$script,~third-party
 ||californiatimes.com/caltimes/latimes/Bootstrap.js$script,third-party,domain=latimes.com
-||ev.lavanguardia.com$xmlhttprequest,~third-party
+||ev.lavanguardia.com^$xmlhttprequest,~third-party
 lavanguardia.com,mundodeportivo.com##span.content-ad,span.hidden-ad,span.ad-unit,div.ad-div
 ledevoir.com#%#//scriptlet('ubo-cookie-remover', 'pw6')
 legrandcontinent.eu#%#//scriptlet('ubo-rc', 'paywall|pw|softwall', 'body', 'stay')
@@ -455,10 +455,10 @@ marketwatch.com#%#//scriptlet('ubo-cookie-remover', 'cX_P')
 ||adobedtm.com/*/launch-*.js$script,domain=medscape.com
 mexiconewsdaily.com#%#//scriptlet('ubo-rc', 'tdb-block-inner', 'body.single div.td-post-content > div.tdb-block-inner', 'stay')
 ||motorsportmagazine.com/wp-admin/admin-ajax.php$xmlhttprequest,~third-party
-||ev.mundodeportivo.com$xmlhttprequest,~third-party
+||ev.mundodeportivo.com^$xmlhttprequest,~third-party
 ||musicomh.com/wp-content/*/bundle.js$script,~third-party
 mv-voice.com#%#//scriptlet('ubo-cookie-remover', '/^/')
-||cdn.registerdisney.go.com$script,domain=nationalgeographic.com
+||cdn.registerdisney.go.com^$script,domain=nationalgeographic.com
 ||nationalgeographic.com.es/Content/js/lib/runtime.min.js$script,~third-party
 nationalgeographic.it#%#//scriptlet('ubo-ra', 'style', 'section[style]', 'stay')
 nationalgeographic.it##section.paywall-container
@@ -547,6 +547,7 @@ study.com#%#//scriptlet('ubo-ra', 'class', 'div.hidden[ng-non-bindable]', 'stay'
 study.com##div.article-cutoff-div
 ||suomensotilas.fi/wp-content/plugins/epflpw/js/pw.js$script,~third-party
 suomensotilas.fi#%#//scriptlet('ubo-rc', 'epfl-pw-obscured', 'div.epfl-pw-obscured', 'stay')
+/\.telegram\.hr\/.+\/(\w+-){3,}/$domain=telegram.hr,csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:
 ||telegraph.co.uk/martech/js/$script,~third-party
 tes.com#%#//scriptlet('ubo-cookie-remover', '/tg_paywall/')
 tes.com#%#//scriptlet('ubo-ra', 'class', 'div.tg-paywall-body-overlay', 'stay')
@@ -705,21 +706,21 @@ thelocal.at,thelocal.ch,thelocal.com,thelocal.de,thelocal.dk,thelocal.es,theloca
 policorner.ca##div.free-text,div.subscribe-box
 /wp-content/plugins/incognito_dectector/$script,~third-party
 ##button.everlit-overlay-btn
-||gyrovague.com$xmlhttprequest,third-party
-||top-fwz1.mail.ru$script,third-party
+||gyrovague.com^$xmlhttprequest,third-party
+||top-fwz1.mail.ru^$script,third-party
 ||jeuneafrique.com/cdn-cgi/trace$xmlhttprequest,~third-party
 ||assets.guim.co.uk/assets/SignInGate*.js$script,domain=theguardian.com
 theguardian.com##[name="SlotBodyEnd"],div[data-cy="contributions-liveblog-epic"]
 timesofindia.indiatimes.com#%#//scriptlet('ubo-ra', 'style', 'body[style]', 'stay')
 timesofindia.indiatimes.com##div[class]:has(>div.loginWallPopUP)
-@@||consentmanager.net$script,third-party
+@@||consentmanager.net^$script,third-party
 #@#.cmpwrapper
 @@||cookielaw.org^$xmlhttprequest,domain=blick.ch
 @@||sdk.privacy-center.org^$script,third-party
 @@/wrapperMessagingWithoutDetection.js$script,~third-party,domain=handelsblatt.com
 !##div#didomi-host
 #%#//scriptlet('ubo-rc', 'didomi-popup-open', 'body.didomi-popup-open', 'stay')
-||htlbid.com$script,third-party
+||htlbid.com^$script,third-party
 ||flip-pay.com/*/flip-pay.js$script,third-party,domain=clareecho.ie|euractiv.com|pressgazette.co.uk|thedailymash.co.uk
 clareecho.ie#%#//scriptlet('ubo-rc', 'td-post-content', 'div.td-post-content', 'stay')
 #%#//scriptlet('ubo-ra', 'class', 'div.wkwp-paywall', 'stay')
