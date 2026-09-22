@@ -329,41 +329,5 @@
 			"keyword": "lang:mk"
 		}
 	],
-	"filters": [
-		{
-			"filterId": 15,
-			"name": "AdGuard DNS filter",
-			"description": "Filter composed of several other filters (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.",
-			"timeAdded": "2014-06-30T07:56:55+0000",
-			"homepage": "https://adguard.com/kb/general/ad-filtering/adguard-filters/",
-			"deprecated": true,
-			"expires": 432000,
-			"displayNumber": 3,
-			"groupId": 6,
-			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/15_optimized.txt",
-			"platformsIncluded": [
-				"ext_safari",
-				"ios"
-			],
-			"trustLevel": "full",
-			"version": "1.0.0.5",
-			"timeUpdated": "2026-09-22T07:11:37+0000",
-			"languages": [],
-			"tags": [
-				45,
-				1,
-				2,
-				9,
-				11,
-				25,
-				26,
-				13,
-				58,
-				59,
-				60,
-				61
-			],
-			"downloadUrl": "https://filters.adtidy.org/extension/safari/filters/15_optimized.txt"
-		}
-	]
+	"filters": []
 }
