@@ -341,10 +341,9 @@
 			"displayNumber": 3,
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/15_optimized.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3",
-				"ext_edge_mv3",
-				"ext_opera_mv3"
+			"platformsIncluded": [
+				"ext_safari",
+				"ios"
 			],
 			"trustLevel": "full",
 			"version": "2.1.37.57",
