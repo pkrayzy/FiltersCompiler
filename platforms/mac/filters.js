@@ -69,8 +69,8 @@
 				"ext_edge_mv3",
 				"ext_opera_mv3"
 			],
-			"version": "2.1.37.56",
-			"timeUpdated": "2026-10-09T12:22:36+0000",
+			"version": "2.1.37.57",
+			"timeUpdated": "2026-10-09T12:31:46+0000",
 			"languages": []
 		}
 	]
