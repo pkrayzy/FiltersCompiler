@@ -27772,6 +27772,1252 @@
 				"description": "用於封鎖波斯文網站的廣告和追蹤器之過濾清單。"
 			}
 		},
+		"236": {
+			"ar": {
+				"name": "road-block",
+				"description": "الاشتراك في فلتر منع الإعلانات الرومانية."
+			},
+			"be": {
+				"name": "road-block",
+				"description": "Румынскі фільтр для блакавання рэкламы."
+			},
+			"bg": {
+				"name": "road-block",
+				"description": "Абонамент за филтър за блокиране на рекламите на румънски."
+			},
+			"ca": {
+				"name": "road-block",
+				"description": "subscripció al filtre de bloqueig d'anuncis romanès."
+			},
+			"cs": {
+				"name": "road-block",
+				"description": "Předplatné filtru pro blokování rumunských reklam."
+			},
+			"da": {
+				"name": "road-block",
+				"description": "Rumænsk adblockingfilterabonnement."
+			},
+			"de": {
+				"name": "ROad-Block (Rumänien)",
+				"description": "Filterliste zum Sperren von Werbung auf rumänischen Websites."
+			},
+			"el": {
+				"name": "road-block",
+				"description": "Συνδρομή φίλτρου αποκλεισμού διαφημίσεων στη Ρουμανία."
+			},
+			"en": {
+				"name": "road-block",
+				"description": "Romanian ad blocking filter subscription."
+			},
+			"es": {
+				"name": "road-block",
+				"description": "Suscripción rumana al filtro para bloqueo de anuncios."
+			},
+			"es_ES": {
+				"name": "road-block",
+				"description": "Suscripción rumana al filtro para bloqueo de anuncios."
+			},
+			"fa": {
+				"name": "road-block",
+				"description": "اشتراک پالایش تبلیغات رومانیایی."
+			},
+			"fi": {
+				"name": "road-block",
+				"description": "Suodatin mainosestoon romaniankielisillä sivustoilla."
+			},
+			"fr": {
+				"name": "road-block",
+				"description": "Abonnement aux filtres bloqueurs de pub Roumaniens."
+			},
+			"he": {
+				"name": "road-block",
+				"description": "רשימת מסננים של חסימת פרסומות בשפה הרומנית."
+			},
+			"hi": {
+				"name": "road-block",
+				"description": "रोमानियाई विज्ञापन ब्लॉकिंग फ़िल्टर सदस्यता।"
+			},
+			"hr": {
+				"name": "road-block",
+				"description": "Pretplata na rumunjski filtar za blokiranje oglasa."
+			},
+			"hu": {
+				"name": "road-block",
+				"description": "Román hirdetésblokkoló szűrő feliratkozás."
+			},
+			"hy": {
+				"name": "road-block",
+				"description": "Ռումինական գովազդների արգելափակման զտիչի բաժանորդություն։"
+			},
+			"id": {
+				"name": "road-block",
+				"description": "Langganan filter pemblokiran iklan Rumania."
+			},
+			"it": {
+				"name": "road-block",
+				"description": "Sottoscrizione al filtro blocca-annunci in lingua rumena."
+			},
+			"ja": {
+				"name": "road-block",
+				"description": "ルーマニアの広告ブロックフィルターサブスクリプション。"
+			},
+			"ko": {
+				"name": "road-block",
+				"description": "루마니아어 광고 차단 필터 구독."
+			},
+			"lt": {
+				"name": "road-block",
+				"description": "Rumunų reklamos blokavimo filtrų prenumerata."
+			},
+			"mk": {
+				"name": "road-block",
+				"description": "Претплата на романски филтер за блокирање реклами."
+			},
+			"ms": {
+				"name": "road-block",
+				"description": "Langganan penapis iklan Romania."
+			},
+			"nl": {
+				"name": "Road-block",
+				"description": "Roemeens advertentie blokkering filter abonnement."
+			},
+			"no": {
+				"name": "road-block",
+				"description": "Abonnement på rumensk reklameblokkeringsfilter."
+			},
+			"pl": {
+				"name": "road-block",
+				"description": "Subskrypcja rumuńskiego filtra blokującego reklamy."
+			},
+			"pt": {
+				"name": "road-block",
+				"description": "Subscrição de filtro de bloqueio de anúncios romeno."
+			},
+			"pt_BR": {
+				"name": "road-block",
+				"description": "Assinatura de filtro de bloqueio de anúncios romeno."
+			},
+			"pt_PT": {
+				"name": "road-block",
+				"description": "Subscrição de filtro de bloqueio de anúncios romeno."
+			},
+			"ro": {
+				"name": "road-block",
+				"description": "Abonament la filtru de blocat reclame românești."
+			},
+			"ru": {
+				"name": "road-block",
+				"description": "Румынский фильтр для блокировки рекламы."
+			},
+			"sk": {
+				"name": "road-block",
+				"description": "Odber rumunského filtra pre blokovanie reklám."
+			},
+			"sl": {
+				"name": "road-block",
+				"description": "Naročnina na romunski filter za zaviranje oglasov."
+			},
+			"sr": {
+				"name": "road-block",
+				"description": "Rumunski filter za blokiranje reklama."
+			},
+			"sv": {
+				"name": "road-block",
+				"description": "Rumänsk prenumeration på filter för annonsblockering."
+			},
+			"th": {
+				"name": "road-block",
+				"description": "การสมัครตัวกรองการปิดกั้นโฆษณาของโรมาเนีย"
+			},
+			"tr": {
+				"name": "road-block",
+				"description": "Rumence reklam engelleme filtre aboneliği."
+			},
+			"uk": {
+				"name": "road-block",
+				"description": "Румунський фільтр для блокування реклами."
+			},
+			"vi": {
+				"name": "road-block",
+				"description": "Bộ lọc chặn quảng cáo tiếng Romania."
+			},
+			"zh": {
+				"name": "road-block",
+				"description": "罗马尼亚广告拦截过滤器订阅。"
+			},
+			"zh_TW": {
+				"name": "road-block",
+				"description": "羅馬尼亞文的廣告封鎖過濾器訂閱。"
+			}
+		},
+		"237": {
+			"ar": {
+				"name": "Polish Annoyances Filters",
+				"description": "قائمة الفلاتر التي تخفي وتحظر النوافذ المنبثقة وعناصر واجهة المستخدم والرسائل الإخبارية وإشعارات الدفع والسهام والروابط الداخلية التي تم وضع علامة عليها والتي تكون خارج الموضوع وعناصر مزعجة أخرى. عوامل تصفية ملفات تعريف الارتباط الخاصة باللائحة العامة لحماية البيانات البولندية موجودة بالفعل."
+			},
+			"be": {
+				"name": "Polish Annoyances Filters",
+				"description": "Фільтр, які хавае і блакіруе ўсплывальную рэкламу, віджэты, рассылку навін, push-апавяшчэнні, стрэлкі з пазначанымі ўнутранымі спасылкамі, якія не датычацца тэмы і іншыя раздражняльныя элементы. Polish GDPR-Cookies Filters ужо ўключаны ў яго."
+			},
+			"bg": {
+				"name": "Polish Annoyances Filters",
+				"description": "Списък с филтри, който скрива и блокира изскачащи прозорци, виджети, бюлетини, Push известия, стрелки, маркирани вътрешни линкове, които са извън темата, и други дразнещи елементи. Полските GDPR-Cookies филтри вече са включени в него."
+			},
+			"ca": {
+				"name": "Polish Annoyances Filters",
+				"description": "Llista de filtres que amaga i bloqueja finestres emergents, widgets, butlletins, notificacions push, fletxes, enllaços interns etiquetats que no estan relacionats amb el tema, i altres elements irritants. Els filtres de galetes GDPR polonesos ja hi són inclosos."
+			},
+			"cs": {
+				"name": "Polské filtry obtěžování",
+				"description": "Seznam filtrů, který skrývá a blokuje vyskakovací okna, widgety, zpravodaje, vyskakovací oznámení, šipky, označené interní odkazy mimo téma a další dráždivé prvky. Obsahuje Polské filtry GDPR-Cookies."
+			},
+			"da": {
+				"name": "Polske Irritationsfiltre",
+				"description": "Filterliste, der skjuler og blokerer pop op'er, widgets, nyhedsbreve, push-notifikationer, pile, taggede interne links, som er uden for emnet og andre irriterende elementer. Polske GDPR-cookies filtre er allerede inkluderet."
+			},
+			"de": {
+				"name": "Polish Annoyances Filters",
+				"description": "Filterliste, die Pop-ups, Widgets, Newsletter, Push-Benachrichtigungen, Pfeile, markierte interne Links, die nicht zum Inhalt gehören, und andere störende Elemente ausblendet und sperrt. „Polskie Filtry Ciasteczkowe“ (Cookies) ist bereits darin enthalten."
+			},
+			"el": {
+				"name": "Polish Annoyances Filters",
+				"description": "Λίστα φίλτρου που κρύβει και αποκλείει αναδυόμενα παράθυρα, γραφικά στοιχεία, ενημερωτικά δελτία, ειδοποιήσεις push, βέλη, εσωτερικούς συνδέσμους με ετικέτες εκτός θέματος και άλλα ενοχλητικά στοιχεία. Τα πολωνικά φίλτρα GDPR-Cookies είναι ήδη σε αυτό."
+			},
+			"en": {
+				"name": "Polish Annoyances Filters",
+				"description": "Filter list that hides and blocks pop-ups, widgets, newsletters, push notifications, arrows, tagged internal links that are off-topic, and other irritating elements. Polish GDPR-Cookies Filters is already in it."
+			},
+			"es": {
+				"name": "Polish Annoyances Filters",
+				"description": "Lista de filtros que oculta y bloquea ventanas emergentes, widgets, boletines informativos, notificaciones push, flechas, enlaces internos etiquetados que no están relacionados con el tema y otros elementos irritantes. Filtros para cookies GDPR polaco ya está en la lista."
+			},
+			"es_ES": {
+				"name": "Polish Annoyances Filters",
+				"description": "Lista de filtros que oculta y bloquea ventanas emergentes, widgets, boletines informativos, notificaciones push, flechas, enlaces internos etiquetados que no están relacionados con el tema y otros elementos irritantes. Filtros para cookies GDPR polaco ya está en la lista."
+			},
+			"fa": {
+				"name": "Polish Annoyances Filters",
+				"description": "فهرست پالایش‌ها که پنجره‌های بازشو، ویجت‌ها، خبرنامه‌ها، اعلان های فشار، پیکان‌ها، پیوندهای داخلی برچسب‌خورده که موضوعیت ندارند، و سایر اجزاء ناراحت‌کننده را نهان می‌کند و مسدود می‌کند. Polish GDPR-Cookies Filters از قبل در آن وجود دارد."
+			},
+			"fi": {
+				"name": "Polish Annoyances Filters",
+				"description": "Suodatinlista, joka piilottaa ja estää ponnahduksia, widgettejä, uutiskirjeitä, push-ilmoituksia, nuolia, merkittyjä sisäisiä linkkejä aiheen ulkopuolelta sekä muita ärsyttäviä elementtejä. Puolan GDPR-evästesuodattimet sisältyvät jo siihen."
+			},
+			"fr": {
+				"name": "Polish Annoyances Filters",
+				"description": "Liste de filtres qui masque et bloque les fenêtres contextuelles, les widgets, les newsletters, les notifications push, les flèches, les liens internes balisés hors sujet et d'autres éléments irritants. Les Filtres GDPR-Cookies Polonais y sont déjà."
+			},
+			"he": {
+				"name": "Polish Annoyances Filters",
+				"description": "רשימת מסננים אשר מסתירה וחוסמת חלונות קופצים, יישומונים, עלונים, התראות דחיפה, חצים, קישורים פנימיים מתוייגים אשר מחוץ לנושא, ואלמנטים מעצבנים אחרים. מסננים פולניים של עוגיות GDPR כבר ברשימה."
+			},
+			"hi": {
+				"name": "Polish Annoyances Filters",
+				"description": "एक फ़िल्टर सूची जो पॉप-अप, विजेट, न्यूज़लेटर, पुश सूचनाएँ, तीर, ऑफ़-टॉपिक टैग किए गए आंतरिक लिंक और अन्य परेशान करने वाले तत्वों को छुपाता और ब्लॉक करता है। पॉलिश GDPR-कुकीज़ फ़िल्टर पहले ही इसमें शामिल है।"
+			},
+			"hr": {
+				"name": "Polish Annoyances Filters",
+				"description": "Popis filtara koji skriva i blokira skočne prozore, widgete, biltene, push obavijesti, strelice, označene interne poveznice koje su izvan teme i druge iritantne elemente. Polskie GDPR-Cookies Filters već je u njemu."
+			},
+			"hu": {
+				"name": "Polish Annoyances Filters",
+				"description": "Szűrőlista, amely elrejti és blokkolja a felugró ablakokat, widgeteket, hírleveleket, push értesítéseket, nyilakat, a témán kívüli címkézett belső linkeket és az egyéb irritáló elemeket. A Lengyel GDPR Süti Szűrő is benne van."
+			},
+			"hy": {
+				"name": "Polish Annoyances Filters",
+				"description": "Զտիչների ցանկ, որը թաքցնում է և արգելափակում նետողներ, վիդջեթներ, տեղեկագրեր, պուլսային ծանուցումներ, դեպի չնչին թեմաների ներքին հղումներ, և այլանման խանգարող տարրեր։ Polish GDPR-Cookies Filters արդեն գտնվել է դրա մեջ։"
+			},
+			"id": {
+				"name": "Polish Annoyances Filters",
+				"description": "Daftar filter yang menyembunyikan dan memblokir pop-up, widget, buletin, pemberitahuan push, panah, tautan internal yang ditandai di luar topik, dan elemen menjengkelkan lainnya. Filter GDPR-Cookie Polandia sudah ada di dalamnya."
+			},
+			"it": {
+				"name": "Polish Annoyances Filters",
+				"description": "Elenco di filtri che nasconde e blocca pop-up, widget, newsletter, notifiche push, frecce, collegamenti interni con tag fuori tema e altri elementi irritanti. I filtri polacchi GDPR-Cookie sono già inclusi."
+			},
+			"ja": {
+				"name": "Polish Annoyances Filters",
+				"description": "ポップアップ、ウィジェット、ニュースレター、プッシュ通知、矢印、テーマから外れたタグ付き内部リンク、その他の迷惑な要素を非表示にしてブロックするフィルタリスト。「Polish GDPR-Cookies Filters」フィルタがすでに含まれています。"
+			},
+			"ko": {
+				"name": "Polish Annoyances Filters",
+				"description": "팝업, 위젯, 뉴스 레터, 푸시 알림, 화살표, 주제에서 벗어난 태그가 지정된 내부 링크 및 기타 자극적인 요소를 숨기고 차단하는 필터 목록입니다. 폴란드 GDPR- 쿠키 필터가 포함되어 있습니다."
+			},
+			"lt": {
+				"name": "Polish Annoyances Filters",
+				"description": "Filtrų sąrašas, kuris paslepia ir blokuoja iškylančius langus, valdiklius, naujienlaiškius, stumdomuosius pranešimus, rodykles, pažymėtas vidines nuorodas, kurios neatitinka temos, ir kitus erzinančius elementus. Lenkijos GDPR-Cookies filtrai jau jame."
+			},
+			"mk": {
+				"name": "Polish Annoyances Filters",
+				"description": "Список со филтри што крие и блокира скокачки прозорци, виџети, билтени, притисни известувања, стрелки, означени внатрешни врски што се надвор од темата и други иритирачки елементи. Полските GDPR-Cookies Filters веќе се во него."
+			},
+			"ms": {
+				"name": "Polish Annoyances Filters",
+				"description": "Senarai penapis yang menyembunyikan dan menyekat pop timbul, widget, buletin, pemberitahuan push, anak panah, pautan dalaman yang ditandakan yang tidak berkaitan, dan elemen yang mengganggu lain. Penapis GDPR-Kuki Poland telah pun ada dalamnya."
+			},
+			"nl": {
+				"name": "Poolse Ergernissen Filters",
+				"description": "Filterlijst dat pop-up's verbergt en blokkeert, widgets, nieuwsbrieven, push-meldingen, pijlen, getagde interne links die niks met het onderwerp te maken hebben, en andere irriterende elementen. Poolse GDPR-cookies zijn hierin inbegrepen."
+			},
+			"no": {
+				"name": "Polish Annoyances Filters",
+				"description": "Filterliste som skjuler og blokkerer pop-ups, widgets, nyhetsbrev, push-varsler, piler, taggede interne lenker som ikke er relevante og andre irriterende elementer. Polish GDPR-Cookies Filters er allerede inkludert."
+			},
+			"pl": {
+				"name": "Polish Annoyances Filters",
+				"description": "Lista filtrów, która ukrywa i blokuje wyskakujące okienka, widżety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, niezwiązane z tematem artykułu i inne irytujące elementy. Polskie Filtry Ciasteczkowe są już w nim zawarte."
+			},
+			"pt": {
+				"name": "Polish Annoyances Filters",
+				"description": "Lista de filtros que oculta e bloqueia pop-ups, widgets, boletins informativos, notificações push, setas, links internos marcados que estão fora do tópico e outros elementos irritantes. Suplemento especial anti-aborrecimento polonês já está nele."
+			},
+			"pt_BR": {
+				"name": "Polish Annoyances Filters",
+				"description": "Lista de filtros que oculta e bloqueia pop-ups, widgets, boletins informativos, notificações push, setas, links internos marcados que estão fora do tópico e outros elementos irritantes. Filtro de aborrecimentos polonês já está nele."
+			},
+			"pt_PT": {
+				"name": "Polish Annoyances Filters",
+				"description": "Lista de filtros que oculta e bloqueia pop-ups, widgets, boletins informativos, notificações push, setas, links internos marcados que estão fora do tópico e outros elementos irritantes. Suplemento especial anti-aborrecimento polonês já está nele."
+			},
+			"ro": {
+				"name": "Polish Annoyances Filters",
+				"description": "Listă de filtre care ascund și blochează pop-up-uri, widget-uri, buletine informative, notificări push, săgeți, linkuri interne etichetate în afara subiectului și alte elemente iritante. Filtrele poloneze GDPR-Cookies sunt deja în ea."
+			},
+			"ru": {
+				"name": "Polish Annoyances Filters",
+				"description": "Фильтр, который прячет и блокирует всплывающую рекламу, виджеты, рассылки, пуш-уведомления, внутренние ссылки, которые не относятся к теме, и другие раздражающие элементы. Polish GDPR-Cookies Filters уже включены в него."
+			},
+			"sk": {
+				"name": "Polish Annoyances Filters",
+				"description": "Filtrujte zoznam, ktorý skrýva a blokuje kontextové okná, widgety, informačné vestníky, upozornenia push, šípky, označené interné odkazy mimo témy a ďalšie iritujúce prvky. Poľský filter na GDPR cookie je už v ňom obsiahnutý."
+			},
+			"sl": {
+				"name": "Polish Annoyances Filters",
+				"description": "Seznam filtrov, ki skrije in zavira pojavna okna, pripomočke, glasila, potisna obvestila, puščice, označene notranje povezave, ki niso povezane s temo, in druge dražilne elemente. Poljski filtri za piškotke GDPR so že v njem."
+			},
+			"sr": {
+				"name": "Polish Annoyances Filters",
+				"description": "Lista filtera koja skriva i blokira iskačuće prozore, vidžete, biltene, push obaveštenja, strelice, označene interne veze koje su van teme i druge iritantneelementi. Polskie Filtri Ciasteczkove je već u njemu."
+			},
+			"sv": {
+				"name": "Polish Annoyances Filters",
+				"description": "Filterlista som döljer och blockerar popup-fönster, widgets, nyhetsbrev, push-notiser, pilar, taggade interna länkar som är off-topic och andra irriterande element. Polska GDPR-Cookies-filter finns redan i den."
+			},
+			"th": {
+				"name": "Polish Annoyances Filters",
+				"description": "รายการตัวกรองที่ซ่อนและปิดกั้นป๊อปอัปวิดเจ็ตจดหมายข่าวการแจ้งเตือนแบบพุชลูกศรลิงก์ภายในที่ติดแท็กที่ไม่เกี่ยวข้องกับหัวข้อและองค์ประกอบอื่น ๆ ที่น่ารำคาญ ตัวกรองคุกกี้ GDPR ของโปแลนด์มีอยู่แล้ว"
+			},
+			"tr": {
+				"name": "Polish Annoyances Filters",
+				"description": "Açılır pencereleri, araçları, haber bültenlerini, anlık bildirimlerini, okları, konu dışı etiketli dâhili bağlantıları ve diğer can sıkıcı öğeleri gizleyen ve engelleyen filtre listesi. Polish GDPR-Cookies Filters zaten buna dâhildir."
+			},
+			"uk": {
+				"name": "Polish Annoyances Filters",
+				"description": "Фільтр, який приховує та блокує банери, віджети, розсилки новин, push-сповіщення, стрілки, позначені внутрішні посилання, які не стосуються теми, а також інші дратівливі елементи. До складу цього фільтра вже входить Polish GDPR-Cookies Filters."
+			},
+			"vi": {
+				"name": "Polish Annoyances Filters",
+				"description": "Bộ lọc ẩn và chặn cửa sổ bật, tiện ích, tin tức, thông báo đẩy, mũi tên điều khiển, đường dẫn ngầm lạc đề, và những phiền nhiễu khác. Đã có trong Polish GDPR-Cookies Filters."
+			},
+			"zh": {
+				"name": "波兰恼人元素过滤器",
+				"description": "隐藏和拦截弹出窗口、小部件、时事通讯、推送通知、箭头、偏离主题的带标记的内部链接和其他烦人的元素的过滤列表。Polish GDPR-Cookies Filters 已包含在它当中。"
+			},
+			"zh_TW": {
+				"name": "Polish Annoyances Filters",
+				"description": "隱藏並封鎖彈出式視窗、小工具、時事通訊、推播通知、箭頭、離題的被標記的內部連結和其它令人惱怒的元件之過濾清單。Polish GDPR-Cookies Filters 已在其中。"
+			}
+		},
+		"238": {
+			"ar": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "الفلاتر البولندية الرسمية ضد تنبيهات Adblock."
+			},
+			"be": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Афіцыйныя польскія фільтры ад паведамленняў AdBlock."
+			},
+			"bg": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Официални полски филтри срещу известия Adblock."
+			},
+			"ca": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtres oficials polonesos contra les alertes d'Adblock."
+			},
+			"cs": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Oficiální polské filtry proti upozornění Adblock."
+			},
+			"da": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Officielle polske filtre mod Adblock-alarmer."
+			},
+			"de": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Offizielle polnische Filter gegen Adblock-Warnhinweise."
+			},
+			"el": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Επίσημα πολωνικά φίλτρα κατά των ειδοποιήσεων Adblock."
+			},
+			"en": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Official Polish filters against Adblock alerts."
+			},
+			"es": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtros polacos oficiales contra alertas de Adblock."
+			},
+			"es_ES": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtros polacos oficiales contra alertas de Adblock."
+			},
+			"fa": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "فیلترهای رسمی لهستانی در برابر هشدارهای Adblock."
+			},
+			"fi": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Viralliset puolalaiset suodattimet mainosestoilmoituksia vastaan."
+			},
+			"fr": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtres Polonais officiels contre les alertes Adblock."
+			},
+			"he": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "מסננים פולניים רשמיים נגד אזהרות לגבי חסימת פרסומות."
+			},
+			"hi": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "एडब्लॉक अलर्ट के खिलाफ आधिकारिक पोलिश फ़िल्टर।"
+			},
+			"hr": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Službeni poljski filtri protiv AdBlock upozorenja."
+			},
+			"hu": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Hivatalos lengyel szűrők, amelyek a hirdetésblokkolók elleni figyelmeztetéseket tiltják."
+			},
+			"hy": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Պաշտոնական փոլանդական զտիչներ Adblock կատեգորիաների առաջացման դեմ։"
+			},
+			"id": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filter Polandia resmi terhadap peringatan Adblock."
+			},
+			"it": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtri ufficiali polacchi contro gli avvisi di disattivazione del Blocca-annunci."
+			},
+			"ja": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "「広告ブロックを無効にしてください」系警告を対処するポーランドの公式フィルター。"
+			},
+			"ko": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "애드블록 경고에 대한 공식 폴란드어 필터."
+			},
+			"lt": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Oficialūs Lenkijos filtrai prieš Adblock įspėjimus."
+			},
+			"mk": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Официјални полски филтри против предупредувањата за користење Adblock."
+			},
+			"ms": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Penapis rasmi Poland menentang amaran Adblock."
+			},
+			"nl": {
+				"name": "Poolse Anti Adblock Filters",
+				"description": "Officiële Poolse filters tegen Adblock waarschuwingen."
+			},
+			"no": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Offisielle polske filtre mot Adblock-varsler."
+			},
+			"pl": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Oficjalne polskie filtry przeciwko alertom Adblock."
+			},
+			"pt": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtros oficiais poloneses de aviso de bloqueio de anúncios."
+			},
+			"pt_BR": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtros oficiais poloneses de aviso de bloqueio de anúncios."
+			},
+			"pt_PT": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtros oficiais poloneses de aviso de bloqueio de anúncios."
+			},
+			"ro": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Filtre poloneze oficiale contra alertelor Adblock."
+			},
+			"ru": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Официальные польские фильтры от оповещений AdBlock."
+			},
+			"sk": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Oficiálne poľské filtre proti upozorneniam Adblock."
+			},
+			"sl": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Uradni poljski filtri proti opozorilom zaviranja oglasov."
+			},
+			"sr": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Zvanični poljski filteri protiv upozorenja o blokiranju reklama."
+			},
+			"sv": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Officiella polska filter mot annonsblockerings-varningar."
+			},
+			"th": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "ตัวกรองภาษาโปแลนด์อย่างเป็นทางการกับการแจ้งเตือนปิดกั้นโฆษณา"
+			},
+			"tr": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Reklam engelleyici uyarılarına karşı resmi Lehçe filtreleri."
+			},
+			"uk": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Офіційні польські фільтри проти попереджень про Adblock."
+			},
+			"vi": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "Bộ lọc chặn cảnh báo chặn quảng cáo chính thức tiếng Ba Lan."
+			},
+			"zh": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "官方波兰语过滤器，用于反 Adblock 警告。"
+			},
+			"zh_TW": {
+				"name": "Polish Anti Adblock Filters",
+				"description": "防止廣告封鎖警報之官方的波蘭文過濾器。"
+			}
+		},
+		"239": {
+			"ar": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "عامل تصفية يحظر خطوط الجهات الخارجية. قد يكسر شكل وتصميم بعض المواقع."
+			},
+			"be": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Фільтр, які блакіруе шрыфты іншых распрацоўшчыкаў. Можа пашкодзіць выгляд і дызайн некаторых вэб-сайтаў."
+			},
+			"bg": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Филтър, който блокира шрифтове от трети страни. Може да наруши външния вид и дизайна на някои уебсайтове."
+			},
+			"ca": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Un filtre que bloqueja fonts de tercers. Pot alterar l'aspecte i el disseny d'alguns llocs web."
+			},
+			"cs": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filtr, který blokuje písma třetích stran. Může to narušit vzhled a design některých webů."
+			},
+			"da": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Et filter, der blokerer skrifttyper fra tredjeparter. Det kan på visse websteder ødelægge udseende og design."
+			},
+			"de": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Ein Filter, der Schriften von Drittanbietern sperrt. Diese Schriften können das Aussehen und Design einiger Websites beeinträchtigen."
+			},
+			"el": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Ένα φίλτρο που αποκλείει γραμματοσειρές τρίτων. Μπορεί να σπάσει την εμφάνιση και το σχεδιασμό ορισμένων ιστότοπων."
+			},
+			"en": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "A filter that blocks third-party fonts. It may break the look and design of some websites."
+			},
+			"es": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Un filtro que bloquea las fuentes de terceros. Puede romper el aspecto y el diseño de algunos sitios web."
+			},
+			"es_ES": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Un filtro que bloquea las fuentes de terceros. Puede romper el aspecto y el diseño de algunos sitios web."
+			},
+			"fa": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "فیلتری که فونت‌های شخص ثالث را مسدود می‌کند. ممکن است ظاهر و طراحی برخی از وب‌سایت‌ها را خراب کند."
+			},
+			"fi": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Suodatin, joka estää kolmannen osapuolen kirjasimet. Saattaa rikkoa joidenkin sivustojen ulkoasun."
+			},
+			"fr": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Un filtre qui bloque les polices tierces. Cela peut briser l'apparence et la conception de certains sites Web."
+			},
+			"he": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "מסנן אשר חוסם גופני צד־שלישי. הוא עשוי לשבור את המראה והעיצוב של אתרים מסוימים."
+			},
+			"hi": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "एक फ़िल्टर जो थर्ड-पार्टी फॉन्ट्स को ब्लॉक करता है। यह कुछ वेबसाइटों का रूप और डिज़ाइन बिगाड़ सकता है।"
+			},
+			"hr": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filtar koji blokira fontove treće strane. To može pokvariti izgled i dizajn nekih web stranica."
+			},
+			"hu": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Szűrő, amely blokkolja a harmadik féltől származó betűtípusokat. Elronthatja egyes webhelyek megjelenését és kialakítását."
+			},
+			"hy": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Ֆիլտր, որը արգելափակում է երրորդ կողմի ֆոնտերը։ Դա կարող է վնասել որոշ կայքերի տեսքը և ձևավորումը։"
+			},
+			"id": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filter yang memblokir font pihak ketiga. Ini dapat merusak tampilan dan desain beberapa situs web."
+			},
+			"it": {
+				"name": "Fanboy Anti-Font di terze parti",
+				"description": "Un filtro che blocca i caratteri di terze parti. Potrebbe corrompere l'aspetto e lo stile di alcuni siti web."
+			},
+			"ja": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "サードパーティ製フォントをブロックするフィルターです。一部のウェブサイトの外観やデザインを崩す可能性があります。"
+			},
+			"ko": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "타사 글꼴을 차단하는 필터입니다. 일부 웹사이트의 모양과 디자인이 깨질 수 있습니다."
+			},
+			"lt": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filtras, blokuojantis trečiųjų šalių šriftus. Tai gali sugadinti kai kurių svetainių išvaizdą ir dizainą."
+			},
+			"mk": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Филтер што блокира фонтови од трети страни. Може да го скрши изгледот и дизајнот на некои веб-локации."
+			},
+			"ms": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Penapis yang menyekat font pihak ketiga. Ia mungkin merosakkan penampilan dan reka bentuk beberapa laman web."
+			},
+			"nl": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filter dat derde-partijen fonts blokkeert. Het kan het uiterlijk en ontwerp van sommige websites breken."
+			},
+			"no": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Et filter som blokkerer tredjeparts skrifttyper. Det kan ødelegge utseendet og designet på noen nettsteder."
+			},
+			"pl": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filtr blokujący czcionki innych firm. Może to zepsuć wygląd i projekt niektórych witryn internetowych."
+			},
+			"pt": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Um filtro que bloqueia fontes de terceiros. Isso pode prejudicar a aparência e o design de alguns sítios."
+			},
+			"pt_BR": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Um filtro que bloqueia fontes de terceiros. Isso pode prejudicar a aparência e o design de alguns sites."
+			},
+			"pt_PT": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Um filtro que bloqueia fontes de terceiros. Isso pode prejudicar a aparência e o design de alguns sítios."
+			},
+			"ro": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Un filtru care blochează fonturile de la terțe parți. Poate distruge aspectul și designul unor site-uri."
+			},
+			"ru": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Фильтр, который блокирует шрифты сторонних разработчиков. Может сломать вид и дизайн некоторых сайтов."
+			},
+			"sk": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filter, ktorý blokuje písma tretích strán. Môže to narušiť vzhľad a dizajn niektorých webových stránok."
+			},
+			"sl": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filter, ki zavira pisave drugih avtorjev. To lahko poslabša videz in oblikovanje nekaterih spletnih strani."
+			},
+			"sr": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Filter koji blokira fontove treće strane. To može pokvariti izgled i dizajn nekih sajtova."
+			},
+			"sv": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Ett filter som blockerar teckensnitt från tredje part. Det kan förstöra utseendet och designen på vissa webbplatser."
+			},
+			"th": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "ตัวกรองที่ปิดกั้นฟอนต์ของบุคคลที่สาม ซึ่งอาจทำลายการออกแบบและรูปลักษณ์ของเว็บไซต์บางแห่ง."
+			},
+			"tr": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Üçüncü taraf yazı tiplerini engelleyen bir filtre. Bazı sitelerin görünümünü ve tasarımını bozabilir."
+			},
+			"uk": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Фільтр, який блокує сторонні шрифти. Він може пошкодити вигляд і дизайн деяких вебсайтів."
+			},
+			"vi": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "Bộ lọc chặn các phông chữ từ bên thứ ba. Bộ lọc này có thể làm hỏng giao diện và bố cục của trang."
+			},
+			"zh": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "拦截第三方字体的过滤器。它可能破坏一些网站的外观和设计。"
+			},
+			"zh_TW": {
+				"name": "Fanboy's Anti-thirdparty Fonts",
+				"description": "封鎖第三方字體的過濾器。它可能會破壞一些網站的外觀和設計。"
+			}
+		},
+		"240": {
+			"ar": {
+				"name": "BarbBlock",
+				"description": "BarbBlock عبارة عن قائمة حظر محتوى مع ملحقات متصفح مستقلة لمتصفح Chrome و Firefox. يقوم بإدراج المواقع التي استخدمت عمليات الإزالة وفقًا لقانون الألفية الجديدة لحقوق طبع ونشر المواد الرقمية (DMCA) لفرض الإزالة من قوائم حظر المحتوى الأخرى. عمليات الإزالة هذه غير صالحة بشكل قاطع ، لكنها يمكن أن تكون فعالة في ترهيب المشاريع الصغيرة مفتوحة المصدر إلى الامتثال."
+			},
+			"be": {
+				"name": "BarbBlock",
+				"description": "BarbBlock – гэта фільтр для блакіравання змесціва з аўтаномнымі браўзернымі пашырэннямі для Chrome і Firefox. Дадзены фільтр уносіць у чорны спіс вэб-сайты, якія выкарыстоўвалі закон DMCA для прымусовага выдалення з іншых фільтраў блакіравання змесціва. Такія выключэнні катэгарычна недапушчальны, але яны могуць быць эфектыўнымі для запалохвання і падначалення невялікіх праектаў з адкрытым зыходным кодам."
+			},
+			"bg": {
+				"name": "BarbBlock",
+				"description": "BarbBlock е списък за блокиране на съдържание с независими разширения за браузър за Chrome и Firefox. Той добавя в черния списък сайтове, които са използвали DMCA изтегляния, за да принудят премахването си от други списъци за блокиране на съдържание. Такива изтегляния са категорично невалидни, но могат да бъдат ефективни за плаши малките проекти с отворен код да се съобразят."
+			},
+			"ca": {
+				"name": "BarbBlock",
+				"description": "BarbBlock és una llista de bloqueig de contingut amb extensions de navegador independents per a Chrome i Firefox. Afegeix a la llista negra els llocs que han utilitzat la retirada DMCA per forçar l'eliminació d'altres llistes de bloqueig de contingut. Tals retirades són categòricament invàlides, però poden ser efectives per intimidar petits projectes de codi obert per a la seva conformitat."
+			},
+			"cs": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je seznam na blokování obsahu se samostatnými rozšířeními pro Chrome a Firefox. Blokuje přístup ke stránkám, které si ve smyslu zákona DMCA vynutily odstranění z jiných seznamů blokování obsahu. Takové odstranění jsou kategoricky neplatné, ale mohou být účinné při zastrašováni malých open-source projektů."
+			},
+			"da": {
+				"name": "BarbBlock",
+				"description": "BarbBlock er en indholdsblokeringsliste med individuelle browserudvidelser til Chrome og Firefox. Den sortlister websteder, som har brugt DMCA-nedltagelser til at tvinge fjernelse fra andre indholdsblokeringslister. Sådanne nedltagelser er kategorisk ugyldige, men de kan være effektive til at skræmme små open-source projekter til overholdelse."
+			},
+			"de": {
+				"name": "BarbBlock",
+				"description": "BarbBlock ist eine Sperrliste für Inhalte mit eigenständigen Browser-Erweiterungen für Chrome und Firefox. Sie sperrt Websites, die DMCA-Take-Downs verwendet haben, um das Entfernen aus anderen Inhaltssperrlisten zu erzwingen. Solche Takedowns sind kategorisch ungültig, aber sie können wirksam sein, um kleine Open-Source-Projekte in die Einhaltung der Vorschriften einzuschüchtern."
+			},
+			"el": {
+				"name": "BarbBlock",
+				"description": "Το BarbBlock είναι μια λίστα αποκλεισμού περιεχομένου με αυτόνομες επεκτάσεις προγράμματος περιήγησης για Chrome και Firefox. Μαύρες λίστες ιστότοπων που έχουν χρησιμοποιήσει κατάργηση DMCA για να εξαναγκάσουν την κατάργηση από άλλες λίστες αποκλεισμού περιεχομένου. Τέτοιες καταργήσεις είναι κατηγορηματικά άκυρες, αλλά μπορεί να είναι αποτελεσματικές στον εκφοβισμό μικρών έργων ανοιχτού κώδικα."
+			},
+			"en": {
+				"name": "BarbBlock",
+				"description": "BarbBlock is a content blocking list with standalone browser extensions for Chrome and Firefox. It blacklists sites that have used DMCA takedowns to force removal from other content blocking lists. Such takedowns are categorically invalid, but they can be effective at intimidating small open-source projects into compliance."
+			},
+			"es": {
+				"name": "BarbBlock",
+				"description": "BarbBlock es una lista de bloqueo de contenido con extensiones de navegador independientes para Chrome y Firefox. Incluye en listas negras los sitios que han utilizado avisos DMCA para forzar la eliminación de otras listas de bloqueo de contenido. Tales eliminaciones son categóricamente no válidas, pero pueden ser efectivas para intimidar a pequeños proyectos de código abierto para que cumplan con la ley."
+			},
+			"es_ES": {
+				"name": "BarbBlock",
+				"description": "BarbBlock es una lista de bloqueo de contenido con extensiones de navegador independientes para Chrome y Firefox. Incluye en listas negras los sitios que han utilizado avisos DMCA para forzar la eliminación de otras listas de bloqueo de contenido. Tales eliminaciones son categóricamente no válidas, pero pueden ser efectivas para intimidar a pequeños proyectos de código abierto para que cumplan con la ley."
+			},
+			"fa": {
+				"name": "BarbBlock",
+				"description": "BarbBlock یک فهرست مسدودسازی محتوا با افزونه‌های مرورگر مستقل برای Chrome و فایرفاکس است. این فهرست سایت‌هایی را که از DMCA برای اجبار به حذف از فهرست‌های مسدودسازی محتوا دیگر استفاده کرده‌اند، به لیست سیاه اضافه می‌کند. اینگونه اقدامات DMCA به طور مطلق نامعتبر هستند، اما می‌توانند موثر باشند و باعث ترساندن پروژه‌های کوچک منبع باز به اطاعت شوند."
+			},
+			"fi": {
+				"name": "BarbBlock",
+				"description": "Sisällönestolista, jolla on omat selainlaajennukset Chromelle ja Firefoxille. Se estää sivustot, jotka ovat käyttäneet DMCA:n poistopyyntöjä muilta sisällönestolistoilta. Tällaiset poistopyynnöt ovat täysin virheellisiä, mutta saattavat olla tehokkas uhka, jolla pienemmät avoimen lähdekoodin projektit saadaan niitä noudattamaan."
+			},
+			"fr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock est une liste de blocage de contenu avec des extensions de navigateur autonomes pour Chrome et Firefox. Elle met sur la liste noire les sites qui ont utilisé les retraits DMCA pour forcer la suppression d'autres listes de blocage de contenu. De telles suppressions sont catégoriquement invalides, mais elles peuvent être efficaces pour intimider les petits projets open source pour les mettre en conformité."
+			},
+			"he": {
+				"name": "BarbBlock",
+				"description": "BarbBlock הוא רשימה של חסימת תוכן עם הרחבות דפדפן עצמאיות עבור Chrome ו־Firefox. הוא מוסיף אל רשימה שחורה אתרים שהשתמשו בהפלות DMCA כדי לאלץ הסרה מרשימות אחרות של חסימת תוכן. הפלות כאלו בלתי תקפות בעליל, אבל הן יכולות להיות יעילות בהפחדת מיזמי קוד פתוח קטנים לצורך היענות."
+			},
+			"hi": {
+				"name": "BarbBlock",
+				"description": "बारबब्लॉक एक कंटेंट ब्लॉकिंग सूची है जो क्रोम और फ़ायरफ़ॉक्स के लिए स्टैंडअलोन ब्राउज़र एक्सटेंशंस के साथ है। यह उन साइटों को ब्लैकलिस्ट करता है जिन्होंने अन्य कंटेंट ब्लॉकिंग सूचियों से हटाने के लिए DMCA टेकडाउन का उपयोग किया है। ऐसे टेकडाउन स्पष्ट रूप से अमान्य हैं, लेकिन वे छोटे ओपन-सोर्स प्रोजेक्टों को अनुपालन के लिए डराने में प्रभावी हो सकते हैं।"
+			},
+			"hr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je popis za blokiranje sadržaja sa samostalnim proširenjima preglednika za Chrome i Firefox. Ono stavlja web stranica na popis neželjenih, koje su koristile DMCA uklanjanje kako bi prisilile uklanjanje s drugih popisa za blokiranje sadržaja. Takva uklanjanja kategorički su nevaljana, ali mogu biti učinkovita u zastrašivanju malih projekata otvorenog koda."
+			},
+			"hu": {
+				"name": "BarbBlock",
+				"description": "A BarbBlock egy tartalomblokkoló lista, önálló Chrome és a Firefox böngészőbővítményekkel. Tiltólistára teszi azokat a webhelyeket, amelyek a DMCA segítségével távolíttatták el magukat az egyéb tartalomblokkoló listákról. Az ilyen eltávolítások kategorikusan érvénytelenek, de hatékonyan képesek megfélemlíteni a nyílt forráskódú kis projekteket."
+			},
+			"hy": {
+				"name": "BarbBlock",
+				"description": "BarbBlock-ն բովանդակության հավաքման ցանկ է ինքնուրույն զետեղված բրաուզերային ընդլայնումներով Chrome և Firefox-ի համար։ Այն սև ցուցակում է դնում այն կայքերը, որոնք օգտագործել են DMCA-ի փոխանցումներ՝ ստիպելու այլ բովանդակության հավաքման ցանկերից հանելու։ Այդպիսի փոխանցումները գեթ քվոտաբառային են, սակայն կարող են արդյունավետ լինել փոքր օփեն-սորզ ծրագրերի վրա ճնշում գործադրելու համար։"
+			},
+			"id": {
+				"name": "BarbBlock",
+				"description": "BarbBlock adalah daftar pemblokiran konten dengan ekstensi browser tersendiri untuk Chrome dan Firefox. Menambahkan daftar hitam situs yang telah menggunakan penghapusan DMCA untuk memaksa penghapusan dari daftar pemblokiran konten lainnya. Penghapusan semacam itu secara kategoris tidak valid, tetapi bisa efektif dalam mengintimidasi proyek sumber terbuka kecil agar patuh."
+			},
+			"it": {
+				"name": "BarbBlock",
+				"description": "BarbBlock è un elenco di blocco di contenuti con estensioni del browser standalone per Chrome e Firefox. Mette in lista nera quei siti che hanno utilizzato le rimozioni DMCA per forzare la rimozione da altri elenchi di blocco dei contenuti. Tali rimozioni sono categoricamente non valide, ma possono essere efficaci nell'intimidire i piccoli progetti open source in conformità."
+			},
+			"ja": {
+				"name": "BarbBlock",
+				"description": "BarbBlockは、ChromeとFirefox用のスタンドアロンのブラウザ拡張機能を持つコンテンツブロッキングリストです。他のコンテンツブロッキングリストから強制的に削除させるためにDMCA 侵害行為を使ったサイトをブラックリスト化します。このようなDMCAを使った取り締まりは厳密には無効ですが、小規模なオープンソースプロジェクトを脅して応諾させるには効果的です。"
+			},
+			"ko": {
+				"name": "BarbBlock",
+				"description": "BarbBlock은 Chrome 및 Firefox용 브라우저 확장 프로그램을 위한 콘텐츠 차단 목록입니다. 콘텐츠 차단 목록에서 강제 삭제를 위해 DMCA 게시 중단을 이용하는 사이트를 블랙리스트에 추가합니다. 해당 게시 중단이 절대적으로 유효한 것은 아니나, 소규모 오픈 소스 프로젝트로 하여금 규정을 준수시키는 데 효과적일 수 있습니다."
+			},
+			"lt": {
+				"name": "BarbBlock",
+				"description": "BarbBlock yra turinio blokavimo sąrašas su nepriklausomais naršyklės plėtiniais, skirtais Chrome ir Firefox. Jis juodajame sąraše turi svetaines, kurios naudojasi DMCA pašalinimo prašymais, kad priverstų išimti iš kitų turinio blokavimo sąrašų. Tokie pašalinimo prašymai yra kategoriškai neteisingi, tačiau gali būti veiksmingi, norint bauginti mažus atvirojo kodo projektus, kad jie laikytųsi reikalavimų."
+			},
+			"mk": {
+				"name": "BarbBlock",
+				"description": "BarbBlock е листа за блокирање содржини со самостојни екстензии на прелистувачот за Chrome и Firefox. Ги става на црните листи сајтови кои користеле отстранување DMCA за принудно отстранување од други списоци за блокирање содржини. Ваквите симнувања се категорично невалидни, но можат да бидат ефективни во заплашувањето на малите проекти со отворен код да се усогласат."
+			},
+			"ms": {
+				"name": "BarbBlock",
+				"description": "BarbBlock adalah senarai penyekat kandungan dengan penyambung pelayar berdiri sendiri untuk Chrome dan Firefox. Ia menyekat laman yang telah menggunakan penghapusan DMCA untuk memaksa pemindahan dari senarai penyekat kandungan lain. Penghapusan seperti ini adalah tidak sah secara kategorik, tetapi ia boleh berkesan dalam menakut-nakutkan projek-projek sumber terbuka yang kecil untuk mematuhi."
+			},
+			"nl": {
+				"name": "BarbBlock",
+				"description": "BarbBlock is een blokkeringslijst met standalone uitbreidingen voor Chrome en Firefox. Ze blokkeert websites die DMCA verwijderingsverzoeken gebruiken om verwijdering van andere blokkeringslijsten af te dwingen. Deze verwijderingsverzoeken zijn pertinent ongeldig, maar kunnen effectief zijn tegen kleinere open-source projecten."
+			},
+			"no": {
+				"name": "BarbBlock",
+				"description": "BarbBlock er en innholdsblokeringsliste med uavhengige nettleserutvidelser for Chrome og Firefox. Den sorterer nettsteder som har brukt DMCA-nedtagninger for å tvinge fjerning fra andre innholdsblokeringslister. Slike nedtagninger er kategorisk ugyldige, men de kan være effektive for å skremme små åpne kildeprosjekter til samsvar."
+			},
+			"pl": {
+				"name": "BarbBlock",
+				"description": "BarbBlock to lista blokująca treści z samodzielnymi rozszerzeniami przeglądarki dla Chrome i Firefox. Umieszcza na czarnej liście witryny, które stosowały żądania usunięcia treści na podstawie ustawy DMCA, aby wymusić usunięcie z innych list blokujących treści. Takie usunięcia są kategorycznie nieważne, ale mogą skutecznie zastraszać małe projekty open-source w celu zapewnienia zgodności."
+			},
+			"pt": {
+				"name": "BarbBlock",
+				"description": "BarbBlock é uma lista de bloqueio de conteúdo com extensões de navegador independentes para Chrome e Firefox. Ele coloca na lista negra sítios que usaram remoções por DMCA para forçar a remoção de outras listas de bloqueio de conteúdo. Essas remoções são categoricamente inválidas, mas podem ser eficazes para intimidar pequenos projetos de código aberto em conformidade."
+			},
+			"pt_BR": {
+				"name": "BarbBlock",
+				"description": "BarbBlock é uma lista de bloqueio de conteúdo com extensões de navegador independentes para Chrome e Firefox. Ele coloca na lista negra sites que usaram remoções por DMCA para forçar a remoção de outras listas de bloqueio de conteúdo. Essas remoções são categoricamente inválidas, mas podem ser eficazes para intimidar pequenos projetos de código aberto em conformidade."
+			},
+			"pt_PT": {
+				"name": "BarbBlock",
+				"description": "BarbBlock é uma lista de bloqueio de conteúdo com extensões de navegador independentes para Chrome e Firefox. Ele coloca na lista negra sítios que usaram remoções por DMCA para forçar a remoção de outras listas de bloqueio de conteúdo. Essas remoções são categoricamente inválidas, mas podem ser eficazes para intimidar pequenos projetos de código aberto em conformidade."
+			},
+			"ro": {
+				"name": "BarbBlock",
+				"description": "BarbBlock este o listă de blocare de conținut cu extensii de browser independente pentru Chrome și Firefox. Blochează site-urile care au utilizat cereri de eliminare DMCA din alte liste de blocare de conținut. Astfel de cereri de eliminare sunt complet eronate, dar pot reprezenta o amenințare eficientă pentru a face proiectele open source mai mici să le respecte."
+			},
+			"ru": {
+				"name": "BarbBlock",
+				"description": "BarbBlock – это фильтр для блокировки контента с автономными браузерными расширениями для Chrome и Firefox. Он вносит в черный список сайты, которые использовали закон DMCA для принудительного удаления из других фильтров блокировки контента. Такие изъятия категорически недопустимы, но они могут запугать, а затем подчинить небольшие проекты с открытым исходным кодом."
+			},
+			"sk": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je zoznam ma blokovanie obsahu so samostatnými rozšíreniami pre Chrome a Firefox. Blokuje prístup k stránkam, ktoré si v zmysle zákona DMCA vynútili odstránenie z iných zoznamov blokovania obsahu. Takéto odstránenia sú kategoricky neplatné, ale môžu byť účinné pri zastrašovaní malých open-source projektov."
+			},
+			"sl": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je seznam za zaviranje vsebine s samostojnimi razširitvami brskalnika za Chrome in Firefox. Spletne strani, ki so uporabila odstranitve z zakonom DMCA, uvrščajo na sezname nedovoljenih. Takšno odstranjevanje je kategorično neveljavno, lahko pa učinkovito zastraši skladnost majhnih odprtokodnih projektov."
+			},
+			"sr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock je lista za blokiranje sadržaja sa samostalnim proširenjima pregledača za Chrome i Firefok. Na crne liste stavljaju veb lokacije koje su koristileuklanjanje DMCA kako bi prinudno uklonile sa drugih lista blokiranja sadržaja. Takva uklanjanja su kategorički nevaljana, ali mogu biti efikasna u zastrašivanjumalih projekata otvorenog koda u skladu."
+			},
+			"sv": {
+				"name": "BarbBlock",
+				"description": "BarbBlock är en innehållsblockeringslista med fristående webbläsartillägg för Chrome och Firefox. Den svartlistar webbplatser som har använt DMCA-takedowns för att tvinga bort dem från andra innehållsblockeringslistor. Sådana nedtagningar är kategoriskt ogiltiga, men de kan vara effektiva för att skrämma små projekt med öppen källkod till efterlevnad."
+			},
+			"th": {
+				"name": "BarbBlock",
+				"description": "BarbBlock เป็นรายการปิดกั้นเนื้อหาที่มีส่วนขยายเบราว์เซอร์แบบสแตนด์อโลนสำหรับ Chrome และ Firefox ขึ้นบัญชีดำไซต์ที่ใช้การลบ DMCA เพื่อบังคับให้ลบออกจากรายการปิดกั้นเนื้อหาอื่น ๆ การลบออกดังกล่าวไม่ถูกต้องโดยเด็ดขาด แต่อาจมีผลในการข่มขู่โครงการโอเพ่นซอร์สขนาดเล็กให้ปฏิบัติตาม"
+			},
+			"tr": {
+				"name": "BarbBlock",
+				"description": "BarbBlock, Chrome ve Firefox için bağımsız tarayıcı uzantılarına sahip bir içerik engelleme listesidir. Diğer içerik engelleme listelerinden kaldırılmaya zorlamak için DMCA yayından kaldırma işlemlerini kullanan siteleri kara listeye alır. Bu tür yayından kaldırmalar kategorik olarak geçersizdir, ancak küçük açık kaynaklı projeleri uyumluluk açısından sindirmede etkili olabilirler."
+			},
+			"uk": {
+				"name": "BarbBlock",
+				"description": "BarbBlock — це фільтр блокування, а також незалежне розширення для браузерів Chrome та Firefox. Фільтр блокує сайти, які використовували закон DMCA для примусового вилучення правил з інших фільтрів. Такі вилучення категорично неприпустимі, але вони можуть бути ефективними в залякуванні та подальшому підпорядкуванню невеликих проєктів з відкритим кодом."
+			},
+			"vi": {
+				"name": "BarbBlock",
+				"description": "BarbBlock là bộ lọc quảng cáo cùng với tiện ích mở rộng cho Chrome và Firefox. BarbBlock chặn những trang đã dùng DMCA để ép những bộ lọc loại bỏ tên miền của nó. Những điều gỡ bỏ đó là vô lý, nhưng có hiệu quả đối với những dự án mã nguồn mở nhỏ."
+			},
+			"zh": {
+				"name": "BarbBlock",
+				"description": "BarbBlock是一个带独立Chrome和火狐浏览器扩展的内容拦截列表。它将那些使用DMCA下架通知迫使内容拦截列表将它们从拦截名单中删除的站点列入黑名单。这样的通知是绝对无效的，但这种做法可以有效地迫使小型开源项目就范。"
+			},
+			"zh_TW": {
+				"name": "BarbBlock",
+				"description": "BarbBlock 是對應用於 Chrome 和 Firefox 的獨立瀏覽器擴充功能之內容阻擋清單。它將已使用數位千禧年著作權法（DMCA）取締以從其它內容阻擋清單中強制排除的網站列入黑名單。這樣的取締是絕對無效的，但它們能有效地威嚇小型開源的專案就範。"
+			}
+		},
+		"241": {
+			"ar": {
+				"name": "EasyList Cookie List",
+				"description": "يزيل ملفات تعريف الارتباط وتحذيرات الخصوصية. مدرج بالفعل في قائمة مضايقات Fanboy."
+			},
+			"be": {
+				"name": "EasyList Cookie List",
+				"description": "Прыбірае папярэджанні пра cookie і апавяшчэнні пра прыватнасць. Ужо ўлучаны ў Fanboy's Annoyances list."
+			},
+			"bg": {
+				"name": "EasyList Cookie List",
+				"description": "Премахва предупрежденията за бисквитки и поверителност. Вече е включено в списъка на Fanboy's Annoyances list."
+			},
+			"ca": {
+				"name": "EasyList Cookie List",
+				"description": "Elimina els avisos sobre cookies i privacitat. Ja està inclòs en la llista de molèsties de Fanboy."
+			},
+			"cs": {
+				"name": "EasyList Cookie List",
+				"description": "Odstraňuje upozornění týkající se souborů cookie a ochrany osobních údajů. Je již zahrnut v Fanboy's Annoyances list."
+			},
+			"da": {
+				"name": "EasyList Cookie List",
+				"description": "Fjerner advarsler om cookies og fortrolighed. Er allerede inkluderet på Fanboy's Annoyances liste."
+			},
+			"de": {
+				"name": "EasyList Cookie List",
+				"description": "Entfernt Cookie- und Datenschutzhinweise. Bereits in der Filterliste „Fanboy's Annoyances“ (Belästigungen) enthalten."
+			},
+			"el": {
+				"name": "EasyList Cookie List",
+				"description": "Καταργεί τις προειδοποιήσεις cookie και απορρήτου. Συμπεριλαμβάνεται ήδη στη λίστα Fanboy's Annoyances."
+			},
+			"en": {
+				"name": "EasyList Cookie List",
+				"description": "Removes cookie and privacy warnings. Already included in Fanboy's Annoyances list."
+			},
+			"es": {
+				"name": "EasyList Cookie List",
+				"description": "Elimina los avisos de privacidad y cookies. Ya está incluido en Fanboy's Annoyances list."
+			},
+			"es_ES": {
+				"name": "EasyList Cookie List",
+				"description": "Elimina los avisos de privacidad y cookies. Ya está incluido en Fanboy's Annoyances list."
+			},
+			"fa": {
+				"name": "EasyList Cookie List",
+				"description": "کلوچک‌ها و هشدارهای حریم خصوصی را حذف می‌کند. در حال حاضر در فهرست Fanboy's Annoyances قرار دارد."
+			},
+			"fi": {
+				"name": "EasyList Cookie List",
+				"description": "Poistaa eväste- ja tietosuojavaroitukset. Sisältyy jo Fanboy's Annoyances -listaan."
+			},
+			"fr": {
+				"name": "EasyList Cookie List",
+				"description": "Supprime les cookies et les avertissements de confidentialité. Déjà inclus dans Fanboy's Annoyances list."
+			},
+			"he": {
+				"name": "EasyList Cookie List",
+				"description": "מסיר אזהרות לגבי עוגיות ופרטיות. כלול כבר ברשימה Fanboy's Annoyances."
+			},
+			"hi": {
+				"name": "EasyList Cookie List",
+				"description": "कुकी और गोपनीयता चेतावनियों को हटाता है। पहले से ही फैनबॉय के निंदा सूची में शामिल है।"
+			},
+			"hr": {
+				"name": "EasyList Cookie List",
+				"description": "Uklanja upozorenja o kolačićima i privatnosti. Već uvršten na Fanboy's Annoyances list."
+			},
+			"hu": {
+				"name": "EasyList Cookie List",
+				"description": "Eltávolítja a sütikkel és az adatvédelemmel kapcsolatos figyelmeztetéseket. Már szerepel a Fanboy Annoyances listában."
+			},
+			"hy": {
+				"name": "EasyList Cookie List",
+				"description": "Վերացնում է կուքիների և գաղտնիության նախազգուշացումներն։ Այն արդեն ներառված է Fanboy's Annoyances list-ում։"
+			},
+			"id": {
+				"name": "EasyList Cookie List",
+				"description": "Menghapus cookie dan peringatan privasi. Sudah termasuk dalam daftar Fanboy's Annoyances."
+			},
+			"it": {
+				"name": "Elenco Cookie EasyList",
+				"description": "Rimuove cookie e avvisi sulla privacy. Già incluso nell'elenco Anti-Fastidio Fanboy."
+			},
+			"ja": {
+				"name": "EasyList Cookie List",
+				"description": "クッキーとプライバシーの警告を削除します。※このフィルタは「 Fanboy's Annoyances」に既に含まれています。"
+			},
+			"ko": {
+				"name": "EasyList Cookie List",
+				"description": "쿠키 및 개인 정보 경고가 제거됩니다. 이미 Fanboy's Annoyances 목록에 포함되어 있습니다."
+			},
+			"lt": {
+				"name": "EasyList Cookie List",
+				"description": "Pašalina slapukų ir privatumo įspėjimus. Jau įtrauktas į Fanboy's Annoyances sąrašą."
+			},
+			"mk": {
+				"name": "EasyList Cookie List",
+				"description": "Ги отстранува предупредувањата за колачиња и приватност. Веќе вклучен во списокот на Fanboy's Annoyances."
+			},
+			"ms": {
+				"name": "EasyList Cookie List",
+				"description": "Mengeluarkan amaran cookie dan privasi. Sudah termasuk dalam senarai gangguan Fanboy."
+			},
+			"nl": {
+				"name": "EasyList Cookie List",
+				"description": "Verwijdert cookie en privacy waarschuwingen. Inbegrepen in Fanboy's Annoyances list."
+			},
+			"no": {
+				"name": "EasyList Cookie List",
+				"description": "Fjerner informasjonskapsler og personvernavarsler. Allerede inkludert i Fanboy's Annoyances-liste."
+			},
+			"pl": {
+				"name": "EasyList Cookie List",
+				"description": "Usuwa pliki cookie i ostrzeżenia dotyczące prywatności. Już zawarty na Fanboy's Annoyances list."
+			},
+			"pt": {
+				"name": "EasyList Cookie List",
+				"description": "Remove cookies e avisos de privacidade. Já incluído na Fanboy's Annoyances list."
+			},
+			"pt_BR": {
+				"name": "EasyList Cookie List",
+				"description": "Remove cookies e avisos de privacidade. Já incluído na Fanboy's Annoyances list."
+			},
+			"pt_PT": {
+				"name": "EasyList Cookie List",
+				"description": "Remove cookies e avisos de privacidade. Já incluído na Fanboy's Annoyances list."
+			},
+			"ro": {
+				"name": "EasyList Cookie List",
+				"description": "Elimină avertismente privind cookie-urile și confidențialitatea. Deja inclus în lista Fanboy's Annoyances."
+			},
+			"ru": {
+				"name": "EasyList Cookie List",
+				"description": "Убирает предупреждения о cookie и уведомления о конфиденциальности. Уже включен в Fanboy's Annoyances list."
+			},
+			"sk": {
+				"name": "EasyList Cookie List",
+				"description": "Odstraňuje upozornenia týkajúce sa súborov cookie a ochrany osobných údajov. Je už zahrnutý v zozname Fanboy's Annoyances."
+			},
+			"sl": {
+				"name": "EasyList Cookie List",
+				"description": "Odstrani opozorila o piškotkih in zasebnosti. Že vključen na seznam nadležnih Fanboya."
+			},
+			"sr": {
+				"name": "EasyList Cookie List",
+				"description": "Uklanja upozorenja o kolačićima i privatnosti. Već je uključena u Fanboy's Annoyances list."
+			},
+			"sv": {
+				"name": "EasyList Cookie List",
+				"description": "Tar bort cookie- och integritetsvarningar. Finns redan med på Fanboy's Annoyances list."
+			},
+			"th": {
+				"name": "EasyList Cookie List",
+				"description": "ลบคำเตือนคุกกี้และความเป็นส่วนตัว รวมอยู่ในรายการ Annoyances ของ Fanboy แล้ว"
+			},
+			"tr": {
+				"name": "EasyList Cookie List",
+				"description": "Çerez ve gizlilik uyarılarını kaldırır. Fanboy's Annoyances listesine zaten dâhildir."
+			},
+			"uk": {
+				"name": "EasyList Cookie List",
+				"description": "Вилучає попередження про кукі-файли та приватність. Уже входить до складу фільтра Fanboy's Annoyances."
+			},
+			"vi": {
+				"name": "EasyList Cookie List",
+				"description": "Loại bỏ cảnh báo về cookie và quyền riêng tư. Đã bao gồm trong danh sách Fanboy's Annoyances."
+			},
+			"zh": {
+				"name": "EasyList Cookie 列表",
+				"description": "删除cookie和隐私警告。已包含在 Fanboy's Annoyances 列表中。"
+			},
+			"zh_TW": {
+				"name": "EasyList Cookie List",
+				"description": "移除 cookie 和隱私警告。已被包含在 Fanboy's Annoyances 清單中。"
+			}
+		},
+		"242": {
+			"ar": {
+				"name": "NoCoin Filter List",
+				"description": "يعمل هذا الفلتر على تعطيل عمال المناجم المستندة إلى المتصفح مثل خلية العملة."
+			},
+			"be": {
+				"name": "NoCoin Filter List",
+				"description": "Гэты фільтр адключае браўзерныя майнеры, такія як Coinhive."
+			},
+			"bg": {
+				"name": "NoCoin Filter List",
+				"description": "Този филтър деактивира браузърни минирани, като coin-hive."
+			},
+			"ca": {
+				"name": "NoCoin Filter List",
+				"description": "Aquest filtre deshabilita miners basats en navegador, com coin-hive."
+			},
+			"cs": {
+				"name": "NoCoin Filter List",
+				"description": "Tento filtr blokuje těžbu kryptoměn na bázi prohlížeče, jako je například coin-hive."
+			},
+			"da": {
+				"name": "NoCoin Filter List",
+				"description": "Dette filter deaktiverer browserbaserede miners, såsom coin-hive."
+			},
+			"de": {
+				"name": "NoCoin Filter List",
+				"description": "Dieser Filter deaktiviert browserbasiertes „Schürfen nach Kryptowährung“ wie z.B. Coinhive."
+			},
+			"el": {
+				"name": "NoCoin Filter List",
+				"description": "Αυτό το φίλτρο απενεργοποιεί τους διακομιστές που βασίζονται στα προγράμματα περιήγησης, όπως το coin-hive."
+			},
+			"en": {
+				"name": "NoCoin Filter List",
+				"description": "This filter disables browser-based miners such as coin-hive."
+			},
+			"es": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro deshabilita los mineros basados ​​en navegador como Coinhive."
+			},
+			"es_ES": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro deshabilita los mineros basados ​​en navegador como Coinhive."
+			},
+			"fa": {
+				"name": "فهرست فیلتر NoCoin",
+				"description": "این فیلتر ماینرهای مبتنی بر مرورگر مانند coin-hive را غیرفعال می‌کند."
+			},
+			"fi": {
+				"name": "NoCoin Filter List",
+				"description": "Suodatin, joka poistaa käytöstä selainpohjaiset louhijat kuten coin-hive."
+			},
+			"fr": {
+				"name": "NoCoin Filter List",
+				"description": "Ce filtre désactive les mineurs basés sur les navigateurs comme coin-hive."
+			},
+			"he": {
+				"name": "NoCoin Filter List",
+				"description": "מסנן זה משבית כורים מבוססי דפדפן כגון כוורת מטבעות."
+			},
+			"hi": {
+				"name": "NoCoin Filter List",
+				"description": "यह फ़िल्टर ब्राउज़र-आधारित खनन उपकरणों जैसे कि कॉइन-हाइव को निष्क्रिय करता है।"
+			},
+			"hr": {
+				"name": "NoCoin Filter List",
+				"description": "Ovaj filtar onemogućava rudare temeljene na pregledniku, kao što je coin-hive."
+			},
+			"hu": {
+				"name": "NoCoin Filter List",
+				"description": "Ez a szűrő letiltja a böngészőalapú bányászokat, például coin-hive."
+			},
+			"hy": {
+				"name": "NoCoin Filter List",
+				"description": "Այս զտիչը անջատում է բրաուզերի հիման վրա ցուցակագրվող միներները, ինչպիսին է coin-hive-ը։"
+			},
+			"id": {
+				"name": "NoCoin Filter List",
+				"description": "Filter ini menonaktifkan penambang berbasis browser seperti coin-hive."
+			},
+			"it": {
+				"name": "Elenco Filtri NoCoin",
+				"description": "Questi filtri disattivano i miner di criptovalute come coin-hive."
+			},
+			"ja": {
+				"name": "NoCoin Filter List",
+				"description": "このフィルターは、コインハイブなどのようなブラウザベースのマイナーを無効にします。"
+			},
+			"ko": {
+				"name": "NoCoin Filter List",
+				"description": "이 필터는 코인 하이브와 같은 브라우저 기반 채굴 프로그램을 비활성화합니다."
+			},
+			"lt": {
+				"name": "NoCoin Filter List",
+				"description": "Šis filtras išjungia naršyklės pagrindu veikiančius kalnakasius, tokius kaip coin-hive."
+			},
+			"mk": {
+				"name": "NoCoin Filter List",
+				"description": "Овој филтер ги оневозможува ископувањата базирани на прелистувачи како што е coin-hive."
+			},
+			"ms": {
+				"name": "NoCoin Filter List",
+				"description": "Penapis ini mematikan penambang berdasarkan pelayar seperti coin-hive."
+			},
+			"nl": {
+				"name": "NoCoin Filter List",
+				"description": "Dit filter schakelt browser-gebaseerde miners uit, zoals coin-hive."
+			},
+			"no": {
+				"name": "NoCoin Filter List",
+				"description": "Denne filteret deaktiverer nettleserbaserte gruveplasser som coin-hive."
+			},
+			"pl": {
+				"name": "NoCoin Filter List",
+				"description": "Ten filtr wyłącza koparki kryptowalut działające w przeglądarce, takie jak coin-hive."
+			},
+			"pt": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro desativa mineradores baseados em navegador, como coin-hive."
+			},
+			"pt_BR": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro desativa mineradores baseados em navegador, como coin-hive."
+			},
+			"pt_PT": {
+				"name": "NoCoin Filter List",
+				"description": "Este filtro desativa mineradores baseados em navegador, como coin-hive."
+			},
+			"ro": {
+				"name": "NoCoin Filter List",
+				"description": "Acest filtru dezactivează minerii din browser, cum ar fi coin-hive."
+			},
+			"ru": {
+				"name": "NoCoin Filter List",
+				"description": "Этот фильтр отключает браузерные майнеры, такие как Coinhive."
+			},
+			"sk": {
+				"name": "NoCoin Filter List",
+				"description": "Tento filter blokuje ťažiarov na báze prehliadača, ako je napríklad coin-hive."
+			},
+			"sl": {
+				"name": "NoCoin Filter List",
+				"description": "Ta filter onemogoča rudarjenja, ki temeljijo na brskalniku, kot je coin-hive."
+			},
+			"sr": {
+				"name": "NoCoin Filter List",
+				"description": "Ovaj filter onemogućava rudarenja preko preglednika kao što je coin-hive."
+			},
+			"sv": {
+				"name": "NoCoin Filter List",
+				"description": "Detta filter inaktiverar webbläsarbaserade krypto-grävare som Coinhive."
+			},
+			"th": {
+				"name": "NoCoin Filter List",
+				"description": "ตัวกรองนี้ปิดใช้งานคนงานเหมืองที่ใช้เบราว์เซอร์เช่นเหรียญรัง"
+			},
+			"tr": {
+				"name": "NoCoin Filter List",
+				"description": "Bu filtre, coin-hive gibi tarayıcı tabanlı madencileri devre dışı bırakır."
+			},
+			"uk": {
+				"name": "NoCoin Filter List",
+				"description": "Цей фільтр вимикає браузерні майнери криптовалют, наприклад, coin-hive."
+			},
+			"vi": {
+				"name": "NoCoin Filter List",
+				"description": "Chặn các trình đào tiền ảo trên trình duyệt như coin-hive."
+			},
+			"zh": {
+				"name": "NoCoin 过滤列表",
+				"description": "此过滤器禁用基于浏览器的挖矿站点，如coin-hive。"
+			},
+			"zh_TW": {
+				"name": "NoCoin Filter List",
+				"description": "此過濾器禁用基於瀏覽器的挖礦程式，諸如 coin-hive。"
+			}
+		},
 		"243": {
 			"ar": {
 				"name": "Frellwit's Swedish Filter",
