@@ -1,8 +1,8 @@
-! Checksum: 7cYPV/4tRRmt/UG8V8nQWQ
+! Checksum: bSu+iaFeDaf9s3PGLJ00dw
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements that do not fall under popular categories of annoyances, such as website promotional offers and restrictions on copying and text selection.
-! Version: 2.0.49.19
-! TimeUpdated: 2026-10-13T18:08:04+00:00
+! Version: 2.0.49.35
+! TimeUpdated: 2026-10-17T14:10:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -38,6 +38,8 @@ instagram.com##._aagw:empty
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/244437
+! login popup 5 times after opening some positions
 ! abcnews - related articles
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242313
 milliard.tatar##.main__icons__dzen
@@ -969,8 +971,6 @@ football-tribe.com##.dugout
 football-tribe.com##.dugout_video_cont
 besoccer.com##.dugout-wrapper
 ||embed.dugout.com^$script,third-party,domain=~sportowefakty.wp.pl|~ultra-soccer.jp|~fcbinside.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/117432
-cureco.jp##object[width="640"][height="480"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116397
 ais.th##.container_float_shop
 ||ais.th/asset_index2020/js/chat_and_shop.js
@@ -3201,6 +3201,13 @@ apteki.yandex.ru##div[data-qa="BannerSlider"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+tvnow.st##.access-cta
+||ko-fi.com/cdn/scripts/overlay-widget.js$domain=uu.canna.to
+sozcu.com.tr##.rup-headline-preview
+mangatek.com###shop-update-modal
+tapology.com##.adFreePromo
+cumhuriyet.com.tr##.news-body-end
+saechsische.de###piano-sticky-template-article-saez
 store.google.com###crm_popup_anchored_£10
 ostsee-zeitung.de###piano-sticky-template-article-oz > .tp-container-inner
 app.chitchat.gg##.flow-root
@@ -3251,8 +3258,7 @@ wallpapers.com##.td-side-premium
 milliard.tatar##.widget-any
 bunshun.jp##.is-fixed-pr
 thecyberexpress.com##.thecy-entity-placement
-deepl.com##.below-navigation-banner-wrapper
-deepl.com##div[class^="homeExperience-module"]
+deepl.com##div[class*="marketing-home-experience"]
 studianclass.com##.btn-purchase
 aptoide.com##div[page="appcoins-bundle"]
 gori.me##.post-reactions
@@ -3361,9 +3367,6 @@ shopandmall.ru##.pro-account-floating-button
 shopandmall.ru##.top-slider
 gogov.ru##.greygoose
 sutochno.ru##.get-cashback
-danawa.com##.layer-ajungdang
-danawa.com##.aside-floating-banner
-danawa.com##.main-ajungdang-banner
 euroauto.ru##.banner-card
 crunchyroll.com##a[class^="bannerPanel_banner__"]
 ||api.bnesim.com/v*/promo/
@@ -3629,7 +3632,6 @@ jitenon.jp##.register_ad
 ign.com##.card.das-block
 trip.com##.m-chromePlugin__pop-wrap
 iport.ru##div[class^="TopBanner_root__"]
-||infogram.com/*?src=embed$domain=ynet.co.il
 elcomercio.pe##.h_subscribe-box
 edumail.su###safe-news-ticker-root
 umschool.net##.bn
@@ -7938,6 +7940,19 @@ ficbook.net##.help-box
 ficbook.net##a[class^="global-banner"][href^="https://t.me/"]
 ficbook.net##.ficfan-banner
 !
+! danawa.com
+danawa.com##a[href^="https://prod.danawa.com/bridge/loadingBridgeDf.html?"]
+danawa.com###sectionLayer > .category__list__row > .category_hover_layer > .category__2depth__right > .category__finance
+danawa.com###danawa_menubar > .main-header__nav > .link_nav--finance
+search.danawa.com,m.danawa.com###bottomTabBar-item-financeBenefit
+search.danawa.com,m.danawa.com###bottom-tabBarContainer > .box__tooltip-finance
+danawa.com##.aside-floating-banner
+search.danawa.com,prod.danawa.com###asideFloatingBannerInner
+danawa.com###danawa_main_container > .layer-finance
+danawa.com###danawa_menubar > .main-header__nav > .link_nav--internet
+prod.danawa.com###DnwListContents > .list-main-content > div.z-10
+danawa.com##.main-ajungdang-banner
+!
 !+ NOT_OPTIMIZED
 hotokami.jp##div[data-controller="spots-lists"] > .border-b-gray-200.border-solid[onclick^="gtag"]
 !+ NOT_OPTIMIZED
@@ -8175,6 +8190,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/244496
+! https://github.com/AdguardTeam/AdguardFilters/issues/244415
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243996
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242634
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242373

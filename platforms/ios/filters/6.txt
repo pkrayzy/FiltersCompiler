@@ -1,9 +1,9 @@
-! Checksum: 2xEMCg6WOVEe51gvHwjbsA
-! Diff-Path: ../patches/6/6-s-1791915082-3600.patch
+! Checksum: KyKfBR+0oJtjtrWhvxGVLQ
+! Diff-Path: ../patches/6/6-s-1792149055-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.54.15
-! TimeUpdated: 2026-10-13T18:07:31+00:00
+! Version: 2.0.54.21
+! TimeUpdated: 2026-10-16T11:06:40+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -860,6 +860,8 @@ schnittmuster-datenbank.de#%#//scriptlet("abort-on-property-read", "adsBlocked")
 ! NOTE: Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243943
+@@||saechsische.de/pf/resources/google_adsense-123.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/241980
 xboxdynasty.de###xd-adblock-wall:not(#style_important)
 xboxdynasty.de#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype.addEventListener', '-adblock-')
@@ -2139,6 +2141,9 @@ hochheimer-zeitung.de,wormser-zeitung.de,mittelhessen.de,allgemeine-zeitung.de,w
 hochheimer-zeitung.de,wormser-zeitung.de,mittelhessen.de,allgemeine-zeitung.de,wiesbadener-kurier.de,echo-online.de##.frontpageOverview__adWrapper
 hochheimer-zeitung.de,wormser-zeitung.de,mittelhessen.de,allgemeine-zeitung.de,wiesbadener-kurier.de,echo-online.de##.frontpageOverview__adWrapper + div:has(> .divider:only-child)
 hochheimer-zeitung.de,wormser-zeitung.de,mittelhessen.de,allgemeine-zeitung.de,wiesbadener-kurier.de,echo-online.de##.swiper-wrapper > div[data-testid="native-ad"]
+hochheimer-zeitung.de,wormser-zeitung.de,mittelhessen.de,allgemeine-zeitung.de,wiesbadener-kurier.de,echo-online.de##.contentFooter__adSlot
+hochheimer-zeitung.de,wormser-zeitung.de,mittelhessen.de,allgemeine-zeitung.de,wiesbadener-kurier.de,echo-online.de##.contentWrapper:has(> .adSlot:only-child)
+hochheimer-zeitung.de,wormser-zeitung.de,mittelhessen.de,allgemeine-zeitung.de,wiesbadener-kurier.de,echo-online.de##.contentWrapper:has(> .adSlot:only-child) + .contentWrapper:has(> .divider:only-child)
 !
 ! Common names:
 ! ##.pdb-div-gpt-footerad
@@ -2162,6 +2167,10 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+chefkoch.de##taboola-widget[container="taboola-end"]
+chefkoch.de##qmn-ad
+wetteronline.de##a[href^="https://to.wetteronline.de"]
+motorsport-total.com##div:has(> img[data-obwid]:only-child)
 homeandsmart.de##div[class^="Ads_BA_CAD"]
 monsterdealz.de###sidebar-primary > div.box:has(> div.fixed-content-adsense)
 monsterdealz.de##.single-post-content > p:has(> a[rel="sponsored nofollow"])
@@ -2337,7 +2346,8 @@ amazon.de#$#html { overflow: auto !important; padding-right: 0 !important; }
 businessinsider.de##div[data-remove-type-no-ads]
 businessinsider.de##.piano-article__after-block
 finanzen100.de##div[id^="f100-banner-"]
-moz.de#$#.u-adSlot--sky-right { visibility: hidden !important; min-width: 0 !important; }
+moz.de##.u-adSlot:not(.u-adSlot--sky-left):not(.u-adSlot--sky-right)
+moz.de#$#.u-adSlot { visibility: hidden !important; min-width: 0 !important; }
 chefkoch.de##spark-ad
 immowelt.de##div[data-testid="serp-masthead-testid"]
 immowelt.de##div[data-testid="serp-inline-ad"]
@@ -10034,7 +10044,6 @@ news.de###news_content_3
 news.de###news_header
 wiiunews.at###newupcoming
 namibia-forum.ch###nfad-inner
-kinomax.to###ni-overlay
 nordkurier.de###nordkurier\.de_bb_1
 nordkurier.de###nordkurier\.de_bb_2
 nordkurier.de###nordkurier\.de_lb_1
@@ -10442,7 +10451,7 @@ cash.ch##.adm-container
 kochbar.de##.admanager__ems__dmofooter-1
 kochbar.de##.admanager__ems__superbanner-1
 smartdroid.de##.adp1
-africa-positive.de,anruferauskunft.de,arbeitszeugnisgenerator.de,autoscout24.ch,badi-info.ch,erochatcommunity.com,erochatcommunity.net,eurotrainer.ndz.de,fischkopf.de,nachtkritik.de,raetselhilfe.net,regenbogen.de,stol.it,viamichelin.at,viamichelin.ch,viamichelin.de,wetter.at,xwords.de##.ads
+africa-positive.de,anruferauskunft.de,arbeitszeugnisgenerator.de,autoscout24.ch,badi-info.ch,erochatcommunity.com,erochatcommunity.net,eurotrainer.ndz.de,fischkopf.de,nachtkritik.de,raetselhilfe.net,regenbogen.de,viamichelin.at,viamichelin.ch,viamichelin.de,wetter.at,xwords.de##.ads
 administrator.de##.ads-300x600-wrapper
 ukraine-nachrichten.de##.ads-336
 efahrer.chip.de##.ads-alignment
@@ -12580,7 +12589,9 @@ basicthinking.de##.widget-post:has(.widget-p-listing > .p-wrap:only-child a[href
 windowspro.de##.wip-block-3:has(> style + div[id])
 windowspro.de##.wip-node-content .field--name-body > div:has(> div[id] + script)
 windowspro.de##.wip-node-content .field--name-body > div:has(> div[id]):has(> script)
+windowspro.de##.wip-node-content .field--name-body > div:has(a[onmouseover] img)
 windowspro.de##.wip-node-content .field--name-body > div:has(img[src*="/sites/windowspro.de/files/images/"]):not(:has(a[href*="/landing-page/"]))
+windowspro.de##.wip-node-content .field--name-body > div:has(script ~ div[id], div[id] ~ script):not(:has(div[id^="div-gpt-ad-"]))
 connect.de##.wkTeaser:has(.promolabel)
 connect.de##.wk_promptbox__listitem:has(.paistry-ad-label)
 connect.de##.wk_promptbox__listitem:has(.wk-anzeige-label)

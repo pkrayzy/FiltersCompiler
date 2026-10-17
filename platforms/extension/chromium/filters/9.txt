@@ -1,9 +1,9 @@
-! Checksum: 3K+q61oD8xla4wj5q/p5Yw
-! Diff-Path: ../patches/9/9-s-1791900705-3600.patch
+! Checksum: GffCA7Yd+Z6WBjGGRR3fDw
+! Diff-Path: ../patches/9/9-s-1792138251-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.36.4
-! TimeUpdated: 2026-10-13T14:08:31+00:00
+! Version: 2.0.36.8
+! TimeUpdated: 2026-10-16T08:07:35+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -203,6 +203,8 @@
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/244498
+www2.clubvideostv.com#%#//scriptlet('remove-node-text', 'script', 'lockScreen')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/244181
 ||topanimes.net/topanimes.net.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243596
@@ -330,9 +332,12 @@ pornoenspanish.es#%#//scriptlet('prevent-setTimeout', 'scriptObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228011
 ||cdnpc.net^$xmlhttprequest,redirect=nooptext,domain=file4go.lol
 ! https://github.com/AdguardTeam/AdguardFilters/issues/227704
+novelaplay.com#%#//scriptlet('prevent-setTimeout', '.offsetHeight===0')
+novelaplay.com#%#//scriptlet('set-constant', 'adblockDetected', 'false')
 novelaplay.com#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'bait')
 novelaplay.com#@#.ad-space:not(.textads)
 novelaplay.com#@##adContainer
+novelaplay.com#@#.adunit
 ! https://github.com/AdguardTeam/AdguardFilters/issues/227703
 pkproject.net#%#//scriptlet('prevent-setTimeout', 'adblock')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/227346
@@ -2199,6 +2204,7 @@ actualidadiphone.com,lucrandoideias.com,proandroid.com,lusometeo.com,kltutors.co
 !
 ! NOTE: Specific rules
 !
+psicoactiva.com###espacio-publicitario
 subsbr.net##.xbr-dual-player-grid
 ||subsbr.net/xbr-gaming-videos-api.php
 braziljournal.com##.banner-ad
@@ -3180,7 +3186,7 @@ capitalist.com.br,omelete.com.br##.truvidPos
 omelete.com.br##.article__body > ul > li:has(> a:not(a[href*="omelete.com.br"]))
 ||cdn.ome.lt/static/omelete/js/advertisement/
 ||cdn.ome.lt/static/omelete/js/banners.min.js
-applesfera.com,territorioese.com##.ad
+arealme.com,applesfera.com,territorioese.com##.ad
 nintenduo.com##div[id^="ninte-"]
 portalbsd.com.br##div.col-md-9 > div.row:has(> div > div.text-left > a > img[src*="publicidade"])
 laiguana.tv###tdi_154
