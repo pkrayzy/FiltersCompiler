@@ -87,30 +87,30 @@ for all supported AdGuard products.
 
 ## Build And Test Commands
 
-| Command | Description |
-| ------- | ----------- |
-| `yarn build` | Build all filters (`tsx scripts/build/build.js`) |
-| `yarn build:local` | Build from cached `filter.txt` (`build.js --use-cache`) |
-| `yarn auto-build` | Full automated build via `bash scripts/auto_build.sh` |
-| `yarn build:patches` | Build incremental patches |
-| `yarn generate-cache` | Generate cached `filter.txt` from templates (`tsx scripts/build/build.js --generate-cache`) |
-| `yarn download-stats` | Download per-filter `stats.json` to `temp/optimization/stats/` |
-| `yarn strip-generated-meta <dir>` | Strip generated meta from `.txt`/`filters.json`/`filters.js` in `<dir>` in place |
-| `yarn test` | Run unit tests (`vitest run`) |
-| `yarn lint` | Run all linters (code + types + markdown) |
-| `yarn lint:code` | ESLint check (`eslint .`) |
-| `yarn lint:types` | TypeScript type check (`tsc --noEmit`) |
-| `yarn lint:md` | Markdown lint (`markdownlint **/*.md`) |
-| `yarn validate` | Validate platforms and locales |
-| `yarn validate:platforms` | Validate platform build outputs |
-| `yarn validate:locales` | Validate locale files |
-| `yarn compare-build-output` | Build comparison vs. master. Requires interactive manual inputs; not for CI/automation |
-| `yarn update-wildcard-domains` | Scan filters for wildcard domains |
-| `yarn expand-wildcard-domains` | Expand wildcard domains in platform builds |
-| `yarn compress` | Compress repository data |
-| `yarn crowdin` | Run the Crowdin CLI (used by the translations download script) |
+| Command                           | Description                                                                                 |
+| --------------------------------- | ------------------------------------------------------------------------------------------- |
+| `yarn build`                      | Build all filters (`tsx scripts/build/build.js`)                                            |
+| `yarn build:local`                | Build from cached `filter.txt` (`build.js --use-cache`)                                     |
+| `yarn auto-build`                 | Full automated build via `bash scripts/auto_build.sh`                                       |
+| `yarn build:patches`              | Build incremental patches                                                                   |
+| `yarn generate-cache`             | Generate cached `filter.txt` from templates (`tsx scripts/build/build.js --generate-cache`) |
+| `yarn download-stats`             | Download per-filter `stats.json` to `temp/optimization/stats/`                              |
+| `yarn strip-generated-meta <dir>` | Strip generated meta from `.txt`/`filters.json`/`filters.js` in `<dir>` in place            |
+| `yarn test`                       | Run unit tests (`vitest run`)                                                               |
+| `yarn lint`                       | Run all linters (code + types + markdown)                                                   |
+| `yarn lint:code`                  | ESLint check (`eslint .`)                                                                   |
+| `yarn lint:types`                 | TypeScript type check (`tsc --noEmit`)                                                      |
+| `yarn lint:md`                    | Markdown lint (`markdownlint **/*.md`)                                                      |
+| `yarn validate`                   | Validate platforms and locales                                                              |
+| `yarn validate:platforms`         | Validate platform build outputs                                                             |
+| `yarn validate:locales`           | Validate locale files                                                                       |
+| `yarn compare-build-output`       | Build comparison vs. master. Requires interactive manual inputs; not for CI/automation      |
+| `yarn update-wildcard-domains`    | Scan filters for wildcard domains                                                           |
+| `yarn expand-wildcard-domains`    | Expand wildcard domains in platform builds                                                  |
+| `yarn compress`                   | Compress repository data                                                                    |
+| `yarn crowdin`                    | Run the Crowdin CLI (used by the translations download script)                              |
 
-`yarn build:local` reuses `temp/optimization/stats/` when it's non-empty *and* its
+`yarn build:local` reuses `temp/optimization/stats/` when it's non-empty _and_ its
 `temp/optimization/stats.scope` marker matches the current `--include`/`--skip`
 selection (or was a full, unscoped download); otherwise stats are fetched from the
 remote server. Plain `yarn build` always fetches remotely — the local cache is
@@ -147,10 +147,10 @@ After completing any task that modifies code in `scripts/`:
 
 3. **Update tests for changed code.** Add or update tests in the `__tests__/` directory
    alongside the code you changed:
-   - `scripts/wildcard-domain-processor/__tests__/` for wildcard-domain-processor changes
-   - `scripts/build/__tests__/` for build script changes
-   - `scripts/repository/__tests__/` for repository script changes
-   - `scripts/translations/__tests__/` for translation script changes
+    - `scripts/wildcard-domain-processor/__tests__/` for wildcard-domain-processor changes
+    - `scripts/build/__tests__/` for build script changes
+    - `scripts/repository/__tests__/` for repository script changes
+    - `scripts/translations/__tests__/` for translation script changes
 
 4. **Validate platform outputs** if filters, templates, or build scripts changed.
 
@@ -169,14 +169,14 @@ After completing any task that modifies code in `scripts/`:
 8. **Synchronise code, tests, and documentation for CLI changes.** When adding or modifying
    command-line arguments, build flags, or their compatibility rules:
     - Add or update tests in `scripts/build/__tests__/` covering the new behaviour.
-    - Update the *Command Compatibility* section in `DEVELOPMENT.md`.
+    - Update the _Command Compatibility_ section in `DEVELOPMENT.md`.
     - Never merge CLI changes without matching tests and documentation.
 
 9. **Coordinate new filters with the MV3 browser extension.** When adding a new filter
    (new `filterId`), keep it out of the MV3 extension platforms (`ext_chromium_mv3`,
    `ext_edge_mv3`, `ext_opera_mv3`) via `platformsExcluded` in its `metadata.json` until
    `@adguard/dnr-rulesets` includes the new ruleset (`tasks/validator-data.json` and
-   related files updated) *and* an MV3 extension release bundling it has shipped.
+   related files updated) _and_ an MV3 extension release bundling it has shipped.
    See [DEVELOPMENT.md — Adding a New Filter](DEVELOPMENT.md#adding-a-new-filter).
 
 ## Code Guidelines
