@@ -1,8 +1,8 @@
-! Checksum: EUOIMBWQO0PPwGSJJH8CMQ
+! Checksum: OWp+fOIs55jv/1xKNarC1w
 ! Title: Quick Fixes Filter (Optimized)
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 1.0.0.45
-! TimeUpdated: 2026-10-14T01:22:32+00:00
+! Version: 1.0.0.46
+! TimeUpdated: 2026-10-19T23:35:45+00:00
 ! Expires: 5 days (update frequency)
 NotoSans*$font
 OpenSans-*00*$font
@@ -83,7 +83,6 @@ OpenSans-*00*$font
 ||jwcdn.com^
 ||content.jwplatform.com^
 ##.jwplayer__wrapper.jw-reset
-##.ad-unit
 ###mid-article-leaderboard
 amazon.com#$?#div#nav-flyout-rufus { remove: true; }
 architecturaldigest.com,bonappetit.com,cntraveler.com,gq.com,newyorker.com,pitchfork.com,self.com,teenvogue.com,them.us,vanityfair.com,vogue.com,wired.com##[class^="TickerContainer-"],figure[data-testid="cne-interlude-container"],[data-testid="sticky-hero-ad"],.consumer-marketing-unit
@@ -424,9 +423,7 @@ ksta.de,rundschau-online.de##div.dm-paywall-wrapper,div.dm-slot,div.dm-zephr-ban
 ||cdn.tinypass.com/api/tinypass.min.js$script,domain=kurier.at
 kurier.at#%#//scriptlet('ubo-ra', 'class|style', 'div.paywall', 'stay')
 kurier.at##div#cfs-paywall-container
-||glanacion.com/*/metering/*.js$script,domain=lanacion.com.ar
-lanacion.com.ar#%#//scriptlet('ubo-cookie-remover', '/^metering_arc/')
-lanacion.com.ar#%#//scriptlet('ubo-set-local-storage-item', '/^/', '$remove$')
+lanacion.com.ar#%#//scriptlet('ubo-set-local-storage-item', 'metering', '$remove$')
 lance.com.br#%#//scriptlet('ubo-rc', 'h-[550px]', 'div.paywall-content[class*="h-\["]', 'stay')
 ||latimes.com/meteringjs/$script,~third-party
 ||californiatimes.com/caltimes/latimes/Bootstrap.js$script,third-party,domain=latimes.com
@@ -563,7 +560,9 @@ the-star.co.ke##div.premium-gate__paywall,div.premium-content figure:not(:has(im
 ||theatlantic.com/zephr/decision-engine$xmlhttprequest,~third-party
 theatlantic.com##aside#paywall,div[class^="LostInventoryMessage_"]
 ||thedailybeast.com/zephr/decision-engine$xmlhttprequest,~third-party
-||cloudfunctions.net/gated-countView$xmlhttprequest,domain=thediplomat.com
+thediplomat.com#%#//scriptlet('ubo-ra', 'style', 'div#app_story_content', 'stay')
+thediplomat.com#%#//scriptlet('ubo-ra', 'hidden', 'aside[hidden]', 'stay')
+thediplomat.com##aside#tda-gated-appendix,section#tda-gated-body
 thedispatch.com#%#//scriptlet('ubo-cookie-remover', 'xbc')
 theglobeandmail.com#%#//scriptlet('ubo-set', 'window.Fusion.globalContent._id', '0')
 ||cdn.piano.io/api/tinypass.min.js$script,domain=www.thehindu.com
