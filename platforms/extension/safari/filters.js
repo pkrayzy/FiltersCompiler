@@ -343,6 +343,7 @@
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/15_optimized.txt",
 			"platformsIncluded": [
 				"ext_safari",
+				"ext_ublock",
 				"ios"
 			],
 			"trustLevel": "full",
