@@ -35,8 +35,8 @@ for all supported AdGuard products.
     - `test.yaml` (runs `yarn test` on every pull request)
     - `compression-tests.yaml` (runs the repository compression tests in a container on pull
       requests that touch `scripts/repository/`, and monthly)
-    - `update-translations.yaml` (weekly translations download from Crowdin that opens a PR;
-      requires the `CROWDIN_PERSONAL_TOKEN` secret)
+    - `update-translations.yaml` (translations download from Crowdin that opens a PR; runs
+      every Monday at 06:00 UTC and on manual dispatch)
 - **Translations upload**: manual only, via the legacy `scripts/translations/upload.sh`
   (there is no automated or Crowdin-CLI-based upload)
 - **Performance Goals**: N/A
@@ -75,7 +75,8 @@ for all supported AdGuard products.
 ├── groups/                         # Filter group definitions (metadata.json)
 ├── tags/                           # Filter tag taxonomy (metadata.json)
 ├── temp/                           # Temporary build artifacts
-├── crowdin.yml                     # Crowdin project config (project 17570, folder miscellaneous/filters-registry)
+├── crowdin.yml                     # Crowdin project config: project 365951,
+│                                   #   folder `miscellaneous/filters-registry`
 ├── package.json                    # Project manifest and scripts
 ├── tsconfig.json                   # TypeScript config (ES2022, nodenext)
 ├── vitest.config.ts                # Test runner config
