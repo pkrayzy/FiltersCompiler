@@ -1,13 +1,13 @@
 ![Adblock Plus 2.0]
-! Checksum: Arejb7uu3JyRQOV/TrGYwA
+! Checksum: IysqvPu1V0KElBdv5cNAAg
 ! Title: Quick Fixes Filter
 ! Description: Filter to quickly resolve content filtering issues on popular websites without updating the extension.
-! Version: 1.0.0.80
-! TimeUpdated: 2026-11-02T19:54:55+00:00
+! Version: 1.0.0.81
+! TimeUpdated: 2026-11-02T22:46:41+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: Krayzylist
-! Last modified: 2026-11-02T19:52:44.126Z
+! Last modified: 2026-11-02T22:44:25.665Z
 !
 ! Compiled by @adguard/hostlist-compiler v0.0.0
 !
@@ -273,7 +273,7 @@ bloomberg.com,ft.com,nytimes.com,theverge.com##+js(set-session-storage-item, /*/
 !!--AdShield--!!
 !
 ! Title: Scriptlets
-! Last modified: 2026-11-02T19:52:44.628Z
+! Last modified: 2026-11-02T22:44:25.991Z
 !
 ! Compiled by @adguard/hostlist-compiler v0.0.0
 !
@@ -281,90 +281,6 @@ bloomberg.com,ft.com,nytimes.com,theverge.com##+js(set-session-storage-item, /*/
 ! Source name: Krayzylist
 ! Source: https://raw.githubusercontent.com/pkrayzy/HostlistCompiler/master/SourceLists/scriptlets.txt
 !
-! START: Youtube whitescreen fix
-!
-! This one might be needed when the page is loaded for the first time
-! !+ PLATFORM(ext_ff)
-youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
-youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPlayerResponse.adSlots, undefined)
-youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPlayerResponse.playerAds, undefined)
-youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, playerResponse.adPlacements, undefined)
-!
-! Modify YT xhr responses
-! https://github.com/AdguardTeam/AdguardFilters/issues/167440
-! The rule trusted-replace-xhr-response with '\"adPlacements.*?([A-Z]"\}|"\}{2})\}\]\,' causes breakage on tv.youtube.com
-! The problem is that rules with '~' do not work correctly in Safari, the same might be for exceptions,
-! so requests from tv.youtube.com are excluded from this rule (the url part - '^(?!.*(\/\/tv\.youtube\.com)).*(player\?key=|watch\?[tv]=)') and instead simple workaround is used
-!
-! Multiple trusted-replace-xhr-response causes breakage on music.youtube.com when logged in
-! Exclude "get_drm_license" from "player" url because it breaks "Free with ads" movies
-youtube.com##+js(json-prune, playerResponse.adPlacements playerResponse.adSlots, playerResponse.streamingData.serverAbrStreamingUrl)
-youtube.com##+js(json-prune-xhr-response, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots, , propsToMatch, /playlist\?list=|\/player(?!.*(get_drm_license))|watch\?[tv]=|get_watch\?/)
-youtube.com##+js(json-prune-fetch-response, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots, , propsToMatch, /playlist\?list=|player\?|watch\?[tv]=/)
-m.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots)
-!+ NOT_PLATFORM(ext_ff)
-! YouTube prevents to modify some native methods, rule below should fix this
-! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1925290685
-||googlevideo.com/initplayback?source=youtube&*&c=TVHTML5&oad=$xhr,domain=youtube.com
-! To obtain native "fetch" and "Request" method YouTube creates an iframe with "sandbox" attribute in which extension cannot inject scriptlets, the rule below is a workaround to fix this
-! Fix SSAP ads
-www.youtube.com##+js(adjust-setTimeout, [native code], 17000, 0.001)
-! Fix ads with a specific Google account and for case when JSON.stringify is not writable
-! Some platforms cannot download the new JS rules, so we need to keep the previous rules for them and disable them for other platforms
-! TODO: Remove the exceptions and rules above once all platforms include the new rules
-! Updated rules
-! Fix fake buffering on the initial load
-! Fix ads on https://www.youtube.com/shorts/
-! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1991263854
-! TODO: remove the hints and JavaScript rule when Safari uses the latest scriptlets library (v2.2.7 or above)
-!+ NOT_PLATFORM(ext_safari)
-youtube.com##+js(json-prune, entries.[-].command.reelWatchEndpoint.adClientParams.isAd)
-! https://github.com/AdguardTeam/AdguardFilters/issues/203236#issuecomment-3914900001
-! https://github.com/AdguardTeam/AdguardFilters/issues/203236#issuecomment-4752451222
-! For ads on the homepage/feed
-www.youtube.com##+js(json-prune, contents.twoColumnBrowseResultsRenderer.tabs.[].tabRenderer.content.richGridRenderer.contents.[-].richItemRenderer.content.adSlotRenderer)
-www.youtube.com##+js(json-prune, ytInitialData.contents.twoColumnBrowseResultsRenderer.tabs.[].tabRenderer.content.richGridRenderer.contents.[-].richItemRenderer.content.adSlotRenderer)
-! https://github.com/AdguardTeam/AdguardFilters/issues/203236#issuecomment-3911413190
-www.youtube.com##+js(set-constant, ytcfg.data_.EXPERIMENT_FLAGS.web_streaming_watch, false)
-! Fixes muting videos when `web_streaming_watch` is set to `true`
-www.youtube.com##+js(json-prune, $.playerResponse[?(@.cards&&!@.playabilityStatus.miniplayer)].playerConfig.audioConfig.muteOnStart)
-! https://github.com/AdguardTeam/AdguardFilters/issues/203236#issuecomment-3902013966
-! https://github.com/AdguardTeam/AdguardFilters/issues/239516#issuecomment-5747844181
-! Viewer count and other elements are not updating automatically when rule below is applied
-! Fix fake buffering on mobile website
-m.youtube.com##+js(json-prune, playerResponse.messages.[].youThereRenderer)
-! This one may be unnecessary:
-||youtube.com/get_video_info?*=adunit&$important
-! https://github.com/AdguardTeam/AdguardFilters/issues/81610
-! test for iOS
-! https://github.com/AdguardTeam/AdguardFilters/issues/51453
-!+ NOT_OPTIMIZED
-||youtube.com/get_video_info?$~3p,badfilter
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/194856
-!
-! END: Youtube whitescreen fix
-! YouTube ads (for old and new ads)
-! youtube.com - white screen with skip button
-! I am not sure why we need this, commented out
-! !#if (!adguard_app_ios && !adguard_ext_android_cb)
-! @@||youtube.com/get_video_info
-! !#endif
-!
-! Rules that are restricted to one or more domains.
-! This section contain any type of rule grouped by domain.
-!
-! remove anti-adb
-! !#if (!adguard_ext_firefox)
-! !#endif
-! main youtube page - changing view for the first row of elements
-www.youtube.com###contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]) > #contents:first-child:style(max-width: unset !important;)
-www.youtube.com###contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]) ytd-rich-grid-media:style(max-width: unset !important;)
-www.youtube.com###contents ytd-rich-grid-row:has(> div[id="contents"] > ytd-rich-item-renderer[style="display: none !important;"]):style(--ytd-rich-grid-items-per-row: 1 !important;)
-! https://github.com/AdguardTeam/AdguardFilters/issues/96262
-developer.android.com,adssettings.google.com##sc-survey-survey-manager
-!
-! Allowlist
 ! START: Ad-Shield ad reinsertion
 ! SECTION: Ad-Shield
 !
