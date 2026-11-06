@@ -347,8 +347,8 @@
 				"ios"
 			],
 			"trustLevel": "full",
-			"version": "2.1.38.22",
-			"timeUpdated": "2026-11-05T13:16:19+0000",
+			"version": "2.1.38.23",
+			"timeUpdated": "2026-11-06T08:53:38+0000",
 			"languages": [],
 			"tags": [
 				45,
