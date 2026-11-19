@@ -331,6 +331,7 @@
 	],
 	"filters": [
 		{
+<<<<<<< HEAD
 			"filterId": 1,
 			"name": "AdGuard Russian filter",
 			"description": "Filter that enables ad blocking on websites in Russian language.",
@@ -1990,6 +1991,8 @@
 			"downloadUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/234_optimized.txt"
 		},
 		{
+=======
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 			"filterId": 235,
 			"name": "Persian Blocker",
 			"description": "Filter list for blocking ads and trackers on websites in Persian.",
@@ -2016,6 +2019,7 @@
 				70
 			],
 			"downloadUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/235_optimized.txt"
+<<<<<<< HEAD
 		},
 		{
 			"filterId": 236,
@@ -2488,6 +2492,8 @@
 				5
 			],
 			"downloadUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/260_optimized.txt"
+=======
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 		}
 	]
 }

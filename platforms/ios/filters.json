@@ -331,6 +331,7 @@
 	],
 	"filters": [
 		{
+<<<<<<< HEAD
 			"filterId": 1,
 			"name": "AdGuard Russian filter",
 			"description": "Filter that enables ad blocking on websites in Russian language.",
@@ -635,6 +636,8 @@
 			"downloadUrl": "https://filters.adtidy.org/ios/filters/14_optimized.txt"
 		},
 		{
+=======
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 			"filterId": 15,
 			"name": "AdGuard DNS filter",
 			"description": "Filter composed of several other filters (AdGuard Base filter, Social Media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.",
@@ -645,14 +648,19 @@
 			"displayNumber": 3,
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/ios/filters/15_optimized.txt",
-			"platformsExcluded": [
-				"ext_chromium_mv3",
-				"ext_edge_mv3",
-				"ext_opera_mv3"
+			"platformsIncluded": [
+				"ext_safari",
+				"ext_ublock",
+				"ios"
 			],
 			"trustLevel": "full",
+<<<<<<< HEAD
 			"version": "2.1.42.28",
 			"timeUpdated": "2026-11-19T01:08:58+0000",
+=======
+			"version": "2.1.38.46",
+			"timeUpdated": "2026-11-19T01:34:10+0000",
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 			"languages": [],
 			"tags": [
 				45,
@@ -671,6 +679,7 @@
 			"downloadUrl": "https://filters.adtidy.org/ios/filters/15_optimized.txt"
 		},
 		{
+<<<<<<< HEAD
 			"filterId": 16,
 			"name": "AdGuard French filter",
 			"description": "Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.",
@@ -1990,6 +1999,8 @@
 			"downloadUrl": "https://filters.adtidy.org/ios/filters/234_optimized.txt"
 		},
 		{
+=======
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 			"filterId": 235,
 			"name": "Persian Blocker",
 			"description": "Filter list for blocking ads and trackers on websites in Persian.",
@@ -2016,6 +2027,7 @@
 				70
 			],
 			"downloadUrl": "https://filters.adtidy.org/ios/filters/235_optimized.txt"
+<<<<<<< HEAD
 		},
 		{
 			"filterId": 236,
@@ -2460,6 +2472,8 @@
 				5
 			],
 			"downloadUrl": "https://filters.adtidy.org/ios/filters/260_optimized.txt"
+=======
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 		}
 	]
 }

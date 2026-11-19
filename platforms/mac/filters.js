@@ -38,6 +38,7 @@
 	],
 	"filters": [
 		{
+<<<<<<< HEAD
 			"filterId": 1,
 			"name": "AdGuard Russian filter",
 			"description": "Filter that enables ad blocking on websites in Russian language.",
@@ -1380,6 +1381,8 @@
 			"languages": []
 		},
 		{
+=======
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 			"filterId": 235,
 			"name": "Persian Blocker",
 			"description": "Filter list for blocking ads and trackers on websites in Persian.",
@@ -1395,6 +1398,7 @@
 				"tg",
 				"ps"
 			]
+<<<<<<< HEAD
 		},
 		{
 			"filterId": 236,
@@ -1768,6 +1772,8 @@
 			"version": "2.0.3.22",
 			"timeUpdated": "2026-11-19T00:48:49+0000",
 			"languages": []
+=======
+>>>>>>> 61599bf42658ee456fd439c6ed5280f377cc7671
 		}
 	]
 }
