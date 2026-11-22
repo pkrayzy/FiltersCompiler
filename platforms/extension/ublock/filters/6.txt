@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 3zDfLL6wn5qmj42Iuava7Q
-! Diff-Path: ../patches/6/6-s-1795036261-3600.patch
+! Checksum: 912LOZmcUS0Yg8IP3Z3Y9A
+! Diff-Path: ../patches/6/6-s-1795198394-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.54.84
-! TimeUpdated: 2026-11-18T21:07:53+00:00
+! Version: 2.0.54.89
+! TimeUpdated: 2026-11-20T18:10:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1601,6 +1601,15 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+windows-faq.de###block-42
+windows-faq.de###block-45
+windows-faq.de###block-44
+windows-faq.de##.et_pb_code
+windows-faq.de##.code-block
+||cdn.vorsprung-online.de/media/com_rstbox/*/engagebox.
+vorsprung-online.de##.card:has(> .card-body > .mod-vorsprung-rawcode)
+vorsprung-online.de##.card:has(> .card-body > .news-promo)
+vorsprung-online.de##.eb-inst
 wallstreet-online.de###sbHeadline
 wallstreet-online.de##.content > div:only-child > .sbpluswer:has(> a:only-child .sbpbutton)
 wallstreet-online.de##.sbpluswer:has(> div > button > a[href*="smartbroker"])
@@ -6133,6 +6142,8 @@ amateurbusters.com##.sb_area > .sb_area_headline:contains(Urlaub)
 ! https://github.com/AdguardTeam/AdguardForMac/issues/1752
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/247543
+@@||cdn.vorsprung-online.de/files/images/*/Werbung/logo.webp$domain=vorsprung-online.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/246474
 ! https://github.com/AdguardTeam/AdguardFilters/issues/246067
 finanztip.de#@#.affiliate:not(body)
@@ -7980,6 +7991,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||fuechse.berlin^*/modul-hauptsponsoren/
 ||fundresearch.de^*/partnercenter/
 ||funkbasis.de/_static/ban-
+||fupa.net/ads/
 ||fupa.net/static/js/fupa_ads-
 ||fussball-em-2020.com/wp-content/uploads/*/Sidebar_11prozent.jpg
 ||fussball.de^*/partner/
@@ -9056,6 +9068,8 @@ teltarif.de###LxLottoBox
 teltarif.de###LxShop
 teltarif.de###LxTN2ADV
 teltarif.de###LxTNADV
+chip.de###M1:has(.page--has-billboard):style(top:0;)
+chip.de###M1:has(.page--has-billboard) ~ .Footer:style(margin-top:0;)
 slashcam.de###MEDMRECHome
 slashcam.de###MEDMRECHome2Lazy
 slashcam.de###MEDMRECHome3Lazy
@@ -10025,6 +10039,7 @@ notebookinfo.de##.av-carousel
 notebookinfo.de##.av-fade-carousel
 hsc2000.de##.av-partner-fake-img
 likehifi.de##.avad1_widget
+chip.de##.avast-box
 hsc2000.de##.avia-slideshow-1
 nrwhits.de##.ax-medium-rectangle-n
 az.com.na##.az-adverts
@@ -11221,6 +11236,7 @@ foerde.news##[aria-label="Anzeige"]
 foerde.news##[aria-label="Werbung"]
 home24.de##[data-cnstrc-sl-campaign-owner]
 aerzteblatt.de##[data-cy="section-ad"]
+focus.de##[data-element-tracking-campaign-name="anzeige-top-empfehlungen-von-fachfirmen"]
 gmx.net##[data-sda-slot]
 fitbook.de,petbook.de##[data-view-track="stickybar.display.Skyscanner"]
 pornhutdeutsch.com##[href^="https://start.amateurcommunity.com/"]
@@ -11229,6 +11245,7 @@ pornhutdeutsch.com##[href^="https://www.zubivu.com/"]
 skodacommunity.de##[id^="fh-afp_"]
 ddl-warez.cc##[onclick^="window.location.href='/azn/"]
 raidrush.info##[style="min-height:90px;"]
+chip.de##a:has(> img:only-child:not([class]):not([srcset]):not([loading]))
 nebenwerte-magazin.com##a[aria-label="auvesta-gold-sparvertrag"]
 manomano.de##a[class*="sponsoredProductCard"]
 neuwagen.de##a[class="placement"]
@@ -11349,6 +11366,7 @@ aus-liebe.net,pcwelt.de,radsport-seite.de##a[href^="https://www.awin1.com/cread.
 chinahandys.net##a[href^="https://www.banggood.com/marketing-"]
 ero-world.info##a[href^="https://www.big7.com/"]
 falk.de##a[href^="https://www.booking.com/searchresults.html?aid="]
+chip.de##a[href^="https://www.chip.de/"]:not([class]):has(> img:only-child[alt=""])
 chip.de##a[href^="https://www.chip.de/deals/"]
 onvista.de##a[href^="https://www.comdirect.de/wtr/affiliate?"]
 stadt-bremerhaven.de##a[href^="https://www.communicationads.net/tc.php?"]
@@ -11482,14 +11500,13 @@ ingolstadt-today.de##div[data-ez-block-id="3324017"]
 alles-mahlsdorf.de##div[data-id="904ffeb"]
 mobile.de##div[data-label="Anzeige"]
 kleinanzeigen.de##div[data-liberty-ad-loaded="true"]
-kleinanzeigen.de##div[data-liberty-position-name*="srp"]
-kleinanzeigen.de##div[data-liberty-position-name="home-billboard"]
-kleinanzeigen.de##div[data-liberty-position-name="vip-belly"]
-kleinanzeigen.de##div[data-liberty-position-name="vip-billboard"]
+kleinanzeigen.de##div[data-liberty-position-name]
+kleinanzeigen.de##div[data-liberty-subarea]
 heise.de##div[data-module-name="AdModule"]
 otto.de##div[data-module-type="SHOPPROMO_LARGE"]
 chip.de##div[data-qa-download-page-buy-button]
 giga.de##div[data-sdg-ad]
+fupa.net##div[data-sentry-component="AdSlotContainer"]
 haus.de##div[data-sentry-component="ParagraphAdSlotVlyby"]
 haus.de##div[data-sentry-component="STFAdSlot"]
 gmx.net##div[data-service-slot^="box_"]
@@ -11806,7 +11823,6 @@ grazia-magazin.de##kas[kas-id="article_top"]
 vital.de##kas[type="placement"]
 finanzfluss.de##li[class="suggestion suggested"]
 restegourmet.de##li[data-content-type="ad"]
-kleinanzeigen.de##li[data-liberty-position-name^="home-teaser-ads-"]
 redcare-apotheke.ch,shop-apotheke.*##li[data-ssr-as*="/api.sae.systems/rma/api/"]
 finanzfluss.de##li[id*="-Insearchad-"]
 finanzfluss.de##li[id^="ff-Insearch-"]
@@ -11926,6 +11942,8 @@ ratehase.de##div[style="height: 90px; margin: 30px 0 20px 0; text-align: center;
 ratehase.de##div[style="height: 90px; margin: 30px 0 30px 0; text-align: center; width: 100%;"]
 ratehase.de##div[style="text-align:center; min-height: 260px; height: 260px; margin: 0 auto 0 auto;"]
 t-online.de##section[data-stage-layout^="custom_nativendo_"]
+chip.de###M1:has(.page--has-billboard):style(top:0;)
+chip.de###M1:has(.page--has-billboard) ~ .Footer:style(margin-top:0;)
 boersennews.de###bnTickerContainer:has(#bnTickerAdNotice)
 chip.de##.ChipArticleTeaser:has(.RUC-Badge--Secondary)
 baur.de##.MuiBox-root:has(a[href^="//b.fr3.eu.criteo.com/rm?"])
@@ -12077,6 +12095,7 @@ mediamarkt.*,saturn.de##[data-test="mms-product-card"]:has(div[data-test="mms-pl
 mobile.de##[data-testid="card-layout-wrapper"] article:has([data-testid="grid-sponsored-badge"])
 obi.*##[data-track-section^="home-topteaser"]:has(hobi-advertiser-tag)
 ariva.de##a.background-red-bright:has(span.anzeige)
+chip.de##a:has(> img:only-child:not([class]):not([srcset]):not([loading]))
 hd-source.to##a[href*="/out/af.php"]:has(> img.hosterpic):style(pointer-events:none;)
 t3n.de##article.c-pin:has(div.c-badge + span.u-text-extrasmall)
 hamburg-magazin.de,kiel-magazin.de,luebeck-magazin.de##article.card:has(.with-ad-marker)
@@ -12086,6 +12105,7 @@ mopo.de##article.k5a-slot:has(.k5a-sticker > .k5a-label)
 redcare-apotheke.ch,shop-apotheke.*##article.o-CompactProductListItem:has(a[href^="https://retail-api.sa-tech.de/api/"])
 finanzen.net##article.page-content__item:has(img[alt="UBS"])
 imtest.de##article.type-post[data-post-id]:has(.sponsor-label)
+chip.de##article:has(.RUC-Badge--Secondary, .RUC-Grid-Teaser-Block-Title-Ad)
 meetingpoint-brandenburg.de,meetingpoint-dahme-spreewald.de,meetingpoint-jl.de,meetingpoint-magdeburg.de,meetingpoint-potsdam.de,meetingpoint-stadtnachrichten.de##article:has(.tile-link[rel*="sponsored"])
 android-hilfe.de##article:has(a[href^="/fh-ma/click?"])
 mobile.de##article[class^="contentBox-module__"]:has(span[data-testid="sponsored-badge"])
@@ -12106,6 +12126,7 @@ onvista.de##div.shrink-0:has(> div.bg-neutral-2 > div.bg-accent-2)
 nydus.org##div.ui-tabs:has(#nydus_org_300x600_desktop_1)
 nydus.org##div:has(> #nydus_org_970x300_billboard_responsive)
 bauernzeitung.ch##div:has(> .advert)
+der-farang.com##div:has(> a[rel~="nofollow"][target="_blank"]:not([href*="der-farang.com"]) img)
 onvista.de##div:has(> div.bg-neutral-3 a[href="/ratgeber/broker-vergleich"] > div[title$=" Prozent"])
 froheweihnachten.info,weihnachten.me,weihnachts-bilder.org,weihnachts-filme.com##div:has(> img[referrerpolicy="unsafe-url"])
 mobile.de##div[class*="KnOLI W0RYj"]:has(#SRP_BILLBOARD-container)

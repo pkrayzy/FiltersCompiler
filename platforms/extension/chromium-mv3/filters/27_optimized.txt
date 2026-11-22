@@ -1,11 +1,13 @@
-! Checksum: fdv1YzuUisutmzSgRQE+Zw
+! Checksum: JIWyRKGLVeyB12KYDxGp2Q
 ! Title: AdGuard Polish filter (Optimized)
 ! Description: Official Polish filters for AdBlock, uBlock Origin & AdGuard + AdGuard Polish filter. Filter list that specifically removes ads on websites in the Polish language.
-! Version: 2.0.0.99
-! TimeUpdated: 2026-11-18T16:09:29+00:00
+! Version: 2.0.1.2
+! TimeUpdated: 2026-11-22T12:10:04+00:00
 ! Expires: 10 days (update frequency)
 ||lekipoludzku.pl^
 ||testowa-strona-dozynkowa.pl^
+radio.pl#%#//scriptlet('prevent-navigation', '/adblock')
+radio.pl#%#(()=>{const t=Function.prototype.toString,o={construct:(o,c,n)=>{try{const o=c[0];"function"==typeof o&&t.call(o).includes("adBlockerStatus")&&(c[0]=t=>t(!1))}catch(t){}return Reflect.construct(o,c,n)}};window.Promise=new Proxy(window.Promise,o)})();
 @@||ewybory.eu^$generichide
 ewybory.eu#%#//scriptlet('prevent-setTimeout', 'blocked')
 ewybory.eu#%#//scriptlet('abort-on-stack-trace', 'Array.prototype.forEach', 'applyAdClasses')
@@ -3426,6 +3428,9 @@ shinden.pl##.sh-side-ad
 shinden.pl###spolSticky
 shinden.pl##.spolecznoscinet
 shinden.pl##iframe[src^="https://reklama.shinden.eu/adpeeps.php?"]
+shinden.pl##.controller-main > .l-container-secondary[id]:has(> .col-xs-12 > .spolecznoscinet)
+shinden.pl###rightSection > .sh-side-box:has(> section[class] > div[style] > .spolecznoscinet)
+shinden.pl###rightSection > .sh-side-sticky > div[class]:not([class^="sh-"]):has(> a[rel*="sponsored"] > img)
 shinden.pl#$?#.ads { remove: true; }
 shinden.pl#%#//scriptlet('abort-current-inline-script', 'atob', 'getElementsByTagName')
 shinden.pl#%#//scriptlet("abort-on-property-read", "popjs.init")
@@ -8862,6 +8867,8 @@ wykop.pl##.m-hide.m-reset-width.m-reset-margin.m-reset-float.grid-right > div.r-
 wykop.pl##.ski-jumping-slider
 wykop.pl##section.lisek-app
 wykop.pl##footer ~ *
+wykop.pl##aside > aside > article
+wykop.pl##section.sidebar aside
 autocentrum.pl,demotywatory.pl,dziennik.pl,facetemjestem.pl,gala.pl,garnek.pl,jegostrona.pl,joemonster.org,kobieta.pl,komixxy.pl,transfery.info,v10.pl,prawdaobiektywna.pl##div > iframe[style^="border:"]:not([src])
 filmyfilmy.pl###play
 ||aranzujemy.co.pl^

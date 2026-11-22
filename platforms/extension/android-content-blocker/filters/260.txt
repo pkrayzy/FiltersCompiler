@@ -1,9 +1,9 @@
-! Checksum: DgDGedVN4I67aUXqezQjHg
-! Diff-Path: ../patches/260/260-s-1795049417-14400.patch
+! Checksum: hr7sUKPKTHCTJc1XJCU29w
+! Diff-Path: ../patches/260/260-s-1795322278-14400.patch
 ! Title: Stevo's AI Blocklist
 ! Description: A filter list that hides website features which use generative AI and AI-generated content.
-! Version: 2.0.3.22
-! TimeUpdated: 2026-11-19T00:48:49+00:00
+! Version: 2.0.3.33
+! TimeUpdated: 2026-11-22T04:36:03+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: Stevo's AI Blocklist
@@ -104,6 +104,8 @@ alphacoders.com##.item:has(.thumb-tag-masonry:is([href="https://alphacoders.com/
 ! Chatbot network requests
 ||www.amazon.*/rufus/$xmlhttprequest,domain=www.amazon.*
 ! AI questions in autocomplete search suggestions
+! * Backup CSS filter
+www.amazon.*##[id^="sac-suggestion-row-"]:has(.s-suggestion-rufus-autocomplete-bh-desktop-icon-container)
 ! Search placeholder messages (No longer used?)
 ! Navbar - "Rufus" button
 www.amazon.*###nav-rufus-disco
@@ -166,6 +168,7 @@ health.amazon.com##.flex-container.margin-bottom-small > .flex-justify-content-f
 ! "Get started with Health AI" (Logged in)
 health.amazon.com##[data-hcr-token-id="{{health.ai.widget.upsell.banner}}"]
 ! === American Banker ===
+! Re-activate simplified search
 ! -- https://www.americanbanker.com/search?q=test
 ! AI Answer
 www.americanbanker.com##.miso-hybrid-search-combo__disclaimer
@@ -347,6 +350,7 @@ www.bing.com###codex
 www.bing.com##.gbfo_c_bsic_variant:has(> [href^="https://www.bing.com/images/create"])
 ! Header - ... → Microsoft 365 → M365 Copilot
 www.bing.com###m365copilot_overflow
+! Search bar - Plus button + for AI tools
 ! "M365" button to the right of search bar
 www.bing.com##.cdxCopilotIconBg
 ! "Image creator" and "Video creator" buttons below search bar
@@ -355,6 +359,7 @@ www.bing.com###aitools
 www.bing.com###sa_ai_block
 ! Autocomplete suggestion for "Image Creator"
 ! -- https://www.bing.com/search?q=test (generic search page)
+! Search bar - Plus button for AI tools
 ! Navbar tabs for "Search" and "Copilot"
 www.bing.com###b-scopeListItem-copilotsearch
 www.bing.com###b-scopeListItem-conv
@@ -519,7 +524,7 @@ builtin.com,builtinaustin.com,builtinbelfast.uk,builtinbengaluru.in,builtinbosto
 ! === Bunnings Warehouse ===
 ! -- https://www.bunnings.com.au/
 ! Ask Buddy button
-www.bunnings.com.au##button:has(.bg-ai-sparkle-gradient)
+www.bunnings.co.nz,www.bunnings.com.au##button:has(.bg-ai-sparkle-gradient)
 ! === Business Insider ===
 ! -- https://www.businessinsider.com/
 ! "Your briefing" content & summaries on search result pages
@@ -555,48 +560,45 @@ www.canva.com##[role="list"] > li:has(> [href="https://www.canva.com/safe-ai-can
 www.canva.com##[role="list"] > li:has(> [href="https://www.canva.com/ai-logo-generator/"])
 www.canva.com##[role="list"] > li:has(> [href="https://www.canva.com/business-name-generator/"])
 ! -- https://www.canva.com/ (logged in)
-! Floating AI chat button
-www.canva.com##button[aria-label="Help Assistant"]
-! Quick select - Canva code
-www.canva.com##.zAWjSA.GLyNIw:has([href^="/design/editor/shell?create&type=TAG5rX9VMoM&category=tAG5rahqeWE"])
+! Floating AI help button
+www.canva.com##button[aria-label="Get help"]
 ! Sidebar - Canva AI
-www.canva.com##div:has(> #assistant)
-! Sidebar - More > Dream Lab
-www.canva.com##._B7XGQ [href="/dream-lab"]
-! -  Create menu
-! Create > For You > Quick Actions >
-! * Image to Layers
+www.canva.com##.xdz27ya:has(#assistant)
+! Sidebar > Dream Lab
+! * Also covers "More" overflow menu
+www.canva.com##nav .x1ghz6dp.x1717udv.xng3xce.xc342km.xe8uvvx.x9dqhi0.x9f619.x1a2a7pz.xdz27ya:has(#dream-lab)
+www.canva.com##[role="navigation"] > div:has(> [href="/dream-lab"])
+www.canva.com##[role="navigation"] > div:has(> [href="/dream-lab"]) + hr
+! - "Create" page
+! Create > For you > Quick actions
+! * Magic Layers, Canva Code, & Magic Write
 www.canva.com##.zAWjSA.GLyNIw:has([src="https://content-management-files.canva.com/assets/en/8da12929-77b6-4790-9824-38061f1b67e7"])
-! * Canva Code
-www.canva.com##.zAWjSA.GLyNIw:has([href="/ai/code?forceOpen"])
-! * Magic Write
+www.canva.com##.zAWjSA.GLyNIw:has([href^="/ai/code"])
 www.canva.com##.zAWjSA.GLyNIw:has([href^="/design/editor/shell?create&type=TAFJi5FXMSs&category=tAFK2fpTBVQ"])
-! Create > Photo Editor
-! * Magic Eraser
-www.canva.com##.zAWjSA.GLyNIw:has([src="https://static.canva.com/web/images/4798106e6919ec3efa713e286bc110d8.jpg"])
-! * Background Generator
+! Create > Photo Editor > Quick actions
+! * Grab Text, Background Generator
+www.canva.com##.zAWjSA.GLyNIw:has([src="https://static.canva.com/web/images/9a4d533e514bcd5c64c659414e5bf38f.jpg"])
 www.canva.com##.zAWjSA.GLyNIw:has([src="https://static.canva.com/web/images/58eb8e48f401eb5dfa2cb723df801370.jpg"])
-! Create > Code
 ! -- https://www.canva.com/design?create&type=TAGyBJVQJvY (Canva Docs)
-! Navbar - Magic Switch
-! Sidebar - Canva AI
-www.canva.com##.HqCA9g:has([aria-label="Canva AI"])
-! Sidebar - Templates - Generate button
-www.canva.com##.x9f619.xeuugli.xnvo3vl.x1lca0qi.x10zg81t.xw36f2b.xn95wi4.x1mz2wy7.xxtcm4k.x1qyk479.x5lhr3w:has([aria-label="Generation options"])
-! Sidebar - Apps - AI generation tab
-www.canva.com##div:has(> [id$="_-tab-ai-generation"])
-! TODO: AI section in app list
+! Header - Magic Switch (Translate & Transform)
+www.canva.com##[role="list"] button:has([d^="M23.404 4.16c-2.034-.406-2.911-1.386-3.318-3.369a.25.25"])
+www.canva.com##[role="list"] button:has([d^="M10 9.9c-.2-.4-.5-.8-.9-1.2-.9-.8-2.3-1.5-5.1-1.5a.8.8"])
 ! Toolbar - Ask Canva
 www.canva.com##.nbY0vg > div:has([aria-label="Ask Canva"])
 www.canva.com##.nbY0vg > div:has([aria-label="Ask Canva"]) + .bm8JbQ
-! Replace "Start typing" text on blank document
-! Plus icon for quick actions menu
-www.canva.com##.lQmhtA:has([aria-label="Quick actions"])
-! TODO: Typing / on blank line opens quick actions
+! Sidebar - Canva AI
+www.canva.com##.HqCA9g:has([aria-label="Canva AI"])
+! Sidebar - Apps - AI Generation category
+www.canva.com##div:has(> [id$="_-tab-ai-generation"])
+! Sidebar - Apps - Collections - "Your go-to apps, in Canva AI"
+! TODO: AI section in app list
+! Replace "Start typing or ask Canva" text on blank document
+! * TODO: Filter has a delay
+! Quick Actions > Magic Write
+! * TODO: Still selectable via keyboard arrows
+www.canva.com##[role="listbox"] [role="option"]:has([d^="M11.444 5.489c-2.033-.407-2.91-1.387-3.317-3.37a.25.25"])
 ! -- https://www.canva.com/design?create&type=TAGcbLa0hys (Website Builder)
 ! Sidebar > Text > Magic Write
-! -- https://www.canva.com/templates
-! TODO: AI video effects section
 ! === CBC News ===
 ! -- https://www.cbc.ca/news/politics/canada-united-states-trade-negotiations-tariffs-9.7309218
 ! Listen to this article
@@ -628,6 +630,9 @@ clarencemedicalrhyl.wales###druidWebchatRoot_v2
 platform.claude.com###aiSearchResults__Item-__ask_ai__
 ! Search bar - Toggle AI mode
 platform.claude.com##.ikp-ai-search-input-group > [data-part="view_toggle"]
+! -- https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/handle-streaming-refusals
+! Markdown dropdown menu - Chat in Claude.ai
+platform.claude.com##[role="menu"][data-side="bottom"] [role="menuitem"]:has([data-cds="Spark"])
 ! === CodeAI ===
 ! -- https://code.org/en-US
 ! Navbar - Hour of AI
@@ -864,6 +869,12 @@ www.deviantart.com##section.ail3hi:has([href="https://www.deviantart.com/dreamup
 ! -- https://www.diffchecker.com/ne4H8RD8/
 ! Explain button
 www.diffchecker.com##button.bg-surface-purple:has([clip-path="url(#sparkle_svg__a)"])
+! === Dinosaur Pictures ===
+! -- https://dinosaurpictures.org/Niobrarasaurus-pictures
+! Enable setting to hide AI-generated images (https://dinosaurpictures.org/how-we-use-ai)
+! * Backup CSS for untrusted AdGuard filters
+dinosaurpictures.org###images > .ai-content
+! * Switch "other" dinosaurs to non-ai Version
 ! === DiskGenius ===
 ! Floating AI Assistant
 ||api.livechatinc.com^$script,domain=www.diskgenius.com
@@ -1285,8 +1296,10 @@ github.com##[data-testid="copilot-free-user-checklist"]
 ! * Via https://www.reddit.com/r/uBlockOrigin/comments/1vkxr0j/comment/p2xake5/
 github.com##[data-component="ActionList.Item"]:has(> [data-tab-item="agents"])
 ! "Ask Copilot about this repository" when repository has no README file (ex: https://github.com/easylist/easylistchina)
-! Might be limited to enterprise users with Copilot
-github.com##[class^="OverviewRepoFiles-module_"]:has([data-component="Blankslate"] .octicon-copilot)
+! * Enterprise account
+github.com##[class^="OverviewRepoFiles-module_"][class$="_Box_1"]:has([data-component="Blankslate"] .octicon-copilot)
+! * Non-enterprise account
+github.com##[class^="Box_1__"]:has([data-component="Blankslate"] .octicon-copilot)
 ! -- https://github.com/Stevoisiak/Stevos-AI-Blocklist/blob/main/GenAI-Blocklist.txt (File view)
 ! File header - "Ask Copilot about this file" button
 github.com###blob-view-header-copilot-icon
@@ -1809,14 +1822,16 @@ one.google.com##.aTVMOe.RLyrIe.KGSMie
 !   * Pregenerated topic infobox (mobile only): https://www.google.com/search?q=ghola+dune
 !   * Mixture of AI and non-ai infoboxes: https://www.google.com/search?q=Super+Mario+64+release+date
 ! -- https://www.google.com/ (Homepage)
+! Header - Top left "AI mode history" button
+! * Homepage
+www.google.*##.HoXidc
+! * Search page
+www.google.*##.ECfIkf
 ! Remove AI hyperlinks from Google Doodle Logos
 ! AdGuard compatible
-! Search bar - Plus icon for "add files and tools"
-! * TODO: Doesn't work on https://www.google.co.jp/index.html
-! * TODO: Replace icon with magnifying glass
 ! Search bar - "AI Mode" button
 www.google.*##.plR5qb
-! Search bar - Deactivate AI tools plus (+) icon and revert to magnifying glass
+! Search bar - Revert AI tools plus icon (+) to magnifying glass
 ! * Desktop
 ! * Mobile
 ! Search bar - AI button (sparkling magnifying glass icon, mobile only)
@@ -1849,7 +1864,7 @@ www.google.*##[data-attnms]
 www.google.*##.Kevs9.SLPe5b:has([data-attnms])
 www.google.*##.YNk70c.EjQTId:has(+ div [data-attnms]) #oFNiHe:empty
 ! * Blank space when in middle of search results (Ex: https://www.google.com/search?q=stevo%27s+genai+blocklist)
-www.google.*##.ULSxyf:has(> .MjjYud > .Wm5I1e.SePcAf[data-tma="80"] [data-attnms])
+www.google.*##.ULSxyf:has(> .MjjYud > .SePcAf[data-tma="80"] [data-attnms])
 ! * Fix conflict with laylavish's AI blocklist
 !   See https://github.com/Stevoisiak/Stevos-AI-Blocklist/issues/52
 ! Web Guide
@@ -1964,6 +1979,10 @@ workspace.google.com##.ORSkHc:has([data-appset-type="49"])
 ||ai-search-dot-gsuite-staging.appspot.com/api/answer$xmlhttprequest,domain=workspace.google.com
 ! AI search summary
 workspace.google.com##.summary
+! === Grand Forks Herald ===
+! -- https://www.grandforksherald.com/search?q=test
+! Ask Herald chatbot
+||assets.dappier.com/widget/dappier-loader.min.js$script,domain=www.grandforksherald.com
 ! === Graphed ===
 ! -- https://www.graphed.com/blog/can-you-delete-data-from-google-analytics
 ! Mid-article AI Agent promos
@@ -2092,6 +2111,11 @@ imgflip.com##.ai
 ! "AI" button below text fields
 imgflip.com##.mm-toggle-ai
 ! FAQ section about AI
+! === India Today ===
+! -- https://www.indiatoday.in/sports/cricket/story/india-blind-cricket-team-pakistan-asia-cup-controversy-explained-3043257-2026-11-20
+! AIssist logo & Summarise This
+www.indiatoday.in##.ai_assist_logo
+www.indiatoday.in###summaryButton
 ! === Indian Startup News ===
 ! -- https://indianstartupnews.com/news/deepika-padukone-backed-healthy-snacks-brand-epigamia-appoints-ritesh-gauba-as-its-new-ceo-11800984
 ! Floating "Simplify" button
@@ -2779,6 +2803,10 @@ search.naver.com##[data-meta-ssuid-extra="fender_renderer-ai_briefing"]
 ||aib-api.naver.com/aibrender.naver?where=nexearch&query=$xmlhttprequest,domain=search.naver.com
 ! AI tab
 search.naver.com##[role="tab"][href^="?ssc=tab.ait.all"]
+! == ND Mais (Portuguese)
+! -- https://ndmais.com.br/economia/governo-aumenta-valor-da-hora-extra-fim-escala-6x1-nova-regra-data/
+! Summarize article
+ndmais.com.br##.nd-ro__resumo
 ! === NDTV ===
 ! -- https://www.ndtv.com/feature/amazon-announces-90-day-code-safety-reset-amid-ai-related-outages-know-details-11203576
 ! "Quick Read" AI summary
@@ -2789,8 +2817,16 @@ www.ndtv.com##.ASum_wr.ASum_Mnon
 www.newegg.com##.header2021-celeste
 ! Search bar (focused) - Ask Celeste
 www.newegg.com##.header2021-search-sec-ask
+! Search bar - Remove sparkle from magnifying glass search button
+! * uBO doesn't allow backslash \ in CSS styles
+!   https://github.com/uBlockOrigin/uBlock-issues/issues/668#issuecomment-511117701
 ! Floating AI Assistant icon
 www.newegg.com##.floating-robot
+! -- https://www.newegg.com/ (mobile)
+! Navbar - AI Mode
+www.newegg.com##.ai-mode-links
+! Floating AI button
+www.newegg.com##.ai-button
 ! -- https://www.newegg.com/p/pl?d=what+is+the+best+cpu
 ! Ask Celeste sidebar/chat widget
 ||www.newegg.com/ai/pin$subdocument,domain=www.newegg.com
@@ -2802,6 +2838,11 @@ www.newegg.com##.plp-side-ask
 www.newegg.com##.ask-assistant
 ! "Any Questions? Ask Celeste"
 www.newegg.com##.assistant_box
+! -- https://www.newegg.com/p/N82E16823167075 (mobile)
+! Ask Celeste question suggestions
+www.newegg.com##.ask-ai-assistant
+! Sticky footer - AI Assistant icon
+www.newegg.com##.ai-btn
 ! === News18 ===
 ! Search - AI overview
 www.news18.com##.aiovwrp
@@ -2892,7 +2933,7 @@ www.opera.com##li:has(> .hf__link[href="/ai/articles"])
 ! === Outlook ===
 ! -- https://outlook.office.com/mail/
 ! Copilot icon in top right
-outlook.office.com##[data-app-section="CopilotDabRibbon"]
+outlook.live.com,outlook.office.com##[data-app-section="CopilotDabRibbon"]
 ! Copilot icon in left sidebar
 outlook.office.com##.___77lcry0.f10pi13n[aria-label="Copilot"]
 ! Summarize button while reading a message
@@ -3043,6 +3084,9 @@ hintaopas.fi,prisjagt.dk,prisjakt.no,prisjakt.nu##[data-test="StickyAssistantBut
 ! -- https://www.prisjakt.nu/
 ! Search mode switcher
 hintaopas.fi,prisjagt.dk,prisjakt.no,prisjakt.nu##[data-sentry-component="HeroModeTabs"]:has(button[aria-pressed="false"] [data-sentry-component="AssistantIcon"])
+! Promo card for AI Assistant
+hintaopas.fi##[data-sentry-component="CampaignCard"]:has(> [href="https://hintaopas.fi/teema/shoppingavustaja"])
+prisjagt.dk,prisjakt.nu,prisjakt.no##[data-sentry-component="CampaignCard"]:has(> [href$="/tema/shoppingassistent"])
 ! === Prime Video ===
 ! -- https://www.primevideo.com/search?ie=UTF8&ref_=atv_nb_sug&phrase=Avatar
 ! AI beta recommendations
@@ -3070,6 +3114,9 @@ account.proton.me##.lumo-troubleshoot-launcher
 ! -- https://account.proton.me/apps
 ! Lumo app
 account.proton.me##.explore-apps-list-item:has(> [data-testid="explore-lumo"])
+! === Public Domain Files ===
+! Navbar - AI Generated images
+www.publicdomainfiles.com##.mainmenu li:has(> [href="https://www.halfphoto.com"])
 ! === Puck ===
 ! -- https://puck.news/hollywood/2026/11/the-wachowskis-are-reclaiming-the-matrix
 ! AI powered article narration
@@ -3239,6 +3286,9 @@ replug.io##.mantine-1fndqk8
 ! -- https://risingwave.com/blog/essential-guide-to-find-sql-server-hostname-and-port/
 ! Header promo banner
 risingwave.com##div.bg-\[\#3a88fe\]:has(+ header):has(a[href*="interactive-ai"])
+! === Rivulis (Hebrew) ===
+! Chatbot
+||sitegpt.ai/widget/$script,domain=he.rivulis.com
 ! === Rock 30 Games ===
 ! Floating AI assistant button
 rock30games.com##clever-search-toggler
@@ -3345,6 +3395,9 @@ admin.shopify.com##[class^="_ControlsContainer_"] > [class*="_SectionBreak_"]:ha
 ! -- https://admin.shopify.com/store/[id]/settings/general/store-contact-details
 ! Store name - Get name ideas from Sidekick
 admin.shopify.com##[data-component-name="store-name-suggestion-footer"]
+! -- https://community.shopify.com/t/new-in-shipping-batching-scan-to-verify-and-more/690349
+! AI topic summary
+community.shopify.com##.ai-topic-summary
 ! -- https://shopify.dev/docs
 ! Header - Ask Assistant
 ! TODO: Remove AI hotkey for `/`
@@ -3656,9 +3709,11 @@ tms-outsource.com##.menu-item:has(> [href="https://tms-outsource.com/blog/catego
 ! -- https://www.todoist.com/
 ! Ramble promo banner
 www.todoist.com##message-banner[data-banner-name="ramble-1vv4lt6"]
-! -- https://app.todoist.com/app/upcoming
-! Ramble button
+! -- https://app.todoist.com/app
+! Sidebar - Ramble button
 app.todoist.com##button[aria-label="Dictate tasks with Ramble"]
+! Sidebar - Todoist Automations
+app.todoist.com###apps-automations
 ! === TrialX ===
 ! -- https://www.trialx.com/clinical-trials/listings/273100/early-detection-of-endometrialovarian/
 ! AI simplified article
@@ -3700,6 +3755,10 @@ turbotax.intuit.com###aic-entry
 tutorbin.com##[class^="dropdown_li__"]:has(> [class^="dropdown_ai_tool___"])
 ! AI Study Tools section
 tutorbin.com##section:has([href="/ai-homework-helper"] > [class^="Aisection_tryAiText__"])
+! === TweakTown ===
+! -- https://www.tweaktown.com/news/114756/intel-claims-new-lpddr5x-d270-gpu-outperforms-rtx-pro-6000-with-gddr7-at-half-the-power-consumption/index.html
+! Story Q&A
+www.tweaktown.com##.tt-faq-wrapper
 ! === Twilio ===
 ! -- https://www.twilio.com/docs/sendgrid/api-reference
 ! Copy as markdown > Open in assistant
@@ -3949,6 +4008,9 @@ www.wigs.com##.oke-w-reviewsSummaryModule
 ! -- https://onlinelibrary.wiley.com/doi/10.1002/agr.70142
 ! Floating AI Companion
 ||onlinelibrary.wiley.com/products/acropolis/pericles/releasedAssets/js/ContentAssistant.js$script,domain=onlinelibrary.wiley.com
+! -- https://onlinelibrary.wiley.com/doi/epdf/10.1002/zoo.70100
+! Floating AI Companion
+||onlinelibrary.wiley.com/products/pericles/releasedAssets/js/ContentAssistant-$script,domain=onlinelibrary.wiley.com
 ! === Wix ===
 ! -- https://manage.wix.com/ai-assistant?flow=main-partner-studio
 ! "Chat with AI" button.

@@ -1,5 +1,5 @@
-! Checksum: 0jWyG9P4FHEvcNhsxJOhCg
-! Diff-Path: ../patches/201_optimized/201_optimized-s-1794976678-14400.patch
+! Checksum: Hjbqgjl12rmt0JwyftHa8w
+! Diff-Path: ../patches/201_optimized/201_optimized-s-1795322277-14400.patch
 ! Title: Web Annoyances Ultralist (Optimized)
 ! Description: Blocks annoying web elements and reclaims lost screen real estate.
 ! Version: 2.0.0.48
@@ -34,6 +34,7 @@ latimes.com,pacificsandiego.com,sandiegouniontribune.com##.google-dfp-ad-wrapper
 msnbc.com,nbcnews.com,today.com##.db-m.dn[style*="height"], [class*="bannerAd"]
 newindianexpress.com##.scc
 news.sky.com###leaderboard
+newyorker.com###AMS_NYR_CONTENTPAGE_TEXTOFFER, #digital-editions, #position2_yrail, #rolloverAd, .ArticleFooter__adEndArticle___2_iy_, .DailyCartoonSection__adContainer___2M0dz, .SpotlightSection__adContainer___21KsF, .cm-footer__wrapper, .cne-interlude-container, .cns-ads-container, .ticker-view, .ticker-wrapper.ticker-row, [class^="Ad__"], [class*="ConsumerMarketingUnitThemedWrapper-"], [class*="consumer-marketing-unit--"]
 nypost.com##.ad-slot--billboard, .ad-slot, .is-sticky.d-block-lg.d-none.billboard-overlay, div[id^="outbrain_widget_"]
 nytimes.com###HPBottom2, #HPHalf, #NYT_MAIN_CONTENT_2_REGION, #Top, #TopAd, #acm-wrapper, #bottom-wrapper, #digital_hoverCraft, #dock, #dual_hoverCraft, #duallink, #gatewayUnit, #recipeDetailsPromoSlot, #story > #NYT_ABOVE_MAIN_CONTENT_REGION, .BlockAdvert-adContainer--1aZlM, .InlineMessage-inline--2ysnq, .ResponsiveAd-topAd--3WpE4, .ad, .css-1q6mid5[href*="/subscription"], .css-ein641, .css-gx5sib, .g-ad-wrapper, .gift-article-button, .max300.min300.iframe-holder, .nytcp-opt, .opinion-c-col-bottom-region, .ribbon-ad-container, .subColumn-2.noBackground.mobilePromo.nocontent, .text-ad, BlockAdvert-ad--2QvJV, [id^="dfp-ad-"], [id^="story-ad-"], div[data-testid^="inline-message"]
 player.fm##.top-promo
@@ -47,6 +48,7 @@ tedium.co##.md-adbox
 thelibertydaily.com##.paid-subscriber
 usatoday.com###partner-poster-0, #read-this-next, .partner-placement, .sponsor, [aria-label="advertisement"]
 vanityfair.com###AMS_VYF_ARTICLE_INTEGRATED_END, #AMS_VYF_ARTICLE_INTEGRATED_INSTREAM, #AMS_VYF_GLOBAL_FOOTER, #AMS_VYF_GLOBAL_HEADER, #AMS_VYF_HOLLYWOOD_FOOTER, #AMS_VYF_INLINE_PROMO, #AMS_VYF_INLINE_TEXT, .ad--in-content, .ad--out-of-page, .component-riser, .component-sponsored-links, .consumer-marketing-unit, .consumer-marketing-unit--cm-footer, .consumer-marketing-unit--display-hero, .paywall-bar-failsafe, .paywall-growler, [class*="StickyHeroAdWrapper-"]
+variety.com###leaderboard, #leaderboard-no-padding, .ad-below-tags, .google-publisher.adma, .l-header__leaderboard
 w3schools.com###skyscraper
 wikipedia.org##.cn-WikiLovesPride2019, .cn-fundraising, .frb
 wired.com###paywall-growler, #wiredwidgetsecommerce-2, #wiredwidgetsecommerce-3, #wiredwidgetsmarketing-3, .ad-stickyhero, .advertisement__leaderboard, .affiliate-links-component, .consumer-marketing-unit--article-mid-content, .consumer-marketing-unit--cm-footer, .consumer-marketing-unit--display-rail, .insider, .js-post-listing-rad, .js-prefooter-rad, .magazine, .paywall-container-component, .rad
@@ -87,6 +89,7 @@ yahoo.com###YDC-MainCanvasLeadAd-Composite, #danafarberpromo, #defaultdestLREC, 
 ###cookieinfo
 ###cookielaw
 ###cookieMessage
+###cookieNote
 ###cookieNotice
 ###cookienotice
 ###cookienotif
@@ -113,8 +116,6 @@ yahoo.com###YDC-MainCanvasLeadAd-Composite, #danafarberpromo, #defaultdestLREC, 
 ##.cc_banner
 ##.cc_banner-wrapper
 ##.cookie-alert
-##.cookie-banner-wrapper
-##.cookie-bg
 ##.cookie-container
 ##.cookie-law
 ##.cookie-notice-container
@@ -146,7 +147,6 @@ ebay.*,yahoodatabreachsettlement.com###gdpr-banner
 espn.*##.active.js-feed-item-mask, .active.news-feed-item > .story_progress > .bar, .alert--fixed.alert--center.alert, .bg-opaque.mod-outbrain.mod-no-border, .cookie-overlay, .js-bloomed.favorites-mgmt.lightbox, .promo-banner-container
 glosbe.com#@#.cookie-consent
 gmx.com,zdf.de#@##onetrust-consent-sdk
-gulfnews.com##.gn-cookies-warning
 kohler.com,redhat.com###consent_blackbar
 mercola.com##.gdpr-wrap
 microcenter.com###PnlPrivacyAlert
@@ -201,11 +201,11 @@ deadbydaylight.com###dbd-logoPart2
 dell.com###btn-virtual-assistant, .uc-floating-button
 dell.com##.btnbacktotop
 dictionary.cambridge.org##.ctop
+disboard.org##.navbar-search
 discord.me##.header-fix
 docs.google.com###docs-homescreen-add
 dominos.com##.pd-fixed
 duckduckgo.com,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion###react-layout [style*="height: 49px; width: 100%"]
-dxomark.com,ggwash.org##.nav-logo
 ebay.*,ebay.co.*,ebay.com.*##.gh-btt-button
 ebay.*,ebay.co.*,ebay.com.*##.gh-header-placeholder
 ebay.*,ebay.co.*,ebay.com.*##.ifh-skin-var-overrides
@@ -233,10 +233,9 @@ ign.com##.sidebar-back-to-top
 imdb.com##.ipc-accordion__item__header-shadow
 independent.co.uk###vf-tray-trigger
 insideevs.com,motor1.com,motorsport.com,rideapart.com###layout_header_spacer
-justwatch.com##.header-background
+irs.gov###block-pup-sticky-nav, #stickyNavLogo
 knowyourmeme.com##.search-button.stuck-only
 ko-fi.com##.kfds-show-hide-btn
-lawandcrime.com,mediaite.com##.c-article-nav-arrows
 lefigaro.fr##.fh-placeholder, .fig-progress-bar
 live.vkvideo.ru##.Notifications_root_nnYzG
 lowes.com##.atc-wrapper
@@ -255,7 +254,6 @@ pastebin.com##.popup-container > .-pro.popup-box
 people.com##.mntl-header__menu-top .mntl-utility-nav__subscribe
 pixiv.net##.bottom-0.fixed
 pixivision.net##._floated-bottom-bar
-programiz.com##.get-app-link-wrapper
 refinery29.com##.condensed-header
 rollingstone.com##.article-sticky-header
 soundcloud.com##body:not(.m-hideHeader) .dropbar
@@ -270,13 +268,13 @@ techcommunity.microsoft.com##.Navbar_lia-nav-spacer__e1b2y
 tenor.com##.TOSBanner.Banner
 theatlantic.com###nonMeteredNudge
 thefreedictionary.com###fixedBlock
-thehill.com##.close-btn, [class="rollover-people-block"]
 themeisle.com###notice-popup
 theverge.com##.duet--navigation--sticky-nav
 tiktok.com##[class*="-DivNoticeContainerWithoutHeader"]
 tiktok.com##[class*="-DivScrollToButtonContainer"]
 tomsguide.com,tomshardware.com##.u-scrollButtons
 usatoday.com##.gnt_nb
+variety.com###floating-video-title, .header-sticky, .l-list--row-wrap.l-list, .player-close
 verizon.com##.gnav20-sticky-header
 vkvideo.ru##[class*="ScrollToTopButton__"]
 wallpapercave.com###scrollarrow
@@ -346,7 +344,6 @@ youtube.com###frosted-glass
 ###termly-code-snippet-support
 ###to_top_scrollup
 ###top-ad-slot-0
-###top-bar-social
 ###top_ad
 ###top_social
 ###topad
@@ -366,7 +363,6 @@ youtube.com###frosted-glass
 ##.back-to-top:not(html):not(body)
 ##.back-top:not(html):not(body)
 ##.back2top:not(html):not(body)
-##.backToTop:not(html):not(body)
 ##.bdsharebuttonbox
 ##.bimber-microshare-item-share
 ##.btn-social
@@ -384,7 +380,6 @@ youtube.com###frosted-glass
 ##.et_social_sidebar_networks
 ##.eupopup-container
 ##.fa-share
-##.facebook-like
 ##.facebook-like-static
 ##.facebook-share
 ##.fb-like
@@ -451,6 +446,7 @@ youtube.com###frosted-glass
 ##.share-fb
 ##.share-gplus
 ##.share-icon-container
+##.share-icons
 ##.share-item
 ##.share-linkedin
 ##.share-links
@@ -500,6 +496,7 @@ youtube.com###frosted-glass
 ##.sharrre
 ##.sharrre-container
 ##.site-footer__social
+##.site-social
 ##.social-bar
 ##.social-bar-wrapper
 ##.social-block
@@ -541,6 +538,7 @@ youtube.com###frosted-glass
 ##.social-sticky
 ##.social-tools
 ##.social-widget
+##.social-widgets
 ##.social_bar
 ##.social_btn
 ##.social_btns
@@ -731,6 +729,7 @@ imgur.com###post-jump-container, .NewCover .GoUp, .ButtonBackToTop, .badge.Galle
 libreoffice.org###toTop
 linkedin.com###artdeco-global-alert-container, #artdeco-toasts__wormhole, #siteflow-widget-next, .ember-view.msg-overlay-onboarding-hovercard--minimized-list.msg-overlay-onboarding-hovercard--top.Elevation-2dp.active.msg-overlay-onboarding-hovercard.hovercard-top.msg-overlay-onboarding-hovercard--general, .ember-view.shared-modal-container.splash-modal, .toast-container
 majorgeeks.com###fanback
+newyorker.com##.Failsafe__tny-failsafe___3NxXj, .bx-has-close-inside, .interstitial, .paywall-bar, .paywall-modal, .paywall-registration-gate
 notepad-plus-plus.org##[href="#main"]
 npr.org###global-modal-mount
 nypost.com###nyp-newsletter-modal, #nyp-piano-flyout, #web-alerts-modal, .nyp-sitewide-notice, .nyp-zephr-flyout
@@ -760,6 +759,7 @@ cbc.ca##.newsletterWidget
 cbssports.com##.Newsletter-container
 disqus.com,punchdrink.com###email-signup
 eff.org##.pane-effector-signup
+epi.org###epi-email-signup-backdrop
 express.co.uk##.newsletter-pure
 foreignaffairs.com##.article-newsletter-signup--container
 foreignpolicy.com##.subscribe--long
@@ -770,6 +770,7 @@ mercola.com##.bottom-subscription, .top-subscription
 musicbusinessworldwide.com##.mb-newsletter
 nerdist.com###sub-footer-banner-wrapper-300
 newsmax.com###nmSignUpContainer
+newyorker.com##.ArticlePageSidebar__railItem___1K-hs, .Failsafe__header___21L-f, .MainHeader__fullSubscribe___dolgp, .MainHeader__subscribeLink___3TGEc, .NewsletterSubscribe__newsletterComponent___1ZI2a, .content-well-newsletter, .newsletter-subscribe-form
 nypost.com###commerce-disclosure, .inline-module--newsletter
 openculture.com##.new_subscription_block
 patheos.com##.simple-signup
@@ -822,6 +823,7 @@ fandom.com###ShareEntryPoint, .is-toggle.card-share__button, .quick-links__socia
 forum.piriform.com,linustechtips.com##.ipsClearfix.ipsList_noSpacing.ipsList_inline
 foxbusiness.com,foxnews.com###navbar-share, #node-share-top, .follow-buttons.section, .social-icons > ul > .fb, .social-icons > ul > .flipboard, .social-icons > ul > .gp, .social-icons > ul > .ig, .social-icons > ul > .tw, p a[href*="facebook.com/"]
 gematsu.com##.single_post_share_icon_post
+goal.com##.actions-bar-share
 google.com##.chr-footer-social, kno-share-button
 gsmarena.com##.sharrre.social-share
 guinnessworldrecords.com##.page-controls-share
@@ -866,8 +868,10 @@ flightaware.com###blockerDisclaimerContainer
 gimp.org##.headerlink
 mayoclinic.org##.mayoad
 mybroadband.co.za##.next-previous-article
+openstreetmap.org,snapzu.com##.welcome
 protonmail.com##.csbtns
 repubblica.it###rep-slim-header
+revolvy.com###topper_info
 rt.com##.offers
 techmeme.com##.ifsp
 wbur.org##.section--takeover
