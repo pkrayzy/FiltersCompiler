@@ -655,12 +655,17 @@
 			],
 			"trustLevel": "full",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"version": "2.1.38.68",
 			"timeUpdated": "2026-11-28T09:43:39+0000",
 =======
 			"version": "2.1.43.40",
 			"timeUpdated": "2026-11-28T13:07:47+0000",
 >>>>>>> 63dc45c9468cc62febd78ca920a2a39fe1ea4d38
+=======
+			"version": "2.1.38.69",
+			"timeUpdated": "2026-11-28T14:27:19+0000",
+>>>>>>> e3007ba0116f695e1d7eb9d5daea547e57db688b
 			"languages": [],
 			"tags": [
 				45,
