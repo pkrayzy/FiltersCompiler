@@ -1,9 +1,9 @@
-! Checksum: P/HU+56Ws1osLVQA/exSHQ
-! Diff-Path: ../patches/260/260-s-1795322271-14400.patch
+! Checksum: 0/7AbmiURkGu8vTrnYsx4w
+! Diff-Path: ../patches/260/260-s-1795811851-14400.patch
 ! Title: Stevo's AI Blocklist
 ! Description: A filter list that hides website features which use generative AI and AI-generated content.
-! Version: 2.0.3.33
-! TimeUpdated: 2026-11-22T04:36:03+00:00
+! Version: 2.0.3.49
+! TimeUpdated: 2026-11-27T20:36:04+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: Stevo's AI Blocklist
@@ -153,6 +153,10 @@ www.amazon.*###nile-inline-insights_feature_div
 www.amazon.*###nile-inline-mobile-hoc-below-top-highlights_feature_div
 ! Customer reviews - Summarize 1 star/5 star reviews pills
 www.amazon.*##.cr-reviews-ai-pills-t1
+! -- https://www.amazon.com/COTRUERE-Winter-Gloves-Adults-Stretchy/dp/B0CBBJ1GSY/
+! Top Highlights
+www.amazon.*##[data-voyager-desktop-ns-expander-toggle="{\"columnName\":\"topHighlight\"}"]
+www.amazon.*##.afs-insights-with-divider
 ! -- https://www.amazon.com/clp/B01BFE0KNQ
 ! "Customers say" summary
 www.amazon.*##.cs-summary-section
@@ -278,6 +282,9 @@ www.automateexcel.com##nav:has([href="/formula-generator-ai-bot/"]):has([href="/
 ! -- https://www.autonocion.com/
 ! Floating chat button
 www.autonocion.com###an-box-btn
+! === Auto Trader NZ ===
+! Floating AI chat button
+||embed.vaile.ai/chat-widget-magic.iife.js$script,domain=autotrader.co.nz
 ! === AutoZone ===
 ! -- https://www.autozone.com/p/duralast-platinum-battery-h7-agm/319458
 ! Review summary
@@ -305,6 +312,10 @@ www.diy.com##[data-testid="hello-bq"]
 ! -- https://help.backbone.com/hc/en-us/articles/18306138828311-Which-cases-are-compatible-with-the-Backbone-One-2nd-Gen
 ! Floating "Ask a question" button
 ||decagon.ai/demo/backbone$subdocument,domain=help.backbone.com
+! === Back Market ===
+! -- https://www.backmarket.com/en-us
+! Floating "Ask me" chatbot button
+www.backmarket.com##[data-test="shopping-assistant-fab"]
 ! === Baidu ===
 ! -- https://www.baidu.com/
 ! "Wenxin" tab in top navbar
@@ -381,7 +392,10 @@ www.bing.com###sa_ai_block
 www.bing.com#%#//scriptlet('ubo-json-edit-xhr-response', '$.s[?@.t=="AI"]', 'propsToMatch', '/AS/Suggestions')
 ! -- https://www.bing.com/search?q=test (generic search page)
 ! Search bar - Plus button for AI tools
-www.bing.com#$##sb_tool_drawer { pointer-events: none !important }
+www.bing.com#$#[data-iid="SBAITOOLS"] { pointer-events: none !important; border: none !important }
+www.bing.com#$##sb_option_icon > path { fill: #00000099 !important }
+! * Icon replacement doesn't work on Safari
+www.bing.com#$##sb_option_icon > path { d: path("M7.57895 0.710526C11.3723 0.710526 14.4474 3.78563 14.4474 7.57895C14.4474 9.21969 13.872 10.726 12.9122 11.9073L17.555 16.5502C17.8325 16.8277 17.8325 17.2775 17.555 17.555C17.3028 17.8073 16.9081 17.8302 16.6299 17.6238L16.5502 17.555L11.9073 12.9122C10.726 13.872 9.21969 14.4474 7.57895 14.4474C3.78563 14.4474 0.710526 11.3723 0.710526 7.57895C0.710526 3.78563 3.78563 0.710526 7.57895 0.710526ZM7.57895 2.13158C4.57045 2.13158 2.13158 4.57045 2.13158 7.57895C2.13158 10.5874 4.57045 13.0263 7.57895 13.0263C10.5874 13.0263 13.0263 10.5874 13.0263 7.57895C13.0263 4.57045 10.5874 2.13158 7.57895 2.13158Z") !important }
 ! Navbar tabs for "Search" and "Copilot"
 www.bing.com###b-scopeListItem-copilotsearch
 www.bing.com###b-scopeListItem-conv
@@ -432,6 +446,13 @@ www.bing.com##.conversation_starters
 www.bing.com##.editorial-promo-card:has(> [aria-label^="Advance your AI skills"])
 ! Copilot price insignhts (bottom)
 www.bing.com#?##ShoppingLandingPage_ShoppingEducation:contains(Try it on Copilot)
+! -- https://www.bing.com/videos/riverview/relatedvideo?q=bob+ross+episode+1&&mid=4EA7E588CD4C7E1FDC044EA7E588CD4C7E1FDC04&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUCxcnsr1R5Ge_fbTu5ajt8DQ&FORM=VRDGAR (Video)
+! AI insights
+www.bing.com##.aibtn
+! "Key moments in this video"
+www.bing.com##.aichpolc
+! Summary
+www.bing.com##.acaiic
 ! -- https://rewards.bing.com/
 ! Earn > Microsoft Unlocked
 rewards.bing.com##mee-card:has([aria-label="Microsoft Unlocked, Stories from the heart and soul of AI innovation, Explore now"])
@@ -964,38 +985,49 @@ www.dropbox.com##.oa-pulsar-effect-WAFFLE_RECLAIM
 ! === DuckDuckGo ===
 ! Set "Duck.ai" to "Off"
 duckduckgo.com#%#//scriptlet('ubo-set-cookie', 'bg', '-1')
+! * See https://github.com/AdguardTeam/Scriptlets/issues/590
 ! Set "Search Assist" to "Never"
 duckduckgo.com#%#//scriptlet('ubo-set-cookie', 'be', '0')
 ! Set "Hide AI-Generated Images" to "On"
 duckduckgo.com#%#//scriptlet('ubo-set-cookie', 'bj', '1')
 ! -- https://duckduckgo.com/ (Homepage)
+! * Backup if disabling Duck.ai with `set-cookie` failed
 ! Search box - AI mode toggle
-duckduckgo.com##.ai-searchbox_modeSelectorWrapper__yKK7S
-! Header > "Duck.ai"
-duckduckgo.com##.header_aiChatButton__e_9yJ
+duckduckgo.com##[data-testid="ai-toggle"][data-mode="search"]
+! * TODO: Reclaim space for search field, return old search button, etc.
+!   May be possible either by removing classes or using CSS overrides.
+! IE: duckduckgo.com#%#//scriptlet('remove-class', 'inline-ai-search-box-module-scss-module__eJ3y5G__queryWrap|inline-ai-search-box-module-scss-module__eJ3y5G__queryInput')
+! Search autocomplete - "Ask Duck.ai"
+! * TODO: This element mentions that pressing Alt+Enter searches with Duck.ai,
+!   so users may get redirected if they press the key combo.
+duckduckgo.com#$#[class^="inline-ai-search-box-module-scss-module__"][class$="__footerAskWrap"] { visibility: hidden }
+! * Mobile
+duckduckgo.com##[class^="stacked-ai-search-box-module-scss-module__"][class$="__suggestionsFooter"]
+! Transient AI promo below search bar
+duckduckgo.com##[data-testid="duckai-drawer-promotion"]
+! Header - "Duck.ai"
+duckduckgo.com##[data-testid="aichat-button"]
 ! ≡ menu > "More from DuckDuckGo" > "Duck.ai"
-duckduckgo.com##[class^="sideMenu_sectionLink__"][href^="https://duck.ai/"]
-! Search autocomplete > "Ask Duck.ai"
-! * This element mentions that pressing Alt+Enter searches with Duck.ai. I am unsure if this behavior can be
-!   blocked, so users may get redirected if they unknowingly press the key combo.
-duckduckgo.com##.search-input_duckAiSubmitWrapper__yHJMl
+duckduckgo.com##[data-testid="sidemenu-link-aichat"]
+! Discover more from DuckDuckGo - Duck.ai
+duckduckgo.com##.product-showcase-chip-module-scss-module__Wr_QMG__root:has([d^="M12.264 5.89c.061.245.41.245.472 0l.136-.544a2.026 2.026"])
 ! -- https://duckduckgo.com/?q=what+is+a+snow+emergency (Search results)
-! Navbar > "Duck.ai" button
-duckduckgo.com##a.Pd_jmhkZzftl0UtTaw0u[href*="&ia=chat"]
-! Navbar > "Search Assist" button
-duckduckgo.com##a.d3n3IVqx1558EtMlZV_g[href*="&assist="]
+! Navbar - "Ask Duck.ai" button
+duckduckgo.com###react-duckbar li:has([href*="?ia=chat"], [href*="&ia=chat"])
+! Navbar - "Search Assist" button
+duckduckgo.com###react-duckbar li:has([data-assist-icon-trigger])
 ! Top of page > "Search Assist" summary
 duckduckgo.com##[data-react-module-id="wikinlp"]
 ||duckduckgo.com/qna.js$xmlhttprequest,~third-party
-! Right sidebar > "More from DuckDuckGo" > "Duck.ai"
-duckduckgo.com##.nav-menu__item:has(> a[href="https://duck.ai"])
+! Right sidebar - "More from DuckDuckGo" > "Duck.ai"
+duckduckgo.com##.nav-menu__item:has(> [href="https://duck.ai"])
 ! Right sidebar > "Search Assist" summary
 ! * Sometimes the search assist can appear on the side instead of on top.
 !   For example, (https://duckduckgo.com/?q=what+is+a+test&ia=web)
 duckduckgo.com##[data-layout="wikinlp"]
-! -- https://noai.duckduckgo.com/
-! ≡ menu > Duck AI
-noai.duckduckgo.com##[class^="side-menu-module-scss-module__"][href="https://duck.ai"]
+! -- https://duckduckgo.com/?q=test
+! Sidebar - Explore More
+duckduckgo.com##[data-layout="explore_more"]
 ! === Dummies ===
 ! Header - Dummies AI button
 www.dummies.com##.n4-dummies-ai_btn
@@ -1031,8 +1063,11 @@ export.ebay.com##.chatbot
 ! AI-free searching
 www.ecosia.org#%#//scriptlet('ubo-set-cookie-reload', 'ECNOAI', 'true')
 ! -- https://www.ecosia.org/ (Homepage)
+! * Backup filters if setting cookie fails
 ! "AI Chat" in search bar
 www.ecosia.org##.omnibox-search-form__ai-chat
+! Plus button for AI tools
+www.ecosia.org##.omnibox-ai-tools__toggle
 ! -- https://www.ecosia.org/search?q=test (Search results)
 ! "AI Chat" & separator in navbar
 www.ecosia.org##[data-test-id="search-navigation-item-chat"]
@@ -1162,6 +1197,15 @@ facebook.com##.m.nb[data-type="container"]:has([role="button"][aria-label="Meta 
 ! -- https://avatar.fandom.com/wiki/Aang (Article)
 ! Quick Answers - appears below contents box
 fandom.com##section.trfc161
+! === Feedly ===
+! -- https://feedly.com/i/my/me
+! Sidebar - Create AI Feed
+feedly.com##.LeftnavWebAlertsButton__wrapper
+! Sidebar > Feeds > Plus icon (+) > Create AI Feed
+feedly.com##[data-floating-ui-focusable] [role="menuitem"][tabindex="0"]:has([d^="M10.005 3.133a.5.5 0 0 1 .492.41l"])
+! -- https://feedly.com/i/collection/content/user/[user-id]/category/global.all (Feeds > All)
+! "Synthesize articles" sparkle icon
+feedly.com##div:has(> button[aria-label="Toggle Ask AI panel"])
 ! === Fight the New Drug ===
 ! Floating AI button
 fightthenewdrug.org###askFTND_button
@@ -1192,6 +1236,10 @@ firstpost.com###ia-search
 ! -- https://www.foodnetwork.com/recipes/alton-brown/baked-macaroni-and-cheese-recipe-1939524
 ! Review summary
 www.foodnetwork.com##.reviewsSummary
+! === Font Awesome ===
+! -- https://fontawesome.com/search?q=%EE%80%A8
+! Let your agent find icons for you
+fontawesome.com##.ais-StateResults .column-6:has(> [href="/ai"])
 ! === Forbes ===
 ! -- https://www.forbes.com/sites/jonmarkman/2026/09/03/googles-gemini-38-flash-brings-frontier-level-work-to-its-cheap-tier/
 ! Article voiceover
@@ -1875,12 +1923,15 @@ www.google.com##.yVTUN:has(svg.fdpJhe)
 www.google.com##.kfgtbc:has([class="lHmueb"])
 ! === Google Maps ===
 ! -- https://www.google.com/maps/
-! Modal window for Ask Maps. May only appear once per user.
+! Transient modal for Ask Maps
 www.google.com##[role="dialog"][aria-label="Ask anything about anywhere"]
-! "Ask Maps" button at top by location categories
+! "Ask Maps" button at top by location categories carousel
 www.google.com##.KNfEk.Rqu0ae.aUjao:has(.F5iire)
+www.google.com##.YxsSjf.F5lvuc.QWdptd:has(.F5iire)
+! "Ask Maps" section below search autocomplete suggestions
+www.google.com##.m6QErb.iS1Ot.XiKgde.caxkfb:has([jsaction^="pane.promocard.askmapstravelcta"])
 ! "Ask Maps" button in expandable sidebar
-www.google.com##.AJqepd:has([jsaction="settings.askGemini"])
+www.google.com##li:has(> [jsaction="settings.askGemini"])
 ! "Ask Maps" button in fixed sidebar
 www.google.com##[jsaction="navigationrail.askMaps"]
 ! === Google Meet ===
@@ -1914,8 +1965,6 @@ www.google.*##.ECfIkf
 www.google.*#%#//scriptlet('remove-attr', 'href', 'a[href*="&udm=50"]:has(#hplogo)')
 www.google.*#%#//scriptlet('remove-attr', 'href', '#hplogoo a[href*="&udm=50"]')
 www.google.*#%#//scriptlet('remove-attr', 'href', '#mlogo[href*="&udm=50"]')
-! Search bar - "AI Mode" button
-www.google.*##.plR5qb
 ! Search bar - Revert AI tools plus icon (+) to magnifying glass
 ! * Desktop
 www.google.*#$#[action="/search"] .XCTQH:has(.G4cWGb.z1asCe) { pointer-events: none !important }
@@ -1926,9 +1975,18 @@ www.google.*#$#[action="/search"] .XCTQH .G4cWGb.z1asCe path { d: path("M784-120
 www.google.*#$#[action="/search"] .eCAVse[type="button"][aria-haspopup="dialog"] { pointer-events: none !important }
 www.google.*#$#[action="/search"] .eCAVse[type="button"][aria-haspopup="dialog"] path { color: #bfbfbf !important }
 www.google.*#$#[action="/search"] .eCAVse[type="button"][aria-haspopup="dialog"] path { d: path("M784-120L532-372q-30,24-69,38t-83,14q-109,0-184.5-75.5T120-580t75.5-184.5T380-840t184.5,75.5T640-580q0,44-14,83t-38,69L840-176l-56,56ZM380-400q75,0 127.5-52.5T560-580T507.5-707.5T380-760T252.5-707.5T200-580t52.5,127.5T380-400Z") !important }
-! Search bar - AI button (sparkling magnifying glass icon, mobile only)
+! Search bar - Sparkling magnifying glass AI icon
+! * Desktop, appears after typing in search bar
+www.google.*##.pUM3Jb
+! * Mobile
 www.google.*##.xOchs
 www.google.*##button.EX3c2d.Cq58Jd:has([d^="M740-560q-6,0-8-6q-16-61-60"])
+! Search bar - "AI Mode" button
+! * Use :not() because AI button may transform into regular search button after typing search query
+! * .PHjFye indicates icon has finished transforming from AI button
+www.google.*##.plR5qb:not(.VzUPFe.Sw4CSc.PHjFye)
+! * Cancel gradient animation when button appears
+www.google.*#$#.plR5qb.VzUPFe.Sw4CSc .bvUkz { animation: none !important }
 ! Search bar - Autocomplete suggestions
 ! * JSONPath v2 compatible
 www.google.*#%#//scriptlet('ubo-json-edit', '$..[?@.zp.udm=="50"]')
@@ -1961,6 +2019,7 @@ www.google.*##[data-attnms]
 ! * Blank space for AI Overview at top of search results
 www.google.*##.Kevs9.SLPe5b:has([data-attnms])
 www.google.*##.YNk70c.EjQTId:has(+ div [data-attnms]) #oFNiHe:empty
+www.google.*##[role="main"] > .SLPe5b.M8OgIe:has([data-attnms]):has(#oFNiHe:empty)
 ! * Blank space when in middle of search results (Ex: https://www.google.com/search?q=stevo%27s+genai+blocklist)
 www.google.*##.ULSxyf:has(> .MjjYud > .SePcAf[data-tma="80"] [data-attnms])
 ! * Fix conflict with laylavish's AI blocklist
@@ -2021,6 +2080,9 @@ www.google.*##[jsname="NoEzVd"]:has([jsname="lHCI7d"])
 ! * .k1U36b.OMMx3d is for "Generative AI is experimental" disclaimer
 ! * Filter has a delay before it applies
 www.google.*##[data-crust-trigger] > div:has(.k1U36b.OMMx3d)
+! -- https://www.google.com/search?q=Thanksgiving+2026
+! Floating "Join the parade" button to turn selfie into balloon
+www.google.*##.tkcvsb.pQltpb[data-delight-buttons]
 ! -- https://www.google.com/search?q=boston (mobile)
 ! "Ask anything in AI Mode" suggestions
 www.google.*##.rlT1Ue.IGspb.PZPZlf[data-attrid="VisualDigestGeneratedResult"]
@@ -2118,6 +2180,9 @@ www.greenpan.us#$#.bar_menu .item:has(+ [data-parent="ai-shopping-assistant"]) a
 ||cdn.spiffy.ai/production/universal-build/envive-injection^$script,domain=www.greenpan.us
 ! Review summary
 www.greenpan.us##[data-bv-show="review-summaries"]
+! === Gridinsoft ===
+! Floating AI chat icon
+gridinsoft.com##.ai-chat-widget
 ! === Hardware Busters ===
 ! -- https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/
 ! Floating "Ask Buster" button
@@ -2162,6 +2227,22 @@ www.homedepot.com###product-section-magic-apron-qa-bot
 www.homedepot.com###beyond_bought_together
 ! Review summary
 www.homedepot.com###magic-apron-review-summary
+! === Home Depot (Canada) ===
+! -- https://www.homedepot.ca/en/home.html
+! Header - Ask button
+www.homedepot.ca##.global-header-magic-apron-ask
+! -- https://www.homedepot.ca/search?q=%20
+! Transient notice for Ask button
+www.homedepot.ca##magic-apron-blurb-widget
+! Search filters - Ask
+www.homedepot.ca##.ask-button-touch
+! Floating magic apron button
+www.homedepot.ca##hdca-magic-apron-assist-micro
+! -- https://www.homedepot.ca/product/milwaukee-tool-18v-m18-lithium-ion-extended-capacity-xc-6-0-ah-redlithium-high-output-battery/1001129753
+! Ask AI about out product
+www.homedepot.ca###magicApronBot
+! Review summary
+www.homedepot.ca##[data-bv-show="review-summaries"]
 ! === Hourglass Cosmetics ===
 ! -- https://www.hourglasscosmetics.com/products/veil-hydrating-skin-tint
 ! Review summary
@@ -2324,6 +2405,13 @@ www.ishopchangi.com###chat-wrapper
 ! -- https://www.istom.fr/
 ! Chatbot modal
 ||webchat.studizz.fr/webchat.js$script,domain=www.istom.fr
+! === J.Crew ===
+! Navbar - Style Advisor
+www.jcrew.com##.nc-nav__style-assistant
+! -- https://www.jcrew.com/p/mens/categories/clothing/sweaters/pullover/BC523?display=all&fit=Men&colorProductCode=BC523&colorCode=BK0001
+! Chat with our fit assistant
+www.jcrew.com##[data-qaid="pdpProductLinksfit-assistant"]
+www.jcrew.com##[data-qaid="pdpProductLinksfit-assistant"] + [class^="ProductLinks__links-divider___"]
 ! === JCPenney ===
 ! -- https://www.jcpenney.com/
 ! Header - AskPenney
@@ -2461,12 +2549,19 @@ www.lawinsider.com##.zKcZVDrbtr
 ! ClauseFinder & AI Column chips
 www.lawinsider.com##.mdc-menu-surface--anchor:has([data-trigger-paywall-id="CLAUSE_FINDER"])
 www.lawinsider.com##.mdc-menu-surface--anchor:has(> [data-trigger-paywall-id="AI_SEARCH_COLUMNS"])
+! === Learn Python ===
+! -- https://www.learnpython.org/en/Hello%2C_World%21
+! Explain Code button
+www.learnpython.org##[data-trackid="exercise-action-bar-explain"]
 ! === Lenovo ===
 ! -- https://www.lenovo.com/us/en/p/workstations/thinkstation-p-series/lenovo-thinkstation-p3-tiny-gen-2-intel/30k6000xus
 ! AI Overview (mobile)
 www.lenovo.com##.pdp-ai-summary
 ! Review summary
 www.lenovo.com##[data-bv-show="review-summaries"]
+! -- https://psref.lenovo.com/
+! Floating PSREF AI Beta button [support, chatbot]
+psref.lenovo.com##.ai-icon-container
 ! === Les Numériques (French) ===
 ! Floating chat icon
 www.lesnumeriques.com##[data-lemrock-component]
@@ -2560,6 +2655,9 @@ www.macys.com##.google-prompts
 www.macys.com##.ask-something-else
 ! Review summary
 www.macys.com##.generated-summary-main-container
+! -- https://www.macys.com/shop/featured/straight-fit-white-pants?ss=true
+! "Ask Macy’s" search suggestions
+www.macys.com##.ai-overview-wrapper
 ! === Mailchimp ===
 ! -- https://mailchimp.com/
 ! Ask Mailchimp Assistant
@@ -2573,6 +2671,11 @@ widget.indexfox.ai##.ask-ai-button
 widget.indexfox.ai##.ask-response
 ! Search - Page summary
 ||api.indexfox.ai/api/6383989965980236728/summary$xmlhttprequest,domain=widget.indexfox.ai
+! === MarketBeat ===
+! -- https://www.marketbeat.com/pages/search.aspx?query=test
+! AI search overview
+||www.marketbeat.com/Pages/Search.aspx/GetOverview$xmlhttprequest,domain=www.marketbeat.com
+www.marketbeat.com###ai-overview
 ! === Mathrubhumi ===
 ! -- https://english.mathrubhumi.com/news/india/suvendu-adhikari-aide-murder-bike-recovered-west-bengal-u8r914aj
 ! Article summary
@@ -2946,9 +3049,7 @@ www.newegg.com##.header2021-celeste
 ! Search bar (focused) - Ask Celeste
 www.newegg.com##.header2021-search-sec-ask
 ! Search bar - Remove sparkle from magnifying glass search button
-! * uBO doesn't allow backslash \ in CSS styles
-!   https://github.com/uBlockOrigin/uBlock-issues/issues/668#issuecomment-511117701
-www.newegg.com#$#.ico-search-ai::before { content: "\f002" !important }
+www.newegg.com#$#.ico-search-ai::before { content: "" !important }
 ! Floating AI Assistant icon
 www.newegg.com##.floating-robot
 ! -- https://www.newegg.com/ (mobile)
@@ -3228,6 +3329,10 @@ hintaopas.fi,prisjagt.dk,prisjakt.no,prisjakt.nu#$#[data-sentry-component="HeroM
 ! Promo card for AI Assistant
 hintaopas.fi##[data-sentry-component="CampaignCard"]:has(> [href="https://hintaopas.fi/teema/shoppingavustaja"])
 prisjagt.dk,prisjakt.nu,prisjakt.no##[data-sentry-component="CampaignCard"]:has(> [href$="/tema/shoppingassistent"])
+! -- https://www.prisjakt.nu/produkt.php?p=5147004
+! Insights (product comparison) section
+hintaopas.fi,prisjagt.dk,prisjakt.no,prisjakt.nu##[data-sentry-component="AnchorTab"]:has(> [href="#insights"])
+hintaopas.fi,prisjagt.dk,prisjakt.no,prisjakt.nu###insights
 ! === Prime Video ===
 ! -- https://www.primevideo.com/search?ie=UTF8&ref_=atv_nb_sug&phrase=Avatar
 ! AI beta recommendations
@@ -3369,7 +3474,7 @@ www.reddit.com##.trailing-divider:has(+ .trailing-content-container > [name="tra
 www.reddit.com##.trailing-content-container:has(> [name="trailingContent"])
 ! -- https://www.reddit.com/?feed=home
 ! Recommended posts from AI subreddits
-www.reddit.com#?#shreddit-feed:not([reload-url$="?feed=following"]) shreddit-post[recommendation-source]:matches-attr(subreddit-name="/^(3amAI|ADULT_ART_AI|AgentsOfAI|AI_Agents|Ai_and_Digital_arts|AI_ART|AI_Art_Department|AI_Art_Requests|AI_Art_Series|ai_artworld|AI_developers|Ai_Dragons|Ai_HarryPotter|Ai_Husbando_Art|Ai_PeopleOfColor_Art|Ai_Pokemon|Ai_StarWars_Art|AIAliveSentient|aiArt|AiArt_Psych|AIartbattle|AiArtChallenge|aiartcodex|AIArtCreator|aiARTistsUNITE|AIArtistWorkflows|AiArtLounge|AIArtPorn|AiArtShow|AIArtwork|AiArtWow|AIArtZone|aibeingstupid|AiCarArt|AICatgirls|AICharacterDrawing|AiChatGPT|aiCoffeeArt|AiComicBookArt|AiComicBookArt|AIEscher|aifails|AIfreakout|aigamedev|AIGameOfThrones|aiGayArt|AIGenArt|AiGenCarporn|AIGeneratedArt|aigeneratedmemes|AIgeneratednightmares|AIGeneratedPokemon|AIGirlfriend|AiGirlsSexyArt|aigoddesses|AIGrinding|AiHentaiArtwork|Aihotgirl|aiHub|AIisfuckinglit|ailookbook|AImsorryjon|aiMusic|AIpornhub|aipromptprogramming|AIRetrofuturism|aisettings|aispacegirls|aitoolsupdate|AiUncensored|aivideo|AIVideo4all|AiVideoGameArt|AIVisibile|aiwars|AiWholesome|aiyiff|AmazingAI|AnimeAIArt|anyaiart|Art_of_AI|Arthemy|artificial|ArtificialInteligence|ArtIsForEveryone|bard|bigsleep|Celebrity_Ai_Photos|CharacterAI|CharacterAI_No_Filter|Chatbots|ChatGPT|ChatGPTCoding|ChatGPTPro|civitai|claude|ClaudeAI|ClaudeCode|comfyui|Copilot|craiyon|CursedAI|cursedAIpics|dalle2|dallemini|dawnAi|deepdream|DeepFloydIF|deeplearning|DefendingAI|DefendingAIArt|DimensionTraveler|DiscoDiffusion|dndai|DragonDiffusion|DreamArchitecture|DreamBooth|dreamcasting|DreamstudioAI|DumbAI|DuneAI|DungeonoftheMadMage|EternalAI_org|FanArtAI|FiddlartAi|FurAI|GarfieldAI_art|GeminiAI|GenAI4all|generateforme|generative|generativeAI|GenTube|GithubCopilot|GoogleAI|GoogleAIGoneWild|GoogleGeminiAI|GPT3|hellaflyai|HighEndAI|HQ_AI_Ecchi|ImageGenerators|Indian_AI_Girls|IndianArtAI|indie_games_and_ai|invokeai|JustOneWord|layla_ai|Lensa|LensaFails|leonardoai|lotr_ai_art|LOTRAI|LovingOpenSourceAI|MachineLearning|MBVirtualVixens|MediaSynthesis|microsoft_365_copilot|midjourney|MidJourney2Dalle|midjourney_imagine|MidjourneyArtworks|MidJourneyDiscussions|MidjourneyFails|MidJourneyFantasy|MidjourneyPrompts|momaia|narrative_ai_art|nightcafe|nijijourney|nonutsnightmare|NovelAi|OpenAI|perplexity_ai|Pixai_Official|ProductHunters|PromptArt|promptcraft|PromptDesign|PromptEngineering|PromptSharing|promptsideas|RenaissanceArt_AI|riffusion|sdforall|sdnsfw|SeaArtAI|sexbotlovers|shittyAiArt|SillyTavernAI|singularity|SoraAi|StableDiffusion|StableDiffusionInfo|StableDiffusionUI|starryai|StarWarsAIArt|stupidAI|SukiAI|SunoAI|te_diffusion|TheAIBrain|WaifuDiffusion|weirddalle|WomboArt|Wombodream|wonderAI|WorldbuildingWithAI)$/")
+www.reddit.com#?#shreddit-feed:not([reload-url$="?feed=following"]) shreddit-post[recommendation-source]:matches-attr(subreddit-name="/^(3amAI|ADULT_ART_AI|AgentsOfAI|AI_Agents|Ai_and_Digital_arts|AI_ART|AI_Art_Department|AI_Art_Requests|AI_Art_Series|ai_artworld|AI_developers|Ai_Dragons|Ai_HarryPotter|Ai_Husbando_Art|Ai_PeopleOfColor_Art|Ai_Pokemon|Ai_StarWars_Art|AIAliveSentient|aiArt|AiArt_Psych|AIartbattle|AiArtChallenge|aiartcodex|AIArtCreator|aiARTistsUNITE|AIArtistWorkflows|AiArtLounge|AIArtPorn|AiArtShow|AIArtwork|AiArtWow|AIArtZone|aibeingstupid|AiCarArt|AICatgirls|AICharacterDrawing|AiChatGPT|aiCoffeeArt|AiComicBookArt|AiComicBookArt|AIEscher|aifails|AIfreakout|aigamedev|AIGameOfThrones|aiGayArt|AIGenArt|AiGenCarporn|AIGeneratedArt|aigeneratedmemes|AIgeneratednightmares|AIGeneratedPokemon|AIGirlfriend|AiGirlsSexyArt|aigoddesses|AIGrinding|AiHentaiArtwork|Aihotgirl|aiHub|AIisfuckinglit|ailookbook|AImsorryjon|aiMusic|AIpornhub|aipromptprogramming|AIRetrofuturism|aisettings|aispacegirls|aitoolsupdate|AiUncensored|aivideo|AIVideo4all|AiVideoGameArt|AIVisibile|aiwars|AiWholesome|aiyiff|AmazingAI|AnimeAIArt|anyaiart|Art_of_AI|ArtCraftAI|Arthemy|artificial|ArtificialInteligence|Artificials|ArtIsForEveryone|bard|bigsleep|Celebrity_Ai_Photos|CharacterAI|CharacterAI_No_Filter|Chatbots|ChatGPT|ChatGPTCoding|ChatGPTPro|civitai|claude|ClaudeAI|ClaudeCode|comfyui|Copilot|craiyon|CursedAI|cursedAIpics|dalle2|dallemini|dawnAi|deepdream|DeepFloydIF|deeplearning|DefendingAI|DefendingAIArt|DimensionTraveler|DiscoDiffusion|dndai|DragonDiffusion|DreamArchitecture|DreamBooth|dreamcasting|DreamstudioAI|DumbAI|DuneAI|DungeonoftheMadMage|EternalAI_org|FanArtAI|FiddlartAi|FurAI|GarfieldAI_art|GeminiAI|GenAI4all|generateforme|generative|generativeAI|GenTube|GithubCopilot|GoogleAI|GoogleAIGoneWild|GoogleGeminiAI|GPT3|hellaflyai|HighEndAI|HQ_AI_Ecchi|ImageGenerators|Indian_AI_Girls|IndianArtAI|indie_games_and_ai|invokeai|JustOneWord|layla_ai|Lensa|LensaFails|leonardoai|LocalLLM|lotr_ai_art|LOTRAI|LovingOpenSourceAI|MachineLearning|MBVirtualVixens|MediaSynthesis|microsoft_365_copilot|midjourney|MidJourney2Dalle|midjourney_imagine|MidjourneyArtworks|MidJourneyDiscussions|MidjourneyFails|MidJourneyFantasy|MidjourneyPrompts|momaia|narrative_ai_art|nightcafe|nijijourney|nonutsnightmare|NovelAi|OpenAI|perplexity_ai|Pixai_Official|ProductHunters|PromptArt|promptcraft|PromptDesign|PromptEngineering|PromptSharing|promptsideas|RenaissanceArt_AI|riffusion|sdforall|sdnsfw|SeaArtAI|sexbotlovers|shittyAiArt|SillyTavernAI|singularity|SoraAi|StableDiffusion|StableDiffusionInfo|StableDiffusionUI|starryai|StarWarsAIArt|stupidAI|SukiAI|SunoAI|te_diffusion|TheAIBrain|WaifuDiffusion|weirddalle|WomboArt|Wombodream|wonderAI|WorldbuildingWithAI)$/")
 ! -- https://www.reddit.com/search/?q=legal+eagle+bricks+and+minifigs
 ! "Ask" tab
 www.reddit.com###search-results-page-tab-ai_search
@@ -3386,7 +3491,7 @@ www.reddit.com##.grid:has(> .col-start-2 > conversation-snapshot-text-clamp) + h
 ! "People also ask about" section (Mobile only)
 www.reddit.com##[id^="answers-suggested-queries"]
 ! Suggestions to repost to AI subreddit (If post was by current user)
-www.reddit.com#?#[data-testid="post-recovery-suggested-communities"] a:matches-attr(href="/^\/r\/(3amAI|ADULT_ART_AI|AgentsOfAI|AI_Agents|Ai_and_Digital_arts|AI_ART|AI_Art_Department|AI_Art_Requests|AI_Art_Series|ai_artworld|AI_developers|Ai_Dragons|Ai_HarryPotter|Ai_Husbando_Art|Ai_PeopleOfColor_Art|Ai_Pokemon|Ai_StarWars_Art|AIAliveSentient|aiArt|AiArt_Psych|AIartbattle|AiArtChallenge|aiartcodex|AIArtCreator|aiARTistsUNITE|AIArtistWorkflows|AiArtLounge|AIArtPorn|AiArtShow|AIArtwork|AiArtWow|AIArtZone|aibeingstupid|AiCarArt|AICatgirls|AICharacterDrawing|AiChatGPT|aiCoffeeArt|AiComicBookArt|AiComicBookArt|AIEscher|aifails|AIfreakout|aigamedev|AIGameOfThrones|aiGayArt|AIGenArt|AiGenCarporn|AIGeneratedArt|aigeneratedmemes|AIgeneratednightmares|AIGeneratedPokemon|AIGirlfriend|AiGirlsSexyArt|aigoddesses|AIGrinding|AiHentaiArtwork|Aihotgirl|aiHub|AIisfuckinglit|ailookbook|AImsorryjon|aiMusic|AIpornhub|aipromptprogramming|AIRetrofuturism|aisettings|aispacegirls|aitoolsupdate|AiUncensored|aivideo|AIVideo4all|AiVideoGameArt|AIVisibile|aiwars|AiWholesome|aiyiff|AmazingAI|AnimeAIArt|anyaiart|Art_of_AI|Arthemy|artificial|ArtificialInteligence|ArtIsForEveryone|bard|bigsleep|Celebrity_Ai_Photos|CharacterAI|CharacterAI_No_Filter|Chatbots|ChatGPT|ChatGPTCoding|ChatGPTPro|civitai|claude|ClaudeAI|ClaudeCode|comfyui|Copilot|craiyon|CursedAI|cursedAIpics|dalle2|dallemini|dawnAi|deepdream|DeepFloydIF|deeplearning|DefendingAI|DefendingAIArt|DimensionTraveler|DiscoDiffusion|dndai|DragonDiffusion|DreamArchitecture|DreamBooth|dreamcasting|DreamstudioAI|DumbAI|DuneAI|DungeonoftheMadMage|EternalAI_org|FanArtAI|FiddlartAi|FurAI|GarfieldAI_art|GeminiAI|GenAI4all|generateforme|generative|generativeAI|GenTube|GithubCopilot|GoogleAI|GoogleAIGoneWild|GoogleGeminiAI|GPT3|hellaflyai|HighEndAI|HQ_AI_Ecchi|ImageGenerators|Indian_AI_Girls|IndianArtAI|indie_games_and_ai|invokeai|JustOneWord|layla_ai|Lensa|LensaFails|leonardoai|lotr_ai_art|LOTRAI|LovingOpenSourceAI|MachineLearning|MBVirtualVixens|MediaSynthesis|microsoft_365_copilot|midjourney|MidJourney2Dalle|midjourney_imagine|MidjourneyArtworks|MidJourneyDiscussions|MidjourneyFails|MidJourneyFantasy|MidjourneyPrompts|momaia|narrative_ai_art|nightcafe|nijijourney|nonutsnightmare|NovelAi|OpenAI|perplexity_ai|Pixai_Official|ProductHunters|PromptArt|promptcraft|PromptDesign|PromptEngineering|PromptSharing|promptsideas|RenaissanceArt_AI|riffusion|sdforall|sdnsfw|SeaArtAI|sexbotlovers|shittyAiArt|SillyTavernAI|singularity|SoraAi|StableDiffusion|StableDiffusionInfo|StableDiffusionUI|starryai|StarWarsAIArt|stupidAI|SukiAI|SunoAI|te_diffusion|TheAIBrain|WaifuDiffusion|weirddalle|WomboArt|Wombodream|wonderAI|WorldbuildingWithAI)/")
+www.reddit.com#?#[data-testid="post-recovery-suggested-communities"] a:matches-attr(href="/^\/r\/(3amAI|ADULT_ART_AI|AgentsOfAI|AI_Agents|Ai_and_Digital_arts|AI_ART|AI_Art_Department|AI_Art_Requests|AI_Art_Series|ai_artworld|AI_developers|Ai_Dragons|Ai_HarryPotter|Ai_Husbando_Art|Ai_PeopleOfColor_Art|Ai_Pokemon|Ai_StarWars_Art|AIAliveSentient|aiArt|AiArt_Psych|AIartbattle|AiArtChallenge|aiartcodex|AIArtCreator|aiARTistsUNITE|AIArtistWorkflows|AiArtLounge|AIArtPorn|AiArtShow|AIArtwork|AiArtWow|AIArtZone|aibeingstupid|AiCarArt|AICatgirls|AICharacterDrawing|AiChatGPT|aiCoffeeArt|AiComicBookArt|AiComicBookArt|AIEscher|aifails|AIfreakout|aigamedev|AIGameOfThrones|aiGayArt|AIGenArt|AiGenCarporn|AIGeneratedArt|aigeneratedmemes|AIgeneratednightmares|AIGeneratedPokemon|AIGirlfriend|AiGirlsSexyArt|aigoddesses|AIGrinding|AiHentaiArtwork|Aihotgirl|aiHub|AIisfuckinglit|ailookbook|AImsorryjon|aiMusic|AIpornhub|aipromptprogramming|AIRetrofuturism|aisettings|aispacegirls|aitoolsupdate|AiUncensored|aivideo|AIVideo4all|AiVideoGameArt|AIVisibile|aiwars|AiWholesome|aiyiff|AmazingAI|AnimeAIArt|anyaiart|Art_of_AI|ArtCraftAI|Arthemy|artificial|ArtificialInteligence|Artificials|ArtIsForEveryone|bard|bigsleep|Celebrity_Ai_Photos|CharacterAI|CharacterAI_No_Filter|Chatbots|ChatGPT|ChatGPTCoding|ChatGPTPro|civitai|claude|ClaudeAI|ClaudeCode|comfyui|Copilot|craiyon|CursedAI|cursedAIpics|dalle2|dallemini|dawnAi|deepdream|DeepFloydIF|deeplearning|DefendingAI|DefendingAIArt|DimensionTraveler|DiscoDiffusion|dndai|DragonDiffusion|DreamArchitecture|DreamBooth|dreamcasting|DreamstudioAI|DumbAI|DuneAI|DungeonoftheMadMage|EternalAI_org|FanArtAI|FiddlartAi|FurAI|GarfieldAI_art|GeminiAI|GenAI4all|generateforme|generative|generativeAI|GenTube|GithubCopilot|GoogleAI|GoogleAIGoneWild|GoogleGeminiAI|GPT3|hellaflyai|HighEndAI|HQ_AI_Ecchi|ImageGenerators|Indian_AI_Girls|IndianArtAI|indie_games_and_ai|invokeai|JustOneWord|layla_ai|Lensa|LensaFails|leonardoai|LocalLLM|lotr_ai_art|LOTRAI|LovingOpenSourceAI|MachineLearning|MBVirtualVixens|MediaSynthesis|microsoft_365_copilot|midjourney|MidJourney2Dalle|midjourney_imagine|MidjourneyArtworks|MidJourneyDiscussions|MidjourneyFails|MidJourneyFantasy|MidjourneyPrompts|momaia|narrative_ai_art|nightcafe|nijijourney|nonutsnightmare|NovelAi|OpenAI|perplexity_ai|Pixai_Official|ProductHunters|PromptArt|promptcraft|PromptDesign|PromptEngineering|PromptSharing|promptsideas|RenaissanceArt_AI|riffusion|sdforall|sdnsfw|SeaArtAI|sexbotlovers|shittyAiArt|SillyTavernAI|singularity|SoraAi|StableDiffusion|StableDiffusionInfo|StableDiffusionUI|starryai|StarWarsAIArt|stupidAI|SukiAI|SunoAI|te_diffusion|TheAIBrain|WaifuDiffusion|weirddalle|WomboArt|Wombodream|wonderAI|WorldbuildingWithAI)/")
 ! -- https://www.reddit.com/r/valve/comments/1vo1c7q/comment/p3nmcrh/
 ! AI-linked keywords in comments
 ! * Based on https://www.reddit.com/r/uBlockOrigin/comments/1vt6sgy/comment/p4rdpz2/
@@ -4003,13 +4108,13 @@ ups.com###digital-assistant-launcher
 ups.com###WACContainer
 ! === Urban Dictionary ===
 ! Floating chatbox
-||urbandictionary.ai/widget$subdocument,domain=www.urbandictionary.com
-! "Ask UD" button
+||urbandictionary.ai/widget$subdocument,script,domain=www.urbandictionary.com
+! "Ask UD" button by word definitions
 www.urbandictionary.com##.ud-ask
 ! === US News ===
 ! -- https://www.usnews.com/banking/articles/what-is-a-credit-union
 ! Floating Ask AI button
-www.usnews.com##.MuiBox-root:has(> [aria-label="Ask U.S. News AI"])
+usnews.com##.MuiBox-root:has(> [aria-label="Ask U.S. News AI"])
 ! === Valnet ===
 ! Sites found via https://www.valnetinc.com/en/our-brands
 ! -- https://www.howtogeek.com/repurposed-old-router-saved-20-dollars/
@@ -4232,6 +4337,12 @@ www.wolframalpha.com##.sc-fc1b1463-0:has(> [href^="https://www.amazon.com/What-C
 www.wolframalpha.com##.sc-fc1b1463-0:has(> [href^="https://www.wolfram.com/notebook-assistant-llm-kit"])
 www.wolframalpha.com##.sc-fc1b1463-0:has(> [href^="https://www.wolfram.com/language/core-areas/machine-learning"])
 www.wolframalpha.com##.sc-fc1b1463-0:has(> [href^="https://www.wolfram.com/artificial-intelligence"])
+! === Woolworths ===
+! -- https://www.woolworths.com.au/shop/help
+! "How can we help?" chatbot section
+! * There's another AI button for "Olive" further down, but you can ask the bot
+!   to contact human customer support.
+www.woolworths.com.au##[class^="gen-faq_component_container__"]
 ! === Woman's World ===
 ! -- https://www.womansworld.com/wellness/sleep/lavender-oil-for-sleep-beat-insomnia-naturally
 ! "Ask us your health questions"
@@ -4276,12 +4387,15 @@ x.com##[data-testid="grokImgGen"]
 ! Floating Grok chat button in bottom right
 x.com##[data-testid="GrokDrawer"]
 ! - Promos
-! Top of home feed - Promos for video generation and Grok Build
+! Top of home feed - Promos for Grok
 x.com##[data-testid="cellInnerDiv"]:has([data-testid="inlinePrompt-primaryAction"] > [href^="https://grok.com/"])
 x.com##[data-testid="cellInnerDiv"]:has([data-testid="inlinePrompt-primaryAction"] > [href^="https://grok.com/"]) + [data-testid="cellInnerDiv"]:has(.r-gu4em3:empty)
 x.com##[data-testid="cellInnerDiv"]:has([data-testid="inlinePrompt-primaryAction"] > [href^="https://x.ai/"])
 x.com##[data-testid="cellInnerDiv"]:has([data-testid="inlinePrompt-primaryAction"] > [href^="https://x.ai/"]) + [data-testid="cellInnerDiv"]:has(.r-gu4em3:empty)
+x.com##[data-testid="cellInnerDiv"]:has([data-testid="inlinePrompt-primaryAction"] > [href^="/i/premium_sign_up?referring_page=grok-bot-offer"])
+x.com##[data-testid="cellInnerDiv"]:has([data-testid="inlinePrompt-primaryAction"] > [href^="/i/premium_sign_up?referring_page=grok-bot-offer"]) + [data-testid="cellInnerDiv"]:has(.r-gu4em3:empty)
 ! Right sidebar - Grok promos
+x.com##aside[aria-label="Get Grok Bot with X Premium"]
 x.com##.css-175oi2r:has(> .r-kemksi.r-1ifxtd0 > aside > [href="https://grok.com/imagine?referring_page=home_sidebar_grok_promo"])
 x.com##.css-g5y9jx.r-kemksi.r-1kqtdi0.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x:has(> aside [href^="https://grok.com/"])
 ! -- Hiding specific tweets
@@ -4361,6 +4475,9 @@ finance.yahoo.com##.dock-tablist-capsule:has(#tab-dock-modules[aria-selected="tr
 ! -- https://finance.yahoo.com/markets/article/meta-announces-plans-to-raise-up-to-95-billion-for-ai-buildout-140141962.html
 ! Ask AI button (mobile)
 finance.yahoo.com##.scout-fab-split-half--scout
+! -- https://finance.yahoo.com/quote/ANT/
+! "What's happening with [stock]" summary
+finance.yahoo.com##.ai-analyst-hybrid-banner
 ! -- https://finance.yahoo.com/technology/ai/articles/us-threatens-sanctions-against-chinese-153705506.html
 ! Mid-article "Ask Yahoo Scout" (No longer used?)
 finance.yahoo.com##.dig-deeper-wrapper
@@ -4488,16 +4605,18 @@ m.youtube.com#%#//scriptlet('ubo-json-edit', '$..[?@.horizontalCardListRenderer.
 ! Partially based on https://github.com/moocj/yt-remove-ai-chapters
 ! TODO: Remove segments on playback bar
 ! * Player - Chapter tooltips when hovering progress bar
-www.youtube.com##ytd-watch-flexy:has([target-id="engagement-panel-macro-markers-auto-chapters"]) .ytp-tooltip-progress-bar-pill-title
+www.youtube.com##.watch-root-element:has([target-id="engagement-panel-macro-markers-auto-chapters"]) .ytp-tooltip-progress-bar-pill-title
 ! * Player - Chapter near video time
-www.youtube.com##ytd-watch-flexy:has([target-id="engagement-panel-macro-markers-auto-chapters"]) .ytp-chapter-container
+www.youtube.com##.watch-root-element:has([target-id="engagement-panel-macro-markers-auto-chapters"]) .ytp-chapter-container
 ! * Description - Chapter cards
-www.youtube.com##ytd-watch-flexy:has([target-id="engagement-panel-macro-markers-auto-chapters"]) ytd-horizontal-card-list-renderer[modern-chapters]
+www.youtube.com##.watch-root-element:has([target-id="engagement-panel-macro-markers-auto-chapters"]) [modern-chapters]
 ! * Sidebar panel - Chapter tab (Not covered by JSON filters)
-www.youtube.com##ytd-watch-flexy:has([target-id="engagement-panel-macro-markers-auto-chapters"]) .ytChipBarViewModelChipWrapper:has(button[aria-label="Chapters"][aria-selected="false"])
-www.youtube.com##ytd-watch-flexy:has([target-id="engagement-panel-macro-markers-auto-chapters"]) chip-bar-view-model:has(button[aria-label="Chapters"][aria-selected="false"]):has(.ytChipBarViewModelChipWrapper:last-child:nth-child(2))
+www.youtube.com##.watch-root-element:has([target-id="engagement-panel-macro-markers-auto-chapters"]) .ytChipBarViewModelChipWrapper:has(button[aria-label="Chapters"][aria-selected="false"])
+! ** Hide all tabs if only 1 is left
+www.youtube.com##.watch-root-element:has([target-id="engagement-panel-macro-markers-auto-chapters"]) chip-bar-view-model:has(button[aria-label="Chapters"][aria-selected="false"]):has(.ytChipBarViewModelChipWrapper:last-child:nth-child(2))
 ! * Sidebar panel - Transcript chapter headers
-www.youtube.com##ytd-watch-flexy:has([target-id="engagement-panel-macro-markers-auto-chapters"]) [data-target-id="PAmodern_transcript_view"] yt-item-section-renderer > #header
+!   Note: Sometimes transcript auto-chapters appear without a chapters section (https://www.youtube.com/watch?v=LeFPryVXFwQ)
+www.youtube.com###panels:not(:has([target-id="engagement-panel-macro-markers-description-chapters"])) timeline-chapter-view-model
 ! -- https://m.youtube.com/watch?v=oh5p5f5_-7A (mobile)
 ! "Ask" slide in comment carousel below video
 ! * Does not work on AdGuard for iOS
@@ -4551,6 +4670,17 @@ studio.youtube.com##[test-id="VIDEO_BRAINSTORM_IDEA"]
 studio.youtube.com##.ask-studio-container
 ! Editor - Create - Turn audio into Short
 studio.youtube.com###entrypoint-audiovision-shorts-row
+! === Zenni Optical ===
+! Search bar - AI button
+www.zennioptical.com##[data-testid="ai-search-shortcut"]
+! Search bar (focused) - AI Search toggle
+www.zennioptical.com##.tw-group\/aitoggle:has([role="switch"][aria-checked="false"])
+! Search bar (focused) - Try these AI searches
+www.zennioptical.com##.tw-py-4:has([data-testid="ai-example-query"])
+! Search bar - Override placeholder text
+! * Backup for non-trusted filters. The text starts as "Search glasses", but changes after page load.
+!   Ideally we'd find a way to block this without trusted filters.
+www.zennioptical.com#$#.searchInput[placeholder="Search or let AI recommend frames"]::placeholder { color: transparent !important }
 ! === Zillow ===
 ! Floating chatbot icon
 ! * Appears during searches. Does not appear for all users.
@@ -5063,20 +5193,21 @@ www.sankakucomplex.com##[data-test="ai_companion"]
 www.sankakucomplex.com##[data-test="ai_art"]
 ! Can't block AI art from non-chan site because only a few image tags are present in the metadata.
 ! There are so many AI features, this filter is a drop in the bucket ¯\_(ツ)_/¯
-! -- https://chan.sankakucomplex.com/
-! Navbar, Posts > AI Artwork
-chan.sankakucomplex.com###subnavbar > li:has(> [href^="https://chan.sankakucomplex.com/?tags=sankaku_ai"])
-! Navbar, Companions
+! -- https://chan.sankakucomplex.com/ (logged in)
+! Header - Promo for Sankaku Plus
+chan.sankakucomplex.com###news-ticker:has(> [href="https://get.sankaku.plus/"])
+! Navbar - Posts > AI Artwork
+chan.sankakucomplex.com###header li:has(> [href^="https://chan.sankakucomplex.com/?tags=sankaku_ai"])
+! Navbar - Companions
 chan.sankakucomplex.com##.nav-special:has(> [href="/companions"])
 ! Floating companions window
 chan.sankakucomplex.com##.companion--draggable_element
 ! Carousel promos
 chan.sankakucomplex.com##.ai-carousel
 chan.sankakucomplex.com##.companion-carousel
-! Images tagged as AI made
-chan.sankakucomplex.com##.post-preview:has([data-auto_page~="ai-assisted"], [data-auto_page~="ai-created"], [data-auto_page~="ai-upscaled"], [data-auto_page~="ai-voiced"])
-! Sankaku subscription promo mentioning AI
-chan.sankakucomplex.com#?#.premium-carousel:contains(" AI ")
+! Promo banner for Sankaku Plus
+! * Covers homepage, search, and post view
+chan.sankakucomplex.com##.carousel:has(h5 > [href="https://get.sankaku.plus/"])
 ! === Scrolller (NSFW) ===
 ! AI Jerk Off
 scrolller.com##.index-module__fNZuDa__container[href="https://trk.scrolller.com/b5fb9e68-dccb-4e9c-a514-9b514cfdaf7f"]

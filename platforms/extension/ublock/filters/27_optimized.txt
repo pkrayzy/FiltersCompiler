@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Z/UW2aIgJfbzjpqxmJ++mw
-! Diff-Path: ../patches/27_optimized/27_optimized-s-1795349516-3600.patch
+! Checksum: uvLkDG0RAWPJGh4Vq84Mug
+! Diff-Path: ../patches/27_optimized/27_optimized-s-1795864256-3600.patch
 ! Title: AdGuard Polish filter (Optimized)
 ! Description: Official Polish filters for AdBlock, uBlock Origin & AdGuard + AdGuard Polish filter. Filter list that specifically removes ads on websites in the Polish language.
-! Version: 2.0.1.2
-! TimeUpdated: 2026-11-22T12:10:04+00:00
+! Version: 2.0.1.12
+! TimeUpdated: 2026-11-28T11:08:05+00:00
 ! Expires: 5 days (update frequency)
 ||lekipoludzku.pl^
 ||testowa-strona-dozynkowa.pl^
@@ -15,6 +15,9 @@ anime-odcinki.pl##+js(abort-current-script, EventTarget.prototype.addEventListen
 phototrans.pl,phototrans.eu##+js(no-setTimeout-if, .removeChild)
 tygodnikziemiopolskiej.info##+js(google-ima)
 ##.news-slot-center
+weszlo.com##.bookie-widget
+strumyk.cv,strumyk.ca##.promo
+chamsko.pl##.main-content > div[style="text-align:center;"]:has(> a[target="_blank"] > img)
 katowice24.info##.ad--bill-top ~ div.grid__row:has(> div.grid__col:only-child > div.card > div.custom-html-box > div.adv)
 mycompanypolska.pl##.custom-slot
 epiotrkow.pl##.box-ra:has(> .ad-link)
@@ -1372,9 +1375,8 @@ infoprzasnysz.com##.rimy
 dziennikprawny.pl##article > div:not([class]) > a[target="_blank"][rel="noopener"] > img
 !+ NOT_OPTIMIZED
 ithardware.pl###home-sliderBaner
-ithardware.pl###special-section-4:style(background-image: none !important;)
-ithardware.pl##html[class*="light"] #special-section-4:style(background-color: black !important;)
-ithardware.pl##+js(abort-current-script, document.getElementById, ad.doubleclick.net)
+ithardware.pl##+js(abort-current-script, document.getElementById, /window\.open|ad\.doubleclick\.net/)
+ithardware.pl##.special-section-wrapper:style(background-image: none !important; background-color: #161616 !important; cursor: default !important;)
 ithardware.pl###t_subpage > .gray-section > .container:has(> .flex-column-full:only-child > div[id^="t_ads_banner"]:only-child)
 ithardware.pl##div[id^="t_ads_banner"]
 !+ NOT_OPTIMIZED
@@ -2199,7 +2201,7 @@ events.gry-online.pl##body:style(background-image: none !important;)
 ||assuredwhoa.com^$domain=gry-online.pl
 ||whoinasmuch.com^$domain=gry-online.pl
 ||contentyet.com^$domain=gry-online.pl
-$script,3p,denyallow=gracza.pl|dailymotion.com|googleapis.com|google.com|twitter.com,domain=gry-online.pl
+$script,3p,denyallow=gracza.pl|dailymotion.com|googleapis.com|google.com|twitter.com|unpkg.com,domain=gry-online.pl
 gry-online.pl#@#.adspace
 gry-online.pl##+js(set-constant, adbstatus, false)
 gry-online.pl##.top-extra-tlo > #baner-outer ~ div[id] > a[style^="display:block;width:100%;max-width:"] > img[src^="/im/"]
@@ -2335,6 +2337,7 @@ interia.pl##body .ad-rectangle:not(#style_important)
 interia.pl##div[class^="box ad box"]:style(position: absolute !important; left: -3000px !important;)
 tipy.interia.pl##.rekObokWstepu
 ||poczta.interia.pl/next/adv,advKeyword$subdocument,important
+poczta.interia.pl###message-adv
 poczta.interia.pl##.top-ad-placement
 poczta.interia.pl##div.ad[nxt-ad-place]
 poczta.interia.pl##.ads-content
@@ -3275,10 +3278,15 @@ filmweb.pl#@#body .ws__wrapper
 !+ NOT_OPTIMIZED
 filmweb.pl##.ws__wrapper:style(visibility: hidden !important;)
 filmweb.pl##.lightboxNEW:not(.fullscreen)[style]:style(top: 0 !important;)
+||mmorpg.org.pl/ads/
+mmorpg.org.pl##div[data-ad-placement]
+mmorpg.org.pl##div[data-vidverto-zone]
 mmorpg.org.pl##div[id*="_bill_"]
 mmorpg.org.pl##div[id*="_bill_"] + a[href="/premium"]
 mmorpg.org.pl##div[id*="_half_"]:empty
 mmorpg.org.pl##div[id*="_half_"]:empty + a[href="/premium"]
+mmorpg.org.pl##+js(set-constant, w2g, {})
+mmorpg.org.pl##+js(set-session-storage-item, ad-wall-reloads, 2)
 mmorpg.org.pl##+js(prevent-fetch, wtg-ads.com)
 elektroda.pl##div[id^="post-content-"] > .text-wrap[style*="filter: blur"]:style(filter: none !important;)
 elektroda.pl##body div.adBanner.advert.advertisement.adsby:not(#style_important):style(display: block !important;)
@@ -3509,6 +3517,8 @@ filmweb.pl##.d_utru
 interia.pl##.adStandardTop
 interia.pl##div[class*="ad ad_"]
 ||exsite.pl/kampania/ads/
+lovekrakow.pl#@#[class$="-ads"]
+akcjademokracja.pl#@#[class^="ad-"]
 kuchenny.com.pl#@#A[target="_blank"] > IMG
 @@||filmweb.pl/api/v1/rc/ads.pl_PL$~3p,xhr
 ##a[href*="techmaniak.pl/www/gact/ckk.php"]
@@ -8944,6 +8954,7 @@ filmyfilmy.pl###play
 ||caringyarn.pro^
 ||neuca.www-com.co.uk^
 ||secure.encryptedconnection.net^
+||moderemarkt.com^
 ||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=exs.pl,important
 ||ipla.hit.stat24.com^$object,domain=ipla.tv,important
 electro-torrent.pl##a[href*="://o9d.pl/"]

@@ -1,8 +1,8 @@
-! Checksum: r5JarVhyPXfME5Rl5SxB1w
+! Checksum: G8y7pm9XGACCpUsp8Nj8TA
 ! Title: AdGuard Polish filter
 ! Description: Official Polish filters for AdBlock, uBlock Origin & AdGuard + AdGuard Polish filter. Filter list that specifically removes ads on websites in the Polish language.
-! Version: 2.0.1.2
-! TimeUpdated: 2026-11-22T12:10:04+00:00
+! Version: 2.0.1.12
+! TimeUpdated: 2026-11-28T11:08:05+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -90,6 +90,9 @@ tygodnikziemiopolskiej.info#%#//scriptlet('google-ima3')
 !
 ! NOTE: Specific rules
 !
+weszlo.com##.bookie-widget
+strumyk.cv,strumyk.ca##.promo
+chamsko.pl##.main-content > div[style="text-align:center;"]:has(> a[target="_blank"] > img)
 katowice24.info##.ad--bill-top ~ div.grid__row:has(> div.grid__col:only-child > div.card > div.custom-html-box > div.adv)
 mycompanypolska.pl##.custom-slot
 epiotrkow.pl##.box-ra:has(> .ad-link)
@@ -1904,9 +1907,8 @@ dziennikprawny.pl##article > div:not([class]) > a[target="_blank"][rel="noopener
 !+ NOT_OPTIMIZED
 ithardware.pl###home-sliderBaner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218733
-ithardware.pl#$##special-section-4 { background-image: none !important; }
-ithardware.pl#$#html[class*="light"] #special-section-4 { background-color: black !important; }
-ithardware.pl#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'ad.doubleclick.net')
+ithardware.pl#%#//scriptlet('abort-current-inline-script', 'document.getElementById', '/window\.open|ad\.doubleclick\.net/')
+ithardware.pl#$#.special-section-wrapper { background-image: none !important; background-color: #161616 !important; cursor: default !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214235
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131705
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134017
@@ -3127,7 +3129,7 @@ events.gry-online.pl#$#body { background-image: none !important; }
 ||assuredwhoa.com^$domain=gry-online.pl
 ||whoinasmuch.com^$domain=gry-online.pl
 ||contentyet.com^$domain=gry-online.pl
-$script,third-party,denyallow=gracza.pl|dailymotion.com|googleapis.com|google.com|twitter.com,domain=gry-online.pl
+$script,third-party,denyallow=gracza.pl|dailymotion.com|googleapis.com|google.com|twitter.com|unpkg.com,domain=gry-online.pl
 gry-online.pl#@#.adspace
 gry-online.pl#%#//scriptlet("set-constant", "adbstatus", "false")
 gry-online.pl##.top-extra-tlo > #baner-outer ~ div[id] > a[style^="display:block;width:100%;max-width:"] > img[src^="/im/"]
@@ -3337,6 +3339,7 @@ tipy.interia.pl##.rekObokWstepu
 ! https://github.com/AdguardTeam/AdguardFilters/issues/162718
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113851
 ||poczta.interia.pl/next/adv,advKeyword$subdocument,important
+poczta.interia.pl###message-adv
 poczta.interia.pl##.top-ad-placement
 poczta.interia.pl##div.ad[nxt-ad-place]
 poczta.interia.pl##.ads-content
@@ -4779,10 +4782,18 @@ filmweb.pl#$#.ws__wrapper { visibility: hidden !important; }
 filmweb.pl#$#.lightboxNEW:not(.fullscreen)[style] { top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/70948
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109192
+||mmorpg.org.pl/ads/
+mmorpg.org.pl##div[data-ad-placement]
+mmorpg.org.pl##div[data-vidverto-zone]
 mmorpg.org.pl##div[id*="_bill_"]
 mmorpg.org.pl##div[id*="_bill_"] + a[href="/premium"]
 mmorpg.org.pl##div[id*="_half_"]:empty
 mmorpg.org.pl##div[id*="_half_"]:empty + a[href="/premium"]
+mmorpg.org.pl#%#//scriptlet('set-constant', 'w2g', 'emptyObj')
+mmorpg.org.pl#%#//scriptlet('prevent-element-src-loading', 'script', 'wtg-ads.com')
+mmorpg.org.pl#%#//scriptlet('set-session-storage-item', 'ad-wall-reloads', '2')
+mmorpg.org.pl#%#//scriptlet('trusted-set-local-storage-item', 'ad-notice-dismissed', '$now$')
+mmorpg.org.pl#%#//scriptlet('trusted-replace-argument', 'Promise.prototype.then', '0', 'noopFunc', 'waitForBlockVerdict')
 mmorpg.org.pl#%#//scriptlet('prevent-fetch', 'wtg-ads.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211879
 elektroda.pl#$#div[id^="post-content-"] > .text-wrap[style*="filter: blur"] { filter: none !important; }
@@ -5107,6 +5118,10 @@ exsite.pl#%#window.ab = false;
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/248325
+lovekrakow.pl#@#[class$="-ads"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/248043
+akcjademokracja.pl#@#[class^="ad-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/245224
 kuchenny.com.pl#@#A[target="_blank"] > IMG
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242783
@@ -10546,6 +10561,7 @@ filmyfilmy.pl###play
 ||caringyarn.pro^
 ||neuca.www-com.co.uk^
 ||secure.encryptedconnection.net^
+||moderemarkt.com^
 ||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=exs.pl,important
 ||ipla.hit.stat24.com^$object,domain=ipla.tv,important
 electro-torrent.pl##a[href*="://o9d.pl/"]
